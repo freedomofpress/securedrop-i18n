@@ -24,6 +24,7 @@ py==1.4.31
 pytest-cov==2.4.0
 pytest==3.0.3
 requests==2.13.0          # via coveralls
-selenium==2.53.6
-six==1.10.0
-Werkzeug==0.11.11         # via flask
+selenium==2.53.6          # via tbselenium
+six==1.10.0               # via mock, pip-tools
+tbselenium==0.2.1
+werkzeug==0.11.11         # via flask

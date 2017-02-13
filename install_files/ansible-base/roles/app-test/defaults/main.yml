@@ -3,3 +3,11 @@
 # Can aid in debugging the AppArmor profiles, but also permits
 # misconfigurations, and so should be used with caution.
 securedrop_app_test_apparmor_complain: False
+
+# Specify TBB version to download and install
+tbb_release: 6.5.1
+tbb_locale: en-US
+tbb_arch: 64
+tbb_directory: "/home/{{ ansible_user|default(ansible_ssh_user|default(lookup('env', 'USER'))) }}/.local/tbb"
+tbb_signing_key: EF6E286DDA85EA2A4BA7DE684E2C6E8793298290
+keyserver: "hkps://keyserver.cns.vt.edu"
