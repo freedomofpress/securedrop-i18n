@@ -1,5 +1,0 @@
----
-- name: Download Firefox as a fallback if Tor Browser does not work
-  apt:
-    name: firefox
-    state: present

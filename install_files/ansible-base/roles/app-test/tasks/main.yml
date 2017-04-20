@@ -16,5 +16,3 @@
 - include: disable_mprotect_ff_plugin_container.yml
 
 - include: download_verify_tbb.yml
-
-- include: download_ff_esr.yml

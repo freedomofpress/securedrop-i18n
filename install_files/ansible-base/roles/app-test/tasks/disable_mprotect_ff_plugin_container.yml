@@ -1,6 +1,6 @@
 ---
 - name: disable mprotect on firefox and the firefox plugin container
-  command: paxctl -cm /usr/lib/firefox/{{ item }}
+  command: paxctl -cm {{ tbb_dir }}/tor-browser_{{ tbb_locale }}/Browser/{{ item }}
   with_items:
     - firefox
     - plugin-container

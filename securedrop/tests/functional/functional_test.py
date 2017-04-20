@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 
 from datetime import datetime
-import getpass
 import mock
 from multiprocessing import Process
 import os
-from os.path import abspath, dirname, join, realpath
+from os.path import abspath, dirname, expanduser, join, realpath
 import shutil
 import signal
 import socket
@@ -17,9 +16,7 @@ import urllib2
 
 from Crypto import Random
 import gnupg
-from selenium import webdriver
 from selenium.common.exceptions import WebDriverException
-from selenium.webdriver.firefox import firefox_binary
 from tbselenium.tbdriver import TorBrowserDriver
 
 os.environ['SECUREDROP_ENV'] = 'test'
@@ -42,6 +39,13 @@ class FunctionalTest():
 
 
     def _create_tor_browser_webdriver(self, abs_log_file_path):
+        return driver
+
+    def _create_webdriver(self):
+        abs_log_file_path = os.path.abspath(join(dirname(__file__), '../log/firefox.log'))
+        with open(abs_log_file_path, 'a') as f:
+            log_msg = '\n\n[%s] Running Functional Tests\n' % str(datetime.now())
+            f.write(log_msg)
         # Don't use Tor when reading from localhost,
         # and turn off private browsing. We need to turn off private browsing
         # because we won't be able to access the browser's cookies in
@@ -53,31 +57,12 @@ class FunctionalTest():
                      'browser.privatebrowsing.autostart': False
                     }
 
-        username = getpass.getuser()
-        user_path = join('/home', username)
-        path_to_tbb = '.local/tbb/tor-browser_en-US'
-        path_to_tbb = abspath(join(user_path, path_to_tbb))
+        path_to_tbb = abspath(join(expanduser('~'),
+                                              '.local/tbb/tor-browser_en-US')))
 
         driver = TorBrowserDriver(path_to_tbb,
                                   pref_dict=pref_dict,
                                   tbb_logfile_path=abs_log_file_path)
-        return driver
-
-    def _create_firefox_webdriver(self, abs_log_file_path):
-        with open(abs_log_file_path, 'a') as f:
-            firefox = firefox_binary.FirefoxBinary(log_file=f)
-            return webdriver.Firefox(firefox_binary=firefox)
-
-    def _create_webdriver(self):
-        abs_log_file_path = os.path.abspath(join(dirname(__file__), '../log/firefox.log'))
-        with open(abs_log_file_path, 'a') as f:
-            log_msg = '\n\n[%s] Running Functional Tests\n' % str(datetime.now())
-            f.write(log_msg)
-
-        if 'SD_USE_FALLBACK_BROWSER' in os.environ:
-            driver = self._create_firefox_webdriver(abs_log_file_path)
-        else:
-            driver = self._create_tor_browser_webdriver(abs_log_file_path)
 
         return driver
 
