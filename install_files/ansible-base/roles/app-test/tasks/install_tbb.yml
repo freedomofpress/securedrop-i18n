@@ -1,4 +1,13 @@
 ---
+- name: Install TBB apt dependencies.
+  sudo: true
+  apt:
+    name: "{{ item }}"
+    state: latest
+    update_cache: yes
+    cache_valid_time: 3600
+  with_items: "{{ tbb_apt_dependencies }}"
+
 - name: Create tbb directory.
   sudo: true
   file:

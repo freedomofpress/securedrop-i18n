@@ -57,10 +57,10 @@ class FunctionalTest():
                      'browser.privatebrowsing.autostart': False
                     }
 
-        path_to_tbb = abspath(join(expanduser('~'),
-                                              '.local/tbb/tor-browser_en-US'))
+        tbb_path = abspath(join(expanduser('~'),
+                                '.local/tbb/tor-browser_en-US'))
 
-        driver = TorBrowserDriver(path_to_tbb,
+        driver = TorBrowserDriver(tbb_path,
                                   pref_dict=pref_dict,
                                   tbb_logfile_path=abs_log_file_path)
 
