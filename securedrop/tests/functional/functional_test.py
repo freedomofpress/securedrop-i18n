@@ -4,7 +4,7 @@ from datetime import datetime
 import mock
 from multiprocessing import Process
 import os
-from os.path import abspath, dirname, expanduser, join, realpath
+from os.path import abspath, dirname, expanduser, join
 import shutil
 import signal
 import socket
@@ -26,7 +26,9 @@ import journalist
 import source
 import tests.utils.env as env
 
-LOG_DIR = abspath(join(dirname(realpath(__file__)), '..', 'log'))
+FUNCTIONAL_TEST_DIR = abspath(dirname(__file__))
+LOGFILE_PATH = abspath(join(FUNCTIONAL_TEST_DIR, '../log/firefox.log'))
+TBB_PATH = abspath(join(expanduser('~'), '.local/tbb/tor-browser_en-US'))
 
 class FunctionalTest():
 
@@ -37,33 +39,23 @@ class FunctionalTest():
         s.close()
         return port
 
-
-    def _create_tor_browser_webdriver(self, abs_log_file_path):
-        return driver
-
     def _create_webdriver(self):
-        abs_log_file_path = os.path.abspath(join(dirname(__file__), '../log/firefox.log'))
-        with open(abs_log_file_path, 'a') as f:
-            log_msg = '\n\n[%s] Running Functional Tests\n' % str(datetime.now())
+        log_msg = '\n\n[{}] Running Functional Tests\n'.format(datetime.now())
+        with open(LOGFILE_PATH, 'a') as f:
             f.write(log_msg)
-        # Don't use Tor when reading from localhost,
-        # and turn off private browsing. We need to turn off private browsing
-        # because we won't be able to access the browser's cookies in
-        # private browsing mode.  Since we use session cookies in SD anyway
-        # (in private browsing mode all cookies are set as session cookies),
-        # this should not affect session lifetime.
-        pref_dict = {
-                     'network.proxy.no_proxies_on': '127.0.0.1',
-                     'browser.privatebrowsing.autostart': False
-                    }
-
+        # Don't use Tor when reading from localhost, and turn off private
+        # browsing. We need to turn off private browsing because we won't be
+        # able to access the browser's cookies in private browsing mode. Since
+        # we use session cookies in SD anyway (in private browsing mode all
+        # cookies are set as session cookies), this should not affect session
+        # lifetime.
+        pref_dict = {'network.proxy.no_proxies_on': '127.0.0.1',
+                     'browser.privatebrowsing.autostart': False}
         tbb_path = abspath(join(expanduser('~'),
                                 '.local/tbb/tor-browser_en-US'))
-
-        driver = TorBrowserDriver(tbb_path,
+        driver = TorBrowserDriver(TBB_PATH,
                                   pref_dict=pref_dict,
-                                  tbb_logfile_path=abs_log_file_path)
-
+                                  tbb_logfile_path=LOGFILE_PATH)
         return driver
 
     def setUp(self):
