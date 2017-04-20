@@ -58,7 +58,7 @@ class FunctionalTest():
                     }
 
         path_to_tbb = abspath(join(expanduser('~'),
-                                              '.local/tbb/tor-browser_en-US')))
+                                              '.local/tbb/tor-browser_en-US'))
 
         driver = TorBrowserDriver(path_to_tbb,
                                   pref_dict=pref_dict,
