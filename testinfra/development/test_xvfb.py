@@ -2,7 +2,6 @@ import pytest
 
 
 @pytest.mark.parametrize('dependency', [
-  'firefox',
   'xvfb',
 ])
 def test_xvfb_apt_dependencies(Package, dependency):
@@ -10,6 +9,14 @@ def test_xvfb_apt_dependencies(Package, dependency):
     Ensure apt requirements for Xvfb are present.
     """
     assert Package(dependency).is_installed
+
+
+def test_tbb_dependency(File):
+    f = File("~/.local/tbb/tor-browser_en-US/Browser/firefox")
+    assert f.is_file
+    assert oct(f.mode) == "0700"
+    assert f.user != "root"
+    assert f.group != "root"
 
 
 def test_xvfb_service_config(File, Sudo):
