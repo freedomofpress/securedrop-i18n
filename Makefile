@@ -34,6 +34,11 @@ docs:
 # Spins up livereload environment for editing; blocks.
 	make -C docs/ clean && sphinx-autobuild docs/ docs/_build/html
 
+.PHONY: docs-url-lint
+docs-url-lint:
+# Queries all known URLs in the docs for broken links.
+	./docs/find-broken-docs-urls.sh
+
 help:
 	@echo Makefile for developing and testing SecureDrop.
 	@echo Subcommands:
