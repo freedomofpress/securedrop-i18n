@@ -85,6 +85,93 @@ class TestManage(object):
         manage.clean_tmp(args)
         assert 'FILE removed' in caplog.text()
 
+    def test_translate_compile_code_and_template(self):
+        source = [
+            'tests/i18n/code.py',
+            'tests/i18n/template.html',
+        ]
+        kwargs = {
+            'translations_dir': config.TEMP_DIR,
+            'mapping': 'tests/i18n/babel.cfg',
+            'source': source,
+            'extract_update': True,
+            'compile': True,
+            'verbose': logging.DEBUG,
+        }
+        args = argparse.Namespace(**kwargs)
+        manage.setup_verbosity(args)
+        manage.translate(args)
+        messages_file = os.path.join(config.TEMP_DIR, 'messages.pot')
+        assert os.path.exists(messages_file)
+        pot = open(messages_file).read()
+        assert 'code hello i18n' in pot
+        assert 'template hello i18n' in pot
+
+        locale = 'en_US'
+        locale_dir = os.path.join(config.TEMP_DIR, locale)
+        manage.sh("pybabel init -i {} -d {} -l {}".format(
+            messages_file,
+            config.TEMP_DIR,
+            locale,
+        ))
+        mo_file = os.path.join(locale_dir, 'LC_MESSAGES/messages.mo')
+        assert not os.path.exists(mo_file)
+        manage.translate(args)
+        assert os.path.exists(mo_file)
+        mo = open(mo_file).read()
+        assert 'code hello i18n' in mo
+        assert 'template hello i18n' in mo
+
+    def test_translate_compile_arg(self):
+        source = [
+            'tests/i18n/code.py',
+        ]
+        kwargs = {
+            'translations_dir': config.TEMP_DIR,
+            'mapping': 'tests/i18n/babel.cfg',
+            'source': source,
+            'extract_update': True,
+            'compile': False,
+            'verbose': logging.DEBUG,
+        }
+        args = argparse.Namespace(**kwargs)
+        manage.setup_verbosity(args)
+        manage.translate(args)
+        messages_file = os.path.join(config.TEMP_DIR, 'messages.pot')
+        assert os.path.exists(messages_file)
+        pot = open(messages_file).read()
+        assert 'code hello i18n' in pot
+
+        locale = 'en_US'
+        locale_dir = os.path.join(config.TEMP_DIR, locale)
+        manage.sh("pybabel init -i {} -d {} -l {}".format(
+            messages_file,
+            config.TEMP_DIR,
+            locale,
+        ))
+        mo_file = os.path.join(locale_dir, 'LC_MESSAGES/messages.mo')
+
+        #
+        # Extract+update but do not compile
+        #
+        assert not os.path.exists(mo_file)
+        manage.translate(args)
+        assert not os.path.exists(mo_file)
+
+        #
+        # Compile but do not extract+update
+        #
+        source = [
+            'tests/i18n/code.py',
+            'tests/i18n/template.html',
+        ]
+        kwargs['extract_update'] = False
+        kwargs['compile'] = True
+        args = argparse.Namespace(**kwargs)
+        manage.translate(args)
+        mo = open(mo_file).read()
+        assert 'code hello i18n' in mo
+        assert 'template hello i18n' not in mo
 
 class TestSh(object):
 
