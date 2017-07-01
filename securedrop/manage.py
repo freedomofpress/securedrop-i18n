@@ -11,6 +11,7 @@ import subprocess
 import sys
 import time
 import traceback
+import version
 
 import psutil
 import qrcode
@@ -224,6 +225,48 @@ def clean_tmp(args):
     return 0
 
 
+def translate(args):
+    messages_file = os.path.join(args.translations_dir, 'messages.pot')
+
+    if args.extract_update:
+        sh("""
+        set -xe
+
+        mkdir -p {translations_dir}
+
+        pybabel extract \
+        --charset=utf-8 \
+        --mapping={mapping} \
+        --output={messages_file} \
+        --project=SecureDrop \
+        --version={version} \
+        --msgid-bugs-address='securedrop@freedom.press' \
+        --copyright-holder='Freedom of the Press Foundation' \
+        {sources}
+
+        sed -i '/^#, fuzzy$/d' {messages_file}
+
+        test $(ls {translations_dir} | wc -l) = 1 && exit 0
+
+        pybabel update \
+        --input-file {messages_file} \
+        --output-dir {translations_dir} \
+        --no-fuzzy-matching --ignore-obsolete
+        """.format(translations_dir=args.translations_dir,
+                   mapping=args.mapping,
+                   messages_file=messages_file,
+                   version=version.__version__,
+                   sources=" ".join(args.source)))
+    if args.compile:
+        sh("""
+        set -x
+
+        test $(ls {translations_dir} | wc -l) = 1 && exit 0
+
+        pybabel compile --directory {translations_dir}
+        """.format(translations_dir=args.translations_dir))
+
+
 def get_args():
     parser = argparse.ArgumentParser(prog=__file__, description='Management '
                                      'and testing utility for SecureDrop.')
@@ -263,6 +306,9 @@ def get_args():
     # Cleanup the SD temp dir
     set_clean_tmp_parser(subps, 'clean-tmp')
     set_clean_tmp_parser(subps, 'clean_tmp')
+
+    set_translate_parser(subps)
+
     return parser
 
 def set_clean_tmp_parser(subps, name):
@@ -281,6 +327,39 @@ def set_clean_tmp_parser(subps, name):
         help=('remove old files from DIRECTORY '
               '(default {})'.format(config.TEMP_DIR)))
     parser.set_defaults(func=clean_tmp)
+
+def set_translate_parser(subps):
+    parser = subps.add_parser('translate',
+                              help='Update and compile translations')
+    translations_dir = 'translations'
+    parser.add_argument(
+        '--extract-update',
+        action='store_true',
+        help='run pybabel extract and pybabel update')
+    parser.add_argument(
+        '--compile',
+        action='store_true',
+        help='run pybabel compile')
+    mapping = 'babel.cfg'
+    parser.add_argument(
+        '--mapping',
+        default=mapping,
+        help='Mapping of files to consider (default {})'.format(
+            mapping))
+    parser.add_argument(
+        '--translations-dir',
+        default=translations_dir,
+        help='Base directory for translation files (default {})'.format(
+            translations_dir))
+    sources = ['.', 'source_templates', 'journalist_templates']
+    parser.add_argument(
+        '--source',
+        default=sources,
+        action='append',
+        help='Source file or directory to extract (default {})'.format(
+            sources))
+    parser.set_defaults(func=translate)
+
 
 def setup_verbosity(args):
     logging.getLogger(__name__).setLevel(args.verbose)
