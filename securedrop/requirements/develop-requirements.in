@@ -4,6 +4,7 @@ boto
 flake8
 pip-tools
 pytest-xdist
+pytest-capturelog
 testinfra
 sphinx
 sphinx-autobuild
