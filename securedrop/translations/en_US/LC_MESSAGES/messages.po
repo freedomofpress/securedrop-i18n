@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"POT-Creation-Date: 2017-07-03 15:42+0000\n"
+"POT-Creation-Date: 2017-07-09 08:54+0000\n"
 "PO-Revision-Date: 2017-07-03 16:02+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_US\n"
@@ -17,4 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.4.0\n"
+
+#: journalist_templates/account_edit_hotp_secret.html:6
+msgid "Change Secret"
+msgstr ""
+
+#: journalist_templates/account_edit_hotp_secret.html:7
+msgid "HOTP Secret"
+msgstr ""
+
+#: journalist_templates/account_edit_hotp_secret.html:9
+msgid "CONTINUE"
+msgstr ""
 
