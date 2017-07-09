@@ -75,7 +75,7 @@ class JournalistNavigationSteps():
         h1s = self.driver.find_elements_by_tag_name('h1')
         self.assertIn("Admin Interface", [el.text for el in h1s])
 
-    def _add_user(self, username, password, is_admin=False):
+    def _add_user(self, username, password, is_admin=False, hotp=None):
         username_field = self.driver.find_element_by_css_selector(
             'input[name="username"]')
         username_field.send_keys(username)
@@ -87,6 +87,15 @@ class JournalistNavigationSteps():
         password_again_field = self.driver.find_element_by_css_selector(
             'input[name="password_again"]')
         password_again_field.send_keys(password)
+
+        if hotp:
+            hotp_checkbox = self.driver.find_element_by_css_selector(
+                'input[name="is_hotp"]')
+            print(str(hotp_checkbox.__dict__))
+            hotp_checkbox.click()
+            hotp_secret = self.driver.find_element_by_css_selector(
+                'input[name="otp_secret"]')
+            hotp_secret.send_keys(hotp)
 
         if is_admin:
             # TODO implement (checkbox is unchecked by default)
