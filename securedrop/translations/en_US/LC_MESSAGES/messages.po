@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"POT-Creation-Date: 2017-07-09 08:55+0000\n"
+"POT-Creation-Date: 2017-07-09 09:39+0000\n"
 "PO-Revision-Date: 2017-07-03 16:02+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_US\n"
@@ -23,6 +23,7 @@ msgid "Change Secret"
 msgstr ""
 
 #: journalist_templates/account_edit_hotp_secret.html:7
+#: journalist_templates/admin_add_user.html:19
 msgid "HOTP Secret"
 msgstr ""
 
@@ -76,5 +77,33 @@ msgstr ""
 
 #: journalist_templates/account_new_two_factor.html:24
 msgid "SUBMIT"
+msgstr ""
+
+#: journalist_templates/admin_add_user.html:4
+msgid "Back to admin interface"
+msgstr ""
+
+#: journalist_templates/admin_add_user.html:9
+msgid "Username"
+msgstr ""
+
+#: journalist_templates/admin_add_user.html:10
+msgid "Password"
+msgstr ""
+
+#: journalist_templates/admin_add_user.html:11
+msgid "Password (again)"
+msgstr ""
+
+#: journalist_templates/admin_add_user.html:14
+msgid "Is Administrator"
+msgstr ""
+
+#: journalist_templates/admin_add_user.html:18
+msgid "I'm using a Yubikey"
+msgstr ""
+
+#: journalist_templates/admin_add_user.html:21
+msgid "ADD USER"
 msgstr ""
 
