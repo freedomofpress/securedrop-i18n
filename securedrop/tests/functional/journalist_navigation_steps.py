@@ -5,6 +5,7 @@ import tempfile
 import zipfile
 import gzip
 import datetime
+import os
 
 from selenium.common.exceptions import NoSuchElementException
 
@@ -27,7 +28,7 @@ class JournalistNavigationSteps():
 
             return content
 
-    def _login_user(self, username, password, token):
+    def _try_login_user(self, username, password, token):
         self.driver.get(self.journalist_location + "/login")
         username_field = self.driver.find_element_by_css_selector(
             'input[name="username"]')
@@ -45,6 +46,8 @@ class JournalistNavigationSteps():
             'button[type=submit]')
         submit_button.click()
 
+    def _login_user(self, username, password, token):
+        self._try_login_user(username, password, token)
         # Successful login should redirect to the index
         assert self.driver.current_url == self.journalist_location + '/'
 
@@ -54,29 +57,31 @@ class JournalistNavigationSteps():
         self._login_user(self.user.username, self.user_pw, 'mocked')
 
         headline = self.driver.find_element_by_css_selector('span.headline')
-        assert 'Sources' in headline.text
+        if not hasattr(self, 'accept_languages'):
+            assert 'Sources' in headline.text
 
     def _admin_logs_in(self):
         self.admin, self.admin_pw = db_helper.init_journalist(is_admin=True)
         self._login_user(self.admin.username, self.admin_pw, 'mocked')
 
-        # Admin user should log in to the same interface as a normal user,
-        # since there may be users who wish to be both journalists and admins.
-        headline = self.driver.find_element_by_css_selector('span.headline')
-        assert 'Sources' in headline.text
+        if not hasattr(self, 'accept_languages'):
+            # Admin user should log in to the same interface as a normal user,
+            # since there may be users who wish to be both journalists and admins.
+            headline = self.driver.find_element_by_css_selector('span.headline')
+            assert 'Sources' in headline.text
 
-        # Admin user should have a link that take them to the admin page
-        links = self.driver.find_elements_by_tag_name('a')
-        assert 'Admin' in  [el.text for el in links]
+            # Admin user should have a link that take them to the admin page
+            links = self.driver.find_elements_by_tag_name('a')
+            assert 'Admin' in  [el.text for el in links]
 
     def _admin_visits_admin_interface(self):
-        admin_interface_link = self.driver.find_element_by_link_text('Admin')
+        admin_interface_link = self.driver.find_element_by_id('link_admin_index')
         admin_interface_link.click()
+        if not hasattr(self, 'accept_languages'):
+            h1s = self.driver.find_elements_by_tag_name('h1')
+            assert "Admin Interface" in [el.text for el in h1s]
 
-        h1s = self.driver.find_elements_by_tag_name('h1')
-        self.assertIn("Admin Interface", [el.text for el in h1s])
-
-    def _add_user(self, username, password, is_admin=False):
+    def _add_user(self, username, password, is_admin=False, hotp=None):
         username_field = self.driver.find_element_by_css_selector(
             'input[name="username"]')
         username_field.send_keys(username)
@@ -88,6 +93,15 @@ class JournalistNavigationSteps():
         password_again_field = self.driver.find_element_by_css_selector(
             'input[name="password_again"]')
         password_again_field.send_keys(password)
+
+        if hotp:
+            hotp_checkbox = self.driver.find_element_by_css_selector(
+                'input[name="is_hotp"]')
+            print(str(hotp_checkbox.__dict__))
+            hotp_checkbox.click()
+            hotp_secret = self.driver.find_element_by_css_selector(
+                'input[name="otp_secret"]')
+            hotp_secret.send_keys(hotp)
 
         if is_admin:
             # TODO implement (checkbox is unchecked by default)
@@ -102,9 +116,10 @@ class JournalistNavigationSteps():
             'button#add-user')
         add_user_btn.click()
 
-        # The add user page has a form with an "ADD USER" button
-        btns = self.driver.find_elements_by_tag_name('button')
-        self.assertIn('ADD USER', [el.text for el in btns])
+        if not hasattr(self, 'accept_languages'):
+            # The add user page has a form with an "ADD USER" button
+            btns = self.driver.find_elements_by_tag_name('button')
+            assert 'ADD USER' in [el.text for el in btns]
 
         self.new_user = dict(
             username='dellsberg',
@@ -112,10 +127,11 @@ class JournalistNavigationSteps():
 
         self._add_user(self.new_user['username'], self.new_user['password'])
 
-        # Clicking submit on the add user form should redirect to the Google
-        # Authenticator page
-        h1s = self.driver.find_elements_by_tag_name('h1')
-        self.assertIn("Enable Google Authenticator", [el.text for el in h1s])
+        if not hasattr(self, 'accept_languages'):
+            # Clicking submit on the add user form should redirect to the Google
+            # Authenticator page
+            h1s = self.driver.find_elements_by_tag_name('h1')
+            assert "Enable Google Authenticator" in [el.text for el in h1s]
 
         # Retrieve the saved user object from the db and keep it around for
         # further testing
@@ -130,16 +146,17 @@ class JournalistNavigationSteps():
             'button[type=submit]')
         submit_button.click()
 
-        # Successfully verifying the code should redirect to the admin
-        # interface, and flash a message indicating success
-        flashed_msgs = self.driver.find_elements_by_css_selector('.flash')
-        self.assertIn(("Two-factor token successfully verified for user"
-                       " {}!").format(self.new_user['username']),
-                      [el.text for el in flashed_msgs])
+        if not hasattr(self, 'accept_languages'):
+            # Successfully verifying the code should redirect to the admin
+            # interface, and flash a message indicating success
+            flashed_msgs = self.driver.find_elements_by_css_selector('.flash')
+            assert (("Two-factor token successfully verified for user"
+                     " {}!").format(self.new_user['username']) in 
+                    [el.text for el in flashed_msgs])
 
     def _logout(self):
         # Click the logout link
-        logout_link = self.driver.find_element_by_link_text('Logout')
+        logout_link = self.driver.find_element_by_id('link_logout')
         logout_link.click()
 
         # Logging out should redirect back to the login page
@@ -152,8 +169,9 @@ class JournalistNavigationSteps():
         self._logout()
         self._login_user(self.new_user['username'],
                          self.new_user['password'], otp)
-        # Test that the new user was logged in successfully
-        assert 'Sources' in self.driver.page_source
+        if not hasattr(self, 'accept_languages'):
+            # Test that the new user was logged in successfully
+            assert 'Sources' in self.driver.page_source
 
     def _new_user_can_log_in(self):
         # Log the admin user out
@@ -164,17 +182,18 @@ class JournalistNavigationSteps():
                          self.new_user['password'],
                          'mocked')
 
-        # Test that the new user was logged in successfully
-        assert 'Sources' in self.driver.page_source
+        if not hasattr(self, 'accept_languages'):
+            # Test that the new user was logged in successfully
+            assert 'Sources' in self.driver.page_source
 
         # The new user was not an admin, so they should not have the admin
         # interface link available
         with pytest.raises(NoSuchElementException):
-            self.driver.find_element_by_link_text('Admin')
+            self.driver.find_element_by_id('link_admin_index')
 
     def _edit_account(self):
-        edit_account_link = self.driver.find_element_by_link_text(
-            'Edit Account')
+        edit_account_link = self.driver.find_element_by_id(
+            'link_edit_account')
         edit_account_link.click()
 
         # The header says "Edit your account"
@@ -248,7 +267,7 @@ class JournalistNavigationSteps():
         self._login_user(self.admin.username, self.admin_pw, 'mocked')
 
         # Go to the admin interface
-        admin_interface_link = self.driver.find_element_by_link_text('Admin')
+        admin_interface_link = self.driver.find_element_by_id('link_admin_index')
         admin_interface_link.click()
 
         # Click the "edit user" link for the new user
@@ -259,7 +278,7 @@ class JournalistNavigationSteps():
         assert len(new_user_edit_links) == 1
         new_user_edit_links[0].click()
         def can_edit_user():
-            assert ('Edit user "{}"'.format(self.new_user['username']) in
+            assert ('"{}"'.format(self.new_user['username']) in
                     self.driver.page_source)
         self.wait_for(can_edit_user)
 
@@ -273,8 +292,7 @@ class JournalistNavigationSteps():
         update_user_btn.click()
 
         def can_edit_user():
-            assert ('Edit user "{}"'.format(new_username) in
-                    self.driver.page_source)
+            assert ('"{}"'.format(new_username) in self.driver.page_source)
         self.wait_for(can_edit_user)
 
         # Update self.new_user with the new username for the future tests
@@ -285,16 +303,17 @@ class JournalistNavigationSteps():
         self._login_user(self.new_user['username'],
                          self.new_user['password'],
                          'mocked')
-        def found_sources():
-            assert 'Sources' in self.driver.page_source
-        self.wait_for(found_sources)
+        if not hasattr(self, 'accept_languages'):
+            def found_sources():
+                assert 'Sources' in self.driver.page_source
+            self.wait_for(found_sources)
 
         # Log the admin user back in
         self._logout()
         self._login_user(self.admin.username, self.admin_pw, 'mocked')
 
         # Go to the admin interface
-        admin_interface_link = self.driver.find_element_by_link_text('Admin')
+        admin_interface_link = self.driver.find_element_by_id('link_admin_index')
         admin_interface_link.click()
         # Edit the new user's password
         self._edit_user(self.new_user['username'])

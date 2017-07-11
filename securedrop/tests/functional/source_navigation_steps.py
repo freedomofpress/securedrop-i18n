@@ -9,8 +9,9 @@ class SourceNavigationSteps():
     def _source_visits_source_homepage(self):
         self.driver.get(self.source_location)
 
-        assert ("SecureDrop | Protecting Journalists and Sources" ==
-                self.driver.title)
+        if not hasattr(self, 'accept_languages'):
+            assert ("SecureDrop | Protecting Journalists and Sources" ==
+                    self.driver.title)
 
     def _source_chooses_to_submit_documents(self):
         # First move the cursor to a known position in case it happens to
@@ -72,8 +73,9 @@ class SourceNavigationSteps():
     def _source_hits_cancel_at_submit_page(self):
         self.driver.find_element_by_id('cancel').click()
 
-        headline = self.driver.find_element_by_class_name('headline')
-        assert 'Submit Materials' == headline.text
+        if not hasattr(self, 'accept_languages'):
+            headline = self.driver.find_element_by_class_name('headline')
+            assert 'Submit Materials' == headline.text
 
     def _source_continues_to_submit_page(self):
         continue_button = self.driver.find_element_by_id('continue-button')
@@ -94,8 +96,9 @@ class SourceNavigationSteps():
 
         continue_button.click()
 
-        headline = self.driver.find_element_by_class_name('headline')
-        assert 'Submit Materials' == headline.text
+        if not hasattr(self, 'accept_languages'):
+            headline = self.driver.find_element_by_class_name('headline')
+            assert 'Submit Materials' == headline.text
 
     def _source_submits_a_file(self):
         with tempfile.NamedTemporaryFile() as file:
@@ -119,10 +122,11 @@ class SourceNavigationSteps():
 
             submit_button.click()
 
-            notification = self.driver.find_element_by_css_selector(
-                '.success')
-            expected_notification = 'Thank you for sending this information to us'
-            assert expected_notification in notification.text
+            if not hasattr(self, 'accept_languages'):
+                notification = self.driver.find_element_by_css_selector(
+                    '.success')
+                expected_notification = 'Thank you for sending this information to us'
+                assert expected_notification in notification.text
 
     def _source_submits_a_message(self):
         text_box = self.driver.find_element_by_css_selector('[name=msg]')
@@ -131,9 +135,10 @@ class SourceNavigationSteps():
         submit_button = self.driver.find_element_by_id('submit-doc-button')
         submit_button.click()
 
-        notification = self.driver.find_element_by_css_selector(
-            '.success')
-        assert 'Thank you for sending this information to us' in notification.text
+        if not hasattr(self, 'accept_languages'):
+            notification = self.driver.find_element_by_css_selector(
+                '.success')
+            assert 'Thank' in notification.text
 
     def _source_deletes_a_journalist_reply(self):
         # Get the reply filename so we can use IDs to select the delete buttons
@@ -149,10 +154,12 @@ class SourceNavigationSteps():
         assert confirm_button.is_displayed()
         confirm_button.click()
 
-        notification = self.driver.find_element_by_class_name('notification')
-        assert 'Reply deleted' in  notification.text
+        if not hasattr(self, 'accept_languages'):
+            notification = self.driver.find_element_by_class_name('notification')
+            assert 'Reply deleted' in  notification.text
 
     def _source_logs_out(self):
         logout_button = self.driver.find_element_by_id('logout').click()
-        notification = self.driver.find_element_by_css_selector('.important')
-        assert 'Thank you for exiting your session!' in notification.text
+        if not hasattr(self, 'accept_languages'):
+            notification = self.driver.find_element_by_css_selector('.important')
+            assert 'Thank you for exiting your session!' in notification.text
