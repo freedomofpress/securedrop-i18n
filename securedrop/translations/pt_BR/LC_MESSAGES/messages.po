@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-01 20:00+0000\n"
+"PO-Revision-Date: 2017-12-01 20:43+0000\n"
 "Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/pt_BR/>\n"
@@ -608,9 +608,9 @@ msgid ""
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
 "Se as credenciais de autentificação de dois fatores de um usuário forem "
-"perdidas ou comprometidas, você pode redefini-las aqui. <em>Caso deseje fazê-"
-"lo, o usuário deve estar presente e preparado para configurar seu aparelho "
-"com as novas credenciais. Caso contrário, ele não poderá acessar a sua conta."
+"perdidas ou comprometidas, você pode redefini-las aqui. <em>Ao fazê-lo, essa "
+"pessoa deve estar presente et preparada para configurar o aparelho dela com "
+"as novas credenciais. Caso contrário, o acesso à conta dela será impossível."
 
 #: journalist_templates/edit_account.html:63
 msgid ""
@@ -830,6 +830,7 @@ msgid "Look up a codename..."
 msgstr "Procurar um codinome..."
 
 #: source_templates/first_submission_flashed_message.html:2
+#, fuzzy
 msgid "Success!"
 msgstr "Sucesso!"
 
@@ -847,9 +848,10 @@ msgstr "Esqueceu o seu codinome?"
 
 #: source_templates/generate.html:4
 msgid "Welcome"
-msgstr "Bem-vindo"
+msgstr "Boas-vindas"
 
 #: source_templates/generate.html:5
+#, fuzzy
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our journalists in response to what you submit on the next screen."
@@ -877,7 +879,7 @@ msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
 msgstr ""
-"Por favor, anote o seu codinome e guarde-o em um lugar seguro ou memorize-o."
+"Por favor, anote o seu codinome e guarde-o em um lugar seguro,ou memorize-o."
 
 #: source_templates/generate.html:45
 msgid "USE NEW CODENAME"
@@ -1046,7 +1048,7 @@ msgstr "Você pode enviar um arquivo, uma mensagem ou ambos."
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
-msgstr "Tamanho máximo do envio: 500 MB"
+msgstr "Tamanho máximo de envio: 500 MB"
 
 #: source_templates/lookup.html:36
 #, fuzzy
