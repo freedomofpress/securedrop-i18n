@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2017-12-02 10:20+0000\n"
+"PO-Revision-Date: 2017-12-04 10:28+0000\n"
 "Last-Translator: Loic Dachary <loic@dachary.org>\n"
 "Language-Team: French "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/fr/>\n"
@@ -205,10 +205,8 @@ msgid "No unread submissions in selected collections."
 msgstr "Il n'y a aucun envoi non lu dans les collections sélectionnées."
 
 #: journalist_templates/_source_row.html:19
-#, fuzzy
-#| msgid "docs {doc_num}"
 msgid "{doc_num} docs"
-msgstr "documents {doc_num}"
+msgstr "{doc_num} documents"
 
 #: journalist_templates/_source_row.html:20
 msgid "{msg_num} messages"
