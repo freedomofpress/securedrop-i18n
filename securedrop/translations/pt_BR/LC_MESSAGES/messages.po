@@ -9,8 +9,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2017-12-02 00:00+0000\n"
 "Last-Translator: communiaa <ameaneantie@riseup.net>\n"
-"Language-Team: Portuguese (Brazil) "
-"<https://weblate.securedrop.club/projects/securedrop/securedrop/pt_BR/>\n"
+"Language-Team: Portuguese (Brazil) <https://weblate.securedrop.club/projects/"
+"securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -206,12 +206,14 @@ msgid "No unread submissions in selected collections."
 msgstr "Nenhum envio não lido nas coleções selecionadas."
 
 #: journalist_templates/_source_row.html:19
-msgid "docs {doc_num}"
+#, fuzzy
+#| msgid "docs {doc_num}"
+msgid "{doc_num} docs"
 msgstr "documentos {doc_num}"
 
 #: journalist_templates/_source_row.html:20
-msgid "messages {msg_num}"
-msgstr "mensagens {msg_num}"
+msgid "{msg_num} messages"
+msgstr ""
 
 #: journalist_templates/_source_row.html:23
 msgid "{num_unread} unread"
@@ -408,8 +410,8 @@ msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
 msgstr ""
-"Este site utiliza a tecnologia <br> <img src=\"/static/i/securedrop_small."
-"png\" alt=\"SecureDrop\">"
+"Este site utiliza a tecnologia <br> <img src=\"/static/i/securedrop_small.png"
+"\" alt=\"SecureDrop\">"
 
 #: journalist_templates/base.html:54
 msgid "Powered by <em>SecureDrop {version}</em>."
@@ -524,7 +526,8 @@ msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
 msgstr[0] "O arquivo seguinte será <strong>excluído permanentemente</strong>:"
-msgstr[1] "Os arquivos seguintes serão <strong>excluídos permanentemente</strong>:"
+msgstr[1] ""
+"Os arquivos seguintes serão <strong>excluídos permanentemente</strong>:"
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
@@ -882,11 +885,11 @@ msgid ""
 msgstr ""
 "Por favor, anote o seu codinome e guarde-o em um lugar seguro,ou memorize-o."
 
-#: source_templates/generate.html:45
+#: source_templates/generate.html:44
 msgid "USE NEW CODENAME"
 msgstr "USAR UM NOVO CODINOME"
 
-#: source_templates/generate.html:47
+#: source_templates/generate.html:46
 msgid "USE EXISTING CODENAME"
 msgstr "USAR O CODINOME ATUAL"
 
@@ -906,9 +909,9 @@ msgid ""
 "\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</a>, or "
 "ignore this warning to continue."
 msgstr ""
-"<strong>Recomendamos o uso do navegador Tor para acessar o "
-"SecureDrop:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Veja "
-"como instalar o Tor</a>, ou ignore este aviso e continue."
+"<strong>Recomendamos o uso do navegador Tor para acessar o SecureDrop:</"
+"strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Veja como "
+"instalar o Tor</a>, ou ignore este aviso e continue."
 
 #: source_templates/index.html:41
 msgid "Submit documents for the first time"
@@ -1188,9 +1191,9 @@ msgid ""
 "you</strong> to install Tor Browser and use it to access our site safely and "
 "anonymously."
 msgstr ""
-"Para enviar informações para o SecureDrop, é <strong>altamente "
-"recomendado</strong> instalar o Navegador Tor e usá-lo para acessar nosso "
-"site com segurança e anonimato."
+"Para enviar informações para o SecureDrop, é <strong>altamente recomendado</"
+"strong> instalar o Navegador Tor e usá-lo para acessar nosso site com "
+"segurança e anonimato."
 
 #: source_templates/use-tor-browser.html:6
 msgid ""
@@ -1285,8 +1288,8 @@ msgid ""
 "code>)"
 msgstr ""
 "Envie o conteúdo criptografado. O nome do arquivo será o mesmo da versão não "
-"criptografada, mas com \".gpg\" no final (por exemplo "
-"<code>roswell_photos.pdf.gpg</code>)"
+"criptografada, mas com \".gpg\" no final (por exemplo <code>roswell_photos."
+"pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:23
 msgid ""
@@ -1301,3 +1304,6 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Voltar à página de envio"
+
+#~ msgid "messages {msg_num}"
+#~ msgstr "mensagens {msg_num}"

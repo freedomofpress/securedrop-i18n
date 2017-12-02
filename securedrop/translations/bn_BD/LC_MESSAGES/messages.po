@@ -180,11 +180,11 @@ msgid "No unread submissions in selected collections."
 msgstr ""
 
 #: journalist_templates/_source_row.html:19
-msgid "docs {doc_num}"
+msgid "{doc_num} docs"
 msgstr ""
 
 #: journalist_templates/_source_row.html:20
-msgid "messages {msg_num}"
+msgid "{msg_num} messages"
 msgstr ""
 
 #: journalist_templates/_source_row.html:23
@@ -781,11 +781,11 @@ msgid ""
 "memorize it."
 msgstr ""
 
-#: source_templates/generate.html:45
+#: source_templates/generate.html:44
 msgid "USE NEW CODENAME"
 msgstr ""
 
-#: source_templates/generate.html:47
+#: source_templates/generate.html:46
 msgid "USE EXISTING CODENAME"
 msgstr ""
 

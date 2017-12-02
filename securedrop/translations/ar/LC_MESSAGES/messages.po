@@ -10,8 +10,8 @@ msgstr ""
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2017-12-01 15:00+0000\n"
 "Last-Translator: ramyraoof <ramy.raoof@gmail.com>\n"
-"Language-Team: Arabic "
-"<https://weblate.securedrop.club/projects/securedrop/securedrop/ar/>\n"
+"Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
+"securedrop/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -214,12 +214,14 @@ msgid "No unread submissions in selected collections."
 msgstr "لا توجد رسائل غير مقروءة في المجموعات المختارة."
 
 #: journalist_templates/_source_row.html:19
-msgid "docs {doc_num}"
+#, fuzzy
+#| msgid "docs {doc_num}"
+msgid "{doc_num} docs"
 msgstr "{doc_num} مستندات"
 
 #: journalist_templates/_source_row.html:20
-msgid "messages {msg_num}"
-msgstr "{msg_num} رسائل"
+msgid "{msg_num} messages"
+msgstr ""
 
 #: journalist_templates/_source_row.html:23
 msgid "{num_unread} unread"
@@ -537,7 +539,8 @@ msgstr[2] ""
 msgstr[3] "تم تحديد  بعض الملفات {files}  ل<strong>حذفها بشكل نهائي</strong>:"
 msgstr[4] ""
 "تم تحديد  العديد من الملفات {files}  ل<strong>حذفها بشكل نهائي</strong>:"
-msgstr[5] "تم تحديد {files} الملفات التالية ل<strong>حذفها بشكل نهائي</strong>:"
+msgstr[5] ""
+"تم تحديد {files} الملفات التالية ل<strong>حذفها بشكل نهائي</strong>:"
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
@@ -868,8 +871,8 @@ msgid ""
 " questions or are interested in additional documents. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"لأننا لا نستخدم أي من الوسائل التقليدية لتتبع مستخدمي "
-"<strong>SecureDrop</strong>,\n"
+"لأننا لا نستخدم أي من الوسائل التقليدية لتتبع مستخدمي <strong>SecureDrop</"
+"strong>,\n"
 " فاستخدام هذا الاسم في الزيارات المقبلة لهو الطريقة الوحيدة كي نتواصل معك في "
 "حال ساورتنا\n"
 " أي أسئلة أو في حال احتجنا إلى أي مستندات إضافيى.  بخلاف كلمات السر, فما "
@@ -882,11 +885,11 @@ msgid ""
 msgstr ""
 "من فضلك، ما  سجّل هذا الإسم الرمز واحفظه في مكان آمن, أو احفظه عن ظهر قلب."
 
-#: source_templates/generate.html:45
+#: source_templates/generate.html:44
 msgid "USE NEW CODENAME"
 msgstr "استخدم اسم رمزي جديد"
 
-#: source_templates/generate.html:47
+#: source_templates/generate.html:46
 msgid "USE EXISTING CODENAME"
 msgstr "استخدم اسم رمز موجود"
 
@@ -1117,10 +1120,10 @@ msgid ""
 "button in the Tor browser to clear all history of your SecureDrop usage from "
 "this device. If you are not using Tor Browser, restart your browser."
 msgstr ""
-"لقد تم تسجيل خروجك نظراً لعدم  تفاعلك!  من فضلك عاود تسجيل الدخول إن كنت "
-"تريد الاستتمرار في استخدام SecureDrop أو اختر \"هوية جديدة\" من خلال الزر "
-"الاخضر  على شكل البصلة في متصفح تور لحذف  جميع سجلات استخدام SecureDrop من "
-"الجهاز. أما إن لم تكن تستخدم متصفح ثور فمن فضلك أعد تشغيل متصفحك."
+"لقد تم تسجيل خروجك نظراً لعدم  تفاعلك!  من فضلك عاود تسجيل الدخول إن كنت تريد "
+"الاستتمرار في استخدام SecureDrop أو اختر \"هوية جديدة\" من خلال الزر الاخضر  "
+"على شكل البصلة في متصفح تور لحذف  جميع سجلات استخدام SecureDrop من الجهاز. "
+"أما إن لم تكن تستخدم متصفح ثور فمن فضلك أعد تشغيل متصفحك."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1284,3 +1287,6 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "الرجوع الى صفحة الارسال"
+
+#~ msgid "messages {msg_num}"
+#~ msgstr "{msg_num} رسائل"

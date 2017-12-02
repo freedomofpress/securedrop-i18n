@@ -217,12 +217,14 @@ msgid "No unread submissions in selected collections."
 msgstr "Нет непрочитанных сообщений в выбранных коллекциях."
 
 #: journalist_templates/_source_row.html:19
-msgid "docs {doc_num}"
+#, fuzzy
+#| msgid "docs {doc_num}"
+msgid "{doc_num} docs"
 msgstr "документы {doc_num}"
 
 #: journalist_templates/_source_row.html:20
-msgid "messages {msg_num}"
-msgstr "сообщения {msg_num}"
+msgid "{msg_num} messages"
+msgstr ""
 
 #: journalist_templates/_source_row.html:23
 msgid "{num_unread} unread"
@@ -884,13 +886,13 @@ msgstr ""
 "Пожалуйста, либо запишите данный псевдоним и сохраните его в безопасном "
 "месте или запомните его."
 
-#: source_templates/generate.html:45
+#: source_templates/generate.html:44
 #, fuzzy
 #| msgid "ALREADY HAVE A CODENAME?"
 msgid "USE NEW CODENAME"
 msgstr "У ВАС УЖЕ ЕСТЬ ПСЕВДОНИМ?"
 
-#: source_templates/generate.html:47
+#: source_templates/generate.html:46
 msgid "USE EXISTING CODENAME"
 msgstr ""
 
@@ -1267,3 +1269,6 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Вернуться на страницу отправки"
+
+#~ msgid "messages {msg_num}"
+#~ msgstr "сообщения {msg_num}"

@@ -10,8 +10,8 @@ msgstr ""
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2017-11-29 22:00+0000\n"
 "Last-Translator: Anatoli <djanatoli@gmail.com>\n"
-"Language-Team: Spanish "
-"<https://weblate.securedrop.club/projects/securedrop/securedrop/es/>\n"
+"Language-Team: Spanish <https://weblate.securedrop.club/projects/securedrop/"
+"securedrop/es/>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -62,7 +62,8 @@ msgstr ""
 
 #: journalist_app/admin.py:84
 msgid "Token in two-factor authentication accepted for user {user}."
-msgstr "Token en autenticación de dos factores aceptado para el usuario {user}."
+msgstr ""
+"Token en autenticación de dos factores aceptado para el usuario {user}."
 
 #: journalist_app/admin.py:118
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
@@ -203,12 +204,14 @@ msgid "No unread submissions in selected collections."
 msgstr "No hay sumisiónes sin leer en las colecciones seleccionadas."
 
 #: journalist_templates/_source_row.html:19
-msgid "docs {doc_num}"
+#, fuzzy
+#| msgid "docs {doc_num}"
+msgid "{doc_num} docs"
 msgstr "docs {doc_num}"
 
 #: journalist_templates/_source_row.html:20
-msgid "messages {msg_num}"
-msgstr "mensajes {msg_num}"
+msgid "{msg_num} messages"
+msgstr ""
 
 #: journalist_templates/_source_row.html:23
 msgid "{num_unread} unread"
@@ -890,11 +893,11 @@ msgstr ""
 "Por favor, escriba este nombre clave y guárdelo en un lugar seguro, o "
 "memorizelo."
 
-#: source_templates/generate.html:45
+#: source_templates/generate.html:44
 msgid "USE NEW CODENAME"
 msgstr "USAR UN NOMBRE CLAVE NUEVO"
 
-#: source_templates/generate.html:47
+#: source_templates/generate.html:46
 msgid "USE EXISTING CODENAME"
 msgstr "USAR NOMBRE CLAVE EXISTENTE"
 
@@ -914,9 +917,9 @@ msgid ""
 "\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</a>, or "
 "ignore this warning to continue."
 msgstr ""
-"<strong>Recomendamos usar el navegador Tor Browser para acceder a "
-"SecureDrop:</strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">"
-"Aprenda a como instalarlo </a>, o ignore esta advertencia para continuar."
+"<strong>Recomendamos usar el navegador Tor Browser para acceder a SecureDrop:"
+"</strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">Aprenda a como "
+"instalarlo </a>, o ignore esta advertencia para continuar."
 
 #: source_templates/index.html:41
 msgid "Submit documents for the first time"
@@ -1177,9 +1180,9 @@ msgid ""
 "to install <a href=\"torproject.org/download.html.en\">Tor</a> and use it to "
 "access our site safely and anonymously."
 msgstr ""
-"Si desea enviar información, usted esta <strong>encarecidamente "
-"aconsejado</strong> a instalar <a href=\"torproject.org/download.html.en\""
-">Tor</a> y usarlo para entrar a nuestro sitio seguramente y anónimamente."
+"Si desea enviar información, usted esta <strong>encarecidamente aconsejado</"
+"strong> a instalar <a href=\"torproject.org/download.html.en\">Tor</a> y "
+"usarlo para entrar a nuestro sitio seguramente y anónimamente."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
@@ -1189,8 +1192,8 @@ msgstr "Usted Debería Usar Tor Browser"
 msgid ""
 "If you are not using Tor Browser, you <strong>may not be anonymous</strong>."
 msgstr ""
-"Si no está usando el Tor Browser, usted <strong> quizá no esté "
-"anónimo</strong>."
+"Si no está usando el Tor Browser, usted <strong> quizá no esté anónimo</"
+"strong>."
 
 #: source_templates/use-tor-browser.html:5
 msgid ""
@@ -1274,8 +1277,8 @@ msgid ""
 "at the end), you can just copy and paste that. (don't include the <code>."
 "asc</code>!)"
 msgstr ""
-"Usted va a necesitar poder identificar la llave (esta es llamada la \"user "
-"ID\" o UID). Ya que el nombre del archivo de la llave pública es la huella "
+"Usted va a necesitar poder identificar la llave (esta es llamada la \"user ID"
+"\" o UID). Ya que el nombre del archivo de la llave pública es la huella "
 "digital (con .asc al final), usted puede copiar y pegar eso. (¡No incluya "
 "<code>.asc</code>!)"
 
@@ -1311,3 +1314,6 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Regresar a la pagina de envío"
+
+#~ msgid "messages {msg_num}"
+#~ msgstr "mensajes {msg_num}"

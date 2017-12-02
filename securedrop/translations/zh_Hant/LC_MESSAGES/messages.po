@@ -10,8 +10,8 @@ msgstr ""
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2017-11-30 14:00+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
-"Language-Team: Chinese (Traditional) "
-"<https://weblate.securedrop.club/projects/securedrop/securedrop/zh_Hant/>\n"
+"Language-Team: Chinese (Traditional) <https://weblate.securedrop.club/"
+"projects/securedrop/securedrop/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -193,12 +193,14 @@ msgid "No unread submissions in selected collections."
 msgstr "在所選擇的館藏中，並沒有仍標示未讀的提交資訊。"
 
 #: journalist_templates/_source_row.html:19
-msgid "docs {doc_num}"
+#, fuzzy
+#| msgid "docs {doc_num}"
+msgid "{doc_num} docs"
 msgstr "文档{doc_num}"
 
 #: journalist_templates/_source_row.html:20
-msgid "messages {msg_num}"
-msgstr "消息{msg_num}"
+msgid "{msg_num} messages"
+msgstr ""
 
 #: journalist_templates/_source_row.html:23
 msgid "{num_unread} unread"
@@ -479,7 +481,9 @@ msgid ""
 "Click below to delete this source's collection. <em>Warning: If you do this, "
 "the files seen here will be unrecoverable and the source will no longer be "
 "able to login using their previous codename.</em>"
-msgstr "点击下面以删除这一源的集合。<em>1警告：如果你这么做，这里看到的多个文件将是不可恢复的，而且这一源将无法用它们之前的代码名称再登录。"
+msgstr ""
+"点击下面以删除这一源的集合。<em>1警告：如果你这么做，这里看到的多个文件将是不"
+"可恢复的，而且这一源将无法用它们之前的代码名称再登录。"
 
 #: journalist_templates/col.html:104
 msgid "DELETE COLLECTION"
@@ -491,7 +495,8 @@ msgid ""
 msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
-msgstr[0] "以下的{files}文件已经被选择，将被<strong>1永久型地被删除</strong>2："
+msgstr[0] ""
+"以下的{files}文件已经被选择，将被<strong>1永久型地被删除</strong>2："
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
@@ -574,7 +579,8 @@ msgid ""
 "is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
-"如果用户的两部分授权信用已经丢失或者减低，你可以在此重置它们。<em>如果你这么做，应该确信该用户是当前的，而且准备好用新的两部分信用去设置他们的设备。否"
+"如果用户的两部分授权信用已经丢失或者减低，你可以在此重置它们。<em>如果你这么"
+"做，应该确信该用户是当前的，而且准备好用新的两部分信用去设置他们的设备。否"
 "则，他们的账户将被锁住。</em>"
 
 #: journalist_templates/edit_account.html:63
@@ -584,8 +590,9 @@ msgid ""
 "this, make sure you are ready to set up your new device, otherwise you will "
 "be locked out of your account.</em>"
 msgstr ""
-"如果你的两部分授权信用丢失或者减低，或者你有一件新的设备，你可以这次重置你的信用。<em>1 "
-"如果你这么做，应该确信你已经准备好设置你的新设备，否则你的账户将被锁住。</em>2"
+"如果你的两部分授权信用丢失或者减低，或者你有一件新的设备，你可以这次重置你的"
+"信用。<em>1 如果你这么做，应该确信你已经准备好设置你的新设备，否则你的账户将"
+"被锁住。</em>2"
 
 #: journalist_templates/edit_account.html:65
 msgid ""
@@ -824,13 +831,13 @@ msgid ""
 "memorize it."
 msgstr "請抄下代號並妥善保管，或牢記住它。"
 
-#: source_templates/generate.html:45
+#: source_templates/generate.html:44
 #, fuzzy
 #| msgid "ALREADY HAVE A CODENAME?"
 msgid "USE NEW CODENAME"
 msgstr "已有代號？"
 
-#: source_templates/generate.html:47
+#: source_templates/generate.html:46
 msgid "USE EXISTING CODENAME"
 msgstr "使用退出代码名"
 
@@ -839,14 +846,18 @@ msgid ""
 "<strong>We recommend turning the Security Slider to High to protect your "
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
 "high</a>, or ignore this warning to continue."
-msgstr "1。我们建议调整安全性滚动条到高处，以保护你的匿名性。3。 学习如何设置到高处，4。或者忽略这一条警告，继续操作。"
+msgstr ""
+"1。我们建议调整安全性滚动条到高处，以保护你的匿名性。3。 学习如何设置到高处，"
+"4。或者忽略这一条警告，继续操作。"
 
 #: source_templates/index.html:18
 msgid ""
 "<strong>We recommend using Tor Browser to access SecureDrop:</strong> <a id="
 "\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</a>, or "
 "ignore this warning to continue."
-msgstr "1. 我们建议使用 Tor浏览器使用 SecureDrop  3。学习如何安装它。4. 或者忽略这条警告，继续操作。"
+msgstr ""
+"1. 我们建议使用 Tor浏览器使用 SecureDrop  3。学习如何安装它。4. 或者忽略这条"
+"警告，继续操作。"
 
 #: source_templates/index.html:41
 msgid "Submit documents for the first time"
@@ -921,7 +932,9 @@ msgid ""
 "Thank you for exiting your session! Please select \"New Identity\" from the "
 "green onion button in the Tor browser to clear all history of your "
 "SecureDrop usage from this device."
-msgstr "感谢你退出了你的会话！ 请从 Tor 浏览器的绿色的洋葱按钮里算则“新身份”，以便在这一设备里清除你所有的SecureDrop 的使用历史。"
+msgstr ""
+"感谢你退出了你的会话！ 请从 Tor 浏览器的绿色的洋葱按钮里算则“新身份”，以便在"
+"这一设备里清除你所有的SecureDrop 的使用历史。"
 
 #: source_templates/lookup.html:11
 msgid "Whew, it’s you! Now, the embarrassing part..."
@@ -934,15 +947,18 @@ msgid ""
 "some random blip. To err on the side of caution, we put a hold on sending "
 "all documents from that day through to our journalists."
 msgstr ""
-"当您上次访问的时候，我们的服务器经历了一次不平常的新活动的大浪。这可能是人的活动导致的，或者自动机攻击的，也可能是一些随机的波动。出于标识错误的用心考虑，"
-"我们保持了那一天要发送给我们的记者的所有文档。"
+"当您上次访问的时候，我们的服务器经历了一次不平常的新活动的大浪。这可能是人的"
+"活动导致的，或者自动机攻击的，也可能是一些随机的波动。出于标识错误的用心考"
+"虑，我们保持了那一天要发送给我们的记者的所有文档。"
 
 #: source_templates/lookup.html:14
 msgid ""
 "Now that we know you’re really a human, though, we’ll get your previous "
 "submission into the hands of a journalist straight away. We’re sorry for the "
 "delay. Please do check back again in a week or so."
-msgstr "现在我们知道您是真人在操作，不过，我们将把您的上次提交直接放入一位记者的手中。 我们很抱歉这一延迟。请在大约一周后再次检查。"
+msgstr ""
+"现在我们知道您是真人在操作，不过，我们将把您的上次提交直接放入一位记者的手"
+"中。 我们很抱歉这一延迟。请在大约一周后再次检查。"
 
 #: source_templates/lookup.html:20
 msgid "Submit Materials"
@@ -953,7 +969,9 @@ msgid ""
 "If you are already familiar with GPG, you can optionally encrypt your files "
 "and messages with our <a href=\"{url}\" class=\"text-link\">public key</a> "
 "before submission. Files are encrypted as they are received by SecureDrop."
-msgstr "如果你熟悉GPG，您可以在提交之前可选地使用我们的公钥来加密你的文件和消息。加密的文件以 SecureDrop 收到的内容为准。"
+msgstr ""
+"如果你熟悉GPG，您可以在提交之前可选地使用我们的公钥来加密你的文件和消息。加密"
+"的文件以 SecureDrop 收到的内容为准。"
 
 #: source_templates/lookup.html:22
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
@@ -982,8 +1000,9 @@ msgid ""
 "with them. This also lets us know that you are aware of our reply. You can "
 "respond by submitting a new message above."
 msgstr ""
-"您已经收到一条回复。为了保护您的身份，防止某人知道您的代码名，请您在使用了回复之后将它们全部删除。这也会让我们知道你意识到了我们的回复。您可以发送一条新消"
-"息在上面来回应。"
+"您已经收到一条回复。为了保护您的身份，防止某人知道您的代码名，请您在使用了回"
+"复之后将它们全部删除。这也会让我们知道你意识到了我们的回复。您可以发送一条新"
+"消息在上面来回应。"
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
@@ -1040,8 +1059,9 @@ msgid ""
 "button in the Tor browser to clear all history of your SecureDrop usage from "
 "this device. If you are not using Tor Browser, restart your browser."
 msgstr ""
-"您的会话因为没有动作已经超时了。如果你想继续使用 SecureDrop，请再次登录，或者在 Tor 浏览器的绿色洋葱按钮里选择“新身份”"
-"来清除在这一设备上所有您的使用 SecureDrop 的历史记录。 如果您没有使用 Tor 浏览器，请重启您的浏览器。"
+"您的会话因为没有动作已经超时了。如果你想继续使用 SecureDrop，请再次登录，或者"
+"在 Tor 浏览器的绿色洋葱按钮里选择“新身份”来清除在这一设备上所有您的使用 "
+"SecureDrop 的历史记录。 如果您没有使用 Tor 浏览器，请重启您的浏览器。"
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1052,7 +1072,9 @@ msgid ""
 "<a href=\"tor2web.org\">Tor2Web</a> is a proxy service that lets you browse "
 "Tor Hidden Services (.onion sites) without installing Tor. It was designed "
 "to facilitate anonymous publishing."
-msgstr "Tor2Web 是代理服务，可以让您不安装 Tor 就可以诶浏览 Tor 隐藏服务（.onion 站点）。设计它的目的在于方便匿名出版。"
+msgstr ""
+"Tor2Web 是代理服务，可以让您不安装 Tor 就可以诶浏览 Tor 隐藏服务（.onion 站"
+"点）。设计它的目的在于方便匿名出版。"
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
@@ -1062,15 +1084,19 @@ msgid ""
 "Tor2Web sites typically do not use HTTPS, it is possible that your "
 "connection could be MITM'ed by a capable adversary."
 msgstr ""
-"Tor2Web仅仅保护出版商，不保护读者。如果您用 Tor2Web 给我我们上传了文档，您不是匿名的，而且您可以被您的 ISP 或者 Tor2Web "
-"代理的操作人员查出您的身份。 另外，因为 Tor2Web 一般不使用 HTTPS，所以您的网络链接可能被有能力的对手 MITM 掉。"
+"Tor2Web仅仅保护出版商，不保护读者。如果您用 Tor2Web 给我我们上传了文档，您不"
+"是匿名的，而且您可以被您的 ISP 或者 Tor2Web 代理的操作人员查出您的身份。 另"
+"外，因为 Tor2Web 一般不使用 HTTPS，所以您的网络链接可能被有能力的对手 MITM "
+"掉。"
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
 "If you want to submit information, you are <strong>strongly advised</strong> "
 "to install <a href=\"torproject.org/download.html.en\">Tor</a> and use it to "
 "access our site safely and anonymously."
-msgstr "如果您想发布信息，我们强烈建议您安装 Tor，并使用它安全地和匿名地访问我们的网站。"
+msgstr ""
+"如果您想发布信息，我们强烈建议您安装 Tor，并使用它安全地和匿名地访问我们的网"
+"站。"
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
@@ -1086,7 +1112,9 @@ msgid ""
 "If you want to submit information to SecureDrop, we <strong>strongly advise "
 "you</strong> to install Tor Browser and use it to access our site safely and "
 "anonymously."
-msgstr "如果您想提交信息给SecureDrop，我们强烈建议你按照 Tor 浏览器，并使用它安全地、匿名地访问我们的网站。"
+msgstr ""
+"如果您想提交信息给SecureDrop，我们强烈建议你按照 Tor 浏览器，并使用它安全地、"
+"匿名地访问我们的网站。"
 
 #: source_templates/use-tor-browser.html:6
 msgid ""
@@ -1128,7 +1156,9 @@ msgid ""
 "If you are using <a href=\"{url}\">Tails</a>, you can double-click the "
 "<code>.asc</code> file you just downloaded and it will be automatically "
 "imported to your keyring."
-msgstr "如果您在使用 Tails，您可以双击您刚才下载的 .asc 文件，它可以自动及加入到您的钥匙环中。"
+msgstr ""
+"如果您在使用 Tails，您可以双击您刚才下载的 .asc 文件，它可以自动及加入到您的"
+"钥匙环中。"
 
 #: source_templates/why-journalist-key.html:11
 msgid ""
@@ -1183,3 +1213,6 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "返回提交文件頁面"
+
+#~ msgid "messages {msg_num}"
+#~ msgstr "消息{msg_num}"
