@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2017-12-02 17:00+0000\n"
+"PO-Revision-Date: 2017-12-03 00:47+0000\n"
 "Last-Translator: Anatoli <djanatoli@gmail.com>\n"
 "Language-Team: Spanish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/es/>\n"
@@ -198,9 +198,8 @@ msgstr ""
 "Contraseña nueva:"
 
 #: journalist_app/utils.py:261
-#, fuzzy
 msgid "No unread submissions in selected collections."
-msgstr "No hay sumisiónes sin leer en las colecciones seleccionadas."
+msgstr "No hay envios sin leer en las colecciones seleccionadas."
 
 #: journalist_templates/_source_row.html:19
 msgid "{doc_num} docs"
