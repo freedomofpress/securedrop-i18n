@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2017-12-02 18:00+0000\n"
-"Last-Translator: ramyraoof <ramy.raoof@gmail.com>\n"
+"PO-Revision-Date: 2017-12-02 21:00+0000\n"
+"Last-Translator: redshiftzero <jen@freedom.press>\n"
 "Language-Team: Arabic "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ar/>\n"
 "Language: ar\n"
@@ -221,7 +221,7 @@ msgstr "{doc_num} مستندات"
 
 #: journalist_templates/_source_row.html:20
 msgid "{msg_num} messages"
-msgstr ""
+msgstr "{msg_num} رسائل"
 
 #: journalist_templates/_source_row.html:23
 msgid "{num_unread} unread"
