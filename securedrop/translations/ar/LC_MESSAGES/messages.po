@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2017-12-02 21:00+0000\n"
-"Last-Translator: redshiftzero <jen@freedom.press>\n"
+"PO-Revision-Date: 2017-12-03 21:00+0000\n"
+"Last-Translator: ramyraoof <ramy.raoof@gmail.com>\n"
 "Language-Team: Arabic "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ar/>\n"
 "Language: ar\n"
@@ -368,16 +368,16 @@ msgstr "ما من مستخدمين لعرضهم"
 #: journalist_templates/admin_add_user.html:4
 #: journalist_templates/edit_account.html:7
 msgid "Back to admin interface"
-msgstr "الرجوع إلى واجهة المستخدم"
+msgstr "الرجوع إلى واجهة المسؤول"
 
 #: journalist_templates/admin_add_user.html:21
 msgid "The user's password will be:"
-msgstr "كلمة سر المستخدم ستكون:"
+msgstr "كلمة سر المستخدم:"
 
 #: journalist_templates/admin_add_user.html:24
 #: journalist_templates/edit_account.html:17
 msgid "Is Administrator"
-msgstr "هو المسؤول"
+msgstr "تعيينه كمسئوول"
 
 #: journalist_templates/admin_add_user.html:32
 msgid "Is using a YubiKey [HOTP]"
@@ -391,11 +391,10 @@ msgid ""
 "them enter one of the 6-digit codes from the app to confirm that two factor "
 "authentication is set up correctly."
 msgstr ""
-"أنت على وشك الإنتهاء! لإنهاء عملية إضافة المستخدم الجديد، اطلب منهم أن "
-"يتبعوا التعليمات أدناه لتنصيب التحقق بخطوتين  بواسطة Google Authenticator. \n"
-" ما إن يضيفوا  معلومات حسابهم على هذا التطبيق، اطلب منهم إدخال إحدى الرموز "
-"المكونة من 6 أرقام من التطبيق للتأكد من أن التحقق بخطوتين تم  تنصيبه بالشكل "
-"الصحيح."
+"أنت على وشك الانتهاء! لإتمام عملية إضافة المستخدم الجديد اطلب منهم إتباع "
+"التعليمات أدناه لتنصيب التحقق بخطوتين  بواسطة Google Authenticator. \n"
+" وبعد إضافة معلومات الحساب في التطبيق اطلب منهم إدخال إحدى الرموز المكونة من "
+"6 أرقام للتأكد من سلامة الإعداد."
 
 #: journalist_templates/base.html:24
 msgid "Logged on as"
@@ -414,12 +413,12 @@ msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
 msgstr ""
-"مشغل من قبل <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
-"\">"
+"مدعم بواسطة <br> <img src=\"/static/i/securedrop_small.png\" alt=\""
+"SecureDrop\">"
 
 #: journalist_templates/base.html:54
 msgid "Powered by <em>SecureDrop {version}</em>."
-msgstr "مشغّل من قبل <em>SecureDrop {version} </em>."
+msgstr "مدعم بواسطة <em>SecureDrop {version} </em>."
 
 #: journalist_templates/col.html:10
 msgid "All Sources"
@@ -431,8 +430,8 @@ msgid ""
 "the first random codename is difficult to say or remember. You can generate "
 "new random codenames as many times as you like."
 msgstr ""
-"قم بإنشاء اسم رمزي عشوائي جديد لهذا المصدر. نوصي بهذا إذا كان الاسم الرمزي "
-"الاول من الصعب نطقه أو تذكره. يمكنك إنشاء اسماء رمزية جديدة  جديدة قدر ما "
+"قم بإنشاء اسم رمزي عشوائي جديد لهذا المصدر. ننصح بهذا في حالة صعوبة الاسم "
+"الحالي من ناحيةالنطق أو التذكر كما يمكنك إنشاء أسماء رمزية  جديدة بقدر ما "
 "تشاء."
 
 #: journalist_templates/col.html:13
@@ -441,7 +440,7 @@ msgstr "تغيير الاسم الرمزي"
 
 #: journalist_templates/col.html:14
 msgid "Are you sure you want to generate a new codename?"
-msgstr "هل أنت متأكد من أنك تريد انشاء اسم رمزي جديد؟"
+msgstr "هل أنت متأكد من إنشاء اسم رمزي جديد؟"
 
 #: journalist_templates/col.html:15 source_templates/lookup.html:72
 msgid "Cancel"
@@ -456,16 +455,16 @@ msgid ""
 "The documents are stored encrypted for security. To read them, you will need "
 "to decrypt them using GPG."
 msgstr ""
-"تم تخزين المستندات و تعميتها لغايات أمنية. إذا كنت تريد قراءتها، ستحتاج إلى  "
-"فك التعمية  وذلك بواسطة  نظام GPG."
+"تم حفظ المستندات و تعميتها لدواعي الحماية. سوف تحتاج إلى تظهيرها (ردها إلى "
+"صيغتها الأصلية) بواسطة GPG لقراءة المحتوى."
 
 #: journalist_templates/col.html:26
 msgid "Download Selected"
-msgstr "تنزيل الاختيار"
+msgstr "تنزيل المختار"
 
 #: journalist_templates/col.html:27
 msgid "Delete Selected"
-msgstr "حذف الاختيار"
+msgstr "حذف المختار"
 
 #: journalist_templates/col.html:55
 msgid "Uploaded Document"
@@ -473,7 +472,7 @@ msgstr "تم تحميل المستند"
 
 #: journalist_templates/col.html:57 journalist_templates/col.html:75
 msgid "Reply"
-msgstr "رد"
+msgstr "رَدّ"
 
 #: journalist_templates/col.html:59
 msgid "Message"
@@ -481,32 +480,32 @@ msgstr "رسالة"
 
 #: journalist_templates/col.html:70
 msgid "No documents to display."
-msgstr "ما من مستندات موجودة لعرضها."
+msgstr "ما من مستندات لعرضها."
 
 #: journalist_templates/col.html:77
 msgid ""
 "You can write a secure reply to the person who submitted these documents:"
-msgstr "يمكنك الرد كتابياً بشكل آمن على الشخص الذي أرسل هذه المستندات:"
+msgstr "يمكن إرسال رد على نحو آمن إلى الشخص الذي أرسل المستندات:"
 
 #: journalist_templates/col.html:86
 msgid "You've flagged this source for reply."
-msgstr "لقد علّمت أو أشرت بعلامة  لهذا المصدر للرد عليه."
+msgstr "قمت بوسم هذا المصدر للرد عليه."
 
 #: journalist_templates/col.html:87
 msgid ""
 "An encryption key will be generated for the source the next time they log "
 "in, after which you will be able to reply to the source here."
 msgstr ""
-"سيتم إنشاء مفتاح تعمية للمصدر  وذلك عندما يسجلّوا دخولهم  مرّة جديدة،  بعد هذه "
-"العملية، ستتمكن من الرد على المصدر هنا."
+"فور تسجيل دخول المصدر المرة التالية سوف يتم إنشاء مفتاح تعمية خاص به. وسوف "
+"تتمكن من الرد على المصدر هنا بعد تلك الخطوة."
 
 #: journalist_templates/col.html:89
 msgid "Click below if you would like to write a reply to this source."
-msgstr "انقر أدناه إن كنت تريد الرد على هذا المصدر."
+msgstr "انقر أدناه للرد على المصدر."
 
 #: journalist_templates/col.html:93
 msgid "FLAG THIS SOURCE FOR REPLY"
-msgstr "علّم هذا المصدر أو أشر بعلامة إليه، للرد عليه"
+msgstr "وسّم المصدر للرد عليه"
 
 #: journalist_templates/col.html:98
 msgid ""
@@ -514,9 +513,9 @@ msgid ""
 "the files seen here will be unrecoverable and the source will no longer be "
 "able to login using their previous codename.</em>"
 msgstr ""
-"انقر أدناه لحذف مجموعة هذا المصدر. <em> تنبيه: إذا قمت بذلك، فستكون هذه "
-"الملفات غير قابلة للاسترداد ولن يتمكن المصدر من تسجيل دخوله باستخدام اسمه "
-"الرمزي السابق.</em>"
+"انقر أدناه لحذف المجموعة الهاصة بهذا المصدر. <em> تحذير: بعد إجراء الحذف لا "
+"يمكن استرداد الملفات، ولن يتمكن المصدر من تسجيل الدخول باستخدام الاسم الرمزي "
+"السابق.</em>"
 
 #: journalist_templates/col.html:104
 msgid "DELETE COLLECTION"
@@ -544,7 +543,7 @@ msgstr "حذف الملفات بشكل دائم"
 
 #: journalist_templates/delete.html:23
 msgid "Return to the list of documents for {source_name}…"
-msgstr "الرجوع إلى قائمة المستندات ل {source_name} …"
+msgstr "العودة إلى قائمة المستندات الخاصة بـ {source_name}…"
 
 #: journalist_templates/edit_account.html:6
 msgid "Edit user \"{user}\""
@@ -552,7 +551,7 @@ msgstr "تعديل المستخدم \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Username &amp; Admin Status"
-msgstr "تغيير اسم المستخدم &amp; و وضع وصلاحيات المسؤول"
+msgstr "تغيير اسم المستخدم وحالة المسؤول"
 
 #: journalist_templates/edit_account.html:12
 msgid "Change username"
@@ -564,7 +563,7 @@ msgstr "تحديث"
 
 #: journalist_templates/edit_account.html:22
 msgid "Edit your account"
-msgstr "عدّل حسابك"
+msgstr "حرّر حسابك"
 
 #: journalist_templates/edit_account.html:25
 msgid "Reset Password"
@@ -572,19 +571,19 @@ msgstr "إعادة ضبط كلمة السر"
 
 #: journalist_templates/edit_account.html:27
 msgid "SecureDrop now uses automatically generated diceware passwords."
-msgstr "SecureDrop يستخدم الآن كلمات السر ديسوير \"diceware\" المولّدة تلقائيا."
+msgstr "يستخدم SecureDrop على نحو آلي طريقة دايسوير لتويد كلمات السر."
 
 #: journalist_templates/edit_account.html:28
 msgid ""
 "Your password will be changed immediately, so you will need to save it "
 "before pressing the \"Reset Password\" button."
 msgstr ""
-"سيتم تغيير كلمة السر الخاصة بك فورا، لذلك ستحتاج إلى حفظها قبل الضغط على زر "
-"\"إعادة ضبط كلمة السر\"."
+"سيتم تغيير كلمة السر فورا لذا عليك حفظها قبل الضغط على \"إعادة ضبط كلمة "
+"السر\"."
 
 #: journalist_templates/edit_account.html:34
 msgid "Please enter your current password and two-factor code."
-msgstr "من فضلك أكتب كلمة سرّك الحالية و رمز التحقق بخطوتين."
+msgstr "رجاء كتابة كلمة السر الحالية ورمز التحقق بخطوتين."
 
 #: journalist_templates/edit_account.html:40
 msgid "Current Password"
@@ -596,11 +595,11 @@ msgstr "رمز التحقق بخطوتين"
 
 #: journalist_templates/edit_account.html:46
 msgid "The user's password will be changed to:"
-msgstr "ستتغير كلمة السر الخاصة بالمستخدم  إلى:"
+msgstr "تغيير كلمة سر المستخدم  إلى:"
 
 #: journalist_templates/edit_account.html:48
 msgid "Your password will be changed to:"
-msgstr "كلمة السر الخاصة بك ستتغير الى:"
+msgstr "كلمة السر الخاصة بك ستتغير إلى:"
 
 #: journalist_templates/edit_account.html:53
 msgid "RESET PASSWORD"
@@ -608,7 +607,7 @@ msgstr "إعادة ضبط كلمة السر"
 
 #: journalist_templates/edit_account.html:58
 msgid "Reset Two-Factor Authentication"
-msgstr "إعادة ضبط التحقق بخطوتين"
+msgstr "إعادة ضبط خاصية التحقق بخطوتين"
 
 #: journalist_templates/edit_account.html:61
 msgid ""
@@ -617,10 +616,9 @@ msgid ""
 "is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
-"إذا فقد مستخدم  ما  المعلومات والبيانات المتعلّقة بالتحقق بخطوتين الخاص به "
-"ككلمة السر والأسم،  يمكنك استرجاعها هنا. <em> فإذا قمت بذلك، تأكد بأن "
-"المستخدم حاضر ومستعد لتفعيل أجهزته عن طريق بيانات التحقق بخطوتين الجديدة. "
-"والا سيحظرون من الدخول إلى حسابهم."
+"إذا فقد المستخدم البيانات الخاصة بالتحقق بخطوتين يمكن إعادة ضبطها من هنا. "
+"<em> في حالة القيام بذلك رجاء التأكد من وجود المستخدم والاستعداد لضبط خاصية "
+"التحقق بخطوتين الجديدة وإلا لن يمكن النفاذ إلى الحساب."
 
 #: journalist_templates/edit_account.html:63
 msgid ""
@@ -629,10 +627,9 @@ msgid ""
 "this, make sure you are ready to set up your new device, otherwise you will "
 "be locked out of your account.</em>"
 msgstr ""
-"إذا فقدت المعلومات والبيانات المتعلّقة بالتحقق بخطوتين الخاص بك ككلمة السر "
-"والأسم،، أو  إذا اقنيت  جهاز جديد، فيمكنك اعادة ضبط هذه البيانات اهنا.<em> "
-"فإذا قمت بذلك، تأكد بأنك جاهز لتفعيل جهازك الجديد، وإلا سيتم منعك من الدخول "
-"إلى حسابك.</em>"
+"إذا فقدت بياناتك الخاصة بالتحقق بخطوتين يمكن إعادة ضبطها من هنا. <em> في "
+"حالة القيام بذلك رجاء الاستعداد لضبط خاصية التحقق بخطوتين الجديدة وإلا لن "
+"تتمكن النفاذ إلى الحساب.<em>"
 
 #: journalist_templates/edit_account.html:65
 msgid ""
