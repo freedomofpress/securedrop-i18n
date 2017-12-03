@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2017-12-03 00:47+0000\n"
-"Last-Translator: Anatoli <djanatoli@gmail.com>\n"
+"PO-Revision-Date: 2017-12-03 02:00+0000\n"
+"Last-Translator: Daniel Arauz <danarauz@gmail.com>\n"
 "Language-Team: Spanish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/es/>\n"
 "Language: es_ES\n"
@@ -139,7 +139,7 @@ msgstr "La fuente '{original_name}' ha sido renombrada a '{new_name}'"
 
 #: journalist_app/main.py:183
 msgid "No unread submissions for this source."
-msgstr "No hay sumisiones sin leer para esta fuente."
+msgstr "No hay envios sin leer para esta fuente."
 
 #: journalist_app/utils.py:45
 msgid "Account updated."
