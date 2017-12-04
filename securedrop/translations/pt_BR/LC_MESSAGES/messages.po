@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-04 11:29+0000\n"
-"Last-Translator: Bernardo Tonasse <btonasse@gmail.com>\n"
+"PO-Revision-Date: 2017-12-04 11:33+0000\n"
+"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -421,17 +421,17 @@ msgid ""
 "the first random codename is difficult to say or remember. You can generate "
 "new random codenames as many times as you like."
 msgstr ""
-"Gere um nome codinome aleatório para esta fonte. Recomendamos fazer isso se "
-"o primeiro codinome gerado for difícil de pronunciar ou de lembrar. Você "
-"pode gerar novos codinomes aleatórios quantas vezes quiser."
+"Gerar um novo codinome aleatório para esta fonte. Recomendamos que isso seja "
+"feito caso o primeiro codinome gerado seja difícil de pronunciar ou de "
+"lembrar. Você pode gerar novos codinomes aleatórios quantas vezes quiser."
 
 #: journalist_templates/col.html:13
 msgid "Change codename"
-msgstr "Mudar codinome"
+msgstr "Alterar codinome"
 
 #: journalist_templates/col.html:14
 msgid "Are you sure you want to generate a new codename?"
-msgstr "Tem certeza que quer gerar um novo codinome?"
+msgstr "Tem certeza de que deseja gerar um novo codinome?"
 
 #: journalist_templates/col.html:15 source_templates/lookup.html:72
 msgid "Cancel"
@@ -511,7 +511,7 @@ msgstr ""
 
 #: journalist_templates/col.html:104
 msgid "DELETE COLLECTION"
-msgstr "EXCLUIR COLEÇÃO"
+msgstr "APAGAR COLEÇÃO"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -519,9 +519,8 @@ msgid ""
 msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
-msgstr[0] "O arquivo seguinte será <strong>excluído permanentemente</strong>:"
-msgstr[1] ""
-"Os arquivos seguintes serão <strong>excluídos permanentemente</strong>:"
+msgstr[0] "O arquivo seguinte será <strong>apagado definitivamente</strong>:"
+msgstr[1] "Os arquivos seguintes serão <strong>apagados definitivamente</strong>:"
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
