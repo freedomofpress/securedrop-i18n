@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-04 11:22+0000\n"
-"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
+"PO-Revision-Date: 2017-12-04 11:26+0000\n"
+"Last-Translator: Bernardo Tonasse <btonasse@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -738,9 +738,9 @@ msgid ""
 "<strong>WARNING:</strong> You appear to be using Tor2Web. This <strong>does "
 "not</strong> provide anonymity. <a href=\"{url}\">Why is this dangerous?</a>"
 msgstr ""
-"<strong>ATENÇÃO:</strong> Parece que você está usando Tor2Web, o que <strong>"
-" não</strong> garante o seu anonimato. <a href=\"{url}\">Por que essa "
-"escolha é perigosa?</a>"
+"<strong>ATENÇÃO:</strong> Parece que você está usando o Tor2Web, o que "
+"<strong> não</strong> garante o seu anonimato. <a href=\"{url}\">Por que "
+"isso é perigoso?</a>"
 
 #: source_app/forms.py:14
 msgid "Field must be between 1 and {max_codename_len} characters long."
@@ -821,7 +821,6 @@ msgid "Look up a codename..."
 msgstr "Procurar um codinome..."
 
 #: source_templates/first_submission_flashed_message.html:2
-#, fuzzy
 msgid "Success!"
 msgstr "Sucesso!"
 
@@ -842,13 +841,12 @@ msgid "Welcome"
 msgstr "Boas-vindas"
 
 #: source_templates/generate.html:5
-#, fuzzy
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our journalists in response to what you submit on the next screen."
 msgstr ""
-"Use este codinome para acessar as respostas de nossos jornalistas ao "
-"material que será enviado na página seguinte."
+"Use o codinome abaixo para consultar as respostas de nossos jornalistas ao "
+"material que você enviará na página seguinte."
 
 #: source_templates/generate.html:29
 msgid ""
