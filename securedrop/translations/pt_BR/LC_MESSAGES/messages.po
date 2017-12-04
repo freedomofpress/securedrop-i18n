@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2017-12-04 11:21+0000\n"
-"Last-Translator: Bernardo Tonasse <btonasse@gmail.com>\n"
+"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -644,7 +644,6 @@ msgid "Thanks!"
 msgstr "Obrigado!"
 
 #: journalist_templates/flag.html:8
-#, fuzzy
 msgid ""
 "SecureDrop will generate a secure encryption key for this source the next "
 "time that they log in. Once the key has been generated, a reply box will "
@@ -653,8 +652,8 @@ msgid ""
 msgstr ""
 "O SecureDrop gerará uma chave criptográfica segura para esta fonte da "
 "próxima vez que ela se conectar. Quando a chave tiver sido criada, um campo "
-"de resposta aparecerá abaixo de sua coleção de documentos, através da qual "
-"você poderá escrever mensagens protegidas para esta fonte."
+"de respostas aparecerá abaixo da sua coleção de documentos. Esse campo de "
+"respostas poderá ser usado para redigir mensagens protegidas para esta fonte."
 
 #: journalist_templates/flag.html:10
 #, fuzzy
