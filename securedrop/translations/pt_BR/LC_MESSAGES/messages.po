@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-04 11:04+0000\n"
-"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
+"PO-Revision-Date: 2017-12-04 11:12+0000\n"
+"Last-Translator: Bernardo Tonasse <btonasse@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -273,8 +273,8 @@ msgid ""
 "Your phone will now be in \"scanning\" mode. When you are in this mode, scan "
 "the barcode below:"
 msgstr ""
-"A partir de agora, seu telefone estará em modo \"scan\". Escaneie o código "
-"de barras abaixo:"
+"Agora seu telefone deve estar em modo \"scan\". Escaneie o código de barras "
+"abaixo:"
 
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
@@ -600,7 +600,6 @@ msgid "Reset Two-Factor Authentication"
 msgstr "Redefinir Autenticação de Dois Fatores"
 
 #: journalist_templates/edit_account.html:61
-#, fuzzy
 msgid ""
 "If a user's two-factor authentication credentials have been lost or "
 "compromised, you can reset them here. <em>If you do this, make sure the user "
@@ -764,8 +763,7 @@ msgid ""
 "You were redirected because you are already logged in. If you want to create "
 "a new account, you should log out first."
 msgstr ""
-"Você foi redirecionado porque já está conectado. Para criar uma nova conta, "
-"é preciso encerrar a sessão."
+"Sessão já iniciada. Para criar uma nova conta, é preciso encerrar a sessão."
 
 #: source_app/main.py:111
 msgid "You must enter a message or choose a file to submit."
@@ -1052,7 +1050,6 @@ msgid "Maximum upload size: 500 MB"
 msgstr "Tamanho máximo de envio: 500 MB"
 
 #: source_templates/lookup.html:36
-#, fuzzy
 msgid "Write a message."
 msgstr "Escreva uma mensagem."
 
@@ -1257,7 +1254,6 @@ msgid "Encrypt your submission."
 msgstr "Criptografe o seu envio."
 
 #: source_templates/why-journalist-key.html:16
-#, fuzzy
 msgid ""
 "You will need to be able to identify the key (this is called the \"user ID\" "
 "or UID). Since the public key's filename is the key's fingerprint (with .asc "
@@ -1265,8 +1261,8 @@ msgid ""
 "asc</code>!)"
 msgstr ""
 "Será preciso identificar a chave (chamada \"ID do usuário\", ou \"UID\"). "
-"Como o nome do arquivo da chave pública também corresponde ao fingerprint da "
-"chave (com \".asc\" no final), basta copiar e colar esse nome (deixando de "
+"Como o nome do arquivo da chave pública também é o seu fingerprint (com a "
+"extensão \".asc\" no final), basta copiar e colar esse nome (deixando de "
 "fora a extensão <code>.asc</code>)."
 
 #: source_templates/why-journalist-key.html:17
