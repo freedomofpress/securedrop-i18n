@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2017-12-04 09:00+0000\n"
+"PO-Revision-Date: 2017-12-04 15:00+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/zh_Hant/>\n"
@@ -34,11 +34,11 @@ msgstr "密碼不正確，或者兩因子認證碼不正確。"
 
 #: journalist_app/account.py:39
 msgid "Token in two-factor authentication verified."
-msgstr "兩因子查核的認證碼已通過驗證。"
+msgstr "兩因子授權的認證碼已通過驗證。"
 
 #: journalist_app/account.py:43 journalist_app/admin.py:91
 msgid "Could not verify token in two-factor authentication."
-msgstr "雙重認證的認證碼無法確認。"
+msgstr "兩因子授權的認證碼無法確認。"
 
 #: journalist_app/admin.py:47
 msgid ""
@@ -58,11 +58,11 @@ msgstr "保存此用户到資料庫時出錯。請通知管理員。"
 
 #: journalist_app/admin.py:84
 msgid "Token in two-factor authentication accepted for user {user}."
-msgstr "用户{user}已通過雙重因子認證。"
+msgstr "用户 {user} 已通過雙重因子認證。"
 
 #: journalist_app/admin.py:118
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
-msgstr "密鑰格式不符：請只提交A-F之間的字母和0-9之間的數字。"
+msgstr "祕密格式不符：請只提交 A-F 之間的字母和 0-9 之間的數字。"
 
 #: journalist_app/admin.py:123
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
@@ -83,11 +83,11 @@ msgstr "删除了用户\"{user}\""
 
 #: journalist_app/col.py:47
 msgid "{source_name}'s collection deleted"
-msgstr "{source_name}集件已删除"
+msgstr "{source_name} 集件已删除"
 
 #: journalist_app/col.py:58
 msgid "No collections selected."
-msgstr "並未選擇任何的集合。"
+msgstr "並未選擇任何的集件。"
 
 #: journalist_app/decorators.py:16
 msgid "Only administrators can access this page."
@@ -124,11 +124,11 @@ msgstr "未選擇要刪除的資料夾。"
 
 #: journalist_app/main.py:168
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
-msgstr "來源{original_name}已重新命名為{new_name}"
+msgstr "線人 {original_name} 已重新命名為 {new_name}"
 
 #: journalist_app/main.py:183
 msgid "No unread submissions for this source."
-msgstr "此來源裡無未讀的提交。"
+msgstr "此位線人無未讀的提交。"
 
 #: journalist_app/utils.py:45
 msgid "Account updated."
@@ -141,7 +141,7 @@ msgstr "登錄失敗。"
 #: journalist_app/utils.py:84
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
-msgstr[0] "請等待至少{seconds}秒後再次登錄。"
+msgstr[0] "請等待至少 {seconds} 秒後再次登錄。"
 
 #: journalist_app/utils.py:95
 msgid "Please wait for a new two-factor token before trying again."
@@ -176,15 +176,15 @@ msgstr "密碼已更新。別忘了將它保存在你的 KeePassX 數據庫中�
 
 #: journalist_app/utils.py:261
 msgid "No unread submissions in selected collections."
-msgstr "在所選擇的收藏集合中，並無標示未讀的提交資訊。"
+msgstr "在所選擇的收藏集件中，並無標示未讀的提交資訊。"
 
 #: journalist_templates/_source_row.html:19
 msgid "{doc_num} docs"
-msgstr "文件編號{doc_num}"
+msgstr "文件編號 {doc_num}"
 
 #: journalist_templates/_source_row.html:20
 msgid "{msg_num} messages"
-msgstr "訊息編號{msg_num}"
+msgstr "訊息編號 {msg_num}"
 
 #: journalist_templates/_source_row.html:23
 msgid "{num_unread} unread"
@@ -193,13 +193,13 @@ msgstr "{num_unread} 未讀"
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
 msgid "Change Secret"
-msgstr "更改密碼"
+msgstr "更改祕密"
 
 #: journalist_templates/account_edit_hotp_secret.html:7
 #: journalist_templates/admin_add_user.html:33
 #: journalist_templates/admin_edit_hotp_secret.html:8
 msgid "HOTP Secret"
-msgstr "HOTP 密碼"
+msgstr "HOTP 祕密"
 
 #: journalist_templates/account_edit_hotp_secret.html:9
 #: journalist_templates/admin_edit_hotp_secret.html:10
@@ -219,8 +219,8 @@ msgid ""
 "added the entry for your account in the app, enter one of the 6-digit codes "
 "from the app to confirm that two factor authentication is set up correctly."
 msgstr ""
-"快完成了！ 為完成重置两因子授權查驗，請依照下面的指示設置 Google "
-"Authenticator。一旦帳戶順利加入到應用程式後，請輸入由應用程式所提供的6位代碼，以確認兩因子授權設置正確。"
+"快完成了！ 為完成重置两因子授權查驗，請依照下面的指示設置 Google Authenticator。一旦帳戶順利加入到應用程式後，"
+"請輸入由應用程式所提供的 6 位代碼，以確認兩因子授權設置正確。"
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
@@ -247,12 +247,12 @@ msgstr "您的手機進入掃描模式，此模式下，請掃描下方的條碼
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
 msgid "Can't scan the barcode? Enter the following code manually:"
-msgstr "如無法掃描條碼，請直接輸入以下文字："
+msgstr "如無法掃描條碼，請直接手動輸入以下文字："
 
 #: journalist_templates/account_new_two_factor.html:15
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid "Once you have scanned the barcode, enter the 6-digit code below:"
-msgstr "完成掃描條碼後，請在下面輸入6位數字的代碼："
+msgstr "完成掃描條碼後，請在下面輸入 6 位數字的代碼："
 
 #: journalist_templates/account_new_two_factor.html:17
 #: journalist_templates/admin_new_user_two_factor.html:20
@@ -262,7 +262,7 @@ msgstr "啟用 Yubikey (OATH-HOTP)"
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:21
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
-msgstr "設定 Yubikey 後，請在下面輸入六位數字代碼："
+msgstr "設定 Yubikey 後，請在下面輸入 6 位數字代碼："
 
 #: journalist_templates/account_new_two_factor.html:22
 #: journalist_templates/admin_new_user_two_factor.html:25
@@ -312,7 +312,7 @@ msgstr "编辑用户{username}"
 
 #: journalist_templates/admin.html:26
 msgid "Delete user {username}"
-msgstr "删除用户{username}"
+msgstr "删除用户 {username}"
 
 #: journalist_templates/admin.html:31
 msgid "never"
@@ -348,8 +348,8 @@ msgid ""
 "them enter one of the 6-digit codes from the app to confirm that two factor "
 "authentication is set up correctly."
 msgstr ""
-"即将完成！ 為增加新用户，請他們依照以下指示使用 Google Authenticator 來設置兩因子授權驗證。 "
-"一旦此帳戶記錄加入到應用程式，請輸入應用程式提供的6位數字碼，以確認兩因子授權查驗設置正確。"
+"即將完成！ 為增加新用户，請他們依照以下指示使用 Google Authenticator 來設置兩因子授權驗證。 一旦此帳戶記錄加入到應用程式，"
+"請輸入應用程式提供的 6 位數字碼，以確認兩因子授權查驗設置正確。"
 
 #: journalist_templates/base.html:24
 msgid "Logged on as"
@@ -367,8 +367,7 @@ msgstr "登出"
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
-msgstr ""
-"由<br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop\">支持"
+msgstr "由<br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop\">搭建"
 
 #: journalist_templates/base.html:54
 msgid "Powered by <em>SecureDrop {version}</em>."
@@ -391,7 +390,7 @@ msgstr "更改代號"
 
 #: journalist_templates/col.html:14
 msgid "Are you sure you want to generate a new codename?"
-msgstr "確定要生成一個新的代碼名稱嗎？"
+msgstr "確定要生成一個新的代號名稱嗎？"
 
 #: journalist_templates/col.html:15 source_templates/lookup.html:72
 msgid "Cancel"
@@ -459,7 +458,7 @@ msgid ""
 "Click below to delete this source's collection. <em>Warning: If you do this, "
 "the files seen here will be unrecoverable and the source will no longer be "
 "able to login using their previous codename.</em>"
-msgstr "點擊下方以刪除此一線人的集件。<em>警告：如果這麼做，這處可看到的檔案將不可恢復，且此位線人將無法用之前的代號名進行登錄。</em>"
+msgstr "點擊下方以刪除此一線人的集件。<em>警告：如果這麼做，這處可看到的檔案將不可恢復，且此位線人將無法用之前的代號進行登錄。</em>"
 
 #: journalist_templates/col.html:104
 msgid "DELETE COLLECTION"
@@ -471,7 +470,7 @@ msgid ""
 msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
-msgstr[0] "以下的{files}文件已被挑選，將被<strong>1永久删除</strong>2："
+msgstr[0] "以下的 {files} 文件已被挑選，將被<strong>永久删除</strong>："
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
@@ -513,11 +512,11 @@ msgstr "SecureDrop 現使用類似骰子機來自動産生密碼。"
 msgid ""
 "Your password will be changed immediately, so you will need to save it "
 "before pressing the \"Reset Password\" button."
-msgstr "你的密碼將立即改變，因此你需要在按下“重置密码”按钮此之前儲存它。"
+msgstr "你的密碼將立即改變，因此你需要在按下“重置密码”按鈕此之前儲存它。"
 
 #: journalist_templates/edit_account.html:34
 msgid "Please enter your current password and two-factor code."
-msgstr "請輸入目前使用的密碼與兩因子授權的代碼。"
+msgstr "請輸入目前使用的密碼與兩因子授權的認證碼。"
 
 #: journalist_templates/edit_account.html:40
 msgid "Current Password"
@@ -550,8 +549,8 @@ msgid ""
 "is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
-"如果用户兩因子授權的證明已丢失或遭破壞，可以在此重置它們。<em>如果這麼做，確認該用戶為現有用戶，而且在其設置上已設好新的兩因子授權驗證。否则，他們的帳"
-"戶將被鎖住。"
+"如果用户兩因子授權的證明已丢失或遭破壞，可以在此重置它們。<em>如果這麼做，確認該用戶在場，而且在其設置上已設好新的兩因子授權驗證。否则，他們的帳戶將被"
+"鎖住。"
 
 #: journalist_templates/edit_account.html:63
 msgid ""
@@ -560,8 +559,8 @@ msgid ""
 "this, make sure you are ready to set up your new device, otherwise you will "
 "be locked out of your account.</em>"
 msgstr ""
-"如果你的两因子授權證明已丢失或遭到破壞，或是你有一件新設備，可以在此重置你的證書。<em>1 "
-"如果這麼做，請確認新設備已設置妥當，否则你的帳戶將被鎖住。</em>2"
+"如果你的两因子授權證明已丢失或遭到破壞，或是你有一件新設備，可以在此重置你的證書。<em> "
+"如果這麼做，請確認新設備已設置妥當，否则你的帳戶將被鎖住。</em>"
 
 #: journalist_templates/edit_account.html:65
 msgid ""
@@ -574,11 +573,11 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:85
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
-msgstr "重置兩因子授權（應用程式）"
+msgstr "重置兩因子授權驗證（應用程式）"
 
 #: journalist_templates/edit_account.html:87
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
-msgstr "重置兩因子授權（硬體令牌）"
+msgstr "重置兩因子授權驗證（硬體令牌）"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -624,7 +623,7 @@ msgstr "未有文件被提交！"
 
 #: journalist_templates/js-strings.html:3
 msgid "filter by codename"
-msgstr "按代碼名篩選"
+msgstr "按代號篩選"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
@@ -644,7 +643,7 @@ msgstr "確認要刪除此一集件？"
 
 #: journalist_templates/js-strings.html:8
 msgid "Are you sure you want to delete the {size} selected collections?"
-msgstr "確認要刪除所挑選 {size} 大小的集合？"
+msgstr "確認要刪除所挑選 {size} 大小的集件？"
 
 #: journalist_templates/js-strings.html:9
 msgid "Are you sure you want to delete the {size} selected submissions?"
@@ -657,7 +656,7 @@ msgstr "確認要刪除這名 {username} 用戶？"
 #: journalist_templates/js-strings.html:11
 msgid ""
 "Are you sure you want to reset two-factor authentication for {username}?"
-msgstr "確認要重置 {username} 的兩因子授權？"
+msgstr "確認要重置 {username} 的兩因子授權驗證？"
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
@@ -676,12 +675,12 @@ msgid ""
 "<strong>WARNING:</strong> You appear to be using Tor2Web. This <strong>does "
 "not</strong> provide anonymity. <a href=\"{url}\">Why is this dangerous?</a>"
 msgstr ""
-"<strong> 警告：</strong> 看來你正在使用Tor2Web。 這<strong>不能</strong>提供匿名性。<a href"
+"<strong> 警告：</strong> 看來你正在使用 Tor2Web。 它<strong>不能</strong>提供匿名性。<a href"
 "=\"/tor2web-warning\">這樣為什麼有危險？</a>"
 
 #: source_app/forms.py:14
 msgid "Field must be between 1 and {max_codename_len} characters long."
-msgstr "此處欄位長度必須在 1 和 {max_codename_len} 個字符之間。"
+msgstr "此處字段長度必須在 1 和 {max_codename_len} 個字符之間。"
 
 #: source_app/forms.py:17
 msgid "Invalid input."
@@ -766,7 +765,7 @@ msgstr "感谢你發送此一訊息給我們。請稍晚再來查看回覆。"
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
-msgstr "忘記你的代碼名稱？"
+msgstr "忘記你的代號？"
 
 #: source_templates/generate.html:4
 msgid "Welcome"
@@ -798,11 +797,11 @@ msgstr "請抄下代號並妥善保管，或牢牢記住它。"
 
 #: source_templates/generate.html:44
 msgid "USE NEW CODENAME"
-msgstr "使用新的代號名"
+msgstr "使用新的代號"
 
 #: source_templates/generate.html:46
 msgid "USE EXISTING CODENAME"
-msgstr "使用已有的代號名"
+msgstr "使用已有的代號"
 
 #: source_templates/index.html:17
 msgid ""
@@ -828,7 +827,7 @@ msgstr "第一次提交文件"
 
 #: source_templates/index.html:48
 msgid "Already submitted something?"
-msgstr "已曾經提交過文件？"
+msgstr "已曾提交過文件？"
 
 #: source_templates/index.html:54
 msgid ""
@@ -867,7 +866,7 @@ msgstr "點擊 <strong>安全性設置...</strong>"
 #: source_templates/index.html:96
 msgid ""
 "Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
-msgstr "將滾動條滑動到<strong>高</strong>，然後點擊 <strong>Ok</strong>"
+msgstr "將安全條滑動到<strong>高</strong>，然後點擊 <strong>Ok</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Click here</a> to refresh the page"
@@ -875,11 +874,11 @@ msgstr "<a href=\"/\">點擊此處</a> 以刷新此頁面"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
-msgstr "輸入代號名稱"
+msgstr "輸入代號"
 
 #: source_templates/login.html:12
 msgid "Enter your codename"
-msgstr "請輸入您的代號名稱"
+msgstr "請輸入您的代號"
 
 #: source_templates/login.html:25 source_templates/lookup.html:47
 msgid "CANCEL"
@@ -895,7 +894,7 @@ msgid ""
 "Thank you for exiting your session! Please select \"New Identity\" from the "
 "green onion button in the Tor browser to clear all history of your "
 "SecureDrop usage from this device."
-msgstr "感谢！要退出此段會話，請從 Tor 瀏覽器中選擇綠色按鈕的“新身份”，以便清除此設備上所有訪問 SecureDrop 的記錄。"
+msgstr "感谢！要退出此段期間，請從 Tor 瀏覽器中選擇綠色按鈕的“新身份”，以便清除此設備上所有訪問 SecureDrop 的記錄。"
 
 #: source_templates/lookup.html:11
 msgid "Whew, it’s you! Now, the embarrassing part..."
@@ -908,15 +907,15 @@ msgid ""
 "some random blip. To err on the side of caution, we put a hold on sending "
 "all documents from that day through to our journalists."
 msgstr ""
-"在您上次訪問後，我們的伺服器經歷了一次新活動不尋常的波浪。這可能是人為，或是自動化攻擊，也可能只是一些零星的小星花。基於謹慎考量我們會標記錯誤，並扣住當天"
-"起原本要發送給記者的所有文件檔案。"
+"在您上次訪問後，我們的伺服器經歷了一次不尋常的新活動。這可能是人為，或是自動化攻擊，也可能只是一些零星的小星花。基於謹慎考量我們會標記錯誤，並扣住當天起原"
+"本要發送給記者的所有文件檔案。"
 
 #: source_templates/lookup.html:14
 msgid ""
 "Now that we know you’re really a human, though, we’ll get your previous "
 "submission into the hands of a journalist straight away. We’re sorry for the "
 "delay. Please do check back again in a week or so."
-msgstr "现在我们知道您是真人在操作，所以，我们將把您的上次提交直接交到記者手上。 我們很抱歉造成的延遲。請大約在一週後左右再次檢查。"
+msgstr "現在我们知道您是真人在操作，所以，我們將把您的上次提交直接交到記者手上。 我們很抱歉造成的延遲。請大約在一週後左右再次檢查。"
 
 #: source_templates/lookup.html:20
 msgid "Submit Materials"
@@ -1085,7 +1084,7 @@ msgid ""
 "messages and files before submission can provide an extra layer of security "
 "before your data reaches the SecureDrop server."
 msgstr ""
-"SecureDrop 會自動加密所有收到的資料。上傳前先把文件和訊息加密可提供多一層安全保護，確認資料在傳送到 SecureDrop 伺服器前的安全。"
+"SecureDrop 會自動加密所有收到的資料。上傳前先把文件和訊息加密可提供多一層安全保護，確保資料在傳送到 SecureDrop 伺服器前的安全。"
 
 #: source_templates/why-journalist-key.html:5
 msgid ""
@@ -1132,7 +1131,7 @@ msgid ""
 "asc</code>!)"
 msgstr ""
 "您需要辨認出我們的金鑰（稱為 \"user ID\" 或 UID）。公開金鑰的檔案名稱即是金鑰的指紋（加上 .asc 結尾），你可以直接複製貼上檔案名稱（"
-"不包括 <code>.asc</code>！）"
+"不要包括 <code>.asc</code>！）"
 
 #: source_templates/why-journalist-key.html:17
 msgid ""
