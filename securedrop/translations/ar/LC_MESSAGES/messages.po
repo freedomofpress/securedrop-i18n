@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2017-12-03 21:00+0000\n"
+"PO-Revision-Date: 2017-12-04 20:00+0000\n"
 "Last-Translator: ramyraoof <ramy.raoof@gmail.com>\n"
 "Language-Team: Arabic "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ar/>\n"
@@ -637,18 +637,17 @@ msgid ""
 "Authenticator or FreeOTP, choose the first option. For hardware tokens like "
 "the Yubikey, choose the second."
 msgstr ""
-"لإعادة ضبط التحقق بخطوتين مثل Google Authenticator أو FreeOTP على تطبيقات "
-"الهاتف المحمول،   اضغط على الخيار الاول. أما فيما يتعلّق بالتطبيقات الخاصة "
-"بالأجهزة أو ما يسمى بالعتاد الحاسوبي ك Yubikey،  فاضغط على الخيار الثاني."
+"اضغط على الخيار الأول لإعادة ضبط التحقق بخطوتين على تطبيقات الهاتف المحمول "
+"مثل Google Authenticator أو FreeOTP . اضغط على الخيار الثاني في حالات مفاتيح "
+"المصادقة مثل Yubikey."
 
 #: journalist_templates/edit_account.html:85
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
-msgstr "إعادة ضبط التحقق بخطوتين (تطبيق)"
+msgstr "إعادة ضبط التحقق بخطوتين - تطبيق"
 
 #: journalist_templates/edit_account.html:87
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
-msgstr ""
-"إعادة ضبط التحقق بخطوتين ( برمجيات خاصة بالأجهزة الصلبة أو العتاد الحاسوبي)"
+msgstr "إعادة ضبط التحقق بخطوتين - مفاتيح المصادقة"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -661,22 +660,22 @@ msgid ""
 "appear under their collection of documents. You can use this box to write "
 "encrypted replies to them."
 msgstr ""
-"في المرة الثانية الني سيقوم المصدر فيها بتسجيل دخوله، سيولّد  SecureDrop، "
-"ويخلق مفتاح تشفير آمن لهذا المصدر. حالما يتم إنتاج المفتاح، سوف يظهر صندوق "
-"للرد تحت مجموعة المستندات الخاصة بهم. يمكنك استخدام  مربّع الحوار أو الصندوق "
-"الحوار هذا لكتابة ردود مشفرة لهم."
+"سوف يقوم SecureDrop بتوليد مفتاح تعمية آمن خاص بالمصدر في المرة التالية "
+"لتسجيل دخول المصدر، وبعد إنشاء المفتاح سوف تظهر مساحة مخصصة للتراسل تحت "
+"مجموعة المستندات الخاصة بالمصدر. يمكنك استخدام مساحة المحادثة لتراسل آمن مع "
+"المصدر."
 
 #: journalist_templates/flag.html:10
 msgid "Continue to the list of documents for {codename}..."
-msgstr "تابع إلى قائمة المستندات ل{codename}..."
+msgstr "تابع إلى قائمة المستندات الخاصة بـ {codename}..."
 
 #: journalist_templates/index.html:4
 msgid "Sources"
-msgstr "مصادر"
+msgstr "المصادر"
 
 #: journalist_templates/index.html:11
 msgid "Download Unread"
-msgstr "تنزيل لم تتم قراءته"
+msgstr "تنزيل المحتوى الغير مقروء"
 
 #: journalist_templates/index.html:12
 msgid "Download"
@@ -684,19 +683,19 @@ msgstr "تنزيل"
 
 #: journalist_templates/index.html:13
 msgid "Star"
-msgstr "وضع علامة النجمة"
+msgstr "نجمة"
 
 #: journalist_templates/index.html:14
 msgid "Un-star"
-msgstr "الغاء علامة النجمة"
+msgstr "إلغاء علامة النجمة"
 
 #: journalist_templates/index.html:42
 msgid "No documents have been submitted!"
-msgstr "لم يتم إرسال أية مستندات!"
+msgstr "لا يوجد مستندات مرسلة!"
 
 #: journalist_templates/js-strings.html:3
 msgid "filter by codename"
-msgstr "قم بالتصفية بحسب الاسم الرمزي"
+msgstr "التصفية وفق الاسم الرمزي"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
@@ -704,36 +703,36 @@ msgstr "اختر الكل"
 
 #: journalist_templates/js-strings.html:5
 msgid "Select Unread"
-msgstr "اختر الرسائل الغير المقروءة"
+msgstr "اختر الرسائل الغير مقروءة"
 
 #: journalist_templates/js-strings.html:6
 msgid "Select None"
-msgstr "لا تختر اي شيء"
+msgstr "عدم الاختيار"
 
 #: journalist_templates/js-strings.html:7
 msgid "Are you sure you want to delete this collection?"
-msgstr "هل أنت متأكد من أنك تريد حذف هذه المجموعة؟"
+msgstr "هل أنت متأكد من حذف المجموعة المختارة؟"
 
 #: journalist_templates/js-strings.html:8
 msgid "Are you sure you want to delete the {size} selected collections?"
-msgstr "هل أنت متأكد من أنك تريد حذف {size} المجموعة المختارة؟"
+msgstr "هل أنت متأكد من حذف {size} المجموعة المختارة؟"
 
 #: journalist_templates/js-strings.html:9
 msgid "Are you sure you want to delete the {size} selected submissions?"
-msgstr "هل أنت متأكد من أنك تريد حذف المرسلات المختارة و التي حجمها  {size} ؟"
+msgstr "هل أنت متأكد من حذف المرسلات المختارة و التي حجمها {size}؟"
 
 #: journalist_templates/js-strings.html:10
 msgid "Are you sure you want to delete the user {username}?"
-msgstr "هل أنت متأكد من أنك تريد حذف المستخدم {username}؟"
+msgstr "هل أنت متأكد من حذف المستخدم {username}؟"
 
 #: journalist_templates/js-strings.html:11
 msgid ""
 "Are you sure you want to reset two-factor authentication for {username}?"
-msgstr "هل أنت متأكد من أنك تريد اعادة ضبط التحقق بخطوتين ل {username}؟"
+msgstr "هل أنت متأكد من إعادة ضبط التحقق بخطوتين الخاص بـ {username}؟"
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
-msgstr "قم بتسجيل الدخول للوصول إلى واجهة الصحفي"
+msgstr "قم بتسجيل الدخول للنفاذ إلى واجهة الصحفي"
 
 #: journalist_templates/login.html:9
 msgid "Password"
@@ -748,12 +747,13 @@ msgid ""
 "<strong>WARNING:</strong> You appear to be using Tor2Web. This <strong>does "
 "not</strong> provide anonymity. <a href=\"{url}\">Why is this dangerous?</a>"
 msgstr ""
-"<strong>تنبيه:</strong> يبدو أنك تستخدم Tor2Web. هذا <strong>لا</strong> "
-"يخفي هوية المستخدم. <a href=\"{url}\">  ما الخطر في ذلك؟</a>"
+"<strong>تنبيه:</strong> يبدو أنك تستخدم خدمة Tor2Web. يجب <strong> الانتباه "
+"أن الخدمة لا توفر مجهولية للمستخدم</strong>.\n"
+"<a href=\"{url}\">  ما الخطر في ذلك؟</a>"
 
 #: source_app/forms.py:14
 msgid "Field must be between 1 and {max_codename_len} characters long."
-msgstr "يجب أن يتراوح طول الحقل بين حرف واحد  و {max_codename_len} حروف."
+msgstr "يجب أن يتراوح طول الحقل بين حرف واحد  و {max_codename_len} حرف."
 
 #: source_app/forms.py:17
 msgid "Invalid input."
@@ -764,24 +764,24 @@ msgid ""
 "You were redirected because you are already logged in. If you want to create "
 "a new account, you should log out first."
 msgstr ""
-"لقد تم تحويلك لأنك قمت بتسجيل الدخول من قبل. إذا كنت تريد انشاء حساب جديد، "
-"يجب عليك أولا أن تخرج من حسابك."
+"تم إعادة توجيهك لحسابك بسبب قيامك بتسجيل الدخول من قبل. يتوجب عليك أولا "
+"تسجيل الخروج لإنشاء حساب جديد."
 
 #: source_app/main.py:111
 msgid "You must enter a message or choose a file to submit."
-msgstr "يجب عليك كتابة رسالة أو اختيار ملف لإرساله."
+msgstr "يجب كتابة رسالة أو اختيار ملف لإرساله."
 
 #: source_app/main.py:144
 msgid "Thanks! We received your message."
-msgstr "شكرا! لقد استلمنا رسالتك."
+msgstr "شكرا! لقد استلمنا الرسالة."
 
 #: source_app/main.py:146
 msgid "Thanks! We received your document."
-msgstr "شكرا! لقد استلمنا مستندك."
+msgstr "شكرا! لقد استلمنا المستند."
 
 #: source_app/main.py:148
 msgid "Thanks! We received your message and document."
-msgstr "شكرا! لقد استلمنا مستندك ورسالتك."
+msgstr "شكرا! لقد استلمنا الرسالة والمستند."
 
 #: source_app/main.py:184
 msgid "Reply deleted"
@@ -793,16 +793,16 @@ msgstr "تم حذف جميع الردود"
 
 #: source_app/main.py:215
 msgid "Sorry, that is not a recognized codename."
-msgstr "عذراً، هذا الاسم الرمزي غير معترف به."
+msgstr "عذراً، لا يمكن التعرف على الاسم الرمزي."
 
 #: source_templates/base.html:6 source_templates/index.html:4
 msgid "Protecting Journalists and Sources"
-msgstr "حماية الصحفيين و المصادر"
+msgstr "حماية الصحفيين والمصادر"
 
 #: source_templates/base.html:24 source_templates/base.html:43
 #: source_templates/index.html:32 source_templates/index.html:84
 msgid "Powered by"
-msgstr "مشغل بواسطة"
+msgstr "مدعم بواسطة"
 
 #: source_templates/base.html:33
 msgid "LOG OUT"
@@ -813,7 +813,8 @@ msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
 msgstr ""
-"كجميع البرمجيات، قد  تشوبSecureDrop على ثغرات أمنية. استخدمها تحت مسؤوليتك."
+"قد يتضمن SecureDrop ثغرات أمنية شأنه شأن كل البرمجيات. يتعين الاستخدام على "
+"مسؤوليتك."
 
 #: source_templates/error.html:3
 msgid "Server error"
@@ -823,21 +824,21 @@ msgstr "خطأ في الخادم"
 msgid ""
 "Sorry, the website encountered an error and was unable to complete your "
 "request."
-msgstr "نأسف، لقد واجه الموقع الإلكتروني خطأ ولم يتمكن من إكمال طلبك."
+msgstr "نأسف لوقوع خطأ في الموقع وتعذر إكمال طلبك."
 
 #: source_templates/error.html:7 source_templates/notfound.html:7
 msgid "Look up a codename..."
-msgstr "ابحث عن اسم رمزي..."
+msgstr "البحث عن اسم رمزي..."
 
 #: source_templates/first_submission_flashed_message.html:2
 msgid "Success!"
-msgstr "نجاح!"
+msgstr "تم بنجاح!"
 
 #: source_templates/first_submission_flashed_message.html:3
 msgid ""
 "Thank you for sending this information to us. Please check back later for "
 "replies."
-msgstr "شكرا لقيامك بإرسال هذه المعلومات لنا. الرجاء التحقق من ردنا لاحقا."
+msgstr "شكرا لقيامك بإرسال المعلومات لنا. رجاء التحقق من ردنا في وقت لاحق."
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
