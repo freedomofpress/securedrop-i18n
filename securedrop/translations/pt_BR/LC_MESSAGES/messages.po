@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-04 11:18+0000\n"
-"Last-Translator: Loic Dachary <loic@dachary.org>\n"
+"PO-Revision-Date: 2017-12-04 11:21+0000\n"
+"Last-Translator: Bernardo Tonasse <btonasse@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -622,22 +622,20 @@ msgstr ""
 "Caso contrário, não será mais possível acessar a sua conta.</em>"
 
 #: journalist_templates/edit_account.html:65
-#, fuzzy
 msgid ""
 "To reset two-factor authentication for mobile apps such as Google "
 "Authenticator or FreeOTP, choose the first option. For hardware tokens like "
 "the Yubikey, choose the second."
 msgstr ""
 "Para redefinir a autenticação de dois fatores para aplicativos móveis, como "
-"Google Authenticator ou FreeOTP, selecione a primeira opção. Para tokens "
-"como a Yubikey, selecione a segunda."
+"Google Authenticator ou FreeOTP, selecione a primeira opção. Para tokens de "
+"segurança como o Yubikey, selecione a segunda."
 
 #: journalist_templates/edit_account.html:85
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
 msgstr "REDEFINIR A AUTENTICAÇÃO DE DOIS FATORES (APP)"
 
 #: journalist_templates/edit_account.html:87
-#, fuzzy
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
 msgstr "REDEFINIR A AUTENTICAÇÃO DE DOIS FATORES (TOKEN)"
 
