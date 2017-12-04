@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2017-12-04 11:22+0000\n"
-"Last-Translator: Bernardo Tonasse <btonasse@gmail.com>\n"
+"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -734,14 +734,13 @@ msgid "LOG IN"
 msgstr "FAZER LOG IN"
 
 #: source_app/__init__.py:73
-#, fuzzy
 msgid ""
 "<strong>WARNING:</strong> You appear to be using Tor2Web. This <strong>does "
 "not</strong> provide anonymity. <a href=\"{url}\">Why is this dangerous?</a>"
 msgstr ""
-"<strong>ATENÇÃO:</strong> você parece estar usando Tor2Web. Isso<strong> "
-"não</strong> lhe confere anonimato. <a href=\"{url}\">Por que isso é "
-"perigoso?</a>"
+"<strong>ATENÇÃO:</strong> Parece que você está usando Tor2Web, o que <strong>"
+" não</strong> garante o seu anonimato. <a href=\"{url}\">Por que essa "
+"escolha é perigosa?</a>"
 
 #: source_app/forms.py:14
 msgid "Field must be between 1 and {max_codename_len} characters long."
