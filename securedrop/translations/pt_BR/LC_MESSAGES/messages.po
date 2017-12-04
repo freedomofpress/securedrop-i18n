@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-04 11:33+0000\n"
-"Last-Translator: Bernardo Tonasse <btonasse@gmail.com>\n"
+"PO-Revision-Date: 2017-12-04 11:35+0000\n"
+"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -564,8 +564,8 @@ msgid ""
 "Your password will be changed immediately, so you will need to save it "
 "before pressing the \"Reset Password\" button."
 msgstr ""
-"Sua senha será modificada imediatamente. Salve sua senha antes de clicar em "
-"\"Redefinir Senha\"."
+"Sua senha será alterada imediatamente. Salve sua senha antes de clicar em \""
+"Redefinir Senha\"."
 
 #: journalist_templates/edit_account.html:34
 msgid "Please enter your current password and two-factor code."
@@ -640,7 +640,7 @@ msgstr "REDEFINIR A AUTENTICAÇÃO DE DOIS FATORES (TOKEN)"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
-msgstr "Obrigado!"
+msgstr "Agradecemos!"
 
 #: journalist_templates/flag.html:8
 msgid ""
@@ -700,19 +700,19 @@ msgstr "Não Selecionar Nada"
 
 #: journalist_templates/js-strings.html:7
 msgid "Are you sure you want to delete this collection?"
-msgstr "Tem certeza que quer excluir esta coleção?"
+msgstr "Tem certeza de que deseja apagar esta coleção?"
 
 #: journalist_templates/js-strings.html:8
 msgid "Are you sure you want to delete the {size} selected collections?"
-msgstr "Tem certeza que quer excluir as {size} coleções selecionadas?"
+msgstr "Tem certeza de que deseja apagar as {size} coleções selecionadas?"
 
 #: journalist_templates/js-strings.html:9
 msgid "Are you sure you want to delete the {size} selected submissions?"
-msgstr "Você tem certeza de que quer apagar os {size} itens selecionados?"
+msgstr "Você tem certeza de que deseja apagar os {size} itens selecionados?"
 
 #: journalist_templates/js-strings.html:10
 msgid "Are you sure you want to delete the user {username}?"
-msgstr "Tem certeza que quer excluir o usuário {username}?"
+msgstr "Você tem certeza de que deseja apagar o nome de usuário {username}?"
 
 #: journalist_templates/js-strings.html:11
 msgid ""
