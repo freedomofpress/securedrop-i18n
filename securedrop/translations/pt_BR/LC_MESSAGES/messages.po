@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2017-12-04 11:02+0000\n"
-"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
+"Last-Translator: Bernardo Tonasse <btonasse@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -123,7 +123,7 @@ msgstr "Não é possível enviar uma resposta em branco."
 
 #: journalist_app/main.py:118
 msgid "Thanks. Your reply has been stored."
-msgstr "Agradecemos pela contribuição. Sua resposta foi registrada"
+msgstr "Agradecemos pela contribuição. Sua resposta foi registrada."
 
 #: journalist_app/main.py:139
 msgid "No collections selected for download."
