@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2017-11-28 22:54+0000\n"
+"PO-Revision-Date: 2017-12-04 10:36+0000\n"
 "Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
-"Language-Team: Dutch <https://weblate.securedrop.club/projects/securedrop/"
-"securedrop/nl/>\n"
+"Language-Team: Dutch "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -200,14 +200,12 @@ msgid "No unread submissions in selected collections."
 msgstr "Geen ongelezen inzendingen in de geselecteerde collecties."
 
 #: journalist_templates/_source_row.html:19
-#, fuzzy
-#| msgid "docs {doc_num}"
 msgid "{doc_num} docs"
-msgstr "documenten {doc_num}"
+msgstr "{doc_num} documenten"
 
 #: journalist_templates/_source_row.html:20
 msgid "{msg_num} messages"
-msgstr ""
+msgstr "{msg_num} berichten"
 
 #: journalist_templates/_source_row.html:23
 msgid "{num_unread} unread"
