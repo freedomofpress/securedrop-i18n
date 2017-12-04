@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2017-12-04 07:05+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2017-12-04 09:00+0000\n"
+"Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -899,7 +899,7 @@ msgstr "感谢！要退出此段會話，請從 Tor 瀏覽器中選擇綠色按�
 
 #: source_templates/lookup.html:11
 msgid "Whew, it’s you! Now, the embarrassing part..."
-msgstr "哎呀，是您！ 现在是尴尬的部分……"
+msgstr "哎呀，是您！ 现在遇上尴尬的狀況..."
 
 #: source_templates/lookup.html:12
 msgid ""
@@ -908,19 +908,19 @@ msgid ""
 "some random blip. To err on the side of caution, we put a hold on sending "
 "all documents from that day through to our journalists."
 msgstr ""
-"在您上次訪問後，我們的伺服器經歷了一次不尋常的新活動大浪。它可能是人為導致，或是自動化攻擊，也可能只是一些隨機的小星花。基於謹慎考量我們會標記錯誤，並扣住"
-"當天起原本要發送給記者的所有文件檔案。"
+"在您上次訪問後，我們的伺服器經歷了一次新活動不尋常的波浪。這可能是人為，或是自動化攻擊，也可能只是一些零星的小星花。基於謹慎考量我們會標記錯誤，並扣住當天"
+"起原本要發送給記者的所有文件檔案。"
 
 #: source_templates/lookup.html:14
 msgid ""
 "Now that we know you’re really a human, though, we’ll get your previous "
 "submission into the hands of a journalist straight away. We’re sorry for the "
 "delay. Please do check back again in a week or so."
-msgstr "现在我们知道您是真人在操作，所以，我们將把您的上次提交直接放入到記者手上。 我們很抱歉造成的延遲。請大約在一週後左右再次檢查。"
+msgstr "现在我们知道您是真人在操作，所以，我们將把您的上次提交直接交到記者手上。 我們很抱歉造成的延遲。請大約在一週後左右再次檢查。"
 
 #: source_templates/lookup.html:20
 msgid "Submit Materials"
-msgstr "提送材料"
+msgstr "提交材料"
 
 #: source_templates/lookup.html:21
 msgid ""
@@ -929,7 +929,7 @@ msgid ""
 "before submission. Files are encrypted as they are received by SecureDrop."
 msgstr ""
 "如果你熟悉 GPG，可以在提交之前選擇使用我們的<a href=\"{url}\" class=\"text-link\">公鑰</a> 來加密。透過 "
-"SecureDrop 收到文檔都會經過加密。"
+"SecureDrop 收到的文檔都會經過加密。"
 
 #: source_templates/lookup.html:22
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
@@ -958,8 +958,8 @@ msgid ""
 "with them. This also lets us know that you are aware of our reply. You can "
 "respond by submitting a new message above."
 msgstr ""
-"您已经收到一則回覆。為保護您的身份，防止某人知道您的代號，請您在讀完回覆後將之全部刪除。這也讓我們知道您已收到我了我們的回覆。您可以在上面發送一則新的回應"
-"訊息。"
+"您已经收到一則回覆。為保護您的身份，防止某人知道您的代號，請您在讀完回覆後將之全部刪除。這也讓我們知道您已收到了我們的回覆。您可以在上面發送一則新的回應訊"
+"息。"
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
@@ -1029,7 +1029,7 @@ msgid ""
 "Tor Hidden Services (.onion sites) without installing Tor. It was designed "
 "to facilitate anonymous publishing."
 msgstr ""
-"<a href=\"tor2web.org\">Tor2Web</a> 是代理服務，以便不用安装 Tor 就可以瀏覽 Tor 隱藏服務（ .onion "
+"<a href=\"tor2web.org\">Tor2Web</a> 是代理服務，以不用安装 Tor 就可瀏覽 Tor 隱藏服務（ .onion "
 "網站）。它是設計用來促進匿名發表。"
 
 #: source_templates/tor2web-warning.html:5
@@ -1040,9 +1040,8 @@ msgid ""
 "Tor2Web sites typically do not use HTTPS, it is possible that your "
 "connection could be MITM'ed by a capable adversary."
 msgstr ""
-"Tor2Web 僅保護發表者，不保護讀者。如果您用 Tor2Web 上傳文件檔案給我們，您 <strong>不是匿名</strong> ，且可以被您的 "
-"ISP 或者 Tor2Web 代理的操作者查出您的身份。 另外，因为 Tor2Web 一般不使用 "
-"HTTPS，所以網路連線可能被有能力的對手進行中間人攻擊。"
+"Tor2Web 僅保護發表者，不保護讀者。如果您用 Tor2Web 上傳文件檔案給我們，您 <strong>不是匿名</strong> ，則您的 ISP "
+"或 Tor2Web 代理的操作者可以查出您的身份。 另外，因 Tor2Web 一般不使用 HTTPS，所以網路連線可能被有能力的對手進行中間人攻擊。"
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
@@ -1060,7 +1059,7 @@ msgstr "您應使用 Tor 瀏覽器"
 #: source_templates/use-tor-browser.html:4
 msgid ""
 "If you are not using Tor Browser, you <strong>may not be anonymous</strong>."
-msgstr "如果您不使用 Tor 瀏覽器，<strong>也許無法匿名</strong>。"
+msgstr "如果您不使用 Tor 瀏覽器，<strong>也許無法保持匿名</strong>。"
 
 #: source_templates/use-tor-browser.html:5
 msgid ""
@@ -1098,7 +1097,7 @@ msgstr "如果您熟悉 GPG 加密軟體，您可以在上傳文件前先自行�
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. The public key is a text file "
 "with the extension <code>.asc</code>"
-msgstr "<a href=\"{url}\">下載</a>公鑰。公鑰是一類文字類型檔案，其副檔名為 <code>.asc</code>"
+msgstr "<a href=\"{url}\">下載</a>公鑰。公鑰是一種文字類型檔案，其副檔名為 <code>.asc</code>"
 
 #: source_templates/why-journalist-key.html:8
 msgid "Import it into your GPG keyring."
