@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2017-12-04 11:36+0000\n"
-"Last-Translator: Bernardo Tonasse <btonasse@gmail.com>\n"
+"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -744,7 +744,7 @@ msgstr ""
 
 #: source_app/forms.py:14
 msgid "Field must be between 1 and {max_codename_len} characters long."
-msgstr "Este campo deve ter de 1 a {max_codename_len} caracteres."
+msgstr "Este campo deve conter entre 1 a {max_codename_len} caracteres."
 
 #: source_app/forms.py:17
 msgid "Invalid input."
