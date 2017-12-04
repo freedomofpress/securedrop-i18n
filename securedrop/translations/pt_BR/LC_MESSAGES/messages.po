@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-04 11:01+0000\n"
-"Last-Translator: Bernardo Tonasse <btonasse@gmail.com>\n"
+"PO-Revision-Date: 2017-12-04 11:02+0000\n"
+"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -36,9 +36,8 @@ msgid "Token in two-factor authentication verified."
 msgstr "Código de autenticação de dois fatores verificado."
 
 #: journalist_app/account.py:43 journalist_app/admin.py:91
-#, fuzzy
 msgid "Could not verify token in two-factor authentication."
-msgstr "O dispositivo de autenticação de dois fatores não pôde ser verificado."
+msgstr "Não foi possível verificar o código de autenticação de dois fatores."
 
 #: journalist_app/admin.py:47
 msgid ""
