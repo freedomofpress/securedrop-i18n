@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-04 11:02+0000\n"
-"Last-Translator: Bernardo Tonasse <btonasse@gmail.com>\n"
+"PO-Revision-Date: 2017-12-04 11:04+0000\n"
+"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -160,11 +160,10 @@ msgstr[1] ""
 "novamente."
 
 #: journalist_app/utils.py:95
-#, fuzzy
 msgid "Please wait for a new two-factor token before trying again."
 msgstr ""
-"Favor aguardar um novo token de autenticação de dois fatores antes de tentar "
-"novamente."
+"Por favor, aguarde um novo código de autenticação de dois fatores antes de "
+"tentar novamente."
 
 #: journalist_app/utils.py:140
 msgid "Submission deleted."
