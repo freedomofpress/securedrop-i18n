@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-04 11:21+0000\n"
-"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
+"PO-Revision-Date: 2017-12-04 11:22+0000\n"
+"Last-Translator: Bernardo Tonasse <btonasse@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -656,9 +656,8 @@ msgstr ""
 "respostas poderá ser usado para redigir mensagens protegidas para esta fonte."
 
 #: journalist_templates/flag.html:10
-#, fuzzy
 msgid "Continue to the list of documents for {codename}..."
-msgstr "Continuar para a lista de documentos de {codename}..."
+msgstr "Acessar a lista de documentos de {codename}..."
 
 #: journalist_templates/index.html:4
 msgid "Sources"
