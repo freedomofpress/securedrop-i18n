@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2017-12-05 17:00+0000\n"
+"PO-Revision-Date: 2017-12-05 20:00+0000\n"
 "Last-Translator: ramyraoof <ramy.raoof@gmail.com>\n"
 "Language-Team: Arabic "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ar/>\n"
@@ -661,9 +661,8 @@ msgid ""
 "encrypted replies to them."
 msgstr ""
 "سوف يقوم SecureDrop بتوليد مفتاح تعمية آمن خاص بالمصدر في المرة التالية "
-"لتسجيل دخول المصدر، وبعد إنشاء المفتاح سوف تظهر مساحة مخصصة للتراسل تحت "
-"مجموعة المستندات الخاصة بالمصدر. يمكنك استخدام مساحة المحادثة لتراسل آمن مع "
-"المصدر."
+"لتسجيل دخول الشخص، وبعد إنشاء المفتاح سوف تظهر مساحة مخصصة للتراسل أسفل "
+"مجموعة المستندات الخاصة بالمصدر. يمكن استخدام مساحة المحادثة للتراسل آمن."
 
 #: journalist_templates/flag.html:10
 msgid "Continue to the list of documents for {codename}..."
@@ -868,15 +867,14 @@ msgstr ""
 "رجاء الانتباه أننا لا نستخدم أي من وسائل التتبع التقليدية لمستخدمي منصتنا "
 "<strong>SecureDrop</strong> وبالتالي استخدام الاسم الرمزي في الزيارات "
 "التالية هي الطريقة الوحيدة التي يمكننا من خلالها التواصل سويا في حال وجود "
-"أسئلة أو رغبة في مشاركة مزيد من الملفات. ولا يوجد طريقة لاسترجاع أو إعادة "
+"أسئلة أو رغبة في مشاركة مزيد من المستندات. ولا يوجد طريقة لاسترجاع أو إعادة "
 "ضبط الاسم الرمزي في حال فقدانه."
 
 #: source_templates/generate.html:36
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
-msgstr ""
-"من فضلك، ما  سجّل هذا الإسم الرمز واحفظه في مكان آمن، أو احفظه عن ظهر قلب."
+msgstr "رجاء تدوين الاسم الرمزي والاحتفاظ به في مكان آمن، أو تذكر الاسم جيدا."
 
 #: source_templates/generate.html:44
 msgid "USE NEW CODENAME"
@@ -884,7 +882,7 @@ msgstr "استخدم اسم رمزي جديد"
 
 #: source_templates/generate.html:46
 msgid "USE EXISTING CODENAME"
-msgstr "استخدم اسم رمز موجود"
+msgstr "استخدم اسم رمزي موجود"
 
 #: source_templates/index.html:17
 msgid ""
@@ -892,9 +890,9 @@ msgid ""
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
 "high</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>نوصي بوضع برفع مستوى وشريط الأمان إلى أعلى مستوى  لحماية مجهوليتك أو "
-"خصوصيتك: </strong> <a id=\"disable-js\" href=\"\">تعلم كيفية وضعه للأعلى</"
-"a>أو تجاهل هذا التحذير للمتابعة."
+"<strong>نوصي برفع مستوى الأمن إلى الوضع الأقصى بتحريك المؤشر إلى الأعلى  "
+"لحماية مجهوليتك </strong> <a id=\"disable-js\" href=\"\">تعلم كيفية ضبطه إلى "
+"الوضع الأقصى</a>أو تجاهل هذا التحذير للمتابعة."
 
 #: source_templates/index.html:18
 msgid ""
@@ -902,13 +900,13 @@ msgid ""
 "\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</a>, or "
 "ignore this warning to continue."
 msgstr ""
-"<strong>نحن نوصي بإستعمال Tor Browser للوصول لخدمة SecureDrop:</strong> <a id"
-"=\"recommend-tor\" href=\"{tor_browser_url}\">تعلم كيفية تنصيبه</a>، أو "
-"تجاهل هذا التحذير للمتابعة."
+"<strong>نحن نوصي باستخدام  متصفح تور  للنفاذ إلى المنصة:</strong>\n"
+"<a id=\"recommend-tor\" href=\"{tor_browser_url}\"> تعليم كيف</a> أو تجاهل "
+"هذا التحذير للمتابعة."
 
 #: source_templates/index.html:41
 msgid "Submit documents for the first time"
-msgstr "إرسال وثائق لأول مرة"
+msgstr "إرسال مستندات للمرة الأولى"
 
 #: source_templates/index.html:48
 msgid "Already submitted something?"
@@ -917,18 +915,18 @@ msgstr "هل سبق و أرسلت شيئا؟"
 #: source_templates/index.html:54
 msgid ""
 "If this is your first time submitting documents to journalists, start here."
-msgstr "إذا كانت هذه هي المرة الأولى التي ترسل فيها وثائق لصحفيين، ابدأ هنا."
+msgstr "ابدأ هنا في حال كانت المرة الأولى التي ترسل فيها مستندات لصحفيين."
 
 #: source_templates/index.html:58
 msgid ""
 "If you have already submitted documents in the past, log in here to check "
 "for responses."
 msgstr ""
-"إذا كنت قد  سبق وأرسلت مستندات ، قم بتسجيل الدخول هنا  لمعرفة إذا وصلتك ردود."
+"قم بتسجيل الدخول هنا  لتفقد وصول ردود إذا قمت بإرسال مستندات في وقت سابق."
 
 #: source_templates/index.html:65
 msgid "SUBMIT DOCUMENTS"
-msgstr "ارسال وثائق"
+msgstr "أرسل مستندات"
 
 #: source_templates/index.html:73
 msgid "CHECK FOR A RESPONSE"
@@ -939,15 +937,13 @@ msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
 "High in 4 easy steps!"
 msgstr ""
-"يبدو أنك تستخدم متصفح تور Tor. يمكنك  رفع  سلّم الحماية  Security Slider شريط "
-"تمرير الحماية إلى الأعلى في 4 خطوات سهلة!"
+"يبدو أنك تستخدم متصفح تور. يمكنك ضبط مؤشر الأمن إلى الحد الأقصى في أربع "
+"خطوات سهلة!"
 
 #: source_templates/index.html:94
 msgid ""
 "Click the <img src=\"{icon}\" alt=\"Tor icon\"> Tor icon in the toolbar above"
-msgstr ""
-"اضغط على <img src=\"{icon}\" alt=\"Tor icon\"> Tor ايقونة Tor في شريط "
-"الأدوات أعلاه"
+msgstr "أضغط على <img src=\"{icon}\" alt=\"أيقونة تور\"> في شريط اﻷدوات أعلاه"
 
 #: source_templates/index.html:95
 msgid "Click <strong>Security Settings...</strong>"
@@ -956,8 +952,7 @@ msgstr "انقر على <strong>إعدادات الحماية...</strong>"
 #: source_templates/index.html:96
 msgid ""
 "Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
-msgstr ""
-"أدر شريط التمرير إلى <strong>عالي</strong>، ثم انقر على <strong>Ok</strong>"
+msgstr "حرك الشريط إلى <strong>عالي</strong>، ثم انقر على <strong>Ok</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Click here</a> to refresh the page"
@@ -986,12 +981,12 @@ msgid ""
 "green onion button in the Tor browser to clear all history of your "
 "SecureDrop usage from this device."
 msgstr ""
-"شكرا لخروجك من الجلسة! الرجاء اختر \"هوية جديدة\" من خلال الزر الاخضر في "
-"متصفح تور لحذف سجل استخدام SecureDrop من الجهاز."
+"شكرا للخروج من الجلسة. رجاء اختيار \"هوية جديدة\" من خلال الزر الأخضر في "
+"متصفح تور لمحو سجل استخدامك لـ SecureDrop من هذا الجهاز."
 
 #: source_templates/lookup.html:11
 msgid "Whew, it’s you! Now, the embarrassing part..."
-msgstr "يا للعجب، هذا أنت! والآن الجزء المربك..."
+msgstr "يا للعجب.. هذا أنت! والآن الجزء المحرج..."
 
 #: source_templates/lookup.html:12
 msgid ""
@@ -1000,9 +995,9 @@ msgid ""
 "some random blip. To err on the side of caution, we put a hold on sending "
 "all documents from that day through to our journalists."
 msgstr ""
-"شهدت خوادمنا موجة غير عادية من النشاط الجديد، عند زيارتك الأخيرة. يمكن أن "
-"يكون هذا نشاط بشري، هجوم آلي، أو مجرد علامة ضوئية.  من باب الحذر، فقد علّ"
-"قنا  منذ ذلك اليوم، عملية ارسال اي مستند إلى صحافينا."
+"عندما قمت بزيارتنا آخر مرة شهدت خوادمنا ارتفاع حاد في مستوى النشاط. من "
+"الوارد أن يكون نشاط بشري أو هجوم مميكن أو مجرد خطأ ما. و من باب الحذر، قررنا "
+"منذ ذلك الحين تعليق خاصية إرسال أي مستندات إلى فريقنا الصحفي."
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1010,12 +1005,12 @@ msgid ""
 "submission into the hands of a journalist straight away. We’re sorry for the "
 "delay. Please do check back again in a week or so."
 msgstr ""
-"الآن  وقد تاكدنا بأنك إنسان، سوف نوجّه فوراً رسالتك السابقة لصحفي على الفور. "
-"نأسف على التاخير. يرجى التحقق مرة أخرى في غضون أسبوع أو نحو ذلك."
+"الآن وقد تبين لنا أنك إنسان حقيقي سوف نقوم على الفور بتوجيه رسالتك السابقة "
+"لفريقنا الصحفي. نأسف على التأخير. برجاء التحقق مرة أخرى في غضون أسبوع."
 
 #: source_templates/lookup.html:20
 msgid "Submit Materials"
-msgstr "ارسال المواد أو المستندات"
+msgstr "إرسال المادة"
 
 #: source_templates/lookup.html:21
 msgid ""
@@ -1023,21 +1018,21 @@ msgid ""
 "and messages with our <a href=\"{url}\" class=\"text-link\">public key</a> "
 "before submission. Files are encrypted as they are received by SecureDrop."
 msgstr ""
-"إذا كنت على دراية بGPG، يمكنك إذا تشفير الملفات والرسائل الخاصة بك  بواسطة<a "
-"href=\"{url}\" class=\"text-link\">مفتاحنا العام</a> قبل ارسالها. يتم تشفير "
-"الملفات كما يتم استلامها من قبل سكوريدروب SecureDrop."
+"إذا كنت على دراية بـGPG يمكنك (على نحو اختياري) تعمية الملفات والرسائل "
+"بواسطة استخدام <a href=\"{url}\" class=\"text-link\">مفتاحنا</a> قبل "
+"الإرسال. الملفات المرسلة عبر SecureDrop يتم تعميتها أثناء تمريرها واستقبالها."
 
 #: source_templates/lookup.html:22
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
-msgstr "<a href=\"{url}\" class=\"text-link\"> لمعرفة المزيد</a>."
+msgstr "<a href=\"{url}\" class=\"text-link\">لمعرفة المزيد</a>."
 
 #: source_templates/lookup.html:24
 msgid "You can send a file, a message, or both."
-msgstr "يمكنك ارسال ملف او رسالة او كلاهما."
+msgstr "يمكنك إرسال ملف أو رسالة، أو كلاهما."
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
-msgstr "الحد الأقصى للتحميل هو: 500 ميجابايت"
+msgstr "الحد الأقصى لمساحة التحميل: 500 ميجابايت"
 
 #: source_templates/lookup.html:36
 msgid "Write a message."
@@ -1045,7 +1040,7 @@ msgstr "اكتب رسالة."
 
 #: source_templates/lookup.html:53
 msgid "Read Replies"
-msgstr "ردود"
+msgstr "قراءة الردود"
 
 #: source_templates/lookup.html:58
 msgid ""
