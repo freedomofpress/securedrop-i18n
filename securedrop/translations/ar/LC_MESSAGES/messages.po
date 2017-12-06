@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2017-12-05 20:00+0000\n"
+"PO-Revision-Date: 2017-12-06 11:19+0000\n"
 "Last-Translator: ramyraoof <ramy.raoof@gmail.com>\n"
 "Language-Team: Arabic "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ar/>\n"
@@ -422,7 +422,7 @@ msgstr "مدعم بواسطة <em>SecureDrop {version} </em>."
 
 #: journalist_templates/col.html:10
 msgid "All Sources"
-msgstr "جميع المصادر"
+msgstr "كُلّ المصادر"
 
 #: journalist_templates/col.html:13
 msgid ""
@@ -788,7 +788,7 @@ msgstr "تم حذف الرد"
 
 #: source_app/main.py:201
 msgid "All replies have been deleted"
-msgstr "تم حذف جميع الردود"
+msgstr "تم حذف كُلّ الردود"
 
 #: source_app/main.py:215
 msgid "Sorry, that is not a recognized codename."
@@ -1049,13 +1049,14 @@ msgid ""
 "with them. This also lets us know that you are aware of our reply. You can "
 "respond by submitting a new message above."
 msgstr ""
-"لقد استلمت ردا. لحماية هويتك في حالة قام  أحد باكتشاف  اسمك الرمزي،  من فضلك "
-"احذف جميع الردود عند الانتهاء منها. بهذا الشكل، سنعرف بدورنا، أنك على علم "
-"أننا قمنا بالاجابة عليك.يمكنك الرد من خلال توجيه رسالة أعلاه."
+"لقد تلقيت رسالة. لدواعي الحفاظ على هويتك ننصح بحذف كُلّ الردود عند الانتهاء "
+"منها من أجل حماية هويتك في حال قيام  أحد باكتشاف اسمك الرمزي. وبطبيعة الحال "
+"إذا قمت بحذف الردود سنعلم أنك على دراية بالمراسلات. يمكنك الرد من خلال كتابة "
+"رسالة أعلاه."
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
-msgstr "هل تود حذف هذا الرد؟"
+msgstr "حذف هذا الرد؟"
 
 #: source_templates/lookup.html:73
 msgid "DELETE"
@@ -1063,15 +1064,15 @@ msgstr "حذف"
 
 #: source_templates/lookup.html:82
 msgid "DELETE ALL REPLIES"
-msgstr "حذف جميع الردود"
+msgstr "حذف كُلّ الردود"
 
 #: source_templates/lookup.html:85
 msgid "Are you finished with the replies?"
-msgstr "هل انتهيت من الاطلاع على الردود؟"
+msgstr "هل انتهيت من قراءة الردود؟"
 
 #: source_templates/lookup.html:86
 msgid "YES, DELETE ALL REPLIES"
-msgstr "نعم، حذف جميع الردود"
+msgstr "نعم، حذف كُلّ الردود"
 
 #: source_templates/lookup.html:87
 msgid "NO, NOT YET"
@@ -1079,11 +1080,11 @@ msgstr "لا، ليس بعد"
 
 #: source_templates/lookup.html:91
 msgid "There are no replies at this time."
-msgstr "ما من رد في الوقت الراهن."
+msgstr "ما من ردود في الوقت الراهن."
 
 #: source_templates/lookup.html:100
 msgid "Remember your codename is:"
-msgstr "تذكر أن اسمك الرمزي هو:"
+msgstr "تذكر اسمك الرمزي:"
 
 #: source_templates/lookup.html:101
 msgid "Show"
@@ -1091,7 +1092,7 @@ msgstr "عرض"
 
 #: source_templates/lookup.html:103
 msgid "Hide"
-msgstr "اخفاء"
+msgstr "إخفاء"
 
 #: source_templates/notfound.html:3
 msgid "Page not found"
@@ -1099,7 +1100,7 @@ msgstr "الصفحة غير موجودة"
 
 #: source_templates/notfound.html:5
 msgid "Sorry, we couldn't locate what you requested."
-msgstr "نأسف، لم نتمكن من إيجاد ما طلبته."
+msgstr "نأسف، لم نتمكن من العثور على المطلوب."
 
 #: source_templates/session_timeout.html:6
 msgid ""
@@ -1108,14 +1109,14 @@ msgid ""
 "button in the Tor browser to clear all history of your SecureDrop usage from "
 "this device. If you are not using Tor Browser, restart your browser."
 msgstr ""
-"لقد تم تسجيل خروجك نظراً لعدم  تفاعلك!  من فضلك عاود تسجيل الدخول إن كنت تريد "
-"الاستتمرار في استخدام SecureDrop أو اختر \"هوية جديدة\" من خلال الزر الاخضر  "
-"على شكل البصلة في متصفح تور لحذف  جميع سجلات استخدام SecureDrop من الجهاز. "
-"أما إن لم تكن تستخدم متصفح ثور فمن فضلك أعد تشغيل متصفحك."
+"تم تسجيل الخروج بسبب خمول النشاط.  من فضلك إعادة تسجيل الدخول للاستمرار في "
+"استخدام SecureDrop أو اختيار \"هوية جديدة\" من خلال الزر الأخضر في متصفح تور "
+"لمحو سجل استخدامك لـ SecureDrop من هذا الجهاز. رجاء إعادة فتح المتصفح إذا لم "
+"تكن تستخدم متصفح تور."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
-msgstr "لماذا هناك تنبيه بخصوص Tor2Web؟"
+msgstr "لماذا يوجد تنبيه بخصوص Tor2Web؟"
 
 #: source_templates/tor2web-warning.html:4
 msgid ""
@@ -1123,8 +1124,9 @@ msgid ""
 "Tor Hidden Services (.onion sites) without installing Tor. It was designed "
 "to facilitate anonymous publishing."
 msgstr ""
-"<a href=\"tor2web.org\">Tor2Web</a> هو خادم وكيل يجعلك تتصفح خدمات Tor "
-"الخفية (صفحات .onion) بدون تثبيت Tor. مصمممن أجل تسهيل النشر بشكل مجهول."
+"<a href=\"tor2web.org\">Tor2Web</a> عبارة وسيط من أجل النفاذ إلى الخدمات "
+"والمواقع المبنية على شبكة تور (ذات نطاق onion.) بدون استخدام متصفح تور. وهو "
+"في الأساس مصمم لتيسير النشر بشكل مجهول."
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
@@ -1134,11 +1136,11 @@ msgid ""
 "Tor2Web sites typically do not use HTTPS, it is possible that your "
 "connection could be MITM'ed by a capable adversary."
 msgstr ""
-"شبكة Tor2Web تقوم بحماية الناشرين فقط ولكنها لا تحمي القرّاء. اذا قمت بتحميل "
-"المستندات باستخدام Tor2Web وأرسلتها لنا بواسطته، فانك <strong>مكشوف</strong> "
-"و يمكن تحديد هويتك من خلال  من يزودك الانترنت أو عن طريق    خادم وكيل ك "
-"Tor2Web . بالإضافة إلى ذلك و كما أن مواقع تور ويب Tor2Web  لا تعمل بنظام "
-"HTTPS، فانه من الممكن أن  ينم اعتراض اتصالك قد اعترض من قبل  خصم بارع."
+"خدمة Tor2Web تقوم بحماية الناشرين فقط ولا تحمي القراء. إذا قمت بإرسال "
+"مستندات بواسطة Tor2Web هويتك <strong>ليست مُجهله</strong> ويمكن لمزود خدمة "
+"الإنترنت الخاص بك أو مُشغل خدمة Tor2Web التعرف على هويتك. بالإضافة إلى ذلك، "
+"خدمات Tor2Web لا تستخدم على نحو افتراضي بروتوكول HTTPS وبالتالي يمكن اعتراض "
+"اتصالك بواسطة خصم ذات موارد."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
@@ -1146,20 +1148,18 @@ msgid ""
 "to install <a href=\"torproject.org/download.html.en\">Tor</a> and use it to "
 "access our site safely and anonymously."
 msgstr ""
-"إذا كنت تريد إرسال المعلومات، فانه <strong> ينصح بشدة</strong> تنزيل <a href="
-"\"torproject.org/download.html.en\"> تور </a>واستخدامه للوصول الى موقعنا "
-"بأمان و  بخصوصية تامة أي من دون الكشف عن هويتك."
+"من أجل إرسال بيانات <strong>ننصح بشدة</strong> استخدام <a href=\""
+"torproject.org/download.html.en\">متصفح تور</a> من أجل النفاذ لموقعنا على "
+"نحو آمن ومُجهل."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
-msgstr "عليك استخدام متصفح تور Tor"
+msgstr "يجب عليك استخدام متصفح تور"
 
 #: source_templates/use-tor-browser.html:4
 msgid ""
 "If you are not using Tor Browser, you <strong>may not be anonymous</strong>."
-msgstr ""
-"اذا كنت لا تستخدم متصفح تور، فانه <strong>   قد تكون هويتك ونشاطك الرقمي "
-"مكشوفين</strong>."
+msgstr "في حال عدم استخدام متصفح تور لن تكون <strong>هويتك مخفية</strong>."
 
 #: source_templates/use-tor-browser.html:5
 msgid ""
@@ -1167,21 +1167,20 @@ msgid ""
 "you</strong> to install Tor Browser and use it to access our site safely and "
 "anonymously."
 msgstr ""
-"إذا رغبت بإرسال معلومات لسيكيور دروب SecureDrop، فاننا <strong>ننصحك "
-"بشدة</strong> أن تنزل متصفح تور و استخدامه للدخول الى موقعنا بأمان و \n"
-" بصورة مجهول ."
+"من أجل إرسال بيانات <strong>ننصح بشدة</strong> استخدام متصفح تور من أجل "
+"النفاذ لموقعنا على نحو آمن ومُجهل."
 
 #: source_templates/use-tor-browser.html:6
 msgid ""
 "Copy and paste the following address into your browser and follow the "
 "instructions to download and install Tor Browser:"
 msgstr ""
-"انسخ والصق هذا العنوان ugn  المتصفح الخاص بك واتبع التعليمات لتنزيل و تثبيت "
-"المتصفح تور Tor:"
+"قم بنسخ ولصق العنوان التالي في المتصفح واتبع التعليمات لتنزيل و تثبيت متصفح "
+"تور:"
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
-msgstr "لماذا  أحمّل المفتاح العمومي للصحفي؟"
+msgstr "لماذا تنزيل المفتاح العلني الخاص بالصحفي؟"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
@@ -1250,7 +1249,7 @@ msgid ""
 "On all systems, open the Terminal and use this gpg command: <code>gpg --"
 "recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 msgstr ""
-"في جميع الأنظمة، قم بفتح الطرفية وأستعمل أمر gpg التالي: <code>gpg --"
+"في كُلّ الأنظمة، قم بفتح الطرفية وأستعمل أمر gpg التالي: <code>gpg --"
 "recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 
 #: source_templates/why-journalist-key.html:20
