@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2017-12-06 11:19+0000\n"
-"Last-Translator: ramyraoof <ramy.raoof@gmail.com>\n"
+"Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
 "Language-Team: Arabic "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ar/>\n"
 "Language: ar\n"
@@ -214,8 +214,6 @@ msgid "No unread submissions in selected collections."
 msgstr "لا توجد رسائل غير مقروءة في المجموعات المختارة."
 
 #: journalist_templates/_source_row.html:19
-#, fuzzy
-#| msgid "docs {doc_num}"
 msgid "{doc_num} docs"
 msgstr "{doc_num} مستندات"
 
