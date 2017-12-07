@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-07 17:00+0000\n"
+"PO-Revision-Date: 2017-12-07 20:00+0000\n"
 "Last-Translator: soniabana <sonja4632@gmail.com>\n"
 "Language-Team: Polish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/pl/>\n"
@@ -606,7 +606,7 @@ msgstr ""
 "utracone lub naruszone, możesz je zresetować tutaj. <em> Jeśli to zrobisz, "
 "upewnij się, że użytkownik jest obecny i gotowy do skonfigurowania "
 "urządzenia z nowymi, dwuetapowymi danymi uwierzytelniającymi. W przeciwnym "
-"razie utraci dostęp do swojego konta."
+"razie utraci dostęp do swojego konta.</em>"
 
 #: journalist_templates/edit_account.html:63
 msgid ""
@@ -615,6 +615,10 @@ msgid ""
 "here. <em>If you do this, make sure you are ready to set up your new "
 "device, otherwise you will be locked out of your account.</em>"
 msgstr ""
+"Jeśli Twoje dane weryfikujące uwierzytelnienia dwuetapowego zostały utracone "
+"lub naruszone, możesz je zresetować tutaj. <em> Jeśli to zrobisz, upewnij "
+"się, że jesteś gotowy do skonfigurowania nowego urządzenia. W przeciwnym "
+"razie utracisz dostęp do swojego konta.</em>"
 
 #: journalist_templates/edit_account.html:65
 msgid ""
@@ -622,18 +626,21 @@ msgid ""
 "Authenticator or FreeOTP, choose the first option. For hardware tokens "
 "like the Yubikey, choose the second."
 msgstr ""
+"Aby zresetować uwierzytelnianie dwuetapowe w aplikacjach mobilnych takich "
+"jak Google Authenticator lub FreeOTP, wybierz pierwszą opcję. W przypadku "
+"tokenów sprzętowych, takich jak Yubikey, wybierz drugi."
 
 #: journalist_templates/edit_account.html:85
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
-msgstr ""
+msgstr "ZRESETUJ DWUETAPOWĄ WERYFIKACJĘ (APP)"
 
 #: journalist_templates/edit_account.html:87
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
-msgstr ""
+msgstr "ZRESETUJ DWUETAPOWĄ WERYFIKACJĘ (TOKEN SPRZĘTOWY)"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
-msgstr ""
+msgstr "Dzięki!"
 
 #: journalist_templates/flag.html:8
 msgid ""
@@ -642,82 +649,88 @@ msgid ""
 " appear under their collection of documents. You can use this box to "
 "write encrypted replies to them."
 msgstr ""
+"SecureDrop wygeneruje bezpieczny klucz szyfrowania dla tego źródła przy "
+"następnym logowaniu. Po wygenerowaniu klucza, pole odpowiedzi pojawi się pod "
+"zbiorem dokumentów. Możesz wykorzystać to pole do pisania zaszyfrowanych "
+"odpowiedzi."
 
 #: journalist_templates/flag.html:10
 msgid "Continue to the list of documents for {codename}..."
-msgstr ""
+msgstr "Przejdź dalej do listy plików dla {codename}..."
 
 #: journalist_templates/index.html:4
 msgid "Sources"
-msgstr ""
+msgstr "Źródła"
 
 #: journalist_templates/index.html:11
 msgid "Download Unread"
-msgstr ""
+msgstr "Pobierz Nieodczytane"
 
 #: journalist_templates/index.html:12
 msgid "Download"
-msgstr ""
+msgstr "Pobierz"
 
 #: journalist_templates/index.html:13
 msgid "Star"
-msgstr ""
+msgstr "Gwiazdka"
 
 #: journalist_templates/index.html:14
 msgid "Un-star"
-msgstr ""
+msgstr "Usuń gwiazdkę"
 
 #: journalist_templates/index.html:42
 msgid "No documents have been submitted!"
-msgstr ""
+msgstr "Nie otrzymano żadnych plików!"
 
 #: journalist_templates/js-strings.html:3
 msgid "filter by codename"
-msgstr ""
+msgstr "Filtruj przez nazwę kodową"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
-msgstr ""
+msgstr "Zaznacz Wszystkie"
 
 #: journalist_templates/js-strings.html:5
 msgid "Select Unread"
-msgstr ""
+msgstr "Zaznacz Nieczytane"
 
 #: journalist_templates/js-strings.html:6
 msgid "Select None"
-msgstr ""
+msgstr "Zaznacz Żadne"
 
 #: journalist_templates/js-strings.html:7
 msgid "Are you sure you want to delete this collection?"
-msgstr ""
+msgstr "Czy napewno chcesz usunąć ten zbiór?"
 
 #: journalist_templates/js-strings.html:8
 msgid "Are you sure you want to delete the {size} selected collections?"
-msgstr ""
+msgstr "Czy napewno chcesz usunąć zbiory o pojemności {size}?"
 
 #: journalist_templates/js-strings.html:9
 msgid "Are you sure you want to delete the {size} selected submissions?"
-msgstr ""
+msgstr "Czy napewno chcesz usunąć wpisy o pojemności {size}?"
 
 #: journalist_templates/js-strings.html:10
 msgid "Are you sure you want to delete the user {username}?"
-msgstr ""
+msgstr "Czy napewno chcesz usunąć użytkownika {username}?"
 
 #: journalist_templates/js-strings.html:11
 msgid "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr ""
+"Czy napewno chcesz zresetować weryfikację dwuetapową dla użytkownika "
+"{username}?"
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
-msgstr ""
+msgstr "Zaloguj się, aby uzyskać dostęp do interfejsu dziennikarskiego"
 
 #: journalist_templates/login.html:9
 msgid "Password"
-msgstr ""
+msgstr "Hasło"
 
 #: journalist_templates/login.html:12
 msgid "LOG IN"
-msgstr ""
+msgstr "ZALOGUJ SIĘ"
 
 #: source_app/__init__.py:73
 msgid ""
@@ -725,105 +738,117 @@ msgid ""
 "<strong>does not</strong> provide anonymity. <a href=\"{url}\">Why is "
 "this dangerous?</a>"
 msgstr ""
+"<strong> UWAGA:</strong> Wygląda na to, że korzystasz z Tor2Web. <strong>Nie "
+"gwarantuje</strong> to anonimowości. <a href=\"{url}\">Dlaczego jest to "
+"niebezpieczne?</a>"
 
 #: source_app/forms.py:14
 msgid "Field must be between 1 and {max_codename_len} characters long."
-msgstr ""
+msgstr "Pole musi zawierać od 1 do {max_codename_len} znaków."
 
 #: source_app/forms.py:17
 msgid "Invalid input."
-msgstr ""
+msgstr "Nieprawidłowe dane wejściowe."
 
 #: source_app/main.py:32
 msgid ""
 "You were redirected because you are already logged in. If you want to "
 "create a new account, you should log out first."
 msgstr ""
+"Zostałeś przekierowany, ponieważ jesteś już zalogowany. Jeśli chcesz "
+"utworzyć nowe konto, musisz się najpierw wylogować."
 
 #: source_app/main.py:111
 msgid "You must enter a message or choose a file to submit."
-msgstr ""
+msgstr "Musisz wprowadzić wiadomość lub wybrać plik do przesłania."
 
 #: source_app/main.py:144
 msgid "Thanks! We received your message."
-msgstr ""
+msgstr "Dziękuję! Otrzymaliśmy Twoją wiadomość."
 
 #: source_app/main.py:146
 msgid "Thanks! We received your document."
-msgstr ""
+msgstr "Dziękuję! Otrzymaliśmy Twój plik."
 
 #: source_app/main.py:148
 msgid "Thanks! We received your message and document."
-msgstr ""
+msgstr "Dziękuję! Otrzymaliśmy Twoją wiadomość i plik."
 
 #: source_app/main.py:184
 msgid "Reply deleted"
-msgstr ""
+msgstr "Odpowiedź usunięta"
 
 #: source_app/main.py:201
 msgid "All replies have been deleted"
-msgstr ""
+msgstr "Wszystkie odpowiedzi zostały usunięte"
 
 #: source_app/main.py:215
 msgid "Sorry, that is not a recognized codename."
-msgstr ""
+msgstr "Przepraszamy, to nie jest rozpoznawalna nazwa kodowa."
 
 #: source_templates/base.html:6 source_templates/index.html:4
 msgid "Protecting Journalists and Sources"
-msgstr ""
+msgstr "Ochrona Dziennikarzy i Źródeł"
 
 #: source_templates/base.html:24 source_templates/base.html:43
 #: source_templates/index.html:32 source_templates/index.html:84
 msgid "Powered by"
-msgstr ""
+msgstr "Napędzane przez"
 
 #: source_templates/base.html:33
 msgid "LOG OUT"
-msgstr ""
+msgstr "ZAKOŃCZ SESJĘ"
 
 #: source_templates/base.html:43 source_templates/index.html:84
 msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
 msgstr ""
+"Podobnie jak inne oprogramowania, SecureDrop może zawierać błędy "
+"bezpieczeństwa. Używaj na własne ryzyko."
 
 #: source_templates/error.html:3
 msgid "Server error"
-msgstr ""
+msgstr "Błąd serwerowy"
 
 #: source_templates/error.html:5
 msgid ""
 "Sorry, the website encountered an error and was unable to complete your "
 "request."
-msgstr ""
+msgstr "Niestety, witryna napotkała błąd i nie mogła spełnić Twojego żądania."
 
 #: source_templates/error.html:7 source_templates/notfound.html:7
 msgid "Look up a codename..."
-msgstr ""
+msgstr "Wyszukaj nazwę kodową..."
 
 #: source_templates/first_submission_flashed_message.html:2
 msgid "Success!"
-msgstr ""
+msgstr "Sukces!"
 
 #: source_templates/first_submission_flashed_message.html:3
 msgid ""
 "Thank you for sending this information to us. Please check back later for"
 " replies."
 msgstr ""
+"Dziękujemy za przesłanie nam tych informacji. Wróć później, aby sprawdzić "
+"odpowiedzi."
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
-msgstr ""
+msgstr "Zapomniałeś nazwy kodowej?"
 
 #: source_templates/generate.html:4
 msgid "Welcome"
-msgstr ""
+msgstr "Witamy"
 
 #: source_templates/generate.html:5
 msgid ""
 "This codename is what you will use in future visits to receive messages "
 "from our journalists in response to what you submit on the next screen."
 msgstr ""
+"W przyszłych odwiedzinach, będziesz posługiwał się tą nazwą kodową aby "
+"otrzymywać wiadomości od naszych dziennikarzy w odpowiedzi na to, co "
+"przesyłasz na następnym ekranie."
 
 #: source_templates/generate.html:29
 msgid ""
