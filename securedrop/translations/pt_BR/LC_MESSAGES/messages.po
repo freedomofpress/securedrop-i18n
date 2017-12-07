@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-06 19:40+0000\n"
-"Last-Translator: Cecília do Lago <ceciliadolago@gmail.com>\n"
+"PO-Revision-Date: 2017-12-07 22:00+0000\n"
+"Last-Translator: Bernardo Tonasse <btonasse@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -793,7 +793,7 @@ msgstr "Protegendo Jornalistas e Fontes"
 #: source_templates/base.html:24 source_templates/base.html:43
 #: source_templates/index.html:32 source_templates/index.html:84
 msgid "Powered by"
-msgstr "Este site utiliza"
+msgstr "Este site utiliza o"
 
 #: source_templates/base.html:33
 msgid "LOG OUT"
@@ -839,15 +839,16 @@ msgstr "Esqueceu o seu codinome?"
 
 #: source_templates/generate.html:4
 msgid "Welcome"
-msgstr "Boas-vindas"
+msgstr "Bem-vindo"
 
 #: source_templates/generate.html:5
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our journalists in response to what you submit on the next screen."
 msgstr ""
-"Use o codinome abaixo para consultar as respostas de nossos jornalistas ao "
-"material que você enviará na página seguinte."
+"Na página seguinte, você poderá enviar mensagens e documentos. Para "
+"consultar as respostas de nossos jornalistas ao material enviado, use o "
+"codinome abaixo ou um codinome já existente."
 
 #: source_templates/generate.html:29
 msgid ""
@@ -859,10 +860,10 @@ msgid ""
 "there is no way to retrieve a lost codename."
 msgstr ""
 "Como não usamos métodos tradicionais para identificar as pessoas que "
-"utilizam o nosso serviço <strong>SecureDrop</strong>, este codinome será a "
-"nossa única maneira de entrar em contato com você para fazer perguntas ou "
-"pedir mais documentos. Contrariamente a uma senha, não é possível recuperar "
-"um codinome perdido."
+"utilizam o <strong>SecureDrop</strong>, este codinome é a nossa única "
+"maneira de entrar em contato com você para fazer perguntas ou pedir mais "
+"documentos. Contrariamente a uma senha, não é possível recuperar um codinome "
+"perdido."
 
 #: source_templates/generate.html:36
 msgid ""
@@ -873,11 +874,11 @@ msgstr ""
 
 #: source_templates/generate.html:44
 msgid "USE NEW CODENAME"
-msgstr "USAR UM NOVO CODINOME"
+msgstr "USAR O CODINOME ACIMA"
 
 #: source_templates/generate.html:46
 msgid "USE EXISTING CODENAME"
-msgstr "USAR O CODINOME ATUAL"
+msgstr "USAR UM CODINOME JÁ EXISTENTE"
 
 #: source_templates/index.html:17
 msgid ""
@@ -1263,7 +1264,7 @@ msgid ""
 msgstr ""
 "Em qualquer sistema operacional, abra o terminal (ou prompt de comando) e "
 "execute o seguinte comando: <code>gpg --recipient &lt;ID do usuário&gt; --"
-"encrypt roswell_photos.pdf</code>"
+"encrypt &lt;nome do arquivo&gt;</code>"
 
 #: source_templates/why-journalist-key.html:20
 msgid ""
