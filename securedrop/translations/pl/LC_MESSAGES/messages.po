@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-08 13:20+0000\n"
+"PO-Revision-Date: 2017-12-08 15:00+0000\n"
 "Last-Translator: soniabana <sonja4632@gmail.com>\n"
 "Language-Team: Polish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/pl/>\n"
@@ -95,7 +95,7 @@ msgstr "Zbiór {source_name} został usunięty"
 
 #: journalist_app/col.py:58
 msgid "No collections selected."
-msgstr "Nie wybrano zbioru"
+msgstr "Nie wybrano zbioru."
 
 #: journalist_app/decorators.py:16
 msgid "Only administrators can access this page."
@@ -150,7 +150,8 @@ msgstr "Zalogowanie nieudane."
 #: journalist_app/utils.py:84
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
-msgstr[0] "Proszę czekać co najmniej {seconds} sekund przed ponownym zalogowaniem."
+msgstr[0] ""
+"Proszę czekać co najmniej {seconds} sekundę przed ponownym zalogowaniem."
 msgstr[1] "Proszę czekać kilka sekund przed ponownym zalogowaniem."
 msgstr[2] "Proszę czekać co najmniej {seconds} sekund przed ponownym zalogowaniem."
 
@@ -168,9 +169,9 @@ msgstr[2] "Zgłoszenia usunięte."
 #: journalist_app/utils.py:193
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
-msgstr[0] "{num} zbiór usunięty."
-msgstr[1] "{num} zbiory usunięte."
-msgstr[2] "{num} zbiory usunięte."
+msgstr[0] "{num} zbiór usunięty"
+msgstr[1] "{num} zbiory usunięte"
+msgstr[2] "{num} zbiory usunięte"
 
 #: journalist_app/utils.py:228
 msgid "You submitted a bad password! Password not changed."
@@ -413,17 +414,17 @@ msgid ""
 "if the first random codename is difficult to say or remember. You can "
 "generate new random codenames as many times as you like."
 msgstr ""
-"Wygeneruj nową losową nazwę kodową dla tego źródła. Zalecamy zrobienie tego, "
-"jeśli pierwszy losowy kod jest trudny do powiedzenia lub zapamiętania. "
-"Możesz generować nowe losowe nazwy kodowe tyle razy, ile chcesz."
+"Wygeneruj nowy losowy kryptonim dla tego źródła. Zalecamy zrobienie tego, "
+"jeśli poprzednio wylosowany kryptonim jest trudny do powiedzenia lub "
+"zapamiętania. Możesz generować losowo nowe kryptonimy tyle razy, ile chcesz."
 
 #: journalist_templates/col.html:13
 msgid "Change codename"
-msgstr "Zmień nazwę kodową"
+msgstr "Zmień kryptonim"
 
 #: journalist_templates/col.html:14
 msgid "Are you sure you want to generate a new codename?"
-msgstr "Czy napewno chcesz wygenerować nową nazwę kodową?"
+msgstr "Czy napewno chcesz wygenerować nowy kryptonim?"
 
 #: journalist_templates/col.html:15 source_templates/lookup.html:72
 msgid "Cancel"
@@ -451,7 +452,7 @@ msgstr "Usuń Wybrane"
 
 #: journalist_templates/col.html:55
 msgid "Uploaded Document"
-msgstr "Załadowany Plik"
+msgstr "Przesłany Plik"
 
 #: journalist_templates/col.html:57 journalist_templates/col.html:75
 msgid "Reply"
@@ -467,8 +468,7 @@ msgstr "Brak dokumentów do wyświetlenia."
 
 #: journalist_templates/col.html:77
 msgid "You can write a secure reply to the person who submitted these documents:"
-msgstr ""
-"Możesz wysłać zabezpieczoną wiadomość osobie, która załadowała te pliki:"
+msgstr "Możesz wysłać zabezpieczoną wiadomość osobie, która przesłała te pliki:"
 
 #: journalist_templates/col.html:86
 msgid "You've flagged this source for reply."
@@ -498,7 +498,7 @@ msgid ""
 msgstr ""
 "Kliknij poniżej, aby usunąć zbiór tego źródła. <em> Uwaga: Jeśli to zrobisz, "
 "pliki tutaj widoczne będą niemożliwe do odzyskania, a źródło nie będzie już "
-"mogło się logować przy użyciu dotychczasowej nazwy kodowej. </em>"
+"mogło się logować przy użyciu dotychczasowego kryptonimu. </em>"
 
 #: journalist_templates/col.html:104
 msgid "DELETE COLLECTION"
@@ -527,13 +527,14 @@ msgstr "USUŃ PLIKI PERMANENTNIE"
 
 #: journalist_templates/delete.html:23
 msgid "Return to the list of documents for {source_name}…"
-msgstr "Wróć do listy dokumentów dla {nazwa_źródła}…"
+msgstr "Wróć do listy dokumentów dla {source_name}…"
 
 #: journalist_templates/edit_account.html:6
 msgid "Edit user \"{user}\""
 msgstr "Edycja użytkownika \"{user}\""
 
 #: journalist_templates/edit_account.html:8
+#, fuzzy
 msgid "Change Username &amp; Admin Status"
 msgstr "Zmień nazwę użytkownika &amp; status administracyjny"
 
@@ -682,7 +683,7 @@ msgstr "Nie otrzymano żadnych plików!"
 
 #: journalist_templates/js-strings.html:3
 msgid "filter by codename"
-msgstr "Filtruj przez nazwę kodową"
+msgstr "Filtruj według kryptonimu"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
@@ -782,7 +783,7 @@ msgstr "Wszystkie odpowiedzi zostały usunięte"
 
 #: source_app/main.py:215
 msgid "Sorry, that is not a recognized codename."
-msgstr "Przepraszamy, to nie jest rozpoznawalna nazwa kodowa."
+msgstr "Przepraszamy, nie rozpoznajemy tego kryptonimu."
 
 #: source_templates/base.html:6 source_templates/index.html:4
 msgid "Protecting Journalists and Sources"
@@ -817,7 +818,7 @@ msgstr "Niestety, witryna napotkała błąd i nie mogła spełnić Twojego żąd
 
 #: source_templates/error.html:7 source_templates/notfound.html:7
 msgid "Look up a codename..."
-msgstr "Wyszukaj nazwę kodową..."
+msgstr "Wyszukaj kryptonim..."
 
 #: source_templates/first_submission_flashed_message.html:2
 msgid "Success!"
@@ -833,7 +834,7 @@ msgstr ""
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
-msgstr "Zapomniałeś nazwy kodowej?"
+msgstr "Zapomniałeś swojego kryptonimu?"
 
 #: source_templates/generate.html:4
 msgid "Welcome"
@@ -846,7 +847,7 @@ msgid ""
 msgstr ""
 "W przyszłych odwiedzinach, będziesz posługiwał się tym kryptonimem aby "
 "otrzymywać wiadomości od naszych dziennikarzy w odpowiedzi na to, co "
-"przesyłasz na następnym ekranie."
+"prześlesz na następnym ekranie."
 
 #: source_templates/generate.html:29
 msgid ""
@@ -859,8 +860,8 @@ msgid ""
 msgstr ""
 "Ponieważ nie używamy żadnego z tradycyjnych sposobów śledzenia użytkowników "
 "naszego <strong> SecureDrop </strong>, używanie Twojego kryptonimu podczas "
-"przyszłych odwiedzin to jedyny sposób jaki mamy, aby się z Tobą komunikować "
-"w przypadku pytań lub zainteresowaniem dodatkowymi dokumentami. W "
+"przyszłych odwiedzin to jedyny sposób jaki mamy, aby z Tobą komunikować w "
+"przypadku pytań lub zainteresowaniem dodatkowymi dokumentami. W "
 "przeciwieństwie do haseł, nie ma sposobu na odzyskanie zaginionego "
 "kryptonimu."
 
@@ -986,9 +987,9 @@ msgid ""
 "the green onion button in the Tor browser to clear all history of your "
 "SecureDrop usage from this device."
 msgstr ""
-"Dziękujemy za zakończenie sesji! Wybierz \"Nowa tożsamość\" z przycisku "
-"zielonej cebuli w przeglądarce Tor, aby wyczyścić całą historię korzystania "
-"z SecureDrop z tego urządzenia."
+"Dziękujemy za zakończenie sesji! Wybierz \"Nowa tożsamość\" przyciskając "
+"ikonę zielonej cebuli w przeglądarce Tor, aby wyczyścić całą historię "
+"korzystania z SecureDrop z tego urządzenia."
 
 #: source_templates/lookup.html:11
 msgid "Whew, it’s you! Now, the embarrassing part..."
@@ -1028,9 +1029,10 @@ msgid ""
 "key</a> before submission. Files are encrypted as they are received by "
 "SecureDrop."
 msgstr ""
-"Jeśli znasz już GPG, możesz opcjonalnie zaszyfrować pliki i wiadomości za "
-"pomocą naszego <a href=\"{url}\" class=\"text-link\"> klucza publicznego </a>"
-" przed przesłaniem. Pliki są szyfrowane w trakcie odbioru przez SecureDrop."
+"Jeśli korzystasz już z GPG, możesz opcjonalnie zaszyfrować pliki i "
+"wiadomości za pomocą naszego <a href=\"{url}\" class=\"text-link\"> klucza "
+"publicznego </a> przed przesłaniem. Pliki są szyfrowane w trakcie odbioru "
+"przez SecureDrop."
 
 #: source_templates/lookup.html:22
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
@@ -1121,9 +1123,9 @@ msgid ""
 "browser."
 msgstr ""
 "Twoja sesja wygasła z powodu braku aktywności. Zaloguj się ponownie, jeśli "
-"chcesz kontynuować korzystanie z SecureDrop lub wybierz \"Nowa tożsamość\" z "
-"przycisku zielonej cebuli w przeglądarce Tor, aby wyczyścić całą historię "
-"korzystania z SecureDrop z tego urządzenia. Jeśli nie korzystasz z "
+"chcesz kontynuować korzystanie z SecureDrop lub wybierz \"Nowa tożsamość\" "
+"przyciskając ikonę zielonej cebuli w przeglądarce Tor, aby wyczyścić całą "
+"historię korzystania z SecureDrop z tego urządzenia. Jeśli nie korzystasz z "
 "przeglądarki Tor, uruchom ponownie przeglądarkę."
 
 #: source_templates/tor2web-warning.html:3
@@ -1185,9 +1187,9 @@ msgid ""
 "advise you</strong> to install Tor Browser and use it to access our site "
 "safely and anonymously."
 msgstr ""
-"Jeśli chcesz przesłać informacje do SecureDrop, <strong> jednoznacznie "
-"zalecamy </strong> zainstalowanie Tor Browser i używanie go aby uzyskać "
-"bezpiecznego i anonimowego dostępu do naszej strony."
+"Jeśli chcesz przesłać informacje do SecureDrop, <strong> silnie zalecamy "
+"</strong> zainstalowanie Tor Browser i używanie go aby uzyskać bezpiecznego "
+"i anonimowego dostępu do naszej strony."
 
 #: source_templates/use-tor-browser.html:6
 msgid ""
