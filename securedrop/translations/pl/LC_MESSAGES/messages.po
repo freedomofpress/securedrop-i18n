@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-07 20:00+0000\n"
+"PO-Revision-Date: 2017-12-08 13:20+0000\n"
 "Last-Translator: soniabana <sonja4632@gmail.com>\n"
 "Language-Team: Polish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/pl/>\n"
@@ -37,7 +37,6 @@ msgid "Token in two-factor authentication verified."
 msgstr "Zweryfikowano token uwierzytelniający w weryfikacji dwuetapowej."
 
 #: journalist_app/account.py:43 journalist_app/admin.py:91
-#, fuzzy
 msgid "Could not verify token in two-factor authentication."
 msgstr "Token w uwierzytelnianiu dwuetapowym nie został zweryfikowany."
 
@@ -488,7 +487,6 @@ msgid "Click below if you would like to write a reply to this source."
 msgstr "Kliknij poniżej jeśli chcesz odpowiedzieć źródłowi."
 
 #: journalist_templates/col.html:93
-#, fuzzy
 msgid "FLAG THIS SOURCE FOR REPLY"
 msgstr "ZAZNACZ TO ŹRÓDŁO DO ODPOWIEDZI"
 
@@ -846,7 +844,7 @@ msgid ""
 "This codename is what you will use in future visits to receive messages "
 "from our journalists in response to what you submit on the next screen."
 msgstr ""
-"W przyszłych odwiedzinach, będziesz posługiwał się tą nazwą kodową aby "
+"W przyszłych odwiedzinach, będziesz posługiwał się tym kryptonimem aby "
 "otrzymywać wiadomości od naszych dziennikarzy w odpowiedzi na to, co "
 "przesyłasz na następnym ekranie."
 
@@ -859,20 +857,28 @@ msgid ""
 " questions or are interested in additional documents. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
+"Ponieważ nie używamy żadnego z tradycyjnych sposobów śledzenia użytkowników "
+"naszego <strong> SecureDrop </strong>, używanie Twojego kryptonimu podczas "
+"przyszłych odwiedzin to jedyny sposób jaki mamy, aby się z Tobą komunikować "
+"w przypadku pytań lub zainteresowaniem dodatkowymi dokumentami. W "
+"przeciwieństwie do haseł, nie ma sposobu na odzyskanie zaginionego "
+"kryptonimu."
 
 #: source_templates/generate.html:36
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
 msgstr ""
+"Proszę zapisać ten kryptonim i go przechować w bezpiecznym miejscu, lub go "
+"zapamiętać."
 
 #: source_templates/generate.html:44
 msgid "USE NEW CODENAME"
-msgstr ""
+msgstr "UŻYJ NOWEGO KRYPTONIMU"
 
 #: source_templates/generate.html:46
 msgid "USE EXISTING CODENAME"
-msgstr ""
+msgstr "UŻYJ ISTNIEJĄCEGO KRYPTONIMU"
 
 #: source_templates/index.html:17
 msgid ""
@@ -880,6 +886,10 @@ msgid ""
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to"
 " high</a>, or ignore this warning to continue."
 msgstr ""
+"<strong>Zalecamy ustawić Poziom Zabezpieczenia na Wysoki, aby chronić swoją "
+"anonimowość: </strong> \n"
+"<a id=\"disable-js\" href=\"\"> Dowiedz się, jak ustawić go na Wysoki</a>, "
+"lub zignoruj tymczasowo to ostrzeżenie i przejdź dalej."
 
 #: source_templates/index.html:18
 msgid ""
@@ -887,75 +897,88 @@ msgid ""
 "id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install "
 "it</a>, or ignore this warning to continue."
 msgstr ""
+"<strong> Zalecamy korzystanie z przeglądarki Tor Browser, aby uzyskać dostęp "
+"do SecureDrop: </strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\"> "
+"Dowiedz się, jak ją zainstalować </a> lub zignoruj to ostrzeżenie i przejdź "
+"dalej."
 
 #: source_templates/index.html:41
 msgid "Submit documents for the first time"
-msgstr ""
+msgstr "Prześlij dokumenty po raz pierwszy"
 
 #: source_templates/index.html:48
 msgid "Already submitted something?"
-msgstr ""
+msgstr "Już przesłałeś coś?"
 
 #: source_templates/index.html:54
 msgid ""
 "If this is your first time submitting documents to journalists, start "
 "here."
 msgstr ""
+"Jeśli po raz pierwszy przesyłasz dokumenty do dziennikarzy, zacznij tutaj."
 
 #: source_templates/index.html:58
 msgid ""
 "If you have already submitted documents in the past, log in here to check"
 " for responses."
 msgstr ""
+"Jeśli już przesłałeś dokumenty w przeszłości, zaloguj się tutaj, aby "
+"sprawdzić odpowiedzi."
 
 #: source_templates/index.html:65
 msgid "SUBMIT DOCUMENTS"
-msgstr ""
+msgstr "PRZEŚLIJ DOKUMENTY"
 
 #: source_templates/index.html:73
 msgid "CHECK FOR A RESPONSE"
-msgstr ""
+msgstr "SPRAWDŹ ODPOWIEDZI"
 
 #: source_templates/index.html:92
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider "
 "to High in 4 easy steps!"
 msgstr ""
+"Wygląda na to, że korzystasz z przeglądarki Tor. Możesz ustawić Poziom "
+"Zabezpieczenia na Wysoki w 4 prostych krokach!"
 
 #: source_templates/index.html:94
 msgid ""
 "Click the <img src=\"{icon}\" alt=\"Tor icon\"> Tor icon in the toolbar "
 "above"
 msgstr ""
+"Kliknij <img src = \"{icon}\" alt = \"Tor icon\"> ikonę Tor na powyższym "
+"pasku narzędzi"
 
 #: source_templates/index.html:95
 msgid "Click <strong>Security Settings...</strong>"
-msgstr ""
+msgstr "Kliknij <strong> Ustawienia Bezpieczeństwa...</strong>"
 
 #: source_templates/index.html:96
 msgid "Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
 msgstr ""
+"Przesuń suwak na <strong> Wysoki </strong>, a następnie kliknij <strong> OK "
+"</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Click here</a> to refresh the page"
-msgstr ""
+msgstr "<a href=\"/\"> Kliknij tutaj </a> żeby odświeżyć stronę"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
-msgstr ""
+msgstr "Wpisz Kryptonim"
 
 #: source_templates/login.html:12
 msgid "Enter your codename"
-msgstr ""
+msgstr "Wpisz swój kryptonim"
 
 #: source_templates/login.html:25 source_templates/lookup.html:47
 msgid "CANCEL"
-msgstr ""
+msgstr "ANULUJ"
 
 #: source_templates/logout_flashed_message.html:5
 #: source_templates/session_timeout.html:5
 msgid "Important!"
-msgstr ""
+msgstr "Ważne!"
 
 #: source_templates/logout_flashed_message.html:6
 msgid ""
@@ -963,10 +986,13 @@ msgid ""
 "the green onion button in the Tor browser to clear all history of your "
 "SecureDrop usage from this device."
 msgstr ""
+"Dziękujemy za zakończenie sesji! Wybierz \"Nowa tożsamość\" z przycisku "
+"zielonej cebuli w przeglądarce Tor, aby wyczyścić całą historię korzystania "
+"z SecureDrop z tego urządzenia."
 
 #: source_templates/lookup.html:11
 msgid "Whew, it’s you! Now, the embarrassing part..."
-msgstr ""
+msgstr "Uff, to ty! Teraz ta żenująca część ..."
 
 #: source_templates/lookup.html:12
 msgid ""
@@ -975,6 +1001,11 @@ msgid ""
 "just some random blip. To err on the side of caution, we put a hold on "
 "sending all documents from that day through to our journalists."
 msgstr ""
+"Nasze serwery doświadczyły niezwykłej fali nowej aktywności, kiedy ostatnio "
+"odwiedziłeś. Mogło to być działanie ludzkie, zautomatyzowany atak lub po "
+"prostu przypadkowy błąd. Wyznając zasadę nadmiernej ostrożności, "
+"wstrzymaliśmy wysyłanie wszelkich dokumentów z tamtego dnia do naszych "
+"dziennikarzy."
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -982,10 +1013,13 @@ msgid ""
 "submission into the hands of a journalist straight away. We’re sorry for "
 "the delay. Please do check back again in a week or so."
 msgstr ""
+"Teraz, gdy wiemy, że jesteś naprawdę człowiekiem, oddamy jak najszybciej "
+"twoje wcześniej wysłane dokumenty w ręce dziennikarza. Przepraszamy za "
+"opóźnienie. Proszę sprawdzić ponownie za ok. tydzień."
 
 #: source_templates/lookup.html:20
 msgid "Submit Materials"
-msgstr ""
+msgstr "Wyślij Pliki"
 
 #: source_templates/lookup.html:21
 msgid ""
@@ -994,26 +1028,29 @@ msgid ""
 "key</a> before submission. Files are encrypted as they are received by "
 "SecureDrop."
 msgstr ""
+"Jeśli znasz już GPG, możesz opcjonalnie zaszyfrować pliki i wiadomości za "
+"pomocą naszego <a href=\"{url}\" class=\"text-link\"> klucza publicznego </a>"
+" przed przesłaniem. Pliki są szyfrowane w trakcie odbioru przez SecureDrop."
 
 #: source_templates/lookup.html:22
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
-msgstr ""
+msgstr "<a href=\"{url}\" class=\"text-link\">Dowiedz się więcej</a>."
 
 #: source_templates/lookup.html:24
 msgid "You can send a file, a message, or both."
-msgstr ""
+msgstr "Możesz wysłać plik, wiadomość lub oba."
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
-msgstr ""
+msgstr "Maksymalny rozmiar wysyłania: 500 MB"
 
 #: source_templates/lookup.html:36
 msgid "Write a message."
-msgstr ""
+msgstr "Napisz wiadomość."
 
 #: source_templates/lookup.html:53
 msgid "Read Replies"
-msgstr ""
+msgstr "Przeczytaj odpowiedzi"
 
 #: source_templates/lookup.html:58
 msgid ""
@@ -1022,54 +1059,58 @@ msgid ""
 " with them. This also lets us know that you are aware of our reply. You "
 "can respond by submitting a new message above."
 msgstr ""
+"Otrzymałeś odpowiedź. Aby chronić swoją tożsamość w przypadku, gdyby ktoś "
+"odkrył Twój kryptonim, usuń wszystkie odpowiedzi gdy z nimi skończysz. "
+"Informuje to Nas również że otrzymałeś naszą odpowiedź. Możesz odpowiedzieć, "
+"przesyłając nową wiadomość powyżej."
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
-msgstr ""
+msgstr "Usuń tą odpowiedź?"
 
 #: source_templates/lookup.html:73
 msgid "DELETE"
-msgstr ""
+msgstr "USUŃ"
 
 #: source_templates/lookup.html:82
 msgid "DELETE ALL REPLIES"
-msgstr ""
+msgstr "USUŃ WSZYSTKIE ODPOWIEDZI"
 
 #: source_templates/lookup.html:85
 msgid "Are you finished with the replies?"
-msgstr ""
+msgstr "Czy skończyłeś z odpowiedziami?"
 
 #: source_templates/lookup.html:86
 msgid "YES, DELETE ALL REPLIES"
-msgstr ""
+msgstr "TAK, USUŃ WSZYSTKIE ODPOWIEDZI"
 
 #: source_templates/lookup.html:87
 msgid "NO, NOT YET"
-msgstr ""
+msgstr "NIE, JESZCZE NIE"
 
 #: source_templates/lookup.html:91
 msgid "There are no replies at this time."
-msgstr ""
+msgstr "W tej chwili nie ma odpowiedzi."
 
 #: source_templates/lookup.html:100
 msgid "Remember your codename is:"
-msgstr ""
+msgstr "Pamiętaj, że twój kryptonim to:"
 
 #: source_templates/lookup.html:101
 msgid "Show"
-msgstr ""
+msgstr "Pokaż"
 
 #: source_templates/lookup.html:103
 msgid "Hide"
-msgstr ""
+msgstr "Schowaj"
 
 #: source_templates/notfound.html:3
 msgid "Page not found"
-msgstr ""
+msgstr "Nie odnaleziono strony"
 
 #: source_templates/notfound.html:5
 msgid "Sorry, we couldn't locate what you requested."
-msgstr ""
+msgstr "Niestety, nie udało nam się znaleźć tego, o co prosiłeś."
 
 #: source_templates/session_timeout.html:6
 msgid ""
@@ -1079,10 +1120,15 @@ msgid ""
 "usage from this device. If you are not using Tor Browser, restart your "
 "browser."
 msgstr ""
+"Twoja sesja wygasła z powodu braku aktywności. Zaloguj się ponownie, jeśli "
+"chcesz kontynuować korzystanie z SecureDrop lub wybierz \"Nowa tożsamość\" z "
+"przycisku zielonej cebuli w przeglądarce Tor, aby wyczyścić całą historię "
+"korzystania z SecureDrop z tego urządzenia. Jeśli nie korzystasz z "
+"przeglądarki Tor, uruchom ponownie przeglądarkę."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
-msgstr ""
+msgstr "Dlaczego jest ostrzeżenie o Tor2Web?"
 
 #: source_templates/tor2web-warning.html:4
 msgid ""
@@ -1090,6 +1136,9 @@ msgid ""
 "browse Tor Hidden Services (.onion sites) without installing Tor. It was "
 "designed to facilitate anonymous publishing."
 msgstr ""
+"<a href=\"tor2web.org\">Tor2Web</a> to usługa proxy, która umożliwia "
+"przeglądanie Tor Hidden Services (witryn .onion) bez instalowania Tora. "
+"Został zaprojektowany w celu ułatwienia anonimowego publikowania."
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
@@ -1099,6 +1148,12 @@ msgid ""
 "since Tor2Web sites typically do not use HTTPS, it is possible that your "
 "connection could be MITM'ed by a capable adversary."
 msgstr ""
+"Tor2Web chroni tylko wydawców, a nie czytelników. Jeśli przesyłasz do nas "
+"dokumenty za pomocą Tor2Web, jesteś <strong>nie anonimowy</strong> i możesz "
+"być zidentyfikowany przez dostawcę usług internetowych lub operatorów proxy "
+"Tor2Web. Dodatkowo, ponieważ strony Tor2Web zazwyczaj nie używają HTTPS, "
+"możliwe jest, że twoje połączenie może być zaatakowane sposobem MITM przez "
+"zdolnego przeciwnika."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
@@ -1107,16 +1162,22 @@ msgid ""
 "href=\"torproject.org/download.html.en\">Tor</a> and use it to access our"
 " site safely and anonymously."
 msgstr ""
+"Jeśli chcesz przesłać informacje, <strong> silnie zalecamy </strong> "
+"zainstalowanie przeglądarki <a href=\"torproject.org/download.html.en\"> Tor "
+"</a> i korzystanie z niej, aby bezpiecznie i anonimowo uzyskać dostęp do "
+"naszej witryny."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
-msgstr ""
+msgstr "Powinieneś używać przeglądarki Tor"
 
 #: source_templates/use-tor-browser.html:4
 msgid ""
 "If you are not using Tor Browser, you <strong>may not be "
 "anonymous</strong>."
 msgstr ""
+"Jeśli nie korzystasz z przeglądarki Tor, możesz <strong> nie być anonimowym "
+"</strong>."
 
 #: source_templates/use-tor-browser.html:5
 msgid ""
@@ -1124,16 +1185,21 @@ msgid ""
 "advise you</strong> to install Tor Browser and use it to access our site "
 "safely and anonymously."
 msgstr ""
+"Jeśli chcesz przesłać informacje do SecureDrop, <strong> jednoznacznie "
+"zalecamy </strong> zainstalowanie Tor Browser i używanie go aby uzyskać "
+"bezpiecznego i anonimowego dostępu do naszej strony."
 
 #: source_templates/use-tor-browser.html:6
 msgid ""
 "Copy and paste the following address into your browser and follow the "
 "instructions to download and install Tor Browser:"
 msgstr ""
+"Skopiuj i wklej następujący adres do przeglądarki i postępuj zgodnie z "
+"instrukcjami, aby pobrać i zainstalować przeglądarkę Tor Browser:"
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
-msgstr ""
+msgstr "Po co pobierać klucz publiczny dziennikarza?"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
@@ -1141,22 +1207,29 @@ msgid ""
 "Encrypting messages and files before submission can provide an extra "
 "layer of security before your data reaches the SecureDrop server."
 msgstr ""
+"SecureDrop szyfruje pliki i wiadomości po ich przesłaniu. Szyfrowanie "
+"wiadomości i plików przed przesłaniem może zapewnić dodatkową warstwę "
+"zabezpieczenia, zanim dane dotrą do serwera SecureDrop."
 
 #: source_templates/why-journalist-key.html:5
 msgid ""
 "If you are already familiar with the GPG encryption software, you may "
 "wish to encrypt your submissions yourself. To do so:"
 msgstr ""
+"Jeśli znasz już oprogramowanie szyfrujące GPG, możesz samodzielnie "
+"zaszyfrować swoje zgłoszenia. Aby to zrobić:"
 
 #: source_templates/why-journalist-key.html:7
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. The public key is a text "
 "file with the extension <code>.asc</code>"
 msgstr ""
+"<a href=\"{url}\">Pobierz</a> klucz publiczny. Klucz publiczny to plik "
+"tekstowy z rozszerzeniem <code>.asc </code>"
 
 #: source_templates/why-journalist-key.html:8
 msgid "Import it into your GPG keyring."
-msgstr ""
+msgstr "Zaimportuj go do swojej bazy kluczy GPG."
 
 #: source_templates/why-journalist-key.html:10
 msgid ""
@@ -1164,16 +1237,21 @@ msgid ""
 "<code>.asc</code> file you just downloaded and it will be automatically "
 "imported to your keyring."
 msgstr ""
+"Jeśli korzystasz z <a href=\"{url}\">Tails</a>, możesz kliknąć dwukrotnie "
+"pobrany plik <code>.asc </code>, który zostanie automatycznie zaimportowany "
+"do Twojego breloku."
 
 #: source_templates/why-journalist-key.html:11
 msgid ""
 "If you are using Mac/Linux, open the terminal. You can import the key "
 "with <code>gpg --import /path/to/key.asc</code>."
 msgstr ""
+"Jeśli korzystasz z systemu Mac / Linux, otwórz terminal. Możesz zaimportować "
+"klucz za pomocą <code>gpg --import /path/to/key.asc </code>."
 
 #: source_templates/why-journalist-key.html:14
 msgid "Encrypt your submission."
-msgstr ""
+msgstr "Zaszyfruj swoje zgłoszenie."
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
@@ -1182,12 +1260,19 @@ msgid ""
 "(with .asc at the end), you can just copy and paste that. (don't include "
 "the <code>.asc</code>!)"
 msgstr ""
+"Będziesz musiał być w stanie zidentyfikować klucz (nazywa się \"ID "
+"użytkownika\" lub UID). Ponieważ nazwa pliku klucza publicznego to odcisk "
+"palca klucza (z rozszerzeniem .asc), możesz go po prostu skopiować i wkleić. "
+"(nie dołączaj <code>.asc </code>!)"
 
 #: source_templates/why-journalist-key.html:17
 msgid ""
 "On all systems, open the Terminal and use this gpg command: <code>gpg "
 "--recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 msgstr ""
+"Na wszystkich systemach otwórz Terminal i użyj polecenia gpg: <code>gpg --"
+"recipient &lt; identyfikator użytkownika &gt; --encrypt "
+"roswell_photos.pdf</code>"
 
 #: source_templates/why-journalist-key.html:20
 msgid ""
@@ -1195,6 +1280,9 @@ msgid ""
 "unencrypted file, with .gpg at the end (e.g. "
 "<code>roswell_photos.pdf.gpg</code>)"
 msgstr ""
+"Prześlij zaszyfrowane zgłoszenie. Będzie mieć taką samą nazwę pliku jak plik "
+"niezaszyfrowany, z rozszerzeniem .gpg na końcu (np. "
+"<code>roswell_photos.pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:23
 msgid ""
@@ -1203,7 +1291,11 @@ msgid ""
 "<code>--sign</code> or <code>-s</code> flag) as this will reveal your GPG"
 " identity to us."
 msgstr ""
+"<strong> Wskazówka: </strong> Jeśli chcesz pozostać anonimowy, <strong> nie "
+"</strong> korzystaj z GPG do podpisania zaszyfrowanego pliku (oznaczeniem "
+"<code> --sign </code> lub <code> -s </code>), ponieważ ujawni nam to Twoją "
+"tożsamość GPG."
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
-msgstr ""
+msgstr "Powrót do strony zgłoszenia"
