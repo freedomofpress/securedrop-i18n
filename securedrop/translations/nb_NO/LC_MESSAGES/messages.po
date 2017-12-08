@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2017-12-02 10:06+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
-"Language-Team: Norwegian Bokmål <https://weblate.securedrop.club/projects/"
-"securedrop/securedrop/nb_NO/>\n"
+"PO-Revision-Date: 2017-12-08 23:12+0000\n"
+"Last-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\n"
+"Language-Team: Norwegian Bokmål "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -155,13 +155,10 @@ msgid "Please wait for a new two-factor token before trying again."
 msgstr "Vent til du har fått en ny tofaktor-kode før du forsøker igjen."
 
 #: journalist_app/utils.py:141
-#, fuzzy
-#| msgid "Submission deleted."
-#| msgid_plural "Submissions deleted."
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Bidrag slettet."
-msgstr[1] "Bidragene er slettet."
+msgstr[1] "{num} bidrag slettet."
 
 #: journalist_app/utils.py:194
 msgid "{num} collection deleted"
@@ -835,15 +832,13 @@ msgid "Welcome"
 msgstr "Velkommen"
 
 #: source_templates/generate.html:7
-#, fuzzy
-#| msgid ""
-#| "Please either write this codename down and keep it in a safe place, or "
-#| "memorize it."
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it.<br> This will allow you to log back in and receive replies from "
 "journalists."
-msgstr "Husk, eller skriv ned kodenavnet på et sikkert sted."
+msgstr ""
+"Husk, eller skriv ned kodenavnet på et sikkert sted.<br> Dette gjør at du "
+"kan logge inn igjen for å få svar fra journalistene."
 
 #: source_templates/generate.html:10
 msgid ""
@@ -990,21 +985,14 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "Puh, det er deg! Nå, det litt pinlige…"
 
 #: source_templates/lookup.html:12
-#, fuzzy
-#| msgid ""
-#| "Our servers experienced an unusual surge of new activity, when you last "
-#| "visited. This could have been human activity, an automated attack, or "
-#| "just some random blip. To err on the side of caution, we put a hold on "
-#| "sending all documents from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all "
 "documents from that day through to our journalists."
 msgstr ""
-"Våre servere opplevde uvanlig mye trøkk sist du var innom. Dette kan ha vært "
-"mange vanlige brukere, automatisert hærverk, eller bare tilfeldig krøll på "
-"linja. For sikkerhets skyld, satte vi opp en automatisk brems på "
-"videresending av filer til våre journalister."
+"Våre servere opplevde uvanlig mye trøkk sist du var innom. For sikkerhets "
+"skyld, satte vi opp en automatisk brems på videresending av filer til våre "
+"journalister."
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1093,10 +1081,8 @@ msgid "There are no replies at this time."
 msgstr "Ingen svar til nå."
 
 #: source_templates/lookup.html:100
-#, fuzzy
-#| msgid "Remember your codename is:"
 msgid "Remember, your codename is:"
-msgstr "Husk at kodenavnet ditt er:"
+msgstr "Husk, kodenavnet ditt er:"
 
 #: source_templates/lookup.html:101
 msgid "Show"
