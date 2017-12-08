@@ -111,20 +111,20 @@ msgstr "Коллекция не выбрана."
 msgid "Only administrators can access this page."
 msgstr "Только администраторы имеют доступ к этой странице."
 
-#: journalist_app/forms.py:17
+#: journalist_app/forms.py:18
 msgid "Field must be 40 characters long but got {num_chars}."
 msgstr ""
 
-#: journalist_app/forms.py:28
+#: journalist_app/forms.py:29
 msgid ""
 "Field must be at least {min_chars} characters long but only got {num_chars}."
 msgstr ""
 
-#: journalist_app/forms.py:33 source_app/forms.py:11
+#: journalist_app/forms.py:34 source_app/forms.py:11
 msgid "This field is required."
 msgstr "Это обязательное поле."
 
-#: journalist_app/forms.py:50
+#: journalist_app/forms.py:51
 msgid "You cannot send an empty reply."
 msgstr "Вы не можете отправить пустой ответ."
 
@@ -136,7 +136,7 @@ msgstr "Спасибо. Ваш ответ сохранён."
 msgid "No collections selected for download."
 msgstr "Коллекции для скачивания не выбраны."
 
-#: journalist_app/main.py:142 journalist_app/utils.py:188
+#: journalist_app/main.py:142 journalist_app/utils.py:189
 msgid "No collections selected for deletion."
 msgstr "Не выбраны коллекции для удаления."
 
@@ -175,26 +175,26 @@ msgstr ""
 "Пожалуйста, дождитесь получения нового двухфакторного токена перед тем как "
 "попробовать войти снова."
 
-#: journalist_app/utils.py:140
+#: journalist_app/utils.py:141
 #, fuzzy
 msgid "Submission deleted."
-msgid_plural "Submissions deleted."
+msgid_plural "{num} submissions deleted."
 msgstr[0] "Сообщение удалено."
 msgstr[1] "Сообщения удалено."
 msgstr[2] "Сообщений удалено."
 
-#: journalist_app/utils.py:193
+#: journalist_app/utils.py:194
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} коллекция удалена"
 msgstr[1] "{num} коллекции удалены"
 msgstr[2] "{num} коллекций удалено"
 
-#: journalist_app/utils.py:228
+#: journalist_app/utils.py:229
 msgid "You submitted a bad password! Password not changed."
 msgstr "Вы ввели неверный пароль! Пароль не был изменён."
 
-#: journalist_app/utils.py:235
+#: journalist_app/utils.py:236
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -203,7 +203,7 @@ msgstr ""
 "Произошла ошибка, новый пароль мог быть сохранён неправильно. Установите "
 "новый пароль ещё раз, чтобы не потерять доступ к аккаунту."
 
-#: journalist_app/utils.py:244
+#: journalist_app/utils.py:245
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -211,7 +211,7 @@ msgstr ""
 "Пароль успешно обновлен. Не забудьте сохранить его в базе данных KeePassX. "
 "Новый пароль:"
 
-#: journalist_app/utils.py:261
+#: journalist_app/utils.py:262
 #, fuzzy
 msgid "No unread submissions in selected collections."
 msgstr "Нет непрочитанных сообщений в выбранных коллекциях."
@@ -758,13 +758,13 @@ msgstr ""
 "<strong>ВНИМАНИЕ:</strong> Кажется, вы используете Tor2Web. Это <strong>не "
 "обеспечивает</strong> анонимность. <a href=\"{url}\">Почему это опасно?</a>"
 
-#: source_app/forms.py:14
+#: source_app/forms.py:15
 #, fuzzy
 #| msgid "Field must be between 1 and {max_codename_len} characters long. "
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "Поле должно содержать от 1 до {max_codename_len} символов. "
 
-#: source_app/forms.py:17
+#: source_app/forms.py:18
 msgid "Invalid input."
 msgstr ""
 
@@ -792,15 +792,15 @@ msgstr "Спасибо! Мы получили ваш документ."
 msgid "Thanks! We received your message and document."
 msgstr "Спасибо! Мы получили ваше сообщение и документ."
 
-#: source_app/main.py:184
+#: source_app/main.py:190
 msgid "Reply deleted"
 msgstr "Ответ удалён"
 
-#: source_app/main.py:201
+#: source_app/main.py:207
 msgid "All replies have been deleted"
 msgstr "Все ответы были удалены"
 
-#: source_app/main.py:215
+#: source_app/main.py:221
 msgid "Sorry, that is not a recognized codename."
 msgstr "К сожалению, это кодовое название не распознано."
 
@@ -862,13 +862,26 @@ msgstr "Забыли ваше кодовое название?"
 msgid "Welcome"
 msgstr "Добро пожаловать"
 
-#: source_templates/generate.html:5
+#: source_templates/generate.html:7
+#, fuzzy
+#| msgid ""
+#| "Please either write this codename down and keep it in a safe place, or "
+#| "memorize it."
+msgid ""
+"Please either write this codename down and keep it in a safe place, or "
+"memorize it.<br> This will allow you to log back in and receive replies from "
+"journalists."
+msgstr ""
+"Пожалуйста, либо запишите данный псевдоним и сохраните его в безопасном "
+"месте или запомните его."
+
+#: source_templates/generate.html:10
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our journalists in response to what you submit on the next screen."
 msgstr ""
 
-#: source_templates/generate.html:29
+#: source_templates/generate.html:34
 msgid ""
 "Because we use none of the traditional means to track users of our "
 "<strong>SecureDrop</strong>\n"
@@ -877,14 +890,6 @@ msgid ""
 " questions or are interested in additional documents. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-
-#: source_templates/generate.html:36
-msgid ""
-"Please either write this codename down and keep it in a safe place, or "
-"memorize it."
-msgstr ""
-"Пожалуйста, либо запишите данный псевдоним и сохраните его в безопасном "
-"месте или запомните его."
 
 #: source_templates/generate.html:44
 #, fuzzy
@@ -987,12 +992,12 @@ msgstr "Введите ваш псевдоним"
 msgid "CANCEL"
 msgstr "ОТМЕНИТЬ"
 
-#: source_templates/logout_flashed_message.html:5
+#: source_templates/logout_flashed_message.html:4
 #: source_templates/session_timeout.html:5
 msgid "Important!"
 msgstr "Важно!"
 
-#: source_templates/logout_flashed_message.html:6
+#: source_templates/logout_flashed_message.html:5
 msgid ""
 "Thank you for exiting your session! Please select \"New Identity\" from the "
 "green onion button in the Tor browser to clear all history of your "
@@ -1006,9 +1011,8 @@ msgstr ""
 #: source_templates/lookup.html:12
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
-"visited. This could have been human activity, an automated attack, or just "
-"some random blip. To err on the side of caution, we put a hold on sending "
-"all documents from that day through to our journalists."
+"visited. To err on the side of caution, we put a hold on sending all "
+"documents from that day through to our journalists."
 msgstr ""
 
 #: source_templates/lookup.html:14
@@ -1087,7 +1091,9 @@ msgid "There are no replies at this time."
 msgstr ""
 
 #: source_templates/lookup.html:100
-msgid "Remember your codename is:"
+#, fuzzy
+#| msgid "Remember your codename is:"
+msgid "Remember, your codename is:"
 msgstr "Запомните, что ваш псевдоним:"
 
 #: source_templates/lookup.html:101

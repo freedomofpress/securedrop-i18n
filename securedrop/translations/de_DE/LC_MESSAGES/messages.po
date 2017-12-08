@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2017-12-04 13:00+0000\n"
 "Last-Translator: heartsucker <heartsucker@riseup.net>\n"
-"Language-Team: German "
-"<https://weblate.securedrop.club/projects/securedrop/securedrop/de/>\n"
+"Language-Team: German <https://weblate.securedrop.club/projects/securedrop/"
+"securedrop/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -99,22 +99,22 @@ msgstr "Keine Sammlungen ausgewählt."
 msgid "Only administrators can access this page."
 msgstr "Nur Administratoren haben Zugriff auf diese Seite."
 
-#: journalist_app/forms.py:17
+#: journalist_app/forms.py:18
 msgid "Field must be 40 characters long but got {num_chars}."
 msgstr "Das Feld muss 40 Zeichen lang sein, hat aber {num_chars}."
 
-#: journalist_app/forms.py:28
+#: journalist_app/forms.py:29
 msgid ""
 "Field must be at least {min_chars} characters long but only got {num_chars}."
 msgstr ""
 "Das Feld muss mindestens {min_chars} Zeichen lang sein, enthält aber nur "
 "{num_chars}."
 
-#: journalist_app/forms.py:33 source_app/forms.py:11
+#: journalist_app/forms.py:34 source_app/forms.py:11
 msgid "This field is required."
 msgstr "Dieses Feld ist erforderlich."
 
-#: journalist_app/forms.py:50
+#: journalist_app/forms.py:51
 msgid "You cannot send an empty reply."
 msgstr "Sie können keine leere Antwort senden."
 
@@ -126,7 +126,7 @@ msgstr "Vielen Dank. Ihre Antwort wurde gespeichert."
 msgid "No collections selected for download."
 msgstr "Es sind keine Sammlungen zum Herunterladen ausgewählt."
 
-#: journalist_app/main.py:142 journalist_app/utils.py:188
+#: journalist_app/main.py:142 journalist_app/utils.py:189
 msgid "No collections selected for deletion."
 msgstr "Es sind keine Sammlungen zum Löschen ausgewählt."
 
@@ -161,23 +161,26 @@ msgid "Please wait for a new two-factor token before trying again."
 msgstr ""
 "Bitte warten Sie auf ein neues Zwei-Faktor-Token, bevor Sie erneut versuchen."
 
-#: journalist_app/utils.py:140
+#: journalist_app/utils.py:141
+#, fuzzy
+#| msgid "Submission deleted."
+#| msgid_plural "Submissions deleted."
 msgid "Submission deleted."
-msgid_plural "Submissions deleted."
+msgid_plural "{num} submissions deleted."
 msgstr[0] "Einreichung gelöscht."
 msgstr[1] "Einreichungen gelöscht."
 
-#: journalist_app/utils.py:193
+#: journalist_app/utils.py:194
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} Sammlung gelöscht"
 msgstr[1] "{num} Sammlungen gelöscht"
 
-#: journalist_app/utils.py:228
+#: journalist_app/utils.py:229
 msgid "You submitted a bad password! Password not changed."
 msgstr "Sie haben ein falsches Passwort eingegeben! Passwort nicht geändert."
 
-#: journalist_app/utils.py:235
+#: journalist_app/utils.py:236
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -187,7 +190,7 @@ msgstr ""
 "gespeichert. Um zu verhindern, dass Sie aus Ihrem Konto ausgeschlossen "
 "werden, sollten Sie Ihr Passwort erneut zurücksetzen."
 
-#: journalist_app/utils.py:244
+#: journalist_app/utils.py:245
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -195,7 +198,7 @@ msgstr ""
 "Das Passwort wurde erfolgreich aktualisiert. Vergessen Sie nicht, es in "
 "Ihrer KeePassX-Datenbank zu speichern. Das neue Passwort ist:"
 
-#: journalist_app/utils.py:261
+#: journalist_app/utils.py:262
 msgid "No unread submissions in selected collections."
 msgstr "Keine ungelesenen Einreichungen in den ausgewählten Sammlungen."
 
@@ -755,11 +758,11 @@ msgstr ""
 "garantiert <strong>keine Anonymität.</strong> <a href=\"{url}\">Warum ist "
 "das gefährlich?</a>"
 
-#: source_app/forms.py:14
+#: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "Feld muss zwischen 1 und {max_codename_len} Zeichen lang sein."
 
-#: source_app/forms.py:17
+#: source_app/forms.py:18
 msgid "Invalid input."
 msgstr "Ungültige Eingabe."
 
@@ -788,15 +791,15 @@ msgstr "Danke! Wir haben Ihr Dokument erhalten."
 msgid "Thanks! We received your message and document."
 msgstr "Danke! Wir haben Ihre Nachricht und Dokument erhalten."
 
-#: source_app/main.py:184
+#: source_app/main.py:190
 msgid "Reply deleted"
 msgstr "Antwort gelöscht"
 
-#: source_app/main.py:201
+#: source_app/main.py:207
 msgid "All replies have been deleted"
 msgstr "Alle Antworten wurden gelöscht"
 
-#: source_app/main.py:215
+#: source_app/main.py:221
 msgid "Sorry, that is not a recognized codename."
 msgstr "Entschuldigung, das ist kein erkannter Deckname."
 
@@ -857,7 +860,20 @@ msgstr "Decknamen vergessen?"
 msgid "Welcome"
 msgstr "Willkommen"
 
-#: source_templates/generate.html:5
+#: source_templates/generate.html:7
+#, fuzzy
+#| msgid ""
+#| "Please either write this codename down and keep it in a safe place, or "
+#| "memorize it."
+msgid ""
+"Please either write this codename down and keep it in a safe place, or "
+"memorize it.<br> This will allow you to log back in and receive replies from "
+"journalists."
+msgstr ""
+"Bitte notieren Sie sich diesen Decknamen und bewahren Sie ihn an einem "
+"sicheren Ort auf oder merken Sie ihn sich."
+
+#: source_templates/generate.html:10
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our journalists in response to what you submit on the next screen."
@@ -866,7 +882,7 @@ msgstr ""
 "unseren Journalisten zu erhalten, die darauf antworten, was Sie im nächsten "
 "Schritt versenden."
 
-#: source_templates/generate.html:29
+#: source_templates/generate.html:34
 msgid ""
 "Because we use none of the traditional means to track users of our "
 "<strong>SecureDrop</strong>\n"
@@ -882,14 +898,6 @@ msgstr ""
 "wir Fragen haben oder an weiteren Dokumenten interessiert sein. Anders als "
 "bei Passwörtern gibt es keine Möglichkeit, einen verlorenen Decknamen "
 "wiederherzustellen."
-
-#: source_templates/generate.html:36
-msgid ""
-"Please either write this codename down and keep it in a safe place, or "
-"memorize it."
-msgstr ""
-"Bitte notieren Sie sich diesen Decknamen und bewahren Sie ihn an einem "
-"sicheren Ort auf oder merken Sie ihn sich."
 
 #: source_templates/generate.html:44
 msgid "USE NEW CODENAME"
@@ -994,12 +1002,12 @@ msgstr "Geben Sie Ihren Decknamen ein"
 msgid "CANCEL"
 msgstr "ABBRECHEN"
 
-#: source_templates/logout_flashed_message.html:5
+#: source_templates/logout_flashed_message.html:4
 #: source_templates/session_timeout.html:5
 msgid "Important!"
 msgstr "Wichtig!"
 
-#: source_templates/logout_flashed_message.html:6
+#: source_templates/logout_flashed_message.html:5
 msgid ""
 "Thank you for exiting your session! Please select \"New Identity\" from the "
 "green onion button in the Tor browser to clear all history of your "
@@ -1014,11 +1022,16 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "Puh, Sie sind es! Nun zum peinlichen Teil..."
 
 #: source_templates/lookup.html:12
+#, fuzzy
+#| msgid ""
+#| "Our servers experienced an unusual surge of new activity, when you last "
+#| "visited. This could have been human activity, an automated attack, or "
+#| "just some random blip. To err on the side of caution, we put a hold on "
+#| "sending all documents from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
-"visited. This could have been human activity, an automated attack, or just "
-"some random blip. To err on the side of caution, we put a hold on sending "
-"all documents from that day through to our journalists."
+"visited. To err on the side of caution, we put a hold on sending all "
+"documents from that day through to our journalists."
 msgstr ""
 "Bei Ihrem letzten Besuch haben unsere Server eine ungewöhliche "
 "Aktivitätssteigerung entdeckt. Das könnte menschliche Aktivität, ein "
@@ -1114,7 +1127,9 @@ msgid "There are no replies at this time."
 msgstr "Zur Zeit gibt es keine Antworten."
 
 #: source_templates/lookup.html:100
-msgid "Remember your codename is:"
+#, fuzzy
+#| msgid "Remember your codename is:"
+msgid "Remember, your codename is:"
 msgstr "Denken Sie daran, Ihr Deckname ist:"
 
 #: source_templates/lookup.html:101

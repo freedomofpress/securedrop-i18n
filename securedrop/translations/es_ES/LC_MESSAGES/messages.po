@@ -10,8 +10,8 @@ msgstr ""
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2017-12-04 15:00+0000\n"
 "Last-Translator: Anatoli <djanatoli@gmail.com>\n"
-"Language-Team: Spanish "
-"<https://weblate.securedrop.club/projects/securedrop/securedrop/es/>\n"
+"Language-Team: Spanish <https://weblate.securedrop.club/projects/securedrop/"
+"securedrop/es/>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -102,22 +102,22 @@ msgstr "No hay colecciones seleccionadas."
 msgid "Only administrators can access this page."
 msgstr "Solo administradores pueden entrar a esta página."
 
-#: journalist_app/forms.py:17
+#: journalist_app/forms.py:18
 msgid "Field must be 40 characters long but got {num_chars}."
 msgstr "El area debe ser de 40 caracteres de longitud, pero tiene {num_chars}."
 
-#: journalist_app/forms.py:28
+#: journalist_app/forms.py:29
 msgid ""
 "Field must be at least {min_chars} characters long but only got {num_chars}."
 msgstr ""
 "El área debe ser por lo menos {min_chars}  caracteres de longitud, pero sólo "
 "tiene {num_chars}."
 
-#: journalist_app/forms.py:33 source_app/forms.py:11
+#: journalist_app/forms.py:34 source_app/forms.py:11
 msgid "This field is required."
 msgstr "Esta área es obligatoria."
 
-#: journalist_app/forms.py:50
+#: journalist_app/forms.py:51
 msgid "You cannot send an empty reply."
 msgstr "Usted no puede enviar una respuesta vacía."
 
@@ -129,7 +129,7 @@ msgstr "Gracias. Su respuesta ha sido guardada."
 msgid "No collections selected for download."
 msgstr "No hay colecciones seleccionadas para bajar."
 
-#: journalist_app/main.py:142 journalist_app/utils.py:188
+#: journalist_app/main.py:142 journalist_app/utils.py:189
 msgid "No collections selected for deletion."
 msgstr "No hay colecciones seleccionadas para eliminar."
 
@@ -163,23 +163,26 @@ msgid "Please wait for a new two-factor token before trying again."
 msgstr ""
 "Por favor espere un nuevo token de dos factores antes de intentarlo de nuevo."
 
-#: journalist_app/utils.py:140
+#: journalist_app/utils.py:141
+#, fuzzy
+#| msgid "Submission deleted."
+#| msgid_plural "Submissions deleted."
 msgid "Submission deleted."
-msgid_plural "Submissions deleted."
+msgid_plural "{num} submissions deleted."
 msgstr[0] "Sumisión eliminada."
 msgstr[1] "Sumisiones eliminadas."
 
-#: journalist_app/utils.py:193
+#: journalist_app/utils.py:194
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} colección eliminada"
 msgstr[1] "{num} colecciones eliminadas"
 
-#: journalist_app/utils.py:228
+#: journalist_app/utils.py:229
 msgid "You submitted a bad password! Password not changed."
 msgstr "¡Envió una contraseña incorrecta! La contraseña no cambió."
 
-#: journalist_app/utils.py:235
+#: journalist_app/utils.py:236
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -189,7 +192,7 @@ msgstr ""
 "correctamente. Para evitar que se bloquee su cuenta, debe restablecer su "
 "contraseña nuevamente."
 
-#: journalist_app/utils.py:244
+#: journalist_app/utils.py:245
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -197,7 +200,7 @@ msgstr ""
 "Contraseña actualizada. No olvide guardarla en su base de datos KeePassX. "
 "Contraseña nueva:"
 
-#: journalist_app/utils.py:261
+#: journalist_app/utils.py:262
 msgid "No unread submissions in selected collections."
 msgstr "No hay envios sin leer en las colecciones seleccionadas."
 
@@ -755,12 +758,12 @@ msgstr ""
 "<strong> no </strong> proporciona anonimato. <a href=\"{url}\"> ¿Por qué "
 "esto es peligroso? </a>"
 
-#: source_app/forms.py:14
+#: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr ""
 "Esta area debe estar entre 1 y {max_codename_len} caracteres de longitud."
 
-#: source_app/forms.py:17
+#: source_app/forms.py:18
 msgid "Invalid input."
 msgstr "Entrada inválida."
 
@@ -788,15 +791,15 @@ msgstr "Gracias! Recibimos su documento."
 msgid "Thanks! We received your message and document."
 msgstr "Gracias! Recibimos su mensaje y documento."
 
-#: source_app/main.py:184
+#: source_app/main.py:190
 msgid "Reply deleted"
 msgstr "Respuesta eliminada"
 
-#: source_app/main.py:201
+#: source_app/main.py:207
 msgid "All replies have been deleted"
 msgstr "Todas las repuestas han sido eliminadas"
 
-#: source_app/main.py:215
+#: source_app/main.py:221
 msgid "Sorry, that is not a recognized codename."
 msgstr "Lo sentimos, ese nombre clave no es reconocido."
 
@@ -856,7 +859,20 @@ msgstr "¿Olvido su nombre clave?"
 msgid "Welcome"
 msgstr "Bienvenido"
 
-#: source_templates/generate.html:5
+#: source_templates/generate.html:7
+#, fuzzy
+#| msgid ""
+#| "Please either write this codename down and keep it in a safe place, or "
+#| "memorize it."
+msgid ""
+"Please either write this codename down and keep it in a safe place, or "
+"memorize it.<br> This will allow you to log back in and receive replies from "
+"journalists."
+msgstr ""
+"Por favor, escriba este nombre clave y guárdelo en un lugar seguro, o "
+"memorizelo."
+
+#: source_templates/generate.html:10
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our journalists in response to what you submit on the next screen."
@@ -865,7 +881,7 @@ msgstr ""
 "mensajes de nuestros periodistas en respuesta a lo que usted envíe en la "
 "siguiente pantalla."
 
-#: source_templates/generate.html:29
+#: source_templates/generate.html:34
 msgid ""
 "Because we use none of the traditional means to track users of our "
 "<strong>SecureDrop</strong>\n"
@@ -880,14 +896,6 @@ msgstr ""
 "tenemos de comunicarnos con usted, si tenemos\n"
 "preguntas o estamos interesados en documentos adicionales. A diferencia de "
 "las contraseñas, no hay forma de recuperar un nombre clave perdido."
-
-#: source_templates/generate.html:36
-msgid ""
-"Please either write this codename down and keep it in a safe place, or "
-"memorize it."
-msgstr ""
-"Por favor, escriba este nombre clave y guárdelo en un lugar seguro, o "
-"memorizelo."
 
 #: source_templates/generate.html:44
 msgid "USE NEW CODENAME"
@@ -989,12 +997,12 @@ msgstr "Entre su Nombre Clave"
 msgid "CANCEL"
 msgstr "CANCELAR"
 
-#: source_templates/logout_flashed_message.html:5
+#: source_templates/logout_flashed_message.html:4
 #: source_templates/session_timeout.html:5
 msgid "Important!"
 msgstr "¡Importante!"
 
-#: source_templates/logout_flashed_message.html:6
+#: source_templates/logout_flashed_message.html:5
 msgid ""
 "Thank you for exiting your session! Please select \"New Identity\" from the "
 "green onion button in the Tor browser to clear all history of your "
@@ -1009,11 +1017,16 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "¡Uf, es usted! Ahora, la parte embarazosa..."
 
 #: source_templates/lookup.html:12
+#, fuzzy
+#| msgid ""
+#| "Our servers experienced an unusual surge of new activity, when you last "
+#| "visited. This could have been human activity, an automated attack, or "
+#| "just some random blip. To err on the side of caution, we put a hold on "
+#| "sending all documents from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
-"visited. This could have been human activity, an automated attack, or just "
-"some random blip. To err on the side of caution, we put a hold on sending "
-"all documents from that day through to our journalists."
+"visited. To err on the side of caution, we put a hold on sending all "
+"documents from that day through to our journalists."
 msgstr ""
 "Nuestros servidores experimentaron una oleada inusual de nueva actividad, "
 "cuando usted visitó por última vez. Esto podría haber sido actividad humana, "
@@ -1109,7 +1122,9 @@ msgid "There are no replies at this time."
 msgstr "No hay respuestas en este momento."
 
 #: source_templates/lookup.html:100
-msgid "Remember your codename is:"
+#, fuzzy
+#| msgid "Remember your codename is:"
+msgid "Remember, your codename is:"
 msgstr "Recuerde que su nombre clave es:"
 
 #: source_templates/lookup.html:101

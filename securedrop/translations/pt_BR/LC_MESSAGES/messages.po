@@ -9,8 +9,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2017-12-08 10:00+0000\n"
 "Last-Translator: Bernardo Tonasse <btonasse@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) "
-"<https://weblate.securedrop.club/projects/securedrop/securedrop/pt_BR/>\n"
+"Language-Team: Portuguese (Brazil) <https://weblate.securedrop.club/projects/"
+"securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -101,22 +101,22 @@ msgstr "Nenhuma coleção selecionada."
 msgid "Only administrators can access this page."
 msgstr "Apenas administradores podem acessar esta página."
 
-#: journalist_app/forms.py:17
+#: journalist_app/forms.py:18
 msgid "Field must be 40 characters long but got {num_chars}."
 msgstr "Este campo deve conter 40 caracteres, mas contém {num_chars}."
 
-#: journalist_app/forms.py:28
+#: journalist_app/forms.py:29
 msgid ""
 "Field must be at least {min_chars} characters long but only got {num_chars}."
 msgstr ""
 "Este campo deve conter pelo menos {min_chars} caracteres, mas contém apenas "
 "{num_chars}."
 
-#: journalist_app/forms.py:33 source_app/forms.py:11
+#: journalist_app/forms.py:34 source_app/forms.py:11
 msgid "This field is required."
 msgstr "Este campo é obrigatório."
 
-#: journalist_app/forms.py:50
+#: journalist_app/forms.py:51
 msgid "You cannot send an empty reply."
 msgstr "Não é possível enviar uma resposta em branco."
 
@@ -128,7 +128,7 @@ msgstr "Agradecemos pela contribuição. Sua resposta foi registrada."
 msgid "No collections selected for download."
 msgstr "Nenhuma coleção selecionada para download."
 
-#: journalist_app/main.py:142 journalist_app/utils.py:188
+#: journalist_app/main.py:142 journalist_app/utils.py:189
 msgid "No collections selected for deletion."
 msgstr "Nenhuma coleção selecionada para ser apagada."
 
@@ -164,23 +164,26 @@ msgstr ""
 "Por favor, aguarde um novo código de autenticação de dois fatores antes de "
 "tentar novamente."
 
-#: journalist_app/utils.py:140
+#: journalist_app/utils.py:141
+#, fuzzy
+#| msgid "Submission deleted."
+#| msgid_plural "Submissions deleted."
 msgid "Submission deleted."
-msgid_plural "Submissions deleted."
+msgid_plural "{num} submissions deleted."
 msgstr[0] "Envio apagado."
 msgstr[1] "Envios apagados."
 
-#: journalist_app/utils.py:193
+#: journalist_app/utils.py:194
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} coleção apagada"
 msgstr[1] "{num} coleções apagadas"
 
-#: journalist_app/utils.py:228
+#: journalist_app/utils.py:229
 msgid "You submitted a bad password! Password not changed."
 msgstr "Senha incorreta! A sua senha não foi alterada."
 
-#: journalist_app/utils.py:235
+#: journalist_app/utils.py:236
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -189,7 +192,7 @@ msgstr ""
 "Ocorreu um erro, e a nova senha talvez não tenha sido salva corretamente. "
 "Para não perder o acesso à sua conta, redefina a sua senha."
 
-#: journalist_app/utils.py:244
+#: journalist_app/utils.py:245
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -197,7 +200,7 @@ msgstr ""
 "Senha atualizada. Não se esqueça de salvá-la em seu banco de dados KeePassX. "
 "Nova senha:"
 
-#: journalist_app/utils.py:261
+#: journalist_app/utils.py:262
 msgid "No unread submissions in selected collections."
 msgstr "Nenhum envio não lido nas coleções selecionadas."
 
@@ -520,7 +523,8 @@ msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
 msgstr[0] "O seguinte arquivo será <strong>apagado definitivamente</strong>:"
-msgstr[1] "Os seguintes arquivos serão <strong>apagados definitivamente</strong>:"
+msgstr[1] ""
+"Os seguintes arquivos serão <strong>apagados definitivamente</strong>:"
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
@@ -564,8 +568,8 @@ msgid ""
 "Your password will be changed immediately, so you will need to save it "
 "before pressing the \"Reset Password\" button."
 msgstr ""
-"Sua senha será alterada imediatamente. Salve sua senha antes de clicar em \""
-"Redefinir Senha\"."
+"Sua senha será alterada imediatamente. Salve sua senha antes de clicar em "
+"\"Redefinir Senha\"."
 
 #: journalist_templates/edit_account.html:34
 msgid "Please enter your current password and two-factor code."
@@ -742,11 +746,11 @@ msgstr ""
 "<strong> não</strong> garante o seu anonimato. <a href=\"{url}\">Por que "
 "isso é perigoso?</a>"
 
-#: source_app/forms.py:14
+#: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "Este campo deve conter entre 1 e {max_codename_len} caracteres."
 
-#: source_app/forms.py:17
+#: source_app/forms.py:18
 msgid "Invalid input."
 msgstr "Entrada inválida."
 
@@ -774,15 +778,15 @@ msgid "Thanks! We received your message and document."
 msgstr ""
 "Agradecemos pela contribuição. Recebemos a sua mensagem e o seu documento."
 
-#: source_app/main.py:184
+#: source_app/main.py:190
 msgid "Reply deleted"
 msgstr "Resposta apagada"
 
-#: source_app/main.py:201
+#: source_app/main.py:207
 msgid "All replies have been deleted"
 msgstr "Todas as respostas foram apagadas"
 
-#: source_app/main.py:215
+#: source_app/main.py:221
 msgid "Sorry, that is not a recognized codename."
 msgstr "Desculpe, este codinome não foi reconhecido."
 
@@ -841,7 +845,19 @@ msgstr "Esqueceu o seu codinome?"
 msgid "Welcome"
 msgstr "Bem-vindo(a)"
 
-#: source_templates/generate.html:5
+#: source_templates/generate.html:7
+#, fuzzy
+#| msgid ""
+#| "Please either write this codename down and keep it in a safe place, or "
+#| "memorize it."
+msgid ""
+"Please either write this codename down and keep it in a safe place, or "
+"memorize it.<br> This will allow you to log back in and receive replies from "
+"journalists."
+msgstr ""
+"Por favor, anote o seu codinome e guarde-o em um lugar seguro, ou memorize-o."
+
+#: source_templates/generate.html:10
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our journalists in response to what you submit on the next screen."
@@ -850,7 +866,7 @@ msgstr ""
 "consultar as respostas de nossos jornalistas ao material enviado, use o "
 "codinome abaixo ou um codinome já existente."
 
-#: source_templates/generate.html:29
+#: source_templates/generate.html:34
 msgid ""
 "Because we use none of the traditional means to track users of our "
 "<strong>SecureDrop</strong>\n"
@@ -864,13 +880,6 @@ msgstr ""
 "maneira de entrar em contato com você para fazer perguntas ou pedir mais "
 "documentos. Contrariamente a uma senha, não é possível recuperar um codinome "
 "perdido."
-
-#: source_templates/generate.html:36
-msgid ""
-"Please either write this codename down and keep it in a safe place, or "
-"memorize it."
-msgstr ""
-"Por favor, anote o seu codinome e guarde-o em um lugar seguro, ou memorize-o."
 
 #: source_templates/generate.html:44
 msgid "USE NEW CODENAME"
@@ -972,12 +981,12 @@ msgstr "Digite o seu codinome"
 msgid "CANCEL"
 msgstr "CANCELAR"
 
-#: source_templates/logout_flashed_message.html:5
+#: source_templates/logout_flashed_message.html:4
 #: source_templates/session_timeout.html:5
 msgid "Important!"
 msgstr "Importante!"
 
-#: source_templates/logout_flashed_message.html:6
+#: source_templates/logout_flashed_message.html:5
 msgid ""
 "Thank you for exiting your session! Please select \"New Identity\" from the "
 "green onion button in the Tor browser to clear all history of your "
@@ -992,11 +1001,16 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "Ufa, é você mesmo! Agora, a parte mais delicada..."
 
 #: source_templates/lookup.html:12
+#, fuzzy
+#| msgid ""
+#| "Our servers experienced an unusual surge of new activity, when you last "
+#| "visited. This could have been human activity, an automated attack, or "
+#| "just some random blip. To err on the side of caution, we put a hold on "
+#| "sending all documents from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
-"visited. This could have been human activity, an automated attack, or just "
-"some random blip. To err on the side of caution, we put a hold on sending "
-"all documents from that day through to our journalists."
+"visited. To err on the side of caution, we put a hold on sending all "
+"documents from that day through to our journalists."
 msgstr ""
 "Nossos servidores detectaram um aumento inesperado de novas atividades "
 "durante a sua última visita. Isso pode ter sido causado por usuários, por um "
@@ -1090,7 +1104,9 @@ msgid "There are no replies at this time."
 msgstr "Não há nenhuma resposta por enquanto."
 
 #: source_templates/lookup.html:100
-msgid "Remember your codename is:"
+#, fuzzy
+#| msgid "Remember your codename is:"
+msgid "Remember, your codename is:"
 msgstr "Lembre-se, o seu codinome é:"
 
 #: source_templates/lookup.html:101
@@ -1177,9 +1193,9 @@ msgid ""
 "you</strong> to install Tor Browser and use it to access our site safely and "
 "anonymously."
 msgstr ""
-"Para enviar informações para o SecureDrop, é <strong>altamente "
-"recomendado</strong> instalar o navegador Tor e usá-lo para acessar nosso "
-"site de modo seguro e anônimo."
+"Para enviar informações para o SecureDrop, é <strong>altamente recomendado</"
+"strong> instalar o navegador Tor e usá-lo para acessar nosso site de modo "
+"seguro e anônimo."
 
 #: source_templates/use-tor-browser.html:6
 msgid ""
@@ -1283,8 +1299,8 @@ msgid ""
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
 "<strong>Dica:</strong> para manter o seu anonimato, <strong>não</strong> use "
-"o GPG para assinar o arquivo criptografado (com as opções <code>--sign</code>"
-" ou <code>-s</code>), pois isso revelaria a sua identidade."
+"o GPG para assinar o arquivo criptografado (com as opções <code>--sign</"
+"code> ou <code>-s</code>), pois isso revelaria a sua identidade."
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"

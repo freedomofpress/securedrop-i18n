@@ -10,8 +10,8 @@ msgstr ""
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2017-12-02 10:06+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
-"Language-Team: Norwegian Bokmål "
-"<https://weblate.securedrop.club/projects/securedrop/securedrop/nb_NO/>\n"
+"Language-Team: Norwegian Bokmål <https://weblate.securedrop.club/projects/"
+"securedrop/securedrop/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -99,20 +99,20 @@ msgstr "Ingen kildeoppføringer valgt."
 msgid "Only administrators can access this page."
 msgstr "Bare administratorer har tilgang til denne siden."
 
-#: journalist_app/forms.py:17
+#: journalist_app/forms.py:18
 msgid "Field must be 40 characters long but got {num_chars}."
 msgstr "Må være 40 tegn langt, men er nå på {num_chars}."
 
-#: journalist_app/forms.py:28
+#: journalist_app/forms.py:29
 msgid ""
 "Field must be at least {min_chars} characters long but only got {num_chars}."
 msgstr "Må være minst {min_chars} tegn langt, men er nå på bare {num_chars}."
 
-#: journalist_app/forms.py:33 source_app/forms.py:11
+#: journalist_app/forms.py:34 source_app/forms.py:11
 msgid "This field is required."
 msgstr "Dette feltet er påkrevd."
 
-#: journalist_app/forms.py:50
+#: journalist_app/forms.py:51
 msgid "You cannot send an empty reply."
 msgstr "Du kan ikke sende et tomt svar."
 
@@ -124,7 +124,7 @@ msgstr "Takk. Svaret ditt har blitt lagret."
 msgid "No collections selected for download."
 msgstr "Ingen kildedata valgt for nedlasting."
 
-#: journalist_app/main.py:142 journalist_app/utils.py:188
+#: journalist_app/main.py:142 journalist_app/utils.py:189
 msgid "No collections selected for deletion."
 msgstr "Ingen kildeoppføringer valgt for sletting."
 
@@ -154,23 +154,26 @@ msgstr[1] "Vent i minst {seconds} sekunder før du forsøker å logge inn igjen.
 msgid "Please wait for a new two-factor token before trying again."
 msgstr "Vent til du har fått en ny tofaktor-kode før du forsøker igjen."
 
-#: journalist_app/utils.py:140
+#: journalist_app/utils.py:141
+#, fuzzy
+#| msgid "Submission deleted."
+#| msgid_plural "Submissions deleted."
 msgid "Submission deleted."
-msgid_plural "Submissions deleted."
+msgid_plural "{num} submissions deleted."
 msgstr[0] "Bidrag slettet."
 msgstr[1] "Bidragene er slettet."
 
-#: journalist_app/utils.py:193
+#: journalist_app/utils.py:194
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} kildeoppføring slettet"
 msgstr[1] "{num} kildeoppføringer slettet"
 
-#: journalist_app/utils.py:228
+#: journalist_app/utils.py:229
 msgid "You submitted a bad password! Password not changed."
 msgstr "Du la inn et ugyldig passord! Passordet ble derfor ikke endret."
 
-#: journalist_app/utils.py:235
+#: journalist_app/utils.py:236
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -179,7 +182,7 @@ msgstr ""
 "En feil oppstod, og det nye passordet ble kanskje ikke lagret riktig. For å "
 "unngå å bli utelåst fra kontoen bør du tilbakestille passordet ditt på nytt."
 
-#: journalist_app/utils.py:244
+#: journalist_app/utils.py:245
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -187,7 +190,7 @@ msgstr ""
 "Passord oppdatert. Ikke glem å lagre passordet i din KeePassX-database. Det "
 "nye passordet er:"
 
-#: journalist_app/utils.py:261
+#: journalist_app/utils.py:262
 msgid "No unread submissions in selected collections."
 msgstr "Ingen uleste innsendte bidrag i valgte kildeoppføringer."
 
@@ -732,11 +735,11 @@ msgstr ""
 "<strong>gir ikke</strong> anonym kommunikasjon. <a href=\"{url}\">Hvorfor "
 "kan dette være problematisk?</a>"
 
-#: source_app/forms.py:14
+#: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "Feltet må være mellom ett og {max_codename_len} tegn langt."
 
-#: source_app/forms.py:17
+#: source_app/forms.py:18
 msgid "Invalid input."
 msgstr "Ugyldig inndata."
 
@@ -764,15 +767,15 @@ msgstr "Takk! Vi mottok dokumentet ditt."
 msgid "Thanks! We received your message and document."
 msgstr "Takk! Vi mottok meldingen og dokumentet ditt."
 
-#: source_app/main.py:184
+#: source_app/main.py:190
 msgid "Reply deleted"
 msgstr "Svar slettet"
 
-#: source_app/main.py:201
+#: source_app/main.py:207
 msgid "All replies have been deleted"
 msgstr "Alle svar har blitt slettet"
 
-#: source_app/main.py:215
+#: source_app/main.py:221
 msgid "Sorry, that is not a recognized codename."
 msgstr "Beklager, det er ikke et gjenkjent kodenavn."
 
@@ -831,7 +834,18 @@ msgstr "Glemt kodenavnet ditt?"
 msgid "Welcome"
 msgstr "Velkommen"
 
-#: source_templates/generate.html:5
+#: source_templates/generate.html:7
+#, fuzzy
+#| msgid ""
+#| "Please either write this codename down and keep it in a safe place, or "
+#| "memorize it."
+msgid ""
+"Please either write this codename down and keep it in a safe place, or "
+"memorize it.<br> This will allow you to log back in and receive replies from "
+"journalists."
+msgstr "Husk, eller skriv ned kodenavnet på et sikkert sted."
+
+#: source_templates/generate.html:10
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our journalists in response to what you submit on the next screen."
@@ -840,7 +854,7 @@ msgstr ""
 "kommunikasjonen med våre journalister, f.eks. for å sjekke om de har svart "
 "på det du sendte inn."
 
-#: source_templates/generate.html:29
+#: source_templates/generate.html:34
 msgid ""
 "Because we use none of the traditional means to track users of our "
 "<strong>SecureDrop</strong>\n"
@@ -856,12 +870,6 @@ msgstr ""
 "eller trenger hjelp til å forstå det du har sendt inn. Det er ingen «glemt "
 "passord»-funksjon, og dermed umulig å finne tilbake til kodenavnet om du "
 "glemmer det."
-
-#: source_templates/generate.html:36
-msgid ""
-"Please either write this codename down and keep it in a safe place, or "
-"memorize it."
-msgstr "Husk, eller skriv ned kodenavnet på et sikkert sted."
 
 #: source_templates/generate.html:44
 msgid "USE NEW CODENAME"
@@ -962,12 +970,12 @@ msgstr "Skriv inn ditt kodenavn"
 msgid "CANCEL"
 msgstr "AVBRYT"
 
-#: source_templates/logout_flashed_message.html:5
+#: source_templates/logout_flashed_message.html:4
 #: source_templates/session_timeout.html:5
 msgid "Important!"
 msgstr "Viktig!"
 
-#: source_templates/logout_flashed_message.html:6
+#: source_templates/logout_flashed_message.html:5
 msgid ""
 "Thank you for exiting your session! Please select \"New Identity\" from the "
 "green onion button in the Tor browser to clear all history of your "
@@ -982,11 +990,16 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "Puh, det er deg! Nå, det litt pinlige…"
 
 #: source_templates/lookup.html:12
+#, fuzzy
+#| msgid ""
+#| "Our servers experienced an unusual surge of new activity, when you last "
+#| "visited. This could have been human activity, an automated attack, or "
+#| "just some random blip. To err on the side of caution, we put a hold on "
+#| "sending all documents from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
-"visited. This could have been human activity, an automated attack, or just "
-"some random blip. To err on the side of caution, we put a hold on sending "
-"all documents from that day through to our journalists."
+"visited. To err on the side of caution, we put a hold on sending all "
+"documents from that day through to our journalists."
 msgstr ""
 "Våre servere opplevde uvanlig mye trøkk sist du var innom. Dette kan ha vært "
 "mange vanlige brukere, automatisert hærverk, eller bare tilfeldig krøll på "
@@ -1080,7 +1093,9 @@ msgid "There are no replies at this time."
 msgstr "Ingen svar til nå."
 
 #: source_templates/lookup.html:100
-msgid "Remember your codename is:"
+#, fuzzy
+#| msgid "Remember your codename is:"
+msgid "Remember, your codename is:"
 msgstr "Husk at kodenavnet ditt er:"
 
 #: source_templates/lookup.html:101

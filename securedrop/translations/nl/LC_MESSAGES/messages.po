@@ -10,8 +10,8 @@ msgstr ""
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2017-12-04 10:36+0000\n"
 "Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
-"Language-Team: Dutch "
-"<https://weblate.securedrop.club/projects/securedrop/securedrop/nl/>\n"
+"Language-Team: Dutch <https://weblate.securedrop.club/projects/securedrop/"
+"securedrop/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -102,22 +102,22 @@ msgstr "Geen collecties geselecteerd."
 msgid "Only administrators can access this page."
 msgstr "U moet beheerder zijn om toegang tot deze pagina te krijgen."
 
-#: journalist_app/forms.py:17
+#: journalist_app/forms.py:18
 msgid "Field must be 40 characters long but got {num_chars}."
 msgstr "Veld moet 40 tekens lang zijn, maar bevat er {num_chars}."
 
-#: journalist_app/forms.py:28
+#: journalist_app/forms.py:29
 msgid ""
 "Field must be at least {min_chars} characters long but only got {num_chars}."
 msgstr ""
 "Veld moet minstens {min_chars} karakters lang zijn, maar bevat er slechts "
 "{num_chars}."
 
-#: journalist_app/forms.py:33 source_app/forms.py:11
+#: journalist_app/forms.py:34 source_app/forms.py:11
 msgid "This field is required."
 msgstr "Dit is een verplicht veld."
 
-#: journalist_app/forms.py:50
+#: journalist_app/forms.py:51
 msgid "You cannot send an empty reply."
 msgstr "U kunt geen leeg antwoord te versturen."
 
@@ -129,7 +129,7 @@ msgstr "Bedankt. Uw antwoord is opgeslagen."
 msgid "No collections selected for download."
 msgstr "Geen collecties geselecteerd om te downloaden."
 
-#: journalist_app/main.py:142 journalist_app/utils.py:188
+#: journalist_app/main.py:142 journalist_app/utils.py:189
 msgid "No collections selected for deletion."
 msgstr "Geen collecties geselecteerd om te verwijderen."
 
@@ -161,23 +161,26 @@ msgstr[1] ""
 msgid "Please wait for a new two-factor token before trying again."
 msgstr "Wacht op een nieuw tweestapstoken alvorens opnieuw te proberen."
 
-#: journalist_app/utils.py:140
+#: journalist_app/utils.py:141
+#, fuzzy
+#| msgid "Submission deleted."
+#| msgid_plural "Submissions deleted."
 msgid "Submission deleted."
-msgid_plural "Submissions deleted."
+msgid_plural "{num} submissions deleted."
 msgstr[0] "Inzending verwijderd."
 msgstr[1] "Inzendingen verwijderd."
 
-#: journalist_app/utils.py:193
+#: journalist_app/utils.py:194
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} collectie verwijderd"
 msgstr[1] "{num} collecties verwijderd"
 
-#: journalist_app/utils.py:228
+#: journalist_app/utils.py:229
 msgid "You submitted a bad password! Password not changed."
 msgstr "U heeft een ongeldig wachtwoord ingevoerd! Wachtwoord niet gewijzigd."
 
-#: journalist_app/utils.py:235
+#: journalist_app/utils.py:236
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -187,7 +190,7 @@ msgstr ""
 "correct opgeslagen. Om te voorkomen dat u niet meer kunt inloggen adviseren "
 "wij om uw wachtwoord opnieuw te herstellen."
 
-#: journalist_app/utils.py:244
+#: journalist_app/utils.py:245
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -195,7 +198,7 @@ msgstr ""
 "Wachtwoord updaten is gelukt. Vergeet niet om het op te slaan in uw KeePassX "
 "database. Nieuwe wachtwoord:"
 
-#: journalist_app/utils.py:261
+#: journalist_app/utils.py:262
 msgid "No unread submissions in selected collections."
 msgstr "Geen ongelezen inzendingen in de geselecteerde collecties."
 
@@ -746,11 +749,11 @@ msgstr ""
 "Tor2Web zorgt <strong>niet</strong> voor anonimiteit. <a href="
 "\"{url}\">Waarom is dit gevaarlijk?</a>"
 
-#: source_app/forms.py:14
+#: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "Veld moet tussen 1 en {max_codename_len} tekens lang zijn."
 
-#: source_app/forms.py:17
+#: source_app/forms.py:18
 msgid "Invalid input."
 msgstr "Ongeldige invoer."
 
@@ -778,15 +781,15 @@ msgstr "Bedankt! We hebben uw document ontvangen."
 msgid "Thanks! We received your message and document."
 msgstr "Bedankt! We hebben uw bericht en document ontvangen."
 
-#: source_app/main.py:184
+#: source_app/main.py:190
 msgid "Reply deleted"
 msgstr "Reactie verwijderd"
 
-#: source_app/main.py:201
+#: source_app/main.py:207
 msgid "All replies have been deleted"
 msgstr "Alle reacties zijn verwijderd"
 
-#: source_app/main.py:215
+#: source_app/main.py:221
 msgid "Sorry, that is not a recognized codename."
 msgstr "Helaas is dit geen erkende codenaam."
 
@@ -845,7 +848,20 @@ msgstr "Uw codenaam vergeten?"
 msgid "Welcome"
 msgstr "Welkom"
 
-#: source_templates/generate.html:5
+#: source_templates/generate.html:7
+#, fuzzy
+#| msgid ""
+#| "Please either write this codename down and keep it in a safe place, or "
+#| "memorize it."
+msgid ""
+"Please either write this codename down and keep it in a safe place, or "
+"memorize it.<br> This will allow you to log back in and receive replies from "
+"journalists."
+msgstr ""
+"Noteer deze codenaam en bewaar op een veilige plaats of leer hem uit het "
+"hoofd."
+
+#: source_templates/generate.html:10
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our journalists in response to what you submit on the next screen."
@@ -854,7 +870,7 @@ msgstr ""
 "ontvangen van journalisten in antwoord op wat u op het volgende scherm "
 "inzendt."
 
-#: source_templates/generate.html:29
+#: source_templates/generate.html:34
 msgid ""
 "Because we use none of the traditional means to track users of our "
 "<strong>SecureDrop</strong>\n"
@@ -869,14 +885,6 @@ msgstr ""
 "mochten we vragen hebben of geïnteresseerd zijn in extra documenten. In "
 "tegenstelling tot wachtwoorden kunnen verloren codenamen niet hersteld "
 "worden."
-
-#: source_templates/generate.html:36
-msgid ""
-"Please either write this codename down and keep it in a safe place, or "
-"memorize it."
-msgstr ""
-"Noteer deze codenaam en bewaar op een veilige plaats of leer hem uit het "
-"hoofd."
 
 #: source_templates/generate.html:44
 msgid "USE NEW CODENAME"
@@ -979,12 +987,12 @@ msgstr "Voer uw codenaam in"
 msgid "CANCEL"
 msgstr "ANNULEER"
 
-#: source_templates/logout_flashed_message.html:5
+#: source_templates/logout_flashed_message.html:4
 #: source_templates/session_timeout.html:5
 msgid "Important!"
 msgstr "Belangrijk!"
 
-#: source_templates/logout_flashed_message.html:6
+#: source_templates/logout_flashed_message.html:5
 msgid ""
 "Thank you for exiting your session! Please select \"New Identity\" from the "
 "green onion button in the Tor browser to clear all history of your "
@@ -999,11 +1007,16 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "Gelukkig, het ligt niet aan u! En dan nu het gênante deel..."
 
 #: source_templates/lookup.html:12
+#, fuzzy
+#| msgid ""
+#| "Our servers experienced an unusual surge of new activity, when you last "
+#| "visited. This could have been human activity, an automated attack, or "
+#| "just some random blip. To err on the side of caution, we put a hold on "
+#| "sending all documents from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
-"visited. This could have been human activity, an automated attack, or just "
-"some random blip. To err on the side of caution, we put a hold on sending "
-"all documents from that day through to our journalists."
+"visited. To err on the side of caution, we put a hold on sending all "
+"documents from that day through to our journalists."
 msgstr ""
 "Onze servers hebben het onverwacht druk gekregen tijdens uw laatste bezoek. "
 "Dit heeft mogelijk te maken met menselijke activiteit, een geautomatiseerde "
@@ -1098,7 +1111,9 @@ msgid "There are no replies at this time."
 msgstr "Op dit moment zijn er geen reacties."
 
 #: source_templates/lookup.html:100
-msgid "Remember your codename is:"
+#, fuzzy
+#| msgid "Remember your codename is:"
+msgid "Remember, your codename is:"
 msgstr "Onthoud uw codenaam:"
 
 #: source_templates/lookup.html:101
