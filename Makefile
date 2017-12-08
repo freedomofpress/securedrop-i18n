@@ -59,9 +59,11 @@ flake8: ## Validates PEP8 compliance for Python source files.
 		securedrop/source_app/*.py \
 		securedrop/tests/functional securedrop/tests/*.py
 
+# The --disable=names is required to use the BEM syntax
+# # https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
 .PHONY: html-lint
 html-lint: ## Validates HTML in web application template files.
-	html_lint.py --printfilename --disable=optional_tag,extra_whitespace,indentation \
+	html_lint.py --printfilename --disable=optional_tag,extra_whitespace,indentation,names \
 		securedrop/source_templates/*.html securedrop/journalist_templates/*.html
 
 .PHONY: yamllint
@@ -116,6 +118,16 @@ update-pip-requirements: ## Updates all Python requirements files via pip-compil
 		securedrop/requirements/test-requirements.in
 	pip-compile --output-file securedrop/requirements/securedrop-requirements.txt \
 		securedrop/requirements/securedrop-requirements.in
+
+.PHONY: libvirt-share
+libvirt-share: ## Configure ACLs to allow RWX for libvirt VM (e.g. Admin Workstation)
+	@find "$(PWD)" -type d -and -user $$USER -exec setfacl -m u:libvirt-qemu:rwx {} +
+	@find "$(PWD)" -type f -and -user $$USER -exec setfacl -m u:libvirt-qemu:rw {} +
+
+.PHONY: translate
+translate: ## Update POT translation files from sources
+	@cd securedrop ; ./manage.py translate-messages --extract-update
+	@cd securedrop ; ./manage.py translate-desktop --extract-update
 
 # Explaination of the below shell command should it ever break.
 # 1. Set the field separator to ": ##" and any make targets that might appear between : and ##

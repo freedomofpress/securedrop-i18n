@@ -1,3 +1,8 @@
+---
+#
+# This can be removed when VM against which this is run are more
+# recent than trusty
+#
 - name: Add gettext zesty apt repository
   apt_repository:
     repo: deb http://archive.ubuntu.com/ubuntu/ zesty main
@@ -5,7 +10,6 @@
     update_cache: yes
   tags:
     - apt
-    - development
 
 - name: Install modern gettext
   apt:
@@ -13,7 +17,6 @@
     state: latest
   tags:
     - apt
-    - development
 
 - name: Remove gettext zesty apt repository
   apt_repository:
@@ -22,5 +25,4 @@
     update_cache: yes
   tags:
     - apt
-    - development
 

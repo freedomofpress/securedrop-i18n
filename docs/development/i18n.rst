@@ -11,29 +11,76 @@ to be translated, a directory is created such as
 from ``securedrop/translations/messages.pot``, for translators to work
 with and for the `gettext`_ substitution at runtime.
 
+The desktop icon are in the
+``install_files/ansible-base/roles/tails-config/templates`` directory.
+Their labels are collected in the ``desktop.pot`` file and translated
+in the corresponding ``.po`` files in the same directory (``fr.po``,
+``de.po`` etc.)
+
 The manage.py translate helper
 ------------------------------
 
-The `pybabel`_ command line is wrapped into the ``manage.py
-translate`` helper for convenience. It is designed to be used by
-developers, to run tests with fixtures and during packaging.
+The `pybabel`_ and `gettext`_ command line is wrapped into the
+``manage.py translate-messages`` and ``manage.py translate-desktop``
+helpers for convenience. It is designed to be used by developers, to
+run tests with fixtures and for packaging.
+
+Creating new translations
+-------------------------
+
+For the applications, a user with weblate admin rights must visit the
+`Weblate translation creation page`_ and add the desired languages.
+
+For the desktop, the translations must be suspended in `Weblate`_ to
+avoid conflicts.
+
+* Go to the `Weblate commit page for SecureDrop`_
+
+|Weblate commit Lock|
+
+* Click ``Lock``
+
+|Weblate commit Locked|
+
+Now new files must be created and pushed to weblate with:
+
+.. code:: sh
+
+    $ git clone -b i18n http://lab.securedrop.club/bot/securedrop
+    $ cd securedrop/install_files/ansible-base/roles/tails-config/templates
+    $ msginit --no-translator --locale ar --output ar.po --input desktop.pot
+    $ git add ar.po
+    $ git commit -m 'i18n: add ar.po' ar.po
+    $ git push
+
+Where ``ar`` is the name of the locale, exactly matching the name of
+the corresponding application translation.
+
+After pushing the new translation, make sure to unlock the translations.
+
+The list of supported languages in the SecureDrop :doc:`installation documentation <../install>`
+must be updated.
 
 Updating strings to be translated
 ---------------------------------
 
-After modifying a string in the code, templates or javascript, the
-``securedrop/translations/messages.pot`` file must be updated by
-running the following command in ``/vagrant/securedrop``, in the
-development virtual machine:
+After modifying a string in the code, templates, javascript or desktop
+labels, the ``securedrop/translations/messages.pot`` files must be
+updated by running the following command in ``/vagrant/securedrop``,
+in the development virtual machine:
 
 .. code:: sh
 
-    ./manage.py --verbose translate --extract-update
+    make translate
 
-The updated ``securedrop/translations/messages.pot`` should then be
-reviewed and commited. Once merged in develop, the changes will be
-visible in the `Weblate`_ web interface used by translators because it
-watches the develop branch of the SecureDrop repository.
+which wraps ``manage.py translate-messages`` and ``manage.py
+translate-desktop``.  The updated
+``securedrop/translations/messages.pot`` and
+``install_files/ansible-base/roles/tails-config/templates/desktop.pot``
+should then be reviewed and commited. Once merged in develop, the
+changes will be visible in the `Weblate`_ web interface used by
+translators because it watches the develop branch of the SecureDrop
+repository.
 
 Compiling translations
 ----------------------
@@ -44,8 +91,16 @@ in ``/vagrant/securedrop``, in the development virtual machine:
 
 .. code:: sh
 
-    ./manage.py --verbose translate --compile
+    ./manage.py --verbose translate-messages --compile
 
+For desktop files the compilation phases creates a modified version of
+the original file which includes all the translations collected from
+the ``.po`` files.
+
+This can be done by running the following command in
+``/vagrant/securedrop``, in the development virtual machine::
+
+    ./manage.py --verbose translate-desktop --compile
 
 Verifying translations
 ----------------------
@@ -96,12 +151,31 @@ to the ``develop`` branch via pull requests for merge on a regular basis.
       $ git remote add lab http://lab.securedrop.club/bot/securedrop/tree/i18n
       $ git fetch lab
       $ git checkout -b wip-i18n origin/develop
-      $ git checkout lab/i18n -- securedrop/translations
-      $ git add translations
+      $ git checkout lab/i18n -- securedrop/translations \
+        install_files/ansible-base/roles/tails-config/templates/{nl,fr,de_DE,nb_NO,pt_BR,es_ES}.po
+      $ git add securedrop/translations/{nl,fr,de_DE,nb_NO,pt_BR,es_ES}/LC_MESSAGES/messages.po \
+        install_files/ansible-base/roles/tails-config/templates/{nl,fr,de_DE,nb_NO,pt_BR,es_ES}.po
+      $ vagrant ssh development
+      $ cd /vagrant/securedrop ; ./manage.py --verbose translate-desktop --compile
       $ git commit -m 'sync with weblate' translations
       $ git push wip-i18n
 
+Verify the translations are not broken:
+
+.. code:: sh
+
+      $ vagrant ssh development
+      $ cd /vagrant/securedrop
+      $ PAGE_LAYOUT_LOCALES='de_DE,es_ES,fr_FR,nb_NO,nl,pt_BR' \
+          pytest -v --page-layout tests/pages-layout
+
 Go to https://github.com/freedomofpress/securedrop and propose a pull request.
+
+.. note:: contrary to the applications translations, the desktop
+          translations are compiled and merged into the
+          repository. They need to be available in their translated
+          form when ``securedrop-admin tailsconfig`` is run because
+          the development environment is not available.
 
 Merging develop into the weblate fork
 -------------------------------------
@@ -133,7 +207,7 @@ The ``develop`` branch can now be merged into ``i18n`` as follows:
       $ git fetch lab
       $ git checkout -b i18n lab/i18n
       $ git merge origin/develop
-      $ ./manage.py translate --extract-update
+      $ make translate
 
 The ``manage.py`` command examines all the source files, looking for
 strings that need to be translated (i.e. gettext('translate me') etc.)
@@ -159,9 +233,54 @@ with:
 
 |Weblate commit Unlock|
 
-* Click ``Unlock``
+`Weblate`_ pushes the translations done via the web interface
+to the develop branch in a fork of the `SecureDrop git repository`_.
+These commits must be manually cherry-picked and proposed as pull
+requests for the `SecureDrop git repository`_.
 
 |Weblate commit Unlocked|
+
+Updating the full text index
+----------------------------
+
+The full text index can occasionally not be up to date. The symptom
+may be that the search function fails to find a word that you know
+exists in the source strings. If that happens you can rebuild the
+index from scratch with:
+
+.. code:: sh
+
+      $ ssh debian@weblate.securedrop.club
+      $ cd /app/weblate
+      $ sudo docker-compose run weblate rebuild_index --all --clean
+
+Note that the new index will not be used right away, some workers may
+still have the old index open. Rebooting the machine is an option,
+waiting for a few hours is another option.
+
+Translator credits
+------------------
+
+Verify the names and emails look ok, otherwise add to `.mailmap
+<https://git-scm.com/docs/git-check-mailmap>`_ until it does:
+
+.. code:: sh
+
+      $ git clone https://github.com/freedomofpress/securedrop
+      $ cd securedrop
+      $ git remote add lab http://lab.securedrop.club/bot/securedrop/tree/i18n
+      $ git fetch lab
+      $ previous_version=0.4.4
+      $ git log --pretty='%aN <%aE>' $previous_version..lab/i18n -- \
+         securedrop/translations install_files/ansible-base/roles/tails-config/templates | sort -u
+
+We do not want to publish the translator emails so we strip them:
+
+.. code:: sh
+
+       git log --pretty='%aN' $previous_version..lab/i18n -- \
+        securedrop/translations install_files/ansible-base/roles/tails-config/templates | sort -u
+
 
 .. _`gettext`: https://www.gnu.org/software/gettext/
 .. _`pybabel`: http://babel.pocoo.org/
@@ -170,6 +289,7 @@ with:
 .. _`Weblate SecureDrop branch`: http://lab.securedrop.club/bot/securedrop/tree/i18n
 .. _`patch they contain is unique`: https://git-scm.com/docs/git-patch-id
 .. _`Weblate commit page for SecureDrop`: https://weblate.securedrop.club/projects/securedrop/securedrop/#repository
+.. _`Weblate translation creation page`: https://weblate.securedrop.club/new-lang/securedrop/securedrop/
 
 .. |Weblate commit Lock| image:: ../images/weblate/admin-lock.png
 .. |Weblate commit Locked| image:: ../images/weblate/admin-locked.png

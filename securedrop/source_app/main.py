@@ -15,7 +15,7 @@ from rm import srm
 from source_app.decorators import login_required
 from source_app.utils import (logged_in, generate_unique_codename,
                               async_genkey, normalize_timestamps,
-                              valid_codename)
+                              valid_codename, get_entropy_estimate)
 from source_app.forms import LoginForm
 
 
@@ -160,10 +160,16 @@ def make_blueprint(config):
             g.source.pending = False
 
             # Generate a keypair now, if there's enough entropy (issue #303)
-            entropy_avail = int(
-                open('/proc/sys/kernel/random/entropy_avail').read())
+            # (gpg reads 300 bytes from /dev/random)
+            entropy_avail = get_entropy_estimate()
             if entropy_avail >= 2400:
                 async_genkey(g.filesystem_id, g.codename)
+                current_app.logger.info("generating key, entropy: {}".format(
+                    entropy_avail))
+            else:
+                current_app.logger.warn(
+                        "skipping key generation. entropy: {}".format(
+                                entropy_avail))
 
         g.source.last_updated = datetime.utcnow()
         db_session.commit()
@@ -221,8 +227,11 @@ def make_blueprint(config):
         if logged_in():
             msg = render_template('logout_flashed_message.html')
 
-            # clear the session after we render the message so it's localized
+            # Clear the session after we render the message so it's localized
+            # If a user specified a locale, save it and restore it
+            user_locale = g.locale
             session.clear()
+            session['locale'] = user_locale
 
             flash(Markup(msg), "important hide-if-not-tor-browser")
         return redirect(url_for('.index'))

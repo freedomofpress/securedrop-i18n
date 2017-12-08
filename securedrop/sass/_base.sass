@@ -55,12 +55,6 @@
       &:hover
         color: $color_purple_medium
 
-  .localized
-    text-align: left
-
-    &:dir(rtl)
-      text-align: right
-
   .codename, .password
     font-family: monospace
     letter-spacing: 0.15em
@@ -111,7 +105,7 @@
     float: right
 
     &:dir(rtl)
-      text-align: left
+      float: left
 
   #header
     float: left
@@ -144,6 +138,8 @@
 
       .date
         float: right
+        &:dir(rtl)
+          float: left
         background-color: $color_grey_medium
         color: #ffffff
         font-size: 10px
@@ -215,7 +211,7 @@
     padding: 10px 15px
     border-bottom: 2px solid $color_warning_red
     font-size: large
-    direction: ltr
+    text-align: center
 
   .snippet
     border: 1px solid #c3c3c3

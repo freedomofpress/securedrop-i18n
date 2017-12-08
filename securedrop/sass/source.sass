@@ -1,5 +1,8 @@
 @import base
 @import source_index
+@import modules/visually-hidden
+@import modules/menu
+@import modules/flag
 
 +base_rules
 
@@ -107,6 +110,9 @@ input.codename-box
   letter-spacing: 0.15em
   font-weight: normal
   font-size: 0.85em
+  // Direction is explicitly set to ltr until rtl wordlists
+  // are available.
+  direction: ltr
 
 #index-locales
 

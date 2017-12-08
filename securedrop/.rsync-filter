@@ -42,6 +42,7 @@ include tests/i18n/
 include tests/i18n/*.py
 include tests/i18n/*.html
 include tests/i18n/*.cfg
+include tests/i18n/*.in
 include tests/log/
 include tests/utils/
 include tests/utils/**.py
@@ -50,10 +51,13 @@ include wordlists/
 include wordlists/**.txt
 include sass/
 include sass/**.sass
+include sass/modules/
+include sass/modules/**.sass
 include babel.cfg
 include translations/
 include translations/*.pot
 include translations/*/
 include translations/*/*/
 include translations/*/*/*.po
+include .well-known/
 exclude *
