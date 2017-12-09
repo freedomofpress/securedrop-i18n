@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2017-12-09 10:37+0000\n"
-"Last-Translator: Jenny Dybedahl <jdybedahl@gmail.com>\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -269,13 +269,10 @@ msgstr "Välj meny, \"Sätt upp konto\" och sedan \"Skanna en sträckkod\""
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
-#, fuzzy
 msgid ""
 "Your phone will now be in \"scanning\" mode. When you are in this mode, scan "
 "the barcode below:"
-msgstr ""
-"Din telefon kommer nu att ställas i \"scannings\" läge. När du är i detta "
-"läget, scanna barkoden nedanför:"
+msgstr "Nu sätts din telefon i scanningsläge. Scanna streckkoden nedan:"
 
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
