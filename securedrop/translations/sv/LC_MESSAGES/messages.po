@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2017-12-09 14:05+0000\n"
-"Last-Translator: Magdalena Stenius <mmbste@utu.fi>\n"
+"Last-Translator: Jenny Dybedahl <jdybedahl@gmail.com>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -846,7 +846,6 @@ msgstr ""
 "journalisternas svar på det du lämnar in i nästa skärm."
 
 #: source_templates/generate.html:34
-#, fuzzy
 msgid ""
 "Because we use none of the traditional means to track users of our "
 "<strong>SecureDrop</strong>\n"
@@ -855,7 +854,7 @@ msgid ""
 " questions or are interested in additional documents. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"På grund av att vi inte använder några av det traditionella sätten att följa "
+"Eftersom vi inte använder några av det traditionella sätten att spåra "
 "användare av vår <strong> SecureDrop</strong>-tjänst, kommer användningen av "
 "detta kodnamnet i framtida besök att vara det enda sättet vi har att "
 "kommunicera med dig ifall vi har frågor eller är intresserade av fler "
@@ -968,14 +967,13 @@ msgid "Important!"
 msgstr "Viktigt!"
 
 #: source_templates/logout_flashed_message.html:5
-#, fuzzy
 msgid ""
 "Thank you for exiting your session! Please select \"New Identity\" from the "
 "green onion button in the Tor browser to clear all history of your "
 "SecureDrop usage from this device."
 msgstr ""
-"Tack för att du har avslutat din session! Vänligen välj \"New Identity\" "
-"från den gröna lökknappen i Tor Browser för att rensa all historik från "
+"Tack för att du har avslutat din session! Var snäll och välj \"New Identity\""
+" från den gröna lökknappen i Tor Browser för att rensa all historik från "
 "användning av SecureDrop på den här apparaten."
 
 #: source_templates/lookup.html:11
