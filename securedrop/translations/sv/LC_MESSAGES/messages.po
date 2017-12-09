@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-09 14:17+0000\n"
-"Last-Translator: Magdalena Stenius <mmbste@utu.fi>\n"
+"PO-Revision-Date: 2017-12-09 14:18+0000\n"
+"Last-Translator: Jenny Dybedahl <jdybedahl@gmail.com>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -157,7 +157,8 @@ msgstr[1] ""
 
 #: journalist_app/utils.py:95
 msgid "Please wait for a new two-factor token before trying again."
-msgstr "Vänligen vänta på en ny två-faktor nyckel före du försöker igen."
+msgstr ""
+"Var snäll och vänta på en ny två-faktor nyckel innan du försöker på nytt."
 
 #: journalist_app/utils.py:141
 msgid "Submission deleted."
