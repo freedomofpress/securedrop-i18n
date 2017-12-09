@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-09 13:00+0000\n"
-"Last-Translator: Jenny Dybedahl <jdybedahl@gmail.com>\n"
+"PO-Revision-Date: 2017-12-09 14:01+0000\n"
+"Last-Translator: Magdalena Stenius <mmbste@utu.fi>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -70,7 +70,6 @@ msgstr ""
 "siffrorna 0-9."
 
 #: journalist_app/admin.py:123
-#, fuzzy
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Ogiltigt format i hemligheten: ojämn längd av hemligheten. Skrev du in "
@@ -102,17 +101,15 @@ msgid "Only administrators can access this page."
 msgstr "Endast administratörer har tillgång till denna sida."
 
 #: journalist_app/forms.py:18
-#, fuzzy
 msgid "Field must be 40 characters long but got {num_chars}."
 msgstr "Fältet måste vara 40 tecken långt men är {num_chars}."
 
 #: journalist_app/forms.py:29
-#, fuzzy
 msgid ""
 "Field must be at least {min_chars} characters long but only got {num_chars}."
 msgstr ""
-"Fältet måste vara minst {min_chars} tecken långt men är nu endast "
-"{num_chars} tecken."
+"Fältet måste vara minst {min_chars} tecken långt men är nu endast {num_chars}"
+" tecken."
 
 #: journalist_app/forms.py:34 source_app/forms.py:11
 msgid "This field is required."
@@ -157,18 +154,14 @@ msgstr[0] "Vänligen vänta åtminstone {} sekund före du loggar in igen."
 msgstr[1] "Vänligen vänta åtminstone {} sekunder före du loggar in igen."
 
 #: journalist_app/utils.py:95
-#, fuzzy
 msgid "Please wait for a new two-factor token before trying again."
-msgstr "Vänligen vänta på en ny två-faktor nyckel före du försöker på nytt."
+msgstr "Vänligen vänta på en ny två-faktor nyckel före du försöker igen."
 
 #: journalist_app/utils.py:141
-#, fuzzy
-#| msgid "Submission deleted."
-#| msgid_plural "Submissions deleted."
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Inlämningen har tagits bort."
-msgstr[1] "Inlämningarna har tagits bort."
+msgstr[1] "{num} inlämningar har tagits bort."
 
 #: journalist_app/utils.py:194
 msgid "{num} collection deleted"
@@ -181,15 +174,14 @@ msgid "You submitted a bad password! Password not changed."
 msgstr "Du angav ett dåligt lösenord! Lösenordet har inte ändrats."
 
 #: journalist_app/utils.py:236
-#, fuzzy
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
 "should reset your password again."
 msgstr ""
-"Det framstod ett fel, och det kan hända att det nya lösenordet inte sparades "
-"rätt. För att förhindra att du blir utlåst från ditt konto, återställ ditt "
-"lösenord en gång till."
+"Det uppstod ett fel, och det kan hända att det nya lösenordet inte sparades "
+"rätt. Återställ ditt lösenord en gång till, för att vara säker på att du "
+"inte ska bli utelåst från ditt konto."
 
 #: journalist_app/utils.py:245
 msgid ""
@@ -204,7 +196,6 @@ msgid "No unread submissions in selected collections."
 msgstr "Inga olästa inlämningar i utvalda samlingar."
 
 #: journalist_templates/_source_row.html:19
-#, fuzzy
 msgid "{doc_num} docs"
 msgstr "{doc_num} dokument"
 
@@ -239,7 +230,6 @@ msgid "Enable Google Authenticator"
 msgstr "Slå på Google Authenticator"
 
 #: journalist_templates/account_new_two_factor.html:5
-#, fuzzy
 msgid ""
 "You're almost done! To finish resetting your two-factor authentication, "
 "follow the instructions below to set up Google Authenticator. Once you've "
@@ -248,9 +238,9 @@ msgid ""
 msgstr ""
 "Du är nästan klar! För att avsluta återställningen av din tvåfaktor "
 "autentisering, följ instruktionerna nedanför för att ställa in Google "
-"Authenticator. När du har lagt till ditt inlägg för ditt konto i denna "
-"appen, ange en av de 6-siffrors koderna från appen för att försäkra att "
-"tvåfaktors autentiseringen har ställts in korrekt."
+"Authenticator. Lägg till det här kontot i appen, och ange sedan din "
+"sexsiffriga kod från appen för att bekräfta att tvåfaktorsautentisering "
+"fungerar som den ska."
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
@@ -303,9 +293,8 @@ msgstr "Verifikationskod"
 #: journalist_templates/account_new_two_factor.html:24
 #: journalist_templates/admin_new_user_two_factor.html:27
 #: journalist_templates/col.html:83 source_templates/lookup.html:45
-#, fuzzy
 msgid "SUBMIT"
-msgstr "LÄMNA IN"
+msgstr "SKICKA IN"
 
 #: journalist_templates/admin.html:3
 msgid "Admin Interface"
@@ -335,7 +324,6 @@ msgid "Created"
 msgstr "Skapad"
 
 #: journalist_templates/admin.html:20
-#, fuzzy
 msgid "Last login"
 msgstr "Senaste inloggning"
 
@@ -352,7 +340,6 @@ msgid "never"
 msgstr "aldrig"
 
 #: journalist_templates/admin.html:38
-#, fuzzy
 msgid "No users to display"
 msgstr "Inga användare att visa"
 
@@ -401,13 +388,11 @@ msgid "Log Out"
 msgstr "Logga Ut"
 
 #: journalist_templates/base.html:40
-#, fuzzy
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
 msgstr ""
-"Driven av <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
-"\">"
+"Körs på <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop\">"
 
 #: journalist_templates/base.html:54
 msgid "Powered by <em>SecureDrop {version}</em>."
@@ -418,16 +403,14 @@ msgid "All Sources"
 msgstr "Alla Källor"
 
 #: journalist_templates/col.html:13
-#, fuzzy
 msgid ""
 "Generate a new random codename for this source. We recommend doing this if "
 "the first random codename is difficult to say or remember. You can generate "
 "new random codenames as many times as you like."
 msgstr ""
-"Generera ett nytt slumpmässigt kodnamn för denna källa. Vi rekommenderar att "
-"du gör detta ifall ditt första slumpmässiga kodnamn är svårt att säga eller "
-"komma ihåg. Du kan generera nya slumpmässiga kodnamn så många gånger som du "
-"vill."
+"Generera ett nytt slumpmässigt kodnamn för denna källa. Detta rekommenderas "
+"om föreslaget kodnamn är för svårt att säga eller minnas. Du kan skapa ett "
+"nytt slumpmässigt kodnamn valfritt antal gånger."
 
 #: journalist_templates/col.html:13
 msgid "Change codename"
@@ -446,22 +429,20 @@ msgid "CONFIRM"
 msgstr "BEKRÄFTA"
 
 #: journalist_templates/col.html:22
-#, fuzzy
 msgid ""
 "The documents are stored encrypted for security. To read them, you will need "
 "to decrypt them using GPG."
 msgstr ""
-"Dessa dokument sparas krypterade för ökad säkerhet. För att kunna läsa dem "
-"behöver du dekryptera dem med GPG."
+"Dessa dokument sparas som krypterade för ökad säkerhet. För att läsa dem "
+"behöver du avkryptera dem med GPG."
 
 #: journalist_templates/col.html:26
 msgid "Download Selected"
 msgstr "Nedladdning Utvald"
 
 #: journalist_templates/col.html:27
-#, fuzzy
 msgid "Delete Selected"
-msgstr "Ta bort Utvald"
+msgstr "Radera Markerade"
 
 #: journalist_templates/col.html:55
 msgid "Uploaded Document"
@@ -520,16 +501,15 @@ msgid "DELETE COLLECTION"
 msgstr "TA BORT SAMLING"
 
 #: journalist_templates/delete.html:5
-#, fuzzy
 msgid ""
 "The following file has been selected for <strong>permanent deletion</strong>:"
 msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
-msgstr[0] ""
-"Följande fil har utvalts för <strong> permanent borttagning</strong>:"
+msgstr[0] "Följande fil har utvalts för <strong> permanent borttagning</strong>:"
 msgstr[1] ""
-"Följande filer har utvalts för <strong> permanent borttagning</strong>:"
+"Följande {files} filer har utvalts för <strong> permanent "
+"borttagning</strong>:"
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
