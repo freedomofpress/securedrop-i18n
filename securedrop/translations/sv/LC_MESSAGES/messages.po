@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-09 10:37+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2017-12-09 10:41+0000\n"
+"Last-Translator: Jenny Dybedahl <jdybedahl@gmail.com>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -277,7 +277,7 @@ msgstr "Nu sätts din telefon i scanningsläge. Scanna streckkoden nedan:"
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
 msgid "Can't scan the barcode? Enter the following code manually:"
-msgstr "Kan du inte skanna sträckkoden? Ange följande kod manuellt:"
+msgstr "Kan du inte skanna streckkoden? Ange följande kod manuellt:"
 
 #: journalist_templates/account_new_two_factor.html:15
 #: journalist_templates/admin_new_user_two_factor.html:18
