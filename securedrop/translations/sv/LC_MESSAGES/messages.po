@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-09 10:41+0000\n"
-"Last-Translator: Jenny Dybedahl <jdybedahl@gmail.com>\n"
+"PO-Revision-Date: 2017-12-09 10:52+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -362,9 +362,8 @@ msgid "Back to admin interface"
 msgstr "Tillbaka till administratörsgränssnittet"
 
 #: journalist_templates/admin_add_user.html:21
-#, fuzzy
 msgid "The user's password will be:"
-msgstr "Användarens lösenord kommer att vara:"
+msgstr "Användarens lösenord blir:"
 
 #: journalist_templates/admin_add_user.html:24
 #: journalist_templates/edit_account.html:17
@@ -376,7 +375,6 @@ msgid "Is using a YubiKey [HOTP]"
 msgstr "Använder en YubiKey [HOTP]"
 
 #: journalist_templates/admin_new_user_two_factor.html:6
-#, fuzzy
 msgid ""
 "You're almost done! To finish adding this new user, have them follow the "
 "instructions below to set up two-factor authentication with Google "
@@ -384,12 +382,11 @@ msgid ""
 "them enter one of the 6-digit codes from the app to confirm that two factor "
 "authentication is set up correctly."
 msgstr ""
-"Du är nästan klar! För att avsluta tilläggningen av den nya användaren, be "
-"hen följa instruktionerna nedanför för att sätta upp en "
-"tvåfaktorsautentisering med Google Authenticator. När hen har lagt till "
-"inlogg för denna appen, be hen skriva in en av 6-siffrorskoderna från "
-"applikationen för att försäkra att tvåfaktorsautentiseringen har ställts in "
-"korrekt."
+"Det är strax klart! För att avsluta användarkonfigureringen, följ "
+"instruktionerna nedan för att sätta upp två-stegs-autentisering med Google "
+"Authenticator. När en ny anslutning lagts till för appen (applikationen), "
+"mata in den sexsiffriga koden från appen för att bekräfta två-stegs-"
+"autentiseringen. "
 
 #: journalist_templates/base.html:24
 msgid "Logged on as"
