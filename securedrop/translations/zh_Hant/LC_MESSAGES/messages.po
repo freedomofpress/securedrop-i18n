@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2017-12-09 03:16+0000\n"
+"PO-Revision-Date: 2017-12-09 05:00+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/zh_Hant/>\n"
@@ -30,7 +30,7 @@ msgstr "你因閒置太久已被登出"
 
 #: journalist_app/account.py:26
 msgid "Incorrect password or two-factor code."
-msgstr "密碼不正確，或者兩因子認證碼不正確。"
+msgstr "密碼或是兩因子授權認證碼不正確。"
 
 #: journalist_app/account.py:39
 msgid "Token in two-factor authentication verified."
