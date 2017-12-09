@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-09 10:52+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2017-12-09 10:55+0000\n"
+"Last-Translator: Jenny Dybedahl <jdybedahl@gmail.com>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -545,7 +545,7 @@ msgstr "Redigera användaren \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Username &amp; Admin Status"
-msgstr "Ändra Användarnamn &amp; Administratösstatus"
+msgstr "Ändra användarnamn &amp;administratörsstatus"
 
 #: journalist_templates/edit_account.html:12
 msgid "Change username"
@@ -561,7 +561,7 @@ msgstr "Redigera ditt konto"
 
 #: journalist_templates/edit_account.html:25
 msgid "Reset Password"
-msgstr "Återställ Lösenord"
+msgstr "Återställ lösenord"
 
 #: journalist_templates/edit_account.html:27
 msgid "SecureDrop now uses automatically generated diceware passwords."
@@ -573,7 +573,7 @@ msgid ""
 "before pressing the \"Reset Password\" button."
 msgstr ""
 "Ditt lösenord kommer att återställas omedelbart, så du behöver spara det "
-"före du klickar \"Återställ Lösenord\" -knappen."
+"innan du klickar \"Återställ Lösenord\" -knappen."
 
 #: journalist_templates/edit_account.html:34
 msgid "Please enter your current password and two-factor code."
@@ -601,7 +601,7 @@ msgstr "ÅTERSTÄLL LÖSENORD"
 
 #: journalist_templates/edit_account.html:58
 msgid "Reset Two-Factor Authentication"
-msgstr "Återställ Tvåfaktorsautentisering"
+msgstr "Återställ tvåfaktorsautentisering"
 
 #: journalist_templates/edit_account.html:61
 #, fuzzy
