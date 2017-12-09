@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-09 14:21+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2017-12-09 14:29+0000\n"
+"Last-Translator: Jenny Dybedahl <jdybedahl@gmail.com>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -252,12 +252,13 @@ msgstr "Installera Google Authenticator på din telefon"
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
 msgid "Open the Google Authenticator app"
-msgstr "Öppna Google Authenticator -applikationen"
+msgstr "Öppna appen Google Authenticator"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
 msgid "Tap menu, then tap \"Set up account\", then tap \"Scan a barcode\""
-msgstr "Välj meny, \"Sätt upp konto\" och sedan \"Skanna en sträckkod\""
+msgstr ""
+"Tryck på menyn, välj \"Sätt upp konto\" och sedan \"Skanna en streckkod\""
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -274,7 +275,7 @@ msgstr "Kan du inte skanna streckkoden? Ange följande kod manuellt:"
 #: journalist_templates/account_new_two_factor.html:15
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid "Once you have scanned the barcode, enter the 6-digit code below:"
-msgstr "När du har skannat sträckkoden, ange koden med 6 siffror nedanför:"
+msgstr "Scanna streckkoden och ange sedan den sexsiffriga koden här nedan:"
 
 #: journalist_templates/account_new_two_factor.html:17
 #: journalist_templates/admin_new_user_two_factor.html:20
@@ -284,8 +285,7 @@ msgstr "Aktivera YubiKey (OATH-HOTP)"
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:21
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
-msgstr ""
-"När du har konfigurerat din YubiKey, ange den 6 siffror långa koden nedanför:"
+msgstr "Konfigurera din Yubikey och ange sedan den sexsiffriga koden härnedan:"
 
 #: journalist_templates/account_new_two_factor.html:22
 #: journalist_templates/admin_new_user_two_factor.html:25
