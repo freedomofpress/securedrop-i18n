@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-09 14:02+0000\n"
-"Last-Translator: Magdalena Stenius <mmbste@utu.fi>\n"
+"PO-Revision-Date: 2017-12-09 14:04+0000\n"
+"Last-Translator: Jenny Dybedahl <jdybedahl@gmail.com>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -828,16 +828,12 @@ msgid "Welcome"
 msgstr "Välkommen"
 
 #: source_templates/generate.html:7
-#, fuzzy
-#| msgid ""
-#| "Please either write this codename down and keep it in a safe place, or "
-#| "memorize it."
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it.<br> This will allow you to log back in and receive replies from "
 "journalists."
 msgstr ""
-"Vänligen skriv ner detta kodnamn och spara det i en trygg plats eller "
+"Vänligen skriv ner detta kodnamn och spara det på en säker plats eller "
 "memorera det."
 
 #: source_templates/generate.html:10
