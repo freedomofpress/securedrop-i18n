@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-09 14:08+0000\n"
-"Last-Translator: Jenny Dybedahl <jdybedahl@gmail.com>\n"
+"PO-Revision-Date: 2017-12-09 14:15+0000\n"
+"Last-Translator: Magdalena Stenius <mmbste@utu.fi>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: template_filters.py:14
 msgid "{time} ago"
-msgstr "sedan"
+msgstr "{time }sedan"
 
 #: journalist_app/__init__.py:34 journalist_app/__init__.py:66
 msgid "You have been logged out due to inactivity"
@@ -82,11 +82,11 @@ msgstr "Ett oväntat fel uppstod! Informera din administratör."
 
 #: journalist_app/admin.py:161
 msgid "Username \"{user}\" already taken."
-msgstr "Användarnamnet \"{}\" är redan upptaget."
+msgstr "Användarnamnet \"{user}\" är redan upptaget."
 
 #: journalist_app/admin.py:197
 msgid "Deleted user '{user}'"
-msgstr "Användare '{}' har tagits bort"
+msgstr "Användare '{user}' har tagits bort"
 
 #: journalist_app/col.py:47
 msgid "{source_name}'s collection deleted"
@@ -372,7 +372,7 @@ msgstr ""
 "Det är strax klart! För att avsluta användarkonfigureringen, följ "
 "instruktionerna nedan för att sätta upp två-stegs-autentisering med Google "
 "Authenticator. När det här kontot har lagts till i appen, mata in den "
-"sexsiffriga koden från appen för att bekräfta två-stegs-autentiseringen. "
+"sexsiffriga koden från appen för att bekräfta två-stegs-autentiseringen."
 
 #: journalist_templates/base.html:24
 msgid "Logged on as"
@@ -590,10 +590,10 @@ msgid ""
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
 "Om användarens lösenord med två-stegs-autentisering har förlorats eller "
-"utsatts för en säkerhetsrisk så kan du återställa det här. <em>Innan du gör "
+"utsatts för en säkerhetsrisk så kan du återställa det här. <em>Ifall du gör "
 "det, försäkra dig om att användaren är närvarande och kan skapa en ny två"
-"-stegs-autentisering. Annars kommer användaren att bli utelåst från sitt "
-"konto. "
+"-stegs-autentisering.</em> Annars kommer användaren att bli utelåst från "
+"sitt konto."
 
 #: journalist_templates/edit_account.html:63
 msgid ""
