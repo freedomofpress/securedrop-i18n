@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-09 14:46+0000\n"
-"Last-Translator: Jenny Dybedahl <jdybedahl@gmail.com>\n"
+"PO-Revision-Date: 2017-12-09 14:47+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -102,14 +102,15 @@ msgstr "Endast administratörer har tillgång till denna sida."
 
 #: journalist_app/forms.py:18
 msgid "Field must be 40 characters long but got {num_chars}."
-msgstr "Fältet måste vara 40 tecken långt men är {num_chars}."
+msgstr ""
+"Ifyllt fält behöver vara 40 tecken långt men är {num_chars} tecken långt."
 
 #: journalist_app/forms.py:29
 msgid ""
 "Field must be at least {min_chars} characters long but only got {num_chars}."
 msgstr ""
-"Fältet måste vara innehålla {min_chars} tecken men är nu endast {num_chars} "
-"tecken."
+"Ifyllt fält måste vara minst {min_chars} tecken långt, men har nu {num_chars}"
+" tecken."
 
 #: journalist_app/forms.py:34 source_app/forms.py:11
 msgid "This field is required."
