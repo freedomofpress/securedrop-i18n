@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2017-12-09 14:01+0000\n"
-"Last-Translator: Magdalena Stenius <mmbste@utu.fi>\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -808,9 +808,13 @@ msgid "Look up a codename..."
 msgstr "Sök ett kodnamn..."
 
 #: source_templates/first_submission_flashed_message.html:2
-#, fuzzy
 msgid "Success!"
-msgstr "Det lyckades!"
+msgstr ""
+"Det lyckades!\n"
+"\n"
+"Here we really need to know what succeeded, since there are many schools "
+"within this area. I haven't changed the suggestion, since I don't know what "
+"succeeded. "
 
 #: source_templates/first_submission_flashed_message.html:3
 msgid ""
