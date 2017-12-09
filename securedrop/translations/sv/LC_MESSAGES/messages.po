@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-09 10:56+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2017-12-09 13:00+0000\n"
+"Last-Translator: Jenny Dybedahl <jdybedahl@gmail.com>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -644,7 +644,7 @@ msgstr "ÅTERSTÄLL TVÅFAKTORSAUTENTISERING (APPLIKATION)"
 
 #: journalist_templates/edit_account.html:87
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
-msgstr "ÅTERSTÄLL TVÅFAKTORSAUTENTISERING (HÅRDVARANYCKEL)"
+msgstr "ÅTERSTÄLL TVÅFAKTORSAUTENTISERING (HÅRDVARUNYCKEL)"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -973,7 +973,7 @@ msgstr ""
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Click here</a> to refresh the page"
-msgstr "<a href=\"/\"> Clicka här </a> för att uppdatera sidan"
+msgstr "<a href=\"/\">Klicka här </a> för att uppdatera sidan"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
@@ -1128,7 +1128,7 @@ msgstr "Sidan kunde inte hittas"
 
 #: source_templates/notfound.html:5
 msgid "Sorry, we couldn't locate what you requested."
-msgstr "Förlåt, vi kunde inta hitta det du begärde."
+msgstr "Förlåt, vi kunde inte hitta det du begärde."
 
 #: source_templates/session_timeout.html:6
 msgid ""
