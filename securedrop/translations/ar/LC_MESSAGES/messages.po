@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2017-12-08 22:40+0000\n"
+"PO-Revision-Date: 2017-12-09 19:08+0000\n"
 "Last-Translator: Ahmad Gharbeia <gharbeia@gmail.com>\n"
-"Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
-"securedrop/ar/>\n"
+"Language-Team: Arabic "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -786,7 +786,7 @@ msgstr "عذرًا، لا يمكن التعرف على الاسم الرمزي."
 
 #: source_templates/base.html:6 source_templates/index.html:4
 msgid "Protecting Journalists and Sources"
-msgstr "حماية الصحفيين و&nbsp;المصادر"
+msgstr "حماية الصحافيين و&nbsp;المصادر"
 
 #: source_templates/base.html:24 source_templates/base.html:43
 #: source_templates/index.html:32 source_templates/index.html:84
@@ -837,24 +837,22 @@ msgid "Welcome"
 msgstr "أهلا بك"
 
 #: source_templates/generate.html:7
-#, fuzzy
-#| msgid ""
-#| "Please either write this codename down and keep it in a safe place, or "
-#| "memorize it."
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it.<br> This will allow you to log back in and receive replies from "
 "journalists."
 msgstr ""
-"يجب عليك إمّا تدوين الاسم الرمزي و&nbsp;حفظه في مكان آمن، أو حفظه في ذاكرتك."
+"يجب عليك إمّا تدوين هذا الاسم الرمزي و&nbsp;حفظه في مكان آمن، أو التيقّن من "
+"حفظه في ذاكرتك.<br>هذا الاسم الرمزي وسيلتك الوحيدة لمعاودة الولوج لاحقا "
+"و&nbsp;تلقّي ردود من صحافيينا."
 
 #: source_templates/generate.html:10
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our journalists in response to what you submit on the next screen."
 msgstr ""
-"هذا الاسم الرمزي مخصص لك لتستعمله في زياراتك المقبلة لتلقي الرسائل من "
-"صحفيينا إليك ردّا على ما ستودعه في الخطوة التالية."
+"هذا الاسم الرمزي هو ما ستستعمله في زياراتك المقبلة لتلقي الرسائل من صحافيينا "
+"ردّا على ما ستودعه في الخطوة التالية."
 
 #: source_templates/generate.html:34
 msgid ""
@@ -865,8 +863,8 @@ msgid ""
 " questions or are interested in additional documents. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"لاحظ أننا لا نستعمل في<strong>SecureDrop</strong> أيّا من وسائل تتبّع "
-"المستخدمين التقليدية \"  \"لذا فاستعمال الاسم الرمزي في الزيارات المقبلة هو "
+"لاحظ أننا لا نستعمل في <strong>SecureDrop</strong> أيّا من وسائل تتبّع "
+"المستخدمين التقليدية، لذا فاستعمال الاسم الرمزي في الزيارات المقبلة هو "
 "الوسيلة الوحيدة التي يمكننا بها التواصل معك في حال وجود أسئلة أو اهتمام "
 "بمزيد من المستندات. و&nbsp;لا توجد أيّ وسيلة لاسترجاع الاسم الرمزي في حال "
 "فقده."
@@ -877,7 +875,7 @@ msgstr "استعمل اسمًا رمزيًّا جديدًا"
 
 #: source_templates/generate.html:46
 msgid "USE EXISTING CODENAME"
-msgstr "استعمل اسمًا رمزيًّا قائًما"
+msgstr "لِج باسم رمزي قائم"
 
 #: source_templates/index.html:17
 msgid ""
@@ -911,7 +909,7 @@ msgstr "هل سبق لك إيداع شيء؟"
 msgid ""
 "If this is your first time submitting documents to journalists, start here."
 msgstr ""
-"ابدأ هنا في حال كانت هذه المرة الأولى التي تودع فيها مستندات لدى صحفيينا."
+"ابدأ هنا في حال كانت هذه المرة الأولى التي تودع فيها مستندات لدى صحافيينا."
 
 #: source_templates/index.html:58
 msgid ""
@@ -925,7 +923,7 @@ msgstr "أودع مستندات"
 
 #: source_templates/index.html:73
 msgid "CHECK FOR A RESPONSE"
-msgstr "ّتفحّص إن وصلك رد"
+msgstr "تَفحَّص إنْ وصلك رَدّ منّا"
 
 #: source_templates/index.html:92
 msgid ""
@@ -984,20 +982,13 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "يا للعجب.. هذا أنت! و&nbsp;الآن الجزء المحرج..."
 
 #: source_templates/lookup.html:12
-#, fuzzy
-#| msgid ""
-#| "Our servers experienced an unusual surge of new activity, when you last "
-#| "visited. This could have been human activity, an automated attack, or "
-#| "just some random blip. To err on the side of caution, we put a hold on "
-#| "sending all documents from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all "
 "documents from that day through to our journalists."
 msgstr ""
-"عندما زرتنا آخر مرة شهدت خواديمنا ارتفاعًا حادًّا في مستوى النشاط. من الوارد أن "
-"يكون ذلك نشاطًا بشريَّا أو هجوما مميكنًا أو مجرّد خطأ ما. و من باب الاحتياط فلقد "
-"علّقنا إرسال مستنداتك إلى صحفيينا."
+"عندما زرتنا آخر مرة شهدت خواديمنا ارتفاعًا حادًّا في مستوى النشاط. و من باب "
+"الاحتياط علّقنا إرسال مستنداتك إلى صحافيينا."
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1006,7 +997,7 @@ msgid ""
 "delay. Please do check back again in a week or so."
 msgstr ""
 "أما الآن و&nbsp;قد تبيّن لنا أنّك إنسان حقّا فسوف نمرّر رسالتك السابقة إلى "
-"صحفيينا.  نأسف على التأخير و&nbsp;نرجو تفهّمك. ترقّب رسالة منّا بعد أسبوع."
+"صحافيينا.  نأسف على التأخير و&nbsp;نرجو تفهّمك. ترقّب رسالة منّا بعد أسبوع."
 
 #: source_templates/lookup.html:20
 msgid "Submit Materials"
@@ -1083,8 +1074,6 @@ msgid "There are no replies at this time."
 msgstr "ما من ردود في الوقت الراهن."
 
 #: source_templates/lookup.html:100
-#, fuzzy
-#| msgid "Remember your codename is:"
 msgid "Remember, your codename is:"
 msgstr "تذكر أنّ اسمك الرمزي:"
 
@@ -1111,10 +1100,10 @@ msgid ""
 "button in the Tor browser to clear all history of your SecureDrop usage from "
 "this device. If you are not using Tor Browser, restart your browser."
 msgstr ""
-"تم الخروج بسبب خمول النشاط. من فضلك عاود الولوج لمواصلة استخدام SecureDrop "
-"أو اختيار \"هوية جديدة\" من خلال الزر الأخضر في متصفح تور لطمس أثر استخدامك "
-"SecureDrop من هذا الجهاز.أما إذا لم تكن تستعمل تور فينبغي عليك إطفاء و&nbsp;"
-"إعادة تشغيل المتصفّح."
+"تم الخروج من الحساب بسبب خمول النشاط. تمكنك معاودة الولوج لمواصلة استخدام "
+"SecureDrop إن أردت، أو إذا كنت قد فرغت من استخدامه فاختر \"هوية جديدة\" من "
+"خلال الزر الأخضر في متصفح تور لطمس أثر استخدامك SecureDrop من هذا الجهاز. "
+"أما إذا كنت لا تستخدم تور فينبغي عليك إطفاء و&nbsp;إعادة تشغيل المتصفّح."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1170,8 +1159,8 @@ msgid ""
 "you</strong> to install Tor Browser and use it to access our site safely and "
 "anonymously."
 msgstr ""
-"لغرض إيداع المعلومات فإننا <strong>ننصح بشدّة</strong> باستخدام متصفح تور من "
-"أجل النفاذ إلى موقعنا بأمان و&nbsp; و&nbsp;مجهوليّة."
+"لغرض إيداع المعلومات فإنّنا <strong>ننصح بشدّة</strong> باستخدام متصفح تور "
+"من أجل النفاذ إلى هذا الموقع بأمان و&nbsp;مجهوليّة."
 
 #: source_templates/use-tor-browser.html:6
 msgid ""
