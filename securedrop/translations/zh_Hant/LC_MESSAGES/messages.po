@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2017-12-04 15:00+0000\n"
+"PO-Revision-Date: 2017-12-09 03:16+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
-"Language-Team: Chinese (Traditional) <https://weblate.securedrop.club/"
-"projects/securedrop/securedrop/zh_Hant/>\n"
+"Language-Team: Chinese (Traditional) "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -148,12 +148,9 @@ msgid "Please wait for a new two-factor token before trying again."
 msgstr "請等待産生新的雙重因子認證碼後再重新登錄。"
 
 #: journalist_app/utils.py:141
-#, fuzzy
-#| msgid "Submission deleted."
-#| msgid_plural "Submissions deleted."
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
-msgstr[0] "提交被删除了。"
+msgstr[0] "{num} 個提交被删除了。"
 
 #: journalist_app/utils.py:194
 msgid "{num} collection deleted"
@@ -783,15 +780,11 @@ msgid "Welcome"
 msgstr "歡迎"
 
 #: source_templates/generate.html:7
-#, fuzzy
-#| msgid ""
-#| "Please either write this codename down and keep it in a safe place, or "
-#| "memorize it."
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it.<br> This will allow you to log back in and receive replies from "
 "journalists."
-msgstr "請抄下代號並妥善保管，或牢牢記住它。"
+msgstr "請抄下代號並妥善保管，或牢牢記住它。<br> 之後要登錄與讀取記者的回應時，會用得到此代號。"
 
 #: source_templates/generate.html:10
 msgid ""
@@ -923,20 +916,11 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "哎呀，是您！ 现在遇上尴尬的狀況..."
 
 #: source_templates/lookup.html:12
-#, fuzzy
-#| msgid ""
-#| "Our servers experienced an unusual surge of new activity, when you last "
-#| "visited. This could have been human activity, an automated attack, or "
-#| "just some random blip. To err on the side of caution, we put a hold on "
-#| "sending all documents from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all "
 "documents from that day through to our journalists."
-msgstr ""
-"在您上次訪問後，我們的伺服器經歷了一次不尋常的新活動。這可能是人為，或是自動"
-"化攻擊，也可能只是一些零星的小星花。基於謹慎考量我們會標記錯誤，並扣住當天起"
-"原本要發送給記者的所有文件檔案。"
+msgstr "在您上次訪問後，我們的伺服器經歷了一次不尋常的新活動。基於謹慎考量，我們會標記錯誤，並扣住當天起原本要發送給記者的所有文件檔案。"
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1020,10 +1004,8 @@ msgid "There are no replies at this time."
 msgstr "此時尚無回覆。"
 
 #: source_templates/lookup.html:100
-#, fuzzy
-#| msgid "Remember your codename is:"
 msgid "Remember, your codename is:"
-msgstr "記住您的代號是："
+msgstr "記住，您的代號是："
 
 #: source_templates/lookup.html:101
 msgid "Show"
