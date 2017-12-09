@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-09 14:33+0000\n"
-"Last-Translator: Magdalena Stenius <mmbste@utu.fi>\n"
+"PO-Revision-Date: 2017-12-09 14:36+0000\n"
+"Last-Translator: Jenny Dybedahl <jdybedahl@gmail.com>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -559,7 +559,7 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:34
 msgid "Please enter your current password and two-factor code."
-msgstr "Vänligen ange ditt nuvarande lösenord och tvåfaktorskod."
+msgstr "Var snäll och ange ditt nuvarande lösenord och tvåfaktorskod."
 
 #: journalist_templates/edit_account.html:40
 msgid "Current Password"
@@ -605,10 +605,10 @@ msgid ""
 "this, make sure you are ready to set up your new device, otherwise you will "
 "be locked out of your account.</em>"
 msgstr ""
-"Ifall tvåfaktornsautentiseringens lösen har försvunnit eller kompromissats "
-"eller ifall du börjar använda en ny apparat kan du återställa dina lösen "
-"här. <em> Ifall du gör detta, försäkra att du är färdig att ställa upp din "
-"nya apparat, annars kommer du att låsas ut från ditt konto. </em>"
+"Ifall tvåfaktorsautentiseringens lösen har förlorats eller utsatts för en "
+"säkerhetsrisk, eller ifall du börjar använda en ny apparat kan du återställa "
+"dina lösen här. <em> Ifall du gör detta måste du vara redo att konfigurera "
+"din nya apparat, annars kommer du att låsas ut från ditt konto. </em>"
 
 #: journalist_templates/edit_account.html:65
 msgid ""
@@ -686,7 +686,7 @@ msgstr "Välj Olästa"
 
 #: journalist_templates/js-strings.html:6
 msgid "Select None"
-msgstr "Välj Inga"
+msgstr "Markera inga"
 
 #: journalist_templates/js-strings.html:7
 msgid "Are you sure you want to delete this collection?"
@@ -694,11 +694,11 @@ msgstr "Är du säker att du vill ta bort den här samlingen?"
 
 #: journalist_templates/js-strings.html:8
 msgid "Are you sure you want to delete the {size} selected collections?"
-msgstr "Är du säker att du vill ta bort alla {size} utvalda samlingar?"
+msgstr "Är du säker att du vill ta bort alla de {size} markerade samlingarna?"
 
 #: journalist_templates/js-strings.html:9
 msgid "Are you sure you want to delete the {size} selected submissions?"
-msgstr "Är du säker att du vill ta bort {size} utvalda inlämningar?"
+msgstr "Är du säker att du vill ta bort de {size} markerade inlämningarna?"
 
 #: journalist_templates/js-strings.html:10
 msgid "Are you sure you want to delete the user {username}?"
@@ -732,11 +732,11 @@ msgstr ""
 
 #: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
-msgstr "Fältet måste vara mellan 1 och {max_codename_len} tecken långt."
+msgstr "Fältet måste innehålla mellan 1 och {max_codename_len} tecken."
 
 #: source_app/forms.py:18
 msgid "Invalid input."
-msgstr "Ogiltig input."
+msgstr "Ogiltigt innehåll."
 
 #: source_app/main.py:32
 msgid ""
@@ -748,7 +748,7 @@ msgstr ""
 
 #: source_app/main.py:111
 msgid "You must enter a message or choose a file to submit."
-msgstr "Du måste ange ett meddelande eller välja en fil för att lämna in."
+msgstr "Du måste ange ett meddelande eller välja en fil att lämna in."
 
 #: source_app/main.py:144
 msgid "Thanks! We received your message."
@@ -781,7 +781,7 @@ msgstr "Skyddar Journalister och Källor"
 #: source_templates/base.html:24 source_templates/base.html:43
 #: source_templates/index.html:32 source_templates/index.html:84
 msgid "Powered by"
-msgstr "Driven av"
+msgstr "Kör på"
 
 #: source_templates/base.html:33
 msgid "LOG OUT"
