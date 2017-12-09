@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2017-12-09 14:06+0000\n"
-"Last-Translator: Jenny Dybedahl <jdybedahl@gmail.com>\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -1007,15 +1007,14 @@ msgid "Submit Materials"
 msgstr "Lämna In Material"
 
 #: source_templates/lookup.html:21
-#, fuzzy
 msgid ""
 "If you are already familiar with GPG, you can optionally encrypt your files "
 "and messages with our <a href=\"{url}\" class=\"text-link\">public key</a> "
 "before submission. Files are encrypted as they are received by SecureDrop."
 msgstr ""
-"Ifall du redan känner till GPG kan du välja att kryptera dina filer och "
-"meddelanden med vår <a href=\"{url}\" class=\"text-link\"> publika nyckel </"
-"a> före inlämning. Annars krypteras filerna när de tas emot av SecureDrop."
+"Om du redan känner till GPG, så kan du kryptera dina filer och meddelanden "
+"med vår <a href=\"{url}\" class=\"text-link\"> publika nyckel </a> före "
+"inlämningen, annars krypteras filerna i SecureDrop."
 
 #: source_templates/lookup.html:22
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
