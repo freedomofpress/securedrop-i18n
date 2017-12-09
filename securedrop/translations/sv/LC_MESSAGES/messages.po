@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-09 14:38+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2017-12-09 14:39+0000\n"
+"Last-Translator: Jenny Dybedahl <jdybedahl@gmail.com>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -904,7 +904,7 @@ msgstr "Har du redan lämnat in något?"
 msgid ""
 "If this is your first time submitting documents to journalists, start here."
 msgstr ""
-"Ifall det här är den första gången du lämnar in dokument till journalister, "
+"Ifall det här är första gången du lämnar in dokument till journalister, "
 "börja här."
 
 #: source_templates/index.html:58
@@ -921,15 +921,15 @@ msgstr "LÄMNA IN DOKUMENT"
 
 #: source_templates/index.html:73
 msgid "CHECK FOR A RESPONSE"
-msgstr "KONTROLLERA FÖR SVAR"
+msgstr "TITTA EFTER SVAR"
 
 #: source_templates/index.html:92
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
 "High in 4 easy steps!"
 msgstr ""
-"Du tycks använda Tor Browser. Du kan ändra din Security Slider till High i "
-"fyra enkla steg!"
+"Det ser ut som att du använder Tor Browser. Du kan ändra din Security Slider "
+"till High i fyra enkla steg!"
 
 #: source_templates/index.html:94
 msgid ""
@@ -940,7 +940,7 @@ msgstr ""
 
 #: source_templates/index.html:95
 msgid "Click <strong>Security Settings...</strong>"
-msgstr "Klicka <strong> Security Settings...</strong>"
+msgstr "Klicka på <strong>Security Settings...</strong>"
 
 #: source_templates/index.html:96
 msgid ""
