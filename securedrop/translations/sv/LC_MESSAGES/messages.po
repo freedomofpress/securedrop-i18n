@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-09 14:31+0000\n"
-"Last-Translator: Jenny Dybedahl <jdybedahl@gmail.com>\n"
+"PO-Revision-Date: 2017-12-09 14:32+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -444,7 +444,7 @@ msgstr "Ladda ned markerade"
 
 #: journalist_templates/col.html:27
 msgid "Delete Selected"
-msgstr "Radera Markerade"
+msgstr "Radera Utvalda"
 
 #: journalist_templates/col.html:55
 msgid "Uploaded Document"
