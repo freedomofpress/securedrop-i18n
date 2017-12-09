@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-08 15:00+0000\n"
+"PO-Revision-Date: 2017-12-09 16:00+0000\n"
 "Last-Translator: soniabana <sonja4632@gmail.com>\n"
-"Language-Team: Polish <https://weblate.securedrop.club/projects/securedrop/"
-"securedrop/pl/>\n"
+"Language-Team: Polish "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -160,14 +160,11 @@ msgid "Please wait for a new two-factor token before trying again."
 msgstr "Poczekaj na nowy token dwuetapowy przed ponowną próbą."
 
 #: journalist_app/utils.py:141
-#, fuzzy
-#| msgid "Submission deleted."
-#| msgid_plural "Submissions deleted."
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Zgłoszenie usunięte."
-msgstr[1] "Zgłoszenia usunięte."
-msgstr[2] "Zgłoszenia usunięte."
+msgstr[1] "{num} zgłoszeń usuniętych."
+msgstr[2] "{num} zgłoszeń usuniętych."
 
 #: journalist_app/utils.py:194
 msgid "{num} collection deleted"
@@ -845,17 +842,14 @@ msgid "Welcome"
 msgstr "Witamy"
 
 #: source_templates/generate.html:7
-#, fuzzy
-#| msgid ""
-#| "Please either write this codename down and keep it in a safe place, or "
-#| "memorize it."
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it.<br> This will allow you to log back in and receive replies from "
 "journalists."
 msgstr ""
 "Proszę zapisać ten kryptonim i go przechować w bezpiecznym miejscu, lub go "
-"zapamiętać."
+"zapamiętaj. <b> Korzystaj z niego przy ponownych zalogowaniach, aby "
+"otrzymywać odpowiedzi od dziennikarzy."
 
 #: source_templates/generate.html:10
 msgid ""
@@ -1004,22 +998,14 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "Uff, to ty! Teraz ta żenująca część ..."
 
 #: source_templates/lookup.html:12
-#, fuzzy
-#| msgid ""
-#| "Our servers experienced an unusual surge of new activity, when you last "
-#| "visited. This could have been human activity, an automated attack, or "
-#| "just some random blip. To err on the side of caution, we put a hold on "
-#| "sending all documents from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all "
 "documents from that day through to our journalists."
 msgstr ""
 "Nasze serwery doświadczyły niezwykłej fali nowej aktywności, kiedy ostatnio "
-"odwiedziłeś. Mogło to być działanie ludzkie, zautomatyzowany atak lub po "
-"prostu przypadkowy błąd. Wyznając zasadę nadmiernej ostrożności, "
-"wstrzymaliśmy wysyłanie wszelkich dokumentów z tamtego dnia do naszych "
-"dziennikarzy."
+"odwiedziłeś. Wyznając zasadę nadmiernej ostrożności, wstrzymaliśmy wysyłanie "
+"wszelkich dokumentów z tamtego dnia do naszych dziennikarzy."
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1107,10 +1093,8 @@ msgid "There are no replies at this time."
 msgstr "W tej chwili nie ma odpowiedzi."
 
 #: source_templates/lookup.html:100
-#, fuzzy
-#| msgid "Remember your codename is:"
 msgid "Remember, your codename is:"
-msgstr "Pamiętaj, że twój kryptonim to:"
+msgstr "Pamiętaj że twój kryptonim to:"
 
 #: source_templates/lookup.html:101
 msgid "Show"
