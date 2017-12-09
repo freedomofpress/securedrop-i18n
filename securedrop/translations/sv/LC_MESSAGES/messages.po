@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2017-12-09 14:05+0000\n"
-"Last-Translator: Jenny Dybedahl <jdybedahl@gmail.com>\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -977,9 +977,8 @@ msgstr ""
 "användning av SecureDrop på den här apparaten."
 
 #: source_templates/lookup.html:11
-#, fuzzy
 msgid "Whew, it’s you! Now, the embarrassing part..."
-msgstr "Pust, det är du! Nu, till den pinsamma delen..."
+msgstr "Ok, det är du! Nu, till de pinsamma..."
 
 #: source_templates/lookup.html:12
 #, fuzzy
