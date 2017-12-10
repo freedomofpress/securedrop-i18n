@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2017-12-04 10:28+0000\n"
+"PO-Revision-Date: 2017-12-10 10:00+0000\n"
 "Last-Translator: Loic Dachary <loic@dachary.org>\n"
-"Language-Team: French <https://weblate.securedrop.club/projects/securedrop/"
-"securedrop/fr/>\n"
+"Language-Team: French "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/fr/>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -167,13 +167,10 @@ msgstr ""
 "ressayer."
 
 #: journalist_app/utils.py:141
-#, fuzzy
-#| msgid "Submission deleted."
-#| msgid_plural "Submissions deleted."
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "L'envoi a été supprimé."
-msgstr[1] "Les envois ont été supprimés."
+msgstr[1] "{num} envois ont été supprimés."
 
 #: journalist_app/utils.py:194
 msgid "{num} collection deleted"
@@ -1024,22 +1021,14 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "C'est bien vous ! Maintenant, la partie délicate…"
 
 #: source_templates/lookup.html:12
-#, fuzzy
-#| msgid ""
-#| "Our servers experienced an unusual surge of new activity, when you last "
-#| "visited. This could have been human activity, an automated attack, or "
-#| "just some random blip. To err on the side of caution, we put a hold on "
-#| "sending all documents from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all "
 "documents from that day through to our journalists."
 msgstr ""
 "Nos serveurs ont connu une augmentation inhabituelle d'activités nouvelles "
-"lors de votre dernière visite. Ces activités auraient pu provenir "
-"d'utilisateurs, d'une attaque automatisée ou simplement d'une anomalie "
-"passagère. Par mesure de précaution, nous avons suspendu l'envoi de tous les "
-"documents de cette journée à nos journalistes."
+"lors de votre dernière visite. Par mesure de précaution, nous avons suspendu "
+"l'envoi de tous les documents de cette journée à nos journalistes."
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1129,8 +1118,6 @@ msgid "There are no replies at this time."
 msgstr "Il n'y a aucune réponse pour l'instant."
 
 #: source_templates/lookup.html:100
-#, fuzzy
-#| msgid "Remember your codename is:"
 msgid "Remember, your codename is:"
 msgstr "Souvenez-vous que votre nom de code est :"
 
