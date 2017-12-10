@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2017-12-10 10:00+0000\n"
+"PO-Revision-Date: 2017-12-11 07:42+0000\n"
 "Last-Translator: Loic Dachary <loic@dachary.org>\n"
 "Language-Team: French "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/fr/>\n"
@@ -860,17 +860,14 @@ msgid "Welcome"
 msgstr "Bienvenue"
 
 #: source_templates/generate.html:7
-#, fuzzy
-#| msgid ""
-#| "Please either write this codename down and keep it in a safe place, or "
-#| "memorize it."
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it.<br> This will allow you to log back in and receive replies from "
 "journalists."
 msgstr ""
 "Veuillez soit prendre ce nom de code par écrit et le conserver en lieu sûr, "
-"soit le mémoriser."
+"soit le mémoriser.<br> Il vous permettra de vous authentifier et de recevoir "
+"des réponses des journalistes."
 
 #: source_templates/generate.html:10
 msgid ""
