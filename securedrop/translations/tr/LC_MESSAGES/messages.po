@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-10 14:00+0000\n"
+"PO-Revision-Date: 2017-12-22 10:00+0000\n"
 "Last-Translator: T. E. Kalaycı <tekrei@gmail.com>\n"
 "Language-Team: Turkish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/tr/>\n"
@@ -609,6 +609,11 @@ msgid ""
 "this, make sure you are ready to set up your new device, otherwise you will "
 "be locked out of your account.</em>"
 msgstr ""
+"Eğer bir kullanıcının iki aşamalı doğrulama bilgileri kaybolduysa veya ele "
+"geçirildiyse, buradan sıfırlayabilirsiniz. <em>Bunu yaparsanız, kullanıcının "
+"mevcut olduğundan ve aygıtlarını yeni iki aşamalı doğrulama bilgileriyle "
+"ayarlayacağından emin olun. Aksi durumda hesaplarına erişimleri mümkün "
+"olmayacaktır.</em>"
 
 #: journalist_templates/edit_account.html:65
 msgid ""
@@ -837,12 +842,18 @@ msgid ""
 "memorize it.<br> This will allow you to log back in and receive replies from "
 "journalists."
 msgstr ""
+"Lütfen bu kod ismini bir yere yazın ve güvenli bir şekilde saklayın veya "
+"ezberleyin. <br> Bu kod ismi tekrar giriş yapmanızı ve gazetecilerden yanıt "
+"almanızı sağlayacaktır."
 
 #: source_templates/generate.html:10
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our journalists in response to what you submit on the next screen."
 msgstr ""
+"Bir sonraki sayfada göndereceğiniz şeylere karşılık olarak gazetecilerin "
+"gönderdikleri mesajları almak üzere tekrar geldiğinizde bu kod ismini "
+"kullanacaksınız."
 
 #: source_templates/generate.html:34
 msgid ""
@@ -853,6 +864,12 @@ msgid ""
 " questions or are interested in additional documents. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
+"<strong>SecureDrop</strong> hizmetlerinin kullanıcılarını izlemek için "
+"geleneksel yöntemleri kullanmadığımız\n"
+"için sizinle iletişim kurabilmemiz, sorularımız olması veya ek belgelere "
+"ihtiyaç duymamız için sonraki ziyaretlerinizde\n"
+"bu kod ismini kullanmanız tek olası yoldur. Parolaların aksine kaybolan bir "
+"kod ismini tekrar bulmanın imkanı yoktur."
 
 #: source_templates/generate.html:44
 msgid "USE NEW CODENAME"
@@ -905,13 +922,12 @@ msgid "CHECK FOR A RESPONSE"
 msgstr "YANITLARI KONTROL EDİN"
 
 #: source_templates/index.html:92
-#, fuzzy
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
 "High in 4 easy steps!"
 msgstr ""
 "Tor Tarayıcı kullanıyor gibi gözüküyorsunuz. Dört adımda Güvenlik Kaydırma "
-"düğmesini kolayca Yüksek yapabilirsiniz."
+"düğmesini kolayca Yüksek yapabilirsiniz!"
 
 #: source_templates/index.html:94
 msgid ""
