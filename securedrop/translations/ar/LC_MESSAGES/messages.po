@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2017-12-19 20:00+0000\n"
-"Last-Translator: Ali <aboshanab_@hotmail.com>\n"
+"PO-Revision-Date: 2018-01-08 15:00+0000\n"
+"Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
 "Language-Team: Arabic "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ar/>\n"
 "Language: ar\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 2.17.1\n"
+"X-Generator: Weblate 2.18\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -144,7 +144,7 @@ msgstr "تم تحديث الحساب بنجاح."
 
 #: journalist_app/utils.py:76
 msgid "Login failed."
-msgstr "فشل الولوج"
+msgstr "فشل الدخول."
 
 #: journalist_app/utils.py:84
 msgid "Please wait at least {seconds} second before logging in again."
@@ -517,11 +517,11 @@ msgid ""
 msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
-msgstr[0] "لم يُختر أيّ ملف<strong> لحذفه نهائيا</strong>:"
+msgstr[0] ""
 msgstr[1] "اختير الملف التالي <strong>لحذفه نهائيا</strong>:"
-msgstr[2] "اختير الملفان التاليان <strong>لحذفهما نهائيا</strong>:"
-msgstr[3] "اختيرت الملفات {files} التالية <strong>لحذفها نهائيا</strong>:"
-msgstr[4] "اختيرت الملفات {files} التالية <strong>لحذفها نهائيا</strong>:"
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 msgstr[5] "اختيرت الملفات {files} التالية <strong>لحذفها نهائيا</strong>:"
 
 #: journalist_templates/delete.html:20
@@ -1019,7 +1019,7 @@ msgstr "<a href=\"{url}\" class=\"text-link\">لمعرفة المزيد</a>."
 
 #: source_templates/lookup.html:24
 msgid "You can send a file, a message, or both."
-msgstr "يمكنك إرسال ملف أو رسالة، أو كلبهما."
+msgstr "يمكنك إرسال ملف أو رسالة، أو كليهما."
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
