@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2017-12-09 23:00+0000\n"
-"Last-Translator: Daniel Arauz <danarauz@gmail.com>\n"
-"Language-Team: Spanish <https://weblate.securedrop.club/projects/securedrop/"
-"securedrop/es/>\n"
+"PO-Revision-Date: 2018-01-09 21:25+0000\n"
+"Last-Translator: Anatoli <djanatoli@gmail.com>\n"
+"Language-Team: Spanish "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/es/>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.17.1\n"
+"X-Generator: Weblate 2.18\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -41,10 +41,8 @@ msgid "Could not verify token in two-factor authentication."
 msgstr "No se pudo verificar el token en la autenticación de dos factores."
 
 #: journalist_app/admin.py:37
-#, fuzzy
-#| msgid "Account updated."
 msgid "Image updated."
-msgstr "Cuenta actualizada."
+msgstr "Imagen actualizada."
 
 #: journalist_app/admin.py:63
 msgid ""
@@ -128,14 +126,12 @@ msgid "You cannot send an empty reply."
 msgstr "Usted no puede enviar una respuesta vacía."
 
 #: journalist_app/forms.py:60
-#, fuzzy
-#| msgid "This field is required."
 msgid "File required."
-msgstr "Esta área es obligatoria."
+msgstr "Archivo requerido."
 
 #: journalist_app/forms.py:62
 msgid "Upload images only."
-msgstr ""
+msgstr "Subir imágenes solamente."
 
 #: journalist_app/main.py:118
 msgid "Thanks. Your reply has been stored."
@@ -224,12 +220,10 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: journalist_templates/_source_row.html:20
-#, fuzzy
-#| msgid "Message"
 msgid "1 message"
 msgid_plural "{msg_num} messages"
-msgstr[0] "Mensaje"
-msgstr[1] "Mensaje"
+msgstr[0] "1 Mensaje"
+msgstr[1] "{msg_num} Mensajes"
 
 #: journalist_templates/_source_row.html:23
 msgid "{num_unread} unread"
@@ -255,16 +249,9 @@ msgstr "CONTINUAR"
 #: journalist_templates/account_new_two_factor.html:4
 #: journalist_templates/admin_new_user_two_factor.html:5
 msgid "Enable FreeOTP"
-msgstr ""
+msgstr "Habilitar FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:5
-#, fuzzy
-#| msgid ""
-#| "You're almost done! To finish resetting your two-factor authentication, "
-#| "follow the instructions below to set up Google Authenticator. Once you've "
-#| "added the entry for your account in the app, enter one of the 6-digit "
-#| "codes from the app to confirm that two factor authentication is set up "
-#| "correctly."
 msgid ""
 "You're almost done! To finish resetting your two-factor authentication, "
 "follow the instructions below to set up FreeOTP. Once you've added the entry "
@@ -272,27 +259,25 @@ msgid ""
 "confirm that two factor authentication is set up correctly."
 msgstr ""
 "¡Ya casi termina! Para terminar de reajustar la autenticación de dos "
-"factores, siga las instrucciones de abajo para configurar el Autenticador "
-"Google. Una vez que haya agregado la entrada para su cuenta en la "
-"aplicación, introduzca uno de los códigos de 6 dígitos de la aplicación para "
-"confirmar que la autenticación de dos factores esta configura correctamente."
+"factores, siga las instrucciones de abajo para configurar FreeOTP. Una vez "
+"que haya agregado la entrada para su cuenta en la aplicación, introduzca uno "
+"de los códigos de 6 dígitos de la aplicación para confirmar que la "
+"autenticación de dos factores esta configura correctamente."
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
-#, fuzzy
-#| msgid "Install Google Authenticator on your phone"
 msgid "Install FreeOTP on your phone"
-msgstr "Instalar el Autenticador Google en su teléfono"
+msgstr "Instalar FreeOTP en su teléfono"
 
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
 msgid "Open the FreeOTP app"
-msgstr ""
+msgstr "Abrir la app FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
 msgid "Tap the QRcode symbol at the top"
-msgstr ""
+msgstr "Toque el símbolo de código QR en la parte superior"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -389,7 +374,7 @@ msgstr "No hay usuarios para mostrar"
 
 #: journalist_templates/admin.html:44
 msgid "INSTANCE CONFIG"
-msgstr ""
+msgstr "CONFIGURACIÓN DE INSTANCIA"
 
 #: journalist_templates/admin_add_user.html:4
 #: journalist_templates/config.html:4 journalist_templates/edit_account.html:7
@@ -410,13 +395,6 @@ msgid "Is using a YubiKey [HOTP]"
 msgstr "Está utilizando un dispositivo YubiKey [HOTP]"
 
 #: journalist_templates/admin_new_user_two_factor.html:6
-#, fuzzy
-#| msgid ""
-#| "You're almost done! To finish adding this new user, have them follow the "
-#| "instructions below to set up two-factor authentication with Google "
-#| "Authenticator. Once they've added an entry for this account in the app, "
-#| "have them enter one of the 6-digit codes from the app to confirm that two "
-#| "factor authentication is set up correctly."
 msgid ""
 "You're almost done! To finish adding this new user, have them follow the "
 "instructions below to set up two-factor authentication with FreeOTP. Once "
@@ -426,10 +404,10 @@ msgid ""
 msgstr ""
 "¡Ya casi termina! Para terminar de agregar este nuevo usuario, haga que "
 "ellos sigan las instrucciones de abajo para configurar la autenticación de "
-"dos factores con el Autenticador Google. Una vez que ellos hayan agregado "
-"una entrada para esta cuenta en la aplicación, haga que ingresen uno de los "
-"códigos de 6 dígitos de la aplicación para confirmar que la autenticación de "
-"dos factores esta configurada correctamente."
+"dos factores con FreeOTP. Una vez que ellos hayan agregado una entrada para "
+"esta cuenta en la aplicación, haga que ingresen uno de los códigos de 6 "
+"dígitos de la aplicación para confirmar que la autenticación de dos factores "
+"esta configurada correctamente."
 
 #: journalist_templates/base.html:24
 msgid "Logged on as"
@@ -560,34 +538,36 @@ msgstr "ELIMINAR COLECCION"
 
 #: journalist_templates/config.html:7
 msgid "Instance Configuration"
-msgstr ""
+msgstr "Configuración de Instancia"
 
 #: journalist_templates/config.html:9
 msgid "Alerts"
-msgstr ""
+msgstr "Alertas"
 
 #: journalist_templates/config.html:11
 msgid "Send a test encrypted email alert to verify OSSEC is working correctly:"
 msgstr ""
+"Envíe una alerta de correo encriptada de prueba para verificar que OSSEC "
+"está funcionando correctamente:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
-msgstr ""
+msgstr "ENVIAR ALERTA DE PRUEBA OSSEC"
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
-msgstr ""
+msgstr "Imagen de Logotipo"
 
 #: journalist_templates/config.html:23
 msgid ""
 "Here you can update the image displayed on the SecureDrop web interfaces:"
 msgstr ""
+"Aquí puede actualizar la imagen que se muestra en las interfaces web de "
+"SecureDrop:"
 
 #: journalist_templates/config.html:39
-#, fuzzy
-#| msgid "UPDATE"
 msgid "UPDATE LOGO"
-msgstr "ACTUALIZAR"
+msgstr "ACTUALIZAR LOGOTIPO"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -703,18 +683,13 @@ msgstr ""
 "cuenta. </em>"
 
 #: journalist_templates/edit_account.html:65
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as Google "
-#| "Authenticator or FreeOTP, choose the first option. For hardware tokens "
-#| "like the Yubikey, choose the second."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the Yubikey, choose the second."
 msgstr ""
 "Para restablecer la autenticación de dos factores para aplicaciones móviles "
-"como el Autenticador Google o FreeOTP, elija la primera opción. Para tokens "
-"de hardware como el Yubikey, elija la segunda."
+"como FreeOTP, elija la primera opción. Para tokens de hardware como el "
+"Yubikey, elija la segunda."
 
 #: journalist_templates/edit_account.html:85
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
@@ -822,19 +797,14 @@ msgid "LOG IN"
 msgstr "INICIAR SESION"
 
 #: source_app/__init__.py:73
-#, fuzzy
-#| msgid ""
-#| "<strong>WARNING:</strong> You appear to be using Tor2Web. This "
-#| "<strong>does not</strong> provide anonymity. <a href=\"{url}\">Why is "
-#| "this dangerous?</a>"
 msgid ""
 "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This "
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href="
 "\"{url}\">Why is this dangerous?</a>"
 msgstr ""
-"<strong> ADVERTENCIA:</strong> Usted parece estar usando Tor2Web. Esto "
-"<strong> no </strong> proporciona anonimato. <a href=\"{url}\"> ¿Por qué "
-"esto es peligroso? </a>"
+"<strong> ADVERTENCIA:&amp;nbsp;&lt;/strong> Usted parece estar usando "
+"Tor2Web. Esto <strong>&nbsp; no &nbsp;</strong> proporciona anonimato. <a "
+"href=\"{url}\"> ¿Por qué esto es peligroso? </a>"
 
 #: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
@@ -957,14 +927,6 @@ msgstr ""
 "siguiente pantalla."
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we use none of the traditional means to track users of our "
-#| "<strong>SecureDrop</strong>\n"
-#| " service, using this codename with future visits is the  only way we have "
-#| "to communicate with you, should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we use none of the traditional means to track users of our "
 "<strong>SecureDrop</strong>\n"
@@ -975,7 +937,7 @@ msgid ""
 msgstr ""
 "Porque no utilizamos ninguno de los medios tradicionales para rastrear a los "
 "usuarios de nuestro servicio de <strong>SecureDrop</strong>\n"
-"utilizando este nombre clave en visitas futuras es la única manera que "
+"en futuras visitas, utilizando este nombre clave es la única manera que "
 "tenemos de comunicarnos con usted, si tenemos\n"
 "preguntas o estamos interesados en documentos adicionales. A diferencia de "
 "las contraseñas, no hay forma de recuperar un nombre clave perdido."
@@ -1297,6 +1259,10 @@ msgid ""
 "your mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
+"Si existe la posibilidad de que descargar Tor Browser levante sospechas y es "
+"menos probable que su proveedor de correos sea supervisado, puede enviar un "
+"correo a <pre>gettor@torproject.org</pre> y un bot responderá con "
+"instrucciones."
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
