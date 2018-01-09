@@ -4,7 +4,7 @@ Install SecureDrop
 Install Prerequisites
 ----------------------
 
-SecureDrop has some dependencies that need to be loaded onto the *Admin 
+SecureDrop has some dependencies that need to be loaded onto the *Admin
 Workstation* prior to the installation of the server.
 
 To load these dependencies, from the base of the SecureDrop repository
@@ -64,18 +64,12 @@ continuing:
 -  The first username of a journalist who will be using SecureDrop (you
    can add more later)
 -  The username of the system admin
--  (Optional) An image to replace the SecureDrop logo on the *Source
-   Interface* and *Journalist Interface*
-
-   -  Recommended size: ``500px x 450px``
-   -  Recommended format: PNG
 
 You will have to copy the following required files to
 ``install_files/ansible-base``:
 
 -  SecureDrop Submission Key public key file
 -  Admin GPG public key file (for encrypting OSSEC alerts)
--  (Optional) Custom header image file
 
 The SecureDrop Submission Key should be located on your *Transfer
 Device* from earlier. It will depend on the location where the USB stick
@@ -112,7 +106,7 @@ the remote servers. ::
 
     ./securedrop-admin install
 
-You will be prompted to enter the sudo password for the *Application* and
+You will be prompted to enter the sudo passphrase for the *Application* and
 *Monitor Servers* (which should be the same).
 
 The install process will take some time, and it will return

@@ -3,6 +3,7 @@
 wanted_apache_headers:
   - 'Header edit Set-Cookie ^(.*)$ $1;HttpOnly'
   - 'Header always append X-Frame-Options: DENY'
+  - 'Header set Referrer-Policy "no-referrer"'
   - 'Header set X-XSS-Protection: "1; mode=block"'
   - 'Header set X-Content-Type-Options: nosniff'
   - 'Header set X-Download-Options: noopen'
@@ -31,7 +32,7 @@ pip_deps:
   - name: 'mock'
     version: '2.0.0'
   - name: 'pytest'
-    version: '3.1.1'
+    version: '3.3.1'
   - name: 'selenium'
     version: '2.53.6'
 

@@ -49,6 +49,7 @@ Issues sorted by topic
 * `Source and journalist applications <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3Aapp>`__
 * `Source and journalist applications cleanup <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3A%22goals%3A+app+code+cleanup%22>`__
 * `Reading room client for journalists <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3A%22Reading+Room%22>`__
+* `Source experience <https://github.com/freedomofpress/securedrop/issues?q=is%3Aopen+is%3Aissue+label%3A%22goals%3A+improve+source+experience%22>`__
 * `Journalist experience <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3A%22goals%3A+journalist+experience%22>`__
 * `Improve ansible logic / smoother install <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3A%22goals%3A+Improve+Ansible+logic+%2F+smoother+install%22>`__
 * `Operations and Deployment <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3Aops%2Fdeployment>`__
@@ -99,14 +100,8 @@ maintained by `Freedom of the Press Foundation employees
 maintained `by a horizontal community of volunteers
 <https://securedrop-club.readthedocs.io/en/latest/team.html>`__.
 
-You can browse the list of services and their corresponding Ansible
-playbook to find one you would like to improve:
-
-* `Weblate <https://weblate.securedrop.club>`__ and its `playbook <https://lab.securedrop.club/main/securedrop-club/tree/master/molecule/weblate>`__ and `pending bugs and tasks <https://lab.securedrop.club/main/securedrop-club/issues?label_name[]=Weblate>`__
-* `Discourse <https://forum.securedrop.club>`__ (no playbook yet) and `pending bugs and tasks <https://lab.securedrop.club/main/securedrop-club/issues?label_name[]=Discourse>`__
-* `GitLab <https://lab.securedrop.club>`__ and its `playbook <https://lab.securedrop.club/main/securedrop-club/tree/master/molecule/gitlab>`__ and `pending bugs and tasks <https://lab.securedrop.club/main/securedrop-club/issues?label_name[]=GitLab>`__
-* `Packages <https://packages.securedrop.club>`__ and its `playbook <https://lab.securedrop.club/main/securedrop-club/tree/master/molecule/packages>`__ and `pending bugs and tasks <https://lab.securedrop.club/main/securedrop-club/issues?label_name[]=Packages>`__
-* `Other elements of infrastructure <https://securedrop-club.readthedocs.io>`__ and their associated `playbooks <https://lab.securedrop.club/main/securedrop-club/tree/master/molecule>`__ and `pending bugs and tasks <https://lab.securedrop.club/main/securedrop-club/issues?label_name[]=Other>`__
+You will find a list of the pending tasks to improve the ``securedrop.club`` services in
+the `contribution guide <https://securedrop-club.readthedocs.io/en/latest/contribute.html>`__.
 
 If you're in doubt, feel free to reach out to the `DevOps section of
 the forum <https://forum.securedrop.club/c/devops>`__ or directly to `a
@@ -185,6 +180,5 @@ If you know web design or have experience improving user experience,
 the following tasks are waiting for your help:
 
 * `improving user experience <https://github.com/freedomofpress/securedrop/issues?q=is%3Aopen+is%3Aissue+label%3AUX>`__
-* `using SecureDrop on mobile <https://github.com/freedomofpress/securedrop/issues?q=is%3Aopen+is%3Aissue+label%3A%22goals%3A+improve+source+experience+on+mobile%22>`__
 * improving `CSS/SASS <https://github.com/freedomofpress/securedrop/issues?q=is%3Aopen+is%3Aissue+label%3ACSS%2FSASS>`__ and `HTML <https://github.com/freedomofpress/securedrop/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3AHTML>`__
 * `better journalist experience <https://github.com/freedomofpress/securedrop/issues?q=is%3Aopen+is%3Aissue+label%3A%22goals%3A+journalist+experience%22>`__
