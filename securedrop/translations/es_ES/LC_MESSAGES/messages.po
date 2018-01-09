@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-01-09 21:25+0000\n"
-"Last-Translator: Anatoli <djanatoli@gmail.com>\n"
+"PO-Revision-Date: 2018-01-09 21:26+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/es/>\n"
 "Language: es_ES\n"
@@ -131,7 +131,7 @@ msgstr "Archivo requerido."
 
 #: journalist_app/forms.py:62
 msgid "Upload images only."
-msgstr "Subir imágenes solamente."
+msgstr "Subir imágenes solamente.\n"
 
 #: journalist_app/main.py:118
 msgid "Thanks. Your reply has been stored."
