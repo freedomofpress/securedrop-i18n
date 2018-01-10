@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-01-10 01:28+0000\n"
+"PO-Revision-Date: 2018-01-10 04:00+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/zh_Hant/>\n"
@@ -30,15 +30,15 @@ msgstr "你因閒置太久已被登出"
 
 #: journalist_app/account.py:26
 msgid "Incorrect password or two-factor code."
-msgstr "密碼或是兩因子授權認證碼不正確。"
+msgstr "密碼或是雙因素驗證認證碼不正確。"
 
 #: journalist_app/account.py:42
 msgid "Token in two-factor authentication verified."
-msgstr "兩因子授權的認證碼已通過驗證。"
+msgstr "雙因素驗證的認證碼已通過驗證。"
 
 #: journalist_app/account.py:46 journalist_app/admin.py:108
 msgid "Could not verify token in two-factor authentication."
-msgstr "兩因子授權的認證碼無法確認。"
+msgstr "雙因素驗證的認證碼無法確認。"
 
 #: journalist_app/admin.py:37
 msgid "Image updated."
@@ -62,11 +62,11 @@ msgstr "保存此用户到資料庫時出錯。請通知管理員。"
 
 #: journalist_app/admin.py:101
 msgid "Token in two-factor authentication accepted for user {user}."
-msgstr "用户 {user} 已通過雙重因子認證。"
+msgstr "用户 {user} 已通過雙因素驗證。"
 
 #: journalist_app/admin.py:135
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
-msgstr "祕密格式不符：請只提交 A-F 之間的字母和 0-9 之間的數字。"
+msgstr "無效的祕密格式：只可提交 A-F 之間的字母和 0-9 之間的數字。"
 
 #: journalist_app/admin.py:140
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
@@ -120,7 +120,7 @@ msgstr "檔案欄為必要。"
 
 #: journalist_app/forms.py:62
 msgid "Upload images only."
-msgstr "只上傳圖片。"
+msgstr "僅上傳圖片。"
 
 #: journalist_app/main.py:118
 msgid "Thanks. Your reply has been stored."
@@ -157,7 +157,7 @@ msgstr[0] "請等待至少 {seconds} 秒後再次登錄。"
 
 #: journalist_app/utils.py:95
 msgid "Please wait for a new two-factor token before trying again."
-msgstr "請等待産生新的雙重因子認證碼後再重新登錄。"
+msgstr "請等待産生新的雙因素認證碼後再重新登錄。"
 
 #: journalist_app/utils.py:141
 msgid "Submission deleted."
@@ -601,9 +601,8 @@ msgid ""
 "is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
-"如果用户兩因子授權的證明已丢失或遭破壞，可以在此重置它們。<em>如果這麼做，確"
-"認該用戶在場，而且在其設置上已設好新的兩因子授權驗證。否则，他們的帳戶將被鎖"
-"住。"
+"如果用户雙因素驗證的證明已丢失或遭破壞，可以在此重置它們。<em>如果這麼做，確認該用戶在場，而且在其設置上已設好新的雙因素驗證。否则，他們的帳戶將被鎖住"
+"。"
 
 #: journalist_templates/edit_account.html:63
 msgid ""
