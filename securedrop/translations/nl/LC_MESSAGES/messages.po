@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-01-10 02:00+0000\n"
+"PO-Revision-Date: 2018-01-10 08:59+0000\n"
 "Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
 "Language-Team: Dutch "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/nl/>\n"
@@ -541,19 +541,23 @@ msgstr "Waarschuwingen"
 #: journalist_templates/config.html:11
 msgid "Send a test encrypted email alert to verify OSSEC is working correctly:"
 msgstr ""
+"Verstuur bij wijze van test een versleutelde waarschuwingsmail om te "
+"controleren of OSSEC correct werkt:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
-msgstr ""
+msgstr "VERSTUUR OSSEC WAARSCHUWINGSTESTMAIL"
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
-msgstr ""
+msgstr "Logo Afbeelding"
 
 #: journalist_templates/config.html:23
 msgid ""
 "Here you can update the image displayed on the SecureDrop web interfaces:"
 msgstr ""
+"Hier kan u de afbeelding updaten die getoond wordt in de SecureDrop "
+"webinterface:"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
@@ -670,18 +674,12 @@ msgstr ""
 "anders wordt u buitengesloten van uw account.</em>"
 
 #: journalist_templates/edit_account.html:65
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as Google "
-#| "Authenticator or FreeOTP, choose the first option. For hardware tokens "
-#| "like the Yubikey, choose the second."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the Yubikey, choose the second."
 msgstr ""
-"Om tweestapsauthenticatie voor mobiele apps zoals Google Authenticator of "
-"FreeOTP te herstellen, kies de eerste optie. Voor hardware-tokens zoals "
-"Yubikey kiest u de tweede."
+"Om tweestapsauthenticatie voor mobiele apps zoals FreeOTP te herstellen, "
+"kies de eerste optie. Voor hardware-tokens zoals Yubikey kiest u de tweede."
 
 #: journalist_templates/edit_account.html:85
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
@@ -788,19 +786,14 @@ msgid "LOG IN"
 msgstr "INLOGGEN"
 
 #: source_app/__init__.py:73
-#, fuzzy
-#| msgid ""
-#| "<strong>WARNING:</strong> You appear to be using Tor2Web. This "
-#| "<strong>does not</strong> provide anonymity. <a href=\"{url}\">Why is "
-#| "this dangerous?</a>"
 msgid ""
 "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This "
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href="
 "\"{url}\">Why is this dangerous?</a>"
 msgstr ""
-"<strong>WAARSCHUWING:</strong> Het lijkt erop dat u Tor2Web gebruikt. "
-"Tor2Web zorgt <strong>niet</strong> voor anonimiteit. <a href="
-"\"{url}\">Waarom is dit gevaarlijk?</a>"
+"<strong>WAARSCHUWING:&nbsp;</strong> Het lijkt erop dat u Tor2Web gebruikt. "
+"Tor2Web zorgt <strong>&nbsp;niet&nbsp;</strong> voor anonimiteit. <a href=\""
+"{url}\">Waarom is dit gevaarlijk?</a>"
 
 #: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
@@ -902,17 +895,14 @@ msgid "Welcome"
 msgstr "Welkom"
 
 #: source_templates/generate.html:7
-#, fuzzy
-#| msgid ""
-#| "Please either write this codename down and keep it in a safe place, or "
-#| "memorize it."
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it.<br> This will allow you to log back in and receive replies from "
 "journalists."
 msgstr ""
 "Noteer deze codenaam en bewaar op een veilige plaats of leer hem uit het "
-"hoofd."
+"hoofd.<br>Hiermee kan u later opnieuw inloggen en antwoorden ontvangen van "
+"journalisten."
 
 #: source_templates/generate.html:10
 msgid ""
@@ -924,14 +914,6 @@ msgstr ""
 "inzendt."
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we use none of the traditional means to track users of our "
-#| "<strong>SecureDrop</strong>\n"
-#| " service, using this codename with future visits is the  only way we have "
-#| "to communicate with you, should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we use none of the traditional means to track users of our "
 "<strong>SecureDrop</strong>\n"
@@ -941,11 +923,10 @@ msgid ""
 "there is no way to retrieve a lost codename."
 msgstr ""
 "Omdat we geen van de traditionele manieren gebruiken om gebruikers van onze "
-"<strong>SecureDrop</strong>-service is het gebruik van deze codenaam tijdens "
-"toekomstige bezoeken de enige manier die we hebben om met u te communiceren "
-"mochten we vragen hebben of geïnteresseerd zijn in extra documenten. In "
-"tegenstelling tot wachtwoorden kunnen verloren codenamen niet hersteld "
-"worden."
+"<strong>SecureDrop</strong>-service te traceren, is het gebruik van deze "
+"codenaam de enige manier die we hebben om met u te communiceren mochten we "
+"vragen hebben of geïnteresseerd zijn in extra documenten. In tegenstelling "
+"tot wachtwoorden kunnen verloren codenamen niet teruggehaald worden."
 
 #: source_templates/generate.html:44 source_templates/index.html:65
 msgid "SUBMIT DOCUMENTS"
@@ -1060,21 +1041,14 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "Gelukkig, het ligt niet aan u! En dan nu het gênante deel..."
 
 #: source_templates/lookup.html:12
-#, fuzzy
-#| msgid ""
-#| "Our servers experienced an unusual surge of new activity, when you last "
-#| "visited. This could have been human activity, an automated attack, or "
-#| "just some random blip. To err on the side of caution, we put a hold on "
-#| "sending all documents from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all "
 "documents from that day through to our journalists."
 msgstr ""
 "Onze servers hebben het onverwacht druk gekregen tijdens uw laatste bezoek. "
-"Dit heeft mogelijk te maken met menselijke activiteit, een geautomatiseerde "
-"aanval, of een storing. Uit voorzorg hebben we alle documenten die u die dag "
-"wilde verzenden in de wacht gezet."
+"Uit voorzorg hebben we alle documenten die u die dag wilde verzenden in de "
+"wacht gezet."
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1164,10 +1138,8 @@ msgid "There are no replies at this time."
 msgstr "Op dit moment zijn er geen reacties."
 
 #: source_templates/lookup.html:100
-#, fuzzy
-#| msgid "Remember your codename is:"
 msgid "Remember, your codename is:"
-msgstr "Onthoud uw codenaam:"
+msgstr "Vergeet niet, uw codenaam is:"
 
 #: source_templates/lookup.html:101
 msgid "Show"
@@ -1272,6 +1244,10 @@ msgid ""
 "your mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
+"Wanneer de kans bestaat dat het downloaden van de Tor Browser argwaan wekt "
+"en het minder waarschijnlijk is dat uw mail provider wordt gecontroleerd, "
+"kan u een e-mail sturen naar <pre>gettor@torproject.org</pre> en een bot zal "
+"met instructies antwoorden."
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
