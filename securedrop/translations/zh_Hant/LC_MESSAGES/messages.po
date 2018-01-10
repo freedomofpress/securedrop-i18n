@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2017-12-09 05:00+0000\n"
+"PO-Revision-Date: 2018-01-10 01:28+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
-"Language-Team: Chinese (Traditional) <https://weblate.securedrop.club/"
-"projects/securedrop/securedrop/zh_Hant/>\n"
+"Language-Team: Chinese (Traditional) "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.17.1\n"
+"X-Generator: Weblate 2.18\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -41,10 +41,8 @@ msgid "Could not verify token in two-factor authentication."
 msgstr "兩因子授權的認證碼無法確認。"
 
 #: journalist_app/admin.py:37
-#, fuzzy
-#| msgid "Account updated."
 msgid "Image updated."
-msgstr "帳戶已更新。"
+msgstr "圖片已更新。"
 
 #: journalist_app/admin.py:63
 msgid ""
@@ -117,14 +115,12 @@ msgid "You cannot send an empty reply."
 msgstr "回覆內容不可空白。"
 
 #: journalist_app/forms.py:60
-#, fuzzy
-#| msgid "This field is required."
 msgid "File required."
-msgstr "這是必填項目。"
+msgstr "檔案欄為必要。"
 
 #: journalist_app/forms.py:62
 msgid "Upload images only."
-msgstr ""
+msgstr "只上傳圖片。"
 
 #: journalist_app/main.py:118
 msgid "Thanks. Your reply has been stored."
@@ -197,14 +193,12 @@ msgstr "在所選擇的收藏集件中，並無標示未讀的提交資訊。"
 #: journalist_templates/_source_row.html:19
 msgid "1 doc"
 msgid_plural "{doc_num} docs"
-msgstr[0] ""
+msgstr[0] "{doc_num} 文件"
 
 #: journalist_templates/_source_row.html:20
-#, fuzzy
-#| msgid "Message"
 msgid "1 message"
 msgid_plural "{msg_num} messages"
-msgstr[0] "訊息"
+msgstr[0] "{msg_num} 訊息"
 
 #: journalist_templates/_source_row.html:23
 msgid "{num_unread} unread"
@@ -230,42 +224,32 @@ msgstr "繼續"
 #: journalist_templates/account_new_two_factor.html:4
 #: journalist_templates/admin_new_user_two_factor.html:5
 msgid "Enable FreeOTP"
-msgstr ""
+msgstr "啟用 FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:5
-#, fuzzy
-#| msgid ""
-#| "You're almost done! To finish resetting your two-factor authentication, "
-#| "follow the instructions below to set up Google Authenticator. Once you've "
-#| "added the entry for your account in the app, enter one of the 6-digit "
-#| "codes from the app to confirm that two factor authentication is set up "
-#| "correctly."
 msgid ""
 "You're almost done! To finish resetting your two-factor authentication, "
 "follow the instructions below to set up FreeOTP. Once you've added the entry "
 "for your account in the app, enter one of the 6-digit codes from the app to "
 "confirm that two factor authentication is set up correctly."
 msgstr ""
-"快完成了！ 為完成重置两因子授權查驗，請依照下面的指示設置 Google "
-"Authenticator。一旦帳戶順利加入到應用程式後，請輸入由應用程式所提供的 6 位代"
-"碼，以確認兩因子授權設置正確。"
+"快完成了！ 為完成重置兩因子授權查驗，請依照下面的指示設置 FreeOTP。一旦順利將帳戶加入到應用程式後，請輸入由應用程式所提供的 6 "
+"位代碼，以確認兩因子授權設置正確。"
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
-#, fuzzy
-#| msgid "Install Google Authenticator on your phone"
 msgid "Install FreeOTP on your phone"
-msgstr "安裝 Google Authenticator 到手機上"
+msgstr "手機上安裝 FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
 msgid "Open the FreeOTP app"
-msgstr ""
+msgstr "開啟 FreeOTP 應用"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
 msgid "Tap the QRcode symbol at the top"
-msgstr ""
+msgstr "在上方輕輕點擊 QRcode 符號"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -354,7 +338,7 @@ msgstr "沒有使用者"
 
 #: journalist_templates/admin.html:44
 msgid "INSTANCE CONFIG"
-msgstr ""
+msgstr "虛擬器設定"
 
 #: journalist_templates/admin_add_user.html:4
 #: journalist_templates/config.html:4 journalist_templates/edit_account.html:7
@@ -375,13 +359,6 @@ msgid "Is using a YubiKey [HOTP]"
 msgstr "正在使用 YubiKey [HOTP]"
 
 #: journalist_templates/admin_new_user_two_factor.html:6
-#, fuzzy
-#| msgid ""
-#| "You're almost done! To finish adding this new user, have them follow the "
-#| "instructions below to set up two-factor authentication with Google "
-#| "Authenticator. Once they've added an entry for this account in the app, "
-#| "have them enter one of the 6-digit codes from the app to confirm that two "
-#| "factor authentication is set up correctly."
 msgid ""
 "You're almost done! To finish adding this new user, have them follow the "
 "instructions below to set up two-factor authentication with FreeOTP. Once "
@@ -389,9 +366,8 @@ msgid ""
 "the 6-digit codes from the app to confirm that two factor authentication is "
 "set up correctly."
 msgstr ""
-"即將完成！ 為增加新用户，請他們依照以下指示使用 Google Authenticator 來設置兩"
-"因子授權驗證。 一旦此帳戶記錄加入到應用程式，請輸入應用程式提供的 6 位數字"
-"碼，以確認兩因子授權查驗設置正確。"
+"即將完成！ 為增加新用户，請他們依照以下指示使用 FreeOTP 來設置兩因子授權驗證。 一旦此帳戶記錄加入到應用程式，請輸入應用程式提供的 6 "
+"位數字碼，以確認兩因子授權查驗設置正確。"
 
 #: journalist_templates/base.html:24
 msgid "Logged on as"
@@ -513,34 +489,32 @@ msgstr "删除集件"
 
 #: journalist_templates/config.html:7
 msgid "Instance Configuration"
-msgstr ""
+msgstr "虛擬器設定"
 
 #: journalist_templates/config.html:9
 msgid "Alerts"
-msgstr ""
+msgstr "警示"
 
 #: journalist_templates/config.html:11
 msgid "Send a test encrypted email alert to verify OSSEC is working correctly:"
-msgstr ""
+msgstr "傳送一則測試的加密電郵警報以核實  OSSEC 可正確執行:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
-msgstr ""
+msgstr "傳送測試 OSSEC 警報"
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
-msgstr ""
+msgstr "商標圖片"
 
 #: journalist_templates/config.html:23
 msgid ""
 "Here you can update the image displayed on the SecureDrop web interfaces:"
-msgstr ""
+msgstr "在此處可更新 SecureDrop 網頁介面的顯示圖片:"
 
 #: journalist_templates/config.html:39
-#, fuzzy
-#| msgid "UPDATE"
 msgid "UPDATE LOGO"
-msgstr "更新"
+msgstr "更新商標"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -642,17 +616,10 @@ msgstr ""
 "證書。<em> 如果這麼做，請確認新設備已設置妥當，否则你的帳戶將被鎖住。</em>"
 
 #: journalist_templates/edit_account.html:65
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as Google "
-#| "Authenticator or FreeOTP, choose the first option. For hardware tokens "
-#| "like the Yubikey, choose the second."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the Yubikey, choose the second."
-msgstr ""
-"為手機應用程式，如 Google Authenticator 或 FreeOTP 重置兩因子授權，請選擇第一"
-"選項。如果是像 Yubikey 之類的實體驗證方式，請選第二項。"
+msgstr "利用手機應用程式，如 FreeOTP 來重置兩因子授權，請選擇第一選項。如果是像 Yubikey 之類的實體驗證方式，請選第二項。"
 
 #: journalist_templates/edit_account.html:85
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
@@ -754,18 +721,13 @@ msgid "LOG IN"
 msgstr "登錄"
 
 #: source_app/__init__.py:73
-#, fuzzy
-#| msgid ""
-#| "<strong>WARNING:</strong> You appear to be using Tor2Web. This "
-#| "<strong>does not</strong> provide anonymity. <a href=\"{url}\">Why is "
-#| "this dangerous?</a>"
 msgid ""
 "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This "
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href="
 "\"{url}\">Why is this dangerous?</a>"
 msgstr ""
-"<strong> 警告：</strong> 看來你正在使用 Tor2Web。 它<strong>不能</strong>提供"
-"匿名性。<a href=\"/tor2web-warning\">這樣為什麼有危險？</a>"
+"<strong> 警告：&nbsp;</strong> 看來你正在使用 Tor2Web。 它 "
+"<strong>&nbsp;不能&nbsp;</strong> 提供匿名功能 <a href=\"{url}\">這樣為什麼有危險？</a>"
 
 #: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
@@ -876,14 +838,6 @@ msgid ""
 msgstr "之後你將使用這個代號來讀取記者對你（在下一頁所提交資訊）的回應。"
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we use none of the traditional means to track users of our "
-#| "<strong>SecureDrop</strong>\n"
-#| " service, using this codename with future visits is the  only way we have "
-#| "to communicate with you, should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we use none of the traditional means to track users of our "
 "<strong>SecureDrop</strong>\n"
@@ -892,9 +846,10 @@ msgid ""
 " questions or are interested in additional documents. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"因為我們不使用傳統方式追蹤 <strong>SecureDrop</strong> 服務的用戶，將來若我們"
-"有疑問或需要更多文件時，這個代號將是我們和你溝通的唯一管道。代號和密碼不同，"
-"一旦遺失便無法取回。"
+"因為我們不使用傳統方式追蹤 <strong>SecureDrop</strong> "
+"的使用者。使用這個代號將是未來若我們有疑問或需要更多文件時而要求你再次訪問提供時，我們和你溝通的唯一管道。\n"
+"\n"
+"代號和密碼不同，一旦遺失便無辦法再恢復獲取。"
 
 #: source_templates/generate.html:44 source_templates/index.html:65
 msgid "SUBMIT DOCUMENTS"
@@ -1184,6 +1139,8 @@ msgid ""
 "your mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
+"如果下載 Tor Browser 容易引發他人懷疑，而郵件服務商較不受到監控, 則可以寄信到 "
+"<pre>gettor@torproject.org</pre>會有一個機器人提供答案指示。"
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
