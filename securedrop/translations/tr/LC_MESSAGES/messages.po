@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-27 15:00+0000\n"
+"PO-Revision-Date: 2018-01-10 21:24+0000\n"
 "Last-Translator: T. E. Kalaycı <tekrei@gmail.com>\n"
-"Language-Team: Turkish <https://weblate.securedrop.club/projects/securedrop/"
-"securedrop/tr/>\n"
+"Language-Team: Turkish "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,10 +40,8 @@ msgid "Could not verify token in two-factor authentication."
 msgstr "İki aşamalı doğrulama kodu doğrulanamıyor."
 
 #: journalist_app/admin.py:37
-#, fuzzy
-#| msgid "Account updated."
 msgid "Image updated."
-msgstr "Hesap güncellendi."
+msgstr "Görüntü güncellendi."
 
 #: journalist_app/admin.py:63
 msgid ""
@@ -125,14 +123,12 @@ msgid "You cannot send an empty reply."
 msgstr "Boş bir yanıt gönderemezsiniz."
 
 #: journalist_app/forms.py:60
-#, fuzzy
-#| msgid "This field is required."
 msgid "File required."
-msgstr "Bu saha gereklidir."
+msgstr "Dosya gerekli."
 
 #: journalist_app/forms.py:62
 msgid "Upload images only."
-msgstr ""
+msgstr "Sadece resim yükleyin."
 
 #: journalist_app/main.py:118
 msgid "Thanks. Your reply has been stored."
@@ -215,16 +211,14 @@ msgstr "Seçilen derlemelerde okunmamış gönderi yok."
 #: journalist_templates/_source_row.html:19
 msgid "1 doc"
 msgid_plural "{doc_num} docs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 belge"
+msgstr[1] "{doc_num} belge"
 
 #: journalist_templates/_source_row.html:20
-#, fuzzy
-#| msgid "Message"
 msgid "1 message"
 msgid_plural "{msg_num} messages"
-msgstr[0] "İleti"
-msgstr[1] "İleti"
+msgstr[0] "1 İleti"
+msgstr[1] "{msg_num} İleti"
 
 #: journalist_templates/_source_row.html:23
 msgid "{num_unread} unread"
@@ -250,16 +244,9 @@ msgstr "DEVAM"
 #: journalist_templates/account_new_two_factor.html:4
 #: journalist_templates/admin_new_user_two_factor.html:5
 msgid "Enable FreeOTP"
-msgstr ""
+msgstr "FreeOTP'yi Etkinleştirin"
 
 #: journalist_templates/account_new_two_factor.html:5
-#, fuzzy
-#| msgid ""
-#| "You're almost done! To finish resetting your two-factor authentication, "
-#| "follow the instructions below to set up Google Authenticator. Once you've "
-#| "added the entry for your account in the app, enter one of the 6-digit "
-#| "codes from the app to confirm that two factor authentication is set up "
-#| "correctly."
 msgid ""
 "You're almost done! To finish resetting your two-factor authentication, "
 "follow the instructions below to set up FreeOTP. Once you've added the entry "
@@ -267,27 +254,25 @@ msgid ""
 "confirm that two factor authentication is set up correctly."
 msgstr ""
 "Neredeyse işlem tamam! İki aşamalı doğrulamayı sıfırlamayı tamamlamak için, "
-"Google Authenticator kurmak için gerekli aşağıdaki adımları izlemeniz "
-"gerekiyor. Hesabınıza ilişkin bilgiyi uygulamaya girdikten sonra, uygulamada "
+"FreeOTP kurmak için gerekli olan aşağıdaki adımları izlemeniz gerekiyor. "
+"Hesabınıza ilişkin bilgiyi uygulamaya girdikten sonra, uygulamada "
 "ürettiğiniz 6 rakamlı kodlardan birini girerek iki aşamalı doğrulamanın "
 "düzgün bir şekilde kurulduğunu doğrulayın."
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
-#, fuzzy
-#| msgid "Install Google Authenticator on your phone"
 msgid "Install FreeOTP on your phone"
-msgstr "Telefonunuza Google Authenticator kurun"
+msgstr "Telefonunuza FreeOTP kurun"
 
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
 msgid "Open the FreeOTP app"
-msgstr ""
+msgstr "FreeOTP uygulamasını açın"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
 msgid "Tap the QRcode symbol at the top"
-msgstr ""
+msgstr "Yukarıdaki QRCode simgesine tıklayın"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -379,7 +364,7 @@ msgstr "Gösterilecek kullanıcı yok"
 
 #: journalist_templates/admin.html:44
 msgid "INSTANCE CONFIG"
-msgstr ""
+msgstr "ÖRNEK YAPILANDIRMASI"
 
 #: journalist_templates/admin_add_user.html:4
 #: journalist_templates/config.html:4 journalist_templates/edit_account.html:7
@@ -400,13 +385,6 @@ msgid "Is using a YubiKey [HOTP]"
 msgstr "YubiKey [HOTP] kullanıyor mu"
 
 #: journalist_templates/admin_new_user_two_factor.html:6
-#, fuzzy
-#| msgid ""
-#| "You're almost done! To finish adding this new user, have them follow the "
-#| "instructions below to set up two-factor authentication with Google "
-#| "Authenticator. Once they've added an entry for this account in the app, "
-#| "have them enter one of the 6-digit codes from the app to confirm that two "
-#| "factor authentication is set up correctly."
 msgid ""
 "You're almost done! To finish adding this new user, have them follow the "
 "instructions below to set up two-factor authentication with FreeOTP. Once "
@@ -414,11 +392,11 @@ msgid ""
 "the 6-digit codes from the app to confirm that two factor authentication is "
 "set up correctly."
 msgstr ""
-"Neredeyse bitti! Bu yeni kullanıcıyı eklemeyi tamamlamak için, onlardan "
-"aşağıdaki adımları izleyerek Google Authenticator ile iki aşamalı "
-"doğrulamayı kurmalarını isteyin. Uygulamada bu hesap için bir girdi "
-"eklediklerinde, uygulamanın ürettiği 6 rakamlı kodlardan birini girmelerini "
-"isteyin ve iki aşamalı doğrulamanın doğru bir şekilde kurulduğunu doğrulayın."
+"Neredeyse bitti! Bu yeni kullanıcıyı eklemeyi tamamlamak için, kullanıcıdan "
+"aşağıdaki adımları izleyerek FreeOTP ile iki aşamalı doğrulamayı kurmasını "
+"isteyin. Uygulamada bu hesap için bir girdi eklediklerinde, uygulamanın "
+"ürettiği 6 rakamlı kodlardan birini girmelerini isteyin ve iki aşamalı "
+"doğrulamanın doğru bir şekilde kurulduğunu doğrulayın."
 
 #: journalist_templates/base.html:24
 msgid "Logged on as"
@@ -547,34 +525,35 @@ msgstr "DERLEMEYİ SİL"
 
 #: journalist_templates/config.html:7
 msgid "Instance Configuration"
-msgstr ""
+msgstr "Örnek Yapılandırması"
 
 #: journalist_templates/config.html:9
 msgid "Alerts"
-msgstr ""
+msgstr "Uyarılar"
 
 #: journalist_templates/config.html:11
 msgid "Send a test encrypted email alert to verify OSSEC is working correctly:"
 msgstr ""
+"OSSEC'in düzgün bir şekilde çalıştığını doğrulamak için bir şifreli uyarı e-"
+"postası gönderin:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
-msgstr ""
+msgstr "OSSEC UYARI GÖNDERME TESTİ"
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
-msgstr ""
+msgstr "Logo Resmi"
 
 #: journalist_templates/config.html:23
 msgid ""
 "Here you can update the image displayed on the SecureDrop web interfaces:"
 msgstr ""
+"SecureDrop web arayüzlerinde görüntülenen resmi buradan güncelleyebiliriz:"
 
 #: journalist_templates/config.html:39
-#, fuzzy
-#| msgid "UPDATE"
 msgid "UPDATE LOGO"
-msgstr "GÜNCELLE"
+msgstr "LOGOYU GÜNCELLE"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -689,18 +668,13 @@ msgstr ""
 "olmayacaktır.</em>"
 
 #: journalist_templates/edit_account.html:65
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as Google "
-#| "Authenticator or FreeOTP, choose the first option. For hardware tokens "
-#| "like the Yubikey, choose the second."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the Yubikey, choose the second."
 msgstr ""
-"Google Authenticator veya FreeOTP gibi mobil uygulamalar için iki aşamalı "
-"doğrulamayı sıfırlamak amacıyla ilk seçeneği, YubiKey gibi donanımsal "
-"çözümler için ikinci seçeneği seçin."
+"FreeOTP gibi mobil uygulamalar için iki aşamalı doğrulamayı sıfırlamak "
+"amacıyla ilk seçeneği, YubiKey gibi donanımsal çözümler için ikinci seçeneği "
+"seçin."
 
 #: journalist_templates/edit_account.html:85
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
@@ -806,18 +780,14 @@ msgid "LOG IN"
 msgstr "OTURUM AÇ"
 
 #: source_app/__init__.py:73
-#, fuzzy
-#| msgid ""
-#| "<strong>WARNING:</strong> You appear to be using Tor2Web. This "
-#| "<strong>does not</strong> provide anonymity. <a href=\"{url}\">Why is "
-#| "this dangerous?</a>"
 msgid ""
 "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This "
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href="
 "\"{url}\">Why is this dangerous?</a>"
 msgstr ""
-"<strong>UYARI:</strong> Tor2Web kullanıyor gibi gözüküyorsunuz. Bu anonimlik "
-"<strong>sağlamaz</strong>. <a href=\"{url}\">Bu durum neden tehlikeli?</a>"
+"<strong>UYARI:&nbsp;</strong> Tor2Web kullanıyor gibi gözüküyorsunuz. Bu "
+"anonimlik <strong>&nbsp;sağlamaz&nbsp;</strong>. <a href=\"{url}\">Bu neden "
+"tehlikeli?</a>"
 
 #: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
@@ -939,14 +909,6 @@ msgstr ""
 "kullanacaksınız."
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we use none of the traditional means to track users of our "
-#| "<strong>SecureDrop</strong>\n"
-#| " service, using this codename with future visits is the  only way we have "
-#| "to communicate with you, should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we use none of the traditional means to track users of our "
 "<strong>SecureDrop</strong>\n"
@@ -956,10 +918,10 @@ msgid ""
 "there is no way to retrieve a lost codename."
 msgstr ""
 "<strong>SecureDrop</strong> hizmetlerinin kullanıcılarını izlemek için "
-"geleneksel yöntemleri kullanmıyoruz, bu nedenle\n"
-"sizinle iletişim kurabilmek, soru sorabilmek veya ek belge ihtiyaçlarını "
-"bildirebilmek için sonraki ziyaretlerinizde\n"
-"bu kod ismini kullanmanız olası tek yoldur. Parolaların aksine kod ismi "
+"geleneksel yöntemleri kullanmadığımız için\n"
+"sizinle iletişim kurabilmemiz, soru sorabilmemiz veya ek belge ihtiyaçlarını "
+"bildirebilmemiz amacıyla sonraki ziyaretlerinizde\n"
+"bu kod ismini kullanmanız tek yoldur. Parolaların aksine kod ismi "
 "kaybolduğunda tekrar bulmanın imkanı yoktur."
 
 #: source_templates/generate.html:44 source_templates/index.html:65
@@ -1275,6 +1237,10 @@ msgid ""
 "your mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
+"Tor Tarayıcı'yı indirmenizin şüphe uyandırma olasılığı varsa ve e-posta "
+"sağlayıcınızın izlenme ihtimali daha düşük ise, "
+"<pre>gettor@torproject.org</pre> adresine bir e-posta atabilirsiniz ve bir "
+"bot yönergeleri size yanıt olarak gönderecektir."
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
