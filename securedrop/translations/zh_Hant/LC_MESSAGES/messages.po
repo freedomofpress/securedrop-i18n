@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-01-11 07:00+0000\n"
+"PO-Revision-Date: 2018-01-11 09:00+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/zh_Hant/>\n"
@@ -607,7 +607,7 @@ msgid ""
 "this, make sure you are ready to set up your new device, otherwise you will "
 "be locked out of your account.</em>"
 msgstr ""
-"如果你的雙因素驗證證書已丢失或遭到破壞，或是你有一件新設備，可以在此重置你的證書。<em> "
+"如果你的雙因素驗證證明已丢失或遭到破壞，或是你有一件新設備，可以在此重置你的證明。<em> "
 "如果要這麼做，請確認新設備已設置妥當，否则你的帳戶會被鎖住。</em>"
 
 #: journalist_templates/edit_account.html:65
@@ -618,7 +618,7 @@ msgstr "利用手機應用程式，如 FreeOTP 來重置雙因素驗證，請選
 
 #: journalist_templates/edit_account.html:85
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
-msgstr "重置雙因素驗證器（應用程式）"
+msgstr "重置雙因素驗證（應用程式）"
 
 #: journalist_templates/edit_account.html:87
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
