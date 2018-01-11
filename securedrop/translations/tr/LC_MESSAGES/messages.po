@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-01-11 17:00+0000\n"
-"Last-Translator: Volkan <volkangezer@gmail.com>\n"
+"PO-Revision-Date: 2018-01-11 21:34+0000\n"
+"Last-Translator: T. E. Kalaycı <tekrei@gmail.com>\n"
 "Language-Team: Turkish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/tr/>\n"
 "Language: tr\n"
@@ -105,7 +105,8 @@ msgstr "Yalnızca yöneticiler bu sayfaya erişebilir."
 #: journalist_app/forms.py:19
 msgid "Field must be 40 characters long but got {num_chars}."
 msgstr ""
-"Alanın 40 karakter uzunluğunda olması gerekiyor, şu an sadece {num_chars}."
+"Alanın 40 karakter uzunluğunda olması gerekiyor, şu an sadece {num_chars} "
+"karakter."
 
 #: journalist_app/forms.py:30
 msgid ""
@@ -184,7 +185,7 @@ msgstr[1] "{num} derleme silindi"
 
 #: journalist_app/utils.py:229
 msgid "You submitted a bad password! Password not changed."
-msgstr "Kötü bir parola seçtiniz. Parola değiştirilmedi."
+msgstr "Kötü bir parola seçtiniz! Parola değiştirilmedi."
 
 #: journalist_app/utils.py:236
 msgid ""
@@ -917,10 +918,10 @@ msgid ""
 " questions or are interested in additional documents. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"<strong>SecureDrop</strong> hizmetlerinin kullanıcılarını izlemek için "
-"geleneksel yöntemleri kullanmadığımız için\n"
+"<strong>SecureDrop</strong> hizmeti kullanıcıları izlemek için geleneksel "
+"yöntemleri kullanmıyor, bu nedenle\n"
 "sizinle iletişim kurabilmemiz, soru sorabilmemiz veya ek belge ihtiyaçlarını "
-"bildirebilmemiz amacıyla sonraki ziyaretlerinizde\n"
+"bildirebilmemiz için sonraki ziyaretlerinizde\n"
 "bu kod adını kullanmanız tek yoldur. Parolaların aksine kod adı "
 "kaybolduğunda tekrar bulmanın imkanı yoktur."
 
