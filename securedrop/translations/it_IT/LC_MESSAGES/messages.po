@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-01-12 13:44+0000\n"
+"PO-Revision-Date: 2018-01-12 16:00+0000\n"
 "Last-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\n"
 "Language-Team: Italian "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/it/>\n"
@@ -29,7 +29,7 @@ msgstr "{time} fa"
 
 #: journalist_app/__init__.py:34 journalist_app/__init__.py:76
 msgid "You have been logged out due to inactivity"
-msgstr "Sei stato disconnesso a causa di inattività"
+msgstr "La sessione è stata terminata per inattività"
 
 #: journalist_app/account.py:26
 msgid "Incorrect password or two-factor code."
@@ -37,7 +37,7 @@ msgstr "Password o codice a due fattori errati."
 
 #: journalist_app/account.py:42
 msgid "Token in two-factor authentication verified."
-msgstr "Identificatore nell'autenticazione a due fattori verificato."
+msgstr "Token nell'autenticazione a due fattori verificato."
 
 #: journalist_app/account.py:46 journalist_app/admin.py:108
 msgid "Could not verify token in two-factor authentication."
@@ -65,24 +65,23 @@ msgid ""
 "An error occurred saving this user to the database. Please inform your "
 "administrator."
 msgstr ""
-"Si è verificato un errore salvando questo utente nella banca dati. Si prega "
-"di informare il proprio amministratore."
+"Si è verificato un errore salvando questo utente nel database. Informare il "
+"proprio amministratore."
 
 #: journalist_app/admin.py:101
 msgid "Token in two-factor authentication accepted for user {user}."
-msgstr ""
-"Identificatore nell'autenticazione a due fattori accettato per l'utente "
-"{user}."
+msgstr "Token  nell'autenticazione a due fattori accettato per l'utente {user}."
 
 #: journalist_app/admin.py:135
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
-msgstr "Formato segreto non valido: utilizza solo lettere A-F e numeri 0-9."
+msgstr ""
+"Formato del segreto non valido: utilizzare solo lettere A-F e numeri 0-9."
 
 #: journalist_app/admin.py:140
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
-"Formato segreto non valido: segreto di lunghezza insolita. Forse non l'hai "
-"digitato correttamente?"
+"Formato del segreto non valido: segreto di lunghezza insolita. Forse non è "
+"stato digitato correttamente?"
 
 #: journalist_app/admin.py:145 journalist_app/main.py:107
 #: journalist_app/utils.py:38
@@ -174,9 +173,7 @@ msgstr[1] "Attendi almeno {seconds} secondi prima di collegarti nuovamente."
 
 #: journalist_app/utils.py:95
 msgid "Please wait for a new two-factor token before trying again."
-msgstr ""
-"Si prega di attendere per un nuovo token a due fattori prima di tentare "
-"nuovamente."
+msgstr "Attendere un nuovo token a due fattori prima di tentare nuovamente."
 
 #: journalist_app/utils.py:141
 msgid "Submission deleted."
@@ -192,7 +189,7 @@ msgstr[1] "{num} collezioni cancellate"
 
 #: journalist_app/utils.py:229
 msgid "You submitted a bad password! Password not changed."
-msgstr "Hai inserito una password scorretta! Password non cambiata."
+msgstr "È stata inserita una password errata! Password non modificata."
 
 #: journalist_app/utils.py:236
 msgid ""
@@ -235,13 +232,13 @@ msgstr "{num_unread} non letti"
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
 msgid "Change Secret"
-msgstr "Cambia Secret"
+msgstr "Cambia segreto"
 
 #: journalist_templates/account_edit_hotp_secret.html:7
 #: journalist_templates/admin_add_user.html:33
 #: journalist_templates/admin_edit_hotp_secret.html:8
 msgid "HOTP Secret"
-msgstr "Secret HOTP"
+msgstr "Segreto per HOTP"
 
 #: journalist_templates/account_edit_hotp_secret.html:9
 #: journalist_templates/admin_edit_hotp_secret.html:10
@@ -508,14 +505,14 @@ msgstr ""
 
 #: journalist_templates/col.html:86
 msgid "You've flagged this source for reply."
-msgstr "Hai segnalato questa fonte per una risposta."
+msgstr "Hai contrassegnato questa fonte per fornire una risposta."
 
 #: journalist_templates/col.html:87
 msgid ""
 "An encryption key will be generated for the source the next time they log "
 "in, after which you will be able to reply to the source here."
 msgstr ""
-"Una chiave cifrata sarà generata per la fonte la prossima volta che si "
+"Una chiave di cifratura sarà generata per la fonte la prossima volta che si "
 "connetterà, dopodiché potrai risponderle qui."
 
 #: journalist_templates/col.html:89
@@ -524,7 +521,7 @@ msgstr "Fare clic qui sotto per scrivere una risposta a questa fonte."
 
 #: journalist_templates/col.html:93
 msgid "FLAG THIS SOURCE FOR REPLY"
-msgstr "SEGNALA QUESTA FONTE PER UNA RISPOSTA"
+msgstr "CONTRASSEGNA QUESTA FONTE PER UNA RISPOSTA"
 
 #: journalist_templates/col.html:98
 msgid ""
@@ -742,7 +739,7 @@ msgstr "Rimuovi dai preferiti"
 
 #: journalist_templates/index.html:42
 msgid "No documents have been submitted!"
-msgstr "Non è stato inviato nessun documento!"
+msgstr "Non è stato inviato alcun documento!"
 
 #: journalist_templates/js-strings.html:3
 msgid "filter by codename"
@@ -807,7 +804,7 @@ msgstr ""
 
 #: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
-msgstr "Il campo deve essere tra 1 e {max_codename_len} caratteri."
+msgstr "Il campo deve avere una lunghezza tra 1 e {max_codename_len} caratteri."
 
 #: source_app/forms.py:18
 msgid "Invalid input."
@@ -818,8 +815,8 @@ msgid ""
 "You were redirected because you are already logged in. If you want to create "
 "a new account, you should log out first."
 msgstr ""
-"Sei stato reindirizzato perché eri già autenticato. Se vuoi creare un nuovo "
-"account devi prima uscire."
+"Sei stato reindirizzato perché avevi già eseguito l'accesso. Se vuoi creare "
+"un nuovo account devi prima terminare la sessione corrente."
 
 #: source_app/main.py:111
 msgid "You must enter a message or choose a file to submit."
@@ -847,7 +844,7 @@ msgstr "Tutte le risposte sono state eliminate"
 
 #: source_app/main.py:221
 msgid "Sorry, that is not a recognized codename."
-msgstr "Ci dispiace, questo nome in codice non è riconosciuto."
+msgstr "Questo nome in codice non è riconosciuto."
 
 #: source_templates/base.html:6 source_templates/index.html:4
 msgid "Protecting Journalists and Sources"
@@ -867,8 +864,8 @@ msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
 msgstr ""
-"Come tutto il software, SecureDrop potrebbe contenere bug di sicurezza. "
-"Usalo a tuo rischio."
+"Come ogni software, SecureDrop potrebbe contenere bug di sicurezza. Usarlo a "
+"proprio rischio."
 
 #: source_templates/error.html:3
 msgid "Server error"
@@ -879,7 +876,7 @@ msgid ""
 "Sorry, the website encountered an error and was unable to complete your "
 "request."
 msgstr ""
-"Ci dispiace, si è verificato un errore e non è possibile completare la tua "
+"Si è verificato un errore nel sito web e non è stato possibile completare la "
 "richiesta."
 
 #: source_templates/error.html:7 source_templates/notfound.html:7
@@ -888,15 +885,15 @@ msgstr "Ricerca un nome in codice..."
 
 #: source_templates/first_submission_flashed_message.html:2
 msgid "Success!"
-msgstr "Successo!"
+msgstr "Completato!"
 
 #: source_templates/first_submission_flashed_message.html:3
 msgid ""
 "Thank you for sending this information to us. Please check back later for "
 "replies."
 msgstr ""
-"Grazie per aver inviato questa informazione. Torna di nuovo per eventuali "
-"risposte."
+"Grazie per aver inviato questa informazione. Verifica più tardi per vedere "
+"eventuali risposte."
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
@@ -912,17 +909,17 @@ msgid ""
 "memorize it.<br> This will allow you to log back in and receive replies from "
 "journalists."
 msgstr ""
-"Trascrivi questo nome in codice e tienilo in un posto sicuro, o memorizzalo."
-"<br> Questo ti permetterà di autenticarti di nuovo e ricevere risposte dai "
-"giornalisti."
+"Trascrivi questo nome in codice e tienilo in un posto sicuro, o "
+"memorizzalo.<br> Questo ti permetterà di eseguire nuovamente l'accesso e "
+"ricevere le risposte dai giornalisti."
 
 #: source_templates/generate.html:10
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our journalists in response to what you submit on the next screen."
 msgstr ""
-"Questo nome in codice è quello che userai in future visite per ricevere "
-"messaggi dai nostri giornalisti in risposta a cosa invii nella prosima "
+"Questo nome in codice è quello che userai in futuro per ricevere messaggi "
+"dai nostri giornalisti, in risposta a ciò che invierai dalla prossima "
 "schermata."
 
 #: source_templates/generate.html:34
@@ -977,7 +974,7 @@ msgstr "Hai già inviato qualcosa?"
 msgid ""
 "If this is your first time submitting documents to journalists, start here."
 msgstr ""
-"Se questa è la prima volta che invii documenti a giornalisti, inizia da qui."
+"Se questa è la prima volta che invii documenti ai giornalisti, inizia da qui."
 
 #: source_templates/index.html:58
 msgid ""
@@ -996,29 +993,30 @@ msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
 "High in 4 easy steps!"
 msgstr ""
-"Sembra che tu stia usando Tor Browser. Puoi spostare il Security Slider su "
+"Sembra che tu stia usando Tor Browser. Puoi spostare il Tab di Sicurezza su "
 "Alto in 4 semplici passi!"
 
 #: source_templates/index.html:94
 msgid ""
 "Click the <img src=\"{icon}\" alt=\"Tor icon\"> Tor icon in the toolbar above"
 msgstr ""
-"Clicca l'<img src=\"{icon}\" alt=\"Tor icon\"> icona di Tor nella barra in "
-"alto"
+"Fare clic sull'<img src=\"{icon}\" alt=\"Tor icon\">icona di Tor nella barra "
+"in alto"
 
 #: source_templates/index.html:95
 msgid "Click <strong>Security Settings...</strong>"
-msgstr "Clicca <strong>Impostazioni di Sicurezza...</strong>"
+msgstr "Fare clic su <strong>Impostazioni di Sicurezza...</strong>"
 
 #: source_templates/index.html:96
 msgid ""
 "Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
 msgstr ""
-"Sposta lo Slider su <strong>Alto</strong>, poi clicca <strong>Ok</strong>"
+"Sposta il Tab di Sicurezza su <strong>Alta</strong>, poi fai clic su "
+"<strong>OK</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Click here</a> to refresh the page"
-msgstr "<a href=\"/\">Clicca qui</a> per ricaricare la pagina"
+msgstr "<a href=\"/\">Fai clic qui </a> per ricaricare la pagina"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
@@ -1044,12 +1042,12 @@ msgid ""
 "SecureDrop usage from this device."
 msgstr ""
 "Grazie per aver terminato la sessione! Seleziona \"Nuova identità\" dal "
-"bottone verde in Tor Browser per cancellare la cronologia del tuo uso di "
+"pulsante verde nel browser Tor per cancellare la cronologia del tuo uso di "
 "SecureDrop da questo dispositivo."
 
 #: source_templates/lookup.html:11
 msgid "Whew, it’s you! Now, the embarrassing part..."
-msgstr "Whew, sei tu! Adesso, la parte imbarazzante..."
+msgstr "Che sollievo, sei tu! Adesso, la parte imbarazzante..."
 
 #: source_templates/lookup.html:12
 msgid ""
