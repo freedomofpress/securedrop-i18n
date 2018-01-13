@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-01-13 10:10+0000\n"
+"PO-Revision-Date: 2018-01-13 12:00+0000\n"
 "Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
 "Language-Team: Arabic "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ar/>\n"
@@ -76,8 +76,8 @@ msgstr ""
 #: journalist_app/admin.py:140
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
-"صيغة البيانات السرية غير صحيحة: طول العبارة السرية يجب أن يكون عددا زوجيًا لا "
-"فرديا. تلزم مراجعة الإدخال."
+"صيغة البيانات السرية غير صحيحة: طول العبارة السرية يجب أن يكون عددا زوجيًا "
+"لا فرديا. ربما ينبغي مراجعة الإدخال ؟"
 
 #: journalist_app/admin.py:145 journalist_app/main.py:107
 #: journalist_app/utils.py:38
@@ -594,7 +594,7 @@ msgstr "تعديل حساب المستخدم \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Username &amp; Admin Status"
-msgstr "تغيير إسم المستخدم &amp; حالة المدير"
+msgstr "تغيير إسم المستخدم &amp; صفة مدير"
 
 #: journalist_templates/edit_account.html:12
 msgid "Change username"
@@ -658,10 +658,10 @@ msgid ""
 "is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
-"إذا فقد المستخدم البيانات الخاصة بالاستيثاق في خطوتين أو انكشفت فتمكن إعادة "
-"ضبطها من هنا. <em> لفعل ذلك ينبغي أن يكون المستخدم حاضرًا و&nbsp;مستعدًّا "
-"بجهازه لضبط وظيفة الاستيثاق في خطوتين مجدّدًا و&nbsp;إلا لن يمكنه الولوج إلى "
-"الحساب."
+"إذا فقد المستخدم بياناته المتعلقة بالمصادقة بخطوتين أو انكشفت فبالإمكان "
+"إعادة تعيينها من هنا. <em>إن قمتَ بذلك ينبغي أن يكون المستخدم حاضرًا و "
+"مستعدًّا لإعداد المصادقة بخطوتين على جهازه مجدّدًا و إلا فإنه لن يتمكن من "
+"الولوج إلى حسابه."
 
 #: journalist_templates/edit_account.html:63
 msgid ""
