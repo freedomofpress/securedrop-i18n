@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-01-12 19:00+0000\n"
-"Last-Translator: ramyraoof <ramy.raoof@gmail.com>\n"
+"PO-Revision-Date: 2018-01-13 10:10+0000\n"
+"Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
 "Language-Team: Arabic "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ar/>\n"
 "Language: ar\n"
@@ -31,21 +31,19 @@ msgstr "تم الخروج من الحساب بسبب انعدام النشاط"
 
 #: journalist_app/account.py:26
 msgid "Incorrect password or two-factor code."
-msgstr "كلمة السر أو رمز الاستيثاق في خطوتين غير صحيح."
+msgstr "كلمة السر أو رمز المصادقة بخطوتين غير صحيح."
 
 #: journalist_app/account.py:42
 msgid "Token in two-factor authentication verified."
-msgstr "تم التحقق من رمز الاستيثاق في خطوتين."
+msgstr "تم التحقق من رمز المصادقة بخطوتين."
 
 #: journalist_app/account.py:46 journalist_app/admin.py:108
 msgid "Could not verify token in two-factor authentication."
 msgstr "تعذّر التحقّق من رمز الاستيثاق في خطوتين."
 
 #: journalist_app/admin.py:37
-#, fuzzy
-#| msgid "Account updated."
 msgid "Image updated."
-msgstr "تم تحديث  الصورة بنجاح."
+msgstr "تم تحديثها."
 
 #: journalist_app/admin.py:63
 msgid ""
@@ -164,16 +162,15 @@ msgstr "فشل الدخول."
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] "ينبغي الانتظار {seconds} ثانية على الأقل قبل محاولة الولوج مجدّدا."
-msgstr[1] "ينبغي الانتظار {seconds} ثانية على الأقل قبل محاولة الولوج مجدّدا."
+msgstr[1] "ينبغي الإنتظار {seconds} ثانية على الأقل قبل محاولة الدخول مجدّدا."
 msgstr[2] "ينبغي الانتظار {seconds} ثانية على الأقل قبل محاولة الولوج مجدّدا."
 msgstr[3] "ينبغي الانتظار {seconds} ثوان على الأقل قبل محاولة الولوج مجدّدا."
 msgstr[4] "ينبغي الانتظار {seconds} ثواني على الأقل قبل محاولة الولوج مجدّدا."
-msgstr[5] "ينبغي الانتظار {seconds} ثواني على الأقل قبل محاولة الولوج مجدّدا."
+msgstr[5] "ينبغي الإنتظار {seconds} ثواني على الأقل قبل محاولة الدخول مجدّدا."
 
 #: journalist_app/utils.py:95
 msgid "Please wait for a new two-factor token before trying again."
-msgstr ""
-"انتظر حتى ظهور رمز الاستيثاق في خطوتين جديد و&nbsp;استعمله للمحاولة مجدّدًا."
+msgstr "الرجاء إنتظار الرمز الجديد للمصادقة بخطوتين قبل إعادة المحاولة."
 
 #: journalist_app/utils.py:141
 msgid "Submission deleted."
@@ -227,8 +224,8 @@ msgstr[0] "لا يوجد"
 msgstr[1] "مستند 1"
 msgstr[2] "مستندان"
 msgstr[3] "مستندات"
-msgstr[4] "مستندات"
-msgstr[5] "مستندات {doc_num}"
+msgstr[4] "{doc_num} مستندات"
+msgstr[5] "{doc_num} مستندات"
 
 #: journalist_templates/_source_row.html:20
 msgid "1 message"
@@ -297,7 +294,9 @@ msgstr "أنقر رمز الاستجابة السريع في الأعلى"
 msgid ""
 "Your phone will now be in \"scanning\" mode. When you are in this mode, scan "
 "the barcode below:"
-msgstr "الهاتف الآن في وضعية \"المسح الضوئي\". امسح الرمز التالي:"
+msgstr ""
+"سينتقل هاتفك الآن إلى وضعية \"المسح الضوئي\". عندما تكون جاهزا قم بمسح شفرة "
+"التعرّف التالية :"
 
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
@@ -548,7 +547,7 @@ msgstr "تنبيهات"
 
 #: journalist_templates/config.html:11
 msgid "Send a test encrypted email alert to verify OSSEC is working correctly:"
-msgstr "تحريب رسالة تنبيه معمّاة للتأكد من عمل OSSEC بنجاح:"
+msgstr "قم بإرسال إشعار عبر رسالة مشفّرة للتحقق من أنّ OSSEC يشتغل بشكل عادي :"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
@@ -595,7 +594,7 @@ msgstr "تعديل حساب المستخدم \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Username &amp; Admin Status"
-msgstr "تغيير اسم المستخدم و&nbsp;حالة كونه إداريا"
+msgstr "تغيير إسم المستخدم &amp; حالة المدير"
 
 #: journalist_templates/edit_account.html:12
 msgid "Change username"
@@ -774,7 +773,7 @@ msgstr ""
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
-msgstr "لِج إلى حسابك للنفاذ إلى واجهة الصحفي"
+msgstr "قم بتسجيل الدخول قصد النفاذ إلى واجهة الصحفي"
 
 #: journalist_templates/login.html:9
 msgid "Password"
@@ -1034,8 +1033,8 @@ msgid ""
 "visited. To err on the side of caution, we put a hold on sending all "
 "documents from that day through to our journalists."
 msgstr ""
-"عندما زرتنا آخر مرة شهدت خواديمنا ارتفاعًا حادًّا في مستوى النشاط. و من باب "
-"الاحتياط علّقنا إرسال مستنداتك إلى صحافيينا."
+"عندما زرتنا آخر مرة شهدت خواديمنا ارتفاعًا حادًّا في مستوى النشاط. و منذ ذلك "
+"اليوم، و من باب الاحتياط علّقنا إرسال مستنداتك إلى صحافيينا."
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1075,7 +1074,7 @@ msgstr "الحجم الأقصى الممكن رفعه: 500 ميجابايت"
 
 #: source_templates/lookup.html:36
 msgid "Write a message."
-msgstr "اكتب رسالة."
+msgstr "أكتب رسالة."
 
 #: source_templates/lookup.html:53
 msgid "Read Replies"
@@ -1102,7 +1101,7 @@ msgstr "احذف"
 
 #: source_templates/lookup.html:82
 msgid "DELETE ALL REPLIES"
-msgstr "احذف كُلّ الردود"
+msgstr "إحذف كافة الردود"
 
 #: source_templates/lookup.html:85
 msgid "Are you finished with the replies?"
@@ -1299,8 +1298,8 @@ msgid ""
 "On all systems, open the Terminal and use this gpg command: <code>gpg --"
 "recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 msgstr ""
-"في كُلّ أنظمة التشغيل قم بفتح الطرفية واستخدام أمر gpg التالي: <code>gpg --"
-"recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
+"في كُلّ أنظمة التشغيل قم بفتح الطرفية واستخدام أمر gpg التالي: <code>gpg "
+"--reciepient&lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 
 #: source_templates/why-journalist-key.html:20
 msgid ""
