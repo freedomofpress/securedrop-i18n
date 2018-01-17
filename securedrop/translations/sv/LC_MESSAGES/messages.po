@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-09 16:00+0000\n"
-"Last-Translator: Magdalena Stenius <mmbste@utu.fi>\n"
-"Language-Team: Swedish <https://weblate.securedrop.club/projects/securedrop/"
-"securedrop/sv/>\n"
+"PO-Revision-Date: 2018-01-17 02:00+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Swedish "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.17.1\n"
+"X-Generator: Weblate 2.18\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -132,8 +132,9 @@ msgid "File required."
 msgstr "Detta fält är obligatoriskt."
 
 #: journalist_app/forms.py:62
+#, fuzzy
 msgid "Upload images only."
-msgstr ""
+msgstr "Last endast upp bilder."
 
 #: journalist_app/main.py:118
 msgid "Thanks. Your reply has been stored."
@@ -215,10 +216,11 @@ msgid "No unread submissions in selected collections."
 msgstr "Inga olästa inlämningar i utvalda samlingar."
 
 #: journalist_templates/_source_row.html:19
+#, fuzzy
 msgid "1 doc"
 msgid_plural "{doc_num} docs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 dokument"
+msgstr[1] "{doc_num} dokument"
 
 #: journalist_templates/_source_row.html:20
 #, fuzzy
@@ -251,8 +253,9 @@ msgstr "FORTSÄTT"
 
 #: journalist_templates/account_new_two_factor.html:4
 #: journalist_templates/admin_new_user_two_factor.html:5
+#, fuzzy
 msgid "Enable FreeOTP"
-msgstr ""
+msgstr "Slå på FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:5
 #, fuzzy
@@ -283,13 +286,15 @@ msgstr "Installera Google Authenticator på din telefon"
 
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
+#, fuzzy
 msgid "Open the FreeOTP app"
-msgstr ""
+msgstr "Öppna FreeOTP-appen"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
+#, fuzzy
 msgid "Tap the QRcode symbol at the top"
-msgstr ""
+msgstr "Trycka på QR-kodsymbolet på toppen"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -378,8 +383,9 @@ msgid "No users to display"
 msgstr "Inga användare att visa"
 
 #: journalist_templates/admin.html:44
+#, fuzzy
 msgid "INSTANCE CONFIG"
-msgstr ""
+msgstr "INSTANS-KONFIGURATION"
 
 #: journalist_templates/admin_add_user.html:4
 #: journalist_templates/config.html:4 journalist_templates/edit_account.html:7
@@ -545,29 +551,37 @@ msgid "DELETE COLLECTION"
 msgstr "TA BORT SAMLING"
 
 #: journalist_templates/config.html:7
+#, fuzzy
 msgid "Instance Configuration"
-msgstr ""
+msgstr "Instanskonfiguration"
 
 #: journalist_templates/config.html:9
+#, fuzzy
 msgid "Alerts"
-msgstr ""
+msgstr "Varslar"
 
 #: journalist_templates/config.html:11
+#, fuzzy
 msgid "Send a test encrypted email alert to verify OSSEC is working correctly:"
 msgstr ""
+"Skicka en krypterad teste-postvarsel for att bekräfta at OSSEC fungerar rett:"
 
 #: journalist_templates/config.html:15
+#, fuzzy
 msgid "SEND TEST OSSEC ALERT"
-msgstr ""
+msgstr "SKICKA TEST OSSEC-VARSEL"
 
 #: journalist_templates/config.html:21
+#, fuzzy
 msgid "Logo Image"
-msgstr ""
+msgstr "Logo-bild"
 
 #: journalist_templates/config.html:23
+#, fuzzy
 msgid ""
 "Here you can update the image displayed on the SecureDrop web interfaces:"
 msgstr ""
+"Här kan ni uppdatera bilden vist på det nätbaserade SecureDrop-gränssnittet:"
 
 #: journalist_templates/config.html:39
 #, fuzzy
@@ -1264,11 +1278,16 @@ msgstr ""
 "instruktionerna om hur man laddar ner och installerar Tor Browser:"
 
 #: source_templates/use-tor-browser.html:9
+#, fuzzy
 msgid ""
 "If there is a chance that downloading the Tor Browser raises suspicion and "
 "your mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
+"Om det finns en chans för att det å ladda ner Tor-nätläsaren högar "
+"misstanken, och din e-postleverantör förmodligen har mindre chans att bli "
+"övervakad, kan ni skicka en e-post till <pre>gettor@torproject.org</pre> och "
+"en bot vill svara med instruktioner."
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
