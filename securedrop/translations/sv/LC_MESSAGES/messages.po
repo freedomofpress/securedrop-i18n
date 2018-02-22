@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-02-22 13:44+0000\n"
-"Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
+"PO-Revision-Date: 2018-02-22 13:47+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -124,15 +124,12 @@ msgid "You cannot send an empty reply."
 msgstr "Du kan inte skicka ett tomt svar."
 
 #: journalist_app/forms.py:60
-#, fuzzy
-#| msgid "This field is required."
 msgid "File required."
-msgstr "Detta fält är obligatoriskt."
+msgstr "Fil krävs."
 
 #: journalist_app/forms.py:62
-#, fuzzy
 msgid "Upload images only."
-msgstr "Last endast upp bilder."
+msgstr "Ladda endast upp bilder."
 
 #: journalist_app/main.py:118
 msgid "Thanks. Your reply has been stored."
@@ -214,19 +211,16 @@ msgid "No unread submissions in selected collections."
 msgstr "Inga olästa inlämningar i utvalda samlingar."
 
 #: journalist_templates/_source_row.html:19
-#, fuzzy
 msgid "1 doc"
 msgid_plural "{doc_num} docs"
 msgstr[0] "1 dokument"
 msgstr[1] "{doc_num} dokument"
 
 #: journalist_templates/_source_row.html:20
-#, fuzzy
-#| msgid "Message"
 msgid "1 message"
 msgid_plural "{msg_num} messages"
-msgstr[0] "Meddelande"
-msgstr[1] "Meddelande"
+msgstr[0] "1 meddelande"
+msgstr[1] "{msg_num} meddelanden"
 
 #: journalist_templates/_source_row.html:23
 msgid "{num_unread} unread"
@@ -251,18 +245,10 @@ msgstr "FORTSÄTT"
 
 #: journalist_templates/account_new_two_factor.html:4
 #: journalist_templates/admin_new_user_two_factor.html:5
-#, fuzzy
 msgid "Enable FreeOTP"
-msgstr "Slå på FreeOTP"
+msgstr "Aktivera FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:5
-#, fuzzy
-#| msgid ""
-#| "You're almost done! To finish resetting your two-factor authentication, "
-#| "follow the instructions below to set up Google Authenticator. Once you've "
-#| "added the entry for your account in the app, enter one of the 6-digit "
-#| "codes from the app to confirm that two factor authentication is set up "
-#| "correctly."
 msgid ""
 "You're almost done! To finish resetting your two-factor authentication, "
 "follow the instructions below to set up FreeOTP. Once you've added the entry "
@@ -271,28 +257,24 @@ msgid ""
 msgstr ""
 "Du är nästan klar! För att avsluta återställningen av din tvåfaktor "
 "autentisering, följ instruktionerna nedanför för att ställa in Google "
-"Authenticator. Lägg till det här kontot i appen, och ange sedan din "
-"sexsiffriga kod från appen för att bekräfta att tvåfaktorsautentisering "
-"fungerar som den ska."
+"FreeOTP. Lägg till det här kontot i appen, och ange sedan din sexsiffriga "
+"kod från appen för att bekräfta att tvåfaktorsautentisering fungerar som den "
+"ska."
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
-#, fuzzy
-#| msgid "Install Google Authenticator on your phone"
 msgid "Install FreeOTP on your phone"
-msgstr "Installera Google Authenticator på din telefon"
+msgstr "Installera FreeOTP på din telefon"
 
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
-#, fuzzy
 msgid "Open the FreeOTP app"
 msgstr "Öppna FreeOTP-appen"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
-#, fuzzy
 msgid "Tap the QRcode symbol at the top"
-msgstr "Trycka på QR-kodsymbolet på toppen"
+msgstr "Tryck på QR-koden längst upp"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -381,7 +363,6 @@ msgid "No users to display"
 msgstr "Inga användare att visa"
 
 #: journalist_templates/admin.html:44
-#, fuzzy
 msgid "INSTANCE CONFIG"
 msgstr "INSTANS-KONFIGURATION"
 
@@ -404,13 +385,6 @@ msgid "Is using a YubiKey [HOTP]"
 msgstr "Använder en YubiKey [HOTP]"
 
 #: journalist_templates/admin_new_user_two_factor.html:6
-#, fuzzy
-#| msgid ""
-#| "You're almost done! To finish adding this new user, have them follow the "
-#| "instructions below to set up two-factor authentication with Google "
-#| "Authenticator. Once they've added an entry for this account in the app, "
-#| "have them enter one of the 6-digit codes from the app to confirm that two "
-#| "factor authentication is set up correctly."
 msgid ""
 "You're almost done! To finish adding this new user, have them follow the "
 "instructions below to set up two-factor authentication with FreeOTP. Once "
@@ -419,9 +393,9 @@ msgid ""
 "set up correctly."
 msgstr ""
 "Det är strax klart! För att avsluta användarkonfigureringen, följ "
-"instruktionerna nedan för att sätta upp två-stegs-autentisering med Google "
-"Authenticator. När det här kontot har lagts till i appen, mata in den "
-"sexsiffriga koden från appen för att bekräfta två-stegs-autentiseringen."
+"instruktionerna nedan för att sätta upp två-stegs-autentisering med FreeOTP. "
+"När det här kontot har lagts till i appen, mata in den sexsiffriga koden "
+"från appen för att bekräfta två-stegs-autentiseringen."
 
 #: journalist_templates/base.html:24
 msgid "Logged on as"
@@ -549,25 +523,20 @@ msgid "DELETE COLLECTION"
 msgstr "TA BORT SAMLING"
 
 #: journalist_templates/config.html:7
-#, fuzzy
 msgid "Instance Configuration"
 msgstr "Instanskonfiguration"
 
 #: journalist_templates/config.html:9
-#, fuzzy
 msgid "Alerts"
-msgstr "Varslar"
+msgstr "Larm"
 
 #: journalist_templates/config.html:11
-#, fuzzy
 msgid "Send a test encrypted email alert to verify OSSEC is working correctly:"
-msgstr ""
-"Skicka en krypterad teste-postvarsel for att bekräfta at OSSEC fungerar rett:"
+msgstr "Skicka ett krypterat email för att bekräfta att OSSEC fungerar korrekt:"
 
 #: journalist_templates/config.html:15
-#, fuzzy
 msgid "SEND TEST OSSEC ALERT"
-msgstr "SKICKA TEST OSSEC-VARSEL"
+msgstr "SKICKA TEST OSSEC LARM"
 
 #: journalist_templates/config.html:21
 #, fuzzy
