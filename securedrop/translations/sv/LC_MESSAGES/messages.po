@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-02-22 13:47+0000\n"
-"Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
+"PO-Revision-Date: 2018-02-22 13:49+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -539,22 +539,17 @@ msgid "SEND TEST OSSEC ALERT"
 msgstr "SKICKA TEST OSSEC-LARM"
 
 #: journalist_templates/config.html:21
-#, fuzzy
 msgid "Logo Image"
-msgstr "Logo-bild"
+msgstr "Logga"
 
 #: journalist_templates/config.html:23
-#, fuzzy
 msgid ""
 "Here you can update the image displayed on the SecureDrop web interfaces:"
-msgstr ""
-"Här kan ni uppdatera bilden vist på det nätbaserade SecureDrop-gränssnittet:"
+msgstr "Här kan ni uppdatera bilden som visas på SecureDrop-gränssnittet:"
 
 #: journalist_templates/config.html:39
-#, fuzzy
-#| msgid "UPDATE"
 msgid "UPDATE LOGO"
-msgstr "UPPDATERA"
+msgstr "UPPDATERA LOGGA"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -666,18 +661,13 @@ msgstr ""
 "din nya apparat, annars kommer du att låsas ut från ditt konto. </em>"
 
 #: journalist_templates/edit_account.html:65
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as Google "
-#| "Authenticator or FreeOTP, choose the first option. For hardware tokens "
-#| "like the Yubikey, choose the second."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the Yubikey, choose the second."
 msgstr ""
-"För att återställa tvåfaktorsautentisering för mobilapplikationer som Google "
-"Authenticator eller FreeOTP, välj det första alternativet. För "
-"hårdvaranycklar som Yubikey, välj det andra."
+"För att återställa tvåfaktorsautentisering för mobilapplikationer som "
+"FreeOTP, välj det första alternativet. För hårdvaranycklar som Yubikey, välj "
+"det andra."
 
 #: journalist_templates/edit_account.html:85
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
@@ -1245,16 +1235,15 @@ msgstr ""
 "instruktionerna om hur man laddar ner och installerar Tor Browser:"
 
 #: source_templates/use-tor-browser.html:9
-#, fuzzy
 msgid ""
 "If there is a chance that downloading the Tor Browser raises suspicion and "
 "your mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
-"Om det finns en chans för att det å ladda ner Tor-nätläsaren högar "
-"misstanken, och din e-postleverantör förmodligen har mindre chans att bli "
-"övervakad, kan ni skicka en e-post till <pre>gettor@torproject.org</pre> och "
-"en bot vill svara med instruktioner."
+"Om det finns en chans att en nedladdning av Tor-läsaren höjer misstanka, och "
+"din e-postleverantör förmodligen har mindre chans att bli övervakad, kan ni "
+"skicka ett e-post till <pre>gettor@torproject.org</pre> så kommer en bot "
+"svara med instruktioner."
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
