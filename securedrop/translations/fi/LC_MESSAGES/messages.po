@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-02-28 14:04+0000\n"
+"PO-Revision-Date: 2018-02-28 16:00+0000\n"
 "Last-Translator: Max Sandholm <max@sandholm.org>\n"
 "Language-Team: Finnish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/fi/>\n"
@@ -66,7 +66,7 @@ msgstr ""
 #: journalist_app/admin.py:104
 msgid "Token in two-factor authentication accepted for user {user}."
 msgstr ""
-"Koodi kaksitasoisessa tunnistusmekanismissa hyväksytty käyttäjälle {user}."
+"Avain kaksitasoisessa tunnistusmekanismissa hyväksytty käyttäjälle {user}."
 
 #: journalist_app/admin.py:138
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
