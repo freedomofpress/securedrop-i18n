@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-01-13 03:00+0000\n"
-"Last-Translator: Pablo Di Noto <pdinoto@gmail.com>\n"
-"Language-Team: Spanish <https://weblate.securedrop.club/projects/securedrop/"
-"securedrop/es/>\n"
+"PO-Revision-Date: 2018-02-28 14:00+0000\n"
+"Last-Translator: Anatoli <djanatoli@gmail.com>\n"
+"Language-Team: Spanish "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/es/>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -96,7 +96,7 @@ msgstr "Usuario '{user}' eliminado"
 
 #: journalist_app/admin.py:249
 msgid "Test alert sent. Check your email."
-msgstr ""
+msgstr "Alerta de prueba enviada. Revise su correo electrónico."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -176,13 +176,12 @@ msgstr[1] ""
 "nuevo."
 
 #: journalist_app/utils.py:104
-#, fuzzy
-#| msgid "Please wait for a new two-factor token before trying again."
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
 msgstr ""
-"Por favor espere un nuevo token de dos factores antes de intentarlo de nuevo."
+"Espere un nuevo código de su token o aplicación de dos factores antes de "
+"volver a intentarlo."
 
 #: journalist_app/utils.py:150
 msgid "Submission deleted."
@@ -224,7 +223,7 @@ msgstr "No hay envios sin leer en las colecciones seleccionadas."
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
-msgstr ""
+msgstr "Cerrar"
 
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:72
@@ -511,17 +510,12 @@ msgstr "Mensaje"
 
 #: journalist_templates/col.html:71 journalist_templates/col.html:129
 #: journalist_templates/index.html:46
-#, fuzzy
-#| msgid "Instance Configuration"
 msgid "Delete Confirmation"
-msgstr "Configuración de Instancia"
+msgstr "Eliminar confirmación"
 
 #: journalist_templates/col.html:72
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected documents?"
-msgstr ""
-"¿Está seguro de que desea eliminar las {size} colecciones seleccionadas?"
+msgstr "¿Está seguro de que desea eliminar los documentos seleccionados?"
 
 #: journalist_templates/col.html:87
 msgid "No documents to display."
@@ -581,13 +575,10 @@ msgid "Alerts"
 msgstr "Alertas"
 
 #: journalist_templates/config.html:11
-#, fuzzy
-#| msgid ""
-#| "Send a test encrypted email alert to verify OSSEC is working correctly:"
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr ""
-"Envíe una alerta de correo encriptada de prueba para verificar que OSSEC "
-"está funcionando correctamente:"
+"Envíe un correo encriptado para verificar si las alertas OSSEC funcionan "
+"correctamente:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
@@ -779,11 +770,8 @@ msgid "Un-star"
 msgstr "Sin-estrella"
 
 #: journalist_templates/index.html:47
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected collections?"
-msgstr ""
-"¿Está seguro de que desea eliminar las {size} colecciones seleccionadas?"
+msgstr "¿Está seguro de que desea eliminar las colecciones seleccionadas?"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
@@ -940,18 +928,12 @@ msgid "Welcome"
 msgstr "Bienvenido"
 
 #: source_templates/generate.html:7
-#, fuzzy
-#| msgid ""
-#| "Please either write this codename down and keep it in a safe place, or "
-#| "memorize it.<br> This will allow you to log back in and receive replies "
-#| "from journalists."
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
 msgstr ""
 "Por favor, escriba este nombre clave y guárdelo en un lugar seguro, o "
-"memorizelo.<br>Esto le permitirá volver a entrar y recibir respuestas de los "
-"periodistas."
+"memorizelo."
 
 #: source_templates/generate.html:10
 msgid ""
@@ -963,14 +945,6 @@ msgstr ""
 "siguiente pantalla."
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we use none of the traditional means to track users of our "
-#| "<strong>SecureDrop</strong>\n"
-#| " service, in future visits, using this codename will be the only way we "
-#| "have to communicate with you should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"
 " service, in future visits, using this codename will be the only way we have "
@@ -978,8 +952,8 @@ msgid ""
 " questions or are interested in additional documents. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"Porque no utilizamos ninguno de los medios tradicionales para rastrear a los "
-"usuarios de nuestro servicio de <strong>SecureDrop</strong>\n"
+"Porque no rastreamos a los usuarios de nuestro servicio de "
+"<strong>SecureDrop</strong>\n"
 "en futuras visitas, utilizando este nombre clave es la única manera que "
 "tenemos de comunicarnos con usted, si tenemos\n"
 "preguntas o estamos interesados en documentos adicionales. A diferencia de "
