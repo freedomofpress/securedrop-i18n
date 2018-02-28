@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-01-16 02:00+0000\n"
-"Last-Translator: Thomas <localizationlab@thomascovenant.org>\n"
-"Language-Team: Finnish <https://weblate.securedrop.club/projects/securedrop/"
-"securedrop/fi/>\n"
+"PO-Revision-Date: 2018-02-28 14:04+0000\n"
+"Last-Translator: Max Sandholm <max@sandholm.org>\n"
+"Language-Team: Finnish "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,10 +40,8 @@ msgid "Could not verify token in two-factor authentication."
 msgstr "Kaksitasoisen tunnistusmekanismin koodia ei voitu varmentaa."
 
 #: journalist_app/admin.py:37
-#, fuzzy
-#| msgid "Account updated."
 msgid "Image updated."
-msgstr "Tili päivitetty."
+msgstr "Kuva päivitetty."
 
 #: journalist_app/admin.py:66
 msgid ""
@@ -51,7 +49,7 @@ msgid ""
 "try again."
 msgstr ""
 "Automaattisesti luodun salasanan kanssa ilmeni ongelma. Käyttäjää ei luotu. "
-"Yrittäkää uudestaan."
+"Yritä uudestaan."
 
 #: journalist_app/admin.py:77
 msgid "That username is already in use"
@@ -66,16 +64,14 @@ msgstr ""
 "ylläpitäjällenne."
 
 #: journalist_app/admin.py:104
-#, fuzzy
 msgid "Token in two-factor authentication accepted for user {user}."
 msgstr ""
 "Koodi kaksitasoisessa tunnistusmekanismissa hyväksytty käyttäjälle {user}."
 
 #: journalist_app/admin.py:138
-#, fuzzy
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
-"Salaisuuden muoto ei päde: sen tulee sisältää ainoastaan kirjaimia A-F ja "
+"Salaisuuden muoto ei kelpaa: sen tulee sisältää ainoastaan kirjaimia A-F ja "
 "numeroita 0-9."
 
 #: journalist_app/admin.py:143
@@ -86,7 +82,6 @@ msgstr ""
 
 #: journalist_app/admin.py:148 journalist_app/main.py:107
 #: journalist_app/utils.py:47
-#, fuzzy
 msgid "An unexpected error occurred! Please inform your administrator."
 msgstr "Odottamaton virhe sattui! Ilmoittakaa tästä ylläpitäjällenne."
 
@@ -100,7 +95,7 @@ msgstr "Poista käyttäjä '{user}'"
 
 #: journalist_app/admin.py:249
 msgid "Test alert sent. Check your email."
-msgstr ""
+msgstr "Testihälytys lähetetty, tarkista sähköpostisi."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -129,41 +124,37 @@ msgstr ""
 
 #: journalist_app/forms.py:35 source_app/forms.py:11
 msgid "This field is required."
-msgstr "Tämän kentän on oltava täytettynä."
+msgstr "Tämän kentän on oltava täytetty."
 
 #: journalist_app/forms.py:52
 msgid "You cannot send an empty reply."
 msgstr "Et voi lähettää tyhjää vastausta."
 
 #: journalist_app/forms.py:60
-#, fuzzy
-#| msgid "This field is required."
 msgid "File required."
-msgstr "Tämän kentän on oltava täytettynä."
+msgstr "Tiedosto vaaditaan."
 
 #: journalist_app/forms.py:62
 msgid "Upload images only."
-msgstr ""
+msgstr "Lähetä ainoastaan kuvia."
 
 #: journalist_app/main.py:118
 msgid "Thanks. Your reply has been stored."
 msgstr "Kiitos. Vastauksesi on tallennettu."
 
 #: journalist_app/main.py:139
-#, fuzzy
 msgid "No collections selected for download."
-msgstr "Ei valittuja kokoelmia latausta varten."
+msgstr "Kokoelmia ei ole valittu latausta varten."
 
 #: journalist_app/main.py:142 journalist_app/utils.py:198
 msgid "No collections selected for deletion."
-msgstr "Ei valittuja kokoelmia poistamista varten."
+msgstr "Kokoelmia ei ole valittu poistamista varten."
 
 #: journalist_app/main.py:168
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
-msgstr "Lähde '{original_name}' on uudelleennimetty '{new_name}'ksi"
+msgstr "Lähde '{original_name}' on uudelleennimetty nimellä '{new_name}'"
 
 #: journalist_app/main.py:183
-#, fuzzy
 msgid "No unread submissions for this source."
 msgstr "Ei avaamattomia palautuksia tältä lähteeltä."
 
@@ -178,23 +169,18 @@ msgstr "Sisäänkirjautuminen epäonnistui."
 #: journalist_app/utils.py:93
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
-msgstr[0] ""
-"Ole hyvä ja odota vähintään {seconds} sekuntti ennen uudelleenkirjautumista."
-msgstr[1] ""
-"Ole hyvä ja odota vähintään {seconds} sekunttia ennen uudelleenkirjautumista."
+msgstr[0] "Odota vähintään {seconds} sekuntti ennen uudelleenkirjautumista."
+msgstr[1] "Odota vähintään {seconds} sekuntia ennen uudelleenkirjautumista."
 
 #: journalist_app/utils.py:104
-#, fuzzy
-#| msgid "Please wait for a new two-factor token before trying again."
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
 msgstr ""
-"Ole hyvä ja odota uutta kaksitasoisen tunnistusmekanismin varmennetta ennen "
-"kuin yrität uudelleen."
+"Odota uutta kaksitasoisen tunnistusmekanismin varmennetta ennen kuin yrität "
+"uudelleen."
 
 #: journalist_app/utils.py:150
-#, fuzzy
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Tallete poistettu."
@@ -208,7 +194,7 @@ msgstr[1] "{num} kokoelmaa poistettu"
 
 #: journalist_app/utils.py:241
 msgid "You submitted a bad password! Password not changed."
-msgstr "Antamasi salasana ei pätenyt. Salasanaa ei vaihdettu."
+msgstr "Antamasi salasana ei kelpaa, salasanaa ei vaihdettu."
 
 #: journalist_app/utils.py:248
 msgid ""
@@ -233,7 +219,7 @@ msgstr "Ei lukemattomia talletteita valituissa kokoelmissa."
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
-msgstr ""
+msgstr "Sulje"
 
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:72
@@ -243,32 +229,29 @@ msgstr "Peruuta"
 #: journalist_templates/_source_row.html:19
 msgid "1 doc"
 msgid_plural "{doc_num} docs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 asiakirja"
+msgstr[1] "{doc_num} asiakirjaa"
 
 #: journalist_templates/_source_row.html:20
-#, fuzzy
-#| msgid "Message"
 msgid "1 message"
 msgid_plural "{msg_num} messages"
-msgstr[0] "Viesti"
-msgstr[1] "Viesti"
+msgstr[0] "1 viesti"
+msgstr[1] "{msg_num} viestiä"
 
 #: journalist_templates/_source_row.html:23
-#, fuzzy
 msgid "{num_unread} unread"
 msgstr "{num_unread} lukematonta"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
 msgid "Change Secret"
-msgstr "Vaihda Salaisuutta"
+msgstr "Vaihda salaisuutta"
 
 #: journalist_templates/account_edit_hotp_secret.html:7
 #: journalist_templates/admin_add_user.html:33
 #: journalist_templates/admin_edit_hotp_secret.html:8
 msgid "HOTP Secret"
-msgstr "HOTP Salaisuus"
+msgstr "HOTP-salaisuus"
 
 #: journalist_templates/account_edit_hotp_secret.html:9
 #: journalist_templates/admin_edit_hotp_secret.html:10
@@ -279,10 +262,9 @@ msgstr "JATKA"
 #: journalist_templates/account_new_two_factor.html:4
 #: journalist_templates/admin_new_user_two_factor.html:5
 msgid "Enable FreeOTP"
-msgstr ""
+msgstr "Aktivoi FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:5
-#, fuzzy
 msgid ""
 "You're almost done! To finish resetting your two-factor authentication, "
 "follow the instructions below to set up FreeOTP. Once you've added the entry "
@@ -290,27 +272,25 @@ msgid ""
 "confirm that two factor authentication is set up correctly."
 msgstr ""
 "Olet melkein valmis! Lopettaaksesi kaksitasoisen tunnistusmekanismisi "
-"resetoinnin, seuraa alla olevia ohjeita Google Authenticatorin "
-"asentamiseksi. Kun olet lisännyt tunnisteet tilillesi applikaatioon, kirjaa "
-"yksi 6-numeroisista koodeista applikaatiosta varmistaaksesi, että "
-"kaksitasoinen tunnistusmekanismi on asennettu oikein."
+"resetoinnin, seuraa alla olevia ohjeita FreeOTP:n asentamiseksi. Kun olet "
+"lisännyt tunnisteet tilillesi sovellukseen, anna yksi 6-numeroisista "
+"koodeista applikaatiosta varmistaaksesi, että kaksitasoinen "
+"tunnistusmekanismi on asennettu oikein."
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
-#, fuzzy
-#| msgid "Install Google Authenticator on your phone"
 msgid "Install FreeOTP on your phone"
-msgstr "Asenna Google Authenticator puhelimeesi"
+msgstr "Asenna FreeOTP puhelimeesi"
 
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
 msgid "Open the FreeOTP app"
-msgstr ""
+msgstr "Avaa FreeOTP-sovellus"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
 msgid "Tap the QR code symbol at the top"
-msgstr ""
+msgstr "Napauta QR-koodi-symbolia yläreunassa"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -323,15 +303,15 @@ msgstr ""
 
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
-#, fuzzy
 msgid "Can't scan the barcode? Enter the following code manually:"
-msgstr "Etkö pysty skannaamaan kuviokoodia? Anna seuraava koodi manuaalisesti:"
+msgstr ""
+"Eikö kuviokoodin skannaaminen onnistu? Anna seuraava koodi manuaalisesti:"
 
 #: journalist_templates/account_new_two_factor.html:15
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid "Once you have scanned the barcode, enter the 6-digit code below:"
 msgstr ""
-"Kun olet skannannut kuviokoodin, kirjaa 6-numeroinen koodi alla olevaan "
+"Kun olet skannannut kuviokoodin, anna 6-numeroinen koodi alla olevaan "
 "kenttään:"
 
 #: journalist_templates/account_new_two_factor.html:17
@@ -341,10 +321,9 @@ msgstr "Aktivoi YubiKey (OATH-HOTP)"
 
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:21
-#, fuzzy
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr ""
-"Kun olet konfiguroinut YubiKeysi, kirjaa 6-numeroinen koodi allaolevaan "
+"Kun olet konfiguroinut YubiKeysi, anna 6-numeroinen koodi allaolevaan "
 "kenttään:"
 
 #: journalist_templates/account_new_two_factor.html:22
@@ -360,7 +339,7 @@ msgstr "TALLENNA"
 
 #: journalist_templates/admin.html:3
 msgid "Admin Interface"
-msgstr "Ylläpitäjän Käyttäjäliittymä"
+msgstr "Ylläpitäjän käyttöliittymä"
 
 #: journalist_templates/admin.html:6
 #: journalist_templates/admin_add_user.html:39
@@ -401,7 +380,7 @@ msgstr "Poista käyttäjä {username}"
 
 #: journalist_templates/admin.html:35
 msgid "never"
-msgstr "älä ikinä"
+msgstr "ei ikinä"
 
 #: journalist_templates/admin.html:42
 msgid "No users to display"
@@ -409,7 +388,7 @@ msgstr "Ei käyttäjiä näytettäväksi"
 
 #: journalist_templates/admin.html:48
 msgid "INSTANCE CONFIG"
-msgstr ""
+msgstr "INSTANSSIN KONFIGURAATIO"
 
 #: journalist_templates/admin_add_user.html:4
 #: journalist_templates/config.html:4 journalist_templates/edit_account.html:7
@@ -423,14 +402,13 @@ msgstr "Käyttäjän salasana tulee olemaan:"
 #: journalist_templates/admin_add_user.html:24
 #: journalist_templates/edit_account.html:17
 msgid "Is Administrator"
-msgstr "On Ylläpitäjä"
+msgstr "On ylläpitäjä"
 
 #: journalist_templates/admin_add_user.html:32
 msgid "Is using a YubiKey [HOTP]"
 msgstr "Käyttää YubiKeytä [HOTP]"
 
 #: journalist_templates/admin_new_user_two_factor.html:6
-#, fuzzy
 msgid ""
 "You're almost done! To finish adding this new user, have them follow the "
 "instructions below to set up two-factor authentication with FreeOTP. Once "
@@ -440,15 +418,13 @@ msgid ""
 msgstr ""
 "Olet melkein valmis! Viimeistelläksesi uuden käyttäjän lisäämisen, pyydä "
 "häntä seuraamaan allaolevia ohjeita kaksitasoisen tunnistusmekanismin "
-"asentamiseksi Google Authenticatorilla. Kun hän on lisännyt kirjautumisen "
-"tälle tilille applikaatioon, pyydä häntä antamaan yksi 6-numeroisista "
-"koodeista varmistaaksesi että kaksitasoinen tunnistusmekanismi on oikein "
-"asennettu."
+"asentamiseksi FreeOTP:lla. Kun hän on lisännyt kirjautumisen tälle tilille "
+"sovellukseen, pyydä häntä antamaan yksi 6-numeroisista koodeista "
+"varmistaaksesi että kaksitasoinen tunnistusmekanismi on oikein asennettu."
 
 #: journalist_templates/base.html:24
-#, fuzzy
 msgid "Logged on as"
-msgstr "Kirjautunut"
+msgstr "Kirjautunut käyttäjänä"
 
 #: journalist_templates/base.html:26
 msgid "Admin"
@@ -456,7 +432,7 @@ msgstr "Ylläpitäjä"
 
 #: journalist_templates/base.html:28
 msgid "Log Out"
-msgstr "Kirjaudu Ulos"
+msgstr "Kirjaudu ulos"
 
 #: journalist_templates/base.html:41
 msgid ""
@@ -472,7 +448,7 @@ msgstr "Palvelun tarjoaa <em>SecureDrop {version}</em>."
 
 #: journalist_templates/col.html:10
 msgid "All Sources"
-msgstr "Kaikki Lähteet"
+msgstr "Kaikki lähteet"
 
 #: journalist_templates/col.html:13
 msgid ""
@@ -498,25 +474,24 @@ msgid "CONFIRM"
 msgstr "VAHVISTA"
 
 #: journalist_templates/col.html:22
-#, fuzzy
 msgid ""
 "The documents are stored encrypted for security. To read them, you will need "
 "to decrypt them using GPG."
 msgstr ""
-"Nämä tiedostot on tallennettu kryptattuna turvallisuussyistä. Lukeaksesi ne "
-"sinun tulee dekryptata ne GPG:n avulla."
+"Nämä tiedostot ovat turvallisuussyistä tallennettu salattuna. Lukeaksesi ne "
+"sinun tulee purkaa salaus GPG:n avulla."
 
 #: journalist_templates/col.html:26
 msgid "Download Selected"
-msgstr "Lataa Valitut"
+msgstr "Lataa valitut"
 
 #: journalist_templates/col.html:28
 msgid "Delete Selected"
-msgstr "Poista Valitut"
+msgstr "Poista valitut"
 
 #: journalist_templates/col.html:57
 msgid "Uploaded Document"
-msgstr "Tiedosto Ladattu"
+msgstr "Tiedosto ladattu"
 
 #: journalist_templates/col.html:59 journalist_templates/col.html:92
 msgid "Reply"
@@ -529,36 +504,33 @@ msgstr "Viesti"
 #: journalist_templates/col.html:71 journalist_templates/col.html:129
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
-msgstr ""
+msgstr "Poistovahvistus"
 
 #: journalist_templates/col.html:72
-#, fuzzy
 msgid "Are you sure you want to delete the selected documents?"
-msgstr "Oletko varma, että haluat poistaa nämä {size} valitut kokoelmat?"
+msgstr "Oletko varma, että haluat poistaa valitut kokoelmat?"
 
 #: journalist_templates/col.html:87
 msgid "No documents to display."
 msgstr "Ei tiedostoja näytettäviksi."
 
 #: journalist_templates/col.html:94
-#, fuzzy
 msgid ""
 "You can write a secure reply to the person who submitted these documents:"
 msgstr ""
-"Voit kirjoittaa suojatun vastauksen henkilölle, joka talletti nämä tiedostot:"
+"Voit kirjoittaa suojatun vastauksen henkilölle, joka lähetti nämä tiedostot:"
 
 #: journalist_templates/col.html:103
 msgid "You've flagged this source for reply."
-msgstr ""
+msgstr "Olet avannut vastauksen tälle lähteelle."
 
 #: journalist_templates/col.html:104
-#, fuzzy
 msgid ""
 "An encryption key will be generated for the source the next time they log "
 "in, after which you will be able to reply to the source here."
 msgstr ""
-"Kryptausavain tullaan luomaan lähteelle seuraavan kerran kun hän kirjautuu "
-"sisään, jonka jälkeen tulet pystymään vastata lähteelle täällä."
+"Salausavain luodaan lähteelle seuraavan kerran kun hän kirjautuu sisään, "
+"jonka jälkeen pystyt vastaamaan lähteelle täältä."
 
 #: journalist_templates/col.html:106
 msgid "Click below if you would like to write a reply to this source."
@@ -568,18 +540,17 @@ msgstr ""
 
 #: journalist_templates/col.html:110
 msgid "FLAG THIS SOURCE FOR REPLY"
-msgstr ""
+msgstr "AVAA VASTAUS LÄHTEELLE"
 
 #: journalist_templates/col.html:115
-#, fuzzy
 msgid ""
 "Click below to delete this source's collection. <em>Warning: If you do this, "
 "the files seen here will be unrecoverable and the source will no longer be "
 "able to login using their previous codename.</em>"
 msgstr ""
 "Klikkaa alla olevaa painiketta poistaaksesi tämän lähteen kokoelman. "
-"<em>Varoitus: Jos teet tämän, tiedostoja ei tulla enää saamaan takaisin ja "
-"lähde ei tule enää voimaan kirjautua sisään käyttäen samaa koodinimeä.</em>"
+"<em>Varoitus: Jos teet tämän, tiedostoja ei enää saa takaisin ja lähde ei "
+"pysty enää kirjautumaan sisään samalla koodinimellä.</em>"
 
 #: journalist_templates/col.html:122
 msgid "DELETE COLLECTION"
@@ -591,34 +562,33 @@ msgstr "Oletko varma, että haluat poistaa tämän kokoelman?"
 
 #: journalist_templates/config.html:7
 msgid "Instance Configuration"
-msgstr ""
+msgstr "Instanssin konfiguraatio"
 
 #: journalist_templates/config.html:9
 msgid "Alerts"
-msgstr ""
+msgstr "Hälytykset"
 
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr ""
+"Lähetä salattu sähköposti varmistaaksesi että OSSEC-hälytykset toimivat:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
-msgstr ""
+msgstr "LÄHETÄ TESTI-OSSEC-HÄLYTYS"
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
-msgstr ""
+msgstr "Logo"
 
 #: journalist_templates/config.html:23
 msgid ""
 "Here you can update the image displayed on the SecureDrop web interfaces:"
-msgstr ""
+msgstr "Tässä voit vaihtaa kuvan, joka näkyy SecureDrop-rajapinnassa:"
 
 #: journalist_templates/config.html:36
-#, fuzzy
-#| msgid "UPDATE"
 msgid "UPDATE LOGO"
-msgstr "PÄIVITÄ"
+msgstr "PÄIVITÄ LOGO"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -637,18 +607,16 @@ msgid "PERMANENTLY DELETE FILES"
 msgstr "POISTA TIEDOSTOT PYSYVÄSTI"
 
 #: journalist_templates/delete.html:23
-#, fuzzy
 msgid "Return to the list of documents for {source_name}…"
-msgstr "Palaa {source_name}n tiedostolistaan…"
+msgstr "Palaa lähteen {source_name} tiedostolistaan…"
 
 #: journalist_templates/edit_account.html:6
 msgid "Edit user \"{user}\""
 msgstr "Muokkaa käyttäjää \"{user}\""
 
 #: journalist_templates/edit_account.html:8
-#, fuzzy
 msgid "Change Username &amp; Admin Status"
-msgstr "Vaihda Käyttäjänimi &amp; Ylläpitäjästatus"
+msgstr "Vaihda käyttäjänimi ja ylläpitäjästatus"
 
 #: journalist_templates/edit_account.html:12
 msgid "Change username"
@@ -663,12 +631,10 @@ msgid "Edit your account"
 msgstr "Muokkaa tiliä"
 
 #: journalist_templates/edit_account.html:25
-#, fuzzy
 msgid "Reset Password"
-msgstr "Palauta Salasanan Oletusarvot"
+msgstr "Palauta salasana"
 
 #: journalist_templates/edit_account.html:27
-#, fuzzy
 msgid "SecureDrop now uses automatically generated diceware passwords."
 msgstr "SecureDrop käyttää nyt automaattisesti luotuja diceware-salasanoja."
 
@@ -681,11 +647,8 @@ msgstr ""
 "ennen kuin painat \"Vaihda Salasana\"-nappia."
 
 #: journalist_templates/edit_account.html:34
-#, fuzzy
 msgid "Please enter your current password and two-factor code."
-msgstr ""
-"Ole hyvä ja kirjaa nykyinen salasanasi ja kaksiasteisen tunnistusmekanismin "
-"varmenne."
+msgstr "Anna nykyinen salasanasi ja kaksiasteisen tunnistusmekanismin varmenne."
 
 #: journalist_templates/edit_account.html:40
 msgid "Current Password"
@@ -696,27 +659,22 @@ msgid "Two-factor Code"
 msgstr "Kaksitasoisen tunnistusmekanismin varmenne"
 
 #: journalist_templates/edit_account.html:46
-#, fuzzy
 msgid "The user's password will be changed to:"
-msgstr "Käyttäjän salasana tullaan vaihtamaan. Uusi salasana:"
+msgstr "Käyttäjän salasana vaihdetaan. Uusi salasana:"
 
 #: journalist_templates/edit_account.html:48
-#, fuzzy
 msgid "Your password will be changed to:"
-msgstr "Salasanasi tullaan vaihtamaan. Uusi salasana:"
+msgstr "Salasanasi vaihdetaan. Uusi salasana:"
 
 #: journalist_templates/edit_account.html:53
-#, fuzzy
 msgid "RESET PASSWORD"
-msgstr "RESETOI SALASANA"
+msgstr "PALAUTA SALASANA"
 
 #: journalist_templates/edit_account.html:58
-#, fuzzy
 msgid "Reset Two-Factor Authentication"
-msgstr "Resetoi Kaksiasteinen Tunnistusmekanismi"
+msgstr "Palauta kaksiasteinen tunnistusmekanismi"
 
 #: journalist_templates/edit_account.html:61
-#, fuzzy
 msgid ""
 "If a user's two-factor authentication credentials have been lost or "
 "compromised, you can reset them here. <em>If you do this, make sure the user "
@@ -724,13 +682,12 @@ msgid ""
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
 "Jos käyttäjän kaksitasoisen tunnistusmekanismin tunnukset ovat kadonneet tai "
-"niiden turvallisuus on heikentynyt, voit resetoida ne täällä. <em>Jos teet "
+"niiden turvallisuus on heikentynyt, voit palauttaa ne täällä. <em>Jos teet "
 "tämän, varmista että käyttäjä on läsnä ja valmis asentamaan laitteeseensa "
-"uudet kaksitasoisen tunnistamisen tunnukset. Muutoin hänet tullaan "
-"lukitsemaan ulos tilitä."
+"uudet kaksitasoisen tunnistamisen tunnukset. Muutoin hänet lukitaan ulos "
+"tilitä."
 
 #: journalist_templates/edit_account.html:63
-#, fuzzy
 msgid ""
 "If your two-factor authentication credentials have been lost or compromised, "
 "or you got a new device, you can reset your credentials here. <em>If you do "
@@ -738,47 +695,42 @@ msgid ""
 "be locked out of your account.</em>"
 msgstr ""
 "Jos kaksitasoisen tunnistusmekanismin tunnukset ovat kadonneet tai "
-"vaarannettu, tai jos käytät uutta laitetta, voit resetoida tilisi täällä. "
+"vaarannettu, tai jos käytät uutta laitetta, voit palauttaa tilisi täällä. "
 "<em>Jos teet tämän, varmista että olet valmis asentamaan tunnuksesi uudelle "
-"laitteellesi. Muutoin tulet lukkiutumaan ulos käyttäjätililtäsi.</em>"
+"laitteellesi. Muutoin lukkiudut ulos käyttäjätililtäsi.</em>"
 
 #: journalist_templates/edit_account.html:65
-#, fuzzy
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the Yubikey, choose the second."
 msgstr ""
-"Resetoidaksesi kaksitasoisen tunnistusmekanismisi mobiiliapplikaatoissa, "
-"kuten Google Authenticatorissa tai FreeOTPssa, valitse ensimmäinen "
-"vaihtoehto. YubiKeyn kaltaisille laitteistoilla toimiville avaimille, "
-"valitse toinen."
+"Palauttaaksesi kaksitasoisen tunnistusmekanismisi mobiilisovelluksissa kuten "
+"FreeOTP:ssa, valitse ensimmäinen vaihtoehto. YubiKeyn kaltaisille "
+"laitteistoilla toimiville avaimille valitse toinen."
 
 #: journalist_templates/edit_account.html:90
-#, fuzzy
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
-msgstr "RESETOI KAKSITASOINEN TUNNISTUSMEKANISMI (APPLIKAATIO)"
+msgstr "PALAUTA KAKSITASOINEN TUNNISTUSMEKANISMI (SOVELLUS)"
 
 #: journalist_templates/edit_account.html:92
-#, fuzzy
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
-msgstr "RESETOI KAKSITASOINEN TUNNISTUSMEKANISMI (LAITTEISTOAVAIN)"
+msgstr "PALAUTA KAKSITASOINEN TUNNISTUSMEKANISMI (LAITTEISTOAVAIN)"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
 msgstr "Kiitti!"
 
 #: journalist_templates/flag.html:8
-#, fuzzy
 msgid ""
 "SecureDrop will generate a secure encryption key for this source the next "
 "time that they log in. Once the key has been generated, a reply box will "
 "appear under their collection of documents. You can use this box to write "
 "encrypted replies to them."
 msgstr ""
-"SecureDrop tulee luomaan turvallisen kryptausavaimen tälle lähteelle "
-"seuraavalla kerralla kun hän kirjautuu sisään. Kun tämä avain on luotu, "
-"vastauskenttä tulee ilmestymään tiedostokokoelman alle. Voit käyttää tätä "
-"kenttää kirjoittaaksesi kryptatun vastauksen hänelle."
+"SecureDrop luo turvallisen salausavaimen tälle lähteelle seuraavalla "
+"kerralla kun hän kirjautuu sisään. Kun tämä avain on luotu, vastauskenttä "
+"ilmestyy tiedostokokoelman alle. Voit käyttää tätä kenttää kirjoittaaksesi "
+"salatun vastauksen hänelle."
 
 #: journalist_templates/flag.html:10
 msgid "Continue to the list of documents for {codename}..."
@@ -797,19 +749,16 @@ msgid "Download"
 msgstr "Lataa"
 
 #: journalist_templates/index.html:13
-#, fuzzy
 msgid "Star"
 msgstr "Merkitse suosikiksi"
 
 #: journalist_templates/index.html:14
-#, fuzzy
 msgid "Un-star"
 msgstr "Poista suosikeista"
 
 #: journalist_templates/index.html:47
-#, fuzzy
 msgid "Are you sure you want to delete the selected collections?"
-msgstr "Oletko varma, että haluat poistaa nämä {size} valitut kokoelmat?"
+msgstr "Oletko varma, että haluat poistaa valitut kokoelmat?"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
@@ -821,15 +770,15 @@ msgstr "hae koodinimellä"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
-msgstr "Valitse Kaikki"
+msgstr "Valitse kaikki"
 
 #: journalist_templates/js-strings.html:5
 msgid "Select Unread"
-msgstr "Valitse Lukemattomat"
+msgstr "Valitse lukemattomat"
 
 #: journalist_templates/js-strings.html:6
 msgid "Select None"
-msgstr "Älä Valitse Mitään"
+msgstr "Älä valitse mitään"
 
 #: journalist_templates/js-strings.html:7
 msgid "Are you sure you want to delete the user {username}?"
@@ -839,59 +788,50 @@ msgstr "Oletko varma, että haluat poistaa käyttäjän {username}?"
 msgid ""
 "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr ""
-"Oletko varma, että haluat resetoida kaksitasoisen tunnistamismekanismin "
-"käyttäjälle {username}?"
+"Oletko varma, että haluat palauttaa käyttäjän {username} kaksitasoisen "
+"tunnistamismekanismin?"
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
-msgstr "Kirjaudu päästäksesi journalistin käyttäjäliittymään"
+msgstr "Kirjaudu journalistin käyttöliittymään"
 
 #: journalist_templates/login.html:9
 msgid "Password"
-msgstr "Lösenord"
+msgstr "Salasana"
 
 #: journalist_templates/login.html:12
 msgid "LOG IN"
 msgstr "KIRJAUDU SISÄÄN"
 
 #: source_app/__init__.py:115
-#, fuzzy
-#| msgid ""
-#| "<strong>WARNING:</strong> You appear to be using Tor2Web. This "
-#| "<strong>does not</strong> provide anonymity. <a href=\"{url}\">Why is "
-#| "this dangerous?</a>"
 msgid ""
 "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This "
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href="
 "\"{url}\">Why is this dangerous?</a>"
 msgstr ""
-"<strong>VAROITUS:</strong> Vaikutat käyttävän Tor2Webia. Tämä<strong> ei "
-"takaa</strong> anonymiteettiä. <a href=\"{url}\">Miksi tämä on vaarallista?</"
-"a>"
+"<strong>VAROITUS:</strong> Näytät käyttävän Tor2Webia. Tämä<strong> ei "
+"takaa</strong> anonymiteettiä. <a href=\"{url}\">Miksi tämä on "
+"vaarallista?</a>"
 
 #: source_app/forms.py:15
-#, fuzzy
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "Kentän tulee olla 1 - {max_codename_len} merkkiä pitkä."
 
 #: source_app/forms.py:18
-#, fuzzy
 msgid "Invalid input."
-msgstr "Pätemätön syöttö."
+msgstr "Syöttö ei kelpaa."
 
 #: source_app/main.py:30
-#, fuzzy
 msgid ""
 "You were redirected because you are already logged in. If you want to create "
 "a new account, you should log out first."
 msgstr ""
-"Sinut uudelleenohjattiin, koska olit jo kirjautuneena sisään. Jos haluat "
+"Sinut uudelleenohjattiin koska olit jo kirjautuneena sisään. Jos haluat "
 "luoda uuden tilin, kirjaudu ensin ulos."
 
 #: source_app/main.py:120
-#, fuzzy
 msgid "You must enter a message or choose a file to submit."
-msgstr "Sinun tulee syöttää viesti tai valita tiedosto tallennettavaksi."
+msgstr "Kirjoita viesti tai valitse tiedosto tallennettavaksi."
 
 #: source_app/main.py:153
 msgid "Thanks! We received your message."
@@ -914,13 +854,12 @@ msgid "All replies have been deleted"
 msgstr "Kaikki vastaukset on poistettu"
 
 #: source_app/main.py:235
-#, fuzzy
 msgid "Sorry, that is not a recognized codename."
-msgstr "Valitettavasti tuo ei ole tunnistettu koodinimi."
+msgstr "Ei ole tunnistettu koodinimi."
 
 #: source_templates/base.html:6 source_templates/index.html:4
 msgid "Protecting Journalists and Sources"
-msgstr "Suojelee Journalisteja ja Lähteitä"
+msgstr "Suojelee journalisteja ja lähteitä"
 
 #: source_templates/base.html:25 source_templates/base.html:45
 #: source_templates/index.html:32 source_templates/index.html:84
@@ -932,12 +871,11 @@ msgid "LOG OUT"
 msgstr "KIRJAUDU ULOS"
 
 #: source_templates/base.html:45 source_templates/index.html:84
-#, fuzzy
 msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
 msgstr ""
-"Kuten kaikki softa, SecureDropkin voi sisältää turvallisuusriskejä. Käyttö "
+"Kuten kaikki ohjelmistot, SecureDrop voi sisältää turvallisuusriskejä. Käytä "
 "omalla vastuulla."
 
 #: source_templates/error.html:3
@@ -945,12 +883,10 @@ msgid "Server error"
 msgstr "Palvelinvirhe"
 
 #: source_templates/error.html:5
-#, fuzzy
 msgid ""
 "Sorry, the website encountered an error and was unable to complete your "
 "request."
-msgstr ""
-"Valitettavasti webbisivu kohtasi virheen eikä voinut täydentää pyyntöäsi."
+msgstr "Verkkosivu kohtasi virheen eikä voinut suorittaa pyyntöäsi."
 
 #: source_templates/error.html:7 source_templates/notfound.html:7
 msgid "Look up a codename..."
@@ -977,27 +913,22 @@ msgid "Welcome"
 msgstr "Tervetuloa"
 
 #: source_templates/generate.html:7
-#, fuzzy
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
 msgstr ""
-"Ole hyvä ja kirjoita tämä koodinimi ylös ja säilytä sitä turvallisessa "
-"paikassa, tai muista se. <br>Tämä tulee mahdollistamaan "
-"uudelleenkirjautumisen palveluun ja journalistien vastausten "
-"vastaanottamisen."
+"Kirjoita tämä koodinimi ylös ja säilytä sitä turvallisessa paikassa, tai "
+"muista se."
 
 #: source_templates/generate.html:10
-#, fuzzy
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our journalists in response to what you submit on the next screen."
 msgstr ""
 "Käyttämällä tätä koodinimeä voit jatkossa vastaanottaa viestejä "
-"journalisteilta vastauksena siihen, mitä tulet tallentamaan sivuston kautta."
+"journalisteilta vastauksena siihen, mitä lähetät sivuston kautta."
 
 #: source_templates/generate.html:34
-#, fuzzy
 msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"
 " service, in future visits, using this codename will be the only way we have "
@@ -1005,26 +936,25 @@ msgid ""
 " questions or are interested in additional documents. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"Johtuen siitä, että emme käytä mitään perinteisiä mekanismeja seurataksemme "
-"<strong>SecureDrop-palvelun</strong> käyttäjiä, tulee ainoa tapamme "
-"tavoittaa sinut tulevaisuudessa olemaan tämän koodinimen kautta, jos meillä "
-"on kysymyksiä sinulle tai olemme kiinnostuneita muista tiedostoista. Toisin "
-"kuin salasanoissa, ei ole mahdollista palauttaa kadonnutta koodinimeä."
+"Koska emme käytä mitään perinteisiä mekanismeja seurataksemme "
+"<strong>SecureDrop</strong>-palvelun käyttäjiä, ainoa tapamme tavoittaa "
+"sinut tulevaisuudessa jos meillä on kysymyksiä sinulle tai olemme "
+"kiinnostuneita muista tiedostoista on tämän koodinimen kautta. Toisin kuin "
+"salasanoja, kadonnutta koodinimeä ei voi palauttaa."
 
 #: source_templates/generate.html:44 source_templates/index.html:65
 msgid "SUBMIT DOCUMENTS"
 msgstr "PALAUTA TIEDOSTOJA"
 
 #: source_templates/index.html:17
-#, fuzzy
 msgid ""
 "<strong>We recommend turning the Security Slider to High to protect your "
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
 "high</a>, or ignore this warning to continue."
 msgstr ""
 "<strong>Suosittelemme, että siirrät Security Slider -valintasi tasolle High "
-"suojellaksesi anonymiteettiasi: </strong><a id=\"disable-js\" href=\"\">Opi, "
-"miten muuttaa tämä valinta</a>, tai hylkää tämä varoitus jatkaaksesi."
+"suojellaksesi anonymiteettiasi: </strong><a id=\"disable-js\" href=\"\">Opi "
+"miten muuttaa tämä valinta</a> tai jätä tämä varoitus huomiotta jatkaaksesi."
 
 #: source_templates/index.html:18
 msgid ""
@@ -1061,21 +991,18 @@ msgstr ""
 "vastauksia."
 
 #: source_templates/index.html:73
-#, fuzzy
 msgid "CHECK FOR A RESPONSE"
 msgstr "TARKISTA VASTAUKSET"
 
 #: source_templates/index.html:92
-#, fuzzy
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
 "High in 4 easy steps!"
 msgstr ""
-"Vaikuttaa siltä, että käytät Tor Browser -selainta. Voit siirtää Security "
-"Slider -valintasi kohtaan High neljällä helpolla askeleella!"
+"Näytät käyttävän Tor Browser -selainta. Voit siirtää Security Slider -"
+"valintasi kohtaan High neljällä helpolla askeleella!"
 
 #: source_templates/index.html:94
-#, fuzzy
 msgid ""
 "Click the <img src=\"{icon}\" alt=\"Tor icon\"> Tor icon in the toolbar above"
 msgstr ""
@@ -1087,12 +1014,11 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "Klikkaa <strong>Security Settings...</strong>"
 
 #: source_templates/index.html:96
-#, fuzzy
 msgid ""
 "Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
 msgstr ""
-"Siirrä Slider-palkki kohtaan <strong>High</strong> ja klikkaa <strong>Ok</"
-"strong>"
+"Siirrä Slider-palkki kohtaan <strong>High</strong> ja klikkaa "
+"<strong>Ok</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Click here</a> to refresh the page"
@@ -1100,12 +1026,11 @@ msgstr "<a href=\"/\">Klikkaa tästä</a> päivittääksesi sivun"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
-msgstr "Anna Koodinimi"
+msgstr "Anna koodinimi"
 
 #: source_templates/login.html:12
-#, fuzzy
 msgid "Enter your codename"
-msgstr "Kirjaa koodinimesi"
+msgstr "Anna koodinimesi"
 
 #: source_templates/login.html:25 source_templates/lookup.html:47
 msgid "CANCEL"
@@ -1117,65 +1042,58 @@ msgid "Important!"
 msgstr "Tärkeää!"
 
 #: source_templates/logout_flashed_message.html:5
-#, fuzzy
 msgid ""
 "Thank you for exiting your session! Please select \"New Identity\" from the "
 "green onion button in the Tor browser to clear all history of your "
 "SecureDrop usage from this device."
 msgstr ""
-"Kiitos sessiosi lopettamisesta! Ole hyvä ja valitse \"New Identity\" "
-"vihreästä sipulipainikkeesta Tor Browser -selaimessa poistaaksesi kaikki "
-"historiasi SecureDropin käytöstä tällä laitteella."
+"Kiitos sessiosi lopettamisesta! Valitse \"New Identity\" vihreästä "
+"sipulipainikkeesta Tor Browser -selaimessa poistaaksesi kaikki historiasi "
+"SecureDropin käytöstä tällä laitteella."
 
 #: source_templates/lookup.html:11
-#, fuzzy
 msgid "Whew, it’s you! Now, the embarrassing part..."
-msgstr "Huh, se olet sinä! Tuota, kiusallisia uutisia..."
+msgstr "Huh, se olet sinä! Kiusallisia uutisia..."
 
 #: source_templates/lookup.html:12
-#, fuzzy
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all "
 "documents from that day through to our journalists."
 msgstr ""
-"Meidän serverimme koki epätavallisen nousun uusissa toiminnoissa, kun "
+"Meidän palvelimme koki epätavallisen nousun uusissa toiminnoissa kun "
 "viimeksi vierailit sivustolla. Varmuuden vuoksi keskeytimme kaikkien "
 "tiedostojen lähettämisen journalisteillemme siltä päivältä."
 
 #: source_templates/lookup.html:14
-#, fuzzy
 msgid ""
 "Now that we know you’re really a human, though, we’ll get your previous "
 "submission into the hands of a journalist straight away. We’re sorry for the "
 "delay. Please do check back again in a week or so."
 msgstr ""
-"Nyt kun olemme varmistaneet että todellakin olet ihminen, tulemme "
-"lähettämään palautuksesi journalisteillemme pikimmiten. Pahoittelemme "
-"viivästystä. Ole hyvä ja palaa asiaan noin viikon päästä."
+"Nyt kun olemme varmistaneet että olet ihminen, lähetämme palautuksesi "
+"journalisteillemme pikimmiten. Pahoittelemme viivästystä. Tarkista uudestaan "
+"noin viikon päästä."
 
 #: source_templates/lookup.html:20
 msgid "Submit Materials"
-msgstr "Palauta Materiaaleja"
+msgstr "Lähetä materiaaleja"
 
 #: source_templates/lookup.html:21
-#, fuzzy
 msgid ""
 "If you are already familiar with GPG, you can optionally encrypt your files "
 "and messages with our <a href=\"{url}\" class=\"text-link\">public key</a> "
 "before submission. Files are encrypted as they are received by SecureDrop."
 msgstr ""
-"Jos GPG on jo sinulle tuttu, voit vaihtoehtoisesti kryptata tiedostosi ja "
+"Jos GPG on jo sinulle tuttu, voit vaihtoehtoisesti salata tiedostosi ja "
 "viestisi <a href=\"{url}\" class=\"text-link\">julkisella avaimellasi</a> "
-"ennen palautusta. Tiedostot kryptataan kun ne otetaan vastaan SecureDropilla."
+"ennen palautusta. Tiedostot salataan kun ne otetaan vastaan SecureDropilla."
 
 #: source_templates/lookup.html:22
-#, fuzzy
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
 msgstr "<a href=\"{url}\" class=\"text-link\">Lue lisää</a>."
 
 #: source_templates/lookup.html:24
-#, fuzzy
 msgid "You can send a file, a message, or both."
 msgstr "Voit lähettää tiedoston, viestin, tai molemmat."
 
@@ -1189,21 +1107,19 @@ msgstr "Kirjoita viesti."
 
 #: source_templates/lookup.html:53
 msgid "Read Replies"
-msgstr "Lue Vastauksia"
+msgstr "Lue vastauksia"
 
 #: source_templates/lookup.html:58
-#, fuzzy
 msgid ""
 "You have received a reply. To protect your identity in the unlikely event "
 "someone learns your codename, please delete all replies when you're done "
 "with them. This also lets us know that you are aware of our reply. You can "
 "respond by submitting a new message above."
 msgstr ""
-"Olet vastaanottanut vastauksen. Suojellaksesi identiteettiäsi siinä "
-"epätodennäköisessä tilanteessa että joku saa tietää koodinimesi, ole hyvä ja "
-"poista kaikki vastaukset kun olet käynyt ne läpi. Tämä antaa myös meille "
-"tiedon siitä, että olet tiedostanut vastauksemme. Voit vastata lähettämällä "
-"uuden viestin ylläolevan kentän kautta."
+"Olet saanut vastauksen. Suojellaksesi identiteettiäsi siltä varalta että "
+"joku saa tietää koodinimesi, poista kaikki vastaukset kun olet käynyt ne "
+"läpi. Tämä antaa myös meille tiedon siitä, että olet lukenut vastauksemme. "
+"Voit vastata lähettämällä uuden viestin ylläolevan kentän kautta."
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
@@ -1226,14 +1142,12 @@ msgid "YES, DELETE ALL REPLIES"
 msgstr "KYLLÄ, POISTA KAIKKI VASTAUKSET"
 
 #: source_templates/lookup.html:87
-#, fuzzy
 msgid "NO, NOT YET"
 msgstr "EI VIELÄ"
 
 #: source_templates/lookup.html:91
-#, fuzzy
 msgid "There are no replies at this time."
-msgstr "Tällä hetkellä sinulla ei ole vastauksia."
+msgstr "Sinulla ei ole vastauksia."
 
 #: source_templates/lookup.html:100
 msgid "Remember, your codename is:"
@@ -1262,19 +1176,17 @@ msgid ""
 "button in the Tor browser to clear all history of your SecureDrop usage from "
 "this device. If you are not using Tor Browser, restart your browser."
 msgstr ""
-"Sessiosi on keskeytetty epäaktiivisuuden vuoksi. Ole hyvä ja kirjaudu sisään "
-"uudestaan jos haluat jatkaa SecureDropin käyttöä, tai valitse \"New Identity"
-"\" vihreästä sipulinapista Tor-selaimessa poistaaksesi kaikki historiasi "
-"SecureDropin käyttöön liittyen tältä laitteelta. Jos ei käytä Tor Browser-"
-"selainta, uudelleenkäynnistä selaimesi."
+"Sessiosi on keskeytetty epäaktiivisuuden vuoksi. Kirjaudu sisään uudelleen "
+"jos haluat jatkaa SecureDropin käyttöä, tai valitse \"New Identity\" "
+"vihreästä sipulinapista Tor-selaimessa poistaaksesi kaikki historiasi "
+"SecureDropin käyttöön liittyen tältä laitteelta. Jos et käytä Tor Browser-"
+"selainta, käynnistä selaimesi uudelleen."
 
 #: source_templates/tor2web-warning.html:3
-#, fuzzy
 msgid "Why is there a warning about Tor2Web?"
 msgstr "Miksi varoitamme Tor2Web:in käytöstä?"
 
 #: source_templates/tor2web-warning.html:4
-#, fuzzy
 msgid ""
 "<a href=\"tor2web.org\">Tor2Web</a> is a proxy service that lets you browse "
 "Tor Hidden Services (.onion sites) without installing Tor. It was designed "
@@ -1282,10 +1194,9 @@ msgid ""
 msgstr ""
 "<a href=\"tor2web.org\">Tor2Web</a> on välityspalvelin joka antaa sinun "
 "etsiä Tor Hidden Services (.onion) -sivustoja ilman Tor:in lataamista. Sen "
-"käyttötarkoitus oli anonyymin julkaisemisen fasilitointi."
+"tarkoitus oli anonyymin julkaisemisen helpottaminen."
 
 #: source_templates/tor2web-warning.html:5
-#, fuzzy
 msgid ""
 "Tor2Web only protects publishers, not readers. If you upload documents to us "
 "using Tor2Web, you are <strong>not anonymous</strong> and could be "
@@ -1294,26 +1205,25 @@ msgid ""
 "connection could be MITM'ed by a capable adversary."
 msgstr ""
 "Tor2Web suojelee ainoastaan julkaisijoita, ei lukijoita. Jos lataat "
-"tiedostoja Tor2Web:in kautta, sinä <strong>et ole anonyymi</strong> ja sinut "
-"on mahdollista tunnistaa ISP:si kautta tai Tor2Web-välityspalvelimesi "
-"operaattorin kautta.Tämän lisäksi, koska Tor2Web-sivustot eivät monessa "
+"tiedostoja Tor2Web:in kautta, <strong>et ole anonyymi</strong> ja sinut on "
+"mahdollista tunnistaa ISP:si kautta tai Tor2Web-välityspalvelimesi "
+"operaattorin kautta. Tämän lisäksi, koska Tor2Web-sivustot eivät monessa "
 "tapauksessa toimi HTTPS:n kautta, yhteytesi voi joutua MITM-hyökkäyksen "
 "kohteeksi."
 
 #: source_templates/tor2web-warning.html:6
-#, fuzzy
 msgid ""
 "If you want to submit information, you are <strong>strongly advised</strong> "
 "to install <a href=\"torproject.org/download.html.en\">Tor</a> and use it to "
 "access our site safely and anonymously."
 msgstr ""
-"Jos haluat lähettää meille informaatiota, suosittelemme <strong>vahvasti</"
-"strong> että lataat <a href=\"torproject.org/download.html.en\">Tor:in</a> "
-"ja käytät sitä saavuttaaksesi sivustomme turvallisesti ja anonyymisti."
+"Jos haluat lähettää meille tietoa, suosittelemme <strong>vahvasti</strong> "
+"että lataat <a href=\"torproject.org/download.html.en\">Tor:in</a> ja käytät "
+"sitä saavuttaaksesi sivustomme turvallisesti ja anonyymisti."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
-msgstr "Sinun Pitäisi Käyttää Tor Browser -selainta"
+msgstr "Sinun pitäisi käyttää Tor Browser -selainta"
 
 #: source_templates/use-tor-browser.html:4
 msgid ""
@@ -1323,18 +1233,16 @@ msgstr ""
 "strong>."
 
 #: source_templates/use-tor-browser.html:5
-#, fuzzy
 msgid ""
 "If you want to submit information to SecureDrop, we <strong>strongly advise "
 "you</strong> to install Tor Browser and use it to access our site safely and "
 "anonymously."
 msgstr ""
-"Jos haluat jakaa informaatiota SecureDropin kautta, suosittelemme "
+"Jos haluat jakaa tietoa SecureDropin kautta, suosittelemme "
 "<strong>vahvasti</strong> että lataat Tor Browser -selaimen ja käytät sitä "
 "tavoittaaksesi sivustomme turvallisesti ja anonyymisti."
 
 #: source_templates/use-tor-browser.html:6
-#, fuzzy
 msgid ""
 "Copy and paste the following address into your browser and follow the "
 "instructions to download and install Tor Browser:"
@@ -1348,6 +1256,9 @@ msgid ""
 "your mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
+"Jos luulet että Tor Browserin lataaminen herättää epäilystä ja uskot että "
+"sähköpostisi on turvallisempi kanava, voit lähettää sähköpostin osoitteeseen "
+"<pre>gettor@torproject.org</pre> niin saat vastauksena tarkemmat ohjeet."
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
@@ -1359,16 +1270,16 @@ msgid ""
 "messages and files before submission can provide an extra layer of security "
 "before your data reaches the SecureDrop server."
 msgstr ""
-"SecureDrop kryptaa tiedostot ja viestit niiden jättämisen jälkeen. Viestien "
-"ja tiedostojen kryptaaminen ennen niiden jättämistä voi tarjota lisää "
-"turvallisuutta ennen datan saapumista SecureDropin palvelimelle."
+"SecureDrop salaa tiedostot ja viestit niiden jättämisen jälkeen. Viestien ja "
+"tiedostojen salaaminen ennen niiden jättämistä voi tarjota lisää "
+"turvallisuutta ennen tiedon saapumista SecureDrop-palvelimelle."
 
 #: source_templates/why-journalist-key.html:5
 msgid ""
 "If you are already familiar with the GPG encryption software, you may wish "
 "to encrypt your submissions yourself. To do so:"
 msgstr ""
-"Jos GPG-kryptausohjelmisto on sinulle tuttu, voit halutessasi kryptata "
+"Jos GPG-salausohjelmisto on sinulle tuttu, voit halutessasi kryptata "
 "tallenteesi itse. Tehdäksesi sen:"
 
 #: source_templates/why-journalist-key.html:7
@@ -1380,46 +1291,40 @@ msgstr ""
 "tekstitiedosto, jonka pääte on <code>.asc</code>"
 
 #: source_templates/why-journalist-key.html:8
-#, fuzzy
 msgid "Import it into your GPG keyring."
-msgstr "To se GPG-avainnippuusi."
+msgstr "Tuo se GPG-avainnippuusi."
 
 #: source_templates/why-journalist-key.html:10
-#, fuzzy
 msgid ""
 "If you are using <a href=\"{url}\">Tails</a>, you can double-click the "
 "<code>.asc</code> file you just downloaded and it will be automatically "
 "imported to your keyring."
 msgstr ""
-"Jos käytät <a href=\"{url}\">Tails:ia</a>, voit tuplaklikata <code>.asc</"
-"code> tiedostoa jonka juuri latasit ja se tullaan automaattisesti lisäämään "
-"avainnippuusi."
+"Jos käytät <a href=\"{url}\">Tails</a>:ia, voit avata <code>.asc</code> -"
+"tiedoston jonka juuri latasit lisätääksesi sen automaattisesti avainnippuusi."
 
 #: source_templates/why-journalist-key.html:11
 msgid ""
 "If you are using Mac/Linux, open the terminal. You can import the key with "
 "<code>gpg --import /path/to/key.asc</code>."
 msgstr ""
-"Jos käytät Mac:iä/Linux:ia, avaa terminaali. Voit tuoda avaimen <code>gpg --"
-"import /polku/avaimeen.asc</code>-komennolla."
+"Jos käytät Mac:iä/Linux:ia, avaa terminaali. Voit tuoda avaimen komennolla "
+"<code>gpg --import /polku/avaimeen.asc</code>."
 
 #: source_templates/why-journalist-key.html:14
-#, fuzzy
 msgid "Encrypt your submission."
-msgstr "Kryptaa talletettava tiedosto."
+msgstr "Salaa lähetettävä tiedosto."
 
 #: source_templates/why-journalist-key.html:16
-#, fuzzy
 msgid ""
 "You will need to be able to identify the key (this is called the \"user ID\" "
 "or UID). Since the public key's filename is the key's fingerprint (with .asc "
 "at the end), you can just copy and paste that. (don't include the <code>."
 "asc</code>!)"
 msgstr ""
-"Sinun on voitava tunnistaa avain (tämän nimi on \"user ID\" tai UID). Koska "
-"avaimen tiedostonimi on avaimen sormenjälki (jonka loppuun on liitetty ."
-"asc), voit kopioida ja liittää sen. (Älä sisällytä siihen <code>.asc</code>-"
-"liitettä!)"
+"Sinun pitää pystyä tunnistaa avain (tämän nimi on \"user ID\" tai UID). "
+"Koska avaimen tiedostonimi on avaimen sormenjälki (jonka loppuun on liitetty "
+".asc), voit kopioida ja liittää sen. (Jätä pois <code>.asc</code>-liite!)"
 
 #: source_templates/why-journalist-key.html:17
 msgid ""
@@ -1430,14 +1335,13 @@ msgstr ""
 "<code>gpg --recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 
 #: source_templates/why-journalist-key.html:20
-#, fuzzy
 msgid ""
 "Upload your encrypted submission. It will have the same filename as the "
 "unencrypted file, with .gpg at the end (e.g. <code>roswell_photos.pdf.gpg</"
 "code>)"
 msgstr ""
-"Lataa kryptattu tallenteesi. Sillä tulee olemaan sama tiedostonimi kuin "
-"kryptaamattomalla tiedostolla, ja sen tiedostomuoto tulee olemaan .gpg (eli "
+"Lataa salattu tallenteesi. Se saa saman tiedostonnimen kuin salaamaton "
+"tiedosto, ja sen tiedostomuoto tulee olemaan .gpg (esim. "
 "<code>roswell_photos.pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:23
@@ -1448,7 +1352,7 @@ msgid ""
 msgstr ""
 "<strong>Vinkki:</strong> Jos haluat pysyä anonyyminä, <strong>älä</strong> "
 "käytä GPG:tä allekirjoittaaksesi kryptatun tiedoston (<code>--sign</code> "
-"tai <code>-s</code> merkeillä), sillä tämä paljastaa GPG-identiteettisi "
+"tai <code>-s</code> vivuilla), sillä tämä paljastaa GPG-identiteettisi "
 "meille."
 
 #: source_templates/why-journalist-key.html:25
