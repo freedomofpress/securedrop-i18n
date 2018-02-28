@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-01-10 17:00+0000\n"
+"PO-Revision-Date: 2018-02-28 12:19+0000\n"
 "Last-Translator: AO <french.coordinator@rbox.me>\n"
-"Language-Team: French <https://weblate.securedrop.club/projects/securedrop/"
-"securedrop/fr/>\n"
+"Language-Team: French "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/fr/>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -99,7 +99,7 @@ msgstr "L’utilisateur « {user} » a été supprimé"
 
 #: journalist_app/admin.py:249
 msgid "Test alert sent. Check your email."
-msgstr ""
+msgstr "L’alerte de test a été envoyée. Veuillez vérifier vos courriels."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -177,14 +177,12 @@ msgstr[1] ""
 "Veuillez patienter au moins {seconds} secondes avant de vous reconnecter."
 
 #: journalist_app/utils.py:104
-#, fuzzy
-#| msgid "Please wait for a new two-factor token before trying again."
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
 msgstr ""
-"Veuillez attendre un nouveau jeton de validation en deux étapes avant de "
-"ressayer."
+"Veuillez attendre un nouveau code de votre jeton ou application de "
+"validation en deux étapes avant de ressayer."
 
 #: journalist_app/utils.py:150
 msgid "Submission deleted."
@@ -227,7 +225,7 @@ msgstr "Aucun envoi non lu dans les collections sélectionnées."
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
-msgstr ""
+msgstr "Fermer"
 
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:72
@@ -297,10 +295,8 @@ msgstr "Ouvrir l’application FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
-#, fuzzy
-#| msgid "Tap the QRcode symbol at the top"
 msgid "Tap the QR code symbol at the top"
-msgstr "Toucher le code QR en haut"
+msgstr "Toucher le symbole de  code QR en haut"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -513,16 +509,12 @@ msgstr "Message"
 
 #: journalist_templates/col.html:71 journalist_templates/col.html:129
 #: journalist_templates/index.html:46
-#, fuzzy
-#| msgid "Instance Configuration"
 msgid "Delete Confirmation"
-msgstr "Configuration de l’Instance"
+msgstr "Supprimer la confirmation"
 
 #: journalist_templates/col.html:72
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected documents?"
-msgstr "Voulez-vous vraiment supprimer les {size} collections sélectionnées ?"
+msgstr "Voulez-vous vraiment supprimer les documents sélectionnés ?"
 
 #: journalist_templates/col.html:87
 msgid "No documents to display."
@@ -584,13 +576,10 @@ msgid "Alerts"
 msgstr "Alertes"
 
 #: journalist_templates/config.html:11
-#, fuzzy
-#| msgid ""
-#| "Send a test encrypted email alert to verify OSSEC is working correctly:"
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr ""
-"Envoyer une alerte courriel de test chiffrée pour vérifier qu’OSSEC "
-"fonctionne correctement :"
+"Envoyer un courriel chiffré pour vérifier si les alertes OSSEC fonctionnent "
+"correctement :"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
@@ -784,10 +773,8 @@ msgid "Un-star"
 msgstr "Ôter l’étoile"
 
 #: journalist_templates/index.html:47
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected collections?"
-msgstr "Voulez-vous vraiment supprimer les {size} collections sélectionnées ?"
+msgstr "Voulez-vous vraiment supprimer les collections sélectionnées ?"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
@@ -944,18 +931,12 @@ msgid "Welcome"
 msgstr "Bienvenue"
 
 #: source_templates/generate.html:7
-#, fuzzy
-#| msgid ""
-#| "Please either write this codename down and keep it in a safe place, or "
-#| "memorize it.<br> This will allow you to log back in and receive replies "
-#| "from journalists."
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
 msgstr ""
 "Veuillez soit prendre ce nom de code par écrit et le conserver en lieu sûr, "
-"soit le mémoriser.<br> Il vous permettra de vous connecter de nouveau et de "
-"recevoir les réponses des journalistes."
+"soit le mémoriser."
 
 #: source_templates/generate.html:10
 msgid ""
@@ -967,14 +948,6 @@ msgstr ""
 "la page suivante."
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we use none of the traditional means to track users of our "
-#| "<strong>SecureDrop</strong>\n"
-#| " service, in future visits, using this codename will be the only way we "
-#| "have to communicate with you should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"
 " service, in future visits, using this codename will be the only way we have "
@@ -982,13 +955,13 @@ msgid ""
 " questions or are interested in additional documents. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"Dans la mesure où nous n’utilisons aucun des moyens traditionnels pour "
-"suivre à la trace les utilisateurs de notre service <strong>SecureDrop</"
-"strong>, lors de prochaines visites, l’utilisation de ce nom de code sera la "
-"seule façon dont nous disposerons pour communiquer avec vous, que nous ayons "
-"des questions ou que nous soyons intéressés par d’autres documents. "
-"Contrairement aux mots de passe, un nom de code perdu ne peut pas être "
-"récupéré."
+"Dans la mesure où nous ne suivons pas les utilisateurs de notre service "
+"<strong>SecureDrop</strong> à la trace,\n"
+"lors de prochaines visites l’utilisation de ce nom de code sera la seule "
+"façon dont nous disposerons pour communiquer avec vous,\n"
+"que nous ayons des questions ou que nous soyons intéressés par d’autres "
+"documents. Contrairement aux mots de passe,\n"
+"un nom de code perdu ne peut pas être récupéré."
 
 #: source_templates/generate.html:44 source_templates/index.html:65
 msgid "SUBMIT DOCUMENTS"
