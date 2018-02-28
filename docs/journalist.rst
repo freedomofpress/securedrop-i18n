@@ -1,6 +1,8 @@
 Journalist Guide
 ================
 
+.. include:: ./includes/provide-feedback.txt
+
 This guide presents an overview of the SecureDrop system for a
 journalist. It covers the core functions necessary to start working
 with the platform: logging in securely, viewing documents, editing
@@ -34,7 +36,7 @@ Connecting to the *Journalist Interface*
 
 Journalists viewing documents on SecureDrop must connect to the
 *Journalist Interface* using the `Tails operating system
-<https://tails.boum.org/>`__ on a USB drive. Your administrator can
+<https://tails.boum.org/>`__ on a USB drive. Your admin can
 help provide you with a Tails drive.
 
 .. important:: See our guide on setting up :doc:`Tails for the Admin
@@ -47,7 +49,7 @@ help provide you with a Tails drive.
 
 Each journalist has an authenticated Tor hidden service URL for
 logging in to the *Journalist Interface*. This must be done using the
-Tails operating system. Click the **Journalist Interface** icon on the
+Tails operating system. Click the *Journalist Interface* icon on the
 desktop. This will open Tor Browser to a ".onion" page. Log in with
 your username, passphrase, and two-factor authentication token, as
 shown in the first screenshot below. (See :doc:`Using YubiKey with the
@@ -241,7 +243,7 @@ can open the ``Terminal``, navigate to the file, and use:
 
 replacing ``NAME_OF_FILE`` with the name of the file you wish to decrypt. This
 command will tell you what key was used to encrypt the file. If you are not
-comfortable at the command line, contact your SecureDrop administrator or
+comfortable at the command line, contact your SecureDrop admin or
 Freedom of the Press Foundation for assistance.
 
 .. warning:: **Do not** transfer source material off the *Secure Viewing Station*

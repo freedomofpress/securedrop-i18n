@@ -6,17 +6,15 @@ import gzip
 import os
 
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.common.keys import Keys
 
 import tests.utils.db_helper as db_helper
-import crypto_util
-from db import Journalist
-from step_helpers import screenshots
-import config
+from models import Journalist
+from sdconfig import config
 
 
 class JournalistNavigationStepsMixin():
 
-    @screenshots
     def _get_submission_content(self, file_url, raw_content):
         if not file_url.endswith(".gz.gpg"):
             return str(raw_content)
@@ -51,13 +49,11 @@ class JournalistNavigationStepsMixin():
             'button[type=submit]')
         submit_button.click()
 
-    @screenshots
     def _login_user(self, username, password, token):
         self._try_login_user(username, password, token)
         # Successful login should redirect to the index
         assert self.driver.current_url == self.journalist_location + '/'
 
-    @screenshots
     def _journalist_logs_in(self):
         # Create a test user for logging in
         self.user, self.user_pw = db_helper.init_journalist()
@@ -74,23 +70,109 @@ class JournalistNavigationStepsMixin():
     def _journalist_selects_first_doc(self):
         self.driver.find_elements_by_name('doc_names_selected')[0].click()
 
-    def _journalist_clicks_delete_selected_javascript(self):
-        self.driver.find_element_by_id('delete-selected').click()
-        self._alert_wait()
+    def _journalist_clicks_on_modal(self, click_id):
+        self.driver.find_element_by_id(click_id).click()
 
-    def _journalist_verifies_deletion_of_one_submission_javascript(self):
-        self._journalist_selects_first_doc()
-        self._journalist_clicks_delete_selected_javascript()
-        self._alert_dismiss()
+        def link_not_displayed():
+            assert (
+                (not self.driver.find_elements_by_id(click_id)) or
+                (not self.driver.find_element_by_id(click_id).is_displayed()))
+        self.wait_for(link_not_displayed)
+
+    def _journalist_clicks_delete_collections_cancel_on_modal(self):
+        self._journalist_clicks_on_modal('cancel-collections-deletions')
+
+    def _journalist_clicks_delete_selected_cancel_on_modal(self):
+        self._journalist_clicks_on_modal('cancel-selected-deletions')
+
+    def _journalist_clicks_delete_collection_cancel_on_modal(self):
+        self._journalist_clicks_on_modal('cancel-collection-deletions')
+
+    def _journalist_clicks_delete_collections_on_modal(self):
+        self._journalist_clicks_on_modal('delete-collections')
+
+    def _journalist_clicks_delete_selected_on_modal(self):
+        self._journalist_clicks_on_modal('delete-selected')
+
+    def _journalist_clicks_delete_collection_on_modal(self):
+        self._journalist_clicks_on_modal('delete-collection-button')
+
+    def _journalist_clicks_delete_link(self, click_id, displayed_id):
+        assert not self.driver.find_element_by_id(displayed_id).is_displayed()
+        self.driver.find_element_by_id(click_id).click()
+
+        def link_displayed():
+            assert self.driver.find_element_by_id(displayed_id).is_displayed()
+        self.wait_for(link_displayed)
+
+    def _journalist_clicks_delete_selected_link(self):
+        self._journalist_clicks_delete_link(
+            'delete-selected-link',
+            'delete-selected-confirmation-modal')
+
+    def _journalist_clicks_delete_collections_link(self):
+        self._journalist_clicks_delete_link(
+            'delete-collections-link',
+            'delete-confirmation-modal')
+
+    def _journalist_clicks_delete_collection_link(self):
+        self._journalist_clicks_delete_link(
+            'delete-collection-link',
+            'delete-collection-confirmation-modal')
+
+    def _journalist_uses_delete_selected_button_confirmation(self):
         selected_count = len(self.driver.find_elements_by_name(
             'doc_names_selected'))
         assert selected_count > 0
-        self._journalist_clicks_delete_selected_javascript()
-        self._alert_accept()
+
+        self._journalist_selects_first_doc()
+        self._journalist_clicks_delete_selected_link()
+        self._journalist_clicks_delete_selected_cancel_on_modal()
+        assert selected_count == len(self.driver.find_elements_by_name(
+            'doc_names_selected'))
+
+        self._journalist_clicks_delete_selected_link()
+        self._journalist_clicks_delete_selected_on_modal()
         assert selected_count > len(self.driver.find_elements_by_name(
             'doc_names_selected'))
 
-    @screenshots
+    def _journalist_uses_delete_collection_button_confirmation(self):
+        self._journalist_clicks_delete_collection_link()
+        self._journalist_clicks_delete_collection_cancel_on_modal()
+
+        # After deletion the button will redirect us. Let's ensure we still
+        # see the delete collection button.
+        def delete_collection_link_displayed():
+            assert self.driver.find_element_by_id(
+                'delete-collection-link').is_displayed()
+        self.wait_for(delete_collection_link_displayed, timeout=60)
+
+        self._journalist_clicks_delete_collection_link()
+        self._journalist_clicks_delete_collection_on_modal()
+
+        # Now we should be redirected to the index.
+        if not hasattr(self, 'accept-languages'):
+            assert "Sources" in self.driver.find_element_by_tag_name('h1').text
+
+    def _journalist_uses_delete_collections_button_confirmation(self):
+        sources = self.driver.find_elements_by_class_name("code-name")
+        assert len(sources) > 0
+
+        self.driver.find_element_by_id('select_all').click()
+        self._journalist_clicks_delete_collections_link()
+        self._journalist_clicks_delete_collections_cancel_on_modal()
+
+        self.driver.find_element_by_id('select_all').click()
+        sources = self.driver.find_elements_by_class_name("code-name")
+        assert len(sources) > 0
+
+        self._journalist_clicks_delete_collections_link()
+        self._journalist_clicks_delete_collections_on_modal()
+
+        # We should be redirected to the index without those boxes selected.
+        sources = self.driver.find_elements_by_class_name("code-name")
+        assert len(sources) == 0
+
     def _admin_logs_in(self):
         self.admin, self.admin_pw = db_helper.init_journalist(is_admin=True)
         self._login_user(self.admin.username, self.admin_pw, 'mocked')
@@ -107,7 +189,6 @@ class JournalistNavigationStepsMixin():
             links = self.driver.find_elements_by_tag_name('a')
             assert 'Admin' in [el.text for el in links]
 
-    @screenshots
     def _admin_visits_admin_interface(self):
         admin_interface_link = self.driver.find_element_by_id(
             'link-admin-index')
@@ -138,7 +219,6 @@ class JournalistNavigationStepsMixin():
             flashed_msgs = self.driver.find_element_by_css_selector('.flash')
             assert 'Image updated.' in flashed_msgs.text
 
-    @screenshots
     def _add_user(self, username, is_admin=False, hotp=None):
         username_field = self.driver.find_element_by_css_selector(
             'input[name="username"]')
@@ -161,7 +241,6 @@ class JournalistNavigationStepsMixin():
             'button[type=submit]')
         submit_button.click()
 
-    @screenshots
     def _admin_adds_a_user(self):
         add_user_btn = self.driver.find_element_by_css_selector(
             'button#add-user')
@@ -209,6 +288,25 @@ class JournalistNavigationStepsMixin():
                          self.new_user['username']) in
                     [el.text for el in flashed_msgs])
 
+    def _admin_deletes_user(self):
+        self.wait_for(lambda: self.driver.find_element_by_css_selector(
+            '.delete-user'), timeout=60)
+
+        # Get the delete user buttons
+        delete_buttons = self.driver.find_elements_by_css_selector(
+            '.delete-user')
+
+        # Try to delete a user
+        delete_buttons[0].click()
+
+        # Wait for JavaScript alert to pop up and accept it.
+        self._alert_wait()
+        self._alert_accept()
+
+        if not hasattr(self, 'accept_languages'):
+            flashed_msg = self.driver.find_element_by_css_selector('.flash')
+            assert "Deleted user" in flashed_msg.text
+
     def _admin_can_send_test_alert(self):
         alert_button = self.driver.find_element_by_id('test-ossec-alert')
         alert_button.click()
@@ -217,7 +315,6 @@ class JournalistNavigationStepsMixin():
             flashed_msg = self.driver.find_element_by_css_selector('.flash')
             assert "Test alert sent. Check your email." in flashed_msg.text
 
-    @screenshots
     def _logout(self):
         # Click the logout link
         logout_link = self.driver.find_element_by_id('link-logout')
@@ -229,7 +326,6 @@ class JournalistNavigationStepsMixin():
                     self.driver.page_source)
         self.wait_for(login_page)
 
-    @screenshots
     def _check_login_with_otp(self, otp):
         self._logout()
         self._login_user(self.new_user['username'],
@@ -238,7 +334,6 @@ class JournalistNavigationStepsMixin():
             # Test that the new user was logged in successfully
             assert 'Sources' in self.driver.page_source
 
-    @screenshots
     def _new_user_can_log_in(self):
         # Log the admin user out
         self._logout()
@@ -257,7 +352,6 @@ class JournalistNavigationStepsMixin():
         with pytest.raises(NoSuchElementException):
             self.driver.find_element_by_id('link-admin-index')
 
-    @screenshots
     def _edit_account(self):
         edit_account_link = self.driver.find_element_by_id(
             'link-edit-account')
@@ -287,7 +381,6 @@ class JournalistNavigationStepsMixin():
         assert ('/account/reset-2fa-hotp' in
                 hotp_reset_button.get_attribute('action'))
 
-    @screenshots
     def _edit_user(self, username):
         user = Journalist.query.filter_by(username=username).one()
 
@@ -331,7 +424,6 @@ class JournalistNavigationStepsMixin():
         assert int(hotp_reset_uid.get_attribute('value')) == user.id
         assert hotp_reset_uid.is_displayed() is False
 
-    @screenshots
     def _admin_can_edit_new_user(self):
         # Log the new user out
         self._logout()
@@ -415,7 +507,10 @@ class JournalistNavigationStepsMixin():
                          'mocked')
         self.wait_for(found_sources)
 
-    @screenshots
+        # Log back out and log back admin in for subsequent tests
+        self._logout()
+        self._login_user(self.admin.username, self.admin_pw, 'mocked')
+
     def _journalist_checks_messages(self):
         self.driver.get(self.journalist_location)
 
@@ -429,7 +524,6 @@ class JournalistNavigationStepsMixin():
                 'span.unread')
             assert "1 unread" in unread_span.text
 
-    @screenshots
     def _journalist_stars_and_unstars_single_message(self):
         # Message begins unstarred
         with pytest.raises(NoSuchElementException):
@@ -445,7 +539,6 @@ class JournalistNavigationStepsMixin():
         with pytest.raises(NoSuchElementException):
             self.driver.find_element_by_id('starred-source-link-1')
 
-    @screenshots
     def _journalist_selects_all_sources_then_selects_none(self):
         self.driver.find_element_by_id('select_all').click()
         checkboxes = self.driver.find_elements_by_id('checkbox')
@@ -464,7 +557,6 @@ class JournalistNavigationStepsMixin():
     def _journalist_selects_documents_to_download(self):
         self.driver.find_element_by_id('select_all').click()
 
-    @screenshots
     def _journalist_downloads_message(self):
         self._journalist_selects_the_first_source()
 
@@ -569,6 +661,10 @@ class JournalistNavigationStepsMixin():
                 hotp_reset_button.get_attribute('action'))
         hotp_reset_button.click()
 
+    def _admin_accepts_2fa_js_alert(self):
+        self._alert_wait()
+        self._alert_accept()
+
     def _admin_visits_reset_2fa_totp(self):
         totp_reset_button = self.driver.find_elements_by_css_selector(
             '#reset-two-factor-totp')[0]
@@ -593,20 +689,18 @@ class JournalistNavigationStepsMixin():
         for checkbox in self.driver.find_elements_by_name(
                 'doc_names_selected'):
             checkbox.click()
-        self.driver.find_element_by_id('delete-selected').click()
+        self.driver.find_element_by_id('delete-selected-link').click()
 
-    def _journalist_confirm_delete_all(self):
+    def _journalist_confirm_delete_selected(self):
         self.wait_for(
-            lambda: self.driver.find_element_by_id('confirm-delete'))
-        confirm_btn = self.driver.find_element_by_id('confirm-delete')
+            lambda: self.driver.find_element_by_id('delete-selected'))
+        confirm_btn = self.driver.find_element_by_id('delete-selected')
         confirm_btn.click()
 
     def _source_delete_key(self):
-        filesystem_id = crypto_util.hash_codename(self.source_name)
-        key = None
-        while not key:
-            key = crypto_util.getkey(filesystem_id)
-        crypto_util.delete_reply_keypair(filesystem_id)
+        filesystem_id = self.source_app.crypto_util.hash_codename(
+            self.source_name)
+        self.source_app.crypto_util.delete_reply_keypair(filesystem_id)
 
     def _journalist_continues_after_flagging(self):
         self.driver.find_element_by_id('continue-to-list').click()
@@ -614,14 +708,13 @@ class JournalistNavigationStepsMixin():
     def _journalist_delete_none(self):
         self.driver.find_element_by_id('delete-selected').click()
 
-    def _journalist_delete_all_javascript(self):
+    def _journalist_delete_all_confirmation(self):
         self.driver.find_element_by_id('select_all').click()
-        self.driver.find_element_by_id('delete-selected').click()
-        self._alert_wait()
+        self.driver.find_element_by_id('delete-selected-link').click()
 
     def _journalist_delete_one(self):
         self.driver.find_elements_by_name('doc_names_selected')[0].click()
-        self.driver.find_element_by_id('delete-selected').click()
+        self.driver.find_element_by_id('delete-selected-link').click()
 
     def _journalist_flags_source(self):
         self.driver.find_element_by_id('flag-button').click()
@@ -651,3 +744,38 @@ class JournalistNavigationStepsMixin():
         hotp_checkbox = self.driver.find_element_by_css_selector(
             'input[name="is_hotp"]')
         hotp_checkbox.click()
+
+    def _journalist_uses_js_filter_by_sources(self):
+        self.wait_for(lambda: self.driver.find_element_by_id("filter"))
+
+        filter_box = self.driver.find_element_by_id("filter")
+        filter_box.send_keys("thiswordisnotinthewordlist")
+
+        sources = self.driver.find_elements_by_class_name("code-name")
+        assert len(sources) > 0
+        for source in sources:
+            assert source.is_displayed() is False
+
+        filter_box.clear()
+        filter_box.send_keys(Keys.RETURN)
+
+        for source in sources:
+            assert source.is_displayed() is True
+
+    def _journalist_uses_js_buttons_to_download_unread(self):
+        self.driver.find_element_by_id('select_all').click()
+        checkboxes = self.driver.find_elements_by_name('doc_names_selected')
+        assert len(checkboxes) > 0
+        for checkbox in checkboxes:
+            assert checkbox.is_selected()
+
+        self.driver.find_element_by_id('select_none').click()
+        checkboxes = self.driver.find_elements_by_name('doc_names_selected')
+        for checkbox in checkboxes:
+            assert checkbox.is_selected() is False
+
+        self.driver.find_element_by_id('select_unread').click()
+        checkboxes = self.driver.find_elements_by_name('doc_names_selected')
+        for checkbox in checkboxes:
+            classes = checkbox.get_attribute('class')
+            assert 'unread-cb' in classes

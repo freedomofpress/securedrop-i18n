@@ -31,12 +31,16 @@ Localization of the source and journalist interfaces
 The source and journalist interface are translated in the following
 languages:
 
+* Arabic (ar)
 * German (de_DE)
 * Spanish (es_ES)
 * French (fr_FR)
+* Italian (it_IT)
 * Norwegian (nb_NO)
 * Dutch (nl)
 * Portuguese, Brasil (pt_BR)
+* Turkish (tr)
+* Chinese, Traditional (zh_Hant)
 
 During the installation you will be given the opportunity to choose the
 list of supported languages to display, using the code shown in

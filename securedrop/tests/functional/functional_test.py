@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
 
-from datetime import datetime
 import errno
 import mock
-from multiprocessing import Process
 import os
-from os.path import abspath, dirname, join, realpath
 import signal
 import socket
 import time
 import traceback
 import requests
 
-from Crypto import Random
+from Cryptodome import Random
+from datetime import datetime
+from multiprocessing import Process
+from os.path import abspath, dirname, join, realpath
 from selenium import webdriver
 from selenium.common.exceptions import (WebDriverException,
                                         NoAlertPresentException)
@@ -21,11 +21,12 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 
 os.environ['SECUREDROP_ENV'] = 'test'  # noqa
-import config
-import db
-import journalist
-from source_app import create_app
+from sdconfig import config
+import journalist_app
+import source_app
 import tests.utils.env as env
+
+from db import db
 
 LOG_DIR = abspath(join(dirname(realpath(__file__)), '..', 'log'))
 
@@ -82,8 +83,10 @@ class FunctionalTest(object):
         return firefox_binary.FirefoxBinary(log_file=log_file)
 
     def setup(self, session_expiration=30):
+        self.__context = journalist_app.create_app(config).app_context()
+        self.__context.push()
         # Patch the two-factor verification to avoid intermittent errors
-        self.patcher = mock.patch('db.Journalist.verify_token')
+        self.patcher = mock.patch('models.Journalist.verify_token')
         self.mock_journalist_verify_token = self.patcher.start()
         self.mock_journalist_verify_token.return_value = True
 
@@ -95,7 +98,7 @@ class FunctionalTest(object):
 
         env.create_directories()
         self.gpg = env.init_gpg()
-        db.init_db()
+        db.create_all()
 
         source_port = self._unused_port()
         journalist_port = self._unused_port()
@@ -106,7 +109,10 @@ class FunctionalTest(object):
         # Allow custom session expiration lengths
         self.session_expiration = session_expiration
 
-        def start_source_server():
+        self.source_app = source_app.create_app(config)
+        self.journalist_app = journalist_app.create_app(config)
+
+        def start_source_server(app):
             # We call Random.atfork() here because we fork the source and
             # journalist server from the main Python process we use to drive
             # our browser with multiprocessing.Process() below. These child
@@ -117,24 +123,25 @@ class FunctionalTest(object):
 
             config.SESSION_EXPIRATION_MINUTES = self.session_expiration
 
-            source_app = create_app(config)
-
-            source_app.run(
+            app.run(
                 port=source_port,
                 debug=True,
                 use_reloader=False,
                 threaded=True)
 
-        def start_journalist_server():
+        def start_journalist_server(app):
             Random.atfork()
-            journalist.app.run(
+            app.run(
                 port=journalist_port,
                 debug=True,
                 use_reloader=False,
                 threaded=True)
 
-        self.source_process = Process(target=start_source_server)
-        self.journalist_process = Process(target=start_journalist_server)
+        self.source_process = Process(
+            target=lambda: start_source_server(self.source_app))
+
+        self.journalist_process = Process(
+            target=lambda: start_journalist_server(self.journalist_app))
 
         self.source_process.start()
         self.journalist_process.start()
@@ -143,7 +150,7 @@ class FunctionalTest(object):
             try:
                 requests.get(self.source_location)
                 requests.get(self.journalist_location)
-            except:
+            except Exception:
                 time.sleep(1)
             else:
                 break
@@ -174,6 +181,14 @@ class FunctionalTest(object):
         self.secret_message = ('These documents outline a major government '
                                'invasion of privacy.')
 
+    def wait_for_source_key(self, source_name):
+        filesystem_id = self.source_app.crypto_util.hash_codename(source_name)
+
+        def key_available(filesystem_id):
+            assert self.source_app.crypto_util.getkey(filesystem_id)
+        self.wait_for(
+            lambda: key_available(filesystem_id), timeout=60)
+
     def teardown(self):
         self.patcher.stop()
         env.teardown()
@@ -181,6 +196,7 @@ class FunctionalTest(object):
             self.driver.quit()
         self.source_process.terminate()
         self.journalist_process.terminate()
+        self.__context.pop()
 
     def wait_for(self, function_with_assertion, timeout=5):
         """Polling wait for an arbitrary assertion."""

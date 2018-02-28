@@ -1,17 +1,17 @@
 Set up the Admin Workstation
 ============================
 
-Earlier, you should have created the *admin Tails USB* along with a
+Earlier, you should have created the *Admin Tails USB* along with a
 persistence volume for it. Now, we are going to add a couple more
-features to the *admin Tails USB* to facilitate SecureDrop's setup.
+features to the *Admin Tails USB* to facilitate SecureDrop's setup.
 
-If you have not switched to and booted the *admin Tails USB* on your
+If you have not switched to and booted the *Admin Tails USB* on your
 regular workstation, do so now.
 
 Start Tails with Persistence Enabled
 ------------------------------------
 
-After you boot the *admin Tails USB* on your normal workstation, you
+After you boot the *Admin Tails USB* on your normal workstation, you
 should see a *Welcome to Tails* screen with *Encrypted Persistent
 Storage*.  Enter your password and click *Unlock*. Do NOT click *Start
 Tails* yet. Under *Additional Settings* click the *plus* sign.
@@ -53,9 +53,16 @@ Start by running the following commands to download the git repository.
 .. note:: Since the repository is fairly large and Tor can be slow,
 	  this may take a few minutes.
 
+.. caution:: Do not download SecureDrop Git repository as a Zip file,
+             or any other means. Only download by using the given git
+             command.
+
 
 Verify the Release Tag
 ~~~~~~~~~~~~~~~~~~~~~~
+
+.. caution:: Do not skip this step as this steps validates the files
+             in your Git repository.
 
 First, download and verify the **SecureDrop Release Signing Key**.
 
@@ -107,8 +114,8 @@ key:
 .. code:: sh
 
     cd ~/Persistent/securedrop/
-    git checkout 0.5
-    git tag -v 0.5
+    git checkout 0.5.2
+    git tag -v 0.5.2
 
 You should see ``Good signature from "SecureDrop Release Signing Key"`` in the
 output of that last command.
@@ -150,7 +157,7 @@ To use the template:
 In case you wish to manually create a database, the suggested password fields in
 the admin template are:
 
-**Administrator**:
+**Admin**:
 
 - Admin account username
 - App Server SSH Onion URL

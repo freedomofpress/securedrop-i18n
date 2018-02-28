@@ -1,18 +1,17 @@
 # -*- coding: utf-8 -*-
 """Testing utilities related to setup and teardown of test environment.
 """
+import gnupg
 import os
-from os.path import abspath, dirname, exists, isdir, join, realpath
 import shutil
-import subprocess
 import threading
 
-import gnupg
+from os.path import abspath, dirname, isdir, join, realpath
 
 os.environ['SECUREDROP_ENV'] = 'test'  # noqa
-import config
-import crypto_util
-from db import init_db, db_session
+from sdconfig import config
+
+from db import db
 
 FILES_DIR = abspath(join(dirname(realpath(__file__)), '..', 'files'))
 
@@ -49,9 +48,7 @@ def setup():
     """Set up the file system, GPG, and database."""
     create_directories()
     init_gpg()
-    init_db()
-    # Do tests that should always run on app startup
-    crypto_util.do_runtime_tests()
+    db.create_all()
 
 
 def teardown():
@@ -61,11 +58,12 @@ def teardown():
     for t in threading.enumerate():
         if t.is_alive() and not isinstance(t, threading._MainThread):
             t.join()
-    db_session.remove()
+    db.session.remove()
     shutil.rmtree(config.TEMP_DIR)
     try:
         shutil.rmtree(config.SECUREDROP_DATA_ROOT)
-        assert not os.path.exists(config.SECUREDROP_DATA_ROOT)  # safeguard for #844
+        # safeguard for #844
+        assert not os.path.exists(config.SECUREDROP_DATA_ROOT)
     except OSError as exc:
         if 'No such file or directory' not in exc:
             raise

@@ -96,6 +96,7 @@ anonymous sources.
 
    development/getting_started
    development/setup_development
+   development/admin_development   
    development/virtual_environments
    development/virtualizing_tails
    development/contributor_guidelines
@@ -110,6 +111,7 @@ anonymous sources.
    development/apt_repo
    development/updating_ossec
    development/apparmor_profiles
+   development/portable_demo
 
 .. toctree::
   :caption: Threat Model

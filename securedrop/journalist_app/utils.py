@@ -6,19 +6,28 @@ from flask import (g, flash, current_app, abort, send_file, redirect, url_for,
 from flask_babel import gettext, ngettext
 from sqlalchemy.sql.expression import false
 
-import crypto_util
 import i18n
-import store
 import worker
 
-from db import (db_session, get_one_or_else, Source, Journalist,
-                InvalidUsernameException, WrongPasswordException,
-                LoginThrottledException, BadTokenException, SourceStar,
-                PasswordError, Submission)
+from db import db
+from models import (get_one_or_else, Source, Journalist,
+                    InvalidUsernameException, WrongPasswordException,
+                    LoginThrottledException, BadTokenException, SourceStar,
+                    PasswordError, Submission)
 from rm import srm
+
+import typing
+# https://www.python.org/dev/peps/pep-0484/#runtime-or-type-checking
+if typing.TYPE_CHECKING:
+    # flake8 can not understand type annotation yet.
+    # That is why all type annotation relative import
+    # statements has to be marked as noqa.
+    # http://flake8.pycqa.org/en/latest/user/error-codes.html?highlight=f401
+    from sdconfig import SDConfig  # noqa: F401
 
 
 def logged_in():
+    # type: () -> bool
     # When a user is logged in, we push their user ID (database primary key)
     # into the session. setup_g checks for this value, and if it finds it,
     # stores a reference to the user's Journalist object in g.
@@ -30,17 +39,17 @@ def logged_in():
 
 
 def commit_account_changes(user):
-    if db_session.is_modified(user):
+    if db.session.is_modified(user):
         try:
-            db_session.add(user)
-            db_session.commit()
+            db.session.add(user)
+            db.session.commit()
         except Exception as e:
             flash(gettext(
                 "An unexpected error occurred! Please "
                   "inform your administrator."), "error")
             current_app.logger.error("Account changes for '{}' failed: {}"
                                      .format(user, e))
-            db_session.rollback()
+            db.session.rollback()
         else:
             flash(gettext("Account updated."), "success")
 
@@ -93,9 +102,9 @@ def validate_user(username, password, token, error_message=None):
                 if user.is_totp:
                     login_flashed_msg += " "
                     login_flashed_msg += gettext(
-                        "Please wait for a new two-factor token"
-                        " before trying again.")
-            except:
+                        "Please wait for a new code from your two-factor token"
+                        " or application before trying again.")
+            except Exception:
                 pass
 
         flash(login_flashed_msg, "error")
@@ -110,18 +119,18 @@ def download(zip_basename, submissions):
 
     :param str zip_basename: The basename of the ZIP-file download.
 
-    :param list submissions: A list of :class:`db.Submission`s to
+    :param list submissions: A list of :class:`models.Submission`s to
                              include in the ZIP-file.
     """
-    zf = store.get_bulk_archive(submissions,
-                                zip_directory=zip_basename)
+    zf = current_app.storage.get_bulk_archive(submissions,
+                                              zip_directory=zip_basename)
     attachment_filename = "{}--{}.zip".format(
         zip_basename, datetime.utcnow().strftime("%Y-%m-%d--%H-%M-%S"))
 
     # Mark the submissions that have been downloaded as such
     for submission in submissions:
         submission.downloaded = True
-    db_session.commit()
+    db.session.commit()
 
     return send_file(zf.name, mimetype="application/zip",
                      attachment_filename=attachment_filename,
@@ -130,10 +139,10 @@ def download(zip_basename, submissions):
 
 def bulk_delete(filesystem_id, items_selected):
     for item in items_selected:
-        item_path = store.path(filesystem_id, item.filename)
+        item_path = current_app.storage.path(filesystem_id, item.filename)
         worker.enqueue(srm, item_path)
-        db_session.delete(item)
-    db_session.commit()
+        db.session.delete(item)
+    db.session.commit()
 
     flash(ngettext("Submission deleted.",
                    "{num} submissions deleted.".format(
@@ -155,15 +164,15 @@ def make_star_true(filesystem_id):
         source.star.starred = True
     else:
         source_star = SourceStar(source)
-        db_session.add(source_star)
+        db.session.add(source_star)
 
 
 def make_star_false(filesystem_id):
     source = get_source(filesystem_id)
     if not source.star:
         source_star = SourceStar(source)
-        db_session.add(source_star)
-        db_session.commit()
+        db.session.add(source_star)
+        db.session.commit()
     source.star.starred = False
 
 
@@ -171,7 +180,7 @@ def col_star(cols_selected):
     for filesystem_id in cols_selected:
         make_star_true(filesystem_id)
 
-    db_session.commit()
+    db.session.commit()
     return redirect(url_for('main.index'))
 
 
@@ -179,7 +188,7 @@ def col_un_star(cols_selected):
     for filesystem_id in cols_selected:
         make_star_false(filesystem_id)
 
-    db_session.commit()
+    db.session.commit()
     return redirect(url_for('main.index'))
 
 
@@ -199,8 +208,11 @@ def col_delete(cols_selected):
 
 
 def make_password(config):
+    # type: (SDConfig) -> str
     while True:
-        password = crypto_util.genrandomid(7, i18n.get_language(config))
+        password = current_app.crypto_util.genrandomid(
+            7,
+            i18n.get_language(config))
         try:
             Journalist.check_password_acceptable(password)
             return password
@@ -210,15 +222,15 @@ def make_password(config):
 
 def delete_collection(filesystem_id):
     # Delete the source's collection of submissions
-    job = worker.enqueue(srm, store.path(filesystem_id))
+    job = worker.enqueue(srm, current_app.storage.path(filesystem_id))
 
     # Delete the source's reply keypair
-    crypto_util.delete_reply_keypair(filesystem_id)
+    current_app.crypto_util.delete_reply_keypair(filesystem_id)
 
     # Delete their entry in the db
     source = get_source(filesystem_id)
-    db_session.delete(source)
-    db_session.commit()
+    db.session.delete(source)
+    db.session.commit()
     return job
 
 
@@ -231,7 +243,7 @@ def set_diceware_password(user, password):
         return
 
     try:
-        db_session.commit()
+        db.session.commit()
     except Exception:
         flash(gettext(
             'There was an error, and the new password might not have been '

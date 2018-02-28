@@ -1,6 +1,8 @@
 Admin Guide
 ===========
 
+.. include:: ./includes/provide-feedback.txt
+
 You (the admin) should have your own username and passphrase, plus
 two-factor authentication through either the FreeOTP app
 on your smartphone or a YubiKey.
@@ -265,9 +267,9 @@ Application Server
 Adding Users (CLI)
 ^^^^^^^^^^^^^^^^^^
 
-After the provisioning of the first administrator account, we recommend
+After the provisioning of the first admin account, we recommend
 using the Admin Interface web application for adding additional journalists
-and administrators.
+and admins.
 
 However, you can also add users via ``./manage.py`` in ``/var/www/securedrop/``
 as described :doc:`during first install <create_admin_account>`. You can use

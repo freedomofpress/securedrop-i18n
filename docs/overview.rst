@@ -119,7 +119,7 @@ Setting up SecureDrop is a multi-step process. Before getting started, you
 should make sure that you're prepared to operate and maintain it. You'll need
 a systems admin who's familiar with Linux, the GNU utilities, and the
 Bash shell. You'll need the :doc:`hardware <hardware>` on which SecureDrop
-runs — this will normally cost $2000-$3000 dollars. The journalists in your
+runs — this will normally cost $2000-$3000. The journalists in your
 organization will need to be trained in the operation of SecureDrop, and
 you'll need to publish and promote your new SecureDrop instance afterwards —
 using your existing websites, mailing lists, and social media.
@@ -164,7 +164,7 @@ should test it thoroughly and then tell the world. The `Freedom of the Press
 Foundation <https://securedrop.org/help>`__ are happy to help you check that
 your SecureDrop setup is up-to-code and properly grounded. After that you'll want
 to check out the :ref:`best practices <Landing Page>` for your
-SecureDrop landing page and our guide to
+SecureDrop *Landing Page* and our guide to
 :doc:`promoting your SecureDrop instance <getting_the_most_out_of_securedrop>`.
 
 .. |SecureDrop architecture overview diagram| image:: ./diagrams/SecureDrop.png

@@ -19,18 +19,19 @@ from tests.functional import journalist_navigation_steps
 from tests.functional import source_navigation_steps
 import functional_test
 import pytest
+import time
 
-import db
+import models
 
 
 @pytest.fixture
 def hardening(request):
-    hardening = db.LOGIN_HARDENING
+    hardening = models.LOGIN_HARDENING
 
     def finalizer():
-        db.LOGIN_HARDENING = hardening
+        models.LOGIN_HARDENING = hardening
     request.addfinalizer(finalizer)
-    db.LOGIN_HARDENING = True
+    models.LOGIN_HARDENING = True
     return None
 
 
@@ -131,7 +132,7 @@ class TestJournalistLayout(
         self._journalist_logs_in()
         self._journalist_visits_col()
         self._journalist_delete_all()
-        self._journalist_confirm_delete_all()
+        self._journalist_confirm_delete_selected()
         self._screenshot('journalist-col_no_document.png')
 
     def test_col_has_no_key(self):
@@ -210,7 +211,7 @@ class TestJournalistLayout(
         self._journalist_delete_none()
         self._screenshot('journalist-delete_none.png')
 
-    def test_delete_one_javascript(self):
+    def test_delete_one_confirmation(self):
         self._javascript_toggle()
         self._source_visits_source_homepage()
         self._source_chooses_to_submit_documents()
@@ -221,11 +222,11 @@ class TestJournalistLayout(
         self._journalist_logs_in()
         self._journalist_visits_col()
         self._journalist_selects_first_doc()
-        self._journalist_clicks_delete_selected_javascript()
-        self._save_alert('journalist-delete_one_javascript.txt')
-        self._alert_accept()
+        self._journalist_clicks_delete_selected_link()
+        time.sleep(1)
+        self._screenshot('journalist-delete_one_confirmation.png')
 
-    def test_delete_all_javascript(self):
+    def test_delete_all_confirmation(self):
         self._javascript_toggle()
         self._source_visits_source_homepage()
         self._source_chooses_to_submit_documents()
@@ -235,9 +236,9 @@ class TestJournalistLayout(
         self._source_logs_out()
         self._journalist_logs_in()
         self._journalist_visits_col()
-        self._journalist_delete_all_javascript()
-        self._save_alert('journalist-delete_all_javascript.txt')
-        self._alert_accept()
+        self._journalist_delete_all_confirmation()
+        time.sleep(1)
+        self._screenshot('journalist-delete_all_confirmation.png')
 
     def test_delete_one(self):
         self._source_visits_source_homepage()
@@ -249,6 +250,7 @@ class TestJournalistLayout(
         self._journalist_logs_in()
         self._journalist_visits_col()
         self._journalist_delete_one()
+        self._journalist_confirm_delete_selected()
         self._screenshot('journalist-delete_one.png')
 
     def test_delete_all(self):
@@ -261,6 +263,7 @@ class TestJournalistLayout(
         self._journalist_logs_in()
         self._journalist_visits_col()
         self._journalist_delete_all()
+        self._journalist_confirm_delete_selected()
         self._screenshot('journalist-delete_all.png')
 
     def test_edit_account_user(self):

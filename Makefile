@@ -21,11 +21,26 @@ ci-go: ## Creates, provisions, tests, and destroys AWS EC2 hosts for testing sta
 
 .PHONY: ci-lint-image
 ci-lint-image: ## Builds linting container.
-	docker build $(EXTRA_BUILD_ARGS) -t securedrop-lint:${TAG} -f devops/docker/Dockerfile.linting .
+	docker build $(DOCKER_BUILD_ARGUMENTS) -t securedrop-lint:${TAG} -f devops/docker/Dockerfile.linting .
 
 .PHONY: ci-lint
 ci-lint: ## Runs linting in linting container.
-	docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock securedrop-lint:${TAG}
+	devops/scripts/dev-shell-ci sudo make --keep-going lint typelint
+
+.PHONY: install-mypy
+install-mypy: ## pip install mypy in a dedicated python3 virtualenv
+	if [[ ! -d .python3/.venv ]] ; then \
+	  virtualenv --python=python3 .python3/.venv && \
+	  .python3/.venv/bin/pip3 install mypy ; \
+        fi
+
+.PHONY: typelint
+typelint: install-mypy ## Runs type linting
+	.python3/.venv/bin/mypy ./securedrop ./admin
+
+.PHONY: ansible-config-lint
+ansible-config-lint: ## Runs custom Ansible env linting tasks.
+	molecule verify -s ansible-config
 
 .PHONY: docs-lint
 docs-lint: ## Check documentation for common syntax errors.
@@ -36,15 +51,11 @@ docs-lint: ## Check documentation for common syntax errors.
 .PHONY: docs
 docs: ## Build project documentation in live reload for editing
 # Spins up livereload environment for editing; blocks.
-	make -C docs/ clean && sphinx-autobuild `[ $(PWD) = /vagrant ] && echo '--host 0.0.0.0'` docs/ docs/_build/html
+	make -C docs/ clean && sphinx-autobuild docs/ docs/_build/html
 
 .PHONY: flake8
 flake8: ## Validates PEP8 compliance for Python source files.
-	flake8 --exclude='config.py' testinfra securedrop/securedrop-admin \
-		securedrop/*.py securedrop/management \
-		securedrop/journalist_app/*.py \
-		securedrop/source_app/*.py securedrop/tests/pages-layout/*.py \
-		securedrop/tests/functional/*.py securedrop/tests/*.py
+	flake8 --exclude='config.py,.venv/'
 
 .PHONY: app-lint
 app-lint: ## Tests pylint lint rule compliance.
@@ -62,7 +73,7 @@ yamllint: ## Lints YAML files (does not validate syntax!)
 # Prune the `.venv/` dir if it exists, since it contains pip-installed files
 # and is not subject to our linting. Using grep to filter filepaths since
 # `-regextype=posix-extended` is not cross-platform.
-	@find "$(PWD)" -path "$(PWD)/.venv" -prune -o -type f \
+	@find "$(PWD)" -path "*/.venv" -prune -o -type f \
 		| grep -E '^.*\.ya?ml' | xargs yamllint -c "$(PWD)/.yamllint"
 
 .PHONY: shellcheck
@@ -73,7 +84,7 @@ shellcheck: ## Lints Bash and sh scripts.
 # and we have a separate issue dedicated to cleaning those up.
 	@docker create -v /mnt --name shellcheck-targets circleci/python:2 /bin/true 2> /dev/null || true
 	@docker cp $(PWD)/. shellcheck-targets:/mnt/
-	@find "." \( -path "./.venv" -o -path "./install_files/ossec-server" \
+	@find "." \( -path "*/.venv" -o -path "./install_files/ossec-server" \
 		-o -path "./install_files/ossec-agent" \) -prune \
 		-o -type f -and -not -ipath '*/.git/*' -exec file --mime {} + \
 		| perl -F: -lanE '$$F[1] =~ /x-shellscript/ and say $$F[0]' \
@@ -86,7 +97,7 @@ shellcheckclean: ## Cleans up temporary container associated with shellcheck tar
 	@docker rm -f shellcheck-targets
 
 .PHONY: lint
-lint: docs-lint app-lint flake8 html-lint yamllint shellcheck ## Runs all linting tools (docs, pylint, flake8, HTML, YAML, shell).
+lint: docs-lint app-lint flake8 html-lint yamllint shellcheck ansible-config-lint ## Runs all linting tools (docs, pylint, flake8, HTML, YAML, shell, ansible-config).
 
 .PHONY: docker-build-ubuntu
 docker-build-ubuntu: ## Builds SD Ubuntu docker container
@@ -105,17 +116,22 @@ safety: ## Runs `safety check` to check python dependencies for vulnerabilities
 		|| exit 1; \
 	done
 
+# Bandit is a static code analysis tool to detect security vulnerabilities in Python applications
+# https://wiki.openstack.org/wiki/Security/Projects/Bandit
+.PHONY: bandit
+bandit: ## Run bandit with medium level excluding test-related folders
+	@bandit --recursive . --exclude admin/.tox,admin/.venv,admin/.eggs,molecule,testinfra,securedrop/tests,.tox,.venv -ll
+
 .PHONY: update-pip-requirements
 update-pip-requirements: ## Updates all Python requirements files via pip-compile.
-	pip-compile --generate-hashes --output-file securedrop/requirements/admin-requirements.txt \
-		securedrop/requirements/ansible.in
+	make -C admin update-pip-requirements
 	pip-compile --output-file securedrop/requirements/develop-requirements.txt \
-		securedrop/requirements/ansible.in \
+		admin/requirements-ansible.in \
 		securedrop/requirements/develop-requirements.in
 	pip-compile --output-file securedrop/requirements/test-requirements.txt \
 		securedrop/requirements/test-requirements.in
-	pip-compile --output-file securedrop/requirements/securedrop-requirements.txt \
-		securedrop/requirements/securedrop-requirements.in
+	pip-compile --output-file securedrop/requirements/securedrop-app-code-requirements.txt \
+		securedrop/requirements/securedrop-app-code-requirements.in
 
 .PHONY: libvirt-share
 libvirt-share: ## Configure ACLs to allow RWX for libvirt VM (e.g. Admin Workstation)

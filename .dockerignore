@@ -1,0 +1,16 @@
+.git
+.vagrant
+**/_build
+**/.mypy_cache
+**/.eggs
+**/.tox
+**/venv
+**/.venv
+
+**/__pycache__
+**/*.pyc
+securedrop/.sass-cache
+securedrop/static/gen
+securedrop/static/.webassets-cache
+securedrop/tests/log/*
+securedrop/tests/pages-layout/

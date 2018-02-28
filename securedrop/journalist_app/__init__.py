@@ -11,22 +11,66 @@ import i18n
 import template_filters
 import version
 
-from db import db_session, Journalist
+from crypto_util import CryptoUtil
+from db import db
 from journalist_app import account, admin, main, col
 from journalist_app.utils import get_source, logged_in
+from models import Journalist
+from store import Storage
+
+import typing
+# https://www.python.org/dev/peps/pep-0484/#runtime-or-type-checking
+if typing.TYPE_CHECKING:
+    # flake8 can not understand type annotation yet.
+    # That is why all type annotation relative import
+    # statements has to be marked as noqa.
+    # http://flake8.pycqa.org/en/latest/user/error-codes.html?highlight=f401
+    from sdconfig import SDConfig  # noqa: F401
 
 _insecure_views = ['main.login', 'static']
 
 
 def create_app(config):
+    # type: (SDConfig) -> Flask
     app = Flask(__name__,
                 template_folder=config.JOURNALIST_TEMPLATES_DIR,
                 static_folder=path.join(config.SECUREDROP_ROOT, 'static'))
 
     app.config.from_object(config.JournalistInterfaceFlaskConfig)
+    app.sdconfig = config
 
     CSRFProtect(app)
     Environment(app)
+
+    if config.DATABASE_ENGINE == "sqlite":
+        db_uri = (config.DATABASE_ENGINE + ":///" +
+                  config.DATABASE_FILE)
+    else:
+        db_uri = (
+            config.DATABASE_ENGINE + '://' +
+            config.DATABASE_USERNAME + ':' +
+            config.DATABASE_PASSWORD + '@' +
+            config.DATABASE_HOST + '/' +
+            config.DATABASE_NAME
+        )
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
+    db.init_app(app)
+
+    app.storage = Storage(config.STORE_DIR,
+                          config.TEMP_DIR,
+                          config.JOURNALIST_KEY)
+
+    app.crypto_util = CryptoUtil(
+        scrypt_params=config.SCRYPT_PARAMS,
+        scrypt_id_pepper=config.SCRYPT_ID_PEPPER,
+        scrypt_gpg_pepper=config.SCRYPT_GPG_PEPPER,
+        securedrop_root=config.SECUREDROP_ROOT,
+        word_list=config.WORD_LIST,
+        nouns_file=config.NOUNS,
+        adjectives_file=config.ADJECTIVES,
+        gpg_key_dir=config.GPG_KEY_DIR,
+    )
 
     @app.errorhandler(CSRFError)
     def handle_csrf_error(e):
@@ -42,7 +86,8 @@ def create_app(config):
     app.jinja_env.lstrip_blocks = True
     app.jinja_env.globals['version'] = version.__version__
     if hasattr(config, 'CUSTOM_HEADER_IMAGE'):
-        app.jinja_env.globals['header_image'] = config.CUSTOM_HEADER_IMAGE
+        app.jinja_env.globals['header_image'] = \
+            config.CUSTOM_HEADER_IMAGE  # type: ignore
         app.jinja_env.globals['use_custom_header_image'] = True
     else:
         app.jinja_env.globals['header_image'] = 'logo.png'
@@ -55,18 +100,13 @@ def create_app(config):
     @app.template_filter('autoversion')
     def autoversion_filter(filename):
         """Use this template filter for cache busting"""
-        if path.exists(filename[1:]):
-            timestamp = str(path.getmtime(filename[1:]))
+        absolute_filename = path.join(config.SECUREDROP_ROOT, filename[1:])
+        if path.exists(absolute_filename):
+            timestamp = str(path.getmtime(absolute_filename))
         else:
             return filename
         versioned_filename = "{0}?v={1}".format(filename, timestamp)
         return versioned_filename
-
-    @app.teardown_appcontext
-    def shutdown_session(exception=None):
-        """Automatically remove database sessions at the end of the request, or
-        when the application shuts down"""
-        db_session.remove()
 
     @app.before_request
     def setup_g():

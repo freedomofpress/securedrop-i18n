@@ -29,12 +29,7 @@ To get started editing the docs:
 
       make docs
 
-If you have the :ref:`Development VM <development_vm>` running, you should run
-``make docs`` from within the ``/vagrant`` directory inside the VM, otherwise
-the forwarded port on 8000 will collide with sphinx-autobuild process running
-on localhost.
-
-You can then can browse the documentation at http://127.0.0.1:8000/.
+You can then browse the documentation at http://127.0.0.1:8000/.
 As you make changes, the docs will automatically rebuild in the browser
 window, so you don't need to refresh the page manually.
 
@@ -70,7 +65,7 @@ To update these screenshots automatically you can run:
 
    make -C securedrop images update-user-guides
 
-This will generate screenshots for each image in the web application and copy
+This will generate screenshots for each page in the web application and copy
 them to the folder under ``docs/images/manual/screenshots`` where they will
 replace the existing screenshots. Stage for commit any screenshots you wish to
 update. If you wish to update all screenshots, simply stage for commit all

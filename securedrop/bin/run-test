@@ -1,0 +1,35 @@
+#!/bin/bash
+# shellcheck disable=SC1090
+
+set -euo pipefail
+
+source "${BASH_SOURCE%/*}/dev-deps"
+
+run_xvfb &
+run_redis &
+urandom
+run_sass --force --update
+maybe_create_config_py
+
+if [ -n "${CIRCLE_BRANCH:-}" ] ; then
+    touch tests/log/firefox.log
+    function finish {
+        cp tests/log/firefox.log /tmp/test-results/logs/
+        bash <(curl -s https://codecov.io/bash)
+    }
+    trap finish EXIT
+fi
+
+mkdir -p "/tmp/test-results/logs"
+
+export PAGE_LAYOUT_LOCALES="en_US,ar,fr_FR"
+pytest \
+  --page-layout \
+  --durations 10 \
+  --junitxml=/tmp/test-results/junit.xml \
+  --cov-report term-missing \
+  --cov-report html:/tmp/test-results/cov_html \
+  --cov-report xml:/tmp/test-results/cov.xml \
+  --cov-report annotate:/tmp/test-results/cov_annotate \
+  --cov=. \
+  "$@"

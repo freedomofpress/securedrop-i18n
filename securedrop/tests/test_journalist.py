@@ -5,18 +5,19 @@ import random
 import unittest
 import zipfile
 
-from flask import url_for, escape, session
+from flask import url_for, escape, session, current_app
 from flask_testing import TestCase
 from mock import patch
 from sqlalchemy.orm.exc import StaleDataError
 from sqlalchemy.exc import IntegrityError
 
 os.environ['SECUREDROP_ENV'] = 'test'  # noqa
-import config
-import crypto_util
-from db import (db_session, InvalidPasswordLength, Journalist, Reply, Source,
-                Submission)
-import db
+from sdconfig import SDConfig, config
+
+from db import db
+from models import (InvalidPasswordLength, Journalist, Reply, Source,
+                    Submission)
+import models
 import journalist
 import journalist_app
 import journalist_app.utils
@@ -49,10 +50,10 @@ class TestJournalistApp(TestCase):
     def tearDown(self):
         utils.env.teardown()
 
-    @patch('crypto_util.genrandomid', side_effect=['bad', VALID_PASSWORD])
+    @patch('crypto_util.CryptoUtil.genrandomid',
+           side_effect=['bad', VALID_PASSWORD])
     def test_make_password(self, mocked_pw_gen):
-        class fake_config:
-            pass
+        fake_config = SDConfig()
         assert (journalist_app.utils.make_password(fake_config) ==
                 VALID_PASSWORD)
 
@@ -65,7 +66,7 @@ class TestJournalistApp(TestCase):
         exception_class = StaleDataError
         exception_msg = 'Potentially sensitive content!'
 
-        with patch('db.db_session.commit',
+        with patch('sqlalchemy.orm.scoping.scoped_session.commit',
                    side_effect=exception_class(exception_msg)):
             self.client.post(url_for('main.reply'),
                              data={'filesystem_id': filesystem_id,
@@ -85,7 +86,8 @@ class TestJournalistApp(TestCase):
 
         exception_class = StaleDataError
 
-        with patch('db.db_session.commit', side_effect=exception_class()):
+        with patch('sqlalchemy.orm.scoping.scoped_session.commit',
+                   side_effect=exception_class()):
             self.client.post(url_for('main.reply'),
                              data={'filesystem_id': filesystem_id,
                              'message': '_'})
@@ -123,7 +125,7 @@ class TestJournalistApp(TestCase):
         self.assertRedirects(resp, url_for('main.login'))
 
     def test_login_throttle(self):
-        db.LOGIN_HARDENING = True
+        models.LOGIN_HARDENING = True
         try:
             for _ in range(Journalist._MAX_LOGIN_ATTEMPTS_PER_PERIOD):
                 resp = self.client.post(url_for('main.login'),
@@ -141,7 +143,7 @@ class TestJournalistApp(TestCase):
             self.assertIn("Please wait at least {} seconds".format(
                 Journalist._LOGIN_ATTEMPT_PERIOD), resp.data)
         finally:
-            db.LOGIN_HARDENING = False
+            models.LOGIN_HARDENING = False
 
     def test_login_invalid_credentials(self):
         resp = self.client.post(url_for('main.login'),
@@ -270,6 +272,34 @@ class TestJournalistApp(TestCase):
         # Verify journalist is no longer in the database
         self.assertEqual(Journalist.query.get(self.user.id), None)
 
+    def test_admin_cannot_delete_self(self):
+        # Verify journalist is in the database
+        self.assertNotEqual(Journalist.query.get(self.user.id), None)
+
+        self._login_admin()
+        resp = self.client.post(url_for('admin.delete_user',
+                                        user_id=self.admin.id),
+                                follow_redirects=True)
+
+        # Assert correct interface behavior
+        self.assert403(resp)
+
+        resp = self.client.get(url_for('admin.index'))
+        self.assert200(resp)
+        self.assertIn("Admin Interface", resp.data)
+        # The user can be edited and deleted
+        self.assertIn(escape("Edit user {}".format(self.user.username)),
+                      resp.data)
+        self.assertIn(
+            escape("Delete user {}".format(self.user.username)),
+            resp.data)
+        # The admin can be edited but cannot deleted
+        self.assertIn(escape("Edit user {}".format(self.admin.username)),
+                      resp.data)
+        self.assertNotIn(
+            escape("Delete user {}".format(self.admin.username)),
+            resp.data)
+
     def test_admin_deletes_invalid_user_404(self):
         self._login_admin()
         invalid_user_pk = max([user.id for user in Journalist.query.all()]) + 1
@@ -292,14 +322,16 @@ class TestJournalistApp(TestCase):
     def test_admin_edits_user_password_error_response(self):
         self._login_admin()
 
-        with patch('db.db_session.commit', side_effect=Exception()):
+        with patch('sqlalchemy.orm.scoping.scoped_session.commit',
+                   side_effect=Exception()):
             resp = self.client.post(
                 url_for('admin.new_password', user_id=self.user.id),
                 data=dict(password=VALID_PASSWORD_2),
                 follow_redirects=True)
 
+        text = resp.data.decode('utf-8')
         assert ('There was an error, and the new password might not have '
-                'been saved correctly.') in resp.data.decode('utf-8')
+                'been saved correctly.') in text, text
 
     def test_user_edits_password_success_response(self):
         self._login_user()
@@ -338,7 +370,8 @@ class TestJournalistApp(TestCase):
     def test_user_edits_password_error_reponse(self):
         self._login_user()
 
-        with patch('db.db_session.commit', side_effect=Exception()):
+        with patch('sqlalchemy.orm.scoping.scoped_session.commit',
+                   side_effect=Exception()):
             resp = self.client.post(
                 url_for('account.new_password'),
                 data=dict(current_password=self.user_pw,
@@ -474,7 +507,7 @@ class TestJournalistApp(TestCase):
             "Invalid secret format: "
             "odd-length secret. Did you mistype the secret?", "error")
 
-    @patch('db.Journalist.set_hotp_secret')
+    @patch('models.Journalist.set_hotp_secret')
     @patch('journalist.app.logger.error')
     def test_admin_resets_user_hotp_error(self,
                                           mocked_error_logger,
@@ -691,9 +724,11 @@ class TestJournalistApp(TestCase):
                                    password=VALID_PASSWORD,
                                    is_admin=None))
 
-        mocked_error_logger.assert_called_once_with(
+        log_event = mocked_error_logger.call_args[0][0]
+        self.assertIn(
             "Adding user 'username' failed: (__builtin__.NoneType) "
-            "None [SQL: 'STATEMENT'] [parameters: 'PARAMETERS']")
+            "None [SQL: 'STATEMENT'] [parameters: 'PARAMETERS']",
+            log_event)
         self.assertMessageFlashed(
             "An error occurred saving this user to the database."
             " Please inform your administrator.",
@@ -716,7 +751,7 @@ class TestJournalistApp(TestCase):
                              data=form.data,
                              follow_redirects=True)
 
-            self.assertMessageFlashed("Image updated.", "notification")
+            self.assertMessageFlashed("Image updated.", "logo-success")
         finally:
             # Restore original image to logo location for subsequent tests
             with open(logo_image_location, 'w') as logo_file:
@@ -731,7 +766,7 @@ class TestJournalistApp(TestCase):
         resp = self.client.post(url_for('admin.manage_config'),
                                 data=form.data,
                                 follow_redirects=True)
-
+        self.assertMessageFlashed("Upload images only.", "logo-error")
         self.assertIn('Upload images only.', resp.data)
 
     def test_logo_upload_with_empty_input_field_fails(self):
@@ -744,6 +779,7 @@ class TestJournalistApp(TestCase):
                                 data=form.data,
                                 follow_redirects=True)
 
+        self.assertMessageFlashed("File required.", "logo-error")
         self.assertIn('File required.', resp.data)
 
     @patch('journalist.app.logger.error')
@@ -878,7 +914,7 @@ class TestJournalistApp(TestCase):
         journalist_app.utils.delete_collection(self.source.filesystem_id)
 
         # Source should be gone
-        results = db_session.query(Source).filter(
+        results = db.session.query(Source).filter(
             Source.id == self.source.id).all()
         self.assertEqual(results, [])
 
@@ -895,10 +931,10 @@ class TestJournalistApp(TestCase):
         journalist_app.utils.delete_collection(self.source.filesystem_id)
         results = Source.query.filter(Source.id == self.source.id).all()
         self.assertEqual(results, [])
-        results = db_session.query(
+        results = db.session.query(
             Submission.source_id == self.source.id).all()
         self.assertEqual(results, [])
-        results = db_session.query(Reply.source_id == self.source.id).all()
+        results = db.session.query(Reply.source_id == self.source.id).all()
         self.assertEqual(results, [])
 
     def test_delete_source_deletes_source_key(self):
@@ -907,13 +943,13 @@ class TestJournalistApp(TestCase):
         self._delete_collection_setup()
 
         # Source key exists
-        source_key = crypto_util.getkey(self.source.filesystem_id)
+        source_key = current_app.crypto_util.getkey(self.source.filesystem_id)
         self.assertNotEqual(source_key, None)
 
         journalist_app.utils.delete_collection(self.source.filesystem_id)
 
         # Source key no longer exists
-        source_key = crypto_util.getkey(self.source.filesystem_id)
+        source_key = current_app.crypto_util.getkey(self.source.filesystem_id)
         self.assertEqual(source_key, None)
 
     def test_delete_source_deletes_docs_on_disk(self):
@@ -1219,7 +1255,7 @@ class TestJournalistApp(TestCase):
         self.assert200(resp)
 
         # Verify there are no remaining sources
-        remaining_sources = db_session.query(db.Source).all()
+        remaining_sources = db.session.query(models.Source).all()
         self.assertEqual(len(remaining_sources), 0)
 
     def test_col_process_successfully_stars_sources(self):
@@ -1278,10 +1314,7 @@ class TestJournalistLocale(TestCase):
         utils.env.teardown()
 
     def get_fake_config(self):
-        class Config:
-            def __getattr__(self, name):
-                return getattr(config, name)
-        return Config()
+        return SDConfig()
 
     # A method required by flask_testing.TestCase
     def create_app(self):
@@ -1307,6 +1340,8 @@ class TestJournalistLocale(TestCase):
 class TestJournalistLogin(unittest.TestCase):
 
     def setUp(self):
+        self.__context = journalist_app.create_app(config).app_context()
+        self.__context.push()
         utils.env.setup()
 
         # Patch the two-factor verification so it always succeeds
@@ -1316,14 +1351,10 @@ class TestJournalistLogin(unittest.TestCase):
 
     def tearDown(self):
         utils.env.teardown()
-        # TODO: figure out why this is necessary here, but unnecessary in all
-        # of the tests in `tests/test_unit_*.py`. Without this, the session
-        # continues to return values even if the underlying database is deleted
-        # (as in `shared_teardown`).
-        db_session.remove()
+        self.__context.pop()
 
-    @patch('db.Journalist._scrypt_hash')
-    @patch('db.Journalist.valid_password', return_value=True)
+    @patch('models.Journalist._scrypt_hash')
+    @patch('models.Journalist.valid_password', return_value=True)
     def test_valid_login_calls_scrypt(self,
                                       mock_scrypt_hash,
                                       mock_valid_password):
@@ -1332,7 +1363,7 @@ class TestJournalistLogin(unittest.TestCase):
             mock_scrypt_hash.called,
             "Failed to call _scrypt_hash for password w/ valid length")
 
-    @patch('db.Journalist._scrypt_hash')
+    @patch('models.Journalist._scrypt_hash')
     def test_login_with_invalid_password_doesnt_call_scrypt(self,
                                                             mock_scrypt_hash):
         invalid_pw = 'a'*(Journalist.MAX_PASSWORD_LEN + 1)

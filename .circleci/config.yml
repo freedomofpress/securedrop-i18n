@@ -7,6 +7,9 @@ jobs:
     steps:
       - run: apt-get install -y make
       - checkout
+      - run:
+          name: Rebase on-top of latest develop
+          command: ./devops/scripts/rebase-develop.sh
       - setup_remote_docker
 
       - run: TAG=${CIRCLE_SHA1} make ci-lint-image
@@ -23,6 +26,9 @@ jobs:
     steps:
       - run: apt-get install -y make
       - checkout
+      - run:
+          name: Rebase on-top of latest develop
+          command: ./devops/scripts/rebase-develop.sh
       - setup_remote_docker
 
       - restore_cache:
@@ -44,7 +50,7 @@ jobs:
             set +o pipefail
             docker images
             fromtag=$(docker images |grep securedrop-test |head -n1 |awk '{print $2}')
-            cd securedrop && TAG=${CIRCLE_SHA1} EXTRA_BUILD_ARGS="--cache-from securedrop-test:${fromtag:-latest}" make images
+            cd securedrop && DOCKER_BUILD_ARGUMENTS="--cache-from securedrop-test:${fromtag:-latest}" ./bin/dev-shell true
 
       - run:
           name: Save Docker image layer cache
@@ -60,10 +66,13 @@ jobs:
 
       - run: mkdir -p ~/test-results
 
-      - run: |
-          export TESTFILES=$(cd securedrop; circleci tests glob 'tests/test*py' 'tests/**/test*py' |circleci tests split --split-by=timings |xargs echo)
-          docker rm -f securedrop-test || true
-          cd securedrop && TAG=${CIRCLE_SHA1} EXTRA_TEST_ARGS=$(bash <(curl -s https://codecov.io/env)) make test
+      - run:
+          name: Run tests
+          command: |
+            export TESTFILES=$(cd securedrop; circleci tests glob 'tests/test*py' 'tests/**/test*py' |circleci tests split --split-by=timings |xargs echo)
+            docker rm -f securedrop-test || true
+            fromtag=$(docker images |grep securedrop-test |head -n1 |awk '{print $2}')
+            cd securedrop && DOCKER_RUN_ARGUMENTS=$(bash <(curl -s https://codecov.io/env)) DOCKER_BUILD_ARGUMENTS="--cache-from securedrop-test:${fromtag:-latest}" make test
 
       - run:
           name: Report results
@@ -77,7 +86,16 @@ jobs:
       - store_artifacts:
           path: ~/test-results
 
-  staging-test:
+  admin-tests:
+    docker:
+      - image: gcr.io/cloud-builders/docker
+    steps:
+      - run: apt-get install -y make
+      - checkout
+      - setup_remote_docker
+      - run: cd admin ; make test
+
+  staging-test-with-rebase:
     docker:
       - image: quay.io/freedomofpress/circleci-docker:latest
         environment:
@@ -97,6 +115,10 @@ jobs:
           command: ./devops/scripts/rebase-develop.sh
 
       - run:
+          name: Installation apt pre-reqs
+          command: apt-get install -y enchant
+
+      - run:
           name: Installation pre-reqs
           command: pip install -U -r securedrop/requirements/develop-requirements.txt
 
@@ -104,6 +126,10 @@ jobs:
           name: Check Python dependencies for CVEs
           command: make safety
 
+      - run:
+          name: Run static security testing on source code
+          command: make bandit
+
       - setup_remote_docker
 
       - run:
@@ -125,49 +151,11 @@ jobs:
       - store_artifacts:
           path: /root/sd/junit
 
-  staging-test-with-rebase:
-    docker:
-      - image: quay.io/freedomofpress/circleci-docker:latest
-        environment:
-          FPF_CI: true
-          CI_SD_ENV: staging
-          CI_AWS_TYPE: t2.medium
-          FPF_GRSEC: false
-          TEST_REPORTS: /root/sd
-    working_directory: ~/sd
-
-    steps:
-
-      - checkout
-
-      - run:
-          name: Installation pre-reqs
-          command: pip install -U -r ./securedrop/requirements/develop-requirements.txt
-
-      - run:
-          name: Check Python dependencies for CVEs
-          command: make safety
-
-      - setup_remote_docker
-
-      - run:
-          name: Run Debian builds
-          command: make build-debs
-
-      - run:
-          name: Provision staging servers and run tests
-          command: make ci-go
-
-      - run:
-          name: Ensure environment torn down
-          command: molecule destroy -s aws
-          when: on_fail
-
-      - store_test_results:
-          path: /root/sd/junit
+      - store_artifacts:
+          path: /root/sd/raw-test-output
 
       - store_artifacts:
-          path: /root/sd/junit
+          path: /root/sd/.tor_version
 
 workflows:
   version: 2
@@ -175,9 +163,7 @@ workflows:
     jobs:
       - lint
       - tests
-      - staging-test:
-          requires:
-            - lint
+      - admin-tests
       - staging-test-with-rebase:
           requires:
             - lint

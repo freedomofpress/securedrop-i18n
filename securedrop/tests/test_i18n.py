@@ -20,13 +20,14 @@ import argparse
 import logging
 import os
 import re
+import unittest
 
 from flask import request, session, render_template_string, render_template
 from flask_babel import gettext
 from werkzeug.datastructures import Headers
 
 os.environ['SECUREDROP_ENV'] = 'test'  # noqa
-import config
+from sdconfig import SDConfig, config
 import i18n
 import journalist_app
 import manage
@@ -36,17 +37,26 @@ import version
 import utils
 
 
-class TestI18N(object):
+class TestI18N(unittest.TestCase):
 
-    @classmethod
-    def setup_class(cls):
+    def setUp(self):
+        self.__context = journalist_app.create_app(config).app_context()
+
+        # Note: We only need the context for the setup/teardown; it interferes
+        # with the rest of the test cases.
+        self.__context.push()
         utils.env.setup()
+        self.__context.pop()
+
+    def tearDown(self):
+        # Note: We only need the context for the setup/teardown; it interferes
+        # with the rest of the test cases.
+        self.__context.push()
+        utils.env.teardown()
+        self.__context.pop()
 
     def get_fake_config(self):
-        class Config:
-            def __getattr__(self, name):
-                return getattr(config, name)
-        return Config()
+        return SDConfig()
 
     def test_get_supported_locales(self):
         locales = ['en_US', 'fr_FR']

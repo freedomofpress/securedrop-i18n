@@ -1,11 +1,10 @@
 Virtual Environments: Servers
 =============================
 
-There are three predefined virtual environments in the Vagrantfile:
+There are two predefined virtual environments in the Vagrantfile:
 
-1. :ref:`Development <development_vm>`
-2. :ref:`Staging <staging_vms>`
-3. :ref:`Production <production_vms>`
+* :ref:`Staging <staging_vms>`
+* :ref:`Production <production_vms>`
 
 This document explains the purpose of, and how to get started working with, each
 one.
@@ -20,41 +19,6 @@ one.
 
 .. note:: If you see test failures due to ``Too many levels of symbolic links``
           and you are using VirtualBox, try restarting VirtualBox.
-
-.. _development_vm:
-
-Development
------------
-
-This VM is intended for rapid development on the SecureDrop web application. It
-syncs the top level of the SecureDrop repo to the ``/vagrant`` directory on the
-VM, which means you can use your favorite editor on your host machine to edit
-the code. This machine has no security hardening or monitoring.
-
-.. tip:: This is the default VM, so you don't need to specify the
-   ``development`` machine name when running commands like ``vagrant up`` and
-   ``vagrant ssh``. Of course, you can specify the name if you want to.
-
-To get started working with the development environment:
-
-.. code:: sh
-
-   vagrant up
-   vagrant ssh
-   cd /vagrant/securedrop
-   ./manage.py run         # run development servers
-   ./manage.py reset       # resets the state of the development instance
-   ./manage.py add-admin   # create a user to use when logging in to the Journalist Interface
-   pytest -v tests/        # run the unit and functional tests
-
-SecureDrop consists of two separate web applications (the Source Interface and
-the Journalist Interface) that run concurrently. In the Development environment
-they are configured to detect code changes and automatically reload whenever a
-file is saved. They are made available on your host machine by forwarding the
-following ports:
-
-* Source Interface: `localhost:8080 <http://localhost:8080>`__
-* Journalist Interface: `localhost:8081 <http://localhost:8081>`__
 
 .. _staging_vms:
 
@@ -94,7 +58,7 @@ To rebuild the local packages for the app code: ::
 The Debian packages will be rebuilt from the current state of your
 local git repository and then installed on the staging servers.
 
-.. note:: If you are using Mac OS X and you run into errors from Ansible
+.. note:: If you are using macOS and you run into errors from Ansible
           such as ``OSError: [Errno 24] Too many open files``, you may need to
           increase the maximum number of open files. Some guides online suggest
           a procedure to do this that involves booting to recovery mode
@@ -133,8 +97,8 @@ local git repository and then installed on the staging servers.
 
             sudo chown root:wheel /Library/LaunchDaemons/limit.maxfiles.plist
 
-          This will increase the maximum open file limits system wide on Mac
-          OS X (last tested on 10.11.6).
+          This will increase the maximum open file limits system wide on macOS
+          (last tested on 10.11.6).
 
 The web interfaces and SSH are available over Tor. A copy of the the Onion URLs
 for Source and Journalist Interfaces, as well as SSH access, are written to the

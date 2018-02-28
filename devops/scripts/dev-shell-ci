@@ -1,0 +1,19 @@
+#!/bin/bash
+# shellcheck disable=SC1090
+# we ignore SC1090 because "source" is validated independently
+
+set -eu
+
+source "${BASH_SOURCE%/*}/ticker"
+
+TOPLEVEL=$(git rev-parse --show-toplevel)
+: "${TAG:=$(git rev-parse HEAD)}"
+
+cd "${TOPLEVEL}"
+
+function docker_run() {
+    docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -ti securedrop-lint:"$TAG" "$@"
+}
+
+ticker make ci-lint-image
+docker_run "$@"

@@ -16,28 +16,33 @@ path_torrc_additions = '/home/amnesia/Persistent/.securedrop/torrc_additions'
 path_torrc_backup = '/etc/tor/torrc.bak'
 path_torrc = '/etc/tor/torrc'
 path_desktop = '/home/amnesia/Desktop/'
-path_persistent_desktop = '/lib/live/mount/persistence/TailsData_unlocked/dotfiles/Desktop/'
+path_persistent_desktop = '/lib/live/mount/persistence/TailsData_unlocked/dotfiles/Desktop/'  # noqa: E501
 
 # load torrc_additions
 if os.path.isfile(path_torrc_additions):
-    torrc_additions = open(path_torrc_additions).read()
+    with open(path_torrc_additions) as f:
+        torrc_additions = f.read()
 else:
     sys.exit('Error opening {0} for reading'.format(path_torrc_additions))
 
 # load torrc
 if os.path.isfile(path_torrc_backup):
-    torrc = open(path_torrc_backup).read()
+    with open(path_torrc_backup) as f:
+        torrc = f.read()
 else:
     if os.path.isfile(path_torrc):
-        torrc = open(path_torrc).read()
+        with open(path_torrc) as f:
+            torrc = f.read()
     else:
         sys.exit('Error opening {0} for reading'.format(path_torrc))
 
     # save a backup
-    open(path_torrc_backup, 'w').write(torrc)
+    with open(path_torrc_backup, 'w') as f:
+        f.write(torrc)
 
 # append the additions
-open(path_torrc, 'w').write(torrc + torrc_additions)
+with open(path_torrc, 'w') as f:
+    f.write(torrc + torrc_additions)
 
 # reload tor
 try:
@@ -64,17 +69,22 @@ env['XDG_RUNTIME_DIR'] = '/run/user/{}'.format(amnesia_uid)
 env['XDG_DATA_DIR'] = '/usr/share/gnome:/usr/local/share/:/usr/share/'
 env['HOME'] = '/home/amnesia'
 env['LOGNAME'] = 'amnesia'
-env['DBUS_SESSION_BUS_ADDRESS'] = 'unix:path=/run/user/{}/bus'.format(amnesia_uid)
+env['DBUS_SESSION_BUS_ADDRESS'] = 'unix:path=/run/user/{}/bus'.format(
+        amnesia_uid)
 
-# remove existing shortcut, recreate symlink and change metadata attribute to trust .desktop
+# remove existing shortcut, recreate symlink and change metadata attribute
+# to trust .desktop
 for shortcut in ['source.desktop', 'journalist.desktop']:
     subprocess.call(['rm', path_desktop + shortcut], env=env)
-    subprocess.call(['ln', '-s', path_persistent_desktop + shortcut, path_desktop + shortcut], env=env)
-    subprocess.call(['gio', 'set', path_desktop + shortcut, 'metadata::trusted', 'yes'], env=env)
+    subprocess.call(['ln', '-s', path_persistent_desktop + shortcut,
+                     path_desktop + shortcut], env=env)
+    subprocess.call(['gio', 'set', path_desktop + shortcut,
+                     'metadata::trusted', 'yes'], env=env)
 
 # reacquire uid0 and notify the user
-os.setresuid(0,0,-1)
-os.setresgid(0,0,-1)
+os.setresuid(0, 0, -1)
+os.setresgid(0, 0, -1)
 subprocess.call(['tails-notify-user',
                  'SecureDrop successfully auto-configured!',
-                 'You can now access the Journalist Interface.\nIf you are an admin, you can now SSH to the servers.'])
+                 'You can now access the Journalist Interface.\n',
+                 'If you are an admin, you can now SSH to the servers.'])

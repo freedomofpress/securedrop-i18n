@@ -61,32 +61,6 @@ $(function () {
       }
     });
 
-  $("#delete-collection").submit(function () {
-    return confirm(get_string("collection-delete-confirm-string"));
-  });
-
-  $("#delete-collections").click(function () {
-    var checked = $(".panel ul#cols li :checkbox").filter(":visible").filter(function(index) {
-        return $(this).prop('checked');
-    });
-    if (checked.length > 0) {
-      return confirm(get_string("collection-multi-delete-confirm-string").supplant({ size: checked.length }));
-    }
-    // Don't submit the form if no collections are selected
-    return false;
-  });
-
-  $("#delete-selected").click(function () {
-      var checked = $(".panel ul#submissions li :checkbox").filter(function() {
-          return $(this).prop('checked')
-      });
-      if (checked.length > 0) {
-          return confirm(get_string('submission-multi-delete-confirm-string').supplant({ size: checked.length }));
-      }
-      // Don't submit the form if no submissions are selected
-      return false;
-  });
-
   $("#unread a").click(function(){
     $("#unread").html("unread: 0");
   });
@@ -115,7 +89,8 @@ $(function () {
   });
 
   // Confirm before resetting two-factor authentication on edit user page
-  $('form#reset-two-factor').submit(function(event) {
+  $('.reset-two-factor').submit(function(event) {
+      var username = $(this).attr('data-username');
       return confirm(get_string("reset-user-mfa-confirm-string").supplant({ username: username }));
   });
 
