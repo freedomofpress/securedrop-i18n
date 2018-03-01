@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-02-28 16:00+0000\n"
+"PO-Revision-Date: 2018-03-01 03:00+0000\n"
 "Last-Translator: Max Sandholm <max@sandholm.org>\n"
 "Language-Team: Finnish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/fi/>\n"
@@ -944,7 +944,7 @@ msgstr ""
 
 #: source_templates/generate.html:44 source_templates/index.html:65
 msgid "SUBMIT DOCUMENTS"
-msgstr "PALAUTA TIEDOSTOJA"
+msgstr "LÄHETÄ TIEDOSTOJA"
 
 #: source_templates/index.html:17
 msgid ""
@@ -969,25 +969,25 @@ msgstr ""
 
 #: source_templates/index.html:41
 msgid "Submit documents for the first time"
-msgstr "Palauta tiedostoja ensimmäistä kertaa"
+msgstr "Lähetä tiedostoja ensimmäistä kertaa"
 
 #: source_templates/index.html:48
 msgid "Already submitted something?"
-msgstr "Oletko jo palauttanut tiedostoja?"
+msgstr "Oletko jo lähettänyt tiedostoja?"
 
 #: source_templates/index.html:54
 msgid ""
 "If this is your first time submitting documents to journalists, start here."
 msgstr ""
-"Jos tämä on ensimmäinen kerta, kun palautat tiedostoja journalisteille, "
-"aloita tästä."
+"Jos tämä on ensimmäinen kerta kun lähetät tiedostoja journalisteille, aloita "
+"tästä."
 
 #: source_templates/index.html:58
 msgid ""
 "If you have already submitted documents in the past, log in here to check "
 "for responses."
 msgstr ""
-"Jos olet jo aiemmin palauttanut tiedostoja, kirjaudu sisään tarkastellaksesi "
+"Jos olet jo aiemmin lähettänyt tiedostoja, kirjaudu sisään tarkastellaksesi "
 "vastauksia."
 
 #: source_templates/index.html:73
@@ -1071,7 +1071,7 @@ msgid ""
 "submission into the hands of a journalist straight away. We’re sorry for the "
 "delay. Please do check back again in a week or so."
 msgstr ""
-"Nyt kun olemme varmistaneet että olet ihminen, lähetämme palautuksesi "
+"Nyt kun olemme varmistaneet että olet ihminen, lähetämme lähetyksesi "
 "journalisteillemme pikimmiten. Pahoittelemme viivästystä. Tarkista uudestaan "
 "noin viikon päästä."
 
@@ -1087,7 +1087,7 @@ msgid ""
 msgstr ""
 "Jos GPG on jo sinulle tuttu, voit vaihtoehtoisesti salata tiedostosi ja "
 "viestisi <a href=\"{url}\" class=\"text-link\">julkisella avaimellasi</a> "
-"ennen palautusta. Tiedostot salataan kun ne otetaan vastaan SecureDropilla."
+"ennen lähetystä. Tiedostot salataan kun ne otetaan vastaan SecureDropilla."
 
 #: source_templates/lookup.html:22
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
@@ -1357,7 +1357,7 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
-msgstr "Takaisin palautussivulle"
+msgstr "Takaisin lähetyssivulle"
 
 #, fuzzy
 #~ msgid "Are you sure you want to delete the {size} selected submissions?"
