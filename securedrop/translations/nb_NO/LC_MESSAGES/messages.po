@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-01-09 17:40+0000\n"
+"PO-Revision-Date: 2018-03-05 02:00+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
-"Language-Team: Norwegian Bokmål <https://weblate.securedrop.club/projects/"
-"securedrop/securedrop/nb_NO/>\n"
+"Language-Team: Norwegian Bokmål "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -92,8 +92,9 @@ msgid "Deleted user '{user}'"
 msgstr "Slettet brukeren '{user}'"
 
 #: journalist_app/admin.py:249
+#, fuzzy
 msgid "Test alert sent. Check your email."
-msgstr ""
+msgstr "Tekstvarsel sendt, sjekk e-posten din."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -167,12 +168,12 @@ msgstr[0] "Vent i minst {seconds} sekund før du forsøker å logge inn igjen."
 msgstr[1] "Vent i minst {seconds} sekunder før du forsøker å logge inn igjen."
 
 #: journalist_app/utils.py:104
-#, fuzzy
-#| msgid "Please wait for a new two-factor token before trying again."
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
-msgstr "Vent til du har fått en ny tofaktor-kode før du forsøker igjen."
+msgstr ""
+"Vent på ny tofaktor-kode fra din kodebrikke eller program før du forsøker "
+"igjen."
 
 #: journalist_app/utils.py:150
 msgid "Submission deleted."
@@ -213,7 +214,7 @@ msgstr "Ingen uleste innsendte bidrag i valgte kildeoppføringer."
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
-msgstr ""
+msgstr "Lukk"
 
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:72
@@ -283,8 +284,6 @@ msgstr "Åpne FreeOTP-appen"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
-#, fuzzy
-#| msgid "Tap the QRcode symbol at the top"
 msgid "Tap the QR code symbol at the top"
 msgstr "Trykk på QR-kode-symbolet øverst"
 
@@ -483,7 +482,7 @@ msgstr "Slett valgte"
 
 #: journalist_templates/col.html:57
 msgid "Uploaded Document"
-msgstr "Opplastet fil"
+msgstr "Opplastet dokument"
 
 #: journalist_templates/col.html:59 journalist_templates/col.html:92
 msgid "Reply"
@@ -495,16 +494,14 @@ msgstr "Melding"
 
 #: journalist_templates/col.html:71 journalist_templates/col.html:129
 #: journalist_templates/index.html:46
-#, fuzzy
-#| msgid "Instance Configuration"
 msgid "Delete Confirmation"
-msgstr "Instans-konfigurasjon"
+msgstr "Slett bekreftelse"
 
 #: journalist_templates/col.html:72
 #, fuzzy
 #| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected documents?"
-msgstr "Er du sikker på at du vil slette de {size} markerte kildeoppføringene?"
+msgstr "Er du sikker på at du vil slette de markerte dokumentene?"
 
 #: journalist_templates/col.html:87
 msgid "No documents to display."
@@ -569,8 +566,7 @@ msgstr "Varsler"
 #| msgid ""
 #| "Send a test encrypted email alert to verify OSSEC is working correctly:"
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
-msgstr ""
-"Send et kryptert testvarsel på e-post for å verifisere at OSSEC fungerer:"
+msgstr "Send en kryptert e-post for å bekrefte at OSSEC-varsler fungerer:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
@@ -756,10 +752,8 @@ msgid "Un-star"
 msgstr "Fjern stjernemerking"
 
 #: journalist_templates/index.html:47
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected collections?"
-msgstr "Er du sikker på at du vil slette de {size} markerte kildeoppføringene?"
+msgstr "Er du sikker på at du vil slette de markerte kildeoppføringene?"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
@@ -840,7 +834,7 @@ msgstr "Takk! Vi mottok meldingen din."
 
 #: source_app/main.py:155
 msgid "Thanks! We received your document."
-msgstr "Takk! Vi mottok dokumentet ditt."
+msgstr "Takk! Vi har mottatt  dokumentet ditt."
 
 #: source_app/main.py:157
 msgid "Thanks! We received your message and document."
@@ -922,9 +916,7 @@ msgstr "Velkommen"
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
-msgstr ""
-"Husk, eller skriv ned kodenavnet på et sikkert sted.<br> Dette gjør at du "
-"kan logge inn igjen for å få svar fra journalistene."
+msgstr "Husk, eller skriv ned kodenavnet på et sikkert sted."
 
 #: source_templates/generate.html:10
 msgid ""
@@ -936,14 +928,6 @@ msgstr ""
 "på det du sendte inn."
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we use none of the traditional means to track users of our "
-#| "<strong>SecureDrop</strong>\n"
-#| " service, in future visits, using this codename will be the only way we "
-#| "have to communicate with you should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"
 " service, in future visits, using this codename will be the only way we have "
@@ -951,11 +935,10 @@ msgid ""
 " questions or are interested in additional documents. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"Fordi vi ikke bruker noen som helst sporing av brukerne på vår "
-"<strong>SecureDrop</strong>-tjeneste, er dette kodenavnet den eneste måten "
-"for senere kommunikasjon om vi har spørsmål eller vil vise interesse for "
-"flere dokumenter. I motsetning til passord, er det  umulig å finne tilbake "
-"til kodenavnet om du glemmer det."
+"Fordi vi ikke sporer brukerne på vår <strong>SecureDrop</strong>-tjeneste, "
+"er dette kodenavnet den eneste måten for senere kommunikasjon om vi har "
+"spørsmål eller vil vise interesse for flere dokumenter. I motsetning til "
+"passord, er det  umulig å finne tilbake til kodenavnet om du glemmer det."
 
 #: source_templates/generate.html:44 source_templates/index.html:65
 msgid "SUBMIT DOCUMENTS"
