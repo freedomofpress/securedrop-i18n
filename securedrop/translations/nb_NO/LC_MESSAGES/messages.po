@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-03-05 02:00+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
-"Language-Team: Norwegian Bokmål <https://weblate.securedrop.club/projects/"
-"securedrop/securedrop/nb_NO/>\n"
+"PO-Revision-Date: 2018-03-06 20:02+0000\n"
+"Last-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\n"
+"Language-Team: Norwegian Bokmål "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -92,9 +92,8 @@ msgid "Deleted user '{user}'"
 msgstr "Slettet brukeren '{user}'"
 
 #: journalist_app/admin.py:249
-#, fuzzy
 msgid "Test alert sent. Please check your email."
-msgstr "Tekstvarsel sendt, sjekk e-posten din."
+msgstr "Testvarsel sendt. Sjekk e-posten din."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -498,8 +497,6 @@ msgid "Delete Confirmation"
 msgstr "Slett bekreftelse"
 
 #: journalist_templates/col.html:72
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected documents?"
 msgstr "Er du sikker på at du vil slette de markerte dokumentene?"
 
@@ -562,9 +559,6 @@ msgid "Alerts"
 msgstr "Varsler"
 
 #: journalist_templates/config.html:11
-#, fuzzy
-#| msgid ""
-#| "Send a test encrypted email alert to verify OSSEC is working correctly:"
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr "Send en kryptert e-post for å bekrefte at OSSEC-varsler fungerer:"
 
@@ -908,11 +902,6 @@ msgid "Welcome"
 msgstr "Velkommen"
 
 #: source_templates/generate.html:7
-#, fuzzy
-#| msgid ""
-#| "Please either write this codename down and keep it in a safe place, or "
-#| "memorize it.<br> This will allow you to log back in and receive replies "
-#| "from journalists."
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
@@ -945,19 +934,14 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "SEND INN DOKUMENTER"
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend turning the Security Slider to High to protect your "
-#| "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
-#| "high</a>, or ignore this warning to continue."
 msgid ""
 "<strong>We recommend turning the Security Slider to Safest to protect your "
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
 "safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Vi anbefaler at sikkerhetsnivået settes til Høyt for å sikre din "
+"<strong>Vi anbefaler at sikkerhetsnivået settes til Sikrest for å sikre din "
 "anonymitet:</strong><a id=\"disable-js\" href=\"\">Lær hvordan sette det til "
-"Høyt</a>, eller se bort fra denne advarselen for å fortsette."
+"Sikrest</a>, eller se bort fra denne advarselen for å fortsette."
 
 #: source_templates/index.html:18
 msgid ""
@@ -996,16 +980,12 @@ msgid "CHECK FOR A RESPONSE"
 msgstr "SE ETTER SVAR"
 
 #: source_templates/index.html:92
-#, fuzzy
-#| msgid ""
-#| "You appear to be using the Tor Browser. You can turn the Security Slider "
-#| "to High in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
 "Safest in 4 easy steps!"
 msgstr ""
-"Du later til å bruke Tor-nettleseren. Du kan stille inn "
-"sikkerhetsglidebryteren til Høyt i 4 enkle steg!"
+"Det ser ut som du bruker Tor-nettleseren. Du kan stille inn "
+"sikkerhetsbryteren til Sikrest i fire enkle steg!"
 
 #: source_templates/index.html:94
 msgid ""
@@ -1019,13 +999,11 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "Klikk <strong>Sikkerhetsinnstillinger…</strong>"
 
 #: source_templates/index.html:96
-#, fuzzy
-#| msgid ""
-#| "Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
 msgid ""
 "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgstr ""
-"Beveg glidebryteren til <strong>Høyt</strong>, klikk så <strong>OK</strong>"
+"Beveg glidebryteren til <strong>Sikrest</strong>, klikk så "
+"<strong>OK</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Click here</a> to refresh the page"
