@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-06 08:55+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2018-03-06 09:00+0000\n"
+"Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -172,13 +172,12 @@ msgstr[1] ""
 "Var snäll och vänta åtminstone {seconds} sekunder innan du loggar in igen."
 
 #: journalist_app/utils.py:104
-#, fuzzy
-#| msgid "Please wait for a new two-factor token before trying again."
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
 msgstr ""
-"Var snäll och vänta på en ny två-faktor nyckel innan du försöker på nytt."
+"Var snäll och vänta på en ny kod från din två-faktor nyckel eller program "
+"innan du försöker på nytt."
 
 #: journalist_app/utils.py:150
 msgid "Submission deleted."
@@ -290,8 +289,6 @@ msgstr "Öppna FreeOTP-appen"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
-#, fuzzy
-#| msgid "Tap the QRcode symbol at the top"
 msgid "Tap the QR code symbol at the top"
 msgstr "Tryck på QR-koden längst upp"
 
@@ -497,16 +494,12 @@ msgstr "Meddelande"
 
 #: journalist_templates/col.html:71 journalist_templates/col.html:129
 #: journalist_templates/index.html:46
-#, fuzzy
-#| msgid "Instance Configuration"
 msgid "Delete Confirmation"
-msgstr "Instanskonfiguration"
+msgstr "Verifiera radering"
 
 #: journalist_templates/col.html:72
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected documents?"
-msgstr "Är du säker att du vill ta bort alla de {size} markerade samlingarna?"
+msgstr "Är du säker att du vill ta bort alla markerade dokument?"
 
 #: journalist_templates/col.html:87
 msgid "No documents to display."
@@ -565,12 +558,8 @@ msgid "Alerts"
 msgstr "Larm"
 
 #: journalist_templates/config.html:11
-#, fuzzy
-#| msgid ""
-#| "Send a test encrypted email alert to verify OSSEC is working correctly:"
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
-msgstr ""
-"Skicka ett krypterat email för att bekräfta att OSSEC fungerar korrekt:"
+msgstr "Skicka ett krypterat email för att bekräfta att OSSEC fungerar korrekt:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
@@ -756,10 +745,8 @@ msgid "Un-star"
 msgstr "Ta bort stjärnmärke"
 
 #: journalist_templates/index.html:47
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected collections?"
-msgstr "Är du säker att du vill ta bort alla de {size} markerade samlingarna?"
+msgstr "Är du säker att du vill ta bort de markerade samlingarna?"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
@@ -915,18 +902,12 @@ msgid "Welcome"
 msgstr "Välkommen"
 
 #: source_templates/generate.html:7
-#, fuzzy
-#| msgid ""
-#| "Please either write this codename down and keep it in a safe place, or "
-#| "memorize it.<br> This will allow you to log back in and receive replies "
-#| "from journalists."
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
 msgstr ""
 "Vänligen skriv ner detta kodnamn och spara det på en säker plats eller "
-"memorera det. <br> Detta kommer att tillåta dig att logga tillbaka in och ta "
-"emot svar från journalister."
+"memorera det."
 
 #: source_templates/generate.html:10
 msgid ""
@@ -937,14 +918,6 @@ msgstr ""
 "journalisternas svar på det du lämnar in i nästa skärm."
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we use none of the traditional means to track users of our "
-#| "<strong>SecureDrop</strong>\n"
-#| " service, in future visits, using this codename will be the only way we "
-#| "have to communicate with you should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"
 " service, in future visits, using this codename will be the only way we have "
@@ -952,8 +925,8 @@ msgid ""
 " questions or are interested in additional documents. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"Eftersom vi inte använder några av det traditionella sätten att spåra "
-"användare av vår <strong> SecureDrop</strong>-tjänst,\n"
+"Eftersom vi inte spårar användare av vår <strong> SecureDrop</strong>-tjänst,"
+"\n"
 "vid framtida besök, kommer användningen av detta kodnamnet att vara det enda "
 "sättet vi har att kommunicera med dig ifall vi har\n"
 "frågor eller är intresserade av fler dokument. Till skillnad från lösenord, "
