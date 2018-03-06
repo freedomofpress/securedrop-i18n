@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-06 08:49+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2018-03-06 08:50+0000\n"
+"Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -93,7 +93,7 @@ msgstr "Användare '{user}' har tagits bort"
 
 #: journalist_app/admin.py:249
 msgid "Test alert sent. Check your email."
-msgstr "Test larm skickat. Kontrollera din e-post."
+msgstr "Test-larm skickat. Kontrollera din e-post."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
