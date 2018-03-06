@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-06 08:50+0000\n"
-"Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
+"PO-Revision-Date: 2018-03-06 08:55+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Swedish "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -220,7 +220,7 @@ msgstr "Inga olästa inlämningar i utvalda samlingar."
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
-msgstr ""
+msgstr "Stäng"
 
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:72
