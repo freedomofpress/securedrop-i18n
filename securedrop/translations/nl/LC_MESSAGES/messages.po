@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-01-10 08:59+0000\n"
+"PO-Revision-Date: 2018-03-06 08:03+0000\n"
 "Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
-"Language-Team: Dutch <https://weblate.securedrop.club/projects/securedrop/"
-"securedrop/nl/>\n"
+"Language-Team: Dutch "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -96,7 +96,7 @@ msgstr "Gebruiker '{user}' verwijderd"
 
 #: journalist_app/admin.py:249
 msgid "Test alert sent. Check your email."
-msgstr ""
+msgstr "Testwaarschuwing verstuurd. Controleer uw e-mail."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -174,12 +174,12 @@ msgstr[1] ""
 "Wacht minimaal {seconds} seconden voordat u opnieuw probeert in te loggen."
 
 #: journalist_app/utils.py:104
-#, fuzzy
-#| msgid "Please wait for a new two-factor token before trying again."
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
-msgstr "Wacht op een nieuw tweestapstoken alvorens opnieuw te proberen."
+msgstr ""
+"Wacht op een nieuwe code van uw tweestapstoken of applicatie alvorens "
+"opnieuw te proberen."
 
 #: journalist_app/utils.py:150
 msgid "Submission deleted."
@@ -221,7 +221,7 @@ msgstr "Geen ongelezen inzendingen in de geselecteerde collecties."
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
-msgstr ""
+msgstr "Sluiten"
 
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:72
@@ -290,8 +290,6 @@ msgstr "Open de FreeOTP app"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
-#, fuzzy
-#| msgid "Tap the QRcode symbol at the top"
 msgid "Tap the QR code symbol at the top"
 msgstr "Tik op de QR code bovenaan"
 
@@ -504,17 +502,12 @@ msgstr "Bericht"
 
 #: journalist_templates/col.html:71 journalist_templates/col.html:129
 #: journalist_templates/index.html:46
-#, fuzzy
-#| msgid "Instance Configuration"
 msgid "Delete Confirmation"
-msgstr "Instantie configureren"
+msgstr "Verwijder bevestiging"
 
 #: journalist_templates/col.html:72
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected documents?"
-msgstr ""
-"Weet u zeker dat u de {size} geselecteerde collecties wilt verwijderen?"
+msgstr "Weet u zeker dat u de geselecteerde documenten wilt verwijderen?"
 
 #: journalist_templates/col.html:87
 msgid "No documents to display."
@@ -574,13 +567,10 @@ msgid "Alerts"
 msgstr "Waarschuwingen"
 
 #: journalist_templates/config.html:11
-#, fuzzy
-#| msgid ""
-#| "Send a test encrypted email alert to verify OSSEC is working correctly:"
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr ""
-"Verstuur bij wijze van test een versleutelde waarschuwingsmail om te "
-"controleren of OSSEC correct werkt:"
+"Verstuur een versleutelde e-mail om te controleren of de waarschuwingen van "
+"OSSEC correct functioneren:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
@@ -768,11 +758,8 @@ msgid "Un-star"
 msgstr "De-markeren"
 
 #: journalist_templates/index.html:47
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected collections?"
-msgstr ""
-"Weet u zeker dat u de {size} geselecteerde collecties wilt verwijderen?"
+msgstr "Weet u zeker dat u de geselecteerde collecties wilt verwijderen?"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
@@ -926,18 +913,12 @@ msgid "Welcome"
 msgstr "Welkom"
 
 #: source_templates/generate.html:7
-#, fuzzy
-#| msgid ""
-#| "Please either write this codename down and keep it in a safe place, or "
-#| "memorize it.<br> This will allow you to log back in and receive replies "
-#| "from journalists."
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
 msgstr ""
 "Noteer deze codenaam en bewaar op een veilige plaats of leer hem uit het "
-"hoofd.<br>Hiermee kan u later opnieuw inloggen en antwoorden ontvangen van "
-"journalisten."
+"hoofd."
 
 #: source_templates/generate.html:10
 msgid ""
@@ -949,14 +930,6 @@ msgstr ""
 "inzendt."
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we use none of the traditional means to track users of our "
-#| "<strong>SecureDrop</strong>\n"
-#| " service, in future visits, using this codename will be the only way we "
-#| "have to communicate with you should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"
 " service, in future visits, using this codename will be the only way we have "
@@ -964,11 +937,11 @@ msgid ""
 " questions or are interested in additional documents. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"Omdat we geen van de traditionele manieren gebruiken om gebruikers van onze "
-"<strong>SecureDrop</strong>-service te traceren, is het gebruik van deze "
-"codenaam de enige manier die we hebben om met u te communiceren mochten we "
-"vragen hebben of geïnteresseerd zijn in extra documenten. In tegenstelling "
-"tot wachtwoorden kunnen verloren codenamen niet teruggehaald worden."
+"Omdat we gebruikers van onze <strong>SecureDrop</strong>-service niet "
+"traceren, is het gebruik van deze codenaam de enige manier die we hebben om "
+"met u te communiceren mochten we vragen hebben of geïnteresseerd zijn in "
+"extra documenten. In tegenstelling tot wachtwoorden kunnen verloren "
+"codenamen niet teruggehaald worden."
 
 #: source_templates/generate.html:44 source_templates/index.html:65
 msgid "SUBMIT DOCUMENTS"
