@@ -9,8 +9,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2018-03-06 09:00+0000\n"
 "Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
-"Language-Team: Swedish "
-"<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
+"Language-Team: Swedish <https://weblate.securedrop.club/projects/securedrop/"
+"securedrop/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -92,7 +92,9 @@ msgid "Deleted user '{user}'"
 msgstr "Användare '{user}' har tagits bort"
 
 #: journalist_app/admin.py:249
-msgid "Test alert sent. Check your email."
+#, fuzzy
+#| msgid "Test alert sent. Check your email."
+msgid "Test alert sent. Please check your email."
 msgstr "Test-larm skickat. Kontrollera din e-post."
 
 #: journalist_app/col.py:45
@@ -559,7 +561,8 @@ msgstr "Larm"
 
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
-msgstr "Skicka ett krypterat email för att bekräfta att OSSEC fungerar korrekt:"
+msgstr ""
+"Skicka ett krypterat email för att bekräfta att OSSEC fungerar korrekt:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
@@ -925,8 +928,8 @@ msgid ""
 " questions or are interested in additional documents. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"Eftersom vi inte spårar användare av vår <strong> SecureDrop</strong>-tjänst,"
-"\n"
+"Eftersom vi inte spårar användare av vår <strong> SecureDrop</strong>-"
+"tjänst,\n"
 "vid framtida besök, kommer användningen av detta kodnamnet att vara det enda "
 "sättet vi har att kommunicera med dig ifall vi har\n"
 "frågor eller är intresserade av fler dokument. Till skillnad från lösenord, "
@@ -937,10 +940,15 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "LÄMNA IN DOKUMENT"
 
 #: source_templates/index.html:17
+#, fuzzy
+#| msgid ""
+#| "<strong>We recommend turning the Security Slider to High to protect your "
+#| "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
+#| "high</a>, or ignore this warning to continue."
 msgid ""
-"<strong>We recommend turning the Security Slider to High to protect your "
+"<strong>We recommend turning the Security Slider to Safest to protect your "
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
-"high</a>, or ignore this warning to continue."
+"safest</a>, or ignore this warning to continue."
 msgstr ""
 "<strong>Vi rekommenderat att du ställer Security Slider till High för att "
 "skydda din anonymitet: </strong>  <a id=\"disable-js\" href=\"\"> Lär dig "
@@ -984,9 +992,13 @@ msgid "CHECK FOR A RESPONSE"
 msgstr "TITTA EFTER SVAR"
 
 #: source_templates/index.html:92
+#, fuzzy
+#| msgid ""
+#| "You appear to be using the Tor Browser. You can turn the Security Slider "
+#| "to High in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
-"High in 4 easy steps!"
+"Safest in 4 easy steps!"
 msgstr ""
 "Det ser ut som att du använder Tor Browser. Du kan ändra din Security Slider "
 "till High i fyra enkla steg!"
@@ -1003,8 +1015,11 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "Klicka på <strong>Security Settings...</strong>"
 
 #: source_templates/index.html:96
+#, fuzzy
+#| msgid ""
+#| "Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
 msgid ""
-"Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
+"Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgstr ""
 "Ändra Slider till <strong> High</strong>, och välj sedan<strong> Ok</strong>"
 

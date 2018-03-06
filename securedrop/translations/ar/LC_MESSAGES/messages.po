@@ -93,7 +93,7 @@ msgid "Deleted user '{user}'"
 msgstr "تم حذف حساب المستخدم '{user}'"
 
 #: journalist_app/admin.py:249
-msgid "Test alert sent. Check your email."
+msgid "Test alert sent. Please check your email."
 msgstr ""
 
 #: journalist_app/col.py:45
@@ -967,10 +967,15 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "أودع مستندات"
 
 #: source_templates/index.html:17
+#, fuzzy
+#| msgid ""
+#| "<strong>We recommend turning the Security Slider to High to protect your "
+#| "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
+#| "high</a>, or ignore this warning to continue."
 msgid ""
-"<strong>We recommend turning the Security Slider to High to protect your "
+"<strong>We recommend turning the Security Slider to Safest to protect your "
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
-"high</a>, or ignore this warning to continue."
+"safest</a>, or ignore this warning to continue."
 msgstr ""
 "<strong>نوصي بتحريك مؤشر درجة الأمن في متصفّح تور إلى أقصى درجة  لحماية "
 "مجهوليتك </strong> <a id=\"disable-js\" href=\"\">طالع عن كيفية ضبط المتصفّح "
@@ -1011,9 +1016,13 @@ msgid "CHECK FOR A RESPONSE"
 msgstr "تَفحَّص إنْ وصلك رَدّ منّا"
 
 #: source_templates/index.html:92
+#, fuzzy
+#| msgid ""
+#| "You appear to be using the Tor Browser. You can turn the Security Slider "
+#| "to High in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
-"High in 4 easy steps!"
+"Safest in 4 easy steps!"
 msgstr ""
 "يبدو أنّك تستخدم متصفح تور. يمكنك ضبط مؤشر الأمن إلى الحد الأقصى في أربع "
 "خطوات سهلة!"
@@ -1028,8 +1037,11 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "انقر على <strong>إعدادات الحماية...</strong>"
 
 #: source_templates/index.html:96
+#, fuzzy
+#| msgid ""
+#| "Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
 msgid ""
-"Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
+"Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgstr "حرك الشريط إلى <strong>عالٍ</strong>، ثم انقر على <strong>Ok</strong>"
 
 #: source_templates/index.html:97

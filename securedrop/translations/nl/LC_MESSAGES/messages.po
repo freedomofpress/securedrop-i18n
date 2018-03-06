@@ -10,8 +10,8 @@ msgstr ""
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2018-03-06 08:03+0000\n"
 "Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
-"Language-Team: Dutch "
-"<https://weblate.securedrop.club/projects/securedrop/securedrop/nl/>\n"
+"Language-Team: Dutch <https://weblate.securedrop.club/projects/securedrop/"
+"securedrop/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -95,7 +95,9 @@ msgid "Deleted user '{user}'"
 msgstr "Gebruiker '{user}' verwijderd"
 
 #: journalist_app/admin.py:249
-msgid "Test alert sent. Check your email."
+#, fuzzy
+#| msgid "Test alert sent. Check your email."
+msgid "Test alert sent. Please check your email."
 msgstr "Testwaarschuwing verstuurd. Controleer uw e-mail."
 
 #: journalist_app/col.py:45
@@ -948,10 +950,15 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "DOCUMENTEN INZENDEN"
 
 #: source_templates/index.html:17
+#, fuzzy
+#| msgid ""
+#| "<strong>We recommend turning the Security Slider to High to protect your "
+#| "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
+#| "high</a>, or ignore this warning to continue."
 msgid ""
-"<strong>We recommend turning the Security Slider to High to protect your "
+"<strong>We recommend turning the Security Slider to Safest to protect your "
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
-"high</a>, or ignore this warning to continue."
+"safest</a>, or ignore this warning to continue."
 msgstr ""
 "<strong>Wij adviseren om de Security Slider op Hoog te zetten om uw "
 "anonimiteit te beschermen:</strong> <a id=\"disable-js\" href=\"\">Lees hier "
@@ -995,9 +1002,13 @@ msgid "CHECK FOR A RESPONSE"
 msgstr "CHECK OF U ANTWOORD HEEFT"
 
 #: source_templates/index.html:92
+#, fuzzy
+#| msgid ""
+#| "You appear to be using the Tor Browser. You can turn the Security Slider "
+#| "to High in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
-"High in 4 easy steps!"
+"Safest in 4 easy steps!"
 msgstr ""
 "Het lijkt erop dat u de Tor Browser gebruikt. U kan de Security Slider op "
 "Hoog zetten in 4 simpele stappen!"
@@ -1014,8 +1025,11 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "Klik op <strong>Veiligheidsinstellingen...</strong>"
 
 #: source_templates/index.html:96
+#, fuzzy
+#| msgid ""
+#| "Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
 msgid ""
-"Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
+"Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgstr ""
 "Beweeg de Schuif naar <strong>Hoog</strong> en klik vervolgens op "
 "<strong>Ok</strong>"

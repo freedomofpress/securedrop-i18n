@@ -86,7 +86,7 @@ msgid "Deleted user '{user}'"
 msgstr "删除了用户\"{user}\""
 
 #: journalist_app/admin.py:249
-msgid "Test alert sent. Check your email."
+msgid "Test alert sent. Please check your email."
 msgstr ""
 
 #: journalist_app/col.py:45
@@ -902,10 +902,15 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "提交文件"
 
 #: source_templates/index.html:17
+#, fuzzy
+#| msgid ""
+#| "<strong>We recommend turning the Security Slider to High to protect your "
+#| "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
+#| "high</a>, or ignore this warning to continue."
 msgid ""
-"<strong>We recommend turning the Security Slider to High to protect your "
+"<strong>We recommend turning the Security Slider to Safest to protect your "
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
-"high</a>, or ignore this warning to continue."
+"safest</a>, or ignore this warning to continue."
 msgstr ""
 "<strong>我們建議將安全條滑動到高保護程度，以保護你的匿名性：</strong> <a id="
 "\"disable-js\" href=\"\">學習如何將此設置為高保護程度</a>，或者忽略此項警告，"
@@ -945,9 +950,13 @@ msgid "CHECK FOR A RESPONSE"
 msgstr "檢查回應"
 
 #: source_templates/index.html:92
+#, fuzzy
+#| msgid ""
+#| "You appear to be using the Tor Browser. You can turn the Security Slider "
+#| "to High in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
-"High in 4 easy steps!"
+"Safest in 4 easy steps!"
 msgstr ""
 "你似乎正在使用 Tor 瀏覽器。你可以用 4 個簡單步驟把安全控制滑動到高保護程度！"
 
@@ -961,8 +970,11 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "點擊 <strong>安全性設置...</strong>"
 
 #: source_templates/index.html:96
+#, fuzzy
+#| msgid ""
+#| "Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
 msgid ""
-"Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
+"Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgstr "將安全條滑動到<strong>高</strong>，然後點擊 <strong>Ok</strong>"
 
 #: source_templates/index.html:97

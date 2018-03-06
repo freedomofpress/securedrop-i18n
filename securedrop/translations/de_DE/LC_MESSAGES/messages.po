@@ -93,7 +93,7 @@ msgid "Deleted user '{user}'"
 msgstr "Benutzer '{user}' wurde gelöscht"
 
 #: journalist_app/admin.py:249
-msgid "Test alert sent. Check your email."
+msgid "Test alert sent. Please check your email."
 msgstr ""
 
 #: journalist_app/col.py:45
@@ -991,10 +991,15 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "DOKUMENTE VERSENDEN"
 
 #: source_templates/index.html:17
+#, fuzzy
+#| msgid ""
+#| "<strong>We recommend turning the Security Slider to High to protect your "
+#| "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
+#| "high</a>, or ignore this warning to continue."
 msgid ""
-"<strong>We recommend turning the Security Slider to High to protect your "
+"<strong>We recommend turning the Security Slider to Safest to protect your "
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
-"high</a>, or ignore this warning to continue."
+"safest</a>, or ignore this warning to continue."
 msgstr ""
 "<strong>Wir empfehlen, die Sicherheitseinstellungen auf 'Hoch' zu stellen, "
 "um Ihre Anonymität zu schützen:</strong><a id=\"disable-js\" href="
@@ -1040,9 +1045,13 @@ msgid "CHECK FOR A RESPONSE"
 msgstr "NACH EINER ANTWORT SCHAUEN"
 
 #: source_templates/index.html:92
+#, fuzzy
+#| msgid ""
+#| "You appear to be using the Tor Browser. You can turn the Security Slider "
+#| "to High in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
-"High in 4 easy steps!"
+"Safest in 4 easy steps!"
 msgstr ""
 "Sie scheinen den Tor-Browser zu verwenden. In 4 einfachen Schritten können "
 "Sie Ihre Sicherheitseinstellungen auf 'Hoch' stellen!"
@@ -1059,8 +1068,11 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "Klicken Sie auf <strong>Sicherheitseinstellungen...</strong>"
 
 #: source_templates/index.html:96
+#, fuzzy
+#| msgid ""
+#| "Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
 msgid ""
-"Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
+"Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgstr ""
 "Stellen Sie den Schieber auf <strong>'Hoch'</strong>, klicken Sie dann "
 "<strong>Ok</strong>"

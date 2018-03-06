@@ -10,8 +10,8 @@ msgstr ""
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2018-03-05 02:00+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
-"Language-Team: Norwegian Bokmål "
-"<https://weblate.securedrop.club/projects/securedrop/securedrop/nb_NO/>\n"
+"Language-Team: Norwegian Bokmål <https://weblate.securedrop.club/projects/"
+"securedrop/securedrop/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -93,7 +93,7 @@ msgstr "Slettet brukeren '{user}'"
 
 #: journalist_app/admin.py:249
 #, fuzzy
-msgid "Test alert sent. Check your email."
+msgid "Test alert sent. Please check your email."
 msgstr "Tekstvarsel sendt, sjekk e-posten din."
 
 #: journalist_app/col.py:45
@@ -945,10 +945,15 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "SEND INN DOKUMENTER"
 
 #: source_templates/index.html:17
+#, fuzzy
+#| msgid ""
+#| "<strong>We recommend turning the Security Slider to High to protect your "
+#| "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
+#| "high</a>, or ignore this warning to continue."
 msgid ""
-"<strong>We recommend turning the Security Slider to High to protect your "
+"<strong>We recommend turning the Security Slider to Safest to protect your "
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
-"high</a>, or ignore this warning to continue."
+"safest</a>, or ignore this warning to continue."
 msgstr ""
 "<strong>Vi anbefaler at sikkerhetsnivået settes til Høyt for å sikre din "
 "anonymitet:</strong><a id=\"disable-js\" href=\"\">Lær hvordan sette det til "
@@ -991,9 +996,13 @@ msgid "CHECK FOR A RESPONSE"
 msgstr "SE ETTER SVAR"
 
 #: source_templates/index.html:92
+#, fuzzy
+#| msgid ""
+#| "You appear to be using the Tor Browser. You can turn the Security Slider "
+#| "to High in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
-"High in 4 easy steps!"
+"Safest in 4 easy steps!"
 msgstr ""
 "Du later til å bruke Tor-nettleseren. Du kan stille inn "
 "sikkerhetsglidebryteren til Høyt i 4 enkle steg!"
@@ -1010,8 +1019,11 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "Klikk <strong>Sikkerhetsinnstillinger…</strong>"
 
 #: source_templates/index.html:96
+#, fuzzy
+#| msgid ""
+#| "Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
 msgid ""
-"Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
+"Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgstr ""
 "Beveg glidebryteren til <strong>Høyt</strong>, klikk så <strong>OK</strong>"
 

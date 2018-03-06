@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SecureDrop 0.5.2\n"
+"Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -82,7 +82,7 @@ msgid "Deleted user '{user}'"
 msgstr ""
 
 #: journalist_app/admin.py:249
-msgid "Test alert sent. Check your email."
+msgid "Test alert sent. Please check your email."
 msgstr ""
 
 #: journalist_app/col.py:45
@@ -851,9 +851,9 @@ msgstr ""
 
 #: source_templates/index.html:17
 msgid ""
-"<strong>We recommend turning the Security Slider to High to protect your "
-"anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to"
-" high</a>, or ignore this warning to continue."
+"<strong>We recommend turning the Security Slider to Safest to protect "
+"your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set "
+"it to safest</a>, or ignore this warning to continue."
 msgstr ""
 
 #: source_templates/index.html:18
@@ -890,7 +890,7 @@ msgstr ""
 #: source_templates/index.html:92
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider "
-"to High in 4 easy steps!"
+"to Safest in 4 easy steps!"
 msgstr ""
 
 #: source_templates/index.html:94
@@ -904,7 +904,7 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr ""
 
 #: source_templates/index.html:96
-msgid "Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
+msgid "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgstr ""
 
 #: source_templates/index.html:97

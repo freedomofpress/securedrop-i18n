@@ -99,7 +99,7 @@ msgid "Deleted user '{user}'"
 msgstr "Utente \"{user}\" eliminato"
 
 #: journalist_app/admin.py:249
-msgid "Test alert sent. Check your email."
+msgid "Test alert sent. Please check your email."
 msgstr ""
 
 #: journalist_app/col.py:45
@@ -984,10 +984,15 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "INVIA DOCUMENTI"
 
 #: source_templates/index.html:17
+#, fuzzy
+#| msgid ""
+#| "<strong>We recommend turning the Security Slider to High to protect your "
+#| "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
+#| "high</a>, or ignore this warning to continue."
 msgid ""
-"<strong>We recommend turning the Security Slider to High to protect your "
+"<strong>We recommend turning the Security Slider to Safest to protect your "
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
-"high</a>, or ignore this warning to continue."
+"safest</a>, or ignore this warning to continue."
 msgstr ""
 "<strong>Raccomandiamo di spostare il Tab di sicurezza su Alto per proteggere "
 "il tuo anonimato:</strong><a id=\"disable-js\" href=\"\">Scopri come "
@@ -1030,9 +1035,13 @@ msgid "CHECK FOR A RESPONSE"
 msgstr "CONTROLLA RIPOSTE"
 
 #: source_templates/index.html:92
+#, fuzzy
+#| msgid ""
+#| "You appear to be using the Tor Browser. You can turn the Security Slider "
+#| "to High in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
-"High in 4 easy steps!"
+"Safest in 4 easy steps!"
 msgstr ""
 "Sembra che tu stia usando il browser Tor. Puoi spostare il Tab di Sicurezza "
 "su Alto in 4 semplici passi!"
@@ -1049,8 +1058,11 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "Fare clic su <strong>Impostazioni di Sicurezza...</strong>"
 
 #: source_templates/index.html:96
+#, fuzzy
+#| msgid ""
+#| "Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
 msgid ""
-"Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
+"Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgstr ""
 "Sposta il Tab di Sicurezza su <strong>Alto</strong>, poi fai clic su "
 "<strong>OK</strong>"

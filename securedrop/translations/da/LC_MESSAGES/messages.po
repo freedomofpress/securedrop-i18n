@@ -86,7 +86,7 @@ msgid "Deleted user '{user}'"
 msgstr ""
 
 #: journalist_app/admin.py:249
-msgid "Test alert sent. Check your email."
+msgid "Test alert sent. Please check your email."
 msgstr ""
 
 #: journalist_app/col.py:45
@@ -855,9 +855,9 @@ msgstr ""
 
 #: source_templates/index.html:17
 msgid ""
-"<strong>We recommend turning the Security Slider to High to protect your "
+"<strong>We recommend turning the Security Slider to Safest to protect your "
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
-"high</a>, or ignore this warning to continue."
+"safest</a>, or ignore this warning to continue."
 msgstr ""
 
 #: source_templates/index.html:18
@@ -893,7 +893,7 @@ msgstr ""
 #: source_templates/index.html:92
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
-"High in 4 easy steps!"
+"Safest in 4 easy steps!"
 msgstr ""
 
 #: source_templates/index.html:94
@@ -907,7 +907,7 @@ msgstr ""
 
 #: source_templates/index.html:96
 msgid ""
-"Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
+"Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgstr ""
 
 #: source_templates/index.html:97
