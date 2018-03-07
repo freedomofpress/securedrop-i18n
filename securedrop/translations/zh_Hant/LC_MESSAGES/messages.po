@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-01-11 09:00+0000\n"
+"PO-Revision-Date: 2018-03-07 15:00+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
-"Language-Team: Chinese (Traditional) <https://weblate.securedrop.club/"
-"projects/securedrop/securedrop/zh_Hant/>\n"
+"Language-Team: Chinese (Traditional) "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -87,7 +87,7 @@ msgstr "删除了用户\"{user}\""
 
 #: journalist_app/admin.py:249
 msgid "Test alert sent. Please check your email."
-msgstr ""
+msgstr "已送出測試警報，請檢查電郵信箱。"
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -165,7 +165,7 @@ msgstr[0] "請等待至少 {seconds} 秒後再次登錄。"
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
-msgstr "請等待産生新的雙因素認證碼後再重試一遍。"
+msgstr "請等待産生新的雙因素認證碼或新的應用認證碼後再重試一遍。"
 
 #: journalist_app/utils.py:150
 msgid "Submission deleted."
@@ -200,7 +200,7 @@ msgstr "在所選擇的集件中，並無未讀的提交資訊。"
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
-msgstr ""
+msgstr "關閉"
 
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:72
@@ -269,7 +269,7 @@ msgstr "開啟 FreeOTP 應用"
 #, fuzzy
 #| msgid "Tap the QRcode symbol at the top"
 msgid "Tap the QR code symbol at the top"
-msgstr "在上方輕輕點擊 QRcode 符號"
+msgstr "在上方輕輕點擊二維碼符號"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -471,13 +471,13 @@ msgstr "訊息"
 #, fuzzy
 #| msgid "Instance Configuration"
 msgid "Delete Confirmation"
-msgstr "虛擬器設定"
+msgstr "刪除確認動作"
 
 #: journalist_templates/col.html:72
 #, fuzzy
 #| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected documents?"
-msgstr "確認要刪除所挑選 {size} 大小的集件？"
+msgstr "確認要刪除所挑選文件？"
 
 #: journalist_templates/col.html:87
 msgid "No documents to display."
@@ -536,7 +536,7 @@ msgstr "警示"
 #| msgid ""
 #| "Send a test encrypted email alert to verify OSSEC is working correctly:"
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
-msgstr "傳送一則測試的加密電郵警報來查驗  OSSEC 是否正確執行:"
+msgstr "傳送一則加密電郵來查驗  OSSEC 是否正確執行:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
@@ -711,7 +711,7 @@ msgstr "未標星"
 #, fuzzy
 #| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected collections?"
-msgstr "確認要刪除所挑選 {size} 大小的集件？"
+msgstr "確認要刪除所挑選的集件？"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
@@ -865,9 +865,7 @@ msgstr "歡迎"
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
-msgstr ""
-"請抄下代號並妥善保管，或牢牢記住它。<br> 之後要登錄與讀取記者的回應時，會用得"
-"到此代號。"
+msgstr "請抄下代號並妥善保管，或牢牢記住它。"
 
 #: source_templates/generate.html:10
 msgid ""
@@ -891,9 +889,8 @@ msgid ""
 " questions or are interested in additional documents. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"因為我們不用傳統方式追蹤 <strong>SecureDrop</strong> 的使用者。你再次訪問須提"
-"供此代號登入，也是將來我們若有疑問或需要更多文件時要求，和你溝通的唯一管"
-"道。\n"
+"因為我們不會追蹤 <strong>SecureDrop</strong> "
+"的使用者。你再次訪問須提供此代號登入，也是將來我們若有疑問或需要更多文件時要求，和你溝通的唯一管道。\n"
 "\n"
 "代號和密碼不同，一旦遺失便無法再恢復獲取。"
 
@@ -912,9 +909,8 @@ msgid ""
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
 "safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>我們建議將安全條滑動到高保護程度，以保護你的匿名性：</strong> <a id="
-"\"disable-js\" href=\"\">學習如何將此設置為高保護程度</a>，或者忽略此項警告，"
-"繼續操作。"
+"<strong>我們建議將安全條滑動到最安全層級，以保護你的匿名性：</strong> <a id=\"disable-js\" href=\"\""
+">學習如何將此設置為最安全層級保護</a>，或者忽略此項警告，繼續操作。"
 
 #: source_templates/index.html:18
 msgid ""
@@ -957,8 +953,7 @@ msgstr "檢查回應"
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
 "Safest in 4 easy steps!"
-msgstr ""
-"你似乎正在使用 Tor 瀏覽器。你可以用 4 個簡單步驟把安全控制滑動到高保護程度！"
+msgstr "你似乎正在使用 Tor 瀏覽器。有 4 個簡單步驟可將安全控制滑動到最安全層級！"
 
 #: source_templates/index.html:94
 msgid ""
@@ -975,7 +970,7 @@ msgstr "點擊 <strong>安全性設置...</strong>"
 #| "Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
 msgid ""
 "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
-msgstr "將安全條滑動到<strong>高</strong>，然後點擊 <strong>Ok</strong>"
+msgstr "將安全條滑動到<strong>最安全</strong>，然後點擊 <strong>確認</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Click here</a> to refresh the page"
