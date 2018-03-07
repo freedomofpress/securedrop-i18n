@@ -11,10 +11,10 @@ msgstr ""
 "Project-Id-Version: SecureDrop\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-01-13 10:00+0000\n"
+"PO-Revision-Date: 2018-03-07 18:00+0000\n"
 "Last-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\n"
-"Language-Team: Italian <https://weblate.securedrop.club/projects/securedrop/"
-"securedrop/it/>\n"
+"Language-Team: Italian "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/it/>\n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -100,7 +100,7 @@ msgstr "Utente \"{user}\" eliminato"
 
 #: journalist_app/admin.py:249
 msgid "Test alert sent. Please check your email."
-msgstr ""
+msgstr "Avviso di prova inviato. Controllare la propria casella email."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -177,12 +177,12 @@ msgstr[0] "Attendi almeno {seconds} secondo prima di collegarti nuovamente."
 msgstr[1] "Attendi almeno {seconds} secondi prima di collegarti nuovamente."
 
 #: journalist_app/utils.py:104
-#, fuzzy
-#| msgid "Please wait for a new two-factor token before trying again."
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
-msgstr "Attendere un nuovo token a due fattori prima di tentare nuovamente."
+msgstr ""
+"Attendere un nuovo codice dal token o dall'applicazione a due fattori prima "
+"di tentare nuovamente."
 
 #: journalist_app/utils.py:150
 msgid "Submission deleted."
@@ -224,7 +224,7 @@ msgstr "Non ci sono invii non letti negli archivi selezionati."
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
-msgstr ""
+msgstr "Chiudi"
 
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:72
@@ -294,8 +294,6 @@ msgstr "Apri l'applicazione FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
-#, fuzzy
-#| msgid "Tap the QRcode symbol at the top"
 msgid "Tap the QR code symbol at the top"
 msgstr "Tocca il simbolo del codice QR in alto"
 
@@ -775,10 +773,8 @@ msgid "Un-star"
 msgstr "Rimuovi dai preferiti"
 
 #: journalist_templates/index.html:47
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected collections?"
-msgstr "Archivi selezionati {size}. Eliminarli veramente?"
+msgstr "Eliminare veramente gli archivi selezionati?"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
@@ -934,18 +930,11 @@ msgid "Welcome"
 msgstr "Benvenuti"
 
 #: source_templates/generate.html:7
-#, fuzzy
-#| msgid ""
-#| "Please either write this codename down and keep it in a safe place, or "
-#| "memorize it.<br> This will allow you to log back in and receive replies "
-#| "from journalists."
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
 msgstr ""
 "Trascrivi questo nome in codice e tienilo in un posto sicuro, o memorizzalo."
-"<br> Questo ti permetterà di eseguire nuovamente l'accesso e ricevere le "
-"risposte dai giornalisti."
 
 #: source_templates/generate.html:10
 msgid ""
