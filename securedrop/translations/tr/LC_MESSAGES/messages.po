@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-01-11 21:34+0000\n"
-"Last-Translator: T. E. Kalaycı <tekrei@gmail.com>\n"
-"Language-Team: Turkish <https://weblate.securedrop.club/projects/securedrop/"
-"securedrop/tr/>\n"
+"PO-Revision-Date: 2018-03-07 19:36+0000\n"
+"Last-Translator: Volkan <volkangezer@gmail.com>\n"
+"Language-Team: Turkish "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -92,7 +92,7 @@ msgstr "'{user}' kullanıcısı silindi"
 
 #: journalist_app/admin.py:249
 msgid "Test alert sent. Please check your email."
-msgstr ""
+msgstr "Test uyarısı gönderildi. Lütfen e-postanızı denetleyin."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -170,14 +170,12 @@ msgstr[0] "Lütfen tekrar giriş yapmadan önce {seconds} saniye bekleyin."
 msgstr[1] "Lütfen tekrar giriş yapmadan önce {seconds} saniye bekleyin."
 
 #: journalist_app/utils.py:104
-#, fuzzy
-#| msgid "Please wait for a new two-factor token before trying again."
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
 msgstr ""
-"Yeniden denemeden önce lütfen yeni bir iki aşamalı doğrulama kodunun "
-"gelmesini bekleyin."
+"Yeniden denemeden önce lütfen yeni bir iki aşamalı doğrulama kodundan veya "
+"uygulamadan kodun gelmesini bekleyin."
 
 #: journalist_app/utils.py:150
 msgid "Submission deleted."
@@ -219,7 +217,7 @@ msgstr "Seçilen derlemelerde okunmamış gönderi yok."
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
-msgstr ""
+msgstr "Kapat"
 
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:72
@@ -289,10 +287,8 @@ msgstr "FreeOTP uygulamasını açın"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
-#, fuzzy
-#| msgid "Tap the QRcode symbol at the top"
 msgid "Tap the QR code symbol at the top"
-msgstr "Yukarıdaki QRCode simgesine dokunun"
+msgstr "Yukarıdaki QR kodu simgesine dokunun"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -500,16 +496,12 @@ msgstr "İleti"
 
 #: journalist_templates/col.html:71 journalist_templates/col.html:129
 #: journalist_templates/index.html:46
-#, fuzzy
-#| msgid "Instance Configuration"
 msgid "Delete Confirmation"
-msgstr "Örnek Yapılandırması"
+msgstr "Silme Onayı"
 
 #: journalist_templates/col.html:72
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected documents?"
-msgstr "Bu {size} seçili derlemeyi silmek istediğinize emin misiniz?"
+msgstr "Seçili belgeleri silmek istediğinize emin misiniz?"
 
 #: journalist_templates/col.html:87
 msgid "No documents to display."
@@ -567,9 +559,6 @@ msgid "Alerts"
 msgstr "Uyarılar"
 
 #: journalist_templates/config.html:11
-#, fuzzy
-#| msgid ""
-#| "Send a test encrypted email alert to verify OSSEC is working correctly:"
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr ""
 "OSSEC'in düzgün bir şekilde çalıştığını doğrulamak için bir şifreli uyarı e-"
@@ -763,10 +752,8 @@ msgid "Un-star"
 msgstr "İşaretini Kaldır"
 
 #: journalist_templates/index.html:47
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected collections?"
-msgstr "Bu {size} seçili derlemeyi silmek istediğinize emin misiniz?"
+msgstr "Seçili derlemeleri silmek istediğinize emin misiniz?"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
@@ -922,18 +909,12 @@ msgid "Welcome"
 msgstr "Hoş Geldiniz"
 
 #: source_templates/generate.html:7
-#, fuzzy
-#| msgid ""
-#| "Please either write this codename down and keep it in a safe place, or "
-#| "memorize it.<br> This will allow you to log back in and receive replies "
-#| "from journalists."
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
 msgstr ""
 "Lütfen bu kod adını bir yere yazın ve güvenli bir şekilde saklayın veya "
-"ezberleyin. <br> Bu kod adı tekrar giriş yapmanızı ve gazetecilerden yanıt "
-"almanızı sağlayacaktır."
+"ezberleyin."
 
 #: source_templates/generate.html:10
 msgid ""
@@ -945,14 +926,6 @@ msgstr ""
 "kullanacaksınız."
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we use none of the traditional means to track users of our "
-#| "<strong>SecureDrop</strong>\n"
-#| " service, in future visits, using this codename will be the only way we "
-#| "have to communicate with you should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"
 " service, in future visits, using this codename will be the only way we have "
@@ -960,8 +933,7 @@ msgid ""
 " questions or are interested in additional documents. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"<strong>SecureDrop</strong> hizmeti kullanıcıları izlemek için geleneksel "
-"yöntemleri kullanmıyor, bu nedenle\n"
+"<strong>SecureDrop</strong> hizmeti kullanıcılarımızı izlemediğimiz için\n"
 "sizinle iletişim kurabilmemiz, soru sorabilmemiz veya ek belge ihtiyaçlarını "
 "bildirebilmemiz için sonraki ziyaretlerinizde\n"
 "bu kod adını kullanmanız tek yoldur. Parolaların aksine kod adı "
@@ -972,19 +944,14 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "BELGE GÖNDER"
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend turning the Security Slider to High to protect your "
-#| "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
-#| "high</a>, or ignore this warning to continue."
 msgid ""
 "<strong>We recommend turning the Security Slider to Safest to protect your "
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
 "safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Anonimliğinizi korumanız için Güvenlik Çubuğunu Yüksek düzeyine "
+"<strong>Anonimliğinizi korumanız için Güvenlik Çubuğunu En Güvenli düzeyine "
 "getirmenizi öneriyoruz:</strong><a id=\"disable-js\" href=\"\">Ayarı nasıl "
-"Yüksek yapabileceğinizi öğrenin</a> veya devam edebilmek için bu uyarıyı "
+"En Güvenli yapabileceğinizi öğrenin</a> veya devam edebilmek için bu uyarıyı "
 "görmezden gelin."
 
 #: source_templates/index.html:18
@@ -1023,16 +990,12 @@ msgid "CHECK FOR A RESPONSE"
 msgstr "YANITLARI KONTROL EDİN"
 
 #: source_templates/index.html:92
-#, fuzzy
-#| msgid ""
-#| "You appear to be using the Tor Browser. You can turn the Security Slider "
-#| "to High in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
 "Safest in 4 easy steps!"
 msgstr ""
 "Tor Tarayıcı kullanıyor gibi gözüküyorsunuz. Dört kolay adımda Güvenlik "
-"Kaydırma düğmesini Yüksek yapabilirsiniz!"
+"Kaydırma düğmesini En Güvenli yapabilirsiniz!"
 
 #: source_templates/index.html:94
 msgid ""
@@ -1046,14 +1009,11 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "<strong>Güvenlik Ayarları...</strong>'na tıklayın"
 
 #: source_templates/index.html:96
-#, fuzzy
-#| msgid ""
-#| "Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
 msgid ""
 "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgstr ""
-"Kaydırma düğmesini <strong>Yüksek</strong> seçeneğine getirin ve daha sonra "
-"<strong>Tamam</strong> düğmesine tıklayın"
+"Kaydırma düğmesini <strong>En Güvenli</strong> seçeneğine getirin ve daha "
+"sonra <strong>Tamam</strong> düğmesine tıklayın"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Click here</a> to refresh the page"
