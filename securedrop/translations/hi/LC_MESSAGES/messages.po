@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-08 13:05+0000\n"
+"PO-Revision-Date: 2018-03-08 13:08+0000\n"
 "Last-Translator: Abhishek Jaiswal <abhijais9451@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
@@ -227,7 +227,7 @@ msgstr "रद्द करना"
 #: journalist_templates/_source_row.html:19
 msgid "1 doc"
 msgid_plural "{doc_num} docs"
-msgstr[0] "१ डॉक्यूमेंट"
+msgstr[0] "1 डॉक्यूमेंट"
 msgstr[1] "{doc_num} डाक्यूमेंट्स"
 
 #: journalist_templates/_source_row.html:20
@@ -238,18 +238,19 @@ msgstr[1] "{msg_num} मेस्सगेस"
 
 #: journalist_templates/_source_row.html:23
 msgid "{num_unread} unread"
-msgstr ""
+msgstr "{num_unread} अपठित"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
 msgid "Change Secret"
-msgstr ""
+msgstr "गुप्त बदलें"
 
 #: journalist_templates/account_edit_hotp_secret.html:7
 #: journalist_templates/admin_add_user.html:33
 #: journalist_templates/admin_edit_hotp_secret.html:8
+#, fuzzy
 msgid "HOTP Secret"
-msgstr ""
+msgstr "HOTP सीक्रेट"
 
 #: journalist_templates/account_edit_hotp_secret.html:9
 #: journalist_templates/admin_edit_hotp_secret.html:10
