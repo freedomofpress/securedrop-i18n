@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-08 11:01+0000\n"
-"Last-Translator: Subham Banga <subhambanga26@gmail.com>\n"
+"PO-Revision-Date: 2018-03-08 11:30+0000\n"
+"Last-Translator: Muhammad Usman <muhdusman98@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
 "Language: hi\n"
@@ -856,7 +856,7 @@ msgstr ""
 
 #: source_templates/generate.html:44 source_templates/index.html:65
 msgid "SUBMIT DOCUMENTS"
-msgstr ""
+msgstr "दस्तावेज़ जमा करें"
 
 #: source_templates/index.html:17
 msgid ""
@@ -864,6 +864,10 @@ msgid ""
 "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set "
 "it to safest</a>, or ignore this warning to continue."
 msgstr ""
+"<strong>हम आपकी गुमनामी की सुरक्षा के लिए सुरक्षा स्लाइडर को सबसे सुरक्षित "
+"बनाने की सलाह देते हैं:</strong> <a id=\"disable-js\" href=\"\">इसे सुरक्षित "
+"करने के तरीके के बारे में जानें</a>, या जारी रखने के लिए इस चेतावनी को अनदेखा"
+" करें|"
 
 #: source_templates/index.html:18
 msgid ""
@@ -871,6 +875,10 @@ msgid ""
 "id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install "
 "it</a>, or ignore this warning to continue."
 msgstr ""
+"<strong>हम SecureDrop  का उपयोग करने के लिए टार ब्राउज़र का उपयोग करने की सला"
+"ह देते हैं:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">इसे "
+"स्थापित करने के बारे में जानें</a>, या जारी रखने के लिए इस चेतावनी को अनदेखा "
+"करें|"
 
 #: source_templates/index.html:41
 msgid "Submit documents for the first time"
@@ -927,7 +935,7 @@ msgstr ""
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Click here</a> to refresh the page"
-msgstr ""
+msgstr "पृष्ठ को ताज़ा करने के लिए यहां <a href=\"/\">दबाएँ</a>"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
