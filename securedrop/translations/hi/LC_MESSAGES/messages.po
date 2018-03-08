@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-08 10:39+0000\n"
-"Last-Translator: Abhishek Jaiswal <abhijais9451@gmail.com>\n"
+"PO-Revision-Date: 2018-03-08 10:42+0000\n"
+"Last-Translator: Muhammad Usman <muhdusman98@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
 "Language: hi\n"
@@ -868,17 +868,19 @@ msgstr ""
 
 #: source_templates/index.html:41
 msgid "Submit documents for the first time"
-msgstr ""
+msgstr "पहली बार दस्तावेज जमा करें"
 
 #: source_templates/index.html:48
 msgid "Already submitted something?"
-msgstr ""
+msgstr "पहले से कुछ जमा किया है?"
 
 #: source_templates/index.html:54
 msgid ""
 "If this is your first time submitting documents to journalists, start "
 "here."
 msgstr ""
+"अगर पत्रकारों को दस्तावेज जमा करने के लिए यह पहली बार है, तो यहां से शुरू "
+"करें|"
 
 #: source_templates/index.html:58
 msgid ""
