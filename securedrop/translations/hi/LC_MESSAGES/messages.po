@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-08 12:05+0000\n"
-"Last-Translator: Subham Banga <subhambanga26@gmail.com>\n"
+"PO-Revision-Date: 2018-03-08 12:32+0000\n"
+"Last-Translator: Muhammad Usman <muhdusman98@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
 "Language: hi\n"
@@ -950,11 +950,11 @@ msgstr "पृष्ठ को ताज़ा करने के लिए य
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
-msgstr "कोडनाम दर्ज करें"
+msgstr "संकेत नाम दर्ज करें"
 
 #: source_templates/login.html:12
 msgid "Enter your codename"
-msgstr ""
+msgstr "आपका संकेत नाम दर्ज करें"
 
 #: source_templates/login.html:25 source_templates/lookup.html:47
 msgid "CANCEL"
@@ -992,7 +992,7 @@ msgstr ""
 
 #: source_templates/lookup.html:20
 msgid "Submit Materials"
-msgstr ""
+msgstr "सामग्री जमा करें"
 
 #: source_templates/lookup.html:21
 msgid ""
@@ -1016,7 +1016,7 @@ msgstr ""
 
 #: source_templates/lookup.html:36
 msgid "Write a message."
-msgstr ""
+msgstr "सन्देश लिखिए।"
 
 #: source_templates/lookup.html:53
 msgid "Read Replies"
@@ -1052,7 +1052,7 @@ msgstr ""
 
 #: source_templates/lookup.html:87
 msgid "NO, NOT YET"
-msgstr ""
+msgstr "अभी तक नहीं"
 
 #: source_templates/lookup.html:91
 msgid "There are no replies at this time."
