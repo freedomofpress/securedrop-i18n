@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-08 10:55+0000\n"
-"Last-Translator: Subham Banga <subhambanga26@gmail.com>\n"
+"PO-Revision-Date: 2018-03-08 10:56+0000\n"
+"Last-Translator: Muhammad Usman <muhdusman98@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
 "Language: hi\n"
@@ -922,6 +922,8 @@ msgstr "<strong>सुरक्षा सेटिंग</strong> पर दब�
 #: source_templates/index.html:96
 msgid "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgstr ""
+"स्लाइडर को <strong>सबसे सुरक्षित</strong> पर करें फिर <strong>ठीक पर "
+"दबाएँ</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Click here</a> to refresh the page"
