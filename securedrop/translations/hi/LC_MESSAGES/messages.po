@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-08 10:48+0000\n"
-"Last-Translator: Muhammad Usman <muhdusman98@gmail.com>\n"
+"PO-Revision-Date: 2018-03-08 10:49+0000\n"
+"Last-Translator: Abhishek Jaiswal <abhijais9451@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
 "Language: hi\n"
@@ -69,7 +69,7 @@ msgstr "उपयोगकर्ता {उपयोगकर्ता} के �
 
 #: journalist_app/admin.py:138
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
-msgstr "अमान्य गुप्त स्वरूप: कृपया केवल ए-एफ और संख्याएँ 0- 9 को जमा करें"
+msgstr "अमान्य गुप्त स्वरूप: कृपया केवल ए-एफ और संख्याएँ 0- 9 को जमा करें|"
 
 #: journalist_app/admin.py:143
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
