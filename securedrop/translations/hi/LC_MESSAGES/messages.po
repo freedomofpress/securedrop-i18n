@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-08 10:56+0000\n"
-"Last-Translator: Muhammad Usman <muhdusman98@gmail.com>\n"
+"PO-Revision-Date: 2018-03-08 11:01+0000\n"
+"Last-Translator: Subham Banga <subhambanga26@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
 "Language: hi\n"
@@ -80,7 +80,7 @@ msgstr ""
 #: journalist_app/admin.py:148 journalist_app/main.py:107
 #: journalist_app/utils.py:47
 msgid "An unexpected error occurred! Please inform your administrator."
-msgstr ""
+msgstr "एक अप्रत्याशित त्रुटि हुई! कृपया अपने व्यवस्थापक को सूचित करें।"
 
 #: journalist_app/admin.py:181
 msgid "Username \"{user}\" already taken."
@@ -126,7 +126,7 @@ msgstr ""
 
 #: journalist_app/forms.py:60
 msgid "File required."
-msgstr ""
+msgstr "आवश्यक फाइल।"
 
 #: journalist_app/forms.py:62
 msgid "Upload images only."
