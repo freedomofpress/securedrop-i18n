@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-03-01 16:00+0000\n"
-"Last-Translator: Anatoli <djanatoli@gmail.com>\n"
-"Language-Team: Spanish <https://weblate.securedrop.club/projects/securedrop/"
-"securedrop/es/>\n"
+"PO-Revision-Date: 2018-03-08 02:37+0000\n"
+"Last-Translator: Daniel Arauz <danarauz@gmail.com>\n"
+"Language-Team: Spanish "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/es/>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -95,10 +95,8 @@ msgid "Deleted user '{user}'"
 msgstr "Usuario '{user}' eliminado"
 
 #: journalist_app/admin.py:249
-#, fuzzy
-#| msgid "Test alert sent. Check your email."
 msgid "Test alert sent. Please check your email."
-msgstr "Alerta de prueba enviada. Revise su correo electrónico."
+msgstr "Alerta de prueba enviada. Por favor revise su correo electrónico."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -964,19 +962,15 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "ENVIAR DOCUMENTOS"
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend turning the Security Slider to High to protect your "
-#| "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
-#| "high</a>, or ignore this warning to continue."
 msgid ""
 "<strong>We recommend turning the Security Slider to Safest to protect your "
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
 "safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong> Recomendamos que corra el control deslizante de seguridad a Alta "
-"para proteger su anonimato:</strong> <a id=\"disable-js\" href=\"\">Aprenda "
-"cómo establecerlo en alta</a>, o ignore esta advertencia para continuar."
+"<strong> Recomendamos que corra el control deslizante de seguridad a lo mas "
+"seguro para proteger su anonimato:</strong> <a id=\"disable-js\" href=\"\">"
+"Aprenda cómo establecerlo a lo mas seguro</a>, o ignore esta advertencia "
+"para continuar."
 
 #: source_templates/index.html:18
 msgid ""
@@ -1016,16 +1010,13 @@ msgid "CHECK FOR A RESPONSE"
 msgstr "VERIFICAR UNA RESPUESTA"
 
 #: source_templates/index.html:92
-#, fuzzy
-#| msgid ""
-#| "You appear to be using the Tor Browser. You can turn the Security Slider "
-#| "to High in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
 "Safest in 4 easy steps!"
 msgstr ""
-"Parece que usted esta usando el navegador Tor Browser. ¡Puede incrementar la "
-"Seguridad a Alta fácilmente en 4 pasos!"
+"Parece que usted esta usando el navegador de Tor (Tor Browser). ¡Usted puede "
+"girar el Control Deslizante de Seguridad a lo Mas Seguro en 4 pasos "
+"fácilmente!"
 
 #: source_templates/index.html:94
 msgid ""
@@ -1039,14 +1030,11 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "Haga clic<strong>Configuración de Seguridad ...</strong>"
 
 #: source_templates/index.html:96
-#, fuzzy
-#| msgid ""
-#| "Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
 msgid ""
 "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgstr ""
-"Gire el control deslizante para<strong>Alto</strong>, luego haga clic "
-"en<strong>OK</strong>"
+"Gire el control deslizante para<strong>Mas Seguro</strong>, luego haga clic "
+"en <strong>Ok</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Click here</a> to refresh the page"
