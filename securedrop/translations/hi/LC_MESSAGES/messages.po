@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-08 10:44+0000\n"
-"Last-Translator: Subham Banga <subhambanga26@gmail.com>\n"
+"PO-Revision-Date: 2018-03-08 10:46+0000\n"
+"Last-Translator: Muhammad Usman <muhdusman98@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
 "Language: hi\n"
@@ -896,13 +896,15 @@ msgstr ""
 
 #: source_templates/index.html:73
 msgid "CHECK FOR A RESPONSE"
-msgstr ""
+msgstr "जवाब के लिए जाँच करें"
 
 #: source_templates/index.html:92
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider "
 "to Safest in 4 easy steps!"
 msgstr ""
+"आप टार ब्राउज़र का उपयोग करते हुए दिखाई देते हैं आप सुरक्षा स्लाइडर को 4 आसा"
+"न चरणों में सबसे सुरक्षित  बना सकते हैं!"
 
 #: source_templates/index.html:94
 msgid ""
