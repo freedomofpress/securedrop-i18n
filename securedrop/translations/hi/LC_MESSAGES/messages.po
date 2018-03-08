@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-08 10:37+0000\n"
-"Last-Translator: Abhishek Jaiswal <abhijais9451@gmail.com>\n"
+"PO-Revision-Date: 2018-03-08 10:39+0000\n"
+"Last-Translator: Subham Banga <subhambanga26@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
 "Language: hi\n"
@@ -37,7 +37,7 @@ msgstr "दो-कारक प्रमाणीकरण में टोक�
 
 #: journalist_app/account.py:46 journalist_app/admin.py:111
 msgid "Could not verify token in two-factor authentication."
-msgstr ""
+msgstr "दो-कारक प्रमाणीकरण में टोकन को सत्यापित नहीं कर सका।"
 
 #: journalist_app/admin.py:37
 msgid "Image updated."
