@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-08 13:08+0000\n"
-"Last-Translator: Abhishek Jaiswal <abhijais9451@gmail.com>\n"
+"PO-Revision-Date: 2018-03-08 15:00+0000\n"
+"Last-Translator: Muhammad Usman <muhdusman98@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
 "Language: hi\n"
@@ -248,20 +248,19 @@ msgstr "गुप्त बदलें"
 #: journalist_templates/account_edit_hotp_secret.html:7
 #: journalist_templates/admin_add_user.html:33
 #: journalist_templates/admin_edit_hotp_secret.html:8
-#, fuzzy
 msgid "HOTP Secret"
-msgstr "HOTP सीक्रेट"
+msgstr "गुप्त HOTP"
 
 #: journalist_templates/account_edit_hotp_secret.html:9
 #: journalist_templates/admin_edit_hotp_secret.html:10
 #: source_templates/login.html:23
 msgid "CONTINUE"
-msgstr ""
+msgstr "जारी रखें"
 
 #: journalist_templates/account_new_two_factor.html:4
 #: journalist_templates/admin_new_user_two_factor.html:5
 msgid "Enable FreeOTP"
-msgstr ""
+msgstr "FreeOTP सक्षम करें"
 
 #: journalist_templates/account_new_two_factor.html:5
 msgid ""
@@ -279,7 +278,7 @@ msgstr ""
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
 msgid "Open the FreeOTP app"
-msgstr ""
+msgstr "FreeOTP एप्लिकेशन को खोलो"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
@@ -316,13 +315,13 @@ msgstr ""
 #: journalist_templates/account_new_two_factor.html:22
 #: journalist_templates/admin_new_user_two_factor.html:25
 msgid "Verification code"
-msgstr ""
+msgstr "पुष्टि संख्या"
 
 #: journalist_templates/account_new_two_factor.html:24
 #: journalist_templates/admin_new_user_two_factor.html:27
 #: journalist_templates/col.html:100 source_templates/lookup.html:45
 msgid "SUBMIT"
-msgstr ""
+msgstr "जमा करें"
 
 #: journalist_templates/admin.html:3
 msgid "Admin Interface"
@@ -331,31 +330,31 @@ msgstr ""
 #: journalist_templates/admin.html:6
 #: journalist_templates/admin_add_user.html:39
 msgid "ADD USER"
-msgstr ""
+msgstr "उपयोगकर्ता जोड़ें"
 
 #: journalist_templates/admin.html:16
 #: journalist_templates/admin_add_user.html:14
 #: journalist_templates/login.html:8
 msgid "Username"
-msgstr ""
+msgstr "उपयोगकर्ता नाम"
 
 #: journalist_templates/admin.html:17
 msgid "Edit"
-msgstr ""
+msgstr "संपादित करें"
 
 #: journalist_templates/admin.html:18 journalist_templates/col.html:76
 #: journalist_templates/col.html:134 journalist_templates/index.html:16
 #: journalist_templates/index.html:51
 msgid "Delete"
-msgstr ""
+msgstr "हटाएं"
 
 #: journalist_templates/admin.html:19
 msgid "Created"
-msgstr ""
+msgstr "बनाया था"
 
 #: journalist_templates/admin.html:20
 msgid "Last login"
-msgstr ""
+msgstr "पिछला लॉगइन"
 
 #: journalist_templates/admin.html:25
 msgid "Edit user {username}"
@@ -363,11 +362,11 @@ msgstr ""
 
 #: journalist_templates/admin.html:29
 msgid "Delete user {username}"
-msgstr ""
+msgstr "{username} उपयोगकर्ता हटाएं"
 
 #: journalist_templates/admin.html:35
 msgid "never"
-msgstr ""
+msgstr "कभी नहीँ"
 
 #: journalist_templates/admin.html:42
 msgid "No users to display"
@@ -389,7 +388,7 @@ msgstr ""
 #: journalist_templates/admin_add_user.html:24
 #: journalist_templates/edit_account.html:17
 msgid "Is Administrator"
-msgstr ""
+msgstr "प्रशासक है"
 
 #: journalist_templates/admin_add_user.html:32
 msgid "Is using a YubiKey [HOTP]"
@@ -410,7 +409,7 @@ msgstr ""
 
 #: journalist_templates/base.html:26
 msgid "Admin"
-msgstr ""
+msgstr "व्यवस्थापक"
 
 #: journalist_templates/base.html:28
 msgid "Log Out"
@@ -1182,7 +1181,7 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:8
 msgid "Import it into your GPG keyring."
-msgstr ""
+msgstr "इसे आपके कीरिंग में आयात करें |"
 
 #: source_templates/why-journalist-key.html:10
 msgid ""
