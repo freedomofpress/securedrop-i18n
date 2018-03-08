@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-08 11:30+0000\n"
-"Last-Translator: Muhammad Usman <muhdusman98@gmail.com>\n"
+"PO-Revision-Date: 2018-03-08 12:05+0000\n"
+"Last-Translator: Subham Banga <subhambanga26@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
 "Language: hi\n"
@@ -827,23 +827,28 @@ msgstr ""
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
-msgstr ""
+msgstr "अपना कूटनाम भूल गए?"
 
 #: source_templates/generate.html:4
 msgid "Welcome"
-msgstr ""
+msgstr "स्वागत हे"
 
 #: source_templates/generate.html:7
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
 msgstr ""
+"कृपया यह कोडनाम नीचे लिखें और इसे किसी सुरक्षित स्थान पर रखें, या इसे याद "
+"रखें।"
 
 #: source_templates/generate.html:10
 msgid ""
 "This codename is what you will use in future visits to receive messages "
 "from our journalists in response to what you submit on the next screen."
 msgstr ""
+"यह कोडनाम आप अगली स्क्रीन पर सबमिट की गई प्रतिक्रिया के उत्तर में हमारे "
+"पत्रकारों से संदेश प्राप्त करने के लिए भविष्य में आने वाले विज़िट में उपयोग "
+"करेंगे।"
 
 #: source_templates/generate.html:34
 msgid ""
@@ -853,6 +858,12 @@ msgid ""
 " questions or are interested in additional documents. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
+"क्योंकि हम हमारे उपयोगकर्ताओं को ट्रैक नहीं करते "
+"हैं<strong>SecureDrop</strong>\n"
+"सेवा, भविष्य के दौरे में, इस कोडनाम का उपयोग करने का एकमात्र तरीका है कि "
+"हमारे साथ संवाद करना चाहिए था हमारे पास होना चाहिए\n"
+"प्रश्न या अतिरिक्त दस्तावेज़ों में रुचि रखते हैं। पासवर्ड के विपरीत, खोई हुई "
+"कोडनाम को पुनः प्राप्त करने का कोई तरीका नहीं है।"
 
 #: source_templates/generate.html:44 source_templates/index.html:65
 msgid "SUBMIT DOCUMENTS"
@@ -939,7 +950,7 @@ msgstr "पृष्ठ को ताज़ा करने के लिए य
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
-msgstr ""
+msgstr "कोडनाम दर्ज करें"
 
 #: source_templates/login.html:12
 msgid "Enter your codename"
@@ -952,7 +963,7 @@ msgstr ""
 #: source_templates/logout_flashed_message.html:4
 #: source_templates/session_timeout.html:5
 msgid "Important!"
-msgstr ""
+msgstr "जरूरी!"
 
 #: source_templates/logout_flashed_message.html:5
 msgid ""
