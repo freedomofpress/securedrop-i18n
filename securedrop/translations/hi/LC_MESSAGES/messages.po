@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-08 15:00+0000\n"
-"Last-Translator: Muhammad Usman <muhdusman98@gmail.com>\n"
+"PO-Revision-Date: 2018-03-09 16:00+0000\n"
+"Last-Translator: Abhishek Jaiswal <abhijais9451@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
 "Language: hi\n"
@@ -269,11 +269,16 @@ msgid ""
 "entry for your account in the app, enter one of the 6-digit codes from "
 "the app to confirm that two factor authentication is set up correctly."
 msgstr ""
+"लगभग काम हो गया! अपने दो-कारक प्रमाणीकरण को रीसेट करना समाप्त करने के लिए, "
+"FreeOTP सेटअप करने के लिए नीचे दिए गए निर्देशों का पालन करें। ऐप में अपने "
+"खाते के लिए प्रविष्टि जोड़ लेने के बाद, यह पुष्टि करने के लिए एप से 6-अंकों "
+"वाले कोडों में से एक को दर्ज करें कि दो कारक प्रमाणीकरण को सही ढंग से सेट "
+"किया गया है|"
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
 msgid "Install FreeOTP on your phone"
-msgstr ""
+msgstr "अपने फोन पर FreeOTP इंस्टॉल करें"
 
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
@@ -283,7 +288,7 @@ msgstr "FreeOTP एप्लिकेशन को खोलो"
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
 msgid "Tap the QR code symbol at the top"
-msgstr ""
+msgstr "शीर्ष पर QR कोड प्रतीक टैप करें"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -291,26 +296,31 @@ msgid ""
 "Your phone will now be in \"scanning\" mode. When you are in this mode, "
 "scan the barcode below:"
 msgstr ""
+"आपका फोन अब \"स्कैनिंग\" मोड में होगा। जब आप इस मोड में हों, तो नीचे बारकोड "
+"स्कैन करें:"
 
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
 msgid "Can't scan the barcode? Enter the following code manually:"
 msgstr ""
+"बारकोड को स्कैन नहीं किया जा सकता है? मैन्युअल रूप से निम्न कोड दर्ज करें:"
 
 #: journalist_templates/account_new_two_factor.html:15
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid "Once you have scanned the barcode, enter the 6-digit code below:"
-msgstr ""
+msgstr "बारकोड को स्कैन करने के बाद, नीचे 6 अंकों के कोड डालें:"
 
 #: journalist_templates/account_new_two_factor.html:17
 #: journalist_templates/admin_new_user_two_factor.html:20
 msgid "Enable YubiKey (OATH-HOTP)"
-msgstr ""
+msgstr "YubiKey सक्षम करें (OATH-HOTP)"
 
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:21
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr ""
+"एक बार जब आप अपने YubiKey को कॉन्फ़िगर कर लेते हैं, तो नीचे 6 अंकों का कोड "
+"डालें:"
 
 #: journalist_templates/account_new_two_factor.html:22
 #: journalist_templates/admin_new_user_two_factor.html:25
@@ -325,7 +335,7 @@ msgstr "जमा करें"
 
 #: journalist_templates/admin.html:3
 msgid "Admin Interface"
-msgstr ""
+msgstr "व्यवस्थापक इंटरफ़ेस"
 
 #: journalist_templates/admin.html:6
 #: journalist_templates/admin_add_user.html:39
@@ -358,7 +368,7 @@ msgstr "पिछला लॉगइन"
 
 #: journalist_templates/admin.html:25
 msgid "Edit user {username}"
-msgstr ""
+msgstr "उपयोगकर्ता {username} संपादित करें"
 
 #: journalist_templates/admin.html:29
 msgid "Delete user {username}"
@@ -370,20 +380,20 @@ msgstr "कभी नहीँ"
 
 #: journalist_templates/admin.html:42
 msgid "No users to display"
-msgstr ""
+msgstr "प्रदर्शित करने के लिए कोई उपयोगकर्ता नहीं"
 
 #: journalist_templates/admin.html:48
 msgid "INSTANCE CONFIG"
-msgstr ""
+msgstr "इंस्टीट्यूट कॉनफिग"
 
 #: journalist_templates/admin_add_user.html:4
 #: journalist_templates/config.html:4 journalist_templates/edit_account.html:7
 msgid "Back to admin interface"
-msgstr ""
+msgstr "व्यवस्थापक इंटरफ़ेस पर वापस जाएं"
 
 #: journalist_templates/admin_add_user.html:21
 msgid "The user's password will be:"
-msgstr ""
+msgstr "उपयोगकर्ता का पासवर्ड होगा:"
 
 #: journalist_templates/admin_add_user.html:24
 #: journalist_templates/edit_account.html:17
@@ -392,7 +402,7 @@ msgstr "प्रशासक है"
 
 #: journalist_templates/admin_add_user.html:32
 msgid "Is using a YubiKey [HOTP]"
-msgstr ""
+msgstr "एक YubiKey [HOTP] का उपयोग कर रहा है"
 
 #: journalist_templates/admin_new_user_two_factor.html:6
 msgid ""
@@ -402,10 +412,16 @@ msgid ""
 "of the 6-digit codes from the app to confirm that two factor "
 "authentication is set up correctly."
 msgstr ""
+"लगभग काम हो गया! इस नए उपयोगकर्ता को जोड़ने के लिए, उनको नीचे दिए गए "
+"निर्देशों का पालन करने को बोले , जिसमें दो-कारक प्रमाणीकरण को FreeOTP के साथ "
+"स्थापित किया गया है। ऐप में इस खाते के लिए एक प्रविष्टि जोड़ लेने के बाद, "
+"उन्हें एप से 6-अंकों वाले कोडों में से एक को दर्ज करने को कहें ताकि यह पुष्टि"
+" हो सके की दो कारक प्रमाणीकरण को सही तरीके से सेटअप किया गया है |"
 
 #: journalist_templates/base.html:24
+#, fuzzy
 msgid "Logged on as"
-msgstr ""
+msgstr "के रूप में लोग्ड"
 
 #: journalist_templates/base.html:26
 msgid "Admin"
@@ -413,13 +429,16 @@ msgstr "व्यवस्थापक"
 
 #: journalist_templates/base.html:28
 msgid "Log Out"
-msgstr ""
+msgstr "लोग आउट"
 
 #: journalist_templates/base.html:41
+#, fuzzy
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" "
 "alt=\"SecureDrop\">"
 msgstr ""
+"<br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop\"> द्वारा "
+"संचालित"
 
 #: journalist_templates/base.html:56
 msgid "Powered by <em>SecureDrop {version}</em>."
@@ -427,7 +446,7 @@ msgstr ""
 
 #: journalist_templates/col.html:10
 msgid "All Sources"
-msgstr ""
+msgstr "सभी स्रोत"
 
 #: journalist_templates/col.html:13
 msgid ""
@@ -435,79 +454,88 @@ msgid ""
 "if the first random codename is difficult to say or remember. You can "
 "generate new random codenames as many times as you like."
 msgstr ""
+"इस स्रोत के लिए एक नया यादृच्छिक कोडनाम उत्पन्न करें। हम ऐसा करने की सलाह "
+"देते हैं यदि पहले यादृच्छिक कोडनाम को कहना या याद रखना मुश्किल है | आप जितनी "
+"बार चाहें उतने बार नए यादृच्छिक कोडनाम उत्पन्न कर सकते हैं।"
 
 #: journalist_templates/col.html:13
 msgid "Change codename"
-msgstr ""
+msgstr "कोडनाम बदलें"
 
 #: journalist_templates/col.html:14
 msgid "Are you sure you want to generate a new codename?"
-msgstr ""
+msgstr "क्या आप वाकई एक नया कोडनाम बनाना चाहते हैं?"
 
 #: journalist_templates/col.html:16
 msgid "CONFIRM"
-msgstr ""
+msgstr "की पुष्टि करें"
 
 #: journalist_templates/col.html:22
 msgid ""
 "The documents are stored encrypted for security. To read them, you will "
 "need to decrypt them using GPG."
 msgstr ""
+"दस्तावेज सुरक्षा के लिए एन्क्रिप्टेड जमा किए जाते हैं। उन्हें पढ़ने के लिए, "
+"आपको GPG का उपयोग करके उन्हें डिक्रिप्ट करना होगा।"
 
 #: journalist_templates/col.html:26
 msgid "Download Selected"
-msgstr ""
+msgstr "डाउनलोड चयनित"
 
 #: journalist_templates/col.html:28
 msgid "Delete Selected"
-msgstr ""
+msgstr "चयनित मिटाएं"
 
 #: journalist_templates/col.html:57
 msgid "Uploaded Document"
-msgstr ""
+msgstr "अपलोड किए गए दस्तावेज़"
 
 #: journalist_templates/col.html:59 journalist_templates/col.html:92
 msgid "Reply"
-msgstr ""
+msgstr "जवाब दें"
 
 #: journalist_templates/col.html:61
 msgid "Message"
-msgstr ""
+msgstr "संदेश"
 
 #: journalist_templates/col.html:71 journalist_templates/col.html:129
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
-msgstr ""
+msgstr "पुष्टिकरण हटाएं"
 
 #: journalist_templates/col.html:72
 msgid "Are you sure you want to delete the selected documents?"
-msgstr ""
+msgstr "क्या आप वाकई चयनित दस्तावेज़ हटाना चाहते हैं?"
 
 #: journalist_templates/col.html:87
 msgid "No documents to display."
-msgstr ""
+msgstr "प्रदर्शित करने के लिए कोई दस्तावेज़ नहीं |"
 
 #: journalist_templates/col.html:94
 msgid "You can write a secure reply to the person who submitted these documents:"
 msgstr ""
+"आप इन दस्तावेजों को सबमिट करने वाले व्यक्ति को एक सुरक्षित उत्तर लिख सकते "
+"हैं:"
 
 #: journalist_templates/col.html:103
 msgid "You've flagged this source for reply."
-msgstr ""
+msgstr "आपने उत्तर के लिए इस स्रोत को चिह्नित किया है |"
 
 #: journalist_templates/col.html:104
 msgid ""
 "An encryption key will be generated for the source the next time they log"
 " in, after which you will be able to reply to the source here."
 msgstr ""
+"अगली बार जब वे लॉग इन करते हैं, तो स्रोत के लिए एक एन्क्रिप्शन कुंजी उत्पन्न "
+"होगी, जिसके बाद आप यहां स्रोत को जवाब दे पाएंगे।"
 
 #: journalist_templates/col.html:106
 msgid "Click below if you would like to write a reply to this source."
-msgstr ""
+msgstr "यदि आप इस स्रोत को उत्तर लिखना चाहते हैं तो नीचे क्लिक करें।"
 
 #: journalist_templates/col.html:110
 msgid "FLAG THIS SOURCE FOR REPLY"
-msgstr ""
+msgstr "उत्तर के लिए इस स्रोत को फ़्लैग करें"
 
 #: journalist_templates/col.html:115
 msgid ""
@@ -518,39 +546,41 @@ msgstr ""
 
 #: journalist_templates/col.html:122
 msgid "DELETE COLLECTION"
-msgstr ""
+msgstr "संग्रह हटाएं"
 
 #: journalist_templates/col.html:130
 msgid "Are you sure you want to delete this collection?"
-msgstr ""
+msgstr "क्या आप इस संग्रह को मिटाना चाहते हैं?"
 
 #: journalist_templates/config.html:7
 msgid "Instance Configuration"
-msgstr ""
+msgstr "इंस्टेंस कॉन्फ़िगरेशन"
 
 #: journalist_templates/config.html:9
 msgid "Alerts"
-msgstr ""
+msgstr "अलर्ट"
 
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr ""
+"एक एन्क्रिप्टेड ईमेल भेजें ताकि यह सत्यापित किया जा सके की OSSEC अलर्टस सही "
+"तरीके से कार्य कर रहे हैं:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
-msgstr ""
+msgstr "परीक्षण OSSEC अलर्ट भेजें"
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
-msgstr ""
+msgstr "लोगो छवि"
 
 #: journalist_templates/config.html:23
 msgid "Here you can update the image displayed on the SecureDrop web interfaces:"
-msgstr ""
+msgstr "यहां आप SecureDrop वेब इंटरफेस पर प्रदर्शित छवि को अपडेट कर सकते हैं:"
 
 #: journalist_templates/config.html:36
 msgid "UPDATE LOGO"
-msgstr ""
+msgstr "अपडेट लोगो"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -564,15 +594,16 @@ msgstr[1] ""
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
-msgstr ""
+msgstr "स्थायी रूप से फ़ाइलें हटाएं"
 
 #: journalist_templates/delete.html:23
 msgid "Return to the list of documents for {source_name}…"
-msgstr ""
+msgstr "{Source_name} के लिए दस्तावेज़ों की सूची पर लौटें …"
 
 #: journalist_templates/edit_account.html:6
+#, fuzzy
 msgid "Edit user \"{user}\""
-msgstr ""
+msgstr "उपयोगकर्ता \"{user}\" संपादित करें"
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Username &amp; Admin Status"
@@ -580,23 +611,25 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:12
 msgid "Change username"
-msgstr ""
+msgstr "उपयोगकर्ता नाम परिवर्तन करें"
 
 #: journalist_templates/edit_account.html:19
 msgid "UPDATE"
-msgstr ""
+msgstr "अपडेट"
 
 #: journalist_templates/edit_account.html:22
 msgid "Edit your account"
-msgstr ""
+msgstr "अपना खाता संपादित करें"
 
 #: journalist_templates/edit_account.html:25
 msgid "Reset Password"
-msgstr ""
+msgstr "पासवर्ड रीसेट"
 
 #: journalist_templates/edit_account.html:27
+#, fuzzy
 msgid "SecureDrop now uses automatically generated diceware passwords."
 msgstr ""
+"SecureDrop अब स्वचालित रूप से जेनरेट किए गए डिसवेयर पासवर्ड का उपयोग करता है"
 
 #: journalist_templates/edit_account.html:28
 msgid ""
