@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-09 09:03+0000\n"
+"PO-Revision-Date: 2018-03-09 11:00+0000\n"
 "Last-Translator: Jobava <jobaval10n@gmail.com>\n"
 "Language-Team: Romanian "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ro/>\n"
@@ -34,7 +34,7 @@ msgstr "Parolă sau cod de autentificare greșit."
 
 #: journalist_app/account.py:42
 msgid "Token in two-factor authentication verified."
-msgstr "Dispozitiv verificat pentru trimiterea codului de autentificare."
+msgstr "Dispozitivul de autentificare a fost verificat."
 
 #: journalist_app/account.py:46 journalist_app/admin.py:111
 msgid "Could not verify token in two-factor authentication."
@@ -193,7 +193,7 @@ msgstr ""
 #: journalist_app/utils.py:150
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
-msgstr[0] "{num} încărcare a fost ștearsă"
+msgstr[0] "Încărcarea a fost ștearsă."
 msgstr[1] "{num} încărcări au fost șterse."
 msgstr[2] "{num} de încărcări au fost șterse."
 
@@ -354,7 +354,7 @@ msgstr "Interfața de administrare"
 #: journalist_templates/admin.html:6
 #: journalist_templates/admin_add_user.html:39
 msgid "ADD USER"
-msgstr "ADAUGĂ UTILIZATOR"
+msgstr "ADAUGĂ UN UTILIZATOR"
 
 #: journalist_templates/admin.html:16
 #: journalist_templates/admin_add_user.html:14
@@ -481,7 +481,7 @@ msgstr "Sigur dorești să generezi un nou nume de cod?"
 
 #: journalist_templates/col.html:16
 msgid "CONFIRM"
-msgstr "CONFIRM"
+msgstr "CONFIRMĂ"
 
 #: journalist_templates/col.html:22
 msgid ""
@@ -493,11 +493,11 @@ msgstr ""
 
 #: journalist_templates/col.html:26
 msgid "Download Selected"
-msgstr "Descarcă cele selectate"
+msgstr "Descarcă selecția"
 
 #: journalist_templates/col.html:28
 msgid "Delete Selected"
-msgstr "Șterge cele selectate"
+msgstr "Șterge selecția"
 
 #: journalist_templates/col.html:57
 msgid "Uploaded Document"
@@ -526,7 +526,7 @@ msgstr "Nu sunt documente de afișat."
 
 #: journalist_templates/col.html:94
 msgid "You can write a secure reply to the person who submitted these documents:"
-msgstr "Poți scrie un răspuns persoanei care a trimis aceste documente:"
+msgstr "Poți răspunde persoanei care a trimis aceste documente:"
 
 #: journalist_templates/col.html:103
 msgid "You've flagged this source for reply."
@@ -1084,8 +1084,8 @@ msgid ""
 "the delay. Please do check back again in a week or so."
 msgstr ""
 "Acum că știm că ești o persoană și nu un robot, vom trimite documentele "
-"trimise unui jurnalist imediat. Ne pare rău pentru întârziere. Te rugăm să "
-"revii în cam o săptămână."
+"transmise de tine unui jurnalist imediat. Ne cerem scuze pentru pentru "
+"întârziere. Te rugăm să revii în cam o săptămână."
 
 #: source_templates/lookup.html:20
 msgid "Submit Materials"
@@ -1222,7 +1222,7 @@ msgstr ""
 "Tor2Web protejează doar proprietarii de servicii web, nu și cititorii "
 "acestora. <strong>Nu ai parte de anonimitate</strong> folosind Tor2Web și "
 "poți fi identificat de furnizorul tău de servicii internet (ISP) sau de "
-"către operatorii Tor2Web. Deasemenea, Tor2Web nu folosește de regulă HTTPS, "
+"către operatorii Tor2Web. De asemenea, Tor2Web nu folosește de regulă HTTPS, "
 "așa că este posibil ca conexiunea ta să fie interceptată de orice dispozitiv "
 "de rețea poziționat între tine și Tor2Web."
 
@@ -1291,7 +1291,7 @@ msgid ""
 msgstr ""
 "SecureDrop criptează fișierele și mesajele după ce sunt trimise. Criptarea "
 "mesajelor și a fișierelor înainte de a le trimite oferă securitate "
-"suplimentară înainte ca datele tale să ajungă pe serverul SecureDrop."
+"suplimentară în tranzit spre SecureDrop."
 
 #: source_templates/why-journalist-key.html:5
 msgid ""
@@ -1333,7 +1333,7 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:14
 msgid "Encrypt your submission."
-msgstr "Criptează trimiterea ta."
+msgstr "Criptează informațiile tale."
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
@@ -1378,4 +1378,4 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
-msgstr "Înapoi la pagina cu trimiterile"
+msgstr "Înapoi la pagina cu trimiteri"
