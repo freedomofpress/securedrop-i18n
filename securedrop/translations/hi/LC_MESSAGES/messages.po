@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-09 16:00+0000\n"
+"PO-Revision-Date: 2018-03-09 22:00+0000\n"
 "Last-Translator: Abhishek Jaiswal <abhijais9451@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
@@ -110,7 +110,7 @@ msgstr "केवल व्यवस्थापक ही पृष्ठ त�
 #: journalist_app/forms.py:19
 #, fuzzy
 msgid "Field must be 40 characters long but got {num_chars}."
-msgstr "फ़ील्ड 40 वर्ण लंबा होनी चाहिए, लेकिन {num_chars} मिला।"
+msgstr "फ़ील्ड 40 वर्ण लंबा होनी चाहिए, लेकिन {num_chars} मिले |"
 
 #: journalist_app/forms.py:30
 msgid ""
@@ -437,12 +437,13 @@ msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" "
 "alt=\"SecureDrop\">"
 msgstr ""
-"<br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop\"> द्वारा "
-"संचालित"
+"<br> <img src=\"/static/i/securedrop_small.png\" alt=\"सेक्युरेदरोप \"> "
+"द्वारा संचालित"
 
 #: journalist_templates/base.html:56
+#, fuzzy
 msgid "Powered by <em>SecureDrop {version}</em>."
-msgstr ""
+msgstr "पॉवरेद बी <em> सेक्युरेदरोप {version} </em>"
 
 #: journalist_templates/col.html:10
 msgid "All Sources"
@@ -543,6 +544,9 @@ msgid ""
 "this, the files seen here will be unrecoverable and the source will no "
 "longer be able to login using their previous codename.</em>"
 msgstr ""
+"इस स्रोत के संग्रह को हटाने के लिए नीचे क्लिक करें <em> चेतावनी: अगर आप ऐसा "
+"करते हैं, तो यहां देखी जाने वाली फ़ाइलें पुनर्प्राप्त नहीं हो सकेंगी और स्रो"
+"त अब उनके पिछले कोडनाम का उपयोग करके लॉगिन नहीं कर पाएगा।</em>"
 
 #: journalist_templates/col.html:122
 msgid "DELETE COLLECTION"
@@ -606,8 +610,9 @@ msgid "Edit user \"{user}\""
 msgstr "उपयोगकर्ता \"{user}\" संपादित करें"
 
 #: journalist_templates/edit_account.html:8
+#, fuzzy
 msgid "Change Username &amp; Admin Status"
-msgstr ""
+msgstr "उपयोगकर्ता नाम परिवर्तन करें  &amp; व्यवस्थापक स्थिति"
 
 #: journalist_templates/edit_account.html:12
 msgid "Change username"
@@ -629,205 +634,239 @@ msgstr "पासवर्ड रीसेट"
 #, fuzzy
 msgid "SecureDrop now uses automatically generated diceware passwords."
 msgstr ""
-"SecureDrop अब स्वचालित रूप से जेनरेट किए गए डिसवेयर पासवर्ड का उपयोग करता है"
+"सेक्युरेदरोप अब स्वचालित रूप से जेनरेट किए गए डिसवेयर पासवर्ड का उपयोग करता "
+"है"
 
 #: journalist_templates/edit_account.html:28
+#, fuzzy
 msgid ""
 "Your password will be changed immediately, so you will need to save it "
 "before pressing the \"Reset Password\" button."
 msgstr ""
+"आपका पासवर्ड तुरंत बदल जाएगा, इसलिए आपको \"पासवर्ड रीसेट करें\" बटन दबाने के "
+"पहले इसे सहेजना होगा।"
 
 #: journalist_templates/edit_account.html:34
 msgid "Please enter your current password and two-factor code."
-msgstr ""
+msgstr "कृपया अपना वर्तमान पासवर्ड और दो-कारक कोड दर्ज करें।"
 
 #: journalist_templates/edit_account.html:40
 msgid "Current Password"
-msgstr ""
+msgstr "वर्तमान पासवर्ड"
 
 #: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
 msgid "Two-factor Code"
-msgstr ""
+msgstr "द्वि-कारक कोड"
 
 #: journalist_templates/edit_account.html:46
+#, fuzzy
 msgid "The user's password will be changed to:"
-msgstr ""
+msgstr "उपयोगकर्ता का पासवर्ड निम्न में बदल जाएगा:"
 
 #: journalist_templates/edit_account.html:48
 msgid "Your password will be changed to:"
-msgstr ""
+msgstr "आपका पासवर्ड इसमें बदल जाएगा:"
 
 #: journalist_templates/edit_account.html:53
 msgid "RESET PASSWORD"
-msgstr ""
+msgstr "पासवर्ड रीसेट"
 
 #: journalist_templates/edit_account.html:58
 msgid "Reset Two-Factor Authentication"
-msgstr ""
+msgstr "दो-फैक्टर प्रमाणीकरण रीसेट करें"
 
 #: journalist_templates/edit_account.html:61
+#, fuzzy
 msgid ""
 "If a user's two-factor authentication credentials have been lost or "
 "compromised, you can reset them here. <em>If you do this, make sure the "
 "user is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
+"अगर उपयोगकर्ता के दो-कारक प्रमाणीकरण क्रेडेंशियल्स खो गए या चोरी किए गए हैं, "
+"तो आप उन्हें यहां रीसेट कर सकते हैं। <em> यदि आप ऐसा करते हैं, तो सुनिश्चित "
+"करें कि उपयोगकर्ता मौजूद है और अपने डिवाइस को दो-कारक प्रमाणिकता के साथ सेट "
+"अप करने के लिए तैयार है। अन्यथा, वे अपने खाते से लॉक क्र दिए कर दिए जाएगा।"
 
 #: journalist_templates/edit_account.html:63
+#, fuzzy
 msgid ""
 "If your two-factor authentication credentials have been lost or "
 "compromised, or you got a new device, you can reset your credentials "
 "here. <em>If you do this, make sure you are ready to set up your new "
 "device, otherwise you will be locked out of your account.</em>"
 msgstr ""
+"यदि आपके दो-कारक प्रमाणीकरण क्रेडेंशियल्स खो गए या चोरी किए गए हैं, या आपको "
+"एक नया फ़ोन मिला है, तो आप यहां अपने क्रेडेंशियल्स रीसेट कर सकते हैं। <em> "
+"अगर आप ऐसा करते हैं, तो सुनिश्चित करें कि आप अपना नया फ़ोन सेट करने के लिए "
+"तैयार हैं, अन्यथा आप अपने खाते से लॉक हो जाएंगे। </ em>"
 
 #: journalist_templates/edit_account.html:65
+#, fuzzy
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, "
 "choose the first option. For hardware tokens like the Yubikey, choose the"
 " second."
 msgstr ""
+"मोबाइल एप जैसे कि FreeOTP के लिए दो-कारक प्रमाणीकरण को रीसेट करने के लिए, "
+"पहला विकल्प चुनें। Yubikey जैसे हार्डवेयर टोकन के लिए, दूसरा चुनें"
 
 #: journalist_templates/edit_account.html:90
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
-msgstr ""
+msgstr "रीसेट दो पहलू प्राधिकरण (एप्प )"
 
 #: journalist_templates/edit_account.html:92
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
-msgstr ""
+msgstr "रीसेट दो-कारक प्राधिकरण (हार्डवेयर टोकन)"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
-msgstr ""
+msgstr "धन्यवाद!"
 
 #: journalist_templates/flag.html:8
+#, fuzzy
 msgid ""
 "SecureDrop will generate a secure encryption key for this source the next"
 " time that they log in. Once the key has been generated, a reply box will"
 " appear under their collection of documents. You can use this box to "
 "write encrypted replies to them."
 msgstr ""
+"सेक्योरड्रॉप इस स्रोत के लिए एक सुरक्षित एन्क्रिप्शन कुंजी उत्पन्न करेगा, "
+"अगली बार जब वे लॉग इन करेंगे। एक बार कुंजी उत्पन्न हो जाने के बाद, एक दस्तावे"
+"ज के संग्रह के तहत एक उत्तर बॉक्स दिखाई देगा। आप इस बॉक्स को उनसे एन्क्रिप्ट "
+"किए गए उत्तर लिखने के लिए उपयोग कर सकते हैं।"
 
 #: journalist_templates/flag.html:10
 msgid "Continue to the list of documents for {codename}..."
-msgstr ""
+msgstr "{Codename} के लिए दस्तावेज़ों की सूची पर जारी रखें ..."
 
 #: journalist_templates/index.html:4
+#, fuzzy
 msgid "Sources"
-msgstr ""
+msgstr "स्रोत"
 
 #: journalist_templates/index.html:11
 msgid "Download Unread"
-msgstr ""
+msgstr "ान पढ़े मसाज डौन्लोड करें"
 
 #: journalist_templates/index.html:12
 msgid "Download"
-msgstr ""
+msgstr "डाउनलोड"
 
 #: journalist_templates/index.html:13
+#, fuzzy
 msgid "Star"
-msgstr ""
+msgstr "मार्क"
 
 #: journalist_templates/index.html:14
 msgid "Un-star"
-msgstr ""
+msgstr "ान मार्क"
 
 #: journalist_templates/index.html:47
 msgid "Are you sure you want to delete the selected collections?"
-msgstr ""
+msgstr "क्या आप वाकई चयनित संग्रह हटाना चाहते हैं?"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
-msgstr ""
+msgstr "कोई दस्तावेज जमा नहीं किया गया है!"
 
 #: journalist_templates/js-strings.html:3
 msgid "filter by codename"
-msgstr ""
+msgstr "कोडनेम द्वारा फ़िल्टर करें"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
-msgstr ""
+msgstr "सभी का चयन करे"
 
 #: journalist_templates/js-strings.html:5
 msgid "Select Unread"
-msgstr ""
+msgstr "न पढ़े चुनें"
 
 #: journalist_templates/js-strings.html:6
 msgid "Select None"
-msgstr ""
+msgstr "किसी का चयन न करें"
 
 #: journalist_templates/js-strings.html:7
 msgid "Are you sure you want to delete the user {username}?"
-msgstr ""
+msgstr "क्या आप वाकई उपयोगकर्ता {username} को हटाना चाहते हैं?"
 
 #: journalist_templates/js-strings.html:8
 msgid "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr ""
+"क्या आप वाकई {username} के लिए दो-कारक प्रमाणीकरण को रीसेट करना चाहते हैं?"
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
-msgstr ""
+msgstr "पत्रकार इंटरफ़ेस तक पहुंचने के लिए लॉगिन करें"
 
 #: journalist_templates/login.html:9
 msgid "Password"
-msgstr ""
+msgstr "पासवर्ड"
 
 #: journalist_templates/login.html:12
 msgid "LOG IN"
-msgstr ""
+msgstr "लॉग इन करें"
 
 #: source_app/__init__.py:115
+#, fuzzy
 msgid ""
 "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This "
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a "
 "href=\"{url}\">Why is this dangerous?</a>"
 msgstr ""
+"<strong>चेतावनी&nbsp;</strong> आप Tor2Web का उपयोग करते हुए दिखाई देते हैं | "
+"ये \n"
+"गुमनामी सुनिश्चित <strong>&nbsp;नहीं &nbsp;</strong> करता | <a href=\"{url}\""
+">\n"
+"यह खतरनाक क्यों है?</a>"
 
 #: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
-msgstr ""
+msgstr "फ़ील्ड 1 और {max_codename_len} वर्णों के बीच लंबा होना चाहिए।"
 
 #: source_app/forms.py:18
 msgid "Invalid input."
-msgstr ""
+msgstr "अमान्य निवेश।"
 
 #: source_app/main.py:30
 msgid ""
 "You were redirected because you are already logged in. If you want to "
 "create a new account, you should log out first."
 msgstr ""
+"आपको पुनर्निर्देशित किया गया था क्योंकि आप पहले ही लॉग इन हैं। यदि आप एक नया "
+"खाता बनाना चाहते हैं, तो आपको पहले लॉग आउट करना चाहिए।"
 
 #: source_app/main.py:120
 msgid "You must enter a message or choose a file to submit."
-msgstr ""
+msgstr "सबमिट करने के लिए आपको कोई संदेश दर्ज करना होगा या एक फ़ाइल चुनें |"
 
 #: source_app/main.py:153
 msgid "Thanks! We received your message."
-msgstr ""
+msgstr "धन्यवाद! हमें आपका संदेश मिला |"
 
 #: source_app/main.py:155
 msgid "Thanks! We received your document."
-msgstr ""
+msgstr "धन्यवाद! हमें आपका दस्तावेज़ मिला।"
 
 #: source_app/main.py:157
 msgid "Thanks! We received your message and document."
-msgstr ""
+msgstr "धन्यवाद! हमें आपका संदेश और दस्तावेज़ मिला।"
 
 #: source_app/main.py:204
 msgid "Reply deleted"
-msgstr ""
+msgstr "जवाब हटा दिया गया"
 
 #: source_app/main.py:221
 msgid "All replies have been deleted"
-msgstr ""
+msgstr "सभी उत्तर हटा दिए गए हैं"
 
 #: source_app/main.py:235
 msgid "Sorry, that is not a recognized codename."
-msgstr ""
+msgstr "क्षमा करें, वह एक मान्यता प्राप्त कोडनाम नहीं है |"
 
 #: source_templates/base.html:6 source_templates/index.html:4
 msgid "Protecting Journalists and Sources"
-msgstr ""
+msgstr "पत्रकारों और स्रोतों की रक्षा करते हुए"
 
 #: source_templates/base.html:25 source_templates/base.html:45
 #: source_templates/index.html:32 source_templates/index.html:84
@@ -836,37 +875,42 @@ msgstr ""
 
 #: source_templates/base.html:34
 msgid "LOG OUT"
-msgstr ""
+msgstr "लोग आउट"
 
 #: source_templates/base.html:45 source_templates/index.html:84
 msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
 msgstr ""
+"सभी सॉफ़्टवेयर की तरह, सिक्योरड्रॉप में सुरक्षा की खामियां हो सकती हैं अपने "
+"जोखिम पर इस्तेमाल करें।"
 
 #: source_templates/error.html:3
 msgid "Server error"
-msgstr ""
+msgstr "सर्वर त्रुटि"
 
 #: source_templates/error.html:5
 msgid ""
 "Sorry, the website encountered an error and was unable to complete your "
 "request."
 msgstr ""
+"क्षमा करें, वेबसाइट को एक त्रुटि मिली और आपका अनुरोध पूरा करने में असमर्थ है "
+"|"
 
 #: source_templates/error.html:7 source_templates/notfound.html:7
+#, fuzzy
 msgid "Look up a codename..."
-msgstr ""
+msgstr "एक कोडनाम खोजो ..."
 
 #: source_templates/first_submission_flashed_message.html:2
 msgid "Success!"
-msgstr ""
+msgstr "सफल हुआ !"
 
 #: source_templates/first_submission_flashed_message.html:3
 msgid ""
 "Thank you for sending this information to us. Please check back later for"
 " replies."
-msgstr ""
+msgstr "हमें यह जानकारी भेजने के लिए धन्यवाद। उत्तर के लिए बाद में जांच करें।"
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
@@ -1001,7 +1045,7 @@ msgstr "आपका संकेत नाम दर्ज करें"
 
 #: source_templates/login.html:25 source_templates/lookup.html:47
 msgid "CANCEL"
-msgstr ""
+msgstr "रद्द करना"
 
 #: source_templates/logout_flashed_message.html:4
 #: source_templates/session_timeout.html:5
@@ -1009,22 +1053,30 @@ msgid "Important!"
 msgstr "जरूरी!"
 
 #: source_templates/logout_flashed_message.html:5
+#, fuzzy
 msgid ""
 "Thank you for exiting your session! Please select \"New Identity\" from "
 "the green onion button in the Tor browser to clear all history of your "
 "SecureDrop usage from this device."
 msgstr ""
+"आपके सत्र से बाहर निकलने के लिए धन्यवाद! कृपया इस डिवाइस से आपके सिक्योरड्रॉ"
+"प उपयोग के सभी इतिहास को साफ़ करने के लिए टोर ब्राउज़र में हरी प्याज बटन से "
+"\"New Identity\" चुनें"
 
 #: source_templates/lookup.html:11
 msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr ""
 
 #: source_templates/lookup.html:12
+#, fuzzy
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all "
 "documents from that day through to our journalists."
 msgstr ""
+"जब आप पिछली बार विज़िट करते थे, तो हमारे सर्वरों ने नई गतिविधि का एक असामान्"
+"य वृद्धि देखी। सावधानी के पक्ष में गलती करने के लिए, हम उस दिन से हमारे "
+"पत्रकारों के माध्यम से सभी दस्तावेज भेजने पर रोक लगाते हैं।"
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1032,6 +1084,9 @@ msgid ""
 "submission into the hands of a journalist straight away. We’re sorry for "
 "the delay. Please do check back again in a week or so."
 msgstr ""
+"अब जब कि हम जानते हैं कि आप वास्तव में एक इंसान हैं, हालांकि, हम आपकी पिछली "
+"एक दस्तावेज़ पत्रकार के हाथों में सीधे तौर पर प्रस्तुत करेंगे। देरी के लिए "
+"हमें खेद है कृपया एक हफ्ते या कुछ समय में फिर से जांच करें।"
 
 #: source_templates/lookup.html:20
 msgid "Submit Materials"
@@ -1044,18 +1099,23 @@ msgid ""
 "key</a> before submission. Files are encrypted as they are received by "
 "SecureDrop."
 msgstr ""
+"यदि आप पहले ही जीपीजी से परिचित हैं, तो आप वैकल्पिक रूप से अपनी फाइलों और "
+"संदेशों को सबमिट करने से पहले एन्क्रिप्ट कर सकते हैं हमारी <a href=\"{url}\" "
+"class=\"text-link\"> सार्वजनिक  कुंजी</a> का प्रयोग करके |\n"
+"फ़ाइलों को एन्क्रिप्ट किया गया है क्योंकि वे सिक्योरड्रॉप द्वारा प्राप्त की "
+"जाती हैं।"
 
 #: source_templates/lookup.html:22
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
-msgstr ""
+msgstr "<a href=\"{url}\" class=\"text-link\">और सुचना पाने के लिए </a> |"
 
 #: source_templates/lookup.html:24
 msgid "You can send a file, a message, or both."
-msgstr ""
+msgstr "आप एक फ़ाइल, एक संदेश या दोनों भेज सकते हैं|"
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
-msgstr ""
+msgstr "अधिकतम अपलोड आकार: 500 MB"
 
 #: source_templates/lookup.html:36
 msgid "Write a message."
@@ -1063,7 +1123,7 @@ msgstr "सन्देश लिखिए।"
 
 #: source_templates/lookup.html:53
 msgid "Read Replies"
-msgstr ""
+msgstr "उत्तर पढ़ें"
 
 #: source_templates/lookup.html:58
 msgid ""
@@ -1075,23 +1135,23 @@ msgstr ""
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
-msgstr ""
+msgstr "यह उत्तर हटाएं?"
 
 #: source_templates/lookup.html:73
 msgid "DELETE"
-msgstr ""
+msgstr "हटाएँ"
 
 #: source_templates/lookup.html:82
 msgid "DELETE ALL REPLIES"
-msgstr ""
+msgstr "सभी उत्तर हटाएं"
 
 #: source_templates/lookup.html:85
 msgid "Are you finished with the replies?"
-msgstr ""
+msgstr "क्या आपने सभी उत्तर पढ़ लिए ?"
 
 #: source_templates/lookup.html:86
 msgid "YES, DELETE ALL REPLIES"
-msgstr ""
+msgstr "हाँ, सभी उत्तर हटाएं"
 
 #: source_templates/lookup.html:87
 msgid "NO, NOT YET"
@@ -1099,27 +1159,27 @@ msgstr "अभी तक नहीं"
 
 #: source_templates/lookup.html:91
 msgid "There are no replies at this time."
-msgstr ""
+msgstr "इस समय कोई जवाब नहीं है |"
 
 #: source_templates/lookup.html:100
 msgid "Remember, your codename is:"
-msgstr ""
+msgstr "याद रखें, आपका कोडनाम है:"
 
 #: source_templates/lookup.html:101
 msgid "Show"
-msgstr ""
+msgstr "दिखाएं"
 
 #: source_templates/lookup.html:103
 msgid "Hide"
-msgstr ""
+msgstr "छुपाएं"
 
 #: source_templates/notfound.html:3
 msgid "Page not found"
-msgstr ""
+msgstr "पृष्ठ नहीं मिला"
 
 #: source_templates/notfound.html:5
 msgid "Sorry, we couldn't locate what you requested."
-msgstr ""
+msgstr "क्षमा करें, हम आपके द्वारा अनुरोध किए गए स्थान का पता नहीं लगा सके।"
 
 #: source_templates/session_timeout.html:6
 msgid ""
@@ -1129,10 +1189,15 @@ msgid ""
 "usage from this device. If you are not using Tor Browser, restart your "
 "browser."
 msgstr ""
+"निष्क्रियता के कारण आपका सत्र समाप्त हो गया यदि आप सिक्योरड्रॉप का उपयोग करना"
+" जारी रखना चाहते हैं तोह लॉग इन करें , या फिर इस ब्राउज़र से आपके सिक्योरड्रॉ"
+"प उपयोग के सभी इतिहास को साफ करने के लिए टोर ब्राउज़र में हरी प्याज बटन से \""
+"नई पहचान\" का चयन करें । यदि आप टोर ब्राउज़र का उपयोग नहीं कर रहे हैं, तो "
+"अपने ब्राउज़र को पुनः आरंभ करें।"
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
-msgstr ""
+msgstr "Tor2Web के बारे में चेतावनी क्यों है?"
 
 #: source_templates/tor2web-warning.html:4
 msgid ""
@@ -1140,6 +1205,10 @@ msgid ""
 "browse Tor Hidden Services (.onion sites) without installing Tor. It was "
 "designed to facilitate anonymous publishing."
 msgstr ""
+"<a href=\"tor2web.org\"></a>\n"
+"एक प्रॉक्सी सेवा है जो आपको टोर को स्थापित किए बिना टोर छुपे सर्विसेज ("
+".onion साइटों) को ब्राउज़ करने देती है। इसे अनाम प्रकाशन को सुविधाजनक बनाने "
+"के लिए डिज़ाइन किया गया था |"
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
@@ -1149,6 +1218,12 @@ msgid ""
 "since Tor2Web sites typically do not use HTTPS, it is possible that your "
 "connection could be MITM'ed by a capable adversary."
 msgstr ""
+"Tor2Web केवल प्रकाशकों की रक्षा करता है, पाठकों की नहीं। यदि आप Tor2Web का "
+"उपयोग करते हुए हमारे पास दस्तावेज़ अपलोड करते हैं, तो आप <strong>\n"
+"गुमनाम नहीं हैं </strong> \n"
+"और आपके ISP या Tor2Web प्रॉक्सी ऑपरेटरों द्वारा पहचाना जा सकता है इसके "
+"अतिरिक्त,Tor2Web साइटों आमतौर पर HTTPS का उपयोग नहीं करते हैं, यह संभव है कि "
+"आपके कनेक्शन एक सक्षम प्रतिद्वंद्वी द्वारा एमआईटीएम हो सकता है|"
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
@@ -1157,16 +1232,23 @@ msgid ""
 "href=\"torproject.org/download.html.en\">Tor</a> and use it to access our"
 " site safely and anonymously."
 msgstr ""
+"यदि आप जानकारी जमा करना चाहते हैं, तो आप हैं<strong>सख्त हिदायत </strong> \n"
+"दी जाती है की आप <a href=\"torproject.org/download.html.en\">टॉर</a> का प्रयो"
+"ग करें \n"
+"ताकि आप हमारी साइट को सुरक्षित और अनाम रूप से एक्सेस करके इसका इस्तेमाल कर "
+"सकें |"
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
-msgstr ""
+msgstr "आपको टॉर ब्राउज़र का इस्तेमाल करना चाहिए"
 
 #: source_templates/use-tor-browser.html:4
 msgid ""
 "If you are not using Tor Browser, you <strong>may not be "
 "anonymous</strong>."
 msgstr ""
+"यदि आप टोर ब्राउज़र का उपयोग नहीं कर रहे हैं, तो आप<strong>अनाम नहीं हैं "
+"</strong>|"
 
 #: source_templates/use-tor-browser.html:5
 msgid ""
@@ -1174,12 +1256,17 @@ msgid ""
 "advise you</strong> to install Tor Browser and use it to access our site "
 "safely and anonymously."
 msgstr ""
+"यदि आप सिक्योरड्रॉप को जानकारी जमा करना चाहते हैं, तो हम आपको <strong>सख्त "
+"हिदायत</strong> देते हैं की आप टोर ब्राउज़र का प्रयोग करें \n"
+"ताकि आप हमारी साइट को सुरक्षित और अनाम रूप से एक्सेस कर सकें |"
 
 #: source_templates/use-tor-browser.html:6
 msgid ""
 "Copy and paste the following address into your browser and follow the "
 "instructions to download and install Tor Browser:"
 msgstr ""
+"निम्न एड्रेस को अपने ब्राउज़र में कॉपी और पेस्ट करें और टोर ब्राउज़र को "
+"डाउनलोड और इंस्टॉल करने के लिए निर्देशों का पालन करें:"
 
 #: source_templates/use-tor-browser.html:9
 msgid ""
@@ -1188,10 +1275,14 @@ msgid ""
 "mail to <pre>gettor@torproject.org</pre> and a bot will answer with "
 "instructions."
 msgstr ""
+"यदि एक आशंका है कि टॉअर ब्राउज़र डाउनलोड करने से संदेह उठता है और आपके मेल "
+"प्रदाता पर नजर रखी जाने की संभावना कम है, तो आप एक मेल भेज सकते "
+"हैं<pre>gettor@torproject.org</pre>\n"
+"और एक बॉट निर्देशों के साथ जवाब देंगे |"
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
-msgstr ""
+msgstr "पत्रकार की सार्वजनिक कुंजी क्यों डाउनलोड करें?"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
@@ -1199,18 +1290,25 @@ msgid ""
 "Encrypting messages and files before submission can provide an extra "
 "layer of security before your data reaches the SecureDrop server."
 msgstr ""
+"सिक्योर्रॉफ़्ट फ़ाइलें और संदेश सबमिट किए जाने के बाद उन्हें एन्क्रिप्ट करता "
+"है। सिक्योरड्रॉप सर्वर तक पहुंचने से पहले संदेशों और फ़ाइलों को एन्क्रिप्ट "
+"करके सुरक्षा के एक अतिरिक्त परत प्रदान करि जा सकती है ।"
 
 #: source_templates/why-journalist-key.html:5
 msgid ""
 "If you are already familiar with the GPG encryption software, you may "
 "wish to encrypt your submissions yourself. To do so:"
 msgstr ""
+"यदि आप पहले से ही GPG एन्क्रिप्शन सॉफ़्टवेयर से परिचित हैं, तो आप स्वयं अपनी "
+"प्रस्तुतियां एन्क्रिप्ट कर सकते हैं। ऐसा करने के लिए:"
 
 #: source_templates/why-journalist-key.html:7
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. The public key is a text "
 "file with the extension <code>.asc</code>"
 msgstr ""
+"<a href=\"{url}\">डाउनलोड</a>सार्वजनिक कुंजी |  सार्वजनिक कुंजी "
+"<code>.asc</code>एक्सटेंशन के साथ एक पाठ फ़ाइल है"
 
 #: source_templates/why-journalist-key.html:8
 msgid "Import it into your GPG keyring."
@@ -1222,16 +1320,21 @@ msgid ""
 "<code>.asc</code> file you just downloaded and it will be automatically "
 "imported to your keyring."
 msgstr ""
+"अगर आप <a href=\"{url}\">Tails</a> का प्रयोग कर रहे है तोह आप डाउनलोड की गयी"
+"  <code>.asc</code> फाइल पर दो बार क्लिक करके उसे खुद बा खुद अपनी कीरिंग  में"
+" इम्पोर्ट क्र सकते हैं |"
 
 #: source_templates/why-journalist-key.html:11
 msgid ""
 "If you are using Mac/Linux, open the terminal. You can import the key "
 "with <code>gpg --import /path/to/key.asc</code>."
 msgstr ""
+"यदि आप मैक / लिनक्स का उपयोग कर रहे हैं तो टर्मिनल खोलें। आप कुंजी को <code>"
+"gpg --import /path/to/key.asc</code>के साथ आयात कर सकते हैं |"
 
 #: source_templates/why-journalist-key.html:14
 msgid "Encrypt your submission."
-msgstr ""
+msgstr "अपना सबमिशन एन्क्रिप्ट करें |"
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
@@ -1264,4 +1367,4 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
-msgstr ""
+msgstr "सबमिशन पृष्ठ पर वापस जाएं"
