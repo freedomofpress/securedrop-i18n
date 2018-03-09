@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-08 18:00+0000\n"
+"PO-Revision-Date: 2018-03-09 09:03+0000\n"
 "Last-Translator: Jobava <jobaval10n@gmail.com>\n"
 "Language-Team: Romanian "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ro/>\n"
@@ -1065,7 +1065,7 @@ msgstr ""
 
 #: source_templates/lookup.html:11
 msgid "Whew, it’s you! Now, the embarrassing part..."
-msgstr ""
+msgstr "Bine ai venit! Întâmpinăm probleme momentan..."
 
 #: source_templates/lookup.html:12
 msgid ""
@@ -1191,6 +1191,11 @@ msgid ""
 "usage from this device. If you are not using Tor Browser, restart your "
 "browser."
 msgstr ""
+"Sesiunea ta s-a terminat din cauza inactivității. Trebuie să te autentifici "
+"din nou pentru a folosi SecureDrop, sau poți alege „Identitate nouă” (New "
+"Identity) din butonul cu ceapa verde din browserul Tor pentru a curăța "
+"întreaga istorie a folosirii SecureDrop pe acest dispozitiv. Dacă nu "
+"folosești browserul Tor, repornește browserul."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1214,6 +1219,12 @@ msgid ""
 "since Tor2Web sites typically do not use HTTPS, it is possible that your "
 "connection could be MITM'ed by a capable adversary."
 msgstr ""
+"Tor2Web protejează doar proprietarii de servicii web, nu și cititorii "
+"acestora. <strong>Nu ai parte de anonimitate</strong> folosind Tor2Web și "
+"poți fi identificat de furnizorul tău de servicii internet (ISP) sau de "
+"către operatorii Tor2Web. Deasemenea, Tor2Web nu folosește de regulă HTTPS, "
+"așa că este posibil ca conexiunea ta să fie interceptată de orice dispozitiv "
+"de rețea poziționat între tine și Tor2Web."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
@@ -1222,6 +1233,9 @@ msgid ""
 "href=\"torproject.org/download.html.en\">Tor</a> and use it to access our"
 " site safely and anonymously."
 msgstr ""
+"Dacă dorești să trimiți aceste informații, <strong>te rugăm "
+"insistent</strong> să folosești <a href=\"torproject.org/download.html.en\""
+">Tor</a> pentru a accesa site-ul nostru în mod sigur și anonim."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
@@ -1260,6 +1274,10 @@ msgid ""
 "mail to <pre>gettor@torproject.org</pre> and a bot will answer with "
 "instructions."
 msgstr ""
+"Dacă descărcarea browserului Tor poate trezi suspiciuni asupra ta, dar este "
+"mai puțin probabil ca furnizorul tău de e-mail să fie monitorizat, ne mai "
+"poți trimite un e-mail la <pre>gettor@torproject.org</pre> și un robot "
+"electronic îți va răspunde cu instrucțiuni."
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
@@ -1324,12 +1342,18 @@ msgid ""
 "(with .asc at the end), you can just copy and paste that. (don't include "
 "the <code>.asc</code>!)"
 msgstr ""
+"Va trebui să identifici cheia cu ajutorul unui „ID utilizator” (user ID) sau "
+"UID. Numele de fișier al cheii este și amprenta digitală a cheii (cu .asc la "
+"sfârșit), așa că poți copia și lipi acest nume (fără a include "
+"<code>.asc</code>)."
 
 #: source_templates/why-journalist-key.html:17
 msgid ""
 "On all systems, open the Terminal and use this gpg command: <code>gpg "
 "--recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 msgstr ""
+"Pe toate sistemele, deschide un terminal și folosește următoarea comandă gpg:"
+"  <code>gpg --recipient &lt; user ID&gt; --encrypt roswell_photos.pdf</code>"
 
 #: source_templates/why-journalist-key.html:20
 msgid ""
@@ -1337,6 +1361,8 @@ msgid ""
 "unencrypted file, with .gpg at the end (e.g. "
 "<code>roswell_photos.pdf.gpg</code>)"
 msgstr ""
+"Încarcă fișierul tău criptat. Acesta va avea același nume, dar cu .gpg la "
+"sfârșit (de ex. <code>roswell_photos.pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:23
 msgid ""
@@ -1345,6 +1371,10 @@ msgid ""
 "<code>--sign</code> or <code>-s</code> flag) as this will reveal your GPG"
 " identity to us."
 msgstr ""
+"<strong>Indiciu:</strong> Dacă dorești să rămâi anonim, <strong>nu "
+"folosi</strong> GPG pentru a semna un fișier criptat (cu argumentul "
+"<code>--sign</code> sau <code>-s</code>) pentru că aceasta ne va dezvălui "
+"nouă identitatea ta."
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
