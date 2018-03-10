@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-10 19:34+0000\n"
-"Last-Translator: Andrey <andrey@mailbox.org>\n"
+"PO-Revision-Date: 2018-03-10 19:39+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Russian "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ru/>\n"
 "Language: ru\n"
@@ -116,6 +116,8 @@ msgstr "Поле должно содержать 40 символов. Сейча
 msgid ""
 "Field must be at least {min_chars} characters long but only got {num_chars}."
 msgstr ""
+"Длина поля должна составлять минимум {min_chars} символов, а составляет "
+"только {num_chars}."
 
 #: journalist_app/forms.py:35 source_app/forms.py:11
 msgid "This field is required."
@@ -126,14 +128,12 @@ msgid "You cannot send an empty reply."
 msgstr "Вы не можете отправить пустой ответ."
 
 #: journalist_app/forms.py:60
-#, fuzzy
-#| msgid "This field is required."
 msgid "File required."
-msgstr "Это обязательное поле."
+msgstr "Файл обязателен."
 
 #: journalist_app/forms.py:62
 msgid "Upload images only."
-msgstr ""
+msgstr "Загружать только изображения."
 
 #: journalist_app/main.py:118
 msgid "Thanks. Your reply has been stored."
@@ -164,16 +164,17 @@ msgid "Login failed."
 msgstr "Авторизация не удалась."
 
 #: journalist_app/utils.py:93
-#, fuzzy
-#| msgid "Please wait at least {seconds} seconds before logging in again."
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] ""
-"Подождите {seconds} секунд перед тем как попробовать снова войти в систему."
+"Подождите минимум {seconds} секунд перед тем как попробовать снова войти в "
+"систему."
 msgstr[1] ""
-"Подождите {seconds} секунд перед тем как попробовать снова войти в систему."
+"Подождите минимум {seconds} секунд перед тем как попробовать снова войти в "
+"систему."
 msgstr[2] ""
-"Подождите {seconds} секунд перед тем как попробовать снова войти в систему."
+"Подождите  минимум {seconds} секунд перед тем как попробовать снова войти в "
+"систему."
 
 #: journalist_app/utils.py:104
 #, fuzzy
