@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-10 06:00+0000\n"
-"Last-Translator: Muhammad Usman <muhdusman98@gmail.com>\n"
+"PO-Revision-Date: 2018-03-10 08:00+0000\n"
+"Last-Translator: Abhishek Jaiswal <abhijais9451@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
 "Language: hi\n"
@@ -417,9 +417,8 @@ msgstr ""
 " हो सके की दो कारक प्रमाणीकरण को सही तरीके से सेटअप किया गया है |"
 
 #: journalist_templates/base.html:24
-#, fuzzy
 msgid "Logged on as"
-msgstr "के रूप में लोग्ड"
+msgstr "लॉग ऑन"
 
 #: journalist_templates/base.html:26
 msgid "Admin"
@@ -438,9 +437,8 @@ msgstr ""
 "द्वारा संचालित"
 
 #: journalist_templates/base.html:56
-#, fuzzy
 msgid "Powered by <em>SecureDrop {version}</em>."
-msgstr "पॉवरेद बी <em> सेक्युरेदरोप {version} </em>"
+msgstr "<em>सिक्योरड्रॉप {version}</em> दवारा संचालित |"
 
 #: journalist_templates/col.html:10
 msgid "All Sources"
@@ -591,7 +589,10 @@ msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
 msgstr[0] ""
+"निम्न फ़ाइल को <strong>स्थायी </strong>रूप से मिटने के लिए लिए चुना गया है:"
 msgstr[1] ""
+"{files} फाइलों को <strong>स्थायी </strong>रूप से मिटने के लिए लिए चुना गया "
+"है:"
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
@@ -602,12 +603,10 @@ msgid "Return to the list of documents for {source_name}…"
 msgstr "{Source_name} के लिए दस्तावेज़ों की सूची पर लौटें …"
 
 #: journalist_templates/edit_account.html:6
-#, fuzzy
 msgid "Edit user \"{user}\""
 msgstr "उपयोगकर्ता \"{user}\" संपादित करें"
 
 #: journalist_templates/edit_account.html:8
-#, fuzzy
 msgid "Change Username &amp; Admin Status"
 msgstr "उपयोगकर्ता नाम परिवर्तन करें  &amp; व्यवस्थापक स्थिति"
 
@@ -628,14 +627,12 @@ msgid "Reset Password"
 msgstr "पासवर्ड रीसेट"
 
 #: journalist_templates/edit_account.html:27
-#, fuzzy
 msgid "SecureDrop now uses automatically generated diceware passwords."
 msgstr ""
 "सेक्युरेदरोप अब स्वचालित रूप से जेनरेट किए गए डिसवेयर पासवर्ड का उपयोग करता "
-"है"
+"है |"
 
 #: journalist_templates/edit_account.html:28
-#, fuzzy
 msgid ""
 "Your password will be changed immediately, so you will need to save it "
 "before pressing the \"Reset Password\" button."
@@ -656,7 +653,6 @@ msgid "Two-factor Code"
 msgstr "द्वि-कारक कोड"
 
 #: journalist_templates/edit_account.html:46
-#, fuzzy
 msgid "The user's password will be changed to:"
 msgstr "उपयोगकर्ता का पासवर्ड निम्न में बदल जाएगा:"
 
