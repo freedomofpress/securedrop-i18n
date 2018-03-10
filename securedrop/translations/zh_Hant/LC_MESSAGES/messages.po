@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-03-08 04:00+0000\n"
+"PO-Revision-Date: 2018-03-10 01:54+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/zh_Hant/>\n"
@@ -464,8 +464,6 @@ msgstr "訊息"
 
 #: journalist_templates/col.html:71 journalist_templates/col.html:129
 #: journalist_templates/index.html:46
-#, fuzzy
-#| msgid "Instance Configuration"
 msgid "Delete Confirmation"
 msgstr "刪除確認動作"
 
@@ -858,14 +856,6 @@ msgid ""
 msgstr "之後你將使用這個代號來讀取記者對你（在下一個畫面所提交資訊）的回應。"
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we use none of the traditional means to track users of our "
-#| "<strong>SecureDrop</strong>\n"
-#| " service, in future visits, using this codename will be the only way we "
-#| "have to communicate with you should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"
 " service, in future visits, using this codename will be the only way we have "
@@ -874,7 +864,7 @@ msgid ""
 "there is no way to retrieve a lost codename."
 msgstr ""
 "因為我們不會追蹤 <strong>SecureDrop</strong> "
-"的使用者。你再次訪問須提供此代號登入，也是將來我們若有疑問或需要更多文件時要求，和你溝通的唯一管道。\n"
+"的使用者。你再次訪問須提供此代號登入，它也是將來我們若有疑問或需要更多文件時要求，和你溝通的唯一管道。\n"
 "\n"
 "代號和密碼不同，一旦遺失便無法再恢復獲取。"
 
