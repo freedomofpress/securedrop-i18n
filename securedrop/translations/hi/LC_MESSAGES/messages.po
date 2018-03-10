@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-10 08:00+0000\n"
-"Last-Translator: Abhishek Jaiswal <abhijais9451@gmail.com>\n"
+"PO-Revision-Date: 2018-03-10 10:00+0000\n"
+"Last-Translator: Muhammad Usman <muhdusman98@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
 "Language: hi\n"
@@ -734,7 +734,6 @@ msgid "Continue to the list of documents for {codename}..."
 msgstr "{Codename} के लिए दस्तावेज़ों की सूची पर जारी रखें ..."
 
 #: journalist_templates/index.html:4
-#, fuzzy
 msgid "Sources"
 msgstr "स्रोत"
 
@@ -864,7 +863,7 @@ msgstr "पत्रकारों और स्रोतों की रक�
 #: source_templates/base.html:25 source_templates/base.html:45
 #: source_templates/index.html:32 source_templates/index.html:84
 msgid "Powered by"
-msgstr ""
+msgstr "संचालित द्वारा"
 
 #: source_templates/base.html:34
 msgid "LOG OUT"
