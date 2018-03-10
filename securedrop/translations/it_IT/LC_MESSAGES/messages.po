@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-03-07 18:00+0000\n"
+"PO-Revision-Date: 2018-03-10 08:00+0000\n"
 "Last-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\n"
 "Language-Team: Italian "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/it/>\n"
@@ -510,16 +510,12 @@ msgstr "Messaggio"
 
 #: journalist_templates/col.html:71 journalist_templates/col.html:129
 #: journalist_templates/index.html:46
-#, fuzzy
-#| msgid "Instance Configuration"
 msgid "Delete Confirmation"
-msgstr "Configurazione istanza"
+msgstr "Conferma eliminazione"
 
 #: journalist_templates/col.html:72
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected documents?"
-msgstr "Archivi selezionati {size}. Eliminarli veramente?"
+msgstr "Eliminare veramente i documenti selezionati?"
 
 #: journalist_templates/col.html:87
 msgid "No documents to display."
@@ -579,12 +575,9 @@ msgid "Alerts"
 msgstr "Avvisi"
 
 #: journalist_templates/config.html:11
-#, fuzzy
-#| msgid ""
-#| "Send a test encrypted email alert to verify OSSEC is working correctly:"
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr ""
-"Invia una email cifrata di prova per verificare che OSSEC funzioni "
+"Invia una email cifrata per verificare che gli avvisi OSSEC funzionino "
 "correttamente:"
 
 #: journalist_templates/config.html:15
@@ -946,14 +939,6 @@ msgstr ""
 "schermata."
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we use none of the traditional means to track users of our "
-#| "<strong>SecureDrop</strong>\n"
-#| " service, in future visits, using this codename will be the only way we "
-#| "have to communicate with you should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"
 " service, in future visits, using this codename will be the only way we have "
@@ -961,10 +946,10 @@ msgid ""
 " questions or are interested in additional documents. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"Dato che non usiamo nessun mezzo tradizionale per tracciare gli utenti del "
-"nostro servizio <strong>SecureDrop</strong>\n"
-" , nelle visite successive, usare questo nome in codice sarà l'unico modo "
-"con cui potremo comunicare con te se dovessimo avere\n"
+"Dato che non tracciamo gli utenti del nostro servizio "
+"<strong>SecureDrop</strong>,\n"
+" nelle visite successive, usare questo nome in codice sarà l'unico modo con "
+"cui potremo comunicare con te se dovessimo avere\n"
 " domande o essere interessati a documenti aggiuntivi. A differenza delle "
 "password, non c'è alcun modo di recuperare un nome in codice perso."
 
@@ -973,19 +958,14 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "INVIA DOCUMENTI"
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend turning the Security Slider to High to protect your "
-#| "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
-#| "high</a>, or ignore this warning to continue."
 msgid ""
 "<strong>We recommend turning the Security Slider to Safest to protect your "
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
 "safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Raccomandiamo di spostare il Tab di sicurezza su Alto per proteggere "
-"il tuo anonimato:</strong><a id=\"disable-js\" href=\"\">Scopri come "
-"impostarlo su Alto</a>, o ignora questo avviso per continuare."
+"<strong>Raccomandiamo di spostare il Tab di sicurezza su \"Molto sicuro\" "
+"per proteggere il tuo anonimato:</strong><a id=\"disable-js\" href=\"\">"
+"Scopri come impostarlo su Alto</a>, o ignora questo avviso per continuare."
 
 #: source_templates/index.html:18
 msgid ""
@@ -1024,16 +1004,12 @@ msgid "CHECK FOR A RESPONSE"
 msgstr "CONTROLLA RIPOSTE"
 
 #: source_templates/index.html:92
-#, fuzzy
-#| msgid ""
-#| "You appear to be using the Tor Browser. You can turn the Security Slider "
-#| "to High in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
 "Safest in 4 easy steps!"
 msgstr ""
 "Sembra che tu stia usando il browser Tor. Puoi spostare il Tab di Sicurezza "
-"su Alto in 4 semplici passi!"
+"su \"Molto sicuro\" in 4 semplici passi!"
 
 #: source_templates/index.html:94
 msgid ""
@@ -1047,14 +1023,11 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "Fare clic su <strong>Impostazioni di Sicurezza...</strong>"
 
 #: source_templates/index.html:96
-#, fuzzy
-#| msgid ""
-#| "Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
 msgid ""
 "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgstr ""
-"Sposta il Tab di Sicurezza su <strong>Alto</strong>, poi fai clic su "
-"<strong>OK</strong>"
+"Sposta il Tab di Sicurezza su <strong>\"Molto sicuro\"</strong>, poi fai "
+"clic su <strong>OK</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Click here</a> to refresh the page"
