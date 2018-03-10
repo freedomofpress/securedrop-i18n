@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-10 19:30+0000\n"
-"Last-Translator: Andrey <andrey@mailbox.org>\n"
+"PO-Revision-Date: 2018-03-10 19:31+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Russian "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ru/>\n"
 "Language: ru\n"
@@ -30,7 +30,7 @@ msgstr "Ваша сессия была завершена из-за неакти
 
 #: journalist_app/account.py:26
 msgid "Incorrect password or two-factor code."
-msgstr ""
+msgstr "Неверный пароль или код двухуровневой аутентификации."
 
 #: journalist_app/account.py:42
 msgid "Token in two-factor authentication verified."
@@ -41,10 +41,8 @@ msgid "Could not verify token in two-factor authentication."
 msgstr "Не удалось проверить токен при двухфакторной аутентификации."
 
 #: journalist_app/admin.py:37
-#, fuzzy
-#| msgid "Account updated."
 msgid "Image updated."
-msgstr "Аккаунт обновлен."
+msgstr "Изображение обновлено."
 
 #: journalist_app/admin.py:66
 msgid ""
@@ -59,16 +57,12 @@ msgid "That username is already in use"
 msgstr "Это имя пользователя уже используется"
 
 #: journalist_app/admin.py:80
-#, fuzzy
-#| msgid ""
-#| "An error occurred saving this user to the database. Please check the "
-#| "application logs."
 msgid ""
 "An error occurred saving this user to the database. Please inform your "
 "administrator."
 msgstr ""
 "Возникла ошибка при сохранении пользователя в базу данных. Пожалуйста "
-"проверьте логи приложения."
+"сообщите вашему администратору."
 
 #: journalist_app/admin.py:104
 msgid "Token in two-factor authentication accepted for user {user}."
