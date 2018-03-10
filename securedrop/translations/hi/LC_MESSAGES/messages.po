@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-10 12:00+0000\n"
-"Last-Translator: Muhammad Usman <muhdusman98@gmail.com>\n"
+"PO-Revision-Date: 2018-03-10 23:00+0000\n"
+"Last-Translator: Abhishek Jaiswal <abhijais9451@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
 "Language: hi\n"
@@ -1057,7 +1057,7 @@ msgstr ""
 
 #: source_templates/lookup.html:11
 msgid "Whew, it’s you! Now, the embarrassing part..."
-msgstr ""
+msgstr "वाह, यह आप हो! अब, शर्मनाक हिस्सा ..."
 
 #: source_templates/lookup.html:12
 #, fuzzy
