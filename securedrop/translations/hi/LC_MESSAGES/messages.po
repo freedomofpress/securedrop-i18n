@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-10 05:00+0000\n"
-"Last-Translator: Abhishek Jaiswal <abhijais9451@gmail.com>\n"
+"PO-Revision-Date: 2018-03-10 06:00+0000\n"
+"Last-Translator: Muhammad Usman <muhdusman98@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
 "Language: hi\n"
@@ -430,7 +430,6 @@ msgid "Log Out"
 msgstr "लोग आउट"
 
 #: journalist_templates/base.html:41
-#, fuzzy
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" "
 "alt=\"SecureDrop\">"
