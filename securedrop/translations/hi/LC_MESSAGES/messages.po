@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-09 22:00+0000\n"
+"PO-Revision-Date: 2018-03-10 05:00+0000\n"
 "Last-Translator: Abhishek Jaiswal <abhijais9451@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
@@ -95,7 +95,6 @@ msgid "Test alert sent. Please check your email."
 msgstr "टेस्ट अलर्ट भेजा गया कृपया अपनी ईमेल देखें।"
 
 #: journalist_app/col.py:45
-#, fuzzy
 msgid "{source_name}'s collection deleted"
 msgstr "{source_name} का संग्रह हटाया गया"
 
@@ -108,7 +107,6 @@ msgid "Only administrators can access this page."
 msgstr "केवल व्यवस्थापक ही पृष्ठ तक पहुंच सकते हैं।"
 
 #: journalist_app/forms.py:19
-#, fuzzy
 msgid "Field must be 40 characters long but got {num_chars}."
 msgstr "फ़ील्ड 40 वर्ण लंबा होनी चाहिए, लेकिन {num_chars} मिले |"
 
