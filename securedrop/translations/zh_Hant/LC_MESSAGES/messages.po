@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-03-10 01:54+0000\n"
+"PO-Revision-Date: 2018-03-10 14:00+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/zh_Hant/>\n"
@@ -356,7 +356,7 @@ msgstr "沒有使用者可顯示"
 
 #: journalist_templates/admin.html:48
 msgid "INSTANCE CONFIG"
-msgstr "虛擬器設定"
+msgstr "架設主機設定"
 
 #: journalist_templates/admin_add_user.html:4
 #: journalist_templates/config.html:4 journalist_templates/edit_account.html:7
@@ -517,7 +517,7 @@ msgstr "確認要刪除此一集件？"
 
 #: journalist_templates/config.html:7
 msgid "Instance Configuration"
-msgstr "虛擬器設定"
+msgstr "架設主機設定"
 
 #: journalist_templates/config.html:9
 msgid "Alerts"
@@ -799,7 +799,7 @@ msgstr "保護新聞記者與消息來源線人"
 #: source_templates/base.html:25 source_templates/base.html:45
 #: source_templates/index.html:32 source_templates/index.html:84
 msgid "Powered by"
-msgstr "搭造"
+msgstr "使用版本"
 
 #: source_templates/base.html:34
 msgid "LOG OUT"
