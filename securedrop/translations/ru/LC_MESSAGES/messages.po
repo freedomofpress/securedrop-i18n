@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-10 19:29+0000\n"
-"Last-Translator: Maria Ovsyannikova <xella.design@gmail.com>\n"
+"PO-Revision-Date: 2018-03-10 19:30+0000\n"
+"Last-Translator: Andrey <andrey@mailbox.org>\n"
 "Language-Team: Russian "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ru/>\n"
 "Language: ru\n"
@@ -83,7 +83,7 @@ msgstr ""
 #, fuzzy
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
-"Неверный формат секретного ключа: нечётная длина. Вы ошиблись в секретном "
+"Неверный формат секретного ключа: нечетная длина. Вы ошиблись в секретном "
 "ключе?"
 
 #: journalist_app/admin.py:148 journalist_app/main.py:107
@@ -103,7 +103,7 @@ msgstr "Имя пользователя \"{user}\" уже занято."
 
 #: journalist_app/admin.py:223
 msgid "Deleted user '{user}'"
-msgstr "Пользователь '{user}' удалён"
+msgstr "Пользователь '{user}' удален"
 
 #: journalist_app/admin.py:249
 msgid "Test alert sent. Please check your email."
@@ -150,7 +150,7 @@ msgstr ""
 
 #: journalist_app/main.py:118
 msgid "Thanks. Your reply has been stored."
-msgstr "Спасибо. Ваш ответ сохранён."
+msgstr "Спасибо. Ваш ответ сохранен."
 
 #: journalist_app/main.py:139
 msgid "No collections selected for download."
@@ -214,7 +214,7 @@ msgstr[2] "{num} коллекций удалено"
 
 #: journalist_app/utils.py:241
 msgid "You submitted a bad password! Password not changed."
-msgstr "Вы ввели неверный пароль! Пароль не был изменён."
+msgstr "Вы ввели неверный пароль! Пароль не был изменен."
 
 #: journalist_app/utils.py:248
 msgid ""
@@ -222,8 +222,8 @@ msgid ""
 "correctly. To prevent you from getting locked out of your account, you "
 "should reset your password again."
 msgstr ""
-"Произошла ошибка, новый пароль мог быть сохранён неправильно. Установите "
-"новый пароль ещё раз, чтобы не потерять доступ к аккаунту."
+"Произошла ошибка, новый пароль мог быть сохранен неправильно. Установите "
+"новый пароль еще раз, чтобы не потерять доступ к аккаунту."
 
 #: journalist_app/utils.py:257
 msgid ""
@@ -685,7 +685,7 @@ msgid ""
 "Your password will be changed immediately, so you will need to save it "
 "before pressing the \"Reset Password\" button."
 msgstr ""
-"Ваш пароль будет немедленно изменён. Сохраните ваш новый пароль перед тем "
+"Ваш пароль будет немедленно изменен. Сохраните ваш новый пароль перед тем "
 "как нажать кнопку \"Сбросить пароль\"."
 
 #: journalist_templates/edit_account.html:34
@@ -704,11 +704,11 @@ msgstr "Двухфакторный код"
 
 #: journalist_templates/edit_account.html:46
 msgid "The user's password will be changed to:"
-msgstr "Пароль пользователя будет изменён на:"
+msgstr "Пароль пользователя будет изменен на:"
 
 #: journalist_templates/edit_account.html:48
 msgid "Your password will be changed to:"
-msgstr "Ваш пароль будет изменён на:"
+msgstr "Ваш пароль будет изменен на:"
 
 #: journalist_templates/edit_account.html:53
 msgid "RESET PASSWORD"
@@ -898,7 +898,7 @@ msgstr "Спасибо! Мы получили ваше сообщение и д�
 
 #: source_app/main.py:204
 msgid "Reply deleted"
-msgstr "Ответ удалён"
+msgstr "Ответ удален"
 
 #: source_app/main.py:221
 msgid "All replies have been deleted"
