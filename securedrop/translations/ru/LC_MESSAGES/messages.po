@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-10 19:31+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2018-03-10 19:34+0000\n"
+"Last-Translator: Andrey <andrey@mailbox.org>\n"
 "Language-Team: Russian "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ru/>\n"
 "Language: ru\n"
@@ -61,7 +61,7 @@ msgid ""
 "An error occurred saving this user to the database. Please inform your "
 "administrator."
 msgstr ""
-"Возникла ошибка при сохранении пользователя в базу данных. Пожалуйста "
+"Возникла ошибка при сохранении пользователя в базу данных. Пожалуйста, "
 "сообщите вашему администратору."
 
 #: journalist_app/admin.py:104
@@ -74,22 +74,15 @@ msgstr ""
 "Недопустимый формат пароля: пожалуйста, используйте буквы от A-F и цифры 0-9."
 
 #: journalist_app/admin.py:143
-#, fuzzy
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
-msgstr ""
-"Неверный формат секретного ключа: нечетная длина. Вы ошиблись в секретном "
-"ключе?"
+msgstr "Неверный формат секретного ключа: нечетная длина. Вы ошиблись?"
 
 #: journalist_app/admin.py:148 journalist_app/main.py:107
 #: journalist_app/utils.py:47
-#, fuzzy
-#| msgid ""
-#| "An unexpected error occurred! Please check the application logs or inform "
-#| "your adminstrator."
 msgid "An unexpected error occurred! Please inform your administrator."
 msgstr ""
-"Произошла непредвиденная ошибка! Пожалуйста, проверьте логи приложения или "
-"обратитесь к администратору."
+"Произошла непредвиденная ошибка! Пожалуйста, обратитесь к вашему "
+"администратору."
 
 #: journalist_app/admin.py:181
 msgid "Username \"{user}\" already taken."
@@ -101,7 +94,7 @@ msgstr "Пользователь '{user}' удален"
 
 #: journalist_app/admin.py:249
 msgid "Test alert sent. Please check your email."
-msgstr ""
+msgstr "Отправлено тестовое предупреждение. Проверьте свою электронную почту."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -117,7 +110,7 @@ msgstr "Только администраторы имеют доступ к э�
 
 #: journalist_app/forms.py:19
 msgid "Field must be 40 characters long but got {num_chars}."
-msgstr ""
+msgstr "Поле должно содержать 40 символов. Сейчас {num_chars}."
 
 #: journalist_app/forms.py:30
 msgid ""
