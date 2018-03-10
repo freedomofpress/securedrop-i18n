@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-10 10:00+0000\n"
+"PO-Revision-Date: 2018-03-10 12:00+0000\n"
 "Last-Translator: Muhammad Usman <muhdusman98@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
@@ -333,7 +333,7 @@ msgstr "जमा करें"
 
 #: journalist_templates/admin.html:3
 msgid "Admin Interface"
-msgstr "व्यवस्थापक इंटरफ़ेस"
+msgstr "व्यवस्थापक अंतराफलक"
 
 #: journalist_templates/admin.html:6
 #: journalist_templates/admin_add_user.html:39
@@ -387,7 +387,7 @@ msgstr "इंस्टीट्यूट कॉनफिग"
 #: journalist_templates/admin_add_user.html:4
 #: journalist_templates/config.html:4 journalist_templates/edit_account.html:7
 msgid "Back to admin interface"
-msgstr "व्यवस्थापक इंटरफ़ेस पर वापस जाएं"
+msgstr "व्यवस्थापक अंतराफलक पर वापस जाएं"
 
 #: journalist_templates/admin_add_user.html:21
 msgid "The user's password will be:"
@@ -789,7 +789,7 @@ msgstr ""
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
-msgstr "पत्रकार इंटरफ़ेस तक पहुंचने के लिए लॉगिन करें"
+msgstr "पत्रकार अंतराफलक तक पहुंचने के लिए लॉगिन करें"
 
 #: journalist_templates/login.html:9
 msgid "Password"
