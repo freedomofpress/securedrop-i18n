@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-11 06:59+0000\n"
-"Last-Translator: Andrey <andrey@mailbox.org>\n"
+"PO-Revision-Date: 2018-03-11 07:00+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Russian "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ru/>\n"
 "Language: ru\n"
@@ -1133,7 +1133,7 @@ msgstr "УДАЛИТЬ ВСЕ ОТВЕТЫ"
 
 #: source_templates/lookup.html:85
 msgid "Are you finished with the replies?"
-msgstr ""
+msgstr "Вы закончили с ответами?"
 
 #: source_templates/lookup.html:86
 msgid "YES, DELETE ALL REPLIES"
@@ -1145,7 +1145,7 @@ msgstr "НЕТ, ЕЩЁ НЕТ"
 
 #: source_templates/lookup.html:91
 msgid "There are no replies at this time."
-msgstr ""
+msgstr "Нет ответов на данный момент."
 
 #: source_templates/lookup.html:100
 #, fuzzy
@@ -1179,7 +1179,7 @@ msgstr ""
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
-msgstr ""
+msgstr "Почему здесь предупреждение о Tor2Web?"
 
 #: source_templates/tor2web-warning.html:4
 msgid ""
