@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-10 21:00+0000\n"
-"Last-Translator: Andrey <andrey@mailbox.org>\n"
+"PO-Revision-Date: 2018-03-11 06:52+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Russian "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ru/>\n"
 "Language: ru\n"
@@ -30,7 +30,7 @@ msgstr "Ваша сессия была завершена из-за неакти
 
 #: journalist_app/account.py:26
 msgid "Incorrect password or two-factor code."
-msgstr "Неверный пароль или код двухуровневой аутентификации."
+msgstr "Неверный пароль  или двухфакторный код."
 
 #: journalist_app/account.py:42
 msgid "Token in two-factor authentication verified."
@@ -62,7 +62,7 @@ msgid ""
 "administrator."
 msgstr ""
 "Возникла ошибка при сохранении пользователя в базу данных. Пожалуйста, "
-"сообщите вашему администратору."
+"сообщите администратору."
 
 #: journalist_app/admin.py:104
 msgid "Token in two-factor authentication accepted for user {user}."
@@ -226,7 +226,7 @@ msgstr "Нет непрочитанных сообщений в выбранны
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
-msgstr ""
+msgstr "Закрыть"
 
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:72
@@ -236,8 +236,8 @@ msgstr "Отменить"
 #: journalist_templates/_source_row.html:19
 msgid "1 doc"
 msgid_plural "{doc_num} docs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 документ"
+msgstr[1] "{doc_num} документов"
 msgstr[2] ""
 
 #: journalist_templates/_source_row.html:20
