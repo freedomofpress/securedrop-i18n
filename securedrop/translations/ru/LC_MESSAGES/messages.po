@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-11 06:56+0000\n"
-"Last-Translator: Andrey <andrey@mailbox.org>\n"
+"PO-Revision-Date: 2018-03-11 06:57+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Russian "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ru/>\n"
 "Language: ru\n"
@@ -666,10 +666,8 @@ msgstr ""
 "Пожалуйста, введите ваш текущий пароль и код двухфакторной аутентификации."
 
 #: journalist_templates/edit_account.html:40
-#, fuzzy
-#| msgid "Reset Password"
 msgid "Current Password"
-msgstr "Сбросить пароль"
+msgstr "Текущий  пароль"
 
 #: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
 msgid "Two-factor Code"
@@ -708,18 +706,13 @@ msgid ""
 msgstr ""
 
 #: journalist_templates/edit_account.html:65
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as Google "
-#| "Authenticator or FreeOTP, choose the first option. For hardware tokens "
-#| "like the Yubikey, choose the second."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the Yubikey, choose the second."
 msgstr ""
-"Для сброса двухфакторной аутентификации для мобильных приложений, таких как "
-"Google Authenticator или FreeOTP, выберите первый вариант. Для аппаратных "
-"токенов, таких как Yubikey, выберите второй вариант."
+"Для сброса двухфакторной аутентификации для мобильных приложений, таких как  "
+"FreeOTP, выберите первый вариант. Для аппаратных токенов, таких как Yubikey, "
+"выберите второй вариант."
 
 #: journalist_templates/edit_account.html:90
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
