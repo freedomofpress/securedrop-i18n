@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-11 06:54+0000\n"
-"Last-Translator: Andrey <andrey@mailbox.org>\n"
+"PO-Revision-Date: 2018-03-11 06:55+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Russian "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ru/>\n"
 "Language: ru\n"
@@ -519,9 +519,8 @@ msgid "Delete Confirmation"
 msgstr "Удалить подтверждение"
 
 #: journalist_templates/col.html:72
-#, fuzzy
 msgid "Are you sure you want to delete the selected documents?"
-msgstr "Вы уверены, что хотите удалить {size} выбранные коллекции?"
+msgstr "Вы уверены, что хотите удалить выбранные документы?"
 
 #: journalist_templates/col.html:87
 msgid "No documents to display."
