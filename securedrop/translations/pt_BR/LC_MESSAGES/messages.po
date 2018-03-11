@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-08 19:00+0000\n"
-"Last-Translator: Jonas B. R. <rossijonas@protonmail.com>\n"
+"PO-Revision-Date: 2018-03-11 03:00+0000\n"
+"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -96,7 +96,7 @@ msgstr "Usuário '{user}' apagado"
 #: journalist_app/admin.py:249
 msgid "Test alert sent. Please check your email."
 msgstr ""
-"O alerta de teste foi enviado. Por favor verifique a sua caixa de e-mails."
+"O alerta de teste foi enviado. Por favor, verifique a sua caixa de e-mails."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -180,8 +180,8 @@ msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
 msgstr ""
-"Por favor, aguarde um novo código de autenticação de dois fatores antes de "
-"tentar novamente."
+"Por favor, aguarde um novo código ou aplicação de autenticação de dois "
+"fatores antes de tentar novamente."
 
 #: journalist_app/utils.py:150
 msgid "Submission deleted."
@@ -293,7 +293,7 @@ msgstr "Abra o FreeOTP"
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
 msgid "Tap the QR code symbol at the top"
-msgstr "Toque no símbolo do QR code no alto da tela"
+msgstr "Toque no símbolo do código QR no alto da tela"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -505,7 +505,7 @@ msgstr "Mensagem"
 #: journalist_templates/col.html:71 journalist_templates/col.html:129
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
-msgstr "Apagar Confirmação"
+msgstr "Confirmar para Apagar"
 
 #: journalist_templates/col.html:72
 msgid "Are you sure you want to delete the selected documents?"
@@ -952,9 +952,10 @@ msgid ""
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
 "safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Ajuste a barra de segurança para o nível Mais Seguro para proteger o "
-"seu anonimato.</strong><a id=\"disable-js\" href=\"\"> Aprenda como ajustar "
-"para o nível Mais Seguro</a>, ou ignore este aviso e continue."
+"<strong>Recomendames que você ajuste a barra de segurança para o nível \"o "
+"mais seguro\" para proteger o seu anonimato.</strong><a id=\"disable-js\" "
+"href=\"\"> Aprenda como ajustar para o nível\"o mais seguro\" </a>, ou "
+"ignore este aviso e continue."
 
 #: source_templates/index.html:18
 msgid ""
@@ -998,7 +999,7 @@ msgid ""
 "Safest in 4 easy steps!"
 msgstr ""
 "Parece que você está usando o navegador Tor. Ajuste seu nível de segurança "
-"para \"Mais Seguro\" em apenas quatro passos!"
+"para \"o mais seguro\"  em apenas quatro passos!"
 
 #: source_templates/index.html:94
 msgid ""
@@ -1015,8 +1016,8 @@ msgstr "Clique em<strong> Configurações de Segurança...</strong>"
 msgid ""
 "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgstr ""
-"Ajuste o nível de segurança para <strong>\"Mais Seguro\"</strong> e clique "
-"em <strong>Ok</strong>"
+"Ajuste o nível de segurança para <strong>\"o mais seguro\" </strong> e "
+"clique em <strong>Ok</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Click here</a> to refresh the page"
