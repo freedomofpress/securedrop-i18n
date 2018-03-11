@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-11 06:53+0000\n"
-"Last-Translator: Andrey <andrey@mailbox.org>\n"
+"PO-Revision-Date: 2018-03-11 06:54+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Russian "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ru/>\n"
 "Language: ru\n"
@@ -271,16 +271,9 @@ msgstr "ПРОДОЛЖИТЬ"
 #: journalist_templates/account_new_two_factor.html:4
 #: journalist_templates/admin_new_user_two_factor.html:5
 msgid "Enable FreeOTP"
-msgstr ""
+msgstr "Активировать FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:5
-#, fuzzy
-#| msgid ""
-#| "You're almost done! To finish resetting your two-factor authentication, "
-#| "follow the instructions below to set up Google Authenticator. Once you've "
-#| "added the entry for your account in the app, enter one of the 6-digit "
-#| "codes from the app to confirm that two factor authentication is set up "
-#| "correctly."
 msgid ""
 "You're almost done! To finish resetting your two-factor authentication, "
 "follow the instructions below to set up FreeOTP. Once you've added the entry "
@@ -288,22 +281,20 @@ msgid ""
 "confirm that two factor authentication is set up correctly."
 msgstr ""
 "Вы почти закончили! Чтобы завершить процедуру сброса двухфакторной "
-"аутентификации, используйте инструцуию ниже для настройки Google "
-"Authenticator. После того, как вы добавили запись для своей учетной записи в "
-"приложение, введите один из 6-значных кодов из приложения, чтобы подтвердить "
-"правильность настройки двухфакторной аутентификации."
+"аутентификации, используйте инструцуию ниже для настройки FreeOTP. После "
+"того, как вы добавили запись для своей учетной записи в приложение, введите "
+"один из 6-значных кодов из приложения, чтобы подтвердить правильность "
+"настройки двухфакторной аутентификации."
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
-#, fuzzy
-#| msgid "Install Google Authenticator on your phone"
 msgid "Install FreeOTP on your phone"
-msgstr "Установите Google Authenticator на свой телефон"
+msgstr "Установите FreeOTP на свой телефон"
 
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
 msgid "Open the FreeOTP app"
-msgstr ""
+msgstr "Открыть приложение FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
@@ -525,7 +516,7 @@ msgstr "Сообщение"
 #: journalist_templates/col.html:71 journalist_templates/col.html:129
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
-msgstr ""
+msgstr "Удалить Подтверждение"
 
 #: journalist_templates/col.html:72
 #, fuzzy
