@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-11 11:13+0000\n"
+"PO-Revision-Date: 2018-03-11 14:00+0000\n"
 "Last-Translator: Andrey <andrey@mailbox.org>\n"
 "Language-Team: Russian "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ru/>\n"
@@ -30,7 +30,7 @@ msgstr "Ваша сессия была завершена из-за неакти
 
 #: journalist_app/account.py:26
 msgid "Incorrect password or two-factor code."
-msgstr "Неверный пароль  или двухфакторный код."
+msgstr "Неверный пароль или двухфакторный код."
 
 #: journalist_app/account.py:42
 msgid "Token in two-factor authentication verified."
@@ -38,7 +38,7 @@ msgstr "Токен двухэтапной аутентификации подт�
 
 #: journalist_app/account.py:46 journalist_app/admin.py:111
 msgid "Could not verify token in two-factor authentication."
-msgstr "Не удалось проверить токен при двухфакторной аутентификации."
+msgstr "Не удалось проверить токен двухфакторной аутентификации."
 
 #: journalist_app/admin.py:37
 msgid "Image updated."
@@ -61,8 +61,8 @@ msgid ""
 "An error occurred saving this user to the database. Please inform your "
 "administrator."
 msgstr ""
-"Возникла ошибка при сохранении пользователя в базу данных. Пожалуйста, "
-"сообщите администратору."
+"Произошла ошибка при сохранении этого пользователя в базе данных. Сообщите "
+"об этом администратору."
 
 #: journalist_app/admin.py:104
 msgid "Token in two-factor authentication accepted for user {user}."
@@ -71,18 +71,16 @@ msgstr "Токен двухфакторной аутентификации дл�
 #: journalist_app/admin.py:138
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
-"Недопустимый формат пароля: пожалуйста, используйте буквы от A-F и цифры 0-9."
+"Недопустимый формат: пожалуйста, используйте только буквы от A-F и цифры 0-9."
 
 #: journalist_app/admin.py:143
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
-msgstr "Неверный формат секретного ключа: нечетная длина. Вы ошиблись?"
+msgstr "Неверный формат: количество символов нечетное. Вы ошиблись?"
 
 #: journalist_app/admin.py:148 journalist_app/main.py:107
 #: journalist_app/utils.py:47
 msgid "An unexpected error occurred! Please inform your administrator."
-msgstr ""
-"Произошла непредвиденная ошибка! Пожалуйста, обратитесь к вашему "
-"администратору."
+msgstr "Произошла непредвиденная ошибка! Сообщите об этом администратору."
 
 #: journalist_app/admin.py:181
 msgid "Username \"{user}\" already taken."
@@ -153,7 +151,7 @@ msgstr "Источник '{original_name}' был переименован в '{
 
 #: journalist_app/main.py:183
 msgid "No unread submissions for this source."
-msgstr "Нет непрочитанных сообщений для этого источника."
+msgstr "Нет непрочитанных материалов для этого источника."
 
 #: journalist_app/utils.py:54
 msgid "Account updated."
@@ -173,7 +171,7 @@ msgstr[1] ""
 "Подождите минимум {seconds} секунды перед тем как попробовать снова войти в "
 "систему."
 msgstr[2] ""
-"Подождите  минимум {seconds} секунд перед тем как попробовать снова войти в "
+"Подождите минимум {seconds} секунд перед тем как попробовать снова войти в "
 "систему."
 
 #: journalist_app/utils.py:104
@@ -187,9 +185,9 @@ msgstr ""
 #: journalist_app/utils.py:150
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
-msgstr[0] "Представление удалено."
-msgstr[1] "{num} представления удалены."
-msgstr[2] "{num} представлений удалены."
+msgstr[0] "Материал удален."
+msgstr[1] "{num} материала удалены."
+msgstr[2] "{num} материалов удалены."
 
 #: journalist_app/utils.py:203
 msgid "{num} collection deleted"
@@ -208,16 +206,16 @@ msgid ""
 "correctly. To prevent you from getting locked out of your account, you "
 "should reset your password again."
 msgstr ""
-"Произошла ошибка, новый пароль мог быть сохранен неправильно. Установите "
-"новый пароль еще раз, чтобы не потерять доступ к аккаунту."
+"Произошла ошибка, новый пароль мог быть сохранен неправильно. Чтобы не "
+"потерять доступ к аккаунту вам нужно снова сбросить пароль.."
 
 #: journalist_app/utils.py:257
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
 msgstr ""
-"Пароль успешно обновлен. Не забудьте сохранить его в базе данных KeePassX. "
-"Новый пароль:"
+"Пароль обновлен. Не забудьте сохранить его в базе данных KeePassX. Новый "
+"пароль:"
 
 #: journalist_app/utils.py:274
 msgid "No unread submissions in selected collections."
@@ -253,13 +251,13 @@ msgstr "{num_unread} непрочитано"
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
 msgid "Change Secret"
-msgstr "Изменить секретный ключ"
+msgstr "Изменить секрет"
 
 #: journalist_templates/account_edit_hotp_secret.html:7
 #: journalist_templates/admin_add_user.html:33
 #: journalist_templates/admin_edit_hotp_secret.html:8
 msgid "HOTP Secret"
-msgstr "Секретный HOTP ключ"
+msgstr "Секрет HOTP"
 
 #: journalist_templates/account_edit_hotp_secret.html:9
 #: journalist_templates/admin_edit_hotp_secret.html:10
@@ -270,7 +268,7 @@ msgstr "ПРОДОЛЖИТЬ"
 #: journalist_templates/account_new_two_factor.html:4
 #: journalist_templates/admin_new_user_two_factor.html:5
 msgid "Enable FreeOTP"
-msgstr "Активировать FreeOTP"
+msgstr "Включение FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:5
 msgid ""
@@ -293,7 +291,7 @@ msgstr "Установите FreeOTP на свой телефон"
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
 msgid "Open the FreeOTP app"
-msgstr "Открыть приложение FreeOTP"
+msgstr "Откройте FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
@@ -306,8 +304,8 @@ msgid ""
 "Your phone will now be in \"scanning\" mode. When you are in this mode, scan "
 "the barcode below:"
 msgstr ""
-"Теперь ваш телефон находится в режиме \"сканирования\". Находясь в этом "
-"режиме, отсканируйте следующий штрих-код:"
+"Теперь ваш телефон находится в режиме сканирования. Находясь в этом режиме "
+"отсканируйте следующий штрих-код:"
 
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
@@ -343,7 +341,7 @@ msgstr "ОТПРАВИТЬ"
 
 #: journalist_templates/admin.html:3
 msgid "Admin Interface"
-msgstr "Панель Администратора"
+msgstr "Интерфейс администратора"
 
 #: journalist_templates/admin.html:6
 #: journalist_templates/admin_add_user.html:39
@@ -397,11 +395,11 @@ msgstr "ПРОЦЕДУРА КОНФИГУРАЦИИ"
 #: journalist_templates/admin_add_user.html:4
 #: journalist_templates/config.html:4 journalist_templates/edit_account.html:7
 msgid "Back to admin interface"
-msgstr "Назад к Панели Администратора"
+msgstr "Назад к интерфейсу администратора"
 
 #: journalist_templates/admin_add_user.html:21
 msgid "The user's password will be:"
-msgstr "Пароль пользователя:"
+msgstr "Пароль пользователя будет:"
 
 #: journalist_templates/admin_add_user.html:24
 #: journalist_templates/edit_account.html:17
@@ -433,7 +431,7 @@ msgstr "Вы вошли как"
 
 #: journalist_templates/base.html:26
 msgid "Admin"
-msgstr "Настройки"
+msgstr "Администратор"
 
 #: journalist_templates/base.html:28
 msgid "Log Out"
@@ -453,7 +451,7 @@ msgstr "Основано на <em>SecureDrop {version}</em>."
 
 #: journalist_templates/col.html:10
 msgid "All Sources"
-msgstr "Все Источники"
+msgstr "Все источники"
 
 #: journalist_templates/col.html:13
 msgid ""
@@ -484,7 +482,7 @@ msgid ""
 "to decrypt them using GPG."
 msgstr ""
 "Документы хранятся в зашифрованном виде для обеспечения безопасности. Чтобы "
-"прочитать их, вам нужно будет расшифровать их с помощью GPG."
+"прочитать их, вам потребуется расшифровка при помощи GPG."
 
 #: journalist_templates/col.html:26
 msgid "Download Selected"
@@ -585,7 +583,7 @@ msgstr "ОТПРАВИТЬ ТЕСТОВОЕ ПРЕДУПРЕЖДЕНИЕ OSSEC"
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
-msgstr "Изображение логотипа"
+msgstr "Логотип"
 
 #: journalist_templates/config.html:23
 msgid ""
@@ -616,7 +614,7 @@ msgstr[2] ""
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
-msgstr "УДАЛИТЬ ФАИЛ БЕЗВОЗВРАТНО"
+msgstr "УДАЛИТЬ ФАЙЛЫ БЕЗВОЗВРАТНО"
 
 #: journalist_templates/delete.html:23
 msgid "Return to the list of documents for {source_name}…"
@@ -628,7 +626,7 @@ msgstr "Редактировать пользователя \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Username &amp; Admin Status"
-msgstr "Изменить имя пользователя &amp; Изменить статус Администратора"
+msgstr "Изменение имени пользователя и статуса администратора"
 
 #: journalist_templates/edit_account.html:12
 msgid "Change username"
@@ -640,7 +638,7 @@ msgstr "ОБНОВИТЬ"
 
 #: journalist_templates/edit_account.html:22
 msgid "Edit your account"
-msgstr "Редактирование аккаунта"
+msgstr "Изменить свою учетную запись"
 
 #: journalist_templates/edit_account.html:25
 msgid "Reset Password"
@@ -665,7 +663,7 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:40
 msgid "Current Password"
-msgstr "Текущий  пароль"
+msgstr "Текущий пароль"
 
 #: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
 msgid "Two-factor Code"
@@ -746,7 +744,7 @@ msgstr ""
 
 #: journalist_templates/flag.html:10
 msgid "Continue to the list of documents for {codename}..."
-msgstr "Перейдите к списку документов для {codeename} ..."
+msgstr "Перейдите к списку документов для {codename}..."
 
 #: journalist_templates/index.html:4
 msgid "Sources"
@@ -778,7 +776,7 @@ msgstr "Отправленные документы отсутствуют!"
 
 #: journalist_templates/js-strings.html:3
 msgid "filter by codename"
-msgstr "отсортировать по кодовому названию"
+msgstr "фильтр по кодовому имени"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
@@ -838,12 +836,12 @@ msgid ""
 "You were redirected because you are already logged in. If you want to create "
 "a new account, you should log out first."
 msgstr ""
-"Вы были перенаправлены, так как вы уже выполнили вход в систему. Если вы "
-"хотите создать новый аккаунт, то вам сначала нужно выйти из системы."
+"Вы были перенаправлены, так как уже выполнили вход в систему. Если вы хотите "
+"создать новый аккаунт, то сначала нужно выйти из системы."
 
 #: source_app/main.py:120
 msgid "You must enter a message or choose a file to submit."
-msgstr "Вы должны ввести сообщение или выбрать фаил для отправки."
+msgstr "Вы должны ввести сообщение или выбрать файл для отправки."
 
 #: source_app/main.py:153
 msgid "Thanks! We received your message."
@@ -876,7 +874,7 @@ msgstr "Защита журналистов и источников"
 #: source_templates/base.html:25 source_templates/base.html:45
 #: source_templates/index.html:32 source_templates/index.html:84
 msgid "Powered by"
-msgstr "Разработано на платформе"
+msgstr "Основано на"
 
 #: source_templates/base.html:34
 msgid "LOG OUT"
@@ -887,8 +885,8 @@ msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
 msgstr ""
-"Как и любое другое программное обеспечение, SecureDrop может иметь ошибки в "
-"обеспечении безопасности. Вы используете данное программное обеспечение на "
+"Как и любое другое программное обеспечение SecureDrop может содержать "
+"уязвимости безопасности. Вы используете данное программное обеспечение на "
 "свой страх и риск."
 
 #: source_templates/error.html:3
@@ -999,7 +997,7 @@ msgid ""
 "If you have already submitted documents in the past, log in here to check "
 "for responses."
 msgstr ""
-"Если вы уже отправляли документы раньше, войдите в систему, чтобы проверить "
+"Если вы уже отправляли документы ранее, войдите в систему, чтобы проверить "
 "ответы."
 
 #: source_templates/index.html:73
@@ -1065,7 +1063,7 @@ msgstr ""
 
 #: source_templates/lookup.html:11
 msgid "Whew, it’s you! Now, the embarrassing part..."
-msgstr "Хорошо, раз это ты! Теперь, к неловкостям..."
+msgstr "Хорошо, раз это вы! Теперь, к неловкостям..."
 
 #: source_templates/lookup.html:12
 msgid ""
@@ -1108,7 +1106,7 @@ msgstr "<a href=\"{url}\" class=\"text-link\">Подробнее</a>."
 
 #: source_templates/lookup.html:24
 msgid "You can send a file, a message, or both."
-msgstr "Вы можете отправить фаил, сообщение или и то и другое."
+msgstr "Вы можете отправить файл, сообщение или и то, и другое."
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
@@ -1156,7 +1154,7 @@ msgstr "ДА, УДАЛИТЬ ВСЕ ОТВЕТЫ"
 
 #: source_templates/lookup.html:87
 msgid "NO, NOT YET"
-msgstr "НЕТ, ЕЩЁ НЕТ"
+msgstr "НЕТ, НЕ СЕЙЧАС"
 
 #: source_templates/lookup.html:91
 msgid "There are no replies at this time."
@@ -1230,9 +1228,10 @@ msgid ""
 "to install <a href=\"torproject.org/download.html.en\">Tor</a> and use it to "
 "access our site safely and anonymously."
 msgstr ""
-"Если вы хотите отправить информацию, <strong>настоятельно рекомендуем</"
-"strong> установить <a href=\"torproject.org/download.html.en\">Tor</a> и "
-"использовать его для доступа на наш сайт безопасно и анонимно."
+"Если вы хотите отправить информацию, <strong>настоятельно "
+"рекомендуем</strong> установить <a href=\"torproject.org/download.html.en\""
+">Tor</a> и использовать его для безопасного и анонимного доступа к нашему "
+"сайту."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
@@ -1242,8 +1241,8 @@ msgstr "Вы должны использовать Tor Browser"
 msgid ""
 "If you are not using Tor Browser, you <strong>may not be anonymous</strong>."
 msgstr ""
-"Если вы не используете Tor Browser, то ,возможно, вы <strong>не анонимны</"
-"strong>."
+"Если вы не используете Tor Browser, вы <strong>не можете быть "
+"анонимны</strong>."
 
 #: source_templates/use-tor-browser.html:5
 msgid ""
@@ -1252,8 +1251,8 @@ msgid ""
 "anonymously."
 msgstr ""
 "Если вы хотите отправить информацию SecureDrop, мы <strong>настоятельно "
-"рекомендуем</strong> установить Tor Browser и использовать его для доступа "
-"на наш сайт безопасно и анонимно."
+"рекомендуем</strong> уустановить Tor Browser и использовать его для "
+"безопасного и анонимного доступа к нашему сайту."
 
 #: source_templates/use-tor-browser.html:6
 msgid ""
