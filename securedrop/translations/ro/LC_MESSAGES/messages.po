@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-09 11:00+0000\n"
+"PO-Revision-Date: 2018-03-11 18:00+0000\n"
 "Last-Translator: Jobava <jobaval10n@gmail.com>\n"
 "Language-Team: Romanian "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ro/>\n"
@@ -193,7 +193,7 @@ msgstr ""
 #: journalist_app/utils.py:150
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
-msgstr[0] "Încărcarea a fost ștearsă."
+msgstr[0] "Trimiterea a fost ștearsă."
 msgstr[1] "{num} încărcări au fost șterse."
 msgstr[2] "{num} de încărcări au fost șterse."
 
@@ -1333,7 +1333,7 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:14
 msgid "Encrypt your submission."
-msgstr "Criptează informațiile tale."
+msgstr "Criptează trimiterea ta."
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
@@ -1361,7 +1361,7 @@ msgid ""
 "unencrypted file, with .gpg at the end (e.g. "
 "<code>roswell_photos.pdf.gpg</code>)"
 msgstr ""
-"Încarcă fișierul tău criptat. Acesta va avea același nume, dar cu .gpg la "
+"Încarcă trimiterea ta criptată. Acesta va avea același nume, dar cu .gpg la "
 "sfârșit (de ex. <code>roswell_photos.pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:23
