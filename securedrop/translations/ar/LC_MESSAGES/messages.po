@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-01-15 19:01+0000\n"
-"Last-Translator: ramyraoof <ramy.raoof@gmail.com>\n"
-"Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
-"securedrop/ar/>\n"
+"PO-Revision-Date: 2018-03-11 11:29+0000\n"
+"Last-Translator: Ouss <oussama.jarrousse@gmail.com>\n"
+"Language-Team: Arabic "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -95,6 +95,8 @@ msgstr "تم حذف حساب المستخدم '{user}'"
 #: journalist_app/admin.py:249
 msgid "Test alert sent. Please check your email."
 msgstr ""
+"تم إرسال رسالة التحذير التجريبية. الرجاء التأكد من وصولها عبر البريد "
+"الالكتروني."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -517,10 +519,8 @@ msgid "Delete Confirmation"
 msgstr "إعدادات النظام"
 
 #: journalist_templates/col.html:72
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected documents?"
-msgstr "هل أنت متأكد من أنك تريد حذف المجموعات {size} المختارة؟"
+msgstr "هل أنت متأكد من أنك تريد حذف الملفات المختارة؟"
 
 #: journalist_templates/col.html:87
 msgid "No documents to display."
@@ -578,11 +578,10 @@ msgid "Alerts"
 msgstr "تنبيهات"
 
 #: journalist_templates/config.html:11
-#, fuzzy
-#| msgid ""
-#| "Send a test encrypted email alert to verify OSSEC is working correctly:"
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
-msgstr "تحريب رسالة تنبيه معمّاة للتأكد من عمل OSSEC بنجاح:"
+msgstr ""
+"أرسل رسالة بريد إلكتروني معمّاة للتأكد من أن تنبيهات OSSEC تعمل بالشكل "
+"الصحيح:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
@@ -765,10 +764,8 @@ msgid "Un-star"
 msgstr "إلغاء النجمة"
 
 #: journalist_templates/index.html:47
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected collections?"
-msgstr "هل أنت متأكد من أنك تريد حذف المجموعات {size} المختارة؟"
+msgstr "هل أنت متأكد من أنك تريد حذف المجموعات المختارة؟"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
