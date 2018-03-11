@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-11 07:00+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2018-03-11 09:00+0000\n"
+"Last-Translator: Andrey <andrey@mailbox.org>\n"
 "Language-Team: Russian "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ru/>\n"
 "Language: ru\n"
@@ -220,9 +220,8 @@ msgstr ""
 "Новый пароль:"
 
 #: journalist_app/utils.py:274
-#, fuzzy
 msgid "No unread submissions in selected collections."
-msgstr "Нет непрочитанных сообщений в выбранных коллекциях."
+msgstr "Нет непрочитанных материалов в выбранных коллекциях."
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
@@ -299,7 +298,7 @@ msgstr "Открыть приложение FreeOTP"
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
 msgid "Tap the QR code symbol at the top"
-msgstr ""
+msgstr "Коснитесь символа QR-кода выше"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -393,7 +392,7 @@ msgstr "Нет пользователей для отображения"
 
 #: journalist_templates/admin.html:48
 msgid "INSTANCE CONFIG"
-msgstr ""
+msgstr "ПРОЦЕДУРА КОНФИГУРАЦИИ"
 
 #: journalist_templates/admin_add_user.html:4
 #: journalist_templates/config.html:4 journalist_templates/edit_account.html:7
@@ -414,13 +413,6 @@ msgid "Is using a YubiKey [HOTP]"
 msgstr "Использует YubiKey [HOTP]"
 
 #: journalist_templates/admin_new_user_two_factor.html:6
-#, fuzzy
-#| msgid ""
-#| "You're almost done! To finish resetting your two-factor authentication, "
-#| "follow the instructions below to set up Google Authenticator. Once you've "
-#| "added the entry for your account in the app, enter one of the 6-digit "
-#| "codes from the app to confirm that two factor authentication is set up "
-#| "correctly."
 msgid ""
 "You're almost done! To finish adding this new user, have them follow the "
 "instructions below to set up two-factor authentication with FreeOTP. Once "
@@ -428,11 +420,12 @@ msgid ""
 "the 6-digit codes from the app to confirm that two factor authentication is "
 "set up correctly."
 msgstr ""
-"Вы почти закончили! Чтобы завершить процедуру сброса двухфакторной "
-"аутентификации, используйте инструцуию ниже для настройки Google "
-"Authenticator. После того, как вы добавили запись для своей учетной записи в "
-"приложение, введите один из 6-значных кодов из приложения, чтобы подтвердить "
-"правильность настройки двухфакторной аутентификации."
+"Вы почти закончили! Чтобы завершить добавление нового пользователя, "
+"попросите его выполнить следующие инструкции, чтобы настроить двухфакторную "
+"аутентификацию с помощью FreeOTP. После того, как он добавит запись для "
+"этого аккаунта в приложение, попросите его ввести один из 6-значных кодов из "
+"приложения, чтобы подтвердить правильность настройки двухфакторной "
+"аутентификации."
 
 #: journalist_templates/base.html:24
 msgid "Logged on as"
@@ -468,18 +461,18 @@ msgid ""
 "the first random codename is difficult to say or remember. You can generate "
 "new random codenames as many times as you like."
 msgstr ""
-"Создать новое случайное кодовое название для этого Источника. Мы рекомендуем "
-"делать это, если первое случайное кодовое название трудно сказать или "
-"запомнить. Вы можете генерировать новые случайные кодовые названия столько "
-"раз, сколько хотите."
+"Создать новое случайное кодовое имя для этого источника. Мы рекомендуем "
+"делать это, если первое случайное кодовое имя трудно произнести или "
+"запомнить. Вы можете генерировать новые случайные кодовые имена столько раз, "
+"сколько хотите."
 
 #: journalist_templates/col.html:13
 msgid "Change codename"
-msgstr "Изменить кодовое название"
+msgstr "Изменить кодовое имя"
 
 #: journalist_templates/col.html:14
 msgid "Are you sure you want to generate a new codename?"
-msgstr "Вы действительно хотите сгенерировать новое кодовое название?"
+msgstr "Вы действительно хотите сгенерировать новое кодовое имя?"
 
 #: journalist_templates/col.html:16
 msgid "CONFIRM"
@@ -527,7 +520,6 @@ msgid "No documents to display."
 msgstr "Нет документов для отображения."
 
 #: journalist_templates/col.html:94
-#, fuzzy
 msgid ""
 "You can write a secure reply to the person who submitted these documents:"
 msgstr ""
@@ -535,7 +527,6 @@ msgstr ""
 "документы:"
 
 #: journalist_templates/col.html:103
-#, fuzzy
 msgid "You've flagged this source for reply."
 msgstr "Вы отметили этот источник для ответа."
 
@@ -544,6 +535,8 @@ msgid ""
 "An encryption key will be generated for the source the next time they log "
 "in, after which you will be able to reply to the source here."
 msgstr ""
+"Ключ шифрования будет сгенерирован для источника при следующем входе в "
+"систему, после чего вы сможете ответить здесь."
 
 #: journalist_templates/col.html:106
 msgid "Click below if you would like to write a reply to this source."
@@ -559,6 +552,10 @@ msgid ""
 "the files seen here will be unrecoverable and the source will no longer be "
 "able to login using their previous codename.</em>"
 msgstr ""
+"Нажмите ниже, чтобы удалить коллекцию этого источника. <em>Предупреждение: "
+"если вы это сделаете, файлы, которые вы здесь видите, будут безвозвратно "
+"удалены, и источник больше не сможет войти в систему, используя свое "
+"предыдущее кодовое имя.</em>"
 
 #: journalist_templates/col.html:122
 msgid "DELETE COLLECTION"
@@ -570,7 +567,7 @@ msgstr "Вы уверены, что хотите удалить эту колл�
 
 #: journalist_templates/config.html:7
 msgid "Instance Configuration"
-msgstr ""
+msgstr "Пример конфигурации"
 
 #: journalist_templates/config.html:9
 msgid "Alerts"
@@ -579,10 +576,12 @@ msgstr "Оповещения"
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr ""
+"Отправьте зашифрованное письмо, чтобы проверить, правильно ли работают "
+"предупреждения OSSEC:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
-msgstr ""
+msgstr "ОТПРАВИТЬ ТЕСТОВОЕ ПРЕДУПРЕЖДЕНИЕ OSSEC"
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
@@ -592,37 +591,36 @@ msgstr "Изображение логотипа"
 msgid ""
 "Here you can update the image displayed on the SecureDrop web interfaces:"
 msgstr ""
+"Здесь вы можете обновить изображение, отображаемое в веб-интерфейсе "
+"SecureDrop:"
 
 #: journalist_templates/config.html:36
 msgid "UPDATE LOGO"
 msgstr "ОБНОВИТЬ ЛОГОТИП"
 
 #: journalist_templates/delete.html:5
-#, fuzzy
 msgid ""
 "The following file has been selected for <strong>permanent deletion</strong>:"
 msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
 msgstr[0] ""
-"Следующий {files} фаил был выбран для <strong>безвозвратного удаления</"
-"strong>:"
+"Следующий {files} файл был выбран для <strong>безвозвратного "
+"удаления</strong>:"
 msgstr[1] ""
-"Следующие {files} файла были выбраны для <strong>безвозвратного удаления</"
-"strong>:"
+"Следующие {files} файла были выбраны для <strong>безвозвратного "
+"удаления</strong>:"
 msgstr[2] ""
-"Следующие {files} файлов были выбраны для <strong>безвозвратного удаления</"
-"strong>:"
+"Следующие {files} файлов были выбраны для <strong>безвозвратного "
+"удаления</strong>:"
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
 msgstr "УДАЛИТЬ ФАИЛ БЕЗВОЗВРАТНО"
 
 #: journalist_templates/delete.html:23
-#, fuzzy
-#| msgid "Return to the list of documents for {source_name}..."
 msgid "Return to the list of documents for {source_name}…"
-msgstr "Вернуться к списку документов для {source_name}..."
+msgstr "Вернуться к списку документов для {source_name}…"
 
 #: journalist_templates/edit_account.html:6
 msgid "Edit user \"{user}\""
@@ -696,6 +694,10 @@ msgid ""
 "is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
+"Если учетные данные двухфакторной аутентификации пользователя потеряны или "
+"скомпрометированы, вы можете сбросить их здесь. <em>Если вы сделаете это, "
+"убедитесь, что пользователь присутствует и готов настроить свое устройство "
+"повторно. В противном случае он будет заблокирован."
 
 #: journalist_templates/edit_account.html:63
 msgid ""
@@ -704,6 +706,10 @@ msgid ""
 "this, make sure you are ready to set up your new device, otherwise you will "
 "be locked out of your account.</em>"
 msgstr ""
+"Если ваши двухфакторные аутентификационные данные были потеряны или "
+"скомпрометированы или у вас появилось новое устройство, вы можете сбросить "
+"свои учетные данные здесь. <em>Если вы сделаете это, убедитесь, что готовы "
+"настроить новое устройство, иначе вы будете заблокированы.</em>"
 
 #: journalist_templates/edit_account.html:65
 msgid ""
@@ -727,17 +733,16 @@ msgid "Thanks!"
 msgstr "Спасибо!"
 
 #: journalist_templates/flag.html:8
-#, fuzzy
 msgid ""
 "SecureDrop will generate a secure encryption key for this source the next "
 "time that they log in. Once the key has been generated, a reply box will "
 "appear under their collection of documents. You can use this box to write "
 "encrypted replies to them."
 msgstr ""
-"SecureDrop сгенерирует зашифрованный ключ для этого пользователя при "
-"следующем входе в систему. После того, как ключ был сгенерирован, в "
-"коллекции документов пользователя появится окно ответа. Вы можете "
-"использовать это поле для написания зашифрованных ответов для пользователя."
+"SecureDrop сгенерирует безопасный ключ шифрования для этого источника при "
+"следующем входе в систему. После генерации ключа в коллекции документов "
+"пользователя появится окно ответа. Вы можете использовать его для написания "
+"зашифрованных ответов пользователям."
 
 #: journalist_templates/flag.html:10
 msgid "Continue to the list of documents for {codename}..."
@@ -756,12 +761,10 @@ msgid "Download"
 msgstr "Загрузить"
 
 #: journalist_templates/index.html:13
-#, fuzzy
 msgid "Star"
 msgstr "Отметить"
 
 #: journalist_templates/index.html:14
-#, fuzzy
 msgid "Un-star"
 msgstr "Снять отметку"
 
@@ -770,7 +773,6 @@ msgid "Are you sure you want to delete the selected collections?"
 msgstr "Вы уверены, что хотите удалить выбранные коллекции?"
 
 #: journalist_templates/index.html:59
-#, fuzzy
 msgid "No documents have been submitted!"
 msgstr "Отправленные документы отсутствуют!"
 
@@ -814,24 +816,18 @@ msgid "LOG IN"
 msgstr "Войти"
 
 #: source_app/__init__.py:115
-#, fuzzy
-#| msgid ""
-#| "<strong>WARNING:</strong> You appear to be using Tor2Web. This "
-#| "<strong>does not</strong> provide anonymity. <a href=\"{url}\">Why is "
-#| "this dangerous?</a>"
 msgid ""
 "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This "
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href="
 "\"{url}\">Why is this dangerous?</a>"
 msgstr ""
-"<strong>ВНИМАНИЕ:</strong> Кажется, вы используете Tor2Web. Это <strong>не "
-"обеспечивает</strong> анонимность. <a href=\"{url}\">Почему это опасно?</a>"
+"<strong>ВНИМАНИЕ:&nbsp;</strong> Кажется, вы используете Tor2Web. Это "
+"<strong>&nbsp;не обеспечивает&nbsp;</strong> анонимность. <a href=\"{url}\">"
+"Почему это опасно?</a>"
 
 #: source_app/forms.py:15
-#, fuzzy
-#| msgid "Field must be between 1 and {max_codename_len} characters long. "
 msgid "Field must be between 1 and {max_codename_len} characters long."
-msgstr "Поле должно содержать от 1 до {max_codename_len} символов. "
+msgstr "Поле должно содержать от 1 до {max_codename_len} символов."
 
 #: source_app/forms.py:18
 msgid "Invalid input."
@@ -871,12 +867,11 @@ msgstr "Все ответы были удалены"
 
 #: source_app/main.py:235
 msgid "Sorry, that is not a recognized codename."
-msgstr "К сожалению, это кодовое название не распознано."
+msgstr "К сожалению, это кодовое имя не распознано."
 
 #: source_templates/base.html:6 source_templates/index.html:4
-#, fuzzy
 msgid "Protecting Journalists and Sources"
-msgstr "Защищает Журналистов и Источники"
+msgstr "Защита журналистов и источников"
 
 #: source_templates/base.html:25 source_templates/base.html:45
 #: source_templates/index.html:32 source_templates/index.html:84
@@ -908,14 +903,13 @@ msgstr "Извините, на сайте произошла ошибка. Ва�
 
 #: source_templates/error.html:7 source_templates/notfound.html:7
 msgid "Look up a codename..."
-msgstr ""
+msgstr "Посмотреть кодовое имя..."
 
 #: source_templates/first_submission_flashed_message.html:2
 msgid "Success!"
 msgstr "Успех!"
 
 #: source_templates/first_submission_flashed_message.html:3
-#, fuzzy
 msgid ""
 "Thank you for sending this information to us. Please check back later for "
 "replies."
@@ -925,29 +919,28 @@ msgstr ""
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
-msgstr "Забыли ваше кодовое название?"
+msgstr "Забыли ваше кодовое имя?"
 
 #: source_templates/generate.html:4
 msgid "Welcome"
 msgstr "Добро пожаловать"
 
 #: source_templates/generate.html:7
-#, fuzzy
-#| msgid ""
-#| "Please either write this codename down and keep it in a safe place, or "
-#| "memorize it."
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
 msgstr ""
-"Пожалуйста, либо запишите данный псевдоним и сохраните его в безопасном "
-"месте или запомните его."
+"Пожалуйста, запишите это кодовое имя и сохраните его в надежном месте или "
+"запомните его."
 
 #: source_templates/generate.html:10
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our journalists in response to what you submit on the next screen."
 msgstr ""
+"Кодовое имя - это то, что вы будете использовать в будущих посещениях для "
+"получения сообщений от наших журналистов в ответ на то, что вы представите "
+"на следующем экране."
 
 #: source_templates/generate.html:34
 msgid ""
@@ -957,6 +950,12 @@ msgid ""
 " questions or are interested in additional documents. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
+"Потому что мы не отслеживаем пользователей нашего сервиса "
+"<strong>SecureDrop</strong>.\n"
+"При будущих посещениях используется кодовое имя - это единственный способ "
+"связаться с вами, если у нас появятся\n"
+"вопросы или заинтересованость в дополнительных документах. Кодовое имя в "
+"отличие от пароля восстановить невозможно."
 
 #: source_templates/generate.html:44 source_templates/index.html:65
 msgid "SUBMIT DOCUMENTS"
@@ -998,18 +997,16 @@ msgstr ""
 "ответы."
 
 #: source_templates/index.html:73
-#, fuzzy
 msgid "CHECK FOR A RESPONSE"
-msgstr "ПРОВЕРИТЬ ПОЛУЧЕННЫЕ ОТВЕТЫ"
+msgstr "ПРОВЕРИТЬ ОТВЕТЫ"
 
 #: source_templates/index.html:92
-#, fuzzy
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
 "Safest in 4 easy steps!"
 msgstr ""
-"Кажется, вы используете Tor Browser. При помощи четырех простых шагов вы "
-"можете установить свои настройки безопасности на \"Высокий\" уровень."
+"Кажется, вы используете Tor Browser. Вы можете сделать его максимально "
+"безопасным за 4 простых шага!"
 
 #: source_templates/index.html:94
 msgid ""
@@ -1019,31 +1016,27 @@ msgstr ""
 "инструментов выше"
 
 #: source_templates/index.html:95
-#, fuzzy
 msgid "Click <strong>Security Settings...</strong>"
-msgstr "Нажмите <strong>Настройки Безопасности...</strong>"
+msgstr "Нажмите <strong>Настройки безопасности...</strong>"
 
 #: source_templates/index.html:96
-#, fuzzy
 msgid ""
 "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgstr ""
-"Установите ползунок на значение <strong>Высокий</strong>, потом нажмите "
-"<strong>Ок</strong>"
+"Установите слайдер на значение <strong>Наиболее безопасный</strong> и "
+"кликните <strong>Ок</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Click here</a> to refresh the page"
 msgstr "<a href=\"/\">Нажмите здесь</a>, чтобы обновить страницу"
 
 #: source_templates/login.html:6
-#, fuzzy
 msgid "Enter Codename"
-msgstr "Введите псевдоним"
+msgstr "Введите кодовое имя"
 
 #: source_templates/login.html:12
-#, fuzzy
 msgid "Enter your codename"
-msgstr "Введите ваш псевдоним"
+msgstr "Введите ваше кодовое имя"
 
 #: source_templates/login.html:25 source_templates/lookup.html:47
 msgid "CANCEL"
@@ -1080,7 +1073,6 @@ msgid ""
 msgstr ""
 
 #: source_templates/lookup.html:20
-#, fuzzy
 msgid "Submit Materials"
 msgstr "Отправить материалы"
 
@@ -1148,10 +1140,8 @@ msgid "There are no replies at this time."
 msgstr "Нет ответов на данный момент."
 
 #: source_templates/lookup.html:100
-#, fuzzy
-#| msgid "Remember your codename is:"
 msgid "Remember, your codename is:"
-msgstr "Запомните, что ваш псевдоним:"
+msgstr "Запомните, что ваше кодовое имя:"
 
 #: source_templates/lookup.html:101
 msgid "Show"
@@ -1244,12 +1234,10 @@ msgid ""
 msgstr ""
 
 #: source_templates/why-journalist-key.html:3
-#, fuzzy
 msgid "Why download the journalist's public key?"
-msgstr "Зачем загружать открытый ключ журналиста?"
+msgstr "Зачем загружать публичный ключ журналиста?"
 
 #: source_templates/why-journalist-key.html:4
-#, fuzzy
 msgid ""
 "SecureDrop encrypts files and messages after they are submitted. Encrypting "
 "messages and files before submission can provide an extra layer of security "
@@ -1260,7 +1248,6 @@ msgstr ""
 "безопасности до того, как ваши данные достигнут сервера SecureDrop."
 
 #: source_templates/why-journalist-key.html:5
-#, fuzzy
 msgid ""
 "If you are already familiar with the GPG encryption software, you may wish "
 "to encrypt your submissions yourself. To do so:"
@@ -1277,9 +1264,8 @@ msgstr ""
 "фаил с расширением <code>.asc</code>"
 
 #: source_templates/why-journalist-key.html:8
-#, fuzzy
 msgid "Import it into your GPG keyring."
-msgstr "Импортировать в ваш GPG Keyring."
+msgstr "Импортировать в ваше хранилище GPG."
 
 #: source_templates/why-journalist-key.html:10
 msgid ""
@@ -1309,13 +1295,12 @@ msgid ""
 msgstr ""
 
 #: source_templates/why-journalist-key.html:17
-#, fuzzy
 msgid ""
 "On all systems, open the Terminal and use this gpg command: <code>gpg --"
 "recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 msgstr ""
-"Для всех систем, откройте терминал и используйте gpg команду: <code>gpg --"
-"recipient&lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
+"Для всех ОС, откройте терминал и используйте команду gpg: <code>gpg --"
+"recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 
 #: source_templates/why-journalist-key.html:20
 msgid ""
@@ -1325,7 +1310,6 @@ msgid ""
 msgstr ""
 
 #: source_templates/why-journalist-key.html:23
-#, fuzzy
 msgid ""
 "<strong>Tip:</strong> If you wish to remain anonymous, <strong>do not</"
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
