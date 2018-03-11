@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2018-03-11 06:56+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Last-Translator: Andrey <andrey@mailbox.org>\n"
 "Language-Team: Russian "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ru/>\n"
 "Language: ru\n"
@@ -662,7 +662,8 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:34
 msgid "Please enter your current password and two-factor code."
-msgstr "Пожалйста введите ваш верный пароль и код двухфакторной аутентификации."
+msgstr ""
+"Пожалуйста, введите ваш текущий пароль и код двухфакторной аутентификации."
 
 #: journalist_templates/edit_account.html:40
 #, fuzzy
