@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-11 06:57+0000\n"
-"Last-Translator: Andrey <andrey@mailbox.org>\n"
+"PO-Revision-Date: 2018-03-11 06:59+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Russian "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ru/>\n"
 "Language: ru\n"
@@ -766,9 +766,8 @@ msgid "Un-star"
 msgstr "Снять отметку"
 
 #: journalist_templates/index.html:47
-#, fuzzy
 msgid "Are you sure you want to delete the selected collections?"
-msgstr "Вы уверены, что хотите удалить {size} выбранные коллекции?"
+msgstr "Вы уверены, что хотите удалить выбранные коллекции?"
 
 #: journalist_templates/index.html:59
 #, fuzzy
@@ -836,7 +835,7 @@ msgstr "Поле должно содержать от 1 до {max_codename_len} 
 
 #: source_app/forms.py:18
 msgid "Invalid input."
-msgstr ""
+msgstr "Неверный ввод."
 
 #: source_app/main.py:30
 msgid ""
@@ -882,7 +881,7 @@ msgstr "Защищает Журналистов и Источники"
 #: source_templates/base.html:25 source_templates/base.html:45
 #: source_templates/index.html:32 source_templates/index.html:84
 msgid "Powered by"
-msgstr ""
+msgstr "Разработано на платформе"
 
 #: source_templates/base.html:34
 msgid "LOG OUT"
@@ -1106,11 +1105,11 @@ msgstr "Максимальный размер для загрузки: 500МБ"
 
 #: source_templates/lookup.html:36
 msgid "Write a message."
-msgstr ""
+msgstr "Написать сообщение."
 
 #: source_templates/lookup.html:53
 msgid "Read Replies"
-msgstr ""
+msgstr "Читать Ответы"
 
 #: source_templates/lookup.html:58
 msgid ""
