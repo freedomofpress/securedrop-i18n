@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-11 06:55+0000\n"
+"PO-Revision-Date: 2018-03-11 06:56+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Russian "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ru/>\n"
@@ -574,7 +574,7 @@ msgstr ""
 
 #: journalist_templates/config.html:9
 msgid "Alerts"
-msgstr ""
+msgstr "Оповещения"
 
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
@@ -586,7 +586,7 @@ msgstr ""
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
-msgstr ""
+msgstr "Изображение логотипа"
 
 #: journalist_templates/config.html:23
 msgid ""
@@ -594,10 +594,8 @@ msgid ""
 msgstr ""
 
 #: journalist_templates/config.html:36
-#, fuzzy
-#| msgid "UPDATE"
 msgid "UPDATE LOGO"
-msgstr "ОБНОВИТЬ"
+msgstr "ОБНОВИТЬ ЛОГОТИП"
 
 #: journalist_templates/delete.html:5
 #, fuzzy
@@ -664,7 +662,7 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:34
 msgid "Please enter your current password and two-factor code."
-msgstr ""
+msgstr "Пожалйста введите ваш верный пароль и код двухфакторной аутентификации."
 
 #: journalist_templates/edit_account.html:40
 #, fuzzy
