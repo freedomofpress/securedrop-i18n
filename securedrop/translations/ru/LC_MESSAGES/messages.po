@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2018-03-11 06:52+0000\n"
-"Last-Translator: Andrey <andrey@mailbox.org>\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Russian "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ru/>\n"
 "Language: ru\n"
@@ -241,12 +241,10 @@ msgstr[1] "{doc_num} документа"
 msgstr[2] "{doc_num} документов"
 
 #: journalist_templates/_source_row.html:20
-#, fuzzy
-#| msgid "Message"
 msgid "1 message"
 msgid_plural "{msg_num} messages"
-msgstr[0] "Сообщение"
-msgstr[1] "Сообщение"
+msgstr[0] "1 Сообщение"
+msgstr[1] "{msg_num}Сообщений"
 msgstr[2] "Сообщение"
 
 #: journalist_templates/_source_row.html:23
