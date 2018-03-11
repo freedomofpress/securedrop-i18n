@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-01-10 08:03+0000\n"
-"Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
-"Language-Team: German <https://weblate.securedrop.club/projects/securedrop/"
-"securedrop/de/>\n"
+"PO-Revision-Date: 2018-03-11 17:00+0000\n"
+"Last-Translator: heartsucker <heartsucker@riseup.net>\n"
+"Language-Team: German "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -94,7 +94,7 @@ msgstr "Benutzer '{user}' wurde gelöscht"
 
 #: journalist_app/admin.py:249
 msgid "Test alert sent. Please check your email."
-msgstr ""
+msgstr "Testnachricht gesendet. Bitte überprüfen Sie Ihre E-Mail."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -174,13 +174,12 @@ msgstr[1] ""
 "anmelden."
 
 #: journalist_app/utils.py:104
-#, fuzzy
-#| msgid "Please wait for a new two-factor token before trying again."
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
 msgstr ""
-"Bitte warten Sie auf ein neues Zwei-Faktor-Token, bevor Sie erneut versuchen."
+"Bitte warten Sie auf ein neues Code von ihre Zwei-Faktor-Token oder "
+"Applikation, bevor Sie erneut versuchen."
 
 #: journalist_app/utils.py:150
 msgid "Submission deleted."
@@ -222,7 +221,7 @@ msgstr "Keine ungelesenen Einreichungen in den ausgewählten Sammlungen."
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
-msgstr ""
+msgstr "Schließen"
 
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:72
@@ -292,10 +291,8 @@ msgstr "Öffnen Sie die FreeOTP-App"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
-#, fuzzy
-#| msgid "Tap the QRcode symbol at the top"
 msgid "Tap the QR code symbol at the top"
-msgstr "Tippen Sie auf das QRcode-Symbol am oberen Rand"
+msgstr "Tippen Sie auf das QR-Code-Symbol am oberen Rand"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -510,17 +507,12 @@ msgstr "Nachricht"
 
 #: journalist_templates/col.html:71 journalist_templates/col.html:129
 #: journalist_templates/index.html:46
-#, fuzzy
-#| msgid "Instance Configuration"
 msgid "Delete Confirmation"
-msgstr "Instanzkonfiguration"
+msgstr "Löschbestätigung"
 
 #: journalist_templates/col.html:72
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected documents?"
-msgstr ""
-"Sind Sie sicher, dass Sie die {size} markierten Sammlungen löschen möchten?"
+msgstr "Sind Sie sicher, dass Sie die markierten Dokumente löschen möchten?"
 
 #: journalist_templates/col.html:87
 msgid "No documents to display."
@@ -581,13 +573,10 @@ msgid "Alerts"
 msgstr "Alarme"
 
 #: journalist_templates/config.html:11
-#, fuzzy
-#| msgid ""
-#| "Send a test encrypted email alert to verify OSSEC is working correctly:"
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr ""
-"Senden Sie eine testweise verschlüsselte E-Mail-Benachrichtigung, um zu "
-"überprüfen, ob OSSEC korrekt funktioniert:"
+"Senden Sie eine verschlüsselte E-Mail, um zu überprüfen, ob OSSEC korrekt "
+"funktioniert:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
@@ -777,11 +766,8 @@ msgid "Un-star"
 msgstr "Markieren rückgängig machen"
 
 #: journalist_templates/index.html:47
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected collections?"
-msgstr ""
-"Sind Sie sicher, dass Sie die {size} markierten Sammlungen löschen möchten?"
+msgstr "Sind Sie sicher, dass Sie die markierten Sammlungen löschen möchten?"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
@@ -940,18 +926,12 @@ msgid "Welcome"
 msgstr "Willkommen"
 
 #: source_templates/generate.html:7
-#, fuzzy
-#| msgid ""
-#| "Please either write this codename down and keep it in a safe place, or "
-#| "memorize it.<br> This will allow you to log back in and receive replies "
-#| "from journalists."
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
 msgstr ""
 "Bitte notieren Sie sich diesen Decknamen und bewahren Sie ihn an einem "
-"sicheren Ort auf oder merken Sie ihn sich.<br> Auf diese Weise können Sie "
-"sich wieder anmelden und Antworten von Journalisten erhalten."
+"sicheren Ort auf oder merken Sie ihn sich."
 
 #: source_templates/generate.html:10
 msgid ""
@@ -963,14 +943,6 @@ msgstr ""
 "Schritt versenden."
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we use none of the traditional means to track users of our "
-#| "<strong>SecureDrop</strong>\n"
-#| " service, in future visits, using this codename will be the only way we "
-#| "have to communicate with you should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"
 " service, in future visits, using this codename will be the only way we have "
@@ -978,8 +950,7 @@ msgid ""
 " questions or are interested in additional documents. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"Wir nutzen keines der traditionellen Mittel, um die Nutzer unseres "
-"<strong>SecureDrop</strong>-Dienstes zu verfolgen.\n"
+"Wir verfolgen keine Nutzer unseres <strong>SecureDrop</strong>-Dienstes.\n"
 "Daher ist dieser Deckname die einzige Möglichkeit, um in Zukunft mit Ihnen "
 "zu kommunizieren, sollten wir Fragen haben oder an weiteren Dokumenten "
 "interessiert sein.\n"
