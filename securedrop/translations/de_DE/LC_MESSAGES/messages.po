@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-03-11 17:00+0000\n"
+"PO-Revision-Date: 2018-03-12 07:27+0000\n"
 "Last-Translator: heartsucker <heartsucker@riseup.net>\n"
 "Language-Team: German "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/de/>\n"
@@ -962,20 +962,15 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "DOKUMENTE VERSENDEN"
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend turning the Security Slider to High to protect your "
-#| "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
-#| "high</a>, or ignore this warning to continue."
 msgid ""
 "<strong>We recommend turning the Security Slider to Safest to protect your "
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
 "safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Wir empfehlen, die Sicherheitseinstellungen auf 'Hoch' zu stellen, "
-"um Ihre Anonymität zu schützen:</strong><a id=\"disable-js\" href="
-"\"\">Erfahren Sie, wie man ihn auf hoch einstellt</a> oder ignorieren Sie "
-"diese Warnung, um fortzufahren."
+"<strong>Wir empfehlen, die Sicherheitseinstellungen auf 'Am sichersten' zu "
+"stellen, um Ihre Anonymität zu schützen:</strong><a id=\"disable-js\" href=\""
+"\">Erfahren Sie, wie man ihn auf am sichersten einstellt</a> oder ignorieren "
+"Sie diese Warnung, um fortzufahren."
 
 #: source_templates/index.html:18
 msgid ""
@@ -1016,16 +1011,12 @@ msgid "CHECK FOR A RESPONSE"
 msgstr "NACH EINER ANTWORT SCHAUEN"
 
 #: source_templates/index.html:92
-#, fuzzy
-#| msgid ""
-#| "You appear to be using the Tor Browser. You can turn the Security Slider "
-#| "to High in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
 "Safest in 4 easy steps!"
 msgstr ""
 "Sie scheinen den Tor-Browser zu verwenden. In 4 einfachen Schritten können "
-"Sie Ihre Sicherheitseinstellungen auf 'Hoch' stellen!"
+"Sie Ihre Sicherheitseinstellungen auf 'Am sichersten' stellen!"
 
 #: source_templates/index.html:94
 msgid ""
@@ -1039,14 +1030,11 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "Klicken Sie auf <strong>Sicherheitseinstellungen...</strong>"
 
 #: source_templates/index.html:96
-#, fuzzy
-#| msgid ""
-#| "Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
 msgid ""
 "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgstr ""
-"Stellen Sie den Schieber auf <strong>'Hoch'</strong>, klicken Sie dann "
-"<strong>Ok</strong>"
+"Stellen Sie den Schieber auf <strong>'Am sichersten'</strong>, klicken Sie "
+"dann <strong>Ok</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Click here</a> to refresh the page"
