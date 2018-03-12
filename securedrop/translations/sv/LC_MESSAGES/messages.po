@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-06 09:00+0000\n"
+"PO-Revision-Date: 2018-03-12 07:05+0000\n"
 "Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
-"Language-Team: Swedish <https://weblate.securedrop.club/projects/securedrop/"
-"securedrop/sv/>\n"
+"Language-Team: Swedish "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -85,17 +85,15 @@ msgstr "Ett oväntat fel uppstod! Informera din administratör."
 
 #: journalist_app/admin.py:181
 msgid "Username \"{user}\" already taken."
-msgstr "Användarnamnet \"{user}\" är redan upptaget."
+msgstr "Användarnamnet \"{user}\" är redan använt."
 
 #: journalist_app/admin.py:223
 msgid "Deleted user '{user}'"
 msgstr "Användare '{user}' har tagits bort"
 
 #: journalist_app/admin.py:249
-#, fuzzy
-#| msgid "Test alert sent. Check your email."
 msgid "Test alert sent. Please check your email."
-msgstr "Test-larm skickat. Kontrollera din e-post."
+msgstr "Test-larm skickat. Vänligen kontrollera din e-post."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -143,7 +141,7 @@ msgstr "Tack. Ditt svar har sparats."
 
 #: journalist_app/main.py:139
 msgid "No collections selected for download."
-msgstr "Inga samlingar utvalda för nedladdning."
+msgstr "Inga samlingar valda för nedladdning."
 
 #: journalist_app/main.py:142 journalist_app/utils.py:198
 msgid "No collections selected for deletion."
@@ -940,19 +938,14 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "LÄMNA IN DOKUMENT"
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend turning the Security Slider to High to protect your "
-#| "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
-#| "high</a>, or ignore this warning to continue."
 msgid ""
 "<strong>We recommend turning the Security Slider to Safest to protect your "
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
 "safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Vi rekommenderat att du ställer Security Slider till High för att "
+"<strong>Vi rekommenderar att du ställer Security Slider till Safest för att "
 "skydda din anonymitet: </strong>  <a id=\"disable-js\" href=\"\"> Lär dig "
-"hur du ställer den till High</a> eller ignorera denna varning och fortsätt."
+"hur du ställer den till safest</a> eller ignorera denna varning och fortsätt."
 
 #: source_templates/index.html:18
 msgid ""
@@ -992,16 +985,12 @@ msgid "CHECK FOR A RESPONSE"
 msgstr "TITTA EFTER SVAR"
 
 #: source_templates/index.html:92
-#, fuzzy
-#| msgid ""
-#| "You appear to be using the Tor Browser. You can turn the Security Slider "
-#| "to High in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
 "Safest in 4 easy steps!"
 msgstr ""
 "Det ser ut som att du använder Tor Browser. Du kan ändra din Security Slider "
-"till High i fyra enkla steg!"
+"till Safest i 4 enkla steg!"
 
 #: source_templates/index.html:94
 msgid ""
@@ -1015,13 +1004,11 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "Klicka på <strong>Security Settings...</strong>"
 
 #: source_templates/index.html:96
-#, fuzzy
-#| msgid ""
-#| "Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
 msgid ""
 "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgstr ""
-"Ändra Slider till <strong> High</strong>, och välj sedan<strong> Ok</strong>"
+"Ändra Slider till <strong> Safest</strong>, och välj sedan<strong> "
+"Ok</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Click here</a> to refresh the page"
