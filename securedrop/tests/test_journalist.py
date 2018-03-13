@@ -382,13 +382,13 @@ class TestJournalistApp(TestCase):
         assert ('There was an error, and the new password might not have '
                 'been saved correctly.') in resp.data.decode('utf-8')
 
-    def test_admin_add_user_when_username_already_in_use(self):
+    def test_admin_add_user_when_username_already_taken(self):
         self._login_admin()
         resp = self.client.post(url_for('admin.add_user'),
                                 data=dict(username=self.admin.username,
                                           password=VALID_PASSWORD,
                                           is_admin=None))
-        self.assertIn('That username is already in use', resp.data)
+        self.assertIn('already taken', resp.data)
 
     def test_max_password_length(self):
         """Creating a Journalist with a password that is greater than the
@@ -543,6 +543,55 @@ class TestJournalistApp(TestCase):
         # should redirect to verification page
         self.assertRedirects(resp, url_for('account.new_two_factor'))
 
+    def test_user_resets_user_hotp_format_odd(self):
+        self._login_user()
+        old_hotp = self.user.hotp.secret
+
+        self.client.post(url_for('account.reset_two_factor_hotp'),
+                         data=dict(uid=self.user.id, otp_secret='123'))
+        new_hotp = self.user.hotp.secret
+
+        self.assertEqual(old_hotp, new_hotp)
+        self.assertMessageFlashed(
+            "Invalid secret format: "
+            "odd-length secret. Did you mistype the secret?", "error")
+
+    def test_user_resets_user_hotp_format_non_hexa(self):
+        self._login_user()
+        old_hotp = self.user.hotp.secret
+
+        self.client.post(url_for('account.reset_two_factor_hotp'),
+                         data=dict(uid=self.user.id, otp_secret='ZZ'))
+        new_hotp = self.user.hotp.secret
+
+        self.assertEqual(old_hotp, new_hotp)
+        self.assertMessageFlashed(
+            "Invalid secret format: "
+            "please only submit letters A-F and numbers 0-9.", "error")
+
+    @patch('models.Journalist.set_hotp_secret')
+    @patch('journalist.app.logger.error')
+    def test_user_resets_user_hotp_error(self,
+                                         mocked_error_logger,
+                                         mock_set_hotp_secret):
+        self._login_user()
+        old_hotp = self.user.hotp.secret
+
+        error_message = 'SOMETHING WRONG!'
+        mock_set_hotp_secret.side_effect = TypeError(error_message)
+
+        otp_secret = '1234'
+        self.client.post(url_for('account.reset_two_factor_hotp'),
+                         data=dict(uid=self.user.id, otp_secret=otp_secret))
+        new_hotp = self.user.hotp.secret
+
+        self.assertEqual(old_hotp, new_hotp)
+        self.assertMessageFlashed("An unexpected error occurred! "
+                                  "Please inform your administrator.", "error")
+        mocked_error_logger.assert_called_once_with(
+            "set_hotp_secret '{}' (id {}) failed: {}".format(
+                otp_secret, self.user.id, error_message))
+
     def test_admin_resets_user_totp(self):
         self._login_admin()
         old_totp = self.user.totp
@@ -639,7 +688,7 @@ class TestJournalistApp(TestCase):
                                           is_admin=None,
                                           is_hotp=True,
                                           otp_secret='123'))
-        self.assertIn('Field must be 40 characters long', resp.data)
+        self.assertIn('HOTP secrets are 40 characters', resp.data)
 
     def test_admin_add_user_yubikey_valid_length(self):
         self._login_admin()
