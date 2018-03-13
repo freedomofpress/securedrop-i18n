@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2017-12-09 16:00+0000\n"
-"Last-Translator: soniabana <sonja4632@gmail.com>\n"
-"Language-Team: Polish <https://weblate.securedrop.club/projects/securedrop/"
-"securedrop/pl/>\n"
+"PO-Revision-Date: 2018-03-13 20:00+0000\n"
+"Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
+"Language-Team: Polish "
+"<https://weblate.securedrop.club/projects/securedrop/securedrop/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.17.1\n"
+"X-Generator: Weblate 2.18\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -274,13 +274,6 @@ msgid "Enable FreeOTP"
 msgstr ""
 
 #: journalist_templates/account_new_two_factor.html:5
-#, fuzzy
-#| msgid ""
-#| "You're almost done! To finish resetting your two-factor authentication, "
-#| "follow the instructions below to set up Google Authenticator. Once you've "
-#| "added the entry for your account in the app, enter one of the 6-digit "
-#| "codes from the app to confirm that two factor authentication is set up "
-#| "correctly."
 msgid ""
 "You're almost done! To finish resetting your two-factor authentication, "
 "follow the instructions below to set up FreeOTP. Once you've added the entry "
@@ -289,16 +282,14 @@ msgid ""
 msgstr ""
 "Jesteś prawie gotowy! Aby dokończyć resetowanie uwierzytelniania "
 "dwuetapowego, postępuj zgodnie z instrukcjami poniżej, aby skonfigurować "
-"Google Authenticator. Po dodaniu wpisu do swojego konta w aplikacji, "
-"wprowadź jeden z 6-cyfrowych kodów z aplikacji, aby potwierdzić, że "
-"uwierzytelnianie dwuetapowe jest poprawnie skonfigurowane."
+"FreeOTP. Po dodaniu wpisu do swojego konta w aplikacji, wprowadź jeden z 6-"
+"cyfrowych kodów z aplikacji, aby potwierdzić, że uwierzytelnianie dwuetapowe "
+"jest poprawnie skonfigurowane."
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
-#, fuzzy
-#| msgid "Install Google Authenticator on your phone"
 msgid "Install FreeOTP on your phone"
-msgstr "Zainstaluj Google Authenticator w Twoim telefonie"
+msgstr "Zainstaluj FreeOTP w Twoim telefonie"
 
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
@@ -423,13 +414,6 @@ msgid "Is using a YubiKey [HOTP]"
 msgstr "Korzysta z YubiKey [HOTP]"
 
 #: journalist_templates/admin_new_user_two_factor.html:6
-#, fuzzy
-#| msgid ""
-#| "You're almost done! To finish adding this new user, have them follow the "
-#| "instructions below to set up two-factor authentication with Google "
-#| "Authenticator. Once they've added an entry for this account in the app, "
-#| "have them enter one of the 6-digit codes from the app to confirm that two "
-#| "factor authentication is set up correctly."
 msgid ""
 "You're almost done! To finish adding this new user, have them follow the "
 "instructions below to set up two-factor authentication with FreeOTP. Once "
@@ -438,9 +422,9 @@ msgid ""
 "set up correctly."
 msgstr ""
 "Jesteś prawie gotowy! Aby dokończyć dodawanie nowego użytkownika, wykonaj "
-"poniższe instrukcje, aby skonfigurować uwierzytelnianie dwuetapowe w Google "
-"Authenticator. Po dodaniu wpisu dotyczącego tego konta w aplikacji, poproś, "
-"aby wprowadził jeden z 6-cyfrowych kodów z aplikacji, aby potwierdzić, że "
+"poniższe instrukcje, aby skonfigurować uwierzytelnianie dwuetapowe w "
+"FreeOTP. Po dodaniu wpisu dotyczącego tego konta w aplikacji, poproś, aby "
+"wprowadził jeden z 6-cyfrowych kodów z aplikacji, aby potwierdzić, że "
 "uwierzytelnianie dwuetapowe jest skonfigurowane poprawnie."
 
 #: journalist_templates/base.html:24
@@ -527,10 +511,8 @@ msgid "Delete Confirmation"
 msgstr ""
 
 #: journalist_templates/col.html:72
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected documents?"
-msgstr "Czy napewno chcesz usunąć zbiory o pojemności {size}?"
+msgstr "Czy napewno chcesz usunąć zbiory?"
 
 #: journalist_templates/col.html:87
 msgid "No documents to display."
@@ -586,7 +568,7 @@ msgstr ""
 
 #: journalist_templates/config.html:9
 msgid "Alerts"
-msgstr ""
+msgstr "Ostrzeżenia"
 
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
@@ -606,10 +588,8 @@ msgid ""
 msgstr ""
 
 #: journalist_templates/config.html:36
-#, fuzzy
-#| msgid "UPDATE"
 msgid "UPDATE LOGO"
-msgstr "AKTUALIZACJA"
+msgstr "AKTUALIZACJA LOGO"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -726,18 +706,13 @@ msgstr ""
 "razie utracisz dostęp do swojego konta.</em>"
 
 #: journalist_templates/edit_account.html:65
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as Google "
-#| "Authenticator or FreeOTP, choose the first option. For hardware tokens "
-#| "like the Yubikey, choose the second."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the Yubikey, choose the second."
 msgstr ""
 "Aby zresetować uwierzytelnianie dwuetapowe w aplikacjach mobilnych takich "
-"jak Google Authenticator lub FreeOTP, wybierz pierwszą opcję. W przypadku "
-"tokenów sprzętowych, takich jak Yubikey, wybierz drugi."
+"jak FreeOTP, wybierz pierwszą opcję. W przypadku tokenów sprzętowych, takich "
+"jak Yubikey, wybierz drugi."
 
 #: journalist_templates/edit_account.html:90
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
@@ -837,19 +812,14 @@ msgid "LOG IN"
 msgstr "ZALOGUJ SIĘ"
 
 #: source_app/__init__.py:115
-#, fuzzy
-#| msgid ""
-#| "<strong>WARNING:</strong> You appear to be using Tor2Web. This "
-#| "<strong>does not</strong> provide anonymity. <a href=\"{url}\">Why is "
-#| "this dangerous?</a>"
 msgid ""
 "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This "
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href="
 "\"{url}\">Why is this dangerous?</a>"
 msgstr ""
-"<strong> UWAGA:</strong> Wygląda na to, że korzystasz z Tor2Web. <strong>Nie "
-"gwarantuje</strong> to anonimowości. <a href=\"{url}\">Dlaczego jest to "
-"niebezpieczne?</a>"
+"<strong>UWAGA:&nbsp;</strong> Wygląda na to, że korzystasz z Tor2Web. "
+"<strong>&nbsp;Nie gwarantuje&nbsp;</strong> to anonimowości. <a href=\"{url}"
+"\">Dlaczego jest to niebezpieczne?</a>"
 
 #: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
@@ -951,18 +921,12 @@ msgid "Welcome"
 msgstr "Witamy"
 
 #: source_templates/generate.html:7
-#, fuzzy
-#| msgid ""
-#| "Please either write this codename down and keep it in a safe place, or "
-#| "memorize it.<br> This will allow you to log back in and receive replies "
-#| "from journalists."
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
 msgstr ""
 "Proszę zapisać ten kryptonim i go przechować w bezpiecznym miejscu, lub go "
-"zapamiętaj. <b> Korzystaj z niego przy ponownych zalogowaniach, aby "
-"otrzymywać odpowiedzi od dziennikarzy."
+"zapamiętaj."
 
 #: source_templates/generate.html:10
 msgid ""
@@ -1001,19 +965,14 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "PRZEŚLIJ DOKUMENTY"
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend turning the Security Slider to High to protect your "
-#| "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
-#| "high</a>, or ignore this warning to continue."
 msgid ""
 "<strong>We recommend turning the Security Slider to Safest to protect your "
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
 "safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Zalecamy ustawić Poziom Zabezpieczenia na Wysoki, aby chronić swoją "
+"<strong>Zalecamy ustawić Poziom Zabezpieczenia na Safest, aby chronić swoją "
 "anonimowość: </strong> \n"
-"<a id=\"disable-js\" href=\"\"> Dowiedz się, jak ustawić go na Wysoki</a>, "
+"<a id=\"disable-js\" href=\"\"> Dowiedz się, jak ustawić go na Safest</a>, "
 "lub zignoruj tymczasowo to ostrzeżenie i przejdź dalej."
 
 #: source_templates/index.html:18
@@ -1054,16 +1013,12 @@ msgid "CHECK FOR A RESPONSE"
 msgstr "SPRAWDŹ ODPOWIEDZI"
 
 #: source_templates/index.html:92
-#, fuzzy
-#| msgid ""
-#| "You appear to be using the Tor Browser. You can turn the Security Slider "
-#| "to High in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
 "Safest in 4 easy steps!"
 msgstr ""
 "Wygląda na to, że korzystasz z przeglądarki Tor. Możesz ustawić Poziom "
-"Zabezpieczenia na Wysoki w 4 prostych krokach!"
+"Zabezpieczenia na Safest w 4 prostych krokach!"
 
 #: source_templates/index.html:94
 msgid ""
@@ -1077,14 +1032,11 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "Kliknij <strong> Ustawienia Bezpieczeństwa...</strong>"
 
 #: source_templates/index.html:96
-#, fuzzy
-#| msgid ""
-#| "Turn the Slider to <strong>High</strong>, then click <strong>Ok</strong>"
 msgid ""
 "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgstr ""
-"Przesuń suwak na <strong> Wysoki </strong>, a następnie kliknij <strong> OK "
-"</strong>"
+"Przesuń suwak na <strong>Safest</strong>, a następnie kliknij "
+"<strong>OK</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Click here</a> to refresh the page"
