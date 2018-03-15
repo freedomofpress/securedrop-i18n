@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-03-10 06:35+0000\n"
+"PO-Revision-Date: 2018-03-15 15:00+0000\n"
 "Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
 "Language-Team: Dutch "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/nl/>\n"
@@ -618,7 +618,7 @@ msgstr "Gebruiker \"{user}\" bewerken"
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Username &amp; Admin Status"
-msgstr "Gebruikersnaam & Beheerderstatus wijzigen"
+msgstr "Gebruikersnaam &amp; Beheerderstatus wijzigen"
 
 #: journalist_templates/edit_account.html:12
 msgid "Change username"
@@ -953,9 +953,9 @@ msgid ""
 "anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it to "
 "safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Wij adviseren om de Security Slider op Hoog te zetten om uw "
-"anonimiteit te beschermen:</strong> <a id=\"disable-js\" href=\"\">Lees hier "
-"hoe u dit op hoog zet</a> of negeer deze waarschuwing."
+"<strong>Wij adviseren om de beveiligingsschuifbalk op Veiliste te zetten om "
+"uw anonimiteit te beschermen:</strong> <a id=\"disable-js\" href=\"\">Lees "
+"hier hoe u dit op Veiligste zet</a> of negeer deze waarschuwing."
 
 #: source_templates/index.html:18
 msgid ""
@@ -999,8 +999,8 @@ msgid ""
 "You appear to be using the Tor Browser. You can turn the Security Slider to "
 "Safest in 4 easy steps!"
 msgstr ""
-"Het lijkt erop dat u de Tor Browser gebruikt. U kan de Security Slider op "
-"Safest zetten in 4 simpele stappen!"
+"Het lijkt erop dat u de Tor Browser gebruikt. U kan de "
+"beveiligingsschuifbalk op Veiligste zetten in 4 simpele stappen!"
 
 #: source_templates/index.html:94
 msgid ""
@@ -1017,7 +1017,7 @@ msgstr "Klik op <strong>Veiligheidsinstellingen...</strong>"
 msgid ""
 "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgstr ""
-"Beweeg de Schuif naar <strong>Safest</strong> en klik vervolgens op "
+"Beweeg de schuif naar <strong>Veiligste</strong> en klik vervolgens op "
 "<strong>Ok</strong>"
 
 #: source_templates/index.html:97
