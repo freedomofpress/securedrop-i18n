@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-16 16:00+0000\n"
-"Last-Translator: Dev Singh <devksingh4@gmail.com>\n"
+"PO-Revision-Date: 2018-03-16 19:00+0000\n"
+"Last-Translator: Drashti <drashtipandya37@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
 "Language: hi\n"
@@ -417,7 +417,7 @@ msgstr ""
 
 #: journalist_templates/base.html:24
 msgid "Logged on as"
-msgstr "लॉग ऑन"
+msgstr "जैसे लॉग ऑन"
 
 #: journalist_templates/base.html:26
 msgid "Admin"
@@ -521,8 +521,8 @@ msgid ""
 "An encryption key will be generated for the source the next time they log"
 " in, after which you will be able to reply to the source here."
 msgstr ""
-"अगली बार जब वे लॉग इन करते हैं, तो स्रोत के लिए एक कूटलेखन कुंजी उत्पन्न होगी"
-", जिसके बाद आप यहां स्रोत को जवाब दे पाएंगे।"
+"अगली बार जब वे लॉग इन करते हैं, तो स्रोत के लिए एक एन्क्रिप्शन कुंजी उत्पन्न "
+"होगी, जिसके बाद आप यहां स्रोत को जवाब दे पाएंगे।"
 
 #: journalist_templates/col.html:106
 msgid "Click below if you would like to write a reply to this source."
@@ -540,7 +540,7 @@ msgid ""
 msgstr ""
 "इस स्रोत के संग्रह को हटाने के लिए नीचे क्लिक करें <em> चेतावनी: अगर आप ऐसा "
 "करते हैं, तो यहां देखी जाने वाली फ़ाइलें पुनर्प्राप्त नहीं हो सकेंगी और स्रो"
-"त अब उनके पिछले कोडनाम का उपयोग करके लॉगिन नहीं कर पाएगा।</em>"
+"त अब उनके पिछले कोडनाम का उपयोग करके लॉगिन नहीं कर पाएगे।</em>"
 
 #: journalist_templates/col.html:122
 msgid "DELETE COLLECTION"
@@ -574,7 +574,7 @@ msgstr "लोगो छवि"
 
 #: journalist_templates/config.html:23
 msgid "Here you can update the image displayed on the SecureDrop web interfaces:"
-msgstr "यहां आप सेक्योरड्राप वेब इंटरफेस पर प्रदर्शित छवि को सुधार सकते हैं:"
+msgstr "यहां आप SecureDrop वेब इंटरफेस पर प्रदर्शित छवि को सुधार सकते हैं:"
 
 #: journalist_templates/config.html:36
 msgid "UPDATE LOGO"
@@ -590,8 +590,8 @@ msgid_plural ""
 msgstr[0] ""
 "निम्न फ़ाइल को <strong>स्थायी </strong>रूप से मिटने के लिए लिए चुना गया है:"
 msgstr[1] ""
-"{files} फाइलों को <strong>स्थायी </strong>रूप से मिटने के लिए लिए चुना गया "
-"है:"
+"निम्न {files} फाइलों को <strong>स्थायी </strong>रूप से मिटने के लिए लिए चुना "
+"गया है:"
 
 #: journalist_templates/delete.html:20
 #, fuzzy
@@ -600,7 +600,7 @@ msgstr "स्थायी रूप से फ़ाइलें हटाए�
 
 #: journalist_templates/delete.html:23
 msgid "Return to the list of documents for {source_name}…"
-msgstr "{Source_name} के लिए दस्तावेज़ों की सूची पर लौटें …"
+msgstr "{source_name} के लिए दस्तावेज़ों की सूची पर लौटें…"
 
 #: journalist_templates/edit_account.html:6
 msgid "Edit user \"{user}\""
@@ -612,7 +612,7 @@ msgstr "उपयोगकर्ता नाम परिवर्तन कर
 
 #: journalist_templates/edit_account.html:12
 msgid "Change username"
-msgstr "उपयोगकर्ता नाम परिवर्तन करें  &amp; व्यवस्थापक स्थिति"
+msgstr "उपयोगकर्ता नाम परिवर्तन करें"
 
 #: journalist_templates/edit_account.html:19
 msgid "UPDATE"
@@ -628,9 +628,7 @@ msgstr "पासवर्ड रीसेट"
 
 #: journalist_templates/edit_account.html:27
 msgid "SecureDrop now uses automatically generated diceware passwords."
-msgstr ""
-"सेक्योरड्राप अब स्वचालित रूप से जेनरेट किए गए डिसवेयर पासवर्ड का उपयोग करता "
-"है |"
+msgstr "SecureDrop अब स्वचालित रूप से बनाऐ गए डिसवेयर पासवर्ड का उपयोग करता है|"
 
 #: journalist_templates/edit_account.html:28
 msgid ""
@@ -650,7 +648,7 @@ msgstr "वर्तमान पासवर्ड"
 
 #: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
 msgid "Two-factor Code"
-msgstr "दो कारक कोड"
+msgstr "दो-कारक कोड"
 
 #: journalist_templates/edit_account.html:46
 msgid "The user's password will be changed to:"
@@ -698,12 +696,12 @@ msgid ""
 "choose the first option. For hardware tokens like the Yubikey, choose the"
 " second."
 msgstr ""
-"मोबाइल एप जैसे कि (फ्री ओटीपी ) के लिए दो-कारक प्रमाणीकरण को रीसेट करने के लि"
-"ए, पहला विकल्प चुनें। युबकि जैसे हार्डवेयर टोकन के लिए, दूसरा चुनें |"
+"मोबाइल एप जैसे कि (FreeOTP) के लिए दो-कारक प्रमाणीकरण को रीसेट करने के लिए, "
+"पहला विकल्प चुनें। Yubikey जैसे हार्डवेयर टोकन के लिए, दूसरा चुनें |"
 
 #: journalist_templates/edit_account.html:90
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
-msgstr "रीसेट दो पहलू प्राधिकरण (एप्प )"
+msgstr "दो पहलू प्राधिकरण रीसेट (एप्प)"
 
 #: journalist_templates/edit_account.html:92
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
@@ -727,7 +725,7 @@ msgstr ""
 
 #: journalist_templates/flag.html:10
 msgid "Continue to the list of documents for {codename}..."
-msgstr "{Codename} के लिए दस्तावेज़ों की सूची पर जारी रखें ..."
+msgstr "{codename} के लिए दस्तावेज़ों की सूची पर जारी रखें..."
 
 #: journalist_templates/index.html:4
 msgid "Sources"
@@ -735,7 +733,7 @@ msgstr "स्रोत"
 
 #: journalist_templates/index.html:11
 msgid "Download Unread"
-msgstr "न पढ़े मसाज डौन्लोड करें"
+msgstr "न पढ़े मसाज डाउनलोड करें"
 
 #: journalist_templates/index.html:12
 msgid "Download"
@@ -767,7 +765,7 @@ msgstr "सभी का चयन करे"
 
 #: journalist_templates/js-strings.html:5
 msgid "Select Unread"
-msgstr "न पढ़े चुनें"
+msgstr "न पढ़े हुऐ चुनें"
 
 #: journalist_templates/js-strings.html:6
 msgid "Select None"
@@ -792,7 +790,7 @@ msgstr "पासवर्ड"
 
 #: journalist_templates/login.html:12
 msgid "LOG IN"
-msgstr "लॉग इन करें"
+msgstr "लॉग इन"
 
 #: source_app/__init__.py:115
 msgid ""
@@ -826,7 +824,7 @@ msgstr "सबमिट करने के लिए आपको कोई स
 
 #: source_app/main.py:153
 msgid "Thanks! We received your message."
-msgstr "धन्यवाद! हमें आपका संदेश मिला |"
+msgstr "धन्यवाद! हमें आपका संदेशा मिला|"
 
 #: source_app/main.py:155
 msgid "Thanks! We received your document."
@@ -834,7 +832,7 @@ msgstr "धन्यवाद! हमें आपका दस्तावे�
 
 #: source_app/main.py:157
 msgid "Thanks! We received your message and document."
-msgstr "धन्यवाद! हमें आपका संदेश और दस्तावेज़ मिला।"
+msgstr "धन्यवाद! हमें आपका संदेशा और दस्तावेज़ मिला।"
 
 #: source_app/main.py:204
 msgid "Reply deleted"
@@ -855,7 +853,7 @@ msgstr "पत्रकारों और स्रोतों की रक�
 #: source_templates/base.html:25 source_templates/base.html:45
 #: source_templates/index.html:32 source_templates/index.html:84
 msgid "Powered by"
-msgstr "संचालित द्वारा"
+msgstr "द्वारा संचालित"
 
 #: source_templates/base.html:34
 msgid "LOG OUT"
@@ -866,7 +864,7 @@ msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
 msgstr ""
-"सभी सॉफ़्टवेयर की तरह,सेक्योरड्राप में सुरक्षा की खामियां हो सकती हैं अपने "
+"सभी सॉफ़्टवेयर की तरह, SecureDrop में सुरक्षा की खामियां हो सकती हैं। अपने "
 "जोखिम पर इस्तेमाल करें।"
 
 #: source_templates/error.html:3
@@ -883,11 +881,11 @@ msgstr ""
 
 #: source_templates/error.html:7 source_templates/notfound.html:7
 msgid "Look up a codename..."
-msgstr "एक कोडनाम खोजें ..."
+msgstr "एक कोडनाम खोजें..."
 
 #: source_templates/first_submission_flashed_message.html:2
 msgid "Success!"
-msgstr "सफल हुआ !"
+msgstr "सफल हुआ!"
 
 #: source_templates/first_submission_flashed_message.html:3
 msgid ""
