@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-15 20:00+0000\n"
-"Last-Translator: Drashti <drashtipandya37@gmail.com>\n"
+"PO-Revision-Date: 2018-03-16 16:00+0000\n"
+"Last-Translator: Dev Singh <devksingh4@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
 "Language: hi\n"
@@ -594,6 +594,7 @@ msgstr[1] ""
 "है:"
 
 #: journalist_templates/delete.html:20
+#, fuzzy
 msgid "PERMANENTLY DELETE FILES"
 msgstr "स्थायी रूप से फ़ाइलें हटाएं"
 
@@ -611,7 +612,7 @@ msgstr "उपयोगकर्ता नाम परिवर्तन कर
 
 #: journalist_templates/edit_account.html:12
 msgid "Change username"
-msgstr "उपयोगकर्ता नाम परिवर्तन करें"
+msgstr "उपयोगकर्ता नाम परिवर्तन करें  &amp; व्यवस्थापक स्थिति"
 
 #: journalist_templates/edit_account.html:19
 msgid "UPDATE"
@@ -649,11 +650,11 @@ msgstr "वर्तमान पासवर्ड"
 
 #: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
 msgid "Two-factor Code"
-msgstr "द्वि-कारक कोड"
+msgstr "दो कारक कोड"
 
 #: journalist_templates/edit_account.html:46
 msgid "The user's password will be changed to:"
-msgstr "उपयोगकर्ता का पासवर्ड निम्न में बदल जाएगा:"
+msgstr "पयोगकर्ता का पासवर्ड इस में बदल जाएगा:"
 
 #: journalist_templates/edit_account.html:48
 msgid "Your password will be changed to:"
@@ -734,7 +735,7 @@ msgstr "स्रोत"
 
 #: journalist_templates/index.html:11
 msgid "Download Unread"
-msgstr "ान पढ़े मसाज डौन्लोड करें"
+msgstr "न पढ़े मसाज डौन्लोड करें"
 
 #: journalist_templates/index.html:12
 msgid "Download"
