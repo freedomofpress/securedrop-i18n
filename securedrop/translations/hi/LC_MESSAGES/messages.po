@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-25 09:00+0000\n"
+"PO-Revision-Date: 2018-03-25 10:52+0000\n"
 "Last-Translator: Drashti <drashtipandya37@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
@@ -594,7 +594,6 @@ msgstr[1] ""
 "गया है:"
 
 #: journalist_templates/delete.html:20
-#, fuzzy
 msgid "PERMANENTLY DELETE FILES"
 msgstr "स्थायी रूप से फ़ाइलें हटाएं"
 
@@ -744,9 +743,8 @@ msgid "Star"
 msgstr "तारांकित करें"
 
 #: journalist_templates/index.html:14
-#, fuzzy
 msgid "Un-star"
-msgstr "ान मार्क"
+msgstr "स्टार को हटा दें"
 
 #: journalist_templates/index.html:47
 msgid "Are you sure you want to delete the selected collections?"
@@ -1054,7 +1052,7 @@ msgid ""
 "visited. To err on the side of caution, we put a hold on sending all "
 "documents from that day through to our journalists."
 msgstr ""
-"जब आप पिछली बार विज़िट करते थे, तो हमारे सर्वरों ने नई गतिविधि की असामान्य "
+"जब आपने पिछली बार मुलाक़ात की थी, तो हमारे सर्वरों ने नई गतिविधि की असामान्य "
 "वृद्धि देखी। सावधानी के पक्ष में गलती करने के लिए, हम उस दिन से हमारे "
 "पत्रकारों के माध्यम से सभी दस्तावेज भेजने पर रोक लगाते हैं।"
 
@@ -1351,9 +1349,9 @@ msgid ""
 "<code>--sign</code> or <code>-s</code> flag) as this will reveal your GPG"
 " identity to us."
 msgstr ""
-"<strong>सलाह:</strong> यदि आप गुमनाम रहना चाहते हैं तोह कृपया GPG को "
-"<code>--sign</code>या <code>-s</code> चुनाव के साथ <strong>मत प्रयोग "
-"करें</strong> क्यूंकि यह हमें आपकी GPG पहचान बता देता है |"
+"<strong>सलाह:</strong> यदि आप गुमनाम रहना चाहते हैं, तोह कृपया GPG को "
+"(<code>--sign</code> या <code>-s</code> flag के साथ) <strong>मत प्रयोग "
+"करें</strong> क्यूंकि यह हमें आपकी GPG पहचान बता देता है|"
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
