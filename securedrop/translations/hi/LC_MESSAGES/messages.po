@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-25 10:59+0000\n"
-"Last-Translator: Drashti <drashtipandya37@gmail.com>\n"
+"PO-Revision-Date: 2018-03-25 12:00+0000\n"
+"Last-Translator: Abhishek Jaiswal <abhijais9451@gmail.com>\n"
 "Language-Team: Hindi "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/hi/>\n"
 "Language: hi\n"
@@ -60,8 +60,8 @@ msgid ""
 "An error occurred saving this user to the database. Please inform your "
 "administrator."
 msgstr ""
-"इस उपयोगकर्ता को डेटाबेस में सहेजने में एक त्रुटि हुई। कृपया अपने व्यवस्थापक "
-"को सूचित करें।"
+"इस उपयोगकर्ता को डेटाबेस में सहेजने में एक त्रुटि हुई है। कृपया अपने व्यवस्था"
+"पक को सूचित करें।"
 
 #: journalist_app/admin.py:104
 msgid "Token in two-factor authentication accepted for user {user}."
@@ -357,7 +357,7 @@ msgstr "हटाएं"
 
 #: journalist_templates/admin.html:19
 msgid "Created"
-msgstr "बनाया था"
+msgstr "बनाया गया"
 
 #: journalist_templates/admin.html:20
 msgid "Last login"
