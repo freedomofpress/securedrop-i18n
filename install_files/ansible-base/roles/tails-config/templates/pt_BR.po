@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-31 18:45+0000\n"
+"PO-Revision-Date: 2018-03-31 20:00+0000\n"
 "Last-Translator: Cláudio Carvalho <znnb@mail.com>\n"
 "Language-Team: Portuguese (Brazil) "
 "<https://weblate.securedrop.club/projects/securedrop/desktop/pt_BR/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: desktop-journalist-icon.j2.in:9
 msgid "SecureDrop Journalist Interface"
-msgstr "Interface de Jornalismo do SecureDrop"
+msgstr "Interface de Jornalista do SecureDrop"
 
 #: desktop-source-icon.j2.in:9
 msgid "SecureDrop Source Interface"
