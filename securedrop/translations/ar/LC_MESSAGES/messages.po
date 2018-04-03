@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-04-03 14:00+0000\n"
+"PO-Revision-Date: 2018-04-03 16:00+0000\n"
 "Last-Translator: ramyraoof <ramy.raoof@gmail.com>\n"
 "Language-Team: Arabic "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/ar/>\n"
@@ -512,7 +512,7 @@ msgstr "تأكيد الحذف"
 
 #: journalist_templates/col.html:72
 msgid "Are you sure you want to delete the selected documents?"
-msgstr "هل أنت متأكد من أنك تريد حذف الملفات المختارة؟"
+msgstr "هل أنت متأكد من حذف الملفات المختارة؟"
 
 #: journalist_templates/col.html:87
 msgid "No documents to display."
@@ -572,8 +572,7 @@ msgstr "تنبيهات"
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr ""
-"أرسل رسالة بريد إلكتروني معمّاة للتأكد من أن تنبيهات OSSEC تعمل بالشكل "
-"الصحيح:"
+"أرسل رسالة بريد إلكتروني معمّاة للتأكد من عمل تنبيهات OSSEC بالشكل الصحيح:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
@@ -581,13 +580,13 @@ msgstr "أرسل تنبيه OSSEC تجريبي"
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
-msgstr "صورة شعار"
+msgstr "صورة الشعار"
 
 #: journalist_templates/config.html:23
 msgid ""
 "Here you can update the image displayed on the SecureDrop web interfaces:"
 msgstr ""
-"يمكنك من هنا تحديث الشعار المُبين على واجهة استخدام SecureDrop الخاصة بك:"
+"من هنا يمكن تحديث الشعار المُبين على واجهة استخدام SecureDrop الخاصة بك:"
 
 #: journalist_templates/config.html:36
 msgid "UPDATE LOGO"
@@ -705,8 +704,9 @@ msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the Yubikey, choose the second."
 msgstr ""
-"لإعادة ضبط الاستيثاق في خطوتين على تطبيقات الهاتف المحمول مثل FreeOTP: اضغط "
-"الخيار الأول. أما لاستخدام مفاتيح المصادقة مثل Yubikey فاضغط الخيار الثاني."
+"اِختَر الخيار الأول لإعادة ضبط الاستيثاق في خطوتين على تطبيقات الهاتف "
+"المحمول مثل FreeOTP. أما لاستخدام مفاتيح المصادقة مثل Yubikey اِختَر الخيار "
+"الثاني."
 
 #: journalist_templates/edit_account.html:90
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
@@ -757,7 +757,7 @@ msgstr "إلغاء النجمة"
 
 #: journalist_templates/index.html:47
 msgid "Are you sure you want to delete the selected collections?"
-msgstr "هل أنت متأكد من أنك تريد حذف المجموعات المختارة؟"
+msgstr "هل أنت متأكد من حذف المجموعات المختارة؟"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
@@ -777,7 +777,7 @@ msgstr "اختر الرسائل غير المقروءة"
 
 #: journalist_templates/js-strings.html:6
 msgid "Select None"
-msgstr "عدم الاختيار"
+msgstr "إلغاء الاختيار"
 
 #: journalist_templates/js-strings.html:7
 msgid "Are you sure you want to delete the user {username}?"
@@ -845,11 +845,11 @@ msgstr "شكرا! لقد تلقينا الرسالة و&nbsp;المستند."
 
 #: source_app/main.py:204
 msgid "Reply deleted"
-msgstr "تم حذف الرد"
+msgstr "حُذِفَ الرد"
 
 #: source_app/main.py:221
 msgid "All replies have been deleted"
-msgstr "تم حذف كُلّ الردود"
+msgstr "حُذِفَت كُلّ الردود"
 
 #: source_app/main.py:235
 msgid "Sorry, that is not a recognized codename."
@@ -999,7 +999,7 @@ msgstr "أضغط على <img src=\"{icon}\" alt=\"أيقونة تور\"> في ش
 
 #: source_templates/index.html:95
 msgid "Click <strong>Security Settings...</strong>"
-msgstr "انقر على <strong>إعدادات الحماية...</strong>"
+msgstr "انقر على <strong>إعدادات الأمان...</strong>"
 
 #: source_templates/index.html:96
 msgid ""
@@ -1026,7 +1026,7 @@ msgstr "ألغ"
 #: source_templates/logout_flashed_message.html:4
 #: source_templates/session_timeout.html:5
 msgid "Important!"
-msgstr "مهم!"
+msgstr "هام!"
 
 #: source_templates/logout_flashed_message.html:5
 msgid ""
@@ -1127,7 +1127,7 @@ msgstr "نعم، احذف كُلّ الردود"
 
 #: source_templates/lookup.html:87
 msgid "NO, NOT YET"
-msgstr "لا، ليس بعد"
+msgstr "لا، ليس بَعْد"
 
 #: source_templates/lookup.html:91
 msgid "There are no replies at this time."
@@ -1151,7 +1151,7 @@ msgstr "الصفحة غير موجودة"
 
 #: source_templates/notfound.html:5
 msgid "Sorry, we couldn't locate what you requested."
-msgstr "معذرة، لم نتمكن من إيجاد المطلوب."
+msgstr "عذرًا لم نتمكن من إيجاد المطلوب."
 
 #: source_templates/session_timeout.html:6
 msgid ""
@@ -1293,7 +1293,7 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:14
 msgid "Encrypt your submission."
-msgstr "تعمية المحتوى الخاص بك."
+msgstr "تعمية إيداعك."
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
@@ -1337,7 +1337,7 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
-msgstr "الرجوع إلى صفحة الإرسال"
+msgstr "الرجوع إلى صفحة الإيداع"
 
 #~ msgid "Are you sure you want to delete the {size} selected submissions?"
 #~ msgstr "هل أنت متأكد من أنك تريد حذف الإيداعات {size} المختارة؟"
