@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-03-15 15:00+0000\n"
-"Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
+"PO-Revision-Date: 2018-04-21 12:00+0000\n"
+"Last-Translator: Thom <thom.pp9@gmail.com>\n"
 "Language-Team: Dutch "
 "<https://weblate.securedrop.club/projects/securedrop/securedrop/nl/>\n"
 "Language: nl\n"
@@ -50,7 +50,7 @@ msgid ""
 "try again."
 msgstr ""
 "Er is een probleem opgetreden met het automatisch gegenereerde wachtwoord. "
-"Gebruiker niet aangemaakt. Probeert opnieuw."
+"Gebruiker niet aangemaakt. Probeer het opnieuw."
 
 #: journalist_app/admin.py:77
 msgid "That username is already in use"
@@ -62,7 +62,7 @@ msgid ""
 "administrator."
 msgstr ""
 "Er is een probleem opgetreden bij het opslaan van deze gebruiker in de "
-"database. Neem contact op met de beheerder."
+"database. Neem contact op met uw beheerder."
 
 #: journalist_app/admin.py:104
 msgid "Token in two-factor authentication accepted for user {user}."
@@ -88,7 +88,7 @@ msgstr ""
 
 #: journalist_app/admin.py:181
 msgid "Username \"{user}\" already taken."
-msgstr "Gebruikersnaam \"{user}\" is reeds in gebruik."
+msgstr "Gebruikersnaam \"{user}\" is al in gebruik."
 
 #: journalist_app/admin.py:223
 msgid "Deleted user '{user}'"
@@ -108,7 +108,7 @@ msgstr "Geen collecties geselecteerd."
 
 #: journalist_app/decorators.py:16
 msgid "Only administrators can access this page."
-msgstr "U moet beheerder zijn om toegang tot deze pagina te krijgen."
+msgstr "Alleen beheerders hebben toegang tot deze pagina."
 
 #: journalist_app/forms.py:19
 msgid "Field must be 40 characters long but got {num_chars}."
@@ -127,7 +127,7 @@ msgstr "Dit is een verplicht veld."
 
 #: journalist_app/forms.py:52
 msgid "You cannot send an empty reply."
-msgstr "U kunt geen leeg antwoord te versturen."
+msgstr "U kunt geen leeg antwoord versturen."
 
 #: journalist_app/forms.py:60
 msgid "File required."
@@ -135,7 +135,7 @@ msgstr "Bestand verplicht."
 
 #: journalist_app/forms.py:62
 msgid "Upload images only."
-msgstr "Enkel afbeeldingen uploaden."
+msgstr "Alleen afbeeldingen uploaden."
 
 #: journalist_app/main.py:118
 msgid "Thanks. Your reply has been stored."
@@ -226,13 +226,13 @@ msgstr "Sluiten"
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:72
 msgid "Cancel"
-msgstr "Annuleer"
+msgstr "Annuleren"
 
 #: journalist_templates/_source_row.html:19
 msgid "1 doc"
 msgid_plural "{doc_num} docs"
-msgstr[0] "1 doc"
-msgstr[1] "{doc_num} docs"
+msgstr[0] "1 document"
+msgstr[1] "{doc_num} documenten"
 
 #: journalist_templates/_source_row.html:20
 msgid "1 message"
@@ -286,7 +286,7 @@ msgstr "Installeer FreeOTP op uw telefoon"
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
 msgid "Open the FreeOTP app"
-msgstr "Open de FreeOTP app"
+msgstr "Open de FreeOTP-app"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
@@ -462,7 +462,7 @@ msgstr ""
 
 #: journalist_templates/col.html:13
 msgid "Change codename"
-msgstr "Codenaam veranderen"
+msgstr "Codenaam wijzigen"
 
 #: journalist_templates/col.html:14
 msgid "Are you sure you want to generate a new codename?"
@@ -470,7 +470,7 @@ msgstr "Weet u zeker dat u een nieuwe codenaam wilt genereren?"
 
 #: journalist_templates/col.html:16
 msgid "CONFIRM"
-msgstr "BEVESTIG"
+msgstr "BEVESTIGEN"
 
 #: journalist_templates/col.html:22
 msgid ""
@@ -490,7 +490,7 @@ msgstr "Geselecteerde verwijderen"
 
 #: journalist_templates/col.html:57
 msgid "Uploaded Document"
-msgstr "Geüpload document"
+msgstr "Geüploade document"
 
 #: journalist_templates/col.html:59 journalist_templates/col.html:92
 msgid "Reply"
@@ -503,7 +503,7 @@ msgstr "Bericht"
 #: journalist_templates/col.html:71 journalist_templates/col.html:129
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
-msgstr "Verwijder bevestiging"
+msgstr "Bevestiging verwijderen"
 
 #: journalist_templates/col.html:72
 msgid "Are you sure you want to delete the selected documents?"
@@ -578,7 +578,7 @@ msgstr "VERSTUUR OSSEC WAARSCHUWINGSTESTMAIL"
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
-msgstr "Logo Afbeelding"
+msgstr "Afbeelding logo"
 
 #: journalist_templates/config.html:23
 msgid ""
@@ -589,7 +589,7 @@ msgstr ""
 
 #: journalist_templates/config.html:36
 msgid "UPDATE LOGO"
-msgstr "BIJWERKEN LOGO"
+msgstr "LOGO BIJWERKEN"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -747,7 +747,7 @@ msgstr "Ongelezen downloaden"
 
 #: journalist_templates/index.html:12
 msgid "Download"
-msgstr "Download"
+msgstr "Downloaden"
 
 #: journalist_templates/index.html:13
 msgid "Star"
@@ -771,7 +771,7 @@ msgstr "filter op codenaam"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
-msgstr "Selecteer Alles"
+msgstr "Alles selecteren"
 
 #: journalist_templates/js-strings.html:5
 msgid "Select Unread"
