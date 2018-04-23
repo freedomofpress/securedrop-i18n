@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-04-23 18:51+0000\n"
+"PO-Revision-Date: 2018-04-23 18:54+0000\n"
 "Last-Translator: Andrey <andrey@mailbox.org>\n"
 "Language-Team: Russian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ru/>\n"
@@ -1023,7 +1023,7 @@ msgid ""
 "Safest in four steps."
 msgstr ""
 "Кажется, вы используете Tor Browser. Вы можете сделать его максимально "
-"безопасным за 4 шага!"
+"безопасным за 4 шага."
 
 #: source_templates/index.html:95
 msgid ""
@@ -1037,14 +1037,11 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "Нажмите <strong>Настройки безопасности...</strong>"
 
 #: source_templates/index.html:97
-#, fuzzy
-#| msgid ""
-#| "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
 msgstr ""
-"Установите слайдер на значение <strong>Наиболее безопасный</strong> и "
-"кликните <strong>Ок</strong>"
+"Переместите слайдер на значение <strong>Наиболее безопасный</strong> и "
+"кликните <strong>OK</strong>"
 
 #: source_templates/index.html:98
 msgid "<a href=\"/\">Click here</a> to refresh the page"
@@ -1082,11 +1079,6 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "Хорошо, раз это вы! Теперь, к неловкостям..."
 
 #: source_templates/lookup.html:12
-#, fuzzy
-#| msgid ""
-#| "Our servers experienced an unusual surge of new activity, when you last "
-#| "visited. To err on the side of caution, we put a hold on sending all "
-#| "documents from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all  files "
@@ -1094,7 +1086,7 @@ msgid ""
 msgstr ""
 "Во время вашего последнего визита на наших серверах произошел необычный рост "
 "активности. В качестве меры предосторожности мы приостановили отправку всех "
-"документов с того момента нашим журналистам."
+"файлов и сообщений с того момента нашим журналистам."
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1126,10 +1118,8 @@ msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
 msgstr "<a href=\"{url}\" class=\"text-link\">Подробнее</a>."
 
 #: source_templates/lookup.html:24
-#, fuzzy
-#| msgid "You can send a file, a message, or both."
 msgid "You can submit any kind of file, a message, or both."
-msgstr "Вы можете отправить файл, сообщение или и то, и другое."
+msgstr "Вы можете отправить любой файл, сообщение или и то, и другое."
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
@@ -1144,12 +1134,6 @@ msgid "Read Replies"
 msgstr "Читать ответы"
 
 #: source_templates/lookup.html:58
-#, fuzzy
-#| msgid ""
-#| "You have received a reply. To protect your identity in the unlikely event "
-#| "someone learns your codename, please delete all replies when you're done "
-#| "with them. This also lets us know that you are aware of our reply. You "
-#| "can respond by submitting a new message above."
 msgid ""
 "You have received a reply. To protect your identity in the unlikely event "
 "someone learns your codename, please delete all replies when you're done "
@@ -1159,7 +1143,7 @@ msgstr ""
 "У вас есть ответ. Чтобы защитить вашу личность в том маловероятном случае, "
 "когда кто-то узнает ваше кодовое имя, удалите все ответы, когда вы закончите "
 "с ними работу. Это также поможет нам понять, что вы видели ответ. Вы можете "
-"ответить, отправив новое сообщение выше."
+"ответить, отправив новые файлы и сообщения выше."
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
