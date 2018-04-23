@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-03-10 08:00+0000\n"
+"PO-Revision-Date: 2018-04-23 11:18+0000\n"
 "Last-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\n"
 "Language-Team: Italian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/it/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 2.20\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -94,11 +94,9 @@ msgid "Only administrators can access this page."
 msgstr "Solo gli amministratori possono accedere a questa pagina."
 
 #: journalist_app/forms.py:19
-#, fuzzy
-#| msgid "Field must be 40 characters long but got {num_chars}."
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgstr ""
-"Il campo deve essere di 40 caratteri, ne sono stati trovati {num_chars}."
+"Le password HTOP sono di 40 caratteri - ne sono stati inseriti {num_chars}."
 
 #: journalist_app/forms.py:30
 msgid ""
@@ -121,7 +119,7 @@ msgstr "File obbligatorio."
 
 #: journalist_app/forms.py:62
 msgid "You can only upload JPG/JPEG or PNG image files."
-msgstr ""
+msgstr "Possono essere caricate solo immagini JPG/JPEG o PNG."
 
 #: journalist_app/main.py:117 journalist_app/utils.py:47
 #: journalist_app/utils.py:137
@@ -595,7 +593,7 @@ msgstr ""
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
-msgstr ""
+msgstr "Dimensione consigliata: 500px * 450px"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
@@ -941,13 +939,6 @@ msgstr ""
 "schermata."
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we do not track users of our <strong>SecureDrop</strong>\n"
-#| " service, in future visits, using this codename will be the only way we "
-#| "have to communicate with you should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"
 " service, in future visits, using this codename will be the only way we have "
@@ -955,11 +946,11 @@ msgid ""
 " questions or are interested in additional information. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"Dato che non tracciamo gli utenti del nostro servizio <strong>SecureDrop</"
-"strong>,\n"
+"Dato che non tracciamo gli utenti del nostro servizio "
+"<strong>SecureDrop</strong>,\n"
 " nelle visite successive, usare questo nome in codice sarà l'unico modo con "
 "cui potremo comunicare con te se dovessimo avere\n"
-" domande o essere interessati a documenti aggiuntivi. A differenza delle "
+" domande o essere interessati a informazioni aggiuntive. A differenza delle "
 "password, non c'è alcun modo di recuperare un nome in codice perso."
 
 #: source_templates/generate.html:44 source_templates/index.html:66
@@ -967,20 +958,14 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "INVIA DOCUMENTI"
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend turning the Security Slider to Safest to protect "
-#| "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set "
-#| "it to safest</a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to move the Security Slider to Safest to protect "
 "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it "
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
 "<strong>Raccomandiamo di spostare il Tab di sicurezza su \"Molto sicuro\" "
-"per proteggere il tuo anonimato:</strong><a id=\"disable-js\" href="
-"\"\">Scopri come impostarlo su Alto</a>, o ignora questo avviso per "
-"continuare."
+"per proteggere il tuo anonimato:</strong><a id=\"disable-js\" href=\"\">"
+"Scopri come impostarlo su Alto</a>, o ignora questo avviso per continuare."
 
 #: source_templates/index.html:18
 #, fuzzy
