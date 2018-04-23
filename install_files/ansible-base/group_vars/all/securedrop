@@ -1,8 +1,8 @@
 ---
 # Variables that apply to both the app and monitor server go in this file
 # If the monitor or app server need different values define the variable in
-# hosts_vars/app.yml or host_vars/mon.yml host_vars/development.yml
-securedrop_app_code_version: "0.6~rc2"
+# hosts_vars/app.yml or host_vars/mon.yml
+securedrop_app_code_version: "0.7.0~rc1"
 
 grsecurity: true
 install_local_packages: false
@@ -29,6 +29,8 @@ development_dependencies:
   - git
   - devscripts # for dch
   - gdb # for gcore in TestSubmissionNotInMemory
+  - paxctl
+  - libjpeg-dev
 
 # These profiles are referenced by multiple machines, such as Application Server
 # for direct copying at install time, and the build machine for including them
@@ -51,5 +53,15 @@ appserver_dependencies:
   - apparmor-utils
   - redis-server
   - supervisor
+  - libjpeg-dev
 
 tor_apt_repo_url: https://tor-apt.freedom.press
+
+# Enable Tor over SSH by default
+enable_ssh_over_tor: true
+
+
+# If file is present on system at the end of ansible run
+# force a reboot. Needed because of the de-coupled nature of
+# the many roles of the current prod playbook
+securedrop_cond_reboot_file: /tmp/sd-reboot-now

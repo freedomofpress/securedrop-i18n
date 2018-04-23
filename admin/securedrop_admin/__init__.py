@@ -26,6 +26,7 @@ instances.
 import argparse
 import logging
 import os
+import io
 import re
 import string
 import subprocess
@@ -42,6 +43,10 @@ class FingerprintException(Exception):
     pass
 
 
+class JournalistAlertEmailException(Exception):
+    pass
+
+
 class SiteConfig(object):
 
     class ValidateNotEmpty(Validator):
@@ -50,6 +55,13 @@ class SiteConfig(object):
                 return True
             raise ValidationError(
                 message="Must not be an empty string")
+
+    class ValidateTime(Validator):
+        def validate(self, document):
+            if document.text.isdigit() and int(document.text) in range(0, 24):
+                return True
+            raise ValidationError(
+                message="Must be an integer between 0 and 23")
 
     class ValidateUser(Validator):
         def validate(self, document):
@@ -121,6 +133,13 @@ class SiteConfig(object):
             raise ValidationError(
                 message=path + ' file does not exist')
 
+    class ValidateOptionalPath(ValidatePath):
+        def validate(self, document):
+            if document.text == '':
+                return True
+            return super(SiteConfig.ValidateOptionalPath, self).validate(
+                document)
+
     class ValidateYesNo(Validator):
         def validate(self, document):
             text = document.text.lower()
@@ -141,6 +160,13 @@ class SiteConfig(object):
                 raise ValidationError(
                     message='fingerprints must be 40 hexadecimal characters')
             return True
+
+    class ValidateOptionalFingerprint(ValidateFingerprint):
+        def validate(self, document):
+            if document.text == '':
+                return True
+            return super(SiteConfig.ValidateOptionalFingerprint,
+                         self).validate(document)
 
     class ValidateInt(Validator):
         def validate(self, document):
@@ -191,14 +217,33 @@ class SiteConfig(object):
             raise ValidationError(
                 message="Password for OSSEC email account must be strong")
 
-    class ValidateOSSECEmail(Validator):
+    class ValidateEmail(Validator):
         def validate(self, document):
             text = document.text
-            if text and '@' in text and 'ossec@ossec.test' != text:
+            if text == '':
+                raise ValidationError(
+                    message=("Must not be empty"))
+            if '@' not in text:
+                raise ValidationError(
+                    message=("Must contain a @"))
+            return True
+
+    class ValidateOSSECEmail(ValidateEmail):
+        def validate(self, document):
+            super(SiteConfig.ValidateOSSECEmail, self).validate(document)
+            text = document.text
+            if 'ossec@ossec.test' != text:
                 return True
             raise ValidationError(
-                message=("Must contain a @ and be set to "
-                         "something other than ossec@ossec.test"))
+                message=("Must be set to something other than "
+                         "ossec@ossec.test"))
+
+    class ValidateOptionalEmail(ValidateEmail):
+        def validate(self, document):
+            if document.text == '':
+                return True
+            return super(SiteConfig.ValidateOptionalEmail, self).validate(
+                document)
 
     def __init__(self, args):
         self.args = args
@@ -210,6 +255,10 @@ class SiteConfig(object):
              u'Username for SSH access to the servers',
              SiteConfig.ValidateUser(),
              None],
+            ['daily_reboot_time', 4, int,
+             u'Daily reboot time of the server (24-hour clock)',
+             SiteConfig.ValidateTime(),
+             int],
             ['app_ip', '10.20.2.2', str,
              u'Local IPv4 address for the Application Server',
              SiteConfig.ValidateIP(),
@@ -256,6 +305,19 @@ class SiteConfig(object):
              u'Admin email address for receiving OSSEC alerts',
              SiteConfig.ValidateOSSECEmail(),
              None],
+            ['journalist_alert_gpg_public_key', '', str,
+             u'Local filepath to journalist alerts GPG public key (optional)',
+             SiteConfig.ValidateOptionalPath(self.args.ansible_path),
+             None],
+            ['journalist_gpg_fpr', '', str,
+             u'Full fingerprint for the journalist alerts '
+             u'GPG public key (optional)',
+             SiteConfig.ValidateOptionalFingerprint(),
+             self.sanitize_fingerprint],
+            ['journalist_alert_email', '', str,
+             u'Email address for receiving journalist alerts (optional)',
+             SiteConfig.ValidateOptionalEmail(),
+             None],
             ['smtp_relay', "smtp.gmail.com", str,
              u'SMTP relay for sending OSSEC alerts',
              SiteConfig.ValidateNotEmpty(),
@@ -276,6 +338,10 @@ class SiteConfig(object):
              u'SASL password for sending OSSEC alerts',
              SiteConfig.ValidateOSSECPassword(),
              None],
+            ['enable_ssh_over_tor', True, bool,
+             u'Enable SSH over Tor',
+             SiteConfig.ValidateYesNo(),
+             lambda x: x.lower() == 'yes'],
             ['securedrop_supported_locales', [], types.ListType,
              u'Space separated list of additional locales to support '
              '(' + translations + ')',
@@ -294,6 +360,7 @@ class SiteConfig(object):
         self.config.update(self.user_prompt_config())
         self.save()
         self.validate_gpg_keys()
+        self.validate_journalist_alert_email()
         return True
 
     def user_prompt_config(self):
@@ -339,11 +406,17 @@ class SiteConfig(object):
                  'securedrop_app_gpg_fingerprint'),
 
                 ('ossec_alert_gpg_public_key',
-                 'ossec_gpg_fpr'))
+                 'ossec_gpg_fpr'),
+
+                ('journalist_alert_gpg_public_key',
+                 'journalist_gpg_fpr'))
+        validate = os.path.join(
+            os.path.dirname(__file__), '..', 'bin',
+            'validate-gpg-key.sh')
         for (public_key, fingerprint) in keys:
-            validate = os.path.join(
-                os.path.dirname(__file__), '..', 'bin',
-                'validate-gpg-key.sh')
+            if (self.config[public_key] == '' and
+                    self.config[fingerprint] == ''):
+                continue
             public_key = os.path.join(self.args.ansible_path,
                                       self.config[public_key])
             fingerprint = self.config[fingerprint]
@@ -359,18 +432,35 @@ class SiteConfig(object):
                     "the public key {}".format(public_key))
         return True
 
+    def validate_journalist_alert_email(self):
+        if (self.config['journalist_alert_gpg_public_key'] == '' and
+                self.config['journalist_gpg_fpr'] == ''):
+            return True
+
+        class Document(object):
+            def __init__(self, text):
+                self.text = text
+
+        try:
+            SiteConfig.ValidateEmail().validate(Document(
+                self.config['journalist_alert_email']))
+        except ValidationError as e:
+            raise JournalistAlertEmailException(
+                "journalist alerts email: " + e.message)
+        return True
+
     def exists(self):
         return os.path.exists(self.args.site_config)
 
     def save(self):
-        with open(self.args.site_config, 'w') as site_config_file:
+        with io.open(self.args.site_config, 'w') as site_config_file:
             yaml.safe_dump(self.config,
                            site_config_file,
                            default_flow_style=False)
 
     def load(self):
         try:
-            with open(self.args.site_config) as site_config_file:
+            with io.open(self.args.site_config) as site_config_file:
                 return yaml.safe_load(site_config_file)
         except IOError:
             sdlog.error("Config file missing, re-run with sdconfig")
@@ -488,6 +578,19 @@ def check_for_updates(args):
     return False, latest_tag
 
 
+def get_release_key_from_keyserver(args, keyserver=None, timeout=45):
+    gpg_recv = ['timeout', str(timeout), 'gpg', '--recv-key']
+    release_key = ['22245C81E3BAEB4138B36061310F561200F4AD77']
+
+    # We construct the gpg --recv-key command based on optional keyserver arg.
+    if keyserver:
+        get_key_cmd = gpg_recv + ['--keyserver', keyserver] + release_key
+    else:
+        get_key_cmd = gpg_recv + release_key
+
+    subprocess.check_call(get_key_cmd, cwd=args.root)
+
+
 def update(args):
     """Verify, and apply latest SecureDrop workstation update"""
     sdlog.info("Applying SecureDrop updates...")
@@ -502,9 +605,15 @@ def update(args):
     subprocess.check_call(git_checkout_cmd, cwd=args.root)
 
     sdlog.info("Verifying signature on latest update...")
-    get_release_key = ['gpg', '--recv-key',
-                       '22245C81E3BAEB4138B36061310F561200F4AD77']
-    subprocess.check_call(get_release_key, cwd=args.root)
+
+    try:
+        # First try to get the release key using Tails default keyserver
+        get_release_key_from_keyserver(args)
+    except subprocess.CalledProcessError:
+        # Now try to get the key from a secondary keyserver.
+        secondary_keyserver = 'hkps://hkps.pool.sks-keyservers.net'
+        get_release_key_from_keyserver(args,
+                                       keyserver=secondary_keyserver)
 
     git_verify_tag_cmd = ['git', 'tag', '-v', latest_tag]
     sig_result = subprocess.check_output(git_verify_tag_cmd,

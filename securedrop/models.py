@@ -317,21 +317,27 @@ class Journalist(db.Model):
         self.otp_secret = pyotp.random_base32()
 
     def set_hotp_secret(self, otp_secret):
-        self.is_totp = False
         self.otp_secret = base64.b32encode(
             binascii.unhexlify(
                 otp_secret.replace(
                     " ",
                     "")))
+        self.is_totp = False
         self.hotp_counter = 0
 
     @property
     def totp(self):
-        return pyotp.TOTP(self.otp_secret)
+        if self.is_totp:
+            return pyotp.TOTP(self.otp_secret)
+        else:
+            raise ValueError('{} is not using TOTP'.format(self))
 
     @property
     def hotp(self):
-        return pyotp.HOTP(self.otp_secret)
+        if not self.is_totp:
+            return pyotp.HOTP(self.otp_secret)
+        else:
+            raise ValueError('{} is not using HOTP'.format(self))
 
     @property
     def shared_secret_qrcode(self):
@@ -419,11 +425,11 @@ class Journalist(db.Model):
         if LOGIN_HARDENING:
             cls.throttle_login(user)
 
-        # Prevent TOTP token reuse
-        if user.last_token is not None:
-            if pyotp.utils.compare_digest(token, user.last_token):
-                raise BadTokenException("previously used token "
-                                        "{}".format(token))
+            # Prevent TOTP token reuse
+            if user.last_token is not None:
+                if pyotp.utils.compare_digest(token, user.last_token):
+                    raise BadTokenException("previously used token "
+                                            "{}".format(token))
         if not user.verify_token(token):
             raise BadTokenException("invalid token")
         if not user.valid_password(password):

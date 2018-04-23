@@ -34,7 +34,10 @@ apache_logging_level: "info"
 ossec_alert_gpg_public_key: "test_admin_key.pub"
 ossec_gpg_fpr: "53E1113AC1F25027BA5D475B1141E2BBB5E53711"
 ossec_alert_email: "ossec@ossec.test"
-smtp_relay: "smtp.gmail.com"
+journalist_alert_gpg_public_key: "test_admin_key.pub"
+journalist_gpg_fpr: "53E1113AC1F25027BA5D475B1141E2BBB5E53711"
+journalist_alert_email: "journalist@ossec.test"
+smtp_relay: "smtp.faketld"
 smtp_relay_port: "587"
 sasl_username: "test"
 sasl_domain: "ossec.test"
@@ -46,8 +49,7 @@ postfix_enable_service: no
 
 # Permit direct access for SSH in the staging environment.
 # Otherwise, all SSH connections would be forced over Tor.
-ssh_listening_address: 0.0.0.0
-allow_direct_access: true
+enable_ssh_over_tor: false
 
 ### Use for backup restores ###
 # If the `backup_zip` variable is defined ansible will copy the defined file to
@@ -64,4 +66,4 @@ install_local_packages: true
 # the application code directly out of the local repo. Do, however, make sure
 # the Apache service is configured correctly.
 securedrop_app_install_from_repo: False
-securedrop_app_configure_apache: True
+

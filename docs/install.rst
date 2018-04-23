@@ -31,16 +31,7 @@ Localization of the source and journalist interfaces
 The source and journalist interface are translated in the following
 languages:
 
-* Arabic (ar)
-* German (de_DE)
-* Spanish (es_ES)
-* French (fr_FR)
-* Italian (it_IT)
-* Norwegian (nb_NO)
-* Dutch (nl)
-* Portuguese, Brasil (pt_BR)
-* Turkish (tr)
-* Chinese, Traditional (zh_Hant)
+.. include:: includes/l10n.txt
 
 During the installation you will be given the opportunity to choose the
 list of supported languages to display, using the code shown in
@@ -68,6 +59,21 @@ continuing:
 -  The first username of a journalist who will be using SecureDrop (you
    can add more later)
 -  The username of the system admin
+
+You can also, optionally, configure :doc:`daily notifications
+<journalist>` about whether or not submission activity occurred in the
+past 24 hours. They are sent via email so journalists know if it is
+worth checking the *Journalist Interface*. For this you will need:
+
+-  The journalist alerts GPG key
+-  The journalist alerts GPG key fingerprint
+-  The email address that will receive the journalist alerts
+
+.. note:: It is not possible to specify multiple email addresses. If
+          there are more than one recipient, an alias or a mailing
+          list must be created. All journalist subscribed must share
+          the GPG private key, it is not possible to specify multiple
+          GPG keys.
 
 You will have to copy the following required files to
 ``install_files/ansible-base``:

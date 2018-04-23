@@ -1,5 +1,6 @@
 import operator
 import os
+import io
 
 from datetime import datetime
 from flask import (Blueprint, render_template, flash, redirect, url_for, g,
@@ -39,6 +40,14 @@ def make_blueprint(config):
         session['new_user'] = True
         return render_template('generate.html', codename=codename)
 
+    @view.route('/org-logo')
+    def select_logo():
+        if os.path.exists(os.path.join(current_app.static_folder, 'i',
+                          'custom_logo.png')):
+            return redirect(url_for('static', filename='i/custom_logo.png'))
+        else:
+            return redirect(url_for('static', filename='i/logo.png'))
+
     @view.route('/create', methods=['POST'])
     def create():
         filesystem_id = current_app.crypto_util.hash_codename(
@@ -73,7 +82,7 @@ def make_blueprint(config):
                 reply.filename,
             )
             try:
-                with open(reply_path) as f:
+                with io.open(reply_path, "rb") as f:
                     contents = f.read()
                 reply.decrypted = current_app.crypto_util.decrypt(
                     g.codename,

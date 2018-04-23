@@ -74,6 +74,7 @@ anonymous sources.
    tails_guide
    tails_printing_guide
    https_source_interface
+   ssh_over_local_net
    training_schedule
    yubikey_setup
    backup_and_restore
@@ -84,6 +85,7 @@ anonymous sources.
    :name: upgradetoc
    :maxdepth: 2
 
+   upgrade/0.5.x_to_0.6.rst
    upgrade/0.4.x_to_0.5.rst
    upgrade/0.3.x_to_0.4.rst
    upgrade_to_tails_2x.rst
@@ -113,6 +115,7 @@ anonymous sources.
    development/updating_ossec
    development/apparmor_profiles
    development/portable_demo
+   development/release_management
 
 .. toctree::
   :caption: Threat Model

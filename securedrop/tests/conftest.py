@@ -3,6 +3,7 @@
 import gnupg
 import logging
 import os
+import io
 import psutil
 import pytest
 import shutil
@@ -15,7 +16,9 @@ from sdconfig import SDConfig, config as original_config
 from os import path
 
 from db import db
+from journalist_app import create_app as create_journalist_app
 from source_app import create_app as create_source_app
+import utils
 
 # TODO: the PID file for the redis worker is hard-coded below.
 # Ideally this constant would be provided by a test harness.
@@ -64,15 +67,17 @@ def config(tmpdir):
 
     data = tmpdir.mkdir('data')
     keys = data.mkdir('keys')
+    os.chmod(str(keys), 0o700)
     store = data.mkdir('store')
     tmp = data.mkdir('tmp')
     sqlite = data.join('db.sqlite')
 
     gpg = gnupg.GPG(homedir=str(keys))
-    with open(path.join(path.dirname(__file__),
-                        'files',
-                        'test_journalist_key.pub')) as f:
-        gpg.import_keys(f.read())
+    for ext in ['sec', 'pub']:
+        with io.open(path.join(path.dirname(__file__),
+                               'files',
+                               'test_journalist_key.{}'.format(ext))) as f:
+            gpg.import_keys(f.read())
 
     cnf.SECUREDROP_DATA_ROOT = str(data)
     cnf.GPG_KEY_DIR = str(keys)
@@ -91,9 +96,53 @@ def source_app(config):
     return app
 
 
+@pytest.fixture(scope='function')
+def journalist_app(config):
+    app = create_journalist_app(config)
+    with app.app_context():
+        db.create_all()
+    return app
+
+
+@pytest.fixture(scope='function')
+def test_journo(journalist_app):
+    with journalist_app.app_context():
+        user, password = utils.db_helper.init_journalist(is_admin=False)
+        username = user.username
+        otp_secret = user.otp_secret
+        return {'journalist': user,
+                'username': username,
+                'password': password,
+                'otp_secret': otp_secret,
+                'id': user.id}
+
+
+@pytest.fixture(scope='function')
+def test_admin(journalist_app):
+    with journalist_app.app_context():
+        user, password = utils.db_helper.init_journalist(is_admin=True)
+        username = user.username
+        otp_secret = user.otp_secret
+        return {'admin': user,
+                'username': username,
+                'password': password,
+                'otp_secret': otp_secret,
+                'id': user.id}
+
+
+@pytest.fixture(scope='function')
+def test_source(journalist_app):
+    with journalist_app.app_context():
+        source, codename = utils.db_helper.init_source()
+        filesystem_id = source.filesystem_id
+        return {'source': source,
+                'codename': codename,
+                'filesystem_id': filesystem_id}
+
+
 def _start_test_rqworker(config):
     if not psutil.pid_exists(_get_pid_from_file(TEST_WORKER_PIDFILE)):
-        tmp_logfile = open('/tmp/test_rqworker.log', 'w')
+        tmp_logfile = io.open('/tmp/test_rqworker.log', 'w')
         subprocess.Popen(['rqworker', 'test',
                           '-P', config.SECUREDROP_ROOT,
                           '--pid', TEST_WORKER_PIDFILE],
@@ -113,7 +162,7 @@ def _stop_test_rqworker():
 
 def _get_pid_from_file(pid_file_name):
     try:
-        return int(open(pid_file_name).read())
+        return int(io.open(pid_file_name).read())
     except IOError:
         return None
 
