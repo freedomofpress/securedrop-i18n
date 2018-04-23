@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-04-23 10:59+0000\n"
+"PO-Revision-Date: 2018-04-23 11:09+0000\n"
 "Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
 "Language-Team: Swedish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/sv/>\n"
@@ -1003,7 +1003,7 @@ msgid ""
 "Safest in four steps."
 msgstr ""
 "Det ser ut som att du använder Tor Browser. Du kan flytta din Security "
-"Slider till Safest i fyra enkla steg!"
+"Slider till Safest i fyra enkla steg."
 
 #: source_templates/index.html:95
 msgid ""
@@ -1017,14 +1017,11 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "Klicka på <strong>Security Settings...</strong>"
 
 #: source_templates/index.html:97
-#, fuzzy
-#| msgid ""
-#| "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
 msgstr ""
-"Ändra Slider till <strong> Safest</strong>, och välj sedan<strong> Ok</"
-"strong>"
+"Flytta Slider till <strong> Safest</strong>, och välj sedan<strong> "
+"OK</strong>"
 
 #: source_templates/index.html:98
 msgid "<a href=\"/\">Click here</a> to refresh the page"
@@ -1062,21 +1059,14 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "Ok, det är du! Nu, till det pinsamma..."
 
 #: source_templates/lookup.html:12
-#, fuzzy
-#| msgid ""
-#| "Our servers experienced an unusual surge of new activity, when you last "
-#| "visited. To err on the side of caution, we put a hold on sending all "
-#| "documents from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all  files "
 "and messages from that day through to our journalists."
 msgstr ""
-"Våra servrar utsattes för en ovanlig ökning av ny aktivitet den senaste "
-"gången du besökte oss. Detta kan ha berott på mänsklig aktivitet, en "
-"automatisk attack eller en ren slump. För att hålla oss på den säkra sidan "
-"har vi fryst alla dokument som skickades till våra journalister under den "
-"dagen."
+"Våra servrar utsattes för en ovanlig ökning av ny aktivitet, den senaste "
+"gången du besökte oss. För att vara på den säkra sidan, har vi fryst alla "
+"filer och meddelanden som skickades till våra journalister under den dagen."
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1090,7 +1080,7 @@ msgstr ""
 
 #: source_templates/lookup.html:20
 msgid "Submit Files or Messages"
-msgstr ""
+msgstr "Skicka filer eller meddelanden"
 
 #: source_templates/lookup.html:21
 msgid ""
@@ -1107,10 +1097,8 @@ msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
 msgstr "<a href=\"{url}\" class=\"text-link\">Fortsätt läsa</a>."
 
 #: source_templates/lookup.html:24
-#, fuzzy
-#| msgid "You can send a file, a message, or both."
 msgid "You can submit any kind of file, a message, or both."
-msgstr "Du kan skicka en fil, ett meddelande, eller både och."
+msgstr "Du kan skicka alla typer av filer, ett meddelande, eller både och."
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
@@ -1125,12 +1113,6 @@ msgid "Read Replies"
 msgstr "Läs Svar"
 
 #: source_templates/lookup.html:58
-#, fuzzy
-#| msgid ""
-#| "You have received a reply. To protect your identity in the unlikely event "
-#| "someone learns your codename, please delete all replies when you're done "
-#| "with them. This also lets us know that you are aware of our reply. You "
-#| "can respond by submitting a new message above."
 msgid ""
 "You have received a reply. To protect your identity in the unlikely event "
 "someone learns your codename, please delete all replies when you're done "
@@ -1140,7 +1122,7 @@ msgstr ""
 "Du har tagit emot ett svar. För att skydda din identitet i det osannolika "
 "tillfället att någon skulle komma åt ditt kodnamn, vänligen ta bort alla "
 "svar när du är klar med dem. Därmed får vi också bekräftat att du har läst "
-"vårt svar. Du kan svara genom att lämna in ett nytt meddelande ovanför."
+"vårt svar. Du kan svara genom att skicka in nya filer eller meddelanden ovan."
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
@@ -1212,18 +1194,24 @@ msgid ""
 "Using <a href=\"tor2web.org\">Tor2Web</a> to connect to SecureDrop will not "
 "protect your anonymity."
 msgstr ""
+"Att använda <a href=\"tor2web.org\"> Tor2Web</a> för att ansluta till "
+"SecureDrop kommer inte att skydda din anonymitet."
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
 "It could be possible for anyone listening to Internet usage (your "
 "government, your Internet provider), to identify you."
 msgstr ""
+"Det kan vara möjligt för någon som lyssnar på Internet användning (dina "
+"myndigheter, din internetleverantör), att identifiera dig."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor browser</a> instead."
 msgstr ""
+"Vi <strong>rekommenderar starkt</strong> att du använder <a href=\""
+"www.torproject.org/projects/torbrowser.html\"> Tor browser</a> istället."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
