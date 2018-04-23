@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-04-23 11:09+0000\n"
+"PO-Revision-Date: 2018-04-23 11:56+0000\n"
 "Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
 "Language-Team: Swedish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/sv/>\n"
@@ -1088,9 +1088,9 @@ msgid ""
 "and messages with our <a href=\"{url}\" class=\"text-link\">public key</a> "
 "before submission. Files are encrypted as they are received by SecureDrop."
 msgstr ""
-"Om du redan känner till GPG, så kan du kryptera dina filer och meddelanden "
-"med vår <a href=\"{url}\" class=\"text-link\"> publika nyckel </a> före "
-"inlämningen, annars krypteras filerna i SecureDrop."
+"Om du redan känner till GPG, så kan du själv välja att kryptera dina filer "
+"och meddelanden med vår <a href=\"{url}\" class=\"text-link\"> publika "
+"nyckel </a> före inlämningen. Filer krypteras när de tas emot av SecureDrop"
 
 #: source_templates/lookup.html:22
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
@@ -1110,7 +1110,7 @@ msgstr "Skriv ett meddelande."
 
 #: source_templates/lookup.html:53
 msgid "Read Replies"
-msgstr "Läs Svar"
+msgstr "Läs svar"
 
 #: source_templates/lookup.html:58
 msgid ""
@@ -1119,14 +1119,14 @@ msgid ""
 "with them. This also lets us know that you are aware of our reply. You can "
 "respond by submitting new files and messages above."
 msgstr ""
-"Du har tagit emot ett svar. För att skydda din identitet i det osannolika "
-"tillfället att någon skulle komma åt ditt kodnamn, vänligen ta bort alla "
-"svar när du är klar med dem. Därmed får vi också bekräftat att du har läst "
-"vårt svar. Du kan svara genom att skicka in nya filer eller meddelanden ovan."
+"Du har tagit emot ett svar. För att skydda din identitet vid det osannolika "
+"tillfället någon kommer på ditt kodnamn, vänligen ta bort alla svar när du "
+"är klar med dem. Därmed får vi också bekräftat att du har sett vårt svar. Du "
+"kan svara genom att skicka in nya filer eller meddelanden ovan."
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
-msgstr "Ta bort det här svaret?"
+msgstr "Ta bort detta svar?"
 
 #: source_templates/lookup.html:73
 msgid "DELETE"
@@ -1154,7 +1154,7 @@ msgstr "Det finns inga svar för tillfället."
 
 #: source_templates/lookup.html:100
 msgid "Remember, your codename is:"
-msgstr "Kom ihåg att ditt kodnamn är:"
+msgstr "Kom ihåg, ditt kodnamn är:"
 
 #: source_templates/lookup.html:101
 msgid "Show"
@@ -1182,8 +1182,8 @@ msgstr ""
 "Din session avslutades ut på grund av inaktivitet. Var snäll och logga in "
 "igen ifall du vill fortsätta använda SecureDrop, eller välj \"New Identity\" "
 "från den gröna lökknappen i Tor Browser för att rensa all historik av "
-"SecureDrop på den här apparaten. Ifall du inte använder Tor Browser, starta "
-"om din browser."
+"SecureDrop på den här enheten. Ifall du inte använder Tor Browser, starta om "
+"din webbläsare."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1215,7 +1215,7 @@ msgstr ""
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
-msgstr "Du Borde Använda Tor Browser"
+msgstr "Du borde använda Tor Browser"
 
 #: source_templates/use-tor-browser.html:4
 msgid ""
@@ -1238,7 +1238,7 @@ msgid ""
 "Copy and paste the following address into your browser and follow the "
 "instructions to download and install Tor Browser:"
 msgstr ""
-"Kopiera och klistra in följande adress i ditt sökfält och följ "
+"Kopiera och klistra in följande adress i din webbläsare och följ "
 "instruktionerna om hur man laddar ner och installerar Tor Browser:"
 
 #: source_templates/use-tor-browser.html:9
@@ -1247,14 +1247,14 @@ msgid ""
 "your mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
-"Om det finns en chans att en nedladdning av Tor-läsaren höjer misstankar, "
-"och din e-postleverantör förmodligen har mindre chans att bli övervakad, kan "
-"ni skicka ett e-post till <pre>gettor@torproject.org</pre> så kommer en bot "
+"Om det finns risk att en nedladdning av Tor-läsaren höjer misstankar, och "
+"det är mindre risk att din e-postleverantör är övervakad, kan du skicka ett "
+"e-postmeddelande till <pre>gettor@torproject.org</pre> så kommer en bot "
 "svara med instruktioner."
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
-msgstr "Varför ladda ner journalistens publika nyckel?"
+msgstr "Varför ska du ladda ner journalistens publika nyckel?"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
@@ -1264,7 +1264,7 @@ msgid ""
 msgstr ""
 "SecureDrop krypterar filer och meddelanden efter att de har lämnats in. "
 "Kryptering av filer och meddelanden före inlämning kan erbjuda ett extra "
-"lager av säkerhet före din data når SecureDrop-servern."
+"lager av säkerhet innan din information når SecureDrop-servern."
 
 #: source_templates/why-journalist-key.html:5
 msgid ""
@@ -1279,12 +1279,12 @@ msgid ""
 "<a href=\"{url}\">Download</a> the public key. The public key is a text file "
 "with the extension <code>.asc</code>"
 msgstr ""
-"<a href=\"{url}\"> 1 Ladda ned</a> 2 den publika nyckeln. Den publika "
-"nyckeln är en textfil av formatet <code> 3. asc</code> 4"
+"<a href=\"{url}\">Ladda ned</a> den publika nyckeln. Den publika nyckeln är "
+"en textfil med filändelsen <code> .asc</code>"
 
 #: source_templates/why-journalist-key.html:8
 msgid "Import it into your GPG keyring."
-msgstr "Importera den till din GPG nyckelkedja."
+msgstr "Importera den till din GPG nyckelring."
 
 #: source_templates/why-journalist-key.html:10
 msgid ""
@@ -1292,9 +1292,9 @@ msgid ""
 "<code>.asc</code> file you just downloaded and it will be automatically "
 "imported to your keyring."
 msgstr ""
-"Ifall du använder <a href=\"{url}\"> 1Tails</a> 2 kan du dubbelklicka <code> "
-"3.asc</code> 4 filen du precis laddade ner, så importeras den till din "
-"nyckelkedja."
+"Ifall du använder <a href=\"{url}\"> Tails</a> kan du dubbelklicka på "
+"<code>.asc</code>-filen du precis laddade ner, så importeras den automatiskt "
+"till din nyckelring."
 
 #: source_templates/why-journalist-key.html:11
 msgid ""
@@ -1315,9 +1315,10 @@ msgid ""
 "at the end), you can just copy and paste that. (don't include the <code>."
 "asc</code>!)"
 msgstr ""
-"Du behöver kunna identifiera nyckeln (dvs. \"user ID\" eller \"UID\"). Den "
-"publika nyckelns filnamn är nyckelns fingeravtryck (med filändelsen .asc), "
-"du kopiera och klistra in det. (Inkludera inte <code>.asc</code>!)"
+"Du behöver kunna identifiera nyckeln (dvs. \"user ID\" eller \"UID\"). "
+"Eftersom den publika nyckelns filnamn är nyckelns fingeravtryck (med "
+"filändelsen .asc), kan du bara kopiera och klistra in det. (inkludera inte "
+"<code>.asc</code>!)"
 
 #: source_templates/why-journalist-key.html:17
 msgid ""
@@ -1325,8 +1326,8 @@ msgid ""
 "recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 msgstr ""
 "Vilket system du än använder, öppna terminalen och använd detta GPG-"
-"kommandot: <code> gpg --recipient &lt; user ID &gt; --encrypt roswell_photos."
-"pdf</code>"
+"kommandot: <code> gpg --recipient &lt; user ID&gt; --encrypt "
+"roswell_photos.pdf</code>"
 
 #: source_templates/why-journalist-key.html:20
 msgid ""
@@ -1335,8 +1336,8 @@ msgid ""
 "code>)"
 msgstr ""
 "Ladda upp din krypterade inlämning. Den kommer att ha samma filnamn som den "
-"okrypterade filen, med .gpg i slutet (t.ex. <code> 1roswell_photos.pdf.gpg</"
-"code> 2)"
+"okrypterade filen, med .gpg i slutet (t.ex. <code> "
+"1roswell_photos.pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:23
 msgid ""
@@ -1344,10 +1345,10 @@ msgid ""
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
-"<strong> 1 Tips:</strong> 2 Ifall du önskar att förbli anonym, <strong> 3 "
-"använd inte</strong> 4 GPG för att signera den krypterade filen (med <code> "
-"5--sign</code> 6 eller <code> 7-s</code> 8 flaggan) efter som detta avslöjar "
-"din GPG-identitet för oss."
+"<strong> Tips:</strong> Ifall du önskar att förbli anonym, <strong> använd "
+"inte</strong> GPG för att signera den krypterade filen (med <code> "
+"--sign</code> eller <code>-s</code> flaggan) efter som detta avslöjar din "
+"GPG-identitet för oss."
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
