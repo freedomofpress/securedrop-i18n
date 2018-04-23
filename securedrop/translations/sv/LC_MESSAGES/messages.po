@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-04-23 11:56+0000\n"
+"PO-Revision-Date: 2018-04-23 12:07+0000\n"
 "Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
 "Language-Team: Swedish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/sv/>\n"
@@ -955,8 +955,8 @@ msgid ""
 "install it</a>, or ignore this warning to continue."
 msgstr ""
 "<strong>Det är rekommenderat att använda TorBrowser för att nå "
-"SecureDrop:</strong> 2 <a id=\"recommend-tor\" href=\"{tor_browser_url}\"> "
-"Lär dig hur den installeras</a> eller ignorera denna varning och fortsätt."
+"SecureDrop:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\"> Lär "
+"dig hur den installeras</a> eller ignorera denna varning och fortsätt."
 
 #: source_templates/index.html:19
 msgid ""
@@ -966,36 +966,37 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
-"<strong> Det är rekommenderat att använda dator versionen av TorBrowser för "
+"<strong> Det är rekommenderat att använda datorversionen av TorBrowser för "
 "att nå SecureDrop, då Orfox inte erbjuder samma nivå av säkerhet och "
-"anonymitet som dator versionerna.</strong> 2 <a id=\"recommend-tor\" href=\""
+"anonymitet som datorversionerna.</strong> <a id=\"recommend-tor\" href=\""
 "{tor_browser_url}\"> Lär dig hur den installeras</a> eller ignorera denna "
 "varning och fortsätt."
 
 #: source_templates/index.html:42
 msgid "Submit for the first time"
-msgstr "Skicka in första gången"
+msgstr "Skicka in information första gången"
 
 #: source_templates/index.html:49
 msgid "Already submitted something?"
-msgstr "Har du redan lämnat in något?"
+msgstr "Har du redan skickat in information?"
 
 #: source_templates/index.html:55
 msgid "If this is your first time submitting to journalists, start here."
 msgstr ""
-"Ifall det här är första gången du skickar in till journalister, börja här."
+"Ifall det här är första gången du skickar in information till "
+"journalisterna, börja här."
 
 #: source_templates/index.html:59
 msgid ""
 "If you have already submitted to journalists in the past, log in here to "
 "check for responses."
 msgstr ""
-"Ifall du har skickat in information tidigare, logga in här för att "
-"kontrollera för svar."
+"Ifall du redan har skickat in information till journalisterna, logga in här "
+"för att kontrollera om du fått svar."
 
 #: source_templates/index.html:74
 msgid "CHECK FOR A RESPONSE"
-msgstr "TITTA EFTER SVAR"
+msgstr "KONTROLLERA OM DU FÅTT ETT SVAR"
 
 #: source_templates/index.html:93
 msgid ""
@@ -1050,9 +1051,9 @@ msgid ""
 "green onion button in the Tor browser to clear all history of your "
 "SecureDrop usage from this device."
 msgstr ""
-"Tack för att du har avslutat din session! Var snäll och välj \"New Identity"
-"\" från den gröna knappen med lökikon i Tor Browser för att rensa all "
-"historik från användning av SecureDrop på den här apparaten."
+"Tack för att du har avslutat din session! Var snäll och välj \"New Identity\""
+" från den gröna knappen med lökikon i Tor Browser för att rensa all historik "
+"från användning av SecureDrop på den här enheten."
 
 #: source_templates/lookup.html:11
 msgid "Whew, it’s you! Now, the embarrassing part..."
@@ -1074,9 +1075,9 @@ msgid ""
 "submission into the hands of a journalist straight away. We’re sorry for the "
 "delay. Please do check back again in a week or so."
 msgstr ""
-"Nu när vi verkligen vet att du är en människa, ska vi se till att din förra "
+"Nu när vi verkligen vet att du är en människa, ska vi se till att din "
 "inlämning kommer till en journalist så fort som möjligt. Vi ber om ursäkt "
-"för förseningen. Vänligen återkom om ca. en vecka."
+"för fördröjningen. Vänligen återkom om en vecka eller liknande."
 
 #: source_templates/lookup.html:20
 msgid "Submit Files or Messages"
@@ -1090,7 +1091,7 @@ msgid ""
 msgstr ""
 "Om du redan känner till GPG, så kan du själv välja att kryptera dina filer "
 "och meddelanden med vår <a href=\"{url}\" class=\"text-link\"> publika "
-"nyckel </a> före inlämningen. Filer krypteras när de tas emot av SecureDrop"
+"nyckel </a> före inlämningen. Filer krypteras när de tas emot av SecureDrop."
 
 #: source_templates/lookup.html:22
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
