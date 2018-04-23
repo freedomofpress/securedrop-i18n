@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-12 07:05+0000\n"
+"PO-Revision-Date: 2018-04-23 10:59+0000\n"
 "Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
 "Language-Team: Swedish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/sv/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 2.20\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -88,11 +88,9 @@ msgid "Only administrators can access this page."
 msgstr "Endast administratörer har tillgång till denna sida."
 
 #: journalist_app/forms.py:19
-#, fuzzy
-#| msgid "Field must be 40 characters long but got {num_chars}."
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgstr ""
-"Ifyllt fält behöver vara 40 tecken långt men är {num_chars} tecken långt."
+"HOTP hemligheter är 40 tecken långt - du har fyllt i {num_chars} tecken."
 
 #: journalist_app/forms.py:30
 msgid ""
@@ -115,7 +113,7 @@ msgstr "Fil krävs."
 
 #: journalist_app/forms.py:62
 msgid "You can only upload JPG/JPEG or PNG image files."
-msgstr ""
+msgstr "Du kan endast ladda upp JPG/JPEG eller PNG bildfiler."
 
 #: journalist_app/main.py:117 journalist_app/utils.py:47
 #: journalist_app/utils.py:137
@@ -575,7 +573,7 @@ msgstr "Här kan ni uppdatera bilden som visas på SecureDrop-gränssnittet:"
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
-msgstr ""
+msgstr "Rekommenderad storlek: 500px * 450px"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
@@ -921,13 +919,6 @@ msgstr ""
 "journalisternas svar på det du lämnar in i nästa skärm."
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we do not track users of our <strong>SecureDrop</strong>\n"
-#| " service, in future visits, using this codename will be the only way we "
-#| "have to communicate with you should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"
 " service, in future visits, using this codename will be the only way we have "
@@ -935,53 +926,39 @@ msgid ""
 " questions or are interested in additional information. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"Eftersom vi inte spårar användare av vår <strong> SecureDrop</strong>-"
-"tjänst,\n"
+"Eftersom vi inte spårar användare av vår <strong> SecureDrop</strong>-tjänst,"
+"\n"
 "vid framtida besök, kommer användningen av detta kodnamnet att vara det enda "
 "sättet vi har att kommunicera med dig ifall vi har\n"
-"frågor eller är intresserade av fler dokument. Till skillnad från lösenord, "
-"finns det inget sätt att återställa ett försvunnet kodnamn."
+"frågor eller är intresserade av mer information. Till skillnad från "
+"lösenord, finns det inget sätt att återställa ett försvunnet kodnamn."
 
 #: source_templates/generate.html:44 source_templates/index.html:66
 msgid "SUBMIT DOCUMENTS"
 msgstr "LÄMNA IN DOKUMENT"
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend turning the Security Slider to Safest to protect "
-#| "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set "
-#| "it to safest</a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to move the Security Slider to Safest to protect "
 "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it "
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Vi rekommenderar att du ställer Security Slider till Safest för att "
-"skydda din anonymitet: </strong>  <a id=\"disable-js\" href=\"\"> Lär dig "
-"hur du ställer den till safest</a> eller ignorera denna varning och fortsätt."
+"<strong>Det är rekommenderat att du ställer Security Slider till Safest för "
+"att skydda din anonymitet: </strong>  <a id=\"disable-js\" href=\"\"> Lär "
+"dig hur du ställer den till Safest</a> eller ignorera denna varning och "
+"fortsätt."
 
 #: source_templates/index.html:18
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend using Tor Browser to access SecureDrop:</strong> <a "
-#| "id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
-#| "a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
-"<strong> Vi rekommenderar att du använder TorBrowser för att nå SecureDrop:</"
-"strong> 2 <a id=\"recommend-tor\" href=\"{tor_browser_url}\"> Lär dig hur "
-"den installeras</a> eller ignorera denna varning och fortsätt."
+"<strong>Det är rekommenderat att använda TorBrowser för att nå "
+"SecureDrop:</strong> 2 <a id=\"recommend-tor\" href=\"{tor_browser_url}\"> "
+"Lär dig hur den installeras</a> eller ignorera denna varning och fortsätt."
 
 #: source_templates/index.html:19
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend using Tor Browser to access SecureDrop:</strong> <a "
-#| "id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
-#| "a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
@@ -989,57 +966,44 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
-"<strong> Vi rekommenderar att du använder TorBrowser för att nå SecureDrop:</"
-"strong> 2 <a id=\"recommend-tor\" href=\"{tor_browser_url}\"> Lär dig hur "
-"den installeras</a> eller ignorera denna varning och fortsätt."
+"<strong> Det är rekommenderat att använda dator versionen av TorBrowser för "
+"att nå SecureDrop, då Orfox inte erbjuder samma nivå av säkerhet och "
+"anonymitet som dator versionerna.</strong> 2 <a id=\"recommend-tor\" href=\""
+"{tor_browser_url}\"> Lär dig hur den installeras</a> eller ignorera denna "
+"varning och fortsätt."
 
 #: source_templates/index.html:42
-#, fuzzy
-#| msgid "Submit documents for the first time"
 msgid "Submit for the first time"
-msgstr "Lämna in dokument första gången"
+msgstr "Skicka in första gången"
 
 #: source_templates/index.html:49
 msgid "Already submitted something?"
 msgstr "Har du redan lämnat in något?"
 
 #: source_templates/index.html:55
-#, fuzzy
-#| msgid ""
-#| "If this is your first time submitting documents to journalists, start "
-#| "here."
 msgid "If this is your first time submitting to journalists, start here."
 msgstr ""
-"Ifall det här är första gången du lämnar in dokument till journalister, "
-"börja här."
+"Ifall det här är första gången du skickar in till journalister, börja här."
 
 #: source_templates/index.html:59
-#, fuzzy
-#| msgid ""
-#| "If you have already submitted documents in the past, log in here to check "
-#| "for responses."
 msgid ""
 "If you have already submitted to journalists in the past, log in here to "
 "check for responses."
 msgstr ""
-"Ifall du har lämnat in dokument här förr, logga in här för att kontrollera "
-"för svar."
+"Ifall du har skickat in information tidigare, logga in här för att "
+"kontrollera för svar."
 
 #: source_templates/index.html:74
 msgid "CHECK FOR A RESPONSE"
 msgstr "TITTA EFTER SVAR"
 
 #: source_templates/index.html:93
-#, fuzzy
-#| msgid ""
-#| "You appear to be using the Tor Browser. You can turn the Security Slider "
-#| "to Safest in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
 msgstr ""
-"Det ser ut som att du använder Tor Browser. Du kan ändra din Security Slider "
-"till Safest i 4 enkla steg!"
+"Det ser ut som att du använder Tor Browser. Du kan flytta din Security "
+"Slider till Safest i fyra enkla steg!"
 
 #: source_templates/index.html:95
 msgid ""
