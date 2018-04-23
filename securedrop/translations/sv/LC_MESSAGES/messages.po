@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-04-23 12:07+0000\n"
+"PO-Revision-Date: 2018-04-23 15:00+0000\n"
 "Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
 "Language-Team: Swedish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/sv/>\n"
@@ -432,7 +432,7 @@ msgstr ""
 
 #: journalist_templates/base.html:56
 msgid "Powered by <em>SecureDrop {version}</em>."
-msgstr "Driven av <em>SecureDrop {version}</em>."
+msgstr "Körs på <em>SecureDrop {version}</em>."
 
 #: journalist_templates/col.html:10
 msgid "All Sources"
@@ -446,7 +446,7 @@ msgid ""
 msgstr ""
 "Generera ett nytt slumpmässigt kodnamn för denna källa. Detta rekommenderas "
 "om föreslaget kodnamn är för svårt att säga eller minnas. Du kan skapa ett "
-"nytt slumpmässigt kodnamn valfritt antal gånger."
+"nytt slumpmässigt kodnamn hur många gånger du vill."
 
 #: journalist_templates/col.html:13
 msgid "Change codename"
@@ -465,8 +465,8 @@ msgid ""
 "The documents are stored encrypted for security. To read them, you will need "
 "to decrypt them using GPG."
 msgstr ""
-"Sparade dokument krypteras för ökad säkerhet. För att läsa dessa, avkryptera "
-"med GPG."
+"För ökad säkerhet sparas dokumenten krypterat. För att läsa dessa, behöver "
+"du avkryptera dem med GPG."
 
 #: journalist_templates/col.html:26
 msgid "Download Selected"
@@ -474,7 +474,7 @@ msgstr "Ladda ned markerade"
 
 #: journalist_templates/col.html:28
 msgid "Delete Selected"
-msgstr "Radera Utvalda"
+msgstr "Radera valda"
 
 #: journalist_templates/col.html:57
 msgid "Uploaded Document"
@@ -495,11 +495,11 @@ msgstr "Verifiera radering"
 
 #: journalist_templates/col.html:72
 msgid "Are you sure you want to delete the selected documents?"
-msgstr "Är du säker att du vill ta bort alla markerade dokument?"
+msgstr "Är du säker att du vill ta bort markerade dokument?"
 
 #: journalist_templates/col.html:87
 msgid "No documents to display."
-msgstr "Inga dokument att visa upp."
+msgstr "Inga dokument att visa."
 
 #: journalist_templates/col.html:94
 msgid ""
@@ -517,11 +517,11 @@ msgid ""
 "in, after which you will be able to reply to the source here."
 msgstr ""
 "En krypteringsnyckel kommer att genereras till denna källa nästa gång hen "
-"loggar in. Därefter kommer du att kunna svara till källan här."
+"loggar in, därefter kommer du att kunna svara till källan här."
 
 #: journalist_templates/col.html:106
 msgid "Click below if you would like to write a reply to this source."
-msgstr "Klicka nedanför ifall du vill skriva ett svar till denna källa."
+msgstr "Klicka nedan ifall du vill skriva ett svar till denna källa."
 
 #: journalist_templates/col.html:110
 msgid "FLAG THIS SOURCE FOR REPLY"
@@ -533,8 +533,8 @@ msgid ""
 "the files seen here will be unrecoverable and the source will no longer be "
 "able to login using their previous codename.</em>"
 msgstr ""
-"Klicka nedanför för att ta bort den här källans samling. <em>Varning: Ifall "
-"du gör detta blir det omöjligt att återskapa filerna härnedanm och källan "
+"Klicka nedan för att ta bort den här källans samling. <em>Varning: Ifall du "
+"gör detta blir det omöjligt att återskapa filerna som listas här och källan "
 "kommer inte längre att kunna logga in med sitt förra kodnamn. </em>"
 
 #: journalist_templates/col.html:122
@@ -585,11 +585,9 @@ msgid ""
 msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
-msgstr[0] ""
-"Följande fil har utvalts för <strong> permanent borttagning</strong>:"
+msgstr[0] "Följande fil har valts för <strong> permanent borttagning</strong>:"
 msgstr[1] ""
-"Följande {files} filer har utvalts för <strong> permanent borttagning</"
-"strong>:"
+"Följande {files} filer har valts för <strong> permanent borttagning</strong>:"
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
@@ -684,9 +682,9 @@ msgid ""
 "be locked out of your account.</em>"
 msgstr ""
 "Ifall tvåfaktorsautentiseringens lösen har förlorats eller utsatts för en "
-"säkerhetsrisk, eller ifall du börjar använda en ny apparat kan du återställa "
+"säkerhetsrisk, eller ifall du börjar använda en ny enhet kan du återställa "
 "dina lösen här. <em> Ifall du gör detta måste du vara redo att konfigurera "
-"din nya apparat, annars kommer du att låsas ut från ditt konto. </em>"
+"din nya enhet, annars kommer du att låsas ut från ditt konto. </em>"
 
 #: journalist_templates/edit_account.html:65
 msgid ""
@@ -694,7 +692,7 @@ msgid ""
 "the first option. For hardware tokens like the Yubikey, choose the second."
 msgstr ""
 "För att återställa tvåfaktorsautentisering för mobilapplikationer som "
-"FreeOTP, välj det första alternativet. För hårdvaranycklar som Yubikey, välj "
+"FreeOTP, välj det första alternativet. För hårdvarunycklar som Yubikey, välj "
 "det andra."
 
 #: journalist_templates/edit_account.html:90
@@ -743,7 +741,7 @@ msgstr "Stjärnmärk"
 
 #: journalist_templates/index.html:14
 msgid "Un-star"
-msgstr "Ta bort stjärnmärke"
+msgstr "Ta bort stjärnmärkning"
 
 #: journalist_templates/index.html:47
 msgid "Are you sure you want to delete the selected collections?"
@@ -814,8 +812,8 @@ msgid ""
 "You were redirected because you are already logged in. If you want to create "
 "a new account, you should log out first."
 msgstr ""
-"Du omdirigerades hit eftersom du redan är inloggad. Ifall du vill skapa ett "
-"nytt konto, logga ut först."
+"Du omdirigerades eftersom du redan är inloggad. Ifall du vill skapa ett nytt "
+"konto, logga ut först."
 
 #: source_app/main.py:129
 msgid "You must enter a message or choose a file to submit."
@@ -863,8 +861,8 @@ msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
 msgstr ""
-"SecureDrop kan innehålla säkerhetsfel, precis som all annan mjukvara. Använd "
-"på eget ansvar."
+"Precis som all mjukvara kan SecureDrop innehålla säkerhetshål. Använd på "
+"egen risk."
 
 #: source_templates/error.html:3
 msgid "Server error"
@@ -892,7 +890,7 @@ msgid ""
 "replies."
 msgstr ""
 "Tack för att du skickade denna information till oss. Kom tillbaka senare och "
-"titta efter ett svar."
+"kontrollera om du fått svar."
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
@@ -915,8 +913,8 @@ msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our journalists in response to what you submit on the next screen."
 msgstr ""
-"Detta kodnamn kommer du att använda när du kommer tillbaka för att ta emot "
-"journalisternas svar på det du lämnar in i nästa skärm."
+"Detta kodnamn är det du kommer kunna använda vid framtida besök för att ta "
+"emot våra journalisters svar på den information du lämnar på nästa sida."
 
 #: source_templates/generate.html:34
 msgid ""
@@ -944,8 +942,8 @@ msgid ""
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
 "<strong>Det är rekommenderat att du ställer Security Slider till Safest för "
-"att skydda din anonymitet: </strong>  <a id=\"disable-js\" href=\"\"> Lär "
-"dig hur du ställer den till Safest</a> eller ignorera denna varning och "
+"att skydda din anonymitet:</strong> <a id=\"disable-js\" href=\"\">Lär dig "
+"hur du ställer den till Safest</a>, eller ignorera denna varning och "
 "fortsätt."
 
 #: source_templates/index.html:18
@@ -956,7 +954,7 @@ msgid ""
 msgstr ""
 "<strong>Det är rekommenderat att använda TorBrowser för att nå "
 "SecureDrop:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\"> Lär "
-"dig hur den installeras</a> eller ignorera denna varning och fortsätt."
+"dig hur den installeras</a>, eller ignorera denna varning och fortsätt."
 
 #: source_templates/index.html:19
 msgid ""
