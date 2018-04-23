@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-11 17:00+0000\n"
+"PO-Revision-Date: 2018-04-23 18:51+0000\n"
 "Last-Translator: Andrey <andrey@mailbox.org>\n"
 "Language-Team: Russian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ru/>\n"
@@ -15,9 +15,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.18\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.20\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -89,10 +89,8 @@ msgid "Only administrators can access this page."
 msgstr "Только администраторы имеют доступ к этой странице."
 
 #: journalist_app/forms.py:19
-#, fuzzy
-#| msgid "Field must be 40 characters long but got {num_chars}."
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
-msgstr "Поле должно содержать 40 символов. Сейчас {num_chars}."
+msgstr "Секреты HOTP должны содержать 40 символов. Вы ввели {num_chars}."
 
 #: journalist_app/forms.py:30
 msgid ""
@@ -115,7 +113,7 @@ msgstr "Файл обязателен."
 
 #: journalist_app/forms.py:62
 msgid "You can only upload JPG/JPEG or PNG image files."
-msgstr ""
+msgstr "Вы можете загружать только изображения в формате JPG/JPEG или PNG."
 
 #: journalist_app/main.py:117 journalist_app/utils.py:47
 #: journalist_app/utils.py:137
@@ -592,7 +590,7 @@ msgstr ""
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
-msgstr ""
+msgstr "Рекомендуемый размер: 500px * 450px"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
@@ -943,13 +941,6 @@ msgstr ""
 "на следующем экране."
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we do not track users of our <strong>SecureDrop</strong>\n"
-#| " service, in future visits, using this codename will be the only way we "
-#| "have to communicate with you should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"
 " service, in future visits, using this codename will be the only way we have "
@@ -961,7 +952,7 @@ msgstr ""
 "<strong>SecureDrop</strong>.\n"
 "При будущих посещениях используется кодовое имя - это единственный способ "
 "связаться с вами, если у нас появятся\n"
-"вопросы или заинтересованость в дополнительных документах. Кодовое имя в "
+"вопросы или заинтересованость в дополнительной информации. Кодовое имя в "
 "отличие от пароля восстановить невозможно."
 
 #: source_templates/generate.html:44 source_templates/index.html:66
@@ -969,11 +960,6 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "ОТПРАВИТЬ ДОКУМЕНТЫ"
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend turning the Security Slider to Safest to protect "
-#| "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set "
-#| "it to safest</a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to move the Security Slider to Safest to protect "
 "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it "
@@ -984,26 +970,16 @@ msgstr ""
 "как это сделать</a>, или проигнорируйте для продолжения."
 
 #: source_templates/index.html:18
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend using Tor Browser to access SecureDrop:</strong> <a "
-#| "id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
-#| "a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Мы рекомендуем использовать Tor Browser для доступа к SecureDrop:</"
-"strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Узнайте, как его "
-"установить</a>, или проигнорируйте для продолжения."
+"<strong>Рекомендуется использовать Tor Browser для доступа к "
+"SecureDrop:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">"
+"Узнайте, как его установить</a>, или проигнорируйте для продолжения."
 
 #: source_templates/index.html:19
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend using Tor Browser to access SecureDrop:</strong> <a "
-#| "id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
-#| "a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
@@ -1011,38 +987,30 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
-"<strong>Мы рекомендуем использовать Tor Browser для доступа к SecureDrop:</"
-"strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Узнайте, как его "
-"установить</a>, или проигнорируйте для продолжения."
+"<strong>Рекомендуется использовать настольную версию Tor Browser для доступа "
+"к SecureDrop, так как Orfox не обеспечивает необходимый уровень безопасности "
+"и анонимности в отличие от версии для компьютера.</strong> <a id=\"recommend-"
+"tor\" href=\"{tor_browser_url}\">Узнайте, как его установить</a>, или "
+"проигнорируйте для продолжения."
 
 #: source_templates/index.html:42
-#, fuzzy
-#| msgid "Submit documents for the first time"
 msgid "Submit for the first time"
-msgstr "Отправить документы в первый раз"
+msgstr "Отправить в первый раз"
 
 #: source_templates/index.html:49
 msgid "Already submitted something?"
 msgstr "Уже что-то отправляли?"
 
 #: source_templates/index.html:55
-#, fuzzy
-#| msgid ""
-#| "If this is your first time submitting documents to journalists, start "
-#| "here."
 msgid "If this is your first time submitting to journalists, start here."
-msgstr "Если вы впервые отправляете документы журналистам, начните здесь."
+msgstr "Если вы впервые отправляете журналистам, начните здесь."
 
 #: source_templates/index.html:59
-#, fuzzy
-#| msgid ""
-#| "If you have already submitted documents in the past, log in here to check "
-#| "for responses."
 msgid ""
 "If you have already submitted to journalists in the past, log in here to "
 "check for responses."
 msgstr ""
-"Если вы уже отправляли документы ранее, войдите в систему, чтобы проверить "
+"Если вы уже отправляли журналистам ранее, войдите в систему, чтобы проверить "
 "ответы."
 
 #: source_templates/index.html:74
@@ -1050,16 +1018,12 @@ msgid "CHECK FOR A RESPONSE"
 msgstr "ПРОВЕРИТЬ ОТВЕТЫ"
 
 #: source_templates/index.html:93
-#, fuzzy
-#| msgid ""
-#| "You appear to be using the Tor Browser. You can turn the Security Slider "
-#| "to Safest in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
 msgstr ""
 "Кажется, вы используете Tor Browser. Вы можете сделать его максимально "
-"безопасным за 4 простых шага!"
+"безопасным за 4 шага!"
 
 #: source_templates/index.html:95
 msgid ""
@@ -1144,7 +1108,7 @@ msgstr ""
 
 #: source_templates/lookup.html:20
 msgid "Submit Files or Messages"
-msgstr ""
+msgstr "Отправить файлы или сообщения"
 
 #: source_templates/lookup.html:21
 msgid ""
@@ -1267,18 +1231,24 @@ msgid ""
 "Using <a href=\"tor2web.org\">Tor2Web</a> to connect to SecureDrop will not "
 "protect your anonymity."
 msgstr ""
+"Использование <a href=\"tor2web.org\">Tor2Web</a> для подключения к "
+"SecureDrop не добавит вам анонимности."
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
 "It could be possible for anyone listening to Internet usage (your "
 "government, your Internet provider), to identify you."
 msgstr ""
+"Возможно, кто-нибудь, следящий за трафиком в интернете (силовые структуры, "
+"интернет-провайдер), идентифицирует вас."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor browser</a> instead."
 msgstr ""
+"Мы <strong>настоятельно рекомендуем</strong> вам использовать <a href=\""
+"www.torproject.org/projects/torbrowser.html\">Tor browser</a>."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
