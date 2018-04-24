@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-11 03:00+0000\n"
-"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
+"PO-Revision-Date: 2018-04-24 11:15+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 2.20\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -90,10 +90,8 @@ msgid "Only administrators can access this page."
 msgstr "Apenas administradores podem acessar esta página."
 
 #: journalist_app/forms.py:19
-#, fuzzy
-#| msgid "Field must be 40 characters long but got {num_chars}."
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
-msgstr "Este campo deve conter 40 caracteres, mas contém {num_chars}."
+msgstr "Senhas HOTP contêm 40 caracteres. Você inseriu {num_chars}."
 
 #: journalist_app/forms.py:30
 msgid ""
