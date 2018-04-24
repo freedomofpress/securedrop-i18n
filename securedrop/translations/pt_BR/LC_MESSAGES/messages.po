@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-04-24 11:16+0000\n"
+"PO-Revision-Date: 2018-04-24 14:00+0000\n"
 "Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/pt_BR/>\n"
@@ -964,7 +964,7 @@ msgid ""
 "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it "
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>É recomendável ajustar a barra de segurança para o nível \"o mais "
+"<strong>Recomenda-se ajustar a barra de segurança para o nível \"o mais "
 "seguro\" para proteger o seu anonimato.</strong><a id=\"disable-js\" href=\""
 "\"> Aprenda como ajustar para o nível\"o mais seguro\" </a>, ou ignore este "
 "aviso e continue."
@@ -997,15 +997,17 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
-"<strong>Recomendamos o uso do navegador Tor para acessar o SecureDrop:</"
-"strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Veja como "
-"instalar o Tor</a>, ou ignore este aviso e continue."
+"<strong>Recomenda-se o uso da versão desktop do Navegador Tor para acessar o "
+"SecureDrop já que Orfox não oferece o mesmo nível de segurança e anonimato "
+"que as versões desktop.</strong> <a id=\"recommend-tor\" href=\""
+"{tor_browser_url}\">Veja como instalar o Tor</a>, ou ignore este aviso e "
+"continue."
 
 #: source_templates/index.html:42
 #, fuzzy
 #| msgid "Submit documents for the first time"
 msgid "Submit for the first time"
-msgstr "Enviar documentos pela primeira vez"
+msgstr "Enviar pela primeira vez"
 
 #: source_templates/index.html:49
 msgid "Already submitted something?"
@@ -1045,8 +1047,8 @@ msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
 msgstr ""
-"Parece que você está usando o navegador Tor. Ajuste seu nível de segurança "
-"para \"o mais seguro\"  em apenas quatro passos!"
+"Se você estiver usando o Navegador Tor, ajuste seu nível de segurança para \""
+"o mais seguro\"  em apenas quatro passos!"
 
 #: source_templates/index.html:95
 msgid ""
@@ -1067,7 +1069,7 @@ msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
 msgstr ""
 "Ajuste o nível de segurança para <strong>\"o mais seguro\" </strong> e "
-"clique em <strong>Ok</strong>"
+"clique em <strong>OK</strong>"
 
 #: source_templates/index.html:98
 msgid "<a href=\"/\">Click here</a> to refresh the page"
@@ -1115,9 +1117,9 @@ msgid ""
 "visited. To err on the side of caution, we put a hold on sending all  files "
 "and messages from that day through to our journalists."
 msgstr ""
-"Nossos servidores detectaram um aumento inesperado de novas atividades "
-"durante a sua última visita. Por medida de precaução, suspendemos a entrega "
-"de todos os documentos enviados naquele dia a nossos jornalistas."
+"Nossos servidores detectaram um aumento inesperado de atividade durante a "
+"sua última visita. Por medida de precaução, suspendemos o envio de todos os "
+"documentos e mensagens a nossos jornalistas durante aquele dia."
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1131,7 +1133,7 @@ msgstr ""
 
 #: source_templates/lookup.html:20
 msgid "Submit Files or Messages"
-msgstr ""
+msgstr "Enviar documentos ou mensagens"
 
 #: source_templates/lookup.html:21
 msgid ""
@@ -1152,7 +1154,7 @@ msgstr "<a href=\"{url}\" class=\"text-link\">Saiba mais</a>."
 #, fuzzy
 #| msgid "You can send a file, a message, or both."
 msgid "You can submit any kind of file, a message, or both."
-msgstr "Você pode enviar um arquivo, uma mensagem ou ambos."
+msgstr "Você pode enviar todos os tipos de arquivos, uma mensagem ou ambos."
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
@@ -1181,8 +1183,8 @@ msgid ""
 msgstr ""
 "Você recebeu uma resposta. Para proteger a sua identidade caso alguém "
 "descubra o seu codinome, apague todas as mensagens depois de lidas. Assim, "
-"também ficamos sabendo que você leu nossa mensagem. Para responder, envie "
-"uma nova mensagem acima."
+"também ficamos sabendo que você leu nossas mensagens. Para responder, envie "
+"novos documentos ou mensagens, acima."
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
@@ -1254,12 +1256,16 @@ msgid ""
 "Using <a href=\"tor2web.org\">Tor2Web</a> to connect to SecureDrop will not "
 "protect your anonymity."
 msgstr ""
+"O uso de <a href=\"tor2web.org\">Tor2Web</a> para conectar-se ao SecureDrop "
+"não protege o seu anonimato."
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
 "It could be possible for anyone listening to Internet usage (your "
 "government, your Internet provider), to identify you."
 msgstr ""
+"Assim, a sua identidade pode ser descoberta por qualquer agente que monitore "
+"a sua atividade na Internet (seu governo, seu provedor de Internet)."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
