@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-04-26 20:38+0000\n"
+"PO-Revision-Date: 2018-04-26 20:43+0000\n"
 "Last-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/nb_NO/>\n"
@@ -997,7 +997,7 @@ msgid ""
 "Safest in four steps."
 msgstr ""
 "Det ser ut som du bruker Tor-nettleseren. Du kan stille inn "
-"sikkerhetsbryteren til Safest i fire enkle steg!"
+"sikkerhetsbryteren til Safest i fire enkle steg."
 
 #: source_templates/index.html:95
 msgid ""
@@ -1011,9 +1011,6 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "Klikk <strong>Sikkerhetsinnstillinger…</strong>"
 
 #: source_templates/index.html:97
-#, fuzzy
-#| msgid ""
-#| "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
 msgstr ""
@@ -1055,19 +1052,14 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "Puh, det er deg! Nå, det litt pinlige…"
 
 #: source_templates/lookup.html:12
-#, fuzzy
-#| msgid ""
-#| "Our servers experienced an unusual surge of new activity, when you last "
-#| "visited. To err on the side of caution, we put a hold on sending all "
-#| "documents from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all  files "
 "and messages from that day through to our journalists."
 msgstr ""
 "Våre servere opplevde uvanlig mye trøkk sist du var innom. For sikkerhets "
-"skyld, satte vi opp en automatisk brems på videresending av filer til våre "
-"journalister."
+"skyld, satte vi opp en automatisk brems på videresending av filer og "
+"meldinger til våre journalister."
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1082,7 +1074,7 @@ msgstr ""
 
 #: source_templates/lookup.html:20
 msgid "Submit Files or Messages"
-msgstr ""
+msgstr "Send inn filer eller meldinger"
 
 #: source_templates/lookup.html:21
 msgid ""
@@ -1100,10 +1092,8 @@ msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
 msgstr "<a href=\"{url}\" class=\"text-link\">Lær mer</a>."
 
 #: source_templates/lookup.html:24
-#, fuzzy
-#| msgid "You can send a file, a message, or both."
 msgid "You can submit any kind of file, a message, or both."
-msgstr "Du kan sende ei fil, melding, eller begge deler."
+msgstr "Du kan sende alle typer filer, ei melding, eller begge deler."
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
@@ -1118,12 +1108,6 @@ msgid "Read Replies"
 msgstr "Les svar"
 
 #: source_templates/lookup.html:58
-#, fuzzy
-#| msgid ""
-#| "You have received a reply. To protect your identity in the unlikely event "
-#| "someone learns your codename, please delete all replies when you're done "
-#| "with them. This also lets us know that you are aware of our reply. You "
-#| "can respond by submitting a new message above."
 msgid ""
 "You have received a reply. To protect your identity in the unlikely event "
 "someone learns your codename, please delete all replies when you're done "
@@ -1133,7 +1117,7 @@ msgstr ""
 "Du har mottatt et svar. For å beskytte din egen identitet i tilfelle noen "
 "skulle få tak i kodenavnet ditt, slett alle svar når du har lest dem. Dette "
 "gjør også at vi enklere kan se at du har lest svarene. Du kan fortsette "
-"kommunikasjonen ved å sende inn ei ny melding over."
+"kommunikasjonen ved å sende inn nye filer eller meldinger over."
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
@@ -1205,18 +1189,24 @@ msgid ""
 "Using <a href=\"tor2web.org\">Tor2Web</a> to connect to SecureDrop will not "
 "protect your anonymity."
 msgstr ""
+"Bruk av <a href=\"tor2web.org\">Tor2Web</a> for å kommunisere med SecureDrop "
+"vil ikke beskytte din anonymitet."
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
 "It could be possible for anyone listening to Internet usage (your "
 "government, your Internet provider), to identify you."
 msgstr ""
+"Det er en mulighet for at alle som kan følge med på internettbruken din ("
+"myndigheter, din internettilbyder) kan identifisere deg."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor browser</a> instead."
 msgstr ""
+"Vi <strong>anbefaler sterkt</strong> at du bruker <a href=\"www.torproject."
+"org/projects/torbrowser.html\">Tor-nettleseren</a> i stedet."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
