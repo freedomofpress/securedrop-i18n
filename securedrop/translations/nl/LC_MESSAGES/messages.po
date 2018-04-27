@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-04-27 15:46+0000\n"
+"PO-Revision-Date: 2018-04-27 17:00+0000\n"
 "Last-Translator: Thom <thom.pp9@gmail.com>\n"
 "Language-Team: Dutch <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/nl/>\n"
@@ -1003,30 +1003,20 @@ msgstr ""
 "hier informatie om deze te installeren</a> of negeer deze waarschuwing."
 
 #: source_templates/index.html:42
-#, fuzzy
-#| msgid "Submit documents for the first time"
 msgid "Submit for the first time"
-msgstr "Voor de eerste keer documenten inzenden"
+msgstr "Voor de eerste keer inzenden"
 
 #: source_templates/index.html:49
 msgid "Already submitted something?"
 msgstr "Al eerder iets verstuurd?"
 
 #: source_templates/index.html:55
-#, fuzzy
-#| msgid ""
-#| "If this is your first time submitting documents to journalists, start "
-#| "here."
 msgid "If this is your first time submitting to journalists, start here."
 msgstr ""
 "Als dit de eerste keer is dat u documenten naar journalisten verstuurd, "
 "begin dan hier."
 
 #: source_templates/index.html:59
-#, fuzzy
-#| msgid ""
-#| "If you have already submitted documents in the past, log in here to check "
-#| "for responses."
 msgid ""
 "If you have already submitted to journalists in the past, log in here to "
 "check for responses."
