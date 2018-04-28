@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-03-06 21:47+0000\n"
-"Last-Translator: AO <french.coordinator@rbox.me>\n"
+"PO-Revision-Date: 2018-04-28 09:00+0000\n"
+"Last-Translator: Loic Dachary <loic@dachary.org>\n"
 "Language-Team: French <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fr/>\n"
 "Language: fr_FR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 2.20\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -117,7 +117,7 @@ msgstr "Un fichier est exigé."
 
 #: journalist_app/forms.py:62
 msgid "You can only upload JPG/JPEG or PNG image files."
-msgstr ""
+msgstr "Vous pouvez uniquement téléverser des images au format JPG/JPEG ou PNG."
 
 #: journalist_app/main.py:117 journalist_app/utils.py:47
 #: journalist_app/utils.py:137
@@ -596,7 +596,7 @@ msgstr ""
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
-msgstr ""
+msgstr "Taille recommandée: 500px * 450px"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
@@ -969,7 +969,7 @@ msgstr ""
 "lors de prochaines visites l’utilisation de ce nom de code sera la seule "
 "façon dont nous disposerons pour communiquer avec vous,\n"
 "que nous ayons des questions ou que nous soyons intéressés par d’autres "
-"documents. Contrairement aux mots de passe,\n"
+"informations. Contrairement aux mots de passe,\n"
 "un nom de code perdu ne peut pas être récupéré."
 
 #: source_templates/generate.html:44 source_templates/index.html:66
@@ -987,9 +987,9 @@ msgid ""
 "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it "
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Nous recommandons de régler le curseur de sécurité sur « Le plus "
-"sûr » pour protéger votre anonymat : </strong> <a id=\"disable-js\" href="
-"\"\">apprenez à le régler sur « Le plus sûr »</a> ou ignorez ce message pour "
+"<strong>Il est recommandé de régler le curseur de sécurité sur « Le plus sûr "
+"» pour protéger votre anonymat : </strong> <a id=\"disable-js\" href=\"\">"
+"apprenez à le régler sur « Le plus sûr »</a> ou ignorez ce message pour "
 "poursuivre."
 
 #: source_templates/index.html:18
@@ -1003,7 +1003,7 @@ msgid ""
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Nous recommandons d’utiliser le navigateur Tor pour accéder à "
+"<strong>Il est recommandé d’utiliser le navigateur Tor pour accéder à "
 "SecureDrop :</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\"> "
 "apprenez comment l’installer</a> ou ignorez cet avertissement pour "
 "poursuivre."
@@ -1021,10 +1021,11 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
-"<strong>Nous recommandons d’utiliser le navigateur Tor pour accéder à "
-"SecureDrop :</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\"> "
-"apprenez comment l’installer</a> ou ignorez cet avertissement pour "
-"poursuivre."
+"<strong>Il est recommandé d’utiliser la version desktop du navigateur Tor "
+"pour accéder à SecureDrop, car Orfox ne fournit pas le même niveau de "
+"sécurité et d'anonymat:</strong> <a id=\"recommend-tor\" href=\""
+"{tor_browser_url}\"> apprenez comment l’installer</a> ou ignorez cet "
+"avertissement pour poursuivre."
 
 #: source_templates/index.html:42
 #, fuzzy
