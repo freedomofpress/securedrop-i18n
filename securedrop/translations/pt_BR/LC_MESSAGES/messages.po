@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-04-24 16:00+0000\n"
+"PO-Revision-Date: 2018-04-30 17:00+0000\n"
 "Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/pt_BR/>\n"
@@ -1014,25 +1014,15 @@ msgid "Already submitted something?"
 msgstr "Já enviou algum material?"
 
 #: source_templates/index.html:55
-#, fuzzy
-#| msgid ""
-#| "If this is your first time submitting documents to journalists, start "
-#| "here."
 msgid "If this is your first time submitting to journalists, start here."
-msgstr ""
-"Se você estiver enviando documentos para jornalistas pela primeira vez, "
-"comece por aqui."
+msgstr "Se este for o seu primeiro envio, comece por aqui."
 
 #: source_templates/index.html:59
-#, fuzzy
-#| msgid ""
-#| "If you have already submitted documents in the past, log in here to check "
-#| "for responses."
 msgid ""
 "If you have already submitted to journalists in the past, log in here to "
 "check for responses."
 msgstr ""
-"Se você já tiver enviado documentos, faça login aqui para ler as respostas."
+"Se você já tiver feito algum envio, faça login aqui para ler as respostas."
 
 #: source_templates/index.html:74
 msgid "CHECK FOR A RESPONSE"
