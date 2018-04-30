@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-04-30 13:12+0000\n"
+"PO-Revision-Date: 2018-04-30 15:00+0000\n"
 "Last-Translator: AO <french.coordinator@rbox.me>\n"
 "Language-Team: French <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fr/>\n"
@@ -91,10 +91,9 @@ msgid "Only administrators can access this page."
 msgstr "Seuls les administrateurs peuvent accéder à cette page."
 
 #: journalist_app/forms.py:19
-#, fuzzy
-#| msgid "Field must be 40 characters long but got {num_chars}."
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
-msgstr "Le champ doit comprendre 40 caractères, mais en contient {num_chars}."
+msgstr ""
+"Les secrets HOTP comportent 40 caractères. Vous en avez saisi {num_chars}."
 
 #: journalist_app/forms.py:30
 msgid ""
@@ -1008,33 +1007,23 @@ msgstr ""
 #, fuzzy
 #| msgid "Submit documents for the first time"
 msgid "Submit for the first time"
-msgstr "Envoyer des documents pour la première fois"
+msgstr "Faire un premier envoi."
 
 #: source_templates/index.html:49
 msgid "Already submitted something?"
 msgstr "Avez-vous déjà envoyé quelque chose ?"
 
 #: source_templates/index.html:55
-#, fuzzy
-#| msgid ""
-#| "If this is your first time submitting documents to journalists, start "
-#| "here."
 msgid "If this is your first time submitting to journalists, start here."
-msgstr ""
-"Si vous envoyez des documents à des journalistes pour la première fois, "
-"commencez ici."
+msgstr "Si cela est votre premier envoi à des journalistes, commencez ici."
 
 #: source_templates/index.html:59
-#, fuzzy
-#| msgid ""
-#| "If you have already submitted documents in the past, log in here to check "
-#| "for responses."
 msgid ""
 "If you have already submitted to journalists in the past, log in here to "
 "check for responses."
 msgstr ""
-"Si vous avez déjà envoyé des documents, connectez-vous ici pour consulter "
-"les réponses."
+"Si vous avez déjà effectué des envois à des journalistes, connectez-vous ici "
+"pour consulter les réponses."
 
 #: source_templates/index.html:74
 msgid "CHECK FOR A RESPONSE"
@@ -1045,7 +1034,7 @@ msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
 msgstr ""
-"Il semble que vous utilisiez le navigateur Tor. Vous pouvez régler le "
+"Il semble que vous utilisiez le navigateur Tor. Vous pouvez déplacer le "
 "curseur de sécurité sur « Le plus sûr » en quatre étapes."
 
 #: source_templates/index.html:95
@@ -1125,7 +1114,7 @@ msgstr ""
 
 #: source_templates/lookup.html:20
 msgid "Submit Files or Messages"
-msgstr "Soumettre des Fichiers ou des Messages"
+msgstr "Envoyer des fichiers ou des messages"
 
 #: source_templates/lookup.html:21
 msgid ""
@@ -1144,7 +1133,8 @@ msgstr "<a href=\"{url}\" class=\"text-link\">En apprendre davantage</a>."
 
 #: source_templates/lookup.html:24
 msgid "You can submit any kind of file, a message, or both."
-msgstr "Vous pouvez envoyer tout type de fichier, un message ou les deux."
+msgstr ""
+"Vous pouvez envoyer n’importe quel type de fichier, un message ou les deux."
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
@@ -1166,10 +1156,10 @@ msgid ""
 "respond by submitting new files and messages above."
 msgstr ""
 "Vous avez reçu une réponse. Pour protéger votre identité dans le cas peu "
-"probable où quelqu’un découvrirait votre nom de code, veuillez effacer "
+"probable où quelqu’un découvrirait votre nom de code, veuillez supprimer "
 "toutes les réponses après consultation. Cela nous indique aussi que vous "
-"avez reçu notre réponse. Vous pouvez y réagir en envoyant de nouveaux "
-"fichiers et messages ci-dessus."
+"avez pris connaissance de notre réponse. Vous pouvez y réagir en envoyant de "
+"nouveaux fichiers et messages ci-dessus."
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
@@ -1242,25 +1232,25 @@ msgid ""
 "Using <a href=\"tor2web.org\">Tor2Web</a> to connect to SecureDrop will not "
 "protect your anonymity."
 msgstr ""
-"Utiliser <a href=\"tor2web.org\">Tor2Web</a> pour se connecter à SecureDrop "
-"ne garantit pas votre anonymat."
+"Utiliser <a href=\"tor2web.org\">Tor2Web</a> pour vous connecter à "
+"SecureDrop ne protégera pas votre anonymat."
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
 "It could be possible for anyone listening to Internet usage (your "
 "government, your Internet provider), to identify you."
 msgstr ""
-"Toute personne surveillant votre utilisation d'Internet (votre gouvernement, "
-"votre fournisseur d'accès) peut vous identifier."
+"Il pourrait être possible que toute personne surveillant l’utilisation d’"
+"Internet (votre gouvernement, votre fournisseur d’accès) puisse vous "
+"identifier."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor browser</a> instead."
 msgstr ""
-"Nous vous <strong>recommendons fortement</strong> d'utiliser de préférence "
-"le <a href=\"www.torproject.org/projects/torbrowser.html\">Navigateur "
-"Tor</a>."
+"Nous vous <strong>recommandons fortement</strong> d’utiliser plutôt le <a "
+"href=\"www.torproject.org/projects/torbrowser.html\">Navigateur Tor</a>."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
