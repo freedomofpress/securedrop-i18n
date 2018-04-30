@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-04-30 12:56+0000\n"
+"PO-Revision-Date: 2018-04-30 12:58+0000\n"
 "Last-Translator: AO <french.coordinator@rbox.me>\n"
 "Language-Team: French <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fr/>\n"
@@ -596,7 +596,7 @@ msgstr ""
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
-msgstr "Taille recommandée: 500px * 450px"
+msgstr "Taille recommandée : 500 px * 450 px"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
