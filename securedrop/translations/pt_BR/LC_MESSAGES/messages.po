@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-04-30 17:08+0000\n"
+"PO-Revision-Date: 2018-04-30 17:11+0000\n"
 "Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/pt_BR/>\n"
@@ -1010,7 +1010,7 @@ msgid ""
 "Safest in four steps."
 msgstr ""
 "Se você estiver usando o Navegador Tor, ajuste seu nível de segurança para \""
-"O mais seguro\"  em apenas quatro passos!"
+"O mais seguro\"  em apenas quatro passos."
 
 #: source_templates/index.html:95
 msgid ""
@@ -1024,9 +1024,6 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "Clique em<strong> Configurações de Segurança...</strong>"
 
 #: source_templates/index.html:97
-#, fuzzy
-#| msgid ""
-#| "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
 msgstr ""
@@ -1069,11 +1066,6 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "Ufa, é você mesmo! Agora, a parte mais delicada..."
 
 #: source_templates/lookup.html:12
-#, fuzzy
-#| msgid ""
-#| "Our servers experienced an unusual surge of new activity, when you last "
-#| "visited. To err on the side of caution, we put a hold on sending all "
-#| "documents from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all  files "
@@ -1113,8 +1105,6 @@ msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
 msgstr "<a href=\"{url}\" class=\"text-link\">Saiba mais</a>."
 
 #: source_templates/lookup.html:24
-#, fuzzy
-#| msgid "You can send a file, a message, or both."
 msgid "You can submit any kind of file, a message, or both."
 msgstr "Você pode enviar todos os tipos de arquivos, uma mensagem ou ambos."
 
@@ -1131,12 +1121,6 @@ msgid "Read Replies"
 msgstr "Ler Respostas"
 
 #: source_templates/lookup.html:58
-#, fuzzy
-#| msgid ""
-#| "You have received a reply. To protect your identity in the unlikely event "
-#| "someone learns your codename, please delete all replies when you're done "
-#| "with them. This also lets us know that you are aware of our reply. You "
-#| "can respond by submitting a new message above."
 msgid ""
 "You have received a reply. To protect your identity in the unlikely event "
 "someone learns your codename, please delete all replies when you're done "
