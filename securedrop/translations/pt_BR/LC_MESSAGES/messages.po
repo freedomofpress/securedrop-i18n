@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-04-30 17:05+0000\n"
+"PO-Revision-Date: 2018-04-30 17:08+0000\n"
 "Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/pt_BR/>\n"
@@ -952,17 +952,12 @@ msgid ""
 "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it "
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Recomenda-se ajustar a barra de segurança para o nível \"o mais "
+"<strong>Recomenda-se ajustar a barra de segurança para o nível \"O mais "
 "seguro\" para proteger o seu anonimato.</strong><a id=\"disable-js\" href=\""
-"\"> Aprenda como ajustar para o nível\"o mais seguro\" </a>, ou ignore este "
+"\"> Aprenda como ajustar para o nível\"O mais seguro\" </a>, ou ignore este "
 "aviso e continue."
 
 #: source_templates/index.html:18
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend using Tor Browser to access SecureDrop:</strong> <a "
-#| "id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
-#| "a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
@@ -973,11 +968,6 @@ msgstr ""
 "como instalar o Tor</a>, ou ignore este aviso e continue."
 
 #: source_templates/index.html:19
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend using Tor Browser to access SecureDrop:</strong> <a "
-#| "id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
-#| "a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
@@ -986,14 +976,12 @@ msgid ""
 "continue."
 msgstr ""
 "<strong>Recomenda-se o uso da versão desktop do Navegador Tor para acessar o "
-"SecureDrop já que Orfox não oferece o mesmo nível de segurança e anonimato "
+"SecureDrop, já que Orfox não oferece o mesmo nível de segurança e anonimato "
 "que as versões desktop.</strong> <a id=\"recommend-tor\" href=\""
 "{tor_browser_url}\">Veja como instalar o Tor</a>, ou ignore este aviso e "
 "continue."
 
 #: source_templates/index.html:42
-#, fuzzy
-#| msgid "Submit documents for the first time"
 msgid "Submit for the first time"
 msgstr "Enviar pela primeira vez"
 
@@ -1017,16 +1005,12 @@ msgid "CHECK FOR A RESPONSE"
 msgstr "LER RESPOSTAS"
 
 #: source_templates/index.html:93
-#, fuzzy
-#| msgid ""
-#| "You appear to be using the Tor Browser. You can turn the Security Slider "
-#| "to Safest in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
 msgstr ""
 "Se você estiver usando o Navegador Tor, ajuste seu nível de segurança para \""
-"o mais seguro\"  em apenas quatro passos!"
+"O mais seguro\"  em apenas quatro passos!"
 
 #: source_templates/index.html:95
 msgid ""
