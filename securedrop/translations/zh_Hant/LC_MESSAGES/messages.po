@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-03-10 14:00+0000\n"
+"PO-Revision-Date: 2018-04-30 01:54+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.securedrop.club/"
 "projects/securedrop/securedrop/zh_Hant/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 2.20\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -88,7 +88,7 @@ msgstr "本頁面僅限管理員訪問。"
 #, fuzzy
 #| msgid "Field must be 40 characters long but got {num_chars}."
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
-msgstr "字段必须有 40 個字符長，但現在為 {num_chars}。"
+msgstr "HOTP secrets 需為 40 個字符長，已輸入 {num_chars} 個字符。"
 
 #: journalist_app/forms.py:30
 msgid ""
@@ -109,7 +109,7 @@ msgstr "檔案欄為必要。"
 
 #: journalist_app/forms.py:62
 msgid "You can only upload JPG/JPEG or PNG image files."
-msgstr ""
+msgstr "僅可上傳  JPG/JPEG 或 PNG 格式的圖片檔。"
 
 #: journalist_app/main.py:117 journalist_app/utils.py:47
 #: journalist_app/utils.py:137
@@ -540,7 +540,7 @@ msgstr "在此處可更新 SecureDrop 網頁介面的顯示圖片:"
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
-msgstr ""
+msgstr "建議最佳尺寸: 500px * 450px"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
@@ -872,8 +872,8 @@ msgid ""
 " questions or are interested in additional information. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"因為我們不會追蹤 <strong>SecureDrop</strong> 的使用者。你再次訪問須提供此代號"
-"登入，它也是將來我們若有疑問或需要更多文件時要求，和你溝通的唯一管道。\n"
+"因為我們不會追蹤 <strong>SecureDrop</strong> "
+"的使用者。你再次訪問須提供此代號登入，它也是將來我們若有疑問或需要更多資訊時要求，和你溝通的唯一管道。\n"
 "\n"
 "代號和密碼不同，一旦遺失便無法再恢復獲取。"
 
@@ -907,9 +907,8 @@ msgid ""
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>我們建議用 Tor 瀏覽器來訪問 SecureDrop :</strong> <a id=\"recommend-"
-"tor\" href=\"{tor_browser_url}\"> 學習如何安裝 Tor</a>，或忽略這則警告繼續操"
-"作。"
+"<strong>高度建議用 Tor 瀏覽器來訪問 SecureDrop :</strong> <a id=\"recommend-tor\" href="
+"\"{tor_browser_url}\"> 學習如何安裝 Tor</a>，或忽略這則警告繼續操作。"
 
 #: source_templates/index.html:19
 #, fuzzy
@@ -924,33 +923,25 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
-"<strong>我們建議用 Tor 瀏覽器來訪問 SecureDrop :</strong> <a id=\"recommend-"
-"tor\" href=\"{tor_browser_url}\"> 學習如何安裝 Tor</a>，或忽略這則警告繼續操"
-"作。"
+"<strong>高度建議使用桌面版本的 Tor 瀏覽器來訪問 SecureDrop， Orfox 的安全層級與匿名保護程度遠不如桌面版:</strong>"
+" <a id=\"recommend-tor\" href=\"{tor_browser_url}\"> 學習如何安裝 "
+"Tor</a>，或忽略這則警告繼續操作。"
 
 #: source_templates/index.html:42
 #, fuzzy
 #| msgid "Submit documents for the first time"
 msgid "Submit for the first time"
-msgstr "第一次提交文件"
+msgstr "第一次提交"
 
 #: source_templates/index.html:49
 msgid "Already submitted something?"
 msgstr "已曾提交過文件？"
 
 #: source_templates/index.html:55
-#, fuzzy
-#| msgid ""
-#| "If this is your first time submitting documents to journalists, start "
-#| "here."
 msgid "If this is your first time submitting to journalists, start here."
-msgstr "如果是第一次要提交文件給記者，請從這裡開始。"
+msgstr "如果是第一次要提交資訊給記者，請從這裡開始。"
 
 #: source_templates/index.html:59
-#, fuzzy
-#| msgid ""
-#| "If you have already submitted documents in the past, log in here to check "
-#| "for responses."
 msgid ""
 "If you have already submitted to journalists in the past, log in here to "
 "check for responses."
@@ -961,15 +952,10 @@ msgid "CHECK FOR A RESPONSE"
 msgstr "檢查回應"
 
 #: source_templates/index.html:93
-#, fuzzy
-#| msgid ""
-#| "You appear to be using the Tor Browser. You can turn the Security Slider "
-#| "to Safest in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
-msgstr ""
-"你似乎正在使用 Tor 瀏覽器。有 4 個簡單步驟可將安全控制滑動到最安全層級！"
+msgstr "你似乎正在使用 Tor 瀏覽器。用 4 個步驟可將安全控制移動到最安全層級！"
 
 #: source_templates/index.html:95
 msgid ""
