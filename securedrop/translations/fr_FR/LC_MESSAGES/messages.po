@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-01 09:04+0000\n"
+"PO-Revision-Date: 2018-05-01 09:05+0000\n"
 "Last-Translator: Loic Dachary <loic@dachary.org>\n"
 "Language-Team: French <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fr/>\n"
@@ -1005,7 +1005,7 @@ msgstr ""
 
 #: source_templates/index.html:42
 msgid "Submit for the first time"
-msgstr "Faire un premier envoi."
+msgstr "Faire un premier envoi"
 
 #: source_templates/index.html:49
 msgid "Already submitted something?"
@@ -1016,10 +1016,6 @@ msgid "If this is your first time submitting to journalists, start here."
 msgstr "Si cela est votre premier envoi à des journalistes, commencez ici."
 
 #: source_templates/index.html:59
-#, fuzzy
-#| msgid ""
-#| "If you have already submitted to journalists in the past, log in here to "
-#| "check for responses."
 msgid ""
 "If you have already submitted to journalists, log in here to check for "
 "responses."
@@ -1094,11 +1090,6 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "C’est bien vous ! Maintenant, la partie délicate…"
 
 #: source_templates/lookup.html:12
-#, fuzzy
-#| msgid ""
-#| "Our servers experienced an unusual surge of new activity, when you last "
-#| "visited. To err on the side of caution, we put a hold on sending all  "
-#| "files and messages from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all files "
