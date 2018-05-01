@@ -974,9 +974,9 @@ msgid ""
 "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it "
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Il est recommandé de régler le curseur de sécurité sur « Le plus sûr "
-"» pour protéger votre anonymat : </strong> <a id=\"disable-js\" href=\"\">"
-"Apprenez à le régler sur « Le plus sûr »</a> ou ignorez ce message pour "
+"<strong>Il est recommandé de régler le curseur de sécurité sur « Le plus "
+"sûr » pour protéger votre anonymat : </strong> <a id=\"disable-js\" href="
+"\"\">Apprenez à le régler sur « Le plus sûr »</a> ou ignorez ce message pour "
 "poursuivre."
 
 #: source_templates/index.html:18
@@ -999,9 +999,9 @@ msgid ""
 msgstr ""
 "<strong>Il est recommandé d’utiliser la version pour ordinateur du "
 "navigateur Tor pour accéder à SecureDrop, car Orfox n’offre pas le même "
-"niveau de sécurité et d’anonymat que la version pour ordinateur :</strong> <"
-"a id=\"recommend-tor\" href=\"{tor_browser_url}\">Apprenez à l’installer</a> "
-"ou ignorez cet avertissement pour poursuivre."
+"niveau de sécurité et d’anonymat que la version pour ordinateur :</strong> "
+"<a id=\"recommend-tor\" href=\"{tor_browser_url}\">Apprenez à l’installer</"
+"a> ou ignorez cet avertissement pour poursuivre."
 
 #: source_templates/index.html:42
 #, fuzzy
@@ -1018,9 +1018,13 @@ msgid "If this is your first time submitting to journalists, start here."
 msgstr "Si cela est votre premier envoi à des journalistes, commencez ici."
 
 #: source_templates/index.html:59
+#, fuzzy
+#| msgid ""
+#| "If you have already submitted to journalists in the past, log in here to "
+#| "check for responses."
 msgid ""
-"If you have already submitted to journalists in the past, log in here to "
-"check for responses."
+"If you have already submitted to journalists, log in here to check for "
+"responses."
 msgstr ""
 "Si vous avez déjà effectué des envois à des journalistes, connectez-vous ici "
 "pour consulter les réponses."
@@ -1092,9 +1096,14 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "C’est bien vous ! Maintenant, la partie délicate…"
 
 #: source_templates/lookup.html:12
+#, fuzzy
+#| msgid ""
+#| "Our servers experienced an unusual surge of new activity, when you last "
+#| "visited. To err on the side of caution, we put a hold on sending all  "
+#| "files and messages from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
-"visited. To err on the side of caution, we put a hold on sending all  files "
+"visited. To err on the side of caution, we put a hold on sending all files "
 "and messages from that day through to our journalists."
 msgstr ""
 "Nos serveurs ont connu une augmentation inhabituelle d’activités nouvelles "
@@ -1240,8 +1249,8 @@ msgid ""
 "It could be possible for anyone listening to Internet usage (your "
 "government, your Internet provider), to identify you."
 msgstr ""
-"Il pourrait être possible que toute personne surveillant l’utilisation d’"
-"Internet (votre gouvernement, votre fournisseur d’accès) puisse vous "
+"Il pourrait être possible que toute personne surveillant l’utilisation "
+"d’Internet (votre gouvernement, votre fournisseur d’accès) puisse vous "
 "identifier."
 
 #: source_templates/tor2web-warning.html:6

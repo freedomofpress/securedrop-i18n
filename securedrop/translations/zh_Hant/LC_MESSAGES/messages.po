@@ -863,8 +863,8 @@ msgid ""
 " questions or are interested in additional information. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"因為我們不會追蹤 <strong>SecureDrop</strong> "
-"的使用者。你再次訪問須提供此代號登入，它也是將來我們若有疑問或需要更多資訊時要求，和你溝通的唯一管道。\n"
+"因為我們不會追蹤 <strong>SecureDrop</strong> 的使用者。你再次訪問須提供此代號"
+"登入，它也是將來我們若有疑問或需要更多資訊時要求，和你溝通的唯一管道。\n"
 "\n"
 "代號和密碼不同，一旦遺失便無法再恢復獲取。"
 
@@ -878,8 +878,9 @@ msgid ""
 "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it "
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>我們建議將安全條滑動到最安全層級，以保護你的匿名性：</strong> <a id=\"disable-js\" href=\"\""
-">學習如何將此設置為最安全層級保護</a>，或者忽略此項警告，繼續操作。"
+"<strong>我們建議將安全條滑動到最安全層級，以保護你的匿名性：</strong> <a id="
+"\"disable-js\" href=\"\">學習如何將此設置為最安全層級保護</a>，或者忽略此項警"
+"告，繼續操作。"
 
 #: source_templates/index.html:18
 msgid ""
@@ -887,8 +888,9 @@ msgid ""
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>高度建議用 Tor 瀏覽器來訪問 SecureDrop :</strong> <a id=\"recommend-tor\" href="
-"\"{tor_browser_url}\"> 學習如何安裝 Tor</a>，或忽略這則警告繼續操作。"
+"<strong>高度建議用 Tor 瀏覽器來訪問 SecureDrop :</strong> <a id=\"recommend-"
+"tor\" href=\"{tor_browser_url}\"> 學習如何安裝 Tor</a>，或忽略這則警告繼續操"
+"作。"
 
 #: source_templates/index.html:19
 msgid ""
@@ -898,9 +900,9 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
-"<strong>高度建議使用桌面版本的 Tor 瀏覽器來訪問 SecureDrop， Orfox 的安全層級與匿名保護程度遠不如桌面版:</strong>"
-" <a id=\"recommend-tor\" href=\"{tor_browser_url}\"> 學習如何安裝 "
-"Tor</a>，或忽略這則警告繼續操作。"
+"<strong>高度建議使用桌面版本的 Tor 瀏覽器來訪問 SecureDrop， Orfox 的安全層級"
+"與匿名保護程度遠不如桌面版:</strong> <a id=\"recommend-tor\" href="
+"\"{tor_browser_url}\"> 學習如何安裝 Tor</a>，或忽略這則警告繼續操作。"
 
 #: source_templates/index.html:42
 msgid "Submit for the first time"
@@ -915,9 +917,13 @@ msgid "If this is your first time submitting to journalists, start here."
 msgstr "如果是第一次要提交資訊給記者，請從這裡開始。"
 
 #: source_templates/index.html:59
+#, fuzzy
+#| msgid ""
+#| "If you have already submitted to journalists in the past, log in here to "
+#| "check for responses."
 msgid ""
-"If you have already submitted to journalists in the past, log in here to "
-"check for responses."
+"If you have already submitted to journalists, log in here to check for "
+"responses."
 msgstr "如果您已提交過文件，您可以登入來查閱回覆。"
 
 #: source_templates/index.html:74
@@ -979,11 +985,18 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "哎呀，是您！ 現在遇上尷尬的狀況..."
 
 #: source_templates/lookup.html:12
+#, fuzzy
+#| msgid ""
+#| "Our servers experienced an unusual surge of new activity, when you last "
+#| "visited. To err on the side of caution, we put a hold on sending all  "
+#| "files and messages from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
-"visited. To err on the side of caution, we put a hold on sending all  files "
+"visited. To err on the side of caution, we put a hold on sending all files "
 "and messages from that day through to our journalists."
-msgstr "在您上次訪問後，我們的伺服器經歷了一次不尋常的新活動。基於謹慎考量，我們會標記錯誤，並扣住當天起原本要發送給記者的所有檔案和訊息。"
+msgstr ""
+"在您上次訪問後，我們的伺服器經歷了一次不尋常的新活動。基於謹慎考量，我們會標"
+"記錯誤，並扣住當天起原本要發送給記者的所有檔案和訊息。"
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1034,8 +1047,9 @@ msgid ""
 "with them. This also lets us know that you are aware of our reply. You can "
 "respond by submitting new files and messages above."
 msgstr ""
-"您已經收到一則回覆。為保護您的身份，防止某人知道您的代號，請您在讀完回覆後將之全部刪除。這也讓我們知道您有看到我們的回覆。您可以在上面發送一份新檔案與訊息"
-"作回應。"
+"您已經收到一則回覆。為保護您的身份，防止某人知道您的代號，請您在讀完回覆後將"
+"之全部刪除。這也讓我們知道您有看到我們的回覆。您可以在上面發送一份新檔案與訊"
+"息作回應。"
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
@@ -1104,7 +1118,9 @@ msgstr "為什麼出現一個關於 Tor2Web 的警告？"
 msgid ""
 "Using <a href=\"tor2web.org\">Tor2Web</a> to connect to SecureDrop will not "
 "protect your anonymity."
-msgstr "使用 <a href=\"tor2web.org\">Tor2Web</a>連至 SecureDrop 將無法保護你的匿名安全。"
+msgstr ""
+"使用 <a href=\"tor2web.org\">Tor2Web</a>連至 SecureDrop 將無法保護你的匿名安"
+"全。"
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
@@ -1117,8 +1133,8 @@ msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor browser</a> instead."
 msgstr ""
-"<strong>強烈建議</strong>以<a href=\"www.torproject.org/projects/torbrowser.html\""
-">Tor 瀏覽器</a>為替代。"
+"<strong>強烈建議</strong>以<a href=\"www.torproject.org/projects/torbrowser."
+"html\">Tor 瀏覽器</a>為替代。"
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
