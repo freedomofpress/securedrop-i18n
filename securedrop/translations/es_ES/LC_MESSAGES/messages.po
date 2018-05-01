@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-01 13:05+0000\n"
+"PO-Revision-Date: 2018-05-01 13:16+0000\n"
 "Last-Translator: Anatoli <djanatoli@gmail.com>\n"
 "Language-Team: Spanish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/es/>\n"
@@ -1090,7 +1090,7 @@ msgid ""
 msgstr ""
 "Nuestros servidores experimentaron una oleada inusual de nueva actividad, "
 "cuando usted visitó por última vez. Para errar en el lado de la cautela, "
-"pusimos en espera todos los envios de archivos y mensajes de ese día a "
+"pusimos en espera todos los envíos de archivos y mensajes de ese día a "
 "nuestros periodistas."
 
 #: source_templates/lookup.html:14
@@ -1106,7 +1106,7 @@ msgstr ""
 
 #: source_templates/lookup.html:20
 msgid "Submit Files or Messages"
-msgstr ""
+msgstr "Enviar Archivos o Mensajes"
 
 #: source_templates/lookup.html:21
 msgid ""
@@ -1124,10 +1124,8 @@ msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
 msgstr "<a href=\"{url}\" class=\"text-link\">Aprender más</a>."
 
 #: source_templates/lookup.html:24
-#, fuzzy
-#| msgid "You can send a file, a message, or both."
 msgid "You can submit any kind of file, a message, or both."
-msgstr "Usted puede enviar un archivo, un mensaje, o ambos."
+msgstr "Usted puede enviar cualquier tipo de archivo, un mensaje, o ambos."
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
@@ -1142,12 +1140,6 @@ msgid "Read Replies"
 msgstr "Leer Respustas"
 
 #: source_templates/lookup.html:58
-#, fuzzy
-#| msgid ""
-#| "You have received a reply. To protect your identity in the unlikely event "
-#| "someone learns your codename, please delete all replies when you're done "
-#| "with them. This also lets us know that you are aware of our reply. You "
-#| "can respond by submitting a new message above."
 msgid ""
 "You have received a reply. To protect your identity in the unlikely event "
 "someone learns your codename, please delete all replies when you're done "
@@ -1158,7 +1150,7 @@ msgstr ""
 "caso de que alguien aprenda su nombre clave, por favor, borre todas las "
 "respuestas cuando haya terminado con ellas. Esto también nos permite saber "
 "que usted es consciente de nuestra respuesta. Usted puede responder enviando "
-"un nuevo mensaje arriba."
+"nuevos archivos y mensaje arriba."
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
@@ -1230,18 +1222,24 @@ msgid ""
 "Using <a href=\"tor2web.org\">Tor2Web</a> to connect to SecureDrop will not "
 "protect your anonymity."
 msgstr ""
+"Usar<a href=\"tor2web.org\">Tor2Web</a> para conectar a SecureDrop no "
+"protegerá su anonimato."
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
 "It could be possible for anyone listening to Internet usage (your "
 "government, your Internet provider), to identify you."
 msgstr ""
+"Es posible que cualquier persona que observe el uso de Internet (su "
+"gobierno, su proveedor de Internet) le identifique."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor browser</a> instead."
 msgstr ""
+"Nosotros<strong>recomendamos encarecidamente</strong> que use <a href=\""
+"www.torproject.org/projects/torbrowser.html\">Tor Browser</a> en su lugar."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
