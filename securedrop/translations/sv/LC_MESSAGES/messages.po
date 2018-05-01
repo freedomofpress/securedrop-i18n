@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-04-23 15:00+0000\n"
+"PO-Revision-Date: 2018-05-01 09:04+0000\n"
 "Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
 "Language-Team: Swedish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/sv/>\n"
@@ -985,10 +985,6 @@ msgstr ""
 "journalisterna, börja här."
 
 #: source_templates/index.html:59
-#, fuzzy
-#| msgid ""
-#| "If you have already submitted to journalists in the past, log in here to "
-#| "check for responses."
 msgid ""
 "If you have already submitted to journalists, log in here to check for "
 "responses."
@@ -1062,11 +1058,6 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "Ok, det är du! Nu, till det pinsamma..."
 
 #: source_templates/lookup.html:12
-#, fuzzy
-#| msgid ""
-#| "Our servers experienced an unusual surge of new activity, when you last "
-#| "visited. To err on the side of caution, we put a hold on sending all  "
-#| "files and messages from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all files "
