@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-02 11:10+0000\n"
+"PO-Revision-Date: 2018-05-02 13:00+0000\n"
 "Last-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\n"
 "Language-Team: Italian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/it/>\n"
@@ -772,7 +772,7 @@ msgstr "Eliminare veramente gli archivi selezionati?"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
-msgstr "Non è stato inviato alcun documento."
+msgstr "Non è stato inviato alcun documento!"
 
 #: journalist_templates/js-strings.html:3
 msgid "filter by codename"
@@ -801,7 +801,7 @@ msgstr "Reimpostare veramente l'autenticazione a due fattori per {username}?"
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
-msgstr "Accedi per utilizzare l'interfaccia giornalista"
+msgstr "Accedere per utilizzare l'interfaccia giornalista"
 
 #: journalist_templates/login.html:9
 msgid "Password"
@@ -835,12 +835,13 @@ msgid ""
 "You were redirected because you are already logged in. If you want to create "
 "a new account, you should log out first."
 msgstr ""
-"È stato eseguito il reindirizzamento perché avevi già eseguito l'accesso. Se "
-"vuoi creare un nuovo account devi prima terminare la sessione corrente."
+"È stato eseguito il reindirizzamento perché era già stato eseguito "
+"l'accesso. Per creare un nuovo account bisogna prima terminare la sessione "
+"corrente."
 
 #: source_app/main.py:129
 msgid "You must enter a message or choose a file to submit."
-msgstr "Devi inserire un messaggio o scegliere un file da inviare."
+msgstr "È necessario inserire un messaggio o scegliere un file da inviare."
 
 #: source_app/main.py:162
 msgid "Thanks! We received your message."
@@ -928,7 +929,8 @@ msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
 msgstr ""
-"Trascrivi questo nome in codice e tienilo in un posto sicuro, o memorizzalo."
+"Trascrivere questo nome in codice e conservarlo in un posto sicuro, o "
+"memorizzalo."
 
 #: source_templates/generate.html:10
 msgid ""
@@ -1006,15 +1008,11 @@ msgstr ""
 "Se questa è la prima volta che invii qualcosa ai giornalisti, inizia da qui."
 
 #: source_templates/index.html:59
-#, fuzzy
-#| msgid ""
-#| "If you have already submitted to journalists in the past, log in here to "
-#| "check for responses."
 msgid ""
 "If you have already submitted to journalists, log in here to check for "
 "responses."
 msgstr ""
-"Se hai già inviato qualcosa in passato, accedi qui per controllare le "
+"Se hai già inviato qualcosa ai giornalisti, accedi qui per controllare le "
 "risposte."
 
 #: source_templates/index.html:74
@@ -1049,15 +1047,15 @@ msgstr ""
 
 #: source_templates/index.html:98
 msgid "<a href=\"/\">Click here</a> to refresh the page"
-msgstr "<a href=\"/\">Fai clic qui </a> per ricaricare la pagina"
+msgstr "<a href=\"/\">Fare clic qui</a> per ricaricare la pagina"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
-msgstr "Inserisci nome in codice"
+msgstr "Inserire nome in codice"
 
 #: source_templates/login.html:12
 msgid "Enter your codename"
-msgstr "Inserisci il tuo nome in codice"
+msgstr "Inserire il proprio nome in codice"
 
 #: source_templates/login.html:25 source_templates/lookup.html:47
 msgid "CANCEL"
