@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-04-26 08:00+0000\n"
+"PO-Revision-Date: 2018-05-02 10:38+0000\n"
 "Last-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\n"
 "Language-Team: Italian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/it/>\n"
@@ -111,7 +111,7 @@ msgstr "Questo campo è obbligatorio."
 
 #: journalist_app/forms.py:52
 msgid "You cannot send an empty reply."
-msgstr "Non puoi inviare una risposta vuota."
+msgstr "Non è possibile inviare una risposta vuota."
 
 #: journalist_app/forms.py:60
 msgid "File required."
@@ -137,7 +137,7 @@ msgstr "Nessun archivio è stato selezionato per essere scaricato."
 
 #: journalist_app/main.py:152 journalist_app/utils.py:231
 msgid "No collections selected for deletion."
-msgstr "Nessun archivio è stato selezionato per l'eliminazione."
+msgstr "Nessun archivio è stato selezionato per essere eliminato."
 
 #: journalist_app/main.py:178
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
@@ -158,8 +158,8 @@ msgstr "Accesso non riuscito."
 #: journalist_app/utils.py:93
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
-msgstr[0] "Attendi almeno {seconds} secondo prima di collegarti nuovamente."
-msgstr[1] "Attendi almeno {seconds} secondi prima di collegarti nuovamente."
+msgstr[0] "Attendere almeno {seconds} secondo prima di accedere nuovamente."
+msgstr[1] "Attendere almeno {seconds} secondi prima di accedere nuovamente."
 
 #: journalist_app/utils.py:104
 msgid ""
@@ -194,7 +194,7 @@ msgstr[1] "{num} archivi eliminati"
 
 #: journalist_app/utils.py:274
 msgid "You submitted a bad password! Password not changed."
-msgstr "È stata inserita una password errata! Password non modificata."
+msgstr "È stata inserita una password errata. Password non modificata."
 
 #: journalist_app/utils.py:281
 msgid ""
@@ -203,15 +203,15 @@ msgid ""
 "should reset your password again."
 msgstr ""
 "Si è verificato un errore, e la nuova password potrebbe non essere stata "
-"salvata correttamente. Per evitare che ti venga impedito l'accesso al tuo "
-"account, reimposta nuovamente la password."
+"salvata correttamente. Per evitare che l'accesso all'account venga bloccato, "
+"reimpostare nuovamente la password."
 
 #: journalist_app/utils.py:290
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
 msgstr ""
-"Password aggiornata. Non dimenticare di salvarla nel tuo database KeePassX. "
+"Password aggiornata. Non dimenticare di salvarla nel database KeePassX. "
 "Nuova password:"
 
 #: journalist_app/utils.py:307
