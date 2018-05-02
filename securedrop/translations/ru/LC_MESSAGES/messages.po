@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-05-02 20:29+0000\n"
+"PO-Revision-Date: 2018-05-02 22:00+0000\n"
 "Last-Translator: Adham Kurbanov <uz@zu.uz>\n"
 "Language-Team: Russian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ru/>\n"
@@ -415,10 +415,10 @@ msgid ""
 "set up correctly."
 msgstr ""
 "Вы почти закончили! Чтобы завершить добавление нового пользователя, "
-"попросите его выполнить следующие инструкции, чтобы настроить двухфакторную "
+"попросите его выполнить следующие инструкции, чтобы настроить двухэтапную "
 "аутентификацию с помощью FreeOTP. После того, как он добавит запись для "
 "этого аккаунта в приложение, попросите его ввести один из 6-значных кодов из "
-"приложения, чтобы подтвердить правильность настройки двухфакторной "
+"приложения, чтобы подтвердить правильность настройки двухэтапной "
 "аутентификации."
 
 #: journalist_templates/base.html:24
@@ -659,7 +659,7 @@ msgstr ""
 #: journalist_templates/edit_account.html:34
 msgid "Please enter your current password and two-factor code."
 msgstr ""
-"Пожалуйста, введите ваш текущий пароль и код двухфакторной аутентификации."
+"Пожалуйста, введите ваш текущий пароль и код двухэтапной аутентификации."
 
 #: journalist_templates/edit_account.html:40
 msgid "Current Password"
@@ -667,7 +667,7 @@ msgstr "Текущий пароль"
 
 #: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
 msgid "Two-factor Code"
-msgstr "Двухфакторный код"
+msgstr "Двухэтапный код"
 
 #: journalist_templates/edit_account.html:46
 msgid "The user's password will be changed to:"
@@ -683,7 +683,7 @@ msgstr "СБРОСИТЬ ПАРОЛЬ"
 
 #: journalist_templates/edit_account.html:58
 msgid "Reset Two-Factor Authentication"
-msgstr "Сбросить двухфакторную аутентификацию"
+msgstr "Сбросить двухэтапную аутентификацию"
 
 #: journalist_templates/edit_account.html:61
 msgid ""
@@ -692,7 +692,7 @@ msgid ""
 "is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
-"Если учетные данные двухфакторной аутентификации пользователя потеряны или "
+"Если учетные данные двухэтапной аутентификации пользователя потеряны или "
 "скомпрометированы, вы можете сбросить их здесь. <em>Если вы сделаете это, "
 "убедитесь, что пользователь присутствует и готов настроить свое устройство "
 "повторно. В противном случае он будет заблокирован."
@@ -704,7 +704,7 @@ msgid ""
 "this, make sure you are ready to set up your new device, otherwise you will "
 "be locked out of your account.</em>"
 msgstr ""
-"Если ваши двухфакторные аутентификационные данные были потеряны или "
+"Если ваши двухэтапные аутентификационные данные были потеряны или "
 "скомпрометированы или у вас появилось новое устройство, вы можете сбросить "
 "свои учетные данные здесь. <em>Если вы сделаете это, убедитесь, что готовы "
 "настроить новое устройство, иначе вы будете заблокированы.</em>"
@@ -714,17 +714,17 @@ msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the Yubikey, choose the second."
 msgstr ""
-"Для сброса двухфакторной аутентификации для мобильных приложений, таких как  "
+"Для сброса двухэтапной аутентификации для мобильных приложений, таких как  "
 "FreeOTP, выберите первый вариант. Для аппаратных токенов, таких как Yubikey, "
 "выберите второй."
 
 #: journalist_templates/edit_account.html:90
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
-msgstr "СБРОСИТЬ ДВУХФАКТОРНУЮ АУТЕНТИФИКАЦИЮ (ПРИЛОЖЕНИЕ)"
+msgstr "СБРОСИТЬ ДВУХЭТАПНУЮ АУТЕНТИФИКАЦИЮ (ПРИЛОЖЕНИЕ)"
 
 #: journalist_templates/edit_account.html:92
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
-msgstr "СБРОСИТЬ ДВУХФАКТОРНУЮ АУТЕНТИФИКАЦИЮ (АППАРАТНЫЙ ТОКЕН)"
+msgstr "СБРОСИТЬ ДВУХЭТАПНУЮ АУТЕНТИФИКАЦИЮ (АППАРАТНЫЙ ТОКЕН)"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -798,8 +798,8 @@ msgstr "Вы действительно хотите удалить пользо
 msgid ""
 "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr ""
-"Вы действительно хотите сбросить двухфакторную аутентификацию для "
-"пользователя {username}?"
+"Вы действительно хотите сбросить двухэтапную аутентификацию для пользователя "
+"{username}?"
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
@@ -912,7 +912,7 @@ msgid ""
 "Thank you for sending this information to us. Please check back later for "
 "replies."
 msgstr ""
-"Благодарим вас за отправку нам этой информаци. Пожалуйста, зайдите позже, "
+"Благодарим вас за отправку нам этой информации. Пожалуйста, зайдите позже, "
 "чтобы проверить ответы."
 
 #: source_templates/first_submission_flashed_message.html:5
@@ -1252,7 +1252,7 @@ msgid ""
 "anonymously."
 msgstr ""
 "Если вы хотите отправить информацию SecureDrop, мы <strong>настоятельно "
-"рекомендуем</strong> уустановить Tor Browser и использовать его для "
+"рекомендуем</strong> установить Tor Browser и использовать его для "
 "безопасного и анонимного доступа к нашему сайту."
 
 #: source_templates/use-tor-browser.html:6
