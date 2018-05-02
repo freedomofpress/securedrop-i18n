@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-05-01 09:47+0000\n"
-"Last-Translator: Andrey <andrey@mailbox.org>\n"
+"PO-Revision-Date: 2018-05-02 20:27+0000\n"
+"Last-Translator: Adham Kurbanov <uz@zu.uz>\n"
 "Language-Team: Russian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ru/>\n"
 "Language: ru\n"
@@ -30,7 +30,7 @@ msgstr "Ваша сессия была завершена из-за неакти
 
 #: journalist_app/account.py:26
 msgid "Incorrect password or two-factor code."
-msgstr "Неверный пароль или двухфакторный код."
+msgstr "Неверный пароль или двухэтапный код."
 
 #: journalist_app/account.py:42
 msgid "Token in two-factor authentication verified."
@@ -166,7 +166,7 @@ msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
 msgstr ""
-"Пожалуйста, дождитесь нового кода второго фактора аутентификации от вашего "
+"Пожалуйста, дождитесь нового кода двухэтапной аутентификации от вашего "
 "токена или приложения, прежде чем повторить попытку."
 
 #: journalist_app/utils.py:125
@@ -264,7 +264,7 @@ msgstr "ПРОДОЛЖИТЬ"
 #: journalist_templates/account_new_two_factor.html:4
 #: journalist_templates/admin_new_user_two_factor.html:5
 msgid "Enable FreeOTP"
-msgstr "Включение FreeOTP"
+msgstr "Включить FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:5
 msgid ""
