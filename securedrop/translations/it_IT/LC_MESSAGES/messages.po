@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-02 10:38+0000\n"
+"PO-Revision-Date: 2018-05-02 11:10+0000\n"
 "Last-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\n"
 "Language-Team: Italian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/it/>\n"
@@ -211,8 +211,8 @@ msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
 msgstr ""
-"Password aggiornata. Non dimenticare di salvarla nel database KeePassX. "
-"Nuova password:"
+"Password aggiornata. Non dimenticare di salvarla nel proprio database "
+"KeePassX. Nuova password:"
 
 #: journalist_app/utils.py:307
 msgid "No unread submissions in selected collections."
@@ -252,7 +252,7 @@ msgstr "Cambia segreto"
 #: journalist_templates/admin_add_user.html:33
 #: journalist_templates/admin_edit_hotp_secret.html:8
 msgid "HOTP Secret"
-msgstr "Segreto per HOTP"
+msgstr "Segreto HOTP"
 
 #: journalist_templates/account_edit_hotp_secret.html:9
 #: journalist_templates/admin_edit_hotp_secret.html:10
@@ -307,7 +307,7 @@ msgstr ""
 msgid "Can't scan the barcode? Enter the following code manually:"
 msgstr ""
 "Non è possibile effettuare la scansione del codice a barre? Inserisci "
-"manualmente il seguente codice :"
+"manualmente il seguente codice:"
 
 #: journalist_templates/account_new_two_factor.html:15
 #: journalist_templates/admin_new_user_two_factor.html:18
@@ -482,7 +482,7 @@ msgid ""
 "to decrypt them using GPG."
 msgstr ""
 "I documenti sono archiviati in forma cifrata per ragioni di sicurezza. Per "
-"poterli leggere, dovrai decifrarli utilizzando GPG."
+"poterli leggere, è necessario decifrarli utilizzando GPG."
 
 #: journalist_templates/col.html:26
 msgid "Download Selected"
@@ -533,8 +533,8 @@ msgid ""
 "An encryption key will be generated for the source the next time they log "
 "in, after which you will be able to reply to the source here."
 msgstr ""
-"Una chiave di cifratura sarà generata per la fonte la prossima volta che si "
-"connetterà, dopodiché potrai rispondere qui."
+"Una chiave di cifratura sarà generata per la fonte la prossima volta che "
+"eseguirà l'accesso, dopodiché potrai rispondere qui."
 
 #: journalist_templates/col.html:106
 msgid "Click below if you would like to write a reply to this source."
@@ -551,8 +551,9 @@ msgid ""
 "able to login using their previous codename.</em>"
 msgstr ""
 "Fare clic qui sotto per eliminare l'archivio di questa fonte.<em>Attenzione: "
-"se lo fai, i file presenti qui saranno irrecuperabili e la fonte non sarà "
-"più in grado di accedere usando il precedente nome in codice.</em>"
+"dopo questa operazione, i file presenti qui non potranno essere recuperati e "
+"la fonte non sarà più in grado di accedere usando il precedente nome in "
+"codice.</em>"
 
 #: journalist_templates/col.html:122
 msgid "DELETE COLLECTION"
@@ -653,7 +654,7 @@ msgid ""
 "Your password will be changed immediately, so you will need to save it "
 "before pressing the \"Reset Password\" button."
 msgstr ""
-"La tua password sarà cambiata immediatamente, quindi dovrai salvarla prima "
+"La password sarà cambiata immediatamente, quindi è necessario salvarla prima "
 "di premere il pulsante \"Reimposta password\"."
 
 #: journalist_templates/edit_account.html:34
@@ -713,9 +714,9 @@ msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the Yubikey, choose the second."
 msgstr ""
-"Per reimpostare l'autenticazione a due fattori per applicazioni come "
-"FreeOTP, scegli la prima opzione. Per token hardware come la Yubikey, scegli "
-"la seconda."
+"Per reimpostare l'autenticazione a due fattori con applicazioni come "
+"FreeOTP, scegliere la prima opzione. Per token hardware come la Yubikey, "
+"scegliere la seconda."
 
 #: journalist_templates/edit_account.html:90
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
@@ -737,9 +738,9 @@ msgid ""
 "encrypted replies to them."
 msgstr ""
 "SecureDrop genererà una chiave di cifratura sicura per la fonte la prossima "
-"volta che si connetterà. Una volta che la chiave è stata generata, apparirà "
-"una casella di risposta sotto l'archivio di documenti. Puoi usare questa "
-"casella per scrivere le risposte cifrate."
+"volta che eseguirà l'accesso. Una volta che la chiave è stata generata, "
+"apparirà una casella di risposta sotto l'archivio di documenti. È possibile "
+"usare questa casella per scrivere le risposte cifrate."
 
 #: journalist_templates/flag.html:10
 msgid "Continue to the list of documents for {codename}..."
@@ -771,7 +772,7 @@ msgstr "Eliminare veramente gli archivi selezionati?"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
-msgstr "Non è stato inviato alcun documento!"
+msgstr "Non è stato inviato alcun documento."
 
 #: journalist_templates/js-strings.html:3
 msgid "filter by codename"
