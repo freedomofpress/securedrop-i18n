@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-04 10:16+0000\n"
+"PO-Revision-Date: 2018-05-04 10:18+0000\n"
 "Last-Translator: heartsucker <heartsucker@riseup.net>\n"
 "Language-Team: German <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/de/>\n"
@@ -1003,10 +1003,8 @@ msgstr ""
 "ignorieren Sie diese Warnung, um fortzufahren."
 
 #: source_templates/index.html:42
-#, fuzzy
-#| msgid "Submit documents for the first time"
 msgid "Submit for the first time"
-msgstr "Zum ersten Mal einreichen"
+msgstr "Zum ersten Mal versenden"
 
 #: source_templates/index.html:49
 msgid "Already submitted something?"
@@ -1017,26 +1015,18 @@ msgid "If this is your first time submitting to journalists, start here."
 msgstr "Wenn Sie zum ersten Mal an Journalisten versenden, starten Sie hier."
 
 #: source_templates/index.html:59
-#, fuzzy
-#| msgid ""
-#| "If you have already submitted documents in the past, log in here to check "
-#| "for responses."
 msgid ""
 "If you have already submitted to journalists, log in here to check for "
 "responses."
 msgstr ""
-"Wenn Sie bereits in der Vergangenheit Dokumente versendet haben, melden Sie "
-"sich hier an, um nach Antworten zu schauen."
+"Wenn Sie bereits an Journalisten versendet haben, melden Sie sich hier an, "
+"um nach Antworten zu schauen."
 
 #: source_templates/index.html:74
 msgid "CHECK FOR A RESPONSE"
 msgstr "NACH EINER ANTWORT SCHAUEN"
 
 #: source_templates/index.html:93
-#, fuzzy
-#| msgid ""
-#| "You appear to be using the Tor Browser. You can turn the Security Slider "
-#| "to Safest in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
