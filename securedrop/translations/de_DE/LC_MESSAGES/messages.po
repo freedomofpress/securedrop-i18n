@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-04 07:32+0000\n"
+"PO-Revision-Date: 2018-05-04 09:00+0000\n"
 "Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
 "Language-Team: German <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/de/>\n"
@@ -1153,7 +1153,7 @@ msgstr ""
 
 #: source_templates/lookup.html:20
 msgid "Submit Files or Messages"
-msgstr "Dateien oder Nachrichten senden."
+msgstr "Dateien oder Nachrichten senden"
 
 #: source_templates/lookup.html:21
 msgid ""
@@ -1273,10 +1273,13 @@ msgid "Why is there a warning about Tor2Web?"
 msgstr "Warum gibt es eine Warnung über Tor2Web?"
 
 #: source_templates/tor2web-warning.html:4
+#, fuzzy
 msgid ""
 "Using <a href=\"tor2web.org\">Tor2Web</a> to connect to SecureDrop will not "
 "protect your anonymity."
 msgstr ""
+"Die Verwendung von <a href=\"tor2web.org\">Tor2Web</a> um sich mit "
+"SecureDrop zu verbinden schützt Ihre Anonymität nicht."
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
