@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-04 10:40+0000\n"
+"PO-Revision-Date: 2018-05-04 13:00+0000\n"
 "Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -146,7 +146,7 @@ msgstr "تم تحديث الحساب."
 
 #: journalist_app/utils.py:85
 msgid "Login failed."
-msgstr "فشل الولوج"
+msgstr "فشل الولوج."
 
 #: journalist_app/utils.py:93
 msgid "Please wait at least {seconds} second before logging in again."
@@ -934,7 +934,7 @@ msgid ""
 msgstr ""
 "لاحظ أننا لا نتتبّع مستخدمي خدمة <strong>SecureDrop</strong>، لذا فاستعمال "
 "الاسم الرمزي في الزيارات المقبلة هو الوسيلة الوحيدة التي يمكننا بها التواصل "
-"معك في حال وجود أسئلة أو اهتمام بمزيد من المستندات. و على خلاف الكلمات "
+"معك في حال وجود أسئلة أو اهتمام بمزيد من المعلومات. و على خلاف الكلمات "
 "السرية، لا توجد أيّة وسيلة لاسترجاع الاسم الرمزي في حال فقدانه."
 
 #: source_templates/generate.html:44 source_templates/index.html:66
@@ -942,41 +942,26 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "أودع مستندات"
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend turning the Security Slider to Safest to protect "
-#| "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set "
-#| "it to safest</a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to move the Security Slider to Safest to protect "
 "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it "
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>نوصي بتحريك مؤشر درجة الأمن في متصفّح تور إلى أقصى درجة  لحماية "
-"مجهوليتك </strong> <a id=\"disable-js\" href=\"\">طالع عن كيفية ضبط المتصفّح "
-"على الوضع الأقصى</a>أو تجاهل هذا التحذير للمواصلة."
+"<strong>نوصي بتحريك مؤشر درجة الأمان في متصفّح تور إلى أقصى درجة  لحماية "
+"مجهوليتك : </strong> <a id=\"disable-js\" href=\"\">طالع عن كيفية ضبط المتصفّ"
+"ح على الوضع الأقصى</a> أو تجاهل هذا التحذير للمواصلة."
 
 #: source_templates/index.html:18
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend using Tor Browser to access SecureDrop:</strong> <a "
-#| "id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
-#| "a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>نوصي باستخدام  متصفح تور للنفاذ إلى سِكيوردرُب:</strong>\n"
-"<a id=\"recommend-tor\" href=\"{tor_browser_url}\">انظر كيفية فعل هذا</a> أو "
+"<strong>نوصي باستخدام  متصفح تور للنفاذ إلى سِكيوردرُب :</strong> <a id"
+"=\"recommend-tor\" href=\"{tor_browser_url}\">إطلع على خطوات التنصيب</a> أو "
 "تجاهل هذا التحذير للمواصلة."
 
 #: source_templates/index.html:19
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend using Tor Browser to access SecureDrop:</strong> <a "
-#| "id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
-#| "a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
@@ -984,15 +969,13 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
-"<strong>نوصي باستخدام  متصفح تور للنفاذ إلى سِكيوردرُب:</strong>\n"
-"<a id=\"recommend-tor\" href=\"{tor_browser_url}\">انظر كيفية فعل هذا</a> أو "
+"<strong>نوصي باستخدام  متصفح تور للنفاذ إلى سِكيوردرُب:</strong> <a id"
+"=\"recommend-tor\" href=\"{tor_browser_url}\">إطلع على خطوات التنصيب</a> أو "
 "تجاهل هذا التحذير للمواصلة."
 
 #: source_templates/index.html:42
-#, fuzzy
-#| msgid "Submit documents for the first time"
 msgid "Submit for the first time"
-msgstr "أودع مستندات للمرة الأولى"
+msgstr "الإيداع لأول مرة"
 
 #: source_templates/index.html:49
 msgid "Already submitted something?"
@@ -1231,6 +1214,8 @@ msgid ""
 "Using <a href=\"tor2web.org\">Tor2Web</a> to connect to SecureDrop will not "
 "protect your anonymity."
 msgstr ""
+"إنّ استخدام <a href=\"tor2web.org\">Tor2Web</a> للإتصال بـ SecureDrop لن "
+"يضمن حماية مجهوليتك."
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
