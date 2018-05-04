@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-04 07:26+0000\n"
+"PO-Revision-Date: 2018-05-04 09:00+0000\n"
 "Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
 "Language-Team: Dutch <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/nl/>\n"
@@ -1152,7 +1152,7 @@ msgstr "<a href=\"{url}\" class=\"text-link\">Lees meer</a>."
 #, fuzzy
 #| msgid "You can send a file, a message, or both."
 msgid "You can submit any kind of file, a message, or both."
-msgstr "U kunt een bestand, bericht of beide versturen."
+msgstr "U kunt elk soort bestand, een bericht of beide versturen."
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
@@ -1182,8 +1182,8 @@ msgstr ""
 "U heeft een reactie ontvangen. Om uw identiteit te beschermen voor het "
 "onwaarschijnlijke geval dat iemand uw codenaam kent, adviseren wij om alle "
 "reacties te verwijderen zodra u er klaar mee bent. Hierdoor weten wij ook "
-"dat u onze reactie heeft gezien. U kunt reageren door een nieuw bericht "
-"hierboven te versturen."
+"dat u onze reactie heeft gezien. U kunt reageren door nieuwe bestanden en "
+"bericht hierboven te versturen."
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
