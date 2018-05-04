@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-04 09:00+0000\n"
-"Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
+"PO-Revision-Date: 2018-05-04 10:16+0000\n"
+"Last-Translator: heartsucker <heartsucker@riseup.net>\n"
 "Language-Team: German <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/de/>\n"
 "Language: de_DE\n"
@@ -86,10 +86,8 @@ msgid "Only administrators can access this page."
 msgstr "Nur Administratoren haben Zugriff auf diese Seite."
 
 #: journalist_app/forms.py:19
-#, fuzzy
-#| msgid "Field must be 40 characters long but got {num_chars}."
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
-msgstr "Das Feld muss 40 Zeichen lang sein, hat aber {num_chars}."
+msgstr "HOTP-Geheimnisse sind 40 Zeichen lang. Du hast {num_chars} eingegeben."
 
 #: journalist_app/forms.py:30
 msgid ""
@@ -945,13 +943,6 @@ msgstr ""
 "Schritt versenden."
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we do not track users of our <strong>SecureDrop</strong>\n"
-#| " service, in future visits, using this codename will be the only way we "
-#| "have to communicate with you should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"
 " service, in future visits, using this codename will be the only way we have "
@@ -961,7 +952,7 @@ msgid ""
 msgstr ""
 "Wir verfolgen keine Nutzer unseres <strong>SecureDrop</strong>-Dienstes.\n"
 "Daher ist dieser Deckname die einzige Möglichkeit, um in Zukunft mit Ihnen "
-"zu kommunizieren, sollten wir Fragen haben oder an weiteren Dokumenten "
+"zu kommunizieren, sollten wir Fragen haben oder an weiteren Information "
 "interessiert sein.\n"
 "Anders als bei Passwörtern gibt es keine Möglichkeit, einen verlorenen "
 "Decknamen wiederherzustellen."
@@ -971,36 +962,26 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "DOKUMENTE VERSENDEN"
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend turning the Security Slider to Safest to protect "
-#| "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set "
-#| "it to safest</a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to move the Security Slider to Safest to protect "
 "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it "
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Wir empfehlen, die Sicherheitseinstellungen auf 'Am sichersten' zu "
-"stellen, um Ihre Anonymität zu schützen:</strong><a id=\"disable-js\" href="
-"\"\">Erfahren Sie, wie man ihn auf am sichersten einstellt</a> oder "
+"<strong>Es wird empfohlen, die Sicherheitseinstellungen auf 'Am sichersten' "
+"zu stellen, um Ihre Anonymität zu schützen:</strong><a id=\"disable-js\" "
+"href=\"\">Erfahren Sie, wie man ihn auf Am Sichersten einstellt</a> oder "
 "ignorieren Sie diese Warnung, um fortzufahren."
 
 #: source_templates/index.html:18
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend using Tor Browser to access SecureDrop:</strong> <a "
-#| "id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
-#| "a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Wir empfehlen die Nutzung des Tor-Browsers für den Zugriff auf "
-"SecureDrop:</strong> <a id=\"recommend-tor\" href="
-"\"{tor_browser_url}\">Erfahren Sie, wie Sie ihn installieren</a> oder "
-"ignorieren Sie diese Warnung, um fortzufahren."
+"<strong>Es wir empfohlen, die Nutzung des Tor-Browsers für den Zugriff auf "
+"SecureDrop:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">"
+"Erfahren Sie, wie Sie ihn installieren</a> oder ignorieren Sie diese "
+"Warnung, um fortzufahren."
 
 #: source_templates/index.html:19
 #, fuzzy
@@ -1015,30 +996,25 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
-"<strong>Wir empfehlen die Nutzung des Tor-Browsers für den Zugriff auf "
-"SecureDrop:</strong> <a id=\"recommend-tor\" href="
-"\"{tor_browser_url}\">Erfahren Sie, wie Sie ihn installieren</a> oder "
+"<strong>Es wir empfohlen, die Nutzung der Desktop-Version des Tor-Browsers "
+"für den Zugriff auf SecureDrop, weil Orfox nicht das gleiche Sicherheit und "
+"Anonymität bietet, als die Desktop-Version.</strong> <a id=\"recommend-tor\" "
+"href=\"{tor_browser_url}\">Erfahren Sie, wie Sie ihn installieren</a> oder "
 "ignorieren Sie diese Warnung, um fortzufahren."
 
 #: source_templates/index.html:42
 #, fuzzy
 #| msgid "Submit documents for the first time"
 msgid "Submit for the first time"
-msgstr "Zum ersten Mal Dokumente senden"
+msgstr "Zum ersten Mal einreichen"
 
 #: source_templates/index.html:49
 msgid "Already submitted something?"
 msgstr "Haben Sie bereits etwas versendet?"
 
 #: source_templates/index.html:55
-#, fuzzy
-#| msgid ""
-#| "If this is your first time submitting documents to journalists, start "
-#| "here."
 msgid "If this is your first time submitting to journalists, start here."
-msgstr ""
-"Wenn Sie zum ersten Mal Dokumente an Journalisten versenden, starten Sie "
-"hier."
+msgstr "Wenn Sie zum ersten Mal an Journalisten versenden, starten Sie hier."
 
 #: source_templates/index.html:59
 #, fuzzy
