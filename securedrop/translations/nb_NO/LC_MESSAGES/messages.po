@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-04 07:52+0000\n"
+"PO-Revision-Date: 2018-05-04 09:00+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/nb_NO/>\n"
@@ -949,9 +949,9 @@ msgid ""
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Det er anbefalt å bruke Tor-nettleseren for å nå SecureDrop:</"
-"strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Lær hvordan du "
-"installerer den</a>, eller se bort fra denne advarselen for å fortsette uten."
+"<strong>Det anbefales å bruke Tor-nettleseren for å nå SecureDrop:</strong> <"
+"a id=\"recommend-tor\" href=\"{tor_browser_url}\">Lær hvordan du installerer "
+"den</a>, eller se bort fra denne advarselen for å fortsette uten."
 
 #: source_templates/index.html:19
 msgid ""
@@ -1093,7 +1093,7 @@ msgstr "<a href=\"{url}\" class=\"text-link\">Lær mer</a>."
 
 #: source_templates/lookup.html:24
 msgid "You can submit any kind of file, a message, or both."
-msgstr "Du kan sende alle typer filer, ei melding, eller begge deler."
+msgstr "Du kan sende alle typer filer, en melding, eller begge deler."
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
@@ -1116,8 +1116,8 @@ msgid ""
 msgstr ""
 "Du har mottatt et svar. For å beskytte din egen identitet i tilfelle noen "
 "skulle få tak i kodenavnet ditt, slett alle svar når du har lest dem. Dette "
-"gjør også at vi enklere kan se at du har lest svarene. Du kan fortsette "
-"kommunikasjonen ved å sende inn nye filer eller meldinger over."
+"gjør også at vi enklere kan se at du har lest dem. Du kan fortsette "
+"kommunikasjonen ved å sende inn nye filer eller meldinger ovenfor."
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
@@ -1197,8 +1197,8 @@ msgid ""
 "It could be possible for anyone listening to Internet usage (your "
 "government, your Internet provider), to identify you."
 msgstr ""
-"Det er en mulighet for at alle som kan følge med på internettbruken din "
-"(myndigheter, din internettilbyder) kan identifisere deg."
+"Det er en mulighet for at alle som kan følge med på internettbruken din ("
+"myndigheter, internettilbyderen din) kan identifisere deg."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
