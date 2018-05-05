@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2018-05-05 11:14+0000\n"
-"Last-Translator: Abhishek Jaiswal <abhijais9451@gmail.com>\n"
+"Last-Translator: Drashti <drashtipandya37@gmail.com>\n"
 "Language-Team: Hindi <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/hi/>\n"
 "Language: hi\n"
@@ -111,7 +111,7 @@ msgstr "आवश्यक फाइल।"
 
 #: journalist_app/forms.py:62
 msgid "You can only upload JPG/JPEG or PNG image files."
-msgstr ""
+msgstr "आप केवल JPG/JPEG या PNG छवि फ़ाइलों को अपलोड कर सकते हैं।"
 
 #: journalist_app/main.py:117 journalist_app/utils.py:47
 #: journalist_app/utils.py:137
@@ -565,7 +565,7 @@ msgstr "यहां आप SecureDrop वेब इंटरफेस पर �
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
-msgstr ""
+msgstr "अनुशंसित आकार: 500px * 450px"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
@@ -1097,7 +1097,7 @@ msgstr ""
 
 #: source_templates/lookup.html:20
 msgid "Submit Files or Messages"
-msgstr ""
+msgstr "फ़ाइलें या संदेश जमा करें"
 
 #: source_templates/lookup.html:21
 msgid ""
@@ -1218,18 +1218,24 @@ msgid ""
 "Using <a href=\"tor2web.org\">Tor2Web</a> to connect to SecureDrop will not "
 "protect your anonymity."
 msgstr ""
+"SecureDrop से कनेक्ट करने के लिए <a href=\"tor2web.org\">Tor2Web</a> का उपयो"
+"ग करने से आपकी अनामिकता की रक्षा नहीं होगी।"
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
 "It could be possible for anyone listening to Internet usage (your "
 "government, your Internet provider), to identify you."
 msgstr ""
+"आपको पहचानने के लिए इंटरनेट उपयोग (आपकी सरकार, आपका इंटरनेट प्रदाता) सुनने "
+"वाले किसी के लिए यह संभव हो सकता है।"
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor browser</a> instead."
 msgstr ""
+"हम <strong>दृढ़ता से सलाह देते हैं</ strong> आप <a href=\"www.torproject.org/"
+"projects/torbrowser.html\"> Tor browser </a> ब्राउज़र का उपयोग करने के लिए."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
