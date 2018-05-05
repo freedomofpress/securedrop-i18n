@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-04 13:00+0000\n"
+"PO-Revision-Date: 2018-05-05 22:00+0000\n"
 "Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -88,10 +88,8 @@ msgid "Only administrators can access this page."
 msgstr "النّفاذ إلى هذه الصفحة متاح للإداريين وحدهم."
 
 #: journalist_app/forms.py:19
-#, fuzzy
-#| msgid "Field must be 40 characters long but got {num_chars}."
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
-msgstr "يجب أن يحوي هذا الحقل 40 مَحرَفًا لكنّه الآن يحوي {num_chars}."
+msgstr "يجب أن يحوي حقل HOTP على 40 مَحرَفًا لكنّه الآن يحوي {num_chars}."
 
 #: journalist_app/forms.py:30
 msgid ""
@@ -982,39 +980,28 @@ msgid "Already submitted something?"
 msgstr "هل سبق لك إيداع شيء؟"
 
 #: source_templates/index.html:55
-#, fuzzy
-#| msgid ""
-#| "If this is your first time submitting documents to journalists, start "
-#| "here."
 msgid "If this is your first time submitting to journalists, start here."
 msgstr ""
 "ابدأ هنا في حال كانت هذه المرة الأولى التي تودع فيها مستندات لدى صحافيينا."
 
 #: source_templates/index.html:59
-#, fuzzy
-#| msgid ""
-#| "If you have already submitted documents in the past, log in here to check "
-#| "for responses."
 msgid ""
 "If you have already submitted to journalists, log in here to check for "
 "responses."
-msgstr "إذا كنت قد أودعت مسبقًا مستندات لدينا فلِج هنا لترى إن كانت لك رسائل."
+msgstr ""
+"إذا كنت قد أودعت مسبقًا مستندات لدى صحافيينا فلِج هنا لترى إن استلمتَ أجوبة."
 
 #: source_templates/index.html:74
 msgid "CHECK FOR A RESPONSE"
 msgstr "تَفحَّص إنْ وصلك رَدّ منّا"
 
 #: source_templates/index.html:93
-#, fuzzy
-#| msgid ""
-#| "You appear to be using the Tor Browser. You can turn the Security Slider "
-#| "to Safest in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
 msgstr ""
-"يبدو أنّك تستخدم متصفح تور. يمكنك ضبط مؤشر الأمن إلى الحد الأقصى في أربع "
-"خطوات سهلة!"
+"يبدو أنّك تستخدم متصفح تور. يمكنك ضبط مؤشر الأمان إلى الحد الأقصى في أربع "
+"خطوات."
 
 #: source_templates/index.html:95
 msgid ""
@@ -1026,13 +1013,10 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "انقر على <strong>إعدادات الأمان...</strong>"
 
 #: source_templates/index.html:97
-#, fuzzy
-#| msgid ""
-#| "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
 msgstr ""
-"حرك الشريط إلى <strong>الأكثر أمانا</strong>، ثم انقر على <strong>Ok</strong>"
+"حرك الشريط إلى <strong>الأكثر أمانا</strong>، ثم انقر على <strong>OK</strong>"
 
 #: source_templates/index.html:98
 msgid "<a href=\"/\">Click here</a> to refresh the page"
@@ -1069,18 +1053,13 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "يا للعجب.. هذا أنت! و&nbsp;الآن الجزء المحرج..."
 
 #: source_templates/lookup.html:12
-#, fuzzy
-#| msgid ""
-#| "Our servers experienced an unusual surge of new activity, when you last "
-#| "visited. To err on the side of caution, we put a hold on sending all "
-#| "documents from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all files "
 "and messages from that day through to our journalists."
 msgstr ""
 "عندما زرتنا آخر مرة شهدت خواديمنا ارتفاعًا حادًّا في مستوى النشاط. و من باب "
-"الاحتياط علّقنا إرسال مستنداتك إلى صحافيينا منذ ذلك اليوم."
+"الاحتياط علّقنا إرسال الملفات و الرسائل إلى صحافيينا منذ ذلك اليوم."
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1111,10 +1090,8 @@ msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
 msgstr "<a href=\"{url}\" class=\"text-link\">لمعرفة المزيد</a>."
 
 #: source_templates/lookup.html:24
-#, fuzzy
-#| msgid "You can send a file, a message, or both."
 msgid "You can submit any kind of file, a message, or both."
-msgstr "يمكنك إرسال ملف أو رسالة، أو كليهما."
+msgstr "يمكنك إرسال أي نوع من الملفات أو الرسائل، أو كليهما."
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
@@ -1129,12 +1106,6 @@ msgid "Read Replies"
 msgstr "قراءة الردود"
 
 #: source_templates/lookup.html:58
-#, fuzzy
-#| msgid ""
-#| "You have received a reply. To protect your identity in the unlikely event "
-#| "someone learns your codename, please delete all replies when you're done "
-#| "with them. This also lets us know that you are aware of our reply. You "
-#| "can respond by submitting a new message above."
 msgid ""
 "You have received a reply. To protect your identity in the unlikely event "
 "someone learns your codename, please delete all replies when you're done "
@@ -1142,8 +1113,8 @@ msgid ""
 "respond by submitting new files and messages above."
 msgstr ""
 "لقد تلقيت رسالة. لدواعي حماية هويتك من الانكشاف في حال انكشاف هويتك ننصح "
-"بحذف كُلّ الردود بعد قراءتها. هذا سيُعلمنا أيضا أنك تلقيّت ردّنا. كما يمكنك الرّدّ "
-"بكتابة رسالة جديدة."
+"بحذف كُلّ الردود بعد قراءتها. هذا سيُعلمنا أيضا أنك تلقيّت ردّنا. كما يمكنك "
+"الرّدّ بكتابة رسائل جديدة أو إرسال ملفات جديدة."
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
