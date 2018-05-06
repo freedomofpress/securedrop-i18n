@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-04-30 17:11+0000\n"
-"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
+"PO-Revision-Date: 2018-05-06 08:31+0000\n"
+"Last-Translator: Bernardo Tonasse <btonasse@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -994,10 +994,6 @@ msgid "If this is your first time submitting to journalists, start here."
 msgstr "Se este for o seu primeiro envio, comece por aqui."
 
 #: source_templates/index.html:59
-#, fuzzy
-#| msgid ""
-#| "If you have already submitted to journalists in the past, log in here to "
-#| "check for responses."
 msgid ""
 "If you have already submitted to journalists, log in here to check for "
 "responses."
@@ -1070,19 +1066,14 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "Ufa, é você mesmo! Agora, a parte mais delicada..."
 
 #: source_templates/lookup.html:12
-#, fuzzy
-#| msgid ""
-#| "Our servers experienced an unusual surge of new activity, when you last "
-#| "visited. To err on the side of caution, we put a hold on sending all  "
-#| "files and messages from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all files "
 "and messages from that day through to our journalists."
 msgstr ""
 "Nossos servidores detectaram um aumento inesperado de atividade durante a "
-"sua última visita. Por medida de precaução, suspendemos o envio de todos os "
-"documentos e mensagens a nossos jornalistas durante aquele dia."
+"sua última visita. Por medida de precaução, suspendemos a entrega de todos "
+"os documentos e mensagens enviados a nossos jornalistas naquele dia."
 
 #: source_templates/lookup.html:14
 msgid ""
