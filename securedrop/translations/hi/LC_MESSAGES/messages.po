@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-05-06 14:54+0000\n"
+"PO-Revision-Date: 2018-05-06 14:58+0000\n"
 "Last-Translator: Drashti <drashtipandya37@gmail.com>\n"
 "Language-Team: Hindi <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/hi/>\n"
@@ -994,13 +994,11 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "<strong>सुरक्षा सेटिंग..</strong>पर दबाएँ"
 
 #: source_templates/index.html:97
-#, fuzzy
-#| msgid ""
-#| "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
 msgstr ""
-"स्लाइडर को <strong>सबसे सुरक्षित</strong> पर करें, फिर <strong>Ok पर दबाएँ</strong>"
+"स्लाइडर को <strong>सबसे सुरक्षित</strong> चालऐ, फिर <strong>Ok</strong> पर "
+"दबाएँ"
 
 #: source_templates/index.html:98
 msgid "<a href=\"/\">Click here</a> to refresh the page"
@@ -1038,19 +1036,14 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "अरे, यह आप हो! अब, शर्मनाक हिस्सा..."
 
 #: source_templates/lookup.html:12
-#, fuzzy
-#| msgid ""
-#| "Our servers experienced an unusual surge of new activity, when you last "
-#| "visited. To err on the side of caution, we put a hold on sending all "
-#| "documents from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all files "
 "and messages from that day through to our journalists."
 msgstr ""
-"जब आपने पिछली बार मुलाक़ात की थी, तो हमारे सर्वरों ने नई गतिविधि की असामान्य वृद्धि "
-"देखी। सावधानी के पक्ष में गलती करने के लिए, हम उस दिन से हमारे पत्रकारों के माध्यम से सभी "
-"दस्तावेज भेजने पर रोक लगाते हैं।"
+"जब आपने पिछली बार मुलाक़ात की थी, तो हमारे सर्वरों ने नई गतिविधि की असामान्य "
+"वृद्धि देखी। सावधानी के पक्ष में गलती करने के लिए, हम उस दिन से हमारे "
+"पत्रकारों के माध्यम से सभी फाइलें और संदेश भेजने पर रोक लगाते हैं।"
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1082,10 +1075,8 @@ msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
 msgstr "<a href=\"{url}\" class=\"text-link\">अधिक जानें</a>|"
 
 #: source_templates/lookup.html:24
-#, fuzzy
-#| msgid "You can send a file, a message, or both."
 msgid "You can submit any kind of file, a message, or both."
-msgstr "आप एक फ़ाइल, एक संदेश या दोनों भेज सकते हैं|"
+msgstr "आप किसी भी तरह की फाइल, एक संदेश, या दोनों जमा कर सकते हैं।"
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
@@ -1100,21 +1091,16 @@ msgid "Read Replies"
 msgstr "उत्तर पढ़ें"
 
 #: source_templates/lookup.html:58
-#, fuzzy
-#| msgid ""
-#| "You have received a reply. To protect your identity in the unlikely event "
-#| "someone learns your codename, please delete all replies when you're done "
-#| "with them. This also lets us know that you are aware of our reply. You "
-#| "can respond by submitting a new message above."
 msgid ""
 "You have received a reply. To protect your identity in the unlikely event "
 "someone learns your codename, please delete all replies when you're done "
 "with them. This also lets us know that you are aware of our reply. You can "
 "respond by submitting new files and messages above."
 msgstr ""
-"आपको एक उत्तर मिला है| किसी अनपेक्षित परिस्थिति में की आपका संकेत नाम किसी को पता चल "
-"जाये, कृपया पढ़े जा चुके उत्तरों तो मिटा दें| यह इस बात की भी पुष्टि कर देता है की आपको "
-"हमारा उत्तर मिल गया है| आप नए सन्देश भी जमा कर सकते हैं|"
+"आपको एक उत्तर मिला है| किसी अनपेक्षित परिस्थिति में की आपका संकेत नाम किसी को"
+" पता चल जाये, कृपया पढ़े जा चुके उत्तरों तो मिटा दें| यह इस बात की भी पुष्टि "
+"कर देता है की आपको हमारा उत्तर मिल गया है| आप नई फाइलें और संदेश भी जमा कर "
+"सकते हैं|"
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
