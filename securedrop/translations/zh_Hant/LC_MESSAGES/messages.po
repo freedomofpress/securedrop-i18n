@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-04-30 02:02+0000\n"
+"PO-Revision-Date: 2018-05-06 11:11+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.securedrop.club/"
 "projects/securedrop/securedrop/zh_Hant/>\n"
@@ -917,14 +917,10 @@ msgid "If this is your first time submitting to journalists, start here."
 msgstr "如果是第一次要提交資訊給記者，請從這裡開始。"
 
 #: source_templates/index.html:59
-#, fuzzy
-#| msgid ""
-#| "If you have already submitted to journalists in the past, log in here to "
-#| "check for responses."
 msgid ""
 "If you have already submitted to journalists, log in here to check for "
 "responses."
-msgstr "如果您已提交過文件，您可以登入來查閱回覆。"
+msgstr "如果您已提交過文件，您可在此登入來查閱回覆。"
 
 #: source_templates/index.html:74
 msgid "CHECK FOR A RESPONSE"
@@ -985,18 +981,11 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "哎呀，是您！ 現在遇上尷尬的狀況..."
 
 #: source_templates/lookup.html:12
-#, fuzzy
-#| msgid ""
-#| "Our servers experienced an unusual surge of new activity, when you last "
-#| "visited. To err on the side of caution, we put a hold on sending all  "
-#| "files and messages from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all files "
 "and messages from that day through to our journalists."
-msgstr ""
-"在您上次訪問後，我們的伺服器經歷了一次不尋常的新活動。基於謹慎考量，我們會標"
-"記錯誤，並扣住當天起原本要發送給記者的所有檔案和訊息。"
+msgstr "在您上次訪問後，我們的伺服器經歷了一次不尋常的新活動。基於謹慎考量，我們會標記錯誤，並扣住當天起原本要發送給記者的所有檔案和訊息。"
 
 #: source_templates/lookup.html:14
 msgid ""
