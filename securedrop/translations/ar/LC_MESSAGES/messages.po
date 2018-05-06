@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-05 22:00+0000\n"
+"PO-Revision-Date: 2018-05-06 09:00+0000\n"
 "Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -1197,10 +1197,13 @@ msgstr ""
 "الخاص بكم) أن يحدد هويتك."
 
 #: source_templates/tor2web-warning.html:6
+#, fuzzy
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor browser</a> instead."
 msgstr ""
+"<strong>ننصحكم</strong> بإلحاح باستخدام <a href=\"www.torproject.org/"
+"projects/torbrowser.html\">متصفح تور</a> عِوضًا عن ذلك."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
