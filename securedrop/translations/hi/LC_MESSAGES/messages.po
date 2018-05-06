@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-05-06 09:42+0000\n"
+"PO-Revision-Date: 2018-05-06 09:43+0000\n"
 "Last-Translator: Muhammad Usman <muhdusman98@gmail.com>\n"
 "Language-Team: Hindi <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/hi/>\n"
@@ -962,19 +962,15 @@ msgstr "पहले से कुछ जमा किया है?"
 #: source_templates/index.html:55
 msgid "If this is your first time submitting to journalists, start here."
 msgstr ""
-"यदि यह पत्रकारों को सबमिट करने वाला आपका पहला समय है, तो यहां से शुरू करें।"
+"यदि यह पत्रकारों को जमा करने वाला आपका पहला समय है, तो यहां से शुरू करें।"
 
 #: source_templates/index.html:59
-#, fuzzy
-#| msgid ""
-#| "If you have already submitted documents in the past, log in here to check "
-#| "for responses."
 msgid ""
 "If you have already submitted to journalists, log in here to check for "
 "responses."
 msgstr ""
-"यदि आपने पहले ही दस्तावेजों को अतीत में सबमिट किया है, तो जवाबों की जांच के लिए यहां लॉग "
-"इन करें।"
+"यदि आप पहले से ही पत्रकारों को जमा कर चुके हैं, तो प्रतिक्रियाओं की जांच के "
+"लिए यहां लॉग इन करें।"
 
 #: source_templates/index.html:74
 msgid "CHECK FOR A RESPONSE"
