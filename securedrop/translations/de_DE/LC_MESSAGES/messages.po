@@ -288,7 +288,7 @@ msgstr "Öffnen Sie die FreeOTP-App"
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
 msgid "Tap the QR code symbol at the top"
-msgstr "Tippen Sie oben auf das QR-Code-Symbol."
+msgstr "Tippen Sie oben auf das QR-Code-Symbol"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
