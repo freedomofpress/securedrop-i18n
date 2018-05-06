@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-06 16:59+0000\n"
+"PO-Revision-Date: 2018-05-06 17:14+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/de/>\n"
@@ -968,9 +968,9 @@ msgid ""
 "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it "
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Es wird empfohlen, die Sicherheitseinstellungen auf 'Am sichersten' "
+"<strong>Es wird empfohlen, den Sicherheits-Schieberegler auf 'Am sichersten' "
 "zu stellen, um Ihre Anonymität zu schützen:</strong><a id=\"disable-js\" "
-"href=\"\">Erfahren Sie, wie man ihn auf Am Sichersten einstellt</a> oder "
+"href=\"\">Erfahren Sie, wie man ihn auf 'Am sichersten' einstellt</a> oder "
 "ignorieren Sie diese Warnung, um fortzufahren."
 
 #: source_templates/index.html:18
@@ -979,8 +979,8 @@ msgid ""
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Es wir empfohlen, die Nutzung des Tor-Browsers für den Zugriff auf "
-"SecureDrop:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">"
+"<strong>Es wird empfohlen, für den Zugriff auf SecureDrop den Tor-Browser zu "
+"verwenden:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">"
 "Erfahren Sie, wie Sie ihn installieren</a> oder ignorieren Sie diese "
 "Warnung, um fortzufahren."
 
@@ -992,15 +992,15 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
-"<strong>Es wird empfohlen, die Nutzung der Desktop-Version des Tor-Browsers "
-"für den Zugriff auf SecureDrop, weil Orfox nicht das gleiche Sicherheit und "
-"Anonymität bietet, als die Desktop-Version.</strong> <a id=\"recommend-tor\" "
-"href=\"{tor_browser_url}\">Erfahren Sie, wie Sie ihn installieren</a> oder "
-"ignorieren Sie diese Warnung, um fortzufahren."
+"<strong>Es wird empfohlen, für den Zugriff auf SecureDrop die Desktop-"
+"Version des Tor-Browsers zu verwenden, da Orfox nicht das gleiche Maß an "
+"Sicherheit und Anonymität bietet wie die Desktop-Versionen.</strong> <a id"
+"=\"recommend-tor\" href=\"{tor_browser_url}\">Erfahren Sie, wie Sie ihn "
+"installieren</a> oder ignorieren Sie diese Warnung, um fortzufahren."
 
 #: source_templates/index.html:42
 msgid "Submit for the first time"
-msgstr "Zum ersten Mal absenden"
+msgstr "Zum ersten Mal versenden"
 
 #: source_templates/index.html:49
 msgid "Already submitted something?"
@@ -1008,7 +1008,7 @@ msgstr "Haben Sie bereits etwas versendet?"
 
 #: source_templates/index.html:55
 msgid "If this is your first time submitting to journalists, start here."
-msgstr "Wenn Sie zum ersten Mal an Journalisten versenden, starten Sie hier."
+msgstr "Starten Sie hier, wenn Sie zum ersten Mal an Journalisten versenden."
 
 #: source_templates/index.html:59
 msgid ""
@@ -1027,8 +1027,8 @@ msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
 msgstr ""
-"Sie scheinen den Tor-Browser zu verwenden. In 4 einfachen Schritten können "
-"Sie Ihre Sicherheitseinstellungen auf 'Am sichersten' stellen."
+"Sie scheinen den Tor-Browser zu verwenden. In vier Schritten können Sie den "
+"Sicherheits-Schieberegler auf 'Am sichersten' stellen."
 
 #: source_templates/index.html:95
 msgid ""
@@ -1045,8 +1045,8 @@ msgstr "Klicken Sie auf <strong>Sicherheitseinstellungen...</strong>"
 msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
 msgstr ""
-"Stellen Sie den Schieber auf <strong>'Am sichersten'</strong>, klicken Sie "
-"dann <strong>OK</strong>"
+"Stellen Sie den Schieberegler auf <strong>'Am sichersten'</strong>, klicken "
+"Sie dann auf <strong>OK</strong>"
 
 #: source_templates/index.html:98
 msgid "<a href=\"/\">Click here</a> to refresh the page"
@@ -1091,8 +1091,8 @@ msgid ""
 msgstr ""
 "Bei Ihrem letzten Besuch haben unsere Server eine ungewöhliche "
 "Aktivitätssteigerung entdeckt. Um auf Nummer sicher zu gehen, haben wir das "
-"Versenden aller Datei und Nachrichten an unsere Journalisten von diesem Tag "
-"an aufgehalten."
+"Versenden aller Dateien und Nachrichten an unsere Journalisten von diesem "
+"Tag an aufgehalten."
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1107,7 +1107,7 @@ msgstr ""
 
 #: source_templates/lookup.html:20
 msgid "Submit Files or Messages"
-msgstr "Dateien oder Nachrichten senden"
+msgstr "Dateien oder Nachrichten versenden"
 
 #: source_templates/lookup.html:21
 msgid ""
@@ -1126,7 +1126,7 @@ msgstr "<a href=\"{url}\" class=\"text-link\">Erfahren Sie mehr</a>."
 
 #: source_templates/lookup.html:24
 msgid "You can submit any kind of file, a message, or both."
-msgstr "Sie können jede Art von Datei, eine Nachricht oder beides senden."
+msgstr "Sie können jede Art von Datei, eine Nachricht oder beides versenden."
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
@@ -1150,8 +1150,8 @@ msgstr ""
 "Sie haben eine Antwort erhalten. Um Ihre Identität zu schützen, falls jemand "
 "unwahrscheinlicherweise Ihren Decknamen erfährt, löschen Sie bitte alle "
 "Antworten, sobald Sie gelesen sind. Dann bekommen auch wir mit, dass Sie die "
-"Antwort erhalten haben. Sie können antworten, indem Sie oben neue Datein "
-"Nachrichten versenden."
+"Antwort erhalten haben. Sie können antworten, indem Sie oben neue Dateien "
+"und Nachrichten versenden."
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
@@ -1223,16 +1223,16 @@ msgid ""
 "Using <a href=\"tor2web.org\">Tor2Web</a> to connect to SecureDrop will not "
 "protect your anonymity."
 msgstr ""
-"Die Verwendung von <a href=\"tor2web.org\">Tor2Web</a> um sich mit "
-"SecureDrop zu verbinden schützt Ihre Anonymität nicht."
+"Die Verwendung von <a href=\"tor2web.org\">Tor2Web</a>, um sich mit "
+"SecureDrop zu verbinden, schützt Ihre Anonymität nicht."
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
 "It could be possible for anyone listening to Internet usage (your "
 "government, your Internet provider), to identify you."
 msgstr ""
-"Es könnte für jeden möglich sein, Ihren Internetverkehr zu überwachen (z.B., "
-"Ihre Regierung, Ihr Internetanbieter), um Sie zu identifizieren."
+"Es könnte für jeden möglich sein, Ihren Internetverkehr zu überwachen (Ihre "
+"Regierung, Ihr Internetanbieter), um Sie zu identifizieren."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
