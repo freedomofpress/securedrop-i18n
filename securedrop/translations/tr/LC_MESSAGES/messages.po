@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-05-06 09:00+0000\n"
+"PO-Revision-Date: 2018-05-06 09:48+0000\n"
 "Last-Translator: tekrei <tekrei@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/tr/>\n"
@@ -89,12 +89,10 @@ msgid "Only administrators can access this page."
 msgstr "Yalnızca yöneticiler bu sayfaya erişebilir."
 
 #: journalist_app/forms.py:19
-#, fuzzy
-#| msgid "Field must be 40 characters long but got {num_chars}."
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgstr ""
-"Alanın 40 karakter uzunluğunda olması gerekiyor, şu an sadece {num_chars} "
-"karakter."
+"HOTP gizli kelimeleri 40 karakter uzunluğundadır - siz {num_chars} karakter "
+"girdiniz."
 
 #: journalist_app/forms.py:30
 msgid ""
@@ -928,13 +926,6 @@ msgstr ""
 "kullanacaksınız."
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we do not track users of our <strong>SecureDrop</strong>\n"
-#| " service, in future visits, using this codename will be the only way we "
-#| "have to communicate with you should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"
 " service, in future visits, using this codename will be the only way we have "
@@ -943,8 +934,8 @@ msgid ""
 "there is no way to retrieve a lost codename."
 msgstr ""
 "<strong>SecureDrop</strong> hizmeti kullanıcılarımızı izlemediğimiz için\n"
-"sizinle iletişim kurabilmemiz, soru sorabilmemiz veya ek belge ihtiyaçlarını "
-"bildirebilmemiz için sonraki ziyaretlerinizde\n"
+"sizinle iletişim kurabilmemiz, soru sorabilmemiz veya ek enformasyon "
+"ihtiyaçlarını bildirebilmemiz için sonraki ziyaretlerinizde\n"
 "bu kod adını kullanmanız tek yoldur. Parolaların aksine kod adı "
 "kaybolduğunda tekrar bulmanın imkanı yoktur."
 
@@ -953,36 +944,26 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "BELGE GÖNDER"
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend turning the Security Slider to Safest to protect "
-#| "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set "
-#| "it to safest</a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to move the Security Slider to Safest to protect "
 "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it "
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
 "<strong>Anonimliğinizi korumanız için Güvenlik Çubuğunu En Güvenli düzeyine "
-"getirmenizi öneriyoruz:</strong><a id=\"disable-js\" href=\"\">Ayarı nasıl "
-"En Güvenli yapabileceğinizi öğrenin</a> veya devam edebilmek için bu uyarıyı "
+"getirmeniz önerilir:</strong><a id=\"disable-js\" href=\"\">Ayarı nasıl En "
+"Güvenli yapabileceğinizi öğrenin</a> veya devam edebilmek için bu uyarıyı "
 "görmezden gelin."
 
 #: source_templates/index.html:18
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend using Tor Browser to access SecureDrop:</strong> <a "
-#| "id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
-#| "a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>SecureDrop uygulamasına erişmek için Tor Tarayıcı kullanmanızı "
-"öneriyoruz:</strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">Nasıl "
-"kuracağınızı öğrenin</a> veya devam edebilmek için bu uyarıyı görmezden "
-"gelin."
+"<strong>SecureDrop uygulamasına erişmek için Tor Tarayıcı kullanmanız "
+"önerilmektedir:</strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">"
+"Nasıl kuracağınızı öğrenin</a> veya devam edebilmek için bu uyarıyı "
+"görmezden gelin."
 
 #: source_templates/index.html:19
 #, fuzzy
