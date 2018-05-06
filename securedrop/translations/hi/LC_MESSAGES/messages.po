@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-05-05 13:00+0000\n"
-"Last-Translator: Drashti <drashtipandya37@gmail.com>\n"
+"PO-Revision-Date: 2018-05-06 09:42+0000\n"
+"Last-Translator: Muhammad Usman <muhdusman98@gmail.com>\n"
 "Language-Team: Hindi <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/hi/>\n"
 "Language: hi\n"
@@ -897,13 +897,6 @@ msgstr ""
 "संदेश प्राप्त करने के लिए भविष्य में आने वाले दौरा में उपयोग करें।"
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we do not track users of our <strong>SecureDrop</strong>\n"
-#| " service, in future visits, using this codename will be the only way we "
-#| "have to communicate with you should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"
 " service, in future visits, using this codename will be the only way we have "
@@ -911,53 +904,40 @@ msgid ""
 " questions or are interested in additional information. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"क्योंकि हम हमारे उपयोगकर्ताओं को ट्रैक नहीं करते हैं<strong>SecureDrop</strong>सेवा, "
-"भविष्य के दौरे में, \n"
-"इस संकेत नाम का उपयोग करने का एकमात्र तरीका है कि हमारे साथ संवाद करना चाहिए था "
-"हमारे पास होना चाहिए प्रश्न या \n"
-"अतिरिक्त दस्तावेज़ों में रुचि रखते हैं। पासवर्ड के विपरीत, खोई हुई कोडनाम को पुनः प्राप्त करने "
-"का कोई तरीका नहीं है।"
+"क्योंकि हम हमारे उपयोगकर्ताओं को ट्रैक नहीं करते "
+"हैं<strong>SecureDrop</strong>सेवा, भविष्य के दौरे में, \n"
+"इस संकेत नाम का उपयोग करने का एकमात्र तरीका है कि हमारे साथ संवाद करना चाहिए "
+"था हमारे पास होना चाहिए प्रश्न या \n"
+"अतिरिक्त जानकारी में रुचि रखते हैं। पासवर्ड के विपरीत, खोई हुई कोडनाम को पुनः"
+" प्राप्त करने का कोई तरीका नहीं है।"
 
 #: source_templates/generate.html:44 source_templates/index.html:66
 msgid "SUBMIT DOCUMENTS"
 msgstr "दस्तावेज़ जमा करें"
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend turning the Security Slider to Safest to protect "
-#| "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set "
-#| "it to safest</a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to move the Security Slider to Safest to protect "
 "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it "
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>हम आपकी गुमनामी की सुरक्षा के लिए सुरक्षा स्लाइडर को सबसे सुरक्षित बनाने की "
-"सलाह देते हैं:</strong> <a id=\"disable-js\" href=\"\">इसे सुरक्षित करने के तरीके के "
-"बारे में जानें</a>, या जारी रखने के लिए इस चेतावनी को अनदेखा करें|"
+"<strong>आपकी अनामिकता की सुरक्षा के लिए सुरक्षा स्लाइडर को सबसे सुरक्षित करने"
+" की अनुशंसा की जाती है:</strong> <a id=\"disable-js\" href=\"\">इसे सुरक्षित "
+"करने के तरीके के बारे में जानें</a>, या जारी रखने के लिए इस चेतावनी को अनदेखा"
+" करें|"
 
 #: source_templates/index.html:18
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend using Tor Browser to access SecureDrop:</strong> <a "
-#| "id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
-#| "a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>हम SecureDrop का उपयोग करने के लिए Tor ब्राउज़र का उपयोग करने की सलाह देते "
-"हैं:</strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">इसे इस्तमाल करने "
-"के बारे में जानें</a>, या जारी रखने के लिए इस चेतावनी को अनदेखा करें|"
+"<strong>SecureDrop तक पहुंचने के लिए टोर ब्राउज़र का उपयोग करने की अनुशंसा की"
+" जाती है:</strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">इसे "
+"इस्तमाल करने के बारे में जानें</a>, या जारी रखने के लिए इस चेतावनी को अनदेखा "
+"करें|"
 
 #: source_templates/index.html:19
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend using Tor Browser to access SecureDrop:</strong> <a "
-#| "id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
-#| "a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
@@ -965,27 +945,24 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
-"<strong>हम SecureDrop का उपयोग करने के लिए Tor ब्राउज़र का उपयोग करने की सलाह देते "
-"हैं:</strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">इसे इस्तमाल करने "
-"के बारे में जानें</a>, या जारी रखने के लिए इस चेतावनी को अनदेखा करें|"
+"<strong>यह अनुशंसा की जाती है कि आप SecureDrop तक पहुंचने के लिए टोर ब्राउजर "
+"के डेस्कटॉप संस्करण का उपयोग करें, क्योंकि ऑर्फॉक्स समान स्तर की सुरक्षा और "
+"डेस्कटॉप संस्करणों के जितना गुमनाम नहीं प्रदान करता है।</strong><a id"
+"=\"recommend-tor\" href=\"{tor_browser_url}\">इसे इस्तमाल करने के बारे में "
+"जानें</a>, या जारी रखने के लिए इस चेतावनी को अनदेखा करें|"
 
 #: source_templates/index.html:42
-#, fuzzy
-#| msgid "Submit documents for the first time"
 msgid "Submit for the first time"
-msgstr "पहली बार दस्तावेज जमा करें"
+msgstr "पहली बार जमा करें"
 
 #: source_templates/index.html:49
 msgid "Already submitted something?"
 msgstr "पहले से कुछ जमा किया है?"
 
 #: source_templates/index.html:55
-#, fuzzy
-#| msgid ""
-#| "If this is your first time submitting documents to journalists, start "
-#| "here."
 msgid "If this is your first time submitting to journalists, start here."
-msgstr "अगर पत्रकारों को दस्तावेज जमा करने के लिए यह पहली बार है, तो यहां से शुरू करें|"
+msgstr ""
+"यदि यह पत्रकारों को सबमिट करने वाला आपका पहला समय है, तो यहां से शुरू करें।"
 
 #: source_templates/index.html:59
 #, fuzzy
