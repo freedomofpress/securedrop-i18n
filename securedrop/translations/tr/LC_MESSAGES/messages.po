@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-05-06 09:48+0000\n"
+"PO-Revision-Date: 2018-05-06 09:50+0000\n"
 "Last-Translator: tekrei <tekrei@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/tr/>\n"
@@ -950,9 +950,9 @@ msgid ""
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
 "<strong>Anonimliğinizi korumanız için Güvenlik Çubuğunu En Güvenli düzeyine "
-"getirmeniz önerilir:</strong><a id=\"disable-js\" href=\"\">Ayarı nasıl En "
-"Güvenli yapabileceğinizi öğrenin</a> veya devam edebilmek için bu uyarıyı "
-"görmezden gelin."
+"getirmeniz önerilmektedir:</strong><a id=\"disable-js\" href=\"\">Ayarı "
+"nasıl En Güvenli yapabileceğinizi öğrenin</a> veya devam edebilmek için bu "
+"uyarıyı görmezden gelin."
 
 #: source_templates/index.html:18
 msgid ""
@@ -966,11 +966,6 @@ msgstr ""
 "görmezden gelin."
 
 #: source_templates/index.html:19
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend using Tor Browser to access SecureDrop:</strong> <a "
-#| "id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
-#| "a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
@@ -978,49 +973,37 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
-"<strong>SecureDrop uygulamasına erişmek için Tor Tarayıcı kullanmanızı "
-"öneriyoruz:</strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">Nasıl "
-"kuracağınızı öğrenin</a> veya devam edebilmek için bu uyarıyı görmezden "
-"gelin."
+"<strong>SecureDrop uygulamasına erişmek için Tor Tarayıcının masaüstü "
+"sürümünü kullanmanız önerilmektedir, çünkü Orfox, masaüstü sürümlerle aynı "
+"güvenlik ve anonimlik düzeylerini sağlamamaktadır</strong>.<a id=\"recommend-"
+"tor\" href=\"{tor_browser_url}\">Nasıl kuracağınızı öğrenin</a> veya devam "
+"edebilmek için bu uyarıyı görmezden gelin."
 
 #: source_templates/index.html:42
-#, fuzzy
-#| msgid "Submit documents for the first time"
 msgid "Submit for the first time"
-msgstr "İlk defa belge göndermek"
+msgstr "İlk defa göndermek"
 
 #: source_templates/index.html:49
 msgid "Already submitted something?"
 msgstr "Daha önce bir şeyler gönderdiniz mi?"
 
 #: source_templates/index.html:55
-#, fuzzy
-#| msgid ""
-#| "If this is your first time submitting documents to journalists, start "
-#| "here."
 msgid "If this is your first time submitting to journalists, start here."
-msgstr "Gazetecilere ilk defa belge gönderiyorsanız, buradan başlayın."
+msgstr "Gazetecilere ilk defa gönderecekseniz, buradan başlayın."
 
 #: source_templates/index.html:59
-#, fuzzy
-#| msgid ""
-#| "If you have already submitted documents in the past, log in here to check "
-#| "for responses."
 msgid ""
 "If you have already submitted to journalists, log in here to check for "
 "responses."
 msgstr ""
-"Daha önce de belge gönderdiyseniz, oturum açarak yanıtları kontrol edin."
+"Daha önce de gazetecilere gönderdiyseniz, oturum açarak yanıtları kontrol "
+"edin."
 
 #: source_templates/index.html:74
 msgid "CHECK FOR A RESPONSE"
 msgstr "YANITLARI KONTROL EDİN"
 
 #: source_templates/index.html:93
-#, fuzzy
-#| msgid ""
-#| "You appear to be using the Tor Browser. You can turn the Security Slider "
-#| "to Safest in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
