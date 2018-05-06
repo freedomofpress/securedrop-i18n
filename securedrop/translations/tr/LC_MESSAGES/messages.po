@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-05-06 09:50+0000\n"
+"PO-Revision-Date: 2018-05-06 09:54+0000\n"
 "Last-Translator: tekrei <tekrei@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/tr/>\n"
@@ -1009,7 +1009,7 @@ msgid ""
 "Safest in four steps."
 msgstr ""
 "Tor Tarayıcı kullanıyor gibi gözüküyorsunuz. Dört kolay adımda Güvenlik "
-"Kaydırma düğmesini En Güvenli yapabilirsiniz!"
+"Kaydırma düğmesini En Güvenli yapabilirsiniz."
 
 #: source_templates/index.html:95
 msgid ""
@@ -1023,9 +1023,6 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "<strong>Güvenlik Ayarları...</strong>'na tıklayın"
 
 #: source_templates/index.html:97
-#, fuzzy
-#| msgid ""
-#| "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
 msgstr ""
@@ -1068,11 +1065,6 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "Ah, senmişsin! Şimdi, can sıkıcı kısım..."
 
 #: source_templates/lookup.html:12
-#, fuzzy
-#| msgid ""
-#| "Our servers experienced an unusual surge of new activity, when you last "
-#| "visited. To err on the side of caution, we put a hold on sending all "
-#| "documents from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all files "
@@ -1080,7 +1072,7 @@ msgid ""
 msgstr ""
 "Sunucularımız son ziyaretinizde beklenmedik bir faaliyetle karşılaştı. "
 "Tedbiri elden bırakmamak amacıyla o günden itibaren gazetecilerimiz "
-"aracılığıyla belge gönderimini askıya aldık."
+"aracılığıyla dosya ve mesaj gönderimini askıya aldık."
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1112,10 +1104,9 @@ msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
 msgstr "<a href=\"{url}\" class=\"text-link\">Daha Fazlasını Öğren</a>."
 
 #: source_templates/lookup.html:24
-#, fuzzy
-#| msgid "You can send a file, a message, or both."
 msgid "You can submit any kind of file, a message, or both."
-msgstr "Bir dosya, bir ileti veya ikisini birden gönderebilirsiniz."
+msgstr ""
+"Herhangi bir dosya, bir ileti türü veya her ikisini birden gönderebilirsiniz."
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
@@ -1130,12 +1121,6 @@ msgid "Read Replies"
 msgstr "Yanıtları Oku"
 
 #: source_templates/lookup.html:58
-#, fuzzy
-#| msgid ""
-#| "You have received a reply. To protect your identity in the unlikely event "
-#| "someone learns your codename, please delete all replies when you're done "
-#| "with them. This also lets us know that you are aware of our reply. You "
-#| "can respond by submitting a new message above."
 msgid ""
 "You have received a reply. To protect your identity in the unlikely event "
 "someone learns your codename, please delete all replies when you're done "
@@ -1145,7 +1130,8 @@ msgstr ""
 "Bir yanıt aldınız. Pek mümkün olmayan bir şekilde birinin kod adını öğrenme "
 "ihtimaline karşın kimliğinizi korumak için yanıtlarla işiniz bittiğinde "
 "lütfen hepsini silin. Bu ayrıca yanıtı görmüş olduğunuzu anlamamızı "
-"sağlayacaktır. Yukarıdan yeni bir ileti göndererek yanıt verebilirsiniz."
+"sağlayacaktır. Yukarıdan yeni bir ileti ve dosya göndererek yanıt "
+"verebilirsiniz."
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
@@ -1217,12 +1203,16 @@ msgid ""
 "Using <a href=\"tor2web.org\">Tor2Web</a> to connect to SecureDrop will not "
 "protect your anonymity."
 msgstr ""
+"SecureDrop uygulamasına <a href=\"tor2web.org\">Tor2Web</a> kullanarak "
+"bağlanmak anonimliğinizi korumayacaktır."
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
 "It could be possible for anyone listening to Internet usage (your "
 "government, your Internet provider), to identify you."
 msgstr ""
+"İnternet kullanımını gözetleyen herhangi birinin (hükümetiniz, İnternet "
+"sağlayıcınız) sizi tanımlaması mümkün olabilir."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
