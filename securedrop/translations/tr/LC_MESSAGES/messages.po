@@ -1212,7 +1212,7 @@ msgid ""
 "government, your Internet provider), to identify you."
 msgstr ""
 "İnternet kullanımını gözetleyen herhangi birinin (hükümetiniz, İnternet "
-"sağlayıcınız) sizi tanımlaması mümkün olabilir."
+"sağlayıcınız) sizi tespit etmesi mümkün olabilir."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
