@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-06 16:53+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2018-05-06 16:59+0000\n"
+"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/de/>\n"
 "Language: de_DE\n"
@@ -71,7 +71,7 @@ msgstr "Benutzer '{user}' wurde gelöscht"
 
 #: journalist_app/admin.py:239
 msgid "Test alert sent. Please check your email."
-msgstr "Testnachricht gesendet. Bitte überprüfen Sie Ihre E-Mail."
+msgstr "Testalarm gesendet. Bitte überprüfen Sie Ihre E-Mail."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -87,7 +87,8 @@ msgstr "Nur Administratoren haben Zugriff auf diese Seite."
 
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
-msgstr "HOTP-Geheimnisse sind 40 Zeichen lang. Du hast {num_chars} eingegeben."
+msgstr ""
+"HOTP-Geheimnisse sind 40 Zeichen lang - Sie haben {num_chars} eingegeben."
 
 #: journalist_app/forms.py:30
 msgid ""
@@ -162,8 +163,8 @@ msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
 msgstr ""
-"Bitte warten Sie auf ein neues Code von ihre Zwei-Faktor-Token oder "
-"Applikation, bevor Sie erneut versuchen."
+"Bitte warten Sie auf einen neuen Code von Ihrem Zwei-Faktor-Token oder Ihrer "
+"Anwendung, bevor Sie es erneut versuchen."
 
 #: journalist_app/utils.py:125
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
@@ -931,7 +932,7 @@ msgid ""
 "memorize it."
 msgstr ""
 "Bitte notieren Sie sich diesen Decknamen und bewahren Sie ihn an einem "
-"sicheren Ort auf oder merken Sie ihn sich."
+"sicheren Ort auf, oder merken Sie ihn sich."
 
 #: source_templates/generate.html:10
 msgid ""
@@ -999,7 +1000,7 @@ msgstr ""
 
 #: source_templates/index.html:42
 msgid "Submit for the first time"
-msgstr "Zum ersten Mal versenden"
+msgstr "Zum ersten Mal absenden"
 
 #: source_templates/index.html:49
 msgid "Already submitted something?"
