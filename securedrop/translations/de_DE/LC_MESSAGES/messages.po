@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-04 10:38+0000\n"
-"Last-Translator: heartsucker <heartsucker@riseup.net>\n"
+"PO-Revision-Date: 2018-05-06 16:53+0000\n"
+"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/de/>\n"
 "Language: de_DE\n"
@@ -288,7 +288,7 @@ msgstr "Öffnen Sie die FreeOTP-App"
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
 msgid "Tap the QR code symbol at the top"
-msgstr "Tippen Sie auf das QR-Code-Symbol am oberen Rand"
+msgstr "Tippen Sie oben auf das QR-Code-Symbol."
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
