@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-07 11:18+0000\n"
+"PO-Revision-Date: 2018-05-07 11:43+0000\n"
 "Last-Translator: ramyraoof <ramy.raoof@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -567,8 +567,7 @@ msgstr "تنبيهات"
 
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
-msgstr ""
-"أرسل رسالة بريد إلكتروني معمّاة للتأكد من عمل تنبيهات OSSEC بالشكل الصحيح:"
+msgstr "اختبر عمل تنبيهات OSSEC معمّاة عبر البريد الإكتروني:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
@@ -586,7 +585,7 @@ msgstr ""
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
-msgstr "الحجم المطلوب : 500px * 450px"
+msgstr "الحجم الموصى به : 500 بوصة * 450 بوصة"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
@@ -932,8 +931,8 @@ msgid ""
 msgstr ""
 "لاحظ أننا لا نتتبّع مستخدمي خدمة <strong>SecureDrop</strong>، لذا فاستعمال "
 "الاسم الرمزي في الزيارات المقبلة هو الوسيلة الوحيدة التي يمكننا بها التواصل "
-"معك في حال وجود أسئلة أو اهتمام بمزيد من المعلومات. و على خلاف الكلمات "
-"السرية، لا توجد أيّة وسيلة لاسترجاع الاسم الرمزي في حال فقدانه."
+"معك في حال وجود أسئلة أو اهتمام بمزيد من المعلومات. وعلى خلاف كلمات السر، لا "
+"توجد أيّة وسيلة لاسترجاع الاسم الرمزي في حال فقدانه."
 
 #: source_templates/generate.html:44 source_templates/index.html:66
 msgid "SUBMIT DOCUMENTS"
@@ -946,8 +945,8 @@ msgid ""
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
 "<strong>نوصي بتحريك مؤشر درجة الأمان في متصفّح تور إلى أقصى درجة  لحماية "
-"مجهوليتك : </strong> <a id=\"disable-js\" href=\"\">طالع عن كيفية ضبط المتصفّ"
-"ح على الوضع الأقصى</a> أو تجاهل هذا التحذير للمواصلة."
+"مجهوليتك : </strong> <a id=\"disable-js\" href=\"\">طالع كيفية ضبط المتصفّح "
+"على الوضع الأقصى</a> أو تجاهل هذا التحذير للمواصلة.t"
 
 #: source_templates/index.html:18
 msgid ""
