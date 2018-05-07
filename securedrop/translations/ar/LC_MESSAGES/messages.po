@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-07 11:43+0000\n"
+"PO-Revision-Date: 2018-05-07 11:58+0000\n"
 "Last-Translator: ramyraoof <ramy.raoof@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -946,7 +946,7 @@ msgid ""
 msgstr ""
 "<strong>نوصي بتحريك مؤشر درجة الأمان في متصفّح تور إلى أقصى درجة  لحماية "
 "مجهوليتك : </strong> <a id=\"disable-js\" href=\"\">طالع كيفية ضبط المتصفّح "
-"على الوضع الأقصى</a> أو تجاهل هذا التحذير للمواصلة.t"
+"على الوضع الأقصى</a> أو تجاهل هذا التحذير للمواصلة."
 
 #: source_templates/index.html:18
 msgid ""
@@ -955,7 +955,7 @@ msgid ""
 "install it</a>, or ignore this warning to continue."
 msgstr ""
 "<strong>نوصي باستخدام  متصفح تور للنفاذ إلى سِكيوردرُب :</strong> <a id"
-"=\"recommend-tor\" href=\"{tor_browser_url}\">إطلع على خطوات التنصيب</a> أو "
+"=\"recommend-tor\" href=\"{tor_browser_url}\">طالع خطوات التنصيب</a> أو "
 "تجاهل هذا التحذير للمواصلة."
 
 #: source_templates/index.html:19
@@ -966,8 +966,8 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
-"<strong>نوصي باستخدام  متصفح تور للنفاذ إلى سِكيوردرُب:</strong> <a id"
-"=\"recommend-tor\" href=\"{tor_browser_url}\">إطلع على خطوات التنصيب</a> أو "
+"<strong>نوصي باستخدام  متصفح تور للنفاذ إلى سيكيور دروب:</strong> <a id"
+"=\"recommend-tor\" href=\"{tor_browser_url}\">طالع خطوات التنصيب</a> أو "
 "تجاهل هذا التحذير للمواصلة."
 
 #: source_templates/index.html:42
@@ -980,15 +980,14 @@ msgstr "هل سبق لك إيداع شيء؟"
 
 #: source_templates/index.html:55
 msgid "If this is your first time submitting to journalists, start here."
-msgstr ""
-"ابدأ هنا في حال كانت هذه المرة الأولى التي تودع فيها مستندات لدى صحافيينا."
+msgstr "ابدأ هنا إذا كانت المرة الأولى التي تودع فيها مستندات لدى صحافيينا."
 
 #: source_templates/index.html:59
 msgid ""
 "If you have already submitted to journalists, log in here to check for "
 "responses."
 msgstr ""
-"إذا كنت قد أودعت مسبقًا مستندات لدى صحافيينا فلِج هنا لترى إن استلمتَ أجوبة."
+"إذا كنت قد أودعت مسبقًا مستندات لدى صحافيينا فلِج هنا لترى إن استلمتَ ردود."
 
 #: source_templates/index.html:74
 msgid "CHECK FOR A RESPONSE"
