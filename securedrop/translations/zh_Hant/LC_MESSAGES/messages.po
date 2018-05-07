@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-07 16:37+0000\n"
+"PO-Revision-Date: 2018-05-07 18:00+0000\n"
 "Last-Translator: foolfitz <foolfitz@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.securedrop.club/"
 "projects/securedrop/securedrop/zh_Hant/>\n"
@@ -864,7 +864,7 @@ msgid ""
 "there is no way to retrieve a lost codename."
 msgstr ""
 "因為我們不會追蹤 <strong>SecureDrop</strong> "
-"的使用者，日後要再訪問，你須提供此代號以供登入，它也是將來我們若有疑問或需要更多資訊時要求，和你溝通的唯一管道。\n"
+"的使用者，日後要再訪問，您須提供此代號以供登入，它也是將來我們若有疑問或需要更多資訊時要求，和您溝通的唯一管道。\n"
 "\n"
 "代號和密碼不同，一旦遺失便無法再恢復獲取。"
 
@@ -878,7 +878,7 @@ msgid ""
 "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it "
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>我們建議將安全滑桿滑動到最高安全層級，以保護你的匿名性：</strong> <a id=\"disable-js\" href=\"\""
+"<strong>我們建議將安全滑桿滑動到最高安全層級，以保護您的匿名性：</strong> <a id=\"disable-js\" href=\"\""
 ">學習如何將此設置為最高安全層級保護</a>，或者忽略此項警告，繼續操作。"
 
 #: source_templates/index.html:18
@@ -929,7 +929,7 @@ msgstr "檢查回應"
 msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
-msgstr "你似乎正在使用 Tor 瀏覽器。用 4 個步驟可將安全滑桿移動到最高安全層級。"
+msgstr "您似乎正在使用 Tor 瀏覽器。用 4 個步驟可將安全滑桿移動到最高安全層級。"
 
 #: source_templates/index.html:95
 msgid ""
@@ -943,7 +943,7 @@ msgstr "點擊 <strong>安全性設置...</strong>"
 #: source_templates/index.html:97
 msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
-msgstr "將安全滑桿移動到<strong>最安全</strong>，然後點擊 <strong>確認</strong>"
+msgstr "將安全滑桿移動到<strong>最高安全層級</strong>，然後點擊 <strong>確認</strong>"
 
 #: source_templates/index.html:98
 msgid "<a href=\"/\">Click here</a> to refresh the page"
@@ -1014,7 +1014,7 @@ msgstr "<a href=\"{url}\" class=\"text-link\">了解更多</a>."
 
 #: source_templates/lookup.html:24
 msgid "You can submit any kind of file, a message, or both."
-msgstr "您可以提交任何檔案，撰寫訊息或兩者都作。"
+msgstr "您可以提交任何類型的檔案，撰寫訊息或兩者都作。"
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
@@ -1114,7 +1114,7 @@ msgstr ""
 msgid ""
 "It could be possible for anyone listening to Internet usage (your "
 "government, your Internet provider), to identify you."
-msgstr "任何網路監聽者（如政府,網路服務業者）都可能認出你。"
+msgstr "任何網路監聽者（如政府、網路服務業者）都有可能認出您。"
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
