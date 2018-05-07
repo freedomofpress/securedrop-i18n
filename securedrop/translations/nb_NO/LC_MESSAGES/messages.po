@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-04 09:00+0000\n"
+"PO-Revision-Date: 2018-05-07 13:00+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/nb_NO/>\n"
@@ -489,7 +489,7 @@ msgstr "Melding"
 #: journalist_templates/col.html:71 journalist_templates/col.html:129
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
-msgstr "Slett bekreftelse"
+msgstr "Bekreftelse av sletting"
 
 #: journalist_templates/col.html:72
 msgid "Are you sure you want to delete the selected documents?"
