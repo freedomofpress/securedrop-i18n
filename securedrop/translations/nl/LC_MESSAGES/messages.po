@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-04 09:00+0000\n"
+"PO-Revision-Date: 2018-05-07 11:00+0000\n"
 "Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
 "Language-Team: Dutch <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/nl/>\n"
@@ -320,8 +320,8 @@ msgstr "YubiKey inschakelen (OATH-HOTP)"
 #: journalist_templates/admin_new_user_two_factor.html:21
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr ""
-"Zodra u uw YubiKey geconfigureerd heeft, voer de zescijferige code hieronder "
-"in:"
+"Zodra u uw YubiKey geconfigureerd heeft, voert u de zescijferige code "
+"hieronder in:"
 
 #: journalist_templates/account_new_two_factor.html:22
 #: journalist_templates/admin_new_user_two_factor.html:25
@@ -736,7 +736,7 @@ msgstr ""
 
 #: journalist_templates/flag.html:10
 msgid "Continue to the list of documents for {codename}..."
-msgstr "Ga door naar de lijst documenten van {codename}..."
+msgstr "Ga door naar documentenlijst van {codename}…"
 
 #: journalist_templates/index.html:4
 msgid "Sources"
@@ -856,7 +856,7 @@ msgstr "Alle reacties zijn verwijderd"
 
 #: source_app/main.py:244
 msgid "Sorry, that is not a recognized codename."
-msgstr "Helaas is dit geen erkende codenaam."
+msgstr "Helaas is dit een onbekende codenaam."
 
 #: source_templates/base.html:6 source_templates/index.html:4
 msgid "Protecting Journalists and Sources"
@@ -931,13 +931,6 @@ msgstr ""
 "inzendt."
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we do not track users of our <strong>SecureDrop</strong>\n"
-#| " service, in future visits, using this codename will be the only way we "
-#| "have to communicate with you should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"
 " service, in future visits, using this codename will be the only way we have "
