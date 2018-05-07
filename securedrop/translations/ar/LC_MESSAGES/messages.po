@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-07 11:58+0000\n"
+"PO-Revision-Date: 2018-05-07 14:00+0000\n"
 "Last-Translator: ramyraoof <ramy.raoof@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -954,7 +954,7 @@ msgid ""
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>نوصي باستخدام  متصفح تور للنفاذ إلى سِكيوردرُب :</strong> <a id"
+"<strong>نوصي باستخدام  متصفح تور للنفاذ إلى سِكيور دروب :</strong> <a id"
 "=\"recommend-tor\" href=\"{tor_browser_url}\">طالع خطوات التنصيب</a> أو "
 "تجاهل هذا التحذير للمواصلة."
 
@@ -1013,8 +1013,7 @@ msgstr "انقر على <strong>إعدادات الأمان...</strong>"
 #: source_templates/index.html:97
 msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
-msgstr ""
-"حرك الشريط إلى <strong>الأكثر أمانا</strong>، ثم انقر على <strong>OK</strong>"
+msgstr "حرك الشريط إلى <strong>Safest</strong>، ثم انقر على <strong>OK</strong>"
 
 #: source_templates/index.html:98
 msgid "<a href=\"/\">Click here</a> to refresh the page"
@@ -1057,7 +1056,7 @@ msgid ""
 "and messages from that day through to our journalists."
 msgstr ""
 "عندما زرتنا آخر مرة شهدت خواديمنا ارتفاعًا حادًّا في مستوى النشاط. و من باب "
-"الاحتياط علّقنا إرسال الملفات و الرسائل إلى صحافيينا منذ ذلك اليوم."
+"الاحتياط علّقنا تمرير الملفات والرسائل إلى صحافيينا منذ ذلك اليوم."
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1110,9 +1109,9 @@ msgid ""
 "with them. This also lets us know that you are aware of our reply. You can "
 "respond by submitting new files and messages above."
 msgstr ""
-"لقد تلقيت رسالة. لدواعي حماية هويتك من الانكشاف في حال انكشاف هويتك ننصح "
-"بحذف كُلّ الردود بعد قراءتها. هذا سيُعلمنا أيضا أنك تلقيّت ردّنا. كما يمكنك "
-"الرّدّ بكتابة رسائل جديدة أو إرسال ملفات جديدة."
+"لقد تلقيت رسالة. لدواعي حماية هويتك في حال انكشاف الاسم الرمزي ننصح بحذف كُلّ"
+" الرسائل بعد قراءتها. هذا سيُعلمنا أيضا أنك تلقيّت ردّنا. كما يمكنك الرّدّ "
+"بكتابة رسائل جديدة أو إرسال ملفات جديدة."
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
@@ -1191,8 +1190,7 @@ msgid ""
 "It could be possible for anyone listening to Internet usage (your "
 "government, your Internet provider), to identify you."
 msgstr ""
-"قد يكون من الممكن لأي شخص يستمع لاستخدام الإنترنت (حكومتكم و مزود الإنترنت "
-"الخاص بكم) أن يحدد هويتك."
+"من الممكن لأي جهة (شركة الانترنت أو السلطات) تراقب الإنترنت من تحديد هويتك."
 
 #: source_templates/tor2web-warning.html:6
 #, fuzzy
@@ -1336,7 +1334,7 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
-msgstr "الرجوع إلى صفحة الإيداع"
+msgstr "العودة إلى صفحة الإيداع"
 
 #~ msgid "That username is already in use"
 #~ msgstr "اسم المستخدم غير متاح"
