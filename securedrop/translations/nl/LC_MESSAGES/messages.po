@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-07 11:00+0000\n"
-"Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
+"PO-Revision-Date: 2018-05-08 07:57+0000\n"
+"Last-Translator: Thom <thom.pp9@gmail.com>\n"
 "Language-Team: Dutch <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/nl/>\n"
 "Language: nl\n"
@@ -90,8 +90,6 @@ msgid "Only administrators can access this page."
 msgstr "Alleen beheerders hebben toegang tot deze pagina."
 
 #: journalist_app/forms.py:19
-#, fuzzy
-#| msgid "Field must be 40 characters long but got {num_chars}."
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgstr "HOTP geheimen zijn 40 tekens lang. U hebt er {num_chars} ingevoerd."
 
@@ -950,11 +948,6 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "DOCUMENTEN INZENDEN"
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend turning the Security Slider to Safest to protect "
-#| "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set "
-#| "it to safest</a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to move the Security Slider to Safest to protect "
 "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it "
@@ -962,14 +955,10 @@ msgid ""
 msgstr ""
 "<strong>Het wordt aangeraden om de beveiligingsschuifbalk op Veiligste te "
 "zetten om uw anonimiteit te beschermen:</strong> <a id=\"disable-js\" href=\""
-"\">Lees hier hoe u dit op Veiligste zet</a> of negeer deze waarschuwing."
+"\">Lees hier hoe u dit op Veiligste zet</a> of negeer deze waarschuwing om "
+"door te gaan."
 
 #: source_templates/index.html:18
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend using Tor Browser to access SecureDrop:</strong> <a "
-#| "id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
-#| "a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
@@ -977,14 +966,10 @@ msgid ""
 msgstr ""
 "<strong>Het wordt aangeraden om de Tor Browser te gebruiken om SecureDrop te "
 "bezoeken:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Lees "
-"hier informatie om deze te installeren</a> of negeer deze waarschuwing."
+"hier informatie om deze te installeren</a> of negeer deze waarschuwing om "
+"door te gaan."
 
 #: source_templates/index.html:19
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend using Tor Browser to access SecureDrop:</strong> <a "
-#| "id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
-#| "a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
@@ -996,7 +981,7 @@ msgstr ""
 "gebruiken om SecureDrop te bezoeken, want Orfox biedt niet hetzelfde "
 "veiligheids- en anonimiteitsniveau als de desktop versies.</strong> <a id"
 "=\"recommend-tor\" href=\"{tor_browser_url}\">Leer hier hoe deze te "
-"installeren is</a> of negeer deze waarschuwing."
+"installeren is</a> of negeer deze waarschuwing om door te gaan."
 
 #: source_templates/index.html:42
 msgid "Submit for the first time"
@@ -1013,10 +998,6 @@ msgstr ""
 "begin dan hier."
 
 #: source_templates/index.html:59
-#, fuzzy
-#| msgid ""
-#| "If you have already submitted to journalists in the past, log in here to "
-#| "check for responses."
 msgid ""
 "If you have already submitted to journalists, log in here to check for "
 "responses."
@@ -1029,15 +1010,11 @@ msgid "CHECK FOR A RESPONSE"
 msgstr "CHECK OF U ANTWOORD HEEFT"
 
 #: source_templates/index.html:93
-#, fuzzy
-#| msgid ""
-#| "You appear to be using the Tor Browser. You can turn the Security Slider "
-#| "to Safest in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
 msgstr ""
-"Het lijkt erop dat u de Tor Browser gebruikt. U kan de "
+"Het lijkt erop dat u de Tor Browser gebruikt. U kunt de "
 "beveiligingsschuifbalk op Veiligste zetten in 4 stappen!"
 
 #: source_templates/index.html:95
