@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-08 07:57+0000\n"
+"PO-Revision-Date: 2018-05-08 08:00+0000\n"
 "Last-Translator: Thom <thom.pp9@gmail.com>\n"
 "Language-Team: Dutch <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/nl/>\n"
@@ -1015,7 +1015,7 @@ msgid ""
 "Safest in four steps."
 msgstr ""
 "Het lijkt erop dat u de Tor Browser gebruikt. U kunt de "
-"beveiligingsschuifbalk op Veiligste zetten in 4 stappen!"
+"beveiligingsschuifbalk op Veiligste zetten in 4 stappen."
 
 #: source_templates/index.html:95
 msgid ""
@@ -1029,13 +1029,10 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "Klik op <strong>Veiligheidsinstellingen...</strong>"
 
 #: source_templates/index.html:97
-#, fuzzy
-#| msgid ""
-#| "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
 msgstr ""
-"Beweeg de schuif naar <strong>Veiligste</strong> en klik vervolgens op "
+"Beweeg de schuifbalk naar <strong>Veiligste</strong> en klik vervolgens op "
 "<strong>OK</strong>"
 
 #: source_templates/index.html:98
@@ -1074,11 +1071,6 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "Gelukkig, u bent het! En dan nu het gênante deel..."
 
 #: source_templates/lookup.html:12
-#, fuzzy
-#| msgid ""
-#| "Our servers experienced an unusual surge of new activity, when you last "
-#| "visited. To err on the side of caution, we put a hold on sending all "
-#| "documents from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all files "
@@ -1119,8 +1111,6 @@ msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
 msgstr "<a href=\"{url}\" class=\"text-link\">Lees meer</a>."
 
 #: source_templates/lookup.html:24
-#, fuzzy
-#| msgid "You can send a file, a message, or both."
 msgid "You can submit any kind of file, a message, or both."
 msgstr "U kunt elk soort bestand, een bericht of beide versturen."
 
@@ -1137,12 +1127,6 @@ msgid "Read Replies"
 msgstr "Reacties lezen"
 
 #: source_templates/lookup.html:58
-#, fuzzy
-#| msgid ""
-#| "You have received a reply. To protect your identity in the unlikely event "
-#| "someone learns your codename, please delete all replies when you're done "
-#| "with them. This also lets us know that you are aware of our reply. You "
-#| "can respond by submitting a new message above."
 msgid ""
 "You have received a reply. To protect your identity in the unlikely event "
 "someone learns your codename, please delete all replies when you're done "
@@ -1152,8 +1136,8 @@ msgstr ""
 "U heeft een reactie ontvangen. Om uw identiteit te beschermen voor het "
 "onwaarschijnlijke geval dat iemand uw codenaam kent, adviseren wij om alle "
 "reacties te verwijderen zodra u er klaar mee bent. Hierdoor weten wij ook "
-"dat u onze reactie heeft gezien. U kunt reageren door nieuwe bestanden en "
-"bericht hierboven te versturen."
+"dat u onze reactie heeft gezien. U kunt reageren door hierboven nieuwe "
+"bestanden en berichten te versturen."
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
