@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-07 13:00+0000\n"
+"PO-Revision-Date: 2018-05-09 13:45+0000\n"
 "Last-Translator: AO <french.coordinator@rbox.me>\n"
 "Language-Team: French <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fr/>\n"
@@ -30,15 +30,16 @@ msgstr "Vous avez été déconnecté pour cause d’inactivité"
 
 #: journalist_app/account.py:26
 msgid "Incorrect password or two-factor code."
-msgstr "Le mot de passe ou le code de validation en deux étapes est erroné."
+msgstr ""
+"Le mot de passe ou le code d’authentification à deux facteurs est erroné."
 
 #: journalist_app/account.py:42
 msgid "Token in two-factor authentication verified."
-msgstr "Le jeton de validation en deux étapes a été vérifié."
+msgstr "Le jeton d’authentification à deux facteurs a été vérifié."
 
 #: journalist_app/account.py:46 journalist_app/admin.py:116
 msgid "Could not verify token in two-factor authentication."
-msgstr "Impossible de vérifier le jeton de la validation en deux étapes."
+msgstr "Impossible de vérifier le jeton d’authentification à deux facteurs."
 
 #: journalist_app/admin.py:38
 msgid "Image updated."
@@ -67,7 +68,7 @@ msgstr ""
 #: journalist_app/admin.py:109
 msgid "Token in two-factor authentication accepted for user {user}."
 msgstr ""
-"Le jeton de la validation en deux étapes a été accepté pour l’utilisateur "
+"Le jeton d’authentification à deux facteurs a été accepté pour l’utilisateur "
 "{user}."
 
 #: journalist_app/admin.py:208
@@ -166,8 +167,8 @@ msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
 msgstr ""
-"Veuillez attendre un nouveau code de votre jeton ou application de "
-"validation en deux étapes avant de ressayer."
+"Veuillez attendre un nouveau code de votre jeton ou application d’"
+"authentification à deux facteurs avant de ressayer."
 
 #: journalist_app/utils.py:125
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
@@ -274,11 +275,11 @@ msgid ""
 "for your account in the app, enter one of the 6-digit codes from the app to "
 "confirm that two factor authentication is set up correctly."
 msgstr ""
-"Vous avez presque terminé ! Pour finir de réinitialiser votre validation en "
-"deux étapes, suivez les instructions ci-dessous pour configurer FreeOTP. "
-"Après avoir ajouté votre compte dans l’appli, saisissez l’un des codes à 6 "
-"chiffres de l’appli pour confirmer que la validation en deux étapes est "
-"configurée correctement."
+"Vous avez presque terminé ! Pour finir de réinitialiser votre "
+"authentification à deux facteurs, suivez les instructions ci-dessous pour "
+"configurer FreeOTP. Après avoir ajouté votre compte dans l’appli, saisissez "
+"l’un des codes à 6 chiffres de l’appli pour confirmer que l’authentification "
+"à deux facteurs est configurée correctement."
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
@@ -420,10 +421,11 @@ msgid ""
 "set up correctly."
 msgstr ""
 "Vous avez presque terminé ! Pour finir d’ajouter ce nouvel utilisateur, "
-"faites-lui suivre les instructions ci-dessous pour configurer la validation "
-"en deux étapes avec FreeOTP. Après avoir ajouté son compte dans l’appli, "
-"demandez-lui de saisir l’un des codes à 6 chiffres de l’appli pour confirmer "
-"que la validation en deux étapes est configurée correctement."
+"faites-lui suivre les instructions ci-dessous pour configurer l’"
+"authentification à deux facteurs avec FreeOTP. Après avoir ajouté son compte "
+"dans l’appli, demandez-lui de saisir l’un des codes à 6 chiffres de l’appli "
+"pour confirmer que l’authentification à deux facteurs est configurée "
+"correctement."
 
 #: journalist_templates/base.html:24
 msgid "Logged on as"
@@ -663,8 +665,8 @@ msgstr ""
 #: journalist_templates/edit_account.html:34
 msgid "Please enter your current password and two-factor code."
 msgstr ""
-"Veuillez saisir votre mot de passe actuel et votre code de validation en "
-"deux étapes."
+"Veuillez saisir votre mot de passe actuel et votre code d’authentification à "
+"deux facteurs."
 
 #: journalist_templates/edit_account.html:40
 msgid "Current Password"
@@ -672,7 +674,7 @@ msgstr "Mot de passe actuel"
 
 #: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
 msgid "Two-factor Code"
-msgstr "Code de validation en deux étapes"
+msgstr "Code d’authentification à deux facteurs"
 
 #: journalist_templates/edit_account.html:46
 msgid "The user's password will be changed to:"
@@ -688,7 +690,7 @@ msgstr "RÉINITIALISER LE MOT DE PASSE"
 
 #: journalist_templates/edit_account.html:58
 msgid "Reset Two-Factor Authentication"
-msgstr "Réinitialiser la validation en deux étapes"
+msgstr "Réinitialiser l’authentification à deux facteurs"
 
 #: journalist_templates/edit_account.html:61
 msgid ""
@@ -697,11 +699,11 @@ msgid ""
 "is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
-"Si les authentifiants de validation en deux étapes d’un utilisateur ont été "
-"perdus ou compromis, vous pouvez les réinitialiser ici. <em>Si vous le "
-"faites, assurez-vous que l’utilisateur est présent et prêt à configurer les "
-"nouveaux authentifiants de validation en deux étapes sur son appareil. Il ne "
-"pourra autrement plus accéder à son compte."
+"Si les authentifiants d’authentification à deux facteurs d’un utilisateur "
+"ont été perdus ou compromis, vous pouvez les réinitialiser ici. <em>Si vous "
+"le faites, assurez-vous que l’utilisateur est présent et prêt à configurer "
+"les nouveaux authentifiants d’authentification à deux facteurs sur son "
+"appareil. Il ne pourra autrement plus accéder à son compte."
 
 #: journalist_templates/edit_account.html:63
 msgid ""
@@ -710,23 +712,24 @@ msgid ""
 "this, make sure you are ready to set up your new device, otherwise you will "
 "be locked out of your account.</em>"
 msgstr ""
-"Si vos authentifiants de validation en deux étapes ont été perdus ou "
-"compromis ou si vous avez un nouvel appareil, vous pouvez les réinitialiser "
-"ici. <em>Si vous le faites, assurez-vous d’être prêt à configurer votre "
-"nouvel appareil, sans quoi vous ne pourrez plus accéder à votre compte.</em>"
+"Si vos authentifiants d’authentification à deux facteurs ont été perdus ou "
+"compromis ou encore si vous avez un nouvel appareil, vous pouvez les "
+"réinitialiser ici. <em>Si vous le faites, assurez-vous d’être prêt à "
+"configurer votre nouvel appareil, sans quoi vous ne pourrez plus accéder à "
+"votre compte.</em>"
 
 #: journalist_templates/edit_account.html:65
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the Yubikey, choose the second."
 msgstr ""
-"Pour réinitialiser la validation en deux étapes pour des applis mobiles "
-"telles que FreeOTP, choisissez la première option. Pour les jetons matériels "
-"tels que Yubikey, choisissez la seconde."
+"Pour réinitialiser l’authentification à deux facteurs pour des applis "
+"mobiles telles que FreeOTP, choisissez la première option. Pour les jetons "
+"matériels tels que la Yubikey, choisissez la seconde."
 
 #: journalist_templates/edit_account.html:90
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
-msgstr "RÉINITIALISER LA VALIDATION EN DEUX ÉTAPES (APPLI)"
+msgstr "RÉINITIALISER L’AUTHENTIFICATION À DEUX FACTEURS (APPLI)"
 
 #: journalist_templates/edit_account.html:92
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
