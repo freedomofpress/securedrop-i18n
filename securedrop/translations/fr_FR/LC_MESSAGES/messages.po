@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-09 13:45+0000\n"
+"PO-Revision-Date: 2018-05-09 16:00+0000\n"
 "Last-Translator: AO <french.coordinator@rbox.me>\n"
 "Language-Team: French <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fr/>\n"
@@ -117,7 +117,7 @@ msgstr "Un fichier est exigé."
 
 #: journalist_app/forms.py:62
 msgid "Upload images only."
-msgstr "Téléverser des images uniquement."
+msgstr "Ne téléverser que des images."
 
 #: journalist_app/main.py:117 journalist_app/utils.py:47
 #: journalist_app/utils.py:137
@@ -733,7 +733,7 @@ msgstr "RÉINITIALISER L’AUTHENTIFICATION À DEUX FACTEURS (APPLI)"
 
 #: journalist_templates/edit_account.html:92
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
-msgstr "RÉINITIALISER LA VALIDATION EN DEUX ÉTAPES (JETON MATÉRIEL)"
+msgstr "RÉINITIALISER L’AUTHENTIFICATION À DEUX FACTEURS (JETON MATÉRIEL)"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -808,7 +808,7 @@ msgstr "Voulez-vous vraiment supprimer l’utilisateur {username} ?"
 msgid ""
 "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr ""
-"Voulez-vous vraiment réinitialiser la validation en deux étapes pour "
+"Voulez-vous vraiment réinitialiser l’authentification à deux facteurs pour "
 "{username} ?"
 
 #: journalist_templates/login.html:4
