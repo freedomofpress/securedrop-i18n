@@ -247,6 +247,7 @@ class SiteConfig(object):
 
     def __init__(self, args):
         self.args = args
+        self.config = {}
         translations = SiteConfig.Locales(
             self.args.app_path).get_translations()
         translations = " ".join(translations)
@@ -279,15 +280,30 @@ class SiteConfig(object):
              u'DNS server specified during installation',
              SiteConfig.ValidateNotEmpty(),
              None],
+            ['securedrop_app_gpg_public_key', 'SecureDrop.asc', str,
+             u'Local filepath to public key for '
+             'SecureDrop Application GPG public key',
+             SiteConfig.ValidatePath(self.args.ansible_path),
+             None],
             ['securedrop_app_https_on_source_interface', False, bool,
              u'Whether HTTPS should be enabled on '
              'Source Interface (requires EV cert)',
              SiteConfig.ValidateYesNo(),
              lambda x: x.lower() == 'yes'],
-            ['securedrop_app_gpg_public_key', 'SecureDrop.asc', str,
-             u'Local filepath to public key for '
-             'SecureDrop Application GPG public key',
-             SiteConfig.ValidatePath(self.args.ansible_path),
+            ['securedrop_app_https_certificate_cert_src', '', str,
+             u'Local filepath to HTTPS certificate '
+             '(optional, only if using HTTPS on source interface)',
+             SiteConfig.ValidateOptionalPath(self.args.ansible_path),
+             None],
+            ['securedrop_app_https_certificate_key_src', '', str,
+             u'Local filepath to HTTPS certificate key '
+             '(optional, only if using HTTPS on source interface)',
+             SiteConfig.ValidateOptionalPath(self.args.ansible_path),
+             None],
+            ['securedrop_app_https_certificate_chain_src', '', str,
+             u'Local filepath to HTTPS certificate chain file '
+             '(optional, only if using HTTPS on source interface)',
+             SiteConfig.ValidateOptionalPath(self.args.ansible_path),
              None],
             ['securedrop_app_gpg_fingerprint', '', str,
              u'Full fingerprint for the SecureDrop Application GPG Key',
@@ -339,7 +355,8 @@ class SiteConfig(object):
              SiteConfig.ValidateOSSECPassword(),
              None],
             ['enable_ssh_over_tor', True, bool,
-             u'Enable SSH over Tor',
+             u'Enable SSH over Tor (recommended, disables SSH over LAN). '
+             u'If you respond no, SSH will be available over LAN only',
              SiteConfig.ValidateYesNo(),
              lambda x: x.lower() == 'yes'],
             ['securedrop_supported_locales', [], types.ListType,
@@ -352,8 +369,7 @@ class SiteConfig(object):
     def load_and_update_config(self):
         if self.exists():
             self.config = self.load()
-        else:
-            self.config = {}
+
         return self.update_config()
 
     def update_config(self):
@@ -367,6 +383,16 @@ class SiteConfig(object):
         config = {}
         for desc in self.desc:
             (var, default, type, prompt, validator, transform) = desc
+            if var == 'journalist_gpg_fpr':
+                if not config.get('journalist_alert_gpg_public_key',
+                                  None):
+                    config[var] = ''
+                    continue
+            if var == 'journalist_alert_email':
+                if not config.get('journalist_alert_gpg_public_key',
+                                  None):
+                    config[var] = ''
+                    continue
             config[var] = self.user_prompt_config_one(desc,
                                                       self.config.get(var))
         return config
@@ -550,6 +576,12 @@ def run_tails_config(args):
                                  cwd=args.ansible_path)
 
 
+def check_for_updates_wrapper(args):
+    res, tag = check_for_updates(args)
+    # Because the command worked properly exit with 0.
+    return 0
+
+
 def check_for_updates(args):
     """Check for SecureDrop updates"""
     sdlog.info("Checking for SecureDrop updates...")
@@ -702,7 +734,7 @@ def parse_argv(argv):
 
     parse_check_updates = subparsers.add_parser('check_for_updates',
                                                 help=check_for_updates.__doc__)
-    parse_check_updates.set_defaults(func=check_for_updates)
+    parse_check_updates.set_defaults(func=check_for_updates_wrapper)
 
     parse_logs = subparsers.add_parser('logs',
                                        help=get_logs.__doc__)
