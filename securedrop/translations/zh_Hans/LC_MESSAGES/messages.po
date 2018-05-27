@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-05-27 22:10+0000\n"
+"PO-Revision-Date: 2018-05-28 00:00+0000\n"
 "Last-Translator: JieDiscovery <jie.song@telecom-bretagne.eu>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.securedrop.club/"
 "projects/securedrop/securedrop/zh_Hans/>\n"
@@ -119,11 +119,11 @@ msgstr "谢谢，您的回复已经被储存。"
 
 #: journalist_app/main.py:149
 msgid "No collections selected for download."
-msgstr ""
+msgstr "未选择要下载的集件。"
 
 #: journalist_app/main.py:152 journalist_app/utils.py:231
 msgid "No collections selected for deletion."
-msgstr ""
+msgstr "未选择要删除的集件。"
 
 #: journalist_app/main.py:178
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
