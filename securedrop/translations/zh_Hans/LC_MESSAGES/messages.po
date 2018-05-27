@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-05-27 22:08+0000\n"
+"PO-Revision-Date: 2018-05-27 22:10+0000\n"
 "Last-Translator: JieDiscovery <jie.song@telecom-bretagne.eu>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.securedrop.club/"
 "projects/securedrop/securedrop/zh_Hans/>\n"
@@ -111,11 +111,11 @@ msgstr "仅上传图片。"
 #: journalist_app/main.py:117 journalist_app/utils.py:47
 #: journalist_app/utils.py:137
 msgid "An unexpected error occurred! Please inform your administrator."
-msgstr "出现一个预期以外的错误！请通知管路员。"
+msgstr "出现一个预期以外的错误！请通知管理员。"
 
 #: journalist_app/main.py:128
 msgid "Thanks. Your reply has been stored."
-msgstr ""
+msgstr "谢谢，您的回复已经被储存。"
 
 #: journalist_app/main.py:149
 msgid "No collections selected for download."
