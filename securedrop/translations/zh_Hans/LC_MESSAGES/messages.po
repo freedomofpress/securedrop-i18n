@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-05-27 21:48+0000\n"
+"PO-Revision-Date: 2018-05-27 21:49+0000\n"
 "Last-Translator: JieDiscovery <jie.song@telecom-bretagne.eu>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.securedrop.club/"
 "projects/securedrop/securedrop/zh_Hans/>\n"
@@ -61,11 +61,11 @@ msgstr "保存该用户到数据库时出错。请通知管理员。"
 
 #: journalist_app/admin.py:109
 msgid "Token in two-factor authentication accepted for user {user}."
-msgstr "用户{user}已通过双因素验证。"
+msgstr "用户 {user} 已通过双因素验证。"
 
 #: journalist_app/admin.py:208
 msgid "Deleted user '{user}'"
-msgstr ""
+msgstr "用户 '{user}' 已删除。"
 
 #: journalist_app/admin.py:234
 msgid "Test alert sent. Please check your email."
