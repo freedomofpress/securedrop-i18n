@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-06-01 20:14+0000\n"
+"PO-Revision-Date: 2018-06-01 20:26+0000\n"
 "Last-Translator: JonnyShuali <roee@mail.com>\n"
 "Language-Team: Hebrew <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/he/>\n"
@@ -352,7 +352,7 @@ msgstr ""
 
 #: journalist_templates/admin.html:42
 msgid "No users to display"
-msgstr "אין משתמשים להצגה"
+msgstr "אין משתמשים לתצוגה"
 
 #: journalist_templates/admin.html:48
 msgid "INSTANCE CONFIG"
@@ -361,20 +361,20 @@ msgstr ""
 #: journalist_templates/admin_add_user.html:4
 #: journalist_templates/config.html:4 journalist_templates/edit_account.html:7
 msgid "Back to admin interface"
-msgstr ""
+msgstr "חזור אל ממשק הניהול"
 
 #: journalist_templates/admin_add_user.html:21
 msgid "The user's password will be:"
-msgstr ""
+msgstr "סיסמת המשתמש תהיינה:"
 
 #: journalist_templates/admin_add_user.html:24
 #: journalist_templates/edit_account.html:17
 msgid "Is Administrator"
-msgstr ""
+msgstr "האם מנהל"
 
 #: journalist_templates/admin_add_user.html:32
 msgid "Is using a YubiKey [HOTP]"
-msgstr ""
+msgstr "האם משתמש בYubiKey [HOTP]"
 
 #: journalist_templates/admin_new_user_two_factor.html:6
 msgid ""
@@ -384,32 +384,37 @@ msgid ""
 "the 6-digit codes from the app to confirm that two factor authentication is "
 "set up correctly."
 msgstr ""
+"כמעט סיימנו! כדי לסיים הפעלת המשתמש החדש, הדרך אותם לבצע את המטלות מטה על "
+"מנת להפעיל את האימות הדו-שלבי עם FreeOTP. אחרי שיוסיפו את החשבון באפליקציה, "
+"הדרך אותם להקליד את 6 הספרות שהתקבלו על מנת להפעיל את האימות הדו-שלבי בהצלחה."
 
 #: journalist_templates/base.html:24
 msgid "Logged on as"
-msgstr ""
+msgstr "מחובר כ"
 
 #: journalist_templates/base.html:26
 msgid "Admin"
-msgstr ""
+msgstr "מנהל"
 
 #: journalist_templates/base.html:28
 msgid "Log Out"
-msgstr ""
+msgstr "התנתק"
 
 #: journalist_templates/base.html:41
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
 msgstr ""
+"מופעל על ידי <br> <img src=\"/static/i/securedrop_small.png\" alt=\""
+"SecureDrop\">"
 
 #: journalist_templates/base.html:56
 msgid "Powered by <em>SecureDrop {version}</em>."
-msgstr ""
+msgstr "מופעל על ידי <em>SecureDrop {version}</em>."
 
 #: journalist_templates/col.html:10
 msgid "All Sources"
-msgstr ""
+msgstr "כל המקורות"
 
 #: journalist_templates/col.html:13
 msgid ""
@@ -417,49 +422,52 @@ msgid ""
 "the first random codename is difficult to say or remember. You can generate "
 "new random codenames as many times as you like."
 msgstr ""
+"ייצר שם קוד אקראי עבור המקור. אנו ממליצים לעשות את זה עם שם הקוד האקראי "
+"הראשון שהתקבל קשה מידי לזכירה. תוכל לייצר שמות קוד חדשים כאוות נפשך."
 
 #: journalist_templates/col.html:13
 msgid "Change codename"
-msgstr ""
+msgstr "שנה שם-קוד"
 
 #: journalist_templates/col.html:14
 msgid "Are you sure you want to generate a new codename?"
-msgstr ""
+msgstr "אתה בטוח שברצונך לייצר שם-קוד חדש?"
 
 #: journalist_templates/col.html:16
 msgid "CONFIRM"
-msgstr ""
+msgstr "אשר"
 
 #: journalist_templates/col.html:22
 msgid ""
 "The documents are stored encrypted for security. To read them, you will need "
 "to decrypt them using GPG."
 msgstr ""
+"המסמך נשמרה באופן מוצפן לאבטחה. כדי לקרוא אותו, תצטרך לפענח אותו עם GPG."
 
 #: journalist_templates/col.html:26
 msgid "Download Selected"
-msgstr ""
+msgstr "הורד נבחרים"
 
 #: journalist_templates/col.html:28
 msgid "Delete Selected"
-msgstr ""
+msgstr "מחק נבחרים"
 
 #: journalist_templates/col.html:57
 msgid "Uploaded Document"
-msgstr ""
+msgstr "מסמכים שהועלו"
 
 #: journalist_templates/col.html:59 journalist_templates/col.html:92
 msgid "Reply"
-msgstr ""
+msgstr "השב"
 
 #: journalist_templates/col.html:61
 msgid "Message"
-msgstr ""
+msgstr "הודעה"
 
 #: journalist_templates/col.html:71 journalist_templates/col.html:129
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
-msgstr ""
+msgstr "מחק שיחה"
 
 #: journalist_templates/col.html:72
 msgid "Are you sure you want to delete the selected documents?"
