@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-06-01 20:26+0000\n"
+"PO-Revision-Date: 2018-06-01 22:00+0000\n"
 "Last-Translator: JonnyShuali <roee@mail.com>\n"
 "Language-Team: Hebrew <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/he/>\n"
@@ -65,7 +65,7 @@ msgstr "הקוד עבור אימות דו-שלבי התקבל עבור המשת�
 
 #: journalist_app/admin.py:208
 msgid "Deleted user '{user}'"
-msgstr ""
+msgstr "המשתמש '{user}' נמחק"
 
 #: journalist_app/admin.py:234
 msgid "Test alert sent. Please check your email."
@@ -467,38 +467,40 @@ msgstr "הודעה"
 #: journalist_templates/col.html:71 journalist_templates/col.html:129
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
-msgstr "מחק שיחה"
+msgstr "אימות מחיקה"
 
 #: journalist_templates/col.html:72
 msgid "Are you sure you want to delete the selected documents?"
-msgstr ""
+msgstr "אתה בטוח שברצונך למחוק את המסמכים שנבחרו?"
 
 #: journalist_templates/col.html:87
 msgid "No documents to display."
-msgstr ""
+msgstr "אין מסמכים לתצוגה."
 
 #: journalist_templates/col.html:94
 msgid ""
 "You can write a secure reply to the person who submitted these documents:"
-msgstr ""
+msgstr "תוכל לרשום תגובה מאובטחת עבור האדם ששלחת את המסמכים הללו:"
 
 #: journalist_templates/col.html:103
 msgid "You've flagged this source for reply."
-msgstr ""
+msgstr "סימנת את המקור הזה לתגובה."
 
 #: journalist_templates/col.html:104
 msgid ""
 "An encryption key will be generated for the source the next time they log "
 "in, after which you will be able to reply to the source here."
 msgstr ""
+"מפתח צופן יווצר עבור המקור הזה כאשר יתחבר בפעם הבאה, אחר כך תוכל להגיב עבורו "
+"כאן."
 
 #: journalist_templates/col.html:106
 msgid "Click below if you would like to write a reply to this source."
-msgstr ""
+msgstr "לחץ כאן אם ברצונך לכתוב תגובה למקור."
 
 #: journalist_templates/col.html:110
 msgid "FLAG THIS SOURCE FOR REPLY"
-msgstr ""
+msgstr "סמן את המקור לתגובה"
 
 #: journalist_templates/col.html:115
 msgid ""
@@ -521,32 +523,32 @@ msgstr ""
 
 #: journalist_templates/config.html:9
 msgid "Alerts"
-msgstr ""
+msgstr "התראות"
 
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
-msgstr ""
+msgstr "שלח מייל מוצפן אם התראות OSSEC עובדות:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
-msgstr ""
+msgstr "שלח התראת ניסיון של OSSEC"
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
-msgstr ""
+msgstr "סמליל"
 
 #: journalist_templates/config.html:23
 msgid ""
 "Here you can update the image displayed on the SecureDrop web interfaces:"
-msgstr ""
+msgstr "כאן תוכל לעדכן את התמונה שתוצג באתר של SecureDrop:"
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
-msgstr ""
+msgstr "גודל מומלץ: 500px * 450px"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
-msgstr ""
+msgstr "עדכן סמליל"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -554,40 +556,40 @@ msgid ""
 msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "הקובץ הנל נבחר עבור <strong>מחיקה לצמיתות</strong>:"
+msgstr[1] "הקבצים הללו נבחרו עבור <strong>מחיקה לצמיתות</strong>:"
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
-msgstr ""
+msgstr "מחק לצמיתות את הקבצים"
 
 #: journalist_templates/delete.html:23
 msgid "Return to the list of documents for {source_name}…"
-msgstr ""
+msgstr "חזור לרשימת המסמכים של {source_name}…"
 
 #: journalist_templates/edit_account.html:6
 msgid "Edit user \"{user}\""
-msgstr ""
+msgstr "ערוך את המשתמש \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Username &amp; Admin Status"
-msgstr ""
+msgstr "עדכן שם משתמש והרשאות"
 
 #: journalist_templates/edit_account.html:12
 msgid "Change username"
-msgstr ""
+msgstr "שנה שם משתמש"
 
 #: journalist_templates/edit_account.html:19
 msgid "UPDATE"
-msgstr ""
+msgstr "עדכן"
 
 #: journalist_templates/edit_account.html:22
 msgid "Edit your account"
-msgstr ""
+msgstr "ערוך את החשבון"
 
 #: journalist_templates/edit_account.html:25
 msgid "Reset Password"
-msgstr ""
+msgstr "שחזר סיסמא"
 
 #: journalist_templates/edit_account.html:27
 msgid "SecureDrop now uses automatically generated diceware passwords."
