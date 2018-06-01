@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-06-01 19:45+0000\n"
+"PO-Revision-Date: 2018-06-01 20:14+0000\n"
 "Last-Translator: JonnyShuali <roee@mail.com>\n"
 "Language-Team: Hebrew <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/he/>\n"
@@ -51,17 +51,17 @@ msgstr "הייתה בעיה עם יצירת הסיסמא. המשתמש לא נו
 
 #: journalist_app/admin.py:82 journalist_app/admin.py:166
 msgid "Username \"{user}\" already taken."
-msgstr "שם המשתמש \"{user}\" תפוס."
+msgstr "שם המשתמש \"{user}\" כבר תפוס."
 
 #: journalist_app/admin.py:85
 msgid ""
 "An error occurred saving this user to the database. Please inform your "
 "administrator."
-msgstr ""
+msgstr "התרחשה שגיאה בשמירת המשתמש במסד הנתונים. צור קשר עם מנהל המערכת."
 
 #: journalist_app/admin.py:109
 msgid "Token in two-factor authentication accepted for user {user}."
-msgstr ""
+msgstr "הקוד עבור אימות דו-שלבי התקבל עבור המשתמש {user}."
 
 #: journalist_app/admin.py:208
 msgid "Deleted user '{user}'"
@@ -69,7 +69,7 @@ msgstr ""
 
 #: journalist_app/admin.py:234
 msgid "Test alert sent. Please check your email."
-msgstr ""
+msgstr "התראת ניסיון נשלחה. אנא בדוק את תיבת המייל שלך."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -90,19 +90,19 @@ msgstr ""
 #: journalist_app/forms.py:30
 msgid ""
 "Field must be at least {min_chars} characters long but only got {num_chars}."
-msgstr ""
+msgstr "השדה צריך להכיל לפחות {min_chars} תווים אך התקבלו רק {num_chars}."
 
 #: journalist_app/forms.py:35 source_app/forms.py:11
 msgid "This field is required."
-msgstr ""
+msgstr "שדה חובה."
 
 #: journalist_app/forms.py:52
 msgid "You cannot send an empty reply."
-msgstr ""
+msgstr "אין אפשרות לשלוח תגובה ריקה."
 
 #: journalist_app/forms.py:60
 msgid "File required."
-msgstr ""
+msgstr "קובץ נדרש."
 
 #: journalist_app/forms.py:62
 msgid "Upload images only."
@@ -111,11 +111,11 @@ msgstr ""
 #: journalist_app/main.py:117 journalist_app/utils.py:47
 #: journalist_app/utils.py:137
 msgid "An unexpected error occurred! Please inform your administrator."
-msgstr ""
+msgstr "תקלה לא צפויה התרחשה! צור עם קשר עם מנהל המערכת."
 
 #: journalist_app/main.py:128
 msgid "Thanks. Your reply has been stored."
-msgstr ""
+msgstr "תודה. התגובה שלך נשמרה."
 
 #: journalist_app/main.py:149
 msgid "No collections selected for download."
@@ -131,11 +131,11 @@ msgstr ""
 
 #: journalist_app/main.py:193
 msgid "No unread submissions for this source."
-msgstr ""
+msgstr "אין טפסים שלא נקראו עבור המקור הזה."
 
 #: journalist_app/utils.py:54
 msgid "Account updated."
-msgstr ""
+msgstr "החשבון עודכן."
 
 #: journalist_app/utils.py:85
 msgid "Login failed."
@@ -144,18 +144,18 @@ msgstr "הכניסה נכשלה."
 #: journalist_app/utils.py:93
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "אנא המתן לפחות לפחות שניה אחת לפני שתנסה להתחבר שוב."
+msgstr[1] "אנא המתן לפחות {seconds} שניות לפני שתנסה להתחבר שוב."
 
 #: journalist_app/utils.py:104
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
-msgstr ""
+msgstr "אנא המתן לקוד חדש עבור האימות הדו שלבי לפני שתנסה שוב."
 
 #: journalist_app/utils.py:125
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
-msgstr ""
+msgstr "פורמט לא תקין: אנא השתמש באותיות A-F ובמספרים 0-9 בלבד."
 
 #: journalist_app/utils.py:131
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
@@ -164,8 +164,8 @@ msgstr ""
 #: journalist_app/utils.py:183
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "טופס נמחק."
+msgstr[1] "{num} טפסים נמחקו."
 
 #: journalist_app/utils.py:236
 msgid "{num} collection deleted"
@@ -175,7 +175,7 @@ msgstr[1] ""
 
 #: journalist_app/utils.py:274
 msgid "You submitted a bad password! Password not changed."
-msgstr ""
+msgstr "שלחת סיסמא גרועה! הסיסמא לא עודכנה."
 
 #: journalist_app/utils.py:281
 msgid ""
@@ -188,7 +188,7 @@ msgstr ""
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
-msgstr ""
+msgstr "הסיסמא עודכנה. אל תשכח לשמור אותה בKeePassX. הסיסמא החדשה היא:"
 
 #: journalist_app/utils.py:307
 msgid "No unread submissions in selected collections."
@@ -196,28 +196,28 @@ msgstr ""
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
-msgstr ""
+msgstr "סגור"
 
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:72
 msgid "Cancel"
-msgstr ""
+msgstr "בטל"
 
 #: journalist_templates/_source_row.html:23
 msgid "1 doc"
 msgid_plural "{doc_num} docs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "מסמך אחד"
+msgstr[1] "{doc_num} מסמכים"
 
 #: journalist_templates/_source_row.html:24
 msgid "1 message"
 msgid_plural "{msg_num} messages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "הודעה אחת"
+msgstr[1] "{msg_num} הודעות"
 
 #: journalist_templates/_source_row.html:27
 msgid "{num_unread} unread"
-msgstr ""
+msgstr "{num_unread} לא נקראו"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -234,12 +234,12 @@ msgstr ""
 #: journalist_templates/admin_edit_hotp_secret.html:10
 #: source_templates/login.html:23
 msgid "CONTINUE"
-msgstr ""
+msgstr "המשך"
 
 #: journalist_templates/account_new_two_factor.html:4
 #: journalist_templates/admin_new_user_two_factor.html:5
 msgid "Enable FreeOTP"
-msgstr ""
+msgstr "אפשר FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:5
 msgid ""
@@ -248,100 +248,103 @@ msgid ""
 "for your account in the app, enter one of the 6-digit codes from the app to "
 "confirm that two factor authentication is set up correctly."
 msgstr ""
+"כמעט סיימנו! כדי לסיים את אתחול האימות הדו שלבי, עקוב אחר הוראות הפעלת "
+"FreeOTP. אחרי שסיימת להגדיר את הרשומה עבור החשבון שלך באפליקציה, הקלד את 6 "
+"הספרות המופיעות בה על מנת לאשר את הצלחת האימות הדו-שלבי."
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
 msgid "Install FreeOTP on your phone"
-msgstr ""
+msgstr "התקן את FreeOTP בטלפון שלך"
 
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
 msgid "Open the FreeOTP app"
-msgstr ""
+msgstr "פתח את FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
 msgid "Tap the QR code symbol at the top"
-msgstr ""
+msgstr "הקש על סמל הQR שנמצא מעלה"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
 msgid ""
 "Your phone will now be in \"scanning\" mode. When you are in this mode, scan "
 "the barcode below:"
-msgstr ""
+msgstr "הטלפון שלך במצב \"סריקה\" כעת. כשאתה במצב זה, סרוק את הברקוד שלמטה:"
 
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
 msgid "Can't scan the barcode? Enter the following code manually:"
-msgstr ""
+msgstr "לא מצליח לסרוק את הברקוד? הקלד את הקוד הבא ידנית:"
 
 #: journalist_templates/account_new_two_factor.html:15
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid "Once you have scanned the barcode, enter the 6-digit code below:"
-msgstr ""
+msgstr "אחרי שסרקת את הברקוד, הקלד את 6 הספרות מטה:"
 
 #: journalist_templates/account_new_two_factor.html:17
 #: journalist_templates/admin_new_user_two_factor.html:20
 msgid "Enable YubiKey (OATH-HOTP)"
-msgstr ""
+msgstr "הפעלת  (OATH-HOTP)"
 
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:21
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
-msgstr ""
+msgstr "אחרי שהגדרת את הYubiKey שלך, הקלד מטה את ששת הספרות שהתקבלו:"
 
 #: journalist_templates/account_new_two_factor.html:22
 #: journalist_templates/admin_new_user_two_factor.html:25
 msgid "Verification code"
-msgstr ""
+msgstr "קוד אימות"
 
 #: journalist_templates/account_new_two_factor.html:24
 #: journalist_templates/admin_new_user_two_factor.html:27
 #: journalist_templates/col.html:100 source_templates/lookup.html:45
 msgid "SUBMIT"
-msgstr ""
+msgstr "שלח"
 
 #: journalist_templates/admin.html:3
 msgid "Admin Interface"
-msgstr ""
+msgstr "ממשק ניהול"
 
 #: journalist_templates/admin.html:6
 #: journalist_templates/admin_add_user.html:39
 msgid "ADD USER"
-msgstr ""
+msgstr "הוספת משתמש"
 
 #: journalist_templates/admin.html:16
 #: journalist_templates/admin_add_user.html:14
 #: journalist_templates/login.html:8
 msgid "Username"
-msgstr ""
+msgstr "שם משתמש"
 
 #: journalist_templates/admin.html:17
 msgid "Edit"
-msgstr ""
+msgstr "עריכה"
 
 #: journalist_templates/admin.html:18 journalist_templates/col.html:76
 #: journalist_templates/col.html:134 journalist_templates/index.html:16
 #: journalist_templates/index.html:51
 msgid "Delete"
-msgstr ""
+msgstr "מחק"
 
 #: journalist_templates/admin.html:19
 msgid "Created"
-msgstr ""
+msgstr "נוצר"
 
 #: journalist_templates/admin.html:20
 msgid "Last login"
-msgstr ""
+msgstr "הכניסה האחרונה"
 
 #: journalist_templates/admin.html:25
 msgid "Edit user {username}"
-msgstr ""
+msgstr "ערוך את המשתמש {username}"
 
 #: journalist_templates/admin.html:29
 msgid "Delete user {username}"
-msgstr ""
+msgstr "מחק את המשתמש {username}"
 
 #: journalist_templates/admin.html:35
 msgid "never"
@@ -349,7 +352,7 @@ msgstr ""
 
 #: journalist_templates/admin.html:42
 msgid "No users to display"
-msgstr ""
+msgstr "אין משתמשים להצגה"
 
 #: journalist_templates/admin.html:48
 msgid "INSTANCE CONFIG"
