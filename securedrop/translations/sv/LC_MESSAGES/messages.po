@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-06-07 12:50+0000\n"
+"PO-Revision-Date: 2018-06-07 15:00+0000\n"
 "Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
 "Language-Team: Swedish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/sv/>\n"
@@ -310,8 +310,7 @@ msgstr "Aktivera YubiKey (OATH-HOTP)"
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:21
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
-msgstr ""
-"När du har konfigurerat din Yubikey, ange den sexsiffriga koden härnedan:"
+msgstr "När du har konfigurerat din Yubikey, ange den sexsiffriga koden nedan:"
 
 #: journalist_templates/account_new_two_factor.html:22
 #: journalist_templates/admin_new_user_two_factor.html:25
@@ -414,11 +413,11 @@ msgstr "Inloggad som"
 
 #: journalist_templates/base.html:26
 msgid "Admin"
-msgstr "Administratör"
+msgstr "Admin"
 
 #: journalist_templates/base.html:28
 msgid "Log Out"
-msgstr "Logga Ut"
+msgstr "Logga ut"
 
 #: journalist_templates/base.html:41
 msgid ""
@@ -433,7 +432,7 @@ msgstr "Körs på <em>SecureDrop {version}</em>."
 
 #: journalist_templates/col.html:10
 msgid "All Sources"
-msgstr "Alla Källor"
+msgstr "Alla källor"
 
 #: journalist_templates/col.html:13
 msgid ""
@@ -471,11 +470,11 @@ msgstr "Ladda ned markerade"
 
 #: journalist_templates/col.html:28
 msgid "Delete Selected"
-msgstr "Radera valda"
+msgstr "Radera markerade"
 
 #: journalist_templates/col.html:57
 msgid "Uploaded Document"
-msgstr "Uppladdat Dokument"
+msgstr "Uppladdat dokument"
 
 #: journalist_templates/col.html:59 journalist_templates/col.html:92
 msgid "Reply"
@@ -492,7 +491,7 @@ msgstr "Verifiera radering"
 
 #: journalist_templates/col.html:72
 msgid "Are you sure you want to delete the selected documents?"
-msgstr "Är du säker att du vill ta bort markerade dokument?"
+msgstr "Är du säker att du vill ta bort de markerade dokumenten?"
 
 #: journalist_templates/col.html:87
 msgid "No documents to display."
@@ -501,8 +500,7 @@ msgstr "Inga dokument att visa."
 #: journalist_templates/col.html:94
 msgid ""
 "You can write a secure reply to the person who submitted these documents:"
-msgstr ""
-"Du kan skriva ett säkert svar till personen som lämnade in dessa dokument:"
+msgstr "Du kan skriva ett säkert svar till personen som lämnade dessa dokument:"
 
 #: journalist_templates/col.html:103
 msgid "You've flagged this source for reply."
