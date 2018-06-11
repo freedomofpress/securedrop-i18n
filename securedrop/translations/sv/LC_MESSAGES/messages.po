@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-06-11 08:03+0000\n"
+"PO-Revision-Date: 2018-06-11 14:05+0000\n"
 "Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
 "Language-Team: Swedish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/sv/>\n"
@@ -300,7 +300,7 @@ msgstr "Kan du inte skanna QR-koden? Ange följande kod manuellt:"
 #: journalist_templates/account_new_two_factor.html:15
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid "Once you have scanned the barcode, enter the 6-digit code below:"
-msgstr "Scanna streckkoden och ange sedan den sexsiffriga koden här nedan:"
+msgstr "Scanna QR-koden och ange sedan den sexsiffriga koden nedan:"
 
 #: journalist_templates/account_new_two_factor.html:17
 #: journalist_templates/admin_new_user_two_factor.html:20
@@ -512,7 +512,7 @@ msgid ""
 "An encryption key will be generated for the source the next time they log "
 "in, after which you will be able to reply to the source here."
 msgstr ""
-"En krypteringsnyckel kommer att genereras till denna källa nästa gång hen "
+"En krypteringsnyckel kommer att genereras till denna källa nästa gång den "
 "loggar in, därefter kommer du att kunna svara till källan här."
 
 #: journalist_templates/col.html:106
@@ -565,7 +565,7 @@ msgstr "Logga"
 #: journalist_templates/config.html:23
 msgid ""
 "Here you can update the image displayed on the SecureDrop web interfaces:"
-msgstr "Här kan ni uppdatera bilden som visas på SecureDrop-gränssnittet:"
+msgstr "Här kan du uppdatera bilden som visas på SecureDrop-gränssnittet:"
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
@@ -627,7 +627,7 @@ msgid ""
 "before pressing the \"Reset Password\" button."
 msgstr ""
 "Ditt lösenord kommer att återställas omedelbart, så du behöver spara det "
-"innan du klickar \"Återställ Lösenord\" -knappen."
+"innan du klickar \"Återställ lösenord\" -knappen."
 
 #: journalist_templates/edit_account.html:34
 msgid "Please enter your current password and two-factor code."
@@ -635,7 +635,7 @@ msgstr "Var snäll och ange ditt nuvarande lösenord och tvåfaktorskod."
 
 #: journalist_templates/edit_account.html:40
 msgid "Current Password"
-msgstr "Nuvarande Lösenord"
+msgstr "Nuvarande lösenord"
 
 #: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
 msgid "Two-factor Code"
@@ -711,9 +711,9 @@ msgid ""
 "encrypted replies to them."
 msgstr ""
 "SecureDrop kommer att generera en säker krypteringsnyckel för den här källan "
-"nästa gång hen loggar in. När den här nyckeln har genererats kommer en "
-"svarsruta att dyka upp under hens dokumentsamling. Du kan använda rutan till "
-"att skriva krypterade svar till hen."
+"nästa gång den loggar in. När nyckeln har genererats kommer en svarsruta att "
+"dyka upp under dokumentsamlingen. Du kan använda rutan till att skriva "
+"krypterade svar."
 
 #: journalist_templates/flag.html:10
 msgid "Continue to the list of documents for {codename}..."
@@ -753,7 +753,7 @@ msgstr "filtrera på kodnamn"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
-msgstr "Välj Alla"
+msgstr "Välj alla"
 
 #: journalist_templates/js-strings.html:5
 msgid "Select Unread"
@@ -837,11 +837,11 @@ msgstr "Alla svar har tagits bort"
 
 #: source_app/main.py:244
 msgid "Sorry, that is not a recognized codename."
-msgstr "Detta kodnamn är okänt."
+msgstr "Tyvärr, detta kodnamn är okänt."
 
 #: source_templates/base.html:6 source_templates/index.html:4
 msgid "Protecting Journalists and Sources"
-msgstr "Skyddar Journalister och Källor"
+msgstr "Skyddar journalister och källor"
 
 #: source_templates/base.html:25 source_templates/base.html:47
 #: source_templates/index.html:33 source_templates/index.html:88
@@ -937,10 +937,10 @@ msgid ""
 "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it "
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Det är rekommenderat att du ställer Security Slider till Safest för "
-"att skydda din anonymitet:</strong> <a id=\"disable-js\" href=\"\">Lär dig "
-"hur du ställer den till Safest</a>, eller ignorera denna varning och "
-"fortsätt."
+"<strong>Det är rekommenderat att du ställer \"Security\"-inställningen till "
+"\"Safest\" för att skydda din anonymitet:</strong> <a id=\"disable-js\" href="
+"\"\">Lär dig hur du ställer den till \"Safest\"</a>, eller ignorera denna "
+"varning och fortsätt."
 
 #: source_templates/index.html:18
 msgid ""
@@ -968,7 +968,7 @@ msgstr ""
 
 #: source_templates/index.html:42
 msgid "Submit for the first time"
-msgstr "Skicka in information första gången"
+msgstr "Skicka in information för första gången"
 
 #: source_templates/index.html:49
 msgid "Already submitted something?"
@@ -997,8 +997,8 @@ msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
 msgstr ""
-"Det ser ut som att du använder Tor Browser. Du kan flytta din Security "
-"Slider till Safest i fyra enkla steg."
+"Det ser ut som att du använder Tor Browser. Du kan ändra dina \"Security\"-"
+"inställningar till \"Safest\" i fyra enkla steg."
 
 #: source_templates/index.html:98
 msgid ""
@@ -1015,8 +1015,8 @@ msgstr "Klicka på <strong>Security Settings...</strong>"
 msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
 msgstr ""
-"Flytta Slider till <strong> Safest</strong>, och välj sedan<strong> OK</"
-"strong>"
+"Flytta \"Security\"-inställningen till <strong> Safest</strong>, och tryck "
+"sedan på<strong> OK</strong>"
 
 #: source_templates/index.html:101
 msgid "<a href=\"/\">Click here</a> to refresh the page"
@@ -1024,7 +1024,7 @@ msgstr "<a href=\"/\">Klicka här </a> för att uppdatera sidan"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
-msgstr "Ange Kodnamn"
+msgstr "Ange kodnamn"
 
 #: source_templates/login.html:12
 msgid "Enter your codename"
@@ -1045,9 +1045,9 @@ msgid ""
 "green onion button in the Tor browser to clear all history of your "
 "SecureDrop usage from this device."
 msgstr ""
-"Tack för att du har avslutat din session! Var snäll och välj \"New Identity"
-"\" från den gröna knappen med lökikon i Tor Browser för att rensa all "
-"historik från användning av SecureDrop på den här enheten."
+"Tack för att du avslutat din session! Var snäll och välj \"New Identity\" "
+"från den gröna knappen med lökikon i Tor Browser för att rensa all historik "
+"av SecureDrop-användning på den här enheten."
 
 #: source_templates/lookup.html:11
 msgid "Whew, it’s you! Now, the embarrassing part..."
@@ -1059,8 +1059,8 @@ msgid ""
 "visited. To err on the side of caution, we put a hold on sending all files "
 "and messages from that day through to our journalists."
 msgstr ""
-"Våra servrar utsattes för en ovanlig ökning av ny aktivitet, den senaste "
-"gången du besökte oss. För att vara på den säkra sidan, har vi fryst alla "
+"Våra servrar utsattes för en ovanlig ökning av ny aktivitet den senaste "
+"gången du besökte oss. För att vara på den säkra sidan har vi fryst alla "
 "filer och meddelanden som skickades till våra journalister under den dagen."
 
 #: source_templates/lookup.html:14
@@ -1069,7 +1069,7 @@ msgid ""
 "submission into the hands of a journalist straight away. We’re sorry for the "
 "delay. Please do check back again in a week or so."
 msgstr ""
-"Nu när vi verkligen vet att du är en människa, ska vi se till att din "
+"Nu när vi verkligen vet att du är en människa ska vi se till att din "
 "inlämning kommer till en journalist så fort som möjligt. Vi ber om ursäkt "
 "för fördröjningen. Vänligen återkom om en vecka eller liknande."
 
@@ -1114,7 +1114,7 @@ msgid ""
 "with them. This also lets us know that you are aware of our reply. You can "
 "respond by submitting new files and messages above."
 msgstr ""
-"Du har tagit emot ett svar. För att skydda din identitet vid det osannolika "
+"Du har fått ett svar. För att skydda din identitet vid det osannolika "
 "tillfället någon kommer på ditt kodnamn, vänligen ta bort alla svar när du "
 "är klar med dem. Därmed får vi också bekräftat att du har sett vårt svar. Du "
 "kan svara genom att skicka in nya filer eller meddelanden ovan."
