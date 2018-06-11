@@ -114,8 +114,8 @@ msgid "File required."
 msgstr "Trường nhập bắt buộc."
 
 #: journalist_app/forms.py:62
-msgid "Upload images only."
-msgstr "Vui lòng chỉ tải hình ảnh lên."
+msgid "You can only upload PNG image files."
+msgstr ""
 
 #: journalist_app/main.py:117 journalist_app/utils.py:47
 #: journalist_app/utils.py:137
@@ -535,8 +535,8 @@ msgstr ""
 "không thể truy cập sử dụng mật danh trước của họ. </em>"
 
 #: journalist_templates/col.html:122
-msgid "DELETE COLLECTION"
-msgstr "XÓA CƠ SỞ DỮ LIỆU"
+msgid "DELETE SOURCE AND SUBMISSIONS"
+msgstr ""
 
 #: journalist_templates/col.html:130
 msgid "Are you sure you want to delete this collection?"
@@ -834,8 +834,8 @@ msgstr "Đây không phải là một mật danh trong cơ sở dữ liệu."
 msgid "Protecting Journalists and Sources"
 msgstr "Bảo vệ những nhà báo và các nguồn"
 
-#: source_templates/base.html:25 source_templates/base.html:45
-#: source_templates/index.html:33 source_templates/index.html:85
+#: source_templates/base.html:25 source_templates/base.html:47
+#: source_templates/index.html:33 source_templates/index.html:88
 msgid "Powered by"
 msgstr "Được cung cấp bởi"
 
@@ -843,7 +843,7 @@ msgstr "Được cung cấp bởi"
 msgid "LOG OUT"
 msgstr "TRUY XUẤT"
 
-#: source_templates/base.html:45 source_templates/index.html:85
+#: source_templates/base.html:47 source_templates/index.html:88
 msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
@@ -971,7 +971,7 @@ msgstr ""
 msgid "CHECK FOR A RESPONSE"
 msgstr "KIỂM TRA CÂU TRẢ LỜI"
 
-#: source_templates/index.html:93
+#: source_templates/index.html:96
 #, fuzzy
 #| msgid ""
 #| "You appear to be using the Tor Browser. You can turn the Security Slider "
@@ -983,18 +983,18 @@ msgstr ""
 "Có vẻ bạn đang dùng Tor Browser. Bạn có thể chuyển thanh an toàn tới mức an "
 "toàn nhất chỉ với 4 bước đơn giản!"
 
-#: source_templates/index.html:95
+#: source_templates/index.html:98
 msgid ""
 "Click the <img src=\"{icon}\" alt=\"Tor icon\"> Tor icon in the toolbar above"
 msgstr ""
 "Nhấn vào <img src=\"{icon}\" alt=\"Tor icon\"> biểu tượng Tor trong thanh "
 "công cụ bên trên"
 
-#: source_templates/index.html:96
+#: source_templates/index.html:99
 msgid "Click <strong>Security Settings...</strong>"
 msgstr "Nhấn vào <strong> Cài đặt an toàn ...</strong>"
 
-#: source_templates/index.html:97
+#: source_templates/index.html:100
 #, fuzzy
 #| msgid ""
 #| "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
@@ -1004,7 +1004,7 @@ msgstr ""
 "Chuyển thanh thành <strong> An toàn nhất </strong>, sau đó nhấn vào "
 "<strong>OK</strong>"
 
-#: source_templates/index.html:98
+#: source_templates/index.html:101
 msgid "<a href=\"/\">Click here</a> to refresh the page"
 msgstr "<a href=\"/\">Nhấn vào đây </a> để tải lại trang"
 
@@ -1142,6 +1142,10 @@ msgstr "Không tìm thấy trang"
 msgid "Sorry, we couldn't locate what you requested."
 msgstr "Xin lỗi, chúng tôi không thể tìm thứ bạn yêu cầu."
 
+#: source_templates/screensaver.html:2
+msgid "Interface hidden. Move your mouse here to show."
+msgstr ""
+
 #: source_templates/session_timeout.html:6
 msgid ""
 "Your session timed out due to inactivity. Please login again if you want to "
@@ -1155,14 +1159,12 @@ msgid "Why is there a warning about Tor2Web?"
 msgstr "Vì sao lại có cảnh báo về Tor2Web?"
 
 #: source_templates/tor2web-warning.html:4
-msgid ""
-"Using <a href=\"tor2web.org\">Tor2Web</a> to connect to SecureDrop will not "
-"protect your anonymity."
+msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
 msgstr ""
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
-"It could be possible for anyone listening to Internet usage (your "
+"It could be possible for anyone monitoring your Internet traffic (your "
 "government, your Internet provider), to identify you."
 msgstr ""
 
@@ -1196,8 +1198,8 @@ msgstr ""
 
 #: source_templates/use-tor-browser.html:9
 msgid ""
-"If there is a chance that downloading the Tor Browser raises suspicion and "
-"your mail provider is less likely to be monitored, you can send a mail to "
+"If there is a chance that downloading Tor Browser raises suspicion and your "
+"mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
 
@@ -1278,6 +1280,12 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr ""
+
+#~ msgid "Upload images only."
+#~ msgstr "Vui lòng chỉ tải hình ảnh lên."
+
+#~ msgid "DELETE COLLECTION"
+#~ msgstr "XÓA CƠ SỞ DỮ LIỆU"
 
 #~ msgid "That username is already in use"
 #~ msgstr "Người dùng này đã được sử dụng"

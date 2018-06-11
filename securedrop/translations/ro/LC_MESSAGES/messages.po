@@ -118,8 +118,8 @@ msgid "File required."
 msgstr "Fișierul este obligatoriu."
 
 #: journalist_app/forms.py:62
-msgid "Upload images only."
-msgstr "Se pot încărca doar imagini."
+msgid "You can only upload PNG image files."
+msgstr ""
 
 #: journalist_app/main.py:117 journalist_app/utils.py:47
 #: journalist_app/utils.py:137
@@ -558,8 +558,8 @@ msgstr ""
 "folosind numele de cod precedent.</em>"
 
 #: journalist_templates/col.html:122
-msgid "DELETE COLLECTION"
-msgstr "ȘTERGE COLECȚIA"
+msgid "DELETE SOURCE AND SUBMISSIONS"
+msgstr ""
 
 #: journalist_templates/col.html:130
 msgid "Are you sure you want to delete this collection?"
@@ -872,8 +872,8 @@ msgstr "Ne pare rău, acesta nu este un nume de cod recunoscut."
 msgid "Protecting Journalists and Sources"
 msgstr "Pentru protecția jurnaliștilor și a surselor"
 
-#: source_templates/base.html:25 source_templates/base.html:45
-#: source_templates/index.html:33 source_templates/index.html:85
+#: source_templates/base.html:25 source_templates/base.html:47
+#: source_templates/index.html:33 source_templates/index.html:88
 msgid "Powered by"
 msgstr "Tehnologie oferită de"
 
@@ -881,7 +881,7 @@ msgstr "Tehnologie oferită de"
 msgid "LOG OUT"
 msgstr "DECONECTARE"
 
-#: source_templates/base.html:45 source_templates/index.html:85
+#: source_templates/base.html:47 source_templates/index.html:88
 msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
@@ -1051,7 +1051,7 @@ msgstr ""
 msgid "CHECK FOR A RESPONSE"
 msgstr "VERIFICĂ RĂSPUNSURILE"
 
-#: source_templates/index.html:93
+#: source_templates/index.html:96
 #, fuzzy
 #| msgid ""
 #| "You appear to be using the Tor Browser. You can turn the Security Slider "
@@ -1063,18 +1063,18 @@ msgstr ""
 "Se pare că folosești Browserul Tor. Poți activa opțiunea de securitate "
 "maximă în 4 pași simpli!"
 
-#: source_templates/index.html:95
+#: source_templates/index.html:98
 msgid ""
 "Click the <img src=\"{icon}\" alt=\"Tor icon\"> Tor icon in the toolbar above"
 msgstr ""
 "Clic pe <img src=\"{icon}\" alt=\"pictograma Tor\"> pictograma Tor din bara "
 "de unelte de mai sus"
 
-#: source_templates/index.html:96
+#: source_templates/index.html:99
 msgid "Click <strong>Security Settings...</strong>"
 msgstr "Clic pe <strong>Setări de securitate...</strong>"
 
-#: source_templates/index.html:97
+#: source_templates/index.html:100
 #, fuzzy
 #| msgid ""
 #| "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
@@ -1084,7 +1084,7 @@ msgstr ""
 "Mută glisorul pe opțiunea <strong>Cel mai sigur</strong>, apoi clic pe "
 "<strong>Ok</strong>"
 
-#: source_templates/index.html:98
+#: source_templates/index.html:101
 msgid "<a href=\"/\">Click here</a> to refresh the page"
 msgstr "<a href=\"/\">Clic aici</a> pentru a reîmprospăta pagina"
 
@@ -1247,6 +1247,10 @@ msgstr "Pagina nu a fost găsită"
 msgid "Sorry, we couldn't locate what you requested."
 msgstr "Ne pare rău, nu am găsit ceea ce căutai."
 
+#: source_templates/screensaver.html:2
+msgid "Interface hidden. Move your mouse here to show."
+msgstr ""
+
 #: source_templates/session_timeout.html:6
 msgid ""
 "Your session timed out due to inactivity. Please login again if you want to "
@@ -1265,14 +1269,12 @@ msgid "Why is there a warning about Tor2Web?"
 msgstr "De ce sunt avertizat despre Tor2Web?"
 
 #: source_templates/tor2web-warning.html:4
-msgid ""
-"Using <a href=\"tor2web.org\">Tor2Web</a> to connect to SecureDrop will not "
-"protect your anonymity."
+msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
 msgstr ""
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
-"It could be possible for anyone listening to Internet usage (your "
+"It could be possible for anyone monitoring your Internet traffic (your "
 "government, your Internet provider), to identify you."
 msgstr ""
 
@@ -1312,9 +1314,15 @@ msgstr ""
 "instrucțiunile pentru a descărca și instala Browserul Tor:"
 
 #: source_templates/use-tor-browser.html:9
+#, fuzzy
+#| msgid ""
+#| "If there is a chance that downloading the Tor Browser raises suspicion "
+#| "and your mail provider is less likely to be monitored, you can send a "
+#| "mail to <pre>gettor@torproject.org</pre> and a bot will answer with "
+#| "instructions."
 msgid ""
-"If there is a chance that downloading the Tor Browser raises suspicion and "
-"your mail provider is less likely to be monitored, you can send a mail to "
+"If there is a chance that downloading Tor Browser raises suspicion and your "
+"mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
 "Dacă descărcarea browserului Tor poate trezi suspiciuni asupra ta, dar este "
@@ -1422,6 +1430,12 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Înapoi la pagina cu trimiteri"
+
+#~ msgid "Upload images only."
+#~ msgstr "Se pot încărca doar imagini."
+
+#~ msgid "DELETE COLLECTION"
+#~ msgstr "ȘTERGE COLECȚIA"
 
 #~ msgid "That username is already in use"
 #~ msgstr "Numele de utilizator este deja folosit"

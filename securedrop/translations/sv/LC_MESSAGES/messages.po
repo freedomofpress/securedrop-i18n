@@ -110,8 +110,10 @@ msgid "File required."
 msgstr "Fil krävs."
 
 #: journalist_app/forms.py:62
-msgid "Upload images only."
-msgstr "Ladda endast upp bilder."
+#, fuzzy
+#| msgid "You can only upload JPG/JPEG or PNG image files."
+msgid "You can only upload PNG image files."
+msgstr "Du kan endast ladda upp JPG/JPEG eller PNG bildfiler."
 
 #: journalist_app/main.py:117 journalist_app/utils.py:47
 #: journalist_app/utils.py:137
@@ -500,7 +502,8 @@ msgstr "Inga dokument att visa."
 #: journalist_templates/col.html:94
 msgid ""
 "You can write a secure reply to the person who submitted these documents:"
-msgstr "Du kan skriva ett säkert svar till personen som lämnade dessa dokument:"
+msgstr ""
+"Du kan skriva ett säkert svar till personen som lämnade dessa dokument:"
 
 #: journalist_templates/col.html:103
 msgid "You've flagged this source for reply."
@@ -533,8 +536,8 @@ msgstr ""
 "kommer inte längre att kunna logga in med sitt förra kodnamn. </em>"
 
 #: journalist_templates/col.html:122
-msgid "DELETE COLLECTION"
-msgstr "TA BORT SAMLING"
+msgid "DELETE SOURCE AND SUBMISSIONS"
+msgstr ""
 
 #: journalist_templates/col.html:130
 msgid "Are you sure you want to delete this collection?"
@@ -842,8 +845,8 @@ msgstr "Detta kodnamn är okänt."
 msgid "Protecting Journalists and Sources"
 msgstr "Skyddar Journalister och Källor"
 
-#: source_templates/base.html:25 source_templates/base.html:45
-#: source_templates/index.html:33 source_templates/index.html:85
+#: source_templates/base.html:25 source_templates/base.html:47
+#: source_templates/index.html:33 source_templates/index.html:88
 msgid "Powered by"
 msgstr "Körs på"
 
@@ -851,7 +854,7 @@ msgstr "Körs på"
 msgid "LOG OUT"
 msgstr "LOGGA UT"
 
-#: source_templates/base.html:45 source_templates/index.html:85
+#: source_templates/base.html:47 source_templates/index.html:88
 msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
@@ -991,7 +994,7 @@ msgstr ""
 msgid "CHECK FOR A RESPONSE"
 msgstr "KONTROLLERA OM DU FÅTT ETT SVAR"
 
-#: source_templates/index.html:93
+#: source_templates/index.html:96
 msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
@@ -999,25 +1002,25 @@ msgstr ""
 "Det ser ut som att du använder Tor Browser. Du kan flytta din Security "
 "Slider till Safest i fyra enkla steg."
 
-#: source_templates/index.html:95
+#: source_templates/index.html:98
 msgid ""
 "Click the <img src=\"{icon}\" alt=\"Tor icon\"> Tor icon in the toolbar above"
 msgstr ""
 "Klicka på <img src=\"{icon}\" alt=\"Tor icon\"> Tor-ikonen i verktygsraden "
 "ovanför"
 
-#: source_templates/index.html:96
+#: source_templates/index.html:99
 msgid "Click <strong>Security Settings...</strong>"
 msgstr "Klicka på <strong>Security Settings...</strong>"
 
-#: source_templates/index.html:97
+#: source_templates/index.html:100
 msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
 msgstr ""
 "Flytta Slider till <strong> Safest</strong>, och välj sedan<strong> OK</"
 "strong>"
 
-#: source_templates/index.html:98
+#: source_templates/index.html:101
 msgid "<a href=\"/\">Click here</a> to refresh the page"
 msgstr "<a href=\"/\">Klicka här </a> för att uppdatera sidan"
 
@@ -1166,6 +1169,10 @@ msgstr "Sidan kunde inte hittas"
 msgid "Sorry, we couldn't locate what you requested."
 msgstr "Förlåt, vi kunde inte hitta det du begärde."
 
+#: source_templates/screensaver.html:2
+msgid "Interface hidden. Move your mouse here to show."
+msgstr ""
+
 #: source_templates/session_timeout.html:6
 msgid ""
 "Your session timed out due to inactivity. Please login again if you want to "
@@ -1184,16 +1191,22 @@ msgid "Why is there a warning about Tor2Web?"
 msgstr "Varför finns det en varning om Tor2Web?"
 
 #: source_templates/tor2web-warning.html:4
-msgid ""
-"Using <a href=\"tor2web.org\">Tor2Web</a> to connect to SecureDrop will not "
-"protect your anonymity."
+#, fuzzy
+#| msgid ""
+#| "Using <a href=\"tor2web.org\">Tor2Web</a> to connect to SecureDrop will "
+#| "not protect your anonymity."
+msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
 msgstr ""
 "Att använda <a href=\"tor2web.org\"> Tor2Web</a> för att ansluta till "
 "SecureDrop kommer inte att skydda din anonymitet."
 
 #: source_templates/tor2web-warning.html:5
+#, fuzzy
+#| msgid ""
+#| "It could be possible for anyone listening to Internet usage (your "
+#| "government, your Internet provider), to identify you."
 msgid ""
-"It could be possible for anyone listening to Internet usage (your "
+"It could be possible for anyone monitoring your Internet traffic (your "
 "government, your Internet provider), to identify you."
 msgstr ""
 "Det kan vara möjligt för någon som lyssnar på Internet användning (dina "
@@ -1236,9 +1249,15 @@ msgstr ""
 "instruktionerna om hur man laddar ner och installerar Tor Browser:"
 
 #: source_templates/use-tor-browser.html:9
+#, fuzzy
+#| msgid ""
+#| "If there is a chance that downloading the Tor Browser raises suspicion "
+#| "and your mail provider is less likely to be monitored, you can send a "
+#| "mail to <pre>gettor@torproject.org</pre> and a bot will answer with "
+#| "instructions."
 msgid ""
-"If there is a chance that downloading the Tor Browser raises suspicion and "
-"your mail provider is less likely to be monitored, you can send a mail to "
+"If there is a chance that downloading Tor Browser raises suspicion and your "
+"mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
 "Om det finns risk att en nedladdning av Tor-läsaren höjer misstankar, och "
@@ -1348,8 +1367,11 @@ msgstr ""
 msgid "Back to submission page"
 msgstr "Tillbaka till inlämningssidan"
 
-#~ msgid "You can only upload JPG/JPEG or PNG image files."
-#~ msgstr "Du kan endast ladda upp JPG/JPEG eller PNG bildfiler."
+#~ msgid "Upload images only."
+#~ msgstr "Ladda endast upp bilder."
+
+#~ msgid "DELETE COLLECTION"
+#~ msgstr "TA BORT SAMLING"
 
 #~ msgid "That username is already in use"
 #~ msgstr "Detta användarnamn används redan"

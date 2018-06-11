@@ -106,7 +106,7 @@ msgid "File required."
 msgstr ""
 
 #: journalist_app/forms.py:62
-msgid "Upload images only."
+msgid "You can only upload PNG image files."
 msgstr ""
 
 #: journalist_app/main.py:117 journalist_app/utils.py:47
@@ -498,7 +498,7 @@ msgid ""
 msgstr ""
 
 #: journalist_templates/col.html:122
-msgid "DELETE COLLECTION"
+msgid "DELETE SOURCE AND SUBMISSIONS"
 msgstr ""
 
 #: journalist_templates/col.html:130
@@ -781,8 +781,8 @@ msgstr ""
 msgid "Protecting Journalists and Sources"
 msgstr ""
 
-#: source_templates/base.html:25 source_templates/base.html:45
-#: source_templates/index.html:33 source_templates/index.html:85
+#: source_templates/base.html:25 source_templates/base.html:47
+#: source_templates/index.html:33 source_templates/index.html:88
 msgid "Powered by"
 msgstr ""
 
@@ -790,7 +790,7 @@ msgstr ""
 msgid "LOG OUT"
 msgstr ""
 
-#: source_templates/base.html:45 source_templates/index.html:85
+#: source_templates/base.html:47 source_templates/index.html:88
 msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
@@ -898,27 +898,27 @@ msgstr ""
 msgid "CHECK FOR A RESPONSE"
 msgstr ""
 
-#: source_templates/index.html:93
+#: source_templates/index.html:96
 msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
 msgstr ""
 
-#: source_templates/index.html:95
+#: source_templates/index.html:98
 msgid ""
 "Click the <img src=\"{icon}\" alt=\"Tor icon\"> Tor icon in the toolbar above"
 msgstr ""
 
-#: source_templates/index.html:96
+#: source_templates/index.html:99
 msgid "Click <strong>Security Settings...</strong>"
 msgstr ""
 
-#: source_templates/index.html:97
+#: source_templates/index.html:100
 msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
 msgstr ""
 
-#: source_templates/index.html:98
+#: source_templates/index.html:101
 msgid "<a href=\"/\">Click here</a> to refresh the page"
 msgstr ""
 
@@ -1051,6 +1051,10 @@ msgstr ""
 msgid "Sorry, we couldn't locate what you requested."
 msgstr ""
 
+#: source_templates/screensaver.html:2
+msgid "Interface hidden. Move your mouse here to show."
+msgstr ""
+
 #: source_templates/session_timeout.html:6
 msgid ""
 "Your session timed out due to inactivity. Please login again if you want to "
@@ -1064,14 +1068,12 @@ msgid "Why is there a warning about Tor2Web?"
 msgstr ""
 
 #: source_templates/tor2web-warning.html:4
-msgid ""
-"Using <a href=\"tor2web.org\">Tor2Web</a> to connect to SecureDrop will not "
-"protect your anonymity."
+msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
 msgstr ""
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
-"It could be possible for anyone listening to Internet usage (your "
+"It could be possible for anyone monitoring your Internet traffic (your "
 "government, your Internet provider), to identify you."
 msgstr ""
 
@@ -1105,8 +1107,8 @@ msgstr ""
 
 #: source_templates/use-tor-browser.html:9
 msgid ""
-"If there is a chance that downloading the Tor Browser raises suspicion and "
-"your mail provider is less likely to be monitored, you can send a mail to "
+"If there is a chance that downloading Tor Browser raises suspicion and your "
+"mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
 
