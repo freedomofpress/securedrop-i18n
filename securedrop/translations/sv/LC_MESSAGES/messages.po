@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-06-11 14:19+0000\n"
+"PO-Revision-Date: 2018-06-11 14:21+0000\n"
 "Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
 "Language-Team: Swedish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/sv/>\n"
@@ -33,7 +33,7 @@ msgstr "Felaktigt lösenord eller säkerhetskod."
 
 #: journalist_app/account.py:42
 msgid "Token in two-factor authentication verified."
-msgstr "Nyckeln i tvåstegsverifiering har godkänts."
+msgstr "Säkerhetskoden i tvåstegsverifiering har godkänts."
 
 #: journalist_app/account.py:46 journalist_app/admin.py:116
 msgid "Could not verify token in two-factor authentication."
