@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-06-11 14:21+0000\n"
+"PO-Revision-Date: 2018-06-11 16:00+0000\n"
 "Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
 "Language-Team: Swedish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/sv/>\n"
@@ -29,15 +29,15 @@ msgstr "Du har blivit utloggad på grund av inaktivitet"
 
 #: journalist_app/account.py:26
 msgid "Incorrect password or two-factor code."
-msgstr "Felaktigt lösenord eller säkerhetskod."
+msgstr "Felaktigt lösenord eller tvåfaktorskod."
 
 #: journalist_app/account.py:42
 msgid "Token in two-factor authentication verified."
-msgstr "Säkerhetskoden i tvåstegsverifiering har godkänts."
+msgstr "Koden i tvåfaktorsautentiseringen har verifierats."
 
 #: journalist_app/account.py:46 journalist_app/admin.py:116
 msgid "Could not verify token in two-factor authentication."
-msgstr "Nyckeln i tvåfaktorsautentiseringen kunde inte verifieras."
+msgstr "Koden i tvåfaktorsautentisering kunde inte verifieras."
 
 #: journalist_app/admin.py:38
 msgid "Image updated."
@@ -65,7 +65,7 @@ msgstr ""
 
 #: journalist_app/admin.py:109
 msgid "Token in two-factor authentication accepted for user {user}."
-msgstr "Nyckeln i tvåfaktorsautentiseringen accepterad för användaren {user}."
+msgstr "Kod i tvåfaktorsautentisering accepterad för användaren {user}."
 
 #: journalist_app/admin.py:208
 msgid "Deleted user '{user}'"
@@ -159,8 +159,8 @@ msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
 msgstr ""
-"Var snäll och vänta på en ny kod från din två-faktor nyckel eller program "
-"innan du försöker på nytt."
+"Var snäll och vänta på en ny kod från din tvåfaktorsautentiseringsnyckel "
+"eller program innan du försöker på nytt."
 
 #: journalist_app/utils.py:125
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
@@ -264,11 +264,11 @@ msgid ""
 "for your account in the app, enter one of the 6-digit codes from the app to "
 "confirm that two factor authentication is set up correctly."
 msgstr ""
-"Du är nästan klar! För att avsluta återställningen av din tvåfaktor "
-"autentisering, följ instruktionerna nedanför för att ställa in Google "
+"Du är nästan klar! För att avsluta återställningen av din "
+"tvåfaktorsautentisering, följ instruktionerna nedanför för att ställa in "
 "FreeOTP. Lägg till det här kontot i appen, och ange sedan din sexsiffriga "
-"kod från appen för att bekräfta att tvåfaktorsautentisering fungerar som den "
-"ska."
+"kod från appen för att bekräfta att tvåfaktorsautentiseringen fungerar som "
+"den ska."
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
@@ -403,9 +403,9 @@ msgid ""
 "set up correctly."
 msgstr ""
 "Det är strax klart! För att avsluta användarkonfigureringen, följ "
-"instruktionerna nedan för att sätta upp två-stegs-autentisering med FreeOTP. "
+"instruktionerna nedan för att sätta upp tvåfaktorsautentisering med FreeOTP. "
 "När det här kontot har lagts till i appen, mata in den sexsiffriga koden "
-"från appen för att bekräfta två-stegs-autentiseringen."
+"från appen för att bekräfta tvåfaktorsautentiseringen."
 
 #: journalist_templates/base.html:24
 msgid "Logged on as"
@@ -631,7 +631,8 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:34
 msgid "Please enter your current password and two-factor code."
-msgstr "Var snäll och ange ditt nuvarande lösenord och tvåfaktorskod."
+msgstr ""
+"Var snäll och ange ditt nuvarande lösenord och tvåfaktorsautentiseringskod."
 
 #: journalist_templates/edit_account.html:40
 msgid "Current Password"
@@ -639,7 +640,7 @@ msgstr "Nuvarande lösenord"
 
 #: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
 msgid "Two-factor Code"
-msgstr "Tvåfaktorskod"
+msgstr "Tvåfaktorsautentiseringskod"
 
 #: journalist_templates/edit_account.html:46
 msgid "The user's password will be changed to:"
@@ -664,11 +665,11 @@ msgid ""
 "is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
-"Om användarens lösenord med två-stegs-autentisering har förlorats eller "
+"Om användarens lösenord med tvåfaktorsautentisering har förlorats eller "
 "utsatts för en säkerhetsrisk så kan du återställa det här. <em>Ifall du gör "
-"det, försäkra dig om att användaren är närvarande och kan skapa en ny två-"
-"stegs-autentisering.</em> Annars kommer användaren att bli utelåst från sitt "
-"konto."
+"det, försäkra dig om att användaren är närvarande och kan skapa en ny "
+"tvåfaktorsautentisering.</em> Annars kommer användaren att bli utelåst från "
+"sitt konto."
 
 #: journalist_templates/edit_account.html:63
 msgid ""
@@ -693,7 +694,7 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:90
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
-msgstr "ÅTERSTÄLL TVÅFAKTORSAUTENTISERING (APPLIKATION)"
+msgstr "ÅTERSTÄLL TVÅFAKTORSAUTENTISERING (APP)"
 
 #: journalist_templates/edit_account.html:92
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
