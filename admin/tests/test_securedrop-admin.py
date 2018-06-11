@@ -66,6 +66,21 @@ class TestSecureDropAdmin(object):
                 assert update_status is True
                 assert tag == '0.6.1'
 
+    def test_check_for_updates_ensure_newline_stripped(self, tmpdir, caplog):
+        """Regression test for #3426"""
+        git_repo_path = str(tmpdir)
+        args = argparse.Namespace(root=git_repo_path)
+        current_tag = "0.6.1\n"
+        tags_available = "0.6\n0.6-rc1\n0.6.1\n"
+
+        with mock.patch('subprocess.check_call'):
+            with mock.patch('subprocess.check_output',
+                            side_effect=[current_tag, tags_available]):
+                update_status, tag = securedrop_admin.check_for_updates(args)
+                assert "All updates applied" in caplog.text
+                assert update_status is False
+                assert tag == '0.6.1'
+
     def test_check_for_updates_update_not_needed(self, tmpdir, caplog):
         git_repo_path = str(tmpdir)
         args = argparse.Namespace(root=git_repo_path)
@@ -114,7 +129,11 @@ class TestSecureDropAdmin(object):
         git_repo_path = str(tmpdir)
         args = argparse.Namespace(root=git_repo_path)
 
-        git_output = 'Good signature from "SecureDrop Release Signing Key"'
+        git_output = ('gpg: Signature made Tue 13 Mar 2018 01:14:11 AM UTC\n'
+                      'gpg:                using RSA key '
+                      '22245C81E3BAEB4138B36061310F561200F4AD77\n'
+                      'gpg: Good signature from "SecureDrop Release '
+                      'Signing Key" [unknown]\n')
 
         patchers = [
             mock.patch('securedrop_admin.check_for_updates',
@@ -156,7 +175,11 @@ class TestSecureDropAdmin(object):
         git_repo_path = str(tmpdir)
         args = argparse.Namespace(root=git_repo_path)
 
-        git_output = 'Good signature from "SecureDrop Release Signing Key"'
+        git_output = ('gpg: Signature made Tue 13 Mar 2018 01:14:11 AM UTC\n'
+                      'gpg:                using RSA key '
+                      '22245C81E3BAEB4138B36061310F561200F4AD77\n'
+                      'gpg: Good signature from "SecureDrop Release '
+                      'Signing Key" [unknown]\n')
 
         with mock.patch('securedrop_admin.check_for_updates',
                         return_value=(True, "0.6.1")):
@@ -173,7 +196,11 @@ class TestSecureDropAdmin(object):
         git_repo_path = str(tmpdir)
         args = argparse.Namespace(root=git_repo_path)
 
-        git_output = 'Bad signature from "SecureDrop Release Signing Key"'
+        git_output = ('gpg: Signature made Tue 13 Mar 2018 01:14:11 AM UTC\n'
+                      'gpg:                using RSA key '
+                      '22245C81E3BAEB4138B36061310F561200F4AD77\n'
+                      'gpg: BAD signature from "SecureDrop Release '
+                      'Signing Key" [unknown]\n')
 
         with mock.patch('securedrop_admin.check_for_updates',
                         return_value=(True, "0.6.1")):
@@ -185,6 +212,115 @@ class TestSecureDropAdmin(object):
                     assert "Signature verification failed." in caplog.text
                     assert "Updated to SecureDrop" not in caplog.text
                     assert ret_code != 0
+
+    def test_update_malicious_key_named_fingerprint(self, tmpdir, caplog):
+        git_repo_path = str(tmpdir)
+        args = argparse.Namespace(root=git_repo_path)
+
+        git_output = ('gpg: Signature made Tue 13 Mar 2018 01:14:11 AM UTC\n'
+                      'gpg:                using RSA key '
+                      '1234567812345678123456781234567812345678\n'
+                      'gpg: Good signature from "22245C81E3BAEB4138'
+                      'B36061310F561200F4AD77" [unknown]\n')
+
+        with mock.patch('securedrop_admin.check_for_updates',
+                        return_value=(True, "0.6.1")):
+            with mock.patch('subprocess.check_call'):
+                with mock.patch('subprocess.check_output',
+                                return_value=git_output):
+                    ret_code = securedrop_admin.update(args)
+                    assert "Applying SecureDrop updates..." in caplog.text
+                    assert "Signature verification failed." in caplog.text
+                    assert "Updated to SecureDrop" not in caplog.text
+                    assert ret_code != 0
+
+    def test_update_malicious_key_named_good_sig(self, tmpdir, caplog):
+        git_repo_path = str(tmpdir)
+        args = argparse.Namespace(root=git_repo_path)
+
+        git_output = ('gpg: Signature made Tue 13 Mar 2018 01:14:11 AM UTC\n'
+                      'gpg:                using RSA key '
+                      '1234567812345678123456781234567812345678\n'
+                      'gpg: Good signature from Good signature from '
+                      '"SecureDrop Release Signing Key" [unknown]\n')
+
+        with mock.patch('securedrop_admin.check_for_updates',
+                        return_value=(True, "0.6.1")):
+            with mock.patch('subprocess.check_call'):
+                with mock.patch('subprocess.check_output',
+                                return_value=git_output):
+                    ret_code = securedrop_admin.update(args)
+                    assert "Applying SecureDrop updates..." in caplog.text
+                    assert "Signature verification failed." in caplog.text
+                    assert "Updated to SecureDrop" not in caplog.text
+                    assert ret_code != 0
+
+    def test_update_malicious_key_named_good_sig_fingerprint(self, tmpdir,
+                                                             caplog):
+        git_repo_path = str(tmpdir)
+        args = argparse.Namespace(root=git_repo_path)
+
+        git_output = ('gpg: Signature made Tue 13 Mar 2018 01:14:11 AM UTC\n'
+                      'gpg:                using RSA key '
+                      '1234567812345678123456781234567812345678\n'
+                      'gpg: Good signature from 22245C81E3BAEB4138'
+                      'B36061310F561200F4AD77 Good signature from '
+                      '"SecureDrop Release Signing Key" [unknown]\n')
+
+        with mock.patch('securedrop_admin.check_for_updates',
+                        return_value=(True, "0.6.1")):
+            with mock.patch('subprocess.check_call'):
+                with mock.patch('subprocess.check_output',
+                                return_value=git_output):
+                    ret_code = securedrop_admin.update(args)
+                    assert "Applying SecureDrop updates..." in caplog.text
+                    assert "Signature verification failed." in caplog.text
+                    assert "Updated to SecureDrop" not in caplog.text
+                    assert ret_code != 0
+
+    def test_no_signature_on_update(self, tmpdir, caplog):
+        git_repo_path = str(tmpdir)
+        args = argparse.Namespace(root=git_repo_path)
+
+        with mock.patch('securedrop_admin.check_for_updates',
+                        return_value=(True, "0.6.1")):
+            with mock.patch('subprocess.check_call'):
+                with mock.patch('subprocess.check_output',
+                                side_effect=subprocess.CalledProcessError(
+                                  1, 'git', 'error: no signature found')
+                                ):
+                    ret_code = securedrop_admin.update(args)
+                    assert "Applying SecureDrop updates..." in caplog.text
+                    assert "Signature verification failed." in caplog.text
+                    assert "Updated to SecureDrop" not in caplog.text
+                    assert ret_code != 0
+
+    def test_exit_codes(self, tmpdir):
+        """Ensure that securedrop-admin returns the correct
+           exit codes for success or failure."""
+        with mock.patch(
+                'securedrop_admin.install_securedrop',
+                return_value=True):
+            with pytest.raises(SystemExit) as e:
+                securedrop_admin.main(
+                    ['--root', str(tmpdir), 'install'])
+                assert e.value.code == securedrop_admin.EXIT_SUCCESS
+
+        with mock.patch(
+                'securedrop_admin.install_securedrop',
+                side_effect=subprocess.CalledProcessError(1, 'TestError')):
+            with pytest.raises(SystemExit) as e:
+                securedrop_admin.main(
+                    ['--root', str(tmpdir), 'install'])
+                assert e.value.code == securedrop_admin.EXIT_SUBPROCESS_ERROR
+
+        with mock.patch(
+                'securedrop_admin.install_securedrop',
+                side_effect=KeyboardInterrupt):
+            with pytest.raises(SystemExit) as e:
+                securedrop_admin.main(
+                    ['--root', str(tmpdir), 'install'])
+                assert e.value.code == securedrop_admin.EXIT_INTERRUPT
 
 
 class TestSiteConfig(object):
@@ -573,25 +709,65 @@ class TestSiteConfig(object):
                 return desc
 
     def verify_desc_consistency_optional(self, site_config, desc):
-        (var, default, etype, prompt, validator, transform) = desc
+        (var, default, etype, prompt, validator, transform, condition) = desc
         # verify the default passes validation
         assert site_config.user_prompt_config_one(desc, None) == default
         assert type(default) == etype
 
     def verify_desc_consistency(self, site_config, desc):
         self.verify_desc_consistency_optional(site_config, desc)
-        (var, default, etype, prompt, validator, transform) = desc
+        (var, default, etype, prompt, validator, transform, condition) = desc
         with pytest.raises(ValidationError):
             site_config.user_prompt_config_one(desc, '')
 
     def verify_prompt_boolean(
             self, site_config, desc):
         self.verify_desc_consistency(site_config, desc)
-        (var, default, etype, prompt, validator, transform) = desc
+        (var, default, etype, prompt, validator, transform, condition) = desc
         assert site_config.user_prompt_config_one(desc, True) is True
         assert site_config.user_prompt_config_one(desc, False) is False
         assert site_config.user_prompt_config_one(desc, 'YES') is True
         assert site_config.user_prompt_config_one(desc, 'NO') is False
+
+    def test_desc_conditional(self):
+        """Ensure that conditional prompts behave correctly.
+
+            Prompts which depend on another question should only be
+            asked if the prior question was answered appropriately."""
+
+        questions = [
+            ['first_question',
+             False,
+             bool,
+             u'Test Question 1',
+             None,
+             lambda x: x.lower() == 'yes',
+             lambda config: True],
+            ['dependent_question',
+             'default_value',
+             str,
+             u'Test Question 2',
+             None,
+             None,
+             lambda config: config.get('first_question', False)]
+        ]
+        args = argparse.Namespace(site_config='tests/files/site-specific',
+                                  ansible_path='tests/files',
+                                  app_path=dirname(__file__))
+        site_config = securedrop_admin.SiteConfig(args)
+        site_config.desc = questions
+
+        def auto_prompt(prompt, default, **kwargs):
+            return default
+
+        with mock.patch('prompt_toolkit.prompt', side_effect=auto_prompt):
+            config = site_config.user_prompt_config()
+            assert config['dependent_question'] != 'default_value'
+
+            site_config.desc[0][1] = True
+
+            config = site_config.user_prompt_config()
+            assert config['dependent_question'] == 'default_value'
 
     verify_prompt_ssh_users = verify_desc_consistency
     verify_prompt_app_ip = verify_desc_consistency
@@ -616,7 +792,7 @@ class TestSiteConfig(object):
         assert site_config.user_prompt_config_one(desc, fpr) == clean_fpr
 
     def verify_desc_consistency_allow_empty(self, site_config, desc):
-        (var, default, etype, prompt, validator, transform) = desc
+        (var, default, etype, prompt, validator, transform, condition) = desc
         # verify the default passes validation
         assert site_config.user_prompt_config_one(desc, None) == default
         assert type(default) == etype
@@ -647,7 +823,7 @@ class TestSiteConfig(object):
     verify_prompt_sasl_password = verify_prompt_not_empty
 
     def verify_prompt_securedrop_supported_locales(self, site_config, desc):
-        (var, default, etype, prompt, validator, transform) = desc
+        (var, default, etype, prompt, validator, transform, condition) = desc
         # verify the default passes validation
         assert site_config.user_prompt_config_one(desc, None) == default
         assert type(default) == etype
@@ -672,7 +848,8 @@ class TestSiteConfig(object):
 
         with mock.patch('prompt_toolkit.prompt', side_effect=auto_prompt):
             for desc in site_config.desc:
-                (var, default, etype, prompt, validator, transform) = desc
+                (var, default, etype, prompt, validator, transform,
+                    condition) = desc
                 method = 'verify_prompt_' + var
                 print("checking " + method)
                 getattr(self, method)(site_config, desc)

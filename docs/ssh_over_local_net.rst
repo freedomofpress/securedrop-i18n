@@ -27,13 +27,13 @@ network instead please continue to read.
 
 .. _ssh_over_local:
 
-Configuring SSH for local access
+Configuring SSH for Local Access
 --------------------------------
 
 .. warning:: It is important that your firewall is configured adequately if you
           decide you need SSH over the local network. The install process locks
           down access as much as possible with net restrictions, SSH keys, and
-          google authenticator. However, you could still leave the interface
+          two-factor authentication. However, you could still leave the interface
           exposed to unintended users if you did not properly follow our network
           firewall guide.
 
@@ -69,7 +69,7 @@ answer either 'no' or 'false' when you are prompted for ``Enable SSH over Tor``:
     Hostname for Application Server: app
     Hostname for Monitor Server: mon
     [...]
-    Enable SSH over Tor (recommended, disables SSH over LAN). If you respond no, SSH will be available over LAN only: yes
+    Enable SSH over Tor (recommended, disables SSH over LAN). If you respond no, SSH will be available over LAN only: no
 
 Then you'll have to run the installation script:
 

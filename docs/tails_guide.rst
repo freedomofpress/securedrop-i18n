@@ -6,13 +6,13 @@ must be using the Tails operating system. The admin must also use Tails to
 access the *Journalist Interface* and create new users.
 
 If you followed the :doc:`SecureDrop Installation instructions <install>`
-correctly, you should have already created a *Journalist Tails USB* and an
-*Admin Tails USB* and enabled the persistence volume on each. If you have not,
-or need to create another *Journalist Tails USB* for a second journalist,
-follow the steps below.
+correctly, you should have already created a *Journalist Workstation* Tails USB
+and an *Admin Workstation* Tails USB and enabled the persistence volume on
+each. If you have not, or need to create another Tails USB for a second
+journalist, follow the steps below.
 
-If you already know how to boot the *Admin Tails USB* or the *Journalist Tails
-USB* with persistence, you can skip down to the step 'download the repository'.
+If you already know how to boot the *Admin Workstation* or *Journalist Workstation*
+Tails USB with persistence, you can skip down to the step 'download the repository'.
 
 Note that for all of these instructions to work, you should have already
 installed the main SecureDrop application. It is also required that you use
@@ -77,7 +77,7 @@ Persistence
 ~~~~~~~~~~~
 
 Creating an encrypted persistent volume will allow you to securely save
-information in the free space that is left on the Transfer Device. This
+information in the free space that is left on the *Transfer Device*. This
 information will remain available to you even if you reboot Tails. Instructions
 on how to create and use this volume can be found on the `Tails
 website <https://tails.boum.org/doc/first_steps/persistence/index.en.html>`__.
@@ -137,8 +137,8 @@ To use the template:
 	     the database.
 
 
-Set Up Easy Access to the Journalist Interface
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Set Up Easy Access to the *Journalist Interface*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To complete setup of the *Admin Workstation* or Journalist Workstation, we
 recommend using the scripts in ``tails_files`` to easily configure Tor to
@@ -170,20 +170,20 @@ If you're running the script as a journalist, you will need the .onion addresses
 for each interface, provided to you by the admin.
 
 We use an "authenticated" Tor Hidden Service so that adversaries cannot access
-the Journalist Interface, providing a layer of defense-in-depth which protects the
-Journalist Interface even if there is a security vulnerability in the web
+the *Journalist Interface*, providing a layer of defense-in-depth which protects the
+*Journalist Interface* even if there is a security vulnerability in the web
 application, or if the journalist's username, passphrase, and two-factor token
 are stolen. The extra configuration that is required is handled by this script.
 
 Our ``./securedrop-admin tailsconfig`` tool sets up Tails to work with SecureDrop
 every time you login. As long as Tails is booted with the persistent volume enabled
-then you can open the Tor Browser and connect to the Journalist Interface as normal.
+then you can open the Tor Browser and connect to the *Journalist Interface* as normal.
 
-Create Bookmarks for Source and Journalist Interfaces
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Create Bookmarks for *Source Interface* and *Journalist Interface*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want, you can open the browser and create bookmarks for the Source and
-Journalist Interfaces. Navigate to the site you wish to bookmark, select
+*Journalist Interfaces*. Navigate to the site you wish to bookmark, select
 *Bookmarks* and *Bookmark This Page*, give the site a useful name (e.g. *Source
 Interface*), and click *Done*. Tails will remember the bookmarks even if you
 reboot.

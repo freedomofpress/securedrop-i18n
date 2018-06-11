@@ -20,7 +20,7 @@ This section outlines the tasks the admin is responsible for in order to
 ensure that the SecureDrop server continues to be a safe place for sources to
 talk to journalists.
 
-Keep your SecureDrop Server Updated
+Keep Your SecureDrop Server Updated
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You should maintain awareness of SecureDrop updates and take any required
@@ -36,7 +36,7 @@ intervention will be required.
 .. _`SecureDrop Release Blog`: https://securedrop.org/news
 .. _`SecureDrop RSS Feed`: https://securedrop.org/news/feed
 
-Keep your Network Firewall Updated
+Keep Your Network Firewall Updated
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Given all traffic first hits the network firewall as it faces the non-Tor public
@@ -52,7 +52,7 @@ Upgrade Docs`_ for further details on how to update the suggested firewall.
 .. _`Netgate RSS Feed`: https://www.netgate.com/feed.xml
 .. _`pfSense Upgrade Docs`: https://doc.pfsense.org/index.php/Upgrade_Guide
 
-Keep your SecureDrop Workstations Updated
+Keep Your SecureDrop Workstations Updated
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You should keep your SecureDrop workstations updated with:
@@ -74,7 +74,7 @@ on how to upgrade the drives.
 .. _`Tails
    Upgrade Documentation`: https://tails.boum.org/doc/first_steps/upgrade/index.en.html
 
-Monitor OSSEC alerts for Unusual Activity
+Monitor OSSEC Alerts for Unusual Activity
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You should decrypt and read your OSSEC alerts. Report any suspicious events to
@@ -83,6 +83,8 @@ for more information on common OSSEC alerts.
 
 .. warning:: Do not post logs or alerts to public forums without first carefully
     examining and redacting any sensitive information.
+
+.. _test OSSEC alert:
 
 .. note:: You can send a test OSSEC alert to verify OSSEC and your email configuration
           is working properly through the *Admin Interface* by clicking **Send
@@ -93,7 +95,6 @@ for more information on common OSSEC alerts.
 .. |Test Alert| image:: images/manual/screenshots/journalist-admin_ossec_alert_button.png
 
 .. _`SecureDrop Support Portal`: https://securedrop-support.readthedocs.io/en/latest/
-
 
 .. _Adding Users:
 
@@ -239,6 +240,8 @@ Rebooting the Servers
 
   sudo reboot
 
+.. _investigating_logs:
+
 Investigating Logs
 ^^^^^^^^^^^^^^^^^^^
 
@@ -340,7 +343,7 @@ You should see a message appear indicating the change was a success:
 .. |System Config Page| image:: images/manual/screenshots/journalist-admin_system_config_page.png
 .. |Logo Update| image:: images/manual/screenshots/journalist-admin_changes_logo_image.png
 
-Updating system configuration
+Updating System Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want to update the system configuration, you should use the
@@ -371,7 +374,7 @@ Read the next section if you have multiple admins.
   Server configuration is stored on the *Admin Workstation* in
   ``~/Persistent/securedrop/install_files/ansible-base/group_vars/all/site-specific``.
 
-Managing ``site-specific`` updates on teams with multiple admins
+Managing ``site-specific`` Updates On Teams With Multiple Admins
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Organizations with multiple admins should establish a protocol to communicate
@@ -394,3 +397,57 @@ by monitoring OSSEC alerts. (Please note that while an OSSEC alert can notify yo
 occurrence of an update to the server, it may not reveal the content of the change.) Another
 management option would be SSHing into the server and manually inspecting the configuration to
 identify any discrepancies.
+
+Frequently Asked Questions
+--------------------------
+
+Some initial troubleshooting steps for common scenarios follow.
+If you continue to have trouble after following these steps, you can contact the
+SecureDrop team for further assistance.
+
+Generic Troubleshooting Tips
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When troubleshooting, ensure you are on the latest version of SecureDrop
+in your *Admin Workstation*. After :doc:`upgrading to SecureDrop 0.7.x <upgrade/0.6.x_to_0.7>`,
+this is done by simply accepting the update when prompted at boot in the GUI
+that appears.
+
+I can't SSH into my servers over Tor from my Admin Workstation. What do I do?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+At any point after the successful installation of SecureDrop, if you cannot SSH
+into your Admin Workstation, you should first perform the following troubleshooting steps:
+
+#. **Ensure that you are connected to Tor.** You can do this by browsing to any site
+   in Tor Browser in your *Admin Workstation*.
+
+#. **Ensure your servers are online.** Visit the *Admin Interface* to check
+   your *Application Server* is online, and you can trigger a `test OSSEC alert`_
+   to verify your *Monitor Server* is online.
+
+#. **Ensure that SSH aliases and the HidServAuth values are configured:** From
+   ``~/Persistent/securedrop``, run  ``./securedrop-admin tailsconfig``. This
+   will ensure your local Tails environment is configured properly.
+
+    .. note:: If you get an error during the Tails configuration step, as an Administrator,
+       you should ensure you have four files ``app-ssh-aths``, ``mon-ssh-aths``,
+       ``app-journalist-aths`` and ``app-source-ths`` in
+       ``~/Persistent/securedrop/install_files/ansible-base/``. These are used by
+       the Tails configuration scripts to configure Tor.
+
+#. **Confirm that your SSH key is available**: During the install, you
+   configured SSH public key authentication using ``ssh-copy-id``.
+   Ensure this key is available using ``ssh-add -L``. If you see the output
+   "This agent has no identities." then you need to add the key via ``ssh-add``
+   prior to SSHing into the servers.
+
+I got a unusual error when running ``./securedrop-admin install``. What do I do?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If the error message is not informative, try running it again. The Tor
+connection can be flaky and can cause apparent errors, but there is no negative
+impact of re-rerunning ``./securedrop-admin install`` more than once. The
+command will simply check which tasks have been completed, and pick up where it
+left off. However, if the same issue persists, you will need to investigate
+further.

@@ -10,6 +10,8 @@ import shutil
 import signal
 import subprocess
 
+from ConfigParser import SafeConfigParser
+
 os.environ['SECUREDROP_ENV'] = 'test'  # noqa
 from sdconfig import SDConfig, config as original_config
 
@@ -85,23 +87,47 @@ def config(tmpdir):
     cnf.TEMP_DIR = str(tmp)
     cnf.DATABASE_FILE = str(sqlite)
 
+    # create the db file
+    subprocess.check_call(['sqlite3', cnf.DATABASE_FILE, '.databases'])
+
     return cnf
+
+
+@pytest.fixture(scope='function')
+def alembic_config(config):
+    base_dir = path.join(path.dirname(__file__), '..')
+    migrations_dir = path.join(base_dir, 'alembic')
+    ini = SafeConfigParser()
+    ini.read(path.join(base_dir, 'alembic.ini'))
+
+    ini.set('alembic', 'script_location', path.join(migrations_dir))
+    ini.set('alembic', 'sqlalchemy.url', 'sqlite:///' + config.DATABASE_FILE)
+
+    alembic_path = path.join(config.SECUREDROP_DATA_ROOT, 'alembic.ini')
+    config.TESTING_ALEMBIC_PATH = alembic_path
+
+    with open(alembic_path, 'w') as f:
+        ini.write(f)
+
+    return alembic_path
 
 
 @pytest.fixture(scope='function')
 def source_app(config):
     app = create_source_app(config)
+    app.config['SERVER_NAME'] = 'localhost'
     with app.app_context():
         db.create_all()
-    return app
+        yield app
 
 
 @pytest.fixture(scope='function')
 def journalist_app(config):
     app = create_journalist_app(config)
+    app.config['SERVER_NAME'] = 'localhost'
     with app.app_context():
         db.create_all()
-    return app
+        yield app
 
 
 @pytest.fixture(scope='function')

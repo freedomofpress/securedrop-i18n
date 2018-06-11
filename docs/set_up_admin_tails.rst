@@ -1,17 +1,17 @@
-Set up the Admin Workstation
-============================
+Set up the *Admin Workstation*
+==============================
 
-Earlier, you should have created the *Admin Tails USB* along with a
-persistence volume for it. Now, we are going to add a couple more
-features to the *Admin Tails USB* to facilitate SecureDrop's setup.
+Earlier, you should have created the *Admin Workstation* Tails USB along with a
+persistence volume for it. Now, we are going to add a couple more features to
+the *Admin Workstation* to facilitate SecureDrop's setup.
 
-If you have not switched to and booted the *Admin Tails USB* on your
+If you have not switched to and booted the *Admin Workstation* Tails USB on your
 regular workstation, do so now.
 
 Start Tails with Persistence Enabled
 ------------------------------------
 
-After you boot the *Admin Tails USB* on your normal workstation, you
+After you boot the *Admin Workstation* Tails USB on your normal workstation, you
 should see a *Welcome to Tails* screen with *Encrypted Persistent
 Storage*.  Enter your password and click *Unlock*. Do NOT click *Start
 Tails* yet. Under *Additional Settings* click the *plus* sign.
@@ -114,11 +114,11 @@ key:
 .. code:: sh
 
     cd ~/Persistent/securedrop/
-    git checkout 0.7.0~rc1
-    git tag -v 0.7.0~rc1
+    git checkout 0.8.0~rc1
+    git tag -v 0.8.0~rc1
 
 You should see ``Good signature from "SecureDrop Release Signing Key"`` in the
-output of that last command.
+output of that last command along with the fingerprint above.
 
 .. caution:: If you do not, signature verification has failed and you
              *should not* proceed with the installation. If this

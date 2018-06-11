@@ -1,4 +1,4 @@
-Setting up the development environment
+Setting Up the Development Environment
 ======================================
 
 .. include:: ../includes/docs-branches.txt
@@ -12,7 +12,7 @@ specific type of development task. We use Vagrant, VirtualBox, and
 Docker and our Ansible playbooks can provision these environments on
 either virtual machines or physical hardware.
 
-Quick start
+Quick Start
 -----------
 
 The Docker based environment is suitable for developing the web application
@@ -45,7 +45,7 @@ Install Docker_.
 .. _Docker: https://store.docker.com/editions/community/docker-ce-desktop-mac
 
 
-Fork & Clone the repository
+Fork & Clone the Repository
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now you are ready to get your own copy of the source code.
@@ -56,7 +56,7 @@ Visit our repository_ fork it and clone it on you local machine:
 
    git clone git@github.com:<your_github_username>/securedrop.git
 
-Using the Docker environment
+Using the Docker Environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The Docker based helpers are intended for rapid development on the
@@ -78,7 +78,7 @@ To get started, you can try the following:
 
 .. code:: sh
 
-   cd securedrop
+   cd securedrop/securedrop
    make dev                                    # run development servers
    make test                                   # run tests
    bin/dev-shell bin/run-test tests/functional # functional tests only
@@ -90,13 +90,13 @@ To get started, you can try the following:
          ``maybe_create_config_py`` etc.
 
 SecureDrop consists of two separate web applications (the Source Interface and
-the Journalist Interface) that run concurrently. In the development environment
+the *Journalist Interface*) that run concurrently. In the development environment
 they are configured to detect code changes and automatically reload whenever a
 file is saved. They are made available on your host machine by forwarding the
 following ports:
 
 * Source Interface: `localhost:8080 <http://localhost:8080>`__
-* Journalist Interface: `localhost:8081 <http://localhost:8081>`__
+* *Journalist Interface*: `localhost:8081 <http://localhost:8081>`__
 
 A test administrator (``journalist``) and non-admin user (``dellsberg``) are
 created by default when running ``make dev``. In addition, sources and
@@ -119,7 +119,7 @@ can simply scan the following QR code:
 
 .. image:: ../images/devenv/test-users-totp-qrcode.png
 
-Setting up a multi-machine environment
+Setting Up a Multi-Machine Environment
 --------------------------------------
 
 .. note:: You do not need this step if you only plan to work on the
@@ -241,7 +241,7 @@ different version, the path to ``virtualenvwrapper.sh`` will differ. Running
 .. _Ansible: http://docs.ansible.com/intro_installation.html
 .. _Homebrew: https://brew.sh/
 
-Fork & Clone the repository
+Fork & Clone the Repository
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now you are ready to get your own copy of the source code.
@@ -254,7 +254,7 @@ Visit our repository_ fork it and clone it on you local machine:
 
 .. _repository: https://github.com/freedomofpress/securedrop
 
-Install python requirements
+Install Python Requirements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 SecureDrop uses many third-party open source packages from the python community.

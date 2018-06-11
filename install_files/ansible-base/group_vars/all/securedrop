@@ -2,7 +2,7 @@
 # Variables that apply to both the app and monitor server go in this file
 # If the monitor or app server need different values define the variable in
 # hosts_vars/app.yml or host_vars/mon.yml
-securedrop_app_code_version: "0.7.0~rc1"
+securedrop_app_code_version: "0.8.0~rc1"
 
 grsecurity: true
 install_local_packages: false
@@ -15,21 +15,7 @@ remote_host_ref: "{{ ansible_ssh_host|default(inventory_hostname) }}"
 
 # Packages required for working on SecureDrop within development VM. Same list
 # is used on the build VM to pull in required packages.
-development_dependencies:
-  - ipython
-  - libssl-dev
-  - ntp
-  - python-dev
-  - python-ipdb
-  - python-pip
-  - ruby # to ensure `gem` command is available
-  - tmux
-  - vim
-  - libffi-dev # for sphinx
-  - git
-  - devscripts # for dch
-  - gdb # for gcore in TestSubmissionNotInMemory
-  - paxctl
+development_dependencies: []
 
 # These profiles are referenced by multiple machines, such as Application Server
 # for direct copying at install time, and the build machine for including them
@@ -48,7 +34,7 @@ appserver_dependencies:
   - python
   - python-pip
   - secure-delete
-  - sqlite
+  - sqlite3
   - apparmor-utils
   - redis-server
   - supervisor
@@ -63,3 +49,8 @@ enable_ssh_over_tor: true
 # force a reboot. Needed because of the de-coupled nature of
 # the many roles of the current prod playbook
 securedrop_cond_reboot_file: /tmp/sd-reboot-now
+
+# If you bump this, also remember to bump in molecule/builder/tests/vars.yml
+securedrop_pkg_grsec:
+  ver: "4.4.115"
+  depends: "linux-image-3.14.79-grsec,linux-image-4.4.115-grsec"

@@ -9,7 +9,7 @@ read on the *Secure Viewing Station*.
 
 We will now generate the *SecureDrop Submission Key*.
 
-Create the key
+Create the Key
 --------------
 
 #. Navigate to **Applications ▸ Terminal** to open a terminal |Terminal|.
@@ -44,7 +44,7 @@ Create the key
    needed**.
 #. Wait for the key to finish generating.
 
-Export the public key
+Export the Public Key
 ---------------------
 
 To manage GPG keys using the graphical interface (a program called Seahorse),
@@ -76,7 +76,7 @@ installation.  Double-click on the newly generated key and change to the
           screenshot.
 
 At this point, you are done with the *Secure Viewing Station* for now. You
-can shut down Tails, grab the *Admin Tails USB* and move over to your regular
+can shut down Tails, grab the *Admin Workstation* Tails USB and move over to your regular
 workstation.
 
 .. |GPG generate key| image:: images/install/run_gpg_gen_key.png

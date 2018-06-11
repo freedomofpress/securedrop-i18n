@@ -97,8 +97,8 @@ Workstations
 These components are necessary to do the initial installation of
 SecureDrop and to process submissions using the air-gapped workflow.
 
-Secure Viewing Station (SVS)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*Secure Viewing Station* (SVS)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1 physical computer used as an air-gap to decrypt and view submissions retrieved
 from the *Application Server*.
@@ -107,7 +107,7 @@ The chosen hardware should be solely used for this purpose and should have any
 wireless networking hardware removed before use.
 
 Admin/Journalist Workstation(s)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *At least 1* physical computer that is used as a workstation for SecureDrop
 admins and/or journalists.
@@ -119,14 +119,14 @@ depending on: the number of admins/journalists you wish to grant access to
 SecureDrop, whether they can share the same workstation due to availability
 requirements, geographic distribution, etc.
 
-USB drive(s)
-~~~~~~~~~~~~~~~~
+USB Drive(s)
+~~~~~~~~~~~~
 
 *At least 2* USB drives to use as a bootable Tails USB for the *SVS* and the
 *Admin Workstation*/*Journalist Workstation*.
 
 If only one person is maintaining the system, you may use the same Tails
-instance as both the Admin Tails and the Journalist Tails; otherwise, we
+instance as both the *Admin Workstation* and the *Journalist Workstation*; otherwise, we
 recommend buying 1 drive for each admin and each journalist.
 
 We also recommend buying two additional USBs to use as bootable backups of the
@@ -174,7 +174,7 @@ Depending on your setup, you may also need these to work on the *SVS*.
 	  firewall. In our experience, relatively recent recycled Dell
 	  desktops or servers are adequate for the SecureDrop servers,
 	  and recycled ThinkPad laptops work well for the
-	  Admin/Journalist workstations.
+	  *Admin Workstation*/*Journalist Workstation*.
 
 	  If you choose to use recycled hardware, you should of course
 	  consider whether or not it is trustworthy; making that

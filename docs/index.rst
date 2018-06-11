@@ -79,6 +79,7 @@ anonymous sources.
    yubikey_setup
    backup_and_restore
    backup_workstations
+   kernel_troubleshooting
 
 .. toctree::
    :caption: Upgrade SecureDrop
@@ -97,7 +98,7 @@ anonymous sources.
    :name: devdocs
    :maxdepth: 2
 
-   development/getting_started
+   development/contributing
    development/setup_development
    development/making_pr
    development/admin_development
@@ -106,6 +107,7 @@ anonymous sources.
    development/virtualizing_tails
    development/contributor_guidelines
    development/tips_and_tricks
+   development/database_migrations
    development/i18n
    development/l10n
    development/documentation_guidelines
@@ -118,6 +120,7 @@ anonymous sources.
    development/apparmor_profiles
    development/portable_demo
    development/release_management
+   development/dockerbuildmaint
 
 .. toctree::
   :caption: Threat Model

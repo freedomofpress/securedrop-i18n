@@ -80,7 +80,15 @@ Journalist Interface <yubikey_setup>`.)
 
 |Journalist Interface Login|
 
-Daily journalist alerts about submissions
+Reset Passphrase or Two-factor Authentication Token
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+If necessary journalists may reset their user passphrase or two-factor authentication token in their user profile. To navigate to your user profile, log in to the *Journalist Interface* and click on the link in the upper right of the screen where it says **Logged on as <your user name>.** 
+
+If you have lost or forgotten your passphrase or two-factor authentication device, you will need to contact your SecureDrop admin for assistance.
+
+|Journalist account profile|
+
+Daily Journalist Alerts About Submissions
 -----------------------------------------
 
 When a SecureDrop has little activity and receives only a few
@@ -139,7 +147,7 @@ Documents and messages are encrypted to the SecureDrop installation's
 GPG public key. In order to read the messages or look at the documents
 you will need to transfer them to the *Secure Viewing Station*.
 
-Flag for reply
+Flag for Reply
 ~~~~~~~~~~~~~~
 
 If the server experiences a large number of new sources signing up at
@@ -303,6 +311,9 @@ with sensitive documents`_.
 Removing Metadata
 ~~~~~~~~~~~~~~~~~
 
+.. tip:: For detailed information about removing metadata from documents, check out
+         this in-depth `guide to removing metadata`_.
+
 Tails also comes with the `Metadata Anonymisation Toolkit`_ (MAT) that
 is used to help strip metadata from a variety of types of files,
 including png, jpg, OpenOffice/LibreOffice documents, Microsoft Office
@@ -323,6 +334,8 @@ When you no longer need documents, you can right-click on them and
 choose **Wipe** to delete them.
 
 |Wiping documents|
+
+.. _`guide to removing metadata`: https://freedom.press/training/everything-you-wanted-know-about-media-metadata-were-afraid-ask/
 
 Risks From Malware
 ~~~~~~~~~~~~~~~~~~
@@ -400,3 +413,4 @@ audio, and begin publishing important, high-impact work!
 .. |Encrypting 1| image:: images/manual/viewing6.png
 .. |Encrypting 2| image:: images/manual/viewing7.png
 .. |Encrypted document| image:: images/manual/viewing8.png
+.. |Journalist account profile| image:: images/manual/screenshots/journalist-edit_account_user.png

@@ -1,0 +1,17 @@
+{
+  "name": "fpf/securedrop-app",
+  "description": "This box contains securedrop app server.",
+  "versions": [
+    {
+      "version": "0.7",
+      "providers": [
+        {
+          "name": "libvirt",
+          "url": "https://s3.amazonaws.com/securedrop-vagrant/app-staging_0.7.box",
+          "checksum_type": "sha256",
+          "checksum": "468923f1e77068b8de96808ed8f52dbe93db3ff0aba8647c37c2d2e83b8367e9"
+        }
+      ]
+    }
+  ]
+}

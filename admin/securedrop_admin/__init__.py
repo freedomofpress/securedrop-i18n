@@ -23,6 +23,7 @@ For use by administrators to install, maintain, and manage their SD
 instances.
 """
 
+from __future__ import print_function
 import argparse
 import logging
 import os
@@ -37,6 +38,10 @@ from prompt_toolkit.validation import Validator, ValidationError
 import yaml
 
 sdlog = logging.getLogger(__name__)
+RELEASE_KEY = '22245C81E3BAEB4138B36061310F561200F4AD77'
+EXIT_SUCCESS = 0
+EXIT_SUBPROCESS_ERROR = 1
+EXIT_INTERRUPT = 2
 
 
 class FingerprintException(Exception):
@@ -255,115 +260,141 @@ class SiteConfig(object):
             ['ssh_users', 'sd', str,
              u'Username for SSH access to the servers',
              SiteConfig.ValidateUser(),
-             None],
+             None,
+             lambda config: True],
             ['daily_reboot_time', 4, int,
              u'Daily reboot time of the server (24-hour clock)',
              SiteConfig.ValidateTime(),
-             int],
+             int,
+             lambda config: True],
             ['app_ip', '10.20.2.2', str,
              u'Local IPv4 address for the Application Server',
              SiteConfig.ValidateIP(),
-             None],
+             None,
+             lambda config: True],
             ['monitor_ip', '10.20.3.2', str,
              u'Local IPv4 address for the Monitor Server',
              SiteConfig.ValidateIP(),
-             None],
+             None,
+             lambda config: True],
             ['app_hostname', 'app', str,
              u'Hostname for Application Server',
              SiteConfig.ValidateNotEmpty(),
-             None],
+             None,
+             lambda config: True],
             ['monitor_hostname', 'mon', str,
              u'Hostname for Monitor Server',
              SiteConfig.ValidateNotEmpty(),
-             None],
+             None,
+             lambda config: True],
             ['dns_server', '8.8.8.8', str,
              u'DNS server specified during installation',
              SiteConfig.ValidateNotEmpty(),
-             None],
+             None,
+             lambda config: True],
             ['securedrop_app_gpg_public_key', 'SecureDrop.asc', str,
              u'Local filepath to public key for '
              'SecureDrop Application GPG public key',
              SiteConfig.ValidatePath(self.args.ansible_path),
-             None],
+             None,
+             lambda config: True],
             ['securedrop_app_https_on_source_interface', False, bool,
              u'Whether HTTPS should be enabled on '
              'Source Interface (requires EV cert)',
              SiteConfig.ValidateYesNo(),
-             lambda x: x.lower() == 'yes'],
+             lambda x: x.lower() == 'yes',
+             lambda config: True],
             ['securedrop_app_https_certificate_cert_src', '', str,
-             u'Local filepath to HTTPS certificate '
-             '(optional, only if using HTTPS on source interface)',
+             u'Local filepath to HTTPS certificate',
              SiteConfig.ValidateOptionalPath(self.args.ansible_path),
-             None],
+             None,
+             lambda config: config.get(
+                'securedrop_app_https_on_source_interface')],
             ['securedrop_app_https_certificate_key_src', '', str,
-             u'Local filepath to HTTPS certificate key '
-             '(optional, only if using HTTPS on source interface)',
+             u'Local filepath to HTTPS certificate key',
              SiteConfig.ValidateOptionalPath(self.args.ansible_path),
-             None],
+             None,
+             lambda config: config.get(
+                'securedrop_app_https_on_source_interface')],
             ['securedrop_app_https_certificate_chain_src', '', str,
-             u'Local filepath to HTTPS certificate chain file '
-             '(optional, only if using HTTPS on source interface)',
+             u'Local filepath to HTTPS certificate chain file',
              SiteConfig.ValidateOptionalPath(self.args.ansible_path),
-             None],
+             None,
+             lambda config: config.get(
+                'securedrop_app_https_on_source_interface')],
             ['securedrop_app_gpg_fingerprint', '', str,
              u'Full fingerprint for the SecureDrop Application GPG Key',
              SiteConfig.ValidateFingerprint(),
-             self.sanitize_fingerprint],
+             self.sanitize_fingerprint,
+             lambda config: True],
             ['ossec_alert_gpg_public_key', 'ossec.pub', str,
              u'Local filepath to OSSEC alerts GPG public key',
              SiteConfig.ValidatePath(self.args.ansible_path),
-             None],
+             None,
+             lambda config: True],
             ['ossec_gpg_fpr', '', str,
              u'Full fingerprint for the OSSEC alerts GPG public key',
              SiteConfig.ValidateFingerprint(),
-             self.sanitize_fingerprint],
+             self.sanitize_fingerprint,
+             lambda config: True],
             ['ossec_alert_email', '', str,
              u'Admin email address for receiving OSSEC alerts',
              SiteConfig.ValidateOSSECEmail(),
-             None],
+             None,
+             lambda config: True],
             ['journalist_alert_gpg_public_key', '', str,
              u'Local filepath to journalist alerts GPG public key (optional)',
              SiteConfig.ValidateOptionalPath(self.args.ansible_path),
-             None],
+             None,
+             lambda config: True],
             ['journalist_gpg_fpr', '', str,
              u'Full fingerprint for the journalist alerts '
              u'GPG public key (optional)',
              SiteConfig.ValidateOptionalFingerprint(),
-             self.sanitize_fingerprint],
+             self.sanitize_fingerprint,
+             lambda config: config.get('journalist_alert_gpg_public_key')],
             ['journalist_alert_email', '', str,
              u'Email address for receiving journalist alerts (optional)',
              SiteConfig.ValidateOptionalEmail(),
-             None],
+             None,
+             lambda config: config.get('journalist_alert_gpg_public_key')],
             ['smtp_relay', "smtp.gmail.com", str,
              u'SMTP relay for sending OSSEC alerts',
              SiteConfig.ValidateNotEmpty(),
-             None],
+             None,
+             lambda config: True],
             ['smtp_relay_port', 587, int,
              u'SMTP port for sending OSSEC alerts',
              SiteConfig.ValidateInt(),
-             int],
+             int,
+             lambda config: True],
             ['sasl_domain', "gmail.com", str,
              u'SASL domain for sending OSSEC alerts',
              None,
-             None],
+             None,
+             lambda config: True],
             ['sasl_username', '', str,
              u'SASL username for sending OSSEC alerts',
              SiteConfig.ValidateOSSECUsername(),
-             None],
+             None,
+             lambda config: True],
             ['sasl_password', '', str,
              u'SASL password for sending OSSEC alerts',
              SiteConfig.ValidateOSSECPassword(),
-             None],
+             None,
+             lambda config: True],
             ['enable_ssh_over_tor', True, bool,
              u'Enable SSH over Tor (recommended, disables SSH over LAN). '
              u'If you respond no, SSH will be available over LAN only',
              SiteConfig.ValidateYesNo(),
-             lambda x: x.lower() == 'yes'],
+             lambda x: x.lower() == 'yes',
+             lambda config: True],
             ['securedrop_supported_locales', [], types.ListType,
              u'Space separated list of additional locales to support '
              '(' + translations + ')',
              SiteConfig.ValidateLocales(self.args.app_path),
-             string.split],
+             string.split,
+             lambda config: True],
         ]
 
     def load_and_update_config(self):
@@ -382,23 +413,17 @@ class SiteConfig(object):
     def user_prompt_config(self):
         config = {}
         for desc in self.desc:
-            (var, default, type, prompt, validator, transform) = desc
-            if var == 'journalist_gpg_fpr':
-                if not config.get('journalist_alert_gpg_public_key',
-                                  None):
-                    config[var] = ''
-                    continue
-            if var == 'journalist_alert_email':
-                if not config.get('journalist_alert_gpg_public_key',
-                                  None):
-                    config[var] = ''
-                    continue
+            (var, default, type, prompt, validator, transform,
+                condition) = desc
+            if not condition(config):
+                config[var] = ''
+                continue
             config[var] = self.user_prompt_config_one(desc,
                                                       self.config.get(var))
         return config
 
     def user_prompt_config_one(self, desc, from_config):
-        (var, default, type, prompt, validator, transform) = desc
+        (var, default, type, prompt, validator, transform, condition) = desc
         if from_config is not None:
             default = from_config
         prompt += ': '
@@ -587,7 +612,8 @@ def check_for_updates(args):
     sdlog.info("Checking for SecureDrop updates...")
 
     # Determine what branch we are on
-    current_tag = subprocess.check_output(['git', 'describe'], cwd=args.root)
+    current_tag = subprocess.check_output(['git', 'describe'],
+                                          cwd=args.root).rstrip('\n')
 
     # Fetch all branches
     git_fetch_cmd = ['git', 'fetch', '--all']
@@ -612,7 +638,7 @@ def check_for_updates(args):
 
 def get_release_key_from_keyserver(args, keyserver=None, timeout=45):
     gpg_recv = ['timeout', str(timeout), 'gpg', '--recv-key']
-    release_key = ['22245C81E3BAEB4138B36061310F561200F4AD77']
+    release_key = [RELEASE_KEY]
 
     # We construct the gpg --recv-key command based on optional keyserver arg.
     if keyserver:
@@ -633,9 +659,6 @@ def update(args):
         # Exit if we're up to date
         return 0
 
-    git_checkout_cmd = ['git', 'checkout', latest_tag]
-    subprocess.check_call(git_checkout_cmd, cwd=args.root)
-
     sdlog.info("Verifying signature on latest update...")
 
     try:
@@ -648,14 +671,35 @@ def update(args):
                                        keyserver=secondary_keyserver)
 
     git_verify_tag_cmd = ['git', 'tag', '-v', latest_tag]
-    sig_result = subprocess.check_output(git_verify_tag_cmd,
-                                         stderr=subprocess.STDOUT,
-                                         cwd=args.root)
+    try:
+        sig_result = subprocess.check_output(git_verify_tag_cmd,
+                                             stderr=subprocess.STDOUT,
+                                             cwd=args.root)
 
-    if 'Good signature' not in sig_result:
+        good_sig_text = 'Good signature from "SecureDrop Release Signing Key"'
+        bad_sig_text = 'BAD signature'
+        # To ensure that an adversary cannot name a malicious key good_sig_text
+        # we check that bad_sig_text does not appear and that the release key
+        # appears on the second line of the output.
+        gpg_lines = sig_result.split('\n')
+        if RELEASE_KEY in gpg_lines[1] and \
+                sig_result.count(good_sig_text) == 1 and \
+                bad_sig_text not in sig_result:
+            sdlog.info("Signature verification successful.")
+        else:  # If anything else happens, fail and exit 1
+            sdlog.info("Signature verification failed.")
+            return 1
+
+    except subprocess.CalledProcessError:
+        # If there is no signature, or if the signature does not verify,
+        # then git tag -v exits subprocess.check_output will exit 1
+        # and subprocess.check_output will throw a CalledProcessError
         sdlog.info("Signature verification failed.")
-        return -1
-    sdlog.info("Signature verification successful.")
+        return 1
+
+    # Only if the proper signature verifies do we check out the latest
+    git_checkout_cmd = ['git', 'checkout', latest_tag]
+    subprocess.check_call(git_checkout_cmd, cwd=args.root)
 
     sdlog.info("Updated to SecureDrop {}.".format(latest_tag))
     return 0
@@ -748,17 +792,23 @@ def main(argv):
     setup_logger(args.v)
     if args.v:
         return_code = args.func(args)
-        sys.exit(return_code)
+        if return_code != 0:
+            sys.exit(EXIT_SUBPROCESS_ERROR)
     else:
         try:
             return_code = args.func(args)
         except KeyboardInterrupt:
-            sys.exit(-1)
+            print('Process was interrupted.')
+            sys.exit(EXIT_INTERRUPT)
+        except subprocess.CalledProcessError as e:
+            print('ERROR (run with -v for more): {msg}'.format(msg=e),
+                  file=sys.stderr)
+            sys.exit(EXIT_SUBPROCESS_ERROR)
         except Exception as e:
             raise SystemExit(
                 'ERROR (run with -v for more): {msg}'.format(msg=e))
         else:
-            sys.exit(return_code)
+            sys.exit(EXIT_SUCCESS)
 
 
 if __name__ == "__main__":
