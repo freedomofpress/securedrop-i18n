@@ -1239,10 +1239,6 @@ msgstr ""
 "anonymat."
 
 #: source_templates/tor2web-warning.html:5
-#, fuzzy
-#| msgid ""
-#| "It could be possible for anyone listening to Internet usage (your "
-#| "government, your Internet provider), to identify you."
 msgid ""
 "It could be possible for anyone monitoring your Internet traffic (your "
 "government, your Internet provider), to identify you."
