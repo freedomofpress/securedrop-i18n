@@ -106,8 +106,6 @@ msgid "File required."
 msgstr "檔案欄為必要。"
 
 #: journalist_app/forms.py:62
-#, fuzzy
-#| msgid "You can only upload JPG/JPEG or PNG image files."
 msgid "You can only upload PNG image files."
 msgstr "僅可上傳 PNG 格式的圖片檔。"
 
@@ -1114,18 +1112,10 @@ msgid "Why is there a warning about Tor2Web?"
 msgstr "為什麼出現一個關於 Tor2Web 的警告？"
 
 #: source_templates/tor2web-warning.html:4
-#, fuzzy
-#| msgid ""
-#| "Using <a href=\"tor2web.org\">Tor2Web</a> to connect to SecureDrop will "
-#| "not protect your anonymity."
 msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
 msgstr "使用 Tor2Web 連至 SecureDrop 將無法保護您的匿名安全。"
 
 #: source_templates/tor2web-warning.html:5
-#, fuzzy
-#| msgid ""
-#| "It could be possible for anyone listening to Internet usage (your "
-#| "government, your Internet provider), to identify you."
 msgid ""
 "It could be possible for anyone monitoring your Internet traffic (your "
 "government, your Internet provider), to identify you."
@@ -1164,19 +1154,13 @@ msgid ""
 msgstr "複製並貼上以下的網址到您的瀏覽器，並依照指示下載和安裝 Tor 瀏覽器："
 
 #: source_templates/use-tor-browser.html:9
-#, fuzzy
-#| msgid ""
-#| "If there is a chance that downloading the Tor Browser raises suspicion "
-#| "and your mail provider is less likely to be monitored, you can send a "
-#| "mail to <pre>gettor@torproject.org</pre> and a bot will answer with "
-#| "instructions."
 msgid ""
 "If there is a chance that downloading Tor Browser raises suspicion and your "
 "mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
-"如果下載 Tor Browser 容易引發他人懷疑，而郵件服務商較不受到監控, 則可以寄信"
-"到 <pre>gettor@torproject.org</pre>它利用機器人提供答案指示。"
+"如果下載 Tor Browser 容易引發他人懷疑，而郵件服務商較不受到監控，則可以寄信到 "
+"<pre>gettor@torproject.org</pre>它利用機器人提供答案指示。"
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
