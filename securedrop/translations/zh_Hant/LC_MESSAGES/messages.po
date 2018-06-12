@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-12 07:42+0000\n"
+"PO-Revision-Date: 2018-06-12 09:00+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.securedrop.club/"
 "projects/securedrop/securedrop/zh_Hant/>\n"
@@ -1094,7 +1094,7 @@ msgstr "對不起，未能處置您的請求。"
 
 #: source_templates/screensaver.html:2
 msgid "Interface hidden. Move your mouse here to show."
-msgstr "界面已隱藏，在此移動滑鼠使其顯示。"
+msgstr "界面現為隱藏，在此移動滑鼠可使其顯現。"
 
 #: source_templates/session_timeout.html:6
 msgid ""
