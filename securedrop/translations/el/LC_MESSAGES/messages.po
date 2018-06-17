@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-06-17 16:57+0000\n"
-"Last-Translator: wp <chalktwo@gmail.com>\n"
+"PO-Revision-Date: 2018-06-18 09:49+0000\n"
+"Last-Translator: pierwill <mail@pierwill.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/el/>\n"
 "Language: el\n"
@@ -680,9 +680,8 @@ msgid "Star"
 msgstr "αστέρι"
 
 #: journalist_templates/index.html:14
-#, fuzzy
 msgid "Un-star"
-msgstr "αστέρι"
+msgstr ""
 
 #: journalist_templates/index.html:47
 msgid "Are you sure you want to delete the selected collections?"
@@ -933,7 +932,7 @@ msgstr ""
 
 #: source_templates/login.html:25 source_templates/lookup.html:47
 msgid "CANCEL"
-msgstr "Άκυρο"
+msgstr "ΆΚΥΡΟ"
 
 #: source_templates/logout_flashed_message.html:4
 #: source_templates/session_timeout.html:5
@@ -991,7 +990,7 @@ msgstr ""
 
 #: source_templates/lookup.html:36
 msgid "Write a message."
-msgstr ""
+msgstr "Υράψε ένα μήνυμα"
 
 #: source_templates/lookup.html:53
 msgid "Read Replies"
