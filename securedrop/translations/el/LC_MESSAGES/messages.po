@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-06-17 13:20+0000\n"
+"PO-Revision-Date: 2018-06-17 16:51+0000\n"
 "Last-Translator: wp <chalktwo@gmail.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/el/>\n"
@@ -197,12 +197,12 @@ msgstr ""
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
-msgstr ""
+msgstr "Κλείσιμο"
 
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:72
 msgid "Cancel"
-msgstr ""
+msgstr "Άκυρο"
 
 #: journalist_templates/_source_row.html:23
 msgid "1 doc"
@@ -301,7 +301,7 @@ msgstr ""
 #: journalist_templates/admin_new_user_two_factor.html:27
 #: journalist_templates/col.html:100 source_templates/lookup.html:45
 msgid "SUBMIT"
-msgstr "υποβάλλω"
+msgstr "ΥΠΟΒΆΛΛΩ"
 
 #: journalist_templates/admin.html:3
 msgid "Admin Interface"
@@ -316,17 +316,17 @@ msgstr ""
 #: journalist_templates/admin_add_user.html:14
 #: journalist_templates/login.html:8
 msgid "Username"
-msgstr ""
+msgstr "όνομα χρήστη"
 
 #: journalist_templates/admin.html:17
 msgid "Edit"
-msgstr ""
+msgstr "επεξεργάζομαι"
 
 #: journalist_templates/admin.html:18 journalist_templates/col.html:76
 #: journalist_templates/col.html:134 journalist_templates/index.html:16
 #: journalist_templates/index.html:51
 msgid "Delete"
-msgstr ""
+msgstr "Διαγραφή"
 
 #: journalist_templates/admin.html:19
 msgid "Created"
@@ -389,7 +389,7 @@ msgstr ""
 
 #: journalist_templates/base.html:26
 msgid "Admin"
-msgstr ""
+msgstr "διαχειριστής"
 
 #: journalist_templates/base.html:28
 msgid "Log Out"
@@ -426,7 +426,7 @@ msgstr ""
 
 #: journalist_templates/col.html:16
 msgid "CONFIRM"
-msgstr ""
+msgstr "επιβεβαιώνω"
 
 #: journalist_templates/col.html:22
 msgid ""
@@ -452,7 +452,7 @@ msgstr ""
 
 #: journalist_templates/col.html:61
 msgid "Message"
-msgstr ""
+msgstr "Μήνυμα"
 
 #: journalist_templates/col.html:71 journalist_templates/col.html:129
 #: journalist_templates/index.html:46
@@ -576,7 +576,7 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:25
 msgid "Reset Password"
-msgstr ""
+msgstr "επαναφορά κωδικού πρόσβασης"
 
 #: journalist_templates/edit_account.html:27
 msgid "SecureDrop now uses automatically generated diceware passwords."
@@ -610,7 +610,7 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:53
 msgid "RESET PASSWORD"
-msgstr ""
+msgstr "ΕΠΑΝΑΦΟΡΆ ΚΩΔΙΚΟΎ ΠΡΌΣΒΑΣΗΣ"
 
 #: journalist_templates/edit_account.html:58
 msgid "Reset Two-Factor Authentication"
@@ -649,7 +649,7 @@ msgstr ""
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
-msgstr ""
+msgstr "Ευχαριστώ!"
 
 #: journalist_templates/flag.html:8
 msgid ""
@@ -673,15 +673,15 @@ msgstr ""
 
 #: journalist_templates/index.html:12
 msgid "Download"
-msgstr ""
+msgstr "λήψη"
 
 #: journalist_templates/index.html:13
 msgid "Star"
-msgstr ""
+msgstr "αστέρι"
 
 #: journalist_templates/index.html:14
 msgid "Un-star"
-msgstr ""
+msgstr "αστέρι"
 
 #: journalist_templates/index.html:47
 msgid "Are you sure you want to delete the selected collections?"
