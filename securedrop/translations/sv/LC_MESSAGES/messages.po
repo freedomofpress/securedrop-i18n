@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-06-11 16:00+0000\n"
+"PO-Revision-Date: 2018-06-18 10:10+0000\n"
 "Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
 "Language-Team: Swedish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/sv/>\n"
@@ -234,8 +234,8 @@ msgstr[1] "{msg_num} meddelanden"
 #: journalist_templates/_source_row.html:27
 msgid "1 unread"
 msgid_plural "{num_unread} unread"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 oläst"
+msgstr[1] "{num_unread} olästa"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -1171,10 +1171,8 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Förlåt, vi kunde inte hitta det du begärde."
 
 #: source_templates/screensaver.html:2
-#, fuzzy
-#| msgid "Interface hidden. Move your mouse here to show."
 msgid "Interface hidden. Move your cursor here to show."
-msgstr "Gränssnittet är gömt. Flytta musen hit för att visa det."
+msgstr "Gränssnittet är gömt. Flytta muspekaren hit för att visa det."
 
 #: source_templates/session_timeout.html:6
 msgid ""
