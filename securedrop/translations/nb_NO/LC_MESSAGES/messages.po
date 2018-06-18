@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-12 18:54+0000\n"
+"PO-Revision-Date: 2018-06-18 18:03+0000\n"
 "Last-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/nb_NO/>\n"
@@ -230,8 +230,8 @@ msgstr[1] "{msg_num} meldinger"
 #: journalist_templates/_source_row.html:27
 msgid "1 unread"
 msgid_plural "{num_unread} unread"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 ulest"
+msgstr[1] "{num_unread} uleste"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -1170,8 +1170,6 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Beklager, men vi kunne ikke finne det du ba om."
 
 #: source_templates/screensaver.html:2
-#, fuzzy
-#| msgid "Interface hidden. Move your mouse here to show."
 msgid "Interface hidden. Move your cursor here to show."
 msgstr "Skjult grensesnitt. Beveg musepekeren for å vise."
 
