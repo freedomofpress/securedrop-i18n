@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-11 13:28+0000\n"
+"PO-Revision-Date: 2018-06-18 10:24+0000\n"
 "Last-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\n"
 "Language-Team: Italian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/it/>\n"
@@ -242,8 +242,8 @@ msgstr[1] "{msg_num} messaggi"
 #: journalist_templates/_source_row.html:27
 msgid "1 unread"
 msgid_plural "{num_unread} unread"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 non letto"
+msgstr[1] "{num_unread} non letti"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -1197,10 +1197,8 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Non è stato possibile trovare quello che hai richiesto."
 
 #: source_templates/screensaver.html:2
-#, fuzzy
-#| msgid "Interface hidden. Move your mouse here to show."
 msgid "Interface hidden. Move your cursor here to show."
-msgstr "Interfaccia nascosta. Muovere qui il mouse per mostrarla."
+msgstr "Interfaccia nascosta. Muovere qui il cursore per mostrarla."
 
 #: source_templates/session_timeout.html:6
 msgid ""
