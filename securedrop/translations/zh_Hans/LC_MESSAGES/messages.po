@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-05-28 00:00+0000\n"
-"Last-Translator: JieDiscovery <jie.song@telecom-bretagne.eu>\n"
+"PO-Revision-Date: 2018-06-26 15:10+0000\n"
+"Last-Translator: pierwill <mail@pierwill.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.securedrop.club/"
 "projects/securedrop/securedrop/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -199,7 +199,7 @@ msgstr ""
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:72
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: journalist_templates/_source_row.html:23
 msgid "1 doc"
@@ -316,13 +316,13 @@ msgstr ""
 
 #: journalist_templates/admin.html:17
 msgid "Edit"
-msgstr ""
+msgstr "编辑"
 
 #: journalist_templates/admin.html:18 journalist_templates/col.html:76
 #: journalist_templates/col.html:134 journalist_templates/index.html:16
 #: journalist_templates/index.html:51
 msgid "Delete"
-msgstr ""
+msgstr "删除"
 
 #: journalist_templates/admin.html:19
 msgid "Created"
@@ -342,7 +342,7 @@ msgstr ""
 
 #: journalist_templates/admin.html:35
 msgid "never"
-msgstr ""
+msgstr "从来不"
 
 #: journalist_templates/admin.html:42
 msgid "No users to display"
