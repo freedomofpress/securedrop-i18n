@@ -251,8 +251,11 @@ msgstr[1] "{msg_num} mesaje"
 msgstr[2] "{msg_num} de mesaje"
 
 #: journalist_templates/_source_row.html:27
-msgid "{num_unread} unread"
-msgstr "{num_unread} necitite"
+msgid "1 unread"
+msgid_plural "{num_unread} unread"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -1248,7 +1251,7 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Ne pare rău, nu am găsit ceea ce căutai."
 
 #: source_templates/screensaver.html:2
-msgid "Interface hidden. Move your mouse here to show."
+msgid "Interface hidden. Move your cursor here to show."
 msgstr ""
 
 #: source_templates/session_timeout.html:6
@@ -1430,6 +1433,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Înapoi la pagina cu trimiteri"
+
+#~ msgid "{num_unread} unread"
+#~ msgstr "{num_unread} necitite"
 
 #~ msgid "Upload images only."
 #~ msgstr "Se pot încărca doar imagini."

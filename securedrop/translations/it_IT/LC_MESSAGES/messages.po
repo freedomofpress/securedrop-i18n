@@ -240,8 +240,10 @@ msgstr[0] "1 messaggio"
 msgstr[1] "{msg_num} messaggi"
 
 #: journalist_templates/_source_row.html:27
-msgid "{num_unread} unread"
-msgstr "{num_unread} non letti"
+msgid "1 unread"
+msgid_plural "{num_unread} unread"
+msgstr[0] ""
+msgstr[1] ""
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -1195,7 +1197,9 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Non è stato possibile trovare quello che hai richiesto."
 
 #: source_templates/screensaver.html:2
-msgid "Interface hidden. Move your mouse here to show."
+#, fuzzy
+#| msgid "Interface hidden. Move your mouse here to show."
+msgid "Interface hidden. Move your cursor here to show."
 msgstr "Interfaccia nascosta. Muovere qui il mouse per mostrarla."
 
 #: source_templates/session_timeout.html:6
@@ -1376,6 +1380,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Torna alla pagina di invio documenti e messaggi"
+
+#~ msgid "{num_unread} unread"
+#~ msgstr "{num_unread} non letti"
 
 #~ msgid "Upload images only."
 #~ msgstr "Carica solo immagini."

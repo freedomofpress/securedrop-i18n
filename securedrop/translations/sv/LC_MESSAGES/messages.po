@@ -232,8 +232,10 @@ msgstr[0] "1 meddelande"
 msgstr[1] "{msg_num} meddelanden"
 
 #: journalist_templates/_source_row.html:27
-msgid "{num_unread} unread"
-msgstr "{num_unread} olästa"
+msgid "1 unread"
+msgid_plural "{num_unread} unread"
+msgstr[0] ""
+msgstr[1] ""
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -963,8 +965,8 @@ msgid ""
 msgstr ""
 "<strong> Det är rekommenderat att använda datorversionen av TorBrowser för "
 "att använda SecureDrop, då Orfox inte erbjuder samma nivå av säkerhet och "
-"anonymitet som datorversionerna.</strong> <a id=\"recommend-tor\" href=\""
-"{tor_browser_url}\"> Lär dig hur den installeras</a> eller ignorera denna "
+"anonymitet som datorversionerna.</strong> <a id=\"recommend-tor\" href="
+"\"{tor_browser_url}\"> Lär dig hur den installeras</a> eller ignorera denna "
 "varning och fortsätt."
 
 #: source_templates/index.html:42
@@ -1169,7 +1171,9 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Förlåt, vi kunde inte hitta det du begärde."
 
 #: source_templates/screensaver.html:2
-msgid "Interface hidden. Move your mouse here to show."
+#, fuzzy
+#| msgid "Interface hidden. Move your mouse here to show."
+msgid "Interface hidden. Move your cursor here to show."
 msgstr "Gränssnittet är gömt. Flytta musen hit för att visa det."
 
 #: source_templates/session_timeout.html:6
@@ -1313,8 +1317,8 @@ msgid ""
 "at the end), you can just copy and paste that. (don't include the <code>."
 "asc</code>!)"
 msgstr ""
-"Du behöver möjlighet att identifiera nyckeln (dvs. \"user ID\" eller \"UID\")"
-". Eftersom den publika nyckelns filnamn är nyckelns fingeravtryck (med "
+"Du behöver möjlighet att identifiera nyckeln (dvs. \"user ID\" eller \"UID"
+"\"). Eftersom den publika nyckelns filnamn är nyckelns fingeravtryck (med "
 "filändelsen .asc), kan du bara kopiera och klistra in det. (inkludera inte "
 "<code>.asc</code>!)"
 
@@ -1351,6 +1355,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Tillbaka till inlämningssidan"
+
+#~ msgid "{num_unread} unread"
+#~ msgstr "{num_unread} olästa"
 
 #~ msgid "Upload images only."
 #~ msgstr "Ladda endast upp bilder."

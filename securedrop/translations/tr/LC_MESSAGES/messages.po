@@ -235,8 +235,10 @@ msgstr[0] "1 İleti"
 msgstr[1] "{msg_num} İleti"
 
 #: journalist_templates/_source_row.html:27
-msgid "{num_unread} unread"
-msgstr "{num_unread} okunmamış"
+msgid "1 unread"
+msgid_plural "{num_unread} unread"
+msgstr[0] ""
+msgstr[1] ""
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -1184,7 +1186,7 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Üzgünüz, isteğinizi yerine getiremiyoruz."
 
 #: source_templates/screensaver.html:2
-msgid "Interface hidden. Move your mouse here to show."
+msgid "Interface hidden. Move your cursor here to show."
 msgstr ""
 
 #: source_templates/session_timeout.html:6
@@ -1381,6 +1383,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Gönderi sayfasına geri dön"
+
+#~ msgid "{num_unread} unread"
+#~ msgstr "{num_unread} okunmamış"
 
 #~ msgid "Upload images only."
 #~ msgstr "Sadece resim yükleyin."

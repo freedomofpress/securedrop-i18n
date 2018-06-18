@@ -213,8 +213,10 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: journalist_templates/_source_row.html:27
-msgid "{num_unread} unread"
-msgstr ""
+msgid "1 unread"
+msgid_plural "{num_unread} unread"
+msgstr[0] ""
+msgstr[1] ""
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -1048,7 +1050,7 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr ""
 
 #: source_templates/screensaver.html:2
-msgid "Interface hidden. Move your mouse here to show."
+msgid "Interface hidden. Move your cursor here to show."
 msgstr ""
 
 #: source_templates/session_timeout.html:6

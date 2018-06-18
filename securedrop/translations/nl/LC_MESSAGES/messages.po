@@ -238,8 +238,10 @@ msgstr[0] "1 bericht"
 msgstr[1] "{msg_num} berichten"
 
 #: journalist_templates/_source_row.html:27
-msgid "{num_unread} unread"
-msgstr "{num_unread} ongelezen"
+msgid "1 unread"
+msgid_plural "{num_unread} unread"
+msgstr[0] ""
+msgstr[1] ""
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -1190,7 +1192,9 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Sorry, we kunnen niet vinden wat u zoekt."
 
 #: source_templates/screensaver.html:2
-msgid "Interface hidden. Move your mouse here to show."
+#, fuzzy
+#| msgid "Interface hidden. Move your mouse here to show."
+msgid "Interface hidden. Move your cursor here to show."
 msgstr "Interface verborgen. Beweeg uw muis hier om te tonen."
 
 #: source_templates/session_timeout.html:6
@@ -1386,6 +1390,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Terug naar inzendingenpagina"
+
+#~ msgid "{num_unread} unread"
+#~ msgstr "{num_unread} ongelezen"
 
 #~ msgid "Upload images only."
 #~ msgstr "Alleen afbeeldingen uploaden."

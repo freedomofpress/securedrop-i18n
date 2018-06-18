@@ -212,8 +212,9 @@ msgid_plural "{msg_num} messages"
 msgstr[0] "{msg_num} 訊息"
 
 #: journalist_templates/_source_row.html:27
-msgid "{num_unread} unread"
-msgstr "{num_unread} 未讀"
+msgid "1 unread"
+msgid_plural "{num_unread} unread"
+msgstr[0] ""
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -1093,7 +1094,9 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "對不起，未能處置您的請求。"
 
 #: source_templates/screensaver.html:2
-msgid "Interface hidden. Move your mouse here to show."
+#, fuzzy
+#| msgid "Interface hidden. Move your mouse here to show."
+msgid "Interface hidden. Move your cursor here to show."
 msgstr "界面現為隱藏，在此移動滑鼠可使其顯現。"
 
 #: source_templates/session_timeout.html:6
@@ -1159,8 +1162,8 @@ msgid ""
 "mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
-"如果下載 Tor Browser 容易引發他人懷疑，而郵件服務商較不受到監控，則可以寄信到 "
-"<pre>gettor@torproject.org</pre>它利用機器人提供答案指示。"
+"如果下載 Tor Browser 容易引發他人懷疑，而郵件服務商較不受到監控，則可以寄信"
+"到 <pre>gettor@torproject.org</pre>它利用機器人提供答案指示。"
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
@@ -1255,6 +1258,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "返回提交文件頁面"
+
+#~ msgid "{num_unread} unread"
+#~ msgstr "{num_unread} 未讀"
 
 #~ msgid "Upload images only."
 #~ msgstr "僅上傳圖片。"

@@ -251,8 +251,14 @@ msgstr[4] "رسالة"
 msgstr[5] "{msg_num} رسالة"
 
 #: journalist_templates/_source_row.html:27
-msgid "{num_unread} unread"
-msgstr "{num_unread} غير مقروءة"
+msgid "1 unread"
+msgid_plural "{num_unread} unread"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -1165,7 +1171,7 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "عذرًا لم نتمكن من إيجاد المطلوب."
 
 #: source_templates/screensaver.html:2
-msgid "Interface hidden. Move your mouse here to show."
+msgid "Interface hidden. Move your cursor here to show."
 msgstr ""
 
 #: source_templates/session_timeout.html:6
@@ -1353,6 +1359,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "العودة إلى صفحة الإيداع"
+
+#~ msgid "{num_unread} unread"
+#~ msgstr "{num_unread} غير مقروءة"
 
 #~ msgid "Upload images only."
 #~ msgstr "رفع صور فقط."
