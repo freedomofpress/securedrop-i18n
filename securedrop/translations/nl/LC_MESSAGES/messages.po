@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-18 09:49+0000\n"
+"PO-Revision-Date: 2018-06-21 05:27+0000\n"
 "Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
 "Language-Team: Dutch <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/nl/>\n"
@@ -113,8 +113,6 @@ msgid "File required."
 msgstr "Bestand verplicht."
 
 #: journalist_app/forms.py:62
-#, fuzzy
-#| msgid "You can only upload JPG/JPEG or PNG image files."
 msgid "You can only upload PNG image files."
 msgstr "U kunt alleen PNG-afbeeldingsbestanden uploaden."
 
@@ -240,8 +238,8 @@ msgstr[1] "{msg_num} berichten"
 #: journalist_templates/_source_row.html:27
 msgid "1 unread"
 msgid_plural "{num_unread} unread"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 ongelezen"
+msgstr[1] "{num_unread} ongelezen"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -1192,8 +1190,6 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Sorry, we kunnen niet vinden wat u zoekt."
 
 #: source_templates/screensaver.html:2
-#, fuzzy
-#| msgid "Interface hidden. Move your mouse here to show."
 msgid "Interface hidden. Move your cursor here to show."
 msgstr "Interface verborgen. Beweeg uw muis hier om te tonen."
 
@@ -1214,20 +1210,12 @@ msgid "Why is there a warning about Tor2Web?"
 msgstr "Waarom zie ik een waarschuwing over Tor2Web?"
 
 #: source_templates/tor2web-warning.html:4
-#, fuzzy
-#| msgid ""
-#| "Using <a href=\"tor2web.org\">Tor2Web</a> to connect to SecureDrop will "
-#| "not protect your anonymity."
 msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
 msgstr ""
 "Het gebruik van Tor2Web om met SecureDrop te verbinden, zal uw anonimiteit "
 "niet beschermen."
 
 #: source_templates/tor2web-warning.html:5
-#, fuzzy
-#| msgid ""
-#| "It could be possible for anyone listening to Internet usage (your "
-#| "government, your Internet provider), to identify you."
 msgid ""
 "It could be possible for anyone monitoring your Internet traffic (your "
 "government, your Internet provider), to identify you."
@@ -1273,12 +1261,6 @@ msgstr ""
 "de Tor Browser te downloaden en te installeren:"
 
 #: source_templates/use-tor-browser.html:9
-#, fuzzy
-#| msgid ""
-#| "If there is a chance that downloading the Tor Browser raises suspicion "
-#| "and your mail provider is less likely to be monitored, you can send a "
-#| "mail to <pre>gettor@torproject.org</pre> and a bot will answer with "
-#| "instructions."
 msgid ""
 "If there is a chance that downloading Tor Browser raises suspicion and your "
 "mail provider is less likely to be monitored, you can send a mail to "
