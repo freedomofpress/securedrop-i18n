@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-08 12:00+0000\n"
+"PO-Revision-Date: 2018-06-25 09:47+0000\n"
 "Last-Translator: ramyraoof <ramy.raoof@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -110,10 +110,8 @@ msgid "File required."
 msgstr "اِختَر ملف."
 
 #: journalist_app/forms.py:62
-#, fuzzy
-#| msgid "You can only upload JPG/JPEG or PNG image files."
 msgid "You can only upload PNG image files."
-msgstr "أنواع الملفات المسموح بها: jgp أو jpeg أو pgn."
+msgstr "أنواع الملفات المسموحة بامتداد pgn."
 
 #: journalist_app/main.py:117 journalist_app/utils.py:47
 #: journalist_app/utils.py:137
@@ -558,8 +556,9 @@ msgstr ""
 "السابق.</em>"
 
 #: journalist_templates/col.html:122
+#, fuzzy
 msgid "DELETE SOURCE AND SUBMISSIONS"
-msgstr ""
+msgstr "حذف المصدر والرسائل"
 
 #: journalist_templates/col.html:130
 msgid "Are you sure you want to delete this collection?"
@@ -1171,8 +1170,9 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "عذرًا لم نتمكن من إيجاد المطلوب."
 
 #: source_templates/screensaver.html:2
+#, fuzzy
 msgid "Interface hidden. Move your cursor here to show."
-msgstr ""
+msgstr "الواجهة مخفية.. حرك المؤشر"
 
 #: source_templates/session_timeout.html:6
 msgid ""
@@ -1191,25 +1191,16 @@ msgid "Why is there a warning about Tor2Web?"
 msgstr "لماذا يوجد تنبيه بشأن Tor2Web؟"
 
 #: source_templates/tor2web-warning.html:4
-#, fuzzy
-#| msgid ""
-#| "Using <a href=\"tor2web.org\">Tor2Web</a> to connect to SecureDrop will "
-#| "not protect your anonymity."
 msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
-msgstr ""
-"إنّ استخدام <a href=\"tor2web.org\">Tor2Web</a> للإتصال بـ SecureDrop لن يضمن "
-"حماية مجهوليتك."
+msgstr "إنّ استخدام Tor2Web للإتصال بـ SecureDrop لن يضمن حماية مجهوليتك."
 
 #: source_templates/tor2web-warning.html:5
-#, fuzzy
-#| msgid ""
-#| "It could be possible for anyone listening to Internet usage (your "
-#| "government, your Internet provider), to identify you."
 msgid ""
 "It could be possible for anyone monitoring your Internet traffic (your "
 "government, your Internet provider), to identify you."
 msgstr ""
-"من الممكن لأي جهة (شركة الانترنت أو السلطات) تراقب الإنترنت من تحديد هويتك."
+"من الممكن لأي جهة تراقب الإنترنت (مقدم خدمة الانترنت أو السلطات) من تحديد "
+"هويتك."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
@@ -1246,20 +1237,14 @@ msgstr ""
 "و&nbsp;تنصيب متصفّح تور:"
 
 #: source_templates/use-tor-browser.html:9
-#, fuzzy
-#| msgid ""
-#| "If there is a chance that downloading the Tor Browser raises suspicion "
-#| "and your mail provider is less likely to be monitored, you can send a "
-#| "mail to <pre>gettor@torproject.org</pre> and a bot will answer with "
-#| "instructions."
 msgid ""
 "If there is a chance that downloading Tor Browser raises suspicion and your "
 "mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
-"إذا كان زيارة موقع تور لتنزيل المتصفح مثير للريبة، وحساب بريدك الإلكتروني "
-"على الأرجح غير مراقب يمكنك مراسلة <pre>gettor@torproject.org</pre> وسوف "
-"تتلقى إرشادات لتنزيل متصفح تور بطريقة بديلة."
+"إذا كان زيارة موقع تور لتنزيل المتصفح مثير للريبة وخدمة بريدك الإلكتروني على "
+"الأرجح غير مراقبة يمكنك مراسلة <pre>gettor@torproject.org</pre> وسوف تتلقى "
+"إرشادات لتنزيل متصفح تور بطريقة بديلة."
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
