@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-05-06 19:00+0000\n"
-"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
+"PO-Revision-Date: 2018-06-23 17:13+0000\n"
+"Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
 "Language-Team: German <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/de/>\n"
 "Language: de_DE\n"
@@ -110,10 +110,8 @@ msgid "File required."
 msgstr "Datei erforderlich."
 
 #: journalist_app/forms.py:62
-#, fuzzy
-#| msgid "You can only upload JPG/JPEG or PNG image files."
 msgid "You can only upload PNG image files."
-msgstr "Sie können nur JPG/JPEG- oder PNG-Bilddateien hochladen."
+msgstr "Sie können nur PNG-Bilddateien hochladen."
 
 #: journalist_app/main.py:117 journalist_app/utils.py:47
 #: journalist_app/utils.py:137
