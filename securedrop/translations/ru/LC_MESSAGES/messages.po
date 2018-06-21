@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2018-06-21 08:02+0000\n"
-"Last-Translator: Andrey <andrey@mailbox.org>\n"
+"Last-Translator: Adham Kurbanov <uz@zu.uz>\n"
 "Language-Team: Russian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ru/>\n"
 "Language: ru\n"
@@ -556,7 +556,7 @@ msgstr ""
 
 #: journalist_templates/col.html:122
 msgid "DELETE SOURCE AND SUBMISSIONS"
-msgstr "УДАЛИТЬ ИСТОЧНИК И ПРЕДСТАВЛЕНИЯ"
+msgstr "УДАЛИТЬ ИСТОЧНИК И ПРЕДЛОЖЕНИЯ"
 
 #: journalist_templates/col.html:130
 msgid "Are you sure you want to delete this collection?"
