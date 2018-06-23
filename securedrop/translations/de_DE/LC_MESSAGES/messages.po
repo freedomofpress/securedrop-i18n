@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-23 17:13+0000\n"
+"PO-Revision-Date: 2018-06-23 17:15+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/de/>\n"
@@ -511,7 +511,7 @@ msgstr "Löschbestätigung"
 
 #: journalist_templates/col.html:72
 msgid "Are you sure you want to delete the selected documents?"
-msgstr "Sind Sie sicher, dass Sie die markierten Dokumente löschen möchten?"
+msgstr "Sind Sie sicher, dass Sie die ausgewählten Dokumente löschen möchten?"
 
 #: journalist_templates/col.html:87
 msgid "No documents to display."
