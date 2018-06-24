@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-12 09:00+0000\n"
+"PO-Revision-Date: 2018-06-24 02:09+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.securedrop.club/"
 "projects/securedrop/securedrop/zh_Hant/>\n"
@@ -214,7 +214,7 @@ msgstr[0] "{msg_num} 訊息"
 #: journalist_templates/_source_row.html:27
 msgid "1 unread"
 msgid_plural "{num_unread} unread"
-msgstr[0] ""
+msgstr[0] "{num_unread} 未讀"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -1094,10 +1094,8 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "對不起，未能處置您的請求。"
 
 #: source_templates/screensaver.html:2
-#, fuzzy
-#| msgid "Interface hidden. Move your mouse here to show."
 msgid "Interface hidden. Move your cursor here to show."
-msgstr "界面現為隱藏，在此移動滑鼠可使其顯現。"
+msgstr "界面已隱藏，在此移動滑鼠可使其顯現。"
 
 #: source_templates/session_timeout.html:6
 msgid ""
