@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2018-06-25 18:33+0000\n"
-"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -804,7 +804,7 @@ msgstr "Senha"
 
 #: journalist_templates/login.html:12
 msgid "LOG IN"
-msgstr "FAZER LOG IN"
+msgstr "ENTRAR"
 
 #: source_app/__init__.py:115
 msgid ""
@@ -927,9 +927,8 @@ msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our journalists in response to what you submit on the next screen."
 msgstr ""
-"Na página seguinte, você poderá enviar mensagens e documentos. Para "
-"consultar as respostas de nossos jornalistas ao material enviado, use o "
-"codinome abaixo ou um codinome já existente."
+"Este codinome é o que você usará em futuras visitas para receber mensagens "
+"de nossos jornalistas em resposta ao que você enviar na próxima tela."
 
 #: source_templates/generate.html:34
 msgid ""
