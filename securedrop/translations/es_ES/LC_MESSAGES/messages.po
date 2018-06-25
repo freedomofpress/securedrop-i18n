@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-25 18:01+0000\n"
+"PO-Revision-Date: 2018-06-25 18:55+0000\n"
 "Last-Translator: Freddy Martinez <freddymartinez9@gmail.com>\n"
 "Language-Team: Spanish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/es/>\n"
@@ -242,7 +242,7 @@ msgstr[1] "{msg_num} mensajes"
 #: journalist_templates/_source_row.html:27
 msgid "1 unread"
 msgid_plural "{num_unread} unread"
-msgstr[0] "{num_unread} sin leer"
+msgstr[0] "1 sin leer"
 msgstr[1] "{num_unread} sin leer"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
