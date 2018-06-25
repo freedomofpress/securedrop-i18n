@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2018-06-25 17:45+0000\n"
-"Last-Translator: Freddy Martinez <freddymartinez9@gmail.com>\n"
+"Last-Translator: Daniel Arauz <danarauz@gmail.com>\n"
 "Language-Team: Spanish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/es/>\n"
 "Language: es_ES\n"
@@ -165,8 +165,8 @@ msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
 msgstr ""
-"Por favor, espere un nuevo código de su token o aplicación de dos factores "
-"antes de volver a intentarlo."
+"Por favor espere por un nuevo código de su token de dos factores o "
+"aplicación antes de volver a intentarlo."
 
 #: journalist_app/utils.py:125
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
@@ -177,7 +177,7 @@ msgstr ""
 #: journalist_app/utils.py:131
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
-"El formato del secreto es invalido: secreto con longitud impar. ¿Ha escrito "
+"El formato del secreto es invalido: secreto de longitud impar. ¿Ha escrito "
 "mal el secreto?"
 
 #: journalist_app/utils.py:183
@@ -508,7 +508,7 @@ msgstr "Mensaje"
 #: journalist_templates/col.html:71 journalist_templates/col.html:129
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
-msgstr "Eliminar confirmación"
+msgstr "Eliminar Confirmación"
 
 #: journalist_templates/col.html:72
 msgid "Are you sure you want to delete the selected documents?"
@@ -1092,9 +1092,8 @@ msgid ""
 "and messages from that day through to our journalists."
 msgstr ""
 "Nuestros servidores experimentaron una oleada inusual de nueva actividad, "
-"cuando usted visitó por última vez. Para errar en el lado de la cautela, "
-"pusimos en espera todos los envíos de archivos y mensajes de ese día a "
-"nuestros periodistas."
+"cuando usted visitó por última vez. Por cautela, pusimos en espera todos los "
+"envíos de archivos y mensajes de ese día a nuestros periodistas."
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1117,10 +1116,11 @@ msgid ""
 "and messages with our <a href=\"{url}\" class=\"text-link\">public key</a> "
 "before submission. Files are encrypted as they are received by SecureDrop."
 msgstr ""
-"Si usted esta familiarizado con GPG, puede opcionalmente encriptar sus "
-"archivos y mensajes con nuestra <a href=\"{url}\" class=\"text-link\">llave "
-"publica</a> antes de enviarlos. Los archivos son encriptados tan pronto son "
-"recibidos por SecureDrop."
+"Si usted esta familiarizado con GPG, puede opcionalmente cifrar sus archivos "
+"y mensajes con nuestra <a href=\"{url}\" class=\"text-link\">llave "
+"publica</a> antes de enviarlos. Ya sea que usted encifre sus mensajes con "
+"GPG o no, todos los archivos son cifrados tan pronto son recibidos por "
+"SecureDrop."
 
 #: source_templates/lookup.html:22
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
