@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-06-11 14:41+0000\n"
-"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
+"PO-Revision-Date: 2018-06-25 18:22+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -240,8 +240,8 @@ msgstr[1] "{msg_num} mensagens"
 #: journalist_templates/_source_row.html:27
 msgid "1 unread"
 msgid_plural "{num_unread} unread"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 não lida"
+msgstr[1] "{num_unread} não lida"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
