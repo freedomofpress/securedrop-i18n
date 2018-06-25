@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-25 19:30+0000\n"
+"PO-Revision-Date: 2018-06-25 19:31+0000\n"
 "Last-Translator: Ali <aboshanab_@hotmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -556,9 +556,8 @@ msgstr ""
 "السابق.</em>"
 
 #: journalist_templates/col.html:122
-#, fuzzy
 msgid "DELETE SOURCE AND SUBMISSIONS"
-msgstr "حذف المصدر والرسائل"
+msgstr "حذف المصدر وتقديماته"
 
 #: journalist_templates/col.html:130
 msgid "Are you sure you want to delete this collection?"
@@ -1170,9 +1169,8 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "عذرًا لم نتمكن من إيجاد المطلوب."
 
 #: source_templates/screensaver.html:2
-#, fuzzy
 msgid "Interface hidden. Move your cursor here to show."
-msgstr "الواجهة مخفية.. حرك المؤشر"
+msgstr "الواجهة مخفية. حرك المؤشر هنا للإظهار."
 
 #: source_templates/session_timeout.html:6
 msgid ""
