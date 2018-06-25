@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-06-25 18:22+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2018-06-25 18:33+0000\n"
+"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -241,7 +241,7 @@ msgstr[1] "{msg_num} mensagens"
 msgid "1 unread"
 msgid_plural "{num_unread} unread"
 msgstr[0] "1 não lida"
-msgstr[1] "{num_unread} não lida"
+msgstr[1] "{num_unread} não lidas"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -286,7 +286,7 @@ msgstr "Instale o FreeOTP no seu telefone"
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
 msgid "Open the FreeOTP app"
-msgstr "Abra o FreeOTP"
+msgstr "Abrir o app FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
@@ -618,7 +618,7 @@ msgstr "Editar usuário \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Username &amp; Admin Status"
-msgstr "Alterar nome de usuário e credenciais de administrador"
+msgstr "Alterar nome de usuário e credenciais de administração"
 
 #: journalist_templates/edit_account.html:12
 msgid "Change username"
@@ -684,7 +684,7 @@ msgid ""
 "is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
-"Se as credenciais de autentificação de dois fatores de um usuário forem "
+"Se as credenciais de autenticação de dois fatores de um usuário forem "
 "perdidas ou comprometidas, você pode redefini-las aqui. <em>Ao fazê-lo, essa "
 "pessoa deve estar presente e preparada para configurar o aparelho dela com "
 "as novas credenciais. Caso contrário, ela não poderá mais acessar a própria "
@@ -837,16 +837,16 @@ msgstr "É preciso escrever uma mensagem ou escolher um arquivo para enviar."
 
 #: source_app/main.py:162
 msgid "Thanks! We received your message."
-msgstr "Agradecemos pela contribuição. Recebemos a sua mensagem."
+msgstr "Agradecemos a contribuição. Recebemos a sua mensagem."
 
 #: source_app/main.py:164
 msgid "Thanks! We received your document."
-msgstr "Agradecemos pela contribuição. Recebemos o seu documento."
+msgstr "Agradecemos a contribuição. Recebemos o seu documento."
 
 #: source_app/main.py:166
 msgid "Thanks! We received your message and document."
 msgstr ""
-"Agradecemos pela contribuição. Recebemos a sua mensagem e o seu documento."
+"Agradecemos sua contribuição. Recebemos a sua mensagem e o seu documento."
 
 #: source_app/main.py:213
 msgid "Reply deleted"
