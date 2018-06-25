@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-25 18:00+0000\n"
+"PO-Revision-Date: 2018-06-25 18:01+0000\n"
 "Last-Translator: Freddy Martinez <freddymartinez9@gmail.com>\n"
 "Language-Team: Spanish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/es/>\n"
@@ -243,7 +243,7 @@ msgstr[1] "{msg_num} mensajes"
 msgid "1 unread"
 msgid_plural "{num_unread} unread"
 msgstr[0] "{num_unread} sin leer"
-msgstr[1] ""
+msgstr[1] "{num_unread} sin leer"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -1205,7 +1205,7 @@ msgstr "Lo sentimos, no pudimos localizar lo que pidió."
 
 #: source_templates/screensaver.html:2
 msgid "Interface hidden. Move your cursor here to show."
-msgstr "Interfaz oculta. Mueve el puntero aquí para mostrarla"
+msgstr "Interfaz oculta. Mueve el puntero aquí para mostrarla."
 
 #: source_templates/session_timeout.html:6
 msgid ""
