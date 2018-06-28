@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-28 17:23+0000\n"
+"PO-Revision-Date: 2018-06-28 17:26+0000\n"
 "Last-Translator: Ahmad Gharbeia <gharbeia@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -143,7 +143,7 @@ msgstr "تم تحديث الحساب."
 
 #: journalist_app/utils.py:85
 msgid "Login failed."
-msgstr "فشل الولوج"
+msgstr "فشل الولوج."
 
 #: journalist_app/utils.py:93
 msgid "Please wait at least {seconds} second before logging in again."
