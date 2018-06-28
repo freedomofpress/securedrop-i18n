@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2018-06-28 18:02+0000\n"
-"Last-Translator: Ahmad Gharbeia <gharbeia@gmail.com>\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
 "Language: ar\n"
@@ -1148,7 +1148,7 @@ msgstr "لا، ليس بَعْد"
 
 #: source_templates/lookup.html:91
 msgid "There are no replies at this time."
-msgstr "ما من ردود في الوقت الراهن."
+msgstr "لا يوجد أي رد حتى الآن."
 
 #: source_templates/lookup.html:100
 msgid "Remember, your codename is:"
