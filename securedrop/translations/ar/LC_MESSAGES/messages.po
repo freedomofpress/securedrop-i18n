@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-28 19:35+0000\n"
+"PO-Revision-Date: 2018-06-28 19:40+0000\n"
 "Last-Translator: Ahmad Gharbeia <gharbeia@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -973,7 +973,7 @@ msgid ""
 "continue."
 msgstr ""
 "<strong>نوصي باستخدام  متصفح تور للنفاذ إلى سِكيوردرُپ إذ أنّ Orfox لا يوفّر "
-"القدر ذاته من السرية و&nbsp;المجهوليّة اللتان توفّرهما إصدارة سطح المكتب "
+"القدر ذاته من السرية و&nbsp;المجهوليّة اللتين توفّرهما إصدارة سطح المكتب "
 ":</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">طالع خطوات "
 "التنصيب</a> أو تجاهل هذا التحذير للمواصلة."
 
@@ -1012,7 +1012,7 @@ msgstr ""
 #: source_templates/index.html:98
 msgid ""
 "Click the <img src=\"{icon}\" alt=\"Tor icon\"> Tor icon in the toolbar above"
-msgstr "أضغط على <img src=\"{icon}\" alt=\"أيقونة تور\"> في شريط اﻷدوات أعلاه"
+msgstr "اضغط على <img src=\"{icon}\" alt=\"أيقونة تور\"> في شريط اﻷدوات أعلاه"
 
 #: source_templates/index.html:99
 msgid "Click <strong>Security Settings...</strong>"
@@ -1022,11 +1022,11 @@ msgstr "انقر على <strong>إعدادات الأمان...</strong>"
 msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
 msgstr ""
-"حرك الشريط إلى <strong>Safest</strong>، ثم انقر على <strong>OK</strong>"
+"حرّك المنزلق إلى <strong>Safest</strong>، ثم انقر على <strong>OK</strong>"
 
 #: source_templates/index.html:101
 msgid "<a href=\"/\">Click here</a> to refresh the page"
-msgstr "<a href=\"/\">انقر هنا</a> لتحديث الصفحة"
+msgstr "<a href=\"/\">انقر هنا</a> لإنعاش الصفحة"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
@@ -1034,7 +1034,7 @@ msgstr "أدخل الاسم الرمزي"
 
 #: source_templates/login.html:12
 msgid "Enter your codename"
-msgstr "أدخل الاسم الرمزي الخاص بك"
+msgstr "أدخل اسمك الرمزي"
 
 #: source_templates/login.html:25 source_templates/lookup.html:47
 msgid "CANCEL"
@@ -1051,12 +1051,12 @@ msgid ""
 "green onion button in the Tor browser to clear all history of your "
 "SecureDrop usage from this device."
 msgstr ""
-"شكرا للخروج من الجلسة. الآن اختر \"هوية جديدة\" من خلال الزر الأخضر في متصفح "
+"شكرا للخروج من الجلسة. الآن اختر \"هوية جديدة\" بضغط الزر الأخضر في متصفح "
 "تور لطمس أثر استخدامك SecureDrop من هذا الجهاز."
 
 #: source_templates/lookup.html:11
 msgid "Whew, it’s you! Now, the embarrassing part..."
-msgstr "يا للعجب.. هذا أنت! و&nbsp;الآن الجزء المحرج..."
+msgstr "ها أنت ذا قد عدت! و&nbsp;الآن الجزء المحرج..."
 
 #: source_templates/lookup.html:12
 msgid ""
