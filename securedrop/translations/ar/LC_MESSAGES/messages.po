@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-28 19:22+0000\n"
+"PO-Revision-Date: 2018-06-28 19:26+0000\n"
 "Last-Translator: Ahmad Gharbeia <gharbeia@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -828,8 +828,8 @@ msgid ""
 "You were redirected because you are already logged in. If you want to create "
 "a new account, you should log out first."
 msgstr ""
-"تمت إعادة توجيهك إلى حسابك لأنّك والج إليه بالفعل. إنَ كنت تريد إنشاء حسابا "
-"جديد فعليك الخوج من هذا الحساب أوّلا."
+"تمت إعادة توجيهك إلى حسابك لأنّك والج إليه بالفعل. إنَ كنت تريد إنشاء حساب "
+"جديد فعليك الخروج من هذا الحساب أوّلا."
 
 #: source_app/main.py:129
 msgid "You must enter a message or choose a file to submit."
@@ -861,7 +861,7 @@ msgstr "عذرًا، لا يمكن التعرف على الاسم الرمزي."
 
 #: source_templates/base.html:6 source_templates/index.html:4
 msgid "Protecting Journalists and Sources"
-msgstr "حماية الصحافيين و&nbsp;المصادر"
+msgstr "لحماية الصحافيين و&nbsp;المصادر"
 
 #: source_templates/base.html:25 source_templates/base.html:47
 #: source_templates/index.html:33 source_templates/index.html:88
@@ -887,7 +887,7 @@ msgstr "عطل في الخادوم"
 msgid ""
 "Sorry, the website encountered an error and was unable to complete your "
 "request."
-msgstr "نأسف لوقوع عطل في الموقع و&nbsp;تعذُّر إكمال طلبك."
+msgstr "نأسف لوقوع عطل في الموقع و&nbsp;تعذُّر إتمام طلبك."
 
 #: source_templates/error.html:7 source_templates/notfound.html:7
 msgid "Look up a codename..."
@@ -901,7 +901,7 @@ msgstr "تم بنجاح!"
 msgid ""
 "Thank you for sending this information to us. Please check back later for "
 "replies."
-msgstr "شكرا لإرسالك هذه المعلومات إلينا. ترّقب ردًّا منّا."
+msgstr "شكرا لإرسالك هذه المعلومات إلينا. تَرَقّب ردًّا منّا."
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
