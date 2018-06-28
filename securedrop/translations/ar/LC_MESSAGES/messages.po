@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-28 19:44+0000\n"
+"PO-Revision-Date: 2018-06-28 19:47+0000\n"
 "Last-Translator: Ahmad Gharbeia <gharbeia@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -1089,8 +1089,8 @@ msgid ""
 msgstr ""
 "إذا كنت على دراية باستعمال GPG فيمكنك (اختياريا) تعمية الملفّات و&nbsp;"
 "الرسائل <a href=\"{url}\" class=\"text-link\">بمفتاحنا العلني</a> قبل "
-"إيداعها. و في كلّ الأحوال فإنّ الملفات و&nbsp;الرسائل المرسلة عبر SecureDrop "
-"تُعمّى تلقائيّا."
+"إيداعها. و في كلّ الأحوال فإنّ الملفات تُعمّى تلقائيّا أثناء إيداعها عبر "
+"SecureDrop."
 
 #: source_templates/lookup.html:22
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
@@ -1098,7 +1098,7 @@ msgstr "<a href=\"{url}\" class=\"text-link\">لمعرفة المزيد</a>."
 
 #: source_templates/lookup.html:24
 msgid "You can submit any kind of file, a message, or both."
-msgstr "يمكنك إرسال أي نوع من الملفات أو الرسائل، أو كليهما."
+msgstr "يمكنك إيداع أي نوع من الملفات أو الرسائل، أو كليهما."
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
