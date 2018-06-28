@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-28 18:07+0000\n"
-"Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
+"PO-Revision-Date: 2018-06-28 18:38+0000\n"
+"Last-Translator: Ahmad Gharbeia <gharbeia@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
 "Language: ar\n"
@@ -988,14 +988,15 @@ msgstr "هل سبق لك إيداع شيء؟"
 
 #: source_templates/index.html:55
 msgid "If this is your first time submitting to journalists, start here."
-msgstr "ابدأ هنا إذا كانت المرة الأولى التي تودع فيها مستندات لدى صحافيينا."
+msgstr "ابدأ هنا إن كانت هذه المرة الأولى التي تودع فيها مستندات لدى صحافيينا."
 
 #: source_templates/index.html:59
 msgid ""
 "If you have already submitted to journalists, log in here to check for "
 "responses."
 msgstr ""
-"إذا كنت قد أودعت مسبقًا مستندات لدى صحافيينا فلِج هنا لترى إن استلمتَ ردود."
+"إذا كنت قد أودعت مسبقًا مستندات لدى صحافيينا فلِج هنا لترى إن وصلتك منهم "
+"ردود."
 
 #: source_templates/index.html:74
 msgid "CHECK FOR A RESPONSE"
@@ -1105,7 +1106,7 @@ msgstr "الحجم الأقصى الممكن رفعه: 500 ميجابايت"
 
 #: source_templates/lookup.html:36
 msgid "Write a message."
-msgstr "أكتب رسالة."
+msgstr "اكتب رسالة."
 
 #: source_templates/lookup.html:53
 msgid "Read Replies"
@@ -1118,9 +1119,9 @@ msgid ""
 "with them. This also lets us know that you are aware of our reply. You can "
 "respond by submitting new files and messages above."
 msgstr ""
-"لقد تلقيت رسالة. لدواعي حماية هويتك في حال انكشاف الاسم الرمزي ننصح بحذف كُلّ "
-"الرسائل بعد قراءتها. هذا سيُعلمنا أيضا أنك تلقيّت ردّنا. كما يمكنك الرّدّ بكتابة "
-"رسائل جديدة أو إرسال ملفات جديدة."
+"لقد تلقيت ردّا. لدواعي حماية هويتك إذا حدث و انكشف اسمك الرمزي في المستقبل، "
+"فإننا ننصحك بحذف كُلّ الرسائل بعد قراءتها. هذا سيُعلمنا أيضا أنك تلقيّت ردّ"
+"نا. يمكنك الرّدّ بكتابة رسائل و إيداع ملفات جديدة."
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
@@ -1225,8 +1226,8 @@ msgid ""
 "you</strong> to install Tor Browser and use it to access our site safely and "
 "anonymously."
 msgstr ""
-"إن كنت تود إرسال بيانات <strong>ننصح بشدة</strong> استخدام متصفح تور من أجل "
-"النفاذ إلى موقعنا على نحو آمن ومُجهل."
+"إن أردت إيداع معلومات في SecureDrop فإننا <strong> نحثّك بشدة</strong> على "
+"استخدام متصفح تور من أجل النفاذ إلى موقعنا بأمان و مجهولية."
 
 #: source_templates/use-tor-browser.html:6
 msgid ""
@@ -1256,9 +1257,9 @@ msgid ""
 "messages and files before submission can provide an extra layer of security "
 "before your data reaches the SecureDrop server."
 msgstr ""
-"يُعمّي SecureDrop الملفات و&nbsp;الرسائل بعد إيداعها و&nbsp;قبل حفظها في "
-"الخادوم. و&تعمية الرسائل و&nbsp;الملفات قبل إيداعها يزيد أمان التواصل بإضافة "
-"طبقة من السرية قبل وصول المعلومات إلى خادوم SecureDrop."
+"يُعمّي SecureDrop الملفات و&nbsp;الرسائل بعد إيداعها. تعمية الرسائل و&nbsp;"
+"الملفات من طرفك قبل إيداعها يزيد أمان التواصل بإضافة طبقة أخرى من السرية قبل "
+"وصول المعلومات إلى خادوم SecureDrop."
 
 #: source_templates/why-journalist-key.html:5
 msgid ""
