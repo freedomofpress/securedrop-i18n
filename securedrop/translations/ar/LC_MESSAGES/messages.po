@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-28 19:40+0000\n"
+"PO-Revision-Date: 2018-06-28 19:44+0000\n"
 "Last-Translator: Ahmad Gharbeia <gharbeia@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -1056,7 +1056,7 @@ msgstr ""
 
 #: source_templates/lookup.html:11
 msgid "Whew, it’s you! Now, the embarrassing part..."
-msgstr "ها أنت ذا قد عدت! و&nbsp;الآن الجزء المحرج..."
+msgstr "ها أنت ذا قد عدت! ثمّة أمر محرج..."
 
 #: source_templates/lookup.html:12
 msgid ""
@@ -1073,12 +1073,13 @@ msgid ""
 "submission into the hands of a journalist straight away. We’re sorry for the "
 "delay. Please do check back again in a week or so."
 msgstr ""
-"أما الآن و&nbsp;قد تبيّن لنا أنّك إنسان حقّا فسوف نمرّر رسالتك السابقة إلى "
-"صحافيينا. نأسف على التأخير و&nbsp;نرجو تفهّمك. ترقّب رسالة منّا بعد أسبوع."
+"أما الآن و&nbsp;قد تبيّن لنا أنّك إنسان حقّا فسوف نمرّر إيداعك السابق إلى "
+"صحافيينا. نأسف على التأخير و&nbsp;نثق أنّك تتفهّم الوضع. ترقّب رسالة منّا "
+"بعد أسبوع."
 
 #: source_templates/lookup.html:20
 msgid "Submit Files or Messages"
-msgstr "إرسال ملفات أو رسائل"
+msgstr "إيداع ملفات أو رسائل"
 
 #: source_templates/lookup.html:21
 msgid ""
