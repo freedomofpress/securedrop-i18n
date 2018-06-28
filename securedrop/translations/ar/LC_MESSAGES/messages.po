@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-28 19:47+0000\n"
+"PO-Revision-Date: 2018-06-30 10:41+0000\n"
 "Last-Translator: Ahmad Gharbeia <gharbeia@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -1157,11 +1157,11 @@ msgstr "تذكر أنّ اسمك الرمزي:"
 
 #: source_templates/lookup.html:101
 msgid "Show"
-msgstr "اعرض"
+msgstr "أظهر"
 
 #: source_templates/lookup.html:103
 msgid "Hide"
-msgstr "أخف"
+msgstr "اخفِ"
 
 #: source_templates/notfound.html:3
 msgid "Page not found"
@@ -1173,7 +1173,7 @@ msgstr "عذرًا لم نتمكن من إيجاد المطلوب."
 
 #: source_templates/screensaver.html:2
 msgid "Interface hidden. Move your cursor here to show."
-msgstr "الواجهة مخفية. حرك المؤشر هنا للإظهار."
+msgstr "الواجهة مخفية. حرك المؤشر هنا لإظهارها."
 
 #: source_templates/session_timeout.html:6
 msgid ""
@@ -1182,10 +1182,10 @@ msgid ""
 "button in the Tor browser to clear all history of your SecureDrop usage from "
 "this device. If you are not using Tor Browser, restart your browser."
 msgstr ""
-"تم الخروج من الحساب بسبب خمول النشاط. تمكنك معاودة الولوج لمواصلة استخدام "
-"SecureDrop إن أردت، أو إذا كنت قد فرغت من استخدامه فاختر \"هوية جديدة\" من "
-"خلال الزر الأخضر في متصفح تور لطمس أثر استخدامك SecureDrop من هذا الجهاز. "
-"أما إذا كنت لا تستخدم تور فينبغي عليك إطفاء و&nbsp;إعادة تشغيل المتصفّح."
+"تم الخروج من الحساب بسبب انعدام التفاعل. تمكنك معاودة الولوج لمواصلة استخدام "
+"SecureDrop إن أردت، أو إذا كنت قد فرغت من استخدامه فاختر \"هوية جديدة\" بضغط "
+"الزر الأخضر في متصفح تور لطمس أثر استخدامك SecureDrop من هذا الجهاز. أما إذا "
+"كنت لا تستخدم تور فينبغي عليك إطفاء و&nbsp;إعادة تشغيل المتصفّح."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1193,15 +1193,15 @@ msgstr "لماذا يوجد تنبيه بشأن Tor2Web؟"
 
 #: source_templates/tor2web-warning.html:4
 msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
-msgstr "إنّ استخدام Tor2Web للإتصال بـ SecureDrop لن يضمن حماية مجهوليتك."
+msgstr "إنّ استخدام Tor2Web للنفاذ إلى SecureDrop لا يحقّق لك المجهولية."
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
 "It could be possible for anyone monitoring your Internet traffic (your "
 "government, your Internet provider), to identify you."
 msgstr ""
-"من الممكن لأي جهة تراقب الإنترنت (مقدم خدمة الانترنت أو السلطات) من تحديد "
-"هويتك."
+"من الممكن لأي جهة تراقب الإنترنت (مثل مقدم خدمة الاتصال بالإنترنت أو السلطات)"
+" تحديد هويتك."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
@@ -1227,7 +1227,7 @@ msgid ""
 "anonymously."
 msgstr ""
 "إن أردت إيداع معلومات في SecureDrop فإننا <strong> نحثّك بشدة</strong> على "
-"استخدام متصفح تور من أجل النفاذ إلى موقعنا بأمان و مجهولية."
+"استخدام متصفح تور من أجل النفاذ إلى موقعنا بأمان و&nbsp;مجهولية."
 
 #: source_templates/use-tor-browser.html:6
 msgid ""
@@ -1243,13 +1243,14 @@ msgid ""
 "mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
-"إذا كان زيارة موقع تور لتنزيل المتصفح مثير للريبة وخدمة بريدك الإلكتروني على "
-"الأرجح غير مراقبة يمكنك مراسلة <pre>gettor@torproject.org</pre> وسوف تتلقى "
-"إرشادات لتنزيل متصفح تور بطريقة بديلة."
+"إذا كانت زيارة موقع تور لتنزيل المتصفح مثيرة للريبة و&nbsp;إذا كان الأرجح أنّ"
+" مقدّم خدمة البريد الإلكتروني لك غير مراقب فيمكنك إرسال رسالة إلى "
+"<pre>gettor@torproject.org</pre> و&nbsp;سوف تتلقى ردًّا فيه إرشادات لتنزيل "
+"متصفح تور بطريقة بديلة."
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
-msgstr "ما أهمية تنزيل مفتاح الصحفي العلني؟"
+msgstr "ما أهمية تنزيل المفتاح العلني للصحفي؟"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
@@ -1266,15 +1267,15 @@ msgid ""
 "If you are already familiar with the GPG encryption software, you may wish "
 "to encrypt your submissions yourself. To do so:"
 msgstr ""
-"إذا كنت على دراية باستخدام برمجيات التعمية المتوافقة مع GPG فيمكنك تعمية "
-"إيداعك بنفسك. لعمل ذلك:"
+"إذا كنت على دراية بكيفية استخدام برمجيات التعمية المتوافقة مع OpenPGP فيمكنك "
+"تعمية إيداعك بنفسك. لفعل ذلك:"
 
 #: source_templates/why-journalist-key.html:7
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. The public key is a text file "
 "with the extension <code>.asc</code>"
 msgstr ""
-"<a href=\"{url}\">نزِّل</a>المفتاح العلني. المفتاح العلني ملف نصي ينتهي "
+"<a href=\"{url}\">نزِّل</a>المفتاح العلني. المفتاح العلني ملف نصي اسمه ينتهي "
 "بالامتداد <code>.asc</code>"
 
 #: source_templates/why-journalist-key.html:8
@@ -1300,7 +1301,7 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:14
 msgid "Encrypt your submission."
-msgstr "تعمية إيداعك."
+msgstr "عمِّ إيداعك."
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
@@ -1309,9 +1310,9 @@ msgid ""
 "at the end), you can just copy and paste that. (don't include the <code>."
 "asc</code>!)"
 msgstr ""
-"لتطبيق التعمية سيطون عليك تحديد المفتاح المعمّى بواسطته (أي هوية المستخدم؛ "
+"لتطبيق التعمية سيكون عليك تحديد المفتاح المعمّى بواسطته (أي هوية المستخدم؛ "
 "UID) و&nbsp;بما أنّ اسم ملف المفتاح العلني عادة ما يكون بصمة المفتاح مع "
-"الامتداد asc فيمكنك ببساطة نسخها و&nbsp;لصقها (أي البصمة وحدها بلا الامتداد "
+"الامتداد asc فيمكنك ببساطة نسخها و&nbsp;لصقها (أي البصمة وحدها بغير الامتداد "
 "<code>asc</code>)"
 
 #: source_templates/why-journalist-key.html:17
@@ -1319,8 +1320,8 @@ msgid ""
 "On all systems, open the Terminal and use this gpg command: <code>gpg --"
 "recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 msgstr ""
-"في كُلّ أنظمة التشغيل قم بفتح الطرفية واستخدام أمر gpg التالي: <code>gpg --"
-"recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
+"في كُلّ أنظمة التشغيل افتح الطرفية و&nbsp;استخدام أمر gpg التالي: <code>gpg "
+"--recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 
 #: source_templates/why-journalist-key.html:20
 msgid ""
@@ -1338,13 +1339,13 @@ msgid ""
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
-"<strong>نصيحة:</strong> إذا كنت ترغب في البقاء مجهولا الهوية،<strong>فلا "
-"توقّع</strong> الملف المُعمى باستخدام <code>--sign</code> أو <code>-s</code>) "
-"في GPG إذ من شأن ذلك الكشف لنا عن هوية GPG التي تستعملها."
+"<strong>نصيحة:</strong> إذا كنت ترغب في البقاء مجهول الهوية،<strong>فلا "
+"توقّع</strong> الملف المُعمى باستخدام <code>--sign</code> أو <code>-s</code>)"
+" في GPG إذ من شأن ذلك الكشف لنا عن هويتك التي تستعملها مع مفاتيح GPG."
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
-msgstr "العودة إلى صفحة الإيداع"
+msgstr "الرجوع إلى صفحة الإيداع"
 
 #~ msgid "{num_unread} unread"
 #~ msgstr "{num_unread} غير مقروءة"
