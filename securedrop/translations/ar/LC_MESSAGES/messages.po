@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-28 17:55+0000\n"
-"Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
+"PO-Revision-Date: 2018-06-28 18:00+0000\n"
+"Last-Translator: Ahmad Gharbeia <gharbeia@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
 "Language: ar\n"
@@ -593,7 +593,7 @@ msgstr ""
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
-msgstr "الحجم الموصى به : 500px * 450px"
+msgstr "الحجم الموصى به: 500عنصورة × 450 عنصورة"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
@@ -702,9 +702,9 @@ msgid ""
 "this, make sure you are ready to set up your new device, otherwise you will "
 "be locked out of your account.</em>"
 msgstr ""
-"إذا فقدت بيانات الاستيثاق في خطوتين أو انكشفت فتمكن إعادة ضبطها من هنا. <em> "
-"لفعل ذلك ينبغي الاستعداد بجهازك لضبط خاصية الاستيثاق في خطوتين الجديدة "
-"و&nbsp;إلا لن تتمكن من الولوج إلى الحساب.</em>"
+"إذا فقدت بيانات الاستيثاق في خطوتين أو انكشفت فيمكنك تصفيرها هنا. <em>لفعل "
+"ذلك ينبغي عليك تحضير جهازك لضبطه و&nbsp;إلا فلن يمكنك الولوج إلى الحساب بعد "
+"الآن.</em>"
 
 #: journalist_templates/edit_account.html:65
 msgid ""
