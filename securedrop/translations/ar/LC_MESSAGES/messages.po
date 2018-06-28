@@ -644,7 +644,7 @@ msgstr "صفِّر كلمة السر"
 
 #: journalist_templates/edit_account.html:27
 msgid "SecureDrop now uses automatically generated diceware passwords."
-msgstr "يستخدم SecureDrop آليا طريقة دَيْسوَيَر لتوليد كلمات السر."
+msgstr "يستخدم SecureDrop كلمات سرّ مولّدة تلقائيا بأسلوب دَيْسوَيَر"
 
 #: journalist_templates/edit_account.html:28
 msgid ""
