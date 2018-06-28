@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2018-06-28 17:53+0000\n"
-"Last-Translator: Ahmad Gharbeia <gharbeia@gmail.com>\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
 "Language: ar\n"
@@ -515,7 +515,7 @@ msgstr "تأكيد الحذف"
 
 #: journalist_templates/col.html:72
 msgid "Are you sure you want to delete the selected documents?"
-msgstr "هل أنت متأكد من حذف الملفات المختارة؟"
+msgstr "هل أنت متأكد من أنك تريد حذف المستندات المختارة ؟"
 
 #: journalist_templates/col.html:87
 msgid "No documents to display."
