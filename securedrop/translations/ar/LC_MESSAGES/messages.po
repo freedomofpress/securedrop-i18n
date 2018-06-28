@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-28 19:10+0000\n"
+"PO-Revision-Date: 2018-06-28 19:12+0000\n"
 "Last-Translator: Ahmad Gharbeia <gharbeia@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -689,10 +689,9 @@ msgid ""
 "is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
-"إذا فقد المستخدم البيانات الخاصة بالاستيثاق في خطوتين أو انكشفت فيمكن "
-"تصفيرها من هنا. <em> لفعل ذلك ينبغي أن يكون المستخدم حاضرًا و&nbsp;مستعدًّا "
-"بجهازه لضبط وظيفة الاستيثاق في خطوتين مجدّدًا و&nbsp;إلا لن يمكنه الولوج إلى "
-"الحساب."
+"إذا فقد المستخدم بيانات الاستيثاق في خطوتين أو انكشفت فيمكن تصفيرها من هنا. "
+"<em> لفعل ذلك ينبغي أن يكون المستخدم حاضرًا و&nbsp;مستعدًّا بجهازه لضبط "
+"وظيفة الاستيثاق في خطوتين مجدّدًا و&nbsp;إلا لن يمكنه الولوج إلى الحساب."
 
 #: journalist_templates/edit_account.html:63
 msgid ""
@@ -710,16 +709,16 @@ msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the Yubikey, choose the second."
 msgstr ""
-"اِختَر الخيار الأول لإعادة ضبط الاستيثاق في خطوتين على تطبيقات الهاتف المحمول "
-"مثل FreeOTP. أما لاستخدام مفاتيح المصادقة مثل Yubikey اِختَر الخيار الثاني."
+"لتصفير الاستيثاق في خطوتين على تطبيقات الهاتف المحمول مثل FreeOTP اختَر "
+"الخيار الأول. أما لاستخدام مفاتيح المصادقة مثل Yubikey فاختَر الخيار الثاني."
 
 #: journalist_templates/edit_account.html:90
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
-msgstr "إعادة ضبط الاستيثاق في خطوتين (تطبيق محمول)"
+msgstr "تصفير الاستيثاق في خطوتين (تطبيق محمول)"
 
 #: journalist_templates/edit_account.html:92
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
-msgstr "إعادة ضبط الاستيثاق في خطوتين (مفاتيح عتادي)"
+msgstr "تصفير الاستيثاق في خطوتين (مفاتيح عتادي)"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
