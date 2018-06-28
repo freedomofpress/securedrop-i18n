@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-28 17:21+0000\n"
+"PO-Revision-Date: 2018-06-28 17:22+0000\n"
 "Last-Translator: Ahmad Gharbeia <gharbeia@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -43,7 +43,7 @@ msgstr "تعذّر التحقّق من رمز الاستيثاق في خطوتي
 
 #: journalist_app/admin.py:38
 msgid "Image updated."
-msgstr "تم تحديث  الصورة بنجاح."
+msgstr "تم تحديث الصورة بنجاح."
 
 #: journalist_app/admin.py:71
 msgid ""
