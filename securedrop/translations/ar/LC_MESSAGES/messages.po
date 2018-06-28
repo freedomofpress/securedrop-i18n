@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-28 19:12+0000\n"
+"PO-Revision-Date: 2018-06-28 19:22+0000\n"
 "Last-Translator: Ahmad Gharbeia <gharbeia@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -714,11 +714,11 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:90
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
-msgstr "تصفير الاستيثاق في خطوتين (تطبيق محمول)"
+msgstr "تصفير الاستيثاق في خطوتين (لتطبيق المحمول)"
 
 #: journalist_templates/edit_account.html:92
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
-msgstr "تصفير الاستيثاق في خطوتين (مفاتيح عتادي)"
+msgstr "تصفير الاستيثاق في خطوتين (لمفاتيح عتادي)"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -731,8 +731,8 @@ msgid ""
 "appear under their collection of documents. You can use this box to write "
 "encrypted replies to them."
 msgstr ""
-"سوف يقوم SecureDrop بتوليد مفتاح تعمية للمصدر في المرة التالية التي يلج فيها "
-"إلى حسابه، و&nbsp;بعد توليد المفتاح سوف يظهر حقل للتراسل أسفل مجموعة مستندات "
+"سوف يولّد SecureDrop مفتاح تعمية للمصدر في المرة التالية التي يلج فيها إلى "
+"حسابه، و&nbsp;بعد توليد المفتاح سوف يظهر حقل للتراسل أسفل مجموعة مستندات "
 "المصدر. يمكن استخدام ذلك الحقل للتراسل السّري معه."
 
 #: journalist_templates/flag.html:10
@@ -757,7 +757,7 @@ msgstr "نجمة"
 
 #: journalist_templates/index.html:14
 msgid "Un-star"
-msgstr "إلغاء النجمة"
+msgstr "إزالة النجمة"
 
 #: journalist_templates/index.html:47
 msgid "Are you sure you want to delete the selected collections?"
@@ -765,7 +765,7 @@ msgstr "هل أنت متأكد من أنك تريد حذف المجموعات ا
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
-msgstr "لا توجد مستندات مرسلة!"
+msgstr "لا توجد مستندات مودعة!"
 
 #: journalist_templates/js-strings.html:3
 msgid "filter by codename"
@@ -781,7 +781,7 @@ msgstr "اختر الرسائل غير المقروءة"
 
 #: journalist_templates/js-strings.html:6
 msgid "Select None"
-msgstr "إلغاء الاختيار"
+msgstr "إزالة الاختيار"
 
 #: journalist_templates/js-strings.html:7
 msgid "Are you sure you want to delete the user {username}?"
@@ -791,11 +791,11 @@ msgstr "هل أنت متأكد من أنك تريد حذف المستخدم {use
 msgid ""
 "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr ""
-"هل أنت متأكد من أنّك تريد إعادة ضبط الاستيثاق في خطوتين للمستخدم {username}؟"
+"هل أنت متأكد من أنّك تريد تصفير الاستيثاق في خطوتين للمستخدم {username}؟"
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
-msgstr "لِج إلى حسابك للنفاذ إلى واجهة الصحفي"
+msgstr "لِج إلى حسابك للنفاذ إلى واجهة الصحافيين"
 
 #: journalist_templates/login.html:9
 msgid "Password"
