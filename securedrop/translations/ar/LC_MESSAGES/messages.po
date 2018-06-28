@@ -972,9 +972,10 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
-"<strong>نوصي باستخدام  متصفح تور للنفاذ إلى سيكيور دروب:</strong> <a id="
-"\"recommend-tor\" href=\"{tor_browser_url}\">طالع خطوات التنصيب</a> أو تجاهل "
-"هذا التحذير للمواصلة."
+"<strong>نوصي باستخدام  متصفح تور للنفاذ إلى سِكيوردرُپ إذ أنّ Orfox لا يوفّر "
+"القدر ذاته من السرية و&nbsp;المجهوليّة اللتان توفّرهما إصدارة سطح المكتب "
+":</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">طالع خطوات "
+"التنصيب</a> أو تجاهل هذا التحذير للمواصلة."
 
 #: source_templates/index.html:42
 msgid "Submit for the first time"
