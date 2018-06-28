@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-28 17:27+0000\n"
+"PO-Revision-Date: 2018-06-28 17:44+0000\n"
 "Last-Translator: Ahmad Gharbeia <gharbeia@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -72,7 +72,7 @@ msgstr "حُذِفَ المستخدم '{user}'"
 
 #: journalist_app/admin.py:234
 msgid "Test alert sent. Please check your email."
-msgstr "تم إرسال تنبيه تجريبي. رجاء تفقد البريد الإلكتروني."
+msgstr "تم إرسال تنبيه تجريبي. تفقّد بريدك الإلكتروني."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -88,7 +88,9 @@ msgstr "النّفاذ إلى هذه الصفحة متاح للإداريين و
 
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
-msgstr "يجب أن يحوي حقل HOTP على 40 مَحرَفًا لكنّه الآن يحوي {num_chars}."
+msgstr ""
+"تتألّف كلمة السرّ من نوع HOTP من 40 مَحرَفًا على الأقل، لكنّك أدخلت "
+"{num_chars} محرفا!"
 
 #: journalist_app/forms.py:30
 msgid ""
@@ -170,8 +172,8 @@ msgstr ""
 #: journalist_app/utils.py:131
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
-"صيغة البيانات السرية غير صحيحة: طول العبارة السرية يجب أن يكون عددا زوجيًا لا "
-"فرديا. تلزم مراجعة الإدخال."
+"صيغة البيانات السرية غير صحيحة: عدد كلمات العبارة السرية يجب أن يكون زوجيًّا "
+"لا فرديًّا. تلزم مراجعة الإدخال."
 
 #: journalist_app/utils.py:183
 msgid "Submission deleted."
