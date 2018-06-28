@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-28 19:26+0000\n"
+"PO-Revision-Date: 2018-06-28 19:35+0000\n"
 "Last-Translator: Ahmad Gharbeia <gharbeia@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -551,7 +551,7 @@ msgid ""
 "the files seen here will be unrecoverable and the source will no longer be "
 "able to login using their previous codename.</em>"
 msgstr ""
-"انقر أدناه لحذف مجموعة وثائق هذا المصدر. <em> تحذير: بعد الحذف لا يمكن "
+"انقر أدناه لحذف مجموعة مستندات هذا المصدر. <em> تحذير: بعد الحذف لا يمكن "
 "استرداد الملفات، و&nbsp;لن يتمكن المصدر من الولوج باستخدام اسمه الرمزي "
 "السابق.</em>"
 
@@ -905,7 +905,7 @@ msgstr "شكرا لإرسالك هذه المعلومات إلينا. تَرَق
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
-msgstr "هل نسيت الاسم الرمزي الخاص بك؟"
+msgstr "هل نسيت اسمك الرمزي بك؟"
 
 #: source_templates/generate.html:4
 msgid "Welcome"
@@ -960,9 +960,9 @@ msgid ""
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>نوصي باستخدام  متصفح تور للنفاذ إلى سِكيور دروب :</strong> <a id="
-"\"recommend-tor\" href=\"{tor_browser_url}\">طالع خطوات التنصيب</a> أو تجاهل "
-"هذا التحذير للمواصلة."
+"<strong>نوصي باستخدام  متصفح تور للنفاذ إلى سِكيوردرُپ :</strong> <a id"
+"=\"recommend-tor\" href=\"{tor_browser_url}\">طالع خطوات التنصيب</a> أو "
+"تجاهل هذا التحذير للمواصلة."
 
 #: source_templates/index.html:19
 msgid ""
