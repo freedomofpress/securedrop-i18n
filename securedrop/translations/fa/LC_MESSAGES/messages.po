@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-07-06 15:12+0000\n"
+"PO-Revision-Date: 2018-07-07 09:12+0000\n"
 "Last-Translator: Hamed <snbig.pentester@gmail.com>\n"
 "Language-Team: Persian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fa/>\n"
@@ -88,6 +88,7 @@ msgid "Only administrators can access this page."
 msgstr "تنها مدیران می‌توانند به این صفحه دسترسی داشته باشند."
 
 #: journalist_app/forms.py:19
+#, fuzzy
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgstr ""
 "طول هش رمز های یکبار مصرف 40 کاراکتر می‌باشد - شما {num_chars} وارد کرده‌اید."
@@ -153,7 +154,7 @@ msgstr "ورود ناموفق بود."
 #: journalist_app/utils.py:93
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
-msgstr[0] "لطفا قبل از ورود به سیستم حداقل {seconds} ثانیه صبر کنید."
+msgstr[0] "لطفا قبل از ورود به سیستم حداقل یک ثانیه صبر کنید."
 msgstr[1] "لطفا قبل از ورود به سیستم حداقل {seconds} ثانیه صبر کنید."
 
 #: journalist_app/utils.py:104
@@ -161,26 +162,29 @@ msgid ""
 "Please wait for a new code from your two-factor token or application "
 "before trying again."
 msgstr ""
+"لطفا پیش از اقدام مجدد، برای دریافت شناسه‌ی دو مرحله ای یا سیستمی صبر کنید."
 
 #: journalist_app/utils.py:125
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
-msgstr ""
+msgstr "قالب رمز نامعتبر: لطفا فقط حروف A-F و اعداد 0-9 را ارسال کنید."
 
 #: journalist_app/utils.py:131
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
+"قالب رمز نامعتبر است: تعداد کارکترها‌ی رمز باید زوج باشد. آیا رمز را اشتباه "
+"تایپ کردید؟"
 
 #: journalist_app/utils.py:183
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "محتوای ارسالی حذف شد."
+msgstr[1] "{num} محتوای ارسالی حذف شدند."
 
 #: journalist_app/utils.py:236
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{num} مجموعه حذف شد."
+msgstr[1] "{num} مجموعه حذف شدند."
 
 #: journalist_app/utils.py:274
 msgid "You submitted a bad password! Password not changed."
