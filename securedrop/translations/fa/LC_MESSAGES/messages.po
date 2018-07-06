@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-07-06 13:17+0000\n"
+"PO-Revision-Date: 2018-07-06 14:12+0000\n"
 "Last-Translator: Hamed <snbig.pentester@gmail.com>\n"
 "Language-Team: Persian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fa/>\n"
@@ -82,33 +82,37 @@ msgstr "مجموعه‌ی {source_name} حذف شد."
 
 #: journalist_app/col.py:56
 msgid "No collections selected."
-msgstr ""
+msgstr "هیچ مجموعه‌ای انتخاب نشد."
 
 #: journalist_app/decorators.py:16
 msgid "Only administrators can access this page."
-msgstr ""
+msgstr "تنها مدیران می‌توانند به این صفحه دسترسی داشته باشند."
 
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgstr ""
+"طول هش رمز های یکبار مصرف 40 کاراکتر می‌باشد - شما {num_chars} وارد کرده‌اید."
 
 #: journalist_app/forms.py:30
+#, fuzzy
 msgid ""
 "Field must be at least {min_chars} characters long but only got "
 "{num_chars}."
 msgstr ""
+"طول رشته حداقل باید {min_chars} کارکتر باشد اما فقط {num_chars} دریافت شده "
+"است."
 
 #: journalist_app/forms.py:35 source_app/forms.py:11
 msgid "This field is required."
-msgstr ""
+msgstr "پرکردن این فیلد ضروری است."
 
 #: journalist_app/forms.py:52
 msgid "You cannot send an empty reply."
-msgstr ""
+msgstr "نمی‌توانید پاسخ خالی ارسال کنید."
 
 #: journalist_app/forms.py:60
 msgid "File required."
-msgstr ""
+msgstr "پرونده مورد نیاز است."
 
 #: journalist_app/forms.py:62
 msgid "You can only upload PNG image files."
