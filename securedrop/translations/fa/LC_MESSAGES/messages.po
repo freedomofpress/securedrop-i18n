@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-07-06 14:12+0000\n"
+"PO-Revision-Date: 2018-07-06 14:24+0000\n"
 "Last-Translator: Hamed <snbig.pentester@gmail.com>\n"
 "Language-Team: Persian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fa/>\n"
@@ -52,9 +52,8 @@ msgstr ""
 "امتحان کنید."
 
 #: journalist_app/admin.py:82 journalist_app/admin.py:166
-#, fuzzy
 msgid "Username \"{user}\" already taken."
-msgstr "نام کاربری \"{user}\" قبلا گرفته شده‌است."
+msgstr "نام کاربری \"{user}\" قبلا گرفته شده‌ است."
 
 #: journalist_app/admin.py:85
 msgid ""
@@ -116,20 +115,20 @@ msgstr "پرونده مورد نیاز است."
 
 #: journalist_app/forms.py:62
 msgid "You can only upload PNG image files."
-msgstr ""
+msgstr "تنها می توانید تصاویر را با فرمت PNG بارگزاری کنید."
 
 #: journalist_app/main.py:117 journalist_app/utils.py:47
 #: journalist_app/utils.py:137
 msgid "An unexpected error occurred! Please inform your administrator."
-msgstr ""
+msgstr "یک خطای غیر منتظره رخ داده است! لطفا به مدیر خود اطلاع دهید."
 
 #: journalist_app/main.py:128
 msgid "Thanks. Your reply has been stored."
-msgstr ""
+msgstr "با تشکر. پاسخ شما ذخیره شده است."
 
 #: journalist_app/main.py:149
 msgid "No collections selected for download."
-msgstr ""
+msgstr "هیچ مجموعه‌ای برای بارگیری انتخاب نشده است."
 
 #: journalist_app/main.py:152 journalist_app/utils.py:231
 msgid "No collections selected for deletion."
