@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-07-06 13:08+0000\n"
+"PO-Revision-Date: 2018-07-06 13:17+0000\n"
 "Last-Translator: Hamed <snbig.pentester@gmail.com>\n"
 "Language-Team: Persian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fa/>\n"
@@ -69,15 +69,16 @@ msgstr "شناسه‌ی احراز هویت دو مرحله ای برای کار
 
 #: journalist_app/admin.py:208
 msgid "Deleted user '{user}'"
-msgstr "کاربر '{user}' حذف شد."
+msgstr "کاربر '{user}' حذف شد"
 
 #: journalist_app/admin.py:234
 msgid "Test alert sent. Please check your email."
-msgstr ""
+msgstr "پیام هشدار آزمایشی ارسال شد. لطفا ایمیل خود را بررسی نماید."
 
 #: journalist_app/col.py:45
+#, fuzzy
 msgid "{source_name}'s collection deleted"
-msgstr ""
+msgstr "مجموعه‌ی {source_name} حذف شد."
 
 #: journalist_app/col.py:56
 msgid "No collections selected."
