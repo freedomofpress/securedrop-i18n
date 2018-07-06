@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-07-06 14:24+0000\n"
+"PO-Revision-Date: 2018-07-06 14:49+0000\n"
 "Last-Translator: Hamed <snbig.pentester@gmail.com>\n"
 "Language-Team: Persian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fa/>\n"
@@ -124,7 +124,7 @@ msgstr "یک خطای غیر منتظره رخ داده است! لطفا به م
 
 #: journalist_app/main.py:128
 msgid "Thanks. Your reply has been stored."
-msgstr "با تشکر. پاسخ شما ذخیره شده است."
+msgstr "با تشکر. پاسخ شما ذخیره شد."
 
 #: journalist_app/main.py:149
 msgid "No collections selected for download."
@@ -132,11 +132,11 @@ msgstr "هیچ مجموعه‌ای برای بارگیری انتخاب نشده
 
 #: journalist_app/main.py:152 journalist_app/utils.py:231
 msgid "No collections selected for deletion."
-msgstr ""
+msgstr "هیچ مجموعه‌ای برای حذف انتخاب نشده است."
 
 #: journalist_app/main.py:178
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
-msgstr ""
+msgstr "منبع آگاه '{original_name}' به '{new_name}' تغییر نام داده است."
 
 #: journalist_app/main.py:193
 msgid "No unread submissions for this source."
