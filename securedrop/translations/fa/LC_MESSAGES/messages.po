@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-07-07 10:31+0000\n"
+"PO-Revision-Date: 2018-07-07 10:34+0000\n"
 "Last-Translator: Hamed <snbig.pentester@gmail.com>\n"
 "Language-Team: Persian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fa/>\n"
@@ -285,15 +285,17 @@ msgstr "بر روی رمزینه پاسخ سریع (QR code) در بالای ص�
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
+#, fuzzy
 msgid ""
 "Your phone will now be in \"scanning\" mode. When you are in this mode, "
 "scan the barcode below:"
-msgstr "اکنون گوشی شما در حالت \"اسکن\" قرار می‌گیرد."
+msgstr "اکنون گوشی شما به حالت \"اسکن\" درخواهد آمد."
 
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
 msgid "Can't scan the barcode? Enter the following code manually:"
 msgstr ""
+"نمی‌توانید رمزینه (barcode) را اسکن کنید؟ به صورت دستی کد روبرو را وارد کنید:"
 
 #: journalist_templates/account_new_two_factor.html:15
 #: journalist_templates/admin_new_user_two_factor.html:18
