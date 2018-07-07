@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-07-07 11:34+0000\n"
+"PO-Revision-Date: 2018-07-07 17:18+0000\n"
 "Last-Translator: Hamed <snbig.pentester@gmail.com>\n"
 "Language-Team: Persian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fa/>\n"
@@ -329,9 +329,8 @@ msgid "SUBMIT"
 msgstr "ارسال"
 
 #: journalist_templates/admin.html:3
-#, fuzzy
 msgid "Admin Interface"
-msgstr "مدیریت"
+msgstr "رابط مدیریت"
 
 #: journalist_templates/admin.html:6
 #: journalist_templates/admin_add_user.html:39
@@ -376,64 +375,67 @@ msgstr "هیچ وقت"
 
 #: journalist_templates/admin.html:42
 msgid "No users to display"
-msgstr "کاربری برای نمایش وجود ندارد."
+msgstr "کاربری برای نمایش وجود ندارد"
 
 #: journalist_templates/admin.html:48
 msgid "INSTANCE CONFIG"
-msgstr ""
+msgstr "تنظیمات سیستم"
 
 #: journalist_templates/admin_add_user.html:4
 #: journalist_templates/config.html:4 journalist_templates/edit_account.html:7
 msgid "Back to admin interface"
-msgstr ""
+msgstr "بازگشت به رابط مدیریت"
 
 #: journalist_templates/admin_add_user.html:21
 msgid "The user's password will be:"
-msgstr ""
+msgstr "گذرواژه‌ی کاربر:"
 
 #: journalist_templates/admin_add_user.html:24
 #: journalist_templates/edit_account.html:17
 msgid "Is Administrator"
-msgstr ""
+msgstr "مدیر می‌باشد"
 
 #: journalist_templates/admin_add_user.html:32
 msgid "Is using a YubiKey [HOTP]"
-msgstr ""
+msgstr "از [YubiKey [HOTP استفاده می‌کند"
 
 #: journalist_templates/admin_new_user_two_factor.html:6
+#, fuzzy
 msgid ""
 "You're almost done! To finish adding this new user, have them follow the "
 "instructions below to set up two-factor authentication with FreeOTP. Once"
 " they've added an entry for this account in the app, have them enter one "
 "of the 6-digit codes from the app to confirm that two factor "
 "authentication is set up correctly."
-msgstr ""
+msgstr "کار تمام است!"
 
 #: journalist_templates/base.html:24
 msgid "Logged on as"
-msgstr ""
+msgstr "ورود به عنوان"
 
 #: journalist_templates/base.html:26
 msgid "Admin"
-msgstr ""
+msgstr "مدیر"
 
 #: journalist_templates/base.html:28
 msgid "Log Out"
-msgstr ""
+msgstr "خروج"
 
 #: journalist_templates/base.html:41
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" "
 "alt=\"SecureDrop\">"
 msgstr ""
+"طراحی شده توسط <br> <img src=\"/static/i/securedrop_small.png\" alt=\""
+"SecureDrop\">"
 
 #: journalist_templates/base.html:56
 msgid "Powered by <em>SecureDrop {version}</em>."
-msgstr ""
+msgstr "طراحی شده توسط <em>SecureDrop {version} </em>."
 
 #: journalist_templates/col.html:10
 msgid "All Sources"
-msgstr ""
+msgstr "تمام منابع آگاه"
 
 #: journalist_templates/col.html:13
 msgid ""
@@ -443,22 +445,25 @@ msgid ""
 msgstr ""
 
 #: journalist_templates/col.html:13
+#, fuzzy
 msgid "Change codename"
-msgstr ""
+msgstr "تغییر نام کد"
 
 #: journalist_templates/col.html:14
 msgid "Are you sure you want to generate a new codename?"
-msgstr ""
+msgstr "آیا مطمئن هستید که می‌خواهید نام کد جدید تولید کنید؟"
 
 #: journalist_templates/col.html:16
 msgid "CONFIRM"
-msgstr ""
+msgstr "تایید"
 
 #: journalist_templates/col.html:22
 msgid ""
 "The documents are stored encrypted for security. To read them, you will "
 "need to decrypt them using GPG."
 msgstr ""
+"اسناد به دلایل امنیتی بصورت رمزگذاری شده نگهداری می‌شوند. برای خواندن آن‌ها، "
+"شما نیاز خواهید داشت با استفاده از GPG آن‌ها را رمزگشایی نمایید."
 
 #: journalist_templates/col.html:26
 msgid "Download Selected"
