@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-07-07 10:39+0000\n"
+"PO-Revision-Date: 2018-07-07 11:33+0000\n"
 "Last-Translator: Hamed <snbig.pentester@gmail.com>\n"
 "Language-Team: Persian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fa/>\n"
@@ -302,73 +302,77 @@ msgstr ""
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid "Once you have scanned the barcode, enter the 6-digit code below:"
 msgstr ""
-"پس از آن که رمزینه (بارکد) را اسکن کردید، کد 6 رقمی را در قسمت زیر وارد کنید:"
+"پس از آن که رمزینه (بارکد) را اسکن کردید، کد 6 رقمی بدست آمده را در قسمت زیر "
+"وارد کنید:"
 
 #: journalist_templates/account_new_two_factor.html:17
 #: journalist_templates/admin_new_user_two_factor.html:20
 msgid "Enable YubiKey (OATH-HOTP)"
-msgstr ""
+msgstr "فعالسازی (YubiKey (OATH-HOTP"
 
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:21
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr ""
+"پس از آنکه YubiKey خود را پیکربندی کردید، کد 6 رقمی بدست آمده را در قسمت زیر "
+"وارد کنید:"
 
 #: journalist_templates/account_new_two_factor.html:22
 #: journalist_templates/admin_new_user_two_factor.html:25
 msgid "Verification code"
-msgstr ""
+msgstr "کد تایید"
 
 #: journalist_templates/account_new_two_factor.html:24
 #: journalist_templates/admin_new_user_two_factor.html:27
 #: journalist_templates/col.html:100 source_templates/lookup.html:45
 msgid "SUBMIT"
-msgstr ""
+msgstr "ارسال"
 
 #: journalist_templates/admin.html:3
+#, fuzzy
 msgid "Admin Interface"
-msgstr ""
+msgstr "مدیریت"
 
 #: journalist_templates/admin.html:6
 #: journalist_templates/admin_add_user.html:39
 msgid "ADD USER"
-msgstr ""
+msgstr "اضافه کردن کاربر"
 
 #: journalist_templates/admin.html:16
 #: journalist_templates/admin_add_user.html:14
 #: journalist_templates/login.html:8
 msgid "Username"
-msgstr ""
+msgstr "نام کاربری"
 
 #: journalist_templates/admin.html:17
 msgid "Edit"
-msgstr ""
+msgstr "ویرایش"
 
 #: journalist_templates/admin.html:18 journalist_templates/col.html:76
 #: journalist_templates/col.html:134 journalist_templates/index.html:16
 #: journalist_templates/index.html:51
 msgid "Delete"
-msgstr ""
+msgstr "حذف"
 
 #: journalist_templates/admin.html:19
 msgid "Created"
-msgstr ""
+msgstr "ایجاد شده"
 
 #: journalist_templates/admin.html:20
 msgid "Last login"
-msgstr ""
+msgstr "آخرین ورود"
 
 #: journalist_templates/admin.html:25
 msgid "Edit user {username}"
-msgstr ""
+msgstr "ویرایش کاربر {username}"
 
 #: journalist_templates/admin.html:29
 msgid "Delete user {username}"
-msgstr ""
+msgstr "حذف کاربر {username}"
 
 #: journalist_templates/admin.html:35
 msgid "never"
-msgstr ""
+msgstr "هرگز"
 
 #: journalist_templates/admin.html:42
 msgid "No users to display"
