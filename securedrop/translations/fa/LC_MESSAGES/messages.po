@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-07-07 17:18+0000\n"
+"PO-Revision-Date: 2018-07-08 18:54+0000\n"
 "Last-Translator: Hamed <snbig.pentester@gmail.com>\n"
 "Language-Team: Persian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fa/>\n"
@@ -462,37 +462,37 @@ msgid ""
 "The documents are stored encrypted for security. To read them, you will "
 "need to decrypt them using GPG."
 msgstr ""
-"اسناد به دلایل امنیتی بصورت رمزگذاری شده نگهداری می‌شوند. برای خواندن آن‌ها، "
-"شما نیاز خواهید داشت با استفاده از GPG آن‌ها را رمزگشایی نمایید."
+"اسناد به دلایل امنیتی بصورت رمزگذاری شده نگهداری می‌شوند. برای خواندن، شما "
+"نیاز خواهید داشت که با استفاده از GPG آن‌ها را رمزگشایی نمایید."
 
 #: journalist_templates/col.html:26
 msgid "Download Selected"
-msgstr ""
+msgstr "بارگیری موارد انتخاب شده"
 
 #: journalist_templates/col.html:28
 msgid "Delete Selected"
-msgstr ""
+msgstr "حذف موارد انتخاب شده"
 
 #: journalist_templates/col.html:57
 msgid "Uploaded Document"
-msgstr ""
+msgstr "اسناد بارگذاری شده"
 
 #: journalist_templates/col.html:59 journalist_templates/col.html:92
 msgid "Reply"
-msgstr ""
+msgstr "پاسخ"
 
 #: journalist_templates/col.html:61
 msgid "Message"
-msgstr ""
+msgstr "پیام"
 
 #: journalist_templates/col.html:71 journalist_templates/col.html:129
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
-msgstr ""
+msgstr "تاییدیه‌ی حذف"
 
 #: journalist_templates/col.html:72
 msgid "Are you sure you want to delete the selected documents?"
-msgstr ""
+msgstr "آیا مطمئن هستید که می‌خواهید اسناد انتخاب شده را حذف کنید؟"
 
 #: journalist_templates/col.html:87
 msgid "No documents to display."
