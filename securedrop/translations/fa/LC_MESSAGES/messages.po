@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-07-07 11:33+0000\n"
+"PO-Revision-Date: 2018-07-07 11:34+0000\n"
 "Last-Translator: Hamed <snbig.pentester@gmail.com>\n"
 "Language-Team: Persian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fa/>\n"
@@ -372,11 +372,11 @@ msgstr "حذف کاربر {username}"
 
 #: journalist_templates/admin.html:35
 msgid "never"
-msgstr "هرگز"
+msgstr "هیچ وقت"
 
 #: journalist_templates/admin.html:42
 msgid "No users to display"
-msgstr ""
+msgstr "کاربری برای نمایش وجود ندارد."
 
 #: journalist_templates/admin.html:48
 msgid "INSTANCE CONFIG"
