@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-07-08 18:54+0000\n"
+"PO-Revision-Date: 2018-07-09 08:33+0000\n"
 "Last-Translator: Hamed <snbig.pentester@gmail.com>\n"
 "Language-Team: Persian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fa/>\n"
@@ -261,12 +261,13 @@ msgid "Enable FreeOTP"
 msgstr "فعال سازی FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:5
+#, fuzzy
 msgid ""
 "You're almost done! To finish resetting your two-factor authentication, "
 "follow the instructions below to set up FreeOTP. Once you've added the "
 "entry for your account in the app, enter one of the 6-digit codes from "
 "the app to confirm that two factor authentication is set up correctly."
-msgstr ""
+msgstr "کار تمام است!"
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
@@ -445,9 +446,8 @@ msgid ""
 msgstr ""
 
 #: journalist_templates/col.html:13
-#, fuzzy
 msgid "Change codename"
-msgstr "تغییر نام کد"
+msgstr "تغییر اسم رمز"
 
 #: journalist_templates/col.html:14
 msgid "Are you sure you want to generate a new codename?"
