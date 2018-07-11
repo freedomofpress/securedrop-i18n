@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-07-09 08:33+0000\n"
-"Last-Translator: Goudarz Jafari <goudarz.jafari@gmail.com>\n"
+"PO-Revision-Date: 2018-07-15 23:08+0000\n"
+"Last-Translator: Hamed <snbig.pentester@gmail.com>\n"
 "Language-Team: Persian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fa/>\n"
 "Language: fa\n"
@@ -444,6 +444,9 @@ msgid ""
 "if the first random codename is difficult to say or remember. You can "
 "generate new random codenames as many times as you like."
 msgstr ""
+"تولید یک اسم رمز تصادفی برای این منبع آگاه. ما انجام این کار را در صورتی که "
+"گفتن یا بخاطر سپردن اسم رمز اول دشوار باشد، توصیه می‌کنیم. شما می‌توانید هر "
+"چند بار که تمایل دارید اسم رمز تصادفی تولید کنید."
 
 #: journalist_templates/col.html:13
 msgid "Change codename"
@@ -501,24 +504,28 @@ msgstr "هیچ سندی برای نمایش وجود ندارد."
 #: journalist_templates/col.html:94
 msgid "You can write a secure reply to the person who submitted these documents:"
 msgstr ""
+"شما می‌توانید پاسخی امن برای شخصی که این اسناد را ارسال کرده است بنویسید:"
 
 #: journalist_templates/col.html:103
 msgid "You've flagged this source for reply."
-msgstr ""
+msgstr "شما این منبع آگاه را برای پاسخ دادن نشانه گذاری کرده‌اید."
 
 #: journalist_templates/col.html:104
 msgid ""
 "An encryption key will be generated for the source the next time they log"
 " in, after which you will be able to reply to the source here."
 msgstr ""
+"یک کلید رمزگذاری بعد از ورود مجدد منبع آگاه تولید خواهد شد، که پس از آن شما، "
+"قادر به پاسخگویی به منبع آگاه در اینجا خواهید بود."
 
 #: journalist_templates/col.html:106
 msgid "Click below if you would like to write a reply to this source."
 msgstr ""
+"اگر تمایل دارید پاسخی برای این منبع آگاه ارسال کنید، زیر را کلیک نمایید."
 
 #: journalist_templates/col.html:110
 msgid "FLAG THIS SOURCE FOR REPLY"
-msgstr ""
+msgstr "نشانه گذاری این منبع آگاه برای پاسخ دادن"
 
 #: journalist_templates/col.html:115
 msgid ""
@@ -529,7 +536,7 @@ msgstr ""
 
 #: journalist_templates/col.html:122
 msgid "DELETE SOURCE AND SUBMISSIONS"
-msgstr ""
+msgstr "حذف محتواهای ارسالی و منبع آگاه"
 
 #: journalist_templates/col.html:130
 msgid "Are you sure you want to delete this collection?"
@@ -563,11 +570,11 @@ msgstr ""
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
-msgstr ""
+msgstr "اندازه‌ی توصیه شده: 450px * 500px"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
-msgstr ""
+msgstr "بروزرسانی لگو"
 
 #: journalist_templates/delete.html:5
 msgid ""
