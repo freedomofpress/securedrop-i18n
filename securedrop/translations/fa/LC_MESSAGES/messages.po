@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-07-15 23:08+0000\n"
+"PO-Revision-Date: 2018-07-16 07:32+0000\n"
 "Last-Translator: 30rooss <IR.30rooss.IR@gmail.com>\n"
 "Language-Team: Persian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fa/>\n"
@@ -616,7 +616,7 @@ msgstr "حساب خود را ویرایش کنید"
 
 #: journalist_templates/edit_account.html:25
 msgid "Reset Password"
-msgstr "باز نشانی کلمه ی عبور"
+msgstr "باز نشانی گذرواژه"
 
 #: journalist_templates/edit_account.html:27
 msgid "SecureDrop now uses automatically generated diceware passwords."
@@ -632,31 +632,31 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:34
 msgid "Please enter your current password and two-factor code."
-msgstr ""
+msgstr "لطفا گذرواژه ی فعلی و رمز دوم خود را وارد نمایید."
 
 #: journalist_templates/edit_account.html:40
 msgid "Current Password"
-msgstr ""
+msgstr "گذرواژه ی فعلی"
 
 #: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
 msgid "Two-factor Code"
-msgstr ""
+msgstr "رمز دوم"
 
 #: journalist_templates/edit_account.html:46
 msgid "The user's password will be changed to:"
-msgstr ""
+msgstr "گذرواژه ی شما تغییر خواهد کرد به :"
 
 #: journalist_templates/edit_account.html:48
 msgid "Your password will be changed to:"
-msgstr ""
+msgstr "گذرواژه ی شما تغییر خواهد کرد به:"
 
 #: journalist_templates/edit_account.html:53
 msgid "RESET PASSWORD"
-msgstr ""
+msgstr "بازنشانی گذرواژه"
 
 #: journalist_templates/edit_account.html:58
 msgid "Reset Two-Factor Authentication"
-msgstr ""
+msgstr "بازنشانی رمز دوم احراز هویت"
 
 #: journalist_templates/edit_account.html:61
 msgid ""
