@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2018-07-15 23:08+0000\n"
-"Last-Translator: Hamed <snbig.pentester@gmail.com>\n"
+"Last-Translator: 30rooss <IR.30rooss.IR@gmail.com>\n"
 "Language-Team: Persian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fa/>\n"
 "Language: fa\n"
@@ -588,15 +588,15 @@ msgstr[1] ""
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
-msgstr ""
+msgstr "حذف دائمی فایل ها"
 
 #: journalist_templates/delete.html:23
 msgid "Return to the list of documents for {source_name}…"
-msgstr ""
+msgstr "بازگشت به فهرست اسناد مربوط به {source_name} …"
 
 #: journalist_templates/edit_account.html:6
 msgid "Edit user \"{user}\""
-msgstr ""
+msgstr "ویرایش کاربر \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Username &amp; Admin Status"
@@ -604,23 +604,25 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:12
 msgid "Change username"
-msgstr ""
+msgstr "تغییر نام کاربری"
 
 #: journalist_templates/edit_account.html:19
 msgid "UPDATE"
-msgstr ""
+msgstr "به روز رسانی"
 
 #: journalist_templates/edit_account.html:22
 msgid "Edit your account"
-msgstr ""
+msgstr "حساب خود را ویرایش کنید"
 
 #: journalist_templates/edit_account.html:25
 msgid "Reset Password"
-msgstr ""
+msgstr "باز نشانی کلمه ی عبور"
 
 #: journalist_templates/edit_account.html:27
 msgid "SecureDrop now uses automatically generated diceware passwords."
 msgstr ""
+"SecureDrop ذر حال حاضر از گذرواژه ی تصادفی ای که به صورت خودکار تولید شده "
+"است استفاده میکند."
 
 #: journalist_templates/edit_account.html:28
 msgid ""
