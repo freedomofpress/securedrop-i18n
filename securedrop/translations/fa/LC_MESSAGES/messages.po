@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-07-16 07:32+0000\n"
-"Last-Translator: 30rooss <IR.30rooss.IR@gmail.com>\n"
+"PO-Revision-Date: 2018-07-16 07:35+0000\n"
+"Last-Translator: Hamed <snbig.pentester@gmail.com>\n"
 "Language-Team: Persian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fa/>\n"
 "Language: fa\n"
@@ -648,7 +648,7 @@ msgstr "گذرواژه ی شما تغییر خواهد کرد به :"
 
 #: journalist_templates/edit_account.html:48
 msgid "Your password will be changed to:"
-msgstr "گذرواژه ی شما تغییر خواهد کرد به:"
+msgstr "گذرواژه‌ی شما تغییر خواهد کرد به:"
 
 #: journalist_templates/edit_account.html:53
 msgid "RESET PASSWORD"
@@ -656,7 +656,7 @@ msgstr "بازنشانی گذرواژه"
 
 #: journalist_templates/edit_account.html:58
 msgid "Reset Two-Factor Authentication"
-msgstr "بازنشانی رمز دوم احراز هویت"
+msgstr "بازنشانی احراز هویت دو مرحله‌ای"
 
 #: journalist_templates/edit_account.html:61
 msgid ""
