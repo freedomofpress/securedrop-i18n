@@ -648,7 +648,7 @@ msgstr "گذرواژه ی شما تغییر خواهد کرد به :"
 
 #: journalist_templates/edit_account.html:48
 msgid "Your password will be changed to:"
-msgstr "گذرواژه‌ی شما تغییر خواهد کرد به:"
+msgstr "گذرواژه ی شما تغییر خواهد کرد به:"
 
 #: journalist_templates/edit_account.html:53
 msgid "RESET PASSWORD"
