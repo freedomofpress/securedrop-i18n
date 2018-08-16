@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-08-16 02:16+0000\n"
+"PO-Revision-Date: 2018-08-16 03:03+0000\n"
 "Last-Translator: geistling <geistling@protonmail.com>\n"
 "Language-Team: Japanese <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ja/>\n"
@@ -29,7 +29,7 @@ msgstr ""
 
 #: journalist_app/account.py:26
 msgid "Incorrect password or two-factor code."
-msgstr ""
+msgstr "パスワードまたは２FAコードは正しくありません。"
 
 #: journalist_app/account.py:42
 msgid "Token in two-factor authentication verified."
@@ -73,7 +73,7 @@ msgstr ""
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
-msgstr "{source_name}の集は消去された。"
+msgstr "{source_name}の集は消去された"
 
 #: journalist_app/col.py:56
 msgid "No collections selected."
@@ -95,7 +95,7 @@ msgstr ""
 
 #: journalist_app/forms.py:35 source_app/forms.py:11
 msgid "This field is required."
-msgstr ""
+msgstr "このフィールドは必要です。"
 
 #: journalist_app/forms.py:52
 msgid "You cannot send an empty reply."
@@ -136,7 +136,7 @@ msgstr ""
 
 #: journalist_app/utils.py:54
 msgid "Account updated."
-msgstr ""
+msgstr "アカウント更新した。"
 
 #: journalist_app/utils.py:85
 msgid "Login failed."
