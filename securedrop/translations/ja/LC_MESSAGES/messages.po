@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-08-16 03:17+0000\n"
-"Last-Translator: zyphlar <will@zyphon.com>\n"
+"PO-Revision-Date: 2018-08-16 04:06+0000\n"
+"Last-Translator: geistling <geistling@protonmail.com>\n"
 "Language-Team: Japanese <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ja/>\n"
 "Language: ja\n"
@@ -65,7 +65,7 @@ msgstr ""
 
 #: journalist_app/admin.py:208
 msgid "Deleted user '{user}'"
-msgstr ""
+msgstr "ユーザー'{user}'が削除されました"
 
 #: journalist_app/admin.py:234
 msgid "Test alert sent. Please check your email."
@@ -81,7 +81,7 @@ msgstr ""
 
 #: journalist_app/decorators.py:16
 msgid "Only administrators can access this page."
-msgstr ""
+msgstr "このページには管理者のアクセス権が必要です。"
 
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
@@ -103,7 +103,7 @@ msgstr ""
 
 #: journalist_app/forms.py:60
 msgid "File required."
-msgstr ""
+msgstr "ファイルが必要です。"
 
 #: journalist_app/forms.py:62
 msgid "You can only upload PNG image files."
@@ -112,7 +112,7 @@ msgstr ""
 #: journalist_app/main.py:117 journalist_app/utils.py:47
 #: journalist_app/utils.py:137
 msgid "An unexpected error occurred! Please inform your administrator."
-msgstr ""
+msgstr "予期しないエラーが発生しました！管理者にご連絡ください。"
 
 #: journalist_app/main.py:128
 msgid "Thanks. Your reply has been stored."
@@ -140,7 +140,7 @@ msgstr "アカウント更新した。"
 
 #: journalist_app/utils.py:85
 msgid "Login failed."
-msgstr ""
+msgstr "ログインに失敗しました。"
 
 #: journalist_app/utils.py:93
 msgid "Please wait at least {seconds} second before logging in again."
@@ -194,12 +194,12 @@ msgstr ""
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
-msgstr ""
+msgstr "閉じる"
 
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:72
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
 
 #: journalist_templates/_source_row.html:23
 msgid "1 doc"
@@ -209,12 +209,12 @@ msgstr[0] ""
 #: journalist_templates/_source_row.html:24
 msgid "1 message"
 msgid_plural "{msg_num} messages"
-msgstr[0] ""
+msgstr[0] "{msg_num}メッセージ"
 
 #: journalist_templates/_source_row.html:27
 msgid "1 unread"
 msgid_plural "{num_unread} unread"
-msgstr[0] ""
+msgstr[0] "{num_unread} 未読"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -225,13 +225,13 @@ msgstr ""
 #: journalist_templates/admin_add_user.html:33
 #: journalist_templates/admin_edit_hotp_secret.html:8
 msgid "HOTP Secret"
-msgstr ""
+msgstr "HOTP秘密鍵"
 
 #: journalist_templates/account_edit_hotp_secret.html:9
 #: journalist_templates/admin_edit_hotp_secret.html:10
 #: source_templates/login.html:23
 msgid "CONTINUE"
-msgstr ""
+msgstr "続く"
 
 #: journalist_templates/account_new_two_factor.html:4
 #: journalist_templates/admin_new_user_two_factor.html:5
@@ -254,7 +254,7 @@ msgstr ""
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
 msgid "Open the FreeOTP app"
-msgstr ""
+msgstr "FreeOTP を開く"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
@@ -281,7 +281,7 @@ msgstr ""
 #: journalist_templates/account_new_two_factor.html:17
 #: journalist_templates/admin_new_user_two_factor.html:20
 msgid "Enable YubiKey (OATH-HOTP)"
-msgstr ""
+msgstr "Yubikeyを有効にして（OATH"
 
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:21
@@ -291,38 +291,38 @@ msgstr ""
 #: journalist_templates/account_new_two_factor.html:22
 #: journalist_templates/admin_new_user_two_factor.html:25
 msgid "Verification code"
-msgstr ""
+msgstr "確認コード"
 
 #: journalist_templates/account_new_two_factor.html:24
 #: journalist_templates/admin_new_user_two_factor.html:27
 #: journalist_templates/col.html:100 source_templates/lookup.html:45
 msgid "SUBMIT"
-msgstr ""
+msgstr "送信"
 
 #: journalist_templates/admin.html:3
 msgid "Admin Interface"
-msgstr ""
+msgstr "管理インターフェイス"
 
 #: journalist_templates/admin.html:6
 #: journalist_templates/admin_add_user.html:39
 msgid "ADD USER"
-msgstr ""
+msgstr "ユーザーを追加"
 
 #: journalist_templates/admin.html:16
 #: journalist_templates/admin_add_user.html:14
 #: journalist_templates/login.html:8
 msgid "Username"
-msgstr ""
+msgstr "ユーザーネーム"
 
 #: journalist_templates/admin.html:17
 msgid "Edit"
-msgstr ""
+msgstr "編集"
 
 #: journalist_templates/admin.html:18 journalist_templates/col.html:76
 #: journalist_templates/col.html:134 journalist_templates/index.html:16
 #: journalist_templates/index.html:51
 msgid "Delete"
-msgstr ""
+msgstr "削除"
 
 #: journalist_templates/admin.html:19
 msgid "Created"
@@ -330,7 +330,7 @@ msgstr ""
 
 #: journalist_templates/admin.html:20
 msgid "Last login"
-msgstr ""
+msgstr "最後のログイン"
 
 #: journalist_templates/admin.html:25
 msgid "Edit user {username}"
