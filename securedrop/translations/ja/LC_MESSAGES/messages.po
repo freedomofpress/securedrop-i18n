@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-08-16 03:03+0000\n"
-"Last-Translator: geistling <geistling@protonmail.com>\n"
+"PO-Revision-Date: 2018-08-16 03:17+0000\n"
+"Last-Translator: zyphlar <will@zyphon.com>\n"
 "Language-Team: Japanese <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ja/>\n"
 "Language: ja\n"
@@ -1134,10 +1134,11 @@ msgid ""
 "<a href=\"{url}\">Download</a> the public key. The public key is a text "
 "file with the extension <code>.asc</code>"
 msgstr ""
+"公開鍵を<a href=\"{url}\">ダウンロードして</a>ください。公開鍵は、テキストファイルが拡張子の<code>.asc</code>です。"
 
 #: source_templates/why-journalist-key.html:8
 msgid "Import it into your GPG keyring."
-msgstr ""
+msgstr "GPGキーリングにインポートします。"
 
 #: source_templates/why-journalist-key.html:10
 msgid ""
@@ -1154,7 +1155,7 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:14
 msgid "Encrypt your submission."
-msgstr ""
+msgstr "提出を暗号化します。"
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
