@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-08-16 04:06+0000\n"
+"PO-Revision-Date: 2018-08-16 08:44+0000\n"
 "Last-Translator: geistling <geistling@protonmail.com>\n"
 "Language-Team: Japanese <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ja/>\n"
@@ -281,7 +281,7 @@ msgstr ""
 #: journalist_templates/account_new_two_factor.html:17
 #: journalist_templates/admin_new_user_two_factor.html:20
 msgid "Enable YubiKey (OATH-HOTP)"
-msgstr "Yubikeyを有効にして（OATH"
+msgstr "Yubikeyを有効にして（OATH-HOTP）"
 
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:21
@@ -338,7 +338,7 @@ msgstr ""
 
 #: journalist_templates/admin.html:29
 msgid "Delete user {username}"
-msgstr ""
+msgstr "ユーザー {username} を削除する"
 
 #: journalist_templates/admin.html:35
 msgid "never"
