@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-08-21 17:05+0000\n"
+"PO-Revision-Date: 2018-08-21 17:17+0000\n"
 "Last-Translator: Adrian <pappasadrian@gmail.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/el/>\n"
@@ -29,15 +29,16 @@ msgstr "Αποσυνδεθήκατε λόγω αδράνειας"
 
 #: journalist_app/account.py:26
 msgid "Incorrect password or two-factor code."
-msgstr ""
+msgstr "Λάθος κωδικός πρόσβασης ή κωδικός πιστοποίησης δύο παραγόντων."
 
 #: journalist_app/account.py:42
 msgid "Token in two-factor authentication verified."
-msgstr ""
+msgstr "Το διακριτικό στην πιστοποίηση δυο παραγόντων επιβεβαιώθηκε."
 
 #: journalist_app/account.py:46 journalist_app/admin.py:116
 msgid "Could not verify token in two-factor authentication."
 msgstr ""
+"Το διακριτικό της πιστοποίησης δύο παραγόντων δεν μπορεί να επιβεβαιωθεί."
 
 #: journalist_app/admin.py:38
 msgid "Image updated."
@@ -64,6 +65,8 @@ msgstr ""
 #: journalist_app/admin.py:109
 msgid "Token in two-factor authentication accepted for user {user}."
 msgstr ""
+"Το διακριτικό της πιστοποίησης δύο παραγόντων έγινε αποδεκτό για τον χρήστη "
+"{user}."
 
 #: journalist_app/admin.py:208
 msgid "Deleted user '{user}'"
@@ -158,6 +161,8 @@ msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
 msgstr ""
+"Παρακαλώ περιμένετε για ένα νέο κωδικό από τη συσκευή ή εφαρμογή δύο "
+"παραγόντων πριν ξαναδοκιμάσετε."
 
 #: journalist_app/utils.py:125
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
@@ -284,7 +289,7 @@ msgid ""
 "the barcode below:"
 msgstr ""
 "Το τηλέφωνό σας πρέπει να είναι τώρα σε κατάσταση σάρωσης. Όταν βρεθείτε σε "
-"αυτή τη κατάσταση, σκανάρετε τον παρακάτω κώδικα:"
+"αυτή τη κατάσταση, σκανάρετε τον παρακάτω QR κωδικό:"
 
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
@@ -297,36 +302,39 @@ msgstr ""
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid "Once you have scanned the barcode, enter the 6-digit code below:"
 msgstr ""
+"Όταν σκανάρετε τον QR κωδικό, πληκτρολογήστε τον εξαψήφιο κωδικό παρακάτω:"
 
 #: journalist_templates/account_new_two_factor.html:17
 #: journalist_templates/admin_new_user_two_factor.html:20
 msgid "Enable YubiKey (OATH-HOTP)"
-msgstr ""
+msgstr "Ενεργοποίηση YubiKey (OATH-HOTP)"
 
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:21
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr ""
+"Όταν ολοκληρώσετε την παραμετροποίηση του YubiKey σας, πληκτρολογήστε τον "
+"εξαψήφιο κωδικό παρακάτω:"
 
 #: journalist_templates/account_new_two_factor.html:22
 #: journalist_templates/admin_new_user_two_factor.html:25
 msgid "Verification code"
-msgstr ""
+msgstr "Κωδικός επιβεβαίωσης"
 
 #: journalist_templates/account_new_two_factor.html:24
 #: journalist_templates/admin_new_user_two_factor.html:27
 #: journalist_templates/col.html:99 source_templates/lookup.html:45
 msgid "SUBMIT"
-msgstr "ΥΠΟΒΆΛΛΩ"
+msgstr "ΥΠΟΒΟΛΗ"
 
 #: journalist_templates/admin.html:3
 msgid "Admin Interface"
-msgstr ""
+msgstr "Διεπαφή διαχείρισης"
 
 #: journalist_templates/admin.html:6
 #: journalist_templates/admin_add_user.html:39
 msgid "ADD USER"
-msgstr ""
+msgstr "ΠΡΟΣΘΗΚΗ ΧΡΗΣΤΗ"
 
 #: journalist_templates/admin.html:16
 #: journalist_templates/admin_add_user.html:14
@@ -336,7 +344,7 @@ msgstr "όνομα χρήστη"
 
 #: journalist_templates/admin.html:17
 msgid "Edit"
-msgstr "επεξεργάζομαι"
+msgstr "Επεξεργασία"
 
 #: journalist_templates/admin.html:18 journalist_templates/col.html:75
 #: journalist_templates/col.html:133 journalist_templates/index.html:16
@@ -346,27 +354,27 @@ msgstr "Διαγραφή"
 
 #: journalist_templates/admin.html:19
 msgid "Created"
-msgstr ""
+msgstr "Δημιουργία"
 
 #: journalist_templates/admin.html:20
 msgid "Last login"
-msgstr ""
+msgstr "Τελευταία σύνδεση"
 
 #: journalist_templates/admin.html:25
 msgid "Edit user {username}"
-msgstr ""
+msgstr "Επεξεργασία χρήστη {username}"
 
 #: journalist_templates/admin.html:29
 msgid "Delete user {username}"
-msgstr ""
+msgstr "Διαγραφή χρήστη {username}"
 
 #: journalist_templates/admin.html:35
 msgid "never"
-msgstr ""
+msgstr "ποτέ"
 
 #: journalist_templates/admin.html:42
 msgid "No users to display"
-msgstr ""
+msgstr "Δεν υπάρχουν χρήστες για να προβληθούν"
 
 #: journalist_templates/admin.html:48
 msgid "INSTANCE CONFIG"
@@ -375,20 +383,20 @@ msgstr ""
 #: journalist_templates/admin_add_user.html:4
 #: journalist_templates/config.html:4 journalist_templates/edit_account.html:7
 msgid "Back to admin interface"
-msgstr ""
+msgstr "Πίσω στη διεπαφή διαχείρισης"
 
 #: journalist_templates/admin_add_user.html:21
 msgid "The user's password will be:"
-msgstr ""
+msgstr "Ο κωδικός του χρήστη θα είναι:"
 
 #: journalist_templates/admin_add_user.html:24
 #: journalist_templates/edit_account.html:17
 msgid "Is Administrator"
-msgstr ""
+msgstr "Είναι διαχειριστής"
 
 #: journalist_templates/admin_add_user.html:32
 msgid "Is using a YubiKey [HOTP]"
-msgstr ""
+msgstr "Χρησιμοποιεί YubiKey [HOTP]"
 
 #: journalist_templates/admin_new_user_two_factor.html:6
 msgid ""
@@ -398,6 +406,12 @@ msgid ""
 "the 6-digit codes from the app to confirm that two factor authentication is "
 "set up correctly."
 msgstr ""
+"Έχετε σχεδόν τελειώσει. Για να ολοκληρώσετε την προσθήκη του νέου χρήστη, "
+"ζητήστε του να ακολουθήσει τις παρακάτω οδηγίες για να ρυθμίσει την "
+"πιστοποίηση σε δύο βήματα με το FreeOTP. Μόλις προσθέσουν μια εγγραφή για "
+"αυτό τον λογαριασμό στην εφαρμογή, ζητήστε τους να εισάγουν έναν από τους "
+"εξαψήφιους κωδικούς από την εφαρμογή για να επιβεβαιώσουν ότι η πιστοποίηση "
+"σε δύο βήματα έχει ρυθμιστεί σωστά."
 
 #: journalist_templates/base.html:24
 msgid "Logged on as"
