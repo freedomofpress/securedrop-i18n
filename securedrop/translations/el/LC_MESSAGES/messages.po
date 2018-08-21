@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-08-21 16:59+0000\n"
+"PO-Revision-Date: 2018-08-21 17:05+0000\n"
 "Last-Translator: Adrian <pappasadrian@gmail.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/el/>\n"
@@ -223,36 +223,36 @@ msgstr[1] "{doc_num} έγγραφα"
 #: journalist_templates/_source_row.html:24
 msgid "1 message"
 msgid_plural "{msg_num} messages"
-msgstr[0] "Ένα μήνυμα"
+msgstr[0] "1 μήνυμα"
 msgstr[1] "{msg_num} μηνύματα"
 
 #: journalist_templates/_source_row.html:27
 msgid "1 unread"
 msgid_plural "{num_unread} unread"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 μη αναγνωσμένο"
+msgstr[1] "{num_unread} μη αναγνωσμένα"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
 msgid "Change Secret"
-msgstr ""
+msgstr "Αλλαγή μυστικού"
 
 #: journalist_templates/account_edit_hotp_secret.html:7
 #: journalist_templates/admin_add_user.html:33
 #: journalist_templates/admin_edit_hotp_secret.html:8
 msgid "HOTP Secret"
-msgstr ""
+msgstr "Μυστικό HOTP"
 
 #: journalist_templates/account_edit_hotp_secret.html:9
 #: journalist_templates/admin_edit_hotp_secret.html:10
 #: source_templates/login.html:23
 msgid "CONTINUE"
-msgstr ""
+msgstr "ΣΥΝΕΧΕΙΑ"
 
 #: journalist_templates/account_new_two_factor.html:4
 #: journalist_templates/admin_new_user_two_factor.html:5
 msgid "Enable FreeOTP"
-msgstr ""
+msgstr "Ενεργοποίηση του FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:5
 msgid ""
@@ -265,17 +265,17 @@ msgstr ""
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
 msgid "Install FreeOTP on your phone"
-msgstr ""
+msgstr "Εγκαταστήστε το FreeOTP στο τηλέφωνό σας"
 
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
 msgid "Open the FreeOTP app"
-msgstr ""
+msgstr "Ανοίξτε την εφαρμογή FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
 msgid "Tap the QR code symbol at the top"
-msgstr ""
+msgstr "Πατήστε το σύμβολο με τον κωδικό QR στο πάνω μέρος"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -283,11 +283,15 @@ msgid ""
 "Your phone will now be in \"scanning\" mode. When you are in this mode, scan "
 "the barcode below:"
 msgstr ""
+"Το τηλέφωνό σας πρέπει να είναι τώρα σε κατάσταση σάρωσης. Όταν βρεθείτε σε "
+"αυτή τη κατάσταση, σκανάρετε τον παρακάτω κώδικα:"
 
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
 msgid "Can't scan the barcode? Enter the following code manually:"
 msgstr ""
+"Δεν μπορείτε να σκανάρετε τον QR κωδικό; Πληκτρολογήστε τον παρακάτω κωδικό "
+"χειροκίνητα:"
 
 #: journalist_templates/account_new_two_factor.html:15
 #: journalist_templates/admin_new_user_two_factor.html:18
