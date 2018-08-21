@@ -111,7 +111,7 @@ build-debs: ## Builds and tests debian packages
 safety: ## Runs `safety check` to check python dependencies for vulnerabilities
 	@for req_file in `find . -type f -name '*requirements.txt'`; do \
 		echo "Checking file $$req_file" \
-		&& safety check --full-report -r $$req_file \
+		&& safety check --ignore 36351 --full-report -r $$req_file \
 		&& echo -e '\n' \
 		|| exit 1; \
 	done
@@ -146,6 +146,14 @@ self-signed-https-certs: ## Generates self-signed certs for TESTING the HTTPS co
 .PHONY: vagrant-package
 vagrant-package: ## Package up a vagrant box of the last stable SD release
 	@devops/scripts/vagrant_package.sh
+
+.PHONY: staging
+staging: ## Creates local staging environment in VM, autodetecting platform
+	@./devops/create-staging-env
+
+.PHONY: clean
+clean: ## DANGER! Purges all site-specific info and developer files from project.
+	@./devops/clean
 
 # Explaination of the below shell command should it ever break.
 # 1. Set the field separator to ": ##" and any make targets that might appear between : and ##

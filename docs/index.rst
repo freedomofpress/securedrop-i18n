@@ -79,12 +79,14 @@ anonymous sources.
    backup_and_restore
    backup_workstations
    kernel_troubleshooting
+   getting_support
 
 .. toctree::
    :caption: Upgrade SecureDrop
    :name: upgradetoc
    :maxdepth: 2
 
+   upgrade/0.7.x_to_0.8.rst
    upgrade/0.6.x_to_0.7.rst
    upgrade/0.5.x_to_0.6.rst
    upgrade/0.4.x_to_0.5.rst
@@ -102,6 +104,7 @@ anonymous sources.
    development/making_pr
    development/admin_development
    development/updategui_development
+   development/journalist_api
    development/virtual_environments
    development/virtualizing_tails
    development/contributor_guidelines
@@ -120,6 +123,7 @@ anonymous sources.
    development/portable_demo
    development/release_management
    development/dockerbuildmaint
+   development/qubes_staging
 
 .. toctree::
   :caption: Threat Model

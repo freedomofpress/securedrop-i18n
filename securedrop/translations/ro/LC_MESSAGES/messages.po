@@ -24,7 +24,7 @@ msgstr ""
 msgid "{time} ago"
 msgstr "acum {time}"
 
-#: journalist_app/__init__.py:78 journalist_app/__init__.py:116
+#: journalist_app/__init__.py:80 journalist_app/__init__.py:119
 msgid "You have been logged out due to inactivity"
 msgstr "Ai fost deconectat în urma inactivității"
 
@@ -88,7 +88,7 @@ msgstr "Colecția ce aparține de {source_name} a fost ștearsă"
 msgid "No collections selected."
 msgstr "Nu ai ales nicio selecție."
 
-#: journalist_app/decorators.py:16
+#: journalist_app/decorators.py:15
 msgid "Only administrators can access this page."
 msgstr "Doar administratorii pot accesa această pagină."
 
@@ -135,7 +135,7 @@ msgstr "Mulțumim. Răspunsul tău a fost stocat."
 msgid "No collections selected for download."
 msgstr "Nu s-au selectat colecții de descărcat."
 
-#: journalist_app/main.py:152 journalist_app/utils.py:231
+#: journalist_app/main.py:152 journalist_app/utils.py:235
 msgid "No collections selected for deletion."
 msgstr "Nu s-au selectat colecții pentru ștergere."
 
@@ -188,25 +188,25 @@ msgstr ""
 "Formatul pentru secret este nevalid: lungimea este impară. Asigură-te că ai "
 "scris corect secretul."
 
-#: journalist_app/utils.py:183
+#: journalist_app/utils.py:187
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Trimiterea a fost ștearsă."
 msgstr[1] "{num} încărcări au fost șterse."
 msgstr[2] "{num} de încărcări au fost șterse."
 
-#: journalist_app/utils.py:236
+#: journalist_app/utils.py:240
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} colecție a fost ștearsă"
 msgstr[1] "{num} colecții au fost șterse"
 msgstr[2] "{num} de colecții au fost șterse"
 
-#: journalist_app/utils.py:274
+#: journalist_app/utils.py:278
 msgid "You submitted a bad password! Password not changed."
 msgstr "Ai introdus o parolă greșită! Parola nu s-a schimbat."
 
-#: journalist_app/utils.py:281
+#: journalist_app/utils.py:285
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -215,7 +215,7 @@ msgstr ""
 "S-a produs o eroare și noua parolă nu a fost salvată corect. Pentru a nu "
 "rămâne blocat în afara contului trebuie să resetezi parola din nou."
 
-#: journalist_app/utils.py:290
+#: journalist_app/utils.py:294
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -223,7 +223,7 @@ msgstr ""
 "Parola a fost actualizată. Nu uita să o salvezi în baza de date personală "
 "KeePassX. Noua parolă:"
 
-#: journalist_app/utils.py:307
+#: journalist_app/utils.py:311
 msgid "No unread submissions in selected collections."
 msgstr "Nu sunt trimiteri necitite în colecțiile alese."
 
@@ -344,7 +344,7 @@ msgstr "Verifică codul"
 
 #: journalist_templates/account_new_two_factor.html:24
 #: journalist_templates/admin_new_user_two_factor.html:27
-#: journalist_templates/col.html:100 source_templates/lookup.html:45
+#: journalist_templates/col.html:99 source_templates/lookup.html:45
 msgid "SUBMIT"
 msgstr "TRIMITE"
 
@@ -367,8 +367,8 @@ msgstr "Nume utilizator"
 msgid "Edit"
 msgstr "Editează"
 
-#: journalist_templates/admin.html:18 journalist_templates/col.html:76
-#: journalist_templates/col.html:134 journalist_templates/index.html:16
+#: journalist_templates/admin.html:18 journalist_templates/col.html:75
+#: journalist_templates/col.html:133 journalist_templates/index.html:16
 #: journalist_templates/index.html:51
 msgid "Delete"
 msgstr "Șterge"
@@ -500,41 +500,41 @@ msgstr "Descarcă selecția"
 msgid "Delete Selected"
 msgstr "Șterge selecția"
 
-#: journalist_templates/col.html:57
+#: journalist_templates/col.html:56
 msgid "Uploaded Document"
 msgstr "Documentul a fost încărcat"
 
-#: journalist_templates/col.html:59 journalist_templates/col.html:92
+#: journalist_templates/col.html:58 journalist_templates/col.html:91
 msgid "Reply"
 msgstr "Răspunde"
 
-#: journalist_templates/col.html:61
+#: journalist_templates/col.html:60
 msgid "Message"
 msgstr "Mesaj"
 
-#: journalist_templates/col.html:71 journalist_templates/col.html:129
+#: journalist_templates/col.html:70 journalist_templates/col.html:128
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
 msgstr "Șterge confirmarea"
 
-#: journalist_templates/col.html:72
+#: journalist_templates/col.html:71
 msgid "Are you sure you want to delete the selected documents?"
 msgstr "Sigur dorești să ștergi documentele selectate?"
 
-#: journalist_templates/col.html:87
+#: journalist_templates/col.html:86
 msgid "No documents to display."
 msgstr "Nu sunt documente de afișat."
 
-#: journalist_templates/col.html:94
+#: journalist_templates/col.html:93
 msgid ""
 "You can write a secure reply to the person who submitted these documents:"
 msgstr "Poți răspunde persoanei care a trimis aceste documente:"
 
-#: journalist_templates/col.html:103
+#: journalist_templates/col.html:102
 msgid "You've flagged this source for reply."
 msgstr "Ai marcat această sursă pentru a primi un răspuns."
 
-#: journalist_templates/col.html:104
+#: journalist_templates/col.html:103
 msgid ""
 "An encryption key will be generated for the source the next time they log "
 "in, after which you will be able to reply to the source here."
@@ -542,15 +542,15 @@ msgstr ""
 "A fost generată o cheie de criptare pentru sursă pentru data viitoare când "
 "se autentifică, după care vei putea citi răspunsul din partea sursei aici."
 
-#: journalist_templates/col.html:106
+#: journalist_templates/col.html:105
 msgid "Click below if you would like to write a reply to this source."
 msgstr "Clic mai jos dacă dorești să răspunzi acestei surse."
 
-#: journalist_templates/col.html:110
+#: journalist_templates/col.html:109
 msgid "FLAG THIS SOURCE FOR REPLY"
 msgstr "MARCHEAZĂ SURSA PENTRU RĂSPUNS"
 
-#: journalist_templates/col.html:115
+#: journalist_templates/col.html:114
 msgid ""
 "Click below to delete this source's collection. <em>Warning: If you do this, "
 "the files seen here will be unrecoverable and the source will no longer be "
@@ -560,11 +560,11 @@ msgstr ""
 "fișierele nu vor mai fi recuperabile și sursa nu se va mai putea autentifica "
 "folosind numele de cod precedent.</em>"
 
-#: journalist_templates/col.html:122
+#: journalist_templates/col.html:121
 msgid "DELETE SOURCE AND SUBMISSIONS"
 msgstr ""
 
-#: journalist_templates/col.html:130
+#: journalist_templates/col.html:129
 msgid "Are you sure you want to delete this collection?"
 msgstr "Sigur dorești să ștergi această colecție?"
 
@@ -835,7 +835,7 @@ msgstr "Câmpul trebuie să fie între 1 și {max_codename_len} caractere."
 msgid "Invalid input."
 msgstr "Conținut nevalid."
 
-#: source_app/main.py:31
+#: source_app/main.py:30
 msgid ""
 "You were redirected because you are already logged in. If you want to create "
 "a new account, you should log out first."
@@ -843,31 +843,31 @@ msgstr ""
 "Ai fost redirectat pentru că ești deja autentificat. Dacă vrei să creezi un "
 "nou cont trebuie să te deconectezi mai întâi."
 
-#: source_app/main.py:129
+#: source_app/main.py:131
 msgid "You must enter a message or choose a file to submit."
 msgstr "Trebuie să introduci un mesaj sau să alegi un fișier de trimis."
 
-#: source_app/main.py:162
+#: source_app/main.py:164
 msgid "Thanks! We received your message."
 msgstr "Mulțumim! Am primit mesajul tău."
 
-#: source_app/main.py:164
+#: source_app/main.py:166
 msgid "Thanks! We received your document."
 msgstr "Mulțumim! Am primit documentul tău."
 
-#: source_app/main.py:166
+#: source_app/main.py:168
 msgid "Thanks! We received your message and document."
 msgstr "Mulțumim! Am primit mesajul și documentul tău."
 
-#: source_app/main.py:213
+#: source_app/main.py:220
 msgid "Reply deleted"
 msgstr "Răspunsul a fost șters"
 
-#: source_app/main.py:230
+#: source_app/main.py:238
 msgid "All replies have been deleted"
 msgstr "Toate răspunsurile au fost șterse"
 
-#: source_app/main.py:244
+#: source_app/main.py:252
 msgid "Sorry, that is not a recognized codename."
 msgstr "Ne pare rău, acesta nu este un nume de cod recunoscut."
 

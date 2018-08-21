@@ -24,7 +24,7 @@ msgstr ""
 msgid "{time} ago"
 msgstr "{time} 之前"
 
-#: journalist_app/__init__.py:78 journalist_app/__init__.py:116
+#: journalist_app/__init__.py:80 journalist_app/__init__.py:119
 msgid "You have been logged out due to inactivity"
 msgstr "您因閒置太久已被登出"
 
@@ -80,7 +80,7 @@ msgstr "{source_name} 集件已删除"
 msgid "No collections selected."
 msgstr "並未選擇任何的集件。"
 
-#: journalist_app/decorators.py:16
+#: journalist_app/decorators.py:15
 msgid "Only administrators can access this page."
 msgstr "本頁面僅限管理員訪問。"
 
@@ -122,7 +122,7 @@ msgstr "謝謝，我們已儲存您的回覆。"
 msgid "No collections selected for download."
 msgstr "未選擇要下載的集件。"
 
-#: journalist_app/main.py:152 journalist_app/utils.py:231
+#: journalist_app/main.py:152 journalist_app/utils.py:235
 msgid "No collections selected for deletion."
 msgstr "未選擇要刪除的集件。"
 
@@ -161,34 +161,34 @@ msgstr "無效的動態密碼格式：只可提交 A-F 之間的字母和 0-9 �
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "動態密碼格式不符：輸入長度為奇數。是否輸入錯誤？"
 
-#: journalist_app/utils.py:183
+#: journalist_app/utils.py:187
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "{num} 個提交已删除。"
 
-#: journalist_app/utils.py:236
+#: journalist_app/utils.py:240
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} 集件已删除"
 
-#: journalist_app/utils.py:274
+#: journalist_app/utils.py:278
 msgid "You submitted a bad password! Password not changed."
 msgstr "你提交的密碼不對！原密碼未更改。"
 
-#: journalist_app/utils.py:281
+#: journalist_app/utils.py:285
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
 "should reset your password again."
 msgstr "出錯了，新密碼可能未正確地保存。为了防止帳戶被鎖定，請再次重置密碼。"
 
-#: journalist_app/utils.py:290
+#: journalist_app/utils.py:294
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
 msgstr "密碼已更新。別忘了將它保存在你的 KeePassX 數據庫中。新的密碼是："
 
-#: journalist_app/utils.py:307
+#: journalist_app/utils.py:311
 msgid "No unread submissions in selected collections."
 msgstr "在所選擇的集件中，並無未讀的提交資訊。"
 
@@ -298,7 +298,7 @@ msgstr "驗證碼"
 
 #: journalist_templates/account_new_two_factor.html:24
 #: journalist_templates/admin_new_user_two_factor.html:27
-#: journalist_templates/col.html:100 source_templates/lookup.html:45
+#: journalist_templates/col.html:99 source_templates/lookup.html:45
 msgid "SUBMIT"
 msgstr "提交"
 
@@ -321,8 +321,8 @@ msgstr "使用者名稱"
 msgid "Edit"
 msgstr "編輯"
 
-#: journalist_templates/admin.html:18 journalist_templates/col.html:76
-#: journalist_templates/col.html:134 journalist_templates/index.html:16
+#: journalist_templates/admin.html:18 journalist_templates/col.html:75
+#: journalist_templates/col.html:133 journalist_templates/index.html:16
 #: journalist_templates/index.html:51
 msgid "Delete"
 msgstr "刪除"
@@ -447,55 +447,55 @@ msgstr "下載所選的部份"
 msgid "Delete Selected"
 msgstr "删除所選部份"
 
-#: journalist_templates/col.html:57
+#: journalist_templates/col.html:56
 msgid "Uploaded Document"
 msgstr "已上傳的文件"
 
-#: journalist_templates/col.html:59 journalist_templates/col.html:92
+#: journalist_templates/col.html:58 journalist_templates/col.html:91
 msgid "Reply"
 msgstr "回覆"
 
-#: journalist_templates/col.html:61
+#: journalist_templates/col.html:60
 msgid "Message"
 msgstr "訊息"
 
-#: journalist_templates/col.html:71 journalist_templates/col.html:129
+#: journalist_templates/col.html:70 journalist_templates/col.html:128
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
 msgstr "刪除確認動作"
 
-#: journalist_templates/col.html:72
+#: journalist_templates/col.html:71
 msgid "Are you sure you want to delete the selected documents?"
 msgstr "確認要刪除所挑選文件？"
 
-#: journalist_templates/col.html:87
+#: journalist_templates/col.html:86
 msgid "No documents to display."
 msgstr "無文件可顯示。"
 
-#: journalist_templates/col.html:94
+#: journalist_templates/col.html:93
 msgid ""
 "You can write a secure reply to the person who submitted these documents:"
 msgstr "您可以撰寫安全的回覆訊息給文件提交者："
 
-#: journalist_templates/col.html:103
+#: journalist_templates/col.html:102
 msgid "You've flagged this source for reply."
 msgstr "您已把這名線人標記為待回覆。"
 
-#: journalist_templates/col.html:104
+#: journalist_templates/col.html:103
 msgid ""
 "An encryption key will be generated for the source the next time they log "
 "in, after which you will be able to reply to the source here."
 msgstr "系統會在線人下次登入時產生新的加密密鑰，之後您可以在這裡回覆線人。"
 
-#: journalist_templates/col.html:106
+#: journalist_templates/col.html:105
 msgid "Click below if you would like to write a reply to this source."
 msgstr "如要回覆此名線人，請點擊下方。"
 
-#: journalist_templates/col.html:110
+#: journalist_templates/col.html:109
 msgid "FLAG THIS SOURCE FOR REPLY"
 msgstr "請對此位線人加註旗誌，以進行回覆"
 
-#: journalist_templates/col.html:115
+#: journalist_templates/col.html:114
 msgid ""
 "Click below to delete this source's collection. <em>Warning: If you do this, "
 "the files seen here will be unrecoverable and the source will no longer be "
@@ -504,11 +504,11 @@ msgstr ""
 "點擊下方來刪除這名線人的集件。<em>警告：如果這麼做，這裏看到的檔案將無法恢"
 "復，而線人將無法用之前的代號登錄。</em>"
 
-#: journalist_templates/col.html:122
+#: journalist_templates/col.html:121
 msgid "DELETE SOURCE AND SUBMISSIONS"
 msgstr "刪除線人與其提交的資料"
 
-#: journalist_templates/col.html:130
+#: journalist_templates/col.html:129
 msgid "Are you sure you want to delete this collection?"
 msgstr "確認要刪除此一集件？"
 
@@ -759,37 +759,37 @@ msgstr "此處字段長度必須在 1 和 {max_codename_len} 個字符之間。"
 msgid "Invalid input."
 msgstr "無效輸入。"
 
-#: source_app/main.py:31
+#: source_app/main.py:30
 msgid ""
 "You were redirected because you are already logged in. If you want to create "
 "a new account, you should log out first."
 msgstr "你被重定向了， 因為已在登錄狀態。如果想創建一個新帳戶，請先登出。"
 
-#: source_app/main.py:129
+#: source_app/main.py:131
 msgid "You must enter a message or choose a file to submit."
 msgstr "你必须輸入一則訊息，或是選擇一個文件來提交。"
 
-#: source_app/main.py:162
+#: source_app/main.py:164
 msgid "Thanks! We received your message."
 msgstr "謝謝！我們已收到你的訊息。"
 
-#: source_app/main.py:164
+#: source_app/main.py:166
 msgid "Thanks! We received your document."
 msgstr "謝謝！我們已收到你的文件。"
 
-#: source_app/main.py:166
+#: source_app/main.py:168
 msgid "Thanks! We received your message and document."
 msgstr "謝謝！我們已收到你的訊息和文件。"
 
-#: source_app/main.py:213
+#: source_app/main.py:220
 msgid "Reply deleted"
 msgstr "回覆已刪除"
 
-#: source_app/main.py:230
+#: source_app/main.py:238
 msgid "All replies have been deleted"
 msgstr "所有的回覆都已被删除"
 
-#: source_app/main.py:244
+#: source_app/main.py:252
 msgid "Sorry, that is not a recognized codename."
 msgstr "對不起，無法識別這個代號。"
 

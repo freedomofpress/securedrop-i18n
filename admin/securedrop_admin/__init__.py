@@ -537,6 +537,7 @@ def setup_logger(verbose=False):
 def sdconfig(args):
     """Configure SD site settings"""
     SiteConfig(args).load_and_update_config()
+    return 0
 
 
 def install_securedrop(args):
@@ -685,7 +686,23 @@ def update(args):
         if RELEASE_KEY in gpg_lines[1] and \
                 sig_result.count(good_sig_text) == 1 and \
                 bad_sig_text not in sig_result:
-            sdlog.info("Signature verification successful.")
+            # Finally, we check that there is no branch of the same name
+            # prior to reporting success.
+            cmd = ['git', 'show-ref', '--heads', '--verify',
+                   'refs/heads/{}'.format(latest_tag)]
+            try:
+                # We expect this to produce a non-zero exit code, which
+                # will produce a subprocess.CalledProcessError
+                subprocess.check_output(cmd, stderr=subprocess.STDOUT)
+                sdlog.info("Signature verification failed.")
+                return 1
+            except subprocess.CalledProcessError, e:
+                if 'not a valid ref' in e.output:
+                    # Then there is no duplicate branch.
+                    sdlog.info("Signature verification successful.")
+                else:  # If any other exception occurs, we bail.
+                    sdlog.info("Signature verification failed.")
+                    return 1
         else:  # If anything else happens, fail and exit 1
             sdlog.info("Signature verification failed.")
             return 1
@@ -807,8 +824,10 @@ def main(argv):
         except Exception as e:
             raise SystemExit(
                 'ERROR (run with -v for more): {msg}'.format(msg=e))
-        else:
-            sys.exit(EXIT_SUCCESS)
+    if return_code == 0:
+        sys.exit(EXIT_SUCCESS)
+    else:
+        sys.exit(EXIT_SUBPROCESS_ERROR)
 
 
 if __name__ == "__main__":

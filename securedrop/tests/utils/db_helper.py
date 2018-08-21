@@ -2,6 +2,7 @@
 """Testing utilities that involve database (and often related
 filesystem) interaction.
 """
+import datetime
 import mock
 import os
 
@@ -143,9 +144,12 @@ def submit(source, num_submissions):
     :returns: A list of the :class:`models.Submission`s submitted.
     """
     assert num_submissions >= 1
+    source.last_updated = datetime.datetime.utcnow()
+    db.session.add(source)
     submissions = []
     for _ in range(num_submissions):
         source.interaction_count += 1
+        source.pending = False
         fpath = current_app.storage.save_message_submission(
             source.filesystem_id,
             source.interaction_count,
@@ -154,6 +158,7 @@ def submit(source, num_submissions):
         )
         submission = models.Submission(source, fpath)
         submissions.append(submission)
+        db.session.add(source)
         db.session.add(submission)
 
     db.session.commit()

@@ -8,6 +8,7 @@ import pyotp
 import qrcode
 # Using svg because it doesn't require additional dependencies
 import qrcode.image.svg
+import uuid
 
 # Find the best implementation available on this platform
 try:
@@ -15,8 +16,10 @@ try:
 except ImportError:
     from StringIO import StringIO  # type: ignore
 
-from flask import current_app
+from flask import current_app, url_for
+from itsdangerous import TimedJSONWebSignatureSerializer, BadData
 from jinja2 import Markup
+from passlib.hash import argon2
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import relationship, backref
 from sqlalchemy import Column, Integer, String, Boolean, DateTime, Binary
@@ -26,11 +29,10 @@ from db import db
 
 
 LOGIN_HARDENING = True
-# Unfortunately, the login hardening measures mess with the tests in
-# non-deterministic ways.  TODO rewrite the tests so we can more
-# precisely control which code paths are exercised.
 if os.environ.get('SECUREDROP_ENV') == 'test':
     LOGIN_HARDENING = False
+
+ARGON2_PARAMS = dict(memory_cost=2**16, rounds=4, parallelism=2)
 
 
 def get_one_or_else(query, logger, failure_method):
@@ -49,10 +51,11 @@ def get_one_or_else(query, logger, failure_method):
 class Source(db.Model):
     __tablename__ = 'sources'
     id = Column(Integer, primary_key=True)
+    uuid = Column(String(36), unique=True, nullable=False)
     filesystem_id = Column(String(96), unique=True)
     journalist_designation = Column(String(255), nullable=False)
     flagged = Column(Boolean, default=False)
-    last_updated = Column(DateTime, default=datetime.datetime.utcnow)
+    last_updated = Column(DateTime)
     star = relationship("SourceStar", uselist=False, backref="source")
 
     # sources are "pending" and don't get displayed to journalists until they
@@ -69,6 +72,7 @@ class Source(db.Model):
     def __init__(self, filesystem_id=None, journalist_designation=None):
         self.filesystem_id = filesystem_id
         self.journalist_designation = journalist_designation
+        self.uuid = str(uuid.uuid4())
 
     def __repr__(self):
         return '<Source %r>' % (self.journalist_designation)
@@ -102,10 +106,59 @@ class Source(db.Model):
         collection.sort(key=lambda x: int(x.filename.split('-')[0]))
         return collection
 
+    @property
+    def public_key(self):
+        return current_app.crypto_util.export_pubkey(self.filesystem_id)
+
+    @public_key.setter
+    def public_key(self, value):
+        raise NotImplementedError
+
+    @public_key.deleter
+    def public_key(self):
+        raise NotImplementedError
+
+    def to_json(self):
+        docs_msg_count = self.documents_messages_count()
+
+        if self.last_updated:
+            last_updated = self.last_updated.isoformat() + 'Z'
+        else:
+            last_updated = datetime.datetime.utcnow().isoformat() + 'Z'
+
+        if self.star and self.star.starred:
+            starred = True
+        else:
+            starred = False
+
+        json_source = {
+            'uuid': self.uuid,
+            'url': url_for('api.single_source', source_uuid=self.uuid),
+            'journalist_designation': self.journalist_designation,
+            'is_flagged': self.flagged,
+            'is_starred': starred,
+            'last_updated': last_updated,
+            'interaction_count': self.interaction_count,
+            'key': {
+              'type': 'PGP',
+              'public': self.public_key
+            },
+            'number_of_documents': docs_msg_count['documents'],
+            'number_of_messages': docs_msg_count['messages'],
+            'submissions_url': url_for('api.all_source_submissions',
+                                       source_uuid=self.uuid),
+            'add_star_url': url_for('api.add_star', source_uuid=self.uuid),
+            'remove_star_url': url_for('api.remove_star',
+                                       source_uuid=self.uuid),
+            'reply_url': url_for('api.post_reply', source_uuid=self.uuid)
+            }
+        return json_source
+
 
 class Submission(db.Model):
     __tablename__ = 'submissions'
     id = Column(Integer, primary_key=True)
+    uuid = Column(String(36), unique=True, nullable=False)
     source_id = Column(Integer, ForeignKey('sources.id'))
     source = relationship(
         "Source",
@@ -119,11 +172,29 @@ class Submission(db.Model):
     def __init__(self, source, filename):
         self.source_id = source.id
         self.filename = filename
+        self.uuid = str(uuid.uuid4())
         self.size = os.stat(current_app.storage.path(source.filesystem_id,
                                                      filename)).st_size
 
     def __repr__(self):
         return '<Submission %r>' % (self.filename)
+
+    def to_json(self):
+        json_submission = {
+            'source_url': url_for('api.single_source',
+                                  source_uuid=self.source.uuid),
+            'submission_url': url_for('api.single_submission',
+                                      source_uuid=self.source.uuid,
+                                      submission_uuid=self.uuid),
+            'filename': self.filename,
+            'size': self.size,
+            'is_read': self.downloaded,
+            'uuid': self.uuid,
+            'download_url': url_for('api.download_submission',
+                                    source_uuid=self.source.uuid,
+                                    submission_uuid=self.uuid),
+        }
+        return json_submission
 
 
 class Reply(db.Model):
@@ -145,6 +216,8 @@ class Reply(db.Model):
 
     filename = Column(String(255), nullable=False)
     size = Column(Integer, nullable=False)
+
+    deleted_by_source = Column(Boolean, default=False, nullable=False)
 
     def __init__(self, journalist, source, filename):
         self.journalist_id = journalist.id
@@ -206,13 +279,13 @@ class InvalidPasswordLength(PasswordError):
        password length.
     """
 
-    def __init__(self, password):
-        self.pw_len = len(password)
+    def __init__(self, passphrase):
+        self.passphrase_len = len(passphrase)
 
     def __str__(self):
-        if self.pw_len > Journalist.MAX_PASSWORD_LEN:
-            return "Password too long (len={})".format(self.pw_len)
-        if self.pw_len < Journalist.MIN_PASSWORD_LEN:
+        if self.passphrase_len > Journalist.MAX_PASSWORD_LEN:
+            return "Password too long (len={})".format(self.passphrase_len)
+        if self.passphrase_len < Journalist.MIN_PASSWORD_LEN:
             return "Password needs to be at least {} characters".format(
                 Journalist.MIN_PASSWORD_LEN
             )
@@ -239,6 +312,7 @@ class Journalist(db.Model):
 
     created_on = Column(DateTime, default=datetime.datetime.utcnow)
     last_access = Column(DateTime)
+    passphrase_hash = Column(String(256))
     login_attempts = relationship(
         "JournalistLoginAttempt",
         backref="journalist")
@@ -259,28 +333,31 @@ class Journalist(db.Model):
             self.username,
             " [admin]" if self.is_admin else "")
 
-    def _gen_salt(self, salt_bytes=32):
-        return os.urandom(salt_bytes)
+    _LEGACY_SCRYPT_PARAMS = dict(N=2**14, r=8, p=1)
 
-    _SCRYPT_PARAMS = dict(N=2**14, r=8, p=1)
-
-    def _scrypt_hash(self, password, salt, params=None):
-        if not params:
-            params = self._SCRYPT_PARAMS
-        return scrypt.hash(str(password), salt, **params)
+    def _scrypt_hash(self, password, salt):
+        return scrypt.hash(str(password), salt, **self._LEGACY_SCRYPT_PARAMS)
 
     MAX_PASSWORD_LEN = 128
     MIN_PASSWORD_LEN = 14
 
-    def set_password(self, password):
-        self.check_password_acceptable(password)
+    def set_password(self, passphrase):
+        self.check_password_acceptable(passphrase)
+
+        # "migrate" from the legacy case
+        if not self.passphrase_hash:
+            self.passphrase_hash = \
+                argon2.using(**ARGON2_PARAMS).hash(passphrase)
+            # passlib creates one merged field that embeds randomly generated
+            # salt in the output like $alg$salt$hash
+            self.pw_hash = None
+            self.pw_salt = None
 
         # Don't do anything if user's password hasn't changed.
-        if self.pw_hash and self.valid_password(password):
+        if self.passphrase_hash and self.valid_password(passphrase):
             return
 
-        self.pw_salt = self._gen_salt()
-        self.pw_hash = self._scrypt_hash(password, self.pw_salt)
+        self.passphrase_hash = argon2.using(**ARGON2_PARAMS).hash(passphrase)
 
     @classmethod
     def check_username_acceptable(cls, username):
@@ -303,15 +380,35 @@ class Journalist(db.Model):
         if len(password.split()) < 7:
             raise NonDicewarePassword()
 
-    def valid_password(self, password):
+    def valid_password(self, passphrase):
         # Avoid hashing passwords that are over the maximum length
-        if len(password) > self.MAX_PASSWORD_LEN:
-            raise InvalidPasswordLength(password)
+        if len(passphrase) > self.MAX_PASSWORD_LEN:
+            raise InvalidPasswordLength(passphrase)
+
         # No check on minimum password length here because some passwords
-        # may have been set prior to setting the minimum password length.
-        return pyotp.utils.compare_digest(
-            self._scrypt_hash(password, self.pw_salt),
-            self.pw_hash)
+        # may have been set prior to setting the mininum password length.
+
+        if self.passphrase_hash:
+            # default case
+            is_valid = argon2.verify(passphrase, self.passphrase_hash)
+        else:
+            # legacy support
+            is_valid = pyotp.utils.compare_digest(
+                self._scrypt_hash(passphrase, self.pw_salt),
+                self.pw_hash)
+
+        # migrate new passwords
+        if is_valid and not self.passphrase_hash:
+            self.passphrase_hash = \
+                argon2.using(**ARGON2_PARAMS).hash(passphrase)
+            # passlib creates one merged field that embeds randomly generated
+            # salt in the output like $alg$salt$hash
+            self.pw_salt = None
+            self.pw_hash = None
+            db.session.add(self)
+            db.session.commit()
+
+        return is_valid
 
     def regenerate_totp_shared_secret(self):
         self.otp_secret = pyotp.random_base32()
@@ -407,6 +504,7 @@ class Journalist(db.Model):
         login_attempt_period = datetime.datetime.utcnow() - \
             datetime.timedelta(seconds=cls._LOGIN_ATTEMPT_PERIOD)
         attempts_within_period = JournalistLoginAttempt.query.filter(
+            JournalistLoginAttempt.journalist_id == user.id).filter(
             JournalistLoginAttempt.timestamp > login_attempt_period).all()
         if len(attempts_within_period) > cls._MAX_LOGIN_ATTEMPTS_PER_PERIOD:
             raise LoginThrottledException(
@@ -435,6 +533,28 @@ class Journalist(db.Model):
         if not user.valid_password(password):
             raise WrongPasswordException("invalid password")
         return user
+
+    def generate_api_token(self, expiration):
+        s = TimedJSONWebSignatureSerializer(
+            current_app.config['SECRET_KEY'], expires_in=expiration)
+        return s.dumps({'id': self.id}).decode('ascii')
+
+    @staticmethod
+    def validate_api_token_and_get_user(token):
+        s = TimedJSONWebSignatureSerializer(current_app.config['SECRET_KEY'])
+        try:
+            data = s.loads(token)
+        except BadData:
+            return None
+        return Journalist.query.get(data['id'])
+
+    def to_json(self):
+        json_user = {
+            'username': self.username,
+            'last_login': self.last_access.isoformat() + 'Z',
+            'is_admin': self.is_admin
+        }
+        return json_user
 
 
 class JournalistLoginAttempt(db.Model):

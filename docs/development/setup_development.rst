@@ -12,6 +12,9 @@ specific type of development task. We use Vagrant, VirtualBox, and
 Docker and our Ansible playbooks can provision these environments on
 either virtual machines or physical hardware.
 
+.. note:: SecureDrop is written in Python 2. We plan to migrate to Python 3
+          in a future release. 
+
 Quick Start
 -----------
 
@@ -44,6 +47,23 @@ Install Docker_.
 
 .. _Docker: https://store.docker.com/editions/community/docker-ce-desktop-mac
 
+
+Qubes
+~~~~~
+
+Create a StandaloneVM based on Debian 9, called ``sd-dev``.
+You can use the **Q** menu to configure a new VM, or run
+the following in ``dom0``:
+
+.. code:: sh
+
+   qvm-clone --class StandaloneVM debian-9 sd-dev
+   qvm-start sd-dev
+   qvm-sync-appmenus sd-dev
+
+The commands above will created a new StandaloneVM, boot it, then update
+the Qubes menus with applications within that VM. Open a terminal in
+``sd-dev``, and proceed with installing `Docker CE for Debian`_.
 
 Fork & Clone the Repository
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -100,16 +120,18 @@ following ports:
 
 A test administrator (``journalist``) and non-admin user (``dellsberg``) are
 created by default when running ``make dev``. In addition, sources and
-submissions are present. The test users have the following credentials:
+submissions are present. The test users have the following credentials. Note that
+the password and TOTP secret are the same for both accounts for convenience during
+development.
 
 * **Username:** ``journalist`` or ``dellsberg``
-* **Password:** ``WEjwn8ZyczDhQSK24YKM8C9a``
+* **Password:** ``correct horse battery staple profanity oil chewy``
 * **TOTP secret:** ``JHCO GO7V CER3 EJ4L``
 
-.. note:: The password and TOTP secret are the same for both accounts for
-   convenience during development.
+.. tip:: We're hosting a demonstration instance of SecureDrop so that anyone can see how   
+    it works. The demo site generates Time-based One-time Password (TOTP) that you can use with the password above. To get a generated token, go to: http://demo.securedrop.club/
 
-To generate the six digit token you need for logging in, use the TOTP secret in
+If you need to generate the six digit token, use the TOTP secret in
 combination with an authenticator application that implements
 `RFC 6238 <https://tools.ietf.org/html/rfc6238>`__, such as
 `FreeOTP <https://freeotp.github.io/>`__ (Android and iOS) or
@@ -118,6 +140,9 @@ combination with an authenticator application that implements
 can simply scan the following QR code:
 
 .. image:: ../images/devenv/test-users-totp-qrcode.png
+
+
+.. _multi_machine_environment:
 
 Setting Up a Multi-Machine Environment
 --------------------------------------
@@ -164,15 +189,6 @@ from the `Vagrant Downloads page`_ and then install it.
             instructions in Vagrantfile that would enable vagrant-cachier are
             currently commented out.
 
-.. todo:: This warning is here because a common refrain during hackathons for
-          SecureDrop a while back was "setting up VMs is too slow, you should
-          use vagrant-cachier". We tried it and it had some nasty interactions
-          with Ansible, so we dropped it, and added this note to prevent other
-          people from making the same suggestion. Eventually, we should: (i)
-          Build our own base boxes to dramatically cut down on provisioning
-          times (ii) Remove this note as well as the commented vagrant-cachier
-          lines from the Vagrantfile
-
 VirtualBox should be at least version 5.x. See `GitHub #1381`_ for documentation
 of incompatibility with the older VirtualBox 4.x release series.
 
@@ -212,15 +228,11 @@ Install the dependencies for the development environment:
 #. Ansible_
 #. rsync >= 3.1.0
 
-.. note:: Note that the version of rsync installed by default on macOS is
-          extremely out-of-date, as is Apple's custom. We recommend using
-          Homebrew_ to install a modern version (3.1.0 or greater):
-          ``brew install rsync``.
-
-There are several ways to install Ansible on a Mac. We recommend installing it
-to a virtual environment using ``virtualenvwrapper`` and ``pip``, so as not to
+If you use homebrew-cask_ to manage macOS apps, you can install Vagrant and
+VirtualBox that way. As for Ansible, we strongly recommend installing it
+in a virtual environment using ``virtualenvwrapper`` and ``pip``, so as not to
 install the older version we use system-wide. The following commands assume your
-default Python is the Python2 that ships with macOS. If you are using a
+default Python is the Python 2 that ships with macOS. If you are using a
 different version, the path to ``virtualenvwrapper.sh`` will differ. Running
 ``pip show virtualenvwrapper`` should help you find it.
 
@@ -235,11 +247,14 @@ different version, the path to ``virtualenvwrapper.sh`` will differ. Running
           to your ``~/.bashrc`` (or whatever your default shell configuration
           file is) so that the command-line utilities ``virtualenvwrapper``
           provides are automatically available in the future.
+          
+The version of rsync installed by default on macOS is extremely out-of-date, as is Apple's custom. We recommend using Homebrew_ to install a modern version (3.1.0 or greater): ``brew install rsync``.
 
 .. _Vagrant: http://www.vagrantup.com/downloads.html
 .. _VirtualBox: https://www.virtualbox.org/wiki/Downloads
 .. _Ansible: http://docs.ansible.com/intro_installation.html
 .. _Homebrew: https://brew.sh/
+.. _homebrew-cask: http://sourabhbajaj.com/mac-setup/Vagrant/README.html
 
 Fork & Clone the Repository
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -81,7 +81,6 @@ class CryptoUtil:
             self.adjectives = f.read().splitlines()
 
     # Make sure these pass before the app can run
-    # TODO: Add more tests
     def do_runtime_tests(self):
         if self.scrypt_id_pepper == self.scrypt_gpg_pepper:
             raise AssertionError('scrypt_id_pepper == scrypt_gpg_pepper')
@@ -184,7 +183,6 @@ class CryptoUtil:
         # deleted. http://pythonhosted.org/python-gnupg/#deleting-keys
         self.gpg.delete_keys(key, True)  # private key
         self.gpg.delete_keys(key)  # public key
-        # TODO: srm?
 
     def getkey(self, name):
         for key in self.gpg.list_keys():
@@ -192,6 +190,10 @@ class CryptoUtil:
                 if name in uid:
                     return key['fingerprint']
         return None
+
+    def export_pubkey(self, name):
+        fingerprint = self.getkey(name)
+        return self.gpg.export_keys(fingerprint)
 
     def encrypt(self, plaintext, fingerprints, output=None):
         # Verify the output path
