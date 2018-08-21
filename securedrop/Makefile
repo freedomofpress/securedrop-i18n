@@ -4,7 +4,12 @@ IMAGE = securedrop
 
 .PHONY: lint
 lint: ## Run the python linter with the project's default error settings
-	find . -name '*.py' | xargs pylint --reports=no --errors-only --disable=import-error
+	find . -name '*.py' | xargs pylint --reports=no --errors-only \
+	   --disable=import-error \
+	   --disable=no-name-in-module \
+	   --disable=unexpected-keyword-arg \
+	   --disable=too-many-function-args \
+	   --disable=import-error
 
 .PHONY: lint-full
 lint-full:  ## Run the python linter with nothing disabled
@@ -16,7 +21,7 @@ test: ## Run the test suite in a dockerized environment
 
 .PHONY: dev
 dev: ## Run the dev server
-	 DOCKER_RUN_ARGUMENTS='-p8080:8080 -p8081:8081 -p5901:5901' ./bin/dev-shell ./bin/run
+	 DOCKER_RUN_ARGUMENTS='-p127.0.0.1:8080:8080 -p127.0.0.1:8081:8081 -p127.0.0.1:5901:5901' ./bin/dev-shell ./bin/run
 
 config.py: test-config
 

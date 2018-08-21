@@ -36,15 +36,14 @@ and reboot safely, provided you can log in. Do not unplug or forcibly
 shut down the server.
 
 Once you hit a key, you will be able to interact with the menu with the
-up (⬆) and down (⬇) keys. Select “Ubuntu” as shown above, and press “e”
-to edit the boot options. In the line that begins “linux”, replace the
-word “quiet” with “single”. Note that the word "quiet" may be wrapped. Once you
-have performed the replacement, the output on your console should look similar to
-the screenshot below.
+up (⬆) and down (⬇) keys. Select "Ubuntu" as shown above, and press "e"
+to edit the boot options. In the line that begins with "linux", add the word
+"single" at the end. When you are done, the output on your console should look
+similar to the screenshot below.
 
 |GRUB in edit mode|
 
-Press the “F10” key to boot.
+Press the "F10" key to boot.
 
 Test the New Kernel
 ~~~~~~~~~~~~~~~~~~~
@@ -75,7 +74,7 @@ Compare the Behavior of the Old Kernel
 
 Reboot the server in a safe way with ``sudo reboot``. After the BIOS screen,
 you can select a different kernel from the GRUB boot menu by selecting
-**Advanced Options for Ubuntu**, pictured below.
+**Advanced options for Ubuntu**, pictured below.
 
 |GRUB with advanced options selected|
 
@@ -119,7 +118,7 @@ be third). Then edit the GRUB configuration:
 
 .. code:: sh
 
-  sudo vim /etc/default/grub
+  sudo nano /etc/default/grub
 
 Make a backup of the file or take a note of the current value of
 ``GRUB_DEFAULT`` somewhere, so you can restore the previous behavior easily at a
@@ -131,10 +130,10 @@ setup, the line in ``/etc/default/grub`` would look like this:
 
 .. code:: sh
 
-  GRUB_DEFAULT=”1>2”
+  GRUB_DEFAULT="1>2"
 
-The “1” means the second entry of the main menu (“Advanced options”),
-the “2” means the third entry of the submenu. Again, update these
+The "1" means the second entry of the main menu ("Advanced options"),
+the "2" means the third entry of the submenu. Again, update these
 numbers consistent with your configuration. 
 
 
@@ -146,7 +145,7 @@ This change still has to be applied to take effect on the next boot:
 
 .. code:: sh
 
-  sudo update-grub2
+  sudo update-grub
 
 Now you can reboot into the old, working kernel.
 
@@ -160,6 +159,8 @@ additional confirmation of the kernel version, the command
 ``uname -r`` should display the expected kernel version number.
 
 Please notify us of the compatibility issue so we can help you resolve it ASAP.
+
+.. _Report Compatibility Issues:
 
 Report Compatibility Issues
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -187,7 +188,7 @@ You can share ``server-facts.log``, ``syslog`` and ``dmesg`` with us as follows:
    and attach the files to it.
 -  Alternatively, email us at securedrop@freedom.press 
    (`GPG encrypted <https://securedrop.org/sites/default/files/fpf-email.asc>`__) 
-   with the subject “SecureDrop kernel facts” and the files attached.
+   with the subject "SecureDrop kernel facts" and the files attached.
 
 Once we get your information, we can try to provide assistance to
 resolve compatibility issues.
@@ -196,3 +197,67 @@ If you are not a member of our Support Portal, we also encourage you to request
 help in the `SecureDrop Community Forums <https://forum.securedrop.club/>`__.
 Choose carefully what information to disclose publicly. For example, raw logs
 may contain sensitive information useful to potential attackers.
+
+.. _Test and Enable an Updated Kernel:
+
+Test and Enable an Updated Kernel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+If you have changed your default kernel, we urge you to test an updated kernel
+as soon as it becomes available in a future SecureDrop release. Note that an
+update may be enforced as part of a release to protect the security of your
+instance. Please consult the `release notes <https://securedrop.org/news/release-announcement/>`__
+for details about kernel updates.
+
+You can test a kernel update without downtime for your instance by booting your
+*Monitor Server* with the new kernel. Log into your *Monitor Server* using
+the *Admin Workstation*. Shut down the server safely using the command
+``sudo poweroff``. Ensure that the server is fully powered off.
+
+Attach required peripherals and power the server back up. After the GRUB bootloader
+appears, select **Advanced options for Ubuntu**, pictured below.
+
+|GRUB with advanced options selected|
+
+If a SecureDrop release with a kernel update has been installed on your system,
+the updated kernel version will be available in the list of options:
+
+|Selecting a specific kernel in GRUB|
+
+Select the new kernel (you do not need to use the version with recovery mode).
+If you do not know your admin account password, you can `boot into single user mode`_
+by editing the boot options. Otherwise, press enter to boot.
+
+Verify that you can boot successfully, and that you have network access
+(``sudo host freedom.press``). If you still encounter problems with the new
+kernel, please `report compatibility issues`_ at your earliest convenience, and
+reboot the server into the old kernel for now.
+
+If the update resolved compatibility issues with an earlier kernel version, you
+can make the new kernel the default. Edit the file ``/etc/default/grub``, e.g.,
+by issuing the following command:
+
+.. code:: sh
+
+  sudo nano /etc/default/grub
+
+Make a backup of the file or take a note of the current value of
+``GRUB_DEFAULT`` somewhere, so you can restore the previous behavior if needed.
+Change the line to ``GRUB_DEFAULT=0``. This configures the bootloader to default
+to loading the most recent kernel version installed on your server.
+
+This change still has to be applied to take effect on the next boot:
+
+.. code:: sh
+
+  sudo update-grub
+
+Safely shut down the *Monitor Server*, remove attached peripherals, and reboot
+it. Verify  that it is working correctly by logging in using your *Admin
+Workstation*. If everything is working as expected, you can make the same change
+to ``/etc/default/grub`` on your *Application Server* as well. Remember to again
+run the command ``sudo update-grub`` when you are done.
+
+You can make the change on the *Application Server* from your *Admin Workstation*
+and reboot the server using the command ``sudo reboot``.
+
+Subsequent kernel updates will again be applied automatically.
