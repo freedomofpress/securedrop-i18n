@@ -23,7 +23,7 @@ msgstr ""
 msgid "{time} ago"
 msgstr "{time} trước"
 
-#: journalist_app/__init__.py:78 journalist_app/__init__.py:116
+#: journalist_app/__init__.py:80 journalist_app/__init__.py:119
 msgid "You have been logged out due to inactivity"
 msgstr "Phiên hoạt động của bạn đã kết thúc vì thiếu hoạt động"
 
@@ -85,7 +85,7 @@ msgstr "Cơ sở dữ liệu của {source_name} đã được xóa"
 msgid "No collections selected."
 msgstr "Không có cơ sở dữ liệu nào được chọn."
 
-#: journalist_app/decorators.py:16
+#: journalist_app/decorators.py:15
 msgid "Only administrators can access this page."
 msgstr "Chỉ có những nhà quản trị mới có thể truy cập trang này."
 
@@ -130,7 +130,7 @@ msgstr "Cảm ơn bạn. Câu trả lời của bạn đã được lưu."
 msgid "No collections selected for download."
 msgstr "Không có cơ sở dữ liệu nào được chọn để tải về."
 
-#: journalist_app/main.py:152 journalist_app/utils.py:231
+#: journalist_app/main.py:152 journalist_app/utils.py:235
 msgid "No collections selected for deletion."
 msgstr "Không có cơ sở dữ liệu nào được chọn để xóa."
 
@@ -173,21 +173,21 @@ msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Cấu trúc bí mật không chính xác: bí mật số lẻ. Có thể bạn đã nhập sai bí mật?"
 
-#: journalist_app/utils.py:183
+#: journalist_app/utils.py:187
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "{num} bài đăng đã được xóa."
 
-#: journalist_app/utils.py:236
+#: journalist_app/utils.py:240
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} cơ sở dữ liệu đã được xóa"
 
-#: journalist_app/utils.py:274
+#: journalist_app/utils.py:278
 msgid "You submitted a bad password! Password not changed."
 msgstr "Bạn đã nhập mật khẩu lỗi! Mật khẩu chưa được đổi."
 
-#: journalist_app/utils.py:281
+#: journalist_app/utils.py:285
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -196,7 +196,7 @@ msgstr ""
 "Đã có lỗi xảy ra, và mật khẩu mới có thể chưa được lưu chính xác. Để tránh "
 "tài khoản bị khóa, bạn nên đổi lại mật khẩu."
 
-#: journalist_app/utils.py:290
+#: journalist_app/utils.py:294
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -204,7 +204,7 @@ msgstr ""
 "Mật khẩu đã được cập nhật. Đừng quên lưu lại trong cơ sở dữ liệu KeePassX "
 "của bạn. Mật khẩu mới là:"
 
-#: journalist_app/utils.py:307
+#: journalist_app/utils.py:311
 msgid "No unread submissions in selected collections."
 msgstr ""
 "Không có bài đăng nào chưa được đọc trong những cơ sở dữ liệu được chọn."
@@ -319,7 +319,7 @@ msgstr "Mã xác nhận"
 
 #: journalist_templates/account_new_two_factor.html:24
 #: journalist_templates/admin_new_user_two_factor.html:27
-#: journalist_templates/col.html:100 source_templates/lookup.html:45
+#: journalist_templates/col.html:99 source_templates/lookup.html:45
 msgid "SUBMIT"
 msgstr "GỬI"
 
@@ -342,8 +342,8 @@ msgstr "Tên người dùng"
 msgid "Edit"
 msgstr "Chỉnh sửa"
 
-#: journalist_templates/admin.html:18 journalist_templates/col.html:76
-#: journalist_templates/col.html:134 journalist_templates/index.html:16
+#: journalist_templates/admin.html:18 journalist_templates/col.html:75
+#: journalist_templates/col.html:133 journalist_templates/index.html:16
 #: journalist_templates/index.html:51
 msgid "Delete"
 msgstr "Xóa"
@@ -474,42 +474,42 @@ msgstr "Tải về được chọn"
 msgid "Delete Selected"
 msgstr "Xóa được chọn"
 
-#: journalist_templates/col.html:57
+#: journalist_templates/col.html:56
 msgid "Uploaded Document"
 msgstr "Tải tài liệu lên"
 
-#: journalist_templates/col.html:59 journalist_templates/col.html:92
+#: journalist_templates/col.html:58 journalist_templates/col.html:91
 msgid "Reply"
 msgstr "Trả lời"
 
-#: journalist_templates/col.html:61
+#: journalist_templates/col.html:60
 msgid "Message"
 msgstr "Tin nhắn"
 
-#: journalist_templates/col.html:71 journalist_templates/col.html:129
+#: journalist_templates/col.html:70 journalist_templates/col.html:128
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
 msgstr "Xác nhận xóa"
 
-#: journalist_templates/col.html:72
+#: journalist_templates/col.html:71
 msgid "Are you sure you want to delete the selected documents?"
 msgstr "Bạn có chắc rằng bạn muốn xóa những tài liệu được chọn không?"
 
-#: journalist_templates/col.html:87
+#: journalist_templates/col.html:86
 msgid "No documents to display."
 msgstr "Không có tài liệu nào để hiển thị."
 
-#: journalist_templates/col.html:94
+#: journalist_templates/col.html:93
 msgid ""
 "You can write a secure reply to the person who submitted these documents:"
 msgstr ""
 "Bạn có thể viết câu trả lời an toàn cho người đã tải những tài liệu này lên:"
 
-#: journalist_templates/col.html:103
+#: journalist_templates/col.html:102
 msgid "You've flagged this source for reply."
 msgstr "Bạn đã đánh dấu nguồn sau để trả lời."
 
-#: journalist_templates/col.html:104
+#: journalist_templates/col.html:103
 msgid ""
 "An encryption key will be generated for the source the next time they log "
 "in, after which you will be able to reply to the source here."
@@ -517,15 +517,15 @@ msgstr ""
 "Một chìa khóa giải mã sẽ được tại cho lần tới họ truy cập, sau đó bạn có thể "
 "trả lời nguồn tại đây."
 
-#: journalist_templates/col.html:106
+#: journalist_templates/col.html:105
 msgid "Click below if you would like to write a reply to this source."
 msgstr "Nhấn dưới đây nếu bạn muốn viết một câu trả lời cho nguồn này."
 
-#: journalist_templates/col.html:110
+#: journalist_templates/col.html:109
 msgid "FLAG THIS SOURCE FOR REPLY"
 msgstr "ĐÁNH DẤU NGUỒN NÀY ĐỂ TRẢ LỜI"
 
-#: journalist_templates/col.html:115
+#: journalist_templates/col.html:114
 msgid ""
 "Click below to delete this source's collection. <em>Warning: If you do this, "
 "the files seen here will be unrecoverable and the source will no longer be "
@@ -535,11 +535,11 @@ msgstr ""
 "vậy, những tài liệu được hiển thị ở đây sẽ bị xóa vĩnh viễn và nguồn sẽ "
 "không thể truy cập sử dụng mật danh trước của họ. </em>"
 
-#: journalist_templates/col.html:122
+#: journalist_templates/col.html:121
 msgid "DELETE SOURCE AND SUBMISSIONS"
 msgstr ""
 
-#: journalist_templates/col.html:130
+#: journalist_templates/col.html:129
 msgid "Are you sure you want to delete this collection?"
 msgstr "Bạn có chắc rằng bạn muốn xóa cơ sở dữ liệu sau không?"
 
@@ -795,7 +795,7 @@ msgstr "Trường nhập phải bao gồm giữa 1 và {max_codename_len} kí t�
 msgid "Invalid input."
 msgstr "Nhập không chính xác."
 
-#: source_app/main.py:31
+#: source_app/main.py:30
 msgid ""
 "You were redirected because you are already logged in. If you want to create "
 "a new account, you should log out first."
@@ -803,31 +803,31 @@ msgstr ""
 "Bạn được gửi tới địa chỉ mới vì bạn đã truy cập rồi. Nếu bạn muốn tạo một "
 "tài khoản mới, vui lòng đăng xuất trước."
 
-#: source_app/main.py:129
+#: source_app/main.py:131
 msgid "You must enter a message or choose a file to submit."
 msgstr "Bạn phải nhập một tin nhắn hay chọn một tài liệu để tải lên."
 
-#: source_app/main.py:162
+#: source_app/main.py:164
 msgid "Thanks! We received your message."
 msgstr "Cảm ơn! Chúng tôi đã nhận được tin nhắn của bạn."
 
-#: source_app/main.py:164
+#: source_app/main.py:166
 msgid "Thanks! We received your document."
 msgstr "Cảm ơn! Chúng tôi đã nhận được tài liệu của bạn."
 
-#: source_app/main.py:166
+#: source_app/main.py:168
 msgid "Thanks! We received your message and document."
 msgstr "Cảm ơn! Chúng tôi đã nhận được tin nhắn và tài liệu của bạn."
 
-#: source_app/main.py:213
+#: source_app/main.py:220
 msgid "Reply deleted"
 msgstr "Câu trả lời đã được xóa"
 
-#: source_app/main.py:230
+#: source_app/main.py:238
 msgid "All replies have been deleted"
 msgstr "Tất cả các câu trả lời đã được xóa"
 
-#: source_app/main.py:244
+#: source_app/main.py:252
 msgid "Sorry, that is not a recognized codename."
 msgstr "Đây không phải là một mật danh trong cơ sở dữ liệu."
 
