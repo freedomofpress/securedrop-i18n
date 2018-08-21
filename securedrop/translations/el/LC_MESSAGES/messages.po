@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-08-21 18:36+0000\n"
+"PO-Revision-Date: 2018-08-21 18:42+0000\n"
 "Last-Translator: Adrian <pappasadrian@gmail.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/el/>\n"
@@ -1285,7 +1285,7 @@ msgid ""
 msgstr ""
 "Υπάρχει ένα ενδεχόμενο πως κατεβάζοντας τον Tor Browser θα εγείρετε υποψίες, "
 "και ο πάροχος email σας είναι λιγότερο πιθανό να παρακολουθείται, οπότε "
-"μπορείτε να στείλετε ένα email στο <pre>1gettor@torproject.org</pre> και θα "
+"μπορείτε να στείλετε ένα email στο <pre>gettor@torproject.org</pre> και θα "
 "λάβετε μια αυτοματοποιημένη απάντηση με οδηγίες."
 
 #: source_templates/why-journalist-key.html:3
@@ -1343,7 +1343,7 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:14
 msgid "Encrypt your submission."
-msgstr ""
+msgstr "Κρυπτογραφήστε την υποβολή σας."
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
@@ -1352,12 +1352,19 @@ msgid ""
 "at the end), you can just copy and paste that. (don't include the <code>."
 "asc</code>!)"
 msgstr ""
+"Θα πρέπει να είστε σε θέση να αναγνωρίσετε το κλειδί (αυτό λέγεται \"ID "
+"χρήστη\" ή UID). Καθώς το όνομα αρχείου του δημόσιου κλειδιού είναι το "
+"δακτυλικό αποτύπωμα του κλειδιού (με την κατάληξη .asc στο τέλος), μπορείτε "
+"απλά να το αντιγράψετε και να το επικολλήσετε. (μη συμπεριλάβετε την "
+"κατάληξη <code>.asc</code>!)"
 
 #: source_templates/why-journalist-key.html:17
 msgid ""
 "On all systems, open the Terminal and use this gpg command: <code>gpg --"
 "recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 msgstr ""
+"Σε όλα τα συστήματα, ανοίξτε το τερματικό και χρησιμοποιήστε την εντολή gpg: "
+"<code>gpg --recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 
 #: source_templates/why-journalist-key.html:20
 msgid ""
@@ -1365,6 +1372,9 @@ msgid ""
 "unencrypted file, with .gpg at the end (e.g. <code>roswell_photos.pdf.gpg</"
 "code>)"
 msgstr ""
+"Ανεβάστε την κρυπτογραφημένη υποβολή σας. Αυτή θα έχει το ίδιο όνομα αρχείου "
+"με το μη κρυπτογραφημένο αρχείο, με κατάληξη .gpg (π.χ. "
+"<code>roswell_photos.pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:23
 msgid ""
@@ -1372,7 +1382,11 @@ msgid ""
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
+"<strong>Συμβουλή:</strong> Αν επιθυμείτε να διατηρήσετε την ανωνυμία σας, "
+"<strong>μην</strong> χρησιμοποιήσετε το GPG για να υπογράψετε το "
+"κρυπτογραφημένο αρχείο (χρησιμοποιώντας τα διακριτικά <code>--sign</code> ή "
+"<code>-s</code>), καθώς αυτό θα μας αποκαλύψει την ταυτότητα GPG σας."
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
-msgstr ""
+msgstr "Πίσω στη σελίδα υποβολών"
