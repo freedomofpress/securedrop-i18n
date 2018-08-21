@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-06-18 09:49+0000\n"
-"Last-Translator: pierwill <mail@pierwill.com>\n"
+"PO-Revision-Date: 2018-08-21 16:59+0000\n"
+"Last-Translator: Adrian <pappasadrian@gmail.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/el/>\n"
 "Language: el\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: template_filters.py:14
 msgid "{time} ago"
-msgstr ""
+msgstr "πρίν από {time}"
 
 #: journalist_app/__init__.py:78 journalist_app/__init__.py:116
 msgid "You have been logged out due to inactivity"
-msgstr ""
+msgstr "Αποσυνδεθήκατε λόγω αδράνειας"
 
 #: journalist_app/account.py:26
 msgid "Incorrect password or two-factor code."
@@ -41,7 +41,7 @@ msgstr ""
 
 #: journalist_app/admin.py:38
 msgid "Image updated."
-msgstr ""
+msgstr "Η φωτογραφία ανανεώθηκε."
 
 #: journalist_app/admin.py:71
 msgid ""
@@ -51,13 +51,15 @@ msgstr ""
 
 #: journalist_app/admin.py:82 journalist_app/admin.py:166
 msgid "Username \"{user}\" already taken."
-msgstr ""
+msgstr "Το όνομα χρήστη \"{user}\" υπάρχει ήδη."
 
 #: journalist_app/admin.py:85
 msgid ""
 "An error occurred saving this user to the database. Please inform your "
 "administrator."
 msgstr ""
+"Υπήρξε σφάλμα με την αποθήκευση αυτού του χρήστη στη βάση δεδομένων. "
+"Παρακαλώ ειδοποιήστε τον διαχειριστή."
 
 #: journalist_app/admin.py:109
 msgid "Token in two-factor authentication accepted for user {user}."
@@ -65,11 +67,11 @@ msgstr ""
 
 #: journalist_app/admin.py:208
 msgid "Deleted user '{user}'"
-msgstr ""
+msgstr "Ο χρήστης '{user}' διαγράφτηκε"
 
 #: journalist_app/admin.py:234
 msgid "Test alert sent. Please check your email."
-msgstr ""
+msgstr "Στάλθηκε δοκιμαστική ειδοποίηση. Παρακαλώ ελέγξτε το email σας."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -77,11 +79,11 @@ msgstr ""
 
 #: journalist_app/col.py:56
 msgid "No collections selected."
-msgstr ""
+msgstr "Δεν έχουν επιλεχθεί συλλογές."
 
 #: journalist_app/decorators.py:16
 msgid "Only administrators can access this page."
-msgstr ""
+msgstr "Μόνο οι διαχειριστές έχουν πρόσβαση σε αυτή την σελίδα."
 
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
@@ -91,61 +93,65 @@ msgstr ""
 msgid ""
 "Field must be at least {min_chars} characters long but only got {num_chars}."
 msgstr ""
+"Το πεδίο πρέπει να έχει τουλάχιστον {min_chars} χαρακτήρες αλλά εσείς έχετε "
+"{num_chars}."
 
 #: journalist_app/forms.py:35 source_app/forms.py:11
 msgid "This field is required."
-msgstr ""
+msgstr "Αυτό το πεδίο είναι υποχρεωτικό."
 
 #: journalist_app/forms.py:52
 msgid "You cannot send an empty reply."
-msgstr ""
+msgstr "Δεν μπορείτε να στείλετε κενή απάντηση."
 
 #: journalist_app/forms.py:60
 msgid "File required."
-msgstr ""
+msgstr "Απαιτείται αρχείο."
 
 #: journalist_app/forms.py:62
 msgid "You can only upload PNG image files."
-msgstr ""
+msgstr "Μπορείτε να ανεβάσετε αρχεία εικόνας μόνο τύπου PNG."
 
 #: journalist_app/main.py:117 journalist_app/utils.py:47
 #: journalist_app/utils.py:137
 msgid "An unexpected error occurred! Please inform your administrator."
-msgstr ""
+msgstr "Παρουσιάστηκε απρόσμενο σφάλμα! Παρακαλώ ειδοποιήστε τον διαχειριστή."
 
 #: journalist_app/main.py:128
 msgid "Thanks. Your reply has been stored."
-msgstr ""
+msgstr "Ευχαριστούμε. Η απάντησή σας αποθηκεύτηκε."
 
 #: journalist_app/main.py:149
 msgid "No collections selected for download."
-msgstr ""
+msgstr "Δεν έχουν επιλεχθεί συλλογές για κατέβασμα."
 
 #: journalist_app/main.py:152 journalist_app/utils.py:231
 msgid "No collections selected for deletion."
-msgstr ""
+msgstr "Δεν έχουν επιλεχθεί συλλογές για διαγραφή."
 
 #: journalist_app/main.py:178
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
-msgstr ""
+msgstr "Η πηγή '{original_name}' μετονομάστηκε σε '{new_name}'"
 
 #: journalist_app/main.py:193
 msgid "No unread submissions for this source."
-msgstr ""
+msgstr "Δεν υπάρχουν μη αναγνωσμένες καταχωρήσεις για αυτή την πηγή."
 
 #: journalist_app/utils.py:54
 msgid "Account updated."
-msgstr ""
+msgstr "Ο λογαριασμός ανανεώθηκε."
 
 #: journalist_app/utils.py:85
 msgid "Login failed."
-msgstr ""
+msgstr "Αποτυχία σύνδεσης."
 
 #: journalist_app/utils.py:93
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] ""
+"Παρακαλώ περιμένετε τουλάχιστον {seconds} δευτερόλεπτο πριν ξανασυνδεθείτε."
 msgstr[1] ""
+"Παρακαλώ περιμένετε τουλάχιστον {seconds} δευτερόλεπτα πριν ξανασυνδεθείτε."
 
 #: journalist_app/utils.py:104
 msgid ""
@@ -164,14 +170,14 @@ msgstr ""
 #: journalist_app/utils.py:183
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Η καταχώρηση διαγράφτηκε."
+msgstr[1] "{num} καταχωρήσεις διαγράφτηκαν."
 
 #: journalist_app/utils.py:236
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Μια συλλογή διαγράφτηκε"
+msgstr[1] "{num} συλλογές διαγράφτηκαν"
 
 #: journalist_app/utils.py:274
 msgid "You submitted a bad password! Password not changed."
@@ -183,16 +189,21 @@ msgid ""
 "correctly. To prevent you from getting locked out of your account, you "
 "should reset your password again."
 msgstr ""
+"Υπήρξε κάποιο σφάλμα, και ο νέος κωδικός ίσως να μην αποθηκεύτηκε σωστά. Για "
+"να μην χάσετε την πρόσβαση στον λογαριασμό σας, παρακαλώ επαναφέρετε τον "
+"κωδικό σας ξανά."
 
 #: journalist_app/utils.py:290
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
 msgstr ""
+"Ο κωδικός ανανεώθηκε. Μη ξεχάσετε να τον αποθηκεύσετε στη βάση δεδομένων του "
+"KeePassX σας. Νέος κωδικός:"
 
 #: journalist_app/utils.py:307
 msgid "No unread submissions in selected collections."
-msgstr ""
+msgstr "Δεν υπάρχουν μη αναγνωσμένες καταχωρήσεις στις επιλεγμένες συλλογές."
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
@@ -206,14 +217,14 @@ msgstr "Άκυρο"
 #: journalist_templates/_source_row.html:23
 msgid "1 doc"
 msgid_plural "{doc_num} docs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 έγγραφο"
+msgstr[1] "{doc_num} έγγραφα"
 
 #: journalist_templates/_source_row.html:24
 msgid "1 message"
 msgid_plural "{msg_num} messages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ένα μήνυμα"
+msgstr[1] "{msg_num} μηνύματα"
 
 #: journalist_templates/_source_row.html:27
 msgid "1 unread"
