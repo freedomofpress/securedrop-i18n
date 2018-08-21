@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-08-21 18:03+0000\n"
+"PO-Revision-Date: 2018-08-21 18:16+0000\n"
 "Last-Translator: Adrian <pappasadrian@gmail.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/el/>\n"
@@ -973,7 +973,7 @@ msgstr ""
 "<strong>Προτείνεται να μετακινήσετε τον \"Μοχλό ασφαλείας\" στο \"Το πιο "
 "ασφαλές\" για να προστατεύσετε την ανωνυμία σας:</strong> <a id=\"disable-"
 "js\" href=\"\">Μάθετε πως να το ρυθμίσετε στο \"Το πιο ασφαλές\"</a>, ή "
-"αγνοήστε αυτή την προειδοποίηση για να συνεχίσετε"
+"αγνοήστε αυτή την προειδοποίηση για να συνεχίσετε."
 
 #: source_templates/index.html:18
 msgid ""
@@ -981,6 +981,10 @@ msgid ""
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
+"<strong>Προτείνεται να χρησιμοποιείτε τον Tor Browser για να επισκέπτεστε το "
+"SecureDrop:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">"
+"Μάθετε πως να το εγκαταστήσετε</a>, ή αγνοήστε αυτή την προειδοποίηση για να "
+"συνεχίσετε."
 
 #: source_templates/index.html:19
 msgid ""
@@ -990,60 +994,75 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
+"<strong>Προτείνεται να χρησιμοποιήσετε την έκδοση για υπολογιστή του Tor "
+"browser για να επισκεφτείτε το SecureDrop, καθώς το Orfox δεν παρέχει το "
+"ίδιο επίπεδο ασφάλειας και ανωνυμίας με τις εκδόσεις για υπολογιστή.</strong>"
+" <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Μάθετε πώς να το "
+"εγκαταστήσετε</a>, ή αγνοήστε αυτή την προειδοποίηση για να συνεχίσετε."
 
 #: source_templates/index.html:42
 msgid "Submit for the first time"
-msgstr ""
+msgstr "Υποβολή για πρώτη φορά"
 
 #: source_templates/index.html:49
 msgid "Already submitted something?"
-msgstr ""
+msgstr "Έχετε ήδη υποβάλλει κάτι;"
 
 #: source_templates/index.html:55
 msgid "If this is your first time submitting to journalists, start here."
 msgstr ""
+"Αν είναι η πρώτη σας φορά που υποβάλλετε κάτι στους δημοσιογράφους, "
+"ξεκινήστε από εδώ."
 
 #: source_templates/index.html:59
 msgid ""
 "If you have already submitted to journalists, log in here to check for "
 "responses."
 msgstr ""
+"Αν έχετε ήδη υποβάλλει κάτι στους δημοσιογράφους, συνδεθείτε για να ελέγξετε "
+"για απαντήσεις."
 
 #: source_templates/index.html:74
 msgid "CHECK FOR A RESPONSE"
-msgstr ""
+msgstr "ΕΛΕΓΧΟΣ ΓΙΑ ΑΠΑΝΤΗΣΕΙΣ"
 
 #: source_templates/index.html:96
 msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
 msgstr ""
+"Φαίνεται πως χρησιμοποιείτε τον Tor Browser. Μπορείτε να μετακινήσετε τον \""
+"Επιλογέα ασφαλείας\" στο \"Το πιο ασφαλές\" σε τέσσερα βήματα."
 
 #: source_templates/index.html:98
 msgid ""
 "Click the <img src=\"{icon}\" alt=\"Tor icon\"> Tor icon in the toolbar above"
 msgstr ""
+"Πατήστε το <img src=\"{icon}\" alt=\"Tor icon\"> εικονίδιο Tor στην παραπάνω "
+"γραμμή εργαλείων"
 
 #: source_templates/index.html:99
 msgid "Click <strong>Security Settings...</strong>"
-msgstr ""
+msgstr "Πατήστε <strong>Επιλογές ασφαλείας...</strong>"
 
 #: source_templates/index.html:100
 msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
 msgstr ""
+"Μετακινήστε τον επιλογέα στο <strong>Το πιο ασφαλές</strong>, και πατήστε "
+"<strong>ΟΚ</strong>"
 
 #: source_templates/index.html:101
 msgid "<a href=\"/\">Click here</a> to refresh the page"
-msgstr ""
+msgstr "<a href=\"/\">Πατήστε εδώ</a> για να ανανεώσετε τη σελίδα"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
-msgstr ""
+msgstr "Εισαγωγή κωδικού ονόματος"
 
 #: source_templates/login.html:12
 msgid "Enter your codename"
-msgstr ""
+msgstr "Γράψτε το κωδικό όνομά σας"
 
 #: source_templates/login.html:25 source_templates/lookup.html:47
 msgid "CANCEL"
@@ -1052,7 +1071,7 @@ msgstr "ΆΚΥΡΟ"
 #: source_templates/logout_flashed_message.html:4
 #: source_templates/session_timeout.html:5
 msgid "Important!"
-msgstr ""
+msgstr "Σημαντικό!"
 
 #: source_templates/logout_flashed_message.html:5
 msgid ""
@@ -1060,10 +1079,13 @@ msgid ""
 "green onion button in the Tor browser to clear all history of your "
 "SecureDrop usage from this device."
 msgstr ""
+"Ευχαριστούμε που αποσυνδεθήκατε από τη συνεδρία σας. Παρακαλώ επιλέξτε \"Νέα "
+"ταυτότητα\" από το πράσινο είκονίδιο του Tor browser για να εκκαθαρίσετε όλο "
+"το ιστορικό της χρήσης του SecureDrop που κάνατε από αυτή τη συσκευή."
 
 #: source_templates/lookup.html:11
 msgid "Whew, it’s you! Now, the embarrassing part..."
-msgstr ""
+msgstr "Πάλι καλά που είσαι εσύ. Τώρα, τα κακά μαντάτα..."
 
 #: source_templates/lookup.html:12
 msgid ""
@@ -1071,6 +1093,9 @@ msgid ""
 "visited. To err on the side of caution, we put a hold on sending all files "
 "and messages from that day through to our journalists."
 msgstr ""
+"Οι σέρβερ μας υπέστησαν μια ασυνήθιστη αύξηση νέας δραστηριότητας απ' όταν "
+"συνδέθηκες τελευταία φορά. Ενεργώντας εκ του ασφαλούς, παύσαμε όλες της "
+"αποστολές αρχείων και μηνυμάτων από εκείνη την μέρα προς τους δημοσιογράφους."
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1078,10 +1103,13 @@ msgid ""
 "submission into the hands of a journalist straight away. We’re sorry for the "
 "delay. Please do check back again in a week or so."
 msgstr ""
+"Τώρα που ξέρουμε πως είσαι όντως άνθρωπος, θα στείλουμε τις προηγούμενες "
+"υποβολές σου σε έναν δημοσιογράφο άμεσα. Συγγνώμη για την καθυστέρηση. "
+"Παρακαλούμε ελέξτε πάλι σε μερικές μέρες."
 
 #: source_templates/lookup.html:20
 msgid "Submit Files or Messages"
-msgstr ""
+msgstr "Υποβολή μηνυμάτων ή αρχείων"
 
 #: source_templates/lookup.html:21
 msgid ""
@@ -1089,14 +1117,19 @@ msgid ""
 "and messages with our <a href=\"{url}\" class=\"text-link\">public key</a> "
 "before submission. Files are encrypted as they are received by SecureDrop."
 msgstr ""
+"Αν έχετε ήδη κάποια επαφή με το GPG, μπορείτε προαιρετικά να κρυπτογραφήσετε "
+"τα αρχεία σας με το <a href=\"{url}\" class=\"text-link\">δημόσιο κλειδί "
+"μας</a> πριν τα υποβάλλετε. Τα αρχεία κρυπτογραφούνται κατά την λήψη από το "
+"SecureDrop."
 
 #: source_templates/lookup.html:22
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
-msgstr ""
+msgstr "<a href=\"{url}\" class=\"text-link\">Μάθετε περισσότερα</a>."
 
 #: source_templates/lookup.html:24
 msgid "You can submit any kind of file, a message, or both."
 msgstr ""
+"Μπορείτε να υποβάλετε οποιουδήποτε τύπου αρχεία, ένα μήνυμα ή και τα δύο"
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
