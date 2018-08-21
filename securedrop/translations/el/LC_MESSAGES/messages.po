@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-08-21 18:28+0000\n"
+"PO-Revision-Date: 2018-08-21 18:36+0000\n"
 "Last-Translator: Adrian <pappasadrian@gmail.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/el/>\n"
@@ -1244,7 +1244,7 @@ msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor browser</a> instead."
 msgstr ""
-"<strong>Προτείνουμε εντόνως</strong> να χρησιμοποιήσετε τον <a href=\""
+"<strong>Προτείνουμε ανεπιφύλακτα</strong> να χρησιμοποιήσετε τον <a href=\""
 "www.torproject.org/projects/torbrowser.html\">Tor Browser</a> καλύτερα."
 
 #: source_templates/use-tor-browser.html:3
@@ -1273,6 +1273,9 @@ msgid ""
 "Copy and paste the following address into your browser and follow the "
 "instructions to download and install Tor Browser:"
 msgstr ""
+"Αντιγράψτε και επικολλήστε την ακόλουθη διεύθυνση στον browser σας και "
+"ακολουθήστε τις οδηγίες για να κατεβάσετε και να εγκαταστήσετε τον Tor "
+"Browser:"
 
 #: source_templates/use-tor-browser.html:9
 msgid ""
@@ -1280,10 +1283,14 @@ msgid ""
 "mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
+"Υπάρχει ένα ενδεχόμενο πως κατεβάζοντας τον Tor Browser θα εγείρετε υποψίες, "
+"και ο πάροχος email σας είναι λιγότερο πιθανό να παρακολουθείται, οπότε "
+"μπορείτε να στείλετε ένα email στο <pre>1gettor@torproject.org</pre> και θα "
+"λάβετε μια αυτοματοποιημένη απάντηση με οδηγίες."
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
-msgstr ""
+msgstr "Γιατί να κατεβάσω το δημόσιο κλειδί του δημοσιογράφου;"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
@@ -1291,22 +1298,30 @@ msgid ""
 "messages and files before submission can provide an extra layer of security "
 "before your data reaches the SecureDrop server."
 msgstr ""
+"Το SecureDrop κρυπτογραφεί τα αρχεία και τα μηνύματα αφού υποβληθούν. "
+"Κρυπτογραφόντας τα μηνύματα και τα αρχεία πριν την υποβολή τους παρέχει ένα "
+"επιπλέον επίπεδο ασφαλείας πριν τα δεδομένα φτάσουν στον server του "
+"SecureDrop."
 
 #: source_templates/why-journalist-key.html:5
 msgid ""
 "If you are already familiar with the GPG encryption software, you may wish "
 "to encrypt your submissions yourself. To do so:"
 msgstr ""
+"Αν είστε ήδη εξοικειωμένοι με το λογισμικό κρυπτογράφησης GPG, ίσως θέλετε "
+"να κρυπτογραφήσετε εσείς τις υποβολές σας. Για να το κάνετε:"
 
 #: source_templates/why-journalist-key.html:7
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. The public key is a text file "
 "with the extension <code>.asc</code>"
 msgstr ""
+"<a href=\"{url}\">Κατεβάστε</a> το δημόσιο κλειδί. Το δημόσιο κλειδί είναι "
+"ένα αρχείο κειμένου με την κατάληξη <code>.asc</code>"
 
 #: source_templates/why-journalist-key.html:8
 msgid "Import it into your GPG keyring."
-msgstr ""
+msgstr "Εισάγετέ το στo keyring του GPG σας."
 
 #: source_templates/why-journalist-key.html:10
 msgid ""
@@ -1314,12 +1329,17 @@ msgid ""
 "<code>.asc</code> file you just downloaded and it will be automatically "
 "imported to your keyring."
 msgstr ""
+"Αν χρησιμοποιείτε το <a href=\"{url}\">Tails</a>, μπορείτε να κάνετε διπλό "
+"κλικ στο αρχείο <code>.asc</code> που μόλις κατεβάσατε και αυτό θα προστεθεί "
+"αυτόματα στο keyring σας."
 
 #: source_templates/why-journalist-key.html:11
 msgid ""
 "If you are using Mac/Linux, open the terminal. You can import the key with "
 "<code>gpg --import /path/to/key.asc</code>."
 msgstr ""
+"Αν χρησιμοποιείτε Mac/Linux, ανοίξτε το τερματικό. Μπορείτε να εισάγετε το "
+"κλειδί με την εντολή <code>gpg --import /path/to/key.asc</code>."
 
 #: source_templates/why-journalist-key.html:14
 msgid "Encrypt your submission."
