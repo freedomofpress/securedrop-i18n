@@ -217,7 +217,7 @@ msgstr "Άκυρο"
 #: journalist_templates/_source_row.html:23
 msgid "1 doc"
 msgid_plural "{doc_num} docs"
-msgstr[0] "1 έγγραφο"
+msgstr[0] "Ένα έγγραφο"
 msgstr[1] "{doc_num} έγγραφα"
 
 #: journalist_templates/_source_row.html:24
