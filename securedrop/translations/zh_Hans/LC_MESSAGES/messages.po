@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-06-26 15:10+0000\n"
-"Last-Translator: pierwill <mail@pierwill.com>\n"
+"PO-Revision-Date: 2018-08-24 14:14+0000\n"
+"Last-Translator: zyfdegh <zyfdegg@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.securedrop.club/"
 "projects/securedrop/securedrop/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: template_filters.py:14
 msgid "{time} ago"
-msgstr "之前"
+msgstr "{time} 之前"
 
 #: journalist_app/__init__.py:80 journalist_app/__init__.py:119
 msgid "You have been logged out due to inactivity"
@@ -29,15 +29,15 @@ msgstr "您因为闲置太久被登出"
 
 #: journalist_app/account.py:26
 msgid "Incorrect password or two-factor code."
-msgstr "密码或双因素验证码不正确。"
+msgstr "密码或两步验证码不正确。"
 
 #: journalist_app/account.py:42
 msgid "Token in two-factor authentication verified."
-msgstr "双因素验证码已通过验证。"
+msgstr "两步验证码已通过验证。"
 
 #: journalist_app/account.py:46 journalist_app/admin.py:116
 msgid "Could not verify token in two-factor authentication."
-msgstr "双因素验证码无法通过验证。"
+msgstr "两步验证码无法通过验证。"
 
 #: journalist_app/admin.py:38
 msgid "Image updated."
@@ -51,7 +51,7 @@ msgstr "自动生成的密码有误。用户账户未建立。请重试。"
 
 #: journalist_app/admin.py:82 journalist_app/admin.py:166
 msgid "Username \"{user}\" already taken."
-msgstr "用户名 \"{user}\"已经被占用。"
+msgstr "用户名 \"{user}\" 已经被占用。"
 
 #: journalist_app/admin.py:85
 msgid ""
@@ -73,11 +73,11 @@ msgstr "测试警报已送达。请检查您的邮箱。"
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
-msgstr "{source_name} 集件已删除"
+msgstr "{source_name} 集合已删除"
 
 #: journalist_app/col.py:56
 msgid "No collections selected."
-msgstr "未选择任何的集件。"
+msgstr "未选择任何的集合。"
 
 #: journalist_app/decorators.py:15
 msgid "Only administrators can access this page."
@@ -85,17 +85,16 @@ msgstr "此页面仅供管理员访问。"
 
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
-msgstr "HOTP secrets 长度为40个字符 - 您已输入 {num_chars} 个字符。"
+msgstr "HOTP 密码长度为 40 个字符 - 您已输入 {num_chars} 个字符。"
 
 #: journalist_app/forms.py:30
 msgid ""
 "Field must be at least {min_chars} characters long but only got {num_chars}."
-msgstr ""
-"该字段需要至少  {min_chars} 个字符长度，目前仅获得  {num_chars} 个字符。"
+msgstr "该字段需要至少  {min_chars} 个字符，目前仅获得  {num_chars} 个字符。"
 
 #: journalist_app/forms.py:35 source_app/forms.py:11
 msgid "This field is required."
-msgstr "这是必填项目。"
+msgstr "这是必填字段。"
 
 #: journalist_app/forms.py:52
 msgid "You cannot send an empty reply."
@@ -103,16 +102,16 @@ msgstr "回复内容不可空白。"
 
 #: journalist_app/forms.py:60
 msgid "File required."
-msgstr "该文件是必须项。"
+msgstr "该文件是必选项。"
 
 #: journalist_app/forms.py:62
 msgid "You can only upload PNG image files."
-msgstr ""
+msgstr "您只能上传 PNG 图片文件。"
 
 #: journalist_app/main.py:117 journalist_app/utils.py:47
 #: journalist_app/utils.py:137
 msgid "An unexpected error occurred! Please inform your administrator."
-msgstr "出现一个预期以外的错误！请通知管理员。"
+msgstr "出现一个意外的错误！请通知管理员。"
 
 #: journalist_app/main.py:128
 msgid "Thanks. Your reply has been stored."
@@ -120,38 +119,38 @@ msgstr "谢谢，您的回复已经被储存。"
 
 #: journalist_app/main.py:149
 msgid "No collections selected for download."
-msgstr "未选择要下载的集件。"
+msgstr "未选择要下载的集合。"
 
 #: journalist_app/main.py:152 journalist_app/utils.py:235
 msgid "No collections selected for deletion."
-msgstr "未选择要删除的集件。"
+msgstr "未选择要删除的集合。"
 
 #: journalist_app/main.py:178
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
-msgstr ""
+msgstr "源 '{original_name}' 已被命名为 '{new_name}'"
 
 #: journalist_app/main.py:193
 msgid "No unread submissions for this source."
-msgstr ""
+msgstr "该源中无未读内容。"
 
 #: journalist_app/utils.py:54
 msgid "Account updated."
-msgstr ""
+msgstr "账号已更新。"
 
 #: journalist_app/utils.py:85
 msgid "Login failed."
-msgstr ""
+msgstr "登录失败。"
 
 #: journalist_app/utils.py:93
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
-msgstr[0] ""
+msgstr[0] "请至少等待 {seconds} 秒后再登录。"
 
 #: journalist_app/utils.py:104
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
-msgstr ""
+msgstr "在重试前，请等待您的双重验证应用的新验证码。"
 
 #: journalist_app/utils.py:125
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
