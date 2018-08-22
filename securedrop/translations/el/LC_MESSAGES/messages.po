@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-08-22 10:51+0000\n"
+"PO-Revision-Date: 2018-08-22 10:54+0000\n"
 "Last-Translator: Adrian <pappasadrian@gmail.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/el/>\n"
@@ -53,7 +53,7 @@ msgstr ""
 
 #: journalist_app/admin.py:82 journalist_app/admin.py:166
 msgid "Username \"{user}\" already taken."
-msgstr "Το όνομα χρήστη \"{user}\" υπάρχει ήδη."
+msgstr "Το όνομα χρήστη \"{user}\" χρησιμοποιείται ήδη."
 
 #: journalist_app/admin.py:85
 msgid ""
@@ -459,8 +459,8 @@ msgid ""
 msgstr ""
 "Δημιουργία ενός νέου τυχαίου κωδικού ονόματος για αυτή την πηγή. Προτείνουμε "
 "να το κάνετε αυτό αν το πρώτο τυχαίο κωδικό όνομα είναι δύσκολο να το πείτε "
-"ή να το θυμάστε. Μπορείτε να παράξετε νέα τυχαία κωδικά ονόματα όσες φορές "
-"θέλετε."
+"ή να το θυμάστε. Μπορείτε να δημιουργήσετε νέα τυχαία κωδικά ονόματα όσες "
+"φορές θέλετε."
 
 #: journalist_templates/col.html:13
 msgid "Change codename"
@@ -468,7 +468,7 @@ msgstr "Αλλαγή κωδικού ονόματος"
 
 #: journalist_templates/col.html:14
 msgid "Are you sure you want to generate a new codename?"
-msgstr "Είστε σίγουροι πως θέλετε να παράξετε ένα νέο κωδικό όνομα;"
+msgstr "Είστε σίγουροι πως θέλετε να δημιουργήσετε ένα νέο κωδικό όνομα;"
 
 #: journalist_templates/col.html:16
 msgid "CONFIRM"
@@ -738,11 +738,11 @@ msgid ""
 "appear under their collection of documents. You can use this box to write "
 "encrypted replies to them."
 msgstr ""
-"Το SecureDrop θα παράξει ένα ασφαλές κλειδί κρυπτογράφησης για αυτή την πηγή "
-"την επόμενη φορά που θα συνδεθεί. Μόλις παραχθεί το κλειδί, θα εμφανιστεί "
-"ένα πεδίο απάντησης κάτω από την συλλογή εγγράφων του/της. Μπορείτε να "
-"χρησιμοποιήσετε αυτό το πεδίο για να του/της γράψετε κρυπτογραφημένες "
-"απαντήσεις."
+"Το SecureDrop θα δημιουργήσει ένα ασφαλές κλειδί κρυπτογράφησης για αυτή την "
+"πηγή την επόμενη φορά που θα συνδεθεί. Μόλις δημιουργηθεί το κλειδί, θα "
+"εμφανιστεί ένα πεδίο απάντησης κάτω από την συλλογή εγγράφων του/της. "
+"Μπορείτε να χρησιμοποιήσετε αυτό το πεδίο για να του/της γράψετε "
+"κρυπτογραφημένες απαντήσεις."
 
 #: journalist_templates/flag.html:10
 msgid "Continue to the list of documents for {codename}..."
