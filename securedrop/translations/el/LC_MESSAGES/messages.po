@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-08-22 10:54+0000\n"
+"PO-Revision-Date: 2018-08-23 17:19+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Greek <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/el/>\n"
@@ -83,7 +83,7 @@ msgstr "Η συλλογή του/της {source_name} διαγράφτηκε"
 
 #: journalist_app/col.py:56
 msgid "No collections selected."
-msgstr "Δεν έχουν επιλεχθεί συλλογές."
+msgstr "Δεν έχουν επιλεχθεί συλλογές"
 
 #: journalist_app/decorators.py:15
 msgid "Only administrators can access this page."
