@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-08-23 17:28+0000\n"
+"PO-Revision-Date: 2018-08-23 17:46+0000\n"
 "Last-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/el/>\n"
@@ -120,15 +120,15 @@ msgstr "Μπορείτε να ανεβάσετε μόνο αρχεία εικό�
 #: journalist_app/main.py:117 journalist_app/utils.py:47
 #: journalist_app/utils.py:137
 msgid "An unexpected error occurred! Please inform your administrator."
-msgstr "Παρουσιάστηκε απρόσμενο σφάλμα! Παρακαλώ ειδοποιήστε το διαχειριστή."
+msgstr "Παρουσιάστηκε απρόσμενο σφάλμα! Παρακαλώ ειδοποιήστε τον διαχειριστή."
 
 #: journalist_app/main.py:128
 msgid "Thanks. Your reply has been stored."
-msgstr "Ευχαριστούμε. Η απάντησή σας αποθηκεύτηκε."
+msgstr "Ευχαριστώ. Η απάντησή σας αποθηκεύτηκε."
 
 #: journalist_app/main.py:149
 msgid "No collections selected for download."
-msgstr "Δεν έχουν επιλεχθεί συλλογές για κατέβασμα."
+msgstr "Δεν έχουν επιλεχθεί συλλογές για λήψη."
 
 #: journalist_app/main.py:152 journalist_app/utils.py:235
 msgid "No collections selected for deletion."
@@ -136,7 +136,7 @@ msgstr "Δεν έχουν επιλεχθεί συλλογές για διαγρ�
 
 #: journalist_app/main.py:178
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
-msgstr "Η πηγή '{original_name}' μετονομάστηκε σε '{new_name}'"
+msgstr "Η πηγή «{original_name}» μετονομάστηκε σε «{new_name}»"
 
 #: journalist_app/main.py:193
 msgid "No unread submissions for this source."
