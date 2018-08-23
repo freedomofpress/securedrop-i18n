@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-08-23 17:19+0000\n"
+"PO-Revision-Date: 2018-08-23 17:23+0000\n"
 "Last-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/el/>\n"
@@ -84,11 +84,11 @@ msgstr "Η συλλογή του/της {source_name} διαγράφηκε"
 
 #: journalist_app/col.py:56
 msgid "No collections selected."
-msgstr "Δεν έχουν επιλεχθεί συλλογές"
+msgstr "Δεν έχουν επιλεχθεί συλλογές."
 
 #: journalist_app/decorators.py:15
 msgid "Only administrators can access this page."
-msgstr "Μόνο οι διαχειριστές έχουν πρόσβαση σε αυτή την σελίδα."
+msgstr "Μόνο οι διαχειριστές έχουν πρόσβαση σε αυτήν την σελίδα."
 
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
@@ -99,7 +99,7 @@ msgid ""
 "Field must be at least {min_chars} characters long but only got {num_chars}."
 msgstr ""
 "Το πεδίο πρέπει να έχει τουλάχιστον {min_chars} χαρακτήρες αλλά εσείς έχετε "
-"{num_chars}."
+"εισάγει {num_chars}."
 
 #: journalist_app/forms.py:35 source_app/forms.py:11
 msgid "This field is required."
