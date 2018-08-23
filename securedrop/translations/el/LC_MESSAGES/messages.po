@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-08-23 17:46+0000\n"
+"PO-Revision-Date: 2018-08-25 21:49+0000\n"
 "Last-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/el/>\n"
@@ -37,7 +37,7 @@ msgstr "Η συσκευή πιστοποίησης δύο παραγόντων �
 
 #: journalist_app/account.py:46 journalist_app/admin.py:116
 msgid "Could not verify token in two-factor authentication."
-msgstr "Η συσκευή της πιστοποίησης δύο παραγόντων δεν μπορεί να επιβεβαιωθεί."
+msgstr "Ήταν αδύνατο να επιβεβαιωθεί η συσκευή πιστοποίησης δύο παραγόντων."
 
 #: journalist_app/admin.py:38
 msgid "Image updated."
@@ -140,11 +140,11 @@ msgstr "Η πηγή «{original_name}» μετονομάστηκε σε «{new_n
 
 #: journalist_app/main.py:193
 msgid "No unread submissions for this source."
-msgstr "Δεν υπάρχουν μη αναγνωσμένες καταχωρήσεις για αυτή την πηγή."
+msgstr "Δεν υπάρχουν μη αναγνωσμένες υποβολές για αυτήν την πηγή."
 
 #: journalist_app/utils.py:54
 msgid "Account updated."
-msgstr "Ο λογαριασμός ανανεώθηκε."
+msgstr "Ο λογαριασμός ενημερώθηκε."
 
 #: journalist_app/utils.py:85
 msgid "Login failed."
@@ -163,7 +163,7 @@ msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
 msgstr ""
-"Παρακαλώ περιμένετε για ένα νέο κωδικό από τη συσκευή ή εφαρμογή δύο "
+"Παρακαλώ περιμένετε για έναν νέο κωδικό από τη συσκευή ή εφαρμογή δύο "
 "παραγόντων πριν ξαναδοκιμάσετε."
 
 #: journalist_app/utils.py:125
@@ -173,6 +173,7 @@ msgstr ""
 "αριθμούς από 0 έως 9."
 
 #: journalist_app/utils.py:131
+#, fuzzy
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Άκυρη μορφή μυστικού: λάθος μήκος μυστικού. Μήπως κάνατε κάποιο λάθος στην "
@@ -181,16 +182,17 @@ msgstr ""
 #: journalist_app/utils.py:187
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
-msgstr[0] "Η καταχώρηση διαγράφτηκε."
-msgstr[1] "{num} καταχωρήσεις διαγράφτηκαν."
+msgstr[0] "Η καταχώρηση διαγράφηκε."
+msgstr[1] "{num} καταχωρήσεις διαγράφηκαν."
 
 #: journalist_app/utils.py:240
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
-msgstr[0] "Μια συλλογή διαγράφτηκε"
-msgstr[1] "{num} συλλογές διαγράφτηκαν"
+msgstr[0] "Μία συλλογή διαγράφηκε"
+msgstr[1] "{num} συλλογές διαγράφηκαν"
 
 #: journalist_app/utils.py:278
+#, fuzzy
 msgid "You submitted a bad password! Password not changed."
 msgstr "Ο κωδικός που καταχωρήσατε δεν είναι καλός! Ο κωδικός δεν άλλαξε."
 
