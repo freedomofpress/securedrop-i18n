@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-08-24 14:47+0000\n"
+"PO-Revision-Date: 2018-08-24 14:57+0000\n"
 "Last-Translator: zyfdegh <zyfdegg@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.securedrop.club/"
 "projects/securedrop/securedrop/zh_Hans/>\n"
@@ -371,7 +371,7 @@ msgstr "是管理员"
 
 #: journalist_templates/admin_add_user.html:32
 msgid "Is using a YubiKey [HOTP]"
-msgstr "在用 YubiKey [HOTP] 吗？"
+msgstr "在用 YubiKey [HOTP] 吗"
 
 #: journalist_templates/admin_new_user_two_factor.html:6
 msgid ""
@@ -381,28 +381,31 @@ msgid ""
 "the 6-digit codes from the app to confirm that two factor authentication is "
 "set up correctly."
 msgstr ""
+"您快搞定了！要完成新用户的添加，请让他们按照下面的说明去设置 FreeOTP 双重验证。在他们添加账号到 app 里后，让他们输入应用中其中一个 6 "
+"位密码，以确认双重验证正确设置了。"
 
 #: journalist_templates/base.html:24
 msgid "Logged on as"
-msgstr ""
+msgstr "以身份登录"
 
 #: journalist_templates/base.html:26
 msgid "Admin"
-msgstr ""
+msgstr "管理员"
 
 #: journalist_templates/base.html:28
 msgid "Log Out"
-msgstr ""
+msgstr "登出"
 
 #: journalist_templates/base.html:41
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
 msgstr ""
+"由 <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop\"> 提供支持"
 
 #: journalist_templates/base.html:56
 msgid "Powered by <em>SecureDrop {version}</em>."
-msgstr ""
+msgstr "由 <em>SecureDrop</em> 提供支持"
 
 #: journalist_templates/col.html:10
 msgid "All Sources"
