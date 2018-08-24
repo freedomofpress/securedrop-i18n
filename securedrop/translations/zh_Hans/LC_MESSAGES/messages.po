@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-08-24 15:09+0000\n"
+"PO-Revision-Date: 2018-08-28 04:56+0000\n"
 "Last-Translator: zyfdegh <zyfdegg@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.securedrop.club/"
 "projects/securedrop/securedrop/zh_Hans/>\n"
@@ -412,16 +412,17 @@ msgid "All Sources"
 msgstr "所有源"
 
 #: journalist_templates/col.html:13
+#, fuzzy
 msgid ""
 "Generate a new random codename for this source. We recommend doing this if "
 "the first random codename is difficult to say or remember. You can generate "
 "new random codenames as many times as you like."
-msgstr "为这个源生成一个新的随机码。假如第一个验证码比较复杂或者难记的话，我们建议您这么做。您可以随意生成随机码，不限次数。"
+msgstr "为这个源生成一个新的代号。假如第一个随机代号比较复杂或者难记的话，我们建议您这么做。您可以随意生成代号，不限次数。"
 
 #: journalist_templates/col.html:13
 #, fuzzy
 msgid "Change codename"
-msgstr "更改验证码"
+msgstr "更改代号"
 
 #: journalist_templates/col.html:14
 msgid "Are you sure you want to generate a new codename?"
@@ -429,7 +430,7 @@ msgstr "您确定想生成一个新的代号？"
 
 #: journalist_templates/col.html:16
 msgid "CONFIRM"
-msgstr ""
+msgstr "确认"
 
 #: journalist_templates/col.html:22
 msgid ""
