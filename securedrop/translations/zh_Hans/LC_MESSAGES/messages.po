@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-08-24 14:30+0000\n"
+"PO-Revision-Date: 2018-08-24 14:47+0000\n"
 "Last-Translator: zyfdegh <zyfdegg@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.securedrop.club/"
 "projects/securedrop/securedrop/zh_Hans/>\n"
@@ -204,12 +204,12 @@ msgstr "取消"
 #: journalist_templates/_source_row.html:23
 msgid "1 doc"
 msgid_plural "{doc_num} docs"
-msgstr[0] "{doc_num} 个文档"
+msgstr[0] "{doc_num} 文档"
 
 #: journalist_templates/_source_row.html:24
 msgid "1 message"
 msgid_plural "{msg_num} messages"
-msgstr[0] "{msg_num} 个消息"
+msgstr[0] "{msg_num} 消息"
 
 #: journalist_templates/_source_row.html:27
 msgid "1 unread"
@@ -219,24 +219,24 @@ msgstr[0] "{num_unread} 未读"
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
 msgid "Change Secret"
-msgstr ""
+msgstr "更改密码"
 
 #: journalist_templates/account_edit_hotp_secret.html:7
 #: journalist_templates/admin_add_user.html:33
 #: journalist_templates/admin_edit_hotp_secret.html:8
 msgid "HOTP Secret"
-msgstr ""
+msgstr "HOTP 密码"
 
 #: journalist_templates/account_edit_hotp_secret.html:9
 #: journalist_templates/admin_edit_hotp_secret.html:10
 #: source_templates/login.html:23
 msgid "CONTINUE"
-msgstr ""
+msgstr "继续"
 
 #: journalist_templates/account_new_two_factor.html:4
 #: journalist_templates/admin_new_user_two_factor.html:5
 msgid "Enable FreeOTP"
-msgstr ""
+msgstr "启用 FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:5
 msgid ""
@@ -245,74 +245,76 @@ msgid ""
 "for your account in the app, enter one of the 6-digit codes from the app to "
 "confirm that two factor authentication is set up correctly."
 msgstr ""
+"您快搞定了！如要完成双重验证的重置，请按照下面的说明设置 FreeOTP。在您添加账号到这个 app 后，输入其中一个 6 "
+"位口令以确认双重验证已正确设置。"
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
 msgid "Install FreeOTP on your phone"
-msgstr ""
+msgstr "在您的手机上安装 FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
 msgid "Open the FreeOTP app"
-msgstr ""
+msgstr "打开 FreeOTP 应用"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
 msgid "Tap the QR code symbol at the top"
-msgstr ""
+msgstr "点按顶部的二维码图标"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
 msgid ""
 "Your phone will now be in \"scanning\" mode. When you are in this mode, scan "
 "the barcode below:"
-msgstr ""
+msgstr "您的手机将处于 “扫描” 模式。这时，扫下面的条形码："
 
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
 msgid "Can't scan the barcode? Enter the following code manually:"
-msgstr ""
+msgstr "无法扫描条形码？手动输入条形码的数字："
 
 #: journalist_templates/account_new_two_factor.html:15
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid "Once you have scanned the barcode, enter the 6-digit code below:"
-msgstr ""
+msgstr "当你扫了条形码后，输入下面的 6 位口令："
 
 #: journalist_templates/account_new_two_factor.html:17
 #: journalist_templates/admin_new_user_two_factor.html:20
 msgid "Enable YubiKey (OATH-HOTP)"
-msgstr ""
+msgstr "启用 YubiKey（OATH-HOTP）"
 
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:21
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
-msgstr ""
+msgstr "当你配置好 YubiKey 后，输入下面的 6 位口令："
 
 #: journalist_templates/account_new_two_factor.html:22
 #: journalist_templates/admin_new_user_two_factor.html:25
 msgid "Verification code"
-msgstr ""
+msgstr "验证码"
 
 #: journalist_templates/account_new_two_factor.html:24
 #: journalist_templates/admin_new_user_two_factor.html:27
 #: journalist_templates/col.html:99 source_templates/lookup.html:45
 msgid "SUBMIT"
-msgstr ""
+msgstr "提交"
 
 #: journalist_templates/admin.html:3
 msgid "Admin Interface"
-msgstr ""
+msgstr "管理员页面"
 
 #: journalist_templates/admin.html:6
 #: journalist_templates/admin_add_user.html:39
 msgid "ADD USER"
-msgstr ""
+msgstr "添加用户"
 
 #: journalist_templates/admin.html:16
 #: journalist_templates/admin_add_user.html:14
 #: journalist_templates/login.html:8
 msgid "Username"
-msgstr ""
+msgstr "用户名"
 
 #: journalist_templates/admin.html:17
 msgid "Edit"
@@ -326,19 +328,19 @@ msgstr "删除"
 
 #: journalist_templates/admin.html:19
 msgid "Created"
-msgstr ""
+msgstr "已创建"
 
 #: journalist_templates/admin.html:20
 msgid "Last login"
-msgstr ""
+msgstr "最近登录"
 
 #: journalist_templates/admin.html:25
 msgid "Edit user {username}"
-msgstr ""
+msgstr "编辑用户 {username}"
 
 #: journalist_templates/admin.html:29
 msgid "Delete user {username}"
-msgstr ""
+msgstr "删除用户 {username}"
 
 #: journalist_templates/admin.html:35
 msgid "never"
@@ -346,29 +348,30 @@ msgstr "从来不"
 
 #: journalist_templates/admin.html:42
 msgid "No users to display"
-msgstr ""
+msgstr "无用户可显示"
 
 #: journalist_templates/admin.html:48
+#, fuzzy
 msgid "INSTANCE CONFIG"
-msgstr ""
+msgstr "实例配置"
 
 #: journalist_templates/admin_add_user.html:4
 #: journalist_templates/config.html:4 journalist_templates/edit_account.html:7
 msgid "Back to admin interface"
-msgstr ""
+msgstr "回到管理员页面"
 
 #: journalist_templates/admin_add_user.html:21
 msgid "The user's password will be:"
-msgstr ""
+msgstr "用户密码是："
 
 #: journalist_templates/admin_add_user.html:24
 #: journalist_templates/edit_account.html:17
 msgid "Is Administrator"
-msgstr ""
+msgstr "是管理员"
 
 #: journalist_templates/admin_add_user.html:32
 msgid "Is using a YubiKey [HOTP]"
-msgstr ""
+msgstr "在用 YubiKey [HOTP] 吗？"
 
 #: journalist_templates/admin_new_user_two_factor.html:6
 msgid ""
