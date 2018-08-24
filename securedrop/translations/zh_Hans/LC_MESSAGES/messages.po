@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-08-24 14:14+0000\n"
+"PO-Revision-Date: 2018-08-24 14:30+0000\n"
 "Last-Translator: zyfdegh <zyfdegg@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.securedrop.club/"
 "projects/securedrop/securedrop/zh_Hans/>\n"
@@ -29,7 +29,7 @@ msgstr "您因为闲置太久被登出"
 
 #: journalist_app/account.py:26
 msgid "Incorrect password or two-factor code."
-msgstr "密码或两步验证码不正确。"
+msgstr "密码或双重验证的验证码不正确。"
 
 #: journalist_app/account.py:42
 msgid "Token in two-factor authentication verified."
@@ -154,46 +154,47 @@ msgstr "在重试前，请等待您的双重验证应用的新验证码。"
 
 #: journalist_app/utils.py:125
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
-msgstr ""
+msgstr "无效密码格式：请使用 A-F 和数字 0-9。"
 
 #: journalist_app/utils.py:131
+#, fuzzy
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
-msgstr ""
+msgstr "无效密码格式：奇数长度的密码。您是不是输错了？"
 
 #: journalist_app/utils.py:187
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
-msgstr[0] ""
+msgstr[0] "{num} 个内容已删除。"
 
 #: journalist_app/utils.py:240
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
-msgstr[0] ""
+msgstr[0] "{num} 个集合已删除"
 
 #: journalist_app/utils.py:278
 msgid "You submitted a bad password! Password not changed."
-msgstr ""
+msgstr "您提交了个无效的密码！密码未改变。"
 
 #: journalist_app/utils.py:285
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
 "should reset your password again."
-msgstr ""
+msgstr "出现错误，新密码可能未存储成功。请再次设置密码，以免账号被锁定。"
 
 #: journalist_app/utils.py:294
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
-msgstr ""
+msgstr "密码已更新。别忘了存到 KeePassX 数据库里哦。新密码："
 
 #: journalist_app/utils.py:311
 msgid "No unread submissions in selected collections."
-msgstr ""
+msgstr "选定的集合中没有未读内容。"
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
-msgstr ""
+msgstr "关闭"
 
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:72
@@ -203,17 +204,17 @@ msgstr "取消"
 #: journalist_templates/_source_row.html:23
 msgid "1 doc"
 msgid_plural "{doc_num} docs"
-msgstr[0] ""
+msgstr[0] "{doc_num} 个文档"
 
 #: journalist_templates/_source_row.html:24
 msgid "1 message"
 msgid_plural "{msg_num} messages"
-msgstr[0] ""
+msgstr[0] "{msg_num} 个消息"
 
 #: journalist_templates/_source_row.html:27
 msgid "1 unread"
 msgid_plural "{num_unread} unread"
-msgstr[0] ""
+msgstr[0] "{num_unread} 未读"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
