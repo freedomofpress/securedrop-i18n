@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-08-25 21:49+0000\n"
-"Last-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\n"
+"PO-Revision-Date: 2018-08-28 04:56+0000\n"
+"Last-Translator: Adrian <pappasadrian@gmail.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/el/>\n"
 "Language: el\n"
@@ -140,7 +140,7 @@ msgstr "Η πηγή «{original_name}» μετονομάστηκε σε «{new_n
 
 #: journalist_app/main.py:193
 msgid "No unread submissions for this source."
-msgstr "Δεν υπάρχουν μη αναγνωσμένες υποβολές για αυτήν την πηγή."
+msgstr "Δεν υπάρχουν μη αναγνωσμένες υποβολές για αυτή την πηγή."
 
 #: journalist_app/utils.py:54
 msgid "Account updated."
