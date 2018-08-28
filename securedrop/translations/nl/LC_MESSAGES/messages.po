@@ -495,11 +495,8 @@ msgid "Read"
 msgstr "Lees"
 
 #: journalist_templates/col.html:45
-#, fuzzy
-#| msgid "1 unread"
-#| msgid_plural "{num_unread} unread"
 msgid "Unread"
-msgstr "ongelezen"
+msgstr "Ongelezen"
 
 #: journalist_templates/col.html:56
 msgid "Uploaded Document"
