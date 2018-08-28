@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-06-26 15:10+0000\n"
+"PO-Revision-Date: 2018-08-28 06:55+0000\n"
 "Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
 "Language-Team: Swedish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/sv/>\n"
@@ -481,14 +481,11 @@ msgstr "Svar"
 
 #: journalist_templates/col.html:41 journalist_templates/col.html:48
 msgid "Read"
-msgstr ""
+msgstr "Lästa"
 
 #: journalist_templates/col.html:45
-#, fuzzy
-#| msgid "1 unread"
-#| msgid_plural "{num_unread} unread"
 msgid "Unread"
-msgstr "1 oläst"
+msgstr "Olästa"
 
 #: journalist_templates/col.html:56
 msgid "Uploaded Document"
