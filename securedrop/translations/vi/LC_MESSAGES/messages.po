@@ -117,8 +117,8 @@ msgstr "Trường nhập bắt buộc."
 msgid "You can only upload PNG image files."
 msgstr ""
 
-#: journalist_app/main.py:117 journalist_app/utils.py:47
-#: journalist_app/utils.py:137
+#: journalist_app/main.py:117 journalist_app/utils.py:48
+#: journalist_app/utils.py:138
 msgid "An unexpected error occurred! Please inform your administrator."
 msgstr "Lỗi không lường trước đã xảy ra! Vui lòng báo cho nhà quản trị."
 
@@ -130,7 +130,7 @@ msgstr "Cảm ơn bạn. Câu trả lời của bạn đã được lưu."
 msgid "No collections selected for download."
 msgstr "Không có cơ sở dữ liệu nào được chọn để tải về."
 
-#: journalist_app/main.py:152 journalist_app/utils.py:235
+#: journalist_app/main.py:152 journalist_app/utils.py:236
 msgid "No collections selected for deletion."
 msgstr "Không có cơ sở dữ liệu nào được chọn để xóa."
 
@@ -142,20 +142,20 @@ msgstr "Nguồn '{original_name}' đã được đổi tên thành '{new_name}'"
 msgid "No unread submissions for this source."
 msgstr "Không có bài đăng nào chưa được đọc cho nguồn này."
 
-#: journalist_app/utils.py:54
+#: journalist_app/utils.py:55
 msgid "Account updated."
 msgstr "Tài khoản đã được cập nhật."
 
-#: journalist_app/utils.py:85
+#: journalist_app/utils.py:86
 msgid "Login failed."
 msgstr "Đăng nhập không thành công."
 
-#: journalist_app/utils.py:93
+#: journalist_app/utils.py:94
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] "Vui lòng đợi ít nhất {seconds} giây trước khi thử đăng nhập lại."
 
-#: journalist_app/utils.py:104
+#: journalist_app/utils.py:105
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
@@ -163,31 +163,31 @@ msgstr ""
 "Vui lòng đợi mật mã mới từ token xác định danh tính hai lần trước khi thử "
 "lại."
 
-#: journalist_app/utils.py:125
+#: journalist_app/utils.py:126
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Cấu trúc bí mật không chính xác: vui lòng nhập chữ từ A-F và số từ 0-9."
 
-#: journalist_app/utils.py:131
+#: journalist_app/utils.py:132
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Cấu trúc bí mật không chính xác: bí mật số lẻ. Có thể bạn đã nhập sai bí mật?"
 
-#: journalist_app/utils.py:187
+#: journalist_app/utils.py:188
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "{num} bài đăng đã được xóa."
 
-#: journalist_app/utils.py:240
+#: journalist_app/utils.py:241
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} cơ sở dữ liệu đã được xóa"
 
-#: journalist_app/utils.py:278
+#: journalist_app/utils.py:279
 msgid "You submitted a bad password! Password not changed."
 msgstr "Bạn đã nhập mật khẩu lỗi! Mật khẩu chưa được đổi."
 
-#: journalist_app/utils.py:285
+#: journalist_app/utils.py:286
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -196,7 +196,7 @@ msgstr ""
 "Đã có lỗi xảy ra, và mật khẩu mới có thể chưa được lưu chính xác. Để tránh "
 "tài khoản bị khóa, bạn nên đổi lại mật khẩu."
 
-#: journalist_app/utils.py:294
+#: journalist_app/utils.py:295
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -204,7 +204,7 @@ msgstr ""
 "Mật khẩu đã được cập nhật. Đừng quên lưu lại trong cơ sở dữ liệu KeePassX "
 "của bạn. Mật khẩu mới là:"
 
-#: journalist_app/utils.py:311
+#: journalist_app/utils.py:312
 msgid "No unread submissions in selected collections."
 msgstr ""
 "Không có bài đăng nào chưa được đọc trong những cơ sở dữ liệu được chọn."
@@ -474,13 +474,24 @@ msgstr "Tải về được chọn"
 msgid "Delete Selected"
 msgstr "Xóa được chọn"
 
+#: journalist_templates/col.html:38 journalist_templates/col.html:58
+#: journalist_templates/col.html:91
+msgid "Reply"
+msgstr "Trả lời"
+
+#: journalist_templates/col.html:41 journalist_templates/col.html:48
+msgid "Read"
+msgstr ""
+
+#: journalist_templates/col.html:45
+#, fuzzy
+#| msgid "Select Unread"
+msgid "Unread"
+msgstr "Chọn chưa đọc"
+
 #: journalist_templates/col.html:56
 msgid "Uploaded Document"
 msgstr "Tải tài liệu lên"
-
-#: journalist_templates/col.html:58 journalist_templates/col.html:91
-msgid "Reply"
-msgstr "Trả lời"
 
 #: journalist_templates/col.html:60
 msgid "Message"

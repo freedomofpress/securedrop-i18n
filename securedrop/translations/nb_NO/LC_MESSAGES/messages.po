@@ -113,8 +113,8 @@ msgstr "Fil påkrevd."
 msgid "You can only upload PNG image files."
 msgstr "Du kan kun laste opp PNG-bildefiler."
 
-#: journalist_app/main.py:117 journalist_app/utils.py:47
-#: journalist_app/utils.py:137
+#: journalist_app/main.py:117 journalist_app/utils.py:48
+#: journalist_app/utils.py:138
 msgid "An unexpected error occurred! Please inform your administrator."
 msgstr ""
 "En uventet feil oppstod! Gi administrator for din SecureDrop beskjed om at "
@@ -128,7 +128,7 @@ msgstr "Takk. Svaret ditt har blitt lagret."
 msgid "No collections selected for download."
 msgstr "Ingen kildedata valgt for nedlasting."
 
-#: journalist_app/main.py:152 journalist_app/utils.py:235
+#: journalist_app/main.py:152 journalist_app/utils.py:236
 msgid "No collections selected for deletion."
 msgstr "Ingen kildeoppføringer valgt for sletting."
 
@@ -140,52 +140,52 @@ msgstr "Kilden '{original_name}' har endret navn til '{new_name}'"
 msgid "No unread submissions for this source."
 msgstr "Ingen uleste bidrag fra denne kilden."
 
-#: journalist_app/utils.py:54
+#: journalist_app/utils.py:55
 msgid "Account updated."
 msgstr "Konto oppdatert."
 
-#: journalist_app/utils.py:85
+#: journalist_app/utils.py:86
 msgid "Login failed."
 msgstr "Innlogging mislyktes."
 
-#: journalist_app/utils.py:93
+#: journalist_app/utils.py:94
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] "Vent i minst {seconds} sekund før du forsøker å logge inn igjen."
 msgstr[1] "Vent i minst {seconds} sekunder før du forsøker å logge inn igjen."
 
-#: journalist_app/utils.py:104
+#: journalist_app/utils.py:105
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
 msgstr ""
 "Vent på ny tofaktor-kode fra din kodebrikke eller app før du forsøker igjen."
 
-#: journalist_app/utils.py:125
+#: journalist_app/utils.py:126
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr "Ugyldig hemmelighetsformat: Bare bruk bokstavene A-F og tall fra 0-9."
 
-#: journalist_app/utils.py:131
+#: journalist_app/utils.py:132
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "Feil hemmelighet, du har lagt til eller glemt noe."
 
-#: journalist_app/utils.py:187
+#: journalist_app/utils.py:188
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Bidrag slettet."
 msgstr[1] "{num} bidrag slettet."
 
-#: journalist_app/utils.py:240
+#: journalist_app/utils.py:241
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} kildeoppføring slettet"
 msgstr[1] "{num} kildeoppføringer slettet"
 
-#: journalist_app/utils.py:278
+#: journalist_app/utils.py:279
 msgid "You submitted a bad password! Password not changed."
 msgstr "Du la inn et ugyldig passord! Passordet ble derfor ikke endret."
 
-#: journalist_app/utils.py:285
+#: journalist_app/utils.py:286
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -194,7 +194,7 @@ msgstr ""
 "En feil oppstod, og det nye passordet ble kanskje ikke lagret riktig. For å "
 "unngå å bli utelåst fra kontoen bør du tilbakestille passordet ditt på nytt."
 
-#: journalist_app/utils.py:294
+#: journalist_app/utils.py:295
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -202,7 +202,7 @@ msgstr ""
 "Passord oppdatert. Ikke glem å lagre passordet i din KeePassX-database. Det "
 "nye passordet er:"
 
-#: journalist_app/utils.py:311
+#: journalist_app/utils.py:312
 msgid "No unread submissions in selected collections."
 msgstr "Ingen uleste innsendte bidrag i valgte kildeoppføringer."
 
@@ -476,13 +476,25 @@ msgstr "Last ned valgte"
 msgid "Delete Selected"
 msgstr "Slett valgte"
 
+#: journalist_templates/col.html:38 journalist_templates/col.html:58
+#: journalist_templates/col.html:91
+msgid "Reply"
+msgstr "Svar"
+
+#: journalist_templates/col.html:41 journalist_templates/col.html:48
+msgid "Read"
+msgstr ""
+
+#: journalist_templates/col.html:45
+#, fuzzy
+#| msgid "1 unread"
+#| msgid_plural "{num_unread} unread"
+msgid "Unread"
+msgstr "1 ulest"
+
 #: journalist_templates/col.html:56
 msgid "Uploaded Document"
 msgstr "Opplastet dokument"
-
-#: journalist_templates/col.html:58 journalist_templates/col.html:91
-msgid "Reply"
-msgstr "Svar"
 
 #: journalist_templates/col.html:60
 msgid "Message"

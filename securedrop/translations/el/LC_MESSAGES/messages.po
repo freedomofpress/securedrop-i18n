@@ -117,8 +117,8 @@ msgstr "Απαιτείται αρχείο."
 msgid "You can only upload PNG image files."
 msgstr "Μπορείτε να ανεβάσετε μόνο αρχεία εικόνας τύπου PNG."
 
-#: journalist_app/main.py:117 journalist_app/utils.py:47
-#: journalist_app/utils.py:137
+#: journalist_app/main.py:117 journalist_app/utils.py:48
+#: journalist_app/utils.py:138
 msgid "An unexpected error occurred! Please inform your administrator."
 msgstr "Παρουσιάστηκε απρόσμενο σφάλμα! Παρακαλώ ειδοποιήστε τον διαχειριστή."
 
@@ -130,7 +130,7 @@ msgstr "Ευχαριστώ. Η απάντησή σας αποθηκεύτηκε.
 msgid "No collections selected for download."
 msgstr "Δεν έχουν επιλεχθεί συλλογές για λήψη."
 
-#: journalist_app/main.py:152 journalist_app/utils.py:235
+#: journalist_app/main.py:152 journalist_app/utils.py:236
 msgid "No collections selected for deletion."
 msgstr "Δεν έχουν επιλεχθεί συλλογές για διαγραφή."
 
@@ -142,15 +142,15 @@ msgstr "Η πηγή «{original_name}» μετονομάστηκε σε «{new_n
 msgid "No unread submissions for this source."
 msgstr "Δεν υπάρχουν μη αναγνωσμένες υποβολές για αυτή την πηγή."
 
-#: journalist_app/utils.py:54
+#: journalist_app/utils.py:55
 msgid "Account updated."
 msgstr "Ο λογαριασμός ενημερώθηκε."
 
-#: journalist_app/utils.py:85
+#: journalist_app/utils.py:86
 msgid "Login failed."
 msgstr "Η σύνδεση απέτυχε."
 
-#: journalist_app/utils.py:93
+#: journalist_app/utils.py:94
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] ""
@@ -158,7 +158,7 @@ msgstr[0] ""
 msgstr[1] ""
 "Παρακαλώ περιμένετε τουλάχιστον {seconds} δευτερόλεπτα πριν ξανασυνδεθείτε."
 
-#: journalist_app/utils.py:104
+#: journalist_app/utils.py:105
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
@@ -166,37 +166,37 @@ msgstr ""
 "Παρακαλώ περιμένετε για έναν νέο κωδικό από τη συσκευή ή εφαρμογή δύο "
 "παραγόντων πριν ξαναδοκιμάσετε."
 
-#: journalist_app/utils.py:125
+#: journalist_app/utils.py:126
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Άκυρη μορφή μυστικού: παρακαλώ πληκτρολογήστε μόνο γράμματα από A έως F και "
 "αριθμούς από 0 έως 9."
 
-#: journalist_app/utils.py:131
+#: journalist_app/utils.py:132
 #, fuzzy
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Άκυρη μορφή μυστικού: λάθος μήκος μυστικού. Μήπως κάνατε κάποιο λάθος στην "
 "πληκτρολόγηση;"
 
-#: journalist_app/utils.py:187
+#: journalist_app/utils.py:188
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Η καταχώρηση διαγράφηκε."
 msgstr[1] "{num} καταχωρήσεις διαγράφηκαν."
 
-#: journalist_app/utils.py:240
+#: journalist_app/utils.py:241
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "Μία συλλογή διαγράφηκε"
 msgstr[1] "{num} συλλογές διαγράφηκαν"
 
-#: journalist_app/utils.py:278
+#: journalist_app/utils.py:279
 #, fuzzy
 msgid "You submitted a bad password! Password not changed."
 msgstr "Ο κωδικός που καταχωρήσατε δεν είναι καλός! Ο κωδικός δεν άλλαξε."
 
-#: journalist_app/utils.py:285
+#: journalist_app/utils.py:286
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -206,7 +206,7 @@ msgstr ""
 "να μην χάσετε την πρόσβαση στον λογαριασμό σας, παρακαλώ επαναφέρετε τον "
 "κωδικό σας ξανά."
 
-#: journalist_app/utils.py:294
+#: journalist_app/utils.py:295
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -214,7 +214,7 @@ msgstr ""
 "Ο κωδικός ανανεώθηκε. Μη ξεχάσετε να τον αποθηκεύσετε στη βάση δεδομένων του "
 "KeePassX σας. Νέος κωδικός:"
 
-#: journalist_app/utils.py:311
+#: journalist_app/utils.py:312
 msgid "No unread submissions in selected collections."
 msgstr "Δεν υπάρχουν μη αναγνωσμένες καταχωρήσεις στις επιλεγμένες συλλογές."
 
@@ -443,8 +443,8 @@ msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
 msgstr ""
-"Με την υποστήριξη του <br> <img src=\"/static/i/securedrop_small.png\" alt=\""
-"SecureDrop\">"
+"Με την υποστήριξη του <br> <img src=\"/static/i/securedrop_small.png\" alt="
+"\"SecureDrop\">"
 
 #: journalist_templates/base.html:56
 msgid "Powered by <em>SecureDrop {version}</em>."
@@ -493,13 +493,25 @@ msgstr "Λήψη επιλεγμένων"
 msgid "Delete Selected"
 msgstr "Διαγραφή επιλεγμένων"
 
+#: journalist_templates/col.html:38 journalist_templates/col.html:58
+#: journalist_templates/col.html:91
+msgid "Reply"
+msgstr "Απάντηση"
+
+#: journalist_templates/col.html:41 journalist_templates/col.html:48
+msgid "Read"
+msgstr ""
+
+#: journalist_templates/col.html:45
+#, fuzzy
+#| msgid "1 unread"
+#| msgid_plural "{num_unread} unread"
+msgid "Unread"
+msgstr "1 μη αναγνωσμένο"
+
 #: journalist_templates/col.html:56
 msgid "Uploaded Document"
 msgstr "Ανεβασμένο έγγραφο"
-
-#: journalist_templates/col.html:58 journalist_templates/col.html:91
-msgid "Reply"
-msgstr "Απάντηση"
 
 #: journalist_templates/col.html:60
 msgid "Message"
@@ -607,10 +619,11 @@ msgid ""
 msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
-msgstr[0] "Το ακόλουθο αρχείο έχει επιλεχθεί για <strong>μόνιμη διαγραφή</strong>:"
+msgstr[0] ""
+"Το ακόλουθο αρχείο έχει επιλεχθεί για <strong>μόνιμη διαγραφή</strong>:"
 msgstr[1] ""
-"Τα ακόλουθα {files} αρχεία έχουν επιλεχθεί για <strong>μόνιμη "
-"διαγραφή</strong>:"
+"Τα ακόλουθα {files} αρχεία έχουν επιλεχθεί για <strong>μόνιμη διαγραφή</"
+"strong>:"
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
@@ -825,12 +838,13 @@ msgid ""
 "\"{url}\">Why is this dangerous?</a>"
 msgstr ""
 "<strong>ΠΡΟΣΟΧΗ:&nbsp;</strong> Φαίνεται πως χρησιμοποιείτε την υπηρεσία "
-"Tor2Web. Αυτή <strong>&nbsp;δεν&nbsp;</strong> παρέχει ανωνυμία. <a href=\""
-"{url}\">Γιατί είναι επικίνδυνο αυτό;</a>"
+"Tor2Web. Αυτή <strong>&nbsp;δεν&nbsp;</strong> παρέχει ανωνυμία. <a href="
+"\"{url}\">Γιατί είναι επικίνδυνο αυτό;</a>"
 
 #: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
-msgstr "Το πεδίο πρέπει να περιέχει μεταξύ 1 και {max_codename_len} χαρακτήρες."
+msgstr ""
+"Το πεδίο πρέπει να περιέχει μεταξύ 1 και {max_codename_len} χαρακτήρες."
 
 #: source_app/forms.py:18
 msgid "Invalid input."
@@ -956,12 +970,12 @@ msgid ""
 " questions or are interested in additional information. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"Επειδή δεν παρακολουθούμε τους χρήστες της υπηρεσίας "
-"<strong>SecureDrop</strong> μας, σε μελλοντικές επισκέψεις σας, ο μοναδικός "
-"τρόπος για να επικοινωνήσουμε μαζί σας αν έχουμε απορίες ή ενδιαφερόμαστε "
-"για περισσότερες πληροφορίες είναι χρησιμοποιώντας αυτό το κωδικό όνομα. Σε "
-"αντίθεση με τους κωδικούς, δεν υπάρχει τρόπος να ανακτήσετε το κωδικό όνομα "
-"αν το χάσετε ή το ξεχάσετε."
+"Επειδή δεν παρακολουθούμε τους χρήστες της υπηρεσίας <strong>SecureDrop</"
+"strong> μας, σε μελλοντικές επισκέψεις σας, ο μοναδικός τρόπος για να "
+"επικοινωνήσουμε μαζί σας αν έχουμε απορίες ή ενδιαφερόμαστε για περισσότερες "
+"πληροφορίες είναι χρησιμοποιώντας αυτό το κωδικό όνομα. Σε αντίθεση με τους "
+"κωδικούς, δεν υπάρχει τρόπος να ανακτήσετε το κωδικό όνομα αν το χάσετε ή το "
+"ξεχάσετε."
 
 #: source_templates/generate.html:44 source_templates/index.html:66
 msgid "SUBMIT DOCUMENTS"
@@ -974,8 +988,8 @@ msgid ""
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
 "<strong>Προτείνεται να μετακινήσετε τον \"Μοχλό ασφαλείας\" στο \"Το πιο "
-"ασφαλές\" για να προστατεύσετε την ανωνυμία σας:</strong> <a id=\"disable-"
-"js\" href=\"\">Μάθετε πως να το ρυθμίσετε στο \"Το πιο ασφαλές\"</a>, ή "
+"ασφαλές\" για να προστατεύσετε την ανωνυμία σας:</strong> <a id=\"disable-js"
+"\" href=\"\">Μάθετε πως να το ρυθμίσετε στο \"Το πιο ασφαλές\"</a>, ή "
 "αγνοήστε αυτή την προειδοποίηση για να συνεχίσετε."
 
 #: source_templates/index.html:18
@@ -985,9 +999,9 @@ msgid ""
 "install it</a>, or ignore this warning to continue."
 msgstr ""
 "<strong>Προτείνεται να χρησιμοποιείτε τον Tor Browser για να επισκέπτεστε το "
-"SecureDrop:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">"
-"Μάθετε πως να το εγκαταστήσετε</a>, ή αγνοήστε αυτή την προειδοποίηση για να "
-"συνεχίσετε."
+"SecureDrop:</strong> <a id=\"recommend-tor\" href="
+"\"{tor_browser_url}\">Μάθετε πως να το εγκαταστήσετε</a>, ή αγνοήστε αυτή "
+"την προειδοποίηση για να συνεχίσετε."
 
 #: source_templates/index.html:19
 msgid ""
@@ -999,8 +1013,8 @@ msgid ""
 msgstr ""
 "<strong>Προτείνεται να χρησιμοποιήσετε την έκδοση για υπολογιστή του Tor "
 "browser για να επισκεφτείτε το SecureDrop, καθώς το Orfox δεν παρέχει το "
-"ίδιο επίπεδο ασφάλειας και ανωνυμίας με τις εκδόσεις για υπολογιστή.</strong>"
-" <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Μάθετε πώς να το "
+"ίδιο επίπεδο ασφάλειας και ανωνυμίας με τις εκδόσεις για υπολογιστή.</"
+"strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Μάθετε πώς να το "
 "εγκαταστήσετε</a>, ή αγνοήστε αυτή την προειδοποίηση για να συνεχίσετε."
 
 #: source_templates/index.html:42
@@ -1034,8 +1048,8 @@ msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
 msgstr ""
-"Φαίνεται πως χρησιμοποιείτε τον Tor Browser. Μπορείτε να μετακινήσετε τον \""
-"Επιλογέα ασφαλείας\" στο \"Το πιο ασφαλές\" σε τέσσερα βήματα."
+"Φαίνεται πως χρησιμοποιείτε τον Tor Browser. Μπορείτε να μετακινήσετε τον "
+"\"Επιλογέα ασφαλείας\" στο \"Το πιο ασφαλές\" σε τέσσερα βήματα."
 
 #: source_templates/index.html:98
 msgid ""
@@ -1247,8 +1261,8 @@ msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor browser</a> instead."
 msgstr ""
-"<strong>Προτείνουμε ανεπιφύλακτα</strong> να χρησιμοποιήσετε τον <a href=\""
-"www.torproject.org/projects/torbrowser.html\">Tor Browser</a> καλύτερα."
+"<strong>Προτείνουμε ανεπιφύλακτα</strong> να χρησιμοποιήσετε τον <a href="
+"\"www.torproject.org/projects/torbrowser.html\">Tor Browser</a> καλύτερα."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
@@ -1258,8 +1272,8 @@ msgstr "Καλό θα ήταν να χρησιμοποιήσετε τον Tor Br
 msgid ""
 "If you are not using Tor Browser, you <strong>may not be anonymous</strong>."
 msgstr ""
-"Αν δεν χρησιμοποιείτε τον Tor Browser, ίσως να <strong>μην είστε "
-"ανώνυμοι</strong>."
+"Αν δεν χρησιμοποιείτε τον Tor Browser, ίσως να <strong>μην είστε ανώνυμοι</"
+"strong>."
 
 #: source_templates/use-tor-browser.html:5
 msgid ""
@@ -1376,8 +1390,8 @@ msgid ""
 "code>)"
 msgstr ""
 "Ανεβάστε την κρυπτογραφημένη υποβολή σας. Αυτή θα έχει το ίδιο όνομα αρχείου "
-"με το μη κρυπτογραφημένο αρχείο, με κατάληξη .gpg (π.χ. "
-"<code>roswell_photos.pdf.gpg</code>)"
+"με το μη κρυπτογραφημένο αρχείο, με κατάληξη .gpg (π.χ. <code>roswell_photos."
+"pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:23
 msgid ""

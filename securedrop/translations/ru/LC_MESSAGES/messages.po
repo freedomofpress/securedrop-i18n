@@ -115,8 +115,8 @@ msgstr "Файл обязателен."
 msgid "You can only upload PNG image files."
 msgstr "Вы можете загружать изображения только в формате PNG."
 
-#: journalist_app/main.py:117 journalist_app/utils.py:47
-#: journalist_app/utils.py:137
+#: journalist_app/main.py:117 journalist_app/utils.py:48
+#: journalist_app/utils.py:138
 msgid "An unexpected error occurred! Please inform your administrator."
 msgstr "Произошла непредвиденная ошибка! Сообщите об этом администратору."
 
@@ -128,7 +128,7 @@ msgstr "Спасибо. Ваш ответ сохранен."
 msgid "No collections selected for download."
 msgstr "Коллекции для скачивания не выбраны."
 
-#: journalist_app/main.py:152 journalist_app/utils.py:235
+#: journalist_app/main.py:152 journalist_app/utils.py:236
 msgid "No collections selected for deletion."
 msgstr "Не выбраны коллекции для удаления."
 
@@ -140,15 +140,15 @@ msgstr "Источник '{original_name}' был переименован в '{
 msgid "No unread submissions for this source."
 msgstr "Нет непрочитанных материалов для этого источника."
 
-#: journalist_app/utils.py:54
+#: journalist_app/utils.py:55
 msgid "Account updated."
 msgstr "Аккаунт обновлен."
 
-#: journalist_app/utils.py:85
+#: journalist_app/utils.py:86
 msgid "Login failed."
 msgstr "Авторизация не удалась."
 
-#: journalist_app/utils.py:93
+#: journalist_app/utils.py:94
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] ""
@@ -161,7 +161,7 @@ msgstr[2] ""
 "Подождите минимум {seconds} секунд перед тем как попробовать снова войти в "
 "систему."
 
-#: journalist_app/utils.py:104
+#: journalist_app/utils.py:105
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
@@ -169,34 +169,34 @@ msgstr ""
 "Пожалуйста, дождитесь нового кода двухэтапной аутентификации от вашего "
 "токена или приложения, прежде чем повторить попытку."
 
-#: journalist_app/utils.py:125
+#: journalist_app/utils.py:126
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Недопустимый формат: пожалуйста, используйте только буквы от A-F и цифры 0-9."
 
-#: journalist_app/utils.py:131
+#: journalist_app/utils.py:132
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "Неверный формат: количество символов нечетное. Вы ошиблись?"
 
-#: journalist_app/utils.py:187
+#: journalist_app/utils.py:188
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Материал удален."
 msgstr[1] "{num} материала удалены."
 msgstr[2] "{num} материалов удалены."
 
-#: journalist_app/utils.py:240
+#: journalist_app/utils.py:241
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} коллекция удалена"
 msgstr[1] "{num} коллекции удалены"
 msgstr[2] "{num} коллекций удалено"
 
-#: journalist_app/utils.py:278
+#: journalist_app/utils.py:279
 msgid "You submitted a bad password! Password not changed."
 msgstr "Вы ввели неверный пароль! Пароль не был изменен."
 
-#: journalist_app/utils.py:285
+#: journalist_app/utils.py:286
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -205,7 +205,7 @@ msgstr ""
 "Произошла ошибка, новый пароль мог быть сохранен неправильно. Чтобы не "
 "потерять доступ к аккаунту вам нужно снова сбросить пароль.."
 
-#: journalist_app/utils.py:294
+#: journalist_app/utils.py:295
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -213,7 +213,7 @@ msgstr ""
 "Пароль обновлен. Не забудьте сохранить его в базе данных KeePassX. Новый "
 "пароль:"
 
-#: journalist_app/utils.py:311
+#: journalist_app/utils.py:312
 msgid "No unread submissions in selected collections."
 msgstr "Нет непрочитанных материалов в выбранных коллекциях."
 
@@ -491,13 +491,25 @@ msgstr "Загрузить выбранное"
 msgid "Delete Selected"
 msgstr "Удалить выбранное"
 
+#: journalist_templates/col.html:38 journalist_templates/col.html:58
+#: journalist_templates/col.html:91
+msgid "Reply"
+msgstr "Ответить"
+
+#: journalist_templates/col.html:41 journalist_templates/col.html:48
+msgid "Read"
+msgstr ""
+
+#: journalist_templates/col.html:45
+#, fuzzy
+#| msgid "1 unread"
+#| msgid_plural "{num_unread} unread"
+msgid "Unread"
+msgstr "1 непрочитанный материал"
+
 #: journalist_templates/col.html:56
 msgid "Uploaded Document"
 msgstr "Загруженный документ"
-
-#: journalist_templates/col.html:58 journalist_templates/col.html:91
-msgid "Reply"
-msgstr "Ответить"
 
 #: journalist_templates/col.html:60
 msgid "Message"

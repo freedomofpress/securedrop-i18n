@@ -108,8 +108,8 @@ msgstr "ファイルが必要です。"
 msgid "You can only upload PNG image files."
 msgstr ""
 
-#: journalist_app/main.py:117 journalist_app/utils.py:47
-#: journalist_app/utils.py:137
+#: journalist_app/main.py:117 journalist_app/utils.py:48
+#: journalist_app/utils.py:138
 msgid "An unexpected error occurred! Please inform your administrator."
 msgstr "予期しないエラーが発生しました！管理者にご連絡ください。"
 
@@ -121,7 +121,7 @@ msgstr ""
 msgid "No collections selected for download."
 msgstr ""
 
-#: journalist_app/main.py:152 journalist_app/utils.py:235
+#: journalist_app/main.py:152 journalist_app/utils.py:236
 msgid "No collections selected for deletion."
 msgstr ""
 
@@ -133,61 +133,61 @@ msgstr ""
 msgid "No unread submissions for this source."
 msgstr ""
 
-#: journalist_app/utils.py:54
+#: journalist_app/utils.py:55
 msgid "Account updated."
 msgstr "アカウント更新した。"
 
-#: journalist_app/utils.py:85
+#: journalist_app/utils.py:86
 msgid "Login failed."
 msgstr "ログインに失敗しました。"
 
-#: journalist_app/utils.py:93
+#: journalist_app/utils.py:94
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] ""
 
-#: journalist_app/utils.py:104
+#: journalist_app/utils.py:105
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
 msgstr ""
 
-#: journalist_app/utils.py:125
+#: journalist_app/utils.py:126
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 
-#: journalist_app/utils.py:131
+#: journalist_app/utils.py:132
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 
-#: journalist_app/utils.py:187
+#: journalist_app/utils.py:188
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] ""
 
-#: journalist_app/utils.py:240
+#: journalist_app/utils.py:241
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] ""
 
-#: journalist_app/utils.py:278
+#: journalist_app/utils.py:279
 msgid "You submitted a bad password! Password not changed."
 msgstr ""
 
-#: journalist_app/utils.py:285
+#: journalist_app/utils.py:286
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
 "should reset your password again."
 msgstr ""
 
-#: journalist_app/utils.py:294
+#: journalist_app/utils.py:295
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
 msgstr ""
 
-#: journalist_app/utils.py:311
+#: journalist_app/utils.py:312
 msgid "No unread submissions in selected collections."
 msgstr ""
 
@@ -437,12 +437,24 @@ msgstr ""
 msgid "Delete Selected"
 msgstr ""
 
-#: journalist_templates/col.html:56
-msgid "Uploaded Document"
+#: journalist_templates/col.html:38 journalist_templates/col.html:58
+#: journalist_templates/col.html:91
+msgid "Reply"
 msgstr ""
 
-#: journalist_templates/col.html:58 journalist_templates/col.html:91
-msgid "Reply"
+#: journalist_templates/col.html:41 journalist_templates/col.html:48
+msgid "Read"
+msgstr ""
+
+#: journalist_templates/col.html:45
+#, fuzzy
+#| msgid "1 unread"
+#| msgid_plural "{num_unread} unread"
+msgid "Unread"
+msgstr "{num_unread} 未読"
+
+#: journalist_templates/col.html:56
+msgid "Uploaded Document"
 msgstr ""
 
 #: journalist_templates/col.html:60
