@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-08-28 14:00+0000\n"
+"PO-Revision-Date: 2018-09-04 19:23+0000\n"
 "Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
 "Language-Team: German <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/de/>\n"
@@ -499,7 +499,7 @@ msgstr "Antworten"
 
 #: journalist_templates/col.html:41 journalist_templates/col.html:48
 msgid "Read"
-msgstr "Lesen"
+msgstr "Gelesen"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
