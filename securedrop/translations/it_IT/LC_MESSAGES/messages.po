@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2018-08-29 08:03+0000\n"
-"Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
+"Last-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\n"
 "Language-Team: Italian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/it/>\n"
 "Language: it_IT\n"
@@ -501,7 +501,7 @@ msgstr "Rispondi"
 
 #: journalist_templates/col.html:41 journalist_templates/col.html:48
 msgid "Read"
-msgstr ""
+msgstr "Letto"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
