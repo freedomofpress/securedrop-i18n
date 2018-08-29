@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2018-08-29 19:47+0000\n"
-"Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
+"Last-Translator: Andrey <andrey@mailbox.org>\n"
 "Language-Team: Russian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ru/>\n"
 "Language: ru\n"
@@ -498,11 +498,11 @@ msgstr "Ответить"
 
 #: journalist_templates/col.html:41 journalist_templates/col.html:48
 msgid "Read"
-msgstr ""
+msgstr "Прочитано"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
-msgstr "Непрочитанный материал"
+msgstr "Не прочитано"
 
 #: journalist_templates/col.html:56
 msgid "Uploaded Document"
