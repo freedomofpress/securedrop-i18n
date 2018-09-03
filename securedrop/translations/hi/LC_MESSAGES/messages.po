@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-06-26 15:10+0000\n"
+"PO-Revision-Date: 2018-09-03 17:28+0000\n"
 "Last-Translator: Drashti <drashtipandya37@gmail.com>\n"
 "Language-Team: Hindi <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/hi/>\n"
@@ -474,14 +474,11 @@ msgstr "जवाब दें"
 
 #: journalist_templates/col.html:41 journalist_templates/col.html:48
 msgid "Read"
-msgstr ""
+msgstr "વાંચો"
 
 #: journalist_templates/col.html:45
-#, fuzzy
-#| msgid "1 unread"
-#| msgid_plural "{num_unread} unread"
 msgid "Unread"
-msgstr "एक बिना पढ़ा"
+msgstr "अपठित"
 
 #: journalist_templates/col.html:56
 msgid "Uploaded Document"
