@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-09-03 17:48+0000\n"
+"PO-Revision-Date: 2018-09-04 19:23+0000\n"
 "Last-Translator: Adrian <pappasadrian@gmail.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/el/>\n"
@@ -498,12 +498,10 @@ msgid "Reply"
 msgstr "Απάντηση"
 
 #: journalist_templates/col.html:41 journalist_templates/col.html:48
-#, fuzzy
 msgid "Read"
-msgstr "Αναγνωσμένα"
+msgstr "Αναγνωσμένο"
 
 #: journalist_templates/col.html:45
-#, fuzzy
 msgid "Unread"
 msgstr "Μη αναγνωσμένο"
 
