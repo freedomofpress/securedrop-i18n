@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-06-24 02:09+0000\n"
+"PO-Revision-Date: 2018-09-04 00:08+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.securedrop.club/"
 "projects/securedrop/securedrop/zh_Hant/>\n"
@@ -454,14 +454,14 @@ msgstr "回覆"
 
 #: journalist_templates/col.html:41 journalist_templates/col.html:48
 msgid "Read"
-msgstr ""
+msgstr "讀取"
 
 #: journalist_templates/col.html:45
 #, fuzzy
 #| msgid "1 unread"
 #| msgid_plural "{num_unread} unread"
 msgid "Unread"
-msgstr "{num_unread} 未讀"
+msgstr "未讀"
 
 #: journalist_templates/col.html:56
 msgid "Uploaded Document"
