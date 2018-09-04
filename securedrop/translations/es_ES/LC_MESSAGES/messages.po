@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-09-04 02:01+0000\n"
+"PO-Revision-Date: 2018-09-04 02:25+0000\n"
 "Last-Translator: Pablo Di Noto <pdinoto@gmail.com>\n"
 "Language-Team: Spanish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/es/>\n"
@@ -517,7 +517,7 @@ msgstr "Mensaje"
 #: journalist_templates/col.html:70 journalist_templates/col.html:128
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
-msgstr "Eliminar Confirmación"
+msgstr "Confirmar la eliminación"
 
 #: journalist_templates/col.html:71
 msgid "Are you sure you want to delete the selected documents?"
@@ -566,7 +566,7 @@ msgstr ""
 
 #: journalist_templates/col.html:121
 msgid "DELETE SOURCE AND SUBMISSIONS"
-msgstr "BORRAR FUENTE Y ENVIOS"
+msgstr "ELIMINAR FUENTE Y ENVIOS"
 
 #: journalist_templates/col.html:129
 msgid "Are you sure you want to delete this collection?"
@@ -583,7 +583,7 @@ msgstr "Alertas"
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr ""
-"Envíe un correo encriptado para verificar si las alertas OSSEC funcionan "
+"Envíe un correo cifrado para verificar si las alertas OSSEC funcionan "
 "correctamente:"
 
 #: journalist_templates/config.html:15
@@ -733,15 +733,15 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:90
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
-msgstr "RESTABLECER LA AUTENTICATION DE DOS FACTORES (APP)"
+msgstr "RESTABLECER LA AUTENTICACIÓN DE DOS FACTORES (APP)"
 
 #: journalist_templates/edit_account.html:92
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
-msgstr "RESTABLECER LA AUTENTICATION DE DOS FACTORES (TOKEN DE HARDWARE)"
+msgstr "RESTABLECER LA AUTENTICACIÓN DE DOS FACTORES (TOKEN DE HARDWARE)"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
-msgstr "Gracias!"
+msgstr "¡Gracias!"
 
 #: journalist_templates/flag.html:8
 msgid ""
@@ -773,11 +773,11 @@ msgstr "Descargar"
 
 #: journalist_templates/index.html:13
 msgid "Star"
-msgstr "Estrella"
+msgstr "Marcar"
 
 #: journalist_templates/index.html:14
 msgid "Un-star"
-msgstr "Sin-estrella"
+msgstr "Desmarcar"
 
 #: journalist_templates/index.html:47
 msgid "Are you sure you want to delete the selected collections?"
@@ -797,11 +797,11 @@ msgstr "Selecionar Todos"
 
 #: journalist_templates/js-strings.html:5
 msgid "Select Unread"
-msgstr "Seleccionar Sin Leer"
+msgstr "Seleccionar No Leídos"
 
 #: journalist_templates/js-strings.html:6
 msgid "Select None"
-msgstr "Seleccionar Nada"
+msgstr "Seleccionar Ninguno"
 
 #: journalist_templates/js-strings.html:7
 msgid "Are you sure you want to delete the user {username}?"
@@ -824,7 +824,7 @@ msgstr "Contraseña"
 
 #: journalist_templates/login.html:12
 msgid "LOG IN"
-msgstr "INICIAR SESION"
+msgstr "INICIAR SESIÓN"
 
 #: source_app/__init__.py:115
 msgid ""
@@ -832,14 +832,13 @@ msgid ""
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href="
 "\"{url}\">Why is this dangerous?</a>"
 msgstr ""
-"<strong> ADVERTENCIA:&nbsp; </strong> Usted parece estar usando Tor2Web. "
-"Esto <strong>&nbsp; no &nbsp;</strong> proporciona anonimato. <a href="
-"\"{url}\"> ¿Por qué esto es peligroso? </a>"
+"<strong>ADVERTENCIA:&nbsp;</strong> Usted parece estar usando Tor2Web. Esto "
+"<strong>&nbsp; no &nbsp;</strong> proporciona anonimato. <a href=\"{url}\"> ¿"
+"Por qué esto es peligroso? </a>"
 
 #: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
-msgstr ""
-"Esta area debe estar entre 1 y {max_codename_len} caracteres de longitud."
+msgstr "Esta campo debe tener de 1 a {max_codename_len} caracteres de longitud."
 
 #: source_app/forms.py:18
 msgid "Invalid input."
@@ -859,15 +858,15 @@ msgstr "Debe escribir un mensaje o elegir un archivo para enviar."
 
 #: source_app/main.py:164
 msgid "Thanks! We received your message."
-msgstr "Gracias! Recibimos su mensaje."
+msgstr "¡Gracias! Recibimos su mensaje."
 
 #: source_app/main.py:166
 msgid "Thanks! We received your document."
-msgstr "Gracias! Recibimos su documento."
+msgstr "¡Gracias! Recibimos su documento."
 
 #: source_app/main.py:168
 msgid "Thanks! We received your message and document."
-msgstr "Gracias! Recibimos su mensaje y documento."
+msgstr "¡Gracias! Recibimos su mensaje y documento."
 
 #: source_app/main.py:220
 msgid "Reply deleted"
@@ -892,7 +891,7 @@ msgstr "Con tecnología de"
 
 #: source_templates/base.html:34
 msgid "LOG OUT"
-msgstr "CERRAR SESSION"
+msgstr "CERRAR SESIÓN"
 
 #: source_templates/base.html:47 source_templates/index.html:88
 msgid ""
@@ -962,10 +961,10 @@ msgid ""
 " questions or are interested in additional information. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"Porque no rastreamos a los usuarios de nuestro servicio de "
+"Debido a que no rastreamos a los usuarios de nuestro servicio "
 "<strong>SecureDrop</strong>\n"
-"en futuras visitas, utilizando este nombre clave es la única manera que "
-"tenemos de comunicarnos con usted, si tenemos\n"
+"este nombre clave es la única manera que tenemos de comunicarnos con usted "
+"en futuras visitas si tenemos\n"
 "preguntas o estamos interesados en información adicional. A diferencia de "
 "las contraseñas, no hay forma de recuperar un nombre clave perdido."
 
@@ -980,8 +979,8 @@ msgid ""
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
 "<strong> Se recomienda mover el control deslizante de seguridad a lo mas "
-"seguro para proteger su anonimato:</strong> <a id=\"disable-js\" href="
-"\"\">Aprenda cómo establecerlo a lo mas seguro</a>, o ignore esta "
+"seguro para proteger su anonimato:</strong> <a id=\"disable-js\" href=\"\">"
+"Aprenda cómo establecerlo en el modo más seguro</a>, o ignore esta "
 "advertencia para continuar."
 
 #: source_templates/index.html:18
@@ -990,10 +989,9 @@ msgid ""
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Se recomienda que use el navegador Tor Browser para el accesso de "
-"SecureDrop: </strong><a id=\"recommend-tor\" href="
-"\"{tor_browser_url}\">Aprenda a como instalarlo </a>, o ignore esta "
-"advertencia para continuar."
+"<strong>Se recomienda que use el navegador Tor Browser para el acceder a "
+"SecureDrop: </strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">"
+"Aprenda a como instalarlo </a>, o ignore esta advertencia para continuar."
 
 #: source_templates/index.html:19
 msgid ""
@@ -1031,7 +1029,7 @@ msgstr ""
 
 #: source_templates/index.html:74
 msgid "CHECK FOR A RESPONSE"
-msgstr "VERIFICAR UNA RESPUESTA"
+msgstr "VERIFICAR SI HAY RESPUESTAS"
 
 #: source_templates/index.html:96
 msgid ""
@@ -1050,7 +1048,7 @@ msgstr ""
 
 #: source_templates/index.html:99
 msgid "Click <strong>Security Settings...</strong>"
-msgstr "Haga clic<strong>Configuración de Seguridad ...</strong>"
+msgstr "Haga clic <strong>Configuración de Seguridad ...</strong>"
 
 #: source_templates/index.html:100
 msgid ""
