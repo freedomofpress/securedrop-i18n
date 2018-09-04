@@ -457,9 +457,6 @@ msgid "Read"
 msgstr "讀取"
 
 #: journalist_templates/col.html:45
-#, fuzzy
-#| msgid "1 unread"
-#| msgid_plural "{num_unread} unread"
 msgid "Unread"
 msgstr "未讀"
 
