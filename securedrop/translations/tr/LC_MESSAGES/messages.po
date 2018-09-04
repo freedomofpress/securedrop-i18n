@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-08-30 21:18+0000\n"
-"Last-Translator: tekrei <tekrei@gmail.com>\n"
+"PO-Revision-Date: 2018-09-04 19:23+0000\n"
+"Last-Translator: erinm <erinm@benespace.org>\n"
 "Language-Team: Turkish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/tr/>\n"
 "Language: tr\n"
@@ -487,11 +487,11 @@ msgstr "Yanıtla"
 
 #: journalist_templates/col.html:41 journalist_templates/col.html:48
 msgid "Read"
-msgstr "Oku"
+msgstr "Okunmuş"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
-msgstr "1 Okunmamış"
+msgstr "Okunmamış"
 
 #: journalist_templates/col.html:56
 msgid "Uploaded Document"
