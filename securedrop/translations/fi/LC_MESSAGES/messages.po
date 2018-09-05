@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-09-04 19:23+0000\n"
+"PO-Revision-Date: 2018-09-07 20:32+0000\n"
 "Last-Translator: Thomas <localizationlab@thomascovenant.org>\n"
 "Language-Team: Finnish <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/fi/>\n"
@@ -104,7 +104,7 @@ msgstr ""
 
 #: journalist_app/forms.py:35 source_app/forms.py:11
 msgid "This field is required."
-msgstr "Tämän kentän on oltava täytetty."
+msgstr "Pakollinen kenttä."
 
 #: journalist_app/forms.py:52
 msgid "You cannot send an empty reply."
@@ -121,7 +121,7 @@ msgstr ""
 #: journalist_app/main.py:117 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
 msgid "An unexpected error occurred! Please inform your administrator."
-msgstr "Odottamaton virhe sattui! Ilmoittakaa tästä ylläpitäjällenne."
+msgstr "Odottamaton virhe! Ilmoittakaa tästä ylläpitäjällenne."
 
 #: journalist_app/main.py:128
 msgid "Thanks. Your reply has been stored."
