@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.9.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-09-08 11:30+0000\n"
+"PO-Revision-Date: 2018-09-09 13:23+0000\n"
 "Last-Translator: Aiiida <leonaviciute.aida@gmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/lt/>\n"
@@ -30,16 +30,19 @@ msgid "You have been logged out due to inactivity"
 msgstr ""
 
 #: journalist_app/account.py:26
+#, fuzzy
 msgid "Incorrect password or two-factor code."
-msgstr ""
+msgstr "Neteisingas slaptažodis arba dviejų dalių autentifikavimo kodas."
 
 #: journalist_app/account.py:42
+#, fuzzy
 msgid "Token in two-factor authentication verified."
-msgstr ""
+msgstr "Dviejų dalių autentifikavimo simbolis patikrtintas."
 
 #: journalist_app/account.py:46 journalist_app/admin.py:116
+#, fuzzy
 msgid "Could not verify token in two-factor authentication."
-msgstr ""
+msgstr "Dviejų dalių autentifikavimo simbolio patvirtinimas nesėkmingas."
 
 #: journalist_app/admin.py:38
 #, fuzzy
@@ -328,18 +331,19 @@ msgstr "Paspauskite ant QR kodo viršuje"
 msgid ""
 "Your phone will now be in \"scanning\" mode. When you are in this mode, "
 "scan the barcode below:"
-msgstr ""
-"Jūsų telefonas dabar įjungs \"skanavimo\" režimą. Nuskanuokite šį barkodą:"
+msgstr "Jūsų telefonas dabar įjungs nuskaitymo režimą. Nuskaitykite šį barkodą:"
 
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
+#, fuzzy
 msgid "Can't scan the barcode? Enter the following code manually:"
-msgstr ""
+msgstr "Nepavyko nuskaityti barkodo? Įveskite šį kodą:"
 
 #: journalist_templates/account_new_two_factor.html:15
 #: journalist_templates/admin_new_user_two_factor.html:18
+#, fuzzy
 msgid "Once you have scanned the barcode, enter the 6-digit code below:"
-msgstr ""
+msgstr "Nuskaitę barkodą, įveskite žemiau esantį 6 skaitmenų kodą:"
 
 #: journalist_templates/account_new_two_factor.html:17
 #: journalist_templates/admin_new_user_two_factor.html:20
@@ -348,81 +352,100 @@ msgstr ""
 
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:21
+#, fuzzy
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr ""
+"Kai sukonfigūruosite savo YubiKey, įveskite žemiau esantį šešių skaitmenų "
+"kodą:"
 
 #: journalist_templates/account_new_two_factor.html:22
 #: journalist_templates/admin_new_user_two_factor.html:25
+#, fuzzy
 msgid "Verification code"
-msgstr ""
+msgstr "Patvirtinimo kodas"
 
 #: journalist_templates/account_new_two_factor.html:24
 #: journalist_templates/admin_new_user_two_factor.html:27
 #: journalist_templates/col.html:99 source_templates/lookup.html:45
+#, fuzzy
 msgid "SUBMIT"
-msgstr ""
+msgstr "PATEIKTI"
 
 #: journalist_templates/admin.html:3
+#, fuzzy
 msgid "Admin Interface"
-msgstr ""
+msgstr "Administratoriaus aplika"
 
 #: journalist_templates/admin.html:6
 #: journalist_templates/admin_add_user.html:39
+#, fuzzy
 msgid "ADD USER"
-msgstr ""
+msgstr "PRIDĖTI VARTOTOJĄ"
 
 #: journalist_templates/admin.html:16
 #: journalist_templates/admin_add_user.html:14
 #: journalist_templates/login.html:8
+#, fuzzy
 msgid "Username"
-msgstr ""
+msgstr "Vartotojo vardas"
 
 #: journalist_templates/admin.html:17
+#, fuzzy
 msgid "Edit"
-msgstr ""
+msgstr "Redaguoti"
 
 #: journalist_templates/admin.html:18 journalist_templates/col.html:75
 #: journalist_templates/col.html:133 journalist_templates/index.html:16
 #: journalist_templates/index.html:51
+#, fuzzy
 msgid "Delete"
-msgstr ""
+msgstr "Ištrinti"
 
 #: journalist_templates/admin.html:19
+#, fuzzy
 msgid "Created"
-msgstr ""
+msgstr "Sukurta"
 
 #: journalist_templates/admin.html:20
+#, fuzzy
 msgid "Last login"
-msgstr ""
+msgstr "Paskutinis prisijungimas"
 
 #: journalist_templates/admin.html:25
+#, fuzzy
 msgid "Edit user {username}"
-msgstr ""
+msgstr "Redaguoti {username}"
 
 #: journalist_templates/admin.html:29
+#, fuzzy
 msgid "Delete user {username}"
-msgstr ""
+msgstr "Ištrinti vartotoją {username}"
 
 #: journalist_templates/admin.html:35
+#, fuzzy
 msgid "never"
-msgstr ""
+msgstr "niekada"
 
 #: journalist_templates/admin.html:42
+#, fuzzy
 msgid "No users to display"
-msgstr ""
+msgstr "Nėra vartotojų"
 
 #: journalist_templates/admin.html:48
+#, fuzzy
 msgid "INSTANCE CONFIG"
-msgstr ""
+msgstr "INSTANCIJOS KONFIGŪRAVIMAS"
 
 #: journalist_templates/admin_add_user.html:4
 #: journalist_templates/config.html:4 journalist_templates/edit_account.html:7
+#, fuzzy
 msgid "Back to admin interface"
-msgstr ""
+msgstr "Grįžti į administratoriaus aplinką"
 
 #: journalist_templates/admin_add_user.html:21
+#, fuzzy
 msgid "The user's password will be:"
-msgstr ""
+msgstr "Vartotojo slaptažodis bus:"
 
 #: journalist_templates/admin_add_user.html:24
 #: journalist_templates/edit_account.html:17
@@ -430,8 +453,9 @@ msgid "Is Administrator"
 msgstr ""
 
 #: journalist_templates/admin_add_user.html:32
+#, fuzzy
 msgid "Is using a YubiKey [HOTP]"
-msgstr ""
+msgstr "Ar naudoja YubiKey [HOTP]"
 
 #: journalist_templates/admin_new_user_two_factor.html:6
 msgid ""
@@ -443,16 +467,19 @@ msgid ""
 msgstr ""
 
 #: journalist_templates/base.html:24
+#, fuzzy
 msgid "Logged on as"
-msgstr ""
+msgstr "Prisijungęs kaip"
 
 #: journalist_templates/base.html:26
+#, fuzzy
 msgid "Admin"
-msgstr ""
+msgstr "Administratorius"
 
 #: journalist_templates/base.html:28
+#, fuzzy
 msgid "Log Out"
-msgstr ""
+msgstr "Atsijungti"
 
 #: journalist_templates/base.html:41
 msgid ""
@@ -465,27 +492,36 @@ msgid "Powered by <em>SecureDrop {version}</em>."
 msgstr ""
 
 #: journalist_templates/col.html:10
+#, fuzzy
 msgid "All Sources"
-msgstr ""
+msgstr "Visi šaltiniai"
 
 #: journalist_templates/col.html:13
+#, fuzzy
 msgid ""
 "Generate a new random codename for this source. We recommend doing this "
 "if the first random codename is difficult to say or remember. You can "
 "generate new random codenames as many times as you like."
 msgstr ""
+"Generuokite naują atsitiktinį kodinį pavadinimą šiam šaltiniui. "
+"Rekomenduojama, jeigu pirmą atsitiktinį kodinį pavadinimą sunku ištarti ar "
+"prisiminti. Naują kodinį pavadinimą generuoti leidžiama neribotą kartų "
+"skaičių."
 
 #: journalist_templates/col.html:13
+#, fuzzy
 msgid "Change codename"
-msgstr ""
+msgstr "Keisti kodinį pavadinimą"
 
 #: journalist_templates/col.html:14
+#, fuzzy
 msgid "Are you sure you want to generate a new codename?"
-msgstr ""
+msgstr "Ar tikrai norite sugeneruoti naują kodinį pavadinimą?"
 
 #: journalist_templates/col.html:16
+#, fuzzy
 msgid "CONFIRM"
-msgstr ""
+msgstr "PATVIRTINTI"
 
 #: journalist_templates/col.html:22
 msgid ""
@@ -1156,27 +1192,37 @@ msgid ""
 msgstr ""
 
 #: source_templates/use-tor-browser.html:3
+#, fuzzy
 msgid "You Should Use Tor Browser"
-msgstr ""
+msgstr "Naudokite Tor naršyklę"
 
 #: source_templates/use-tor-browser.html:4
+#, fuzzy
 msgid ""
 "If you are not using Tor Browser, you <strong>may not be "
 "anonymous</strong>."
 msgstr ""
+"Nenaudodami Tor naršyklės <strong>galite prarasti anonimiškumą</strong>."
 
 #: source_templates/use-tor-browser.html:5
+#, fuzzy
 msgid ""
 "If you want to submit information to SecureDrop, we <strong>strongly "
 "advise you</strong> to install Tor Browser and use it to access our site "
 "safely and anonymously."
 msgstr ""
+"Jeigu norite pateikti informaciją SecureDrop platformai, mes <strong>itin "
+"rekomenduojame</strong> įsirašyti Tor naršyklę ir pasiekti mūsų puslapį "
+"saugiai ir anonimiškai."
 
 #: source_templates/use-tor-browser.html:6
+#, fuzzy
 msgid ""
 "Copy and paste the following address into your browser and follow the "
 "instructions to download and install Tor Browser:"
 msgstr ""
+"Nukopijuokite ir įklijuokite šią nuorodą į savo naršyklę ir sekite "
+"instrukcijas Tor naršyklės atsisiuntimui ir įdiegimui:"
 
 #: source_templates/use-tor-browser.html:9
 msgid ""
@@ -1239,26 +1285,40 @@ msgid ""
 msgstr ""
 
 #: source_templates/why-journalist-key.html:17
+#, fuzzy
 msgid ""
 "On all systems, open the Terminal and use this gpg command: <code>gpg "
 "--recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 msgstr ""
+"Bet kurioje operacinėje sistemoje, atidarykite Terminalą ir naudokite šią "
+"gpg komandą: <code>gpg --recipient &lt;user ID&gt; --encrypt "
+"roswell_photos.pdf</code>"
 
 #: source_templates/why-journalist-key.html:20
+#, fuzzy
 msgid ""
 "Upload your encrypted submission. It will have the same filename as the "
 "unencrypted file, with .gpg at the end (e.g. "
 "<code>roswell_photos.pdf.gpg</code>)"
 msgstr ""
+"Įkelkite savo užšifruotą paraišką. Jos pavadinimas bus toks pat kaip "
+"neužšifruotos bylos (failo), su .gpg pavadinimo pabaigoje (pvz. "
+"<code>roswell_photos.pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:23
+#, fuzzy
 msgid ""
 "<strong>Tip:</strong> If you wish to remain anonymous, <strong>do "
 "not</strong> use GPG to sign the encrypted file (with the "
 "<code>--sign</code> or <code>-s</code> flag) as this will reveal your GPG"
 " identity to us."
 msgstr ""
+"<strong>Patarimas:</strong> Jeigu norite likti neatpažintas, "
+"<strong>nenaudokite</strong> GPG užšifruotos bylos (failo) pasirašymui (su "
+"<code>--sign</code> arba <code>-s</code> žyma) nes tai atskleis jūsų GPG "
+"tapatybę."
 
 #: source_templates/why-journalist-key.html:25
+#, fuzzy
 msgid "Back to submission page"
-msgstr ""
+msgstr "Grįžti į paraiškos puslapį"
