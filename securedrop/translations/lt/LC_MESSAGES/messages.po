@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.9.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-09-08 11:17+0000\n"
+"PO-Revision-Date: 2018-09-08 11:30+0000\n"
 "Last-Translator: Aiiida <leonaviciute.aida@gmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/lt/>\n"
@@ -119,8 +119,9 @@ msgid "You cannot send an empty reply."
 msgstr "Neleidžiama siųsti tuščio atsakymo."
 
 #: journalist_app/forms.py:60
+#, fuzzy
 msgid "File required."
-msgstr ""
+msgstr "Byla (failas) privalomas."
 
 #: journalist_app/forms.py:62
 #, fuzzy
@@ -174,6 +175,7 @@ msgstr[0] ""
 msgstr[1] ""
 "Prašome palaukti bent {seconds} sekundes prieš vėl bandydami prisijungti."
 msgstr[2] ""
+"Prašome palaukti bent {seconds} sekundžių prieš vėl bandydami prisijungti."
 
 #: journalist_app/utils.py:105
 msgid ""
@@ -250,7 +252,7 @@ msgid "1 doc"
 msgid_plural "{doc_num} docs"
 msgstr[0] "1 dokumentas"
 msgstr[1] "{doc_num} dokumentai"
-msgstr[2] ""
+msgstr[2] "{doc_num} dokumentų"
 
 #: journalist_templates/_source_row.html:24
 #, fuzzy
@@ -258,37 +260,41 @@ msgid "1 message"
 msgid_plural "{msg_num} messages"
 msgstr[0] "1 žinutė"
 msgstr[1] "{msg_num} žinutės"
-msgstr[2] ""
+msgstr[2] "{msg_num} žinučių"
 
 #: journalist_templates/_source_row.html:27
 #, fuzzy
 msgid "1 unread"
 msgid_plural "{num_unread} unread"
-msgstr[0] "neperskaityta žinutė"
-msgstr[1] "neperskaitytos žinutės"
-msgstr[2] "neperskaitytų žinučių"
+msgstr[0] "1 neperskaityta žinutė"
+msgstr[1] "{num_unread} neperskaitytos žinutės"
+msgstr[2] "{num_unread} neperskaitytų žinučių"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
+#, fuzzy
 msgid "Change Secret"
-msgstr ""
+msgstr "Keisti paslaptį"
 
 #: journalist_templates/account_edit_hotp_secret.html:7
 #: journalist_templates/admin_add_user.html:33
 #: journalist_templates/admin_edit_hotp_secret.html:8
+#, fuzzy
 msgid "HOTP Secret"
-msgstr ""
+msgstr "HOTP paslaptis"
 
 #: journalist_templates/account_edit_hotp_secret.html:9
 #: journalist_templates/admin_edit_hotp_secret.html:10
 #: source_templates/login.html:23
+#, fuzzy
 msgid "CONTINUE"
-msgstr ""
+msgstr "TĘSTI"
 
 #: journalist_templates/account_new_two_factor.html:4
 #: journalist_templates/admin_new_user_two_factor.html:5
+#, fuzzy
 msgid "Enable FreeOTP"
-msgstr ""
+msgstr "Leisti FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:5
 msgid ""
@@ -300,25 +306,30 @@ msgstr ""
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
+#, fuzzy
 msgid "Install FreeOTP on your phone"
-msgstr ""
+msgstr "Įdiekite FreeOTP savo telefone"
 
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
+#, fuzzy
 msgid "Open the FreeOTP app"
-msgstr ""
+msgstr "Atidarykite FreeOTP aplikaciją"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
+#, fuzzy
 msgid "Tap the QR code symbol at the top"
-msgstr ""
+msgstr "Paspauskite ant QR kodo viršuje"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
+#, fuzzy
 msgid ""
 "Your phone will now be in \"scanning\" mode. When you are in this mode, "
 "scan the barcode below:"
 msgstr ""
+"Jūsų telefonas dabar įjungs \"skanavimo\" režimą. Nuskanuokite šį barkodą:"
 
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
