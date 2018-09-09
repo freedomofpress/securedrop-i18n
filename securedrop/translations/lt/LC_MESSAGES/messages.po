@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.9.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-09-09 13:31+0000\n"
+"PO-Revision-Date: 2018-09-09 13:42+0000\n"
 "Last-Translator: Aiiida <leonaviciute.aida@gmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/lt/>\n"
@@ -22,8 +22,9 @@ msgstr ""
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:14
+#, fuzzy
 msgid "{time} ago"
-msgstr ""
+msgstr "Prieš {time}"
 
 #: journalist_app/__init__.py:80 journalist_app/__init__.py:119
 msgid "You have been logged out due to inactivity"
@@ -37,7 +38,7 @@ msgstr "Neteisingas slaptažodis arba dviejų dalių autentifikavimo kodas."
 #: journalist_app/account.py:42
 #, fuzzy
 msgid "Token in two-factor authentication verified."
-msgstr "Dviejų dalių autentifikavimo simbolis patvirtintas."
+msgstr "Dviejų dalių autentifikavimo generatorius patvirtintas."
 
 #: journalist_app/account.py:46 journalist_app/admin.py:116
 #, fuzzy
@@ -204,11 +205,12 @@ msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 
 #: journalist_app/utils.py:188
+#, fuzzy
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Paraiška ištrinta."
+msgstr[1] "Ištrintos {num} paraiškos."
+msgstr[2] "Ištrinta {num} paraiškų."
 
 #: journalist_app/utils.py:241
 msgid "{num} collection deleted"
@@ -354,8 +356,9 @@ msgstr "Nuskaitę barkodą, įveskite žemiau esantį 6 skaitmenų kodą:"
 
 #: journalist_templates/account_new_two_factor.html:17
 #: journalist_templates/admin_new_user_two_factor.html:20
+#, fuzzy
 msgid "Enable YubiKey (OATH-HOTP)"
-msgstr ""
+msgstr "Aktyvuoti YubiKey (OATH-HOTP)"
 
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:21
@@ -456,8 +459,9 @@ msgstr "Vartotojo slaptažodis bus:"
 
 #: journalist_templates/admin_add_user.html:24
 #: journalist_templates/edit_account.html:17
+#, fuzzy
 msgid "Is Administrator"
-msgstr ""
+msgstr "Ar administratorius"
 
 #: journalist_templates/admin_add_user.html:32
 #, fuzzy
@@ -531,31 +535,39 @@ msgid "CONFIRM"
 msgstr "PATVIRTINTI"
 
 #: journalist_templates/col.html:22
+#, fuzzy
 msgid ""
 "The documents are stored encrypted for security. To read them, you will "
 "need to decrypt them using GPG."
 msgstr ""
+"Saugomi dokumentai dėl saugumo yra užšifruoti. Norint juos perskaityti juos "
+"reikia iššifruoti naudojant GPG."
 
 #: journalist_templates/col.html:26
+#, fuzzy
 msgid "Download Selected"
-msgstr ""
+msgstr "Atsisiųsti pasirinktus"
 
 #: journalist_templates/col.html:28
+#, fuzzy
 msgid "Delete Selected"
-msgstr ""
+msgstr "Ištrinti pasirinktus"
 
 #: journalist_templates/col.html:38 journalist_templates/col.html:58
 #: journalist_templates/col.html:91
+#, fuzzy
 msgid "Reply"
-msgstr ""
+msgstr "Atsakyti"
 
 #: journalist_templates/col.html:41 journalist_templates/col.html:48
+#, fuzzy
 msgid "Read"
-msgstr ""
+msgstr "Skaityti"
 
 #: journalist_templates/col.html:45
+#, fuzzy
 msgid "Unread"
-msgstr ""
+msgstr "Neperskaityta"
 
 #: journalist_templates/col.html:56
 msgid "Uploaded Document"
