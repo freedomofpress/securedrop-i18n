@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.9.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-09-09 13:42+0000\n"
+"PO-Revision-Date: 2018-09-10 17:39+0000\n"
 "Last-Translator: Aiiida <leonaviciute.aida@gmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/lt/>\n"
@@ -88,8 +88,9 @@ msgid "Test alert sent. Please check your email."
 msgstr ""
 
 #: journalist_app/col.py:45
+#, fuzzy
 msgid "{source_name}'s collection deleted"
-msgstr ""
+msgstr "Šaltinio {source_name} medžiaga ištrinta"
 
 #: journalist_app/col.py:56
 msgid "No collections selected."
@@ -147,8 +148,9 @@ msgid "Thanks. Your reply has been stored."
 msgstr "Dėkojame. Jūsų atsakymas išsaugotas."
 
 #: journalist_app/main.py:149
+#, fuzzy
 msgid "No collections selected for download."
-msgstr ""
+msgstr "Nepasirinkta jokios medžiagos parsisiuntimui."
 
 #: journalist_app/main.py:152 journalist_app/utils.py:236
 msgid "No collections selected for deletion."
@@ -562,7 +564,7 @@ msgstr "Atsakyti"
 #: journalist_templates/col.html:41 journalist_templates/col.html:48
 #, fuzzy
 msgid "Read"
-msgstr "Skaityti"
+msgstr "Perskaityta"
 
 #: journalist_templates/col.html:45
 #, fuzzy
@@ -570,25 +572,30 @@ msgid "Unread"
 msgstr "Neperskaityta"
 
 #: journalist_templates/col.html:56
+#, fuzzy
 msgid "Uploaded Document"
-msgstr ""
+msgstr "Įkeltas dokumentas"
 
 #: journalist_templates/col.html:60
+#, fuzzy
 msgid "Message"
-msgstr ""
+msgstr "Žinutė"
 
 #: journalist_templates/col.html:70 journalist_templates/col.html:128
 #: journalist_templates/index.html:46
+#, fuzzy
 msgid "Delete Confirmation"
-msgstr ""
+msgstr "Ištrinti patvirtinimą"
 
 #: journalist_templates/col.html:71
+#, fuzzy
 msgid "Are you sure you want to delete the selected documents?"
-msgstr ""
+msgstr "Ar tikrai norite ištrinti pasirinktus dokumentus?"
 
 #: journalist_templates/col.html:86
+#, fuzzy
 msgid "No documents to display."
-msgstr ""
+msgstr "Nėra dokumentų."
 
 #: journalist_templates/col.html:93
 msgid "You can write a secure reply to the person who submitted these documents:"
