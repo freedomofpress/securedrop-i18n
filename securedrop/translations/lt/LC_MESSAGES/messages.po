@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.9.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-09-11 21:23+0000\n"
+"PO-Revision-Date: 2018-09-11 21:47+0000\n"
 "Last-Translator: Pranciškus Jansas <pranciskusjansas@gmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/lt/>\n"
@@ -698,20 +698,23 @@ msgid "Return to the list of documents for {source_name}…"
 msgstr ""
 
 #: journalist_templates/edit_account.html:6
+#, fuzzy
 msgid "Edit user \"{user}\""
-msgstr ""
+msgstr "Koreguoti vartotoją \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Username &amp; Admin Status"
 msgstr ""
 
 #: journalist_templates/edit_account.html:12
+#, fuzzy
 msgid "Change username"
-msgstr ""
+msgstr "Pakeisti vartotojo vardą"
 
 #: journalist_templates/edit_account.html:19
+#, fuzzy
 msgid "UPDATE"
-msgstr ""
+msgstr "ATNAUJINTI"
 
 #: journalist_templates/edit_account.html:22
 msgid "Edit your account"
@@ -736,8 +739,9 @@ msgid "Please enter your current password and two-factor code."
 msgstr ""
 
 #: journalist_templates/edit_account.html:40
+#, fuzzy
 msgid "Current Password"
-msgstr ""
+msgstr "Dabartinis Slaptažodis"
 
 #: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
 msgid "Two-factor Code"
@@ -791,8 +795,9 @@ msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
 msgstr ""
 
 #: journalist_templates/flag.html:5
+#, fuzzy
 msgid "Thanks!"
-msgstr ""
+msgstr "Ačiū!"
 
 #: journalist_templates/flag.html:8
 msgid ""
@@ -815,8 +820,9 @@ msgid "Download Unread"
 msgstr ""
 
 #: journalist_templates/index.html:12
+#, fuzzy
 msgid "Download"
-msgstr ""
+msgstr "Atsisiųsti"
 
 #: journalist_templates/index.html:13
 msgid "Star"
@@ -831,20 +837,24 @@ msgid "Are you sure you want to delete the selected collections?"
 msgstr ""
 
 #: journalist_templates/index.html:59
+#, fuzzy
 msgid "No documents have been submitted!"
-msgstr ""
+msgstr "Nauji dokumentai nebuvo pateikti!"
 
 #: journalist_templates/js-strings.html:3
+#, fuzzy
 msgid "filter by codename"
-msgstr ""
+msgstr "filtruoti pagal slapyvardį"
 
 #: journalist_templates/js-strings.html:4
+#, fuzzy
 msgid "Select All"
-msgstr ""
+msgstr "Pažymėti Visus"
 
 #: journalist_templates/js-strings.html:5
+#, fuzzy
 msgid "Select Unread"
-msgstr ""
+msgstr "Pažymėti Neperskaitytus"
 
 #: journalist_templates/js-strings.html:6
 msgid "Select None"
@@ -863,12 +873,14 @@ msgid "Login to access the journalist interface"
 msgstr ""
 
 #: journalist_templates/login.html:9
+#, fuzzy
 msgid "Password"
-msgstr ""
+msgstr "Slaptažodis"
 
 #: journalist_templates/login.html:12
+#, fuzzy
 msgid "LOG IN"
-msgstr ""
+msgstr "PRISIJUNGTI"
 
 #: source_app/__init__.py:115
 msgid ""
@@ -882,8 +894,9 @@ msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr ""
 
 #: source_app/forms.py:18
+#, fuzzy
 msgid "Invalid input."
-msgstr ""
+msgstr "Neteisinga laukelio reikšmė."
 
 #: source_app/main.py:30
 msgid ""
@@ -896,28 +909,34 @@ msgid "You must enter a message or choose a file to submit."
 msgstr ""
 
 #: source_app/main.py:164
+#, fuzzy
 msgid "Thanks! We received your message."
-msgstr ""
+msgstr "Ačiū! Žinutė pateikta sėkmingai."
 
 #: source_app/main.py:166
+#, fuzzy
 msgid "Thanks! We received your document."
-msgstr ""
+msgstr "Ačiū! Dokumentas pateiktas sėkmingai."
 
 #: source_app/main.py:168
+#, fuzzy
 msgid "Thanks! We received your message and document."
-msgstr ""
+msgstr "Ačiū! Tavo žinutė ir dokumentai pateikti sėkmingai."
 
 #: source_app/main.py:220
+#, fuzzy
 msgid "Reply deleted"
-msgstr ""
+msgstr "Atsakymas ištrintas"
 
 #: source_app/main.py:238
+#, fuzzy
 msgid "All replies have been deleted"
-msgstr ""
+msgstr "Visi atsakymai ištrinti"
 
 #: source_app/main.py:252
+#, fuzzy
 msgid "Sorry, that is not a recognized codename."
-msgstr ""
+msgstr "Atsiprašome, šis slapyvardis neatpažintas."
 
 #: source_templates/base.html:6 source_templates/index.html:4
 msgid "Protecting Journalists and Sources"
@@ -925,22 +944,27 @@ msgstr ""
 
 #: source_templates/base.html:25 source_templates/base.html:47
 #: source_templates/index.html:33 source_templates/index.html:88
+#, fuzzy
 msgid "Powered by"
-msgstr ""
+msgstr "Sistema paremta"
 
 #: source_templates/base.html:34
+#, fuzzy
 msgid "LOG OUT"
-msgstr ""
+msgstr "ATSIJUNGTI"
 
 #: source_templates/base.html:47 source_templates/index.html:88
+#, fuzzy
 msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
 msgstr ""
+"Kaip ir kiekvienas programinis paketas, Saugi Dėžutė (SecureDrop) gali "
+"turėti saugumo spragų."
 
 #: source_templates/error.html:3
 msgid "Server error"
-msgstr ""
+msgstr "Serverio klaida"
 
 #: source_templates/error.html:5
 msgid ""
@@ -954,33 +978,42 @@ msgstr ""
 
 #: source_templates/first_submission_flashed_message.html:2
 msgid "Success!"
-msgstr ""
+msgstr "Pavyko!"
 
 #: source_templates/first_submission_flashed_message.html:3
+#, fuzzy
 msgid ""
 "Thank you for sending this information to us. Please check back later for"
 " replies."
 msgstr ""
+"Ačiū, kad pasidalinai šia informacija su mumis. Po kurio laiko prisijunk "
+"susipažinti su žurnalistų atsakymais."
 
 #: source_templates/first_submission_flashed_message.html:5
+#, fuzzy
 msgid "Forgot your codename?"
-msgstr ""
+msgstr "Pamiršai savo slapyvardį?"
 
 #: source_templates/generate.html:4
+#, fuzzy
 msgid "Welcome"
-msgstr ""
+msgstr "Labas"
 
 #: source_templates/generate.html:7
+#, fuzzy
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
-msgstr ""
+msgstr "Įsimink arba užsirašyk šį slapyvardį ir saugok jį saugioje vietoje."
 
 #: source_templates/generate.html:10
+#, fuzzy
 msgid ""
 "This codename is what you will use in future visits to receive messages "
 "from our journalists in response to what you submit on the next screen."
 msgstr ""
+"Naudodamas šį slapyvardį ateityje galėsi patikrinti žurnalistų atsakymus "
+"apie tavo pateiktą paraišką."
 
 #: source_templates/generate.html:34
 msgid ""
@@ -992,8 +1025,9 @@ msgid ""
 msgstr ""
 
 #: source_templates/generate.html:44 source_templates/index.html:66
+#, fuzzy
 msgid "SUBMIT DOCUMENTS"
-msgstr ""
+msgstr "PATEIKTI DOKUMENTUS"
 
 #: source_templates/index.html:17
 msgid ""
@@ -1020,22 +1054,27 @@ msgid ""
 msgstr ""
 
 #: source_templates/index.html:42
+#, fuzzy
 msgid "Submit for the first time"
-msgstr ""
+msgstr "Pateikti pirmą kartą"
 
 #: source_templates/index.html:49
+#, fuzzy
 msgid "Already submitted something?"
-msgstr ""
+msgstr "Jau esi pateikęs paraišką?"
 
 #: source_templates/index.html:55
+#, fuzzy
 msgid "If this is your first time submitting to journalists, start here."
-msgstr ""
+msgstr "Jei tai yra tavo pirmas kartas teikiant paraišką, pradėk čia."
 
 #: source_templates/index.html:59
 msgid ""
 "If you have already submitted to journalists, log in here to check for "
 "responses."
 msgstr ""
+"Jei jau esi pateikęs paraišką, prisijunk čia, kad galėtum patikrinti "
+"atsakymus."
 
 #: source_templates/index.html:74
 msgid "CHECK FOR A RESPONSE"
@@ -1066,13 +1105,14 @@ msgid "<a href=\"/\">Click here</a> to refresh the page"
 msgstr ""
 
 #: source_templates/login.html:6
+#, fuzzy
 msgid "Enter Codename"
-msgstr ""
+msgstr "Įvesti Slapyvardį"
 
 #: source_templates/login.html:12
 #, fuzzy
 msgid "Enter your codename"
-msgstr "Įvesk savo slapyvadį"
+msgstr "Įvesk savo slapyvardį"
 
 #: source_templates/login.html:25 source_templates/lookup.html:47
 #, fuzzy
