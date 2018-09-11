@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.9.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-09-11 21:22+0000\n"
-"Last-Translator: Aiiida <leonaviciute.aida@gmail.com>\n"
+"PO-Revision-Date: 2018-09-11 21:23+0000\n"
+"Last-Translator: Pranciškus Jansas <pranciskusjansas@gmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/lt/>\n"
 "Language: lt\n"
@@ -1070,17 +1070,20 @@ msgid "Enter Codename"
 msgstr ""
 
 #: source_templates/login.html:12
+#, fuzzy
 msgid "Enter your codename"
-msgstr ""
+msgstr "Įvesk savo slapyvadį"
 
 #: source_templates/login.html:25 source_templates/lookup.html:47
+#, fuzzy
 msgid "CANCEL"
-msgstr ""
+msgstr "ATŠAUKTI"
 
 #: source_templates/logout_flashed_message.html:4
 #: source_templates/session_timeout.html:5
+#, fuzzy
 msgid "Important!"
-msgstr ""
+msgstr "Svarbu!"
 
 #: source_templates/logout_flashed_message.html:5
 msgid ""
@@ -1108,8 +1111,9 @@ msgid ""
 msgstr ""
 
 #: source_templates/lookup.html:20
+#, fuzzy
 msgid "Submit Files or Messages"
-msgstr ""
+msgstr "Pateikti Failus arba Žinutę"
 
 #: source_templates/lookup.html:21
 msgid ""
@@ -1120,24 +1124,29 @@ msgid ""
 msgstr ""
 
 #: source_templates/lookup.html:22
+#, fuzzy
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
-msgstr ""
+msgstr "<a href=\"{url}\" class=\"text-link\">Sužinoti daugiau</a>."
 
 #: source_templates/lookup.html:24
+#, fuzzy
 msgid "You can submit any kind of file, a message, or both."
-msgstr ""
+msgstr "Gali pateikti bet kokio tipo failą, žinutę, arba abu."
 
 #: source_templates/lookup.html:33
+#, fuzzy
 msgid "Maximum upload size: 500 MB"
-msgstr ""
+msgstr "Maksimalus siunčiamų failų dydis: 500 MB"
 
 #: source_templates/lookup.html:36
+#, fuzzy
 msgid "Write a message."
-msgstr ""
+msgstr "Rašyti žinutę."
 
 #: source_templates/lookup.html:53
+#, fuzzy
 msgid "Read Replies"
-msgstr ""
+msgstr "Skaityti Atsakymus"
 
 #: source_templates/lookup.html:58
 msgid ""
@@ -1148,16 +1157,19 @@ msgid ""
 msgstr ""
 
 #: source_templates/lookup.html:71
+#, fuzzy
 msgid "Delete this reply?"
-msgstr ""
+msgstr "Ištrinti šį atsakymą?"
 
 #: source_templates/lookup.html:73
+#, fuzzy
 msgid "DELETE"
-msgstr ""
+msgstr "IŠTRINTI"
 
 #: source_templates/lookup.html:82
+#, fuzzy
 msgid "DELETE ALL REPLIES"
-msgstr ""
+msgstr "IŠTRINTI VISUS ATSAKYMUS"
 
 #: source_templates/lookup.html:85
 msgid "Are you finished with the replies?"
@@ -1165,31 +1177,37 @@ msgstr ""
 
 #: source_templates/lookup.html:86
 msgid "YES, DELETE ALL REPLIES"
-msgstr ""
+msgstr "TAIP, IŠTRINTI VISUS ATSAKYMUS"
 
 #: source_templates/lookup.html:87
+#, fuzzy
 msgid "NO, NOT YET"
-msgstr ""
+msgstr "NE, NE DABAR"
 
 #: source_templates/lookup.html:91
+#, fuzzy
 msgid "There are no replies at this time."
-msgstr ""
+msgstr "Šiuo metu atsakymų nėra."
 
 #: source_templates/lookup.html:100
+#, fuzzy
 msgid "Remember, your codename is:"
-msgstr ""
+msgstr "Prisimink, tavo slapyvardis yra:"
 
 #: source_templates/lookup.html:101
+#, fuzzy
 msgid "Show"
-msgstr ""
+msgstr "Rodyti"
 
 #: source_templates/lookup.html:103
+#, fuzzy
 msgid "Hide"
-msgstr ""
+msgstr "Slėpti"
 
 #: source_templates/notfound.html:3
+#, fuzzy
 msgid "Page not found"
-msgstr ""
+msgstr "Puslapis nerastas"
 
 #: source_templates/notfound.html:5
 msgid "Sorry, we couldn't locate what you requested."
