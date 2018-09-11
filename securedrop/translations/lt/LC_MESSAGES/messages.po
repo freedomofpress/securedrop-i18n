@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.9.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-09-11 21:47+0000\n"
+"PO-Revision-Date: 2018-09-11 21:53+0000\n"
 "Last-Translator: Pranciškus Jansas <pranciskusjansas@gmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/lt/>\n"
@@ -590,9 +590,8 @@ msgstr "Žinutė"
 
 #: journalist_templates/col.html:70 journalist_templates/col.html:128
 #: journalist_templates/index.html:46
-#, fuzzy
 msgid "Delete Confirmation"
-msgstr "Ištrinti patvirtinimą"
+msgstr "Ištrinti Patvirtinimą"
 
 #: journalist_templates/col.html:71
 #, fuzzy
@@ -651,20 +650,23 @@ msgid "Instance Configuration"
 msgstr ""
 
 #: journalist_templates/config.html:9
+#, fuzzy
 msgid "Alerts"
-msgstr ""
+msgstr "Įspėjimai"
 
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr ""
 
 #: journalist_templates/config.html:15
+#, fuzzy
 msgid "SEND TEST OSSEC ALERT"
-msgstr ""
+msgstr "SIŲSTI PAVYZDINĮ \"OSSEC\" PRANEŠIMĄ"
 
 #: journalist_templates/config.html:21
+#, fuzzy
 msgid "Logo Image"
-msgstr ""
+msgstr "Logotipo Paveiksliukas"
 
 #: journalist_templates/config.html:23
 msgid "Here you can update the image displayed on the SecureDrop web interfaces:"
@@ -675,8 +677,9 @@ msgid "Recommended size: 500px * 450px"
 msgstr ""
 
 #: journalist_templates/config.html:39
+#, fuzzy
 msgid "UPDATE LOGO"
-msgstr ""
+msgstr "ATNAUJINTI LOGOTIPĄ"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -690,8 +693,9 @@ msgstr[1] ""
 msgstr[2] ""
 
 #: journalist_templates/delete.html:20
+#, fuzzy
 msgid "PERMANENTLY DELETE FILES"
-msgstr ""
+msgstr "NEGRĮŽTAMAI IŠTRINTI FAILUS"
 
 #: journalist_templates/delete.html:23
 msgid "Return to the list of documents for {source_name}…"
@@ -700,7 +704,7 @@ msgstr ""
 #: journalist_templates/edit_account.html:6
 #, fuzzy
 msgid "Edit user \"{user}\""
-msgstr "Koreguoti vartotoją \"{user}\""
+msgstr "Koreguoti \"{user}\" vartotojo duomenis"
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Username &amp; Admin Status"
