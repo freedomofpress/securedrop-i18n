@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.9.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-09-11 21:53+0000\n"
+"PO-Revision-Date: 2018-09-12 20:58+0000\n"
 "Last-Translator: Pranciškus Jansas <pranciskusjansas@gmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/lt/>\n"
@@ -590,6 +590,7 @@ msgstr "Žinutė"
 
 #: journalist_templates/col.html:70 journalist_templates/col.html:128
 #: journalist_templates/index.html:46
+#, fuzzy
 msgid "Delete Confirmation"
 msgstr "Ištrinti Patvirtinimą"
 
@@ -967,6 +968,7 @@ msgstr ""
 "turėti saugumo spragų."
 
 #: source_templates/error.html:3
+#, fuzzy
 msgid "Server error"
 msgstr "Serverio klaida"
 
@@ -981,6 +983,7 @@ msgid "Look up a codename..."
 msgstr ""
 
 #: source_templates/first_submission_flashed_message.html:2
+#, fuzzy
 msgid "Success!"
 msgstr "Pavyko!"
 
@@ -1073,6 +1076,7 @@ msgid "If this is your first time submitting to journalists, start here."
 msgstr "Jei tai yra tavo pirmas kartas teikiant paraišką, pradėk čia."
 
 #: source_templates/index.html:59
+#, fuzzy
 msgid ""
 "If you have already submitted to journalists, log in here to check for "
 "responses."
@@ -1220,6 +1224,7 @@ msgid "Are you finished with the replies?"
 msgstr ""
 
 #: source_templates/lookup.html:86
+#, fuzzy
 msgid "YES, DELETE ALL REPLIES"
 msgstr "TAIP, IŠTRINTI VISUS ATSAKYMUS"
 
