@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.9.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2018-09-12 20:58+0000\n"
-"Last-Translator: Pranciškus Jansas <pranciskusjansas@gmail.com>\n"
+"Last-Translator: Aiiida <leonaviciute.aida@gmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/lt/>\n"
 "Language: lt\n"
@@ -624,31 +624,40 @@ msgstr ""
 "jam bus sukurtas užšifravimo kodas."
 
 #: journalist_templates/col.html:105
+#, fuzzy
 msgid "Click below if you would like to write a reply to this source."
-msgstr ""
+msgstr "Spauskite žemiau norėdami atsakyti šiam šaltiniui."
 
 #: journalist_templates/col.html:109
+#, fuzzy
 msgid "FLAG THIS SOURCE FOR REPLY"
-msgstr ""
+msgstr "ATSAKYTI ŠALTINIUI"
 
 #: journalist_templates/col.html:114
+#, fuzzy
 msgid ""
 "Click below to delete this source's collection. <em>Warning: If you do "
 "this, the files seen here will be unrecoverable and the source will no "
 "longer be able to login using their previous codename.</em>"
 msgstr ""
+"Spauskite žemiau norėdami ištrinti šio šaltinio surinktą medžiagą. "
+"<em>Įspėjimas: Ištrynus medžiagą jos atkurti nebebus įmanoma ir šaltinis "
+"nebegalės prisijungti su buvusiu slapyvardžiu.</em>"
 
 #: journalist_templates/col.html:121
+#, fuzzy
 msgid "DELETE SOURCE AND SUBMISSIONS"
-msgstr ""
+msgstr "TRINTI ŠALTINĮ IR PATEIKTĄ MEDŽIAGĄ"
 
 #: journalist_templates/col.html:129
+#, fuzzy
 msgid "Are you sure you want to delete this collection?"
-msgstr ""
+msgstr "Ar tikrai norite ištrinti pasirinktą medžiagą?"
 
 #: journalist_templates/config.html:7
+#, fuzzy
 msgid "Instance Configuration"
-msgstr ""
+msgstr "Konfigūracija"
 
 #: journalist_templates/config.html:9
 #, fuzzy
@@ -656,8 +665,9 @@ msgid "Alerts"
 msgstr "Įspėjimai"
 
 #: journalist_templates/config.html:11
+#, fuzzy
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
-msgstr ""
+msgstr "Siųsti užšifruotą el. laišką patikrinti OSSEC įspėjimus:"
 
 #: journalist_templates/config.html:15
 #, fuzzy
@@ -670,12 +680,14 @@ msgid "Logo Image"
 msgstr "Logotipo Paveiksliukas"
 
 #: journalist_templates/config.html:23
+#, fuzzy
 msgid "Here you can update the image displayed on the SecureDrop web interfaces:"
-msgstr ""
+msgstr "Čia galite atnaujinti paveikslėlį rodomą SecureDrop puslapyje:"
 
 #: journalist_templates/config.html:36
+#, fuzzy
 msgid "Recommended size: 500px * 450px"
-msgstr ""
+msgstr "Rekomenduojamas dydis: 500px * 450px"
 
 #: journalist_templates/config.html:39
 #, fuzzy
@@ -683,15 +695,16 @@ msgid "UPDATE LOGO"
 msgstr "ATNAUJINTI LOGOTIPĄ"
 
 #: journalist_templates/delete.html:5
+#, fuzzy
 msgid ""
 "The following file has been selected for <strong>permanent "
 "deletion</strong>:"
 msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Šis failas bus <strong>ištrinti visam laikui </strong>:"
+msgstr[1] "Šie {files} failai bus <strong>ištrinti visam laikui</strong>:"
+msgstr[2] "Šie {files} failų bus <strong>ištrinti visam laikui</strong>:"
 
 #: journalist_templates/delete.html:20
 #, fuzzy
@@ -699,8 +712,9 @@ msgid "PERMANENTLY DELETE FILES"
 msgstr "NEGRĮŽTAMAI IŠTRINTI FAILUS"
 
 #: journalist_templates/delete.html:23
+#, fuzzy
 msgid "Return to the list of documents for {source_name}…"
-msgstr ""
+msgstr "Grįžti į {source_name} dokumentų sąrašą…"
 
 #: journalist_templates/edit_account.html:6
 #, fuzzy
@@ -708,8 +722,9 @@ msgid "Edit user \"{user}\""
 msgstr "Koreguoti \"{user}\" vartotojo duomenis"
 
 #: journalist_templates/edit_account.html:8
+#, fuzzy
 msgid "Change Username &amp; Admin Status"
-msgstr ""
+msgstr "Pakeisti vartotojo vardą &amp; administratoriaus statusą"
 
 #: journalist_templates/edit_account.html:12
 #, fuzzy
@@ -722,16 +737,20 @@ msgid "UPDATE"
 msgstr "ATNAUJINTI"
 
 #: journalist_templates/edit_account.html:22
+#, fuzzy
 msgid "Edit your account"
-msgstr ""
+msgstr "Redaguoti savo paskyrą"
 
 #: journalist_templates/edit_account.html:25
+#, fuzzy
 msgid "Reset Password"
-msgstr ""
+msgstr "Kurti naują slaptažodį"
 
 #: journalist_templates/edit_account.html:27
+#, fuzzy
 msgid "SecureDrop now uses automatically generated diceware passwords."
 msgstr ""
+"SecureDrop nuo šiol naudoja automatiškai sukurtus diceware slaptažodžius."
 
 #: journalist_templates/edit_account.html:28
 msgid ""
