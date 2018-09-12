@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.9.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-09-12 20:58+0000\n"
+"PO-Revision-Date: 2018-09-20 11:38+0000\n"
 "Last-Translator: Aiiida <leonaviciute.aida@gmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/lt/>\n"
@@ -27,8 +27,9 @@ msgid "{time} ago"
 msgstr "Prieš {time}"
 
 #: journalist_app/__init__.py:80 journalist_app/__init__.py:119
+#, fuzzy
 msgid "You have been logged out due to inactivity"
-msgstr ""
+msgstr "Buvote atjungtas nes paskyra ilgai buvo neaktyvi."
 
 #: journalist_app/account.py:26
 #, fuzzy
@@ -84,8 +85,10 @@ msgid "Deleted user '{user}'"
 msgstr "Vartotojas '{user}' ištrintas"
 
 #: journalist_app/admin.py:234
+#, fuzzy
 msgid "Test alert sent. Please check your email."
 msgstr ""
+"Bandomasis įspėjimas išsiųstas. Galite pasitikrinti savo el. pašto dėžutę."
 
 #: journalist_app/col.py:45
 #, fuzzy
@@ -93,8 +96,9 @@ msgid "{source_name}'s collection deleted"
 msgstr "Šaltinio {source_name} medžiaga ištrinta"
 
 #: journalist_app/col.py:56
+#, fuzzy
 msgid "No collections selected."
-msgstr ""
+msgstr "Nepasirinkta jokios medžiagos."
 
 #: journalist_app/decorators.py:15
 #, fuzzy
@@ -201,11 +205,13 @@ msgstr ""
 #, fuzzy
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
-"Netinkamas slaptas formatas: prašome pateikti tik raides A-F ir skaičius 0-9."
+"Netinkamas slapto kodo formatas: prašome pateikti tik raides A-F ir skaičius "
+"0-9."
 
 #: journalist_app/utils.py:132
+#, fuzzy
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
-msgstr ""
+msgstr "Netinkamas slapto kodo ilgis - ar suklydote?"
 
 #: journalist_app/utils.py:188
 #, fuzzy
@@ -314,12 +320,18 @@ msgid "Enable FreeOTP"
 msgstr "Leisti FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:5
+#, fuzzy
 msgid ""
 "You're almost done! To finish resetting your two-factor authentication, "
 "follow the instructions below to set up FreeOTP. Once you've added the "
 "entry for your account in the app, enter one of the 6-digit codes from "
 "the app to confirm that two factor authentication is set up correctly."
 msgstr ""
+"Beveik baigta! Sekite instrukcijas kaip sukonfigūruoti FreeOTP, kad "
+"sėkimingai užbaigtumėte dviejų dalių autentifikavimo atkūrimą. Kai pridėsite "
+"prieigą prie savo paskyros mobilioje programėlėje, įveskite 6 skaitmenų kodą "
+"iš programėlės patvirtinti, kad dviejų dalių autentifikavimas "
+"sukonfigūruotas teisingai."
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
@@ -474,6 +486,7 @@ msgid "Is using a YubiKey [HOTP]"
 msgstr "Ar naudoja YubiKey [HOTP]"
 
 #: journalist_templates/admin_new_user_two_factor.html:6
+#, fuzzy
 msgid ""
 "You're almost done! To finish adding this new user, have them follow the "
 "instructions below to set up two-factor authentication with FreeOTP. Once"
@@ -481,6 +494,11 @@ msgid ""
 "of the 6-digit codes from the app to confirm that two factor "
 "authentication is set up correctly."
 msgstr ""
+"Beveik baigta! Kad vartotojas būtų sėkmingai pridėtas, užtikrinkite kad jis/"
+"ji seka instrukcijas žemiau dviejų dalių autentifikavimo su FreeOTP "
+"sukonfigūravimui. Kai vartotojas pridės prieigą prie šios paskyros savo "
+"mobilioje programėlėje, užtikrinkite kad 6 skaitmenų kodas iš programėlės "
+"įvestas teisingo dviejų dalių autentifikavimo sukonfigūravimo patvirtinimui."
 
 #: journalist_templates/base.html:24
 #, fuzzy
@@ -744,7 +762,7 @@ msgstr "Redaguoti savo paskyrą"
 #: journalist_templates/edit_account.html:25
 #, fuzzy
 msgid "Reset Password"
-msgstr "Kurti naują slaptažodį"
+msgstr "Nustatyti slaptažodį"
 
 #: journalist_templates/edit_account.html:27
 #, fuzzy
@@ -753,14 +771,20 @@ msgstr ""
 "SecureDrop nuo šiol naudoja automatiškai sukurtus diceware slaptažodžius."
 
 #: journalist_templates/edit_account.html:28
+#, fuzzy
 msgid ""
 "Your password will be changed immediately, so you will need to save it "
 "before pressing the \"Reset Password\" button."
 msgstr ""
+"Jūsų slaptažodis bus pakeistas iškart, todėl turite jį išsaugoti prieš "
+"spaudžiant \"Nustatyti slaptažodį\" mygtuką."
 
 #: journalist_templates/edit_account.html:34
+#, fuzzy
 msgid "Please enter your current password and two-factor code."
 msgstr ""
+"Prašome įvesti savo dabartinį slaptažodį ir dviejų dalių autentifikavimo "
+"kodą."
 
 #: journalist_templates/edit_account.html:40
 #, fuzzy
@@ -768,24 +792,29 @@ msgid "Current Password"
 msgstr "Dabartinis Slaptažodis"
 
 #: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
+#, fuzzy
 msgid "Two-factor Code"
-msgstr ""
+msgstr "Dviejų dalių autentifikavimo kodas"
 
 #: journalist_templates/edit_account.html:46
+#, fuzzy
 msgid "The user's password will be changed to:"
-msgstr ""
+msgstr "Vartotojo slaptažodis bus pakeistas į:"
 
 #: journalist_templates/edit_account.html:48
+#, fuzzy
 msgid "Your password will be changed to:"
-msgstr ""
+msgstr "Jūsų slaptažodis bus pakeistas į:"
 
 #: journalist_templates/edit_account.html:53
+#, fuzzy
 msgid "RESET PASSWORD"
-msgstr ""
+msgstr "NUSTATYTI SLAPTAŽODĮ"
 
 #: journalist_templates/edit_account.html:58
+#, fuzzy
 msgid "Reset Two-Factor Authentication"
-msgstr ""
+msgstr "Iš naujo nustatyti dviejų dalių autentifikavimą"
 
 #: journalist_templates/edit_account.html:61
 msgid ""
@@ -804,19 +833,25 @@ msgid ""
 msgstr ""
 
 #: journalist_templates/edit_account.html:65
+#, fuzzy
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, "
 "choose the first option. For hardware tokens like the Yubikey, choose the"
 " second."
 msgstr ""
+"Iš naujo sukonfigūruoti dviejų dalių autentifikavimą mobiliąja programėle ("
+"pvz FreeOTP), pasirinkite pirmą variantą. Fiziniams raktams, tokiems kaip "
+"Yubikey, rinkitės antrą variantą."
 
 #: journalist_templates/edit_account.html:90
+#, fuzzy
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
-msgstr ""
+msgstr "IŠ NAUJO SUKONFIGŪRUOTI DVIEJŲ DALIŲ AUTENTIFIKAVIMĄ (MOB. PROGRAMĖLĖ)"
 
 #: journalist_templates/edit_account.html:92
+#, fuzzy
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
-msgstr ""
+msgstr "IŠ NAUJO SUKONFIGŪRUOTI DVIEJŲ DALIŲ AUTENTIFIKAVIMĄ (FIZINIS RAKTAS)"
 
 #: journalist_templates/flag.html:5
 #, fuzzy
@@ -824,24 +859,31 @@ msgid "Thanks!"
 msgstr "Ačiū!"
 
 #: journalist_templates/flag.html:8
+#, fuzzy
 msgid ""
 "SecureDrop will generate a secure encryption key for this source the next"
 " time that they log in. Once the key has been generated, a reply box will"
 " appear under their collection of documents. You can use this box to "
 "write encrypted replies to them."
 msgstr ""
+"SecureDrop sukurs saugų užšifravimo raktą šiam šaltiniui ateinančio jų "
+"prisijungimo metu. Kai raktas bus sukurtas, po šaltinio dokumentais atsirast "
+"atsakymo dėžutė. Naudokite šią dėžutę užšifruotiems atsakymams rašyti."
 
 #: journalist_templates/flag.html:10
+#, fuzzy
 msgid "Continue to the list of documents for {codename}..."
-msgstr ""
+msgstr "Eiti į {codename} dokumentų sąrašą..."
 
 #: journalist_templates/index.html:4
+#, fuzzy
 msgid "Sources"
-msgstr ""
+msgstr "Šaltiniai"
 
 #: journalist_templates/index.html:11
+#, fuzzy
 msgid "Download Unread"
-msgstr ""
+msgstr "Atsisiųsti neperskaitytus"
 
 #: journalist_templates/index.html:12
 #, fuzzy
@@ -849,16 +891,19 @@ msgid "Download"
 msgstr "Atsisiųsti"
 
 #: journalist_templates/index.html:13
+#, fuzzy
 msgid "Star"
-msgstr ""
+msgstr "Pažymėti žvaigždute"
 
 #: journalist_templates/index.html:14
+#, fuzzy
 msgid "Un-star"
-msgstr ""
+msgstr "Pašalinti žvaigždutę"
 
 #: journalist_templates/index.html:47
+#, fuzzy
 msgid "Are you sure you want to delete the selected collections?"
-msgstr ""
+msgstr "Ar tikrai norite ištrinti pasirinktą medžiagą?"
 
 #: journalist_templates/index.html:59
 #, fuzzy
@@ -881,20 +926,26 @@ msgid "Select Unread"
 msgstr "Pažymėti Neperskaitytus"
 
 #: journalist_templates/js-strings.html:6
+#, fuzzy
 msgid "Select None"
-msgstr ""
+msgstr "Nepasirinkti nieko"
 
 #: journalist_templates/js-strings.html:7
+#, fuzzy
 msgid "Are you sure you want to delete the user {username}?"
-msgstr ""
+msgstr "Ar tikrai norite ištrinti vartotoją {username}?"
 
 #: journalist_templates/js-strings.html:8
+#, fuzzy
 msgid "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr ""
+"Ar tikrai norite iš naujo nustatyti dviejų dalių autentifikavimą vartotojui "
+"{username}?"
 
 #: journalist_templates/login.html:4
+#, fuzzy
 msgid "Login to access the journalist interface"
-msgstr ""
+msgstr "Prisijungti prie žurnalisto aplinkos"
 
 #: journalist_templates/login.html:9
 #, fuzzy
@@ -907,15 +958,20 @@ msgid "LOG IN"
 msgstr "PRISIJUNGTI"
 
 #: source_app/__init__.py:115
+#, fuzzy
 msgid ""
 "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This "
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a "
 "href=\"{url}\">Why is this dangerous?</a>"
 msgstr ""
+"<strong>ĮSPĖJIMAS:&nbsp;</strong> Jūs naudojate Tor2Web. "
+"Tai<strong>&nbsp;nėra&nbsp;</strong> anonimiška. <a href=\"{url}\"Kodėl tai "
+"pavojinga?</a>"
 
 #: source_app/forms.py:15
+#, fuzzy
 msgid "Field must be between 1 and {max_codename_len} characters long."
-msgstr ""
+msgstr "Laukas turi būti nuo 1 iki {max_codename_len} simbolių ilgio."
 
 #: source_app/forms.py:18
 #, fuzzy
@@ -923,14 +979,19 @@ msgid "Invalid input."
 msgstr "Neteisinga laukelio reikšmė."
 
 #: source_app/main.py:30
+#, fuzzy
 msgid ""
 "You were redirected because you are already logged in. If you want to "
 "create a new account, you should log out first."
 msgstr ""
+"Buvote peradresuotas nes jau esate prisijungęs. Norėdami sukurti naują "
+"paskyrą, pirmiausia atsijunkite."
 
 #: source_app/main.py:131
+#, fuzzy
 msgid "You must enter a message or choose a file to submit."
 msgstr ""
+"Privalote įrašyti žinutę arba pasirinkti bylą (failą) kurį norite pateikti."
 
 #: source_app/main.py:164
 #, fuzzy
@@ -963,8 +1024,9 @@ msgid "Sorry, that is not a recognized codename."
 msgstr "Atsiprašome, šis slapyvardis neatpažintas."
 
 #: source_templates/base.html:6 source_templates/index.html:4
+#, fuzzy
 msgid "Protecting Journalists and Sources"
-msgstr ""
+msgstr "Saugome žurnalistus ir jų šaltinius"
 
 #: source_templates/base.html:25 source_templates/base.html:47
 #: source_templates/index.html:33 source_templates/index.html:88
@@ -992,14 +1054,16 @@ msgid "Server error"
 msgstr "Serverio klaida"
 
 #: source_templates/error.html:5
+#, fuzzy
 msgid ""
 "Sorry, the website encountered an error and was unable to complete your "
 "request."
-msgstr ""
+msgstr "Atsiprašome, puslapyje įvyko klaida ir jūsų prašymas nebuvo užbaigtas."
 
 #: source_templates/error.html:7 source_templates/notfound.html:7
+#, fuzzy
 msgid "Look up a codename..."
-msgstr ""
+msgstr "Surasti slapyvardį..."
 
 #: source_templates/first_submission_flashed_message.html:2
 #, fuzzy
