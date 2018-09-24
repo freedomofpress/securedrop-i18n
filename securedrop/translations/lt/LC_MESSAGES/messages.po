@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.9.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-09-20 11:38+0000\n"
+"PO-Revision-Date: 2018-09-24 17:38+0000\n"
 "Last-Translator: Aiiida <leonaviciute.aida@gmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/lt/>\n"
@@ -1106,6 +1106,7 @@ msgstr ""
 "apie tavo pateiktą paraišką."
 
 #: source_templates/generate.html:34
+#, fuzzy
 msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"
 " service, in future visits, using this codename will be the only way we "
@@ -1113,6 +1114,10 @@ msgid ""
 " questions or are interested in additional information. Unlike passwords,"
 " there is no way to retrieve a lost codename."
 msgstr ""
+"Kadangi <strong>SecureDrop</strong> neseka vartotojų veiklos, ateityje šis "
+"slapyvardis bus vienintelis komunikacijos su jumis būdas, jeigu jums "
+"turėtume klausimų ar norėtume gauti papildomos informacijos. Kitaip nei "
+"slaptažodžių atveju, nėra būdo atkurti prarastą slapyvardį."
 
 #: source_templates/generate.html:44 source_templates/index.html:66
 #, fuzzy
@@ -1120,19 +1125,28 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "PATEIKTI DOKUMENTUS"
 
 #: source_templates/index.html:17
+#, fuzzy
 msgid ""
 "<strong>It is recommended to move the Security Slider to Safest to "
 "protect your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how"
 " to set it to Safest</a>, or ignore this warning to continue."
 msgstr ""
+"<strong>Rekomenduojama naudoti saugiausią Apsaugos Skydelio lygį jūsų "
+"anoninimiškumui apsaugoti:</strong> <a id=\"disable-js\" href=\"\">"
+"Sužinokite kaip pakeisti lygį į saugiausią</a>, arba ignoruokite šį įspėjimą "
+"ir tęskite."
 
 #: source_templates/index.html:18
+#, fuzzy
 msgid ""
 "<strong>It is recommended to use the Tor Browser to access "
 "SecureDrop:</strong> <a id=\"recommend-tor\" "
 "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
 "warning to continue."
 msgstr ""
+"<strong>SecureDrop naršymui rekomenduojama naudoti Tor naršyklę:</strong> <a "
+"id=\"recommend-tor\" href=\"{tor_browser_url}\">Sužinoti kaip įdiegti "
+"naršyklę</a>, arba ignoruokite šį įspėjimą ir tęskite."
 
 #: source_templates/index.html:19
 msgid ""
