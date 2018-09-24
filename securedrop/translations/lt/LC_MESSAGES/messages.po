@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.9.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-09-24 18:33+0000\n"
+"PO-Revision-Date: 2018-10-09 19:49+0000\n"
 "Last-Translator: Aiiida <leonaviciute.aida@gmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/lt/>\n"
@@ -1414,20 +1414,26 @@ msgstr "Kodėl Tor2Web naudojimui yra įspėjimas?"
 #: source_templates/tor2web-warning.html:4
 #, fuzzy
 msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
-msgstr "Tor2Web neužtikrins jūsų anonimiškumo prisijuniant prie SecureDrop."
+msgstr "Tor2Web neužtikrins jūsų anonimiškumo prisijungiant prie SecureDrop."
 
 #: source_templates/tor2web-warning.html:5
+#, fuzzy
 msgid ""
 "It could be possible for anyone monitoring your Internet traffic (your "
 "government, your Internet provider), to identify you."
 msgstr ""
+"Bet kam, sekančiam jūsų interneto veiklą (jūsų valstybei, interneto paslaugų "
+"tiekėjui), būtų įmanoma jus identifikuoti."
 
 #: source_templates/tor2web-warning.html:6
+#, fuzzy
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a "
 "href=\"www.torproject.org/projects/torbrowser.html\">Tor browser</a> "
 "instead."
 msgstr ""
+"Vietoje to, mes <strong>itin rekomenduojame</strong> naudoti <a href=\""
+"www.torproject.org/projects/torbrowser.html\">Tor naršyklę</a>."
 
 #: source_templates/use-tor-browser.html:3
 #, fuzzy
@@ -1463,29 +1469,42 @@ msgstr ""
 "instrukcijas Tor naršyklės atsisiuntimui ir įdiegimui:"
 
 #: source_templates/use-tor-browser.html:9
+#, fuzzy
 msgid ""
 "If there is a chance that downloading Tor Browser raises suspicion and "
 "your mail provider is less likely to be monitored, you can send a mail to"
 " <pre>gettor@torproject.org</pre> and a bot will answer with "
 "instructions."
 msgstr ""
+"Jeigu yra tikimybė, kad Tor naršyklės parsisiuntimas sukels įtarimų ir jūsų "
+"elektroninio pašto tiekėjo stebėjimas yra mažiau tikėtinas, galite siųsti "
+"laišką adresu <pre>gettor@torproject.org</pre> ir botas jums atsiųs "
+"instrukcijas."
 
 #: source_templates/why-journalist-key.html:3
+#, fuzzy
 msgid "Why download the journalist's public key?"
-msgstr ""
+msgstr "Kodėl atsisiųsti žurnalisto viešąjį raktą?"
 
 #: source_templates/why-journalist-key.html:4
+#, fuzzy
 msgid ""
 "SecureDrop encrypts files and messages after they are submitted. "
 "Encrypting messages and files before submission can provide an extra "
 "layer of security before your data reaches the SecureDrop server."
 msgstr ""
+"SecureDrop užšifruoja failus ir žinutes po jų išsiuntimo. Užšifruoti žinutes "
+"ir failus prieš siuntimą gali suteikti papildomą saugumo lygį prieš jūsų "
+"duomenims pasiekiant SecureDrop serverį."
 
 #: source_templates/why-journalist-key.html:5
+#, fuzzy
 msgid ""
 "If you are already familiar with the GPG encryption software, you may "
 "wish to encrypt your submissions yourself. To do so:"
 msgstr ""
+"Jeigu jau esate susipažinęs su GPG užšifravimo programine įranga, "
+"pateikiamus duomenis galite užšifruoti patys. Tam padaryti:"
 
 #: source_templates/why-journalist-key.html:7
 msgid ""
