@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-09-04 19:23+0000\n"
-"Last-Translator: Adrian <pappasadrian@gmail.com>\n"
+"PO-Revision-Date: 2018-09-24 18:29+0000\n"
+"Last-Translator: boublis <boublis@gmail.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/el/>\n"
 "Language: el\n"
@@ -191,9 +191,8 @@ msgstr[0] "Μία συλλογή διαγράφηκε"
 msgstr[1] "{num} συλλογές διαγράφηκαν"
 
 #: journalist_app/utils.py:279
-#, fuzzy
 msgid "You submitted a bad password! Password not changed."
-msgstr "Ο κωδικός που καταχωρήσατε δεν είναι καλός! Ο κωδικός δεν άλλαξε."
+msgstr "Ο κωδικός που καταχωρήσατε είναι λανθασμένος! Ο κωδικός δεν άλλαξε."
 
 #: journalist_app/utils.py:286
 msgid ""
