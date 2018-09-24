@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.9.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-09-24 17:38+0000\n"
+"PO-Revision-Date: 2018-09-24 18:33+0000\n"
 "Last-Translator: Aiiida <leonaviciute.aida@gmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/lt/>\n"
@@ -1144,11 +1144,12 @@ msgid ""
 "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
 "warning to continue."
 msgstr ""
-"<strong>SecureDrop naršymui rekomenduojama naudoti Tor naršyklę:</strong> <a "
-"id=\"recommend-tor\" href=\"{tor_browser_url}\">Sužinoti kaip įdiegti "
+"<strong>SecureDrop naudojimui rekomenduojame Tor naršyklę:</strong> <a id"
+"=\"recommend-tor\" href=\"{tor_browser_url}\">Sužinoti kaip įdiegti "
 "naršyklę</a>, arba ignoruokite šį įspėjimą ir tęskite."
 
 #: source_templates/index.html:19
+#, fuzzy
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security "
@@ -1156,6 +1157,11 @@ msgid ""
 "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
 "warning to continue."
 msgstr ""
+"<strong>SecureDrop naudojimui rekomenduojame Tor naršyklės darbalaukio "
+"versiją, nes Orfox nužtikrina tokio saugumo ir anonimiškumo lygio kaip "
+"darbalaukio versija .</strong> <a id=\"recommend-tor\" href=\""
+"{tor_browser_url}\">Sužinokite kaip įdiegti darbalaukio versiją</a>, arba "
+"ignoruokite šią žinutę ir tęskite."
 
 #: source_templates/index.html:42
 #, fuzzy
@@ -1182,32 +1188,44 @@ msgstr ""
 "atsakymus."
 
 #: source_templates/index.html:74
+#, fuzzy
 msgid "CHECK FOR A RESPONSE"
-msgstr ""
+msgstr "TIKRINTI AR YRA ATSAKYMŲ"
 
 #: source_templates/index.html:96
+#, fuzzy
 msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider "
 "to Safest in four steps."
 msgstr ""
+"Atrodo, kad naudojate Tor naršyklę. Galite pakeisti Apsaugos Skydo lygį "
+"keturiais žingsniais."
 
 #: source_templates/index.html:98
+#, fuzzy
 msgid ""
 "Click the <img src=\"{icon}\" alt=\"Tor icon\"> Tor icon in the toolbar "
 "above"
 msgstr ""
+"Paspauskite ant<img src=\"{icon}\" alt=\"Tor icon\"> Tor piktogramos įrankių "
+"juostoje viršuje"
 
 #: source_templates/index.html:99
+#, fuzzy
 msgid "Click <strong>Security Settings...</strong>"
-msgstr ""
+msgstr "Paspauskite<strong>Apsaugos nustatymai...</strong>"
 
 #: source_templates/index.html:100
+#, fuzzy
 msgid "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
 msgstr ""
+"Pakeiskite lygį į <strong>Saugiausią</strong>, tada spauskite "
+"<strong>GERAI</strong>"
 
 #: source_templates/index.html:101
+#, fuzzy
 msgid "<a href=\"/\">Click here</a> to refresh the page"
-msgstr ""
+msgstr "<a href=\"/\">Spauskite čia</a> puslapiui atnaujinti"
 
 #: source_templates/login.html:6
 #, fuzzy
@@ -1238,22 +1256,31 @@ msgid ""
 msgstr ""
 
 #: source_templates/lookup.html:11
+#, fuzzy
 msgid "Whew, it’s you! Now, the embarrassing part..."
-msgstr ""
+msgstr "Čia jūs! O dabar, gėdinga istorijos pusė..."
 
 #: source_templates/lookup.html:12
+#, fuzzy
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all "
 "files and messages from that day through to our journalists."
 msgstr ""
+"Nuo paskutinio jūsų apsilankymo mūsų serveriai patyrė įtartiną naujos "
+"veiklos kiekį. Atsargumo dėlei, sustabdėme visų failų ir žinučių siuntimą "
+"žurnalistams tą dieną."
 
 #: source_templates/lookup.html:14
+#, fuzzy
 msgid ""
 "Now that we know you’re really a human, though, we’ll get your previous "
 "submission into the hands of a journalist straight away. We’re sorry for "
 "the delay. Please do check back again in a week or so."
 msgstr ""
+"Dabar, kai jau esame įsitikinę, kad jūs tikrai žmogus, tuoj pat išsiųsime "
+"jūsų pateiktą medžiagą žurnalistams. Atsiprašome už šį vėlavimą. Maloniai "
+"prašome sugrįžti po apytiksliai savaitės."
 
 #: source_templates/lookup.html:20
 #, fuzzy
@@ -1294,12 +1321,17 @@ msgid "Read Replies"
 msgstr "Skaityti Atsakymus"
 
 #: source_templates/lookup.html:58
+#, fuzzy
 msgid ""
 "You have received a reply. To protect your identity in the unlikely event"
 " someone learns your codename, please delete all replies when you're done"
 " with them. This also lets us know that you are aware of our reply. You "
 "can respond by submitting new files and messages above."
 msgstr ""
+"Gavote atsakymą. Savo tapatybei apsaugoti tuo retu atveju, jeigu kas nors "
+"sužinotų jūsų slapyvardį, prašome ištrinti visus savo atsakymus kai būsite "
+"juos pabaigę. Tai taip pat mums leis žinoti kad jūs patvirtinate savo "
+"atsakymą. Galite atsakyti siųsdami naujus failus arba žinutes viršuje."
 
 #: source_templates/lookup.html:71
 #, fuzzy
@@ -1317,8 +1349,9 @@ msgid "DELETE ALL REPLIES"
 msgstr "IŠTRINTI VISUS ATSAKYMUS"
 
 #: source_templates/lookup.html:85
+#, fuzzy
 msgid "Are you finished with the replies?"
-msgstr ""
+msgstr "Ar baigėte atsakyti?"
 
 #: source_templates/lookup.html:86
 #, fuzzy
@@ -1356,8 +1389,9 @@ msgid "Page not found"
 msgstr "Puslapis nerastas"
 
 #: source_templates/notfound.html:5
+#, fuzzy
 msgid "Sorry, we couldn't locate what you requested."
-msgstr ""
+msgstr "Atsiprašome, neradome, ko ieškote."
 
 #: source_templates/screensaver.html:2
 msgid "Interface hidden. Move your cursor here to show."
@@ -1373,12 +1407,14 @@ msgid ""
 msgstr ""
 
 #: source_templates/tor2web-warning.html:3
+#, fuzzy
 msgid "Why is there a warning about Tor2Web?"
-msgstr ""
+msgstr "Kodėl Tor2Web naudojimui yra įspėjimas?"
 
 #: source_templates/tor2web-warning.html:4
+#, fuzzy
 msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
-msgstr ""
+msgstr "Tor2Web neužtikrins jūsų anonimiškumo prisijuniant prie SecureDrop."
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
