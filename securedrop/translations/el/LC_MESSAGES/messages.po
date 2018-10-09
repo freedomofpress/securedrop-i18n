@@ -822,7 +822,7 @@ msgstr "Συνδεθείτε για να έχετε πρόσβαση στην δ
 msgid "Password"
 msgstr "Κωδικός πρόσβασης"
 
-#: journalist_templates/login.html:12
+#: journalist_templates/login.html:11
 msgid "LOG IN"
 msgstr "ΣΥΝΔΕΣΗ"
 
@@ -853,33 +853,33 @@ msgstr ""
 "Ανακατευθυνθήκατε επειδή είστε ήδη συνδεδεμένος. Αν θέλετε να δημιουργήσετε "
 "έναν νέο λογαριασμό, πρέπει πρώτα να αποσυνδεθείτε."
 
-#: source_app/main.py:131
+#: source_app/main.py:133
 msgid "You must enter a message or choose a file to submit."
 msgstr ""
 "Πρέπει να πληκτρολογήσετε ένα μήνυμα ή να επιλέξετε ένα αρχείο για "
 "καταχώρηση."
 
-#: source_app/main.py:164
+#: source_app/main.py:166
 msgid "Thanks! We received your message."
 msgstr "Ευχαριστώ! Λάβαμε το μήνυμά σας."
 
-#: source_app/main.py:166
+#: source_app/main.py:168
 msgid "Thanks! We received your document."
 msgstr "Ευχαριστώ! Λάβαμε το έγγραφό σας."
 
-#: source_app/main.py:168
+#: source_app/main.py:170
 msgid "Thanks! We received your message and document."
 msgstr "Ευχαριστώ! Λάβαμε το μήνυμά σας και το έγγραφό σας."
 
-#: source_app/main.py:220
+#: source_app/main.py:222
 msgid "Reply deleted"
 msgstr "Η απάντηση διαγράφτηκε"
 
-#: source_app/main.py:238
+#: source_app/main.py:240
 msgid "All replies have been deleted"
 msgstr "Όλες οι απαντήσεις διαγράφτηκαν"
 
-#: source_app/main.py:252
+#: source_app/main.py:254
 msgid "Sorry, that is not a recognized codename."
 msgstr "Συγγνώμη, δεν αναγνωρίζουμε αυτό το κωδικό όνομα."
 

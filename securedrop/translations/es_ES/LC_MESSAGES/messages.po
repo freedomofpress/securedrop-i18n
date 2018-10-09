@@ -444,8 +444,8 @@ msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
 msgstr ""
-"Con tecnología de <br> <img src=\"/static/i/securedrop_small.png\" alt=\""
-"SecureDrop\">"
+"Con tecnología de <br> <img src=\"/static/i/securedrop_small.png\" alt="
+"\"SecureDrop\">"
 
 #: journalist_templates/base.html:56
 msgid "Powered by <em>SecureDrop {version}</em>."
@@ -822,7 +822,7 @@ msgstr "Login para acceder la interfaz de periodista"
 msgid "Password"
 msgstr "Contraseña"
 
-#: journalist_templates/login.html:12
+#: journalist_templates/login.html:11
 msgid "LOG IN"
 msgstr "INICIAR SESIÓN"
 
@@ -833,12 +833,13 @@ msgid ""
 "\"{url}\">Why is this dangerous?</a>"
 msgstr ""
 "<strong>ADVERTENCIA:&nbsp;</strong> Usted parece estar usando Tor2Web. Esto "
-"<strong>&nbsp; no &nbsp;</strong> proporciona anonimato. <a href=\"{url}\"> ¿"
-"Por qué esto es peligroso? </a>"
+"<strong>&nbsp; no &nbsp;</strong> proporciona anonimato. <a href=\"{url}\"> "
+"¿Por qué esto es peligroso? </a>"
 
 #: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
-msgstr "Esta campo debe tener de 1 a {max_codename_len} caracteres de longitud."
+msgstr ""
+"Esta campo debe tener de 1 a {max_codename_len} caracteres de longitud."
 
 #: source_app/forms.py:18
 msgid "Invalid input."
@@ -852,31 +853,31 @@ msgstr ""
 "Usted fue redirigido porque ya estaba en sesión. Si desea crear una cuenta "
 "nueva, debe cerrar la sesión primero."
 
-#: source_app/main.py:131
+#: source_app/main.py:133
 msgid "You must enter a message or choose a file to submit."
 msgstr "Debe escribir un mensaje o elegir un archivo para enviar."
 
-#: source_app/main.py:164
+#: source_app/main.py:166
 msgid "Thanks! We received your message."
 msgstr "¡Gracias! Recibimos su mensaje."
 
-#: source_app/main.py:166
+#: source_app/main.py:168
 msgid "Thanks! We received your document."
 msgstr "¡Gracias! Recibimos su documento."
 
-#: source_app/main.py:168
+#: source_app/main.py:170
 msgid "Thanks! We received your message and document."
 msgstr "¡Gracias! Recibimos su mensaje y documento."
 
-#: source_app/main.py:220
+#: source_app/main.py:222
 msgid "Reply deleted"
 msgstr "Respuesta eliminada"
 
-#: source_app/main.py:238
+#: source_app/main.py:240
 msgid "All replies have been deleted"
 msgstr "Todas las repuestas han sido eliminadas"
 
-#: source_app/main.py:252
+#: source_app/main.py:254
 msgid "Sorry, that is not a recognized codename."
 msgstr "Lo sentimos, ese nombre clave no es reconocido."
 
@@ -979,8 +980,8 @@ msgid ""
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
 "<strong> Se recomienda mover el control deslizante de seguridad a lo mas "
-"seguro para proteger su anonimato:</strong> <a id=\"disable-js\" href=\"\">"
-"Aprenda cómo establecerlo en el modo más seguro</a>, o ignore esta "
+"seguro para proteger su anonimato:</strong> <a id=\"disable-js\" href="
+"\"\">Aprenda cómo establecerlo en el modo más seguro</a>, o ignore esta "
 "advertencia para continuar."
 
 #: source_templates/index.html:18
@@ -990,8 +991,9 @@ msgid ""
 "install it</a>, or ignore this warning to continue."
 msgstr ""
 "<strong>Se recomienda que use el navegador Tor Browser para el acceder a "
-"SecureDrop: </strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">"
-"Aprenda a como instalarlo </a>, o ignore esta advertencia para continuar."
+"SecureDrop: </strong><a id=\"recommend-tor\" href="
+"\"{tor_browser_url}\">Aprenda a como instalarlo </a>, o ignore esta "
+"advertencia para continuar."
 
 #: source_templates/index.html:19
 msgid ""
@@ -1248,8 +1250,8 @@ msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor browser</a> instead."
 msgstr ""
-"Nosotros <strong>recomendamos encarecidamente</strong> que use <a href=\""
-"www.torproject.org/projects/torbrowser.html\">Tor Browser</a> en su lugar."
+"Nosotros <strong>recomendamos encarecidamente</strong> que use <a href=\"www."
+"torproject.org/projects/torbrowser.html\">Tor Browser</a> en su lugar."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
@@ -1268,9 +1270,9 @@ msgid ""
 "you</strong> to install Tor Browser and use it to access our site safely and "
 "anonymously."
 msgstr ""
-"Si usted quiere enviar información a SecureDrop, nosotros <strong>"
-"encarecidamente le recomendamos</strong> que instale el Tor Browser y lo use "
-"para entrar a nuestro sitio de forma anónima."
+"Si usted quiere enviar información a SecureDrop, nosotros "
+"<strong>encarecidamente le recomendamos</strong> que instale el Tor Browser "
+"y lo use para entrar a nuestro sitio de forma anónima."
 
 #: source_templates/use-tor-browser.html:6
 msgid ""
@@ -1364,8 +1366,8 @@ msgid ""
 "On all systems, open the Terminal and use this gpg command: <code>gpg --"
 "recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 msgstr ""
-"En todos los sistemas, abra la Terminal y use este commando de GPG: <code>"
-"gpg --recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
+"En todos los sistemas, abra la Terminal y use este commando de GPG: "
+"<code>gpg --recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 
 #: source_templates/why-journalist-key.html:20
 msgid ""
@@ -1383,9 +1385,9 @@ msgid ""
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
-"<strong>Sugerencia:</strong> Si usted desea permanecer anónimo, "
-"<strong>no</strong> firme con GPG el archivo cifrado (usando las opciones "
-"<code>--sign</code> o <code>-s</code>) ya que esto va revelaría su identidad."
+"<strong>Sugerencia:</strong> Si usted desea permanecer anónimo, <strong>no</"
+"strong> firme con GPG el archivo cifrado (usando las opciones <code>--sign</"
+"code> o <code>-s</code>) ya que esto va revelaría su identidad."
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"

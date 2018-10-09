@@ -818,7 +818,7 @@ msgstr "Accedere per utilizzare l'interfaccia giornalista"
 msgid "Password"
 msgstr "Password"
 
-#: journalist_templates/login.html:12
+#: journalist_templates/login.html:11
 msgid "LOG IN"
 msgstr "ACCEDI"
 
@@ -850,31 +850,31 @@ msgstr ""
 "l'accesso. Per creare un nuovo account bisogna prima terminare la sessione "
 "corrente."
 
-#: source_app/main.py:131
+#: source_app/main.py:133
 msgid "You must enter a message or choose a file to submit."
 msgstr "È necessario inserire un messaggio o scegliere un file da inviare."
 
-#: source_app/main.py:164
+#: source_app/main.py:166
 msgid "Thanks! We received your message."
 msgstr "Grazie! Abbiamo ricevuto il tuo messaggio."
 
-#: source_app/main.py:166
+#: source_app/main.py:168
 msgid "Thanks! We received your document."
 msgstr "Grazie! Abbiamo ricevuto il tuo documento."
 
-#: source_app/main.py:168
+#: source_app/main.py:170
 msgid "Thanks! We received your message and document."
 msgstr "Grazie! Abbiamo ricevuto il tuo messaggio e il documento."
 
-#: source_app/main.py:220
+#: source_app/main.py:222
 msgid "Reply deleted"
 msgstr "Risposta eliminata"
 
-#: source_app/main.py:238
+#: source_app/main.py:240
 msgid "All replies have been deleted"
 msgstr "Tutte le risposte sono state eliminate"
 
-#: source_app/main.py:252
+#: source_app/main.py:254
 msgid "Sorry, that is not a recognized codename."
 msgstr "Questo nome in codice non è riconosciuto."
 

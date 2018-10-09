@@ -823,7 +823,7 @@ msgstr "Zaloguj się, aby uzyskać dostęp do interfejsu dziennikarskiego"
 msgid "Password"
 msgstr "Hasło"
 
-#: journalist_templates/login.html:12
+#: journalist_templates/login.html:11
 msgid "LOG IN"
 msgstr "ZALOGUJ SIĘ"
 
@@ -853,31 +853,31 @@ msgstr ""
 "Zostałeś przekierowany, ponieważ jesteś już zalogowany. Jeśli chcesz "
 "utworzyć nowe konto, musisz się najpierw wylogować."
 
-#: source_app/main.py:131
+#: source_app/main.py:133
 msgid "You must enter a message or choose a file to submit."
 msgstr "Musisz wprowadzić wiadomość lub wybrać plik do przesłania."
 
-#: source_app/main.py:164
+#: source_app/main.py:166
 msgid "Thanks! We received your message."
 msgstr "Dziękuję! Otrzymaliśmy Twoją wiadomość."
 
-#: source_app/main.py:166
+#: source_app/main.py:168
 msgid "Thanks! We received your document."
 msgstr "Dziękuję! Otrzymaliśmy Twój plik."
 
-#: source_app/main.py:168
+#: source_app/main.py:170
 msgid "Thanks! We received your message and document."
 msgstr "Dziękuję! Otrzymaliśmy Twoją wiadomość i plik."
 
-#: source_app/main.py:220
+#: source_app/main.py:222
 msgid "Reply deleted"
 msgstr "Odpowiedź usunięta"
 
-#: source_app/main.py:238
+#: source_app/main.py:240
 msgid "All replies have been deleted"
 msgstr "Wszystkie odpowiedzi zostały usunięte"
 
-#: source_app/main.py:252
+#: source_app/main.py:254
 msgid "Sorry, that is not a recognized codename."
 msgstr "Przepraszamy, nie rozpoznajemy tego kryptonimu."
 

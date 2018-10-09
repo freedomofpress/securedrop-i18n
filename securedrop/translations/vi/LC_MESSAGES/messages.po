@@ -785,7 +785,7 @@ msgstr "Truy cập để sử dụng giao diện nhà báo"
 msgid "Password"
 msgstr "Mật khẩu"
 
-#: journalist_templates/login.html:12
+#: journalist_templates/login.html:11
 msgid "LOG IN"
 msgstr "TRUY CẬP"
 
@@ -814,31 +814,31 @@ msgstr ""
 "Bạn được gửi tới địa chỉ mới vì bạn đã truy cập rồi. Nếu bạn muốn tạo một "
 "tài khoản mới, vui lòng đăng xuất trước."
 
-#: source_app/main.py:131
+#: source_app/main.py:133
 msgid "You must enter a message or choose a file to submit."
 msgstr "Bạn phải nhập một tin nhắn hay chọn một tài liệu để tải lên."
 
-#: source_app/main.py:164
+#: source_app/main.py:166
 msgid "Thanks! We received your message."
 msgstr "Cảm ơn! Chúng tôi đã nhận được tin nhắn của bạn."
 
-#: source_app/main.py:166
+#: source_app/main.py:168
 msgid "Thanks! We received your document."
 msgstr "Cảm ơn! Chúng tôi đã nhận được tài liệu của bạn."
 
-#: source_app/main.py:168
+#: source_app/main.py:170
 msgid "Thanks! We received your message and document."
 msgstr "Cảm ơn! Chúng tôi đã nhận được tin nhắn và tài liệu của bạn."
 
-#: source_app/main.py:220
+#: source_app/main.py:222
 msgid "Reply deleted"
 msgstr "Câu trả lời đã được xóa"
 
-#: source_app/main.py:238
+#: source_app/main.py:240
 msgid "All replies have been deleted"
 msgstr "Tất cả các câu trả lời đã được xóa"
 
-#: source_app/main.py:252
+#: source_app/main.py:254
 msgid "Sorry, that is not a recognized codename."
 msgstr "Đây không phải là một mật danh trong cơ sở dữ liệu."
 

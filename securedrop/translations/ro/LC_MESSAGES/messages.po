@@ -824,7 +824,7 @@ msgstr "Autentifică-te pentru a accesa interfața jurnalistului"
 msgid "Password"
 msgstr "Parola"
 
-#: journalist_templates/login.html:12
+#: journalist_templates/login.html:11
 msgid "LOG IN"
 msgstr "AUTENTIFICĂ-TE"
 
@@ -854,31 +854,31 @@ msgstr ""
 "Ai fost redirectat pentru că ești deja autentificat. Dacă vrei să creezi un "
 "nou cont trebuie să te deconectezi mai întâi."
 
-#: source_app/main.py:131
+#: source_app/main.py:133
 msgid "You must enter a message or choose a file to submit."
 msgstr "Trebuie să introduci un mesaj sau să alegi un fișier de trimis."
 
-#: source_app/main.py:164
+#: source_app/main.py:166
 msgid "Thanks! We received your message."
 msgstr "Mulțumim! Am primit mesajul tău."
 
-#: source_app/main.py:166
+#: source_app/main.py:168
 msgid "Thanks! We received your document."
 msgstr "Mulțumim! Am primit documentul tău."
 
-#: source_app/main.py:168
+#: source_app/main.py:170
 msgid "Thanks! We received your message and document."
 msgstr "Mulțumim! Am primit mesajul și documentul tău."
 
-#: source_app/main.py:220
+#: source_app/main.py:222
 msgid "Reply deleted"
 msgstr "Răspunsul a fost șters"
 
-#: source_app/main.py:238
+#: source_app/main.py:240
 msgid "All replies have been deleted"
 msgstr "Toate răspunsurile au fost șterse"
 
-#: source_app/main.py:252
+#: source_app/main.py:254
 msgid "Sorry, that is not a recognized codename."
 msgstr "Ne pare rău, acesta nu este un nume de cod recunoscut."
 
