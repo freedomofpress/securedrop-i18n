@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.9.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-10-09 19:49+0000\n"
-"Last-Translator: Aiiida <leonaviciute.aida@gmail.com>\n"
+"PO-Revision-Date: 2018-10-09 23:47+0000\n"
+"Last-Translator: Pranciškus Jansas <pranciskusjansas@gmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/lt/>\n"
 "Language: lt\n"
@@ -1287,11 +1287,16 @@ msgid "Submit Files or Messages"
 msgstr "Pateikti Failus arba Žinutę"
 
 #: source_templates/lookup.html:21
+#, fuzzy
 msgid ""
 "If you are already familiar with GPG, you can optionally encrypt your files "
 "and messages with our <a href=\"{url}\" class=\"text-link\">public key</a> "
 "before submission. Files are encrypted as they are received by SecureDrop."
 msgstr ""
+"Visos paraiškos yra automatiškai užšifruojamos pateikiamo metu. Jei turi "
+"patirties su GPG šifravimu, gali užšifruoti savuosius failus ir žinutes "
+"naudodamas(-a) mūsų <a href=\"{url}\" class=\"text-link\">viešąjį raktą</a> "
+"dar prieš pateikiant paraišką į mūsų sistemą."
 
 #: source_templates/lookup.html:22
 #, fuzzy
@@ -1392,16 +1397,22 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Atsiprašome, neradome, ko ieškote."
 
 #: source_templates/screensaver.html:2
+#, fuzzy
 msgid "Interface hidden. Move your cursor here to show."
 msgstr ""
+"Vartotojo sąsaja laikinai paslėpta. Jei nori tęsti darbą, pajudink pelę."
 
 #: source_templates/session_timeout.html:6
+#, fuzzy
 msgid ""
 "Your session timed out due to inactivity. Please login again if you want to "
 "continue using SecureDrop, or select \"New Identity\" from the green onion "
 "button in the Tor browser to clear all history of your SecureDrop usage from "
 "this device. If you are not using Tor Browser, restart your browser."
 msgstr ""
+"Tavo sesija buvo sustabdyta dėl per mažo aktyvumo. Jei nori toliau naudotis "
+"SecureDrop sistema, prisijunk iš naujo. Jei nori pašalinti šio apsilankymo "
+"istoriją iš savo įrenginio, perkrauk Tor naršyklę."
 
 #: source_templates/tor2web-warning.html:3
 #, fuzzy
@@ -1501,31 +1512,43 @@ msgstr ""
 "pateikiamus duomenis galite užšifruoti patys. Tam padaryti:"
 
 #: source_templates/why-journalist-key.html:7
+#, fuzzy
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. The public key is a text file "
 "with the extension <code>.asc</code>"
 msgstr ""
+"<a href=\"{url}\">Atsisiųsk</a> viešąjį raktą. Viešasis raktas yra failas su "
+"<code>*.asc</code> galūne."
 
 #: source_templates/why-journalist-key.html:8
+#, fuzzy
 msgid "Import it into your GPG keyring."
-msgstr ""
+msgstr "Įtrauk raktą į savo GPG raktinę."
 
 #: source_templates/why-journalist-key.html:10
+#, fuzzy
 msgid ""
 "If you are using <a href=\"{url}\">Tails</a>, you can double-click the "
 "<code>.asc</code> file you just downloaded and it will be automatically "
 "imported to your keyring."
 msgstr ""
+"Jei naudoji <a href=\"{url}\">Tails</a> operacinę sistemą, du kartus "
+"spustelk su pele ant ką tik atsiųsto <code>*.asc</code> failo ir jis bus "
+"automatiškai įtrauktas į tavo raktinę."
 
 #: source_templates/why-journalist-key.html:11
+#, fuzzy
 msgid ""
 "If you are using Mac/Linux, open the terminal. You can import the key with "
 "<code>gpg --import /path/to/key.asc</code>."
 msgstr ""
+"Jei naudoji Mac/Linux operacinę sistemą, atverk terminalo langą. Rakto "
+"importavimui naudok <code>gpg --import /kelias/iki/rakto.asc</code> komandą."
 
 #: source_templates/why-journalist-key.html:14
+#, fuzzy
 msgid "Encrypt your submission."
-msgstr ""
+msgstr "Užsifruoti paraišką."
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
