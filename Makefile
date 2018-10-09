@@ -2,6 +2,7 @@ DEFAULT_GOAL: help
 SHELL := /bin/bash
 PWD := $(shell pwd)
 TAG ?= $(shell git rev-parse HEAD)
+STABLE_VER := $(shell cat molecule/shared/stable.ver)
 
 .PHONY: ci-spinup
 ci-spinup: ## Creates AWS EC2 hosts for testing staging environment.
@@ -19,13 +20,9 @@ ci-run: ## Provisions AWS EC2 hosts for testing staging environment.
 ci-go: ## Creates, provisions, tests, and destroys AWS EC2 hosts for testing staging environment.
 	@if [[ "${CIRCLE_BRANCH}" != docs-* ]]; then molecule test -s aws; else echo Not running on docs branch...; fi
 
-.PHONY: ci-lint-image
-ci-lint-image: ## Builds linting container.
-	docker build $(DOCKER_BUILD_ARGUMENTS) -t securedrop-lint:${TAG} -f devops/docker/Dockerfile.linting .
-
 .PHONY: ci-lint
 ci-lint: ## Runs linting in linting container.
-	devops/scripts/dev-shell-ci sudo make --keep-going lint typelint
+	devops/scripts/dev-shell-ci run make --keep-going lint typelint
 
 .PHONY: install-mypy
 install-mypy: ## pip install mypy in a dedicated python3 virtualenv
@@ -70,27 +67,11 @@ html-lint: ## Validates HTML in web application template files.
 
 .PHONY: yamllint
 yamllint: ## Lints YAML files (does not validate syntax!)
-# Prune the `.venv/` dir if it exists, since it contains pip-installed files
-# and is not subject to our linting. Using grep to filter filepaths since
-# `-regextype=posix-extended` is not cross-platform.
-	@find "$(PWD)" -path "*/.venv" -prune -o -type f \
-		| grep -E '^.*\.ya?ml' | xargs yamllint -c "$(PWD)/.yamllint"
+	./devops/scripts/yaml-lint.sh
 
 .PHONY: shellcheck
 shellcheck: ## Lints Bash and sh scripts.
-# Omitting the `.git/` directory since its hooks won't pass validation, and we
-# don't maintain those scripts. Omitting the `.venv/` dir because we don't control
-# files in there. Omitting the ossec packages because there are a LOT of violations,
-# and we have a separate issue dedicated to cleaning those up.
-	@docker create -v /mnt --name shellcheck-targets circleci/python:2 /bin/true 2> /dev/null || true
-	@docker cp $(PWD)/. shellcheck-targets:/mnt/
-	@find "." \( -path "*/.venv" -o -path "./install_files/ossec-server" \
-		-o -path "./install_files/ossec-agent" \) -prune \
-		-o -type f -and -not -ipath '*/.git/*' -exec file --mime {} + \
-		| perl -F: -lanE '$$F[1] =~ /x-shellscript/ and say $$F[0]' \
-		| xargs docker run --rm --volumes-from shellcheck-targets \
-		-t koalaman/shellcheck:v0.4.6 \
-		-x --exclude=SC1091,SC2001,SC2064,SC2181
+	./devops/scripts/shellcheck.sh
 
 .PHONY: shellcheckclean
 shellcheckclean: ## Cleans up temporary container associated with shellcheck target.
@@ -107,20 +88,27 @@ docker-build-ubuntu: ## Builds SD Ubuntu docker container
 build-debs: ## Builds and tests debian packages
 	@if [[ "${CIRCLE_BRANCH}" != docs-* ]]; then molecule test -s builder; else echo Not running on docs branch...; fi
 
+.PHONY: build-debs-xenial
+build-debs-xenial: ## Builds and tests debian packages (includes Xenial overrides, TESTING ONLY)
+	@if [[ "${CIRCLE_BRANCH}" != docs-* ]]; then \
+		molecule converge -s builder -- -e securedrop_build_xenial_support=True; \
+		else echo Not running on docs branch...; fi
+
 .PHONY: safety
 safety: ## Runs `safety check` to check python dependencies for vulnerabilities
-	@for req_file in `find . -type f -name '*requirements.txt'`; do \
-		echo "Checking file $$req_file" \
-		&& safety check --ignore 36351 --full-report -r $$req_file \
-		&& echo -e '\n' \
-		|| exit 1; \
-	done
-
+	pip install --upgrade safety && \
+		for req_file in `find . -type f -name '*requirements.txt'`; do \
+			echo "Checking file $$req_file" \
+			&& safety check --ignore 36351 --full-report -r $$req_file \
+			&& echo -e '\n' \
+			|| exit 1; \
+		done
 # Bandit is a static code analysis tool to detect security vulnerabilities in Python applications
 # https://wiki.openstack.org/wiki/Security/Projects/Bandit
 .PHONY: bandit
 bandit: ## Run bandit with medium level excluding test-related folders
-	@bandit --recursive . --exclude admin/.tox,admin/.venv,admin/.eggs,molecule,testinfra,securedrop/tests,.tox,.venv -ll
+	pip install --upgrade bandit && \
+		bandit --recursive . --exclude admin/.tox,admin/.venv,admin/.eggs,molecule,testinfra,securedrop/tests,.tox,.venv -ll
 
 .PHONY: update-pip-requirements
 update-pip-requirements: ## Updates all Python requirements files via pip-compile.
@@ -151,9 +139,29 @@ vagrant-package: ## Package up a vagrant box of the last stable SD release
 staging: ## Creates local staging environment in VM, autodetecting platform
 	@./devops/create-staging-env
 
+.PHONY: staging-xenial
+staging-xenial: ## Creates local staging VMs based on Xenial, autodetecting platform
+	@./devops/create-staging-env xenial
+
 .PHONY: clean
 clean: ## DANGER! Purges all site-specific info and developer files from project.
 	@./devops/clean
+
+.PHONY: upgrade_start
+upgrade_start: ## Boot up an upgrade test base environment using libvirt
+	@SD_UPGRADE_BASE=$(STABLE_VER) molecule converge -s upgrade
+
+.PHONY: upgrade_destroy
+upgrade_destroy: ## Destroy up an upgrade test base environment
+	@SD_UPGRADE_BASE=$(STABLE_VER) molecule destroy -s upgrade
+
+.PHONY: upgrade_test_local
+upgrade_test_local: ## Once an upgrade environment is running, force upgrade apt packages (local pkgs)
+	@molecule side-effect -s upgrade
+
+.PHONY: upgrade_test_qa
+upgrade_test_qa: ## Once an upgrade environment is running, force upgrade apt packages (from qa server)
+	@QA_APTTEST=yes molecule side-effect -s upgrade
 
 # Explaination of the below shell command should it ever break.
 # 1. Set the field separator to ": ##" and any make targets that might appear between : and ##
