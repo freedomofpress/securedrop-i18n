@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.9.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-10-09 23:47+0000\n"
+"PO-Revision-Date: 2018-10-10 22:24+0000\n"
 "Last-Translator: Pranciškus Jansas <pranciskusjansas@gmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/lt/>\n"
@@ -639,8 +639,8 @@ msgid ""
 "An encryption key will be generated for the source the next time they log "
 "in, after which you will be able to reply to the source here."
 msgstr ""
-"Šaltiniui galimybę atsakyti turėsite po to, kai jis prisijungs kitą kartą ir "
-"jam bus sukurtas užšifravimo kodas."
+"Šaltiniui galimybę atsakyti turėsite tik po to, kai jis prisijungs kitą "
+"kartą ir jam bus sukurtas užšifravimo kodas."
 
 #: journalist_templates/col.html:105
 #, fuzzy
@@ -818,20 +818,30 @@ msgid "Reset Two-Factor Authentication"
 msgstr "Iš naujo nustatyti dviejų dalių autentifikavimą"
 
 #: journalist_templates/edit_account.html:61
+#, fuzzy
 msgid ""
 "If a user's two-factor authentication credentials have been lost or "
 "compromised, you can reset them here. <em>If you do this, make sure the user "
 "is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
+"Jei vartotojo dviejų dalių autentifikavimo raktas buvo prarastas ar atiteko "
+"trečiosiom šalim, čia galima jį nustatyti iš naujo. <em>Proceso metu "
+"vartotojo raktų įrenginys turi būti paruoštas naujo rakto nustatymui, kitu "
+"atveju vartotojo paskyra bus negrįžtamai užrakinta.</em>"
 
 #: journalist_templates/edit_account.html:63
+#, fuzzy
 msgid ""
 "If your two-factor authentication credentials have been lost or compromised, "
 "or you got a new device, you can reset your credentials here. <em>If you do "
 "this, make sure you are ready to set up your new device, otherwise you will "
 "be locked out of your account.</em>"
 msgstr ""
+"Jei tavo dviejų dalių autentifikavimo raktas buvo prarastas ar atiteko "
+"trečiosiom šalim, čia gali jį nustatyti iš naujo. <em>Proceso metu tavo "
+"raktų įrenginys turi būti paruoštas naujo rakto nustatymui, kitu atveju tavo "
+"paskyra bus negrįžtamai užrakinta.</em>"
 
 #: journalist_templates/edit_account.html:65
 #, fuzzy
@@ -1248,11 +1258,14 @@ msgid "Important!"
 msgstr "Svarbu!"
 
 #: source_templates/logout_flashed_message.html:5
+#, fuzzy
 msgid ""
 "Thank you for exiting your session! Please select \"New Identity\" from the "
 "green onion button in the Tor browser to clear all history of your "
 "SecureDrop usage from this device."
 msgstr ""
+"Tavo sesija sėkmingai uždaryta. Norėdamas pašalinti šios sesijos istoriją iš "
+"savo įrenginio, perkrauk Tor naršyklę."
 
 #: source_templates/lookup.html:11
 #, fuzzy
@@ -1294,9 +1307,9 @@ msgid ""
 "before submission. Files are encrypted as they are received by SecureDrop."
 msgstr ""
 "Visos paraiškos yra automatiškai užšifruojamos pateikiamo metu. Jei turi "
-"patirties su GPG šifravimu, gali užšifruoti savuosius failus ir žinutes "
+"patirties su GPG šifravimu, gali užšifruoti savo žinutes ir failus "
 "naudodamas(-a) mūsų <a href=\"{url}\" class=\"text-link\">viešąjį raktą</a> "
-"dar prieš pateikiant paraišką į mūsų sistemą."
+"dar prieš pateikiant juos į mūsų sistemą."
 
 #: source_templates/lookup.html:22
 #, fuzzy
@@ -1551,12 +1564,15 @@ msgid "Encrypt your submission."
 msgstr "Užsifruoti paraišką."
 
 #: source_templates/why-journalist-key.html:16
+#, fuzzy
 msgid ""
 "You will need to be able to identify the key (this is called the \"user ID\" "
 "or UID). Since the public key's filename is the key's fingerprint (with .asc "
 "at the end), you can just copy and paste that. (don't include the <code>."
 "asc</code>!)"
 msgstr ""
+"Rakto identifikavimui naudok mūsų viešojo rakto failo pavadinimą "
+"neįtraukiant <code>.asc</code> galūnės."
 
 #: source_templates/why-journalist-key.html:17
 #, fuzzy
