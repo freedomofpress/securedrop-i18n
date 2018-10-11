@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-10-11 20:46+0000\n"
+"PO-Revision-Date: 2018-10-16 02:32+0000\n"
 "Last-Translator: Jobava <jobaval10n@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ro/>\n"
@@ -505,13 +505,11 @@ msgstr "Răspunde"
 
 #: journalist_templates/col.html:41 journalist_templates/col.html:48
 msgid "Read"
-msgstr ""
+msgstr "Citit"
 
 #: journalist_templates/col.html:45
-#, fuzzy
-#| msgid "Select Unread"
 msgid "Unread"
-msgstr "Selectează necitite"
+msgstr "Necitit"
 
 #: journalist_templates/col.html:56
 msgid "Uploaded Document"
@@ -571,7 +569,7 @@ msgstr ""
 
 #: journalist_templates/col.html:121
 msgid "DELETE SOURCE AND SUBMISSIONS"
-msgstr ""
+msgstr "ȘTERGE SURSA ȘI TRIMITERILE"
 
 #: journalist_templates/col.html:129
 msgid "Are you sure you want to delete this collection?"
@@ -605,7 +603,7 @@ msgstr "Aici poți actualiza imaginea afișată pe interfețele web SecureDrop:"
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
-msgstr ""
+msgstr "Dimensiune recomandată: 500px * 450px"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
@@ -955,13 +953,6 @@ msgstr ""
 "continuare."
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we do not track users of our <strong>SecureDrop</strong>\n"
-#| " service, in future visits, using this codename will be the only way we "
-#| "have to communicate with you should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"
 " service, in future visits, using this codename will be the only way we have "
@@ -969,11 +960,11 @@ msgid ""
 " questions or are interested in additional information. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"Deoarece noi nu urmărim utilizatorii serviciului nostru <strong>SecureDrop</"
-"strong>,\n"
+"Deoarece noi nu urmărim utilizatorii serviciului nostru "
+"<strong>SecureDrop</strong>,\n"
 "în vizitele tale ulterioare acest nume de cod va fi singura metodă prin care "
 "vei putea comunica cu noi\n"
-"în caz că ai alte întrebări sau dorești să ne trimiți documente "
+"în caz că ai alte întrebări sau dorești să ne trimiți informații "
 "suplimentare. Spre deosebire de parole, un nume de cod nu poate fi recuperat "
 "de noi în niciun fel."
 
@@ -982,11 +973,6 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "TRIMITE DOCUMENTE"
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend turning the Security Slider to Safest to protect "
-#| "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set "
-#| "it to safest</a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to move the Security Slider to Safest to protect "
 "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it "
@@ -994,22 +980,18 @@ msgid ""
 msgstr ""
 "<strong>Recomandăm să muți opțiunea de securitate la „cea mai sigură” pentru "
 "a-ți proteja anonimitatea: </strong><a id=\"disable-js\" href=\"\">Află cum "
-"poți seta opțiunea</a>, sau poți ignora această avertizare pentru a continua."
+"poți seta opțiunea cea mai sigură</a>, sau poți ignora avertizarea pentru a "
+"continua."
 
 #: source_templates/index.html:18
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend using Tor Browser to access SecureDrop:</strong> <a "
-#| "id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
-#| "a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Recomandăm să folosești Browserul Tor pentru a accesa SecureDrop:</"
-"strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Află cum poți să-"
-"l instalezi</a>, sau ignoră această avertizare pentru a continua."
+"<strong>Recomandăm să folosești Browserul Tor pentru a accesa "
+"SecureDrop:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Află "
+"cum poți să-l instalezi</a>, sau ignoră această avertizare pentru a continua."
 
 #: source_templates/index.html:19
 #, fuzzy
