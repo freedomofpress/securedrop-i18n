@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-03-11 18:00+0000\n"
+"PO-Revision-Date: 2018-10-11 20:46+0000\n"
 "Last-Translator: Jobava <jobaval10n@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.club/projects/securedrop/"
 "securedrop/ro/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 2.20\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:14
@@ -93,10 +93,8 @@ msgid "Only administrators can access this page."
 msgstr "Doar administratorii pot accesa această pagină."
 
 #: journalist_app/forms.py:19
-#, fuzzy
-#| msgid "Field must be 40 characters long but got {num_chars}."
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
-msgstr "Câmpul trebuie să fie de 40 de caractere, dar sunt {num_chars}."
+msgstr "Secretele HOTP au 40 de caractere lungime, ai introdus {num_chars}."
 
 #: journalist_app/forms.py:30
 msgid ""
@@ -119,7 +117,7 @@ msgstr "Fișierul este obligatoriu."
 
 #: journalist_app/forms.py:62
 msgid "You can only upload PNG image files."
-msgstr ""
+msgstr "Poți încărca doar fișiere de imagine PNG."
 
 #: journalist_app/main.py:117 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
@@ -253,9 +251,9 @@ msgstr[2] "{msg_num} de mesaje"
 #: journalist_templates/_source_row.html:27
 msgid "1 unread"
 msgid_plural "{num_unread} unread"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "unul necitit"
+msgstr[1] "{num_unread} necitite"
+msgstr[2] "{num_unread} necitite"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
