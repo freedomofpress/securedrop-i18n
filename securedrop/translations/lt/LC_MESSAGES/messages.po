@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.9.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-10-10 22:24+0000\n"
+"PO-Revision-Date: 2018-10-11 18:01+0000\n"
 "Last-Translator: Pranciškus Jansas <pranciskusjansas@gmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/lt/>\n"
@@ -1050,13 +1050,12 @@ msgid "LOG OUT"
 msgstr "ATSIJUNGTI"
 
 #: source_templates/base.html:47 source_templates/index.html:88
-#, fuzzy
 msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
 msgstr ""
-"Kaip ir kiekvienas programinis paketas, Saugi Dėžutė (SecureDrop) gali "
-"turėti saugumo spragų."
+"Kaip ir kiekviena sistema, SecureDrop programinis paketas gali turėti "
+"saugumo spragų."
 
 #: source_templates/error.html:3
 #, fuzzy
@@ -1095,9 +1094,8 @@ msgid "Forgot your codename?"
 msgstr "Pamiršai savo slapyvardį?"
 
 #: source_templates/generate.html:4
-#, fuzzy
 msgid "Welcome"
-msgstr "Labas"
+msgstr "Sveiki!"
 
 #: source_templates/generate.html:7
 #, fuzzy
@@ -1410,10 +1408,9 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Atsiprašome, neradome, ko ieškote."
 
 #: source_templates/screensaver.html:2
-#, fuzzy
 msgid "Interface hidden. Move your cursor here to show."
 msgstr ""
-"Vartotojo sąsaja laikinai paslėpta. Jei nori tęsti darbą, pajudink pelę."
+"Vartotojo sąsaja laikinai paslėpta. Jei norite tęsti darbą, pajudinkite pelę."
 
 #: source_templates/session_timeout.html:6
 #, fuzzy
