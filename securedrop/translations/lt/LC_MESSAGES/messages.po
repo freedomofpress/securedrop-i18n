@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.9.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-10-11 18:01+0000\n"
+"PO-Revision-Date: 2018-10-16 02:32+0000\n"
 "Last-Translator: Pranciškus Jansas <pranciskusjansas@gmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.securedrop.club/projects/"
 "securedrop/securedrop/lt/>\n"
@@ -1095,14 +1095,15 @@ msgstr "Pamiršai savo slapyvardį?"
 
 #: source_templates/generate.html:4
 msgid "Welcome"
-msgstr "Sveiki!"
+msgstr "Sveiki"
 
 #: source_templates/generate.html:7
 #, fuzzy
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
-msgstr "Įsimink arba užsirašyk šį slapyvardį ir saugok jį saugioje vietoje."
+msgstr ""
+"Įsiminkite arba užsirašykite šį slapyvardį. Jį saugokite saugioje vietoje."
 
 #: source_templates/generate.html:10
 #, fuzzy
@@ -1128,9 +1129,8 @@ msgstr ""
 "slaptažodžių atveju, nėra būdo atkurti prarastą slapyvardį."
 
 #: source_templates/generate.html:44 source_templates/index.html:66
-#, fuzzy
 msgid "SUBMIT DOCUMENTS"
-msgstr "PATEIKTI DOKUMENTUS"
+msgstr "PATEIKTI PRANEŠIMĄ"
 
 #: source_templates/index.html:17
 #, fuzzy
@@ -1176,9 +1176,8 @@ msgid "Submit for the first time"
 msgstr "Pateikti pirmą kartą"
 
 #: source_templates/index.html:49
-#, fuzzy
 msgid "Already submitted something?"
-msgstr "Jau esi pateikęs paraišką?"
+msgstr "Jau esate pateikęs pranešimą?"
 
 #: source_templates/index.html:55
 #, fuzzy
@@ -1191,8 +1190,8 @@ msgid ""
 "If you have already submitted to journalists, log in here to check for "
 "responses."
 msgstr ""
-"Jei jau esi pateikęs paraišką, prisijunk čia, kad galėtum patikrinti "
-"atsakymus."
+"Jei jau esate pateikęs pranešimą, prisijunkite čia, kad galėtumėte "
+"patikrinti atsakymus."
 
 #: source_templates/index.html:74
 #, fuzzy
