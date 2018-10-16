@@ -139,33 +139,33 @@ msgstr "Byla (failas) privalomas."
 msgid "You can only upload PNG image files."
 msgstr "Prisegti galima tik PNG formato paveikslėlius."
 
-#: journalist_app/main.py:117 journalist_app/utils.py:48
+#: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
 #, fuzzy
 msgid "An unexpected error occurred! Please inform your administrator."
 msgstr "Nenumatyta klaida! Prašome informuoti savo administratorių."
 
-#: journalist_app/main.py:128
+#: journalist_app/main.py:129
 #, fuzzy
 msgid "Thanks. Your reply has been stored."
 msgstr "Dėkojame. Jūsų atsakymas išsaugotas."
 
-#: journalist_app/main.py:149
+#: journalist_app/main.py:150
 #, fuzzy
 msgid "No collections selected for download."
 msgstr "Nepasirinkta jokios medžiagos atsisiuntimui."
 
-#: journalist_app/main.py:152 journalist_app/utils.py:236
+#: journalist_app/main.py:153 journalist_app/utils.py:236
 #, fuzzy
 msgid "No collections selected for deletion."
 msgstr "Nepasirinkta jokios medžiagos ištrynimui."
 
-#: journalist_app/main.py:178
+#: journalist_app/main.py:179
 #, fuzzy
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
 msgstr "Šaltinis '{original_name}' pervadintas į '{new_name}'"
 
-#: journalist_app/main.py:193
+#: journalist_app/main.py:194
 #, fuzzy
 msgid "No unread submissions for this source."
 msgstr "Šaltinis neturi neperskaitytų paraiškų."

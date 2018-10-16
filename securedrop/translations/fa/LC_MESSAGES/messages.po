@@ -117,28 +117,28 @@ msgstr "پرونده مورد نیاز است."
 msgid "You can only upload PNG image files."
 msgstr "تنها می توانید تصاویر را با فرمت PNG بارگزاری کنید."
 
-#: journalist_app/main.py:117 journalist_app/utils.py:48
+#: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
 msgid "An unexpected error occurred! Please inform your administrator."
 msgstr "یک خطای غیر منتظره رخ داده است! لطفا به مدیر خود اطلاع دهید."
 
-#: journalist_app/main.py:128
+#: journalist_app/main.py:129
 msgid "Thanks. Your reply has been stored."
 msgstr "با تشکر. پاسخ شما ذخیره شد."
 
-#: journalist_app/main.py:149
+#: journalist_app/main.py:150
 msgid "No collections selected for download."
 msgstr "هیچ مجموعه‌ای برای بارگیری انتخاب نشده است."
 
-#: journalist_app/main.py:152 journalist_app/utils.py:236
+#: journalist_app/main.py:153 journalist_app/utils.py:236
 msgid "No collections selected for deletion."
 msgstr "هیچ مجموعه‌ای برای حذف انتخاب نشده است."
 
-#: journalist_app/main.py:178
+#: journalist_app/main.py:179
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
 msgstr "منبع آگاه '{original_name}' به '{new_name}' تغییر نام داده است"
 
-#: journalist_app/main.py:193
+#: journalist_app/main.py:194
 msgid "No unread submissions for this source."
 msgstr "هیچ محتوای ارسالی خوانده نشده‌‌ای از این منبع آگاه یافت نشد."
 

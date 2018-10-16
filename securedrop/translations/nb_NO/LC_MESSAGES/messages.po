@@ -113,30 +113,30 @@ msgstr "Fil påkrevd."
 msgid "You can only upload PNG image files."
 msgstr "Du kan kun laste opp PNG-bildefiler."
 
-#: journalist_app/main.py:117 journalist_app/utils.py:48
+#: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
 msgid "An unexpected error occurred! Please inform your administrator."
 msgstr ""
 "En uventet feil oppstod! Gi administrator for din SecureDrop beskjed om at "
 "det skjedde."
 
-#: journalist_app/main.py:128
+#: journalist_app/main.py:129
 msgid "Thanks. Your reply has been stored."
 msgstr "Takk. Svaret ditt har blitt lagret."
 
-#: journalist_app/main.py:149
+#: journalist_app/main.py:150
 msgid "No collections selected for download."
 msgstr "Ingen kildedata valgt for nedlasting."
 
-#: journalist_app/main.py:152 journalist_app/utils.py:236
+#: journalist_app/main.py:153 journalist_app/utils.py:236
 msgid "No collections selected for deletion."
 msgstr "Ingen kildeoppføringer valgt for sletting."
 
-#: journalist_app/main.py:178
+#: journalist_app/main.py:179
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
 msgstr "Kilden '{original_name}' har endret navn til '{new_name}'"
 
-#: journalist_app/main.py:193
+#: journalist_app/main.py:194
 msgid "No unread submissions for this source."
 msgstr "Ingen uleste bidrag fra denne kilden."
 

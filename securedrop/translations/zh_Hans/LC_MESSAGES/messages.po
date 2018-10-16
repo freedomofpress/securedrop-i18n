@@ -108,28 +108,28 @@ msgstr "该文件是必选项。"
 msgid "You can only upload PNG image files."
 msgstr "您只能上传 PNG 图片文件。"
 
-#: journalist_app/main.py:117 journalist_app/utils.py:48
+#: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
 msgid "An unexpected error occurred! Please inform your administrator."
 msgstr "出现一个意外的错误！请通知管理员。"
 
-#: journalist_app/main.py:128
+#: journalist_app/main.py:129
 msgid "Thanks. Your reply has been stored."
 msgstr "谢谢，您的回复已经被储存。"
 
-#: journalist_app/main.py:149
+#: journalist_app/main.py:150
 msgid "No collections selected for download."
 msgstr "未选择要下载的集合。"
 
-#: journalist_app/main.py:152 journalist_app/utils.py:236
+#: journalist_app/main.py:153 journalist_app/utils.py:236
 msgid "No collections selected for deletion."
 msgstr "未选择要删除的集合。"
 
-#: journalist_app/main.py:178
+#: journalist_app/main.py:179
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
 msgstr "源 '{original_name}' 已被命名为 '{new_name}'"
 
-#: journalist_app/main.py:193
+#: journalist_app/main.py:194
 msgid "No unread submissions for this source."
 msgstr "该源中无未读内容。"
 
