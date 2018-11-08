@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-11-08 21:33+0000\n"
+"PO-Revision-Date: 2018-11-08 21:40+0000\n"
 "Last-Translator: Jobava <jobaval10n@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
@@ -1051,9 +1051,6 @@ msgid "Click <strong>Security Settings...</strong>"
 msgstr "Clic pe <strong>Setări de securitate...</strong>"
 
 #: source_templates/index.html:100
-#, fuzzy
-#| msgid ""
-#| "Turn the Slider to <strong>Safest</strong>, then click <strong>Ok</strong>"
 msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
 msgstr ""
@@ -1096,11 +1093,6 @@ msgid "Whew, it’s you! Now, the embarrassing part..."
 msgstr "Bine ai venit! Întâmpinăm probleme momentan..."
 
 #: source_templates/lookup.html:12
-#, fuzzy
-#| msgid ""
-#| "Our servers experienced an unusual surge of new activity, when you last "
-#| "visited. To err on the side of caution, we put a hold on sending all "
-#| "documents from that day through to our journalists."
 msgid ""
 "Our servers experienced an unusual surge of new activity, when you last "
 "visited. To err on the side of caution, we put a hold on sending all files "
@@ -1108,7 +1100,7 @@ msgid ""
 msgstr ""
 "Serverele noastre sunt supuse unui trafic intens de la ultima ta vizită. "
 "Pentru a nu întâmpina probleme am oprit începând cu acea zi trimiterea de "
-"documente către jurnaliștii noștri."
+"fișiere și mesaje către jurnaliștii noștri."
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1122,7 +1114,7 @@ msgstr ""
 
 #: source_templates/lookup.html:20
 msgid "Submit Files or Messages"
-msgstr ""
+msgstr "Trimite fișiere sau mesaje"
 
 #: source_templates/lookup.html:21
 msgid ""
@@ -1140,10 +1132,8 @@ msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
 msgstr "<a href=\"{url}\" class=\"text-link\">Află mai multe</a>."
 
 #: source_templates/lookup.html:24
-#, fuzzy
-#| msgid "You can send a file, a message, or both."
 msgid "You can submit any kind of file, a message, or both."
-msgstr "Ne poți trimite un fișier, un mesaj, sau ambele."
+msgstr "Ne poți trimite orice fel de fișier, un mesaj, sau ambele."
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
@@ -1158,12 +1148,6 @@ msgid "Read Replies"
 msgstr "Citește răspunsurile"
 
 #: source_templates/lookup.html:58
-#, fuzzy
-#| msgid ""
-#| "You have received a reply. To protect your identity in the unlikely event "
-#| "someone learns your codename, please delete all replies when you're done "
-#| "with them. This also lets us know that you are aware of our reply. You "
-#| "can respond by submitting a new message above."
 msgid ""
 "You have received a reply. To protect your identity in the unlikely event "
 "someone learns your codename, please delete all replies when you're done "
@@ -1173,7 +1157,7 @@ msgstr ""
 "Ai primit un răspuns. Pentru a proteja identitatea ta în cazul improbabil ca "
 "cineva a aflat numele tău de cod, te rugăm să ștergi toate răspunsurile pe "
 "care le-ai postat. Aceasta ne anunță că ai aflat de răspunsul nostru. Mai "
-"poți răspunde prin scrierea unui nou mesaj mai sus."
+"poți răspunde prin trimiterea de noi fișiere sau mesaje mai sus."
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
@@ -1225,7 +1209,7 @@ msgstr "Ne pare rău, nu am găsit ceea ce căutai."
 
 #: source_templates/screensaver.html:2
 msgid "Interface hidden. Move your cursor here to show."
-msgstr ""
+msgstr "Interfața este ascunsă. Mișcă cursorul aici pentru a o afișa."
 
 #: source_templates/session_timeout.html:6
 msgid ""
@@ -1247,18 +1231,24 @@ msgstr "De ce sunt avertizat despre Tor2Web?"
 #: source_templates/tor2web-warning.html:4
 msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
 msgstr ""
+"Folosirea Tor2Web pentru a te conecta la SecureDrop nu-ți va proteja "
+"anonimitatea."
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
 "It could be possible for anyone monitoring your Internet traffic (your "
 "government, your Internet provider), to identify you."
 msgstr ""
+"Este posibil pentru oricine care monitorizează traficul tău de internet ("
+"statul, furnizorul de internet) să te identifice."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor browser</a> instead."
 msgstr ""
+"<strong>Recomandăm puternic</strong> să folosești <a href=\"www.torproject."
+"org/projects/torbrowser.html\">Browserul Tor</a> în loc."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
@@ -1290,21 +1280,15 @@ msgstr ""
 "instrucțiunile pentru a descărca și instala Browserul Tor:"
 
 #: source_templates/use-tor-browser.html:9
-#, fuzzy
-#| msgid ""
-#| "If there is a chance that downloading the Tor Browser raises suspicion "
-#| "and your mail provider is less likely to be monitored, you can send a "
-#| "mail to <pre>gettor@torproject.org</pre> and a bot will answer with "
-#| "instructions."
 msgid ""
 "If there is a chance that downloading Tor Browser raises suspicion and your "
 "mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
 "Dacă descărcarea browserului Tor poate trezi suspiciuni asupra ta, dar este "
-"mai puțin probabil ca furnizorul tău de e-mail să fie monitorizat, ne mai "
-"poți trimite un e-mail la <pre>gettor@torproject.org</pre> și un robot "
-"electronic îți va răspunde cu instrucțiuni."
+"mai puțin probabil ca furnizorul tău de e-mail să fie monitorizat, "
+"recomandăm să ne trimiți un e-mail la <pre>gettor@torproject.org</pre> și un "
+"robot electronic îți va răspunde cu instrucțiuni."
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
