@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-10-16 02:32+0000\n"
+"PO-Revision-Date: 2018-11-08 21:33+0000\n"
 "Last-Translator: Jobava <jobaval10n@gmail.com>\n"
-"Language-Team: Romanian <https://weblate.securedrop.club/projects/securedrop/"
+"Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -994,11 +994,6 @@ msgstr ""
 "l instalezi</a>, sau ignoră această avertizare pentru a continua."
 
 #: source_templates/index.html:19
-#, fuzzy
-#| msgid ""
-#| "<strong>We recommend using Tor Browser to access SecureDrop:</strong> <a "
-#| "id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
-#| "a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
@@ -1006,50 +1001,37 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
-"<strong>Recomandăm să folosești Browserul Tor pentru a accesa SecureDrop:</"
-"strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Află cum poți să-"
-"l instalezi</a>, sau ignoră această avertizare pentru a continua."
+"<strong>Recomandăm să folosești Browserul Tor pentru a accesa SecureDrop "
+"deoarece Orfox nu conferă același nivel de securitate și anonimitate ca "
+"versiunile de desktop.</strong> <a id=\"recommend-tor\" href=\""
+"{tor_browser_url}\">Află cum poți să-l instalezi</a>, sau ignoră această "
+"avertizare pentru a continua."
 
 #: source_templates/index.html:42
-#, fuzzy
-#| msgid "Submit documents for the first time"
 msgid "Submit for the first time"
-msgstr "Trimite documente pentru prima dată"
+msgstr "Trimite pentru prima dată"
 
 #: source_templates/index.html:49
 msgid "Already submitted something?"
 msgstr "Ai trimis deja ceva?"
 
 #: source_templates/index.html:55
-#, fuzzy
-#| msgid ""
-#| "If this is your first time submitting documents to journalists, start "
-#| "here."
 msgid "If this is your first time submitting to journalists, start here."
-msgstr ""
-"Dacă este prima dată când trimiți documente unor jurnaliști, începe aici."
+msgstr "Dacă este prima dată când trimiți unor jurnaliști, începe aici."
 
 #: source_templates/index.html:59
-#, fuzzy
-#| msgid ""
-#| "If you have already submitted documents in the past, log in here to check "
-#| "for responses."
 msgid ""
 "If you have already submitted to journalists, log in here to check for "
 "responses."
 msgstr ""
-"Dacă ai mai trimis deja documente în acest fel, autentifică-te aici pentru a "
-"citi răspunsuri."
+"Dacă ai mai trimis deja în trecut, autentifică-te aici pentru a citi "
+"răspunsurile."
 
 #: source_templates/index.html:74
 msgid "CHECK FOR A RESPONSE"
 msgstr "VERIFICĂ RĂSPUNSURILE"
 
 #: source_templates/index.html:96
-#, fuzzy
-#| msgid ""
-#| "You appear to be using the Tor Browser. You can turn the Security Slider "
-#| "to Safest in 4 easy steps!"
 msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
