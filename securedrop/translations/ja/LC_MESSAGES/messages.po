@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-08-20 20:47+0000\n"
-"Last-Translator: zyphlar <will@zyphon.com>\n"
-"Language-Team: Japanese <https://weblate.securedrop.club/projects/securedrop/"
+"PO-Revision-Date: 2018-11-27 13:35+0000\n"
+"Last-Translator: pito <lnb07655@ebbob.com>\n"
+"Language-Team: Japanese <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -41,7 +41,7 @@ msgstr ""
 
 #: journalist_app/admin.py:38
 msgid "Image updated."
-msgstr ""
+msgstr "画像を更新しました。"
 
 #: journalist_app/admin.py:71
 msgid ""
@@ -388,7 +388,7 @@ msgstr ""
 
 #: journalist_templates/base.html:28
 msgid "Log Out"
-msgstr ""
+msgstr "ログアウト"
 
 #: journalist_templates/base.html:41
 msgid ""
@@ -413,7 +413,7 @@ msgstr ""
 
 #: journalist_templates/col.html:13
 msgid "Change codename"
-msgstr ""
+msgstr "コードネームを変更"
 
 #: journalist_templates/col.html:14
 msgid "Are you sure you want to generate a new codename?"
@@ -421,7 +421,7 @@ msgstr ""
 
 #: journalist_templates/col.html:16
 msgid "CONFIRM"
-msgstr ""
+msgstr "確認"
 
 #: journalist_templates/col.html:22
 msgid ""
@@ -440,7 +440,7 @@ msgstr ""
 #: journalist_templates/col.html:38 journalist_templates/col.html:58
 #: journalist_templates/col.html:91
 msgid "Reply"
-msgstr ""
+msgstr "返信"
 
 #: journalist_templates/col.html:41 journalist_templates/col.html:48
 msgid "Read"
@@ -459,7 +459,7 @@ msgstr ""
 
 #: journalist_templates/col.html:60
 msgid "Message"
-msgstr ""
+msgstr "メッセージ"
 
 #: journalist_templates/col.html:70 journalist_templates/col.html:128
 #: journalist_templates/index.html:46
@@ -518,7 +518,7 @@ msgstr ""
 
 #: journalist_templates/config.html:9
 msgid "Alerts"
-msgstr ""
+msgstr "アラート"
 
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
@@ -530,7 +530,7 @@ msgstr ""
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
-msgstr ""
+msgstr "ロゴ画像"
 
 #: journalist_templates/config.html:23
 msgid ""
@@ -543,7 +543,7 @@ msgstr ""
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
-msgstr ""
+msgstr "ロゴを更新"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -571,19 +571,19 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:12
 msgid "Change username"
-msgstr ""
+msgstr "ユーザー名を変更"
 
 #: journalist_templates/edit_account.html:19
 msgid "UPDATE"
-msgstr ""
+msgstr "更新"
 
 #: journalist_templates/edit_account.html:22
 msgid "Edit your account"
-msgstr ""
+msgstr "アカウントを編集"
 
 #: journalist_templates/edit_account.html:25
 msgid "Reset Password"
-msgstr ""
+msgstr "パスワードをリセット"
 
 #: journalist_templates/edit_account.html:27
 msgid "SecureDrop now uses automatically generated diceware passwords."
@@ -601,7 +601,7 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:40
 msgid "Current Password"
-msgstr ""
+msgstr "現在のパスワード"
 
 #: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
 msgid "Two-factor Code"
@@ -617,7 +617,7 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:53
 msgid "RESET PASSWORD"
-msgstr ""
+msgstr "パスワードをリセット"
 
 #: journalist_templates/edit_account.html:58
 msgid "Reset Two-Factor Authentication"
