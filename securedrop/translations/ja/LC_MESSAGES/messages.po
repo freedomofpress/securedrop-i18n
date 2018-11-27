@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-11-27 14:54+0000\n"
+"PO-Revision-Date: 2018-11-28 05:17+0000\n"
 "Last-Translator: pito <lnb07655@ebbob.com>\n"
 "Language-Team: Japanese <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ja/>\n"
@@ -758,15 +758,15 @@ msgstr ""
 
 #: source_app/main.py:166
 msgid "Thanks! We received your message."
-msgstr "ありがとう! 私たちはあなたのコードネーム"
+msgstr "ありがとう! 私たちはあなたのメッセージを受け取りました。"
 
 #: source_app/main.py:168
 msgid "Thanks! We received your document."
-msgstr ""
+msgstr "ありがとう! 私たちはあなたのドキュメントを受け取りました。"
 
 #: source_app/main.py:170
 msgid "Thanks! We received your message and document."
-msgstr ""
+msgstr "ありがとう! 私たちはあなたのメッセージとドキュメントを受け取りました。"
 
 #: source_app/main.py:222
 msgid "Reply deleted"
@@ -825,7 +825,7 @@ msgstr ""
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
-msgstr ""
+msgstr "コードネームを忘れましたか?"
 
 #: source_templates/generate.html:4
 msgid "Welcome"
@@ -854,7 +854,7 @@ msgstr ""
 
 #: source_templates/generate.html:44 source_templates/index.html:66
 msgid "SUBMIT DOCUMENTS"
-msgstr ""
+msgstr "ドキュメントを送信"
 
 #: source_templates/index.html:17
 msgid ""
@@ -969,7 +969,7 @@ msgstr ""
 
 #: source_templates/lookup.html:20
 msgid "Submit Files or Messages"
-msgstr ""
+msgstr "ファイルまたはメッセージを送信"
 
 #: source_templates/lookup.html:21
 msgid ""
@@ -988,7 +988,7 @@ msgstr ""
 
 #: source_templates/lookup.html:33
 msgid "Maximum upload size: 500 MB"
-msgstr ""
+msgstr "アップロードサイズ制限: 500MB"
 
 #: source_templates/lookup.html:36
 msgid "Write a message."
@@ -1040,15 +1040,15 @@ msgstr ""
 
 #: source_templates/lookup.html:101
 msgid "Show"
-msgstr ""
+msgstr "見る"
 
 #: source_templates/lookup.html:103
 msgid "Hide"
-msgstr ""
+msgstr "隠す"
 
 #: source_templates/notfound.html:3
 msgid "Page not found"
-msgstr ""
+msgstr "ページが見つかりません"
 
 #: source_templates/notfound.html:5
 msgid "Sorry, we couldn't locate what you requested."
