@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-11-27 14:44+0000\n"
+"PO-Revision-Date: 2018-11-27 14:54+0000\n"
 "Last-Translator: pito <lnb07655@ebbob.com>\n"
 "Language-Team: Japanese <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ja/>\n"
@@ -29,7 +29,7 @@ msgstr ""
 
 #: journalist_app/account.py:26
 msgid "Incorrect password or two-factor code."
-msgstr "パスワードまたは２FAコードは正しくありません。"
+msgstr "パスワードまたは2要素認証コードは正しくありません。"
 
 #: journalist_app/account.py:42
 msgid "Token in two-factor authentication verified."
@@ -37,7 +37,7 @@ msgstr "2要素認証のトークンが検証されました。"
 
 #: journalist_app/account.py:46 journalist_app/admin.py:116
 msgid "Could not verify token in two-factor authentication."
-msgstr "2要素認証のトークンを確認できませんでした。"
+msgstr "2要素認証のトークンを検証できませんでした。"
 
 #: journalist_app/admin.py:38
 msgid "Image updated."
@@ -444,14 +444,11 @@ msgstr "返信"
 
 #: journalist_templates/col.html:41 journalist_templates/col.html:48
 msgid "Read"
-msgstr ""
+msgstr "既読"
 
 #: journalist_templates/col.html:45
-#, fuzzy
-#| msgid "1 unread"
-#| msgid_plural "{num_unread} unread"
 msgid "Unread"
-msgstr "{num_unread} 未読"
+msgstr "未読"
 
 #: journalist_templates/col.html:56
 msgid "Uploaded Document"
@@ -703,11 +700,11 @@ msgstr ""
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
-msgstr ""
+msgstr "すべて選択"
 
 #: journalist_templates/js-strings.html:5
 msgid "Select Unread"
-msgstr ""
+msgstr "未読を選択"
 
 #: journalist_templates/js-strings.html:6
 msgid "Select None"
@@ -761,7 +758,7 @@ msgstr ""
 
 #: source_app/main.py:166
 msgid "Thanks! We received your message."
-msgstr ""
+msgstr "ありがとう! 私たちはあなたのコードネーム"
 
 #: source_app/main.py:168
 msgid "Thanks! We received your document."
