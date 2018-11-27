@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-11-27 13:35+0000\n"
+"PO-Revision-Date: 2018-11-27 14:33+0000\n"
 "Last-Translator: pito <lnb07655@ebbob.com>\n"
 "Language-Team: Japanese <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ja/>\n"
@@ -571,7 +571,7 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:12
 msgid "Change username"
-msgstr "ユーザー名を変更"
+msgstr "ユーザーネームを変更"
 
 #: journalist_templates/edit_account.html:19
 msgid "UPDATE"
@@ -679,11 +679,11 @@ msgstr ""
 
 #: journalist_templates/index.html:12
 msgid "Download"
-msgstr ""
+msgstr "ダウンロード"
 
 #: journalist_templates/index.html:13
 msgid "Star"
-msgstr ""
+msgstr "スター"
 
 #: journalist_templates/index.html:14
 msgid "Un-star"
@@ -728,11 +728,11 @@ msgstr ""
 
 #: journalist_templates/login.html:9
 msgid "Password"
-msgstr ""
+msgstr "パスワード"
 
 #: journalist_templates/login.html:11
 msgid "LOG IN"
-msgstr ""
+msgstr "ログイン"
 
 #: source_app/__init__.py:115
 msgid ""
@@ -794,7 +794,7 @@ msgstr ""
 
 #: source_templates/base.html:34
 msgid "LOG OUT"
-msgstr ""
+msgstr "ログアウト"
 
 #: source_templates/base.html:47 source_templates/index.html:88
 msgid ""
@@ -804,7 +804,7 @@ msgstr ""
 
 #: source_templates/error.html:3
 msgid "Server error"
-msgstr ""
+msgstr "サーバーエラー"
 
 #: source_templates/error.html:5
 msgid ""
@@ -818,7 +818,7 @@ msgstr ""
 
 #: source_templates/first_submission_flashed_message.html:2
 msgid "Success!"
-msgstr ""
+msgstr "成功!"
 
 #: source_templates/first_submission_flashed_message.html:3
 msgid ""
@@ -832,7 +832,7 @@ msgstr ""
 
 #: source_templates/generate.html:4
 msgid "Welcome"
-msgstr ""
+msgstr "ようこそ"
 
 #: source_templates/generate.html:7
 msgid ""
@@ -930,20 +930,20 @@ msgstr ""
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
-msgstr ""
+msgstr "コードネームを入力"
 
 #: source_templates/login.html:12
 msgid "Enter your codename"
-msgstr ""
+msgstr "あなたのコードネームを入力"
 
 #: source_templates/login.html:25 source_templates/lookup.html:47
 msgid "CANCEL"
-msgstr ""
+msgstr "キャンセル"
 
 #: source_templates/logout_flashed_message.html:4
 #: source_templates/session_timeout.html:5
 msgid "Important!"
-msgstr ""
+msgstr "重要!"
 
 #: source_templates/logout_flashed_message.html:5
 msgid ""
@@ -1011,11 +1011,11 @@ msgstr ""
 
 #: source_templates/lookup.html:71
 msgid "Delete this reply?"
-msgstr ""
+msgstr "この返信を削除しますか?"
 
 #: source_templates/lookup.html:73
 msgid "DELETE"
-msgstr ""
+msgstr "削除"
 
 #: source_templates/lookup.html:82
 msgid "DELETE ALL REPLIES"
@@ -1091,7 +1091,7 @@ msgstr ""
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
-msgstr ""
+msgstr "を使用する必要があります"
 
 #: source_templates/use-tor-browser.html:4
 msgid ""
