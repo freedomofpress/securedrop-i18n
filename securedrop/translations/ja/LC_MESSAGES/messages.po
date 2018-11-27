@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-11-27 14:41+0000\n"
+"PO-Revision-Date: 2018-11-27 14:44+0000\n"
 "Last-Translator: pito <lnb07655@ebbob.com>\n"
 "Language-Team: Japanese <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ja/>\n"
@@ -33,11 +33,11 @@ msgstr "パスワードまたは２FAコードは正しくありません。"
 
 #: journalist_app/account.py:42
 msgid "Token in two-factor authentication verified."
-msgstr ""
+msgstr "2要素認証のトークンが検証されました。"
 
 #: journalist_app/account.py:46 journalist_app/admin.py:116
 msgid "Could not verify token in two-factor authentication."
-msgstr ""
+msgstr "2要素認証のトークンを確認できませんでした。"
 
 #: journalist_app/admin.py:38
 msgid "Image updated."
@@ -597,7 +597,7 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:34
 msgid "Please enter your current password and two-factor code."
-msgstr ""
+msgstr "現在のパスワードと2要素認証コードを入力してください。"
 
 #: journalist_templates/edit_account.html:40
 msgid "Current Password"
@@ -605,7 +605,7 @@ msgstr "現在のパスワード"
 
 #: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
 msgid "Two-factor Code"
-msgstr "2FAコード"
+msgstr "2要素認証コード"
 
 #: journalist_templates/edit_account.html:46
 msgid "The user's password will be changed to:"
@@ -621,7 +621,7 @@ msgstr "パスワードをリセット"
 
 #: journalist_templates/edit_account.html:58
 msgid "Reset Two-Factor Authentication"
-msgstr ""
+msgstr "2要素認証をリセット"
 
 #: journalist_templates/edit_account.html:61
 msgid ""
