@@ -221,7 +221,7 @@ msgid "Close"
 msgstr "Κλείσιμο"
 
 #: journalist_templates/_confirmation_modal.html:7
-#: journalist_templates/col.html:15 source_templates/lookup.html:72
+#: journalist_templates/col.html:15 source_templates/lookup.html:77
 msgid "Cancel"
 msgstr "Άκυρο"
 
@@ -249,7 +249,7 @@ msgid "Change Secret"
 msgstr "Αλλαγή μυστικού"
 
 #: journalist_templates/account_edit_hotp_secret.html:7
-#: journalist_templates/admin_add_user.html:33
+#: journalist_templates/admin_add_user.html:40
 #: journalist_templates/admin_edit_hotp_secret.html:8
 msgid "HOTP Secret"
 msgstr "Μυστικό HOTP"
@@ -344,7 +344,7 @@ msgid "Admin Interface"
 msgstr "Διεπαφή διαχείρισης"
 
 #: journalist_templates/admin.html:6
-#: journalist_templates/admin_add_user.html:39
+#: journalist_templates/admin_add_user.html:46
 msgid "ADD USER"
 msgstr "ΠΡΟΣΘΗΚΗ ΧΡΗΣΤΗ"
 
@@ -397,16 +397,24 @@ msgstr "ΠΑΡΑΜΕΤΡΟΠΟΙΗΣΗ ΕΓΚΑΤΑΣΤΑΣΗΣ"
 msgid "Back to admin interface"
 msgstr "Πίσω στη διεπαφή διαχείρισης"
 
-#: journalist_templates/admin_add_user.html:21
+#: journalist_templates/admin_add_user.html:23
+msgid "Username can contain spaces"
+msgstr ""
+
+#: journalist_templates/admin_add_user.html:24
+msgid "Username is case-sensitive"
+msgstr ""
+
+#: journalist_templates/admin_add_user.html:28
 msgid "The user's password will be:"
 msgstr "Ο κωδικός του χρήστη θα είναι:"
 
-#: journalist_templates/admin_add_user.html:24
+#: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
 msgid "Is Administrator"
 msgstr "Είναι διαχειριστής"
 
-#: journalist_templates/admin_add_user.html:32
+#: journalist_templates/admin_add_user.html:39
 msgid "Is using a YubiKey [HOTP]"
 msgstr "Χρησιμοποιεί YubiKey [HOTP]"
 
@@ -872,15 +880,15 @@ msgstr "Ευχαριστώ! Λάβαμε το έγγραφό σας."
 msgid "Thanks! We received your message and document."
 msgstr "Ευχαριστώ! Λάβαμε το μήνυμά σας και το έγγραφό σας."
 
-#: source_app/main.py:222
+#: source_app/main.py:223
 msgid "Reply deleted"
 msgstr "Η απάντηση διαγράφτηκε"
 
-#: source_app/main.py:240
+#: source_app/main.py:241
 msgid "All replies have been deleted"
 msgstr "Όλες οι απαντήσεις διαγράφτηκαν"
 
-#: source_app/main.py:254
+#: source_app/main.py:255
 msgid "Sorry, that is not a recognized codename."
 msgstr "Συγγνώμη, δεν αναγνωρίζεται αυτό το κωδικό όνομα."
 
@@ -888,8 +896,8 @@ msgstr "Συγγνώμη, δεν αναγνωρίζεται αυτό το κωδ
 msgid "Protecting Journalists and Sources"
 msgstr "Προστατεύοντας δημοσιογράφους και πηγές"
 
-#: source_templates/base.html:25 source_templates/base.html:47
-#: source_templates/index.html:33 source_templates/index.html:88
+#: source_templates/base.html:25 source_templates/base.html:45
+#: source_templates/index.html:33 source_templates/index.html:85
 msgid "Powered by"
 msgstr "Με την υποστήριξη του"
 
@@ -897,7 +905,7 @@ msgstr "Με την υποστήριξη του"
 msgid "LOG OUT"
 msgstr "ΑΠΟΣΥΝΔΕΣΗ"
 
-#: source_templates/base.html:47 source_templates/index.html:88
+#: source_templates/base.html:45 source_templates/index.html:85
 msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
@@ -1039,7 +1047,7 @@ msgstr ""
 msgid "CHECK FOR A RESPONSE"
 msgstr "ΕΛΕΓΧΟΣ ΓΙΑ ΑΠΑΝΤΗΣΕΙΣ"
 
-#: source_templates/index.html:96
+#: source_templates/index.html:93
 msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
@@ -1047,25 +1055,25 @@ msgstr ""
 "Φαίνεται πως χρησιμοποιείτε τον Tor Browser. Μπορείτε να μετακινήσετε τον "
 "\"Επιλογέα ασφαλείας\" στο \"Το πιο ασφαλές\" σε τέσσερα βήματα."
 
-#: source_templates/index.html:98
+#: source_templates/index.html:95
 msgid ""
 "Click the <img src=\"{icon}\" alt=\"Tor icon\"> Tor icon in the toolbar above"
 msgstr ""
 "Πατήστε το <img src=\"{icon}\" alt=\"Tor icon\"> εικονίδιο Tor στην παραπάνω "
 "γραμμή εργαλείων"
 
-#: source_templates/index.html:99
+#: source_templates/index.html:96
 msgid "Click <strong>Security Settings...</strong>"
 msgstr "Πατήστε <strong>Επιλογές ασφαλείας...</strong>"
 
-#: source_templates/index.html:100
+#: source_templates/index.html:97
 msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
 msgstr ""
 "Μετακινήστε τον επιλογέα στο <strong>Το πιο ασφαλές</strong>, και πατήστε "
 "<strong>ΟΚ</strong>"
 
-#: source_templates/index.html:101
+#: source_templates/index.html:98
 msgid "<a href=\"/\">Click here</a> to refresh the page"
 msgstr "<a href=\"/\">Πατήστε εδώ</a> για να ανανεώσετε τη σελίδα"
 
@@ -1077,7 +1085,7 @@ msgstr "Εισαγωγή κωδικού ονόματος"
 msgid "Enter your codename"
 msgstr "Γράψτε το κωδικό όνομά σας"
 
-#: source_templates/login.html:25 source_templates/lookup.html:47
+#: source_templates/login.html:25 source_templates/lookup.html:51
 msgid "CANCEL"
 msgstr "ΆΚΥΡΟ"
 
@@ -1152,11 +1160,11 @@ msgstr "Μέγιστο μέγεθος υποβολής: 500 MB"
 msgid "Write a message."
 msgstr "Γράψτε ένα μήνυμα."
 
-#: source_templates/lookup.html:53
+#: source_templates/lookup.html:58
 msgid "Read Replies"
 msgstr "Ανάγνωση απαντήσεων"
 
-#: source_templates/lookup.html:58
+#: source_templates/lookup.html:63
 msgid ""
 "You have received a reply. To protect your identity in the unlikely event "
 "someone learns your codename, please delete all replies when you're done "
@@ -1169,43 +1177,43 @@ msgstr ""
 "επίσης να ξέρουμε πως είστε ενήμερος για την απάντησή μας. Μπορείτε επίσης "
 "να απαντήσετε υποβάλλοντας νέα αρχεία και μηνύματα παραπάνω."
 
-#: source_templates/lookup.html:71
+#: source_templates/lookup.html:76
 msgid "Delete this reply?"
 msgstr "Διαγραφή αυτής της απάντησης;"
 
-#: source_templates/lookup.html:73
+#: source_templates/lookup.html:78
 msgid "DELETE"
 msgstr "ΔΙΑΓΡΑΦΗ"
 
-#: source_templates/lookup.html:82
+#: source_templates/lookup.html:87
 msgid "DELETE ALL REPLIES"
 msgstr "ΔΙΑΓΡΑΦΗ ΟΛΩΝ ΤΩΝ ΑΠΑΝΤΗΣΕΩΝ"
 
-#: source_templates/lookup.html:85
+#: source_templates/lookup.html:90
 msgid "Are you finished with the replies?"
 msgstr "Τελειώσατε με τις απαντήσεις;"
 
-#: source_templates/lookup.html:86
+#: source_templates/lookup.html:91
 msgid "YES, DELETE ALL REPLIES"
 msgstr "ΝΑΙ, ΝΑ ΔΙΑΓΡΑΦΟΥΝ ΟΛΕΣ ΟΙ ΑΠΑΝΤΗΣΕΙΣ"
 
-#: source_templates/lookup.html:87
+#: source_templates/lookup.html:92
 msgid "NO, NOT YET"
 msgstr "ΟΧΙ ΑΚΟΜΑ"
 
-#: source_templates/lookup.html:91
+#: source_templates/lookup.html:96
 msgid "There are no replies at this time."
 msgstr "Δεν υπάρχουν απαντήσεις προς το παρόν."
 
-#: source_templates/lookup.html:100
+#: source_templates/lookup.html:105
 msgid "Remember, your codename is:"
 msgstr "Θυμήσου, το κωδικό όνομά σου είναι:"
 
-#: source_templates/lookup.html:101
+#: source_templates/lookup.html:106
 msgid "Show"
 msgstr "Εμφάνιση"
 
-#: source_templates/lookup.html:103
+#: source_templates/lookup.html:108
 msgid "Hide"
 msgstr "Απόκρυψη"
 
@@ -1216,10 +1224,6 @@ msgstr "Η σελίδα δε βρέθηκε"
 #: source_templates/notfound.html:5
 msgid "Sorry, we couldn't locate what you requested."
 msgstr "Συγγνώμη, δεν μπορέσαμε να εντοπίσουμε αυτό που ζητήσατε."
-
-#: source_templates/screensaver.html:2
-msgid "Interface hidden. Move your cursor here to show."
-msgstr "Η διεπαφή έχει κρυφτεί. Μετακινήστε το ποντίκι σας εδώ για εμφάνιση."
 
 #: source_templates/session_timeout.html:6
 msgid ""
@@ -1403,3 +1407,7 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Πίσω στη σελίδα υποβολών"
+
+#~ msgid "Interface hidden. Move your cursor here to show."
+#~ msgstr ""
+#~ "Η διεπαφή έχει κρυφτεί. Μετακινήστε το ποντίκι σας εδώ για εμφάνιση."

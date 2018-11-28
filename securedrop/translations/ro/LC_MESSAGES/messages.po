@@ -230,7 +230,7 @@ msgid "Close"
 msgstr "Închide"
 
 #: journalist_templates/_confirmation_modal.html:7
-#: journalist_templates/col.html:15 source_templates/lookup.html:72
+#: journalist_templates/col.html:15 source_templates/lookup.html:77
 msgid "Cancel"
 msgstr "Renunță"
 
@@ -261,7 +261,7 @@ msgid "Change Secret"
 msgstr "Schimbă secretul"
 
 #: journalist_templates/account_edit_hotp_secret.html:7
-#: journalist_templates/admin_add_user.html:33
+#: journalist_templates/admin_add_user.html:40
 #: journalist_templates/admin_edit_hotp_secret.html:8
 msgid "HOTP Secret"
 msgstr "Secret HOTP"
@@ -351,7 +351,7 @@ msgid "Admin Interface"
 msgstr "Interfața de administrare"
 
 #: journalist_templates/admin.html:6
-#: journalist_templates/admin_add_user.html:39
+#: journalist_templates/admin_add_user.html:46
 msgid "ADD USER"
 msgstr "ADAUGĂ UN UTILIZATOR"
 
@@ -404,16 +404,24 @@ msgstr "CONFIGURAREA INSTANȚEI"
 msgid "Back to admin interface"
 msgstr "Înapoi la interfața de administrare"
 
-#: journalist_templates/admin_add_user.html:21
+#: journalist_templates/admin_add_user.html:23
+msgid "Username can contain spaces"
+msgstr ""
+
+#: journalist_templates/admin_add_user.html:24
+msgid "Username is case-sensitive"
+msgstr ""
+
+#: journalist_templates/admin_add_user.html:28
 msgid "The user's password will be:"
 msgstr "Parola utilizatorului va fi:"
 
-#: journalist_templates/admin_add_user.html:24
+#: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
 msgid "Is Administrator"
 msgstr "Este administrator"
 
-#: journalist_templates/admin_add_user.html:32
+#: journalist_templates/admin_add_user.html:39
 msgid "Is using a YubiKey [HOTP]"
 msgstr "Folosește YubiKey [HOTP]"
 
@@ -866,15 +874,15 @@ msgstr "Mulțumim! Am primit documentul tău."
 msgid "Thanks! We received your message and document."
 msgstr "Mulțumim! Am primit mesajul și documentul tău."
 
-#: source_app/main.py:222
+#: source_app/main.py:223
 msgid "Reply deleted"
 msgstr "Răspunsul a fost șters"
 
-#: source_app/main.py:240
+#: source_app/main.py:241
 msgid "All replies have been deleted"
 msgstr "Toate răspunsurile au fost șterse"
 
-#: source_app/main.py:254
+#: source_app/main.py:255
 msgid "Sorry, that is not a recognized codename."
 msgstr "Ne pare rău, acesta nu este un nume de cod recunoscut."
 
@@ -882,8 +890,8 @@ msgstr "Ne pare rău, acesta nu este un nume de cod recunoscut."
 msgid "Protecting Journalists and Sources"
 msgstr "Pentru protecția jurnaliștilor și a surselor"
 
-#: source_templates/base.html:25 source_templates/base.html:47
-#: source_templates/index.html:33 source_templates/index.html:88
+#: source_templates/base.html:25 source_templates/base.html:45
+#: source_templates/index.html:33 source_templates/index.html:85
 msgid "Powered by"
 msgstr "Tehnologie oferită de"
 
@@ -891,7 +899,7 @@ msgstr "Tehnologie oferită de"
 msgid "LOG OUT"
 msgstr "DECONECTARE"
 
-#: source_templates/base.html:47 source_templates/index.html:88
+#: source_templates/base.html:45 source_templates/index.html:85
 msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
@@ -1003,8 +1011,8 @@ msgid ""
 msgstr ""
 "<strong>Recomandăm să folosești Browserul Tor pentru a accesa SecureDrop "
 "deoarece Orfox nu conferă același nivel de securitate și anonimitate ca "
-"versiunile de desktop.</strong> <a id=\"recommend-tor\" href=\""
-"{tor_browser_url}\">Află cum poți să-l instalezi</a>, sau ignoră această "
+"versiunile de desktop.</strong> <a id=\"recommend-tor\" href="
+"\"{tor_browser_url}\">Află cum poți să-l instalezi</a>, sau ignoră această "
 "avertizare pentru a continua."
 
 #: source_templates/index.html:42
@@ -1031,7 +1039,7 @@ msgstr ""
 msgid "CHECK FOR A RESPONSE"
 msgstr "VERIFICĂ RĂSPUNSURILE"
 
-#: source_templates/index.html:96
+#: source_templates/index.html:93
 msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
@@ -1039,25 +1047,25 @@ msgstr ""
 "Se pare că folosești Browserul Tor. Poți activa opțiunea de securitate "
 "maximă în 4 pași simpli."
 
-#: source_templates/index.html:98
+#: source_templates/index.html:95
 msgid ""
 "Click the <img src=\"{icon}\" alt=\"Tor icon\"> Tor icon in the toolbar above"
 msgstr ""
 "Clic pe <img src=\"{icon}\" alt=\"pictograma Tor\"> pictograma Tor din bara "
 "de unelte de mai sus"
 
-#: source_templates/index.html:99
+#: source_templates/index.html:96
 msgid "Click <strong>Security Settings...</strong>"
 msgstr "Clic pe <strong>Setări de securitate...</strong>"
 
-#: source_templates/index.html:100
+#: source_templates/index.html:97
 msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
 msgstr ""
 "Mută glisorul pe opțiunea <strong>Cel mai sigur</strong>, apoi clic pe "
 "<strong>Ok</strong>"
 
-#: source_templates/index.html:101
+#: source_templates/index.html:98
 msgid "<a href=\"/\">Click here</a> to refresh the page"
 msgstr "<a href=\"/\">Clic aici</a> pentru a reîmprospăta pagina"
 
@@ -1069,7 +1077,7 @@ msgstr "Introdu numele de cod"
 msgid "Enter your codename"
 msgstr "Introdu numele tău de cod"
 
-#: source_templates/login.html:25 source_templates/lookup.html:47
+#: source_templates/login.html:25 source_templates/lookup.html:51
 msgid "CANCEL"
 msgstr "RENUNȚĂ"
 
@@ -1143,11 +1151,11 @@ msgstr "Dimensiunea maximă a fișierului: 500 MB"
 msgid "Write a message."
 msgstr "Scrie un mesaj."
 
-#: source_templates/lookup.html:53
+#: source_templates/lookup.html:58
 msgid "Read Replies"
 msgstr "Citește răspunsurile"
 
-#: source_templates/lookup.html:58
+#: source_templates/lookup.html:63
 msgid ""
 "You have received a reply. To protect your identity in the unlikely event "
 "someone learns your codename, please delete all replies when you're done "
@@ -1159,43 +1167,43 @@ msgstr ""
 "care le-ai postat. Aceasta ne anunță că ai aflat de răspunsul nostru. Mai "
 "poți răspunde prin trimiterea de noi fișiere sau mesaje mai sus."
 
-#: source_templates/lookup.html:71
+#: source_templates/lookup.html:76
 msgid "Delete this reply?"
 msgstr "Șterge acest răspuns?"
 
-#: source_templates/lookup.html:73
+#: source_templates/lookup.html:78
 msgid "DELETE"
 msgstr "ȘTERGE"
 
-#: source_templates/lookup.html:82
+#: source_templates/lookup.html:87
 msgid "DELETE ALL REPLIES"
 msgstr "ȘTERGE TOATE RĂSPUNSURILE"
 
-#: source_templates/lookup.html:85
+#: source_templates/lookup.html:90
 msgid "Are you finished with the replies?"
 msgstr "Ai terminat cu toate răspunsurile?"
 
-#: source_templates/lookup.html:86
+#: source_templates/lookup.html:91
 msgid "YES, DELETE ALL REPLIES"
 msgstr "DA, ȘTERGE TOATE RĂSPUNSURILE"
 
-#: source_templates/lookup.html:87
+#: source_templates/lookup.html:92
 msgid "NO, NOT YET"
 msgstr "NU, NU ÎNCĂ"
 
-#: source_templates/lookup.html:91
+#: source_templates/lookup.html:96
 msgid "There are no replies at this time."
 msgstr "Nu sunt răspunsuri în acest moment."
 
-#: source_templates/lookup.html:100
+#: source_templates/lookup.html:105
 msgid "Remember, your codename is:"
 msgstr "Reține, numele tău de cod este:"
 
-#: source_templates/lookup.html:101
+#: source_templates/lookup.html:106
 msgid "Show"
 msgstr "Arată"
 
-#: source_templates/lookup.html:103
+#: source_templates/lookup.html:108
 msgid "Hide"
 msgstr "Ascunde"
 
@@ -1206,10 +1214,6 @@ msgstr "Pagina nu a fost găsită"
 #: source_templates/notfound.html:5
 msgid "Sorry, we couldn't locate what you requested."
 msgstr "Ne pare rău, nu am găsit ceea ce căutai."
-
-#: source_templates/screensaver.html:2
-msgid "Interface hidden. Move your cursor here to show."
-msgstr "Interfața este ascunsă. Mișcă cursorul aici pentru a o afișa."
 
 #: source_templates/session_timeout.html:6
 msgid ""
@@ -1239,8 +1243,8 @@ msgid ""
 "It could be possible for anyone monitoring your Internet traffic (your "
 "government, your Internet provider), to identify you."
 msgstr ""
-"Este posibil pentru oricine care monitorizează traficul tău de internet ("
-"statul, furnizorul de internet) să te identifice."
+"Este posibil pentru oricine care monitorizează traficul tău de internet "
+"(statul, furnizorul de internet) să te identifice."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
@@ -1390,6 +1394,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Înapoi la pagina cu trimiteri"
+
+#~ msgid "Interface hidden. Move your cursor here to show."
+#~ msgstr "Interfața este ascunsă. Mișcă cursorul aici pentru a o afișa."
 
 #~ msgid "{num_unread} unread"
 #~ msgstr "{num_unread} necitite"
