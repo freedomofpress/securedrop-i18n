@@ -10,7 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2018-03-08 12:00+0000\n"
 "Last-Translator: Saptak Sengupta <saptak013@gmail.com>\n"
-"Language-Team: Bengali (India) <https://weblate.securedrop.club/projects/"
+"Language-Team: Bengali (India) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/bn_IN/>\n"
 "Language: bn_IN\n"
 "MIME-Version: 1.0\n"
@@ -202,7 +202,7 @@ msgid "Close"
 msgstr ""
 
 #: journalist_templates/_confirmation_modal.html:7
-#: journalist_templates/col.html:15 source_templates/lookup.html:72
+#: journalist_templates/col.html:15 source_templates/lookup.html:77
 msgid "Cancel"
 msgstr ""
 
@@ -230,7 +230,7 @@ msgid "Change Secret"
 msgstr ""
 
 #: journalist_templates/account_edit_hotp_secret.html:7
-#: journalist_templates/admin_add_user.html:33
+#: journalist_templates/admin_add_user.html:40
 #: journalist_templates/admin_edit_hotp_secret.html:8
 msgid "HOTP Secret"
 msgstr ""
@@ -312,7 +312,7 @@ msgid "Admin Interface"
 msgstr ""
 
 #: journalist_templates/admin.html:6
-#: journalist_templates/admin_add_user.html:39
+#: journalist_templates/admin_add_user.html:46
 msgid "ADD USER"
 msgstr ""
 
@@ -365,16 +365,24 @@ msgstr ""
 msgid "Back to admin interface"
 msgstr ""
 
-#: journalist_templates/admin_add_user.html:21
-msgid "The user's password will be:"
+#: journalist_templates/admin_add_user.html:23
+msgid "Username can contain spaces"
 msgstr ""
 
 #: journalist_templates/admin_add_user.html:24
+msgid "Username is case-sensitive"
+msgstr ""
+
+#: journalist_templates/admin_add_user.html:28
+msgid "The user's password will be:"
+msgstr ""
+
+#: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
 msgid "Is Administrator"
 msgstr ""
 
-#: journalist_templates/admin_add_user.html:32
+#: journalist_templates/admin_add_user.html:39
 msgid "Is using a YubiKey [HOTP]"
 msgstr ""
 
@@ -778,15 +786,15 @@ msgstr ""
 msgid "Thanks! We received your message and document."
 msgstr ""
 
-#: source_app/main.py:222
+#: source_app/main.py:223
 msgid "Reply deleted"
 msgstr ""
 
-#: source_app/main.py:240
+#: source_app/main.py:241
 msgid "All replies have been deleted"
 msgstr ""
 
-#: source_app/main.py:254
+#: source_app/main.py:255
 msgid "Sorry, that is not a recognized codename."
 msgstr ""
 
@@ -794,8 +802,8 @@ msgstr ""
 msgid "Protecting Journalists and Sources"
 msgstr ""
 
-#: source_templates/base.html:25 source_templates/base.html:47
-#: source_templates/index.html:33 source_templates/index.html:88
+#: source_templates/base.html:25 source_templates/base.html:45
+#: source_templates/index.html:33 source_templates/index.html:85
 msgid "Powered by"
 msgstr ""
 
@@ -803,7 +811,7 @@ msgstr ""
 msgid "LOG OUT"
 msgstr ""
 
-#: source_templates/base.html:47 source_templates/index.html:88
+#: source_templates/base.html:45 source_templates/index.html:85
 msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
@@ -911,27 +919,27 @@ msgstr ""
 msgid "CHECK FOR A RESPONSE"
 msgstr ""
 
-#: source_templates/index.html:96
+#: source_templates/index.html:93
 msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
 msgstr ""
 
-#: source_templates/index.html:98
+#: source_templates/index.html:95
 msgid ""
 "Click the <img src=\"{icon}\" alt=\"Tor icon\"> Tor icon in the toolbar above"
 msgstr ""
 
-#: source_templates/index.html:99
+#: source_templates/index.html:96
 msgid "Click <strong>Security Settings...</strong>"
 msgstr ""
 
-#: source_templates/index.html:100
+#: source_templates/index.html:97
 msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
 msgstr ""
 
-#: source_templates/index.html:101
+#: source_templates/index.html:98
 msgid "<a href=\"/\">Click here</a> to refresh the page"
 msgstr ""
 
@@ -943,7 +951,7 @@ msgstr ""
 msgid "Enter your codename"
 msgstr ""
 
-#: source_templates/login.html:25 source_templates/lookup.html:47
+#: source_templates/login.html:25 source_templates/lookup.html:51
 msgid "CANCEL"
 msgstr ""
 
@@ -1004,11 +1012,11 @@ msgstr ""
 msgid "Write a message."
 msgstr ""
 
-#: source_templates/lookup.html:53
+#: source_templates/lookup.html:58
 msgid "Read Replies"
 msgstr ""
 
-#: source_templates/lookup.html:58
+#: source_templates/lookup.html:63
 msgid ""
 "You have received a reply. To protect your identity in the unlikely event "
 "someone learns your codename, please delete all replies when you're done "
@@ -1016,43 +1024,43 @@ msgid ""
 "respond by submitting new files and messages above."
 msgstr ""
 
-#: source_templates/lookup.html:71
+#: source_templates/lookup.html:76
 msgid "Delete this reply?"
 msgstr ""
 
-#: source_templates/lookup.html:73
+#: source_templates/lookup.html:78
 msgid "DELETE"
 msgstr ""
 
-#: source_templates/lookup.html:82
+#: source_templates/lookup.html:87
 msgid "DELETE ALL REPLIES"
 msgstr ""
 
-#: source_templates/lookup.html:85
+#: source_templates/lookup.html:90
 msgid "Are you finished with the replies?"
 msgstr ""
 
-#: source_templates/lookup.html:86
+#: source_templates/lookup.html:91
 msgid "YES, DELETE ALL REPLIES"
 msgstr ""
 
-#: source_templates/lookup.html:87
+#: source_templates/lookup.html:92
 msgid "NO, NOT YET"
 msgstr ""
 
-#: source_templates/lookup.html:91
+#: source_templates/lookup.html:96
 msgid "There are no replies at this time."
 msgstr ""
 
-#: source_templates/lookup.html:100
+#: source_templates/lookup.html:105
 msgid "Remember, your codename is:"
 msgstr ""
 
-#: source_templates/lookup.html:101
+#: source_templates/lookup.html:106
 msgid "Show"
 msgstr ""
 
-#: source_templates/lookup.html:103
+#: source_templates/lookup.html:108
 msgid "Hide"
 msgstr ""
 
@@ -1062,10 +1070,6 @@ msgstr ""
 
 #: source_templates/notfound.html:5
 msgid "Sorry, we couldn't locate what you requested."
-msgstr ""
-
-#: source_templates/screensaver.html:2
-msgid "Interface hidden. Move your cursor here to show."
 msgstr ""
 
 #: source_templates/session_timeout.html:6

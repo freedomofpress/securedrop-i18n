@@ -1,9 +1,10 @@
-from datetime import datetime, timedelta
-from functools import wraps
 import json
-from werkzeug.exceptions import default_exceptions  # type: ignore
 
+from datetime import datetime, timedelta
 from flask import abort, Blueprint, current_app, jsonify, request
+from functools import wraps
+from os import path
+from werkzeug.exceptions import default_exceptions  # type: ignore
 
 from db import db
 from journalist_app import utils
@@ -238,13 +239,15 @@ def make_blueprint(config):
                 return jsonify(
                     {'message': 'You must encrypt replies client side'}), 400
 
-            reply = Reply(user, source,
-                          current_app.storage.path(source.filesystem_id,
-                                                   filename))
+            # issue #3918
+            filename = path.basename(filename)
+
+            reply = Reply(user, source, filename)
             db.session.add(reply)
             db.session.add(source)
             db.session.commit()
-            return jsonify({'message': 'Your reply has been stored'}), 201
+            return jsonify({'message': 'Your reply has been stored',
+                            'uuid': reply.uuid}), 201
 
     @api.route('/sources/<source_uuid>/replies/<reply_uuid>',
                methods=['GET', 'DELETE'])
