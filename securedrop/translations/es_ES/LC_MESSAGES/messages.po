@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-09-04 19:23+0000\n"
-"Last-Translator: Pablo Di Noto <pdinoto@gmail.com>\n"
+"PO-Revision-Date: 2018-11-29 19:06+0000\n"
+"Last-Translator: Zuhualime Akoochimoya <zakooch@protonmail.ch>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
 "Language: es_ES\n"
@@ -401,11 +401,11 @@ msgstr "Volver a la interfaz de administración"
 
 #: journalist_templates/admin_add_user.html:23
 msgid "Username can contain spaces"
-msgstr ""
+msgstr "El nombre de usuario puede contener espacios"
 
 #: journalist_templates/admin_add_user.html:24
 msgid "Username is case-sensitive"
-msgstr ""
+msgstr "El nombre de usuario distingue mayúsculas de minúsculas"
 
 #: journalist_templates/admin_add_user.html:28
 msgid "The user's password will be:"
