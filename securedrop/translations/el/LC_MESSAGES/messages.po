@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-11-29 16:47+0000\n"
+"PO-Revision-Date: 2018-11-29 17:05+0000\n"
 "Last-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/el/>\n"
@@ -295,13 +295,12 @@ msgstr "Πατήστε το σύμβολο με τον κωδικό QR στο π
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
-#, fuzzy
 msgid ""
 "Your phone will now be in \"scanning\" mode. When you are in this mode, scan "
 "the barcode below:"
 msgstr ""
 "Το τηλέφωνό σας πρέπει να είναι τώρα σε κατάσταση σάρωσης. Όταν βρεθείτε σε "
-"αυτή τη κατάσταση, σκανάρετε τον παρακάτω QR κωδικό:"
+"αυτή τη κατάσταση, σαρώστε τον παρακάτω γραμμωτό κωδικό:"
 
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
@@ -399,11 +398,11 @@ msgstr "Πίσω στη διεπαφή διαχείρισης"
 
 #: journalist_templates/admin_add_user.html:23
 msgid "Username can contain spaces"
-msgstr ""
+msgstr "Το όνομα χρήστη μπορεί να περιέχει κενά"
 
 #: journalist_templates/admin_add_user.html:24
 msgid "Username is case-sensitive"
-msgstr ""
+msgstr "Το όνομα χρήστη κάνει διάκριση πεζών από κεφαλαία"
 
 #: journalist_templates/admin_add_user.html:28
 msgid "The user's password will be:"
@@ -1131,7 +1130,7 @@ msgstr ""
 
 #: source_templates/lookup.html:20
 msgid "Submit Files or Messages"
-msgstr "Υποβολή μηνυμάτων ή αρχείων"
+msgstr "Υποβολή αρχείων ή  μηνυμάτων"
 
 #: source_templates/lookup.html:21
 msgid ""
@@ -1141,7 +1140,7 @@ msgid ""
 msgstr ""
 "Αν έχετε ήδη κάποια επαφή με το GPG, μπορείτε προαιρετικά να κρυπτογραφήσετε "
 "τα αρχεία σας με το <a href=\"{url}\" class=\"text-link\">δημόσιο κλειδί "
-"μας</a> πριν τα υποβάλλετε. Τα αρχεία κρυπτογραφούνται κατά την λήψη από το "
+"μας</a> πριν τα υποβάλλετε. Τα αρχεία κρυπτογραφούνται κατά τη λήψη από το "
 "SecureDrop."
 
 #: source_templates/lookup.html:22
@@ -1235,9 +1234,9 @@ msgid ""
 msgstr ""
 "Η συνεδρία σας έληξε λόγω αδράνειας. Παρακαλώ συνδεθείτε ξανά αν θέλετε να "
 "συνεχίσετε να χρησιμοποιείτε το SecureDrop, ή επιλέξτε \"Νέα ταυτότητα\" από "
-"το πράσινο κουμπί του Tor Browser για να εκκαθαρίσετε όλο το ιστορική της "
-"χρήσης του SecureDrop από αυτή τη συσκευή. Αν δεν χρησιμοποιείτε τον Tor "
-"Browser, επανεκκινήστε τον browser σας."
+"το πράσινο κουμπί του Tor Browser για να εκκαθαρίσετε όλο το ιστορικό χρήσης "
+"του SecureDrop από αυτήν τη συσκευή. Αν δεν χρησιμοποιείτε τον Tor Browser, "
+"επανεκκινήστε τον browser σας."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1255,7 +1254,7 @@ msgid ""
 "government, your Internet provider), to identify you."
 msgstr ""
 "Είναι δυνατό να παρακολουθεί ο οποιοσδήποτε την κίνηση δικτύου σας (η "
-"κυβέρνηση, ο πάροχος) για να σας ταυτοποιήσει."
+"κυβέρνηση, ο πάροχός σας) για να σας ταυτοποιήσει."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
@@ -1283,7 +1282,7 @@ msgid ""
 "anonymously."
 msgstr ""
 "Αν θέλετε να καταχωρήσετε πληροφορίες στο SecureDrop, <strong>προτείνουμε "
-"ανεπιφύλακτα</strong> να εγκαταστήσετε τον Tor Browser και να το "
+"ανεπιφύλακτα</strong> να εγκαταστήσετε τον Tor Browser και να τον "
 "χρησιμοποιήσετε για να επισκεφτείτε τη σελίδα μας με ασφάλεια και ανωνυμία."
 
 #: source_templates/use-tor-browser.html:6
@@ -1301,10 +1300,10 @@ msgid ""
 "mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
-"Υπάρχει ένα ενδεχόμενο πως κατεβάζοντας τον Tor Browser θα εγείρετε υποψίες, "
-"και ο πάροχος email σας είναι λιγότερο πιθανό να παρακολουθείται, οπότε "
-"μπορείτε να στείλετε ένα email στο <pre>gettor@torproject.org</pre> και θα "
-"λάβετε μια αυτοματοποιημένη απάντηση με οδηγίες."
+"Εαν υπάρχει ενδεχόμενο πως κατεβάζοντας τον Tor Browser θα εγείρετε υποψίες, "
+"και ο πάροχος email σας είναι λιγότερο πιθανό να παρακολουθείται, μπορείτε "
+"να στείλετε ένα email στο <pre>gettor@torproject.org</pre> και θα λάβετε μια "
+"αυτοματοποιημένη απάντηση με οδηγίες."
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
@@ -1318,7 +1317,7 @@ msgid ""
 msgstr ""
 "Το SecureDrop κρυπτογραφεί τα αρχεία και τα μηνύματα αφού υποβληθούν. "
 "Κρυπτογραφόντας τα μηνύματα και τα αρχεία πριν την υποβολή τους παρέχει ένα "
-"επιπλέον επίπεδο ασφαλείας πριν τα δεδομένα φτάσουν στον server του "
+"επιπλέον επίπεδο ασφαλείας πριν τα δεδομένα φτάσουν στον διακομιστή του "
 "SecureDrop."
 
 #: source_templates/why-journalist-key.html:5
@@ -1339,7 +1338,7 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:8
 msgid "Import it into your GPG keyring."
-msgstr "Εισάγετέ το στo keyring του GPG σας."
+msgstr "Εισάγετέ το στην κλειδοθήκη GPG σας."
 
 #: source_templates/why-journalist-key.html:10
 msgid ""
@@ -1349,7 +1348,7 @@ msgid ""
 msgstr ""
 "Αν χρησιμοποιείτε το <a href=\"{url}\">Tails</a>, μπορείτε να κάνετε διπλό "
 "κλικ στο αρχείο <code>.asc</code> που μόλις κατεβάσατε και αυτό θα προστεθεί "
-"αυτόματα στο keyring σας."
+"αυτόματα στην κλειδοθήκη σας."
 
 #: source_templates/why-journalist-key.html:11
 msgid ""
