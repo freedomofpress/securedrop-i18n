@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-09-04 19:23+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2018-12-03 18:26+0000\n"
+"Last-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -385,11 +385,11 @@ msgstr "Tilbake til administrasjonsgrensesnittet"
 
 #: journalist_templates/admin_add_user.html:23
 msgid "Username can contain spaces"
-msgstr ""
+msgstr "Brukernavnet kan inneholde mellomrom"
 
 #: journalist_templates/admin_add_user.html:24
 msgid "Username is case-sensitive"
-msgstr ""
+msgstr "Brukernavnet skiller mellom små og store bokstaver"
 
 #: journalist_templates/admin_add_user.html:28
 msgid "The user's password will be:"
