@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-12-04 13:21+0000\n"
+"PO-Revision-Date: 2018-12-05 08:18+0000\n"
 "Last-Translator: Adolfo Jayme-Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Catalan <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ca/>\n"
@@ -118,76 +118,77 @@ msgstr "Només podeu pujar fitxers d’imatge PNG."
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
 msgid "An unexpected error occurred! Please inform your administrator."
-msgstr ""
-"S’ha produït un error inesperat. Informeu del problema a l’administrador."
+msgstr "S’ha produït un error inesperat. Informeu-ne l’administrador."
 
 #: journalist_app/main.py:129
 msgid "Thanks. Your reply has been stored."
-msgstr ""
+msgstr "Gràcies. La resposta ha estat emmagatzemada."
 
 #: journalist_app/main.py:150
 msgid "No collections selected for download."
-msgstr ""
+msgstr "No s’ha seleccionat cap col·lecció per baixar."
 
 #: journalist_app/main.py:153 journalist_app/utils.py:236
 msgid "No collections selected for deletion."
-msgstr ""
+msgstr "No s’ha seleccionat cap col·lecció per suprimir."
 
 #: journalist_app/main.py:179
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
-msgstr ""
+msgstr "Ha canviat el nom de la font «{original_name}» a «{new_name}»"
 
 #: journalist_app/main.py:194
 msgid "No unread submissions for this source."
-msgstr ""
+msgstr "Aquesta font no té cap enviament sense llegir."
 
 #: journalist_app/utils.py:55
 msgid "Account updated."
-msgstr ""
+msgstr "S’ha actualitzat el compte."
 
 #: journalist_app/utils.py:86
 msgid "Login failed."
-msgstr ""
+msgstr "Ha fallat l’inici de la sessió."
 
 #: journalist_app/utils.py:94
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
-msgstr[0] ""
+msgstr[0] "Espereu com a mínim {seconds} segon abans d’iniciar la sessió novament."
 msgstr[1] ""
+"Espereu com a mínim {seconds} segons abans d’iniciar la sessió novament."
 
 #: journalist_app/utils.py:105
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
 msgstr ""
+"Espereu un codi nou del vostre testimoni o programa d’autenticació i proveu-"
+"ho un altre cop."
 
 #: journalist_app/utils.py:126
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
-"Format del secret invàlid: si us plau, introdueix només lletres A-F i "
-"números 0-9."
+"El format del secret no és vàlid: introduïu només lletres A-F i nombres 0-9."
 
 #: journalist_app/utils.py:132
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
-"Format del secret invàlid: secret té longitud no parella. Has teclejat "
-"malament el secret?"
+"El format del secret no és vàlid: la llargada no és parella. L’heu teclejat "
+"malament?"
 
 #: journalist_app/utils.py:188
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "S’ha suprimit l’enviament."
+msgstr[1] "S’han suprimit {num} enviaments."
 
 #: journalist_app/utils.py:241
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "S’ha suprimit {num} col·lecció"
+msgstr[1] "S’han suprimit {num} col·leccions"
 
 #: journalist_app/utils.py:279
 msgid "You submitted a bad password! Password not changed."
-msgstr ""
+msgstr "Heu enviat una contrasenya dolenta! No s’ha canviat la contrasenya."
 
 #: journalist_app/utils.py:286
 msgid ""
@@ -204,51 +205,51 @@ msgstr ""
 
 #: journalist_app/utils.py:312
 msgid "No unread submissions in selected collections."
-msgstr ""
+msgstr "No hi ha cap enviament sense llegir a les col·leccions seleccionades."
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
-msgstr ""
+msgstr "Tanca"
 
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:77
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel·la"
 
 #: journalist_templates/_source_row.html:23
 msgid "1 doc"
 msgid_plural "{doc_num} docs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 document"
+msgstr[1] "{doc_num} documents"
 
 #: journalist_templates/_source_row.html:24
 msgid "1 message"
 msgid_plural "{msg_num} messages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 missatge"
+msgstr[1] "{msg_num} missatges"
 
 #: journalist_templates/_source_row.html:27
 msgid "1 unread"
 msgid_plural "{num_unread} unread"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 sense llegir"
+msgstr[1] "{num_unread} sense llegir"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
 msgid "Change Secret"
-msgstr ""
+msgstr "Canvia el secret"
 
 #: journalist_templates/account_edit_hotp_secret.html:7
 #: journalist_templates/admin_add_user.html:40
 #: journalist_templates/admin_edit_hotp_secret.html:8
 msgid "HOTP Secret"
-msgstr ""
+msgstr "Secret HOTP"
 
 #: journalist_templates/account_edit_hotp_secret.html:9
 #: journalist_templates/admin_edit_hotp_secret.html:10
 #: source_templates/login.html:23
 msgid "CONTINUE"
-msgstr ""
+msgstr "CONTINUA"
 
 #: journalist_templates/account_new_two_factor.html:4
 #: journalist_templates/admin_new_user_two_factor.html:5
@@ -266,17 +267,17 @@ msgstr ""
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
 msgid "Install FreeOTP on your phone"
-msgstr ""
+msgstr "Instal·leu el FreeOTP al vostre telèfon"
 
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
 msgid "Open the FreeOTP app"
-msgstr ""
+msgstr "Obriu l’aplicació FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
 msgid "Tap the QR code symbol at the top"
-msgstr ""
+msgstr "Toqueu el símbol del codi QR que hi ha a dalt"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -284,16 +285,19 @@ msgid ""
 "Your phone will now be in \"scanning\" mode. When you are in this mode, scan "
 "the barcode below:"
 msgstr ""
+"El telèfon es posarà al mode d’escanejament. En aquest mode, escanegeu el "
+"codi de barres següent:"
 
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
 msgid "Can't scan the barcode? Enter the following code manually:"
-msgstr ""
+msgstr "No podeu escanejar el codi? Introduïu-lo manualment:"
 
 #: journalist_templates/account_new_two_factor.html:15
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid "Once you have scanned the barcode, enter the 6-digit code below:"
 msgstr ""
+"Quan hàgiu escanejat el codi de barres, introduïu aquest codi de sis dígits:"
 
 #: journalist_templates/account_new_two_factor.html:17
 #: journalist_templates/admin_new_user_two_factor.html:20
@@ -303,88 +307,88 @@ msgstr ""
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:21
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
-msgstr ""
+msgstr "Quan hàgiu configurat la YubiKey, introduïu aquest codi de sis dígits:"
 
 #: journalist_templates/account_new_two_factor.html:22
 #: journalist_templates/admin_new_user_two_factor.html:25
 msgid "Verification code"
-msgstr ""
+msgstr "Codi de verificació"
 
 #: journalist_templates/account_new_two_factor.html:24
 #: journalist_templates/admin_new_user_two_factor.html:27
 #: journalist_templates/col.html:99 source_templates/lookup.html:45
 msgid "SUBMIT"
-msgstr ""
+msgstr "ENVIA"
 
 #: journalist_templates/admin.html:3
 msgid "Admin Interface"
-msgstr ""
+msgstr "Interfície administrativa"
 
 #: journalist_templates/admin.html:6
 #: journalist_templates/admin_add_user.html:46
 msgid "ADD USER"
-msgstr ""
+msgstr "AFEGEIX UN USUARI"
 
 #: journalist_templates/admin.html:16
 #: journalist_templates/admin_add_user.html:14
 #: journalist_templates/login.html:8
 msgid "Username"
-msgstr ""
+msgstr "Nom d’usuari"
 
 #: journalist_templates/admin.html:17
 msgid "Edit"
-msgstr ""
+msgstr "Edita"
 
 #: journalist_templates/admin.html:18 journalist_templates/col.html:75
 #: journalist_templates/col.html:133 journalist_templates/index.html:16
 #: journalist_templates/index.html:51
 msgid "Delete"
-msgstr ""
+msgstr "Suprimeix"
 
 #: journalist_templates/admin.html:19
 msgid "Created"
-msgstr ""
+msgstr "Creació"
 
 #: journalist_templates/admin.html:20
 msgid "Last login"
-msgstr ""
+msgstr "Darrer inici de sessió"
 
 #: journalist_templates/admin.html:25
 msgid "Edit user {username}"
-msgstr ""
+msgstr "Edita el compte {username}"
 
 #: journalist_templates/admin.html:29
 msgid "Delete user {username}"
-msgstr ""
+msgstr "Suprimeix el compte {username}"
 
 #: journalist_templates/admin.html:35
 msgid "never"
-msgstr ""
+msgstr "mai"
 
 #: journalist_templates/admin.html:42
 msgid "No users to display"
-msgstr ""
+msgstr "No hi ha cap usuari per mostrar"
 
 #: journalist_templates/admin.html:48
 msgid "INSTANCE CONFIG"
-msgstr ""
+msgstr "PARÀMETRES D’INSTÀNCIA"
 
 #: journalist_templates/admin_add_user.html:4
 #: journalist_templates/config.html:4 journalist_templates/edit_account.html:7
 msgid "Back to admin interface"
-msgstr ""
+msgstr "Torna a la interfície administrativa"
 
 #: journalist_templates/admin_add_user.html:23
 msgid "Username can contain spaces"
-msgstr ""
+msgstr "El nom d’usuari no pot contenir espais"
 
 #: journalist_templates/admin_add_user.html:24
 msgid "Username is case-sensitive"
-msgstr ""
+msgstr "El nom d’usuari distingeix entre majúscules i minúscules"
 
 #: journalist_templates/admin_add_user.html:28
 msgid "The user's password will be:"
-msgstr ""
+msgstr "La contrasenya del compte serà:"
 
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
@@ -393,7 +397,7 @@ msgstr ""
 
 #: journalist_templates/admin_add_user.html:39
 msgid "Is using a YubiKey [HOTP]"
-msgstr ""
+msgstr "Fa servir una YubiKey [HOTP]"
 
 #: journalist_templates/admin_new_user_two_factor.html:6
 msgid ""
