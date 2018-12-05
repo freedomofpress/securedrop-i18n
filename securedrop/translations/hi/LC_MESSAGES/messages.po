@@ -55,9 +55,12 @@ msgid "Username \"{user}\" already taken."
 msgstr "उपयोगकर्ता नाम \"{user}\" पहले से ही लिया जा चूका है।"
 
 #: journalist_app/admin.py:85
+#, fuzzy
+#| msgid ""
+#| "An error occurred saving this user to the database. Please inform your "
+#| "administrator."
 msgid ""
-"An error occurred saving this user to the database. Please inform your "
-"administrator."
+"An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
 "इस उपयोगकर्ता को डेटाबेस में सहेजने में एक त्रुटि हुई है। कृपया अपने व्यवस्थापक को सूचित करें।"
 
@@ -82,7 +85,9 @@ msgid "No collections selected."
 msgstr "कोई संग्रह चयनित नहीं।"
 
 #: journalist_app/decorators.py:15
-msgid "Only administrators can access this page."
+#, fuzzy
+#| msgid "Only administrators can access this page."
+msgid "Only admins can access this page."
 msgstr "केवल व्यवस्थापक ही पृष्ठ तक पहुंच सकते हैं।"
 
 #: journalist_app/forms.py:19
@@ -112,7 +117,9 @@ msgstr "आप केवल PNG छवि फ़ाइलों को अपल
 
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
-msgid "An unexpected error occurred! Please inform your administrator."
+#, fuzzy
+#| msgid "An unexpected error occurred! Please inform your administrator."
+msgid "An unexpected error occurred! Please inform your admin."
 msgstr "एक अप्रत्याशित त्रुटि हुई है ! कृपया अपने व्यवस्थापक को सूचित करें।"
 
 #: journalist_app/main.py:129
@@ -388,8 +395,10 @@ msgstr "उपयोगकर्ता का पासवर्ड होगा
 
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
-msgid "Is Administrator"
-msgstr "प्रशासक है"
+#, fuzzy
+#| msgid "Admin"
+msgid "Is Admin"
+msgstr "व्यवस्थापक"
 
 #: journalist_templates/admin_add_user.html:39
 msgid "Is using a YubiKey [HOTP]"
@@ -1335,6 +1344,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "सबमिशन पृष्ठ पर वापस जाएं"
+
+#~ msgid "Is Administrator"
+#~ msgstr "प्रशासक है"
 
 #~ msgid "Interface hidden. Move your cursor here to show."
 #~ msgstr "इंटरफ़ेस छिपा हुआ है। दिखाने के लिए यहां अपने कर्सर को ले जाएं।"

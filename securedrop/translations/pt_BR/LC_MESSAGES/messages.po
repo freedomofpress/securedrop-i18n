@@ -56,9 +56,12 @@ msgid "Username \"{user}\" already taken."
 msgstr "O nome de usuário \"{user}\" já está em uso."
 
 #: journalist_app/admin.py:85
+#, fuzzy
+#| msgid ""
+#| "An error occurred saving this user to the database. Please inform your "
+#| "administrator."
 msgid ""
-"An error occurred saving this user to the database. Please inform your "
-"administrator."
+"An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
 "Ocorreu um erro ao tentar salvar este usuário no banco de dados. Por favor, "
 "informe o administrador."
@@ -86,7 +89,9 @@ msgid "No collections selected."
 msgstr "Nenhuma coleção selecionada."
 
 #: journalist_app/decorators.py:15
-msgid "Only administrators can access this page."
+#, fuzzy
+#| msgid "Only administrators can access this page."
+msgid "Only admins can access this page."
 msgstr "Apenas administradores podem acessar esta página."
 
 #: journalist_app/forms.py:19
@@ -118,7 +123,9 @@ msgstr "Você pode carregar somente documentos de imagem PNG."
 
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
-msgid "An unexpected error occurred! Please inform your administrator."
+#, fuzzy
+#| msgid "An unexpected error occurred! Please inform your administrator."
+msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Ocorreu um erro inesperado! Por favor, informe o administrador."
 
 #: journalist_app/main.py:129
@@ -409,8 +416,10 @@ msgstr "A senha de usuário será:"
 
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
-msgid "Is Administrator"
-msgstr "É administrador"
+#, fuzzy
+#| msgid "Admin"
+msgid "Is Admin"
+msgstr "Admin"
 
 #: journalist_templates/admin_add_user.html:39
 msgid "Is using a YubiKey [HOTP]"
@@ -1377,6 +1386,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Voltar à página de envio"
+
+#~ msgid "Is Administrator"
+#~ msgstr "É administrador"
 
 #~ msgid "Interface hidden. Move your cursor here to show."
 #~ msgstr "Interface oculta. Mova o seu mouse aqui para exibi-la."

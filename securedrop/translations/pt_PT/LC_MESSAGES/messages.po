@@ -63,8 +63,7 @@ msgstr "Nome de utilizador \"{user}\" já em uso."
 #| "An error occurred saving this user to the database. Please check the "
 #| "application logs."
 msgid ""
-"An error occurred saving this user to the database. Please inform your "
-"administrator."
+"An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
 "Ocorreu um erro ao gravar este utilizador na base de dados. Por favor, "
 "verique os logs da aplicação."
@@ -90,7 +89,9 @@ msgid "No collections selected."
 msgstr ""
 
 #: journalist_app/decorators.py:15
-msgid "Only administrators can access this page."
+#, fuzzy
+#| msgid "Only administrators can access this page."
+msgid "Only admins can access this page."
 msgstr "Apenas os administradores podem aceder a esta página."
 
 #: journalist_app/forms.py:19
@@ -124,7 +125,7 @@ msgstr ""
 #| msgid ""
 #| "An unexpected error occurred! Please check the application logs or inform "
 #| "your adminstrator."
-msgid "An unexpected error occurred! Please inform your administrator."
+msgid "An unexpected error occurred! Please inform your admin."
 msgstr ""
 "Um erro inesperado ocorreu! Por favor verifique os logs da aplicação ou "
 "informe o seu administrador."
@@ -411,7 +412,7 @@ msgstr ""
 
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
-msgid "Is Administrator"
+msgid "Is Admin"
 msgstr ""
 
 #: journalist_templates/admin_add_user.html:39

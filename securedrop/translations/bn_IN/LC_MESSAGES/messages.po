@@ -58,8 +58,7 @@ msgstr ""
 
 #: journalist_app/admin.py:85
 msgid ""
-"An error occurred saving this user to the database. Please inform your "
-"administrator."
+"An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
 
 #: journalist_app/admin.py:109
@@ -83,7 +82,7 @@ msgid "No collections selected."
 msgstr ""
 
 #: journalist_app/decorators.py:15
-msgid "Only administrators can access this page."
+msgid "Only admins can access this page."
 msgstr ""
 
 #: journalist_app/forms.py:19
@@ -113,7 +112,7 @@ msgstr ""
 
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
-msgid "An unexpected error occurred! Please inform your administrator."
+msgid "An unexpected error occurred! Please inform your admin."
 msgstr ""
 
 #: journalist_app/main.py:129
@@ -379,7 +378,7 @@ msgstr ""
 
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
-msgid "Is Administrator"
+msgid "Is Admin"
 msgstr ""
 
 #: journalist_templates/admin_add_user.html:39

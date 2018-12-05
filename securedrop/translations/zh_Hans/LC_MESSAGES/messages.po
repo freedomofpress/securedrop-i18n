@@ -9,8 +9,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2018-08-28 04:56+0000\n"
 "Last-Translator: zyfdegh <zyfdegg@gmail.com>\n"
-"Language-Team: Chinese (Simplified) <https://weblate.securedrop.org/"
-"projects/securedrop/securedrop/zh_Hans/>\n"
+"Language-Team: Chinese (Simplified) <https://weblate.securedrop.org/projects/"
+"securedrop/securedrop/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,9 +54,12 @@ msgid "Username \"{user}\" already taken."
 msgstr "用户名 \"{user}\" 已经被占用。"
 
 #: journalist_app/admin.py:85
+#, fuzzy
+#| msgid ""
+#| "An error occurred saving this user to the database. Please inform your "
+#| "administrator."
 msgid ""
-"An error occurred saving this user to the database. Please inform your "
-"administrator."
+"An error occurred saving this user to the database. Please inform your admin."
 msgstr "保存该用户到数据库时出错。请通知管理员。"
 
 #: journalist_app/admin.py:109
@@ -80,7 +83,9 @@ msgid "No collections selected."
 msgstr "未选择任何的集合。"
 
 #: journalist_app/decorators.py:15
-msgid "Only administrators can access this page."
+#, fuzzy
+#| msgid "Only administrators can access this page."
+msgid "Only admins can access this page."
 msgstr "此页面仅供管理员访问。"
 
 #: journalist_app/forms.py:19
@@ -110,7 +115,9 @@ msgstr "您只能上传 PNG 图片文件。"
 
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
-msgid "An unexpected error occurred! Please inform your administrator."
+#, fuzzy
+#| msgid "An unexpected error occurred! Please inform your administrator."
+msgid "An unexpected error occurred! Please inform your admin."
 msgstr "出现一个意外的错误！请通知管理员。"
 
 #: journalist_app/main.py:129
@@ -374,8 +381,10 @@ msgstr "用户密码是："
 
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
-msgid "Is Administrator"
-msgstr "是管理员"
+#, fuzzy
+#| msgid "Admin"
+msgid "Is Admin"
+msgstr "管理员"
 
 #: journalist_templates/admin_add_user.html:39
 msgid "Is using a YubiKey [HOTP]"
@@ -1210,6 +1219,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr ""
+
+#~ msgid "Is Administrator"
+#~ msgstr "是管理员"
 
 #~ msgid "Upload images only."
 #~ msgstr "仅上传图片。"

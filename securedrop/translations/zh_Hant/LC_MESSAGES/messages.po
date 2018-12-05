@@ -55,9 +55,12 @@ msgid "Username \"{user}\" already taken."
 msgstr "用户名「{user}」已存在。"
 
 #: journalist_app/admin.py:85
+#, fuzzy
+#| msgid ""
+#| "An error occurred saving this user to the database. Please inform your "
+#| "administrator."
 msgid ""
-"An error occurred saving this user to the database. Please inform your "
-"administrator."
+"An error occurred saving this user to the database. Please inform your admin."
 msgstr "保存此用户到資料庫時出錯。請通知管理員。"
 
 #: journalist_app/admin.py:109
@@ -81,7 +84,9 @@ msgid "No collections selected."
 msgstr "並未選擇任何的集件。"
 
 #: journalist_app/decorators.py:15
-msgid "Only administrators can access this page."
+#, fuzzy
+#| msgid "Only administrators can access this page."
+msgid "Only admins can access this page."
 msgstr "本頁面僅限管理員訪問。"
 
 #: journalist_app/forms.py:19
@@ -111,7 +116,9 @@ msgstr "僅可上傳 PNG 格式的圖片檔。"
 
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
-msgid "An unexpected error occurred! Please inform your administrator."
+#, fuzzy
+#| msgid "An unexpected error occurred! Please inform your administrator."
+msgid "An unexpected error occurred! Please inform your admin."
 msgstr "發生預期之外的錯誤！請通知系統管理員。"
 
 #: journalist_app/main.py:129
@@ -374,8 +381,10 @@ msgstr "用户的密碼將為："
 
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
-msgid "Is Administrator"
-msgstr "是管理員"
+#, fuzzy
+#| msgid "Admin"
+msgid "Is Admin"
+msgstr "管理員"
 
 #: journalist_templates/admin_add_user.html:39
 msgid "Is using a YubiKey [HOTP]"
@@ -1269,6 +1278,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "返回提交文件頁面"
+
+#~ msgid "Is Administrator"
+#~ msgstr "是管理員"
 
 #~ msgid "Interface hidden. Move your cursor here to show."
 #~ msgstr "界面已隱藏，在此移動滑鼠可使其顯現。"

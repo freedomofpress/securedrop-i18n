@@ -54,9 +54,12 @@ msgid "Username \"{user}\" already taken."
 msgstr "שם המשתמש \"{user}\" כבר תפוס."
 
 #: journalist_app/admin.py:85
+#, fuzzy
+#| msgid ""
+#| "An error occurred saving this user to the database. Please inform your "
+#| "administrator."
 msgid ""
-"An error occurred saving this user to the database. Please inform your "
-"administrator."
+"An error occurred saving this user to the database. Please inform your admin."
 msgstr "התרחשה שגיאה בשמירת המשתמש במסד הנתונים. צור קשר עם מנהל המערכת."
 
 #: journalist_app/admin.py:109
@@ -80,7 +83,9 @@ msgid "No collections selected."
 msgstr ""
 
 #: journalist_app/decorators.py:15
-msgid "Only administrators can access this page."
+#, fuzzy
+#| msgid "Only administrators can access this page."
+msgid "Only admins can access this page."
 msgstr "רק מנהלים יכולים לגשת לעמוד זה."
 
 #: journalist_app/forms.py:19
@@ -110,7 +115,9 @@ msgstr ""
 
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
-msgid "An unexpected error occurred! Please inform your administrator."
+#, fuzzy
+#| msgid "An unexpected error occurred! Please inform your administrator."
+msgid "An unexpected error occurred! Please inform your admin."
 msgstr "תקלה לא צפויה התרחשה! צור עם קשר עם מנהל המערכת."
 
 #: journalist_app/main.py:129
@@ -379,8 +386,10 @@ msgstr "סיסמת המשתמש תהיינה:"
 
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
-msgid "Is Administrator"
-msgstr "האם מנהל"
+#, fuzzy
+#| msgid "Admin"
+msgid "Is Admin"
+msgstr "מנהל"
 
 #: journalist_templates/admin_add_user.html:39
 msgid "Is using a YubiKey [HOTP]"
@@ -1214,6 +1223,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr ""
+
+#~ msgid "Is Administrator"
+#~ msgstr "האם מנהל"
 
 #~ msgid "{num_unread} unread"
 #~ msgstr "{num_unread} לא נקראו"

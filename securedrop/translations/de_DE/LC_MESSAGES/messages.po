@@ -53,9 +53,12 @@ msgid "Username \"{user}\" already taken."
 msgstr "Benutzername \"{user}\" ist bereits vergeben."
 
 #: journalist_app/admin.py:85
+#, fuzzy
+#| msgid ""
+#| "An error occurred saving this user to the database. Please inform your "
+#| "administrator."
 msgid ""
-"An error occurred saving this user to the database. Please inform your "
-"administrator."
+"An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
 "Beim Speichern dieses Benutzers in der Datenbank ist ein Fehler aufgetreten. "
 "Bitte informieren Sie Ihren Administrator."
@@ -82,7 +85,9 @@ msgid "No collections selected."
 msgstr "Keine Sammlungen ausgewählt."
 
 #: journalist_app/decorators.py:15
-msgid "Only administrators can access this page."
+#, fuzzy
+#| msgid "Only administrators can access this page."
+msgid "Only admins can access this page."
 msgstr "Nur Administratoren haben Zugriff auf diese Seite."
 
 #: journalist_app/forms.py:19
@@ -115,7 +120,9 @@ msgstr "Sie können nur PNG-Bilddateien hochladen."
 
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
-msgid "An unexpected error occurred! Please inform your administrator."
+#, fuzzy
+#| msgid "An unexpected error occurred! Please inform your administrator."
+msgid "An unexpected error occurred! Please inform your admin."
 msgstr ""
 "Ein unerwarteter Fehler ist aufgetreten! Bitte Informieren Sie Ihren "
 "Administrator."
@@ -411,8 +418,10 @@ msgstr "Das Benutzerpasswort lautet:"
 
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
-msgid "Is Administrator"
-msgstr "Ist Administrator"
+#, fuzzy
+#| msgid "Admin"
+msgid "Is Admin"
+msgstr "Admin"
 
 #: journalist_templates/admin_add_user.html:39
 msgid "Is using a YubiKey [HOTP]"
@@ -1256,8 +1265,8 @@ msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor browser</a> instead."
 msgstr ""
-"Wir <strong>empfehlen Ihnen dringend</strong>, stattdessen den <a href=\""
-"www.torproject.org/projects/torbrowser.html\">Tor-Browser</a> zu verwenden."
+"Wir <strong>empfehlen Ihnen dringend</strong>, stattdessen den <a href=\"www."
+"torproject.org/projects/torbrowser.html\">Tor-Browser</a> zu verwenden."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
@@ -1400,6 +1409,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Zurück zur Einreichungsseite"
+
+#~ msgid "Is Administrator"
+#~ msgstr "Ist Administrator"
 
 #~ msgid "Interface hidden. Move your cursor here to show."
 #~ msgstr ""

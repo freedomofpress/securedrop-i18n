@@ -57,9 +57,12 @@ msgid "Username \"{user}\" already taken."
 msgstr "Brukernavnet \"{user}\" er allerede i bruk."
 
 #: journalist_app/admin.py:85
+#, fuzzy
+#| msgid ""
+#| "An error occurred saving this user to the database. Please inform your "
+#| "administrator."
 msgid ""
-"An error occurred saving this user to the database. Please inform your "
-"administrator."
+"An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
 "En feil oppstod ved forsøk på lagring av brukeren i databasen. Gi "
 "administrator for din SecureDrop beskjed om at det skjedde."
@@ -85,7 +88,9 @@ msgid "No collections selected."
 msgstr "Ingen kildeoppføringer valgt."
 
 #: journalist_app/decorators.py:15
-msgid "Only administrators can access this page."
+#, fuzzy
+#| msgid "Only administrators can access this page."
+msgid "Only admins can access this page."
 msgstr "Bare administratorer har tilgang til denne siden."
 
 #: journalist_app/forms.py:19
@@ -115,7 +120,9 @@ msgstr "Du kan kun laste opp PNG-bildefiler."
 
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
-msgid "An unexpected error occurred! Please inform your administrator."
+#, fuzzy
+#| msgid "An unexpected error occurred! Please inform your administrator."
+msgid "An unexpected error occurred! Please inform your admin."
 msgstr ""
 "En uventet feil oppstod! Gi administrator for din SecureDrop beskjed om at "
 "det skjedde."
@@ -397,8 +404,10 @@ msgstr "Brukerens passord vil være:"
 
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
-msgid "Is Administrator"
-msgstr "Er administrator"
+#, fuzzy
+#| msgid "Admin"
+msgid "Is Admin"
+msgstr "Administrator"
 
 #: journalist_templates/admin_add_user.html:39
 msgid "Is using a YubiKey [HOTP]"
@@ -1365,6 +1374,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Tilbake til innsendelsesside"
+
+#~ msgid "Is Administrator"
+#~ msgstr "Er administrator"
 
 #~ msgid "Interface hidden. Move your cursor here to show."
 #~ msgstr "Grensesnitt skjult. Beveg musepekeren for å vise."
