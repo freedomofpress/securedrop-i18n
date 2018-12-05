@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-11-29 19:06+0000\n"
+"PO-Revision-Date: 2018-12-05 08:52+0000\n"
 "Last-Translator: Zuhualime Akoochimoya <zakooch@protonmail.ch>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
@@ -57,15 +57,11 @@ msgid "Username \"{user}\" already taken."
 msgstr "El nombre de usuario \"{user}\" ya se encuentra en uso."
 
 #: journalist_app/admin.py:85
-#, fuzzy
-#| msgid ""
-#| "An error occurred saving this user to the database. Please inform your "
-#| "administrator."
 msgid ""
 "An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
 "Ocurrió un error al guardar este usuario en la base de datos. Por favor "
-"informe a su administrador."
+"informe a su admin."
 
 #: journalist_app/admin.py:109
 msgid "Token in two-factor authentication accepted for user {user}."
@@ -89,10 +85,8 @@ msgid "No collections selected."
 msgstr "No hay colecciones seleccionadas."
 
 #: journalist_app/decorators.py:15
-#, fuzzy
-#| msgid "Only administrators can access this page."
 msgid "Only admins can access this page."
-msgstr "Solo administradores pueden entrar a esta página."
+msgstr "Solo admins pueden acceder esta página."
 
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
@@ -125,10 +119,8 @@ msgstr "Solo puede subir archivos de imágenes PNG."
 
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
-#, fuzzy
-#| msgid "An unexpected error occurred! Please inform your administrator."
 msgid "An unexpected error occurred! Please inform your admin."
-msgstr "¡Ocurrió un error inesperado! Por favor informe a su administrador."
+msgstr "¡Ocurrió un error inesperado! Por favor informe a su admin."
 
 #: journalist_app/main.py:129
 msgid "Thanks. Your reply has been stored."
@@ -420,10 +412,8 @@ msgstr "La contraseña del usuario será:"
 
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
-#, fuzzy
-#| msgid "Admin"
 msgid "Is Admin"
-msgstr "Admin"
+msgstr "Es Admin"
 
 #: journalist_templates/admin_add_user.html:39
 msgid "Is using a YubiKey [HOTP]"
