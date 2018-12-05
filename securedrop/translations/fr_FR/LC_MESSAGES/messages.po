@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-11-29 17:40+0000\n"
+"PO-Revision-Date: 2018-12-05 14:47+0000\n"
 "Last-Translator: AO <ao@localizationlab.org>\n"
 "Language-Team: French <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/fr/>\n"
@@ -58,10 +58,6 @@ msgid "Username \"{user}\" already taken."
 msgstr "Le nom d’utilisateur « {user} » est déjà utilisé."
 
 #: journalist_app/admin.py:85
-#, fuzzy
-#| msgid ""
-#| "An error occurred saving this user to the database. Please inform your "
-#| "administrator."
 msgid ""
 "An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
@@ -91,8 +87,6 @@ msgid "No collections selected."
 msgstr "Aucune collection n’a été sélectionnée."
 
 #: journalist_app/decorators.py:15
-#, fuzzy
-#| msgid "Only administrators can access this page."
 msgid "Only admins can access this page."
 msgstr "Seuls les administrateurs peuvent accéder à cette page."
 
@@ -126,8 +120,6 @@ msgstr "Vous ne pouvez téléverser que des fichiers images PNG."
 
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
-#, fuzzy
-#| msgid "An unexpected error occurred! Please inform your administrator."
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr ""
 "Une erreur inattendue est survenue ! Veuillez la signaler à votre "
@@ -422,8 +414,6 @@ msgstr "Le mot de passe de l’utilisateur sera :"
 
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
-#, fuzzy
-#| msgid "Admin"
 msgid "Is Admin"
 msgstr "Administration"
 
