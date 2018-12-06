@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-12-06 18:16+0000\n"
+"PO-Revision-Date: 2018-12-06 19:12+0000\n"
 "Last-Translator: Jobava <jobaval10n@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
@@ -34,7 +34,7 @@ msgstr "Parolă sau cod de autentificare greșit."
 
 #: journalist_app/account.py:42
 msgid "Token in two-factor authentication verified."
-msgstr "Dispozitivul de autentificare a fost verificat."
+msgstr "Codul pentru autentificarea în doi pași a fost verificat."
 
 #: journalist_app/account.py:46 journalist_app/admin.py:116
 msgid "Could not verify token in two-factor authentication."
@@ -77,7 +77,7 @@ msgstr "S-a șters utilizatorul „{user}”"
 
 #: journalist_app/admin.py:234
 msgid "Test alert sent. Please check your email."
-msgstr "Alerta de test a fost trimisă. Poți verifica e-mail-ul."
+msgstr "Alerta de test a fost trimisă. Poți verifica e-mail-ul tău."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
