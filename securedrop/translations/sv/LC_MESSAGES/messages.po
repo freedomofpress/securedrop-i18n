@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-12-06 11:25+0000\n"
+"PO-Revision-Date: 2018-12-09 10:45+0000\n"
 "Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
 "Language-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sv/>\n"
@@ -384,7 +384,7 @@ msgstr "Tillbaka till administratörsgränssnittet"
 
 #: journalist_templates/admin_add_user.html:23
 msgid "Username can contain spaces"
-msgstr "Användarnamn kan inte innehålla mellanslag"
+msgstr "Användarnamn kan innehålla mellanslag"
 
 #: journalist_templates/admin_add_user.html:24
 msgid "Username is case-sensitive"
