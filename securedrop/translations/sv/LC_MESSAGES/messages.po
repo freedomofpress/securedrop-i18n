@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-12-05 23:44+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2018-12-06 11:25+0000\n"
+"Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
 "Language-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sv/>\n"
 "Language: sv\n"
@@ -56,10 +56,6 @@ msgid "Username \"{user}\" already taken."
 msgstr "Användarnamnet \"{user}\" är redan använt."
 
 #: journalist_app/admin.py:85
-#, fuzzy
-#| msgid ""
-#| "An error occurred saving this user to the database. Please inform your "
-#| "administrator."
 msgid ""
 "An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
@@ -87,8 +83,6 @@ msgid "No collections selected."
 msgstr "Inga samlingar är valda."
 
 #: journalist_app/decorators.py:15
-#, fuzzy
-#| msgid "Only administrators can access this page."
 msgid "Only admins can access this page."
 msgstr "Endast administratörer har tillgång till denna sida."
 
@@ -120,8 +114,6 @@ msgstr "Du kan endast ladda upp PNG-bildfiler."
 
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
-#, fuzzy
-#| msgid "An unexpected error occurred! Please inform your administrator."
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Ett oväntat fel uppstod! Informera din administratör."
 
@@ -392,11 +384,11 @@ msgstr "Tillbaka till administratörsgränssnittet"
 
 #: journalist_templates/admin_add_user.html:23
 msgid "Username can contain spaces"
-msgstr "Brukarnamn kan inte ha mellanrum"
+msgstr "Användarnamn kan inte innehålla mellanslag"
 
 #: journalist_templates/admin_add_user.html:24
 msgid "Username is case-sensitive"
-msgstr "Brukarnamnet skiljer mellan stora och små bokstäver"
+msgstr "Användarnamnet är skiftlägeskänsligt"
 
 #: journalist_templates/admin_add_user.html:28
 msgid "The user's password will be:"
@@ -404,10 +396,8 @@ msgstr "Användarens lösenord blir:"
 
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
-#, fuzzy
-#| msgid "Admin"
 msgid "Is Admin"
-msgstr "Admin"
+msgstr "Är admin"
 
 #: journalist_templates/admin_add_user.html:39
 msgid "Is using a YubiKey [HOTP]"
