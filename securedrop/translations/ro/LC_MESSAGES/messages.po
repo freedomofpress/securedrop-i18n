@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-12-06 18:15+0000\n"
+"PO-Revision-Date: 2018-12-06 18:16+0000\n"
 "Last-Translator: Jobava <jobaval10n@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
@@ -63,7 +63,7 @@ msgid ""
 "An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
 "S-a produs o eroare la salvarea utilizatorului în baza de date. Te rugăm să "
-"informezi adminul."
+"informezi administratorul tău."
 
 #: journalist_app/admin.py:109
 msgid "Token in two-factor authentication accepted for user {user}."
@@ -89,7 +89,7 @@ msgstr "Nu ai ales nicio selecție."
 
 #: journalist_app/decorators.py:15
 msgid "Only admins can access this page."
-msgstr "Doar admin poate accesa această pagină."
+msgstr "Doar administratorii pot accesa pagina."
 
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
@@ -405,11 +405,11 @@ msgstr "Înapoi la interfața de administrare"
 
 #: journalist_templates/admin_add_user.html:23
 msgid "Username can contain spaces"
-msgstr ""
+msgstr "Numele de utilizator poate conține spații"
 
 #: journalist_templates/admin_add_user.html:24
 msgid "Username is case-sensitive"
-msgstr ""
+msgstr "Numele de utilizator poate conține majuscule și minuscule"
 
 #: journalist_templates/admin_add_user.html:28
 msgid "The user's password will be:"
@@ -417,10 +417,8 @@ msgstr "Parola utilizatorului va fi:"
 
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
-#, fuzzy
-#| msgid "Admin"
 msgid "Is Admin"
-msgstr "Administrator"
+msgstr "Este administrator"
 
 #: journalist_templates/admin_add_user.html:39
 msgid "Is using a YubiKey [HOTP]"
