@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-12-06 19:12+0000\n"
-"Last-Translator: Jobava <jobaval10n@gmail.com>\n"
+"PO-Revision-Date: 2018-12-10 18:35+0000\n"
+"Last-Translator: robbpa <robbpaun@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
 "Language: ro\n"
@@ -26,7 +26,7 @@ msgstr "acum {time}"
 
 #: journalist_app/__init__.py:80 journalist_app/__init__.py:119
 msgid "You have been logged out due to inactivity"
-msgstr "Ai fost deconectat în urma inactivității"
+msgstr "Ai fost deconectat(ă) în urma inactivității"
 
 #: journalist_app/account.py:26
 msgid "Incorrect password or two-factor code."
