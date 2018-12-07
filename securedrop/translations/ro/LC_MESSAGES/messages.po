@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-12-10 18:35+0000\n"
+"PO-Revision-Date: 2018-12-10 20:10+0000\n"
 "Last-Translator: robbpa <robbpaun@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
@@ -1392,7 +1392,7 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
-msgstr "Înapoi la pagina cu trimiteri"
+msgstr "Înapoi la pagina de trimitere"
 
 #~ msgid "Is Administrator"
 #~ msgstr "Este administrator"
