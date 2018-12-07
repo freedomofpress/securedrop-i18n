@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-09-04 19:23+0000\n"
-"Last-Translator: erinm <erinm@benespace.org>\n"
+"PO-Revision-Date: 2018-12-09 10:45+0000\n"
+"Last-Translator: Kaya Zeren <kayazeren@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
 "Language: tr\n"
@@ -56,15 +56,11 @@ msgid "Username \"{user}\" already taken."
 msgstr "\"{user}\" kullanıcı adı halihazırda alınmış."
 
 #: journalist_app/admin.py:85
-#, fuzzy
-#| msgid ""
-#| "An error occurred saving this user to the database. Please inform your "
-#| "administrator."
 msgid ""
 "An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
-"Bu kullanıcıyı veritabanına kaydederken bir hata oluştu. Lütfen yöneticinize "
-"haber verin."
+"Bu kullanıcı veritabanına kaydedilirken bir sorun çıktı. Lütfen yöneticinize "
+"bilgi verin."
 
 #: journalist_app/admin.py:109
 msgid "Token in two-factor authentication accepted for user {user}."
@@ -88,10 +84,8 @@ msgid "No collections selected."
 msgstr "Herhangi bir derleme seçilmedi."
 
 #: journalist_app/decorators.py:15
-#, fuzzy
-#| msgid "Only administrators can access this page."
 msgid "Only admins can access this page."
-msgstr "Yalnızca yöneticiler bu sayfaya erişebilir."
+msgstr "Bu sayfaya yalnız yöneticiler erişebilir."
 
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
@@ -124,10 +118,8 @@ msgstr "Yalnızca PNG resim dosyalarını yükleyebilirsiniz."
 
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
-#, fuzzy
-#| msgid "An unexpected error occurred! Please inform your administrator."
 msgid "An unexpected error occurred! Please inform your admin."
-msgstr "Beklenmeyen bir hata oluştu! Lütfen sistem yöneticinize haber verin."
+msgstr "Beklenmeyen bir sorun çıktı! Lütfen sistem yöneticinize bilgi verin."
 
 #: journalist_app/main.py:129
 msgid "Thanks. Your reply has been stored."
@@ -396,11 +388,11 @@ msgstr "Yönetici arayüzüne geri dön"
 
 #: journalist_templates/admin_add_user.html:23
 msgid "Username can contain spaces"
-msgstr ""
+msgstr "Kullanıcı adında boşluk karakteri kullanılabilir"
 
 #: journalist_templates/admin_add_user.html:24
 msgid "Username is case-sensitive"
-msgstr ""
+msgstr "Kullanıcı adı büyük-küçük harflere duyarlıdır"
 
 #: journalist_templates/admin_add_user.html:28
 msgid "The user's password will be:"
