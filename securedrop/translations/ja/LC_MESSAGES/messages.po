@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-11-28 05:17+0000\n"
+"PO-Revision-Date: 2018-12-14 07:42+0000\n"
 "Last-Translator: pito <lnb07655@ebbob.com>\n"
 "Language-Team: Japanese <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ja/>\n"
@@ -25,7 +25,7 @@ msgstr "{time}前"
 
 #: journalist_app/__init__.py:80 journalist_app/__init__.py:119
 msgid "You have been logged out due to inactivity"
-msgstr ""
+msgstr "活動が無かったためログアウトされました"
 
 #: journalist_app/account.py:26
 msgid "Incorrect password or two-factor code."
@@ -62,7 +62,7 @@ msgstr "予期しないエラーが発生しました！管理者にご連絡く
 
 #: journalist_app/admin.py:109
 msgid "Token in two-factor authentication accepted for user {user}."
-msgstr ""
+msgstr "ユーザー {user} に対して2要素認証トークンが受け入れられました。"
 
 #: journalist_app/admin.py:208
 msgid "Deleted user '{user}'"
@@ -70,7 +70,7 @@ msgstr "ユーザー'{user}'が削除されました"
 
 #: journalist_app/admin.py:234
 msgid "Test alert sent. Please check your email."
-msgstr ""
+msgstr "テストアラートが送信されました。メールをご確認ください。"
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -78,7 +78,7 @@ msgstr "{source_name}の集は消去された"
 
 #: journalist_app/col.py:56
 msgid "No collections selected."
-msgstr ""
+msgstr "コレクションが選択されていません。"
 
 #: journalist_app/decorators.py:15
 #, fuzzy
@@ -109,7 +109,7 @@ msgstr "ファイルが必要です。"
 
 #: journalist_app/forms.py:62
 msgid "You can only upload PNG image files."
-msgstr ""
+msgstr "アップロードできるのは PNG 形式の画像ファイルのみです。"
 
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
@@ -120,15 +120,15 @@ msgstr "予期しないエラーが発生しました！管理者にご連絡く
 
 #: journalist_app/main.py:129
 msgid "Thanks. Your reply has been stored."
-msgstr ""
+msgstr "ありがとう。返信が保存されました。"
 
 #: journalist_app/main.py:150
 msgid "No collections selected for download."
-msgstr ""
+msgstr "ダウンロードするコレクションが選択されていません。"
 
 #: journalist_app/main.py:153 journalist_app/utils.py:236
 msgid "No collections selected for deletion."
-msgstr ""
+msgstr "削除するコレクションが選択されていません。"
 
 #: journalist_app/main.py:179
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
