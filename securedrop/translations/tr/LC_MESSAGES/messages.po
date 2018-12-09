@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-12-09 10:45+0000\n"
-"Last-Translator: Kaya Zeren <kayazeren@gmail.com>\n"
+"PO-Revision-Date: 2018-12-09 16:23+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
 "Language: tr\n"
@@ -400,8 +400,6 @@ msgstr "Kullanıcının parolası şu olacak:"
 
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
-#, fuzzy
-#| msgid "Admin"
 msgid "Is Admin"
 msgstr "Yönetici"
 
