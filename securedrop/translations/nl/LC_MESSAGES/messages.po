@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-09-04 19:23+0000\n"
-"Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
+"PO-Revision-Date: 2018-12-11 17:30+0000\n"
+"Last-Translator: erinm <erinm@riseup.net>\n"
 "Language-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/nl/>\n"
 "Language: nl\n"
@@ -57,10 +57,6 @@ msgid "Username \"{user}\" already taken."
 msgstr "Gebruikersnaam \"{user}\" is al in gebruik."
 
 #: journalist_app/admin.py:85
-#, fuzzy
-#| msgid ""
-#| "An error occurred saving this user to the database. Please inform your "
-#| "administrator."
 msgid ""
 "An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
@@ -89,8 +85,6 @@ msgid "No collections selected."
 msgstr "Geen collecties geselecteerd."
 
 #: journalist_app/decorators.py:15
-#, fuzzy
-#| msgid "Only administrators can access this page."
 msgid "Only admins can access this page."
 msgstr "Alleen beheerders hebben toegang tot deze pagina."
 
@@ -123,8 +117,6 @@ msgstr "U kunt alleen PNG-afbeeldingen uploaden."
 
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
-#, fuzzy
-#| msgid "An unexpected error occurred! Please inform your administrator."
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Er trad een onverwachte fout op! Neem contact op met uw beheerder."
 
@@ -413,8 +405,6 @@ msgstr "Het wachtwoord van de gebruiker zal zijn:"
 
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
-#, fuzzy
-#| msgid "Admin"
 msgid "Is Admin"
 msgstr "Beheerder"
 
