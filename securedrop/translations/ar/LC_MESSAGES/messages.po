@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2018-12-14 07:39+0000\n"
-"Last-Translator: erinm <erinm@riseup.net>\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ar/>\n"
 "Language: ar\n"
@@ -417,10 +417,8 @@ msgstr "كلمة سر المستخدم:"
 
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
-#, fuzzy
-#| msgid "Admin"
 msgid "Is Admin"
-msgstr "الإدارة"
+msgstr "إداري"
 
 #: journalist_templates/admin_add_user.html:39
 msgid "Is using a YubiKey [HOTP]"
