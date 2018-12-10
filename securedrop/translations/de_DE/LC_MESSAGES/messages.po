@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-12-10 17:36+0000\n"
+"PO-Revision-Date: 2018-12-14 07:44+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/de/>\n"
@@ -116,7 +116,7 @@ msgstr "Sie können nur PNG-Bilddateien hochladen."
 #: journalist_app/utils.py:138
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr ""
-"Ein unerwarteter Fehler ist aufgetreten! Bitte Informieren Sie Ihren "
+"Es ist ein unerwarteter Fehler aufgetreten! Bitte informieren Sie Ihren "
 "Administrator."
 
 #: journalist_app/main.py:129
