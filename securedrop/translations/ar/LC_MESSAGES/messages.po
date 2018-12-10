@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-12-05 08:18+0000\n"
-"Last-Translator: ramyraoof <ramy.raoof@gmail.com>\n"
+"PO-Revision-Date: 2018-12-14 07:39+0000\n"
+"Last-Translator: erinm <erinm@riseup.net>\n"
 "Language-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ar/>\n"
 "Language: ar\n"
@@ -56,10 +56,6 @@ msgid "Username \"{user}\" already taken."
 msgstr "الاسم {user} سبق تخصيصه لمستخدم آخر."
 
 #: journalist_app/admin.py:85
-#, fuzzy
-#| msgid ""
-#| "An error occurred saving this user to the database. Please inform your "
-#| "administrator."
 msgid ""
 "An error occurred saving this user to the database. Please inform your admin."
 msgstr "حدث عطل أثناء تسجيل المستخدم في قاعدة البيانات. الرجاء إبلاغ الإداري."
@@ -85,8 +81,6 @@ msgid "No collections selected."
 msgstr "لم يتم اختيار أي مجموعة."
 
 #: journalist_app/decorators.py:15
-#, fuzzy
-#| msgid "Only administrators can access this page."
 msgid "Only admins can access this page."
 msgstr "النّفاذ إلى هذه الصفحة متاح للإداريين وحدهم."
 
@@ -120,8 +114,6 @@ msgstr "لا يمكن رفع ملفات غير PNG."
 
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
-#, fuzzy
-#| msgid "An unexpected error occurred! Please inform your administrator."
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "حدث عطل غير متوقع. رجاء إبلاغ الإداري."
 
