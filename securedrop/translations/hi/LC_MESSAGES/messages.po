@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-09-04 19:23+0000\n"
-"Last-Translator: Drashti <drashtipandya37@gmail.com>\n"
+"PO-Revision-Date: 2018-12-11 05:55+0000\n"
+"Last-Translator: Chandan Kumar <chkumar246@gmail.com>\n"
 "Language-Team: Hindi <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/hi/>\n"
 "Language: hi\n"
@@ -55,14 +55,11 @@ msgid "Username \"{user}\" already taken."
 msgstr "उपयोगकर्ता नाम \"{user}\" पहले से ही लिया जा चूका है।"
 
 #: journalist_app/admin.py:85
-#, fuzzy
-#| msgid ""
-#| "An error occurred saving this user to the database. Please inform your "
-#| "administrator."
 msgid ""
 "An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
-"इस उपयोगकर्ता को डेटाबेस में सहेजने में एक त्रुटि हुई है। कृपया अपने व्यवस्थापक को सूचित करें।"
+"इस उपयोगकर्ता को डेटाबेस में सहेजने समय त्रुटि हुई। कृपया अपने व्यवस्थापक को "
+"सूचित करें।"
 
 #: journalist_app/admin.py:109
 msgid "Token in two-factor authentication accepted for user {user}."
@@ -85,10 +82,8 @@ msgid "No collections selected."
 msgstr "कोई संग्रह चयनित नहीं।"
 
 #: journalist_app/decorators.py:15
-#, fuzzy
-#| msgid "Only administrators can access this page."
 msgid "Only admins can access this page."
-msgstr "केवल व्यवस्थापक ही पृष्ठ तक पहुंच सकते हैं।"
+msgstr "केवल व्यवस्थापक ही इस पृष्ठ को एक्सेस कर सकते हैं।"
 
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
@@ -117,10 +112,8 @@ msgstr "आप केवल PNG छवि फ़ाइलों को अपल
 
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
-#, fuzzy
-#| msgid "An unexpected error occurred! Please inform your administrator."
 msgid "An unexpected error occurred! Please inform your admin."
-msgstr "एक अप्रत्याशित त्रुटि हुई है ! कृपया अपने व्यवस्थापक को सूचित करें।"
+msgstr "अप्रत्याशित त्रुटि हुई ! कृपया अपने व्यवस्थापक को सूचित करें।"
 
 #: journalist_app/main.py:129
 msgid "Thanks. Your reply has been stored."
@@ -383,11 +376,11 @@ msgstr "व्यवस्थापक अंतराफलक पर वाप
 
 #: journalist_templates/admin_add_user.html:23
 msgid "Username can contain spaces"
-msgstr ""
+msgstr "उपयोगकर्ता के नाम में रिक्त स्थान हो सकते हैं"
 
 #: journalist_templates/admin_add_user.html:24
 msgid "Username is case-sensitive"
-msgstr ""
+msgstr "उपयोगकर्ता के नाम केस-संवेदी है"
 
 #: journalist_templates/admin_add_user.html:28
 msgid "The user's password will be:"
@@ -395,10 +388,8 @@ msgstr "उपयोगकर्ता का पासवर्ड होगा
 
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
-#, fuzzy
-#| msgid "Admin"
 msgid "Is Admin"
-msgstr "व्यवस्थापक"
+msgstr "व्यवस्थापक हैं"
 
 #: journalist_templates/admin_add_user.html:39
 msgid "Is using a YubiKey [HOTP]"
