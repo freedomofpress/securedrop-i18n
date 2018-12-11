@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-12-09 16:23+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2018-12-14 07:39+0000\n"
+"Last-Translator: Volkan <volkangezer@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
 "Language: tr\n"
@@ -59,8 +59,8 @@ msgstr "\"{user}\" kullanıcı adı halihazırda alınmış."
 msgid ""
 "An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
-"Bu kullanıcı veritabanına kaydedilirken bir sorun çıktı. Lütfen yöneticinize "
-"bilgi verin."
+"Bu kullanıcı veritabanına kaydedilirken bir sorun çıktı. Lütfen yöneticinizi "
+"bilgilendirin."
 
 #: journalist_app/admin.py:109
 msgid "Token in two-factor authentication accepted for user {user}."
@@ -85,7 +85,7 @@ msgstr "Herhangi bir derleme seçilmedi."
 
 #: journalist_app/decorators.py:15
 msgid "Only admins can access this page."
-msgstr "Bu sayfaya yalnız yöneticiler erişebilir."
+msgstr "Bu sayfaya yalnızca yöneticiler erişebilir."
 
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
@@ -119,7 +119,7 @@ msgstr "Yalnızca PNG resim dosyalarını yükleyebilirsiniz."
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
 msgid "An unexpected error occurred! Please inform your admin."
-msgstr "Beklenmeyen bir sorun çıktı! Lütfen sistem yöneticinize bilgi verin."
+msgstr "Beklenmeyen bir sorun çıktı! Lütfen sistem yöneticinizi bilgilendirin."
 
 #: journalist_app/main.py:129
 msgid "Thanks. Your reply has been stored."
