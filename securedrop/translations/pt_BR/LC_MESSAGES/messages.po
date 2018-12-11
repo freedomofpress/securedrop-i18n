@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-12-10 09:14+0000\n"
+"PO-Revision-Date: 2018-12-20 00:39+0000\n"
 "Last-Translator: erinm <erinm@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/pt_BR/>\n"
@@ -409,7 +409,7 @@ msgstr "A senha de usuário será:"
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
 msgid "Is Admin"
-msgstr "É o administrador"
+msgstr "É administrador"
 
 #: journalist_templates/admin_add_user.html:39
 msgid "Is using a YubiKey [HOTP]"
