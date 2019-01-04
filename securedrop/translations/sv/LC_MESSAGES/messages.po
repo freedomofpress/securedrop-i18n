@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-12-09 10:45+0000\n"
-"Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
+"PO-Revision-Date: 2019-01-15 07:43+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sv/>\n"
 "Language: sv\n"
@@ -88,7 +88,7 @@ msgstr "Endast administratörer har tillgång till denna sida."
 
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
-msgstr "HOTP hemligheter är 40 tecken långa - du har fyllt i {num_chars}."
+msgstr "HOTP-hemligheter är 40 tecken långa - du har fyllt i {num_chars}."
 
 #: journalist_app/forms.py:30
 msgid ""
