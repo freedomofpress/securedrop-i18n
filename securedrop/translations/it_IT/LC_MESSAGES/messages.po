@@ -27,7 +27,7 @@ msgstr ""
 msgid "{time} ago"
 msgstr "{time} fa"
 
-#: journalist_app/__init__.py:80 journalist_app/__init__.py:119
+#: journalist_app/__init__.py:89 journalist_app/__init__.py:128
 msgid "You have been logged out due to inactivity"
 msgstr "La sessione è stata terminata per inattività"
 
@@ -434,19 +434,27 @@ msgstr ""
 "dei codici a 6 cifre disponibili per confermare che l'autenticazione a due "
 "fattori è stata impostata correttamente."
 
-#: journalist_templates/base.html:24
+#: journalist_templates/base.html:28
+msgid ""
+"<strong>Critical Security:</strong> The operating system used by your "
+"SecureDrop servers has reached its end-of-life. A manual update is urgently "
+"required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
+"\"noreferrer\">Learn More</a>"
+msgstr ""
+
+#: journalist_templates/base.html:33
 msgid "Logged on as"
 msgstr "Accesso eseguito come"
 
-#: journalist_templates/base.html:26
+#: journalist_templates/base.html:35
 msgid "Admin"
 msgstr "Amministratore"
 
-#: journalist_templates/base.html:28
+#: journalist_templates/base.html:37
 msgid "Log Out"
 msgstr "Esci"
 
-#: journalist_templates/base.html:41
+#: journalist_templates/base.html:50
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
@@ -454,7 +462,7 @@ msgstr ""
 "Offerto da <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
 
-#: journalist_templates/base.html:56
+#: journalist_templates/base.html:65
 msgid "Powered by <em>SecureDrop {version}</em>."
 msgstr "Offerto da <em>SecureDrop {version}</em>."
 
@@ -683,7 +691,7 @@ msgstr "Inserire la password attuale e il codice a due fattori."
 msgid "Current Password"
 msgstr "Password attuale"
 
-#: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
+#: journalist_templates/edit_account.html:41 journalist_templates/login.html:11
 msgid "Two-factor Code"
 msgstr "Codice a due fattori"
 
@@ -825,7 +833,7 @@ msgstr "Accedere per utilizzare l'interfaccia giornalista"
 msgid "Password"
 msgstr "Password"
 
-#: journalist_templates/login.html:11
+#: journalist_templates/login.html:12
 msgid "LOG IN"
 msgstr "ACCEDI"
 
@@ -857,31 +865,31 @@ msgstr ""
 "l'accesso. Per creare un nuovo account bisogna prima terminare la sessione "
 "corrente."
 
-#: source_app/main.py:133
+#: source_app/main.py:132
 msgid "You must enter a message or choose a file to submit."
 msgstr "È necessario inserire un messaggio o scegliere un file da inviare."
 
-#: source_app/main.py:166
+#: source_app/main.py:165
 msgid "Thanks! We received your message."
 msgstr "Grazie! Abbiamo ricevuto il tuo messaggio."
 
-#: source_app/main.py:168
+#: source_app/main.py:167
 msgid "Thanks! We received your document."
 msgstr "Grazie! Abbiamo ricevuto il tuo documento."
 
-#: source_app/main.py:170
+#: source_app/main.py:169
 msgid "Thanks! We received your message and document."
 msgstr "Grazie! Abbiamo ricevuto il tuo messaggio e il documento."
 
-#: source_app/main.py:223
+#: source_app/main.py:222
 msgid "Reply deleted"
 msgstr "Risposta eliminata"
 
-#: source_app/main.py:241
+#: source_app/main.py:240
 msgid "All replies have been deleted"
 msgstr "Tutte le risposte sono state eliminate"
 
-#: source_app/main.py:255
+#: source_app/main.py:254
 msgid "Sorry, that is not a recognized codename."
 msgstr "Questo nome in codice non è riconosciuto."
 

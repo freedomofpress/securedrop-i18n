@@ -24,7 +24,7 @@ msgstr ""
 msgid "{time} ago"
 msgstr "{time} siden"
 
-#: journalist_app/__init__.py:80 journalist_app/__init__.py:119
+#: journalist_app/__init__.py:89 journalist_app/__init__.py:128
 msgid "You have been logged out due to inactivity"
 msgstr "Du har blitt utlogget som følge av inaktivitet"
 
@@ -413,19 +413,27 @@ msgstr ""
 "sin i appen, legg så inn én av de 6-sifrede kodene fra appen i skjemaet "
 "under for å bekrefte at autentiseringen er satt opp riktig."
 
-#: journalist_templates/base.html:24
+#: journalist_templates/base.html:28
+msgid ""
+"<strong>Critical Security:</strong> The operating system used by your "
+"SecureDrop servers has reached its end-of-life. A manual update is urgently "
+"required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
+"\"noreferrer\">Learn More</a>"
+msgstr ""
+
+#: journalist_templates/base.html:33
 msgid "Logged on as"
 msgstr "Innlogget som"
 
-#: journalist_templates/base.html:26
+#: journalist_templates/base.html:35
 msgid "Admin"
 msgstr "Administrator"
 
-#: journalist_templates/base.html:28
+#: journalist_templates/base.html:37
 msgid "Log Out"
 msgstr "Logg ut"
 
-#: journalist_templates/base.html:41
+#: journalist_templates/base.html:50
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
@@ -433,7 +441,7 @@ msgstr ""
 "Drevet av: <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
 
-#: journalist_templates/base.html:56
+#: journalist_templates/base.html:65
 msgid "Powered by <em>SecureDrop {version}</em>."
 msgstr "Drevet av: <em>SecureDrop {version}</em>."
 
@@ -655,7 +663,7 @@ msgstr "Skriv inn ditt nåværende passord og tofaktor-kode."
 msgid "Current Password"
 msgstr "Nåværende passord"
 
-#: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
+#: journalist_templates/edit_account.html:41 journalist_templates/login.html:11
 msgid "Two-factor Code"
 msgstr "Tofaktor-kode"
 
@@ -801,7 +809,7 @@ msgstr "Logg inn for å få tilgang til journalist-portalen"
 msgid "Password"
 msgstr "Passord"
 
-#: journalist_templates/login.html:11
+#: journalist_templates/login.html:12
 msgid "LOG IN"
 msgstr "LOGG INN"
 
@@ -831,31 +839,31 @@ msgstr ""
 "Du ble omdirigert fordi du allerede er logget inn. Om du ønsker å lage en ny "
 "konto må du først logge ut."
 
-#: source_app/main.py:133
+#: source_app/main.py:132
 msgid "You must enter a message or choose a file to submit."
 msgstr "Du må skrive inn en melding eller velge ei fil å sende inn."
 
-#: source_app/main.py:166
+#: source_app/main.py:165
 msgid "Thanks! We received your message."
 msgstr "Takk! Vi mottok meldingen din."
 
-#: source_app/main.py:168
+#: source_app/main.py:167
 msgid "Thanks! We received your document."
 msgstr "Takk! Vi har mottatt dokumentet ditt."
 
-#: source_app/main.py:170
+#: source_app/main.py:169
 msgid "Thanks! We received your message and document."
 msgstr "Takk! Vi mottok meldingen og dokumentet ditt."
 
-#: source_app/main.py:223
+#: source_app/main.py:222
 msgid "Reply deleted"
 msgstr "Svar slettet"
 
-#: source_app/main.py:241
+#: source_app/main.py:240
 msgid "All replies have been deleted"
 msgstr "Alle svar har blitt slettet"
 
-#: source_app/main.py:255
+#: source_app/main.py:254
 msgid "Sorry, that is not a recognized codename."
 msgstr "Beklager, det er ikke et gjenkjent kodenavn."
 

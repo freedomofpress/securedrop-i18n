@@ -24,7 +24,7 @@ msgstr ""
 msgid "{time} ago"
 msgstr "{time} geleden"
 
-#: journalist_app/__init__.py:80 journalist_app/__init__.py:119
+#: journalist_app/__init__.py:89 journalist_app/__init__.py:128
 msgid "You have been logged out due to inactivity"
 msgstr "U bent uitgelogd wegens inactiviteit"
 
@@ -426,19 +426,27 @@ msgstr ""
 "hem/haar vervolgens de zescijferige code uit de app invoeren om te "
 "bevestigen dat de tweestapsauthenticatie succesvol is ingericht."
 
-#: journalist_templates/base.html:24
+#: journalist_templates/base.html:28
+msgid ""
+"<strong>Critical Security:</strong> The operating system used by your "
+"SecureDrop servers has reached its end-of-life. A manual update is urgently "
+"required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
+"\"noreferrer\">Learn More</a>"
+msgstr ""
+
+#: journalist_templates/base.html:33
 msgid "Logged on as"
 msgstr "Aangemeld als"
 
-#: journalist_templates/base.html:26
+#: journalist_templates/base.html:35
 msgid "Admin"
 msgstr "Beheerder"
 
-#: journalist_templates/base.html:28
+#: journalist_templates/base.html:37
 msgid "Log Out"
 msgstr "Uitloggen"
 
-#: journalist_templates/base.html:41
+#: journalist_templates/base.html:50
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
@@ -446,7 +454,7 @@ msgstr ""
 "Mogelijk gemaakt door <br> <img src=\"/static/i/securedrop_small.png\" alt="
 "\"SecureDrop\">"
 
-#: journalist_templates/base.html:56
+#: journalist_templates/base.html:65
 msgid "Powered by <em>SecureDrop {version}</em>."
 msgstr "Mogelijk gemaakt door <em>SecureDrop {version}</em>."
 
@@ -673,7 +681,7 @@ msgstr "Gelieve je huidige wachtwoord en tweestapstoken in te geven."
 msgid "Current Password"
 msgstr "Huidig wachtwoord"
 
-#: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
+#: journalist_templates/edit_account.html:41 journalist_templates/login.html:11
 msgid "Two-factor Code"
 msgstr "Tweestapstoken"
 
@@ -816,7 +824,7 @@ msgstr "Inloggen om de interface voor journalisten te openen"
 msgid "Password"
 msgstr "Wachtwoord"
 
-#: journalist_templates/login.html:11
+#: journalist_templates/login.html:12
 msgid "LOG IN"
 msgstr "INLOGGEN"
 
@@ -846,31 +854,31 @@ msgstr ""
 "U bent omgeleid omdat u al ingelogd bent. Indien u een nieuw account wilt "
 "aanmaken, moet u eerst uitloggen."
 
-#: source_app/main.py:133
+#: source_app/main.py:132
 msgid "You must enter a message or choose a file to submit."
 msgstr "U moet een bericht invoeren of een bestand selecteren om te versturen."
 
-#: source_app/main.py:166
+#: source_app/main.py:165
 msgid "Thanks! We received your message."
 msgstr "Bedankt! We hebben uw bericht ontvangen."
 
-#: source_app/main.py:168
+#: source_app/main.py:167
 msgid "Thanks! We received your document."
 msgstr "Bedankt! We hebben uw document ontvangen."
 
-#: source_app/main.py:170
+#: source_app/main.py:169
 msgid "Thanks! We received your message and document."
 msgstr "Bedankt! We hebben uw bericht en document ontvangen."
 
-#: source_app/main.py:223
+#: source_app/main.py:222
 msgid "Reply deleted"
 msgstr "Reactie verwijderd"
 
-#: source_app/main.py:241
+#: source_app/main.py:240
 msgid "All replies have been deleted"
 msgstr "Alle reacties zijn verwijderd"
 
-#: source_app/main.py:255
+#: source_app/main.py:254
 msgid "Sorry, that is not a recognized codename."
 msgstr "Helaas is dit een onbekende codenaam."
 

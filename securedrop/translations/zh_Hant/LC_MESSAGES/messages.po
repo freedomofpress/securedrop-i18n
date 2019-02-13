@@ -24,7 +24,7 @@ msgstr ""
 msgid "{time} ago"
 msgstr "{time} 之前"
 
-#: journalist_app/__init__.py:80 journalist_app/__init__.py:119
+#: journalist_app/__init__.py:89 journalist_app/__init__.py:128
 msgid "You have been logged out due to inactivity"
 msgstr "您因閒置太久已被登出"
 
@@ -392,26 +392,34 @@ msgstr ""
 "旦此帳戶記錄加入到應用程式，請輸入應用程式提供的 6 位數字碼，以確認雙因素驗證"
 "設置正確。"
 
-#: journalist_templates/base.html:24
+#: journalist_templates/base.html:28
+msgid ""
+"<strong>Critical Security:</strong> The operating system used by your "
+"SecureDrop servers has reached its end-of-life. A manual update is urgently "
+"required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
+"\"noreferrer\">Learn More</a>"
+msgstr ""
+
+#: journalist_templates/base.html:33
 msgid "Logged on as"
 msgstr "登入為"
 
-#: journalist_templates/base.html:26
+#: journalist_templates/base.html:35
 msgid "Admin"
 msgstr "管理員"
 
-#: journalist_templates/base.html:28
+#: journalist_templates/base.html:37
 msgid "Log Out"
 msgstr "登出"
 
-#: journalist_templates/base.html:41
+#: journalist_templates/base.html:50
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
 msgstr ""
 "由<br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop\">搭建"
 
-#: journalist_templates/base.html:56
+#: journalist_templates/base.html:65
 msgid "Powered by <em>SecureDrop {version}</em>."
 msgstr "由 <em> SecureDrop {version}</em> 搭建。"
 
@@ -619,7 +627,7 @@ msgstr "請輸入目前使用的密碼與雙因素認證碼。"
 msgid "Current Password"
 msgstr "目前的密碼"
 
-#: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
+#: journalist_templates/edit_account.html:41 journalist_templates/login.html:11
 msgid "Two-factor Code"
 msgstr "雙因素驗證碼"
 
@@ -754,7 +762,7 @@ msgstr "登入記者使用介面"
 msgid "Password"
 msgstr "密碼"
 
-#: journalist_templates/login.html:11
+#: journalist_templates/login.html:12
 msgid "LOG IN"
 msgstr "登錄"
 
@@ -781,31 +789,31 @@ msgid ""
 "a new account, you should log out first."
 msgstr "你被重定向了， 因為已在登錄狀態。如果想創建一個新帳戶，請先登出。"
 
-#: source_app/main.py:133
+#: source_app/main.py:132
 msgid "You must enter a message or choose a file to submit."
 msgstr "你必须輸入一則訊息，或是選擇一個文件來提交。"
 
-#: source_app/main.py:166
+#: source_app/main.py:165
 msgid "Thanks! We received your message."
 msgstr "謝謝！我們已收到你的訊息。"
 
-#: source_app/main.py:168
+#: source_app/main.py:167
 msgid "Thanks! We received your document."
 msgstr "謝謝！我們已收到你的文件。"
 
-#: source_app/main.py:170
+#: source_app/main.py:169
 msgid "Thanks! We received your message and document."
 msgstr "謝謝！我們已收到你的訊息和文件。"
 
-#: source_app/main.py:223
+#: source_app/main.py:222
 msgid "Reply deleted"
 msgstr "回覆已刪除"
 
-#: source_app/main.py:241
+#: source_app/main.py:240
 msgid "All replies have been deleted"
 msgstr "所有的回覆都已被删除"
 
-#: source_app/main.py:255
+#: source_app/main.py:254
 msgid "Sorry, that is not a recognized codename."
 msgstr "對不起，無法識別這個代號。"
 

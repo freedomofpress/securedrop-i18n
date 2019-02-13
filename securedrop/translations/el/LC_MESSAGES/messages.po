@@ -23,7 +23,7 @@ msgstr ""
 msgid "{time} ago"
 msgstr "πριν από {time}"
 
-#: journalist_app/__init__.py:80 journalist_app/__init__.py:119
+#: journalist_app/__init__.py:89 journalist_app/__init__.py:128
 msgid "You have been logged out due to inactivity"
 msgstr "Αποσυνδεθήκατε λόγω αδράνειας"
 
@@ -431,19 +431,27 @@ msgstr ""
 "εξαψήφιους κωδικούς από την εφαρμογή για να επιβεβαιώσουν ότι η πιστοποίηση "
 "δύο παραγόντων έχει ρυθμιστεί σωστά."
 
-#: journalist_templates/base.html:24
+#: journalist_templates/base.html:28
+msgid ""
+"<strong>Critical Security:</strong> The operating system used by your "
+"SecureDrop servers has reached its end-of-life. A manual update is urgently "
+"required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
+"\"noreferrer\">Learn More</a>"
+msgstr ""
+
+#: journalist_templates/base.html:33
 msgid "Logged on as"
 msgstr "Συνδεδεμένος/η ώς"
 
-#: journalist_templates/base.html:26
+#: journalist_templates/base.html:35
 msgid "Admin"
 msgstr "Διαχείριση"
 
-#: journalist_templates/base.html:28
+#: journalist_templates/base.html:37
 msgid "Log Out"
 msgstr "Αποσύνδεση"
 
-#: journalist_templates/base.html:41
+#: journalist_templates/base.html:50
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
@@ -451,7 +459,7 @@ msgstr ""
 "Με την υποστήριξη του <br> <img src=\"/static/i/securedrop_small.png\" alt="
 "\"SecureDrop\">"
 
-#: journalist_templates/base.html:56
+#: journalist_templates/base.html:65
 msgid "Powered by <em>SecureDrop {version}</em>."
 msgstr "Με την υποστήριξη του <em>SecureDrop {version}</em>."
 
@@ -683,7 +691,7 @@ msgstr ""
 msgid "Current Password"
 msgstr "Τρέχων κωδικός"
 
-#: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
+#: journalist_templates/edit_account.html:41 journalist_templates/login.html:11
 msgid "Two-factor Code"
 msgstr "Κωδικός πιστοποίησης δύο παραγόντων"
 
@@ -829,7 +837,7 @@ msgstr "Συνδεθείτε για να έχετε πρόσβαση στην δ
 msgid "Password"
 msgstr "Κωδικός πρόσβασης"
 
-#: journalist_templates/login.html:11
+#: journalist_templates/login.html:12
 msgid "LOG IN"
 msgstr "ΣΥΝΔΕΣΗ"
 
@@ -860,33 +868,33 @@ msgstr ""
 "Ανακατευθυνθήκατε επειδή είστε ήδη συνδεδεμένος. Αν θέλετε να δημιουργήσετε "
 "έναν νέο λογαριασμό, πρέπει πρώτα να αποσυνδεθείτε."
 
-#: source_app/main.py:133
+#: source_app/main.py:132
 msgid "You must enter a message or choose a file to submit."
 msgstr ""
 "Πρέπει να πληκτρολογήσετε ένα μήνυμα ή να επιλέξετε ένα αρχείο για "
 "καταχώρηση."
 
-#: source_app/main.py:166
+#: source_app/main.py:165
 msgid "Thanks! We received your message."
 msgstr "Ευχαριστώ! Λάβαμε το μήνυμά σας."
 
-#: source_app/main.py:168
+#: source_app/main.py:167
 msgid "Thanks! We received your document."
 msgstr "Ευχαριστώ! Λάβαμε το έγγραφό σας."
 
-#: source_app/main.py:170
+#: source_app/main.py:169
 msgid "Thanks! We received your message and document."
 msgstr "Ευχαριστώ! Λάβαμε το μήνυμά σας και το έγγραφό σας."
 
-#: source_app/main.py:223
+#: source_app/main.py:222
 msgid "Reply deleted"
 msgstr "Η απάντηση διαγράφτηκε"
 
-#: source_app/main.py:241
+#: source_app/main.py:240
 msgid "All replies have been deleted"
 msgstr "Όλες οι απαντήσεις διαγράφτηκαν"
 
-#: source_app/main.py:255
+#: source_app/main.py:254
 msgid "Sorry, that is not a recognized codename."
 msgstr "Συγγνώμη, δεν αναγνωρίζεται αυτό το κωδικό όνομα."
 

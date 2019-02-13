@@ -24,7 +24,7 @@ msgstr ""
 msgid "{time} ago"
 msgstr "{time} temu"
 
-#: journalist_app/__init__.py:80 journalist_app/__init__.py:119
+#: journalist_app/__init__.py:89 journalist_app/__init__.py:128
 msgid "You have been logged out due to inactivity"
 msgstr "Zostałeś wylogowany z powodu braku aktywności"
 
@@ -445,19 +445,27 @@ msgstr ""
 "wprowadził jeden z 6-cyfrowych kodów z aplikacji, aby potwierdzić, że "
 "uwierzytelnianie dwuetapowe jest skonfigurowane poprawnie."
 
-#: journalist_templates/base.html:24
+#: journalist_templates/base.html:28
+msgid ""
+"<strong>Critical Security:</strong> The operating system used by your "
+"SecureDrop servers has reached its end-of-life. A manual update is urgently "
+"required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
+"\"noreferrer\">Learn More</a>"
+msgstr ""
+
+#: journalist_templates/base.html:33
 msgid "Logged on as"
 msgstr "Zalogowany jako"
 
-#: journalist_templates/base.html:26
+#: journalist_templates/base.html:35
 msgid "Admin"
 msgstr "Admin"
 
-#: journalist_templates/base.html:28
+#: journalist_templates/base.html:37
 msgid "Log Out"
 msgstr "Wyloguj"
 
-#: journalist_templates/base.html:41
+#: journalist_templates/base.html:50
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
@@ -465,7 +473,7 @@ msgstr ""
 "Napędzane przez <br> <img src=\"/static/i/securedrop_small.png\" alt="
 "\"SecureDrop\">"
 
-#: journalist_templates/base.html:56
+#: journalist_templates/base.html:65
 msgid "Powered by <em>SecureDrop {version}</em>."
 msgstr "Napędzane przez <em>SecureDrop {version}</em>."
 
@@ -693,7 +701,7 @@ msgstr "Wprowadź obecne hasło i kod dwuetapowy."
 msgid "Current Password"
 msgstr "Aktualne Hasło"
 
-#: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
+#: journalist_templates/edit_account.html:41 journalist_templates/login.html:11
 msgid "Two-factor Code"
 msgstr "Kod Dwuetapowy"
 
@@ -840,7 +848,7 @@ msgstr "Zaloguj się, aby uzyskać dostęp do interfejsu dziennikarskiego"
 msgid "Password"
 msgstr "Hasło"
 
-#: journalist_templates/login.html:11
+#: journalist_templates/login.html:12
 msgid "LOG IN"
 msgstr "ZALOGUJ SIĘ"
 
@@ -870,31 +878,31 @@ msgstr ""
 "Zostałeś przekierowany, ponieważ jesteś już zalogowany. Jeśli chcesz "
 "utworzyć nowe konto, musisz się najpierw wylogować."
 
-#: source_app/main.py:133
+#: source_app/main.py:132
 msgid "You must enter a message or choose a file to submit."
 msgstr "Musisz wprowadzić wiadomość lub wybrać plik do przesłania."
 
-#: source_app/main.py:166
+#: source_app/main.py:165
 msgid "Thanks! We received your message."
 msgstr "Dziękuję! Otrzymaliśmy Twoją wiadomość."
 
-#: source_app/main.py:168
+#: source_app/main.py:167
 msgid "Thanks! We received your document."
 msgstr "Dziękuję! Otrzymaliśmy Twój plik."
 
-#: source_app/main.py:170
+#: source_app/main.py:169
 msgid "Thanks! We received your message and document."
 msgstr "Dziękuję! Otrzymaliśmy Twoją wiadomość i plik."
 
-#: source_app/main.py:223
+#: source_app/main.py:222
 msgid "Reply deleted"
 msgstr "Odpowiedź usunięta"
 
-#: source_app/main.py:241
+#: source_app/main.py:240
 msgid "All replies have been deleted"
 msgstr "Wszystkie odpowiedzi zostały usunięte"
 
-#: source_app/main.py:255
+#: source_app/main.py:254
 msgid "Sorry, that is not a recognized codename."
 msgstr "Przepraszamy, nie rozpoznajemy tego kryptonimu."
 

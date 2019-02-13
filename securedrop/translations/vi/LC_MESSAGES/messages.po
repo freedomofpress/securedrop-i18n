@@ -23,7 +23,7 @@ msgstr ""
 msgid "{time} ago"
 msgstr "{time} trước"
 
-#: journalist_app/__init__.py:80 journalist_app/__init__.py:119
+#: journalist_app/__init__.py:89 journalist_app/__init__.py:128
 msgid "You have been logged out due to inactivity"
 msgstr "Phiên hoạt động của bạn đã kết thúc vì thiếu hoạt động"
 
@@ -425,19 +425,27 @@ msgstr ""
 "trong những dãy mật mã bao gồm 6 ký tự từ phần mềm để xác nhận rằng xác định "
 "danh tính hai lần đã được thành lập thành công."
 
-#: journalist_templates/base.html:24
+#: journalist_templates/base.html:28
+msgid ""
+"<strong>Critical Security:</strong> The operating system used by your "
+"SecureDrop servers has reached its end-of-life. A manual update is urgently "
+"required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
+"\"noreferrer\">Learn More</a>"
+msgstr ""
+
+#: journalist_templates/base.html:33
 msgid "Logged on as"
 msgstr "Truy cập với vai trò"
 
-#: journalist_templates/base.html:26
+#: journalist_templates/base.html:35
 msgid "Admin"
 msgstr "Nhà quản trị"
 
-#: journalist_templates/base.html:28
+#: journalist_templates/base.html:37
 msgid "Log Out"
 msgstr "Thoát ra"
 
-#: journalist_templates/base.html:41
+#: journalist_templates/base.html:50
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
@@ -445,7 +453,7 @@ msgstr ""
 "Cung cấp bởi <br> <img src=\"/static/i/securedrop_small.png\" alt="
 "\"SecureDrop\">"
 
-#: journalist_templates/base.html:56
+#: journalist_templates/base.html:65
 msgid "Powered by <em>SecureDrop {version}</em>."
 msgstr "Cung cấp bởi <em> 1SecureDrop {version}</em> 2."
 
@@ -670,7 +678,7 @@ msgstr "Vui lòng nhập mật khẩu hiện tại và mã xác nhận hai lần
 msgid "Current Password"
 msgstr "Mật khẩu hiện tại"
 
-#: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
+#: journalist_templates/edit_account.html:41 journalist_templates/login.html:11
 msgid "Two-factor Code"
 msgstr "Mã xác nhận hai lần"
 
@@ -802,7 +810,7 @@ msgstr "Truy cập để sử dụng giao diện nhà báo"
 msgid "Password"
 msgstr "Mật khẩu"
 
-#: journalist_templates/login.html:11
+#: journalist_templates/login.html:12
 msgid "LOG IN"
 msgstr "TRUY CẬP"
 
@@ -831,31 +839,31 @@ msgstr ""
 "Bạn được gửi tới địa chỉ mới vì bạn đã truy cập rồi. Nếu bạn muốn tạo một "
 "tài khoản mới, vui lòng đăng xuất trước."
 
-#: source_app/main.py:133
+#: source_app/main.py:132
 msgid "You must enter a message or choose a file to submit."
 msgstr "Bạn phải nhập một tin nhắn hay chọn một tài liệu để tải lên."
 
-#: source_app/main.py:166
+#: source_app/main.py:165
 msgid "Thanks! We received your message."
 msgstr "Cảm ơn! Chúng tôi đã nhận được tin nhắn của bạn."
 
-#: source_app/main.py:168
+#: source_app/main.py:167
 msgid "Thanks! We received your document."
 msgstr "Cảm ơn! Chúng tôi đã nhận được tài liệu của bạn."
 
-#: source_app/main.py:170
+#: source_app/main.py:169
 msgid "Thanks! We received your message and document."
 msgstr "Cảm ơn! Chúng tôi đã nhận được tin nhắn và tài liệu của bạn."
 
-#: source_app/main.py:223
+#: source_app/main.py:222
 msgid "Reply deleted"
 msgstr "Câu trả lời đã được xóa"
 
-#: source_app/main.py:241
+#: source_app/main.py:240
 msgid "All replies have been deleted"
 msgstr "Tất cả các câu trả lời đã được xóa"
 
-#: source_app/main.py:255
+#: source_app/main.py:254
 msgid "Sorry, that is not a recognized codename."
 msgstr "Đây không phải là một mật danh trong cơ sở dữ liệu."
 

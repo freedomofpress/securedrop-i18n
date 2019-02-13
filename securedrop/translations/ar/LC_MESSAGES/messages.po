@@ -25,7 +25,7 @@ msgstr ""
 msgid "{time} ago"
 msgstr "{time} مضت"
 
-#: journalist_app/__init__.py:80 journalist_app/__init__.py:119
+#: journalist_app/__init__.py:89 journalist_app/__init__.py:128
 msgid "You have been logged out due to inactivity"
 msgstr "تم الخروج من الحساب بسبب انعدام النشاط"
 
@@ -445,19 +445,27 @@ msgstr ""
 "و&nbsp;بعد إضافة مدخلة لهذا الحساب في التطبيق يجب إدخال أحد الرموز المؤلّفة "
 "من 6 أرقام للتأكد من صحّة الإعداد."
 
-#: journalist_templates/base.html:24
+#: journalist_templates/base.html:28
+msgid ""
+"<strong>Critical Security:</strong> The operating system used by your "
+"SecureDrop servers has reached its end-of-life. A manual update is urgently "
+"required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
+"\"noreferrer\">Learn More</a>"
+msgstr ""
+
+#: journalist_templates/base.html:33
 msgid "Logged on as"
 msgstr "والج باسم"
 
-#: journalist_templates/base.html:26
+#: journalist_templates/base.html:35
 msgid "Admin"
 msgstr "الإدارة"
 
-#: journalist_templates/base.html:28
+#: journalist_templates/base.html:37
 msgid "Log Out"
 msgstr "اخرج من الحساب"
 
-#: journalist_templates/base.html:41
+#: journalist_templates/base.html:50
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
@@ -465,7 +473,7 @@ msgstr ""
 "هذه الخدمة تشغّلها <br> <img src=\"/static/i/securedrop_small.png\" alt="
 "\"SecureDrop\">"
 
-#: journalist_templates/base.html:56
+#: journalist_templates/base.html:65
 msgid "Powered by <em>SecureDrop {version}</em>."
 msgstr "تشغّله <em>SecureDrop {version} </em>."
 
@@ -686,7 +694,7 @@ msgstr "أدخل كلمة السر الحالية و&nbsp;رمز الاستيث�
 msgid "Current Password"
 msgstr "كلمة السر الحالية"
 
-#: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
+#: journalist_templates/edit_account.html:41 journalist_templates/login.html:11
 msgid "Two-factor Code"
 msgstr "رمز الاستيثاق في خطوتين"
 
@@ -825,7 +833,7 @@ msgstr "لِج إلى حسابك للنفاذ إلى واجهة الصحافيي
 msgid "Password"
 msgstr "كلمة السر"
 
-#: journalist_templates/login.html:11
+#: journalist_templates/login.html:12
 msgid "LOG IN"
 msgstr "لِج"
 
@@ -855,31 +863,31 @@ msgstr ""
 "تمت إعادة توجيهك إلى حسابك لأنّك والج إليه بالفعل. إنَ كنت تريد إنشاء حساب "
 "جديد فعليك الخروج من هذا الحساب أوّلا."
 
-#: source_app/main.py:133
+#: source_app/main.py:132
 msgid "You must enter a message or choose a file to submit."
 msgstr "يجب إدخال نصّ رسالة أو اختيار ملف لإيداعه."
 
-#: source_app/main.py:166
+#: source_app/main.py:165
 msgid "Thanks! We received your message."
 msgstr "شكرا! لقد تلقينا الرسالة."
 
-#: source_app/main.py:168
+#: source_app/main.py:167
 msgid "Thanks! We received your document."
 msgstr "شكرا! لقد تلقينا المستند."
 
-#: source_app/main.py:170
+#: source_app/main.py:169
 msgid "Thanks! We received your message and document."
 msgstr "شكرا! لقد تلقينا الرسالة و&nbsp;المستند."
 
-#: source_app/main.py:223
+#: source_app/main.py:222
 msgid "Reply deleted"
 msgstr "حُذِفَ الرد"
 
-#: source_app/main.py:241
+#: source_app/main.py:240
 msgid "All replies have been deleted"
 msgstr "حُذِفَت كُلّ الردود"
 
-#: source_app/main.py:255
+#: source_app/main.py:254
 msgid "Sorry, that is not a recognized codename."
 msgstr "عذرًا، لا يمكن التعرف على الاسم الرمزي."
 

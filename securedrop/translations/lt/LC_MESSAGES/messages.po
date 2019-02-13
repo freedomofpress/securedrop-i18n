@@ -26,7 +26,7 @@ msgstr ""
 msgid "{time} ago"
 msgstr "Prieš {time}"
 
-#: journalist_app/__init__.py:80 journalist_app/__init__.py:119
+#: journalist_app/__init__.py:89 journalist_app/__init__.py:128
 #, fuzzy
 msgid "You have been logged out due to inactivity"
 msgstr "Buvote atjungtas nes paskyra ilgai buvo neaktyvi."
@@ -507,22 +507,30 @@ msgstr ""
 "mobilioje programėlėje, užtikrinkite kad 6 skaitmenų kodas iš programėlės "
 "įvestas teisingo dviejų dalių autentifikavimo sukonfigūravimo patvirtinimui."
 
-#: journalist_templates/base.html:24
+#: journalist_templates/base.html:28
+msgid ""
+"<strong>Critical Security:</strong> The operating system used by your "
+"SecureDrop servers has reached its end-of-life. A manual update is urgently "
+"required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
+"\"noreferrer\">Learn More</a>"
+msgstr ""
+
+#: journalist_templates/base.html:33
 #, fuzzy
 msgid "Logged on as"
 msgstr "Prisijungęs kaip"
 
-#: journalist_templates/base.html:26
+#: journalist_templates/base.html:35
 #, fuzzy
 msgid "Admin"
 msgstr "Administratorius"
 
-#: journalist_templates/base.html:28
+#: journalist_templates/base.html:37
 #, fuzzy
 msgid "Log Out"
 msgstr "Atsijungti"
 
-#: journalist_templates/base.html:41
+#: journalist_templates/base.html:50
 #, fuzzy
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
@@ -531,7 +539,7 @@ msgstr ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
 
-#: journalist_templates/base.html:56
+#: journalist_templates/base.html:65
 #, fuzzy
 msgid "Powered by <em>SecureDrop {version}</em>."
 msgstr "Powered by <em>SecureDrop {version}</em>."
@@ -799,7 +807,7 @@ msgstr ""
 msgid "Current Password"
 msgstr "Dabartinis Slaptažodis"
 
-#: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
+#: journalist_templates/edit_account.html:41 journalist_templates/login.html:11
 #, fuzzy
 msgid "Two-factor Code"
 msgstr "Dviejų dalių autentifikavimo kodas"
@@ -970,7 +978,7 @@ msgstr "Prisijungti prie žurnalisto aplinkos"
 msgid "Password"
 msgstr "Slaptažodis"
 
-#: journalist_templates/login.html:11
+#: journalist_templates/login.html:12
 #, fuzzy
 msgid "LOG IN"
 msgstr "PRISIJUNGTI"
@@ -1004,38 +1012,38 @@ msgstr ""
 "Buvote peradresuotas nes jau esate prisijungęs. Norėdami sukurti naują "
 "paskyrą, pirmiausia atsijunkite."
 
-#: source_app/main.py:133
+#: source_app/main.py:132
 #, fuzzy
 msgid "You must enter a message or choose a file to submit."
 msgstr ""
 "Privalote įrašyti žinutę arba pasirinkti bylą (failą) kurį norite pateikti."
 
-#: source_app/main.py:166
+#: source_app/main.py:165
 #, fuzzy
 msgid "Thanks! We received your message."
 msgstr "Ačiū! Žinutė pateikta sėkmingai."
 
-#: source_app/main.py:168
+#: source_app/main.py:167
 #, fuzzy
 msgid "Thanks! We received your document."
 msgstr "Ačiū! Dokumentas pateiktas sėkmingai."
 
-#: source_app/main.py:170
+#: source_app/main.py:169
 #, fuzzy
 msgid "Thanks! We received your message and document."
 msgstr "Ačiū! Tavo žinutė ir dokumentai pateikti sėkmingai."
 
-#: source_app/main.py:223
+#: source_app/main.py:222
 #, fuzzy
 msgid "Reply deleted"
 msgstr "Atsakymas ištrintas"
 
-#: source_app/main.py:241
+#: source_app/main.py:240
 #, fuzzy
 msgid "All replies have been deleted"
 msgstr "Visi atsakymai ištrinti"
 
-#: source_app/main.py:255
+#: source_app/main.py:254
 #, fuzzy
 msgid "Sorry, that is not a recognized codename."
 msgstr "Atsiprašome, šis slapyvardis neatpažintas."

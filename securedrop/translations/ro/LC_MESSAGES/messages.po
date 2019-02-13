@@ -24,7 +24,7 @@ msgstr ""
 msgid "{time} ago"
 msgstr "acum {time}"
 
-#: journalist_app/__init__.py:80 journalist_app/__init__.py:119
+#: journalist_app/__init__.py:89 journalist_app/__init__.py:128
 msgid "You have been logged out due to inactivity"
 msgstr "Ai fost deconectat(ă) în urma inactivității"
 
@@ -439,19 +439,27 @@ msgstr ""
 "introducă codul de 6 cifre din aplicație pentru a confirma că autentificarea "
 "cu doi factori a fost setată corect."
 
-#: journalist_templates/base.html:24
+#: journalist_templates/base.html:28
+msgid ""
+"<strong>Critical Security:</strong> The operating system used by your "
+"SecureDrop servers has reached its end-of-life. A manual update is urgently "
+"required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
+"\"noreferrer\">Learn More</a>"
+msgstr ""
+
+#: journalist_templates/base.html:33
 msgid "Logged on as"
 msgstr "Autentificat ca"
 
-#: journalist_templates/base.html:26
+#: journalist_templates/base.html:35
 msgid "Admin"
 msgstr "Administrator"
 
-#: journalist_templates/base.html:28
+#: journalist_templates/base.html:37
 msgid "Log Out"
 msgstr "Deconectare"
 
-#: journalist_templates/base.html:41
+#: journalist_templates/base.html:50
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
@@ -459,7 +467,7 @@ msgstr ""
 "Tehnologie oferită de <br> <img src=\"/static/i/securedrop_small.png\" alt="
 "\"SecureDrop\">"
 
-#: journalist_templates/base.html:56
+#: journalist_templates/base.html:65
 msgid "Powered by <em>SecureDrop {version}</em>."
 msgstr "Tehnologie oferită de <em>SecureDrop {version}</em>."
 
@@ -684,7 +692,7 @@ msgstr "Trebuie să introduci parola curentă și codul de autentificare."
 msgid "Current Password"
 msgstr "Parola curentă"
 
-#: journalist_templates/edit_account.html:41 journalist_templates/login.html:10
+#: journalist_templates/edit_account.html:41 journalist_templates/login.html:11
 msgid "Two-factor Code"
 msgstr "Codul de autentificare"
 
@@ -827,7 +835,7 @@ msgstr "Autentifică-te pentru a accesa interfața jurnalistului"
 msgid "Password"
 msgstr "Parola"
 
-#: journalist_templates/login.html:11
+#: journalist_templates/login.html:12
 msgid "LOG IN"
 msgstr "AUTENTIFICĂ-TE"
 
@@ -857,31 +865,31 @@ msgstr ""
 "Ai fost redirectat pentru că ești deja autentificat. Dacă vrei să creezi un "
 "nou cont trebuie să te deconectezi mai întâi."
 
-#: source_app/main.py:133
+#: source_app/main.py:132
 msgid "You must enter a message or choose a file to submit."
 msgstr "Trebuie să introduci un mesaj sau să alegi un fișier de trimis."
 
-#: source_app/main.py:166
+#: source_app/main.py:165
 msgid "Thanks! We received your message."
 msgstr "Mulțumim! Am primit mesajul tău."
 
-#: source_app/main.py:168
+#: source_app/main.py:167
 msgid "Thanks! We received your document."
 msgstr "Mulțumim! Am primit documentul tău."
 
-#: source_app/main.py:170
+#: source_app/main.py:169
 msgid "Thanks! We received your message and document."
 msgstr "Mulțumim! Am primit mesajul și documentul tău."
 
-#: source_app/main.py:223
+#: source_app/main.py:222
 msgid "Reply deleted"
 msgstr "Răspunsul a fost șters"
 
-#: source_app/main.py:241
+#: source_app/main.py:240
 msgid "All replies have been deleted"
 msgstr "Toate răspunsurile au fost șterse"
 
-#: source_app/main.py:255
+#: source_app/main.py:254
 msgid "Sorry, that is not a recognized codename."
 msgstr "Ne pare rău, acesta nu este un nume de cod recunoscut."
 
