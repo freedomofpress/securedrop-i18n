@@ -5,25 +5,17 @@ PWD := $(shell pwd)
 TAG ?= $(shell git rev-parse HEAD)
 STABLE_VER := $(shell cat molecule/shared/stable.ver)
 
-.PHONY: ci-spinup
-ci-spinup: ## Creates GCE host for testing staging environment.
-	./devops/gce-nested/gce-start.sh
+.PHONY: ci-go
+ci-go: ## Creates, provisions, tests, and destroys GCE host for testing staging environment.
+	./devops/gce-nested/ci-go.sh
+
+.PHONY: ci-go-xenial
+ci-go-xenial: ## Creates, provisions, tests, and destroys GCE host for testing staging environment under xenial.
+	./devops/gce-nested/ci-go.sh xenial
 
 .PHONY: ci-teardown
 ci-teardown: ## Destroys GCE host for testing staging environment.
 	./devops/gce-nested/gce-stop.sh
-
-.PHONY: ci-run
-ci-run: ## Provisions GCE host for testing staging environment.
-	./devops/gce-nested/gce-runner.sh
-
-.PHONY: ci-go
-ci-go: ## Creates, provisions, tests, and destroys GCE host for testing staging environment.
-	@if [[ "${CIRCLE_BRANCH}" != docs-* ]]; then \
-		make ci-spinup; \
-		make ci-run; \
-		make ci-teardown; \
-	fi
 
 .PHONY: ci-lint
 ci-lint: ## Runs linting in linting container.
@@ -99,9 +91,11 @@ build-debs-notest: ## Builds and tests debian packages (sans tests)
 
 .PHONY: build-debs-xenial
 build-debs-xenial: ## Builds and tests debian packages (includes Xenial overrides, TESTING ONLY)
-	@if [[ "${CIRCLE_BRANCH}" != docs-* ]]; then \
-		molecule converge -s builder -- -e securedrop_build_xenial_support=True; \
-		else echo Not running on docs branch...; fi
+	@./devops/scripts/build-debs.sh test xenial
+
+.PHONY: build-debs-xenial-notest
+build-debs-xenial-notest: ## Builds and tests debian packages (includes Xenial overrides, sans tests, TESTING ONLY)
+	@./devops/scripts/build-debs.sh notest xenial
 
 .PHONY: build-gcloud-docker
 build-gcloud-docker: ## Build docker container for gcloud sdk
@@ -157,27 +151,36 @@ staging: ## Creates local staging environment in VM, autodetecting platform
 
 .PHONY: staging-xenial
 staging-xenial: ## Creates local staging VMs based on Xenial, autodetecting platform
-	@./devops/create-staging-env xenial
+	@./devops/scripts/create-staging-env xenial
 
 .PHONY: clean
 clean: ## DANGER! Purges all site-specific info and developer files from project.
 	@./devops/clean
 
-.PHONY: upgrade_start
-upgrade_start: ## Boot up an upgrade test base environment using libvirt
+.PHONY: upgrade-start
+upgrade-start: ## Boot up an upgrade test base environment using libvirt
 	@SD_UPGRADE_BASE=$(STABLE_VER) molecule converge -s upgrade
 
-.PHONY: upgrade_destroy
-upgrade_destroy: ## Destroy up an upgrade test base environment
+.PHONY: upgrade-start-qa
+upgrade-start-qa: ## Boot up an upgrade test base env using libvirt in remote apt mode
+	@SD_UPGRADE_BASE=$(STABLE_VER) QA_APTTEST=yes molecule converge -s upgrade
+
+.PHONY: upgrade-destroy
+upgrade-destroy: ## Destroy up an upgrade test base environment
 	@SD_UPGRADE_BASE=$(STABLE_VER) molecule destroy -s upgrade
 
-.PHONY: upgrade_test_local
-upgrade_test_local: ## Once an upgrade environment is running, force upgrade apt packages (local pkgs)
+.PHONY: upgrade-test-local
+upgrade-test-local: ## Once an upgrade environment is running, force upgrade apt packages (local pkgs)
 	@molecule side-effect -s upgrade
 
-.PHONY: upgrade_test_qa
-upgrade_test_qa: ## Once an upgrade environment is running, force upgrade apt packages (from qa server)
+.PHONY: upgrade-test-qa
+upgrade-test-qa: ## Once an upgrade environment is running, force upgrade apt packages (from qa server)
+	@QA_APTTEST=yes molecule converge -s upgrade -- --diff -t apt
 	@QA_APTTEST=yes molecule side-effect -s upgrade
+
+.PHONY: fetch-tor-packages
+fetch-tor-packages: ## Retrieves the most recent Tor packages for Xenial, for apt repo
+	molecule test -s fetch-tor-packages
 
 # Explaination of the below shell command should it ever break.
 # 1. Set the field separator to ": ##" and any make targets that might appear between : and ##

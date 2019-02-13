@@ -413,7 +413,7 @@ msgstr "La contraseña del usuario será:"
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
 msgid "Is Admin"
-msgstr "Es administrador"
+msgstr "Es Admin"
 
 #: journalist_templates/admin_add_user.html:39
 msgid "Is using a YubiKey [HOTP]"

@@ -2,9 +2,10 @@
 import hashlib
 import json
 import os
+import random
 
 from pyotp import TOTP
-from uuid import UUID
+from uuid import UUID, uuid4
 
 from flask import current_app, url_for
 from itsdangerous import TimedJSONWebSignatureSerializer
@@ -14,6 +15,8 @@ from models import Journalist, Reply, Source, SourceStar, Submission
 
 os.environ['SECUREDROP_ENV'] = 'test'  # noqa
 from utils.api_helper import get_api_headers
+
+random.seed('◔ ⌣ ◔')
 
 
 def test_unauthenticated_user_gets_all_endpoints(journalist_app):
@@ -38,6 +41,7 @@ def test_valid_user_can_get_an_api_token(journalist_app, test_journo):
                             headers=get_api_headers())
         observed_response = json.loads(response.data)
 
+        assert observed_response['journalist_uuid'] == test_journo['uuid']
         assert isinstance(Journalist.validate_api_token_and_get_user(
             observed_response['token']), Journalist) is True
         assert response.status_code == 200
@@ -60,7 +64,8 @@ def test_user_cannot_get_an_api_token_with_wrong_password(journalist_app,
 
 
 def test_user_cannot_get_an_api_token_with_wrong_2fa_token(journalist_app,
-                                                           test_journo):
+                                                           test_journo,
+                                                           hardening):
     with journalist_app.test_client() as app:
         response = app.post(url_for('api.get_token'),
                             data=json.dumps(
@@ -649,6 +654,9 @@ def test_authorized_user_can_add_reply(journalist_app, journalist_api_token,
     reply = Reply.query.filter_by(uuid=str(reply_uuid)).one_or_none()
     assert reply is not None
 
+    # check that the filename is present and correct (#4047)
+    assert response.json['filename'] == reply.filename
+
     with journalist_app.app_context():  # Now verify everything was saved.
         assert reply.journalist_id == test_journo['id']
         assert reply.source_id == source_id
@@ -792,3 +800,89 @@ def test_empty_json_20X(journalist_app, journalist_api_token, test_journo,
                                 headers=get_api_headers(journalist_api_token))
 
             assert response.status_code in (200, 201)
+
+
+def test_set_reply_uuid(journalist_app, journalist_api_token, test_source):
+    msg = '-----BEGIN PGP MESSAGE-----\nwat\n-----END PGP MESSAGE-----'
+    reply_uuid = str(uuid4())
+    req_data = {'uuid': reply_uuid, 'reply': msg}
+
+    with journalist_app.test_client() as app:
+        # first check that we can set a valid UUID
+        source_uuid = test_source['uuid']
+        resp = app.post(url_for('api.all_source_replies',
+                                source_uuid=source_uuid),
+                        data=json.dumps(req_data),
+                        headers=get_api_headers(journalist_api_token))
+        assert resp.status_code == 201
+        assert resp.json['uuid'] == reply_uuid
+
+        reply = Reply.query.filter_by(uuid=reply_uuid).one_or_none()
+        assert reply is not None
+
+        len_of_replies = len(Source.query.get(test_source['id']).replies)
+
+        # next check that requesting with the same UUID does not succeed
+        source_uuid = test_source['uuid']
+        resp = app.post(url_for('api.all_source_replies',
+                                source_uuid=source_uuid),
+                        data=json.dumps(req_data),
+                        headers=get_api_headers(journalist_api_token))
+        assert resp.status_code == 409
+
+        new_len_of_replies = len(Source.query.get(test_source['id']).replies)
+
+        assert new_len_of_replies == len_of_replies
+
+        # check setting null for the uuid field doesn't break
+        req_data['uuid'] = None
+        source_uuid = test_source['uuid']
+        resp = app.post(url_for('api.all_source_replies',
+                                source_uuid=source_uuid),
+                        data=json.dumps(req_data),
+                        headers=get_api_headers(journalist_api_token))
+        assert resp.status_code == 201
+
+        new_uuid = resp.json['uuid']
+        reply = Reply.query.filter_by(uuid=new_uuid).one_or_none()
+        assert reply is not None
+
+        # check setting invalid values for the uuid field doesn't break
+        req_data['uuid'] = 'not a uuid'
+        source_uuid = test_source['uuid']
+        resp = app.post(url_for('api.all_source_replies',
+                                source_uuid=source_uuid),
+                        data=json.dumps(req_data),
+                        headers=get_api_headers(journalist_api_token))
+        assert resp.status_code == 400
+
+
+def test_api_does_not_set_cookie_headers(journalist_app, test_journo):
+    with journalist_app.test_client() as app:
+        response = app.get(url_for('api.get_endpoints'))
+
+        observed_headers = response.headers
+        assert 'Set-Cookie' not in observed_headers.keys()
+        if 'Vary' in observed_headers.keys():
+            assert 'Cookie' not in observed_headers['Vary']
+
+
+# regression test for #4053
+def test_malformed_auth_token(journalist_app, journalist_api_token):
+    with journalist_app.app_context():
+        # we know this endpoint requires an auth header
+        url = url_for('api.get_all_sources')
+
+    with journalist_app.test_client() as app:
+        # precondition to ensure token is even valid
+        resp = app.get(url, headers={'Authorization': 'Token {}'.format(journalist_api_token)})
+        assert resp.status_code == 200
+
+        resp = app.get(url, headers={'Authorization': 'not-token {}'.format(journalist_api_token)})
+        assert resp.status_code == 403
+
+        resp = app.get(url, headers={'Authorization': journalist_api_token})
+        assert resp.status_code == 403
+
+        resp = app.get(url, headers={'Authorization': 'too many {}'.format(journalist_api_token)})
+        assert resp.status_code == 403

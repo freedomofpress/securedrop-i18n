@@ -1,6 +1,7 @@
 coverage
 d2to1
 flake8
+flaky
 mock
 pbr
 pip-tools>2.0.0
@@ -9,3 +10,5 @@ pytest
 requests
 tox
 pexpect
+# Needed for requests. Minimum version due to CVE-2018-20060
+urllib3>=1.23

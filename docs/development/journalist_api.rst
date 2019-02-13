@@ -44,7 +44,8 @@ This will produce a response with your Authorization token:
 
   {
       "expiration": "2018-07-10T04:29:41.696321Z",
-      "token": "eyJhbGciOiJIUzI1NiIsImV4cCI6MTUzMTE5Njk4MSwiaWF0IjoxNTMxMTY4MTgxfQ.eyJpZCI6MX0.TBSvfrICMxtvWgpVZzqTl6wHYNQuGPOaZpuAKwwIXXo"
+      "token": "eyJhbGciOiJIUzI1NiIsImV4cCI6MTUzMTE5Njk4MSwiaWF0IjoxNTMxMTY4MTgxfQ.eyJpZCI6MX0.TBSvfrICMxtvWgpVZzqTl6wHYNQuGPOaZpuAKwwIXXo",
+      "journalist_uuid": "54d81dae-9d94-4145-8a57-4c804a04cfe0"
   }
 
 Thereafter in order to authenticate to protected endpoints, send the token in
@@ -357,6 +358,9 @@ Requires authentication. Clients are expected to encrypt replies prior to
 submission to the server. Replies should be encrypted to the public key of the
 source.
 
+Including the ``uuid`` field in the request is optional. Clients may want to
+pre-set the ``uuid`` so they can track in-flight messages.
+
 .. code:: sh
 
   POST /api/v1/sources/<source_uuid>/replies
@@ -366,6 +370,7 @@ with the reply in the request body:
 .. code:: json
 
   {
+   "uuid": "0bc588dd-f613-4999-b21e-1cebbd9adc2c",
    "reply": "-----BEGIN PGP MESSAGE-----[...]-----END PGP MESSAGE-----"
   }
 
@@ -379,7 +384,8 @@ Response 201 created (application/json):
   }
 
 The returned ``uuid`` field is the UUID of the reply and can be used to
-reference this reply later.
+reference this reply later. If the client set the ``uuid`` in the request,
+this will have the same value.
 
 Replies that do not contain a GPG encrypted message will be rejected:
 
