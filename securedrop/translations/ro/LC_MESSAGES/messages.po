@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-02-17 18:10+0000\n"
-"Last-Translator: Jobava <jobaval10n@gmail.com>\n"
+"Last-Translator: robbpa <robbpaun@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
 "Language: ro\n"
@@ -852,25 +852,25 @@ msgid ""
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href="
 "\"{url}\">Why is this dangerous?</a>"
 msgstr ""
-"<strong>ATENȚIE:&nbsp;</strong> Se pare că folosești Tor2Web. Acest serviciu "
-"<strong>&nbsp;nu oferă&nbsp;</strong> anonimitate. <a href=\"{url}\">De ce "
-"este periculos?</a>"
+"<strong>AVERTISMENT:&nbsp;</strong> Se pare că folosești Tor2Web. Acest "
+"serviciu <strong>&nbsp;nu oferă&nbsp;</strong> anonimitate. <a href=\"{url}\""
+">De ce este periculos?</a>"
 
 #: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
-msgstr "Câmpul trebuie să fie între 1 și {max_codename_len} caractere."
+msgstr "Câmpul trebuie să aibă între 1 și {max_codename_len} caractere."
 
 #: source_app/forms.py:18
 msgid "Invalid input."
-msgstr "Conținut nevalid."
+msgstr "Date introduse nevalide."
 
 #: source_app/main.py:30
 msgid ""
 "You were redirected because you are already logged in. If you want to create "
 "a new account, you should log out first."
 msgstr ""
-"Ai fost redirectat pentru că ești deja autentificat. Dacă vrei să creezi un "
-"nou cont trebuie să te deconectezi mai întâi."
+"Ai fost redirecționat(ă) pentru că ești deja autentificat(ă). Dacă vrei să "
+"creezi un cont nou trebuie să te deconectezi mai întâi."
 
 #: source_app/main.py:132
 msgid "You must enter a message or choose a file to submit."
@@ -878,15 +878,15 @@ msgstr "Trebuie să introduci un mesaj sau să alegi un fișier de trimis."
 
 #: source_app/main.py:165
 msgid "Thanks! We received your message."
-msgstr "Mulțumim! Am primit mesajul tău."
+msgstr "Îți mulțumim! Am primit mesajul tău."
 
 #: source_app/main.py:167
 msgid "Thanks! We received your document."
-msgstr "Mulțumim! Am primit documentul tău."
+msgstr "Îți mulțumim! Am primit documentul tău."
 
 #: source_app/main.py:169
 msgid "Thanks! We received your message and document."
-msgstr "Mulțumim! Am primit mesajul și documentul tău."
+msgstr "Îți mulțumim! Am primit mesajul și documentul tău."
 
 #: source_app/main.py:222
 msgid "Reply deleted"
@@ -907,7 +907,7 @@ msgstr "Pentru protecția jurnaliștilor și a surselor"
 #: source_templates/base.html:25 source_templates/base.html:45
 #: source_templates/index.html:33 source_templates/index.html:85
 msgid "Powered by"
-msgstr "Tehnologie oferită de"
+msgstr "Oferit de"
 
 #: source_templates/base.html:34
 msgid "LOG OUT"
@@ -918,8 +918,8 @@ msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
 msgstr ""
-"La fel ca orice program, SecureDrop poate să conțină defecte. Trebuie "
-"folosit doar pe propria răspundere."
+"Ca toate programele informatice, este posibil ca SecureDrop să conțină "
+"defecte. De folosit pe propriul risc."
 
 #: source_templates/error.html:3
 msgid "Server error"
