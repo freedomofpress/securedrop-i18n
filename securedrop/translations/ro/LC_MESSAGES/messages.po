@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-02-13 11:51+0000\n"
+"PO-Revision-Date: 2019-02-17 17:52+0000\n"
 "Last-Translator: robbpa <robbpaun@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
@@ -79,25 +79,25 @@ msgstr "Alerta de test a fost trimisă. Poți verifica e-mail-ul tău."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
-msgstr "Colecția ce aparține de {source_name} a fost ștearsă"
+msgstr "Colecția lui {source_name} a fost ștearsă"
 
 #: journalist_app/col.py:56
 msgid "No collections selected."
-msgstr "Nu ai ales nicio selecție."
+msgstr "Nu a fost selectată nicio colecție."
 
 #: journalist_app/decorators.py:15
 msgid "Only admins can access this page."
-msgstr "Doar administratorii pot accesa pagina."
+msgstr "Doar administratorii pot accesa această pagină."
 
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
-msgstr "Secretele HOTP au 40 de caractere lungime, ai introdus {num_chars}."
+msgstr "Secretele HOTP au 40 de caractere lungime - ai introdus {num_chars}."
 
 #: journalist_app/forms.py:30
 msgid ""
 "Field must be at least {min_chars} characters long but only got {num_chars}."
 msgstr ""
-"Câmpul trebuie să conțină cel puțin {min_chars} caractere, dar sunt "
+"Câmpul trebuie să aibă cel puțin {min_chars} caractere, dar sunt numai "
 "{num_chars}."
 
 #: journalist_app/forms.py:35 source_app/forms.py:11
@@ -106,37 +106,37 @@ msgstr "Acest câmp este obligatoriu."
 
 #: journalist_app/forms.py:52
 msgid "You cannot send an empty reply."
-msgstr "Nu se poate trimite un câmp gol."
+msgstr "Nu poți trimite un răspuns gol."
 
 #: journalist_app/forms.py:60
 msgid "File required."
-msgstr "Fișierul este obligatoriu."
+msgstr "Este necesar un fișier."
 
 #: journalist_app/forms.py:62
 msgid "You can only upload PNG image files."
-msgstr "Poți încărca doar fișiere de imagine PNG."
+msgstr "Poți încărca doar fișiere de imagini PNG."
 
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr ""
-"S-a produs o eroare neașteptată! Te rugăm să informezi administratorul tău."
+"A apărut o eroare neașteptată! Te rugăm să îți informezi administratorul."
 
 #: journalist_app/main.py:129
 msgid "Thanks. Your reply has been stored."
-msgstr "Mulțumim. Răspunsul tău a fost stocat."
+msgstr "Îți mulțumim. Răspunsul tău a fost stocat."
 
 #: journalist_app/main.py:150
 msgid "No collections selected for download."
-msgstr "Nu s-au selectat colecții de descărcat."
+msgstr "Nu a fost selectată nicio colecție pentru descărcare."
 
 #: journalist_app/main.py:153 journalist_app/utils.py:236
 msgid "No collections selected for deletion."
-msgstr "Nu s-au selectat colecții pentru ștergere."
+msgstr "Nu a fost selectată nicio colecție pentru ștergere."
 
 #: journalist_app/main.py:179
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
-msgstr "Sursa „{original_name}” a fost redenumită în „{new_name}”"
+msgstr "Sursa „{original_name}” a fost redenumită „{new_name}”"
 
 #: journalist_app/main.py:194
 msgid "No unread submissions for this source."
@@ -154,52 +154,51 @@ msgstr "Autentificarea a eșuat."
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] ""
-"Trebuie să aștepți cel puțin {seconds} secundă pentru a te autentifica din "
-"nou."
-msgstr[1] ""
-"Trebuie să aștepți cel puțin {seconds} secunde pentru a te autentifica din "
-"nou."
-msgstr[2] ""
-"Trebuie să aștepți cel puțin {seconds} de secunde pentru a te autentifica "
+"Te rugăm să aștepți cel puțin {seconds} secundă înainte de a te autentifica "
 "din nou."
+msgstr[1] ""
+"Te rugăm să aștepți cel puțin {seconds} secunde înainte de a te autentifica "
+"din nou."
+msgstr[2] ""
+"Te rugăm să aștepți cel puțin {seconds} de secunde înainte de a te "
+"autentifica din nou."
 
 #: journalist_app/utils.py:105
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
 msgstr ""
-"Trebuie să aștepți un nou cod de autentificare de la dispozitiv sau "
-"aplicație pentru a încerca din nou."
+"Te rugăm să aștepți un cod nou de la dispozitivul tău sau aplicația ta de "
+"autentificare cu doi factori înainte de a încerca iar."
 
 #: journalist_app/utils.py:126
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
-"Format nevalid pentru secret: trebuie folosite doar litere de la A la F și "
-"numere de la 0 la 9."
+"Secret cu format nevalid: trebuie folosite doar litere de la A la F și cifre "
+"de la 0 la 9."
 
 #: journalist_app/utils.py:132
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
-"Formatul pentru secret este nevalid: lungimea este impară. Asigură-te că ai "
-"scris corect secretul."
+"Secret cu format nevalid: lungimea este impară. Ai tastat greșit secretul?"
 
 #: journalist_app/utils.py:188
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
-msgstr[0] "Trimiterea a fost ștearsă."
-msgstr[1] "{num} încărcări au fost șterse."
-msgstr[2] "{num} de încărcări au fost șterse."
+msgstr[0] "{num} trimitere ștearsă."
+msgstr[1] "{num} trimiteri șterse."
+msgstr[2] "{num} de trimiteri șterse."
 
 #: journalist_app/utils.py:241
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
-msgstr[0] "{num} colecție a fost ștearsă"
-msgstr[1] "{num} colecții au fost șterse"
-msgstr[2] "{num} de colecții au fost șterse"
+msgstr[0] "{num} colecție ștearsă"
+msgstr[1] "{num} colecții șterse"
+msgstr[2] "{num} de colecții șterse"
 
 #: journalist_app/utils.py:279
 msgid "You submitted a bad password! Password not changed."
-msgstr "Ai introdus o parolă greșită! Parola nu s-a schimbat."
+msgstr "Ai introdus o parolă greșită! Parola nu a fost schimbată."
 
 #: journalist_app/utils.py:286
 msgid ""
@@ -207,16 +206,17 @@ msgid ""
 "correctly. To prevent you from getting locked out of your account, you "
 "should reset your password again."
 msgstr ""
-"S-a produs o eroare și noua parolă nu a fost salvată corect. Pentru a nu "
-"rămâne blocat în afara contului trebuie să resetezi parola din nou."
+"A apărut o eroare și este posibil ca noua parolă să nu fi fost salvată "
+"corect. Pentru a preveni imposibilitatea de accesare a contului, trebuie să "
+"resetezi din nou parola."
 
 #: journalist_app/utils.py:295
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
 msgstr ""
-"Parola a fost actualizată. Nu uita să o salvezi în baza de date personală "
-"KeePassX. Noua parolă:"
+"Parola a fost actualizată. Nu uita să o salvezi în baza de ta date KeePassX. "
+"Parola nouă:"
 
 #: journalist_app/utils.py:312
 msgid "No unread submissions in selected collections."
