@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-02-17 18:06+0000\n"
+"PO-Revision-Date: 2019-02-17 18:07+0000\n"
 "Last-Translator: Jobava <jobaval10n@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
@@ -758,7 +758,7 @@ msgstr "RESETEAZĂ AUTENTIFICAREA CU DOI FACTORI (APLICAȚIE)"
 
 #: journalist_templates/edit_account.html:92
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
-msgstr "RESETEAZĂ AUTENTIFICAREA CU DOI FACTORI (DISPOZITIV FIZIC)"
+msgstr "RESETEAZĂ AUTENTIFICAREA CU DOI FACTORI (DISPOZITIV HARDWARE)"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
