@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-02-17 18:16+0000\n"
-"Last-Translator: Jobava <jobaval10n@gmail.com>\n"
+"Last-Translator: robbpa <robbpaun@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
 "Language: ro\n"
@@ -930,8 +930,8 @@ msgid ""
 "Sorry, the website encountered an error and was unable to complete your "
 "request."
 msgstr ""
-"Ne pare rău, site-ul a întâmpinat o eroare și nu a reușit procesarea cererii "
-"tale."
+"Ne pare rău, site-ul a întâmpinat o eroare și nu a reușit să finalizeze "
+"procesarea cererii tale."
 
 #: source_templates/error.html:7 source_templates/notfound.html:7
 msgid "Look up a codename..."
@@ -946,33 +946,32 @@ msgid ""
 "Thank you for sending this information to us. Please check back later for "
 "replies."
 msgstr ""
-"Mulțumim că ne-ai trimis aceste informații. Te rugăm să revii mai târziu "
+"Îți mulțumim că ne-ai trimis aceste informații. Te rugăm să revii mai târziu "
 "pentru a citi răspunsurile."
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
-msgstr "Ai uitat numele de cod?"
+msgstr "Ți-ai uitat numele de cod?"
 
 #: source_templates/generate.html:4
 msgid "Welcome"
-msgstr "Bun venit"
+msgstr "Bine ai venit"
 
 #: source_templates/generate.html:7
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
 msgstr ""
-"Te rugăm să notezi acest nume și să-l păstrezi într-un loc sigur, sau să-l "
-"memorezi."
+"Te rugăm să notezi acest nume de cod și să-l păstrezi într-un loc sigur sau "
+"să-l memorezi."
 
 #: source_templates/generate.html:10
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our journalists in response to what you submit on the next screen."
 msgstr ""
-"Vei folosi acest nume de cod în viitor pentru a primi mesaje de la "
-"jurnaliștii noștri ca răspuns la informațiile pe care ni le vei oferi în "
-"continuare."
+"Pe viitor, vei folosi acest nume de cod pentru a primi mesaje de la "
+"jurnaliștii noștri ca răspuns la ce ai transmis în ecranul următor."
 
 #: source_templates/generate.html:34
 msgid ""
