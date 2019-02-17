@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-02-17 18:07+0000\n"
-"Last-Translator: Jobava <jobaval10n@gmail.com>\n"
+"Last-Translator: robbpa <robbpaun@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
 "Language: ro\n"
@@ -762,7 +762,7 @@ msgstr "RESETEAZĂ AUTENTIFICAREA CU DOI FACTORI (DISPOZITIV HARDWARE)"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
-msgstr "Mulțumim!"
+msgstr "Îți mulțumim!"
 
 #: journalist_templates/flag.html:8
 msgid ""
@@ -771,10 +771,10 @@ msgid ""
 "appear under their collection of documents. You can use this box to write "
 "encrypted replies to them."
 msgstr ""
-"SecureDrop va genera o cheie de criptare sigură pentru această sursă pentru "
-"data viitoare când se vor autentifica. După ce a fost generată cheia va "
-"apărea o căsuță pentru răspunsuri în dreptul colecției de documente al "
-"acestuia. Poți folosi această căsuță pentru a-i trimite răspunsuri criptate."
+"SecureDrop va genera o cheie de criptare securizată pentru această sursă "
+"data viitoare când se va autentifica. După ce a fost generată cheia, sub "
+"colecția de documente a sursei va apărea o casetă de răspuns. Poți folosi "
+"această casetă pentru a-i scrie răspunsuri criptate."
 
 #: journalist_templates/flag.html:10
 msgid "Continue to the list of documents for {codename}..."
@@ -794,11 +794,11 @@ msgstr "Descarcă"
 
 #: journalist_templates/index.html:13
 msgid "Star"
-msgstr "Pune o stea"
+msgstr "Marchează cu stea"
 
 #: journalist_templates/index.html:14
 msgid "Un-star"
-msgstr "Scoate steaua"
+msgstr "Elimină marcajul cu stea"
 
 #: journalist_templates/index.html:47
 msgid "Are you sure you want to delete the selected collections?"
@@ -806,7 +806,7 @@ msgstr "Sigur dorești să ștergi colecțiile selectate?"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
-msgstr "Nu au fost trimise documente!"
+msgstr "Nu a fost trimis niciun document!"
 
 #: journalist_templates/js-strings.html:3
 msgid "filter by codename"
@@ -832,11 +832,11 @@ msgstr "Sigur dorești să ștergi utilizatorul {username}?"
 msgid ""
 "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr ""
-"Sigur dorești să resetezi autentificarea în doi factori pentru {username}?"
+"Sigur dorești să resetezi autentificarea cu doi factori pentru {username}?"
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
-msgstr "Autentifică-te pentru a accesa interfața jurnalistului"
+msgstr "Autentifică-te pentru acces la interfața jurnalistului"
 
 #: journalist_templates/login.html:9
 msgid "Password"
