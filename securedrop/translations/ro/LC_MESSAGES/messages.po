@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-02-17 17:58+0000\n"
+"PO-Revision-Date: 2019-02-17 18:06+0000\n"
 "Last-Translator: robbpa <robbpaun@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
@@ -75,7 +75,7 @@ msgstr "Utilizatorul „{user}” a fost șters."
 
 #: journalist_app/admin.py:234
 msgid "Test alert sent. Please check your email."
-msgstr "Alerta de test a fost trimisă. Poți verifica e-mail-ul tău."
+msgstr "Alerta de test a fost trimisă. Te rugăm să îți verifici e-mailul."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -185,9 +185,9 @@ msgstr ""
 #: journalist_app/utils.py:188
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
-msgstr[0] "{num} trimitere ștearsă."
-msgstr[1] "{num} trimiteri șterse."
-msgstr[2] "{num} de trimiteri șterse."
+msgstr[0] "{num} trimitere a fost ștearsă."
+msgstr[1] "{num} trimiteri au fost șterse."
+msgstr[2] "{num} de trimiteri au fost șterse."
 
 #: journalist_app/utils.py:241
 msgid "{num} collection deleted"
@@ -421,7 +421,7 @@ msgstr "Este administrator"
 
 #: journalist_templates/admin_add_user.html:39
 msgid "Is using a YubiKey [HOTP]"
-msgstr "Folosește YubiKey [HOTP]"
+msgstr "Folosește o cheie YubiKey [HOTP]"
 
 #: journalist_templates/admin_new_user_two_factor.html:6
 msgid ""
@@ -431,12 +431,12 @@ msgid ""
 "the 6-digit codes from the app to confirm that two factor authentication is "
 "set up correctly."
 msgstr ""
-"Aproape ai terminat! Pentru a finaliza adăugarea acestui utilizator nou, "
-"trebuie să îndrumi pe acesta să urmeze instrucțiunile următoare pentru a "
-"seta autentificarea cu doi factori folosind FreeOTP. După ce utilizatorul a "
-"creat o înregistrare pentru acest cont din aplicație, trebuie îndrumat să "
-"introducă codul de 6 cifre din aplicație pentru a confirma că autentificarea "
-"cu doi factori a fost setată corect."
+"Aproape ai terminat! Pentru a finaliza adăugarea acestui utilizator, trebuie "
+"să îi spui să urmeze instrucțiunile de mai jos pentru setarea autentificării "
+"cu doi factori folosind FreeOTP. După ce utilizatorul a adăugat acest cont "
+"în aplicație, spune-i să introducă unul dintre codurile de 6 cifre din "
+"aplicație pentru a confirma că autentificarea cu doi factori este setată "
+"corect."
 
 #: journalist_templates/base.html:28
 msgid ""
@@ -463,12 +463,12 @@ msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
 msgstr ""
-"Tehnologie oferită de <br> <img src=\"/static/i/securedrop_small.png\" alt="
-"\"SecureDrop\">"
+"Oferit de <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop\""
+">"
 
 #: journalist_templates/base.html:65
 msgid "Powered by <em>SecureDrop {version}</em>."
-msgstr "Tehnologie oferită de <em>SecureDrop {version}</em>."
+msgstr "Oferit de <em>SecureDrop {version}</em>."
 
 #: journalist_templates/col.html:10
 msgid "All Sources"
@@ -480,9 +480,9 @@ msgid ""
 "the first random codename is difficult to say or remember. You can generate "
 "new random codenames as many times as you like."
 msgstr ""
-"Generează un nou nume de cod pentru această sursă. Recomandăm un nume "
-"aleatoriu care este dificil de pronunțat sau ținut minte. Poți genera nume "
-"de cod aleatorii în mod nelimitat."
+"Generează un nume de cod aleatoriu nou pentru această sursă. Acțiune "
+"recomandată dacă primul nume de cod aleatoriu este greu de pronunțat sau de "
+"memorat. Poți genera nume de cod aleatorii noi de câte ori vrei."
 
 #: journalist_templates/col.html:13
 msgid "Change codename"
@@ -501,8 +501,8 @@ msgid ""
 "The documents are stored encrypted for security. To read them, you will need "
 "to decrypt them using GPG."
 msgstr ""
-"Documentele sunt stocate în mod criptat, pentru securitate. Pentru a le citi "
-"trebuie să le decriptezi cu GPG."
+"Pentru securitate, documentele sunt stocate în mod criptat. Pentru a le "
+"citi, trebuie să le decriptezi cu GPG."
 
 #: journalist_templates/col.html:26
 msgid "Download Selected"
@@ -549,23 +549,24 @@ msgstr "Nu sunt documente de afișat."
 #: journalist_templates/col.html:93
 msgid ""
 "You can write a secure reply to the person who submitted these documents:"
-msgstr "Poți răspunde persoanei care a trimis aceste documente:"
+msgstr ""
+"Poți scrie un răspuns securizat persoanei care a trimis aceste documente:"
 
 #: journalist_templates/col.html:102
 msgid "You've flagged this source for reply."
-msgstr "Ai marcat această sursă pentru a primi un răspuns."
+msgstr "Ai marcat această sursă pentru răspuns."
 
 #: journalist_templates/col.html:103
 msgid ""
 "An encryption key will be generated for the source the next time they log "
 "in, after which you will be able to reply to the source here."
 msgstr ""
-"A fost generată o cheie de criptare pentru sursă pentru data viitoare când "
-"se autentifică, după care vei putea citi răspunsul din partea sursei aici."
+"Va fi generată o cheie de criptare pentru sursă data următoare când se "
+"autentifică, după care îi vei putea răspunde aici."
 
 #: journalist_templates/col.html:105
 msgid "Click below if you would like to write a reply to this source."
-msgstr "Clic mai jos dacă dorești să răspunzi acestei surse."
+msgstr "Dă clic mai jos dacă dorești să-i răspunzi acestei surse."
 
 #: journalist_templates/col.html:109
 msgid "FLAG THIS SOURCE FOR REPLY"
@@ -577,9 +578,9 @@ msgid ""
 "the files seen here will be unrecoverable and the source will no longer be "
 "able to login using their previous codename.</em>"
 msgstr ""
-"Clic mai jos pentru a șterge colecția sursei. <em>Atenție: dacă faci asta, "
-"fișierele nu vor mai fi recuperabile și sursa nu se va mai putea autentifica "
-"folosind numele de cod precedent.</em>"
+"Dă clic mai jos pentru a șterge colecția acestei surse. <em>Avertisment: "
+"Dacă o ștergi, fișierele de aici nu vor mai putea fi recuperate și sursa nu "
+"se va mai putea autentifica folosind numele de cod anterior.</em>"
 
 #: journalist_templates/col.html:121
 msgid "DELETE SOURCE AND SUBMISSIONS"
@@ -600,15 +601,16 @@ msgstr "Alerte"
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr ""
-"Trimite un e-mail pentru a verifica că alertele OSSEC funcționează corect:"
+"Trimite un mesaj criptat pe e-mail pentru a verifica dacă alertele OSSEC "
+"funcționează corect:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
-msgstr "TRIMITE ALERTĂ DE TEST OSSEC"
+msgstr "TRIMITE ALERTĂ OSSEC DE PROBĂ"
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
-msgstr "Logo imagine"
+msgstr "Imagine logo"
 
 #: journalist_templates/config.html:23
 msgid ""
@@ -617,11 +619,11 @@ msgstr "Aici poți actualiza imaginea afișată pe interfețele web SecureDrop:"
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
-msgstr "Dimensiune recomandată: 500px * 450px"
+msgstr "Mărime recomandată: 500px * 450px"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
-msgstr "ACTUALIZEAZĂ LOGO-UL"
+msgstr "ACTUALIZEAZĂ LOGO"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -630,18 +632,17 @@ msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
 msgstr[0] ""
-"Următorul fișier a fost selectat pentru <strong>a fi șters permanent</"
-"strong>:"
+"Următorul fișier a fost selectat pentru <strong>ștergere definitivă</strong>:"
 msgstr[1] ""
-"Următoarele {files} fișiere au fost selectate pentru <strong>a fi șterse "
-"permanent</strong>:"
+"Următoarele {files} fișiere au fost selectate pentru <strong>ștergere "
+"definitivă</strong>:"
 msgstr[2] ""
-"Următoarele {files} de fișiere au fost selectate pentru <strong>a fi șterse "
-"permanent</strong>:"
+"Următoarele {files} de fișiere au fost selectate pentru <strong>ștergere "
+"definitivă</strong>:"
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
-msgstr "ȘTERGE PERMANENT FIȘIERELE"
+msgstr "ȘTERGE DEFINITIV FIȘIERELE"
 
 #: journalist_templates/delete.html:23
 msgid "Return to the list of documents for {source_name}…"
@@ -665,7 +666,7 @@ msgstr "ACTUALIZEAZĂ"
 
 #: journalist_templates/edit_account.html:22
 msgid "Edit your account"
-msgstr "Editează contul tău"
+msgstr "Editează-ți contul"
 
 #: journalist_templates/edit_account.html:25
 msgid "Reset Password"
@@ -680,12 +681,14 @@ msgid ""
 "Your password will be changed immediately, so you will need to save it "
 "before pressing the \"Reset Password\" button."
 msgstr ""
-"Parola ta va fi schimbată imediat, așa că nu trebuie să o salvezi înainte de "
+"Parola ta va fi schimbată imediat, așa că va trebui să o salvezi înainte de "
 "a apăsa butonul „Resetează parola”."
 
 #: journalist_templates/edit_account.html:34
 msgid "Please enter your current password and two-factor code."
-msgstr "Trebuie să introduci parola curentă și codul de autentificare."
+msgstr ""
+"Te rugăm să introduci parola curentă și codul de autentificare cu doi "
+"factori."
 
 #: journalist_templates/edit_account.html:40
 msgid "Current Password"
@@ -693,7 +696,7 @@ msgstr "Parola curentă"
 
 #: journalist_templates/edit_account.html:41 journalist_templates/login.html:11
 msgid "Two-factor Code"
-msgstr "Codul de autentificare"
+msgstr "Cod de autentificare cu doi factori"
 
 #: journalist_templates/edit_account.html:46
 msgid "The user's password will be changed to:"
@@ -718,10 +721,11 @@ msgid ""
 "is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
-"Dacă factorii de autentificare ai utilizatorului au fost compromiși, îi poți "
-"reseta aici.<em>Dacă faci asta, asigură-te că utilizatorul este prezent și "
-"gata să-și seteze dispozitivul cu noii factori de autentificare, altfel ei "
-"nu vor mai putea intra în cont."
+"Dacă acreditările de autentificare cu doi factori ale unui utilizator au "
+"fost pierdute sau compromise, le poți reseta aici.<em>Dacă le resetezi, "
+"asigură-te că utilizatorul este prezent și gata să-și seteze dispozitivul "
+"folosind noile acreditări cu doi factori de autentificare, altminteri nu va "
+"mai putea intra în cont."
 
 #: journalist_templates/edit_account.html:63
 msgid ""
@@ -730,27 +734,27 @@ msgid ""
 "this, make sure you are ready to set up your new device, otherwise you will "
 "be locked out of your account.</em>"
 msgstr ""
-"Dacă factorii tăi de autentificare au fost pierduți sau compromiși, sau ai "
-"obținut un noi dispozitiv, îți poți reseta factorii aici. <em>Dacă faci "
-"asta, asigură-te că ai setat noul dispozitiv, altfel nu vei mai putea intra "
-"în cont</em>"
+"Dacă ți-ai pierdut propriile acreditări de autentificare cu doi factori sau "
+"au fost compromise ori ai un dispozitiv nou, le poți reseta aici. <em>Dacă "
+"le resetezi, asigură-te că ești gata să-ți setezi noul dispozitiv, "
+"altminteri nu vei mai putea intra în cont.</em><em>"
 
 #: journalist_templates/edit_account.html:65
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the Yubikey, choose the second."
 msgstr ""
-"Pentru a reseta autentificarea cu doi factori pentru aplicații mobile precum "
-"FreeOTP trebuie să alegi prima opțiune. Pentru dispozitive hardware ca "
-"Yubikey, alege a doua opțiune."
+"Ca să resetezi autentificarea cu doi factori pentru aplicații de dispozitive "
+"mobile, precum FreeOTP, alege prima opțiune. Pentru dispozitive fizice de "
+"autentificare, cum este cheia Yubikey, alege a doua opțiune."
 
 #: journalist_templates/edit_account.html:90
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
-msgstr "RESETEAZĂ FACTORII DE AUTENTIFICARE (APLICAȚIE)"
+msgstr "RESETEAZĂ AUTENTIFICAREA CU DOI FACTORI (APLICAȚIE)"
 
 #: journalist_templates/edit_account.html:92
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
-msgstr "RESETEAZĂ FACTORII DE AUTENTIFICARE (DISPOZITIV HARDWARE)"
+msgstr "RESETEAZĂ AUTENTIFICAREA CU DOI FACTORI (DISPOZITIV FIZIC)"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
