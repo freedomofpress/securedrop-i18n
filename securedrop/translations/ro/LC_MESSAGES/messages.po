@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-02-17 17:58+0000\n"
-"Last-Translator: Jobava <jobaval10n@gmail.com>\n"
+"Last-Translator: robbpa <robbpaun@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
 "Language: ro\n"
@@ -220,7 +220,7 @@ msgstr ""
 
 #: journalist_app/utils.py:312
 msgid "No unread submissions in selected collections."
-msgstr "Nu sunt trimiteri necitite în colecțiile alese."
+msgstr "Nicio trimitere necitită în colecțiile selectate."
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
@@ -248,7 +248,7 @@ msgstr[2] "{msg_num} de mesaje"
 #: journalist_templates/_source_row.html:27
 msgid "1 unread"
 msgid_plural "{num_unread} unread"
-msgstr[0] "unul necitit"
+msgstr[0] "{num_unread} necitit"
 msgstr[1] "{num_unread} necitite"
 msgstr[2] "{num_unread} necitite"
 
@@ -282,15 +282,15 @@ msgid ""
 "confirm that two factor authentication is set up correctly."
 msgstr ""
 "Aproape ai terminat! Pentru a termina resetarea autentificării cu doi "
-"factori, urmează instrucțiunile de mai jos pentru a seta FreeOTP. După ce ai "
-"adăugat înregistrarea aceasta pentru contul tău în aplicație, introdu codul "
-"de 6 cifre din aplicație pentru a confirma că autentificarea cu doi factori "
-"a fost setată corect."
+"factori, urmează instrucțiunile de mai jos pentru a configura FreeOTP. După "
+"ce ai adăugat contul în aplicație, introdu unul dintre codurile de 6 cifre "
+"din aplicație pentru a confirma că autentificarea cu doi factori este setată "
+"corect."
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
 msgid "Install FreeOTP on your phone"
-msgstr "Instalează FreeOTP pe telefonul tău"
+msgstr "Instalează FreeOTP pe telefon"
 
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
@@ -308,18 +308,18 @@ msgid ""
 "Your phone will now be in \"scanning\" mode. When you are in this mode, scan "
 "the barcode below:"
 msgstr ""
-"Telefonul va intra acum în modul „scanare”. Când ești în acest mod, scanează "
-"codul de bare de mai jos:"
+"Telefonul va intra acum în modul de „scanare”. Cu telefonul în acest mod, "
+"scanează codul de bare de mai jos:"
 
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
 msgid "Can't scan the barcode? Enter the following code manually:"
-msgstr "Nu poți scana codul de bare? Introdu codul următor manual:"
+msgstr "Nu poți scana codul de bare? Introdu manual codul următor:"
 
 #: journalist_templates/account_new_two_factor.html:15
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid "Once you have scanned the barcode, enter the 6-digit code below:"
-msgstr "După ce ai salvat codul de bare, introdu codul de 6 cifre de mai jos:"
+msgstr "După ce ai scanat codul de bare, introdu codul de 6 cifre de mai jos:"
 
 #: journalist_templates/account_new_two_factor.html:17
 #: journalist_templates/admin_new_user_two_factor.html:20
@@ -330,12 +330,13 @@ msgstr "Activează YubiKey (OATH-HOTP)"
 #: journalist_templates/admin_new_user_two_factor.html:21
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr ""
-"După ce ai configurat YubiKey-ul tău, introdu codul de 6 cifre de mai jos:"
+"După ce ai configurat cheia fizică YubiKey, introdu codul de 6 cifre de mai "
+"jos:"
 
 #: journalist_templates/account_new_two_factor.html:22
 #: journalist_templates/admin_new_user_two_factor.html:25
 msgid "Verification code"
-msgstr "Verifică codul"
+msgstr "Cod de verificare"
 
 #: journalist_templates/account_new_two_factor.html:24
 #: journalist_templates/admin_new_user_two_factor.html:27
@@ -345,7 +346,7 @@ msgstr "TRIMITE"
 
 #: journalist_templates/admin.html:3
 msgid "Admin Interface"
-msgstr "Interfața de administrare"
+msgstr "Interfață de administrare"
 
 #: journalist_templates/admin.html:6
 #: journalist_templates/admin_add_user.html:46
@@ -356,7 +357,7 @@ msgstr "ADAUGĂ UN UTILIZATOR"
 #: journalist_templates/admin_add_user.html:14
 #: journalist_templates/login.html:8
 msgid "Username"
-msgstr "Nume utilizator"
+msgstr "Nume de utilizator"
 
 #: journalist_templates/admin.html:17
 msgid "Edit"
@@ -407,7 +408,7 @@ msgstr "Numele de utilizator poate conține spații"
 
 #: journalist_templates/admin_add_user.html:24
 msgid "Username is case-sensitive"
-msgstr "Numele de utilizator poate conține majuscule și minuscule"
+msgstr "Numele de utilizator distinge scrierea cu litere mari și mici."
 
 #: journalist_templates/admin_add_user.html:28
 msgid "The user's password will be:"
