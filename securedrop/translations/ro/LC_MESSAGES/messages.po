@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-02-17 18:06+0000\n"
-"Last-Translator: robbpa <robbpaun@gmail.com>\n"
+"Last-Translator: Jobava <jobaval10n@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
 "Language: ro\n"
@@ -71,7 +71,7 @@ msgstr ""
 
 #: journalist_app/admin.py:208
 msgid "Deleted user '{user}'"
-msgstr "Utilizatorul „{user}” a fost șters."
+msgstr "Utilizatorul „{user}” a fost șters"
 
 #: journalist_app/admin.py:234
 msgid "Test alert sent. Please check your email."
@@ -408,7 +408,7 @@ msgstr "Numele de utilizator poate conține spații"
 
 #: journalist_templates/admin_add_user.html:24
 msgid "Username is case-sensitive"
-msgstr "Numele de utilizator distinge scrierea cu litere mari și mici."
+msgstr "Numele de utilizator poate conține litere mari și mici"
 
 #: journalist_templates/admin_add_user.html:28
 msgid "The user's password will be:"
@@ -445,6 +445,10 @@ msgid ""
 "required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
 "\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Alertă de securitate:</strong> Sistemul de operare folosit de "
+"serverele SecureDrop este învechit. Este necesară de urgență actualizarea "
+"manuală a sistemului pentru a rămâne în siguranță - <a href=\"//securedrop."
+"org/xenial-upgrade\" rel=\"noreferrer\">Aflați mai multe</a>"
 
 #: journalist_templates/base.html:33
 msgid "Logged on as"
