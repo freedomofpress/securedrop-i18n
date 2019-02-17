@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-02-17 18:07+0000\n"
-"Last-Translator: robbpa <robbpaun@gmail.com>\n"
+"PO-Revision-Date: 2019-02-17 18:10+0000\n"
+"Last-Translator: Jobava <jobaval10n@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
 "Language: ro\n"
@@ -836,7 +836,7 @@ msgstr ""
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
-msgstr "Autentifică-te pentru acces la interfața jurnalistului"
+msgstr "Autentifică-te pentru a accesa interfața jurnalistului"
 
 #: journalist_templates/login.html:9
 msgid "Password"
