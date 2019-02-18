@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.12.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-02-18 13:04+0000\n"
-"Last-Translator: Oktavia <ojonsdottir@irex.org>\n"
+"PO-Revision-Date: 2019-02-18 14:30+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/is/>\n"
 "Language: is\n"
@@ -29,17 +29,15 @@ msgstr "Þú hefur verið skráð(ur) út vegna aðgerðaleysis"
 
 #: journalist_app/account.py:26
 msgid "Incorrect password or two-factor code."
-msgstr "Rangt lykilorð eða tvíþættur kóði."
+msgstr "Rangt lykilorð eða tvíþátta kóði."
 
 #: journalist_app/account.py:42
-#, fuzzy
 msgid "Token in two-factor authentication verified."
-msgstr "Teikn í tvíþvætta auðkenningu sannreynt."
+msgstr "Teikn í tvíþátta auðkenningu sannreynt."
 
 #: journalist_app/account.py:46 journalist_app/admin.py:116
-#, fuzzy
 msgid "Could not verify token in two-factor authentication."
-msgstr "Gat ekki sannreynt teikn í tveggja-þátta auðkenningu."
+msgstr "Gat ekki sannreynt teikn í tvíþátta auðkenningu."
 
 #: journalist_app/admin.py:38
 msgid "Image updated."
@@ -67,7 +65,7 @@ msgstr ""
 
 #: journalist_app/admin.py:109
 msgid "Token in two-factor authentication accepted for user {user}."
-msgstr "Samþykkti teikn í tveggja-þátta auðkenningu fyrir notandann {user}."
+msgstr "Samþykkti teikn í tvíþátta auðkenningu fyrir notandann {user}."
 
 #: journalist_app/admin.py:208
 msgid "Deleted user '{user}'"
@@ -162,8 +160,8 @@ msgid ""
 "Please wait for a new code from your two-factor token or application "
 "before trying again."
 msgstr ""
-"Bíddu eftir nýjum kóða frá tveggja-þátta teikni eða forriti áður en þú "
-"reynir aftur."
+"Bíddu eftir nýjum kóða frá tvíþátta teikni eða forriti áður en þú reynir "
+"aftur."
 
 #: journalist_app/utils.py:126
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
@@ -269,11 +267,11 @@ msgid ""
 "entry for your account in the app, enter one of the 6-digit codes from "
 "the app to confirm that two factor authentication is set up correctly."
 msgstr ""
-"Þetta er næstum búið! Til að ljúka endursetningu á tveggja-þátta "
-"auðkenningu, skaltu fara eftir leiðbeiningunum hér fyrir neðan til að setja "
-"upp FreeOTP. Eftir að þú hefur sett inn færslu með aðgangnum þínum í "
-"forritið, settu þá inn einn af 6-stafa kóðunum úr forritinutil að staðfesta "
-"að tveggja-þátta auðkenningun sé rétt uppsett."
+"Þetta er næstum búið! Til að ljúka endursetningu á tvíþátta auðkenningunni, "
+"skaltu fara eftir leiðbeiningunum hér fyrir neðan til að setja upp FreeOTP. "
+"Eftir að þú hefur sett inn færslu með aðgangnum þínum í forritið, settu þá "
+"inn einn af 6-stafa kóðunum úr forritinu til að staðfesta að tvíþátta "
+"auðkenningin sé rétt uppsett."
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
@@ -423,10 +421,10 @@ msgid ""
 "authentication is set up correctly."
 msgstr ""
 "Þetta er næstum búið! Til að klára að bæta við þessum nýja notanda, láttu þá "
-"fara eftir leiðbeiningunum hér fyrir neðan til að setja upp tveggja-þátta "
+"fara eftir leiðbeiningunum hér fyrir neðan til að setja upp tvíþátta "
 "auðkenningu með FreeOTP. Eftir að þeir hafa sett inn færslu með þessum "
 "aðgangi í forritið, þá eiga þeir að setja inn einn af 6-stafa kóðunum úr "
-"forritinutil að staðfesta að tveggja-þátta auðkenningun sé rétt uppsett."
+"forritinu til að staðfesta að tvíþátta auðkenningin sé rétt uppsett."
 
 #: journalist_templates/base.html:28
 msgid ""
@@ -675,7 +673,7 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:34
 msgid "Please enter your current password and two-factor code."
-msgstr "Settu inn núverandi lykilorð þitt og tveggja-þátta auðkenningarkóða."
+msgstr "Settu inn núverandi lykilorð þitt og tvíþátta auðkenningarkóða."
 
 #: journalist_templates/edit_account.html:40
 msgid "Current Password"
@@ -683,7 +681,7 @@ msgstr "Núverandi lykilorð"
 
 #: journalist_templates/edit_account.html:41 journalist_templates/login.html:11
 msgid "Two-factor Code"
-msgstr "Tveggja-þátta lykilkóði"
+msgstr "Tvíþátta lykilkóði"
 
 #: journalist_templates/edit_account.html:46
 msgid "The user's password will be changed to:"
@@ -699,7 +697,7 @@ msgstr "ENDURSTILLA LYKILORÐ"
 
 #: journalist_templates/edit_account.html:58
 msgid "Reset Two-Factor Authentication"
-msgstr "Endurstilla tveggja-þátta auðkenningu"
+msgstr "Endurstilla tvíþátta auðkenningu"
 
 #: journalist_templates/edit_account.html:61
 msgid ""
@@ -708,11 +706,11 @@ msgid ""
 "user is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
-"Ef tveggja-þátta auðkenningargögnin notanda hafa týnst eða orðið "
-"berskjölduð, geturðu endurstillt auðkennin hér <em>Ef þú gerir þetta, skaltu "
-"ganga úr skugga um að notandinn sé á staðnum og allt sé til reiðu til að "
-"setja upp tveggja-þátta auðkenningu á tækið hans. Annars verður hann "
-"útilokaður frá aðgangnum sínum."
+"Ef tvíþátta auðkenningargögnin notanda hafa týnst eða orðið berskjölduð, "
+"geturðu endurstillt auðkennin hér. <em>Ef þú gerir þetta, skaltu ganga úr "
+"skugga um að notandinn sé á staðnum og allt sé til reiðu til að setja upp "
+"tvíþátta auðkenningu á tækið hans. Annars verður hann útilokaður frá "
+"aðgangnum sínum."
 
 #: journalist_templates/edit_account.html:63
 msgid ""
@@ -721,11 +719,11 @@ msgid ""
 "here. <em>If you do this, make sure you are ready to set up your new "
 "device, otherwise you will be locked out of your account.</em>"
 msgstr ""
-"Ef tveggja-þátta auðkenningargögnin þín hafa týnst eða orðið berskjölduð - "
-"eða að þú sért komin(n) með nýtt tæki - geturðu endurstillt auðkennin þín "
-"hér <em>Ef þú gerir þetta, skaltu ganga úr skugga um að allt sé til reiðu "
-"til að setja upp nýja tækið þitt, annars verðurðu útilokuð/útilokaður frá "
-"aðgangnum þínum.</em>"
+"Ef tvíþátta auðkenningargögnin þín hafa týnst eða orðið berskjölduð - eða að "
+"þú sért komin(n) með nýtt tæki - geturðu endurstillt auðkennin þín hér. <em>"
+"Ef þú gerir þetta, skaltu ganga úr skugga um að allt sé til reiðu til að "
+"setja upp nýja tækið þitt, annars verðurðu útilokuð/útilokaður frá aðgangnum "
+"þínum.</em>"
 
 #: journalist_templates/edit_account.html:65
 msgid ""
@@ -733,17 +731,17 @@ msgid ""
 "choose the first option. For hardware tokens like the Yubikey, choose the"
 " second."
 msgstr ""
-"Til að endurstilla tveggja-þátta auðkenningu fyrir farsímaforrit á borð við "
+"Til að endurstilla tvíþátta auðkenningu fyrir farsímaforrit á borð við "
 "FreeOTP, skaltu velja fyrsta valkostinn. Fyrir vélbúnaðarteikn eins og "
 "Yubikey, veldu þann næsta."
 
 #: journalist_templates/edit_account.html:90
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
-msgstr "ENDURSTILLA TVEGGJA-ÞÁTTA AUÐKENNINGU (FORRIT)"
+msgstr "ENDURSTILLA TVÍÞÁTTA AUÐKENNINGU (FORRIT)"
 
 #: journalist_templates/edit_account.html:92
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
-msgstr "ENDURSTILLA TVEGGJA-ÞÁTTA AUÐKENNINGU (VÉLBÚNAÐARTEIKN)"
+msgstr "ENDURSTILLA TVÍÞÁTTA AUÐKENNINGU (VÉLBÚNAÐARTEIKN)"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -816,7 +814,7 @@ msgstr "Ertu viss um að þú viljir eyða notandanum {username}?"
 #: journalist_templates/js-strings.html:8
 msgid "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr ""
-"rtu viss um að þú viljir endurstilla tveggja-þátta auðkenninguna fyrir "
+"Ertu viss um að þú viljir endurstilla tvíþátta auðkenninguna fyrir "
 "{username}?"
 
 #: journalist_templates/login.html:4
