@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.12.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-02-18 14:30+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Last-Translator: Oktavia <ojonsdottir@irex.org>\n"
 "Language-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/is/>\n"
 "Language: is\n"
@@ -101,7 +101,7 @@ msgstr ""
 
 #: journalist_app/forms.py:35 source_app/forms.py:11
 msgid "This field is required."
-msgstr "Fylla þarf út þennan reit."
+msgstr "Það er nauðsýnlegt að fylla þennan reit út."
 
 #: journalist_app/forms.py:52
 msgid "You cannot send an empty reply."
@@ -113,7 +113,7 @@ msgstr "Skrá er nauðsynleg."
 
 #: journalist_app/forms.py:62
 msgid "You can only upload PNG image files."
-msgstr "Þú getur einungis sent inn PNG-myndskrár."
+msgstr "Þú getur einungis hlaðið upp PNG-myndskrár."
 
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
@@ -122,7 +122,7 @@ msgstr "Óvænt villa kom upp! Hafðu samband við kerfisstjóra."
 
 #: journalist_app/main.py:129
 msgid "Thanks. Your reply has been stored."
-msgstr "Takk. Svarið þitt hefur verið vistuað."
+msgstr "Takk. Svarið þitt hefur verið vistað."
 
 #: journalist_app/main.py:150
 msgid "No collections selected for download."
