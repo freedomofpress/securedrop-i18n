@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.12.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-02-18 14:30+0000\n"
-"Last-Translator: Oktavia <ojonsdottir@irex.org>\n"
+"PO-Revision-Date: 2019-02-20 17:36+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/is/>\n"
 "Language: is\n"
@@ -911,6 +911,8 @@ msgstr ""
 #: source_templates/disable-noscript-xss.html:3
 msgid "Turn off NoScript's cross-site request sanitization setting"
 msgstr ""
+"Slökktu á stillingu NoScript fyrir að hreinsa beiðnir til skriftunar á milli "
+"vefja"
 
 #: source_templates/disable-noscript-xss.html:5
 msgid ""
@@ -919,6 +921,11 @@ msgid ""
 "is turned on. It is safe to turn off this feature while your Security Slider "
 "is set to \"Safest\". Here's how:"
 msgstr ""
+"Vegna hnökra í vafranum (<a href=\"{url}\">sjá nánar</a>), virka "
+"innsendingar ekki áreiðanlega í Tor-vafranum á meðan kveikt er á hreinsun "
+"beiðna til skriftunar á milli vefja. Það er í lagi að slökkva á þessum "
+"eiginleika á meðan öryggisstillingasleðinn er stilltur á \"Öruggastst\". Hér "
+"sérðu hvers vegna:"
 
 #: source_templates/disable-noscript-xss.html:7
 msgid ""
@@ -926,59 +933,80 @@ msgid ""
 "\"inline\" src=\"{noscript_plain_icon_url}\"> or <img class=\"inline\" src="
 "\"{noscript_icon_url}\">. This is the NoScript button."
 msgstr ""
+"Þú ættir að finna \"S\" táknmynd á verkfærastiku Tor-vafrans: <img class=\""
+"inline\" src=\"{noscript_plain_icon_url}\"> eða <img class=\"inline\" src=\""
+"{noscript_icon_url}\">. Þetta er NoScript-hnappurinn."
 
 #: source_templates/disable-noscript-xss.html:11
 msgid "1. Click on the NoScript button."
-msgstr ""
+msgstr "1. Smelltu á NoScript-hnappinn."
 
 #: source_templates/disable-noscript-xss.html:12
 msgid "The NoScript pane should appear. It looks like this:"
 msgstr ""
+"Núna ætti NoScript-spjaldið að birtast. Það lítur út eitthvað á þessa leið:"
 
 #: source_templates/disable-noscript-xss.html:18
 msgid ""
 "2. In the NoScript pane, click on the Settings icon: <img class=\"inline\" "
 "src=\"{url}\">"
 msgstr ""
+"2. Á NoScript-spjaldinu, smelltu á stillingatáknið: <img class=\"inline\" "
+"src=\"{url}\">"
 
 #: source_templates/disable-noscript-xss.html:20
 msgid ""
 "The settings page should appear in a new browser tab. It looks like this:"
 msgstr ""
+"Núna ætti stillingasíðan að birtast í nýjum flipa. Hún lítur út eitthvað á "
+"þessa leið:"
 
 #: source_templates/disable-noscript-xss.html:26
 msgid "3. Click the \"Advanced\" tab."
-msgstr ""
+msgstr "3. Smelltu á \"Ítarlegt\"-flipann."
 
 #: source_templates/disable-noscript-xss.html:28
 msgid "The advanced settings tab should come into view. It looks like this:"
 msgstr ""
+"Núna ætti flipi með ítarlegum stillingum að birtast. Hann lítur út eitthvað "
+"á þessa leið:"
 
 #: source_templates/disable-noscript-xss.html:34
 msgid "4. Un-check \"Sanitize cross-site suspicious requests\"."
 msgstr ""
+"4. Taktu hakið úr \"Hreinsa beiðnir sem mögulega eru tilraunir til "
+"skriftunar á milli vefja\"."
 
 #: source_templates/disable-noscript-xss.html:36
 msgid ""
 "Due to a browser issue, this is required for uploads to work reliably. As "
 "soon as the browser issue is resolved, we will remove this recommendation."
 msgstr ""
+"Vegna hnökra í vafranum þarf að gera þetta svo að innsendingar virki "
+"áreiðanlega. Um leið og vandamálið í vafranum munum við fjarlægja þessa "
+"ábendingu."
 
 #: source_templates/disable-noscript-xss.html:40
 msgid ""
 "5. Close the <i>NoScript Settings</i> browser tab and return to the "
 "SecureDrop tab."
 msgstr ""
+"5. Lokaðu flipanum með <i>stillingum NoScript</i> og farðu aftur á "
+"SecureDrop-flipann."
 
 #: source_templates/disable-noscript-xss.html:42
 msgid ""
 "You can now upload your files. Please keep in mind that each file requires "
 "its own submission."
 msgstr ""
+"Þú getur núna sent inn skrárnar þínar. Hafðu í huga að hverja skrá þarf að "
+"senda inn sérstaklega."
 
 #: source_templates/disable-noscript-xss.html:46
 msgid "6. Re-check \"Sanitize cross-site suspicious requests\"."
 msgstr ""
+"6. Merktu aftur við \"Hreinsa beiðnir sem mögulega eru tilraunir til "
+"skriftunar á milli vefja\"."
 
 #: source_templates/disable-noscript-xss.html:48
 msgid ""
@@ -986,6 +1014,10 @@ msgid ""
 "effect while your Security Slider is set to \"Safest\", but we recommend "
 "enabling it during normal Tor usage."
 msgstr ""
+"Endurtaktu skref 1-3 hér fyrir ofan og yfirfarðu aftur stillingarnar þínar. "
+"Stillingin hefur engin áhrif á meðan öryggisstillingasleðinn er settur á \""
+"Öruggast\", en við mælum með því að það sé virkjað við venjulega notkun á "
+"Tor."
 
 #: source_templates/error.html:3
 msgid "Server error"
@@ -1166,19 +1198,14 @@ msgid "Important!"
 msgstr "Mikilvægt!"
 
 #: source_templates/logout_flashed_message.html:5
-#, fuzzy
-#| msgid ""
-#| "Thank you for exiting your session! Please select \"New Identity\" from "
-#| "the green onion button in the Tor browser to clear all history of your "
-#| "SecureDrop usage from this device."
 msgid ""
 "Thank you for exiting your session! Please select \"New Identity\" from the "
 "onion button in the Tor browser's toolbar to clear all history of your "
 "SecureDrop usage from this device."
 msgstr ""
-"Takk fyrir að fara út úr setunni þinni! Veldu í Tor-vafranum \"Nýtt auðkenni"
-"\" úr hnappnum með græna lauknum til að hreinsa út á þessu tæki allan feril "
-"þinn í SecureDrop."
+"Takk fyrir að fara út úr setunni þinni! Veldu í Tor-vafranum \"Nýtt "
+"auðkenni\" úr hnappnum með lauknum til að hreinsa út á þessu tæki allan "
+"feril þinn í SecureDrop."
 
 #: source_templates/lookup.html:11
 msgid "Whew, it’s you! Now, the embarrassing part..."
@@ -1216,6 +1243,10 @@ msgid ""
 "is <strong>required</strong> for uploads to work. <a href=\"{url}\" class="
 "\"text-link\">Show me how.</a>"
 msgstr ""
+"Áður en þú byrjar, skaltu slökkva  á stillingum NoScript fyrir að hreinsa "
+"beiðnir til skriftunar á milli vefja. Þetta er <strong>nauðsynlegt</strong> "
+"til þess að innsendingar virki. <a href=\"{url}\" class=\"text-link\">Sýna "
+"hvernig.</a>"
 
 #: source_templates/lookup.html:24
 msgid "You can submit any kind of file, a message, or both."
@@ -1310,13 +1341,6 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Því miður, við gátum ekki fundið það sem þú baðst um."
 
 #: source_templates/session_timeout.html:6
-#, fuzzy
-#| msgid ""
-#| "Your session timed out due to inactivity. Please login again if you want "
-#| "to continue using SecureDrop, or select \"New Identity\" from the green "
-#| "onion button in the Tor browser to clear all history of your SecureDrop "
-#| "usage from this device. If you are not using Tor Browser, restart your "
-#| "browser."
 msgid ""
 "Your session timed out due to inactivity. Please login again if you want to "
 "continue using SecureDrop, or select \"New Identity\" from the onion button "
@@ -1325,9 +1349,8 @@ msgid ""
 msgstr ""
 "Setan þín rann út vegna aðgerðaleysis. Skráðu þig inn aftur ef þú ætlar að "
 "halda áfram að nota SecureDrop, eða veldu \"Nýtt auðkenni\" úr hnappnum með "
-"græna lauknum í Tor-vafranum til að hreinsa út á þessu tæki allan feril þinn "
-"í SecureDrop. Ef þú ert ekki að nota Tor-vafrann skaltu endurræsa vafrann "
-"þinn."
+"lauknum í Tor-vafranum til að hreinsa út á þessu tæki allan feril þinn í "
+"SecureDrop. Ef þú ert ekki að nota Tor-vafrann skaltu endurræsa vafrann þinn."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
