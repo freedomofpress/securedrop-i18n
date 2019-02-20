@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-02-20 18:08+0000\n"
+"PO-Revision-Date: 2019-02-20 18:22+0000\n"
 "Last-Translator: Zuhualime Akoochimoya <zakooch@protonmail.ch>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
@@ -946,20 +946,26 @@ msgid ""
 "\"inline\" src=\"{noscript_plain_icon_url}\"> or <img class=\"inline\" src="
 "\"{noscript_icon_url}\">. This is the NoScript button."
 msgstr ""
+"Debieras encontrar el ícono de una \"S\" azul en la barra de herramientas "
+"del navegador Tor: <img class=\"inline\" src=\"{noscript_plain_icon_url}\"> "
+"o <img class=\"inline\" src=\"{noscript_icon_url}\">. Este es el botón de "
+"NoScript."
 
 #: source_templates/disable-noscript-xss.html:11
 msgid "1. Click on the NoScript button."
-msgstr ""
+msgstr "1. Hacer clic en el botón de NoScript."
 
 #: source_templates/disable-noscript-xss.html:12
 msgid "The NoScript pane should appear. It looks like this:"
-msgstr ""
+msgstr "Debiera aparecer el panel de NoScript. Luce cómo ésto:"
 
 #: source_templates/disable-noscript-xss.html:18
 msgid ""
 "2. In the NoScript pane, click on the Settings icon: <img class=\"inline\" "
 "src=\"{url}\">"
 msgstr ""
+"2. En el panel de NoScript, hacer clic en el ícono Ajustes: <img class=\""
+"inline\" src=\"{url}\">"
 
 #: source_templates/disable-noscript-xss.html:20
 msgid ""
