@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-02-20 18:22+0000\n"
+"PO-Revision-Date: 2019-02-21 01:25+0000\n"
 "Last-Translator: Zuhualime Akoochimoya <zakooch@protonmail.ch>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
@@ -924,7 +924,7 @@ msgstr ""
 #: source_templates/disable-noscript-xss.html:3
 msgid "Turn off NoScript's cross-site request sanitization setting"
 msgstr ""
-"Apagar el ajuste de solicitud de sanitización para sitios cruzados de "
+"Desactivar el ajuste de solicitud de sanitización para sitios cruzados de "
 "NoScript"
 
 #: source_templates/disable-noscript-xss.html:5
@@ -971,40 +971,53 @@ msgstr ""
 msgid ""
 "The settings page should appear in a new browser tab. It looks like this:"
 msgstr ""
+"La página de ajustes debiera aparecer en una nueva pestaña del navegador. "
+"Luce cómo ésto:"
 
 #: source_templates/disable-noscript-xss.html:26
 msgid "3. Click the \"Advanced\" tab."
-msgstr ""
+msgstr "3. Hacer clic en la pestaña \"Avanzado\"."
 
 #: source_templates/disable-noscript-xss.html:28
 msgid "The advanced settings tab should come into view. It looks like this:"
 msgstr ""
+"La pestaña de ajustes avanzados debiera aparecer a la vista. Luce cómo ésto:"
 
 #: source_templates/disable-noscript-xss.html:34
 msgid "4. Un-check \"Sanitize cross-site suspicious requests\"."
 msgstr ""
+"4. Hacer desaparecer el tilde en \"Sanitizar solicitudes sospechosas de "
+"sitios cruzados\"."
 
 #: source_templates/disable-noscript-xss.html:36
 msgid ""
 "Due to a browser issue, this is required for uploads to work reliably. As "
 "soon as the browser issue is resolved, we will remove this recommendation."
 msgstr ""
+"Debido a una cuestión con el navegador, esto es requerido para que las "
+"subidas funcionen confiablemente. Tan pronto como sea resuelta, removeremos "
+"ésta recomendación."
 
 #: source_templates/disable-noscript-xss.html:40
 msgid ""
 "5. Close the <i>NoScript Settings</i> browser tab and return to the "
 "SecureDrop tab."
 msgstr ""
+"5. Cierra la pestaña del navegador <i>Ajustes de NoScript</i> y regresa a la "
+"pestaña SecureDrop."
 
 #: source_templates/disable-noscript-xss.html:42
 msgid ""
 "You can now upload your files. Please keep in mind that each file requires "
 "its own submission."
 msgstr ""
+"Ahora puedes subir tus archivos. Por favor ten en cuenta que cada archivo "
+"requiere su propio envío."
 
 #: source_templates/disable-noscript-xss.html:46
 msgid "6. Re-check \"Sanitize cross-site suspicious requests\"."
 msgstr ""
+"6. Vuelve a tildar \"Sanitizar solicitudes sospechosas de sitios cruzados\"."
 
 #: source_templates/disable-noscript-xss.html:48
 msgid ""
@@ -1012,6 +1025,9 @@ msgid ""
 "effect while your Security Slider is set to \"Safest\", but we recommend "
 "enabling it during normal Tor usage."
 msgstr ""
+"Repite los pasos 1-3 como arriba y vuelve a tildar el ajuste. El ajuste no "
+"tiene efecto mientras tu Regla Deslizante de Seguridad está en la posición \""
+"Más Seguro\", pero recomendamos habilitarlo durante el uso normal de Tor."
 
 #: source_templates/error.html:3
 msgid "Server error"
@@ -1192,19 +1208,14 @@ msgid "Important!"
 msgstr "¡Importante!"
 
 #: source_templates/logout_flashed_message.html:5
-#, fuzzy
-#| msgid ""
-#| "Thank you for exiting your session! Please select \"New Identity\" from "
-#| "the green onion button in the Tor browser to clear all history of your "
-#| "SecureDrop usage from this device."
 msgid ""
 "Thank you for exiting your session! Please select \"New Identity\" from the "
 "onion button in the Tor browser's toolbar to clear all history of your "
 "SecureDrop usage from this device."
 msgstr ""
-"¡Gracias por salir de su sesión! Por favor, seleccione \"Nueva Identidad\" "
-"en el botón cebolla verde en el navegador Tor para borrar todo el historial "
-"de uso de SecureDrop de este dispositivo."
+"¡Gracias por salir de tu sesión! Por favor, selecciona \"Nueva Identidad\" "
+"en el botón cebolla en la barra de herramientas del navegador Tor para "
+"borrar todo el historial de uso de SecureDrop de este dispositivo."
 
 #: source_templates/lookup.html:11
 msgid "Whew, it’s you! Now, the embarrassing part..."
@@ -1241,6 +1252,9 @@ msgid ""
 "is <strong>required</strong> for uploads to work. <a href=\"{url}\" class="
 "\"text-link\">Show me how.</a>"
 msgstr ""
+"Antes de empezar, desactiva la sanitización de solicitudes de sitios "
+"cruzados en NoScript. Esto es <strong>requerido</strong> para que funcionen "
+"las subidas. <a href=\"{url}\" class=\"text-link\">Muéstrame cómo.</a>"
 
 #: source_templates/lookup.html:24
 msgid "You can submit any kind of file, a message, or both."
@@ -1336,24 +1350,17 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Lo sentimos, no pudimos localizar lo que pidió."
 
 #: source_templates/session_timeout.html:6
-#, fuzzy
-#| msgid ""
-#| "Your session timed out due to inactivity. Please login again if you want "
-#| "to continue using SecureDrop, or select \"New Identity\" from the green "
-#| "onion button in the Tor browser to clear all history of your SecureDrop "
-#| "usage from this device. If you are not using Tor Browser, restart your "
-#| "browser."
 msgid ""
 "Your session timed out due to inactivity. Please login again if you want to "
 "continue using SecureDrop, or select \"New Identity\" from the onion button "
 "in the Tor browser's toolbar to clear all history of your SecureDrop usage "
 "from this device. If you are not using Tor Browser, restart your browser."
 msgstr ""
-"La sesión se ha cerrado debido a inactividad. Por favor, entre de nuevo si "
-"desea continuar usando SecureDrop, o seleccione \"Nueva Identidad\" desde el "
-"botón cebolla verde en el navegador Tor para borrar todo el historial de su "
-"uso de SecureDrop de este dispositivo. Si no utiliza el navegador Tor, "
-"reinicie el navegador."
+"La sesión se ha cerrado debido a inactividad. Por favor, entra de nuevo si "
+"deseas continuar usando SecureDrop, o selecciona \"Nueva Identidad\" desde "
+"el botón cebolla en la barra de herramientas del navegador Tor para borrar "
+"todo el historial de tu uso de SecureDrop de este dispositivo. Si no utiliza "
+"el navegador Tor, reinicie el navegador."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
