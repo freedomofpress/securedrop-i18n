@@ -227,7 +227,7 @@ msgid "Close"
 msgstr "Închide"
 
 #: journalist_templates/_confirmation_modal.html:7
-#: journalist_templates/col.html:15 source_templates/lookup.html:77
+#: journalist_templates/col.html:15 source_templates/lookup.html:81
 msgid "Cancel"
 msgstr "Renunță"
 
@@ -340,7 +340,7 @@ msgstr "Cod de verificare"
 
 #: journalist_templates/account_new_two_factor.html:24
 #: journalist_templates/admin_new_user_two_factor.html:27
-#: journalist_templates/col.html:99 source_templates/lookup.html:45
+#: journalist_templates/col.html:99 source_templates/lookup.html:49
 msgid "SUBMIT"
 msgstr "TRIMITE"
 
@@ -467,8 +467,8 @@ msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
 msgstr ""
-"Oferit de <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop\""
-">"
+"Oferit de <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
+"\">"
 
 #: journalist_templates/base.html:65
 msgid "Powered by <em>SecureDrop {version}</em>."
@@ -853,8 +853,8 @@ msgid ""
 "\"{url}\">Why is this dangerous?</a>"
 msgstr ""
 "<strong>AVERTISMENT:&nbsp;</strong> Se pare că folosești Tor2Web. Acest "
-"serviciu <strong>&nbsp;nu oferă&nbsp;</strong> anonimitate. <a href=\"{url}\""
-">De ce este periculos?</a>"
+"serviciu <strong>&nbsp;nu oferă&nbsp;</strong> anonimitate. <a href="
+"\"{url}\">De ce este periculos?</a>"
 
 #: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
@@ -921,6 +921,85 @@ msgstr ""
 "Ca toate programele informatice, este posibil ca SecureDrop să conțină "
 "defecte de securitate. Trebuie utilizat pe propria răspundere."
 
+#: source_templates/disable-noscript-xss.html:3
+msgid "Turn off NoScript's cross-site request sanitization setting"
+msgstr ""
+
+#: source_templates/disable-noscript-xss.html:5
+msgid ""
+"Due to a browser issue (<a href=\"{url}\">more details</a>), uploads do not "
+"currently work reliably in Tor Browser while cross-site request sanitization "
+"is turned on. It is safe to turn off this feature while your Security Slider "
+"is set to \"Safest\". Here's how:"
+msgstr ""
+
+#: source_templates/disable-noscript-xss.html:7
+msgid ""
+"You should find a blue \"S\" icon in the Tor browser's toolbar: <img class="
+"\"inline\" src=\"{noscript_plain_icon_url}\"> or <img class=\"inline\" src="
+"\"{noscript_icon_url}\">. This is the NoScript button."
+msgstr ""
+
+#: source_templates/disable-noscript-xss.html:11
+msgid "1. Click on the NoScript button."
+msgstr ""
+
+#: source_templates/disable-noscript-xss.html:12
+msgid "The NoScript pane should appear. It looks like this:"
+msgstr ""
+
+#: source_templates/disable-noscript-xss.html:18
+msgid ""
+"2. In the NoScript pane, click on the Settings icon: <img class=\"inline\" "
+"src=\"{url}\">"
+msgstr ""
+
+#: source_templates/disable-noscript-xss.html:20
+msgid ""
+"The settings page should appear in a new browser tab. It looks like this:"
+msgstr ""
+
+#: source_templates/disable-noscript-xss.html:26
+msgid "3. Click the \"Advanced\" tab."
+msgstr ""
+
+#: source_templates/disable-noscript-xss.html:28
+msgid "The advanced settings tab should come into view. It looks like this:"
+msgstr ""
+
+#: source_templates/disable-noscript-xss.html:34
+msgid "4. Un-check \"Sanitize cross-site suspicious requests\"."
+msgstr ""
+
+#: source_templates/disable-noscript-xss.html:36
+msgid ""
+"Due to a browser issue, this is required for uploads to work reliably. As "
+"soon as the browser issue is resolved, we will remove this recommendation."
+msgstr ""
+
+#: source_templates/disable-noscript-xss.html:40
+msgid ""
+"5. Close the <i>NoScript Settings</i> browser tab and return to the "
+"SecureDrop tab."
+msgstr ""
+
+#: source_templates/disable-noscript-xss.html:42
+msgid ""
+"You can now upload your files. Please keep in mind that each file requires "
+"its own submission."
+msgstr ""
+
+#: source_templates/disable-noscript-xss.html:46
+msgid "6. Re-check \"Sanitize cross-site suspicious requests\"."
+msgstr ""
+
+#: source_templates/disable-noscript-xss.html:48
+msgid ""
+"Repeat steps 1-3 from above and re-check the setting. The setting has no "
+"effect while your Security Slider is set to \"Safest\", but we recommend "
+"enabling it during normal Tor usage."
+msgstr ""
+
 #: source_templates/error.html:3
 msgid "Server error"
 msgstr "Eroare de server"
@@ -981,8 +1060,8 @@ msgid ""
 " questions or are interested in additional information. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"Deoarece noi nu urmărim utilizatorii serviciului nostru "
-"<strong>SecureDrop</strong>,\n"
+"Deoarece noi nu urmărim utilizatorii serviciului nostru <strong>SecureDrop</"
+"strong>,\n"
 "în vizitele tale ulterioare, acest nume de cod va fi singura metodă prin "
 "care vom putea comunica cu tine\n"
 "în caz că avem întrebări sau dorim să ne trimiți informații suplimentare. "
@@ -1009,9 +1088,9 @@ msgid ""
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Se recomandă să folosești browserul Tor pentru a accesa "
-"SecureDrop:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Află "
-"cum îl poți instala</a> sau ignoră acest avertisment pentru a continua."
+"<strong>Se recomandă să folosești browserul Tor pentru a accesa SecureDrop:</"
+"strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Află cum îl poți "
+"instala</a> sau ignoră acest avertisment pentru a continua."
 
 #: source_templates/index.html:19
 msgid ""
@@ -1023,8 +1102,8 @@ msgid ""
 msgstr ""
 "<strong>Se recomandă să folosești browserul Tor în versiunea pentru "
 "calculator pentru a accesa SecureDrop, deoarece Orfox nu oferă același nivel "
-"de securitate și anonimitate.</strong> <a id=\"recommend-tor\" href=\""
-"{tor_browser_url}\">Află cum îl poți instala</a> sau ignoră acest "
+"de securitate și anonimitate.</strong> <a id=\"recommend-tor\" href="
+"\"{tor_browser_url}\">Află cum îl poți instala</a> sau ignoră acest "
 "avertisment pentru a continua."
 
 #: source_templates/index.html:42
@@ -1089,7 +1168,7 @@ msgstr "Introdu numele de cod"
 msgid "Enter your codename"
 msgstr "Introdu numele tău de cod"
 
-#: source_templates/login.html:25 source_templates/lookup.html:51
+#: source_templates/login.html:25 source_templates/lookup.html:55
 msgid "CANCEL"
 msgstr "RENUNȚĂ"
 
@@ -1099,9 +1178,14 @@ msgid "Important!"
 msgstr "Important!"
 
 #: source_templates/logout_flashed_message.html:5
+#, fuzzy
+#| msgid ""
+#| "Thank you for exiting your session! Please select \"New Identity\" from "
+#| "the green onion button in the Tor browser to clear all history of your "
+#| "SecureDrop usage from this device."
 msgid ""
 "Thank you for exiting your session! Please select \"New Identity\" from the "
-"green onion button in the Tor browser to clear all history of your "
+"onion button in the Tor browser's toolbar to clear all history of your "
 "SecureDrop usage from this device."
 msgstr ""
 "Îți mulțumim că ai închis sesiunea! Te rugăm să selectezi „Identitate nouă” "
@@ -1136,7 +1220,18 @@ msgstr ""
 msgid "Submit Files or Messages"
 msgstr "Trimite fișiere sau mesaje"
 
-#: source_templates/lookup.html:21
+#: source_templates/lookup.html:22
+msgid ""
+"Before you begin, turn off cross-site request sanitization in NoScript. This "
+"is <strong>required</strong> for uploads to work. <a href=\"{url}\" class="
+"\"text-link\">Show me how.</a>"
+msgstr ""
+
+#: source_templates/lookup.html:24
+msgid "You can submit any kind of file, a message, or both."
+msgstr "Poți trimite orice tip de fișier, un mesaj sau ambele."
+
+#: source_templates/lookup.html:26
 msgid ""
 "If you are already familiar with GPG, you can optionally encrypt your files "
 "and messages with our <a href=\"{url}\" class=\"text-link\">public key</a> "
@@ -1147,27 +1242,23 @@ msgstr ""
 "înainte de a le trimite. Fișierele sunt criptate pe măsură ce sunt primite "
 "de SecureDrop."
 
-#: source_templates/lookup.html:22
+#: source_templates/lookup.html:27
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
 msgstr "<a href=\"{url}\" class=\"text-link\">Află mai multe</a>."
 
-#: source_templates/lookup.html:24
-msgid "You can submit any kind of file, a message, or both."
-msgstr "Poți trimite orice tip de fișier, un mesaj sau ambele."
-
-#: source_templates/lookup.html:33
+#: source_templates/lookup.html:37
 msgid "Maximum upload size: 500 MB"
 msgstr "Mărime maximă fișiere la încărcare: 500 MB"
 
-#: source_templates/lookup.html:36
+#: source_templates/lookup.html:40
 msgid "Write a message."
 msgstr "Scrie un mesaj."
 
-#: source_templates/lookup.html:58
+#: source_templates/lookup.html:62
 msgid "Read Replies"
 msgstr "Citește răspunsurile"
 
-#: source_templates/lookup.html:63
+#: source_templates/lookup.html:67
 msgid ""
 "You have received a reply. To protect your identity in the unlikely event "
 "someone learns your codename, please delete all replies when you're done "
@@ -1179,43 +1270,43 @@ msgstr ""
 "după ce le-ai citit. Această acțiune ne va anunța că ai aflat că ai primit "
 "răspuns. Ne poți răspunde prin trimiterea de noi fișiere și mesaje mai sus."
 
-#: source_templates/lookup.html:76
+#: source_templates/lookup.html:80
 msgid "Delete this reply?"
 msgstr "Ștergi acest răspuns?"
 
-#: source_templates/lookup.html:78
+#: source_templates/lookup.html:82
 msgid "DELETE"
 msgstr "ȘTERGE"
 
-#: source_templates/lookup.html:87
+#: source_templates/lookup.html:91
 msgid "DELETE ALL REPLIES"
 msgstr "ȘTERGE TOATE RĂSPUNSURILE"
 
-#: source_templates/lookup.html:90
+#: source_templates/lookup.html:94
 msgid "Are you finished with the replies?"
 msgstr "Ai terminat cu răspunsurile?"
 
-#: source_templates/lookup.html:91
+#: source_templates/lookup.html:95
 msgid "YES, DELETE ALL REPLIES"
 msgstr "DA, ȘTERGE TOATE RĂSPUNSURILE"
 
-#: source_templates/lookup.html:92
+#: source_templates/lookup.html:96
 msgid "NO, NOT YET"
 msgstr "NU, NU ÎNCĂ"
 
-#: source_templates/lookup.html:96
+#: source_templates/lookup.html:100
 msgid "There are no replies at this time."
 msgstr "Nu sunt răspunsuri în acest moment."
 
-#: source_templates/lookup.html:105
+#: source_templates/lookup.html:109
 msgid "Remember, your codename is:"
 msgstr "Reține, numele tău de cod este:"
 
-#: source_templates/lookup.html:106
+#: source_templates/lookup.html:110
 msgid "Show"
 msgstr "Arată"
 
-#: source_templates/lookup.html:108
+#: source_templates/lookup.html:112
 msgid "Hide"
 msgstr "Ascunde"
 
@@ -1228,15 +1319,22 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Ne pare rău, nu am găsit ce căutai."
 
 #: source_templates/session_timeout.html:6
+#, fuzzy
+#| msgid ""
+#| "Your session timed out due to inactivity. Please login again if you want "
+#| "to continue using SecureDrop, or select \"New Identity\" from the green "
+#| "onion button in the Tor browser to clear all history of your SecureDrop "
+#| "usage from this device. If you are not using Tor Browser, restart your "
+#| "browser."
 msgid ""
 "Your session timed out due to inactivity. Please login again if you want to "
-"continue using SecureDrop, or select \"New Identity\" from the green onion "
-"button in the Tor browser to clear all history of your SecureDrop usage from "
-"this device. If you are not using Tor Browser, restart your browser."
+"continue using SecureDrop, or select \"New Identity\" from the onion button "
+"in the Tor browser's toolbar to clear all history of your SecureDrop usage "
+"from this device. If you are not using Tor Browser, restart your browser."
 msgstr ""
 "Sesiunea ta s-a terminat din cauza inactivității. Trebuie să te autentifici "
-"din nou dacă vrei să continui utilizarea SecureDrop sau poți alege „"
-"Identitate nouă” din butonul cu ceapă verde din browserul Tor pentru a "
+"din nou dacă vrei să continui utilizarea SecureDrop sau poți alege "
+"„Identitate nouă” din butonul cu ceapă verde din browserul Tor pentru a "
 "șterge tot istoricul de folosire SecureDrop de pe acest dispozitiv. Dacă nu "
 "folosești browserul Tor, repornește browserul."
 
@@ -1371,8 +1469,8 @@ msgid ""
 "asc</code>!)"
 msgstr ""
 "Va trebui să poți identifica cheia cu ajutorul unui „ID utilizator” sau UID. "
-"Denumirea fișierului de cheie publică este și amprenta digitală a cheii (cu "
-".asc la sfârșit), așa că poți copia și lipi această denumire (fără a include "
+"Denumirea fișierului de cheie publică este și amprenta digitală a cheii (cu ."
+"asc la sfârșit), așa că poți copia și lipi această denumire (fără a include "
 "<code>.asc</code>!)."
 
 #: source_templates/why-journalist-key.html:17
@@ -1380,8 +1478,9 @@ msgid ""
 "On all systems, open the Terminal and use this gpg command: <code>gpg --"
 "recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 msgstr ""
-"Pe toate sistemele, deschide un terminal și folosește următoarea comandă gpg:"
-" <code>gpg --recipient &lt; user ID&gt; --encrypt roswell_photos.pdf</code>"
+"Pe toate sistemele, deschide un terminal și folosește următoarea comandă "
+"gpg: <code>gpg --recipient &lt; user ID&gt; --encrypt roswell_photos.pdf</"
+"code>"
 
 #: source_templates/why-journalist-key.html:20
 msgid ""
@@ -1390,8 +1489,8 @@ msgid ""
 "code>)"
 msgstr ""
 "Încarcă trimiterea criptată. Va avea aceeași denumire de fișier ca fișierul "
-"necriptat, dar cu .gpg la sfârșit (de ex. "
-"<code>roswell_photos.pdf.gpg</code>)"
+"necriptat, dar cu .gpg la sfârșit (de ex. <code>roswell_photos.pdf.gpg</"
+"code>)"
 
 #: source_templates/why-journalist-key.html:23
 msgid ""
@@ -1399,10 +1498,9 @@ msgid ""
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
-"<strong>Pont:</strong> Dacă dorești să rămâi anonim(ă), <strong>nu "
-"folosi</strong> GPG pentru a semna fișiere criptate (cu argumentul "
-"<code>--sign</code> sau <code>-s</code>) pentru că ne va dezvălui nouă "
-"identitatea ta GPG."
+"<strong>Pont:</strong> Dacă dorești să rămâi anonim(ă), <strong>nu folosi</"
+"strong> GPG pentru a semna fișiere criptate (cu argumentul <code>--sign</"
+"code> sau <code>-s</code>) pentru că ne va dezvălui nouă identitatea ta GPG."
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
