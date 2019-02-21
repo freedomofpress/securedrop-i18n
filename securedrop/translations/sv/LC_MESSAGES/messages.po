@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-01-15 07:43+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2019-02-21 17:11+0000\n"
+"Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
 "Language-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sv/>\n"
 "Language: sv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.20\n"
+"X-Generator: Weblate 3.4\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -423,6 +423,10 @@ msgid ""
 "required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
 "\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Kritisk sårbarhet:</strong> Operativsystemet som används av dina "
+"SecureDrop-servrar har passerat sin livslängd. En manuell uppdatering krävs "
+"snarast för att skydda systemet - <a href=\"//securedrop.org/xenial-upgrade\""
+" rel=\"noreferrer\">Läs mer</a>"
 
 #: journalist_templates/base.html:33
 msgid "Logged on as"
@@ -889,7 +893,7 @@ msgstr ""
 
 #: source_templates/disable-noscript-xss.html:3
 msgid "Turn off NoScript's cross-site request sanitization setting"
-msgstr ""
+msgstr "Stäng av \"NoScript's cross-site request sanitization\" inställningen"
 
 #: source_templates/disable-noscript-xss.html:5
 msgid ""
@@ -898,6 +902,10 @@ msgid ""
 "is turned on. It is safe to turn off this feature while your Security Slider "
 "is set to \"Safest\". Here's how:"
 msgstr ""
+"På grund av ett webbläsarproblem (<a href=\"{url}\">mer detaljer</a>), så "
+"fungerar inte uppladdningar stabilt i Tor Browser när \"cross-site request "
+"sanitization\" är påslagen. Det är säkert att stänga av denna funktion när "
+"din \"Security Slider\" är satt till \"Safest\". Så här gör du:"
 
 #: source_templates/disable-noscript-xss.html:7
 msgid ""
@@ -905,59 +913,68 @@ msgid ""
 "\"inline\" src=\"{noscript_plain_icon_url}\"> or <img class=\"inline\" src="
 "\"{noscript_icon_url}\">. This is the NoScript button."
 msgstr ""
+"Du ska hitta en blå \"S\" ikon i Tor browserns meny: <img class=\"inline\" "
+"src=\"{noscript_plain_icon_url}\"> eller <img class=\"inline\" src=\""
+"{noscript_icon_url}\">. Detta är NoScript-knappen."
 
 #: source_templates/disable-noscript-xss.html:11
 msgid "1. Click on the NoScript button."
-msgstr ""
+msgstr "1. Tryck på NoScript-knappen."
 
 #: source_templates/disable-noscript-xss.html:12
 msgid "The NoScript pane should appear. It looks like this:"
-msgstr ""
+msgstr "NoScript-panelen ska nu dyka upp. Den ser ut så här:"
 
 #: source_templates/disable-noscript-xss.html:18
 msgid ""
 "2. In the NoScript pane, click on the Settings icon: <img class=\"inline\" "
 "src=\"{url}\">"
 msgstr ""
+"2. Tryck på \"Settings\"-ikonen <img class=\"inline\" src=\"{url}\"> i "
+"NoScript-panelen"
 
 #: source_templates/disable-noscript-xss.html:20
 msgid ""
 "The settings page should appear in a new browser tab. It looks like this:"
-msgstr ""
+msgstr "Inställningssidan ska öppnas i en ny flik. Den ser ut så här:"
 
 #: source_templates/disable-noscript-xss.html:26
 msgid "3. Click the \"Advanced\" tab."
-msgstr ""
+msgstr "3. Klicka på \"Advanced\" fliken."
 
 #: source_templates/disable-noscript-xss.html:28
 msgid "The advanced settings tab should come into view. It looks like this:"
-msgstr ""
+msgstr "Advanced-fliken ska nu visas. Den ser ut så här:"
 
 #: source_templates/disable-noscript-xss.html:34
 msgid "4. Un-check \"Sanitize cross-site suspicious requests\"."
-msgstr ""
+msgstr "4. Avmarkera \"Sanitize cross-site suspicious requests\"."
 
 #: source_templates/disable-noscript-xss.html:36
 msgid ""
 "Due to a browser issue, this is required for uploads to work reliably. As "
 "soon as the browser issue is resolved, we will remove this recommendation."
 msgstr ""
+"På grund av ett webbläsar-problem, så behövs det här för att uppladdningar "
+"ska fungera stabilt. Så snart som webbläsar-problemet är löst, kommer vi att "
+"ta bort denna rekommendation."
 
 #: source_templates/disable-noscript-xss.html:40
 msgid ""
 "5. Close the <i>NoScript Settings</i> browser tab and return to the "
 "SecureDrop tab."
 msgstr ""
+"5. Stäng <i> NoScript Settings</i> fliken och gå tillbaka till SecureDrop."
 
 #: source_templates/disable-noscript-xss.html:42
 msgid ""
 "You can now upload your files. Please keep in mind that each file requires "
 "its own submission."
-msgstr ""
+msgstr "Nu kan du ladda upp filer. Varje fil kräver en separat inskickning."
 
 #: source_templates/disable-noscript-xss.html:46
 msgid "6. Re-check \"Sanitize cross-site suspicious requests\"."
-msgstr ""
+msgstr "6. Dubbelkolla \"Sanitize cross-site suspicious requests\"."
 
 #: source_templates/disable-noscript-xss.html:48
 msgid ""
@@ -965,6 +982,9 @@ msgid ""
 "effect while your Security Slider is set to \"Safest\", but we recommend "
 "enabling it during normal Tor usage."
 msgstr ""
+"Repetera steg 1-3 ovan för att dubbelkolla inställningen. Inställningen har "
+"ingen effekt när \"Security Slider\" är satt till \"Safest\", men vi "
+"rekommenderar att du aktiverar den när du använder Tor i normala fall."
 
 #: source_templates/error.html:3
 msgid "Server error"
@@ -1146,18 +1166,13 @@ msgid "Important!"
 msgstr "Viktigt!"
 
 #: source_templates/logout_flashed_message.html:5
-#, fuzzy
-#| msgid ""
-#| "Thank you for exiting your session! Please select \"New Identity\" from "
-#| "the green onion button in the Tor browser to clear all history of your "
-#| "SecureDrop usage from this device."
 msgid ""
 "Thank you for exiting your session! Please select \"New Identity\" from the "
 "onion button in the Tor browser's toolbar to clear all history of your "
 "SecureDrop usage from this device."
 msgstr ""
 "Tack för att du avslutat din session! Var snäll och välj \"New Identity\" "
-"från knappen med en grön lökikon i Tor Browser för att rensa all historik av "
+"från knappen med en lökikon i Tor Browser för att rensa all historik av "
 "SecureDrop-användning på den här enheten."
 
 #: source_templates/lookup.html:11
@@ -1194,6 +1209,9 @@ msgid ""
 "is <strong>required</strong> for uploads to work. <a href=\"{url}\" class="
 "\"text-link\">Show me how.</a>"
 msgstr ""
+"Innan du börjar, stäng av \"cross-site request sanitization\" i NoScript. "
+"Detta är <strong> ett krav</strong> för att uppladdningar ska fungera. <a "
+"href=\"{url}\" class=\"text-link\">Visa mig hur.</a>"
 
 #: source_templates/lookup.html:24
 msgid "You can submit any kind of file, a message, or both."
@@ -1286,13 +1304,6 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Förlåt, vi kunde inte hitta det du begärde."
 
 #: source_templates/session_timeout.html:6
-#, fuzzy
-#| msgid ""
-#| "Your session timed out due to inactivity. Please login again if you want "
-#| "to continue using SecureDrop, or select \"New Identity\" from the green "
-#| "onion button in the Tor browser to clear all history of your SecureDrop "
-#| "usage from this device. If you are not using Tor Browser, restart your "
-#| "browser."
 msgid ""
 "Your session timed out due to inactivity. Please login again if you want to "
 "continue using SecureDrop, or select \"New Identity\" from the onion button "
@@ -1301,7 +1312,7 @@ msgid ""
 msgstr ""
 "Din session avslutades ut på grund av inaktivitet. Var snäll och logga in "
 "igen ifall du vill fortsätta använda SecureDrop, eller välj \"New Identity\" "
-"från knappen med en grön lökikon i Tor Browser för att rensa all historik av "
+"från knappen med en lökikon i Tor Browser för att rensa all historik av "
 "SecureDrop på den här enheten. Ifall du inte använder Tor Browser, starta om "
 "din webbläsare."
 
