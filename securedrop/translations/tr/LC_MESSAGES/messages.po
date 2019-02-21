@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-02-21 14:13+0000\n"
-"Last-Translator: tekrei <tekrei@gmail.com>\n"
+"PO-Revision-Date: 2019-02-21 14:21+0000\n"
+"Last-Translator: Volkan <volkangezer@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
 "Language: tr\n"
@@ -429,9 +429,9 @@ msgid ""
 "\"noreferrer\">Learn More</a>"
 msgstr ""
 "<strong>Hassas Güvenlik:</strong> SecureDrop sunucularınız tarafından "
-"kullanılan işletim sisteminizin ömrü bitmiştir. Güvende kalmak için manuel "
-"bir güncelleme yapmanız gerekmektedir (daha fazlasını <a href=\"//securedrop."
-"org/xenial-upgrade\" rel=\"noreferrer\">öğrenin)</a>."
+"kullanılan işletim sisteminizin ömrü bitmiştir. Güvende kalmak için elle bir "
+"güncelleme yapmanız gerekmektedir - <a href=\"//securedrop.org/xenial-"
+"upgrade\" rel=\"noreferrer\">Daha Fazlasını Öğren</a>"
 
 #: journalist_templates/base.html:33
 msgid "Logged on as"
@@ -926,7 +926,7 @@ msgid ""
 "\"{noscript_icon_url}\">. This is the NoScript button."
 msgstr ""
 "Tor Tarayıcı'nın araç çubuğunda mavi \"S\" simgesini bulun: <img class=\""
-"inline\" src=\"{noscript_plain_icon_url}\"> veya<img class=\"inline\" src=\""
+"inline\" src=\"{noscript_plain_icon_url}\"> veya <img class=\"inline\" src=\""
 "{noscript_icon_url}\">. Bu NoScript düğmesidir."
 
 #: source_templates/disable-noscript-xss.html:11
@@ -935,7 +935,7 @@ msgstr "1. NoScript düğmesine tıklayın."
 
 #: source_templates/disable-noscript-xss.html:12
 msgid "The NoScript pane should appear. It looks like this:"
-msgstr "NoScript sayfası açılacaktır. Şu şekildedir:"
+msgstr "NoScript sayfası açılacaktır. Şuna benzer:"
 
 #: source_templates/disable-noscript-xss.html:18
 msgid ""
@@ -948,20 +948,19 @@ msgstr ""
 #: source_templates/disable-noscript-xss.html:20
 msgid ""
 "The settings page should appear in a new browser tab. It looks like this:"
-msgstr ""
-"Yeni bir tarayıcı sekmesinde ayarlar sayfası açılmalıdır. Şu şekildedir:"
+msgstr "Yeni bir tarayıcı sekmesinde ayarlar sayfası açılmalıdır. Şuna benzer:"
 
 #: source_templates/disable-noscript-xss.html:26
 msgid "3. Click the \"Advanced\" tab."
-msgstr "3. \"Advanced\" (Gelişmiş) sekmesine tıklayın."
+msgstr "3. \"Gelişmiş\" sekmesine tıklayın."
 
 #: source_templates/disable-noscript-xss.html:28
 msgid "The advanced settings tab should come into view. It looks like this:"
-msgstr "Şimdi gelişmiş ayarlar sekmesi görünür olmalıdır. Şu şekildedir:"
+msgstr "Şimdi gelişmiş ayarlar sekmesi görünür olmalıdır. Şuna benzer:"
 
 #: source_templates/disable-noscript-xss.html:34
 msgid "4. Un-check \"Sanitize cross-site suspicious requests\"."
-msgstr "4. \"Sanitize cross-site suspicious requests\" seçimini kaldırın."
+msgstr "4. \"Siteler arası şüpheli talepleri temizle\" seçimini kaldırın."
 
 #: source_templates/disable-noscript-xss.html:36
 msgid ""
@@ -985,12 +984,13 @@ msgid ""
 "You can now upload your files. Please keep in mind that each file requires "
 "its own submission."
 msgstr ""
-"Şimdi dosya yükleyebilirsiniz. Her dosyanın kendi gönderme formuna ihtiyaç "
-"duyduğunu unutmayın."
+"Şimdi dosyalarınızı yükleyebilirsiniz. Her dosyanın kendi gönderme formuna "
+"ihtiyaç duyduğunu unutmayın."
 
 #: source_templates/disable-noscript-xss.html:46
 msgid "6. Re-check \"Sanitize cross-site suspicious requests\"."
-msgstr "6. \"Sanitize cross-site suspicious requests\" seçeneğini tekrar seçin."
+msgstr ""
+"6. \"Siteler arası şüpheli talepleri temizle\" seçeneğini tekrar işaretleyin."
 
 #: source_templates/disable-noscript-xss.html:48
 msgid ""
@@ -1225,7 +1225,7 @@ msgid ""
 msgstr ""
 "Başlamadan önce, NoScript'teki siteler arası istek temizleme özelliğini "
 "kapatın. Yüklemelerin çalışması için bu <strong>gereklidir</strong>. <a href="
-"\"{url}\" class=\"text-link\">Nasıl yapılacağını görün.</a>"
+"\"{url}\" class=\"text-link\">Nasıl yapacağımı göster.</a>"
 
 #: source_templates/lookup.html:24
 msgid "You can submit any kind of file, a message, or both."
