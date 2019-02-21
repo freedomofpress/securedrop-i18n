@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-12-11 05:02+0000\n"
+"PO-Revision-Date: 2019-02-21 17:11+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.securedrop.org/"
 "projects/securedrop/securedrop/zh_Hant/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.20\n"
+"X-Generator: Weblate 3.4\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -399,6 +399,8 @@ msgid ""
 "required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
 "\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>重要安全課題:</strong> SecureDrop 伺服器作業系統已逾使用年限，亟需手動更新以維持安全。 - <a href=\""
+"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">進一步了解</a>"
 
 #: journalist_templates/base.html:33
 msgid "Logged on as"
@@ -838,7 +840,7 @@ msgstr "如同所有的軟體，SecureDrop 可能含有安全漏洞。使用請�
 
 #: source_templates/disable-noscript-xss.html:3
 msgid "Turn off NoScript's cross-site request sanitization setting"
-msgstr ""
+msgstr "關閉 NoScript 禁止跨站請求的設置"
 
 #: source_templates/disable-noscript-xss.html:5
 msgid ""
@@ -847,6 +849,8 @@ msgid ""
 "is turned on. It is safe to turn off this feature while your Security Slider "
 "is set to \"Safest\". Here's how:"
 msgstr ""
+"由於瀏覽器的原因 (<a href=\"{url}\">詳情說明</a>)，當開啟跨站請求禁止功能時，上傳功能無法穩定地在 Tor "
+"瀏覽器執行。若關閉此功能時，可將安全設置為\"最高級\"。作法如下："
 
 #: source_templates/disable-noscript-xss.html:7
 msgid ""
@@ -857,17 +861,17 @@ msgstr ""
 
 #: source_templates/disable-noscript-xss.html:11
 msgid "1. Click on the NoScript button."
-msgstr ""
+msgstr "1. 點擊  NoScript 按鈕。"
 
 #: source_templates/disable-noscript-xss.html:12
 msgid "The NoScript pane should appear. It looks like this:"
-msgstr ""
+msgstr "應出現 NoScript 面板，大概像這樣："
 
 #: source_templates/disable-noscript-xss.html:18
 msgid ""
 "2. In the NoScript pane, click on the Settings icon: <img class=\"inline\" "
 "src=\"{url}\">"
-msgstr ""
+msgstr "2. 在 NoScript 面板，點擊 Setting 設置圖示: <img class=\"inline\" src=\"{url}\">"
 
 #: source_templates/disable-noscript-xss.html:20
 msgid ""
@@ -1222,9 +1226,8 @@ msgid ""
 "in the Tor browser's toolbar to clear all history of your SecureDrop usage "
 "from this device. If you are not using Tor Browser, restart your browser."
 msgstr ""
-"由於聞置過久您的期間已經逾時。如果想繼續使用 SecureDrop，請再次登錄，或者在 "
-"Tor 瀏覽器的綠色洋葱按鈕中選擇“新身份”以清除設備上所有 SecureDrop 的歷史記"
-"錄。 如果您没使用 Tor 瀏覽器，則請重啟您的瀏覽器。"
+"由於聞置過久您的期間已經逾時。如果想繼續使用 SecureDrop，請再次登錄，或者在 Tor 瀏覽器工具列的洋葱按鈕中選擇“新身份”以清除設備上所有 "
+"SecureDrop 的歷史記錄。 如果您没使用 Tor 瀏覽器，則請重啟您的瀏覽器。"
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
