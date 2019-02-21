@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-02-21 14:32+0000\n"
-"Last-Translator: Volkan <volkangezer@gmail.com>\n"
+"Last-Translator: Kaya Zeren <kayazeren@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
 "Language: tr\n"
@@ -841,7 +841,7 @@ msgstr ""
 
 #: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
-msgstr "Alanın karakter sayısı 1 ile {max_codename_len} arasında olmalıdır."
+msgstr "Alanda 1 ile {max_codename_len} arasında karakter bulunmalıdır."
 
 #: source_app/forms.py:18
 msgid "Invalid input."
@@ -852,12 +852,12 @@ msgid ""
 "You were redirected because you are already logged in. If you want to create "
 "a new account, you should log out first."
 msgstr ""
-"Zaten oturumunuz açık olduğu için buraya yönlendirildiniz. Yeni bir hesap "
-"açmak istiyorsanız, önce oturumu kapatmalısınız."
+"Oturumunuz zaten açık olduğundan buraya yönlendirildiniz. Yeni bir hesap "
+"açmak istiyorsanız, önce oturumunuzu kapatmalısınız."
 
 #: source_app/main.py:132
 msgid "You must enter a message or choose a file to submit."
-msgstr "Bir ileti girmeli veya gönderecek bir dosya seçmelisiniz."
+msgstr "Bir ileti yazmalı ya da gönderilecek bir dosya seçmelisiniz."
 
 #: source_app/main.py:165
 msgid "Thanks! We received your message."
@@ -881,7 +881,7 @@ msgstr "Bütün yanıtlar silindi"
 
 #: source_app/main.py:254
 msgid "Sorry, that is not a recognized codename."
-msgstr "Üzgünüz, kod adı bilinmiyor."
+msgstr "Maalesef, kod adı anlaşılamadı."
 
 #: source_templates/base.html:6 source_templates/index.html:4
 msgid "Protecting Journalists and Sources"
@@ -901,8 +901,8 @@ msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
 msgstr ""
-"Bütün yazılımlarda olduğu gibi, SecureDrop güvenlik açıkları içerebilir. "
-"Riskin size ait olduğunu bilerek kullanın."
+"Bütün yazılımlarda olduğu gibi, SecureDrop üzerinde de güvenlik açıkları "
+"bulunabilir. Doğabilecek risklerin size ait olduğunu bilerek kullanın."
 
 #: source_templates/disable-noscript-xss.html:3
 msgid "Turn off NoScript's cross-site request sanitization setting"
@@ -1011,8 +1011,7 @@ msgstr "Sunucu hatası"
 msgid ""
 "Sorry, the website encountered an error and was unable to complete your "
 "request."
-msgstr ""
-"Üzgünüz, web sitesi bir hatayla karşılaştığı için isteğinizi karşılayamıyor."
+msgstr "Maalesef web sitesinde bir sorun çıktığından isteğiniz karşılanamıyor."
 
 #: source_templates/error.html:7 source_templates/notfound.html:7
 msgid "Look up a codename..."
@@ -1027,8 +1026,8 @@ msgid ""
 "Thank you for sending this information to us. Please check back later for "
 "replies."
 msgstr ""
-"Bu bilgiyi bize gönderdiğiniz için teşekkür ederiz. Yanıtlar için daha sonra "
-"tekrar bakınız."
+"Bu bilgiyi bize gönderdiğiniz için teşekkür ederiz. Yanıtlar için buraya "
+"daha sonra yeniden bakın."
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
@@ -1043,7 +1042,7 @@ msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
 msgstr ""
-"Lütfen bu kod adını bir yere yazın ve güvenli bir şekilde saklayın veya "
+"Lütfen bu kod adını bir yere yazın ve güvenli bir şekilde saklayın ya da "
 "ezberleyin."
 
 #: source_templates/generate.html:10
@@ -1051,9 +1050,8 @@ msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our journalists in response to what you submit on the next screen."
 msgstr ""
-"Bir sonraki sayfada göndereceğiniz şeylere karşılık olarak gazetecilerin "
-"gönderdikleri mesajları almak üzere tekrar geldiğinizde bu kod adını "
-"kullanacaksınız."
+"Bir sonraki sayfada göndereceğiniz bilgilere gazetecilerin gönderdikleri "
+"yanıtları almak için yeniden geldiğinizde bu kod adını kullanacaksınız."
 
 #: source_templates/generate.html:34
 msgid ""
@@ -1063,11 +1061,12 @@ msgid ""
 " questions or are interested in additional information. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"<strong>SecureDrop</strong> hizmeti kullanıcılarımızı izlemediğimiz için\n"
-"sizinle iletişim kurabilmemiz, soru sorabilmemiz veya ek bilgi ihtiyaçlarını "
-"bildirebilmemiz için sonraki ziyaretlerinizde\n"
-"bu kod adını kullanmanız tek yoldur. Parolaların aksine kod adı "
-"kaybolduğunda tekrar bulmanın imkanı yoktur."
+"<strong>SecureDrop</strong> hizmetimizin kullanıcılarını izlemediğimiz için, "
+"\n"
+"sizinle iletişim kurabilmemiz, soru sorabilmemiz ya da ek bilgi "
+"gereksinimlerini bildirebilmemiz için kullanılabilecek\n"
+"tek yol sonraki ziyaretlerinizde bu kod adını kullanmanızdır. Parolaların "
+"aksine kod adı kaybolduğunda geri alınamaz."
 
 #: source_templates/generate.html:44 source_templates/index.html:66
 msgid "SUBMIT DOCUMENTS"
@@ -1079,10 +1078,10 @@ msgid ""
 "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it "
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Anonimliğinizi korumanız için Güvenlik Çubuğunu En Güvenli düzeyine "
-"getirmeniz önerilmektedir:</strong><a id=\"disable-js\" href=\"\">Ayarı "
-"nasıl En Güvenli yapabileceğinizi öğrenin</a> veya devam edebilmek için bu "
-"uyarıyı görmezden gelin."
+"<strong>Anonimliğinizi korumanız için Güvenlik Çubuğunu En Yüksek Güvenlik "
+"düzeyine getirmeniz önerilir:</strong><a id=\"disable-js\" href=\"\">En "
+"Yüksek Güvenlik düzeyi ayarını nasıl yapabileceğinizi öğrenin</a> ya da bu "
+"uyarıyı görmezden gelerek devam edin."
 
 #: source_templates/index.html:18
 msgid ""
@@ -1091,9 +1090,8 @@ msgid ""
 "install it</a>, or ignore this warning to continue."
 msgstr ""
 "<strong>SecureDrop uygulamasına erişmek için Tor Tarayıcı kullanmanız "
-"önerilmektedir:</strong><a id=\"recommend-tor\" href="
-"\"{tor_browser_url}\">Nasıl kuracağınızı öğrenin</a> veya devam edebilmek "
-"için bu uyarıyı görmezden gelin."
+"önerilir:</strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">Nasıl "
+"kuracağınızı öğrenin</a> ya da bu uyarıyı görmezden gelerek devam edin."
 
 #: source_templates/index.html:19
 msgid ""
@@ -1104,10 +1102,10 @@ msgid ""
 "continue."
 msgstr ""
 "<strong>SecureDrop uygulamasına erişmek için Tor Tarayıcının masaüstü "
-"sürümünü kullanmanız önerilmektedir, çünkü Orfox, masaüstü sürümlerle aynı "
-"güvenlik ve anonimlik düzeylerini sağlamamaktadır</strong>.<a id=\"recommend-"
-"tor\" href=\"{tor_browser_url}\">Nasıl kuracağınızı öğrenin</a> veya devam "
-"edebilmek için bu uyarıyı görmezden gelin."
+"sürümünü kullanmanız önerilir. Orfox masaüstü sürümlerle aynı güvenlik ve "
+"anonimlik düzeylerini sağlamaz</strong>.<a id=\"recommend-tor\" href=\""
+"{tor_browser_url}\">Nasıl kuracağınızı öğrenin</a> ya da bu uyarıyı "
+"görmezden gelerek devam edin."
 
 #: source_templates/index.html:42
 msgid "Submit for the first time"
@@ -1119,15 +1117,15 @@ msgstr "Daha önce bir şeyler gönderdiniz mi?"
 
 #: source_templates/index.html:55
 msgid "If this is your first time submitting to journalists, start here."
-msgstr "Gazetecilere ilk defa gönderecekseniz, buradan başlayın."
+msgstr "Gazetecilere ilk defa bir şey gönderecekseniz, buradan başlayın."
 
 #: source_templates/index.html:59
 msgid ""
 "If you have already submitted to journalists, log in here to check for "
 "responses."
 msgstr ""
-"Daha önce de gazetecilere gönderdiyseniz, oturum açarak yanıtları kontrol "
-"edin."
+"Daha önce de gazetecilere bir şey gönderdiyseniz, oturum açarak yanıtları "
+"kontrol edin."
 
 #: source_templates/index.html:74
 msgid "CHECK FOR A RESPONSE"
@@ -1138,26 +1136,26 @@ msgid ""
 "You appear to be using the Tor Browser. You can move the Security Slider to "
 "Safest in four steps."
 msgstr ""
-"Tor Tarayıcı kullanıyor gibi gözüküyorsunuz. Dört kolay adımda Güvenlik "
-"Kaydırma düğmesini En Güvenli yapabilirsiniz."
+"Tor Tarayıcı kullanıyor gibi gözüküyorsunuz. Dört adımda Güvenlik Ayarını En "
+"Güvenli düzeye getirebilirsiniz."
 
 #: source_templates/index.html:95
 msgid ""
 "Click the <img src=\"{icon}\" alt=\"Tor icon\"> Tor icon in the toolbar above"
 msgstr ""
-"Yukarıdaki araç çubuğundaki <img src=\"{icon}\" alt=\"Tor simgesi\"> Tor "
+"Yukarıdaki araç çubuğundan <img src=\"{icon}\" alt=\"Tor simgesi\"> Tor "
 "simgesine tıklayın"
 
 #: source_templates/index.html:96
 msgid "Click <strong>Security Settings...</strong>"
-msgstr "<strong>Güvenlik Ayarları...</strong>'na tıklayın"
+msgstr "<strong>Güvenlik Ayarları...</strong> üzerine tıklayın"
 
 #: source_templates/index.html:97
 msgid ""
 "Move the Slider to <strong>Safest</strong>, then click <strong>OK</strong>"
 msgstr ""
-"Kaydırma düğmesini <strong>En Güvenli</strong> seçeneğine getirin ve daha "
-"sonra <strong>Tamam</strong> düğmesine tıklayın"
+"Kaydırma düğmesini <strong>En Güvenli</strong> üzerine getirin ve "
+"<strong>Tamam</strong> düğmesine tıklayın"
 
 #: source_templates/index.html:98
 msgid "<a href=\"/\">Click here</a> to refresh the page"
@@ -1165,11 +1163,11 @@ msgstr "Sayfayı yenilemek için <a href=\"/\">buraya tıklayın</a>"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
-msgstr "Kod Adını Girin"
+msgstr "Kod Adını Yazın"
 
 #: source_templates/login.html:12
 msgid "Enter your codename"
-msgstr "Kod Adınızı Girin"
+msgstr "Kod adınızı yazın"
 
 #: source_templates/login.html:25 source_templates/lookup.html:55
 msgid "CANCEL"
@@ -1201,8 +1199,8 @@ msgid ""
 "and messages from that day through to our journalists."
 msgstr ""
 "Sunucularımız son ziyaretinizde beklenmedik bir faaliyetle karşılaştı. "
-"Tedbiri elden bırakmamak amacıyla o günden itibaren gazetecilerimiz "
-"aracılığıyla dosya ve mesaj gönderimini askıya aldık."
+"Tedbiri elden bırakmamak amacıyla o günden itibaren gazetecilerimize dosya "
+"ve ileti gönderimini askıya aldık."
 
 #: source_templates/lookup.html:14
 msgid ""
@@ -1211,12 +1209,12 @@ msgid ""
 "delay. Please do check back again in a week or so."
 msgstr ""
 "Şimdi bir insan olduğunuzdan emin olduğumuz için önceki gönderimlerinizi "
-"hemen gazetecilere ileteceğiz. Gecikme için özür dileriz. Yaklaşık bir hafta "
-"içinde lütfen tekrar kontrol edin."
+"hemen gazetecilere ileteceğiz. Gecikme için özür dileriz. Lütfen bir hafta "
+"içinde yeniden kontrol edin."
 
 #: source_templates/lookup.html:20
 msgid "Submit Files or Messages"
-msgstr "Dosya veya Mesaj Gönderin"
+msgstr "Dosya veya İleti Gönderin"
 
 #: source_templates/lookup.html:22
 msgid ""
@@ -1231,7 +1229,8 @@ msgstr ""
 #: source_templates/lookup.html:24
 msgid "You can submit any kind of file, a message, or both."
 msgstr ""
-"Herhangi bir dosya, bir ileti türü veya her ikisini birden gönderebilirsiniz."
+"Herhangi bir dosya, bir ileti türü ya da her ikisini birden "
+"gönderebilirsiniz."
 
 #: source_templates/lookup.html:26
 msgid ""
@@ -1239,18 +1238,17 @@ msgid ""
 "and messages with our <a href=\"{url}\" class=\"text-link\">public key</a> "
 "before submission. Files are encrypted as they are received by SecureDrop."
 msgstr ""
-"GPG hakkında halihazırda bilginiz varsa, dosyalarınızı ve mesajlarınızı "
-"göndermeden önce <a href=\"{url}\" class=\"text-link\">açık anahtarımız</a> "
-"aracılığıyla şifreleyebilirsiniz. Dosyalar SecureDrop tarafından alındığı "
-"anda şifrelenir."
+"GPG hakkında bilginiz varsa, dosya ve iletilerinizi göndermeden önce <a href="
+"\"{url}\" class=\"text-link\">açık anahtarımızı</a> kullanarak "
+"şifreleyebilirsiniz. Dosyalar SecureDrop tarafından alındığı anda şifrelenir."
 
 #: source_templates/lookup.html:27
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
-msgstr "<a href=\"{url}\" class=\"text-link\">Daha Fazlasını Öğren</a>."
+msgstr "<a href=\"{url}\" class=\"text-link\">Ayrıntılı bilgi alın</a>."
 
 #: source_templates/lookup.html:37
 msgid "Maximum upload size: 500 MB"
-msgstr "Azami yükleme boyutu: 500 MB"
+msgstr "En büyük yükleme boyutu: 500 MB"
 
 #: source_templates/lookup.html:40
 msgid "Write a message."
@@ -1258,7 +1256,7 @@ msgstr "Bir ileti yazın."
 
 #: source_templates/lookup.html:62
 msgid "Read Replies"
-msgstr "Yanıtları Oku"
+msgstr "Yanıtları Okuyun"
 
 #: source_templates/lookup.html:67
 msgid ""
@@ -1267,15 +1265,14 @@ msgid ""
 "with them. This also lets us know that you are aware of our reply. You can "
 "respond by submitting new files and messages above."
 msgstr ""
-"Bir yanıt aldınız. Pek mümkün olmayan bir şekilde birinin kod adını öğrenme "
-"ihtimaline karşın kimliğinizi korumak için yanıtlarla işiniz bittiğinde "
-"lütfen hepsini silin. Bu ayrıca yanıtı görmüş olduğunuzu anlamamızı "
-"sağlayacaktır. Yukarıdan yeni bir ileti ve dosya göndererek yanıt "
-"verebilirsiniz."
+"Bir yanıt aldınız. Pek mümkün olmasa da birinin kod adınızı öğrenme "
+"olasılığına karşı kimliğinizi korumak için lütfen yanıtlarla işiniz "
+"bittiğinde tümünü silin. Böylece yanıtı görmüş olduğunuzu da anlayabiliriz. "
+"Yukarıdan yeni bir ileti ve dosya göndererek yanıt verebilirsiniz."
 
 #: source_templates/lookup.html:80
 msgid "Delete this reply?"
-msgstr "Bu yanıtı sil?"
+msgstr "Bu yanıt silinsin mi?"
 
 #: source_templates/lookup.html:82
 msgid "DELETE"
@@ -1319,7 +1316,7 @@ msgstr "Sayfa bulunamadı"
 
 #: source_templates/notfound.html:5
 msgid "Sorry, we couldn't locate what you requested."
-msgstr "Üzgünüz, isteğinizi yerine getiremiyoruz."
+msgstr "Maalesef, isteğinizi yerine getiremiyoruz."
 
 #: source_templates/session_timeout.html:6
 msgid ""
@@ -1341,8 +1338,8 @@ msgstr "Neden Tor2Web hakkında bir uyarı var?"
 #: source_templates/tor2web-warning.html:4
 msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
 msgstr ""
-"SecureDrop uygulamasına Tor2Web kullanarak bağlanmak anonimliğinizi "
-"korumayacaktır."
+"SecureDrop uygulamasına Tor2Web kullanarak bağlanmak anonim kalmanızı "
+"sağlamaz."
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
@@ -1350,7 +1347,7 @@ msgid ""
 "government, your Internet provider), to identify you."
 msgstr ""
 "İnternet kullanımını gözetleyen herhangi birinin (hükümetiniz, İnternet "
-"sağlayıcınız) sizi tanımlaması mümkün olabilir."
+"sağlayıcınız) sizin kim olduğunuzu belirleyebilir."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
@@ -1358,7 +1355,7 @@ msgid ""
 "org/projects/torbrowser.html\">Tor browser</a> instead."
 msgstr ""
 "Bunun yerine <a href=\"www.torproject.org/projects/torbrowser.html\">Tor "
-"Tarayıcı</a> kullanmanızı <strong>kesinlikle öneriyoruz</strong>."
+"Tarayıcı</a> kullanmanızı <strong>önemle öneririz</strong>."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
@@ -1368,7 +1365,7 @@ msgstr "Tor Tarayıcı Kullanmalısınız"
 msgid ""
 "If you are not using Tor Browser, you <strong>may not be anonymous</strong>."
 msgstr ""
-"Tor Tarayıcı kullanmıyorsanız, <strong>anonim olmayabilirsiniz</strong>."
+"Tor Tarayıcı kullanmıyorsanız, <strong>anonim kalamayabilirsiniz</strong>."
 
 #: source_templates/use-tor-browser.html:5
 msgid ""
@@ -1376,18 +1373,18 @@ msgid ""
 "you</strong> to install Tor Browser and use it to access our site safely and "
 "anonymously."
 msgstr ""
-"Bilgi sunmak istiyorsanız, sitemize güvenli ve anonim bir şekilde erişmek "
-"için <a href=\"torproject.org/download.html.en\">Tor</a> kurmanız ve "
-"kullanmanız <strong>şiddetle önerilmektedir</strong>."
+"Bilgi göndermek istiyorsanız, sitemize güvenli ve anonim bir şekilde erişmek "
+"için <a href=\"torproject.org/download.html.en\">Tor Tarayıcı</a> kurmanız "
+"ve kullanmanız <strong>önemle önerilir</strong>."
 
 #: source_templates/use-tor-browser.html:6
 msgid ""
 "Copy and paste the following address into your browser and follow the "
 "instructions to download and install Tor Browser:"
 msgstr ""
-"Tor Tarayıcı'yı indirmek ve kurmak için aşağıdaki adresi kopyalayıp "
-"tarayıcınızın adres çubuğuna yapıştırın ve açılacak sayfadaki adımları takip "
-"edin:"
+"Tor Tarayıcı uygulamasını indirmek ve kurmak için aşağıdaki adresi "
+"kopyalayıp tarayıcınızın adres çubuğuna yapıştırın ve açılacak sayfadaki "
+"adımları izleyin:"
 
 #: source_templates/use-tor-browser.html:9
 msgid ""
@@ -1395,14 +1392,14 @@ msgid ""
 "mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
-"Tor Tarayıcı'yı indirmenizin şüphe uyandırma olasılığı varsa ve e-posta "
-"sağlayıcınızın izlenme ihtimali daha düşük ise, <pre>gettor@torproject.org</"
-"pre> adresine bir e-posta attığınızda; bir bot, yönergeleri size yanıt "
-"olarak gönderecektir."
+"Tor Tarayıcı uygulamasını indirmenizin şüphe uyandırma olasılığı varsa ve e-"
+"posta sağlayıcınızın izlenme olasılığı daha düşük ise, "
+"<pre>gettor@torproject.org</pre> adresine bir e-posta atabilirsiniz. Bir bot "
+"yapmanız gerekenleri size yanıt olarak gönderir."
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
-msgstr "Gazetecinin açık anahtarını neden indirmelisiniz?"
+msgstr "Neden gazetecinin açık anahtarını indirmelisiniz?"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
@@ -1410,17 +1407,17 @@ msgid ""
 "messages and files before submission can provide an extra layer of security "
 "before your data reaches the SecureDrop server."
 msgstr ""
-"SecureDrop dosyaları ve mesajları gönderildikleri anda şifreler. Mesajların "
-"ve dosyaların göndermeden önce şifrelenmesi, verinizin SecureDrop sunucusuna "
-"ulaşmasından önce ek bir güvenlik katmanı sağlayacaktır."
+"SecureDrop dosya ve iletileri gönderildikleri anda şifreler. Dosya ve "
+"iletilerin gönderilmeden önce şifrelenmesi, verilerinizin SecureDrop "
+"sunucusuna ulaşmasından önce ek bir güvenlik katmanı sağlar."
 
 #: source_templates/why-journalist-key.html:5
 msgid ""
 "If you are already familiar with the GPG encryption software, you may wish "
 "to encrypt your submissions yourself. To do so:"
 msgstr ""
-"GPG şifreleme yazılımıyla aşinalığınız varsa, gönderimlerinizi kendiniz "
-"şifrelemek isteyebilirsiniz. Bu amaçla:"
+"GPG şifreleme yazılımını biliyorsanız, gönderimlerinizi kendiniz şifrelemek "
+"isteyebilirsiniz. Bunun için şunları yapın:"
 
 #: source_templates/why-journalist-key.html:7
 msgid ""
@@ -1432,7 +1429,7 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:8
 msgid "Import it into your GPG keyring."
-msgstr "İndirdiğiniz anahtarı GPG anahtarlarınız arasına aktarın."
+msgstr "İndirdiğiniz anahtarı GPG anahtarlığınızda içe aktarın."
 
 #: source_templates/why-journalist-key.html:10
 msgid ""
@@ -1441,8 +1438,7 @@ msgid ""
 "imported to your keyring."
 msgstr ""
 "<a href=\"{url}\">Tails</a> kullanıyorsanız, indirdiğiniz <code>.asc</code> "
-"dosyasına çift tıklamanız anahtarın otomatik olarak içe aktarılması için "
-"yeterli olacaktır."
+"dosyasına çift tıklayarak anahtarı otomatik olarak ie aktarabilirsiniz."
 
 #: source_templates/why-journalist-key.html:11
 msgid ""
