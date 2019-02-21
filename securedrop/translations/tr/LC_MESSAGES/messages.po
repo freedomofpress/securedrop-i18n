@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-12-14 07:39+0000\n"
-"Last-Translator: Volkan <volkangezer@gmail.com>\n"
+"PO-Revision-Date: 2019-02-21 14:13+0000\n"
+"Last-Translator: tekrei <tekrei@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.20\n"
+"X-Generator: Weblate 3.4\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -428,6 +428,10 @@ msgid ""
 "required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
 "\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Hassas Güvenlik:</strong> SecureDrop sunucularınız tarafından "
+"kullanılan işletim sisteminizin ömrü bitmiştir. Güvende kalmak için manuel "
+"bir güncelleme yapmanız gerekmektedir (daha fazlasını <a href=\"//securedrop."
+"org/xenial-upgrade\" rel=\"noreferrer\">öğrenin)</a>."
 
 #: journalist_templates/base.html:33
 msgid "Logged on as"
@@ -901,7 +905,7 @@ msgstr ""
 
 #: source_templates/disable-noscript-xss.html:3
 msgid "Turn off NoScript's cross-site request sanitization setting"
-msgstr ""
+msgstr "NoScript'in siteler arası istek temizleme özelliğini kapatın"
 
 #: source_templates/disable-noscript-xss.html:5
 msgid ""
@@ -910,6 +914,10 @@ msgid ""
 "is turned on. It is safe to turn off this feature while your Security Slider "
 "is set to \"Safest\". Here's how:"
 msgstr ""
+"Bir tarayıcı sorunu nedeniyle (<a href=\"{url}\">ayrıntılar</a>), siteler "
+"arası istek temizleme açık olduğunda yüklemeler Tor Browser'da sağlıklı bir "
+"şekilde çalışmıyor. Güvenlik çubuğunuz \"En Güvenli\" olarak ayarlı "
+"olduğunda bu özelliği kapatmak güvenlidir. Şu şekilde yapabilirsiniz:"
 
 #: source_templates/disable-noscript-xss.html:7
 msgid ""
@@ -917,59 +925,72 @@ msgid ""
 "\"inline\" src=\"{noscript_plain_icon_url}\"> or <img class=\"inline\" src="
 "\"{noscript_icon_url}\">. This is the NoScript button."
 msgstr ""
+"Tor Tarayıcı'nın araç çubuğunda mavi \"S\" simgesini bulun: <img class=\""
+"inline\" src=\"{noscript_plain_icon_url}\"> veya<img class=\"inline\" src=\""
+"{noscript_icon_url}\">. Bu NoScript düğmesidir."
 
 #: source_templates/disable-noscript-xss.html:11
 msgid "1. Click on the NoScript button."
-msgstr ""
+msgstr "1. NoScript düğmesine tıklayın."
 
 #: source_templates/disable-noscript-xss.html:12
 msgid "The NoScript pane should appear. It looks like this:"
-msgstr ""
+msgstr "NoScript sayfası açılacaktır. Şu şekildedir:"
 
 #: source_templates/disable-noscript-xss.html:18
 msgid ""
 "2. In the NoScript pane, click on the Settings icon: <img class=\"inline\" "
 "src=\"{url}\">"
 msgstr ""
+"2. NoScript bölmesinde, Ayarlar simgesine tıklayın: <img class=\"inline\" "
+"src=\"{url}\">"
 
 #: source_templates/disable-noscript-xss.html:20
 msgid ""
 "The settings page should appear in a new browser tab. It looks like this:"
 msgstr ""
+"Yeni bir tarayıcı sekmesinde ayarlar sayfası açılmalıdır. Şu şekildedir:"
 
 #: source_templates/disable-noscript-xss.html:26
 msgid "3. Click the \"Advanced\" tab."
-msgstr ""
+msgstr "3. \"Advanced\" (Gelişmiş) sekmesine tıklayın."
 
 #: source_templates/disable-noscript-xss.html:28
 msgid "The advanced settings tab should come into view. It looks like this:"
-msgstr ""
+msgstr "Şimdi gelişmiş ayarlar sekmesi görünür olmalıdır. Şu şekildedir:"
 
 #: source_templates/disable-noscript-xss.html:34
 msgid "4. Un-check \"Sanitize cross-site suspicious requests\"."
-msgstr ""
+msgstr "4. \"Sanitize cross-site suspicious requests\" seçimini kaldırın."
 
 #: source_templates/disable-noscript-xss.html:36
 msgid ""
 "Due to a browser issue, this is required for uploads to work reliably. As "
 "soon as the browser issue is resolved, we will remove this recommendation."
 msgstr ""
+"Tarayıcıdaki bir sorun nedeniyle, bu değişiklik yüklemelerin eksiksiz "
+"çalışması için gerekmektedir. Tarayıcıdaki sorun çözülür çözülmez, bu "
+"öneriyi kaldıracağız."
 
 #: source_templates/disable-noscript-xss.html:40
 msgid ""
 "5. Close the <i>NoScript Settings</i> browser tab and return to the "
 "SecureDrop tab."
 msgstr ""
+"5. <i>NoScript Ayarları</i> tarayıcı sekmesini kapatıp SecureDrop sekmesine "
+"dönün."
 
 #: source_templates/disable-noscript-xss.html:42
 msgid ""
 "You can now upload your files. Please keep in mind that each file requires "
 "its own submission."
 msgstr ""
+"Şimdi dosya yükleyebilirsiniz. Her dosyanın kendi gönderme formuna ihtiyaç "
+"duyduğunu unutmayın."
 
 #: source_templates/disable-noscript-xss.html:46
 msgid "6. Re-check \"Sanitize cross-site suspicious requests\"."
-msgstr ""
+msgstr "6. \"Sanitize cross-site suspicious requests\" seçeneğini tekrar seçin."
 
 #: source_templates/disable-noscript-xss.html:48
 msgid ""
@@ -977,6 +998,9 @@ msgid ""
 "effect while your Security Slider is set to \"Safest\", but we recommend "
 "enabling it during normal Tor usage."
 msgstr ""
+"1-3 adımlarını tekrarlayarak ayarları tekrar gözden geçirin. Güvenlik "
+"çubuğunuz \"En Güvenli\" konumdayken bu ayarın bir etkisi olmasa da, olağan "
+"Tor kullanımınız sırasında bu seçeneğin seçili olmasını öneriyoruz."
 
 #: source_templates/error.html:3
 msgid "Server error"
@@ -1156,18 +1180,13 @@ msgid "Important!"
 msgstr "Önemli!"
 
 #: source_templates/logout_flashed_message.html:5
-#, fuzzy
-#| msgid ""
-#| "Thank you for exiting your session! Please select \"New Identity\" from "
-#| "the green onion button in the Tor browser to clear all history of your "
-#| "SecureDrop usage from this device."
 msgid ""
 "Thank you for exiting your session! Please select \"New Identity\" from the "
 "onion button in the Tor browser's toolbar to clear all history of your "
 "SecureDrop usage from this device."
 msgstr ""
-"Oturumu kapattığınız için teşekkürler! Lütfen Tor Tarayıcı'daki yeşil soğan "
-"düğmesinden \"Yeni Kimlik\" seçeneğini seçerek bu aygıttaki SecureDrop "
+"Oturumu kapattığınız için teşekkürler! Lütfen Tor Tarayıcı araç çubuğundaki "
+"soğan düğmesinden \"Yeni Kimlik\" seçeneğini seçerek bu aygıttaki SecureDrop "
 "kullanımınıza ilişkin tüm geçmişi temizleyin."
 
 #: source_templates/lookup.html:11
@@ -1204,6 +1223,9 @@ msgid ""
 "is <strong>required</strong> for uploads to work. <a href=\"{url}\" class="
 "\"text-link\">Show me how.</a>"
 msgstr ""
+"Başlamadan önce, NoScript'teki siteler arası istek temizleme özelliğini "
+"kapatın. Yüklemelerin çalışması için bu <strong>gereklidir</strong>. <a href="
+"\"{url}\" class=\"text-link\">Nasıl yapılacağını görün.</a>"
 
 #: source_templates/lookup.html:24
 msgid "You can submit any kind of file, a message, or both."
@@ -1299,13 +1321,6 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Üzgünüz, isteğinizi yerine getiremiyoruz."
 
 #: source_templates/session_timeout.html:6
-#, fuzzy
-#| msgid ""
-#| "Your session timed out due to inactivity. Please login again if you want "
-#| "to continue using SecureDrop, or select \"New Identity\" from the green "
-#| "onion button in the Tor browser to clear all history of your SecureDrop "
-#| "usage from this device. If you are not using Tor Browser, restart your "
-#| "browser."
 msgid ""
 "Your session timed out due to inactivity. Please login again if you want to "
 "continue using SecureDrop, or select \"New Identity\" from the onion button "
@@ -1314,8 +1329,8 @@ msgid ""
 msgstr ""
 "Uzun bir süredir işlem yapmadığınız için oturumunuz sonlandırıldı. "
 "SecureDrop kullanmaya devam etmek için lütfen tekrar giriş yapın veya Tor "
-"Tarayıcı'daki yeşil soğan düğmesinden \"Yeni Kimlik\" seçeneğini seçerek bu "
-"aygıttaki bütün SecureDrop geçmişini temizleyin. Tor Tarayıcı "
+"Tarayıcı araç çubuğundaki soğan düğmesinden \"Yeni Kimlik\" seçeneğini "
+"seçerek bu aygıttaki bütün SecureDrop geçmişini temizleyin. Tor Tarayıcı "
 "kullanmıyorsanız tarayıcınızı yeniden başlatın."
 
 #: source_templates/tor2web-warning.html:3
