@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-12-20 00:39+0000\n"
-"Last-Translator: erinm <erinm@riseup.net>\n"
+"PO-Revision-Date: 2019-02-21 17:11+0000\n"
+"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.20\n"
+"X-Generator: Weblate 3.4\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -56,11 +56,12 @@ msgid "Username \"{user}\" already taken."
 msgstr "O nome de usuário \"{user}\" já está em uso."
 
 #: journalist_app/admin.py:85
+#, fuzzy
 msgid ""
 "An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
-"Ocorreu um erro ao tentar salvar este usuário no banco de dados. Por favor, "
-"informe o administrador."
+"Erro ao salvar este usuário no banco de dados. Por favor, informe o "
+"administrador."
 
 #: journalist_app/admin.py:109
 msgid "Token in two-factor authentication accepted for user {user}."
@@ -85,6 +86,7 @@ msgid "No collections selected."
 msgstr "Nenhuma coleção selecionada."
 
 #: journalist_app/decorators.py:15
+#, fuzzy
 msgid "Only admins can access this page."
 msgstr "Apenas administradores podem acessar esta página."
 
@@ -117,6 +119,7 @@ msgstr "Você pode carregar somente documentos de imagem PNG."
 
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
+#, fuzzy
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Ocorreu um erro inesperado! Por favor, informe o administrador."
 
@@ -395,10 +398,12 @@ msgid "Back to admin interface"
 msgstr "Voltar à interface de administração"
 
 #: journalist_templates/admin_add_user.html:23
+#, fuzzy
 msgid "Username can contain spaces"
 msgstr "O nome de usuário pode conter espaços"
 
 #: journalist_templates/admin_add_user.html:24
+#, fuzzy
 msgid "Username is case-sensitive"
 msgstr "O nome de usuário diferencia maiúsculas e minúsculas"
 
@@ -408,6 +413,7 @@ msgstr "A senha de usuário será:"
 
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
+#, fuzzy
 msgid "Is Admin"
 msgstr "É administrador"
 
@@ -436,6 +442,10 @@ msgid ""
 "required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
 "\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Ponto crítico de segurança:</strong> O sistema operacional usado "
+"pelos servidores de SecureDrop não funciona mais. Uma atualização manual é "
+"urgentemente necessária para garantir a segurança - <a href=\"//securedrop."
+"org/xenial-upgrade\" rel=\"noreferrer\">Saiba mais</a>"
 
 #: journalist_templates/base.html:33
 msgid "Logged on as"
