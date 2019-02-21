@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-02-21 14:28+0000\n"
-"Last-Translator: Volkan <volkangezer@gmail.com>\n"
+"Last-Translator: Kaya Zeren <kayazeren@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
 "Language: tr\n"
@@ -652,7 +652,7 @@ msgstr "GÜNCELLE"
 
 #: journalist_templates/edit_account.html:22
 msgid "Edit your account"
-msgstr "Hesabını düzenle"
+msgstr "Hesabınızı düzenleyin"
 
 #: journalist_templates/edit_account.html:25
 msgid "Reset Password"
@@ -674,23 +674,23 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:34
 msgid "Please enter your current password and two-factor code."
-msgstr "Lütfen mevcut parolanızı ve iki aşamalı doğrulama kodunu girin."
+msgstr "Lütfen geçerli parolanızı ve iki aşamalı kimlik doğrulama kodunu yazın."
 
 #: journalist_templates/edit_account.html:40
 msgid "Current Password"
-msgstr "Mevcut Parola"
+msgstr "Geçerli Parola"
 
 #: journalist_templates/edit_account.html:41 journalist_templates/login.html:11
 msgid "Two-factor Code"
-msgstr "İki Aşamalı Doğrulama Kodu"
+msgstr "İki Aşamalı Kimlik Doğrulama Kodu"
 
 #: journalist_templates/edit_account.html:46
 msgid "The user's password will be changed to:"
-msgstr "Kullanıcının parolası şu şekilde değiştirilecektir:"
+msgstr "Kullanıcının parolası şu şekilde değiştirilecek:"
 
 #: journalist_templates/edit_account.html:48
 msgid "Your password will be changed to:"
-msgstr "Parolanız şu şekilde değiştirilecektir:"
+msgstr "Parolanız şu şekilde değiştirilecek:"
 
 #: journalist_templates/edit_account.html:53
 msgid "RESET PASSWORD"
@@ -698,7 +698,7 @@ msgstr "PAROLAYI SIFIRLA"
 
 #: journalist_templates/edit_account.html:58
 msgid "Reset Two-Factor Authentication"
-msgstr "İki Aşamalı Doğrulamayı Sıfırla"
+msgstr "İki Aşamalı Kimlik Doğrulamayı Sıfırla"
 
 #: journalist_templates/edit_account.html:61
 msgid ""
@@ -707,11 +707,11 @@ msgid ""
 "is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
-"Bir kullanıcının iki aşamalı doğrulama bilgileri kaybolduysa veya ele "
-"geçirildiyse, buradan sıfırlayabilirsiniz. <em>Bunu yaparsanız, kullanıcının "
-"mevcut olduğundan ve aygıtlarını yeni iki aşamalı doğrulama bilgileriyle "
-"ayarlayacağından emin olun. Aksi durumda hesaplarına erişimleri mümkün "
-"olmayacaktır."
+"Bir kullanıcının iki aşamalı kimlik doğrulama bilgileri kaybolursa ya da ele "
+"geçirilirse buradan sıfırlayabilirsiniz. <em>Bu işlemi yaparsanız, "
+"kullanıcının var olduğundan ve aygıtlarını yeni iki aşamalı kimlik doğrulama "
+"bilgilerine göre ayarlayabileceğinden emin olun. Yoksa kullanıcılar "
+"hesaplarına erişemez."
 
 #: journalist_templates/edit_account.html:63
 msgid ""
@@ -720,28 +720,27 @@ msgid ""
 "this, make sure you are ready to set up your new device, otherwise you will "
 "be locked out of your account.</em>"
 msgstr ""
-"Bir kullanıcının iki aşamalı doğrulama bilgileri kaybolduysa veya ele "
-"geçirildiyse, buradan sıfırlayabilirsiniz. <em>Bunu yaparsanız, kullanıcının "
-"mevcut olduğundan ve aygıtlarını yeni iki aşamalı doğrulama bilgileriyle "
-"ayarlayacağından emin olun. Aksi durumda hesaplarına erişimleri mümkün "
-"olmayacaktır.</em>"
+"İki aşamalı kimlik doğrulama bilgileriniz kaybolursa ya da ele geçirilirse "
+"ya da yeni bir aygıt edindiyseniz bilgilerinizi buradan sıfırlayabilirsiniz. "
+"<em>Bu işlemi yaparsanız, yeni aygıtınızı ayarladığından emin olun. Yoksa "
+"hesabınıza erişemezsiniz."
 
 #: journalist_templates/edit_account.html:65
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the Yubikey, choose the second."
 msgstr ""
-"FreeOTP gibi mobil uygulamalar için iki aşamalı doğrulamayı sıfırlamak "
-"amacıyla ilk seçeneği, YubiKey gibi donanımsal çözümler için ikinci seçeneği "
-"seçin."
+"FreeOTP gibi mobil uygulamalar için iki aşamalı kimlik doğrulamayı "
+"sıfırlamak amacıyla ilk seçeneği, YubiKey gibi donanımsal çözümler için "
+"ikinci seçeneği seçin."
 
 #: journalist_templates/edit_account.html:90
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
-msgstr "İKİ AŞAMALI DOĞRULAMAYI SIFIRLA (UYGULAMA)"
+msgstr "İKİ AŞAMALI KİMLİK DOĞRULAMAYI SIFIRLA (UYGULAMA)"
 
 #: journalist_templates/edit_account.html:92
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
-msgstr "İKİ AŞAMALI DOĞRULAMAYI SIFIRLA (DONANIM KODU)"
+msgstr "İKİ AŞAMALI KİMLİK DOĞRULAMAYI SIFIRLA (DONANIM KODU)"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -754,10 +753,10 @@ msgid ""
 "appear under their collection of documents. You can use this box to write "
 "encrypted replies to them."
 msgstr ""
-"SecureDrop bu kaynak için bir sonraki oturum açmasında kullanması için bir "
-"güvenli şifreleme anahtarı üretecektir. Anahtar üretildikten sonra, kaynağın "
-"belgelerinin derlemesi altında bir yanıt kutusu çıkacaktır. Bu kutuya onlara "
-"şifrelenmiş yanıtlar atmak üzere kullanabilirsiniz."
+"SecureDrop bu kaynak için bir sonraki oturum açmasında kullanacağı güvenli "
+"bir şifreleme anahtarı üretecek. Anahtar üretildikten sonra, kaynağın "
+"belgelerinin derlemesi altında bir yanıt kutusu görüntülenir. Bu kutuyu "
+"kullanarak kaynağa şifrelenmiş yanıtlar gönderebilirsiniz."
 
 #: journalist_templates/flag.html:10
 msgid "Continue to the list of documents for {codename}..."
@@ -781,7 +780,7 @@ msgstr "İşaretle"
 
 #: journalist_templates/index.html:14
 msgid "Un-star"
-msgstr "İşaretini Kaldır"
+msgstr "İşareti Kaldır"
 
 #: journalist_templates/index.html:47
 msgid "Are you sure you want to delete the selected collections?"
@@ -789,7 +788,7 @@ msgstr "Seçili derlemeleri silmek istediğinize emin misiniz?"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
-msgstr "Hiçbir belge gönderilmedi!"
+msgstr "Herhangi bir belge gönderilmedi!"
 
 #: journalist_templates/js-strings.html:3
 msgid "filter by codename"
@@ -815,8 +814,8 @@ msgstr "{username} kullanıcısını silmek istediğinize emin misiniz?"
 msgid ""
 "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr ""
-"{username} kullanıcısının iki aşamalı doğrulamasını sıfırlamak istediğinize "
-"emin misiniz?"
+"{username} kullanıcısının iki aşamalı kimlik doğrulamasını sıfırlamak "
+"istediğinize emin misiniz?"
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
@@ -837,8 +836,8 @@ msgid ""
 "\"{url}\">Why is this dangerous?</a>"
 msgstr ""
 "<strong>UYARI:&nbsp;</strong> Tor2Web kullanıyor gibi gözüküyorsunuz. Bu "
-"anonimlik <strong>&nbsp;sağlamaz&nbsp;</strong>. <a href=\"{url}\">Bu neden "
-"tehlikeli?</a>"
+"size anonimlik <strong>&nbsp;sağlamaz&nbsp;</strong>. <a href=\"{url}\">"
+"Neden tehlikeli olduğunu öğrenin?</a>"
 
 #: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
