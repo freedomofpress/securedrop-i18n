@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-02-21 17:11+0000\n"
-"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
+"PO-Revision-Date: 2019-02-22 10:31+0000\n"
+"Last-Translator: EBonsi <webmaster@beart.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -74,8 +74,7 @@ msgstr "Usuário '{user}' apagado"
 
 #: journalist_app/admin.py:234
 msgid "Test alert sent. Please check your email."
-msgstr ""
-"O alerta de teste foi enviado. Por favor, verifique a sua caixa de e-mails."
+msgstr "Teste de alerta enviado. Por favor, verifique seu e-mail."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -918,6 +917,8 @@ msgstr ""
 #: source_templates/disable-noscript-xss.html:3
 msgid "Turn off NoScript's cross-site request sanitization setting"
 msgstr ""
+"Desativar o No-Script entre sites na requisição de configuração de "
+"sanitização"
 
 #: source_templates/disable-noscript-xss.html:5
 msgid ""
@@ -926,6 +927,11 @@ msgid ""
 "is turned on. It is safe to turn off this feature while your Security Slider "
 "is set to \"Safest\". Here's how:"
 msgstr ""
+"Devido a um problema no navegador (<a href=\"{url}\">mais detalhes</a>), os "
+"uploads atualmente não funcionam de maneira confiável no Navegador Tor, "
+"quando a requisição de sanitização entre sites está ativada. Você pode "
+"desativar esse recurso enquanto o seu Slider de Segurança estiver definido "
+"como \"Mais Seguro\". Veja como:"
 
 #: source_templates/disable-noscript-xss.html:7
 msgid ""
@@ -933,59 +939,74 @@ msgid ""
 "\"inline\" src=\"{noscript_plain_icon_url}\"> or <img class=\"inline\" src="
 "\"{noscript_icon_url}\">. This is the NoScript button."
 msgstr ""
+"Você deve encontrar um ícone azul \"S\" na barra de ferramentas do navegador "
+"Tor: <img class=\"inline\" src=\"{noscript_plain_icon_url}\"> ou <img class="
+"\"inline\" src=\"{noscript_icon_url}\">. Este é o botão No-Script."
 
 #: source_templates/disable-noscript-xss.html:11
 msgid "1. Click on the NoScript button."
-msgstr ""
+msgstr "1. Clique no botão No-Script."
 
 #: source_templates/disable-noscript-xss.html:12
 msgid "The NoScript pane should appear. It looks like this:"
-msgstr ""
+msgstr "O painel No-Script deve aparecer. Se parece com isso:"
 
 #: source_templates/disable-noscript-xss.html:18
 msgid ""
 "2. In the NoScript pane, click on the Settings icon: <img class=\"inline\" "
 "src=\"{url}\">"
 msgstr ""
+"2. No painel No-Script, clique no ícone Configurações: <img class=\"inline\" "
+"src=\"{url}\">"
 
 #: source_templates/disable-noscript-xss.html:20
 msgid ""
 "The settings page should appear in a new browser tab. It looks like this:"
 msgstr ""
+"A página de configurações deve aparecer em uma nova aba do navegador. Se "
+"parece com isso:"
 
 #: source_templates/disable-noscript-xss.html:26
 msgid "3. Click the \"Advanced\" tab."
-msgstr ""
+msgstr "3. Clique na aba \"Avançado\"."
 
 #: source_templates/disable-noscript-xss.html:28
 msgid "The advanced settings tab should come into view. It looks like this:"
-msgstr ""
+msgstr "A aba de configurações avançadas deve aparecer. Se parece com isso:"
 
 #: source_templates/disable-noscript-xss.html:34
 msgid "4. Un-check \"Sanitize cross-site suspicious requests\"."
-msgstr ""
+msgstr "4. Desmarque a opção \"Sanitize solicitações suspeitas entre sites\"."
 
 #: source_templates/disable-noscript-xss.html:36
 msgid ""
 "Due to a browser issue, this is required for uploads to work reliably. As "
 "soon as the browser issue is resolved, we will remove this recommendation."
 msgstr ""
+"Devido a um problema no navegador, isso é necessário para que os envios "
+"funcionem de maneira confiável. Assim que o problema do navegador for "
+"resolvido, removeremos essa recomendação."
 
 #: source_templates/disable-noscript-xss.html:40
 msgid ""
 "5. Close the <i>NoScript Settings</i> browser tab and return to the "
 "SecureDrop tab."
 msgstr ""
+"5. Fechar o <i>NoScript Settings</i> na aba do navegador e retorne à aba do "
+"SecureDrop."
 
 #: source_templates/disable-noscript-xss.html:42
 msgid ""
 "You can now upload your files. Please keep in mind that each file requires "
 "its own submission."
 msgstr ""
+"Agora você pode fazer o upload de seus arquivos. Por favor, tenha em mente "
+"que cada arquivo requer o seu próprio envio."
 
 #: source_templates/disable-noscript-xss.html:46
 msgid "6. Re-check \"Sanitize cross-site suspicious requests\"."
 msgstr ""
+"6. Verificar novamente a \"Requisição suspeita de sanitização entre sites\"."
 
 #: source_templates/disable-noscript-xss.html:48
 msgid ""
@@ -993,6 +1014,10 @@ msgid ""
 "effect while your Security Slider is set to \"Safest\", but we recommend "
 "enabling it during normal Tor usage."
 msgstr ""
+"Repetir as etapas de 1 a 3 acima e verifique novamente a configuração. A "
+"configuração não tem efeito quando o Slider de Segurança estiver definido "
+"como \"Mais Seguro\", mas nós recomendamos ativá-lo durante o uso normal do "
+"Tor."
 
 #: source_templates/error.html:3
 msgid "Server error"
