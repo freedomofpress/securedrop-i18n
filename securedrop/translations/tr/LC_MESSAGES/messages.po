@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-02-21 14:22+0000\n"
+"PO-Revision-Date: 2019-02-21 14:26+0000\n"
 "Last-Translator: Kaya Zeren <kayazeren@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
@@ -134,7 +134,7 @@ msgstr "Silinecek bir derleme seçilmemiş."
 
 #: journalist_app/main.py:179
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
-msgstr "'{original_name}' kaynağının ismi '{new_name}' şeklinde değiştirildi"
+msgstr "'{original_name}' kaynağının adı '{new_name}' olarak değiştirildi"
 
 #: journalist_app/main.py:194
 msgid "No unread submissions for this source."
@@ -146,30 +146,32 @@ msgstr "Hesap güncellendi."
 
 #: journalist_app/utils.py:86
 msgid "Login failed."
-msgstr "Giriş başarısız."
+msgstr "Oturum açılamadı."
 
 #: journalist_app/utils.py:94
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
-msgstr[0] "Lütfen tekrar giriş yapmadan önce {seconds} saniye bekleyin."
-msgstr[1] "Lütfen tekrar giriş yapmadan önce {seconds} saniye bekleyin."
+msgstr[0] "Lütfen yeniden oturum açmayı denemeden önce {seconds} saniye bekleyin."
+msgstr[1] "Lütfen yeniden oturum açmayı denemeden önce {seconds} saniye bekleyin."
 
 #: journalist_app/utils.py:105
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
 msgstr ""
-"Yeniden denemeden önce lütfen yeni bir iki aşamalı doğrulama kodundan veya "
-"uygulamadan kodun gelmesini bekleyin."
+"Yeniden denemeden önce lütfen iki aşamalı kimlik doğrulaması kodu ya da "
+"uygulamasından yeni bir kod gelmesini bekleyin."
 
 #: journalist_app/utils.py:126
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
-msgstr "Hatalı gizli biçim: lütfen A-F harflerini ve 0-9 rakamlarını kullanın."
+msgstr ""
+"Gizli biçim hatalı: lütfen A-F arasındaki harfleri ve 0-9 arasındaki "
+"rakamları kullanın."
 
 #: journalist_app/utils.py:132
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
-"Hatalı gizli biçim: tek uzunlukta gizli kod. Gizli kodu yanlış mı girdiniz?"
+"Gizli biçim hatalı: Gizli kod tek uzunlukta. Gizli kodu yanlış mı yazdınız?"
 
 #: journalist_app/utils.py:188
 msgid "Submission deleted."
@@ -185,7 +187,7 @@ msgstr[1] "{num} derleme silindi"
 
 #: journalist_app/utils.py:279
 msgid "You submitted a bad password! Password not changed."
-msgstr "Kötü bir parola seçtiniz! Parola değiştirilmedi."
+msgstr "Yazdığınız parola kötü! Parola değiştirilmedi."
 
 #: journalist_app/utils.py:286
 msgid ""
@@ -193,9 +195,8 @@ msgid ""
 "correctly. To prevent you from getting locked out of your account, you "
 "should reset your password again."
 msgstr ""
-"Bir hata oluştu, yeni parola doğru bir şekilde kaydedilmemiş olabilir. "
-"Hesabınızı kullanmaya devam edebilmeniz için parolayı yeniden sıfırlamanız "
-"gerekmektedir."
+"Bir sorun çıktı. Yeni parola doğru olarak kaydedilmemiş olabilir. Hesabınızı "
+"kullanmaya devam edebilmeniz için parolayı yeniden sıfırlamanız gerekli."
 
 #: journalist_app/utils.py:295
 msgid ""
@@ -207,7 +208,7 @@ msgstr ""
 
 #: journalist_app/utils.py:312
 msgid "No unread submissions in selected collections."
-msgstr "Seçilen derlemelerde okunmamış gönderi yok."
+msgstr "Seçilmiş derlemelerde okunmamış bir gönderi yok."
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
@@ -227,8 +228,8 @@ msgstr[1] "{doc_num} belge"
 #: journalist_templates/_source_row.html:24
 msgid "1 message"
 msgid_plural "{msg_num} messages"
-msgstr[0] "1 İleti"
-msgstr[1] "{msg_num} İleti"
+msgstr[0] "1 ileti"
+msgstr[1] "{msg_num} ileti"
 
 #: journalist_templates/_source_row.html:27
 msgid "1 unread"
@@ -256,7 +257,7 @@ msgstr "DEVAM"
 #: journalist_templates/account_new_two_factor.html:4
 #: journalist_templates/admin_new_user_two_factor.html:5
 msgid "Enable FreeOTP"
-msgstr "FreeOTP'yi Etkinleştirin"
+msgstr "FreeOTP Etkinleştirilsin"
 
 #: journalist_templates/account_new_two_factor.html:5
 msgid ""
@@ -265,11 +266,11 @@ msgid ""
 "for your account in the app, enter one of the 6-digit codes from the app to "
 "confirm that two factor authentication is set up correctly."
 msgstr ""
-"Neredeyse işlem tamam! İki aşamalı doğrulamayı sıfırlamayı tamamlamak üzere "
-"FreeOTP kurmak için gerekli olan aşağıdaki adımları izlemeniz gerekiyor. "
-"Hesabınıza ilişkin bilgiyi uygulamaya girdikten sonra, uygulamada "
-"ürettiğiniz 6 rakamlı kodlardan birini girerek iki aşamalı doğrulamanın "
-"düzgün bir şekilde kurulduğunu doğrulayın."
+"İşlem neredeyse bitti! İki aşamalı kimlik doğrulamasını sıfırlamak üzere "
+"FreeOTP kurulumu için aşağıdaki adımları izlemeniz gerekli. Uygulamaya hesap "
+"bilgilerinizi yazdıktan sonra, uygulamada ürettiğiniz 6 rakamlı kodlardan "
+"birini yazarak iki aşamalı doğrulamanın düzgün bir şekilde kurulduğunu "
+"doğrulayın."
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
@@ -292,29 +293,29 @@ msgid ""
 "Your phone will now be in \"scanning\" mode. When you are in this mode, scan "
 "the barcode below:"
 msgstr ""
-"Telefonunuz şimdi \"tarama\" moduna geçecek. Bu modtayken aşağıdaki barkodu "
+"Telefonunuz \"tarama\" kipine geçecek. Bu kipte iken aşağıdaki barkodu "
 "telefonunuza taratın:"
 
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
 msgid "Can't scan the barcode? Enter the following code manually:"
-msgstr "Barkod taratmakta bir sıkıntı mı var? O zaman şu kodu elle girin:"
+msgstr "Barkod taramada sorun mu yaşıyorsunuz? O zaman şu kodu el ile yazın:"
 
 #: journalist_templates/account_new_two_factor.html:15
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid "Once you have scanned the barcode, enter the 6-digit code below:"
-msgstr "Barkodu taratır taratmaz, aşağıdaki 6 haneli kodu girin:"
+msgstr "Barkodu taratır taratmaz, aşağıdaki 6 haneli kodu yazın:"
 
 #: journalist_templates/account_new_two_factor.html:17
 #: journalist_templates/admin_new_user_two_factor.html:20
 msgid "Enable YubiKey (OATH-HOTP)"
-msgstr "YubiKey (OATH-HOTP) Etkinleştirin"
+msgstr "YubiKey (OATH-HOTP) Etkinleştirilsin"
 
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:21
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr ""
-"YubiKey yapılandırmasını tamamladığınızda, aşağıdaki 6 haneli kodu girin:"
+"YubiKey yapılandırmasını tamamladığınızda, aşağıdaki 6 haneli kodu yazın:"
 
 #: journalist_templates/account_new_two_factor.html:22
 #: journalist_templates/admin_new_user_two_factor.html:25
@@ -358,7 +359,7 @@ msgstr "Oluşturulma"
 
 #: journalist_templates/admin.html:20
 msgid "Last login"
-msgstr "Son giriş"
+msgstr "Son oturum açma"
 
 #: journalist_templates/admin.html:25
 msgid "Edit user {username}"
@@ -374,7 +375,7 @@ msgstr "hiçbir zaman"
 
 #: journalist_templates/admin.html:42
 msgid "No users to display"
-msgstr "Gösterilecek kullanıcı yok"
+msgstr "Görüntülenecek bir kullanıcı yok"
 
 #: journalist_templates/admin.html:48
 msgid "INSTANCE CONFIG"
@@ -414,11 +415,12 @@ msgid ""
 "the 6-digit codes from the app to confirm that two factor authentication is "
 "set up correctly."
 msgstr ""
-"Neredeyse bitti! Bu yeni kullanıcıyı eklemeyi tamamlamak için, kullanıcıdan "
-"aşağıdaki adımları izleyerek FreeOTP ile iki aşamalı doğrulamayı kurmasını "
-"isteyin. Uygulamada bu hesap için bir girdi eklediklerinde, uygulamanın "
-"ürettiği 6 haneli kodlardan birini girmelerini isteyin ve iki aşamalı "
-"doğrulamanın doğru bir şekilde kurulduğunu doğrulayın."
+"Neredeyse bitti! Yeni kullanıcıyı eklemeyi tamamlamak için, kullanıcıdan "
+"aşağıdaki adımları izlemesini ve FreeOTP ile iki aşamalı kimlik "
+"doğrulamasını kurmasını isteyin. Uygulamaya bu hesap için bir kayıt "
+"eklendiğinde, uygulamanın ürettiği 6 haneli kodlardan birini yazmalarını "
+"isteyin ve iki aşamalı kimlik doğrulamasının doğru bir şekilde kurulduğunu "
+"doğrulayın."
 
 #: journalist_templates/base.html:28
 msgid ""
@@ -434,7 +436,7 @@ msgstr ""
 
 #: journalist_templates/base.html:33
 msgid "Logged on as"
-msgstr "Giriş yapan"
+msgstr "Oturum açan"
 
 #: journalist_templates/base.html:35
 msgid "Admin"
@@ -458,7 +460,7 @@ msgstr "Gücünü <em>SecureDrop {version}</em> tarafından almaktadır."
 
 #: journalist_templates/col.html:10
 msgid "All Sources"
-msgstr "Bütün Kaynaklar"
+msgstr "Tüm Kaynaklar"
 
 #: journalist_templates/col.html:13
 msgid ""
@@ -466,8 +468,8 @@ msgid ""
 "the first random codename is difficult to say or remember. You can generate "
 "new random codenames as many times as you like."
 msgstr ""
-"Bu kaynak için yeni rastgele bir kod adı oluştur. Bunu sadece ilk rastgele "
-"kod adının söylemesi veya hatırlaması zor ise yapmanızı öneririz. "
+"Bu kaynak için yeni bir rastgele kod adı üretin. Bu işlemi yalnız ilk "
+"rastgele kod adının söylenmesi ya da anımsanması zor ise yapmanızı öneririz. "
 "İstediğiniz kadar kod adı oluşturabilirsiniz."
 
 #: journalist_templates/col.html:13
@@ -492,11 +494,11 @@ msgstr ""
 
 #: journalist_templates/col.html:26
 msgid "Download Selected"
-msgstr "Seçiliyi İndir"
+msgstr "Seçilmişleri İndir"
 
 #: journalist_templates/col.html:28
 msgid "Delete Selected"
-msgstr "Seçiliyi Sil"
+msgstr "Seçilmişleri Sil"
 
 #: journalist_templates/col.html:38 journalist_templates/col.html:58
 #: journalist_templates/col.html:91
@@ -530,7 +532,7 @@ msgstr "Seçili belgeleri silmek istediğinize emin misiniz?"
 
 #: journalist_templates/col.html:86
 msgid "No documents to display."
-msgstr "Gösterilecek belge yok."
+msgstr "Görüntülenecek bir belge yok."
 
 #: journalist_templates/col.html:93
 msgid ""
@@ -539,15 +541,15 @@ msgstr "Bu belgeleri gönderen kişiye güvenli bir yanıt yazabilirsiniz:"
 
 #: journalist_templates/col.html:102
 msgid "You've flagged this source for reply."
-msgstr "Bu kaynağı yanıt amacıyla işaretlediniz."
+msgstr "Bu kaynağı yanıtlamak amacıyla işaretlediniz."
 
 #: journalist_templates/col.html:103
 msgid ""
 "An encryption key will be generated for the source the next time they log "
 "in, after which you will be able to reply to the source here."
 msgstr ""
-"Bu kaynağın bir sonraki oturum açmasıyla bir şifreleme anahtarı "
-"oluşturulacaktır, daha sonra kaynağa buradan yanıt yazabileceksiniz."
+"Bu kaynağın bir sonraki oturum açışında bir şifreleme anahtarı üretilecek. "
+"Ardından kaynağa buradan yanıt yazabilirsiniz."
 
 #: journalist_templates/col.html:105
 msgid "Click below if you would like to write a reply to this source."
@@ -555,7 +557,7 @@ msgstr "Bu kaynağa bir yanıt yazmak istiyorsanız aşağıya tıklayın."
 
 #: journalist_templates/col.html:109
 msgid "FLAG THIS SOURCE FOR REPLY"
-msgstr "BU KAYNAĞI YANIT AMACIYLA İŞARETLEYİN"
+msgstr "BU KAYNAĞI YANITLAMAK İÇİN İŞARETLEYİN"
 
 #: journalist_templates/col.html:114
 msgid ""
@@ -563,9 +565,9 @@ msgid ""
 "the files seen here will be unrecoverable and the source will no longer be "
 "able to login using their previous codename.</em>"
 msgstr ""
-"Bu kaynağın derlemesini silmek için aşağıya tıklayın. <em>Uyarı: Bunu "
-"yaptığınuzda, burada görülen dosyalar kurtarılamayacak ve kaynak önceki kod "
-"adıyla tekrar oturum açamayacaktır.</em>"
+"Bu kaynağın derlemesini silmek için aşağıya tıklayın. <em>Uyarı: Bu işlemi "
+"yaptığınızda, burada görülen dosyalar geri alınamaz ve kaynak önceki kod "
+"adıyla oturum açamaz.</em>"
 
 #: journalist_templates/col.html:121
 msgid "DELETE SOURCE AND SUBMISSIONS"
@@ -586,26 +588,27 @@ msgstr "Uyarılar"
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr ""
-"OSSEC'in düzgün bir şekilde çalıştığını doğrulamak için bir şifreli uyarı e-"
-"postası gönderin:"
+"OSSEC uygulamasının düzgün bir şekilde çalıştığını doğrulamak için bir "
+"şifreli uyarı e-postası gönderin:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
-msgstr "OSSEC UYARI GÖNDERME TESTİ"
+msgstr "OSSEC UYARI GÖNDERME DENEMESİ"
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
-msgstr "Logo Resmi"
+msgstr "Logo Görseli"
 
 #: journalist_templates/config.html:23
 msgid ""
 "Here you can update the image displayed on the SecureDrop web interfaces:"
 msgstr ""
-"SecureDrop web arayüzlerinde görüntülenen resmi buradan güncelleyebilirsiniz:"
+"SecureDrop web arayüzünde görüntülenecek görseli buradan "
+"güncelleyebilirsiniz:"
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
-msgstr "Önerilen boyut: 500px * 450px"
+msgstr "Önerilen boyut: 500 piksel X 450 piksel"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
@@ -618,10 +621,10 @@ msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
 msgstr[0] ""
-"Aşağıdaki dosya <strong>kalıcı bir şekilde silinmek</strong> üzere seçildi:"
+"Aşağıdaki dosya <strong>kalıcı bir şekilde silinmek</strong> üzere seçilmiş:"
 msgstr[1] ""
 "Aşağıdaki {files} dosya <strong>kalıcı bir şekilde silinmek</strong> üzere "
-"seçildiler:"
+"seçilmiş:"
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
@@ -637,7 +640,7 @@ msgstr "\"{user}\" kullanıcısını düzenle"
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Username &amp; Admin Status"
-msgstr "Kullanıcı Adını &amp; Yönetici Durumunu değiştir"
+msgstr "Kullanıcı Adını ve Yönetici Durumunu değiştir"
 
 #: journalist_templates/edit_account.html:12
 msgid "Change username"
