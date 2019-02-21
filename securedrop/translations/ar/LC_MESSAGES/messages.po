@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2018-12-05 08:18+0000\n"
-"Last-Translator: ramyraoof <ramy.raoof@gmail.com>\n"
+"PO-Revision-Date: 2019-02-21 17:11+0000\n"
+"Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ar/>\n"
 "Language: ar\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 2.20\n"
+"X-Generator: Weblate 3.4\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -85,8 +85,6 @@ msgid "No collections selected."
 msgstr "لم يتم اختيار أي مجموعة."
 
 #: journalist_app/decorators.py:15
-#, fuzzy
-#| msgid "Only administrators can access this page."
 msgid "Only admins can access this page."
 msgstr "النّفاذ إلى هذه الصفحة متاح للإداريين وحدهم."
 
