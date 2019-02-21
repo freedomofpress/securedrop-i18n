@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-02-21 14:21+0000\n"
-"Last-Translator: Kaya Zeren <kayazeren@gmail.com>\n"
+"PO-Revision-Date: 2019-02-21 14:22+0000\n"
+"Last-Translator: Volkan <volkangezer@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
 "Language: tr\n"
@@ -72,7 +72,7 @@ msgstr "'{user}' kullanıcısı silindi"
 
 #: journalist_app/admin.py:234
 msgid "Test alert sent. Please check your email."
-msgstr "Deneme bildirimi gönderildi. Lütfen e-postanızı denetleyin."
+msgstr "Deneme uyarısı gönderildi. Lütfen e-postanızı denetleyin."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
