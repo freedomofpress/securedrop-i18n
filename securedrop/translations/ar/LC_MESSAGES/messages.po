@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2019-02-21 17:11+0000\n"
-"Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
+"Last-Translator: Ahmed Essam <ahmedessamdev@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ar/>\n"
 "Language: ar\n"
@@ -421,10 +421,8 @@ msgstr "كلمة سر المستخدم:"
 
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
-#, fuzzy
-#| msgid "Admin"
 msgid "Is Admin"
-msgstr "الإدارة"
+msgstr "من الإدارة"
 
 #: journalist_templates/admin_add_user.html:39
 msgid "Is using a YubiKey [HOTP]"
@@ -450,6 +448,10 @@ msgid ""
 "required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
 "\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>تنبيه أمنى حرج</strong>نظام التشغيل المستخدم فى خوادم SecureDrop "
+"الخاصة بك قد وصلت الى نهاية مدة الخدمة. التحديث الغير تلقائى العاجل ضرورى "
+"للبقاء آمنا - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">"
+"لمعرفة المزيد</a>"
 
 #: journalist_templates/base.html:33
 msgid "Logged on as"
