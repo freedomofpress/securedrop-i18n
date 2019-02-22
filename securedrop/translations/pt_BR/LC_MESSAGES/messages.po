@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-02-22 10:31+0000\n"
-"Last-Translator: EBonsi <webmaster@beart.com>\n"
+"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -56,7 +56,6 @@ msgid "Username \"{user}\" already taken."
 msgstr "O nome de usuário \"{user}\" já está em uso."
 
 #: journalist_app/admin.py:85
-#, fuzzy
 msgid ""
 "An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
@@ -85,7 +84,6 @@ msgid "No collections selected."
 msgstr "Nenhuma coleção selecionada."
 
 #: journalist_app/decorators.py:15
-#, fuzzy
 msgid "Only admins can access this page."
 msgstr "Apenas administradores podem acessar esta página."
 
@@ -118,7 +116,6 @@ msgstr "Você pode carregar somente documentos de imagem PNG."
 
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
-#, fuzzy
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Ocorreu um erro inesperado! Por favor, informe o administrador."
 
@@ -397,12 +394,10 @@ msgid "Back to admin interface"
 msgstr "Voltar à interface de administração"
 
 #: journalist_templates/admin_add_user.html:23
-#, fuzzy
 msgid "Username can contain spaces"
 msgstr "O nome de usuário pode conter espaços"
 
 #: journalist_templates/admin_add_user.html:24
-#, fuzzy
 msgid "Username is case-sensitive"
 msgstr "O nome de usuário diferencia maiúsculas e minúsculas"
 
@@ -412,7 +407,6 @@ msgstr "A senha de usuário será:"
 
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
-#, fuzzy
 msgid "Is Admin"
 msgstr "É administrador"
 
@@ -1191,19 +1185,14 @@ msgid "Important!"
 msgstr "Importante!"
 
 #: source_templates/logout_flashed_message.html:5
-#, fuzzy
-#| msgid ""
-#| "Thank you for exiting your session! Please select \"New Identity\" from "
-#| "the green onion button in the Tor browser to clear all history of your "
-#| "SecureDrop usage from this device."
 msgid ""
 "Thank you for exiting your session! Please select \"New Identity\" from the "
 "onion button in the Tor browser's toolbar to clear all history of your "
 "SecureDrop usage from this device."
 msgstr ""
-"Sessão encerrada. Agora clique no ícone da cebola verde no seu navegador Tor "
-"e selecione \"Nova Identidade\" para limpar seu histórico de uso do "
-"SecureDrop neste dispositivo."
+"Sessão encerrada. Agora clique no ícone da cebola na barra de ferramentas do "
+"seu navegador Tor e selecione \"Nova Identidade\" para limpar seu histórico "
+"de uso do SecureDrop neste aparelho."
 
 #: source_templates/lookup.html:11
 msgid "Whew, it’s you! Now, the embarrassing part..."
@@ -1239,6 +1228,10 @@ msgid ""
 "is <strong>required</strong> for uploads to work. <a href=\"{url}\" class="
 "\"text-link\">Show me how.</a>"
 msgstr ""
+"Antes de começar, desative a solicitação de sanitização de scripts entre "
+"sites no NoScript. Isto é <strong>1necessário</strong>2 para que o "
+"carregamento funcione. <a href=\"{url}\" class=\"text-link\">3Mostrar "
+"como.</a>4"
 
 #: source_templates/lookup.html:24
 msgid "You can submit any kind of file, a message, or both."
@@ -1332,13 +1325,6 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Desculpe, não pudemos localizar o conteúdo que você pediu."
 
 #: source_templates/session_timeout.html:6
-#, fuzzy
-#| msgid ""
-#| "Your session timed out due to inactivity. Please login again if you want "
-#| "to continue using SecureDrop, or select \"New Identity\" from the green "
-#| "onion button in the Tor browser to clear all history of your SecureDrop "
-#| "usage from this device. If you are not using Tor Browser, restart your "
-#| "browser."
 msgid ""
 "Your session timed out due to inactivity. Please login again if you want to "
 "continue using SecureDrop, or select \"New Identity\" from the onion button "
@@ -1346,10 +1332,10 @@ msgid ""
 "from this device. If you are not using Tor Browser, restart your browser."
 msgstr ""
 "Sua sessão foi encerrada por inatividade. Por favor, faça login novamente se "
-"quiser continuar usando o SecureDrop, ou clique no ícone da cebola verde do "
-"navegador Tor e selecione \"Nova Identidade\" para limpar o seu histórico de "
-"atividades do SecureDrop neste dispositivo. Se não estiver usando o Tor, "
-"reinicie o navegador."
+"quiser continuar usando o SecureDrop ou clique no ícone da cebola - na barra "
+"de ferramentas do navegador Tor - e selecione \"Nova Identidade\" para "
+"limpar o seu histórico de atividades do SecureDrop neste aparelho. Se não "
+"estiver usando o Tor, reinicie o navegador."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
