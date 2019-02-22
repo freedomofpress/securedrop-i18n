@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-02-22 10:31+0000\n"
-"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
+"PO-Revision-Date: 2019-02-22 10:32+0000\n"
+"Last-Translator: EBonsi <webmaster@beart.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -145,7 +145,7 @@ msgstr "Conta atualizada."
 
 #: journalist_app/utils.py:86
 msgid "Login failed."
-msgstr "Não foi possível fazer login."
+msgstr "Falha na autenticação."
 
 #: journalist_app/utils.py:94
 msgid "Please wait at least {seconds} second before logging in again."
