@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-12-10 17:51+0000\n"
-"Last-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\n"
+"PO-Revision-Date: 2019-02-24 16:13+0000\n"
+"Last-Translator: Adrian <pappasadrian@gmail.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/el/>\n"
 "Language: el\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.20\n"
+"X-Generator: Weblate 3.4\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:14
@@ -438,6 +438,11 @@ msgid ""
 "required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
 "\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Κρίσιμο ζήτημα ασφάλειας:</strong> Το λειτουργικό σύστημα που "
+"χρησιμοποιούν οι σέρβερ του SecureDrop σου έχει φτάσει στο τέλος του κύκλου "
+"ζωής του. Χρειάζεται επειγόντως μια χειροκίνητη αναβάθμιση για να "
+"παραμείνετε ασφαλείς - <a href=\"//securedrop.org/xenial-upgrade\" rel=\""
+"noreferrer\">Μάθετε περισσότερα</a>"
 
 #: journalist_templates/base.html:33
 msgid "Logged on as"
@@ -922,6 +927,7 @@ msgstr ""
 #: source_templates/disable-noscript-xss.html:3
 msgid "Turn off NoScript's cross-site request sanitization setting"
 msgstr ""
+"Απενεργοποιήστε την επιλογή για εκκαθάριση cross-site αιτημάτων του NoScript"
 
 #: source_templates/disable-noscript-xss.html:5
 msgid ""
@@ -930,6 +936,11 @@ msgid ""
 "is turned on. It is safe to turn off this feature while your Security Slider "
 "is set to \"Safest\". Here's how:"
 msgstr ""
+"Λόγω ενός ζητήματος με τον περιηγητή (<a href=\"{url}\">περισσότερες "
+"λεπτομέρειες</a>), το ανέβασμα αρχείων δεν δουλεύει αξιόπιστα στον Tor "
+"Browser όσο είναι ενεργοποιημένη η εκκαθάριση cross-site αιτημάτων. Είναι "
+"ασφαλές να απενεργοποιήσετε αυτή την επιλογή όσο ο slider ασφαλείας είναι "
+"τοποθετημένος στο \"Ασφαλέστατο\". Δείτε πως:"
 
 #: source_templates/disable-noscript-xss.html:7
 msgid ""
@@ -937,59 +948,79 @@ msgid ""
 "\"inline\" src=\"{noscript_plain_icon_url}\"> or <img class=\"inline\" src="
 "\"{noscript_icon_url}\">. This is the NoScript button."
 msgstr ""
+"Πρέπει να βλέπετε ένα μπλέ εικονίδιο με το γράμμα \"S\" στη γραμμή εργαλείων "
+"του Tor Browser: <img class=\"inline\" src=\"{noscript_plain_icon_url}\"> ή <"
+"img class=\"inline\" src=\"{noscript_icon_url}\">. Αυτό είναι το κουμπί του "
+"NoScript."
 
 #: source_templates/disable-noscript-xss.html:11
 msgid "1. Click on the NoScript button."
-msgstr ""
+msgstr "1. Πατήστε το κουμπί του NoScript."
 
 #: source_templates/disable-noscript-xss.html:12
 msgid "The NoScript pane should appear. It looks like this:"
-msgstr ""
+msgstr "Θα πρέπει να εμφανιστεί το παράθυρο του NoScript. Φαίνεται κάπως έτσι:"
 
 #: source_templates/disable-noscript-xss.html:18
 msgid ""
 "2. In the NoScript pane, click on the Settings icon: <img class=\"inline\" "
 "src=\"{url}\">"
 msgstr ""
+"2. Στο παράθυρο του NoScript, πατήστε το εικονίδιο των Ρυθμίσεων: <img class="
+"\"inline\" src=\"{url}\">"
 
 #: source_templates/disable-noscript-xss.html:20
 msgid ""
 "The settings page should appear in a new browser tab. It looks like this:"
 msgstr ""
+"Η σελίδα των ρυθμίσεων θα εμφανιστεί σε μία νέα καρτέλα του περιηγητή. "
+"Φαίνεται κάπως έτσι:"
 
 #: source_templates/disable-noscript-xss.html:26
 msgid "3. Click the \"Advanced\" tab."
-msgstr ""
+msgstr "3. Πατήστε την καρτέλα \"Για προχωρημένους\"."
 
 #: source_templates/disable-noscript-xss.html:28
 msgid "The advanced settings tab should come into view. It looks like this:"
 msgstr ""
+"Η καρτέλα με τις ρυθμίσεις για προχωρημένους χρήστες θα πρέπει να "
+"εμφανιστεί. Μοιάζει κάπως έτσι:"
 
 #: source_templates/disable-noscript-xss.html:34
 msgid "4. Un-check \"Sanitize cross-site suspicious requests\"."
 msgstr ""
+"4. Απεπιλέξτε το \"Να γίνεται εκκαθάριση ύποπτων cross-site αιτημάτων\"."
 
 #: source_templates/disable-noscript-xss.html:36
 msgid ""
 "Due to a browser issue, this is required for uploads to work reliably. As "
 "soon as the browser issue is resolved, we will remove this recommendation."
 msgstr ""
+"Λόγω ενός θέματος με τον περιηγητή, αυτό απαιτείται για την αξιόπιστη "
+"λειτουργία του ανεβάσματος αρχείων. Μόλις επιλυθεί αυτό το θέμα του "
+"περιηγητή. θα αφαιρέσουμε αυτή την οδηγία."
 
 #: source_templates/disable-noscript-xss.html:40
 msgid ""
 "5. Close the <i>NoScript Settings</i> browser tab and return to the "
 "SecureDrop tab."
 msgstr ""
+"5. Κλείστε την καρτέλα <i>Ρυθμίσεις του Noscript</i> και επιστρέψτε στην "
+"καρτέλα του SecureDrop."
 
 #: source_templates/disable-noscript-xss.html:42
 msgid ""
 "You can now upload your files. Please keep in mind that each file requires "
 "its own submission."
 msgstr ""
+"Μπορείτε πλέον να ανεβάσετε τα αρχεία σας. Παρακαλώ έχετε υπόψιν σας ότι το "
+"κάθε αρχείο απαιτεί τη δική του ξεχωριστή καταχώριση."
 
 #: source_templates/disable-noscript-xss.html:46
 msgid "6. Re-check \"Sanitize cross-site suspicious requests\"."
 msgstr ""
+"6. Επανεπιλέξτε την επιλογη \"Να γίνεται εκκαθάριση ύποπτων cross-site "
+"αιτημάτων\"."
 
 #: source_templates/disable-noscript-xss.html:48
 msgid ""
@@ -997,6 +1028,10 @@ msgid ""
 "effect while your Security Slider is set to \"Safest\", but we recommend "
 "enabling it during normal Tor usage."
 msgstr ""
+"Επαναλάβετε τα βήματα 1-3 παραπάνω για να επανεπιλέξετε την ρύθμιση. Αυτή η "
+"ρύθμιση δεν έχει καμία επίπτωση όταν ο Slider ασφαλείας σας είναι ορισμένος "
+"στο \"Ασφαλέστατο\", αλλά προτείνουμε να την ενεργοποιήσετε κατά την "
+"διάρκεια κανονικής χρήσης του Tor."
 
 #: source_templates/error.html:3
 msgid "Server error"
@@ -1180,19 +1215,15 @@ msgid "Important!"
 msgstr "Σημαντικό!"
 
 #: source_templates/logout_flashed_message.html:5
-#, fuzzy
-#| msgid ""
-#| "Thank you for exiting your session! Please select \"New Identity\" from "
-#| "the green onion button in the Tor browser to clear all history of your "
-#| "SecureDrop usage from this device."
 msgid ""
 "Thank you for exiting your session! Please select \"New Identity\" from the "
 "onion button in the Tor browser's toolbar to clear all history of your "
 "SecureDrop usage from this device."
 msgstr ""
 "Ευχαριστούμε που αποσυνδεθήκατε από τη συνεδρία σας. Παρακαλώ επιλέξτε \"Νέα "
-"ταυτότητα\" από το πράσινο εικονίδιο του Tor browser για να εκκαθαρίσετε όλο "
-"το ιστορικό της χρήσης του SecureDrop που κάνατε από αυτή τη συσκευή."
+"ταυτότητα\" από το εικονίδιο με σχήμα κρεμμύδι στην γραμμή εργαλείων του Tor "
+"browser, για να εκκαθαρίσετε όλο το ιστορικό της χρήσης του SecureDrop από "
+"αυτή τη συσκευή."
 
 #: source_templates/lookup.html:11
 msgid "Whew, it’s you! Now, the embarrassing part..."
@@ -1228,6 +1259,10 @@ msgid ""
 "is <strong>required</strong> for uploads to work. <a href=\"{url}\" class="
 "\"text-link\">Show me how.</a>"
 msgstr ""
+"Πρίν ξεκινήσετε, απενεργοποιήστε την επιλογή για εκκαθάριση ύποπτων cross-"
+"site αιτημάτων του NoScript. Αυτό <strong>είναι απαραίτητο</strong> για την "
+"λειτουργία του ανεβάσματος αρχείων. <a href=\"{url}\" class=\"text-link\">"
+"Δείτε πως.</a>"
 
 #: source_templates/lookup.html:24
 msgid "You can submit any kind of file, a message, or both."
