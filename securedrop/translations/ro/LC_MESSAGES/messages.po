@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-02-25 18:00+0000\n"
-"Last-Translator: eduard pintilie <eduard.pintilie@gmail.com>\n"
+"Last-Translator: Jobava <jobaval10n@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
 "Language: ro\n"
@@ -924,6 +924,7 @@ msgstr ""
 #: source_templates/disable-noscript-xss.html:3
 msgid "Turn off NoScript's cross-site request sanitization setting"
 msgstr ""
+"Dezactivează setarea din NoScript pentru „cross-site request sanitization”"
 
 #: source_templates/disable-noscript-xss.html:5
 msgid ""
@@ -981,7 +982,7 @@ msgstr "Va fi afișată eticheta cu setările avansate. Arată astfel:"
 
 #: source_templates/disable-noscript-xss.html:34
 msgid "4. Un-check \"Sanitize cross-site suspicious requests\"."
-msgstr ""
+msgstr "4. Debifează „Sanitize cross-site suspicious requests”."
 
 #: source_templates/disable-noscript-xss.html:36
 msgid ""
@@ -1010,7 +1011,7 @@ msgstr ""
 
 #: source_templates/disable-noscript-xss.html:46
 msgid "6. Re-check \"Sanitize cross-site suspicious requests\"."
-msgstr ""
+msgstr "6. Reverifică „Sanitize cross-site suspicious requests”."
 
 #: source_templates/disable-noscript-xss.html:48
 msgid ""
