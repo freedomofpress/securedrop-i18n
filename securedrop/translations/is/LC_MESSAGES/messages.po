@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.12.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-02-20 17:36+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"PO-Revision-Date: 2019-02-26 17:19+0000\n"
+"Last-Translator: Oktavia <ojonsdottir@irex.org>\n"
 "Language-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/is/>\n"
 "Language: is\n"
@@ -53,7 +53,7 @@ msgstr ""
 
 #: journalist_app/admin.py:82 journalist_app/admin.py:166
 msgid "Username \"{user}\" already taken."
-msgstr "Notandanafnið \"{user}\" er núþegar í notkun."
+msgstr "Notandanafnið \"{user}\" er þegar í notkun."
 
 #: journalist_app/admin.py:85
 msgid ""
@@ -72,11 +72,11 @@ msgstr "Eyddi notandanum '{user}'"
 
 #: journalist_app/admin.py:234
 msgid "Test alert sent. Please check your email."
-msgstr "Sendi prufuaðvörun. Athugaðu með tölvupóstinn þinn."
+msgstr "Sendi prufuviðvörun. Athugaðu tölvupóstinn þinn."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
-msgstr "Safni {source_name} var eytt"
+msgstr "Safninu {source_name} var eytt"
 
 #: journalist_app/col.py:56
 msgid "No collections selected."
@@ -99,7 +99,7 @@ msgstr ""
 
 #: journalist_app/forms.py:35 source_app/forms.py:11
 msgid "This field is required."
-msgstr "Það er nauðsýnlegt að fylla þennan reit út."
+msgstr "Það er nauðsynlegt að fylla þennan reit út."
 
 #: journalist_app/forms.py:52
 msgid "You cannot send an empty reply."
@@ -116,7 +116,7 @@ msgstr "Þú getur einungis hlaðið upp PNG-myndskrár."
 #: journalist_app/main.py:118 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
 msgid "An unexpected error occurred! Please inform your admin."
-msgstr "Óvænt villa kom upp! Hafðu samband við kerfisstjóra."
+msgstr "Óvænt villa kom upp! Hafðu samband við kerfisstjórann þinn."
 
 #: journalist_app/main.py:129
 msgid "Thanks. Your reply has been stored."
@@ -133,11 +133,11 @@ msgstr "Engin söfn valin til eyðingar."
 #: journalist_app/main.py:179
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
 msgstr ""
-"Heimildamaðurinn '{original_name}' hefur verið endurnefndur sem '{new_name}'"
+"Heimildarmaðurinn '{original_name}' hefur verið endurnefndur sem '{new_name}'"
 
 #: journalist_app/main.py:194
 msgid "No unread submissions for this source."
-msgstr "Engar ólesnar innsendingar hjá þessum heimildamanni."
+msgstr "Engar ólesnar innsendingar hjá þessum heimildarmanni."
 
 #: journalist_app/utils.py:55
 msgid "Account updated."
@@ -171,8 +171,8 @@ msgstr ""
 #: journalist_app/utils.py:132
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
-"Ógilt snið leynilykils: skrýtin lengd leynilykils. Slóstu leynilykilinn rétt "
-"inn?"
+"Ógilt snið leynilykils: óvenjuleg lengd leynilykils. Slóstu leynilykilinn "
+"rétt inn?"
 
 #: journalist_app/utils.py:188
 msgid "Submission deleted."
@@ -268,16 +268,16 @@ msgid ""
 "for your account in the app, enter one of the 6-digit codes from the app to "
 "confirm that two factor authentication is set up correctly."
 msgstr ""
-"Þetta er næstum búið! Til að ljúka endursetningu á tvíþátta auðkenningunni, "
-"skaltu fara eftir leiðbeiningunum hér fyrir neðan til að setja upp FreeOTP. "
-"Eftir að þú hefur sett inn færslu með aðgangnum þínum í forritið, settu þá "
-"inn einn af 6-stafa kóðunum úr forritinu til að staðfesta að tvíþátta "
-"auðkenningin sé rétt uppsett."
+"Þetta er næstum því búið! Til að ljúka endursetningu á tvíþátta "
+"auðkenningunni, skaltu fara eftir leiðbeiningunum hér fyrir neðan til að "
+"setja upp FreeOTP. Eftir að þú hefur sett inn færslu með aðgangnum þínum í "
+"forritið, settu þá inn einn af 6-stafa kóðunum úr forritinu til að staðfesta "
+"að tvíþátta auðkenningin sé rétt uppsett."
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
 msgid "Install FreeOTP on your phone"
-msgstr "Settu FreeOTP upp á símanum þínum"
+msgstr "Settu FreeOTP upp á símann þinn"
 
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
@@ -320,7 +320,7 @@ msgstr "Virkja YubiKey (OATH-HOTP)"
 #: journalist_templates/admin_new_user_two_factor.html:21
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr ""
-"Þegar þú hefur sett upp YubiKey-dulritunarlykilinn, settu inn 6-stafa kóðann "
+"Þegar þú hefur sett upp YubiKey (dulritunarlykill), settu inn 6-stafa kóðann "
 "hér fyrir neðan:"
 
 #: journalist_templates/account_new_two_factor.html:22
@@ -385,7 +385,7 @@ msgstr "Engir notendur til að birta"
 
 #: journalist_templates/admin.html:48
 msgid "INSTANCE CONFIG"
-msgstr "UPPSETNING Á TILVIKI KERFIS"
+msgstr "UPPSETNING Á KERFISEINTAKI"
 
 #: journalist_templates/admin_add_user.html:4
 #: journalist_templates/config.html:4 journalist_templates/edit_account.html:7
@@ -421,10 +421,10 @@ msgid ""
 "the 6-digit codes from the app to confirm that two factor authentication is "
 "set up correctly."
 msgstr ""
-"Þetta er næstum búið! Til að klára að bæta við þessum nýja notanda, láttu þá "
-"fara eftir leiðbeiningunum hér fyrir neðan til að setja upp tvíþátta "
-"auðkenningu með FreeOTP. Eftir að þeir hafa sett inn færslu með þessum "
-"aðgangi í forritið, þá eiga þeir að setja inn einn af 6-stafa kóðunum úr "
+"Þetta er næstum því búið! Til að klára að bæta við þessum nýja notanda, "
+"láttu hán fara eftir leiðbeiningunum hér fyrir neðan til að setja upp "
+"tvíþátta auðkenningu með FreeOTP. Eftir að hán hefur sett inn færslu með "
+"þessum aðgangi í forritið, þá á hán að setja inn einn af 6-stafa kóðunum úr "
 "forritinu til að staðfesta að tvíþátta auðkenningin sé rétt uppsett."
 
 #: journalist_templates/base.html:28
@@ -465,7 +465,7 @@ msgstr "Keyrt með <em>SecureDrop {version}</em>."
 
 #: journalist_templates/col.html:10
 msgid "All Sources"
-msgstr "Allir heimildamenn"
+msgstr "Allir heimildarmenn"
 
 #: journalist_templates/col.html:13
 msgid ""
@@ -473,9 +473,9 @@ msgid ""
 "the first random codename is difficult to say or remember. You can generate "
 "new random codenames as many times as you like."
 msgstr ""
-"Útbúa nýtt handahófskennt kóðanafn fyrir þennan heimildamann. Við mælum með "
+"Útbúa nýtt handahófskennt kóðanafn fyrir þennan heimildarmann. Við mælum með "
 "því að gera það ef fyrsta handahófskennda kóðanafnið er erfitt að bera fram "
-"eða muna. Þú getur framleitt handahófskennd kóðanöfn eins oft og þér sýnist."
+"eða muna. Þú getur útbúið handahófskennd kóðanöfn eins oft og þér sýnist."
 
 #: journalist_templates/col.html:13
 msgid "Change codename"
@@ -529,7 +529,7 @@ msgstr "Skilaboð"
 #: journalist_templates/col.html:70 journalist_templates/col.html:128
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
-msgstr "Staðfesta eyðingu"
+msgstr "Staðfesting eyðingu"
 
 #: journalist_templates/col.html:71
 msgid "Are you sure you want to delete the selected documents?"
@@ -546,24 +546,24 @@ msgstr "Þú getur skrifað öruggt svar til aðilans sem sendi inn þessi skjö
 
 #: journalist_templates/col.html:102
 msgid "You've flagged this source for reply."
-msgstr "Þú hefur merkt við að þú ætlir að svara þessum heimildamanni."
+msgstr "Þú hefur merkt við að þú ætlir að svara þessum heimildarmanni."
 
 #: journalist_templates/col.html:103
 msgid ""
 "An encryption key will be generated for the source the next time they log "
 "in, after which you will be able to reply to the source here."
 msgstr ""
-"Dulritunarlykill verður útbúinn fyrir heimildamanninn næst þegar hann/þeir "
-"skrá sig inn; eftir það muntu geta svarað heimildamanninum hér."
+"Dulritunarlykill verður útbúinn fyrir heimildarmanninn næst þegar hán skráir "
+"sig inn; eftir það muntu geta svarað heimildarmanninum hér."
 
 #: journalist_templates/col.html:105
 msgid "Click below if you would like to write a reply to this source."
 msgstr ""
-"Smelltu hér fyrir neðan ef þú vilt skrifa svar til þessa heimildamanns."
+"Smelltu hér fyrir neðan ef þú vilt skrifa svar til þessa heimildarmanns."
 
 #: journalist_templates/col.html:109
 msgid "FLAG THIS SOURCE FOR REPLY"
-msgstr "MERKJA ÞENNAN HEIMILDAMANN TIL AÐ SVARA"
+msgstr "MERKJA ÞENNAN HEIMILDARMANN TIL AÐ SVARA"
 
 #: journalist_templates/col.html:114
 msgid ""
@@ -571,14 +571,14 @@ msgid ""
 "the files seen here will be unrecoverable and the source will no longer be "
 "able to login using their previous codename.</em>"
 msgstr ""
-"Smelltu hér fyrir neðan til að eyða safni þessa heimildamanns. <em>Aðvörun: "
+"Smelltu hér fyrir neðan til að eyða safni þessa heimildarmanns. <em>Aðvörun: "
 "Ef þú gerir þetta, verður ekki hægt að endurheimta þessi skjöl og "
-"heimildamaðurinn mun ekki lengur geta skráð sig inn með fyrra kóðanafni sínu."
-"</em>"
+"heimildarmaðurinn mun ekki lengur geta skráð sig inn með fyrra kóðanafni "
+"sínu.</em>"
 
 #: journalist_templates/col.html:121
 msgid "DELETE SOURCE AND SUBMISSIONS"
-msgstr "EYÐA HEIMILDAMANNI OG INNSENDINGUM"
+msgstr "EYÐA HEIMILDARMANNI OG INNSENDINGUM"
 
 #: journalist_templates/col.html:129
 msgid "Are you sure you want to delete this collection?"
@@ -586,24 +586,25 @@ msgstr "Ertu viss um að þú viljir eyða þessu safni?"
 
 #: journalist_templates/config.html:7
 msgid "Instance Configuration"
-msgstr "Uppsetning á kerfistilviki"
+msgstr "Uppsetning á kerfiseintaki"
 
 #: journalist_templates/config.html:9
 msgid "Alerts"
-msgstr "Aðvaranir"
+msgstr "Viðvaranir"
 
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr ""
-"Senda dulritaðan tölvupóst til að sannreyna hvort OSSEC-aðvaranir virki rétt:"
+"Senda dulritaðan tölvupóst til að sannreyna hvort OSSEC-viðvaranir virki "
+"rétt:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
-msgstr "SENDA OSSEC PRUFUAÐVÖRUN"
+msgstr "SENDA OSSEC PRUFUVIÐVÖRUN"
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
-msgstr "Mynd með vörumerki"
+msgstr "Mynd með myndmerki"
 
 #: journalist_templates/config.html:23
 msgid ""
@@ -616,7 +617,7 @@ msgstr "Mælt með stærðinni: 500px * 450px"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
-msgstr "UPPFÆRA VÖRUMERKI"
+msgstr "UPPFÆRA MYNDMERKI"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -625,14 +626,14 @@ msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
 msgstr[0] ""
-"Eftirfarandi skrá hefur verið valin til að <strong>eyða endanlega</strong>:"
+"Eftirfarandi skrá hefur verið valin til að <strong>eyða varanlega</strong>:"
 msgstr[1] ""
-"Eftirfarandi {files} skrár hafa verið valdar til að <strong>eyða endanlega</"
-"strong>:"
+"Eftirfarandi {files} skrár hafa verið valdar til að <strong>eyða "
+"varanlega</strong>:"
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
-msgstr "EYÐA SKRÁM ENDANLEGA"
+msgstr "EYÐA SKRÁM VARANLEGA"
 
 #: journalist_templates/delete.html:23
 msgid "Return to the list of documents for {source_name}…"
@@ -644,7 +645,7 @@ msgstr "Breyta notandanum \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Username &amp; Admin Status"
-msgstr "Breyta notandanafni og stjórnunarstöðu"
+msgstr "Breyta notandanafni &amp; stjórnunarstaða"
 
 #: journalist_templates/edit_account.html:12
 msgid "Change username"
@@ -684,11 +685,11 @@ msgstr "Núverandi lykilorð"
 
 #: journalist_templates/edit_account.html:41 journalist_templates/login.html:11
 msgid "Two-factor Code"
-msgstr "Tvíþátta lykilkóði"
+msgstr "Tvíþátta kóði"
 
 #: journalist_templates/edit_account.html:46
 msgid "The user's password will be changed to:"
-msgstr "Lykilorðinu notandans verður breytt í:"
+msgstr "Lykilorð notandans verður breytt í:"
 
 #: journalist_templates/edit_account.html:48
 msgid "Your password will be changed to:"
@@ -710,10 +711,9 @@ msgid ""
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
 "Ef tvíþátta auðkenningargögnin notanda hafa týnst eða orðið berskjölduð, "
-"geturðu endurstillt auðkennin hér. <em>Ef þú gerir þetta, skaltu ganga úr "
-"skugga um að notandinn sé á staðnum og allt sé til reiðu til að setja upp "
-"tvíþátta auðkenningu á tækið hans. Annars verður hann útilokaður frá "
-"aðgangnum sínum."
+"geturðu endurstillt þau hér. <em>Ef þú gerir þetta, skaltu ganga úr skugga "
+"um að notandinn sé á staðnum og allt sé til reiðu til að setja upp tvíþátta "
+"auðkenningu á tækið háns. Annars verður hán útilokað frá aðgangnum sínum."
 
 #: journalist_templates/edit_account.html:63
 msgid ""
@@ -722,11 +722,10 @@ msgid ""
 "this, make sure you are ready to set up your new device, otherwise you will "
 "be locked out of your account.</em>"
 msgstr ""
-"Ef tvíþátta auðkenningargögnin þín hafa týnst eða orðið berskjölduð - eða að "
-"þú sért komin(n) með nýtt tæki - geturðu endurstillt auðkennin þín hér. "
-"<em>Ef þú gerir þetta, skaltu ganga úr skugga um að allt sé til reiðu til að "
-"setja upp nýja tækið þitt, annars verðurðu útilokuð/útilokaður frá aðgangnum "
-"þínum.</em>"
+"Ef tvíþátta auðkenningargögnin þín hafa týnst eða orðið berskjölduð - eða ef "
+"þú sért komin(n) með nýtt tæki - geturðu endurstillt auðkennin þín hér. <em>"
+"Ef þú gerir þetta, skaltu ganga úr skugga um að allt sé til reiðu til að "
+"setja upp nýja tækið þitt, annars útilokast þú frá aðgangnum þínum.</em>"
 
 #: journalist_templates/edit_account.html:65
 msgid ""
@@ -756,10 +755,10 @@ msgid ""
 "appear under their collection of documents. You can use this box to write "
 "encrypted replies to them."
 msgstr ""
-"SecureDrop mun útbúa öruggan dulritunarlykil fyrir þennan heimildamann næst "
-"þegar hann/þeir skráir sig inn. Eftir að dulritunarlykillinn hefur verið "
-"útbúinn, mun birtast svarreitur undir skjalasafninu hans/þeirra. Þú getur "
-"notað þennan reit til að skrifa dulrituð svör til hans/þeirra."
+"SecureDrop mun útbúa öruggan dulritunarlykil fyrir þennan heimildarmann næst "
+"þegar hán skráir sig inn. Eftir að dulritunarlykillinn hefur verið útbúinn, "
+"mun birtast svarreitur undir skjalasafninu háns. Þú getur notað þennan reit "
+"til að skrifa dulrituð svör til háns."
 
 #: journalist_templates/flag.html:10
 msgid "Continue to the list of documents for {codename}..."
@@ -767,7 +766,7 @@ msgstr "Halda áfram í lista yfir skjöl fyrir {codename}..."
 
 #: journalist_templates/index.html:4
 msgid "Sources"
-msgstr "Heimildamenn"
+msgstr "Heimildarmenn"
 
 #: journalist_templates/index.html:11
 msgid "Download Unread"
@@ -822,7 +821,7 @@ msgstr ""
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
-msgstr "Innskráning fyrir aðgang að fréttamannaviðmóti"
+msgstr "Innskráning fyrir aðgang að fréttamannaviðmótinu"
 
 #: journalist_templates/login.html:9
 msgid "Password"
@@ -844,8 +843,7 @@ msgstr ""
 
 #: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
-msgstr ""
-"Gagnasviðið verður að vera á milli 1 og {max_codename_len} stafa langt."
+msgstr "Gagnasvið verður að vera á milli 1 og {max_codename_len} stafa langt."
 
 #: source_app/forms.py:18
 msgid "Invalid input."
@@ -873,7 +871,7 @@ msgstr "Takk fyrir! Við fengum skjalið þitt."
 
 #: source_app/main.py:169
 msgid "Thanks! We received your message and document."
-msgstr "Takk fyrir! Við fengum skjalið þitt og skilaboðin."
+msgstr "Takk fyrir! Við fengum skilaboðin og skjalið þitt."
 
 #: source_app/main.py:222
 msgid "Reply deleted"
@@ -889,7 +887,7 @@ msgstr "Því miður, þetta er ekki þekkt kóðanafn."
 
 #: source_templates/base.html:6 source_templates/index.html:4
 msgid "Protecting Journalists and Sources"
-msgstr "Verndum frétta- og heimildamenn"
+msgstr "Verndum frétta- og heimildarmenn"
 
 #: source_templates/base.html:25 source_templates/base.html:45
 #: source_templates/index.html:33 source_templates/index.html:85
@@ -905,13 +903,13 @@ msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
 msgstr ""
-"Eins og allur hugbúnaður, getur SecureDrop innihaldið öryggisveilur. Þú "
-"notar þetta á eigin ábyrgð."
+"Eins og allur hugbúnaður, getur SecureDrop innihaldið öryggisveilur. Notkun "
+"á eigin ábyrgð."
 
 #: source_templates/disable-noscript-xss.html:3
 msgid "Turn off NoScript's cross-site request sanitization setting"
 msgstr ""
-"Slökktu á stillingu NoScript fyrir að hreinsa beiðnir til skriftunar á milli "
+"Slökktu á stillingu NoScript sem hreinsar beiðnir til skriftunar á milli "
 "vefja"
 
 #: source_templates/disable-noscript-xss.html:5
@@ -924,7 +922,7 @@ msgstr ""
 "Vegna hnökra í vafranum (<a href=\"{url}\">sjá nánar</a>), virka "
 "innsendingar ekki áreiðanlega í Tor-vafranum á meðan kveikt er á hreinsun "
 "beiðna til skriftunar á milli vefja. Það er í lagi að slökkva á þessum "
-"eiginleika á meðan öryggisstillingasleðinn er stilltur á \"Öruggastst\". Hér "
+"eiginleika á meðan öryggisstillingasleðinn er stilltur á \"Öruggast\". Hér "
 "sérðu hvers vegna:"
 
 #: source_templates/disable-noscript-xss.html:7
@@ -933,9 +931,9 @@ msgid ""
 "\"inline\" src=\"{noscript_plain_icon_url}\"> or <img class=\"inline\" src="
 "\"{noscript_icon_url}\">. This is the NoScript button."
 msgstr ""
-"Þú ættir að finna \"S\" táknmynd á verkfærastiku Tor-vafrans: <img class=\""
-"inline\" src=\"{noscript_plain_icon_url}\"> eða <img class=\"inline\" src=\""
-"{noscript_icon_url}\">. Þetta er NoScript-hnappurinn."
+"Þú ættir að finna bláa \"S\" táknmynd á verkfærastiku Tor-vafrans: <img "
+"class=\"inline\" src=\"{noscript_plain_icon_url}\"> eða <img class=\"inline\""
+" src=\"{noscript_icon_url}\">. Þetta er NoScript-hnappurinn."
 
 #: source_templates/disable-noscript-xss.html:11
 msgid "1. Click on the NoScript button."
@@ -983,8 +981,8 @@ msgid ""
 "soon as the browser issue is resolved, we will remove this recommendation."
 msgstr ""
 "Vegna hnökra í vafranum þarf að gera þetta svo að innsendingar virki "
-"áreiðanlega. Um leið og vandamálið í vafranum munum við fjarlægja þessa "
-"ábendingu."
+"áreiðanlega. Um leið og vandamálið í vafranum er leyst munum við fjarlægja "
+"þessa ábendingu."
 
 #: source_templates/disable-noscript-xss.html:40
 msgid ""
@@ -1059,8 +1057,8 @@ msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
 msgstr ""
-"Þú skalt endilega annað hvort skrifa þetta kóðanafn niður og geyma það á "
-"öruggum stað, eða leggja það á minnið."
+"Þú skalt endilega skrifa þetta kóðanafn niður og geyma það á öruggum stað, "
+"eða leggja það á minnið."
 
 #: source_templates/generate.html:10
 msgid ""
@@ -1106,9 +1104,10 @@ msgid ""
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Mælt er með því að nota Tor-vafrann til að flakka um SecureDrop:</"
-"strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Sjáðu hvernig á "
-"að setja upp Tor-vafrann</a>, eða hunsaðu þessa aðvörun til að halda áfram."
+"<strong>Mælt er með því að nota Tor-vafrann til að fá aðkomu að "
+"SecureDrop:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">"
+"Sjáðu hvernig á að setja upp Tor-vafrann</a>, eða hunsaðu þessa aðvörun til "
+"að halda áfram."
 
 #: source_templates/index.html:19
 msgid ""
@@ -1118,19 +1117,19 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
-"<strong>Mælt er með því að nota borðtölvuútgáfu Tor-vafrans til að flakka um "
-"SecureDrop, þar sem Orfox gefur ekki sama stig öryggis og nafnleyndar eins "
-"og útgáfurnar fyrir vinnutölvur.</strong> <a id=\"recommend-tor\" href="
-"\"{tor_browser_url}\">Sjáðu hvernig á að setja upp Tor-vafrann</a>, eða "
+"<strong>Mælt er með því að nota borðtölvuútgáfu Tor-vafrans til að fá aðkomu "
+"að SecureDrop, þar sem Orfox gefur ekki sama stig öryggis og nafnleyndar "
+"eins og skjáborðsútgáfurnar.</strong> <a id=\"recommend-tor\" href=\""
+"{tor_browser_url}\">Sjáðu hvernig á að setja upp Tor-vafrann</a>, eða "
 "hunsaðu þessa aðvörun til að halda áfram."
 
 #: source_templates/index.html:42
 msgid "Submit for the first time"
-msgstr "Senda inn í fyrsta skipti"
+msgstr "Senda inn í fyrsta skiptið"
 
 #: source_templates/index.html:49
 msgid "Already submitted something?"
-msgstr "Áður sent eitthvað inn?"
+msgstr "Þegar búið að senda eitthvað inn?"
 
 #: source_templates/index.html:55
 msgid "If this is your first time submitting to journalists, start here."
@@ -1143,7 +1142,7 @@ msgid ""
 "If you have already submitted to journalists, log in here to check for "
 "responses."
 msgstr ""
-"Ef þú hefur áður sent inn til fréttamanna, skráðu þig þá inn hér til að "
+"Ef þú hefur þegar sent inn til fréttamanna, skráðu þig þá inn hér til að "
 "athuga með svör."
 
 #: source_templates/index.html:74
@@ -1217,9 +1216,9 @@ msgid ""
 "visited. To err on the side of caution, we put a hold on sending all files "
 "and messages from that day through to our journalists."
 msgstr ""
-"Síðast þegar þú komst í heimsókn, urðu netþjónar okkar varir við óvenjulega "
-"mikla aukningu á virkni. Til að hafa byr fyrir báru og taka ekki óþarfa "
-"áhættu, ákváðum við að setja á bið öll skjöl og skilaboð frá þeim degi sem "
+"Síðast þegar þú komst í heimsókn, urðu netþjónar okkar varir við mikla og "
+"óvenjulega aukningu á virkni. Til að hafa byr fyrir báru og taka ekki óþarfa "
+"áhættu, ákváðum við frá þeim degi að setja bið á öll skjöl og skilaboð sem "
 "áttu að fara til fréttamannanna okkar."
 
 #: source_templates/lookup.html:14
@@ -1230,8 +1229,8 @@ msgid ""
 msgstr ""
 "Núna þegar við höfum staðfest að þú sért í rauninni mennsk vera, þá munum "
 "við strax koma fyrri innsendingunni þinni í hendurnar á fréttamanni. Við "
-"biðjumst velvirðingar á töfinni. Endilega athugaðu stöðuna  aftur eftir svo "
-"sem eina viku."
+"biðjumst velvirðingar á töfinni. Endilega athugaðu stöðuna aftur eftir uþb "
+"eina viku."
 
 #: source_templates/lookup.html:20
 msgid "Submit Files or Messages"
@@ -1243,9 +1242,9 @@ msgid ""
 "is <strong>required</strong> for uploads to work. <a href=\"{url}\" class="
 "\"text-link\">Show me how.</a>"
 msgstr ""
-"Áður en þú byrjar, skaltu slökkva  á stillingum NoScript fyrir að hreinsa "
-"beiðnir til skriftunar á milli vefja. Þetta er <strong>nauðsynlegt</strong> "
-"til þess að innsendingar virki. <a href=\"{url}\" class=\"text-link\">Sýna "
+"Áður en þú byrjar, skaltu slökkva  á stillingum NoScript sem hreinsa beiðnir "
+"til skriftunar á milli vefja. Þetta er <strong>nauðsynlegt</strong> til þess "
+"að innsendingar virki. <a href=\"{url}\" class=\"text-link\">Sýna "
 "hvernig.</a>"
 
 #: source_templates/lookup.html:24
@@ -1286,7 +1285,7 @@ msgid ""
 "with them. This also lets us know that you are aware of our reply. You can "
 "respond by submitting new files and messages above."
 msgstr ""
-"Þú hefur fengið svar. Til að vernda persónuauðkenni þín, fari svo ólíklega "
+"Þú hefur fengið svar. Til að vernda persónuauðkenni þitt, fari svo ólíklega "
 "að einhver komist að kóðanafninu þínu, skaltu endilega eyða öllum svörum "
 "eftir að þú hefur lokið þér af með upplýsingarnar í þeim. Það gefur okkur "
 "líka til kynna að þú hafir lesið svörin frá okkur. Þú getur svo svarað með "
@@ -1403,7 +1402,7 @@ msgid ""
 "Copy and paste the following address into your browser and follow the "
 "instructions to download and install Tor Browser:"
 msgstr ""
-"Afritaðu og límdu eftirfarandi sl inn í vafrann þinn og fylgdu svo "
+"Afritaðu og límdu eftirfarandi slóð inn í vafrann þinn og fylgdu svo "
 "leiðbeiningunum um hvernig eigi að sækja og setja upp Tor-vafrann:"
 
 #: source_templates/use-tor-browser.html:9
@@ -1501,7 +1500,7 @@ msgid ""
 "unencrypted file, with .gpg at the end (e.g. <code>roswell_photos.pdf.gpg</"
 "code>)"
 msgstr ""
-"Sendu inn dulrituðu skrána. Hún munu bera sama skráarheiti og ódulrituaða "
+"Sendu inn dulrituðu skrána. Hún mun bera sama skráarheiti og ódulritaða "
 "skráin, með .gpg aftast (t.d. <code>myndir_af_lagarfjotsormi.pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:23
@@ -1510,8 +1509,8 @@ msgid ""
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
-"<strong>Ábending:</strong> Ef þú óskar raunverulegrar nafnleyndar, "
-"<strong>skaltu ekki</strong> nota GPG til að undirrita dulrituðu skrána (með "
+"<strong>Ábending:</strong> Ef þú óskar áframhaldandi nafnleynd, <strong>"
+"skaltu ekki</strong> nota GPG til að undirrita dulrituðu skrána (með "
 "<code>--sign</code> eða <code>-s</code> flaggi) þar sem slíkt myndi afhjúpa "
 "þitt raunverulega GPG-auðkenni gagnvart okkur."
 
