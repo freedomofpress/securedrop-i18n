@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-07-26 19:17+0000\n"
-"Last-Translator: Hamed <snbig.pentester@gmail.com>\n"
+"PO-Revision-Date: 2019-05-16 03:10+0000\n"
+"Last-Translator: Ali Mirjamali <ali.mirjamali@gmail.com>\n"
 "Language-Team: Persian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/fa/>\n"
 "Language: fa\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.20\n"
+"X-Generator: Weblate 3.4\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:14
@@ -99,7 +99,6 @@ msgstr ""
 "طول هش رمز های یکبار مصرف 40 کاراکتر می‌باشد - شما {num_chars} وارد کرده‌اید."
 
 #: journalist_app/forms.py:30
-#, fuzzy
 msgid ""
 "Field must be at least {min_chars} characters long but only got {num_chars}."
 msgstr ""
@@ -395,11 +394,11 @@ msgstr "بازگشت به رابط مدیریت"
 
 #: journalist_templates/admin_add_user.html:23
 msgid "Username can contain spaces"
-msgstr ""
+msgstr "نام کاربری می‌تواند حاوی کاراکتر فاصله باشد"
 
 #: journalist_templates/admin_add_user.html:24
 msgid "Username is case-sensitive"
-msgstr ""
+msgstr "نام کاربری به بزرگی و کوچکی حروف حساس است"
 
 #: journalist_templates/admin_add_user.html:28
 msgid "The user's password will be:"
@@ -427,12 +426,16 @@ msgid ""
 msgstr "کار تمام است!"
 
 #: journalist_templates/base.html:28
+#, fuzzy
 msgid ""
 "<strong>Critical Security:</strong> The operating system used by your "
 "SecureDrop servers has reached its end-of-life. A manual update is urgently "
 "required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
 "\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>خطای بحرانی:</strong> سیستم عامل مورد استفاده برای سرور SecureDrop "
+"به پایان عمر خود رسیده است. به بروزرسانی سریع برای امن ماندن نیاز است - <a "
+"href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">اطلاعات بیشتر</a>"
 
 #: journalist_templates/base.html:33
 msgid "Logged on as"
@@ -507,7 +510,7 @@ msgstr "پاسخ"
 
 #: journalist_templates/col.html:41 journalist_templates/col.html:48
 msgid "Read"
-msgstr ""
+msgstr "خواندن"
 
 #: journalist_templates/col.html:45
 #, fuzzy
