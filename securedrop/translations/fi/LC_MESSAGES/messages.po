@@ -23,7 +23,7 @@ msgstr ""
 msgid "{time} ago"
 msgstr "{time} sitten"
 
-#: journalist_app/__init__.py:89 journalist_app/__init__.py:128
+#: journalist_app/__init__.py:91 journalist_app/__init__.py:136
 msgid "You have been logged out due to inactivity"
 msgstr "Olet kirjautunut ulos pitkän epäaktiivisuuden vuoksi"
 
@@ -123,48 +123,48 @@ msgstr "Tiedosto vaaditaan."
 msgid "You can only upload PNG image files."
 msgstr ""
 
-#: journalist_app/main.py:118 journalist_app/utils.py:48
-#: journalist_app/utils.py:138
+#: journalist_app/main.py:120 journalist_app/utils.py:49
+#: journalist_app/utils.py:139
 #, fuzzy
 #| msgid "An unexpected error occurred! Please inform your administrator."
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Odottamaton virhe! Ilmoittakaa tästä ylläpitäjällenne."
 
-#: journalist_app/main.py:129
+#: journalist_app/main.py:131
 msgid "Thanks. Your reply has been stored."
 msgstr "Kiitos. Vastauksesi on tallennettu."
 
-#: journalist_app/main.py:150
+#: journalist_app/main.py:152
 msgid "No collections selected for download."
 msgstr "Kokoelmia ei ole valittu latausta varten."
 
-#: journalist_app/main.py:153 journalist_app/utils.py:236
+#: journalist_app/main.py:155 journalist_app/utils.py:237
 msgid "No collections selected for deletion."
 msgstr "Kokoelmia ei ole valittu poistamista varten."
 
-#: journalist_app/main.py:179
+#: journalist_app/main.py:181
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
 msgstr "Lähde '{original_name}' on uudelleennimetty nimellä '{new_name}'"
 
-#: journalist_app/main.py:194
+#: journalist_app/main.py:196
 msgid "No unread submissions for this source."
 msgstr "Ei avaamattomia palautuksia tältä lähteeltä."
 
-#: journalist_app/utils.py:55
+#: journalist_app/utils.py:56
 msgid "Account updated."
 msgstr "Tili päivitetty."
 
-#: journalist_app/utils.py:86
+#: journalist_app/utils.py:87
 msgid "Login failed."
 msgstr "Sisäänkirjautuminen epäonnistui."
 
-#: journalist_app/utils.py:94
+#: journalist_app/utils.py:95
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] "Odota vähintään {seconds} sekuntti ennen uudelleenkirjautumista."
 msgstr[1] "Odota vähintään {seconds} sekuntia ennen uudelleenkirjautumista."
 
-#: journalist_app/utils.py:105
+#: journalist_app/utils.py:106
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
@@ -172,35 +172,35 @@ msgstr ""
 "Odota uutta kaksiosaisen tunnistusmekanismin varmennetta ennen kuin yrität "
 "uudelleen."
 
-#: journalist_app/utils.py:126
+#: journalist_app/utils.py:127
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Salaisuuden muoto ei kelpaa: sen tulee sisältää ainoastaan kirjaimia A-F ja "
 "numeroita 0-9."
 
-#: journalist_app/utils.py:132
+#: journalist_app/utils.py:133
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Salaisuuden muoto ei päde: pariton määrä merkkejä. Kirjoititko salaisuuden "
 "väärin?"
 
-#: journalist_app/utils.py:188
+#: journalist_app/utils.py:189
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Tallete poistettu."
 msgstr[1] "{num} talletetta poistettu."
 
-#: journalist_app/utils.py:241
+#: journalist_app/utils.py:242
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} kokoelma poistettu"
 msgstr[1] "{num} kokoelmaa poistettu"
 
-#: journalist_app/utils.py:279
+#: journalist_app/utils.py:280
 msgid "You submitted a bad password! Password not changed."
 msgstr "Antamasi salasana ei kelpaa, salasanaa ei vaihdettu."
 
-#: journalist_app/utils.py:286
+#: journalist_app/utils.py:287
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -209,7 +209,7 @@ msgstr ""
 "Tapahtui virhe, ja uutta salasanaa ei mahdollisesti tallennettu oikein. "
 "Estääksesi tilisi lukkiutumisen, vaihda salasanasi uudelleen."
 
-#: journalist_app/utils.py:295
+#: journalist_app/utils.py:296
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -217,7 +217,7 @@ msgstr ""
 "Salasana päivitetty. Älä unohda tallentaa sitä KeePassX-tietokantaasi. Uusi "
 "salasana:"
 
-#: journalist_app/utils.py:312
+#: journalist_app/utils.py:313
 msgid "No unread submissions in selected collections."
 msgstr "Ei lukemattomia talletteita valituissa kokoelmissa."
 
@@ -226,7 +226,7 @@ msgid "Close"
 msgstr "Sulje"
 
 #: journalist_templates/_confirmation_modal.html:7
-#: journalist_templates/col.html:15 source_templates/lookup.html:81
+#: journalist_templates/col.html:15 source_templates/lookup.html:75
 msgid "Cancel"
 msgstr "Peruuta"
 
@@ -339,7 +339,7 @@ msgstr "Varmenne"
 
 #: journalist_templates/account_new_two_factor.html:24
 #: journalist_templates/admin_new_user_two_factor.html:27
-#: journalist_templates/col.html:99 source_templates/lookup.html:49
+#: journalist_templates/col.html:99 source_templates/lookup.html:43
 msgid "SUBMIT"
 msgstr "TALLENNA"
 
@@ -438,27 +438,19 @@ msgstr ""
 "sovellukseen, pyydä häntä antamaan yksi 6-numeroisista koodeista "
 "varmistaaksesi että kaksiosainen tunnistusmekanismi on oikein asennettu."
 
-#: journalist_templates/base.html:28
-msgid ""
-"<strong>Critical Security:</strong> The operating system used by your "
-"SecureDrop servers has reached its end-of-life. A manual update is urgently "
-"required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
-"\"noreferrer\">Learn More</a>"
-msgstr ""
-
-#: journalist_templates/base.html:33
+#: journalist_templates/base.html:23
 msgid "Logged on as"
 msgstr "Kirjautunut käyttäjänä"
 
-#: journalist_templates/base.html:35
+#: journalist_templates/base.html:25
 msgid "Admin"
 msgstr "Ylläpitäjä"
 
-#: journalist_templates/base.html:37
+#: journalist_templates/base.html:27
 msgid "Log Out"
 msgstr "Kirjaudu ulos"
 
-#: journalist_templates/base.html:50
+#: journalist_templates/base.html:40
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
@@ -466,7 +458,7 @@ msgstr ""
 "Palvelun tarjoaa <br> <img src=\"/static/i/securedrop_small.png\" alt="
 "\"SecureDrop\">"
 
-#: journalist_templates/base.html:65
+#: journalist_templates/base.html:55
 msgid "Powered by <em>SecureDrop {version}</em>."
 msgstr "Palvelun tarjoaa <em>SecureDrop {version}</em>."
 
@@ -843,7 +835,7 @@ msgstr "Salasana"
 msgid "LOG IN"
 msgstr "KIRJAUDU SISÄÄN"
 
-#: source_app/__init__.py:115
+#: source_app/__init__.py:128
 msgid ""
 "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This "
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href="
@@ -861,7 +853,7 @@ msgstr "Kentän tulee olla 1 - {max_codename_len} merkkiä pitkä."
 msgid "Invalid input."
 msgstr "Syöttö ei kelpaa."
 
-#: source_app/main.py:30
+#: source_app/main.py:33
 msgid ""
 "You were redirected because you are already logged in. If you want to create "
 "a new account, you should log out first."
@@ -869,31 +861,31 @@ msgstr ""
 "Sinut uudelleenohjattiin koska olit jo kirjautuneena sisään. Jos haluat "
 "luoda uuden tilin, kirjaudu ensin ulos."
 
-#: source_app/main.py:132
+#: source_app/main.py:145
 msgid "You must enter a message or choose a file to submit."
 msgstr "Kirjoita viesti tai valitse tiedosto tallennettavaksi."
 
-#: source_app/main.py:165
+#: source_app/main.py:178
 msgid "Thanks! We received your message."
 msgstr "Kiitos! Olemme vastaanottaneet viestisi."
 
-#: source_app/main.py:167
+#: source_app/main.py:180
 msgid "Thanks! We received your document."
 msgstr "Kiitos! Olemme vastaanottaneet tiedostosi."
 
-#: source_app/main.py:169
+#: source_app/main.py:182
 msgid "Thanks! We received your message and document."
 msgstr "Kiitos! Olemme vastaanottaneet tiedostosi ja viestisi."
 
-#: source_app/main.py:222
+#: source_app/main.py:241
 msgid "Reply deleted"
 msgstr "Vastaus poistettu"
 
-#: source_app/main.py:240
+#: source_app/main.py:259
 msgid "All replies have been deleted"
 msgstr "Kaikki vastaukset on poistettu"
 
-#: source_app/main.py:254
+#: source_app/main.py:273
 msgid "Sorry, that is not a recognized codename."
 msgstr "Ei ole tunnistettu koodinimi."
 
@@ -902,7 +894,7 @@ msgid "Protecting Journalists and Sources"
 msgstr "Suojelee journalisteja ja lähteitä"
 
 #: source_templates/base.html:25 source_templates/base.html:45
-#: source_templates/index.html:33 source_templates/index.html:85
+#: source_templates/index.html:32 source_templates/index.html:84
 msgid "Powered by"
 msgstr "Palvelun tarjoaa"
 
@@ -910,92 +902,13 @@ msgstr "Palvelun tarjoaa"
 msgid "LOG OUT"
 msgstr "KIRJAUDU ULOS"
 
-#: source_templates/base.html:45 source_templates/index.html:85
+#: source_templates/base.html:45 source_templates/index.html:84
 msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
 msgstr ""
 "Kuten kaikki ohjelmistot, SecureDrop voi sisältää turvallisuusriskejä. Käytä "
 "omalla vastuulla."
-
-#: source_templates/disable-noscript-xss.html:3
-msgid "Turn off NoScript's cross-site request sanitization setting"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:5
-msgid ""
-"Due to a browser issue (<a href=\"{url}\">more details</a>), uploads do not "
-"currently work reliably in Tor Browser while cross-site request sanitization "
-"is turned on. It is safe to turn off this feature while your Security Slider "
-"is set to \"Safest\". Here's how:"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:7
-msgid ""
-"You should find a blue \"S\" icon in the Tor browser's toolbar: <img class="
-"\"inline\" src=\"{noscript_plain_icon_url}\"> or <img class=\"inline\" src="
-"\"{noscript_icon_url}\">. This is the NoScript button."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:11
-msgid "1. Click on the NoScript button."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:12
-msgid "The NoScript pane should appear. It looks like this:"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:18
-msgid ""
-"2. In the NoScript pane, click on the Settings icon: <img class=\"inline\" "
-"src=\"{url}\">"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:20
-msgid ""
-"The settings page should appear in a new browser tab. It looks like this:"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:26
-msgid "3. Click the \"Advanced\" tab."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:28
-msgid "The advanced settings tab should come into view. It looks like this:"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:34
-msgid "4. Un-check \"Sanitize cross-site suspicious requests\"."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:36
-msgid ""
-"Due to a browser issue, this is required for uploads to work reliably. As "
-"soon as the browser issue is resolved, we will remove this recommendation."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:40
-msgid ""
-"5. Close the <i>NoScript Settings</i> browser tab and return to the "
-"SecureDrop tab."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:42
-msgid ""
-"You can now upload your files. Please keep in mind that each file requires "
-"its own submission."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:46
-msgid "6. Re-check \"Sanitize cross-site suspicious requests\"."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:48
-msgid ""
-"Repeat steps 1-3 from above and re-check the setting. The setting has no "
-"effect while your Security Slider is set to \"Safest\", but we recommend "
-"enabling it during normal Tor usage."
-msgstr ""
 
 #: source_templates/error.html:3
 msgid "Server error"
@@ -1068,11 +981,11 @@ msgstr ""
 "kiinnostuneita muista tiedostoista on tämän koodinimen kautta. Toisin kuin "
 "salasanoja, kadonnutta koodinimeä ei voi palauttaa."
 
-#: source_templates/generate.html:44 source_templates/index.html:66
+#: source_templates/generate.html:44 source_templates/index.html:65
 msgid "SUBMIT DOCUMENTS"
 msgstr "LÄHETÄ TIEDOSTOJA"
 
-#: source_templates/index.html:17
+#: source_templates/index.html:16
 #, fuzzy
 #| msgid ""
 #| "<strong>We recommend turning the Security Slider to Safest to protect "
@@ -1088,7 +1001,7 @@ msgstr ""
 "\"\">Opi miten muuttaa tämä valinta</a> tai jätä tämä varoitus huomiotta "
 "jatkaaksesi."
 
-#: source_templates/index.html:18
+#: source_templates/index.html:17
 #, fuzzy
 #| msgid ""
 #| "<strong>We recommend using Tor Browser to access SecureDrop:</strong> <a "
@@ -1104,7 +1017,7 @@ msgstr ""
 "\"{tor_browser_url}\">Opi, miten se ladataan</a>, tai hylkää tämä varoitus "
 "jatkaaksesi."
 
-#: source_templates/index.html:19
+#: source_templates/index.html:18
 #, fuzzy
 #| msgid ""
 #| "<strong>We recommend using Tor Browser to access SecureDrop:</strong> <a "
@@ -1122,17 +1035,17 @@ msgstr ""
 "\"{tor_browser_url}\">Opi, miten se ladataan</a>, tai hylkää tämä varoitus "
 "jatkaaksesi."
 
-#: source_templates/index.html:42
+#: source_templates/index.html:41
 #, fuzzy
 #| msgid "Submit documents for the first time"
 msgid "Submit for the first time"
 msgstr "Lähetä tiedostoja ensimmäistä kertaa"
 
-#: source_templates/index.html:49
+#: source_templates/index.html:48
 msgid "Already submitted something?"
 msgstr "Oletko jo lähettänyt tiedostoja?"
 
-#: source_templates/index.html:55
+#: source_templates/index.html:54
 #, fuzzy
 #| msgid ""
 #| "If this is your first time submitting documents to journalists, start "
@@ -1142,7 +1055,7 @@ msgstr ""
 "Jos tämä on ensimmäinen kerta kun lähetät tiedostoja journalisteille, aloita "
 "tästä."
 
-#: source_templates/index.html:59
+#: source_templates/index.html:58
 #, fuzzy
 #| msgid ""
 #| "If you have already submitted documents in the past, log in here to check "
@@ -1154,7 +1067,7 @@ msgstr ""
 "Jos olet jo aiemmin lähettänyt tiedostoja, kirjaudu sisään tarkastellaksesi "
 "vastauksia."
 
-#: source_templates/index.html:74
+#: source_templates/index.html:73
 msgid "CHECK FOR A RESPONSE"
 msgstr "TARKISTA VASTAUKSET"
 
@@ -1203,7 +1116,7 @@ msgstr "Anna koodinimi"
 msgid "Enter your codename"
 msgstr "Anna koodinimesi"
 
-#: source_templates/login.html:25 source_templates/lookup.html:55
+#: source_templates/login.html:25 source_templates/lookup.html:49
 msgid "CANCEL"
 msgstr "PERUUTA"
 
@@ -1227,53 +1140,28 @@ msgstr ""
 "sipulipainikkeesta Tor Browser -selaimessa poistaaksesi kaikki historiasi "
 "SecureDropin käytöstä tällä laitteella."
 
+#: source_templates/lookup.html:10
+msgid "Sorry we haven't responded yet!"
+msgstr ""
+
 #: source_templates/lookup.html:11
-msgid "Whew, it’s you! Now, the embarrassing part..."
-msgstr "Huh, se olet sinä! Kiusallisia uutisia..."
+msgid ""
+"Our SecureDrop recently experienced a surge of activity. For security "
+"reasons, the creation of a two-way communication channel was delayed until "
+"you checked in again."
+msgstr ""
 
 #: source_templates/lookup.html:12
-#, fuzzy
-#| msgid ""
-#| "Our servers experienced an unusual surge of new activity, when you last "
-#| "visited. To err on the side of caution, we put a hold on sending all "
-#| "documents from that day through to our journalists."
 msgid ""
-"Our servers experienced an unusual surge of new activity, when you last "
-"visited. To err on the side of caution, we put a hold on sending all files "
-"and messages from that day through to our journalists."
+"Please rest assured that we were able to download your submission, and check "
+"back again later for a reply."
 msgstr ""
-"Meidän palvelimme koki epätavallisen nousun uusissa toiminnoissa kun "
-"viimeksi vierailit sivustolla. Varmuuden vuoksi keskeytimme kaikkien "
-"tiedostojen lähettämisen journalisteillemme siltä päivältä."
 
-#: source_templates/lookup.html:14
-msgid ""
-"Now that we know you’re really a human, though, we’ll get your previous "
-"submission into the hands of a journalist straight away. We’re sorry for the "
-"delay. Please do check back again in a week or so."
-msgstr ""
-"Nyt kun olemme varmistaneet että olet ihminen, lähetämme lähetyksesi "
-"journalisteillemme pikimmiten. Pahoittelemme viivästystä. Tarkista uudestaan "
-"noin viikon päästä."
-
-#: source_templates/lookup.html:20
+#: source_templates/lookup.html:18
 msgid "Submit Files or Messages"
 msgstr ""
 
-#: source_templates/lookup.html:22
-msgid ""
-"Before you begin, turn off cross-site request sanitization in NoScript. This "
-"is <strong>required</strong> for uploads to work. <a href=\"{url}\" class="
-"\"text-link\">Show me how.</a>"
-msgstr ""
-
-#: source_templates/lookup.html:24
-#, fuzzy
-#| msgid "You can send a file, a message, or both."
-msgid "You can submit any kind of file, a message, or both."
-msgstr "Voit lähettää tiedoston, viestin, tai molemmat."
-
-#: source_templates/lookup.html:26
+#: source_templates/lookup.html:19
 msgid ""
 "If you are already familiar with GPG, you can optionally encrypt your files "
 "and messages with our <a href=\"{url}\" class=\"text-link\">public key</a> "
@@ -1283,23 +1171,29 @@ msgstr ""
 "viestisi <a href=\"{url}\" class=\"text-link\">julkisella avaimellasi</a> "
 "ennen lähetystä. Tiedostot salataan kun ne otetaan vastaan SecureDropilla."
 
-#: source_templates/lookup.html:27
+#: source_templates/lookup.html:20
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
 msgstr "<a href=\"{url}\" class=\"text-link\">Lue lisää</a>."
 
-#: source_templates/lookup.html:37
+#: source_templates/lookup.html:22
+#, fuzzy
+#| msgid "You can send a file, a message, or both."
+msgid "You can submit any kind of file, a message, or both."
+msgstr "Voit lähettää tiedoston, viestin, tai molemmat."
+
+#: source_templates/lookup.html:31
 msgid "Maximum upload size: 500 MB"
 msgstr "Suurin ladattava koko: 500 MB"
 
-#: source_templates/lookup.html:40
+#: source_templates/lookup.html:34
 msgid "Write a message."
 msgstr "Kirjoita viesti."
 
-#: source_templates/lookup.html:62
+#: source_templates/lookup.html:56
 msgid "Read Replies"
 msgstr "Lue vastauksia"
 
-#: source_templates/lookup.html:67
+#: source_templates/lookup.html:61
 #, fuzzy
 #| msgid ""
 #| "You have received a reply. To protect your identity in the unlikely event "
@@ -1317,43 +1211,43 @@ msgstr ""
 "läpi. Tämä antaa myös meille tiedon siitä, että olet lukenut vastauksemme. "
 "Voit vastata lähettämällä uuden viestin ylläolevan kentän kautta."
 
-#: source_templates/lookup.html:80
+#: source_templates/lookup.html:74
 msgid "Delete this reply?"
 msgstr "Poista tämä vastaus?"
 
-#: source_templates/lookup.html:82
+#: source_templates/lookup.html:76
 msgid "DELETE"
 msgstr "POISTA"
 
-#: source_templates/lookup.html:91
+#: source_templates/lookup.html:85
 msgid "DELETE ALL REPLIES"
 msgstr "POISTA KAIKKI VASTAUKSET"
 
-#: source_templates/lookup.html:94
+#: source_templates/lookup.html:88
 msgid "Are you finished with the replies?"
 msgstr "Oletko valmis vastausten kanssa?"
 
-#: source_templates/lookup.html:95
+#: source_templates/lookup.html:89
 msgid "YES, DELETE ALL REPLIES"
 msgstr "KYLLÄ, POISTA KAIKKI VASTAUKSET"
 
-#: source_templates/lookup.html:96
+#: source_templates/lookup.html:90
 msgid "NO, NOT YET"
 msgstr "EI VIELÄ"
 
-#: source_templates/lookup.html:100
+#: source_templates/lookup.html:94
 msgid "There are no replies at this time."
 msgstr "Sinulla ei ole vastauksia."
 
-#: source_templates/lookup.html:109
+#: source_templates/lookup.html:103
 msgid "Remember, your codename is:"
 msgstr "Muista, koodinimesi on:"
 
-#: source_templates/lookup.html:110
+#: source_templates/lookup.html:104
 msgid "Show"
 msgstr "Näytä"
 
-#: source_templates/lookup.html:112
+#: source_templates/lookup.html:106
 msgid "Hide"
 msgstr "Piilota"
 
@@ -1549,6 +1443,32 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Takaisin lähetyssivulle"
+
+#~ msgid "Whew, it’s you! Now, the embarrassing part..."
+#~ msgstr "Huh, se olet sinä! Kiusallisia uutisia..."
+
+#, fuzzy
+#~| msgid ""
+#~| "Our servers experienced an unusual surge of new activity, when you last "
+#~| "visited. To err on the side of caution, we put a hold on sending all "
+#~| "documents from that day through to our journalists."
+#~ msgid ""
+#~ "Our servers experienced an unusual surge of new activity, when you last "
+#~ "visited. To err on the side of caution, we put a hold on sending all "
+#~ "files and messages from that day through to our journalists."
+#~ msgstr ""
+#~ "Meidän palvelimme koki epätavallisen nousun uusissa toiminnoissa kun "
+#~ "viimeksi vierailit sivustolla. Varmuuden vuoksi keskeytimme kaikkien "
+#~ "tiedostojen lähettämisen journalisteillemme siltä päivältä."
+
+#~ msgid ""
+#~ "Now that we know you’re really a human, though, we’ll get your previous "
+#~ "submission into the hands of a journalist straight away. We’re sorry for "
+#~ "the delay. Please do check back again in a week or so."
+#~ msgstr ""
+#~ "Nyt kun olemme varmistaneet että olet ihminen, lähetämme lähetyksesi "
+#~ "journalisteillemme pikimmiten. Pahoittelemme viivästystä. Tarkista "
+#~ "uudestaan noin viikon päästä."
 
 #~ msgid "Is Administrator"
 #~ msgstr "On ylläpitäjä"

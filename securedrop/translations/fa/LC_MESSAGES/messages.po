@@ -23,7 +23,7 @@ msgstr ""
 msgid "{time} ago"
 msgstr "{time} قبل"
 
-#: journalist_app/__init__.py:89 journalist_app/__init__.py:128
+#: journalist_app/__init__.py:91 journalist_app/__init__.py:136
 msgid "You have been logged out due to inactivity"
 msgstr "شما به علت عدم فعالیت از سیستم خارج شده اید"
 
@@ -121,81 +121,81 @@ msgstr "پرونده مورد نیاز است."
 msgid "You can only upload PNG image files."
 msgstr "تنها می توانید تصاویر را با فرمت PNG بارگزاری کنید."
 
-#: journalist_app/main.py:118 journalist_app/utils.py:48
-#: journalist_app/utils.py:138
+#: journalist_app/main.py:120 journalist_app/utils.py:49
+#: journalist_app/utils.py:139
 #, fuzzy
 #| msgid "An unexpected error occurred! Please inform your administrator."
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "یک خطای غیر منتظره رخ داده است! لطفا به مدیر خود اطلاع دهید."
 
-#: journalist_app/main.py:129
+#: journalist_app/main.py:131
 msgid "Thanks. Your reply has been stored."
 msgstr "با تشکر. پاسخ شما ذخیره شد."
 
-#: journalist_app/main.py:150
+#: journalist_app/main.py:152
 msgid "No collections selected for download."
 msgstr "هیچ مجموعه‌ای برای بارگیری انتخاب نشده است."
 
-#: journalist_app/main.py:153 journalist_app/utils.py:236
+#: journalist_app/main.py:155 journalist_app/utils.py:237
 msgid "No collections selected for deletion."
 msgstr "هیچ مجموعه‌ای برای حذف انتخاب نشده است."
 
-#: journalist_app/main.py:179
+#: journalist_app/main.py:181
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
 msgstr "منبع آگاه '{original_name}' به '{new_name}' تغییر نام داده است"
 
-#: journalist_app/main.py:194
+#: journalist_app/main.py:196
 msgid "No unread submissions for this source."
 msgstr "هیچ محتوای ارسالی خوانده نشده‌‌ای از این منبع آگاه یافت نشد."
 
-#: journalist_app/utils.py:55
+#: journalist_app/utils.py:56
 msgid "Account updated."
 msgstr "حساب‌ به‌روزرسانی شد."
 
-#: journalist_app/utils.py:86
+#: journalist_app/utils.py:87
 msgid "Login failed."
 msgstr "ورود ناموفق بود."
 
-#: journalist_app/utils.py:94
+#: journalist_app/utils.py:95
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] "لطفا قبل از ورود به سیستم حداقل یک ثانیه صبر کنید."
 msgstr[1] "لطفا قبل از ورود به سیستم حداقل {seconds} ثانیه صبر کنید."
 
-#: journalist_app/utils.py:105
+#: journalist_app/utils.py:106
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
 msgstr ""
 "لطفا پیش از اقدام مجدد، برای دریافت شناسه‌ی دو مرحله ای یا سیستمی صبر کنید."
 
-#: journalist_app/utils.py:126
+#: journalist_app/utils.py:127
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr "قالب رمز نامعتبر: لطفا فقط حروف A-F و اعداد 0-9 را ارسال کنید."
 
-#: journalist_app/utils.py:132
+#: journalist_app/utils.py:133
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "قالب رمز نامعتبر است: تعداد کارکترها‌ی رمز باید زوج باشد. آیا رمز را اشتباه "
 "تایپ کردید؟"
 
-#: journalist_app/utils.py:188
+#: journalist_app/utils.py:189
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "محتوای ارسالی حذف شد."
 msgstr[1] "{num} محتوای ارسالی حذف شدند."
 
-#: journalist_app/utils.py:241
+#: journalist_app/utils.py:242
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} مجموعه حذف شد"
 msgstr[1] "{num} مجموعه حذف شدند"
 
-#: journalist_app/utils.py:279
+#: journalist_app/utils.py:280
 msgid "You submitted a bad password! Password not changed."
 msgstr "گذرواژه‌ی وارد شده صحیح نمی‌باشد! گذر واژه تغییر نکرد."
 
-#: journalist_app/utils.py:286
+#: journalist_app/utils.py:287
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -204,7 +204,7 @@ msgstr ""
 "مشکلی بوجود آمد، و ممکن است گذرواژه‌ی جدید بدرستی ذخیره نشده باشد. برای "
 "جلوگیری از مسدود شدن حساب، می‌بایست گذر واژه‌ی خود را بازنشانی کنید."
 
-#: journalist_app/utils.py:295
+#: journalist_app/utils.py:296
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -212,7 +212,7 @@ msgstr ""
 "گذرواژه بروزرسانی شد. فراموش نکنید که آن را در پایگاه داده‌ی KeePassX ذخیره "
 "نمایید. گذرواژه‌ی جدید:"
 
-#: journalist_app/utils.py:312
+#: journalist_app/utils.py:313
 msgid "No unread submissions in selected collections."
 msgstr "هیج محتوای ارسالی خوانده نشده‌ای در مجموعه‌ی انتخاب شده وجود ندارد."
 
@@ -221,7 +221,7 @@ msgid "Close"
 msgstr "بستن"
 
 #: journalist_templates/_confirmation_modal.html:7
-#: journalist_templates/col.html:15 source_templates/lookup.html:81
+#: journalist_templates/col.html:15 source_templates/lookup.html:75
 msgid "Cancel"
 msgstr "لغو"
 
@@ -330,7 +330,7 @@ msgstr "کد تایید"
 
 #: journalist_templates/account_new_two_factor.html:24
 #: journalist_templates/admin_new_user_two_factor.html:27
-#: journalist_templates/col.html:99 source_templates/lookup.html:49
+#: journalist_templates/col.html:99 source_templates/lookup.html:43
 msgid "SUBMIT"
 msgstr "ارسال"
 
@@ -425,31 +425,19 @@ msgid ""
 "set up correctly."
 msgstr "کار تمام است!"
 
-#: journalist_templates/base.html:28
-#, fuzzy
-msgid ""
-"<strong>Critical Security:</strong> The operating system used by your "
-"SecureDrop servers has reached its end-of-life. A manual update is urgently "
-"required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
-"\"noreferrer\">Learn More</a>"
-msgstr ""
-"<strong>خطای بحرانی:</strong> سیستم عامل مورد استفاده برای سرور SecureDrop "
-"به پایان عمر خود رسیده است. به بروزرسانی سریع برای امن ماندن نیاز است - <a "
-"href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">اطلاعات بیشتر</a>"
-
-#: journalist_templates/base.html:33
+#: journalist_templates/base.html:23
 msgid "Logged on as"
 msgstr "ورود به عنوان"
 
-#: journalist_templates/base.html:35
+#: journalist_templates/base.html:25
 msgid "Admin"
 msgstr "مدیر"
 
-#: journalist_templates/base.html:37
+#: journalist_templates/base.html:27
 msgid "Log Out"
 msgstr "خروج"
 
-#: journalist_templates/base.html:50
+#: journalist_templates/base.html:40
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
@@ -457,7 +445,7 @@ msgstr ""
 "طراحی شده توسط <br> <img src=\"/static/i/securedrop_small.png\" alt="
 "\"SecureDrop\">"
 
-#: journalist_templates/base.html:65
+#: journalist_templates/base.html:55
 msgid "Powered by <em>SecureDrop {version}</em>."
 msgstr "طراحی شده توسط <em>SecureDrop {version} </em>."
 
@@ -809,7 +797,7 @@ msgstr ""
 msgid "LOG IN"
 msgstr ""
 
-#: source_app/__init__.py:115
+#: source_app/__init__.py:128
 msgid ""
 "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This "
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href="
@@ -824,37 +812,37 @@ msgstr ""
 msgid "Invalid input."
 msgstr ""
 
-#: source_app/main.py:30
+#: source_app/main.py:33
 msgid ""
 "You were redirected because you are already logged in. If you want to create "
 "a new account, you should log out first."
 msgstr ""
 
-#: source_app/main.py:132
+#: source_app/main.py:145
 msgid "You must enter a message or choose a file to submit."
 msgstr ""
 
-#: source_app/main.py:165
+#: source_app/main.py:178
 msgid "Thanks! We received your message."
 msgstr ""
 
-#: source_app/main.py:167
+#: source_app/main.py:180
 msgid "Thanks! We received your document."
 msgstr ""
 
-#: source_app/main.py:169
+#: source_app/main.py:182
 msgid "Thanks! We received your message and document."
 msgstr ""
 
-#: source_app/main.py:222
+#: source_app/main.py:241
 msgid "Reply deleted"
 msgstr ""
 
-#: source_app/main.py:240
+#: source_app/main.py:259
 msgid "All replies have been deleted"
 msgstr ""
 
-#: source_app/main.py:254
+#: source_app/main.py:273
 msgid "Sorry, that is not a recognized codename."
 msgstr ""
 
@@ -863,7 +851,7 @@ msgid "Protecting Journalists and Sources"
 msgstr ""
 
 #: source_templates/base.html:25 source_templates/base.html:45
-#: source_templates/index.html:33 source_templates/index.html:85
+#: source_templates/index.html:32 source_templates/index.html:84
 msgid "Powered by"
 msgstr ""
 
@@ -871,89 +859,10 @@ msgstr ""
 msgid "LOG OUT"
 msgstr ""
 
-#: source_templates/base.html:45 source_templates/index.html:85
+#: source_templates/base.html:45 source_templates/index.html:84
 msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:3
-msgid "Turn off NoScript's cross-site request sanitization setting"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:5
-msgid ""
-"Due to a browser issue (<a href=\"{url}\">more details</a>), uploads do not "
-"currently work reliably in Tor Browser while cross-site request sanitization "
-"is turned on. It is safe to turn off this feature while your Security Slider "
-"is set to \"Safest\". Here's how:"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:7
-msgid ""
-"You should find a blue \"S\" icon in the Tor browser's toolbar: <img class="
-"\"inline\" src=\"{noscript_plain_icon_url}\"> or <img class=\"inline\" src="
-"\"{noscript_icon_url}\">. This is the NoScript button."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:11
-msgid "1. Click on the NoScript button."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:12
-msgid "The NoScript pane should appear. It looks like this:"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:18
-msgid ""
-"2. In the NoScript pane, click on the Settings icon: <img class=\"inline\" "
-"src=\"{url}\">"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:20
-msgid ""
-"The settings page should appear in a new browser tab. It looks like this:"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:26
-msgid "3. Click the \"Advanced\" tab."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:28
-msgid "The advanced settings tab should come into view. It looks like this:"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:34
-msgid "4. Un-check \"Sanitize cross-site suspicious requests\"."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:36
-msgid ""
-"Due to a browser issue, this is required for uploads to work reliably. As "
-"soon as the browser issue is resolved, we will remove this recommendation."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:40
-msgid ""
-"5. Close the <i>NoScript Settings</i> browser tab and return to the "
-"SecureDrop tab."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:42
-msgid ""
-"You can now upload your files. Please keep in mind that each file requires "
-"its own submission."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:46
-msgid "6. Re-check \"Sanitize cross-site suspicious requests\"."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:48
-msgid ""
-"Repeat steps 1-3 from above and re-check the setting. The setting has no "
-"effect while your Security Slider is set to \"Safest\", but we recommend "
-"enabling it during normal Tor usage."
 msgstr ""
 
 #: source_templates/error.html:3
@@ -1009,25 +918,25 @@ msgid ""
 "there is no way to retrieve a lost codename."
 msgstr ""
 
-#: source_templates/generate.html:44 source_templates/index.html:66
+#: source_templates/generate.html:44 source_templates/index.html:65
 msgid "SUBMIT DOCUMENTS"
 msgstr ""
 
-#: source_templates/index.html:17
+#: source_templates/index.html:16
 msgid ""
 "<strong>It is recommended to move the Security Slider to Safest to protect "
 "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it "
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
 
-#: source_templates/index.html:18
+#: source_templates/index.html:17
 msgid ""
 "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
 
-#: source_templates/index.html:19
+#: source_templates/index.html:18
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
@@ -1036,25 +945,25 @@ msgid ""
 "continue."
 msgstr ""
 
-#: source_templates/index.html:42
+#: source_templates/index.html:41
 msgid "Submit for the first time"
 msgstr ""
 
-#: source_templates/index.html:49
+#: source_templates/index.html:48
 msgid "Already submitted something?"
 msgstr ""
 
-#: source_templates/index.html:55
+#: source_templates/index.html:54
 msgid "If this is your first time submitting to journalists, start here."
 msgstr ""
 
-#: source_templates/index.html:59
+#: source_templates/index.html:58
 msgid ""
 "If you have already submitted to journalists, log in here to check for "
 "responses."
 msgstr ""
 
-#: source_templates/index.html:74
+#: source_templates/index.html:73
 msgid "CHECK FOR A RESPONSE"
 msgstr ""
 
@@ -1090,7 +999,7 @@ msgstr ""
 msgid "Enter your codename"
 msgstr ""
 
-#: source_templates/login.html:25 source_templates/lookup.html:55
+#: source_templates/login.html:25 source_templates/lookup.html:49
 msgid "CANCEL"
 msgstr ""
 
@@ -1106,63 +1015,55 @@ msgid ""
 "SecureDrop usage from this device."
 msgstr ""
 
+#: source_templates/lookup.html:10
+msgid "Sorry we haven't responded yet!"
+msgstr ""
+
 #: source_templates/lookup.html:11
-msgid "Whew, it’s you! Now, the embarrassing part..."
+msgid ""
+"Our SecureDrop recently experienced a surge of activity. For security "
+"reasons, the creation of a two-way communication channel was delayed until "
+"you checked in again."
 msgstr ""
 
 #: source_templates/lookup.html:12
 msgid ""
-"Our servers experienced an unusual surge of new activity, when you last "
-"visited. To err on the side of caution, we put a hold on sending all files "
-"and messages from that day through to our journalists."
+"Please rest assured that we were able to download your submission, and check "
+"back again later for a reply."
 msgstr ""
 
-#: source_templates/lookup.html:14
-msgid ""
-"Now that we know you’re really a human, though, we’ll get your previous "
-"submission into the hands of a journalist straight away. We’re sorry for the "
-"delay. Please do check back again in a week or so."
-msgstr ""
-
-#: source_templates/lookup.html:20
+#: source_templates/lookup.html:18
 msgid "Submit Files or Messages"
 msgstr ""
 
-#: source_templates/lookup.html:22
-msgid ""
-"Before you begin, turn off cross-site request sanitization in NoScript. This "
-"is <strong>required</strong> for uploads to work. <a href=\"{url}\" class="
-"\"text-link\">Show me how.</a>"
-msgstr ""
-
-#: source_templates/lookup.html:24
-msgid "You can submit any kind of file, a message, or both."
-msgstr ""
-
-#: source_templates/lookup.html:26
+#: source_templates/lookup.html:19
 msgid ""
 "If you are already familiar with GPG, you can optionally encrypt your files "
 "and messages with our <a href=\"{url}\" class=\"text-link\">public key</a> "
 "before submission. Files are encrypted as they are received by SecureDrop."
 msgstr ""
 
-#: source_templates/lookup.html:27
+#: source_templates/lookup.html:20
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
 msgstr ""
 
-#: source_templates/lookup.html:37
+#: source_templates/lookup.html:22
+msgid "You can submit any kind of file, a message, or both."
+msgstr ""
+
+#: source_templates/lookup.html:31
 msgid "Maximum upload size: 500 MB"
 msgstr ""
 
-#: source_templates/lookup.html:40
+#: source_templates/lookup.html:34
 msgid "Write a message."
 msgstr ""
 
-#: source_templates/lookup.html:62
+#: source_templates/lookup.html:56
 msgid "Read Replies"
 msgstr ""
 
-#: source_templates/lookup.html:67
+#: source_templates/lookup.html:61
 msgid ""
 "You have received a reply. To protect your identity in the unlikely event "
 "someone learns your codename, please delete all replies when you're done "
@@ -1170,43 +1071,43 @@ msgid ""
 "respond by submitting new files and messages above."
 msgstr ""
 
-#: source_templates/lookup.html:80
+#: source_templates/lookup.html:74
 msgid "Delete this reply?"
 msgstr ""
 
-#: source_templates/lookup.html:82
+#: source_templates/lookup.html:76
 msgid "DELETE"
 msgstr ""
 
-#: source_templates/lookup.html:91
+#: source_templates/lookup.html:85
 msgid "DELETE ALL REPLIES"
 msgstr ""
 
-#: source_templates/lookup.html:94
+#: source_templates/lookup.html:88
 msgid "Are you finished with the replies?"
 msgstr ""
 
-#: source_templates/lookup.html:95
+#: source_templates/lookup.html:89
 msgid "YES, DELETE ALL REPLIES"
 msgstr ""
 
-#: source_templates/lookup.html:96
+#: source_templates/lookup.html:90
 msgid "NO, NOT YET"
 msgstr ""
 
-#: source_templates/lookup.html:100
+#: source_templates/lookup.html:94
 msgid "There are no replies at this time."
 msgstr ""
 
-#: source_templates/lookup.html:109
+#: source_templates/lookup.html:103
 msgid "Remember, your codename is:"
 msgstr ""
 
-#: source_templates/lookup.html:110
+#: source_templates/lookup.html:104
 msgid "Show"
 msgstr ""
 
-#: source_templates/lookup.html:112
+#: source_templates/lookup.html:106
 msgid "Hide"
 msgstr ""
 
@@ -1350,6 +1251,18 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr ""
+
+#, fuzzy
+#~ msgid ""
+#~ "<strong>Critical Security:</strong> The operating system used by your "
+#~ "SecureDrop servers has reached its end-of-life. A manual update is "
+#~ "urgently required to remain safe - <a href=\"//securedrop.org/xenial-"
+#~ "upgrade\" rel=\"noreferrer\">Learn More</a>"
+#~ msgstr ""
+#~ "<strong>خطای بحرانی:</strong> سیستم عامل مورد استفاده برای سرور "
+#~ "SecureDrop به پایان عمر خود رسیده است. به بروزرسانی سریع برای امن ماندن "
+#~ "نیاز است - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer"
+#~ "\">اطلاعات بیشتر</a>"
 
 #~ msgid "Is Administrator"
 #~ msgstr "مدیر می‌باشد"

@@ -23,7 +23,7 @@ msgstr ""
 msgid "{time} ago"
 msgstr "{time} trước"
 
-#: journalist_app/__init__.py:89 journalist_app/__init__.py:128
+#: journalist_app/__init__.py:91 journalist_app/__init__.py:136
 msgid "You have been logged out due to inactivity"
 msgstr "Phiên hoạt động của bạn đã kết thúc vì thiếu hoạt động"
 
@@ -122,47 +122,47 @@ msgstr "Trường nhập bắt buộc."
 msgid "You can only upload PNG image files."
 msgstr ""
 
-#: journalist_app/main.py:118 journalist_app/utils.py:48
-#: journalist_app/utils.py:138
+#: journalist_app/main.py:120 journalist_app/utils.py:49
+#: journalist_app/utils.py:139
 #, fuzzy
 #| msgid "An unexpected error occurred! Please inform your administrator."
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Lỗi không lường trước đã xảy ra! Vui lòng báo cho nhà quản trị."
 
-#: journalist_app/main.py:129
+#: journalist_app/main.py:131
 msgid "Thanks. Your reply has been stored."
 msgstr "Cảm ơn bạn. Câu trả lời của bạn đã được lưu."
 
-#: journalist_app/main.py:150
+#: journalist_app/main.py:152
 msgid "No collections selected for download."
 msgstr "Không có cơ sở dữ liệu nào được chọn để tải về."
 
-#: journalist_app/main.py:153 journalist_app/utils.py:236
+#: journalist_app/main.py:155 journalist_app/utils.py:237
 msgid "No collections selected for deletion."
 msgstr "Không có cơ sở dữ liệu nào được chọn để xóa."
 
-#: journalist_app/main.py:179
+#: journalist_app/main.py:181
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
 msgstr "Nguồn '{original_name}' đã được đổi tên thành '{new_name}'"
 
-#: journalist_app/main.py:194
+#: journalist_app/main.py:196
 msgid "No unread submissions for this source."
 msgstr "Không có bài đăng nào chưa được đọc cho nguồn này."
 
-#: journalist_app/utils.py:55
+#: journalist_app/utils.py:56
 msgid "Account updated."
 msgstr "Tài khoản đã được cập nhật."
 
-#: journalist_app/utils.py:86
+#: journalist_app/utils.py:87
 msgid "Login failed."
 msgstr "Đăng nhập không thành công."
 
-#: journalist_app/utils.py:94
+#: journalist_app/utils.py:95
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] "Vui lòng đợi ít nhất {seconds} giây trước khi thử đăng nhập lại."
 
-#: journalist_app/utils.py:105
+#: journalist_app/utils.py:106
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
@@ -170,31 +170,31 @@ msgstr ""
 "Vui lòng đợi mật mã mới từ token xác định danh tính hai lần trước khi thử "
 "lại."
 
-#: journalist_app/utils.py:126
+#: journalist_app/utils.py:127
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Cấu trúc bí mật không chính xác: vui lòng nhập chữ từ A-F và số từ 0-9."
 
-#: journalist_app/utils.py:132
+#: journalist_app/utils.py:133
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Cấu trúc bí mật không chính xác: bí mật số lẻ. Có thể bạn đã nhập sai bí mật?"
 
-#: journalist_app/utils.py:188
+#: journalist_app/utils.py:189
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "{num} bài đăng đã được xóa."
 
-#: journalist_app/utils.py:241
+#: journalist_app/utils.py:242
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} cơ sở dữ liệu đã được xóa"
 
-#: journalist_app/utils.py:279
+#: journalist_app/utils.py:280
 msgid "You submitted a bad password! Password not changed."
 msgstr "Bạn đã nhập mật khẩu lỗi! Mật khẩu chưa được đổi."
 
-#: journalist_app/utils.py:286
+#: journalist_app/utils.py:287
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -203,7 +203,7 @@ msgstr ""
 "Đã có lỗi xảy ra, và mật khẩu mới có thể chưa được lưu chính xác. Để tránh "
 "tài khoản bị khóa, bạn nên đổi lại mật khẩu."
 
-#: journalist_app/utils.py:295
+#: journalist_app/utils.py:296
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -211,7 +211,7 @@ msgstr ""
 "Mật khẩu đã được cập nhật. Đừng quên lưu lại trong cơ sở dữ liệu KeePassX "
 "của bạn. Mật khẩu mới là:"
 
-#: journalist_app/utils.py:312
+#: journalist_app/utils.py:313
 msgid "No unread submissions in selected collections."
 msgstr ""
 "Không có bài đăng nào chưa được đọc trong những cơ sở dữ liệu được chọn."
@@ -221,7 +221,7 @@ msgid "Close"
 msgstr "Đóng"
 
 #: journalist_templates/_confirmation_modal.html:7
-#: journalist_templates/col.html:15 source_templates/lookup.html:81
+#: journalist_templates/col.html:15 source_templates/lookup.html:75
 msgid "Cancel"
 msgstr "Hủy"
 
@@ -326,7 +326,7 @@ msgstr "Mã xác nhận"
 
 #: journalist_templates/account_new_two_factor.html:24
 #: journalist_templates/admin_new_user_two_factor.html:27
-#: journalist_templates/col.html:99 source_templates/lookup.html:49
+#: journalist_templates/col.html:99 source_templates/lookup.html:43
 msgid "SUBMIT"
 msgstr "GỬI"
 
@@ -425,27 +425,19 @@ msgstr ""
 "trong những dãy mật mã bao gồm 6 ký tự từ phần mềm để xác nhận rằng xác định "
 "danh tính hai lần đã được thành lập thành công."
 
-#: journalist_templates/base.html:28
-msgid ""
-"<strong>Critical Security:</strong> The operating system used by your "
-"SecureDrop servers has reached its end-of-life. A manual update is urgently "
-"required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
-"\"noreferrer\">Learn More</a>"
-msgstr ""
-
-#: journalist_templates/base.html:33
+#: journalist_templates/base.html:23
 msgid "Logged on as"
 msgstr "Truy cập với vai trò"
 
-#: journalist_templates/base.html:35
+#: journalist_templates/base.html:25
 msgid "Admin"
 msgstr "Nhà quản trị"
 
-#: journalist_templates/base.html:37
+#: journalist_templates/base.html:27
 msgid "Log Out"
 msgstr "Thoát ra"
 
-#: journalist_templates/base.html:50
+#: journalist_templates/base.html:40
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
@@ -453,7 +445,7 @@ msgstr ""
 "Cung cấp bởi <br> <img src=\"/static/i/securedrop_small.png\" alt="
 "\"SecureDrop\">"
 
-#: journalist_templates/base.html:65
+#: journalist_templates/base.html:55
 msgid "Powered by <em>SecureDrop {version}</em>."
 msgstr "Cung cấp bởi <em> 1SecureDrop {version}</em> 2."
 
@@ -814,7 +806,7 @@ msgstr "Mật khẩu"
 msgid "LOG IN"
 msgstr "TRUY CẬP"
 
-#: source_app/__init__.py:115
+#: source_app/__init__.py:128
 msgid ""
 "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This "
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href="
@@ -831,7 +823,7 @@ msgstr "Trường nhập phải bao gồm giữa 1 và {max_codename_len} kí t�
 msgid "Invalid input."
 msgstr "Nhập không chính xác."
 
-#: source_app/main.py:30
+#: source_app/main.py:33
 msgid ""
 "You were redirected because you are already logged in. If you want to create "
 "a new account, you should log out first."
@@ -839,31 +831,31 @@ msgstr ""
 "Bạn được gửi tới địa chỉ mới vì bạn đã truy cập rồi. Nếu bạn muốn tạo một "
 "tài khoản mới, vui lòng đăng xuất trước."
 
-#: source_app/main.py:132
+#: source_app/main.py:145
 msgid "You must enter a message or choose a file to submit."
 msgstr "Bạn phải nhập một tin nhắn hay chọn một tài liệu để tải lên."
 
-#: source_app/main.py:165
+#: source_app/main.py:178
 msgid "Thanks! We received your message."
 msgstr "Cảm ơn! Chúng tôi đã nhận được tin nhắn của bạn."
 
-#: source_app/main.py:167
+#: source_app/main.py:180
 msgid "Thanks! We received your document."
 msgstr "Cảm ơn! Chúng tôi đã nhận được tài liệu của bạn."
 
-#: source_app/main.py:169
+#: source_app/main.py:182
 msgid "Thanks! We received your message and document."
 msgstr "Cảm ơn! Chúng tôi đã nhận được tin nhắn và tài liệu của bạn."
 
-#: source_app/main.py:222
+#: source_app/main.py:241
 msgid "Reply deleted"
 msgstr "Câu trả lời đã được xóa"
 
-#: source_app/main.py:240
+#: source_app/main.py:259
 msgid "All replies have been deleted"
 msgstr "Tất cả các câu trả lời đã được xóa"
 
-#: source_app/main.py:254
+#: source_app/main.py:273
 msgid "Sorry, that is not a recognized codename."
 msgstr "Đây không phải là một mật danh trong cơ sở dữ liệu."
 
@@ -872,7 +864,7 @@ msgid "Protecting Journalists and Sources"
 msgstr "Bảo vệ những nhà báo và các nguồn"
 
 #: source_templates/base.html:25 source_templates/base.html:45
-#: source_templates/index.html:33 source_templates/index.html:85
+#: source_templates/index.html:32 source_templates/index.html:84
 msgid "Powered by"
 msgstr "Được cung cấp bởi"
 
@@ -880,92 +872,13 @@ msgstr "Được cung cấp bởi"
 msgid "LOG OUT"
 msgstr "TRUY XUẤT"
 
-#: source_templates/base.html:45 source_templates/index.html:85
+#: source_templates/base.html:45 source_templates/index.html:84
 msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
 msgstr ""
 "Như mọi phần mềm, SecureDrop có thể có bug. Bạn phải chịu trách nhiệm rủi ro "
 "này."
-
-#: source_templates/disable-noscript-xss.html:3
-msgid "Turn off NoScript's cross-site request sanitization setting"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:5
-msgid ""
-"Due to a browser issue (<a href=\"{url}\">more details</a>), uploads do not "
-"currently work reliably in Tor Browser while cross-site request sanitization "
-"is turned on. It is safe to turn off this feature while your Security Slider "
-"is set to \"Safest\". Here's how:"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:7
-msgid ""
-"You should find a blue \"S\" icon in the Tor browser's toolbar: <img class="
-"\"inline\" src=\"{noscript_plain_icon_url}\"> or <img class=\"inline\" src="
-"\"{noscript_icon_url}\">. This is the NoScript button."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:11
-msgid "1. Click on the NoScript button."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:12
-msgid "The NoScript pane should appear. It looks like this:"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:18
-msgid ""
-"2. In the NoScript pane, click on the Settings icon: <img class=\"inline\" "
-"src=\"{url}\">"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:20
-msgid ""
-"The settings page should appear in a new browser tab. It looks like this:"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:26
-msgid "3. Click the \"Advanced\" tab."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:28
-msgid "The advanced settings tab should come into view. It looks like this:"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:34
-msgid "4. Un-check \"Sanitize cross-site suspicious requests\"."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:36
-msgid ""
-"Due to a browser issue, this is required for uploads to work reliably. As "
-"soon as the browser issue is resolved, we will remove this recommendation."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:40
-msgid ""
-"5. Close the <i>NoScript Settings</i> browser tab and return to the "
-"SecureDrop tab."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:42
-msgid ""
-"You can now upload your files. Please keep in mind that each file requires "
-"its own submission."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:46
-msgid "6. Re-check \"Sanitize cross-site suspicious requests\"."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:48
-msgid ""
-"Repeat steps 1-3 from above and re-check the setting. The setting has no "
-"effect while your Security Slider is set to \"Safest\", but we recommend "
-"enabling it during normal Tor usage."
-msgstr ""
 
 #: source_templates/error.html:3
 msgid "Server error"
@@ -1025,25 +938,25 @@ msgid ""
 "there is no way to retrieve a lost codename."
 msgstr ""
 
-#: source_templates/generate.html:44 source_templates/index.html:66
+#: source_templates/generate.html:44 source_templates/index.html:65
 msgid "SUBMIT DOCUMENTS"
 msgstr "GỬI TÀI LIỆU"
 
-#: source_templates/index.html:17
+#: source_templates/index.html:16
 msgid ""
 "<strong>It is recommended to move the Security Slider to Safest to protect "
 "your anonymity:</strong> <a id=\"disable-js\" href=\"\">Learn how to set it "
 "to Safest</a>, or ignore this warning to continue."
 msgstr ""
 
-#: source_templates/index.html:18
+#: source_templates/index.html:17
 msgid ""
 "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
 
-#: source_templates/index.html:19
+#: source_templates/index.html:18
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
@@ -1052,17 +965,17 @@ msgid ""
 "continue."
 msgstr ""
 
-#: source_templates/index.html:42
+#: source_templates/index.html:41
 #, fuzzy
 #| msgid "Submit documents for the first time"
 msgid "Submit for the first time"
 msgstr "Gửi tài liệu lần đầu"
 
-#: source_templates/index.html:49
+#: source_templates/index.html:48
 msgid "Already submitted something?"
 msgstr "Đã gửi tài liệu rồi?"
 
-#: source_templates/index.html:55
+#: source_templates/index.html:54
 #, fuzzy
 #| msgid ""
 #| "If this is your first time submitting documents to journalists, start "
@@ -1072,7 +985,7 @@ msgstr ""
 "Nếu đây là lần đầu tiên bạn gửi tài liệu cho những nhà báo, hãy bắt đầu tại "
 "đây."
 
-#: source_templates/index.html:59
+#: source_templates/index.html:58
 #, fuzzy
 #| msgid ""
 #| "If you have already submitted documents in the past, log in here to check "
@@ -1083,7 +996,7 @@ msgid ""
 msgstr ""
 "Nếu bạn đã gửi tài liệu rồi, hãy truy cập ở đây để xem các câu trả lời."
 
-#: source_templates/index.html:74
+#: source_templates/index.html:73
 msgid "CHECK FOR A RESPONSE"
 msgstr "KIỂM TRA CÂU TRẢ LỜI"
 
@@ -1132,7 +1045,7 @@ msgstr "Nhập mật danh"
 msgid "Enter your codename"
 msgstr "Nhập mật danh của bạn"
 
-#: source_templates/login.html:25 source_templates/lookup.html:55
+#: source_templates/login.html:25 source_templates/lookup.html:49
 msgid "CANCEL"
 msgstr "HỦY"
 
@@ -1156,65 +1069,57 @@ msgstr ""
 "màu xanh trong trình duyệt Tor để xóa lịch sử sử dụng SecureDrop từ thiết bị "
 "này."
 
+#: source_templates/lookup.html:10
+msgid "Sorry we haven't responded yet!"
+msgstr ""
+
 #: source_templates/lookup.html:11
-msgid "Whew, it’s you! Now, the embarrassing part..."
-msgstr "Chà, là bạn! Giờ là phần đáng xấu hổ đây..."
+msgid ""
+"Our SecureDrop recently experienced a surge of activity. For security "
+"reasons, the creation of a two-way communication channel was delayed until "
+"you checked in again."
+msgstr ""
 
 #: source_templates/lookup.html:12
 msgid ""
-"Our servers experienced an unusual surge of new activity, when you last "
-"visited. To err on the side of caution, we put a hold on sending all files "
-"and messages from that day through to our journalists."
+"Please rest assured that we were able to download your submission, and check "
+"back again later for a reply."
 msgstr ""
 
-#: source_templates/lookup.html:14
-msgid ""
-"Now that we know you’re really a human, though, we’ll get your previous "
-"submission into the hands of a journalist straight away. We’re sorry for the "
-"delay. Please do check back again in a week or so."
-msgstr ""
-
-#: source_templates/lookup.html:20
+#: source_templates/lookup.html:18
 msgid "Submit Files or Messages"
 msgstr ""
 
-#: source_templates/lookup.html:22
-msgid ""
-"Before you begin, turn off cross-site request sanitization in NoScript. This "
-"is <strong>required</strong> for uploads to work. <a href=\"{url}\" class="
-"\"text-link\">Show me how.</a>"
-msgstr ""
-
-#: source_templates/lookup.html:24
-#, fuzzy
-#| msgid "You can send a file, a message, or both."
-msgid "You can submit any kind of file, a message, or both."
-msgstr "Bạn có thể gửi một tài liệu, một tin nhắn, hay cả hai."
-
-#: source_templates/lookup.html:26
+#: source_templates/lookup.html:19
 msgid ""
 "If you are already familiar with GPG, you can optionally encrypt your files "
 "and messages with our <a href=\"{url}\" class=\"text-link\">public key</a> "
 "before submission. Files are encrypted as they are received by SecureDrop."
 msgstr ""
 
-#: source_templates/lookup.html:27
+#: source_templates/lookup.html:20
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
 msgstr ""
 
-#: source_templates/lookup.html:37
+#: source_templates/lookup.html:22
+#, fuzzy
+#| msgid "You can send a file, a message, or both."
+msgid "You can submit any kind of file, a message, or both."
+msgstr "Bạn có thể gửi một tài liệu, một tin nhắn, hay cả hai."
+
+#: source_templates/lookup.html:31
 msgid "Maximum upload size: 500 MB"
 msgstr "Kích thước tải lên tối đa: 500 MB"
 
-#: source_templates/lookup.html:40
+#: source_templates/lookup.html:34
 msgid "Write a message."
 msgstr "Viết một tin nhắn."
 
-#: source_templates/lookup.html:62
+#: source_templates/lookup.html:56
 msgid "Read Replies"
 msgstr "Đọc các câu trả lời"
 
-#: source_templates/lookup.html:67
+#: source_templates/lookup.html:61
 msgid ""
 "You have received a reply. To protect your identity in the unlikely event "
 "someone learns your codename, please delete all replies when you're done "
@@ -1222,43 +1127,43 @@ msgid ""
 "respond by submitting new files and messages above."
 msgstr ""
 
-#: source_templates/lookup.html:80
+#: source_templates/lookup.html:74
 msgid "Delete this reply?"
 msgstr "Xóa câu trả lời này?"
 
-#: source_templates/lookup.html:82
+#: source_templates/lookup.html:76
 msgid "DELETE"
 msgstr "XÓA"
 
-#: source_templates/lookup.html:91
+#: source_templates/lookup.html:85
 msgid "DELETE ALL REPLIES"
 msgstr "XÓA TẤT CẢ CÁC CÂU TRẢ LỜI"
 
-#: source_templates/lookup.html:94
+#: source_templates/lookup.html:88
 msgid "Are you finished with the replies?"
 msgstr "Bạn đã hoàn thành với các câu trả lời chưa?"
 
-#: source_templates/lookup.html:95
+#: source_templates/lookup.html:89
 msgid "YES, DELETE ALL REPLIES"
 msgstr "XÓA MỌI CÂU TRẢ LỜI"
 
-#: source_templates/lookup.html:96
+#: source_templates/lookup.html:90
 msgid "NO, NOT YET"
 msgstr "CHƯA XÓA"
 
-#: source_templates/lookup.html:100
+#: source_templates/lookup.html:94
 msgid "There are no replies at this time."
 msgstr "Hiện tại không có câu trả lời nào."
 
-#: source_templates/lookup.html:109
+#: source_templates/lookup.html:103
 msgid "Remember, your codename is:"
 msgstr "Nhớ rằng mật danh của bạn là:"
 
-#: source_templates/lookup.html:110
+#: source_templates/lookup.html:104
 msgid "Show"
 msgstr "Chậm"
 
-#: source_templates/lookup.html:112
+#: source_templates/lookup.html:106
 msgid "Hide"
 msgstr "Giấu"
 
@@ -1412,6 +1317,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr ""
+
+#~ msgid "Whew, it’s you! Now, the embarrassing part..."
+#~ msgstr "Chà, là bạn! Giờ là phần đáng xấu hổ đây..."
 
 #~ msgid "Is Administrator"
 #~ msgstr "Là nhà quản trị"

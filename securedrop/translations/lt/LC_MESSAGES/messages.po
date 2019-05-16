@@ -26,7 +26,7 @@ msgstr ""
 msgid "{time} ago"
 msgstr "Prieš {time}"
 
-#: journalist_app/__init__.py:89 journalist_app/__init__.py:128
+#: journalist_app/__init__.py:91 journalist_app/__init__.py:136
 #, fuzzy
 msgid "You have been logged out due to inactivity"
 msgstr "Buvote atjungtas nes paskyra ilgai buvo neaktyvi."
@@ -138,48 +138,48 @@ msgstr "Byla (failas) privalomas."
 msgid "You can only upload PNG image files."
 msgstr "Prisegti galima tik PNG formato paveikslėlius."
 
-#: journalist_app/main.py:118 journalist_app/utils.py:48
-#: journalist_app/utils.py:138
+#: journalist_app/main.py:120 journalist_app/utils.py:49
+#: journalist_app/utils.py:139
 #, fuzzy
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Nenumatyta klaida! Prašome informuoti savo administratorių."
 
-#: journalist_app/main.py:129
+#: journalist_app/main.py:131
 #, fuzzy
 msgid "Thanks. Your reply has been stored."
 msgstr "Dėkojame. Jūsų atsakymas išsaugotas."
 
-#: journalist_app/main.py:150
+#: journalist_app/main.py:152
 #, fuzzy
 msgid "No collections selected for download."
 msgstr "Nepasirinkta jokios medžiagos atsisiuntimui."
 
-#: journalist_app/main.py:153 journalist_app/utils.py:236
+#: journalist_app/main.py:155 journalist_app/utils.py:237
 #, fuzzy
 msgid "No collections selected for deletion."
 msgstr "Nepasirinkta jokios medžiagos ištrynimui."
 
-#: journalist_app/main.py:179
+#: journalist_app/main.py:181
 #, fuzzy
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
 msgstr "Šaltinis '{original_name}' pervadintas į '{new_name}'"
 
-#: journalist_app/main.py:194
+#: journalist_app/main.py:196
 #, fuzzy
 msgid "No unread submissions for this source."
 msgstr "Šaltinis neturi neperskaitytų paraiškų."
 
-#: journalist_app/utils.py:55
+#: journalist_app/utils.py:56
 #, fuzzy
 msgid "Account updated."
 msgstr "Paskyra atnaujinta."
 
-#: journalist_app/utils.py:86
+#: journalist_app/utils.py:87
 #, fuzzy
 msgid "Login failed."
 msgstr "Prisijungimas nesėkmingas."
 
-#: journalist_app/utils.py:94
+#: journalist_app/utils.py:95
 #, fuzzy
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
@@ -190,7 +190,7 @@ msgstr[1] ""
 msgstr[2] ""
 "Prašome palaukti bent {seconds} sekundžių prieš vėl bandydami prisijungti."
 
-#: journalist_app/utils.py:105
+#: journalist_app/utils.py:106
 #, fuzzy
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
@@ -199,19 +199,19 @@ msgstr ""
 "Prašome palaukti naujo kodo iš jūsų dviejų dalių autentifikatoriaus prieš "
 "bandydami dar kartą."
 
-#: journalist_app/utils.py:126
+#: journalist_app/utils.py:127
 #, fuzzy
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Netinkamas slapto kodo formatas: prašome pateikti tik raides A-F ir skaičius "
 "0-9."
 
-#: journalist_app/utils.py:132
+#: journalist_app/utils.py:133
 #, fuzzy
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "Netinkamas slapto kodo ilgis - ar suklydote?"
 
-#: journalist_app/utils.py:188
+#: journalist_app/utils.py:189
 #, fuzzy
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
@@ -219,7 +219,7 @@ msgstr[0] "Paraiška ištrinta."
 msgstr[1] "Ištrintos {num} paraiškos."
 msgstr[2] "Ištrinta {num} paraiškų."
 
-#: journalist_app/utils.py:241
+#: journalist_app/utils.py:242
 #, fuzzy
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
@@ -227,12 +227,12 @@ msgstr[0] "Ištrintas {num} surinktos medžiagos vienetas"
 msgstr[1] "Ištrinti {num} surinktos medžiagos vienetai"
 msgstr[2] "Ištrinta {num} surinktos medžiagos vienetų"
 
-#: journalist_app/utils.py:279
+#: journalist_app/utils.py:280
 #, fuzzy
 msgid "You submitted a bad password! Password not changed."
 msgstr "Pateikėte neteisingą slaptažodį! Slaptažodis nepakeistas."
 
-#: journalist_app/utils.py:286
+#: journalist_app/utils.py:287
 #, fuzzy
 msgid ""
 "There was an error, and the new password might not have been saved "
@@ -242,7 +242,7 @@ msgstr ""
 "Įvyko klaida ir naujas slaptažodis galimai nebuvo išsaugotas. Atstatykite "
 "slaptažodį dar kartą, kad nebūtumėte užrakintas iš savo paskyros."
 
-#: journalist_app/utils.py:295
+#: journalist_app/utils.py:296
 #, fuzzy
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
@@ -251,7 +251,7 @@ msgstr ""
 "Slaptažodis atnaujintas. Nepamirškite jį išsaugoti savo KeePassX duomenų "
 "bazėje. Naujas slaptažodis:"
 
-#: journalist_app/utils.py:312
+#: journalist_app/utils.py:313
 #, fuzzy
 msgid "No unread submissions in selected collections."
 msgstr "Pasirinktoje medžiagoje nėra neperskaitytų paraiškų."
@@ -262,7 +262,7 @@ msgid "Close"
 msgstr "Uždaryti"
 
 #: journalist_templates/_confirmation_modal.html:7
-#: journalist_templates/col.html:15 source_templates/lookup.html:81
+#: journalist_templates/col.html:15 source_templates/lookup.html:75
 #, fuzzy
 msgid "Cancel"
 msgstr "Atšaukti"
@@ -392,7 +392,7 @@ msgstr "Patvirtinimo kodas"
 
 #: journalist_templates/account_new_two_factor.html:24
 #: journalist_templates/admin_new_user_two_factor.html:27
-#: journalist_templates/col.html:99 source_templates/lookup.html:49
+#: journalist_templates/col.html:99 source_templates/lookup.html:43
 #, fuzzy
 msgid "SUBMIT"
 msgstr "PATEIKTI"
@@ -507,30 +507,22 @@ msgstr ""
 "mobilioje programėlėje, užtikrinkite kad 6 skaitmenų kodas iš programėlės "
 "įvestas teisingo dviejų dalių autentifikavimo sukonfigūravimo patvirtinimui."
 
-#: journalist_templates/base.html:28
-msgid ""
-"<strong>Critical Security:</strong> The operating system used by your "
-"SecureDrop servers has reached its end-of-life. A manual update is urgently "
-"required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel="
-"\"noreferrer\">Learn More</a>"
-msgstr ""
-
-#: journalist_templates/base.html:33
+#: journalist_templates/base.html:23
 #, fuzzy
 msgid "Logged on as"
 msgstr "Prisijungęs kaip"
 
-#: journalist_templates/base.html:35
+#: journalist_templates/base.html:25
 #, fuzzy
 msgid "Admin"
 msgstr "Administratorius"
 
-#: journalist_templates/base.html:37
+#: journalist_templates/base.html:27
 #, fuzzy
 msgid "Log Out"
 msgstr "Atsijungti"
 
-#: journalist_templates/base.html:50
+#: journalist_templates/base.html:40
 #, fuzzy
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
@@ -539,7 +531,7 @@ msgstr ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
 
-#: journalist_templates/base.html:65
+#: journalist_templates/base.html:55
 #, fuzzy
 msgid "Powered by <em>SecureDrop {version}</em>."
 msgstr "Powered by <em>SecureDrop {version}</em>."
@@ -983,7 +975,7 @@ msgstr "Slaptažodis"
 msgid "LOG IN"
 msgstr "PRISIJUNGTI"
 
-#: source_app/__init__.py:115
+#: source_app/__init__.py:128
 #, fuzzy
 msgid ""
 "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This "
@@ -1003,7 +995,7 @@ msgstr "Laukas turi būti nuo 1 iki {max_codename_len} simbolių ilgio."
 msgid "Invalid input."
 msgstr "Neteisinga laukelio reikšmė."
 
-#: source_app/main.py:30
+#: source_app/main.py:33
 #, fuzzy
 msgid ""
 "You were redirected because you are already logged in. If you want to create "
@@ -1012,38 +1004,38 @@ msgstr ""
 "Buvote peradresuotas nes jau esate prisijungęs. Norėdami sukurti naują "
 "paskyrą, pirmiausia atsijunkite."
 
-#: source_app/main.py:132
+#: source_app/main.py:145
 #, fuzzy
 msgid "You must enter a message or choose a file to submit."
 msgstr ""
 "Privalote įrašyti žinutę arba pasirinkti bylą (failą) kurį norite pateikti."
 
-#: source_app/main.py:165
+#: source_app/main.py:178
 #, fuzzy
 msgid "Thanks! We received your message."
 msgstr "Ačiū! Žinutė pateikta sėkmingai."
 
-#: source_app/main.py:167
+#: source_app/main.py:180
 #, fuzzy
 msgid "Thanks! We received your document."
 msgstr "Ačiū! Dokumentas pateiktas sėkmingai."
 
-#: source_app/main.py:169
+#: source_app/main.py:182
 #, fuzzy
 msgid "Thanks! We received your message and document."
 msgstr "Ačiū! Tavo žinutė ir dokumentai pateikti sėkmingai."
 
-#: source_app/main.py:222
+#: source_app/main.py:241
 #, fuzzy
 msgid "Reply deleted"
 msgstr "Atsakymas ištrintas"
 
-#: source_app/main.py:240
+#: source_app/main.py:259
 #, fuzzy
 msgid "All replies have been deleted"
 msgstr "Visi atsakymai ištrinti"
 
-#: source_app/main.py:254
+#: source_app/main.py:273
 #, fuzzy
 msgid "Sorry, that is not a recognized codename."
 msgstr "Atsiprašome, šis slapyvardis neatpažintas."
@@ -1054,7 +1046,7 @@ msgid "Protecting Journalists and Sources"
 msgstr "Saugome žurnalistus ir jų šaltinius"
 
 #: source_templates/base.html:25 source_templates/base.html:45
-#: source_templates/index.html:33 source_templates/index.html:85
+#: source_templates/index.html:32 source_templates/index.html:84
 #, fuzzy
 msgid "Powered by"
 msgstr "Sistema paremta"
@@ -1064,92 +1056,13 @@ msgstr "Sistema paremta"
 msgid "LOG OUT"
 msgstr "ATSIJUNGTI"
 
-#: source_templates/base.html:45 source_templates/index.html:85
+#: source_templates/base.html:45 source_templates/index.html:84
 msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
 msgstr ""
 "Kaip ir kiekviena sistema, SecureDrop programinis paketas gali turėti "
 "saugumo spragų."
-
-#: source_templates/disable-noscript-xss.html:3
-msgid "Turn off NoScript's cross-site request sanitization setting"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:5
-msgid ""
-"Due to a browser issue (<a href=\"{url}\">more details</a>), uploads do not "
-"currently work reliably in Tor Browser while cross-site request sanitization "
-"is turned on. It is safe to turn off this feature while your Security Slider "
-"is set to \"Safest\". Here's how:"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:7
-msgid ""
-"You should find a blue \"S\" icon in the Tor browser's toolbar: <img class="
-"\"inline\" src=\"{noscript_plain_icon_url}\"> or <img class=\"inline\" src="
-"\"{noscript_icon_url}\">. This is the NoScript button."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:11
-msgid "1. Click on the NoScript button."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:12
-msgid "The NoScript pane should appear. It looks like this:"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:18
-msgid ""
-"2. In the NoScript pane, click on the Settings icon: <img class=\"inline\" "
-"src=\"{url}\">"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:20
-msgid ""
-"The settings page should appear in a new browser tab. It looks like this:"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:26
-msgid "3. Click the \"Advanced\" tab."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:28
-msgid "The advanced settings tab should come into view. It looks like this:"
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:34
-msgid "4. Un-check \"Sanitize cross-site suspicious requests\"."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:36
-msgid ""
-"Due to a browser issue, this is required for uploads to work reliably. As "
-"soon as the browser issue is resolved, we will remove this recommendation."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:40
-msgid ""
-"5. Close the <i>NoScript Settings</i> browser tab and return to the "
-"SecureDrop tab."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:42
-msgid ""
-"You can now upload your files. Please keep in mind that each file requires "
-"its own submission."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:46
-msgid "6. Re-check \"Sanitize cross-site suspicious requests\"."
-msgstr ""
-
-#: source_templates/disable-noscript-xss.html:48
-msgid ""
-"Repeat steps 1-3 from above and re-check the setting. The setting has no "
-"effect while your Security Slider is set to \"Safest\", but we recommend "
-"enabling it during normal Tor usage."
-msgstr ""
 
 #: source_templates/error.html:3
 #, fuzzy
@@ -1222,11 +1135,11 @@ msgstr ""
 "turėtume klausimų ar norėtume gauti papildomos informacijos. Kitaip nei "
 "slaptažodžių atveju, nėra būdo atkurti prarastą slapyvardį."
 
-#: source_templates/generate.html:44 source_templates/index.html:66
+#: source_templates/generate.html:44 source_templates/index.html:65
 msgid "SUBMIT DOCUMENTS"
 msgstr "PATEIKTI PRANEŠIMĄ"
 
-#: source_templates/index.html:17
+#: source_templates/index.html:16
 #, fuzzy
 msgid ""
 "<strong>It is recommended to move the Security Slider to Safest to protect "
@@ -1238,7 +1151,7 @@ msgstr ""
 "\"\">Sužinokite kaip pakeisti lygį į saugiausią</a>, arba ignoruokite šį "
 "įspėjimą ir tęskite."
 
-#: source_templates/index.html:18
+#: source_templates/index.html:17
 #, fuzzy
 msgid ""
 "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
@@ -1249,7 +1162,7 @@ msgstr ""
 "\"recommend-tor\" href=\"{tor_browser_url}\">Sužinoti kaip įdiegti naršyklę</"
 "a>, arba ignoruokite šį įspėjimą ir tęskite."
 
-#: source_templates/index.html:19
+#: source_templates/index.html:18
 #, fuzzy
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
@@ -1264,21 +1177,21 @@ msgstr ""
 "\"{tor_browser_url}\">Sužinokite kaip įdiegti darbalaukio versiją</a>, arba "
 "ignoruokite šią žinutę ir tęskite."
 
-#: source_templates/index.html:42
+#: source_templates/index.html:41
 #, fuzzy
 msgid "Submit for the first time"
 msgstr "Pateikti pirmą kartą"
 
-#: source_templates/index.html:49
+#: source_templates/index.html:48
 msgid "Already submitted something?"
 msgstr "Jau esate pateikęs pranešimą?"
 
-#: source_templates/index.html:55
+#: source_templates/index.html:54
 #, fuzzy
 msgid "If this is your first time submitting to journalists, start here."
 msgstr "Jei tai yra tavo pirmas kartas teikiant paraišką, pradėk čia."
 
-#: source_templates/index.html:59
+#: source_templates/index.html:58
 #, fuzzy
 msgid ""
 "If you have already submitted to journalists, log in here to check for "
@@ -1287,7 +1200,7 @@ msgstr ""
 "Jei jau esate pateikęs pranešimą, prisijunkite čia, kad galėtumėte "
 "patikrinti atsakymus."
 
-#: source_templates/index.html:74
+#: source_templates/index.html:73
 #, fuzzy
 msgid "CHECK FOR A RESPONSE"
 msgstr "TIKRINTI AR YRA ATSAKYMŲ"
@@ -1337,7 +1250,7 @@ msgstr "Įvesti Slapyvardį"
 msgid "Enter your codename"
 msgstr "Įvesk savo slapyvardį"
 
-#: source_templates/login.html:25 source_templates/lookup.html:55
+#: source_templates/login.html:25 source_templates/lookup.html:49
 #, fuzzy
 msgid "CANCEL"
 msgstr "ATŠAUKTI"
@@ -1358,51 +1271,29 @@ msgstr ""
 "Tavo sesija sėkmingai uždaryta. Norėdamas pašalinti šios sesijos istoriją iš "
 "savo įrenginio, perkrauk Tor naršyklę."
 
+#: source_templates/lookup.html:10
+msgid "Sorry we haven't responded yet!"
+msgstr ""
+
 #: source_templates/lookup.html:11
-#, fuzzy
-msgid "Whew, it’s you! Now, the embarrassing part..."
-msgstr "Čia jūs! O dabar, gėdinga istorijos pusė..."
+msgid ""
+"Our SecureDrop recently experienced a surge of activity. For security "
+"reasons, the creation of a two-way communication channel was delayed until "
+"you checked in again."
+msgstr ""
 
 #: source_templates/lookup.html:12
-#, fuzzy
 msgid ""
-"Our servers experienced an unusual surge of new activity, when you last "
-"visited. To err on the side of caution, we put a hold on sending all files "
-"and messages from that day through to our journalists."
+"Please rest assured that we were able to download your submission, and check "
+"back again later for a reply."
 msgstr ""
-"Nuo paskutinio jūsų apsilankymo mūsų serveriai patyrė įtartiną naujos "
-"veiklos kiekį. Atsargumo dėlei, sustabdėme visų failų ir žinučių siuntimą "
-"žurnalistams tą dieną."
 
-#: source_templates/lookup.html:14
-#, fuzzy
-msgid ""
-"Now that we know you’re really a human, though, we’ll get your previous "
-"submission into the hands of a journalist straight away. We’re sorry for the "
-"delay. Please do check back again in a week or so."
-msgstr ""
-"Dabar, kai jau esame įsitikinę, kad jūs tikrai žmogus, tuoj pat išsiųsime "
-"jūsų pateiktą medžiagą žurnalistams. Atsiprašome už šį vėlavimą. Maloniai "
-"prašome sugrįžti po apytiksliai savaitės."
-
-#: source_templates/lookup.html:20
+#: source_templates/lookup.html:18
 #, fuzzy
 msgid "Submit Files or Messages"
 msgstr "Pateikti Failus arba Žinutę"
 
-#: source_templates/lookup.html:22
-msgid ""
-"Before you begin, turn off cross-site request sanitization in NoScript. This "
-"is <strong>required</strong> for uploads to work. <a href=\"{url}\" class="
-"\"text-link\">Show me how.</a>"
-msgstr ""
-
-#: source_templates/lookup.html:24
-#, fuzzy
-msgid "You can submit any kind of file, a message, or both."
-msgstr "Gali pateikti bet kokio tipo failą, žinutę, arba abu."
-
-#: source_templates/lookup.html:26
+#: source_templates/lookup.html:19
 #, fuzzy
 msgid ""
 "If you are already familiar with GPG, you can optionally encrypt your files "
@@ -1414,27 +1305,32 @@ msgstr ""
 "naudodamas(-a) mūsų <a href=\"{url}\" class=\"text-link\">viešąjį raktą</a> "
 "dar prieš pateikiant juos į mūsų sistemą."
 
-#: source_templates/lookup.html:27
+#: source_templates/lookup.html:20
 #, fuzzy
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
 msgstr "<a href=\"{url}\" class=\"text-link\">Sužinoti daugiau</a>."
 
-#: source_templates/lookup.html:37
+#: source_templates/lookup.html:22
+#, fuzzy
+msgid "You can submit any kind of file, a message, or both."
+msgstr "Gali pateikti bet kokio tipo failą, žinutę, arba abu."
+
+#: source_templates/lookup.html:31
 #, fuzzy
 msgid "Maximum upload size: 500 MB"
 msgstr "Maksimalus siunčiamų failų dydis: 500 MB"
 
-#: source_templates/lookup.html:40
+#: source_templates/lookup.html:34
 #, fuzzy
 msgid "Write a message."
 msgstr "Rašyti žinutę."
 
-#: source_templates/lookup.html:62
+#: source_templates/lookup.html:56
 #, fuzzy
 msgid "Read Replies"
 msgstr "Skaityti Atsakymus"
 
-#: source_templates/lookup.html:67
+#: source_templates/lookup.html:61
 #, fuzzy
 msgid ""
 "You have received a reply. To protect your identity in the unlikely event "
@@ -1447,52 +1343,52 @@ msgstr ""
 "juos pabaigę. Tai taip pat mums leis žinoti kad jūs patvirtinate savo "
 "atsakymą. Galite atsakyti siųsdami naujus failus arba žinutes viršuje."
 
-#: source_templates/lookup.html:80
+#: source_templates/lookup.html:74
 #, fuzzy
 msgid "Delete this reply?"
 msgstr "Ištrinti šį atsakymą?"
 
-#: source_templates/lookup.html:82
+#: source_templates/lookup.html:76
 #, fuzzy
 msgid "DELETE"
 msgstr "IŠTRINTI"
 
-#: source_templates/lookup.html:91
+#: source_templates/lookup.html:85
 #, fuzzy
 msgid "DELETE ALL REPLIES"
 msgstr "IŠTRINTI VISUS ATSAKYMUS"
 
-#: source_templates/lookup.html:94
+#: source_templates/lookup.html:88
 #, fuzzy
 msgid "Are you finished with the replies?"
 msgstr "Ar baigėte atsakyti?"
 
-#: source_templates/lookup.html:95
+#: source_templates/lookup.html:89
 #, fuzzy
 msgid "YES, DELETE ALL REPLIES"
 msgstr "TAIP, IŠTRINTI VISUS ATSAKYMUS"
 
-#: source_templates/lookup.html:96
+#: source_templates/lookup.html:90
 #, fuzzy
 msgid "NO, NOT YET"
 msgstr "NE, NE DABAR"
 
-#: source_templates/lookup.html:100
+#: source_templates/lookup.html:94
 #, fuzzy
 msgid "There are no replies at this time."
 msgstr "Šiuo metu atsakymų nėra."
 
-#: source_templates/lookup.html:109
+#: source_templates/lookup.html:103
 #, fuzzy
 msgid "Remember, your codename is:"
 msgstr "Prisimink, tavo slapyvardis yra:"
 
-#: source_templates/lookup.html:110
+#: source_templates/lookup.html:104
 #, fuzzy
 msgid "Show"
 msgstr "Rodyti"
 
-#: source_templates/lookup.html:112
+#: source_templates/lookup.html:106
 #, fuzzy
 msgid "Hide"
 msgstr "Slėpti"
@@ -1703,6 +1599,30 @@ msgstr ""
 #, fuzzy
 msgid "Back to submission page"
 msgstr "Grįžti į paraiškos puslapį"
+
+#, fuzzy
+#~ msgid "Whew, it’s you! Now, the embarrassing part..."
+#~ msgstr "Čia jūs! O dabar, gėdinga istorijos pusė..."
+
+#, fuzzy
+#~ msgid ""
+#~ "Our servers experienced an unusual surge of new activity, when you last "
+#~ "visited. To err on the side of caution, we put a hold on sending all "
+#~ "files and messages from that day through to our journalists."
+#~ msgstr ""
+#~ "Nuo paskutinio jūsų apsilankymo mūsų serveriai patyrė įtartiną naujos "
+#~ "veiklos kiekį. Atsargumo dėlei, sustabdėme visų failų ir žinučių siuntimą "
+#~ "žurnalistams tą dieną."
+
+#, fuzzy
+#~ msgid ""
+#~ "Now that we know you’re really a human, though, we’ll get your previous "
+#~ "submission into the hands of a journalist straight away. We’re sorry for "
+#~ "the delay. Please do check back again in a week or so."
+#~ msgstr ""
+#~ "Dabar, kai jau esame įsitikinę, kad jūs tikrai žmogus, tuoj pat išsiųsime "
+#~ "jūsų pateiktą medžiagą žurnalistams. Atsiprašome už šį vėlavimą. Maloniai "
+#~ "prašome sugrįžti po apytiksliai savaitės."
 
 #, fuzzy
 #~ msgid "Is Administrator"
