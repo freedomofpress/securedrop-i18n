@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-02-26 17:19+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2019-05-16 08:57+0000\n"
+"Last-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -1064,7 +1064,7 @@ msgstr ""
 
 #: source_templates/lookup.html:10
 msgid "Sorry we haven't responded yet!"
-msgstr ""
+msgstr "Beklager at vi ikke har svart ennå!"
 
 #: source_templates/lookup.html:11
 msgid ""
@@ -1072,12 +1072,17 @@ msgid ""
 "reasons, the creation of a two-way communication channel was delayed until "
 "you checked in again."
 msgstr ""
+"Vår SecureDrop har nylig hatt en kraftig økning i aktivitet. Av hensyn til "
+"sikkerheten, ble muligheten for toveis-kommunikasjon utsatt til neste gang "
+"du logget inn."
 
 #: source_templates/lookup.html:12
 msgid ""
 "Please rest assured that we were able to download your submission, and check "
 "back again later for a reply."
 msgstr ""
+"Du skal likevel vite at vi har kunnet laste ned og lese det du sendte, og så "
+"senere gå tilbake for å sjekke etter nye svar."
 
 #: source_templates/lookup.html:18
 msgid "Submit Files or Messages"
