@@ -111,6 +111,8 @@ of backup action.
              be stored on the *Admin Workstation*, or on a
              :doc:`dedicated encrypted backup USB <backup_workstations>`.
 
+.. include:: includes/backup-warning.txt
+
 Restoring
 ---------
 
@@ -156,7 +158,9 @@ to update the corresponding files on the *Admin Workstation*:
 * ``app-journalist-aths``
 * ``app-ssh-aths``
 
-The Onion URLs above can be fetched using the installer:
+Once ssh access to the servers has been established (or if using ssh over
+local network), Onion URLs for the *Source Interface* and *Journalist Interfaces*
+can be fetched using the installer:
 
 .. code:: sh
 

@@ -10,7 +10,7 @@ from werkzeug.exceptions import default_exceptions  # type: ignore
 
 from db import db
 from journalist_app import utils
-from models import (Journalist, Reply, Source, Submission,
+from models import (Journalist, Reply, Source, Submission, RevokedToken,
                     LoginThrottledException, InvalidUsernameException,
                     BadTokenException, WrongPasswordException)
 from store import NotEncrypted
@@ -75,20 +75,28 @@ def make_blueprint(config):
     @api.before_request
     def validate_data():
         if request.method == 'POST':
-            # flag and star can have empty payloads
+            # flag, star, and logout can have empty payloads
             if not request.data:
-                if ('flag' not in request.path and 'star' not in request.path):
-                    return abort(400, 'malformed request')
+                dataless_endpoints = [
+                    'add_star',
+                    'remove_star',
+                    'flag',
+                    'logout',
+                ]
+                for endpoint in dataless_endpoints:
+                    if request.endpoint == 'api.' + endpoint:
+                        return
+                return abort(400, 'malformed request')
             # other requests must have valid JSON payload
             else:
                 try:
-                    json.loads(request.data)
+                    json.loads(request.data.decode('utf-8'))
                 except (ValueError):
                     return abort(400, 'malformed request')
 
     @api.route('/token', methods=['POST'])
     def get_token():
-        creds = json.loads(request.data)
+        creds = json.loads(request.data.decode('utf-8'))
 
         username = creds.get('username', None)
         passphrase = creds.get('passphrase', None)
@@ -177,7 +185,7 @@ def make_blueprint(config):
                methods=['GET'])
     @token_required
     def download_submission(source_uuid, submission_uuid):
-        source = get_or_404(Source, source_uuid, column=Source.uuid)
+        get_or_404(Source, source_uuid, column=Source.uuid)
         submission = get_or_404(Submission, submission_uuid,
                                 column=Submission.uuid)
 
@@ -185,16 +193,16 @@ def make_blueprint(config):
         submission.downloaded = True
         db.session.commit()
 
-        return utils.serve_file_with_etag(source, submission.filename)
+        return utils.serve_file_with_etag(submission)
 
     @api.route('/sources/<source_uuid>/replies/<reply_uuid>/download',
                methods=['GET'])
     @token_required
     def download_reply(source_uuid, reply_uuid):
-        source = get_or_404(Source, source_uuid, column=Source.uuid)
+        get_or_404(Source, source_uuid, column=Source.uuid)
         reply = get_or_404(Reply, reply_uuid, column=Reply.uuid)
 
-        return utils.serve_file_with_etag(source, reply.filename)
+        return utils.serve_file_with_etag(reply)
 
     @api.route('/sources/<source_uuid>/submissions/<submission_uuid>',
                methods=['GET', 'DELETE'])
@@ -232,7 +240,7 @@ def make_blueprint(config):
 
             user = get_user_object(request)
 
-            data = json.loads(request.data)
+            data = request.json
             if not data['reply']:
                 abort(400, 'reply should not be empty')
 
@@ -309,7 +317,17 @@ def make_blueprint(config):
         user = get_user_object(request)
         return jsonify(user.to_json()), 200
 
-    def _handle_http_exception(error):
+    @api.route('/logout', methods=['POST'])
+    @token_required
+    def logout():
+        user = get_user_object(request)
+        auth_token = request.headers.get('Authorization').split(" ")[1]
+        revoked_token = RevokedToken(token=auth_token, journalist_id=user.id)
+        db.session.add(revoked_token)
+        db.session.commit()
+        return jsonify({'message': 'Your token has been revoked.'}), 200
+
+    def _handle_api_http_exception(error):
         # Workaround for no blueprint-level 404/5 error handlers, see:
         # https://github.com/pallets/flask/issues/503#issuecomment-71383286
         response = jsonify({'error': error.name,
@@ -318,6 +336,6 @@ def make_blueprint(config):
         return response, error.code
 
     for code in default_exceptions:
-        api.errorhandler(code)(_handle_http_exception)
+        api.errorhandler(code)(_handle_api_http_exception)
 
     return api

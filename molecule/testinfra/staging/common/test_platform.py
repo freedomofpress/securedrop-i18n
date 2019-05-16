@@ -1,7 +1,6 @@
-# We expect Ubuntu, either Trusty or Xenial, the two LTSes
-# currently targeted for support.
-SUPPORTED_CODENAMES = ('trusty', 'xenial')
-SUPPORTED_RELEASES = ('14.04', '16.04')
+# We expect Ubuntu Xenial
+SUPPORTED_CODENAMES = ('xenial')
+SUPPORTED_RELEASES = ('16.04')
 
 
 def test_ansible_version(host):
@@ -19,10 +18,7 @@ def test_ansible_version(host):
 
 def test_platform(host):
     """
-    SecureDrop requires Ubuntu Trusty 14.04 LTS. The shelf life
-    of that release means we'll need to migrate to Xenial LTS
-    at some point; until then, require hosts to be running
-    Ubuntu.
+    SecureDrop requires Ubuntu Ubuntu 16.04 LTS.
     """
     assert host.system_info.type == "linux"
     assert host.system_info.distribution == "ubuntu"

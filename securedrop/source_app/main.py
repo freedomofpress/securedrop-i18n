@@ -1,12 +1,15 @@
 import operator
 import os
 import io
+import six
 
 from datetime import datetime
 from flask import (Blueprint, render_template, flash, redirect, url_for, g,
                    session, current_app, request, Markup, abort)
 from flask_babel import gettext
 from sqlalchemy.exc import IntegrityError
+
+import store
 
 from db import db
 from models import Source, Submission, Reply, get_one_or_else
@@ -64,6 +67,13 @@ def make_blueprint(config):
 
             # Issue 2386: don't log in on duplicates
             del session['codename']
+
+            # Issue 4361: Delete 'logged_in' if it's in the session
+            try:
+                del session['logged_in']
+            except KeyError:
+                pass
+
             abort(500)
         else:
             os.mkdir(current_app.storage.path(filesystem_id))
@@ -87,7 +97,10 @@ def make_blueprint(config):
                 with io.open(reply_path, "rb") as f:
                     contents = f.read()
                 reply_obj = current_app.crypto_util.decrypt(g.codename, contents)
-                reply.decrypted = reply_obj.decode('utf-8')
+                if six.PY2:  # Python2
+                    reply.decrypted = reply_obj.decode('utf-8')
+                else:
+                    reply.decrypted = reply_obj
             except UnicodeDecodeError:
                 current_app.logger.error("Could not decode reply %s" %
                                          reply.filename)
@@ -173,9 +186,11 @@ def make_blueprint(config):
                                   html_contents=html_contents)
             flash(Markup(msg), "success")
 
+        new_submissions = []
         for fname in fnames:
             submission = Submission(g.source, fname)
             db.session.add(submission)
+            new_submissions.append(submission)
 
         if g.source.pending:
             g.source.pending = False
@@ -199,6 +214,10 @@ def make_blueprint(config):
 
         g.source.last_updated = datetime.utcnow()
         db.session.commit()
+
+        for sub in new_submissions:
+            store.async_add_checksum_for_file(sub)
+
         normalize_timestamps(g.filesystem_id)
 
         return redirect(url_for('main.lookup'))

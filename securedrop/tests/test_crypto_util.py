@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 from datetime import datetime
+from hypothesis import given
+from hypothesis.strategies import text
 import io
 import os
 import pytest
 import re
+import six
 
 os.environ['SECUREDROP_ENV'] = 'test'  # noqa
 import crypto_util
@@ -43,8 +46,8 @@ def test_encrypt_success(source_app, config, test_source):
             source_app.storage.path(test_source['filesystem_id'],
                                     'somefile.gpg'))
 
-        assert isinstance(ciphertext, str)
-        assert ciphertext != message
+        assert isinstance(ciphertext, bytes)
+        assert ciphertext.decode('utf-8') != message
         assert len(ciphertext) > 0
 
 
@@ -145,7 +148,7 @@ def test_basic_encrypt_then_decrypt_multiple_recipients(source_app,
         # ensure we can decrypt with the `config.JOURNALIST_KEY`.
         source_app.crypto_util.delete_reply_keypair(
             test_source['filesystem_id'])
-        plaintext = source_app.crypto_util.gpg.decrypt(ciphertext).data
+        plaintext = source_app.crypto_util.gpg.decrypt(ciphertext).data.decode('utf-8')
 
         assert plaintext == message
 
@@ -268,6 +271,24 @@ def test_delete_reply_keypair(source_app, test_source):
     assert source_app.crypto_util.getkey(fid) is None
 
 
+def test_delete_reply_keypair_pinentry_status_is_handled(source_app, test_source,
+                                                         mocker, capsys):
+    """
+    Regression test for https://github.com/freedomofpress/securedrop/issues/4294
+    """
+    fid = test_source['filesystem_id']
+
+    # Patch private python-gnupg method to reproduce the issue in #4294
+    mocker.patch('pretty_bad_protocol._util._separate_keyword',
+                 return_value=('PINENTRY_LAUNCHED', 'does not matter'))
+
+    source_app.crypto_util.delete_reply_keypair(fid)
+
+    captured = capsys.readouterr()
+    assert "ValueError: Unknown status message: 'PINENTRY_LAUNCHED'" not in captured.err
+    assert source_app.crypto_util.getkey(fid) is None
+
+
 def test_delete_reply_keypair_no_key(source_app):
     """No exceptions should be raised when provided a filesystem id that
     does not exist.
@@ -294,3 +315,38 @@ def test_export_pubkey(source_app, test_source):
     # check that a non-existent identifer exports None
     exported = source_app.crypto_util.export_pubkey('x' * 50)
     assert exported is None
+
+
+@given(
+    name=text(alphabet=crypto_util.DICEWARE_SAFE_CHARS),
+    secret=text(alphabet=crypto_util.DICEWARE_SAFE_CHARS),
+    message=text()
+)
+def test_encrypt_then_decrypt_gives_same_result(
+        source_app,
+        test_source,
+        name,
+        secret,
+        message
+):
+    """Test that encrypting, then decrypting a string gives the original string.
+
+    This is the first test case using `hypothesis`:
+    https://hypothesis.readthedocs.io
+    """
+    crypto = source_app.crypto_util
+
+    key = crypto.genkeypair(
+        name,
+        secret
+    )
+    ciphertext = crypto.encrypt(message, str(key))
+    decrypted_text = crypto.decrypt(secret, ciphertext)
+
+    # `hypothesis.strategies.text()` generates `unicode` char sequences; use
+    # decode('utf-8') in order to decode decrypted ciphertext as `unicode` for
+    # correct type comparisons. Only decode on Python 2.
+    if six.PY2:
+        decrypted_text = decrypted_text.decode('utf-8')
+
+    assert decrypted_text == message

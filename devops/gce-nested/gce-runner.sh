@@ -16,9 +16,6 @@ REMOTE_IP="$(gcloud_call compute instances describe \
 SSH_TARGET="${SSH_USER_NAME}@${REMOTE_IP}"
 SSH_OPTS=(-i "$SSH_PRIVKEY" -o "StrictHostKeyChecking=no" -o "UserKnownHostsFile=/dev/null")
 
-# Assume we're testing Trusty. Xenial is also supported
-target_platform="${1:-trusty}"
-
 # Wrapper utility to run commands on remote GCE instance
 function ssh_gce {
     # We want all args to be evaluated locally, then passed to the remote
@@ -39,7 +36,6 @@ function fetch_junit_test_results() {
 # Copy up securedrop repo to remote server
 function copy_securedrop_repo() {
   rsync -a -e "ssh ${SSH_OPTS[*]}" \
-      --exclude .git \
       --exclude admin/.tox \
       --exclude '*.box' \
       --exclude '*.deb' \
@@ -55,20 +51,10 @@ function copy_securedrop_repo() {
 
 # Main logic
 copy_securedrop_repo
-if [[ "$target_platform" = "xenial" ]]; then
-    ssh_gce "make build-debs-xenial-notest"
-else
-    ssh_gce "make build-debs-notest"
-fi
+ssh_gce "make build-debs-notest"
 
 # The test results should be collected regardless of pass/fail,
 # so register a trap to ensure the fetch always runs.
 trap fetch_junit_test_results EXIT
 
-# Run staging environment. If xenial is passed as an argument, run the
-# staging environment for xenial.
-if [[ "$target_platform" = "xenial" ]]; then
-    ssh_gce "make staging-xenial"
-else
-    ssh_gce "make staging"
-fi
+ssh_gce "make staging"

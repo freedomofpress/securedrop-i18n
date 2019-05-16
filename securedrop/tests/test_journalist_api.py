@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import hashlib
 import json
 import os
 import random
@@ -11,10 +10,10 @@ from flask import current_app, url_for
 from itsdangerous import TimedJSONWebSignatureSerializer
 
 from db import db
-from models import Journalist, Reply, Source, SourceStar, Submission
+from models import Journalist, Reply, Source, SourceStar, Submission, RevokedToken
 
 os.environ['SECUREDROP_ENV'] = 'test'  # noqa
-from utils.api_helper import get_api_headers
+from .utils.api_helper import get_api_headers
 
 random.seed('◔ ⌣ ◔')
 
@@ -23,11 +22,13 @@ def test_unauthenticated_user_gets_all_endpoints(journalist_app):
     with journalist_app.test_client() as app:
         response = app.get(url_for('api.get_endpoints'))
 
-        observed_endpoints = json.loads(response.data)
-        expected_endpoints = [u'current_user_url', u'submissions_url',
-                              u'sources_url', u'auth_token_url',
-                              u'replies_url']
-        assert expected_endpoints == observed_endpoints.keys()
+        expected_endpoints = ['current_user_url', 'submissions_url',
+                              'sources_url', 'auth_token_url',
+                              'replies_url']
+        expected_endpoints.sort()
+        sorted_observed_endpoints = list(response.json.keys())
+        sorted_observed_endpoints.sort()
+        assert expected_endpoints == sorted_observed_endpoints
 
 
 def test_valid_user_can_get_an_api_token(journalist_app, test_journo):
@@ -39,11 +40,10 @@ def test_valid_user_can_get_an_api_token(journalist_app, test_journo):
                                  'passphrase': test_journo['password'],
                                  'one_time_code': valid_token}),
                             headers=get_api_headers())
-        observed_response = json.loads(response.data)
 
-        assert observed_response['journalist_uuid'] == test_journo['uuid']
+        assert response.json['journalist_uuid'] == test_journo['uuid']
         assert isinstance(Journalist.validate_api_token_and_get_user(
-            observed_response['token']), Journalist) is True
+            response.json['token']), Journalist) is True
         assert response.status_code == 200
 
 
@@ -57,10 +57,9 @@ def test_user_cannot_get_an_api_token_with_wrong_password(journalist_app,
                                  'passphrase': 'wrong password',
                                  'one_time_code': valid_token}),
                             headers=get_api_headers())
-        observed_response = json.loads(response.data)
 
         assert response.status_code == 403
-        assert observed_response['error'] == 'Forbidden'
+        assert response.json['error'] == 'Forbidden'
 
 
 def test_user_cannot_get_an_api_token_with_wrong_2fa_token(journalist_app,
@@ -73,10 +72,9 @@ def test_user_cannot_get_an_api_token_with_wrong_2fa_token(journalist_app,
                                  'passphrase': test_journo['password'],
                                  'one_time_code': '123456'}),
                             headers=get_api_headers())
-        observed_response = json.loads(response.data)
 
         assert response.status_code == 403
-        assert observed_response['error'] == 'Forbidden'
+        assert response.json['error'] == 'Forbidden'
 
 
 def test_user_cannot_get_an_api_token_with_no_passphase_field(journalist_app,
@@ -88,11 +86,10 @@ def test_user_cannot_get_an_api_token_with_no_passphase_field(journalist_app,
                                 {'username': test_journo['username'],
                                  'one_time_code': valid_token}),
                             headers=get_api_headers())
-        observed_response = json.loads(response.data)
 
         assert response.status_code == 400
-        assert observed_response['error'] == 'Bad Request'
-        assert observed_response['message'] == 'passphrase field is missing'
+        assert response.json['error'] == 'Bad Request'
+        assert response.json['message'] == 'passphrase field is missing'
 
 
 def test_user_cannot_get_an_api_token_with_no_username_field(journalist_app,
@@ -104,11 +101,10 @@ def test_user_cannot_get_an_api_token_with_no_username_field(journalist_app,
                                 {'passphrase': test_journo['password'],
                                  'one_time_code': valid_token}),
                             headers=get_api_headers())
-        observed_response = json.loads(response.data)
 
         assert response.status_code == 400
-        assert observed_response['error'] == 'Bad Request'
-        assert observed_response['message'] == 'username field is missing'
+        assert response.json['error'] == 'Bad Request'
+        assert response.json['message'] == 'username field is missing'
 
 
 def test_user_cannot_get_an_api_token_with_no_otp_field(journalist_app,
@@ -119,11 +115,10 @@ def test_user_cannot_get_an_api_token_with_no_otp_field(journalist_app,
                                 {'username': test_journo['username'],
                                  'passphrase': test_journo['password']}),
                             headers=get_api_headers())
-        observed_response = json.loads(response.data)
 
         assert response.status_code == 400
-        assert observed_response['error'] == 'Bad Request'
-        assert observed_response['message'] == 'one_time_code field is missing'
+        assert response.json['error'] == 'Bad Request'
+        assert response.json['message'] == 'one_time_code field is missing'
 
 
 def test_authorized_user_gets_all_sources(journalist_app, test_submissions,
@@ -132,13 +127,11 @@ def test_authorized_user_gets_all_sources(journalist_app, test_submissions,
         response = app.get(url_for('api.get_all_sources'),
                            headers=get_api_headers(journalist_api_token))
 
-        data = json.loads(response.data)
-
         assert response.status_code == 200
 
         # We expect to see our test source in the response
         assert test_submissions['source'].journalist_designation == \
-            data['sources'][0]['journalist_designation']
+            response.json['sources'][0]['journalist_designation']
 
 
 def test_user_without_token_cannot_get_protected_endpoints(journalist_app,
@@ -244,14 +237,22 @@ def test_user_without_token_cannot_post_protected_endpoints(journalist_app,
             assert response.status_code == 403
 
 
-def test_api_404(journalist_app, journalist_api_token):
+def test_api_error_handlers_defined(journalist_app):
+    """Ensure the expected error handler is defined in the API blueprint"""
+    for status_code in [400, 401, 403, 404, 500]:
+        result = journalist_app.error_handler_spec['api'][status_code]
+
+        expected_error_handler = '_handle_api_http_exception'
+        assert list(result.values())[0].__name__ == expected_error_handler
+
+
+def test_api_error_handler_404(journalist_app, journalist_api_token):
     with journalist_app.test_client() as app:
         response = app.get('/api/v1/invalidendpoint',
                            headers=get_api_headers(journalist_api_token))
-        json_response = json.loads(response.data)
 
         assert response.status_code == 404
-        assert json_response['error'] == 'Not Found'
+        assert response.json['error'] == 'Not Found'
 
 
 def test_trailing_slash_cleanly_404s(journalist_app, test_source,
@@ -261,10 +262,9 @@ def test_trailing_slash_cleanly_404s(journalist_app, test_source,
         response = app.get(url_for('api.single_source',
                                    source_uuid=uuid) + '/',
                            headers=get_api_headers(journalist_api_token))
-        json_response = json.loads(response.data)
 
         assert response.status_code == 404
-        assert json_response['error'] == 'Not Found'
+        assert response.json['error'] == 'Not Found'
 
 
 def test_authorized_user_gets_single_source(journalist_app, test_source,
@@ -276,9 +276,10 @@ def test_authorized_user_gets_single_source(journalist_app, test_source,
 
         assert response.status_code == 200
 
-        data = json.loads(response.data)
-        assert data['uuid'] == test_source['source'].uuid
-        assert 'BEGIN PGP PUBLIC KEY' in data['key']['public']
+        assert response.json['uuid'] == test_source['source'].uuid
+        assert response.json['key']['fingerprint'] == \
+            test_source['source'].fingerprint
+        assert 'BEGIN PGP PUBLIC KEY' in response.json['key']['public']
 
 
 def test_get_non_existant_source_404s(journalist_app, journalist_api_token):
@@ -320,8 +321,7 @@ def test_authorized_user_can_star_a_source(journalist_app, test_source,
         # API should also report is_starred is true
         response = app.get(url_for('api.single_source', source_uuid=uuid),
                            headers=get_api_headers(journalist_api_token))
-        json_response = json.loads(response.data)
-        assert json_response['is_starred'] is True
+        assert response.json['is_starred'] is True
 
 
 def test_authorized_user_can_unstar_a_source(journalist_app, test_source,
@@ -344,8 +344,7 @@ def test_authorized_user_can_unstar_a_source(journalist_app, test_source,
         # API should also report is_starred is false
         response = app.get(url_for('api.single_source', source_uuid=uuid),
                            headers=get_api_headers(journalist_api_token))
-        json_response = json.loads(response.data)
-        assert json_response['is_starred'] is False
+        assert response.json['is_starred'] is False
 
 
 def test_disallowed_methods_produces_405(journalist_app, test_source,
@@ -354,10 +353,9 @@ def test_disallowed_methods_produces_405(journalist_app, test_source,
         uuid = test_source['source'].uuid
         response = app.delete(url_for('api.add_star', source_uuid=uuid),
                               headers=get_api_headers(journalist_api_token))
-        json_response = json.loads(response.data)
 
         assert response.status_code == 405
-        assert json_response['error'] == 'Method Not Allowed'
+        assert response.json['error'] == 'Method Not Allowed'
 
 
 def test_authorized_user_can_get_all_submissions(journalist_app,
@@ -368,10 +366,8 @@ def test_authorized_user_can_get_all_submissions(journalist_app,
                            headers=get_api_headers(journalist_api_token))
         assert response.status_code == 200
 
-        json_response = json.loads(response.data)
-
         observed_submissions = [submission['filename'] for
-                                submission in json_response['submissions']]
+                                submission in response.json['submissions']]
 
         expected_submissions = [submission.filename for
                                 submission in Submission.query.all()]
@@ -388,10 +384,8 @@ def test_authorized_user_get_source_submissions(journalist_app,
                            headers=get_api_headers(journalist_api_token))
         assert response.status_code == 200
 
-        json_response = json.loads(response.data)
-
         observed_submissions = [submission['filename'] for
-                                submission in json_response['submissions']]
+                                submission in response.json['submissions']]
 
         expected_submissions = [submission.filename for submission in
                                 test_submissions['source'].submissions]
@@ -411,13 +405,11 @@ def test_authorized_user_can_get_single_submission(journalist_app,
 
         assert response.status_code == 200
 
-        json_response = json.loads(response.data)
-
-        assert json_response['uuid'] == submission_uuid
-        assert json_response['is_read'] is False
-        assert json_response['filename'] == \
+        assert response.json['uuid'] == submission_uuid
+        assert response.json['is_read'] is False
+        assert response.json['filename'] == \
             test_submissions['source'].submissions[0].filename
-        assert json_response['size'] == \
+        assert response.json['size'] == \
             test_submissions['source'].submissions[0].size
 
 
@@ -428,10 +420,8 @@ def test_authorized_user_can_get_all_replies(journalist_app, test_files,
                            headers=get_api_headers(journalist_api_token))
         assert response.status_code == 200
 
-        json_response = json.loads(response.data)
-
         observed_replies = [reply['filename'] for
-                            reply in json_response['replies']]
+                            reply in response.json['replies']]
 
         expected_replies = [reply.filename for
                             reply in Reply.query.all()]
@@ -447,10 +437,8 @@ def test_authorized_user_get_source_replies(journalist_app, test_files,
                            headers=get_api_headers(journalist_api_token))
         assert response.status_code == 200
 
-        json_response = json.loads(response.data)
-
         observed_replies = [reply['filename'] for
-                            reply in json_response['replies']]
+                            reply in response.json['replies']]
 
         expected_replies = [reply.filename for
                             reply in test_files['source'].replies]
@@ -469,19 +457,17 @@ def test_authorized_user_can_get_single_reply(journalist_app, test_files,
 
         assert response.status_code == 200
 
-        json_response = json.loads(response.data)
-
         reply = Reply.query.filter(Reply.uuid == reply_uuid).one()
 
-        assert json_response['uuid'] == reply_uuid
-        assert json_response['journalist_username'] == \
+        assert response.json['uuid'] == reply_uuid
+        assert response.json['journalist_username'] == \
             reply.journalist.username
-        assert json_response['journalist_uuid'] == \
+        assert response.json['journalist_uuid'] == \
             reply.journalist.uuid
-        assert json_response['is_deleted_by_source'] is False
-        assert json_response['filename'] == \
+        assert response.json['is_deleted_by_source'] is False
+        assert response.json['filename'] == \
             test_files['source'].replies[0].filename
-        assert json_response['size'] == \
+        assert response.json['size'] == \
             test_files['source'].replies[0].size
 
 
@@ -556,8 +542,7 @@ def test_authorized_user_can_download_submission(journalist_app,
         assert response.mimetype == 'application/pgp-encrypted'
 
         # Response should have Etag field with hash
-        assert response.headers['ETag'] == '"sha256:{}"'.format(
-            hashlib.sha256(response.data).hexdigest())
+        assert response.headers['ETag'].startswith('sha256:')
 
 
 def test_authorized_user_can_download_reply(journalist_app, test_files,
@@ -577,8 +562,7 @@ def test_authorized_user_can_download_reply(journalist_app, test_files,
         assert response.mimetype == 'application/pgp-encrypted'
 
         # Response should have Etag field with hash
-        assert response.headers['ETag'] == '"sha256:{}"'.format(
-            hashlib.sha256(response.data).hexdigest())
+        assert response.headers['ETag'].startswith('sha256:')
 
 
 def test_authorized_user_can_get_current_user_endpoint(journalist_app,
@@ -589,10 +573,9 @@ def test_authorized_user_can_get_current_user_endpoint(journalist_app,
                            headers=get_api_headers(journalist_api_token))
         assert response.status_code == 200
 
-        json_response = json.loads(response.data)
-        assert json_response['is_admin'] is False
-        assert json_response['username'] == test_journo['username']
-        assert json_response['uuid'] == test_journo['journalist'].uuid
+        assert response.json['is_admin'] is False
+        assert response.json['username'] == test_journo['username']
+        assert response.json['uuid'] == test_journo['journalist'].uuid
 
 
 def test_request_with_missing_auth_header_triggers_403(journalist_app):
@@ -643,7 +626,7 @@ def test_authorized_user_can_add_reply(journalist_app, journalist_api_token,
 
         response = app.post(url_for('api.all_source_replies',
                                     source_uuid=uuid),
-                            data=json.dumps({'reply': reply_content}),
+                            data=json.dumps({'reply': reply_content.decode('utf-8')}),
                             headers=get_api_headers(journalist_api_token))
         assert response.status_code == 201
 
@@ -721,8 +704,7 @@ def test_reply_with_valid_curly_json_400(journalist_app, journalist_api_token,
                             headers=get_api_headers(journalist_api_token))
         assert response.status_code == 400
 
-        json_response = json.loads(response.data)
-        assert json_response['message'] == 'reply not found in request body'
+        assert response.json['message'] == 'reply not found in request body'
 
 
 def test_reply_with_valid_square_json_400(journalist_app, journalist_api_token,
@@ -735,8 +717,7 @@ def test_reply_with_valid_square_json_400(journalist_app, journalist_api_token,
                             headers=get_api_headers(journalist_api_token))
         assert response.status_code == 400
 
-        json_response = json.loads(response.data)
-        assert json_response['message'] == 'reply not found in request body'
+        assert response.json['message'] == 'reply not found in request body'
 
 
 def test_malformed_json_400(journalist_app, journalist_api_token, test_journo,
@@ -756,10 +737,9 @@ def test_malformed_json_400(journalist_app, journalist_api_token, test_journo,
             response = app.post(protected_route,
                                 data="{this is invalid {json!",
                                 headers=get_api_headers(journalist_api_token))
-            observed_response = json.loads(response.data)
 
             assert response.status_code == 400
-            assert observed_response['error'] == 'Bad Request'
+            assert response.json['error'] == 'Bad Request'
 
 
 def test_empty_json_400(journalist_app, journalist_api_token, test_journo,
@@ -777,10 +757,9 @@ def test_empty_json_400(journalist_app, journalist_api_token, test_journo,
             response = app.post(protected_route,
                                 data="",
                                 headers=get_api_headers(journalist_api_token))
-            observed_response = json.loads(response.data)
 
             assert response.status_code == 400
-            assert observed_response['error'] == 'Bad Request'
+            assert response.json['error'] == 'Bad Request'
 
 
 def test_empty_json_20X(journalist_app, journalist_api_token, test_journo,
@@ -862,8 +841,8 @@ def test_api_does_not_set_cookie_headers(journalist_app, test_journo):
         response = app.get(url_for('api.get_endpoints'))
 
         observed_headers = response.headers
-        assert 'Set-Cookie' not in observed_headers.keys()
-        if 'Vary' in observed_headers.keys():
+        assert 'Set-Cookie' not in list(observed_headers.keys())
+        if 'Vary' in list(observed_headers.keys()):
             assert 'Cookie' not in observed_headers['Vary']
 
 
@@ -885,4 +864,91 @@ def test_malformed_auth_token(journalist_app, journalist_api_token):
         assert resp.status_code == 403
 
         resp = app.get(url, headers={'Authorization': 'too many {}'.format(journalist_api_token)})
+        assert resp.status_code == 403
+
+
+def test_submission_download_generates_checksum(journalist_app,
+                                                journalist_api_token,
+                                                test_source,
+                                                test_submissions,
+                                                mocker):
+    submission = test_submissions['submissions'][0]
+    assert submission.checksum is None  # precondition
+
+    with journalist_app.test_client() as app:
+        response = app.get(url_for('api.download_submission',
+                                   source_uuid=test_source['uuid'],
+                                   submission_uuid=submission.uuid),
+                           headers=get_api_headers(journalist_api_token))
+        assert response.status_code == 200
+        assert response.headers['ETag']
+
+    # check that the submission checksum was added
+    fetched_submission = Submission.query.get(submission.id)
+    assert fetched_submission.checksum
+
+    mock_add_checksum = mocker.patch('journalist_app.utils.add_checksum_for_file')
+    with journalist_app.test_client() as app:
+        response = app.get(url_for('api.download_submission',
+                                   source_uuid=test_source['uuid'],
+                                   submission_uuid=submission.uuid),
+                           headers=get_api_headers(journalist_api_token))
+        assert response.status_code == 200
+        assert response.headers['ETag']
+
+    fetched_submission = Submission.query.get(submission.id)
+    assert fetched_submission.checksum
+    # we don't want to recalculat this value
+    assert not mock_add_checksum.called
+
+
+def test_reply_download_generates_checksum(journalist_app,
+                                           journalist_api_token,
+                                           test_source,
+                                           test_files,
+                                           mocker):
+    reply = test_files['replies'][0]
+    assert reply.checksum is None  # precondition
+
+    with journalist_app.test_client() as app:
+        response = app.get(url_for('api.download_reply',
+                                   source_uuid=test_source['uuid'],
+                                   reply_uuid=reply.uuid),
+                           headers=get_api_headers(journalist_api_token))
+        assert response.status_code == 200
+        assert response.headers['ETag']
+
+    # check that the reply checksum was added
+    fetched_reply = Reply.query.get(reply.id)
+    assert fetched_reply.checksum
+
+    mock_add_checksum = mocker.patch('journalist_app.utils.add_checksum_for_file')
+    with journalist_app.test_client() as app:
+        response = app.get(url_for('api.download_reply',
+                                   source_uuid=test_source['uuid'],
+                                   reply_uuid=reply.uuid),
+                           headers=get_api_headers(journalist_api_token))
+        assert response.status_code == 200
+        assert response.headers['ETag']
+
+    fetched_reply = Reply.query.get(reply.id)
+    assert fetched_reply.checksum
+    # we don't want to recalculat this value
+    assert not mock_add_checksum.called
+
+
+def test_revoke_token(journalist_app, test_journo, journalist_api_token):
+    with journalist_app.test_client() as app:
+        # without token 403's
+        resp = app.post(url_for('api.logout'))
+        assert resp.status_code == 403
+
+        resp = app.post(url_for('api.logout'), headers=get_api_headers(journalist_api_token))
+        assert resp.status_code == 200
+
+        revoked_token = RevokedToken.query.filter_by(token=journalist_api_token).one()
+        assert revoked_token.journalist_id == test_journo['id']
+
+        resp = app.get(url_for('api.get_all_sources'),
+                       headers=get_api_headers(journalist_api_token))
         assert resp.status_code == 403

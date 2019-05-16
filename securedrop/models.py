@@ -9,12 +9,7 @@ import qrcode
 # Using svg because it doesn't require additional dependencies
 import qrcode.image.svg
 import uuid
-
-# Find the best implementation available on this platform
-try:
-    from cStringIO import StringIO
-except ImportError:
-    from StringIO import StringIO  # type: ignore
+from io import BytesIO
 
 from flask import current_app, url_for
 from itsdangerous import TimedJSONWebSignatureSerializer, BadData
@@ -107,6 +102,18 @@ class Source(db.Model):
         return collection
 
     @property
+    def fingerprint(self):
+        return current_app.crypto_util.getkey(self.filesystem_id)
+
+    @fingerprint.setter
+    def fingerprint(self, value):
+        raise NotImplementedError
+
+    @fingerprint.deleter
+    def fingerprint(self):
+        raise NotImplementedError
+
+    @property
     def public_key(self):
         return current_app.crypto_util.export_pubkey(self.filesystem_id)
 
@@ -141,7 +148,8 @@ class Source(db.Model):
             'interaction_count': self.interaction_count,
             'key': {
               'type': 'PGP',
-              'public': self.public_key
+              'public': self.public_key,
+              'fingerprint': self.fingerprint
             },
             'number_of_documents': docs_msg_count['documents'],
             'number_of_messages': docs_msg_count['messages'],
@@ -169,6 +177,12 @@ class Submission(db.Model):
     filename = Column(String(255), nullable=False)
     size = Column(Integer, nullable=False)
     downloaded = Column(Boolean, default=False)
+    '''
+    The checksum of the encrypted file on disk.
+    Format: $hash_name:$hex_encoded_hash_value
+    Example: sha256:05fa5efd7d1b608ac1fbdf19a61a5a439d05b05225e81faa63fdd188296b614a
+    '''
+    checksum = Column(String(255))
 
     def __init__(self, source, filename):
         self.source_id = source.id
@@ -218,6 +232,12 @@ class Reply(db.Model):
 
     filename = Column(String(255), nullable=False)
     size = Column(Integer, nullable=False)
+    '''
+    The checksum of the encrypted file on disk.
+    Format: $hash_name:$hex_encoded_hash_value
+    Example: sha256:05fa5efd7d1b608ac1fbdf19a61a5a439d05b05225e81faa63fdd188296b614a
+    '''
+    checksum = Column(String(255))
 
     deleted_by_source = Column(Boolean, default=False, nullable=False)
 
@@ -470,9 +490,9 @@ class Journalist(db.Model):
         qr.add_data(uri)
         img = qr.make_image()
 
-        svg_out = StringIO()
+        svg_out = BytesIO()
         img.save(svg_out)
-        return Markup(svg_out.getvalue())
+        return Markup(svg_out.getvalue().decode('utf-8'))
 
     @property
     def formatted_otp_secret(self):
@@ -561,12 +581,27 @@ class Journalist(db.Model):
         return s.dumps({'id': self.id}).decode('ascii')
 
     @staticmethod
+    def validate_token_is_not_expired_or_invalid(token):
+        s = TimedJSONWebSignatureSerializer(current_app.config['SECRET_KEY'])
+        try:
+            s.loads(token)
+        except BadData:
+            return None
+
+        return True
+
+    @staticmethod
     def validate_api_token_and_get_user(token):
         s = TimedJSONWebSignatureSerializer(current_app.config['SECRET_KEY'])
         try:
             data = s.loads(token)
         except BadData:
             return None
+
+        revoked_token = RevokedToken.query.filter_by(token=token).one_or_none()
+        if revoked_token is not None:
+            return None
+
         return Journalist.query.get(data['id'])
 
     def to_json(self):
@@ -591,3 +626,16 @@ class JournalistLoginAttempt(db.Model):
 
     def __init__(self, journalist):
         self.journalist_id = journalist.id
+
+
+class RevokedToken(db.Model):
+
+    """
+    API tokens that have been revoked either through a logout or other revocation mechanism.
+    """
+
+    __tablename__ = 'revoked_tokens'
+
+    id = Column(Integer, primary_key=True)
+    journalist_id = Column(Integer, ForeignKey('journalists.id'))
+    token = db.Column(db.Text, nullable=False, unique=True)

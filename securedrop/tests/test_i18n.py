@@ -19,19 +19,24 @@
 import os
 import re
 
-from flask import request, session, render_template_string, render_template
-from flask_babel import gettext
-from werkzeug.datastructures import Headers
-
-os.environ['SECUREDROP_ENV'] = 'test'  # noqa
-from sdconfig import SDConfig
+from db import db
 import i18n
 import i18n_tool
 import journalist_app as journalist_app_module
 import pytest
 import source_app
+from flask import render_template
+from flask import render_template_string
+from flask import request
+from flask import session
+from flask_babel import gettext
+from sdconfig import SDConfig
+from sh import pybabel
+from sh import sed
+from .utils.env import TESTS_DIR
+from werkzeug.datastructures import Headers
 
-from sh import sed, pybabel
+os.environ['SECUREDROP_ENV'] = 'test'  # noqa
 
 
 def verify_i18n(app):
@@ -93,15 +98,15 @@ def verify_i18n(app):
         page = c.get('/login')
         assert session.get('locale') is None
         assert not_translated == gettext(not_translated)
-        assert '?l=fr_FR' in page.data
-        assert '?l=en_US' not in page.data
+        assert b'?l=fr_FR' in page.data
+        assert b'?l=en_US' not in page.data
 
         page = c.get('/login?l=fr_FR',
                      headers=Headers([('Accept-Language', 'en_US')]))
         assert session.get('locale') == 'fr_FR'
         assert translated_fr == gettext(not_translated)
-        assert '?l=fr_FR' not in page.data
-        assert '?l=en_US' in page.data
+        assert b'?l=fr_FR' not in page.data
+        assert b'?l=en_US' in page.data
 
         c.get('/', headers=Headers([('Accept-Language', 'en_US')]))
         assert session.get('locale') == 'fr_FR'
@@ -174,14 +179,14 @@ def test_i18n(journalist_app, config):
     del journalist_app
 
     sources = [
-        'tests/i18n/code.py',
-        'tests/i18n/template.html',
+        os.path.join(TESTS_DIR, 'i18n/code.py'),
+        os.path.join(TESTS_DIR, 'i18n/template.html'),
     ]
 
     i18n_tool.I18NTool().main([
         '--verbose',
         'translate-messages',
-        '--mapping', 'tests/i18n/babel.cfg',
+        '--mapping', os.path.join(TESTS_DIR, 'i18n/babel.cfg'),
         '--translations-dir', config.TEMP_DIR,
         '--sources', ",".join(sources),
         '--extract-update',
@@ -217,6 +222,8 @@ def test_i18n(journalist_app, config):
     # grabs values at init time and we can't inject them later.
     for app in (journalist_app_module.create_app(fake_config),
                 source_app.create_app(fake_config)):
+        with app.app_context():
+            db.create_all()
         assert i18n.LOCALES == fake_config.SUPPORTED_LOCALES
         verify_i18n(app)
 

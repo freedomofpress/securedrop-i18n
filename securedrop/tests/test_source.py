@@ -1,24 +1,24 @@
 # -*- coding: utf-8 -*-
 import gzip
-import json
 import re
 import subprocess
+import six
 
-from cStringIO import StringIO
+from io import BytesIO
 from flask import session, escape, current_app, url_for, g
 from mock import patch, ANY
 
 import crypto_util
 import source
-import utils
+from . import utils
 import version
 
 from db import db
 from models import Source, Reply
 from source_app import main as source_app_main
 from source_app import api as source_app_api
-from utils.db_helper import new_codename
-from utils.instrument import InstrumentedApp
+from .utils.db_helper import new_codename
+from .utils.instrument import InstrumentedApp
 
 overly_long_codename = 'a' * (Source.MAX_CODENAME_LEN + 1)
 
@@ -88,7 +88,7 @@ def test_generate(source_app):
     text = resp.data.decode('utf-8')
     assert "This codename is what you will use in future visits" in text
 
-    codename = _find_codename(resp.data)
+    codename = _find_codename(resp.data.decode('utf-8'))
     assert len(codename.split()) == Source.NUM_WORDS
     # codename is also stored in the session - make sure it matches the
     # codename displayed to the source
@@ -138,7 +138,31 @@ def test_generate_too_long_codename(source_app):
     )
 
 
-def test_create_duplicate_codename(source_app):
+def test_create_duplicate_codename_logged_in_not_in_session(source_app):
+    with patch.object(source.app.logger, 'error') as logger:
+        with source_app.test_client() as app:
+            resp = app.get(url_for('main.generate'))
+            assert resp.status_code == 200
+
+            # Create a source the first time
+            resp = app.post(url_for('main.create'), follow_redirects=True)
+            assert resp.status_code == 200
+            codename = session['codename']
+
+        with source_app.test_client() as app:
+            # Attempt to add the same source
+            with app.session_transaction() as sess:
+                sess['codename'] = codename
+            resp = app.post(url_for('main.create'), follow_redirects=True)
+            logger.assert_called_once()
+            assert ("Attempt to create a source with duplicate codename"
+                    in logger.call_args[0][0])
+            assert resp.status_code == 500
+            assert 'codename' not in session
+            assert 'logged_in' not in session
+
+
+def test_create_duplicate_codename_logged_in_in_session(source_app):
     with patch.object(source.app.logger, 'error') as logger:
         with source_app.test_client() as app:
             resp = app.get(url_for('main.generate'))
@@ -149,11 +173,16 @@ def test_create_duplicate_codename(source_app):
             assert resp.status_code == 200
 
             # Attempt to add the same source
-            app.post(url_for('main.create'), follow_redirects=True)
+            resp = app.post(url_for('main.create'), follow_redirects=True)
             logger.assert_called_once()
             assert ("Attempt to create a source with duplicate codename"
                     in logger.call_args[0][0])
+            assert resp.status_code == 500
             assert 'codename' not in session
+
+            # Reproducer for bug #4361
+            resp = app.post(url_for('main.index'), follow_redirects=True)
+            assert 'logged_in' not in session
 
 
 def test_lookup(source_app):
@@ -266,8 +295,8 @@ def _dummy_submission(app):
     """
     return app.post(
         url_for('main.submit'),
-        data=dict(msg="Pay no attention to the man behind the curtain.",
-                  fh=(StringIO(''), '')),
+        data=dict(msg=six.u("Pay no attention to the man behind the curtain."),
+                  fh=(BytesIO(b''), '')),
         follow_redirects=True)
 
 
@@ -291,7 +320,7 @@ def test_submit_message(source_app):
         _dummy_submission(app)
         resp = app.post(
             url_for('main.submit'),
-            data=dict(msg="This is a test.", fh=(StringIO(''), '')),
+            data=dict(msg=six.u("This is a test."), fh=(six.StringIO(six.u('')), '')),
             follow_redirects=True)
         assert resp.status_code == 200
         text = resp.data.decode('utf-8')
@@ -303,7 +332,7 @@ def test_submit_empty_message(source_app):
         new_codename(app, session)
         resp = app.post(
             url_for('main.submit'),
-            data=dict(msg="", fh=(StringIO(''), '')),
+            data=dict(msg="", fh=(six.StringIO(six.u('')), '')),
             follow_redirects=True)
         assert resp.status_code == 200
         text = resp.data.decode('utf-8')
@@ -322,7 +351,7 @@ def test_submit_big_message(source_app):
         _dummy_submission(app)
         resp = app.post(
             url_for('main.submit'),
-            data=dict(msg="AA" * (1024 * 512), fh=(StringIO(''), '')),
+            data=dict(msg="AA" * (1024 * 512), fh=(six.StringIO(six.u('')), '')),
             follow_redirects=True)
         assert resp.status_code == 200
         text = resp.data.decode('utf-8')
@@ -335,7 +364,7 @@ def test_submit_file(source_app):
         _dummy_submission(app)
         resp = app.post(
             url_for('main.submit'),
-            data=dict(msg="", fh=(StringIO('This is a test'), 'test.txt')),
+            data=dict(msg="", fh=(BytesIO(b'This is a test'), 'test.txt')),
             follow_redirects=True)
         assert resp.status_code == 200
         text = resp.data.decode('utf-8')
@@ -350,7 +379,7 @@ def test_submit_both(source_app):
             url_for('main.submit'),
             data=dict(
                 msg="This is a test",
-                fh=(StringIO('This is a test'), 'test.txt')),
+                fh=(BytesIO(b'This is a test'), 'test.txt')),
             follow_redirects=True)
         assert resp.status_code == 200
         text = resp.data.decode('utf-8')
@@ -368,7 +397,7 @@ def test_submit_message_with_low_entropy(source_app):
                 _dummy_submission(app)
                 resp = app.post(
                     url_for('main.submit'),
-                    data=dict(msg="This is a test.", fh=(StringIO(''), '')),
+                    data=dict(msg="This is a test.", fh=(six.StringIO(six.u('')), '')),
                     follow_redirects=True)
                 assert resp.status_code == 200
                 assert not async_genkey.called
@@ -385,7 +414,7 @@ def test_submit_message_with_enough_entropy(source_app):
                 _dummy_submission(app)
                 resp = app.post(
                     url_for('main.submit'),
-                    data=dict(msg="This is a test.", fh=(StringIO(''), '')),
+                    data=dict(msg="This is a test.", fh=(six.StringIO(six.u('')), '')),
                     follow_redirects=True)
                 assert resp.status_code == 200
                 assert async_genkey.called
@@ -474,7 +503,7 @@ def test_submit_sanitizes_filename(source_app):
                 url_for('main.submit'),
                 data=dict(
                     msg="",
-                    fh=(StringIO('This is a test'), insecure_filename)),
+                    fh=(BytesIO(b'This is a test'), insecure_filename)),
                 follow_redirects=True)
             assert resp.status_code == 200
             gzipfile.assert_called_with(filename=sanitized_filename,
@@ -516,14 +545,6 @@ def test_why_journalist_key(source_app):
         assert "Why download the journalist's public key?" in text
 
 
-def test_disable_noscript_xss(source_app):
-    with source_app.test_client() as app:
-        resp = app.get(url_for('info.disable_noscript_xss'))
-        assert resp.status_code == 200
-        text = resp.data.decode('utf-8')
-        assert "<h1>Turn off NoScript's cross-site request sanitization setting</h1>" in text
-
-
 def test_metadata_route(source_app):
     with patch.object(source_app_api.platform, "linux_distribution") as mocked_platform:
         mocked_platform.return_value = ("Ubuntu", "16.04", "xenial")
@@ -531,10 +552,8 @@ def test_metadata_route(source_app):
             resp = app.get(url_for('api.metadata'))
             assert resp.status_code == 200
             assert resp.headers.get('Content-Type') == 'application/json'
-            assert json.loads(resp.data.decode('utf-8')).get('sd_version') \
-                == version.__version__
-            assert json.loads(resp.data.decode('utf-8')).get('server_os') \
-                == '16.04'
+            assert resp.json.get('sd_version') == version.__version__
+            assert resp.json.get('server_os') == '16.04'
 
 
 def test_login_with_overly_long_codename(source_app):
@@ -569,7 +588,7 @@ def test_failed_normalize_timestamps_logs_warning(source_app):
                     url_for('main.submit'),
                     data=dict(
                         msg="This is a test.",
-                        fh=(StringIO(''), '')),
+                        fh=(six.StringIO(six.u('')), '')),
                     follow_redirects=True)
                 assert resp.status_code == 200
                 text = resp.data.decode('utf-8')

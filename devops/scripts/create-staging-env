@@ -14,22 +14,17 @@ set -o pipefail
 
 . ./devops/scripts/boot-strap-venv.sh
 
-# Support optional Xenial scenarios, for evaluating Xenial support
-# as we approach the LTS expiration for Trusty.
-
-if [[ "${1:-}" = "xenial" ]] ; then
-    securedrop_platform_suffix="-xenial"
-else
-    securedrop_platform_suffix=""
-fi
+securedrop_platform_suffix="-xenial"
 
 # Respect explicit choice of Vagrant provider if set.
 if [[ -n "${VAGRANT_DEFAULT_PROVIDER:-}" ]] ; then
     securedrop_vm_provider="${VAGRANT_DEFAULT_PROVIDER}"
 # Check whether it appears we're running in Qubes, in which case the standard Vagrant
-# logic will not work at all, due to lack of nested virt support.
+# logic will not work at all, due to lack of nested virt support. The Qubes staging
+# environment uses Xenial template VMs only, so we also suppress the platform suffix.
 elif printenv | grep -q ^QUBES_ ; then
     securedrop_vm_provider="qubes"
+    securedrop_platform_suffix=""
 elif [[ "${OSTYPE:-}" == "linux-gnu" ]]; then
     # Default to Libvirt for Linux users, which works well with Tails VM virtualization.
     securedrop_vm_provider="libvirt"

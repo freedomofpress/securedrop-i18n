@@ -1,6 +1,6 @@
-import functional_test
-import source_navigation_steps
-import journalist_navigation_steps
+from . import functional_test
+from . import source_navigation_steps
+from . import journalist_navigation_steps
 
 
 class TestSubmitAndRetrieveMessage(
@@ -14,6 +14,8 @@ class TestSubmitAndRetrieveMessage(
         self._source_continues_to_submit_page()
         self._source_submits_a_message()
         self._source_logs_out()
+        self.switch_to_firefox_driver()
         self._journalist_logs_in()
         self._journalist_checks_messages()
         self._journalist_downloads_message()
+        self.switch_to_torbrowser_driver()

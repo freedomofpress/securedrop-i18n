@@ -9,10 +9,6 @@ STABLE_VER := $(shell cat molecule/shared/stable.ver)
 ci-go: ## Creates, provisions, tests, and destroys GCE host for testing staging environment.
 	./devops/gce-nested/ci-go.sh
 
-.PHONY: ci-go-xenial
-ci-go-xenial: ## Creates, provisions, tests, and destroys GCE host for testing staging environment under xenial.
-	./devops/gce-nested/ci-go.sh xenial
-
 .PHONY: ci-teardown
 ci-teardown: ## Destroys GCE host for testing staging environment.
 	./devops/gce-nested/gce-stop.sh
@@ -21,16 +17,21 @@ ci-teardown: ## Destroys GCE host for testing staging environment.
 ci-lint: ## Runs linting in linting container.
 	devops/scripts/dev-shell-ci run make --keep-going lint typelint
 
+.PHONY: ci-deb-tests
+ci-deb-tests: ## Runs deb tests in ci
+	@./devops/scripts/test-built-packages.sh
+
 .PHONY: install-mypy
 install-mypy: ## pip install mypy in a dedicated python3 virtualenv
 	if [[ ! -d .python3/.venv ]] ; then \
 	  virtualenv --python=python3 .python3/.venv && \
 	  .python3/.venv/bin/pip3 install mypy ; \
-        fi
+	fi
 
 .PHONY: typelint
 typelint: install-mypy ## Runs type linting
 	.python3/.venv/bin/mypy ./securedrop ./admin
+	.python3/.venv/bin/mypy --disallow-incomplete-defs --disallow-untyped-defs ./securedrop/rm.py
 
 .PHONY: ansible-config-lint
 ansible-config-lint: ## Runs custom Ansible env linting tasks.
@@ -77,10 +78,6 @@ shellcheckclean: ## Cleans up temporary container associated with shellcheck tar
 .PHONY: lint
 lint: docs-lint app-lint flake8 html-lint yamllint shellcheck ansible-config-lint ## Runs all linting tools (docs, pylint, flake8, HTML, YAML, shell, ansible-config).
 
-.PHONY: docker-build-ubuntu
-docker-build-ubuntu: ## Builds SD Ubuntu docker container
-	@docker build -t quay.io/freedomofpress/ubuntu:trusty -f molecule/builder/Dockerfile molecule/builder
-
 .PHONY: build-debs
 build-debs: ## Builds and tests debian packages
 	@./devops/scripts/build-debs.sh
@@ -88,14 +85,6 @@ build-debs: ## Builds and tests debian packages
 .PHONY: build-debs-notest
 build-debs-notest: ## Builds and tests debian packages (sans tests)
 	@./devops/scripts/build-debs.sh notest
-
-.PHONY: build-debs-xenial
-build-debs-xenial: ## Builds and tests debian packages (includes Xenial overrides, TESTING ONLY)
-	@./devops/scripts/build-debs.sh test xenial
-
-.PHONY: build-debs-xenial-notest
-build-debs-xenial-notest: ## Builds and tests debian packages (includes Xenial overrides, sans tests, TESTING ONLY)
-	@./devops/scripts/build-debs.sh notest xenial
 
 .PHONY: build-gcloud-docker
 build-gcloud-docker: ## Build docker container for gcloud sdk
@@ -109,7 +98,7 @@ safety: ## Runs `safety check` to check python dependencies for vulnerabilities
 	pip install --upgrade safety && \
 		for req_file in `find . -type f -name '*requirements.txt'`; do \
 			echo "Checking file $$req_file" \
-			&& safety check --ignore 36351 --full-report -r $$req_file \
+			&& safety check --full-report -r $$req_file \
 			&& echo -e '\n' \
 			|| exit 1; \
 		done
@@ -117,8 +106,9 @@ safety: ## Runs `safety check` to check python dependencies for vulnerabilities
 # https://wiki.openstack.org/wiki/Security/Projects/Bandit
 .PHONY: bandit
 bandit: ## Run bandit with medium level excluding test-related folders
-	pip install --upgrade bandit && \
-		bandit --recursive . --exclude admin/.tox,admin/.venv,admin/.eggs,molecule,testinfra,securedrop/tests,.tox,.venv -ll
+	pip install --upgrade pip && \
+        pip install --upgrade bandit!=1.6.0 && \
+	bandit --recursive . --exclude admin/.tox,admin/.venv,admin/.eggs,molecule,testinfra,securedrop/tests,.tox,.venv -ll
 
 .PHONY: update-pip-requirements
 update-pip-requirements: ## Updates all Python requirements files via pip-compile.
@@ -143,20 +133,17 @@ self-signed-https-certs: ## Generates self-signed certs for TESTING the HTTPS co
 
 .PHONY: vagrant-package
 vagrant-package: ## Package up a vagrant box of the last stable SD release
-	@devops/scripts/vagrant_package.sh
+	@devops/scripts/vagrant-package
 
 .PHONY: staging
 staging: ## Creates local staging environment in VM, autodetecting platform
 	@./devops/scripts/create-staging-env
 
-.PHONY: staging-xenial
-staging-xenial: ## Creates local staging VMs based on Xenial, autodetecting platform
-	@./devops/scripts/create-staging-env xenial
-
 .PHONY: clean
 clean: ## DANGER! Purges all site-specific info and developer files from project.
 	@./devops/clean
 
+# Xenial upgrade targets
 .PHONY: upgrade-start
 upgrade-start: ## Boot up an upgrade test base environment using libvirt
 	@SD_UPGRADE_BASE=$(STABLE_VER) molecule converge -s upgrade
@@ -180,7 +167,7 @@ upgrade-test-qa: ## Once an upgrade environment is running, force upgrade apt pa
 
 .PHONY: fetch-tor-packages
 fetch-tor-packages: ## Retrieves the most recent Tor packages for Xenial, for apt repo
-	molecule test -s fetch-tor-packages
+	@./devops/scripts/fetch-tor-packages.sh
 
 # Explaination of the below shell command should it ever break.
 # 1. Set the field separator to ": ##" and any make targets that might appear between : and ##

@@ -7,20 +7,21 @@ from flask_assets import Environment
 from flask_babel import gettext
 from flask_wtf.csrf import CSRFProtect, CSRFError
 from os import path
-from werkzeug.exceptions import default_exceptions  # type: ignore
+from werkzeug.exceptions import default_exceptions
 
 import i18n
 import template_filters
 import version
-import platform
 
 from crypto_util import CryptoUtil
 from db import db
 from journalist_app import account, admin, api, main, col
 from journalist_app.utils import (get_source, logged_in,
-                                  JournalistInterfaceSessionInterface)
+                                  JournalistInterfaceSessionInterface,
+                                  cleanup_expired_revoked_tokens)
 from models import Journalist
 from store import Storage
+from worker import rq_worker_queue
 
 import typing
 # https://www.python.org/dev/peps/pep-0484/#runtime-or-type-checking
@@ -30,6 +31,9 @@ if typing.TYPE_CHECKING:
     # statements has to be marked as noqa.
     # http://flake8.pycqa.org/en/latest/user/error-codes.html?highlight=f401
     from sdconfig import SDConfig  # noqa: F401
+    from typing import Optional, Union, Tuple, Any  # noqa: F401
+    from werkzeug import Response  # noqa: F401
+    from werkzeug.exceptions import HTTPException  # noqa: F401
 
 _insecure_views = ['main.login', 'main.select_logo', 'static']
 
@@ -62,12 +66,6 @@ def create_app(config):
     app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
     db.init_app(app)
 
-    # Magic values for Xenial upgrade message
-    app.config.update(
-        XENIAL_WARNING_DATE=datetime.strptime('Mar 4 2019', '%b %d %Y'),
-        XENIAL_VER='16.04'
-    )
-
     app.storage = Storage(config.STORE_DIR,
                           config.TEMP_DIR,
                           config.JOURNALIST_KEY)
@@ -83,8 +81,12 @@ def create_app(config):
         gpg_key_dir=config.GPG_KEY_DIR,
     )
 
+    app.config['RQ_WORKER_NAME'] = config.RQ_WORKER_NAME
+    rq_worker_queue.init_app(app)
+
     @app.errorhandler(CSRFError)
     def handle_csrf_error(e):
+        # type: (CSRFError) -> Response
         # render the message first to ensure it's localized.
         msg = gettext('You have been logged out due to inactivity')
         session.clear()
@@ -92,9 +94,10 @@ def create_app(config):
         return redirect(url_for('main.login'))
 
     def _handle_http_exception(error):
+        # type: (HTTPException) -> Tuple[Union[Response, str], Optional[int]]
         # Workaround for no blueprint-level 404/5 error handlers, see:
         # https://github.com/pallets/flask/issues/503#issuecomment-71383286
-        handler = app.error_handler_spec['api'][error.code].values()[0]
+        handler = list(app.error_handler_spec['api'][error.code].values())[0]
         if request.path.startswith('/api/') and handler:
             return handler(error)
 
@@ -120,8 +123,13 @@ def create_app(config):
         template_filters.rel_datetime_format
     app.jinja_env.filters['filesizeformat'] = template_filters.filesizeformat
 
+    @app.before_first_request
+    def expire_blacklisted_tokens():
+        return cleanup_expired_revoked_tokens()
+
     @app.before_request
     def setup_g():
+        # type: () -> Optional[Response]
         """Store commonly used values in Flask's special g object"""
         if 'expires' in session and datetime.utcnow() >= session['expires']:
             session.clear()
@@ -142,10 +150,6 @@ def create_app(config):
         g.html_lang = i18n.locale_to_rfc_5646(g.locale)
         g.locales = i18n.get_locale2name()
 
-        if (platform.linux_distribution()[1] != app.config['XENIAL_VER'] and
-                datetime.now() >= app.config['XENIAL_WARNING_DATE']):
-            g.show_xenial_warning = True
-
         if request.path.split('/')[1] == 'api':
             pass  # We use the @token_required decorator for the API endpoints
         else:  # We are not using the API
@@ -157,6 +161,8 @@ def create_app(config):
             if filesystem_id:
                 g.filesystem_id = filesystem_id
                 g.source = get_source(filesystem_id)
+
+        return None
 
     app.register_blueprint(main.make_blueprint(config))
     app.register_blueprint(account.make_blueprint(config),

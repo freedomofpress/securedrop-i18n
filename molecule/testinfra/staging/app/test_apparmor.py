@@ -105,9 +105,9 @@ def test_apparmor_total_profiles(host):
     """ Ensure number of total profiles is sum of enforced and
         complaining profiles """
     with host.sudo():
-        total_expected = str((len(sdvars.apparmor_enforce)
-                             + len(sdvars.apparmor_complain)))
-        # Trusty has ~10, Xenial about ~20 profiles, so let's expect
+        total_expected = str(len(sdvars.apparmor_enforce)
+                             + len(sdvars.apparmor_complain))
+        # Xenial about ~20 profiles, so let's expect
         # *at least* the sum.
         assert host.check_output("aa-status --profiled") >= total_expected
 
@@ -116,7 +116,7 @@ def test_aastatus_unconfined(host):
     """ Ensure that there are no processes that are unconfined but have
         a profile """
 
-    # Trusty and Xenial should show 0 unconfined processes.
+    # There should be 0 unconfined processes.
     expected_unconfined = 0
 
     unconfined_chk = str("{} processes are unconfined but have"

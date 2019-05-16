@@ -12,20 +12,15 @@ set -o pipefail
 virtualenv_bootstrap
 
 RUN_TESTS="${1:-test}"
-TARGET_PLATFORM="${2:-trusty}"
+TARGET_PLATFORM="${2:-xenial}"
 SCENARIO_NAME="builder-${TARGET_PLATFORM}"
 
-if [[ "${CIRCLE_BRANCH:-}" != docs-* ]]; then
-    case "$RUN_TESTS" in
-        notest)
-            molecule_action=converge
-            ;;
-        test)
-            molecule_action=test
-            ;;
-    esac
-
-    molecule "${molecule_action}" -s "${SCENARIO_NAME}"
-else
-    echo Not running on docs branch...
-fi
+case "$RUN_TESTS" in
+    notest)
+        molecule_action=converge
+        ;;
+    test)
+        molecule_action=test
+        ;;
+esac
+molecule "${molecule_action}" -s "${SCENARIO_NAME}"

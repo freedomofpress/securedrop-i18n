@@ -20,6 +20,7 @@ from source_app import main, info, api
 from source_app.decorators import ignore_static
 from source_app.utils import logged_in
 from store import Storage
+from worker import rq_worker_queue
 
 import typing
 # https://www.python.org/dev/peps/pep-0484/#runtime-or-type-checking
@@ -75,6 +76,9 @@ def create_app(config):
         gpg_key_dir=config.GPG_KEY_DIR,
     )
 
+    app.config['RQ_WORKER_NAME'] = config.RQ_WORKER_NAME
+    rq_worker_queue.init_app(app)
+
     @app.errorhandler(CSRFError)
     def handle_csrf_error(e):
         msg = render_template('session_timeout.html')
@@ -108,6 +112,15 @@ def create_app(config):
 
     @app.before_request
     @ignore_static
+    def setup_i18n():
+        """Store i18n-related values in Flask's special g object"""
+        g.locale = i18n.get_locale(config)
+        g.text_direction = i18n.get_text_direction(g.locale)
+        g.html_lang = i18n.locale_to_rfc_5646(g.locale)
+        g.locales = i18n.get_locale2name()
+
+    @app.before_request
+    @ignore_static
     def check_tor2web():
         # ignore_static here so we only flash a single message warning
         # about Tor2Web, corresponding to the initial page load.
@@ -125,10 +138,6 @@ def create_app(config):
     @ignore_static
     def setup_g():
         """Store commonly used values in Flask's special g object"""
-        g.locale = i18n.get_locale(config)
-        g.text_direction = i18n.get_text_direction(g.locale)
-        g.html_lang = i18n.locale_to_rfc_5646(g.locale)
-        g.locales = i18n.get_locale2name()
 
         if 'expires' in session and datetime.utcnow() >= session['expires']:
             msg = render_template('session_timeout.html')

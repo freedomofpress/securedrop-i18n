@@ -250,19 +250,11 @@ Rebooting the Servers
 Investigating Logs
 ^^^^^^^^^^^^^^^^^^^
 
-Refer to the :doc:`Useful Logs <logging>` documentation to see the locations of
-files that contain relevant information while debugging issues on your SecureDrop
-servers.
+Consult our :doc:`Investigating Logs <logging>` topic guide for locations of the
+most relevant log files you may want to examine as part of troubleshooting, and
+for how to enable error logging for the *Source Interface*.
 
-.. note:: You can also use the ``securedrop-admin`` tool to extract logs to
-  send to Freedom of the Press Foundation for analysis:
-
-    .. code:: sh
-
-      cd ~/Persistent/securedrop
-      ./securedrop-admin logs
-
-  This command will produce encrypted tarballs containing logs from each server.
+.. include:: includes/get-logs.txt
 
 Immediately Apply a SecureDrop Update
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -391,7 +383,7 @@ Currently, when one admin pushes changes in ``site-specific`` to the server, the
 changes will not sync to the local ``site-specific`` file on the remaining admin workstations.
 Without being aware of changes made to ``site-specific``, admins run the risk of pushing old
 information to the servers. This can affect the receipt of OSSEC alerts, viability of the
-Submission Key, among other critical components of the SecureDrop environment.
+*Submission Key*, among other critical components of the SecureDrop environment.
 
 There are multiple ways to avoid pushing out-of-date information to the servers.
 We recommend admins establish a secure communication pipeline to alert fellow admins

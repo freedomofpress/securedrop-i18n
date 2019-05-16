@@ -1,21 +1,22 @@
 # -*- coding: utf-8 -*-
+import binascii
 
 from datetime import datetime
 from flask import (g, flash, current_app, abort, send_file, redirect, url_for,
                    render_template, Markup, sessions, request)
 from flask_babel import gettext, ngettext
-import hashlib
 from sqlalchemy.sql.expression import false
 
 import i18n
-import worker
 
 from db import db
 from models import (get_one_or_else, Source, Journalist,
                     InvalidUsernameException, WrongPasswordException,
                     LoginThrottledException, BadTokenException, SourceStar,
-                    PasswordError, Submission)
+                    PasswordError, Submission, RevokedToken)
 from rm import srm
+from store import add_checksum_for_file
+from worker import rq_worker_queue
 
 import typing
 # https://www.python.org/dev/peps/pep-0484/#runtime-or-type-checking
@@ -121,7 +122,7 @@ def validate_hotp_secret(user, otp_secret):
     """
     try:
         user.set_hotp_secret(otp_secret)
-    except TypeError as e:
+    except (binascii.Error, TypeError) as e:
         if "Non-hexadecimal digit found" in str(e):
             flash(gettext(
                 "Invalid secret format: "
@@ -173,7 +174,7 @@ def download(zip_basename, submissions):
 
 def delete_file(filesystem_id, filename, file_object):
     file_path = current_app.storage.path(filesystem_id, filename)
-    worker.enqueue(srm, file_path)
+    rq_worker_queue.enqueue(srm, file_path)
     db.session.delete(file_object)
     db.session.commit()
 
@@ -260,7 +261,7 @@ def make_password(config):
 
 def delete_collection(filesystem_id):
     # Delete the source's collection of submissions
-    job = worker.enqueue(srm, current_app.storage.path(filesystem_id))
+    job = rq_worker_queue.enqueue(srm, current_app.storage.path(filesystem_id))
 
     # Delete the source's reply keypair
     current_app.crypto_util.delete_reply_keypair(filesystem_id)
@@ -326,16 +327,18 @@ def col_download_all(cols_selected):
     return download("all", submissions)
 
 
-def serve_file_with_etag(source, filename):
-    response = send_file(current_app.storage.path(source.filesystem_id,
-                                                  filename),
+def serve_file_with_etag(db_obj):
+    file_path = current_app.storage.path(db_obj.source.filesystem_id, db_obj.filename)
+    response = send_file(file_path,
                          mimetype="application/pgp-encrypted",
                          as_attachment=True,
                          add_etags=False)  # Disable Flask default ETag
 
+    if not db_obj.checksum:
+        add_checksum_for_file(db.session, db_obj, file_path)
+
     response.direct_passthrough = False
-    response.headers['Etag'] = '"sha256:{}"'.format(
-        hashlib.sha256(response.get_data()).hexdigest())
+    response.headers['Etag'] = db_obj.checksum
     return response
 
 
@@ -350,3 +353,18 @@ class JournalistInterfaceSessionInterface(
         else:
             super(JournalistInterfaceSessionInterface, self).save_session(
                 app, session, response)
+
+
+def cleanup_expired_revoked_tokens():
+    """Remove tokens that have now expired from the revoked token table."""
+
+    revoked_tokens = db.session.query(RevokedToken).all()
+
+    for revoked_token in revoked_tokens:
+        if Journalist.validate_token_is_not_expired_or_invalid(revoked_token.token):
+            pass  # The token has not expired, we must keep in the revoked token table.
+        else:
+            # The token is no longer valid, remove from the revoked token table.
+            db.session.delete(revoked_token)
+
+    db.session.commit()

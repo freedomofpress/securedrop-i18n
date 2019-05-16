@@ -5,8 +5,11 @@ set -euo pipefail
 
 source "${BASH_SOURCE%/*}/dev-deps"
 
-run_xvfb &
+run_xvfb
+run_tor &
 run_redis &
+setup_vncauth
+run_x11vnc &
 urandom
 run_sass --force --update
 maybe_create_config_py
@@ -22,16 +25,17 @@ fi
 
 mkdir -p "/tmp/test-results/logs"
 
-: "${PAGE_LAYOUT_LOCALES:=en_US,ar,fr_FR}"
+: "${PAGE_LAYOUT_LOCALES:=en_US,ar}"
 export PAGE_LAYOUT_LOCALES
+export TOR_FORCE_NET_CONFIG=0
 
 pytest \
-  --page-layout \
-  --durations 10 \
-  --junitxml=/tmp/test-results/junit.xml \
-  --cov-report term-missing \
-  --cov-report html:/tmp/test-results/cov_html \
-  --cov-report xml:/tmp/test-results/cov.xml \
-  --cov-report annotate:/tmp/test-results/cov_annotate \
-  --cov=. \
-  "$@"
+    --page-layout \
+    --durations 10 \
+    --junitxml=/tmp/test-results/junit.xml \
+    --cov-report term-missing \
+    --cov-report html:/tmp/test-results/cov_html \
+    --cov-report xml:/tmp/test-results/cov.xml \
+    --cov-report annotate:/tmp/test-results/cov_annotate \
+    --cov=. \
+    "$@"

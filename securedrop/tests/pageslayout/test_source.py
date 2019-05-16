@@ -17,7 +17,7 @@
 #
 from tests.functional import journalist_navigation_steps
 from tests.functional import source_navigation_steps
-import functional_test
+from . import functional_test
 import pytest
 
 
@@ -30,11 +30,6 @@ class TestSourceLayout(
     def test_index(self):
         self._source_visits_source_homepage()
         self._screenshot('source-index.png')
-
-    def test_index_javascript(self):
-        self._javascript_toggle()
-        self._source_visits_source_homepage()
-        self._screenshot('source-index_javascript.png')
 
     def test_lookup(self):
         self._source_visits_source_homepage()

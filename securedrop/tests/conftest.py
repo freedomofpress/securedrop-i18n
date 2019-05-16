@@ -2,6 +2,7 @@
 
 import pretty_bad_protocol as gnupg
 import logging
+from hypothesis import settings
 import os
 import io
 import json
@@ -11,7 +12,11 @@ import shutil
 import signal
 import subprocess
 
-from ConfigParser import SafeConfigParser
+try:
+    import configparser
+except ImportError:
+    from six.moves import configparser  # renamed in Python 3
+
 from flask import url_for
 from pyotp import TOTP
 
@@ -24,7 +29,7 @@ from db import db
 from journalist_app import create_app as create_journalist_app
 import models
 from source_app import create_app as create_source_app
-import utils
+from . import utils
 
 # The PID file for the redis worker is hard-coded below.
 # Ideally this constant would be provided by a test harness.
@@ -33,12 +38,13 @@ import utils
 TEST_WORKER_PIDFILE = '/tmp/securedrop_test_worker.pid'
 
 # Quiet down gnupg output. (See Issue #2595)
-gnupg_logger = logging.getLogger(gnupg.__name__)
-gnupg_logger.setLevel(logging.ERROR)
-valid_levels = {'INFO': logging.INFO, 'DEBUG': logging.DEBUG}
-gnupg_logger.setLevel(
-   valid_levels.get(os.environ.get('GNUPG_LOG_LEVEL', ""), logging.ERROR)
-)
+GNUPG_LOG_LEVEL = os.environ.get('GNUPG_LOG_LEVEL', "ERROR")
+gnupg._util.log.setLevel(getattr(logging, GNUPG_LOG_LEVEL, logging.ERROR))
+
+# `hypothesis` sets a default deadline of 200 milliseconds before failing tests,
+# which doesn't work for integration tests. Turn off deadlines.
+settings.register_profile("securedrop", deadline=None)
+settings.load_profile("securedrop")
 
 
 def pytest_addoption(parser):
@@ -117,7 +123,7 @@ def config(tmpdir):
 def alembic_config(config):
     base_dir = path.join(path.dirname(__file__), '..')
     migrations_dir = path.join(base_dir, 'alembic')
-    ini = SafeConfigParser()
+    ini = configparser.SafeConfigParser()
     ini.read(path.join(base_dir, 'alembic.ini'))
 
     ini.set('alembic', 'script_location', path.join(migrations_dir))
@@ -224,16 +230,17 @@ def journalist_api_token(journalist_app, test_journo):
                                  'passphrase': test_journo['password'],
                                  'one_time_code': valid_token}),
                             headers=utils.api_helper.get_api_headers())
-        observed_response = json.loads(response.data)
-        return observed_response['token']
+        return response.json['token']
 
 
 def _start_test_rqworker(config):
     if not psutil.pid_exists(_get_pid_from_file(TEST_WORKER_PIDFILE)):
         tmp_logfile = io.open('/tmp/test_rqworker.log', 'w')
-        subprocess.Popen(['rqworker', 'test',
+        subprocess.Popen(['rqworker', config.RQ_WORKER_NAME,
                           '-P', config.SECUREDROP_ROOT,
-                          '--pid', TEST_WORKER_PIDFILE],
+                          '--pid', TEST_WORKER_PIDFILE,
+                          '--logging_level', 'debug',
+                          '-v'],
                          stdout=tmp_logfile,
                          stderr=subprocess.STDOUT)
 
@@ -252,7 +259,7 @@ def _get_pid_from_file(pid_file_name):
     try:
         return int(io.open(pid_file_name).read())
     except IOError:
-        return None
+        return -1
 
 
 def _cleanup_test_securedrop_dataroot(config):

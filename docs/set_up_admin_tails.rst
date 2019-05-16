@@ -21,7 +21,7 @@ specific Tails session and click *Add*. And finally click *Start
 Tails*.
 
 .. note:: The *Administration password* is a one-time password. It
-	  will reset every time you shut down Tails.
+      will reset every time you shut down Tails.
 
 After Tails finishes booting, make sure you're connected to the Internet
 |Network| and that the Tor status onion icon is not crossed out
@@ -51,7 +51,7 @@ Start by running the following commands to download the git repository.
     git clone https://github.com/freedomofpress/securedrop.git
 
 .. note:: Since the repository is fairly large and Tor can be slow,
-	  this may take a few minutes.
+      this may take a few minutes.
 
 .. caution:: Do not download SecureDrop Git repository as a Zip file,
              or any other means. Only download by using the given git
@@ -114,8 +114,8 @@ key:
 .. code:: sh
 
     cd ~/Persistent/securedrop/
-    git checkout 0.12.0~rc1
-    git tag -v 0.12.0~rc1
+    git checkout 0.12.2
+    git tag -v 0.12.2
 
 You should see ``Good signature from "SecureDrop Release Signing Key"`` in the
 output of that last command along with the fingerprint above.
@@ -151,8 +151,8 @@ To use the template:
    on the encrypted persistent volume, this additional passphrase is not necessary.
 
 .. warning:: You will not be able to access your passwords if you
-	     forget the master password or the location of the key
-	     file used to protect the database.
+         forget the master password or the location of the key
+         file used to protect the database.
 
 In case you wish to manually create a database, the suggested password fields in
 the admin template are:

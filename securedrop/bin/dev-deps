@@ -2,16 +2,38 @@
 
 export DISPLAY=:1
 
+function run_tor {
+    tor > /tmp/tor.out 2>&1 || cat /tmp/tor.out
+}
+
 function run_xvfb() {
-    setsid Xvfb :1 -screen 0 1024x768x24 -ac +extension GLX +render -noreset >& /tmp/xvfb.out || cat /tmp/xvfb.out
+    (setsid Xvfb :1 -screen 0 1024x768x24 -ac +extension GLX +render -noreset >& /tmp/xvfb.out || cat /tmp/xvfb.out) &
+
+    # give it time to start
+    for _ in {1..10}
+    do
+        xdpyinfo -display :1 >/dev/null 2>&1 && return 0
+        sleep 1
+    done
+    xdpyinfo -display :1 >/dev/null 2>&1 || (echo "Xvfb is not available"; exit 1)
 }
 
 function run_redis() {
     setsid redis-server >& /tmp/redis.out || cat /tmp/redis.out
 }
 
+function run_supervisor() {
+    mkdir -p /tmp/supervisor/log /tmp/supervisor/run && printf "[unix_http_server]\nfile=/tmp/supervisor/run/supervisor.sock\nchmod=0700\n\n[supervisord]logfile=/tmp/supervisor/log/supervisord.log\npidfile=/tmp/supervisor/run/supervisord.pid\nchildlogdir=/tmp/supervisor/log\n[rpcinterface:supervisor]\nsupervisor.rpcinterface_factory = supervisor.rpcinterface:make_main_rpcinterface\n\n[supervisorctl]\nserverurl=unix:///tmp/supervisor/run/supervisor.sock\n\n[program:securedrop_worker]\ncommand=/usr/local/bin/rqworker\ndirectory=$(pwd)\nautostart=true\nautorestart=true\nstartretries=3\nstderr_logfile=/tmp/supervisor/log/securedrop_worker.err\nstdout_logfile=/tmp/supervisor/log/securedrop_worker.out\nuser=%s\n" "$USER_NAME" > /tmp/supervisor/supervisor.conf
+
+    setsid supervisord -c /tmp/supervisor/supervisor.conf >& /tmp/supervisor/log/supervisor.out || cat /tmp/supervisor/log/supervisor.out
+}
+
+function setup_vncauth {
+    x11vnc -storepasswd freedom /tmp/vncpasswd
+}
+
 function run_x11vnc() {
-    setsid x11vnc -display :1 -autoport 5901 -shared >& /tmp/x11vnc.out || cat /tmp/x11vnc.out
+    setsid x11vnc -display :1 -geometry 1024x768 -rfbauth /tmp/vncpasswd -rfbport 5909 -shared >& /tmp/x11vnc.out || cat /tmp/x11vnc.out
 }
 
 function urandom() {

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-import journalist_navigation_steps
-import functional_test
+from . import journalist_navigation_steps
+from . import functional_test
 
 
 class TestMakeAccountChanges(
@@ -16,11 +16,11 @@ class TestMakeAccountChanges(
         self._admin_logs_in()
         self._admin_visits_admin_interface()
         # Admin view of admin user
-        self._edit_user(self.admin.username)
+        self._edit_user(self.admin, True)
         self._admin_visits_admin_interface()
         self._admin_adds_a_user()
         # Admin view of non-admin user
-        self._edit_user('dellsberg')
+        self._edit_user(self.new_user['username'])
         # User view of self
         self._edit_account()
         self._logout()

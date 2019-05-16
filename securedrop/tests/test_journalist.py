@@ -2,13 +2,13 @@
 import os
 import pytest
 import io
+import six
 import random
 import zipfile
 import base64
-import datetime
+import binascii
 
 from base64 import b64decode
-from cStringIO import StringIO
 from io import BytesIO
 from flask import url_for, escape, session, current_app, g
 from mock import patch
@@ -20,7 +20,7 @@ from sqlalchemy.exc import IntegrityError
 import crypto_util
 import models
 import journalist_app as journalist_app_module
-import utils
+from . import utils
 
 os.environ['SECUREDROP_ENV'] = 'test'  # noqa
 from sdconfig import SDConfig, config
@@ -28,7 +28,7 @@ from sdconfig import SDConfig, config
 from db import db
 from models import (InvalidPasswordLength, Journalist, Reply, Source,
                     Submission)
-from utils.instrument import InstrumentedApp
+from .utils.instrument import InstrumentedApp
 
 # Smugly seed the RNG for deterministic testing
 random.seed('¯\_(ツ)_/¯')
@@ -767,7 +767,7 @@ def test_admin_resets_user_hotp_error(mocker,
                     test_admin['otp_secret'])
 
         mocker.patch('models.Journalist.set_hotp_secret',
-                     side_effect=TypeError(error_message))
+                     side_effect=binascii.Error(error_message))
 
         with InstrumentedApp(journalist_app) as ins:
             app.post(url_for('admin.reset_two_factor_hotp'),
@@ -866,7 +866,7 @@ def test_user_resets_user_hotp_error(mocker,
                     test_journo['otp_secret'])
 
         mocker.patch('models.Journalist.set_hotp_secret',
-                     side_effect=TypeError(error_message))
+                     side_effect=binascii.Error(error_message))
 
         with InstrumentedApp(journalist_app) as ins:
             app.post(url_for('account.reset_two_factor_hotp'),
@@ -1145,8 +1145,12 @@ def test_admin_add_user_integrity_error(journalist_app, test_admin, mocker):
                 "error")
 
     log_event = mocked_error_logger.call_args[0][0]
-    assert ("Adding user 'username' failed: (__builtin__.NoneType) "
-            "None [SQL: 'STATEMENT'] [parameters: 'PARAMETERS']") in log_event
+    if six.PY2:
+        assert ("Adding user 'username' failed: (__builtin__.NoneType) "
+                "None\n[SQL: STATEMENT]\n[parameters: 'PARAMETERS']") in log_event
+    else:
+        assert ("Adding user 'username' failed: (builtins.NoneType) "
+                "None\n[SQL: STATEMENT]\n[parameters: 'PARAMETERS']") in log_event
 
 
 def test_logo_upload_with_valid_image_succeeds(journalist_app, test_admin):
@@ -1163,8 +1167,8 @@ def test_logo_upload_with_valid_image_succeeds(journalist_app, test_admin):
             # Create 1px * 1px 'white' PNG file from its base64 string
             form = journalist_app_module.forms.LogoForm(
                 logo=(BytesIO(base64.decodestring
-                      ("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQ"
-                       "VR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=")), 'test.png')
+                      (b"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQ"
+                       b"VR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=")), 'test.png')
             )
             with InstrumentedApp(journalist_app) as ins:
                 app.post(url_for('admin.manage_config'),
@@ -1184,7 +1188,7 @@ def test_logo_upload_with_invalid_filetype_fails(journalist_app, test_admin):
                     test_admin['otp_secret'])
 
         form = journalist_app_module.forms.LogoForm(
-            logo=(StringIO('filedata'), 'bad.exe')
+            logo=(BytesIO(b'filedata'), 'bad.exe')
         )
         with InstrumentedApp(journalist_app) as ins:
             resp = app.post(url_for('admin.manage_config'),
@@ -1214,7 +1218,7 @@ def test_logo_upload_with_empty_input_field_fails(journalist_app, test_admin):
                     test_admin['otp_secret'])
 
         form = journalist_app_module.forms.LogoForm(
-            logo=(StringIO(''), '')
+            logo=(BytesIO(b''), '')
         )
 
         with InstrumentedApp(journalist_app) as ins:
@@ -1586,61 +1590,6 @@ def test_render_locales(config, journalist_app, test_journo, test_source):
     assert url_end + '?l=en_US' in text, text
 
 
-def test_render_xenial_positive(config, journalist_app, test_journo, mocker):
-    yesterday = datetime.datetime.now() - datetime.timedelta(days=1)
-    journalist_app.config.update(
-        XENIAL_WARNING_DATE=yesterday,
-        XENIAL_VER='16.04'
-    )
-
-    mocked_error_platform = mocker.patch('platform.linux_distribution')
-    mocked_error_platform.return_value = ('Ubuntu', '14.04', 'trusty')
-
-    with journalist_app.test_client() as app:
-        _login_user(app, test_journo['username'], test_journo['password'],
-                    test_journo['otp_secret'])
-
-        resp = app.get(url_for('main.index'))
-
-    text = resp.data.decode('utf-8')
-    assert "critical-skull" in text, text
-
-
-def test_render_xenial_negative_version(config, journalist_app, test_journo, mocker):
-    yesterday = datetime.datetime.now() - datetime.timedelta(days=1)
-    journalist_app.config.update(
-        XENIAL_WARNING_DATE=yesterday,
-        XENIAL_VER='16.04'
-    )
-
-    mocked_error_platform = mocker.patch('platform.linux_distribution')
-    mocked_error_platform.return_value = ('Ubuntu', '16.04', 'xenial')
-
-    with journalist_app.test_client() as app:
-        _login_user(app, test_journo['username'], test_journo['password'],
-                    test_journo['otp_secret'])
-        resp = app.get('/')
-
-    text = resp.data.decode('utf-8')
-    assert "critical-skull" not in text, text
-
-
-def test_render_xenial_negative_date(config, journalist_app, test_journo):
-    tomorrow = datetime.datetime.now() + datetime.timedelta(days=1)
-    journalist_app.config.update(
-        XENIAL_WARNING_DATE=tomorrow,
-        XENIAL_VER='16.04'
-    )
-
-    with journalist_app.test_client() as app:
-        _login_user(app, test_journo['username'], test_journo['password'],
-                    test_journo['otp_secret'])
-        resp = app.get('/')
-
-    text = resp.data.decode('utf-8')
-    assert "critical-skull" not in text, text
-
-
 def test_download_selected_submissions_from_source(journalist_app,
                                                    test_journo,
                                                    test_source):
@@ -1662,12 +1611,12 @@ def test_download_selected_submissions_from_source(journalist_app,
     # The download request was succesful, and the app returned a zipfile
     assert resp.status_code == 200
     assert resp.content_type == 'application/zip'
-    assert zipfile.is_zipfile(StringIO(resp.data))
+    assert zipfile.is_zipfile(BytesIO(resp.data))
 
     # The submissions selected are in the zipfile
     for filename in selected_fnames:
         # Check that the expected filename is in the zip file
-        zipinfo = zipfile.ZipFile(StringIO(resp.data)).getinfo(
+        zipinfo = zipfile.ZipFile(BytesIO(resp.data)).getinfo(
             os.path.join(
                 source.journalist_filename,
                 "%s_%s" % (filename.split('-')[0],
@@ -1684,7 +1633,7 @@ def test_download_selected_submissions_from_source(journalist_app,
 
     for filename in not_selected_fnames:
         with pytest.raises(KeyError):
-            zipfile.ZipFile(StringIO(resp.data)).getinfo(
+            zipfile.ZipFile(BytesIO(resp.data)).getinfo(
                 os.path.join(
                     source.journalist_filename,
                     source.journalist_designation,
@@ -1741,11 +1690,11 @@ def test_download_unread_all_sources(journalist_app, test_journo):
     # The download request was succesful, and the app returned a zipfile
     assert resp.status_code == 200
     assert resp.content_type == 'application/zip'
-    assert zipfile.is_zipfile(StringIO(resp.data))
+    assert zipfile.is_zipfile(BytesIO(resp.data))
 
     # All the not dowloaded submissions are in the zipfile
     for submission in bulk['not_downloaded0']:
-        zipinfo = zipfile.ZipFile(StringIO(resp.data)).getinfo(
+        zipinfo = zipfile.ZipFile(BytesIO(resp.data)).getinfo(
                 os.path.join(
                     "unread",
                     bulk['source0'].journalist_designation,
@@ -1756,7 +1705,7 @@ def test_download_unread_all_sources(journalist_app, test_journo):
         assert zipinfo
 
     for submission in bulk['not_downloaded1']:
-        zipinfo = zipfile.ZipFile(StringIO(resp.data)).getinfo(
+        zipinfo = zipfile.ZipFile(BytesIO(resp.data)).getinfo(
             os.path.join(
                 "unread",
                 bulk['source1'].journalist_designation,
@@ -1769,7 +1718,7 @@ def test_download_unread_all_sources(journalist_app, test_journo):
     # All the downloaded submissions are absent from the zipfile
     for submission in bulk['downloaded0']:
         with pytest.raises(KeyError):
-            zipfile.ZipFile(StringIO(resp.data)).getinfo(
+            zipfile.ZipFile(BytesIO(resp.data)).getinfo(
                 os.path.join(
                     "unread",
                     bulk['source0'].journalist_designation,
@@ -1780,7 +1729,7 @@ def test_download_unread_all_sources(journalist_app, test_journo):
 
     for submission in bulk['downloaded1']:
         with pytest.raises(KeyError):
-            zipfile.ZipFile(StringIO(resp.data)).getinfo(
+            zipfile.ZipFile(BytesIO(resp.data)).getinfo(
                 os.path.join(
                     "unread",
                     bulk['source1'].journalist_designation,
@@ -1811,11 +1760,11 @@ def test_download_all_selected_sources(journalist_app, test_journo):
     # The download request was succesful, and the app returned a zipfile
     assert resp.status_code == 200
     assert resp.content_type == 'application/zip'
-    assert zipfile.is_zipfile(StringIO(resp.data))
+    assert zipfile.is_zipfile(BytesIO(resp.data))
 
     # All messages from source1 are in the zipfile
     for submission in bulk['submissions1']:
-        zipinfo = zipfile.ZipFile(StringIO(resp.data)).getinfo(
+        zipinfo = zipfile.ZipFile(BytesIO(resp.data)).getinfo(
             os.path.join(
                 "all",
                 bulk['source1'].journalist_designation,
@@ -1828,7 +1777,7 @@ def test_download_all_selected_sources(journalist_app, test_journo):
     # All messages from source0 are absent from the zipfile
     for submission in bulk['submissions0']:
         with pytest.raises(KeyError):
-            zipfile.ZipFile(StringIO(resp.data)).getinfo(
+            zipfile.ZipFile(BytesIO(resp.data)).getinfo(
                 os.path.join(
                     "all",
                     bulk['source0'].journalist_designation,
@@ -2022,5 +1971,11 @@ def test_does_set_cookie_headers(journalist_app, test_journo):
         response = app.get(url_for('main.login'))
 
         observed_headers = response.headers
-        assert 'Set-Cookie' in observed_headers.keys()
+        assert 'Set-Cookie' in list(observed_headers.keys())
         assert 'Cookie' in observed_headers['Vary']
+
+
+def test_app_error_handlers_defined(journalist_app):
+    for status_code in [400, 401, 403, 404, 500]:
+        # This will raise KeyError if an app-wide error handler is not defined
+        assert journalist_app.error_handler_spec[None][status_code]

@@ -10,8 +10,8 @@ from pyotp import TOTP
 
 os.environ['SECUREDROP_ENV'] = 'test'  # noqa
 from models import Journalist, BadTokenException
-from utils import login_user
-from utils.instrument import InstrumentedApp
+from .utils import login_user
+from .utils.instrument import InstrumentedApp
 
 
 @contextmanager
@@ -31,9 +31,9 @@ def totp_window():
     # if we have less than 5 seconds left in this window, sleep to wait for
     # the next window
     if window_end_delta < timedelta(seconds=5):
-        sleep_time = window_end_delta.seconds + \
+        timeout = window_end_delta.seconds + \
             window_end_delta.microseconds / 1000000.0
-        time.sleep(sleep_time)
+        time.sleep(timeout)
         window_end = window_end + timedelta(seconds=30)
 
     yield
@@ -89,7 +89,7 @@ def test_bad_token_fails_to_verify_on_admin_new_user_two_factor_page(
        https://github.com/freedomofpress/securedrop/pull/1692
     '''
 
-    invalid_token = u'000000'
+    invalid_token = '000000'
 
     with totp_window():
         with journalist_app.test_client() as app:
@@ -127,7 +127,7 @@ def test_bad_token_fails_to_verify_on_new_user_two_factor_page(
     '''Regression test for
        https://github.com/freedomofpress/securedrop/pull/1692
     '''
-    invalid_token = u'000000'
+    invalid_token = '000000'
 
     with totp_window():
         with journalist_app.test_client() as app:

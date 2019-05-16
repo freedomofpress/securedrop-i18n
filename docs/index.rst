@@ -26,14 +26,14 @@ anonymous sources.
    :maxdepth: 2
 
    overview
-   terminology
+   glossary
    passphrases
    hardware
    before_you_begin
    set_up_tails
    set_up_svs
    set_up_transfer_device
-   generate_securedrop_application_key
+   generate_submission_key
    set_up_admin_tails
    network_firewall
    servers
@@ -86,7 +86,13 @@ anonymous sources.
    :name: upgradetoc
    :maxdepth: 2
 
+   upgrade/xenial_after_april_30.rst
    upgrade/xenial_prep.rst
+   upgrade/xenial_upgrade_in_place.rst
+   upgrade/xenial_backup_install_restore.rst
+   upgrade/0.12.1_to_0.12.2.rst
+   upgrade/0.12.0_to_0.12.1.rst
+   upgrade/0.11.1_to_0.12.0.rst
    upgrade/0.10.0_to_0.11.0.rst
    upgrade/0.9.1_to_0.10.0.rst
    upgrade/0.8.0_to_0.9.1.rst
@@ -139,3 +145,4 @@ anonymous sources.
 
   threat_model/threat_model.rst
   threat_model/dataflow.rst
+  threat_model/mitigations.rst
