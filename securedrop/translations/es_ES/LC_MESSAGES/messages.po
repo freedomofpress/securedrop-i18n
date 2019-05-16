@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-02-26 17:19+0000\n"
-"Last-Translator: Pablo Di Noto <pdinoto@gmail.com>\n"
+"PO-Revision-Date: 2019-05-28 01:04+0000\n"
+"Last-Translator: Zuhualime Akoochimoya <zakooch@protonmail.ch>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
 "Language: es_ES\n"
@@ -1099,7 +1099,7 @@ msgstr ""
 
 #: source_templates/lookup.html:10
 msgid "Sorry we haven't responded yet!"
-msgstr ""
+msgstr "¡Sentimos no haber respondido todavía!"
 
 #: source_templates/lookup.html:11
 msgid ""
@@ -1107,12 +1107,17 @@ msgid ""
 "reasons, the creation of a two-way communication channel was delayed until "
 "you checked in again."
 msgstr ""
+"Nuestro SecureDrop experimentó recientemente un pico de actividad. Por "
+"razones de seguridad, la creación de un canal de comunicación de doble vía "
+"fue demorada hasta que inicie sesión nuevamente."
 
 #: source_templates/lookup.html:12
 msgid ""
 "Please rest assured that we were able to download your submission, and check "
 "back again later for a reply."
 msgstr ""
+"Por favor quédese tranquilo que fuimos capaces de bajar su envío, y vuelva a "
+"comprobar más tarde por una respuesta."
 
 #: source_templates/lookup.html:18
 msgid "Submit Files or Messages"
