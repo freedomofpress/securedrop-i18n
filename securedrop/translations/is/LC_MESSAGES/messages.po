@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.12.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-05-17 12:19+0000\n"
-"Last-Translator: Oktavia <ojonsdottir@irex.org>\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/is/>\n"
 "Language: is\n"
@@ -605,7 +605,7 @@ msgstr "Mælt með stærðinni: 500px * 450px"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
-msgstr "UPPFÆRA MYNDMERKI"
+msgstr "UPPFÆRA MERKI"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -633,7 +633,7 @@ msgstr "Breyta notandanum \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Username &amp; Admin Status"
-msgstr "Breyta notandanafni &amp; stjórnunarstaða"
+msgstr "Breyta notandanafni &amp; stjórnunarstöðu"
 
 #: journalist_templates/edit_account.html:12
 msgid "Change username"
