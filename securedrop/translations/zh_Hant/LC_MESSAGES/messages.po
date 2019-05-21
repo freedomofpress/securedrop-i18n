@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-02-26 17:18+0000\n"
+"PO-Revision-Date: 2019-05-28 12:55+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.securedrop.org/"
 "projects/securedrop/securedrop/zh_Hant/>\n"
@@ -997,20 +997,20 @@ msgstr ""
 
 #: source_templates/lookup.html:10
 msgid "Sorry we haven't responded yet!"
-msgstr ""
+msgstr "抱歉，我們尚無回應！"
 
 #: source_templates/lookup.html:11
 msgid ""
 "Our SecureDrop recently experienced a surge of activity. For security "
 "reasons, the creation of a two-way communication channel was delayed until "
 "you checked in again."
-msgstr ""
+msgstr "SecureDrop 近期遭逢一陣亂流，因安全考量，雙向的交流頻道暫且停止直到用戶再重新登入。"
 
 #: source_templates/lookup.html:12
 msgid ""
 "Please rest assured that we were able to download your submission, and check "
 "back again later for a reply."
-msgstr ""
+msgstr "請放心，我們能夠下載您的提交內容。請稍後回來檢查回覆。"
 
 #: source_templates/lookup.html:18
 msgid "Submit Files or Messages"
