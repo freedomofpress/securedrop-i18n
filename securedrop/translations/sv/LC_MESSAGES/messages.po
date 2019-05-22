@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-05-22 20:17+0000\n"
-"Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
+"PO-Revision-Date: 2019-05-28 18:25+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sv/>\n"
 "Language: sv\n"
@@ -1070,16 +1070,15 @@ msgstr ""
 
 #: source_templates/lookup.html:10
 msgid "Sorry we haven't responded yet!"
-msgstr "Tyvärr har vi inte svarat ännu!"
+msgstr "Tyvärr har vi inte svarat ännu."
 
 #: source_templates/lookup.html:11
-#, fuzzy
 msgid ""
 "Our SecureDrop recently experienced a surge of activity. For security "
 "reasons, the creation of a two-way communication channel was delayed until "
 "you checked in again."
 msgstr ""
-"Vår SecureDrop fick nyligen ökad aktivitet. Av säkerhetsskäl kan du inte "
+"Vår SecureDrop såg nyligen ökad aktivitet. Av säkerhetsskäl kan du inte "
 "upprätta en tvåvägskommunikation innan du checkar in igen."
 
 #: source_templates/lookup.html:12
