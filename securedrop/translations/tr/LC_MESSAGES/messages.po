@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-02-21 17:12+0000\n"
-"Last-Translator: Volkan <volkangezer@gmail.com>\n"
+"PO-Revision-Date: 2019-05-23 00:17+0000\n"
+"Last-Translator: tekrei <tekrei@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
 "Language: tr\n"
@@ -1083,7 +1083,7 @@ msgstr ""
 
 #: source_templates/lookup.html:10
 msgid "Sorry we haven't responded yet!"
-msgstr ""
+msgstr "Henüz yanıt vermediğimiz için özür dileriz!"
 
 #: source_templates/lookup.html:11
 msgid ""
@@ -1091,12 +1091,17 @@ msgid ""
 "reasons, the creation of a two-way communication channel was delayed until "
 "you checked in again."
 msgstr ""
+"Son zamanlarda SecureDrop kurulumumuz yoğun faaliyetteydi. Güvenlik "
+"nedenleriyle, iki yönlü iletişim kanalının yaratılması girişinize kadar "
+"ertelendi."
 
 #: source_templates/lookup.html:12
 msgid ""
 "Please rest assured that we were able to download your submission, and check "
 "back again later for a reply."
 msgstr ""
+"Gönderinizi indirebildiğimizden emin olabilirsiniz, bir yanıt olup "
+"olmadığını denetlemek için daha sonra tekrar gelin."
 
 #: source_templates/lookup.html:18
 msgid "Submit Files or Messages"
