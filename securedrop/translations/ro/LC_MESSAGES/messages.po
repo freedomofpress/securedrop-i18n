@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-02-26 17:19+0000\n"
-"Last-Translator: Jobava <jobaval10n@gmail.com>\n"
+"PO-Revision-Date: 2019-05-28 18:25+0000\n"
+"Last-Translator: robbpa <robbpaun@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
 "Language: ro\n"
@@ -1098,7 +1098,7 @@ msgstr ""
 
 #: source_templates/lookup.html:10
 msgid "Sorry we haven't responded yet!"
-msgstr ""
+msgstr "Ne cerem scuze că nu am răspuns încă!"
 
 #: source_templates/lookup.html:11
 msgid ""
@@ -1106,12 +1106,17 @@ msgid ""
 "reasons, the creation of a two-way communication channel was delayed until "
 "you checked in again."
 msgstr ""
+"Am întâmpinat recent un vârf de activitate pe SecureDrop. Din motive de "
+"securitate, crearea canalelor de comunicații bidirecționale a fost "
+"întârziată până la următoarea ta autentificare."
 
 #: source_templates/lookup.html:12
 msgid ""
 "Please rest assured that we were able to download your submission, and check "
 "back again later for a reply."
 msgstr ""
+"Te asigurăm că am reușit să descărcăm ce ai trimis. Revino mai târziu pentru "
+"un răspuns."
 
 #: source_templates/lookup.html:18
 msgid "Submit Files or Messages"
