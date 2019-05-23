@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-02-26 17:19+0000\n"
+"PO-Revision-Date: 2019-05-28 18:25+0000\n"
 "Last-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\n"
 "Language-Team: Italian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/it/>\n"
@@ -1096,7 +1096,7 @@ msgstr ""
 
 #: source_templates/lookup.html:10
 msgid "Sorry we haven't responded yet!"
-msgstr ""
+msgstr "Non c'è ancora alcuna risposta!"
 
 #: source_templates/lookup.html:11
 msgid ""
@@ -1104,12 +1104,18 @@ msgid ""
 "reasons, the creation of a two-way communication channel was delayed until "
 "you checked in again."
 msgstr ""
+"SecureDrop ha recentemente registrato un sovraccarico di attività. Per "
+"motivi di sicurezza, la creazione di un canale di comunicazione "
+"bidirezionale è stata posticipata fino a quando non verrà eseguito un nuovo "
+"accesso."
 
 #: source_templates/lookup.html:12
 msgid ""
 "Please rest assured that we were able to download your submission, and check "
 "back again later for a reply."
 msgstr ""
+"Assicuriamo che quanto inviato è stato scaricato. Verificare nuovamente in "
+"un secondo momento la presenza di una risposta."
 
 #: source_templates/lookup.html:18
 msgid "Submit Files or Messages"
@@ -1212,11 +1218,11 @@ msgid ""
 "in the Tor browser's toolbar to clear all history of your SecureDrop usage "
 "from this device. If you are not using Tor Browser, restart your browser."
 msgstr ""
-"La tua sessione è stata terminata per inattività. Accedi nuovamente se vuoi "
-"continuare a usare SecureDrop, o seleziona \"Nuova Identità\" dal pulsante a "
-"cipolla nella barra degli strumenti del browser Tor per cancellare la "
-"cronologia del tuo utilizzo di SecureDrop da questo dispositivo. Se non stai "
-"usando Tor, riavvia il tuo browser."
+"La sessione è stata terminata per inattività. Accedere nuovamente per "
+"continuare a usare SecureDrop, o selezionare \"Nuova Identità\" dal pulsante "
+"a cipolla nella barra degli strumenti del browser Tor per cancellare la "
+"cronologia di utilizzo di SecureDrop da questo dispositivo. Se non si sta "
+"usando Tor, riavviare il browser."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
