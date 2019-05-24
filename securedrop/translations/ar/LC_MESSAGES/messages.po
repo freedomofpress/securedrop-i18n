@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-02-26 17:18+0000\n"
+"PO-Revision-Date: 2019-05-28 12:58+0000\n"
 "Last-Translator: Ahmad Gharbeia <gharbeia@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -31,15 +31,15 @@ msgstr "تم الخروج من الحساب بسبب انعدام النشاط"
 
 #: journalist_app/account.py:26
 msgid "Incorrect password or two-factor code."
-msgstr "كلمة السر أو رمز الاستيثاق في خطوتين غير صحيح."
+msgstr "كلمة السر أو رمز الاستيثاق ذي المعاملين غير صحيح."
 
 #: journalist_app/account.py:42
 msgid "Token in two-factor authentication verified."
-msgstr "تم التحقق من رمز الاستيثاق في خطوتين."
+msgstr "تم التحقق من رمز الاستيثاق ذي المعاملين."
 
 #: journalist_app/account.py:46 journalist_app/admin.py:116
 msgid "Could not verify token in two-factor authentication."
-msgstr "تعذّر التحقّق من رمز الاستيثاق في خطوتين."
+msgstr "تعذّر التحقّق من رمز الاستيثاق ذي المعاملين."
 
 #: journalist_app/admin.py:38
 msgid "Image updated."
@@ -63,7 +63,7 @@ msgstr ""
 
 #: journalist_app/admin.py:109
 msgid "Token in two-factor authentication accepted for user {user}."
-msgstr "تمّ قبول رمز الاستيثاق في خطوتين للمستخدم {user}."
+msgstr "تمّ قبول رمز الاستيثاق ذي المعاملين للمستخدم {user}."
 
 #: journalist_app/admin.py:208
 msgid "Deleted user '{user}'"
@@ -107,11 +107,11 @@ msgstr "لا يمكن إرسال ردّ فارغ."
 
 #: journalist_app/forms.py:60
 msgid "File required."
-msgstr "اِختَر ملف."
+msgstr "يجب اختيار ملفّ."
 
 #: journalist_app/forms.py:62
 msgid "You can only upload PNG image files."
-msgstr "لا يمكن رفع ملفات غير PNG."
+msgstr "الصيغة المقبولة لملفّات الصور هي PNG حصرًا."
 
 #: journalist_app/main.py:120 journalist_app/utils.py:49
 #: journalist_app/utils.py:139
@@ -124,11 +124,11 @@ msgstr "شكرا. لقد حُفظ ردُّك."
 
 #: journalist_app/main.py:152
 msgid "No collections selected for download."
-msgstr "لم يتم اختيار أيّ مجموعة للتنزيل."
+msgstr "لَمْ تُختَر أيّ مجموعة لتنزيلها."
 
 #: journalist_app/main.py:155 journalist_app/utils.py:237
 msgid "No collections selected for deletion."
-msgstr "لم تُحدّد مجموعات لحذفها."
+msgstr "لَمْ تُختَر أيّ مجموعة لحذفها."
 
 #: journalist_app/main.py:181
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
@@ -160,13 +160,15 @@ msgstr[5] "ينبغي الانتظار {seconds} ثانية على الأقل ق
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
-msgstr "استخدم رمز استيثاق جديد للمحاولة مجدّدًا."
+msgstr ""
+"انتظر حتّى يظهر رمز استيثاق جديد في تطبيق الاستيثاق ذي المعاملين ثم عاود "
+"المحاولة."
 
 #: journalist_app/utils.py:127
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "صيغة البيانات السرية غير صحيحة: المقبولة هي الأحرف من A-F و&nbsp;الأرقام من "
-"9-0 فقط."
+"0-9 فقط."
 
 #: journalist_app/utils.py:133
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
@@ -287,7 +289,7 @@ msgid ""
 "for your account in the app, enter one of the 6-digit codes from the app to "
 "confirm that two factor authentication is set up correctly."
 msgstr ""
-"أنت على وشك الانتهاء! لإتمام إعادة ضبط الاستيثاق في خطوتين يجب اتبّاع "
+"أنت على وشك الانتهاء! لإتمام تصفير الاستيثاق ذي المعاملين يجب اتبّاع "
 "التعليمات التالية لإعداد FreeOTP. بعد إضافة حسابك في التطبيق أدخل أحد الرموز "
 "المكونة من 6 أرقام للتأكد من سلامة الإعداد."
 
@@ -410,7 +412,7 @@ msgstr "يمكن أن يحوي اسم المستخدم مسافات"
 
 #: journalist_templates/admin_add_user.html:24
 msgid "Username is case-sensitive"
-msgstr "اسم المستخدم يمايو ما بين الأحرف اللاتينية الكبيرة و الصغيرة"
+msgstr "حقل اسم المستخدم يمايز ما بين الأحرف اللاتينية الكبيرة و الصغيرة"
 
 #: journalist_templates/admin_add_user.html:28
 msgid "The user's password will be:"
@@ -434,7 +436,7 @@ msgid ""
 "set up correctly."
 msgstr ""
 "قاربت على الانتهاء! لإتمام إضافة الحساب على المستخدم الجديد اتّباع التعليمات "
-"التالية لضبط الاستيثاق في خطوتين بواسطة FreeOTP.\n"
+"التالية لضبط الاستيثاق ذي المعاملين بواسطة FreeOTP.\n"
 "و&nbsp;بعد إضافة مدخلة لهذا الحساب في التطبيق يجب إدخال أحد الرموز المؤلّفة "
 "من 6 أرقام للتأكد من صحّة الإعداد."
 
@@ -673,7 +675,7 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:34
 msgid "Please enter your current password and two-factor code."
-msgstr "أدخل كلمة السر الحالية و&nbsp;رمز الاستيثاق في خطوتين."
+msgstr "أدخل كلمة السر الحالية و&nbsp;رمز الاستيثاق ذي المعاملين."
 
 #: journalist_templates/edit_account.html:40
 msgid "Current Password"
@@ -697,7 +699,7 @@ msgstr "صفِّر كلمة السر"
 
 #: journalist_templates/edit_account.html:58
 msgid "Reset Two-Factor Authentication"
-msgstr "صفِّر وظيفة الاستيثاق في خطوتين"
+msgstr "صفِّر وظيفة الاستيثاق ذي المعاملين"
 
 #: journalist_templates/edit_account.html:61
 msgid ""
@@ -707,8 +709,8 @@ msgid ""
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
 "إذا فقد المستخدم بيانات الاستيثاق في خطوتين أو انكشفت فيمكن تصفيرها من هنا. "
-"<em> لفعل ذلك ينبغي أن يكون المستخدم حاضرًا و&nbsp;مستعدًّا بجهازه لضبط وظيفة "
-"الاستيثاق في خطوتين مجدّدًا و&nbsp;إلا لن يمكنه الولوج إلى الحساب."
+"<em> لفعل ذلك ينبغي أن يكون المستخدم حاضرًا و&nbsp;مستعدًّا بجهازه لضبط "
+"وظيفة الاستيثاق ذي المعاملين مجدّدًا و&nbsp;إلا لن يمكنه الولوج إلى الحساب."
 
 #: journalist_templates/edit_account.html:63
 msgid ""
@@ -717,25 +719,25 @@ msgid ""
 "this, make sure you are ready to set up your new device, otherwise you will "
 "be locked out of your account.</em>"
 msgstr ""
-"إذا فقدت بيانات الاستيثاق في خطوتين أو انكشفت فيمكنك تصفيرها هنا. <em>لفعل "
-"ذلك ينبغي عليك تحضير جهازك لضبطه و&nbsp;إلا فلن يمكنك الولوج إلى الحساب بعد "
-"الآن.</em>"
+"إذا فقدت بيانات الاستيثاق ذي المعاملين أو انكشفت فيمكنك تصفيرها هنا. <em>"
+"لفعل ذلك ينبغي عليك تحضير جهازك لضبطه و&nbsp;إلا فلن يمكنك الولوج إلى الحساب "
+"بعد الآن.</em>"
 
 #: journalist_templates/edit_account.html:65
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the Yubikey, choose the second."
 msgstr ""
-"لتصفير الاستيثاق في خطوتين على تطبيقات الهاتف المحمول مثل FreeOTP اختَر "
+"لتصفير الاستيثاق ذي المعاملين على تطبيقات الهاتف المحمول مثل FreeOTP اختَر "
 "الخيار الأول. أما لاستخدام مفاتيح المصادقة مثل Yubikey فاختَر الخيار الثاني."
 
 #: journalist_templates/edit_account.html:90
 msgid "RESET TWO-FACTOR AUTHENTICATION (APP)"
-msgstr "تصفير الاستيثاق في خطوتين (لتطبيق المحمول)"
+msgstr "تصفير الاستيثاق ذي المعاملين (لتطبيق المحمول)"
 
 #: journalist_templates/edit_account.html:92
 msgid "RESET TWO-FACTOR AUTHENTICATION (HARDWARE TOKEN)"
-msgstr "تصفير الاستيثاق في خطوتين (لمفاتيح عتادي)"
+msgstr "تصفير الاستيثاق ذي المعاملين (لمفاتيح عتادي)"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -786,7 +788,7 @@ msgstr "لا توجد مستندات مودعة!"
 
 #: journalist_templates/js-strings.html:3
 msgid "filter by codename"
-msgstr "الترشيح وفق الاسم الرمزي"
+msgstr "الترشيح بالاسم الرمزي"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
@@ -808,7 +810,7 @@ msgstr "هل أنت متأكد من أنك تريد حذف المستخدم {use
 msgid ""
 "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr ""
-"هل أنت متأكد من أنّك تريد تصفير الاستيثاق في خطوتين للمستخدم {username}؟"
+"هل أنت متأكد من أنّك تريد تصفير الاستيثاق ذي المعاملين للمستخدم {username}؟"
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
@@ -1072,7 +1074,7 @@ msgstr ""
 
 #: source_templates/lookup.html:10
 msgid "Sorry we haven't responded yet!"
-msgstr ""
+msgstr "معذرة لأننا لم نردّ حتّى الآن!"
 
 #: source_templates/lookup.html:11
 msgid ""
@@ -1080,12 +1082,16 @@ msgid ""
 "reasons, the creation of a two-way communication channel was delayed until "
 "you checked in again."
 msgstr ""
+"تعرّضت منصتنا هذه مؤخّرا إلى طفرة في الزيارات، فلأجل الحيطة عطّلنا إنشاء "
+"قنوات التواصل ثنائي الاتجاه إلى حين زيارتك التالية."
 
 #: source_templates/lookup.html:12
 msgid ""
 "Please rest assured that we were able to download your submission, and check "
 "back again later for a reply."
 msgstr ""
+"اطمئن إلى أنّنا اتمكنّا من تنزيل الوثائق التي أودعتها، و راجعنا لاحقًا "
+"لالتماس ردّ."
 
 #: source_templates/lookup.html:18
 msgid "Submit Files or Messages"
@@ -1130,8 +1136,8 @@ msgid ""
 "respond by submitting new files and messages above."
 msgstr ""
 "لقد تلقيت ردّا. لدواعي حماية هويتك إذا حدث و انكشف اسمك الرمزي في المستقبل، "
-"فإننا ننصحك بحذف كُلّ الرسائل بعد قراءتها. هذا سيُعلمنا أيضا أنك تلقيّت ردّنا. "
-"يمكنك الرّدّ بكتابة رسائل و إيداع ملفات جديدة."
+"فإننا ننصحك بحذف كُلّ الرسائل بعد قراءتها. هذا سيُعلمنا أيضا أنك تلقيّت ردّ"
+"نا. يمكنك الرّدّ بكتابة رسائل و&nbsp;إيداع ملفات جديدة."
 
 #: source_templates/lookup.html:74
 msgid "Delete this reply?"
@@ -1207,8 +1213,8 @@ msgid ""
 "It could be possible for anyone monitoring your Internet traffic (your "
 "government, your Internet provider), to identify you."
 msgstr ""
-"من الممكن لأي جهة تراقب الإنترنت (مثل مقدم خدمة الاتصال بالإنترنت أو "
-"السلطات) تحديد هويتك."
+"بوسع أي جهة تراقب الإنترنت (مثل مقدم خدمة الاتصال بالإنترنت أو السُّلطات) "
+"معرفة هويتك."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
@@ -1234,7 +1240,7 @@ msgid ""
 "anonymously."
 msgstr ""
 "إن أردت إيداع معلومات في SecureDrop فإننا <strong> نحثّك بشدة</strong> على "
-"استخدام متصفح تور من أجل النفاذ إلى موقعنا بأمان و&nbsp;مجهولية."
+"استخدام متصفح تور للنفاذ إلى موقعنا بأمان و&nbsp;مجهولية."
 
 #: source_templates/use-tor-browser.html:6
 msgid ""
