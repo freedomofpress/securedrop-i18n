@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-05-27 20:09+0000\n"
-"Last-Translator: Yarno Ritzen <yarnoritzen@gmail.com>\n"
+"PO-Revision-Date: 2019-05-28 18:25+0000\n"
+"Last-Translator: Thom <thom.pp9@gmail.com>\n"
 "Language-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/nl/>\n"
 "Language: nl\n"
@@ -1086,7 +1086,7 @@ msgstr ""
 
 #: source_templates/lookup.html:10
 msgid "Sorry we haven't responded yet!"
-msgstr "Onze excuses dat we nog niet geantwoord hebben!"
+msgstr "Sorry dat we nog niet hebben gereageerd!"
 
 #: source_templates/lookup.html:11
 msgid ""
