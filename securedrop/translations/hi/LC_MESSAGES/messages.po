@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-02-26 17:19+0000\n"
-"Last-Translator: Chandan Kumar <chkumar246@gmail.com>\n"
+"PO-Revision-Date: 2019-05-28 18:25+0000\n"
+"Last-Translator: Drashti <drashtipandya37@gmail.com>\n"
 "Language-Team: Hindi <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/hi/>\n"
 "Language: hi\n"
@@ -1045,7 +1045,7 @@ msgstr ""
 
 #: source_templates/lookup.html:10
 msgid "Sorry we haven't responded yet!"
-msgstr ""
+msgstr "क्षमा करें, हमने अभी तक कोई प्रतिक्रिया नहीं दी है!"
 
 #: source_templates/lookup.html:11
 msgid ""
@@ -1053,12 +1053,17 @@ msgid ""
 "reasons, the creation of a two-way communication channel was delayed until "
 "you checked in again."
 msgstr ""
+"हमारे SecureDrop ने हाल ही में गतिविधि में वृद्धि का अनुभव किया। सुरक्षा "
+"कारणों से, जब तक आप फिर से जाँच नहीं करते, तब तक दो-तरफ़ा संचार चैनल के "
+"निर्माण में देरी हो रही थी।"
 
 #: source_templates/lookup.html:12
 msgid ""
 "Please rest assured that we were able to download your submission, and check "
 "back again later for a reply."
 msgstr ""
+"कृपया निश्चिंत रहें कि हम आपका सबमिशन डाउनलोड करने में सक्षम थे, और उत्तर के "
+"लिए बाद में फिर से जाँच करेंगे।"
 
 #: source_templates/lookup.html:18
 msgid "Submit Files or Messages"
