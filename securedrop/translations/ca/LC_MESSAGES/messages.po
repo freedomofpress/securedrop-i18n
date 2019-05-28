@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-12-05 08:18+0000\n"
-"Last-Translator: Adolfo Jayme-Barrientos <fitojb@ubuntu.com>\n"
+"PO-Revision-Date: 2019-05-28 18:25+0000\n"
+"Last-Translator: Joan Montané <joan@montane.cat>\n"
 "Language-Team: Catalan <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ca/>\n"
 "Language: ca\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.20\n"
+"X-Generator: Weblate 3.4\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -56,15 +56,11 @@ msgid "Username \"{user}\" already taken."
 msgstr "El compte d’usuari «{user}» ja existeix."
 
 #: journalist_app/admin.py:85
-#, fuzzy
-#| msgid ""
-#| "An error occurred saving this user to the database. Please inform your "
-#| "administrator."
 msgid ""
 "An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
-"Un error ha ocorregut intentant guardar aquest usuari a la base de dades. Si "
-"us plau, informeu a un administrador."
+"S'ha produït un error en intentar desar aquest usuari en la base de dades. "
+"Informeu-ne a l'administrador."
 
 #: journalist_app/admin.py:109
 msgid "Token in two-factor authentication accepted for user {user}."
@@ -87,8 +83,6 @@ msgid "No collections selected."
 msgstr "No s’ha seleccionat cap col·lecció."
 
 #: journalist_app/decorators.py:15
-#, fuzzy
-#| msgid "Only administrators can access this page."
 msgid "Only admins can access this page."
 msgstr "Només els administradors poden accedir a aquesta pàgina."
 
@@ -122,10 +116,8 @@ msgstr "Només podeu pujar fitxers d’imatge PNG."
 
 #: journalist_app/main.py:120 journalist_app/utils.py:49
 #: journalist_app/utils.py:139
-#, fuzzy
-#| msgid "An unexpected error occurred! Please inform your administrator."
 msgid "An unexpected error occurred! Please inform your admin."
-msgstr "S’ha produït un error inesperat. Informeu-ne l’administrador."
+msgstr "S’ha produït un error inesperat! Informeu-ne l’administrador."
 
 #: journalist_app/main.py:131
 msgid "Thanks. Your reply has been stored."
@@ -204,12 +196,17 @@ msgid ""
 "correctly. To prevent you from getting locked out of your account, you "
 "should reset your password again."
 msgstr ""
+"S'ha produït un error i potser la contrasenya nova no s'ha desat "
+"correctament. Per a evitar que bloqueu el compte, hauríeu de tornar a "
+"canviar la contrasenya."
 
 #: journalist_app/utils.py:296
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
 msgstr ""
+"S'ha actualitzat la contrasenya. No oblideu de desar-la en la vostra base de "
+"dades KeePassX. Contrasenya nova:"
 
 #: journalist_app/utils.py:313
 msgid "No unread submissions in selected collections."
@@ -262,7 +259,7 @@ msgstr "CONTINUA"
 #: journalist_templates/account_new_two_factor.html:4
 #: journalist_templates/admin_new_user_two_factor.html:5
 msgid "Enable FreeOTP"
-msgstr ""
+msgstr "Activa el FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:5
 msgid ""
@@ -310,7 +307,7 @@ msgstr ""
 #: journalist_templates/account_new_two_factor.html:17
 #: journalist_templates/admin_new_user_two_factor.html:20
 msgid "Enable YubiKey (OATH-HOTP)"
-msgstr ""
+msgstr "Activa la YubiKey (OATH-HOTP)"
 
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:21
@@ -401,7 +398,7 @@ msgstr "La contrasenya del compte serà:"
 #: journalist_templates/admin_add_user.html:31
 #: journalist_templates/edit_account.html:17
 msgid "Is Admin"
-msgstr ""
+msgstr "És administrador"
 
 #: journalist_templates/admin_add_user.html:39
 msgid "Is using a YubiKey [HOTP]"
@@ -418,29 +415,31 @@ msgstr ""
 
 #: journalist_templates/base.html:23
 msgid "Logged on as"
-msgstr ""
+msgstr "Sessió iniciada com a"
 
 #: journalist_templates/base.html:25
 msgid "Admin"
-msgstr ""
+msgstr "Administrador"
 
 #: journalist_templates/base.html:27
 msgid "Log Out"
-msgstr ""
+msgstr "Tanca la sessió"
 
 #: journalist_templates/base.html:40
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
 msgstr ""
+"Funciona amb <br> <img src=\"/static/i/securedrop_small.png\" alt=\""
+"SecureDrop\">"
 
 #: journalist_templates/base.html:55
 msgid "Powered by <em>SecureDrop {version}</em>."
-msgstr ""
+msgstr "Funciona amb <em>SecureDrop {version}</em>."
 
 #: journalist_templates/col.html:10
 msgid "All Sources"
-msgstr ""
+msgstr "Totes les fonts"
 
 #: journalist_templates/col.html:13
 msgid ""
@@ -448,14 +447,17 @@ msgid ""
 "the first random codename is difficult to say or remember. You can generate "
 "new random codenames as many times as you like."
 msgstr ""
+"Genera un nom en clau aleatori nou per a aquesta font. Us recomanem fer això "
+"si el primer nom en clau és difícil de pronunciar o de recordar. Podeu "
+"generar noms en clau nous tants cops com vulgueu."
 
 #: journalist_templates/col.html:13
 msgid "Change codename"
-msgstr ""
+msgstr "Canvia el nom en clau"
 
 #: journalist_templates/col.html:14
 msgid "Are you sure you want to generate a new codename?"
-msgstr ""
+msgstr "Esteu segur que voleu generar un nom en clau nou?"
 
 #: journalist_templates/col.html:16
 msgid "CONFIRM"
@@ -466,57 +468,61 @@ msgid ""
 "The documents are stored encrypted for security. To read them, you will need "
 "to decrypt them using GPG."
 msgstr ""
+"Els documents s'emmagatzemen xifrats per seguretat. Per a llegir-los, els "
+"haureu de desxifrar fent servir GPG."
 
 #: journalist_templates/col.html:26
 msgid "Download Selected"
-msgstr ""
+msgstr "Baixa la selecció"
 
 #: journalist_templates/col.html:28
 msgid "Delete Selected"
-msgstr ""
+msgstr "Suprimeix la selecció"
 
 #: journalist_templates/col.html:38 journalist_templates/col.html:58
 #: journalist_templates/col.html:91
 msgid "Reply"
-msgstr ""
+msgstr "Respon"
 
 #: journalist_templates/col.html:41 journalist_templates/col.html:48
 msgid "Read"
-msgstr ""
+msgstr "Llegit"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
-msgstr ""
+msgstr "Per llegir"
 
 #: journalist_templates/col.html:56
 msgid "Uploaded Document"
-msgstr ""
+msgstr "Document pujat"
 
 #: journalist_templates/col.html:60
 msgid "Message"
-msgstr ""
+msgstr "Missatge"
 
 #: journalist_templates/col.html:70 journalist_templates/col.html:128
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
-msgstr ""
+msgstr "Confirmació de supressió"
 
 #: journalist_templates/col.html:71
 msgid "Are you sure you want to delete the selected documents?"
-msgstr ""
+msgstr "Esteu segur que voleu suprimir els documents seleccionats?"
 
 #: journalist_templates/col.html:86
 msgid "No documents to display."
-msgstr ""
+msgstr "No hi ha cap document a mostrar."
 
 #: journalist_templates/col.html:93
 msgid ""
 "You can write a secure reply to the person who submitted these documents:"
 msgstr ""
+"Podeu escriure una resposta segura a la persona que ha enviat aquests "
+"documents:"
 
 #: journalist_templates/col.html:102
 msgid "You've flagged this source for reply."
-msgstr ""
+msgstr "Heu marcat aquesta font per a respondre-li."
 
 #: journalist_templates/col.html:103
 msgid ""
@@ -526,11 +532,11 @@ msgstr ""
 
 #: journalist_templates/col.html:105
 msgid "Click below if you would like to write a reply to this source."
-msgstr ""
+msgstr "Feu clic a sota si voleu escriure una resposta a aquesta font."
 
 #: journalist_templates/col.html:109
 msgid "FLAG THIS SOURCE FOR REPLY"
-msgstr ""
+msgstr "MARCA AQUESTA FONT PER A RESPONDRE-LI"
 
 #: journalist_templates/col.html:114
 msgid ""
@@ -541,19 +547,19 @@ msgstr ""
 
 #: journalist_templates/col.html:121
 msgid "DELETE SOURCE AND SUBMISSIONS"
-msgstr ""
+msgstr "SUPRIMEIX LA FONT I ELS ENVIAMENTS"
 
 #: journalist_templates/col.html:129
 msgid "Are you sure you want to delete this collection?"
-msgstr ""
+msgstr "Esteu segur que voleu suprimir aquesta col·lecció?"
 
 #: journalist_templates/config.html:7
 msgid "Instance Configuration"
-msgstr ""
+msgstr "Configuració de la instància"
 
 #: journalist_templates/config.html:9
 msgid "Alerts"
-msgstr ""
+msgstr "Alertes"
 
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
@@ -561,11 +567,11 @@ msgstr ""
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
-msgstr ""
+msgstr "ENVIA UNA ALERTA OSSEC DE PROVA"
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
-msgstr ""
+msgstr "Imatge del logotip"
 
 #: journalist_templates/config.html:23
 msgid ""
@@ -574,11 +580,11 @@ msgstr ""
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
-msgstr ""
+msgstr "Mida recomanada: 500 px * 450 px"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
-msgstr ""
+msgstr "ACTUALITZA EL LOGOTIP"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -591,15 +597,15 @@ msgstr[1] ""
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
-msgstr ""
+msgstr "SUPRIMEIX ELS FITXERS DEFINITIVAMENT"
 
 #: journalist_templates/delete.html:23
 msgid "Return to the list of documents for {source_name}…"
-msgstr ""
+msgstr "Torna a la llista de documents de {source_name}…"
 
 #: journalist_templates/edit_account.html:6
 msgid "Edit user \"{user}\""
-msgstr ""
+msgstr "Edita l'usuari «{user}»"
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Username &amp; Admin Status"
@@ -607,11 +613,11 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:12
 msgid "Change username"
-msgstr ""
+msgstr "Canvia el nom d'usuari"
 
 #: journalist_templates/edit_account.html:19
 msgid "UPDATE"
-msgstr ""
+msgstr "ACTUALITZA"
 
 #: journalist_templates/edit_account.html:22
 msgid "Edit your account"
@@ -637,7 +643,7 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:40
 msgid "Current Password"
-msgstr ""
+msgstr "Contrasenya actual"
 
 #: journalist_templates/edit_account.html:41 journalist_templates/login.html:11
 msgid "Two-factor Code"
@@ -653,7 +659,7 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:53
 msgid "RESET PASSWORD"
-msgstr ""
+msgstr "CANVIA LA CONTRASENYA"
 
 #: journalist_templates/edit_account.html:58
 msgid "Reset Two-Factor Authentication"
@@ -691,7 +697,7 @@ msgstr ""
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
-msgstr ""
+msgstr "Gràcies!"
 
 #: journalist_templates/flag.html:8
 msgid ""
