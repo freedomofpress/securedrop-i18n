@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-05-28 18:25+0000\n"
+"PO-Revision-Date: 2019-06-24 17:15+0000\n"
 "Last-Translator: Joan Montané <joan@montane.cat>\n"
 "Language-Team: Catalan <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ca/>\n"
@@ -268,6 +268,11 @@ msgid ""
 "for your account in the app, enter one of the 6-digit codes from the app to "
 "confirm that two factor authentication is set up correctly."
 msgstr ""
+"Gairebé heu acabat! Per a acabar de restablir l'autenticació de dos factors, "
+"seguiu les instruccions de sota per a configurar el FreeOTP. Una vegada "
+"hàgiu afegit l'entrada per al vostre compte en l'aplicació, introduïu un "
+"dels codis de 6 dígits de l'aplicació per a confirmar que l'autenticació de "
+"dos factors s'ha configurat correctament."
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
@@ -461,7 +466,7 @@ msgstr "Esteu segur que voleu generar un nom en clau nou?"
 
 #: journalist_templates/col.html:16
 msgid "CONFIRM"
-msgstr ""
+msgstr "HO CONFIRMO"
 
 #: journalist_templates/col.html:22
 msgid ""
@@ -564,6 +569,8 @@ msgstr "Alertes"
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr ""
+"Envia un correu xifrat per a verificar si les alertes OSSEC funcionen "
+"correctament:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
@@ -577,6 +584,8 @@ msgstr "Imatge del logotip"
 msgid ""
 "Here you can update the image displayed on the SecureDrop web interfaces:"
 msgstr ""
+"Aquí podeu actualitzar la imatge que es mostra en les interfícies web del "
+"SecureDrop:"
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
@@ -593,7 +602,11 @@ msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
 msgstr[0] ""
+"S'ha seleccionat el fitxer següent per a <strong>suprimir "
+"definitivament</strong>:"
 msgstr[1] ""
+"S'han seleccionat els fitxers següents per a <strong>suprimir "
+"definitivament</strong>:"
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
@@ -609,7 +622,7 @@ msgstr "Edita l'usuari «{user}»"
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Username &amp; Admin Status"
-msgstr ""
+msgstr "Canvia el nom d'usuari i l'estat d'administració"
 
 #: journalist_templates/edit_account.html:12
 msgid "Change username"
@@ -621,25 +634,29 @@ msgstr "ACTUALITZA"
 
 #: journalist_templates/edit_account.html:22
 msgid "Edit your account"
-msgstr ""
+msgstr "Modifica el compte"
 
 #: journalist_templates/edit_account.html:25
 msgid "Reset Password"
-msgstr ""
+msgstr "Restableix la contrasenya"
 
 #: journalist_templates/edit_account.html:27
 msgid "SecureDrop now uses automatically generated diceware passwords."
 msgstr ""
+"El SecureDrop ara usa contrasenyes generades automàticament amb el mètode "
+"«diceware»."
 
 #: journalist_templates/edit_account.html:28
 msgid ""
 "Your password will be changed immediately, so you will need to save it "
 "before pressing the \"Reset Password\" button."
 msgstr ""
+"Es canviarà la vostra contrasenya immediatament, cal que la deseu abans de "
+"prémer el botó «Restableix la contrasenya»."
 
 #: journalist_templates/edit_account.html:34
 msgid "Please enter your current password and two-factor code."
-msgstr ""
+msgstr "Introduïu la vostra contrasenya actual i el codi de dos factors."
 
 #: journalist_templates/edit_account.html:40
 msgid "Current Password"
@@ -647,15 +664,15 @@ msgstr "Contrasenya actual"
 
 #: journalist_templates/edit_account.html:41 journalist_templates/login.html:11
 msgid "Two-factor Code"
-msgstr ""
+msgstr "Codi de dos factors"
 
 #: journalist_templates/edit_account.html:46
 msgid "The user's password will be changed to:"
-msgstr ""
+msgstr "La contrasenya de l'usuari es canviarà a:"
 
 #: journalist_templates/edit_account.html:48
 msgid "Your password will be changed to:"
-msgstr ""
+msgstr "La vostra contrasenya es canviarà a:"
 
 #: journalist_templates/edit_account.html:53
 msgid "RESET PASSWORD"
@@ -663,7 +680,7 @@ msgstr "CANVIA LA CONTRASENYA"
 
 #: journalist_templates/edit_account.html:58
 msgid "Reset Two-Factor Authentication"
-msgstr ""
+msgstr "Restableix l'autenticació de dos factors"
 
 #: journalist_templates/edit_account.html:61
 msgid ""
@@ -709,55 +726,55 @@ msgstr ""
 
 #: journalist_templates/flag.html:10
 msgid "Continue to the list of documents for {codename}..."
-msgstr ""
+msgstr "Continua cap a la llista de documents de codename}..."
 
 #: journalist_templates/index.html:4
 msgid "Sources"
-msgstr ""
+msgstr "Fonts"
 
 #: journalist_templates/index.html:11
 msgid "Download Unread"
-msgstr ""
+msgstr "Baixa les pendents de llegir"
 
 #: journalist_templates/index.html:12
 msgid "Download"
-msgstr ""
+msgstr "Baixa"
 
 #: journalist_templates/index.html:13
 msgid "Star"
-msgstr ""
+msgstr "Marca"
 
 #: journalist_templates/index.html:14
 msgid "Un-star"
-msgstr ""
+msgstr "Desmarca"
 
 #: journalist_templates/index.html:47
 msgid "Are you sure you want to delete the selected collections?"
-msgstr ""
+msgstr "Esteu segur de voler suprimir les col·lecció seleccionades?"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
-msgstr ""
+msgstr "No s'ha tramès cap document!"
 
 #: journalist_templates/js-strings.html:3
 msgid "filter by codename"
-msgstr ""
+msgstr "filtra per nom en clau"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
-msgstr ""
+msgstr "Selecciona-ho tot"
 
 #: journalist_templates/js-strings.html:5
 msgid "Select Unread"
-msgstr ""
+msgstr "Selecciona els pendents de llegir"
 
 #: journalist_templates/js-strings.html:6
 msgid "Select None"
-msgstr ""
+msgstr "No en seleccionis cap"
 
 #: journalist_templates/js-strings.html:7
 msgid "Are you sure you want to delete the user {username}?"
-msgstr ""
+msgstr "Esteu segur de voler suprimir l'usuari {username}?"
 
 #: journalist_templates/js-strings.html:8
 msgid ""
@@ -766,15 +783,15 @@ msgstr ""
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
-msgstr ""
+msgstr "Inicieu sessió per a accedir a la interfície de periodista"
 
 #: journalist_templates/login.html:9
 msgid "Password"
-msgstr ""
+msgstr "Contrasenya"
 
 #: journalist_templates/login.html:12
 msgid "LOG IN"
-msgstr ""
+msgstr "INICIA SESSIÓ"
 
 #: source_app/__init__.py:128
 msgid ""
@@ -785,68 +802,72 @@ msgstr ""
 
 #: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
-msgstr ""
+msgstr "El camp ha de tenir entre 1 i {max_codename_len} caràcters."
 
 #: source_app/forms.py:18
 msgid "Invalid input."
-msgstr ""
+msgstr "L'entrada no és vàlida."
 
 #: source_app/main.py:33
 msgid ""
 "You were redirected because you are already logged in. If you want to create "
 "a new account, you should log out first."
 msgstr ""
+"Heu estat redirigit perquè ja teniu sessió iniciada. Si voleu crear un "
+"compte nou, primer hauríeu de tancar la sessió."
 
 #: source_app/main.py:145
 msgid "You must enter a message or choose a file to submit."
-msgstr ""
+msgstr "Cal que introduïu un missatge o trieu un fitxer a trametre."
 
 #: source_app/main.py:178
 msgid "Thanks! We received your message."
-msgstr ""
+msgstr "Gràcies! Hem rebut el missatge."
 
 #: source_app/main.py:180
 msgid "Thanks! We received your document."
-msgstr ""
+msgstr "Gràcies! Hem rebut el document."
 
 #: source_app/main.py:182
 msgid "Thanks! We received your message and document."
-msgstr ""
+msgstr "Gràcies! Hem rebut el missatge i el document."
 
 #: source_app/main.py:241
 msgid "Reply deleted"
-msgstr ""
+msgstr "S'ha suprimit la resposta"
 
 #: source_app/main.py:259
 msgid "All replies have been deleted"
-msgstr ""
+msgstr "S'han suprimit totes les respostes"
 
 #: source_app/main.py:273
 msgid "Sorry, that is not a recognized codename."
-msgstr ""
+msgstr "No es reconeix aquest nom en clau."
 
 #: source_templates/base.html:6 source_templates/index.html:4
 msgid "Protecting Journalists and Sources"
-msgstr ""
+msgstr "Protegeix els periodistes i les fonts"
 
 #: source_templates/base.html:25 source_templates/base.html:45
 #: source_templates/index.html:32 source_templates/index.html:84
 msgid "Powered by"
-msgstr ""
+msgstr "Funciona amb"
 
 #: source_templates/base.html:34
 msgid "LOG OUT"
-msgstr ""
+msgstr "TANCA LA SESSIÓ"
 
 #: source_templates/base.html:45 source_templates/index.html:84
 msgid ""
 "Like all software, SecureDrop may contain security bugs. Use at your own "
 "risk."
 msgstr ""
+"Com qualsevol programari, el SecureDrop pot contenir errors de seguretat. "
+"Useu-lo sota el vostre risc."
 
 #: source_templates/error.html:3
 msgid "Server error"
-msgstr ""
+msgstr "Error de servidor"
 
 #: source_templates/error.html:5
 msgid ""
@@ -856,25 +877,27 @@ msgstr ""
 
 #: source_templates/error.html:7 source_templates/notfound.html:7
 msgid "Look up a codename..."
-msgstr ""
+msgstr "Cerca un nom en clau..."
 
 #: source_templates/first_submission_flashed_message.html:2
 msgid "Success!"
-msgstr ""
+msgstr "Finalitzat!"
 
 #: source_templates/first_submission_flashed_message.html:3
 msgid ""
 "Thank you for sending this information to us. Please check back later for "
 "replies."
 msgstr ""
+"Gràcies per enviar-nos aquesta informació. Comproveu més endavant si hi ha "
+"cap resposta."
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
-msgstr ""
+msgstr "Heu oblidat el vostre nom en clau?"
 
 #: source_templates/generate.html:4
 msgid "Welcome"
-msgstr ""
+msgstr "Benvingut"
 
 #: source_templates/generate.html:7
 msgid ""
@@ -899,7 +922,7 @@ msgstr ""
 
 #: source_templates/generate.html:44 source_templates/index.html:65
 msgid "SUBMIT DOCUMENTS"
-msgstr ""
+msgstr "ENVIA DOCUMENTS"
 
 #: source_templates/index.html:16
 msgid ""
@@ -926,11 +949,11 @@ msgstr ""
 
 #: source_templates/index.html:41
 msgid "Submit for the first time"
-msgstr ""
+msgstr "Envia per primera vegada"
 
 #: source_templates/index.html:48
 msgid "Already submitted something?"
-msgstr ""
+msgstr "Ja heu enviat alguna cosa?"
 
 #: source_templates/index.html:54
 msgid "If this is your first time submitting to journalists, start here."
@@ -944,7 +967,7 @@ msgstr ""
 
 #: source_templates/index.html:73
 msgid "CHECK FOR A RESPONSE"
-msgstr ""
+msgstr "COMPROVA SI HI HA RESPOSTES"
 
 #: source_templates/index.html:93
 msgid ""
@@ -968,24 +991,24 @@ msgstr ""
 
 #: source_templates/index.html:98
 msgid "<a href=\"/\">Click here</a> to refresh the page"
-msgstr ""
+msgstr "<a href=\"/\">Feu clic aquí</a> per a actualitzar la pàgina"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
-msgstr ""
+msgstr "Introduïu el nom en clau"
 
 #: source_templates/login.html:12
 msgid "Enter your codename"
-msgstr ""
+msgstr "Introduïu el vostre nom en clau"
 
 #: source_templates/login.html:25 source_templates/lookup.html:49
 msgid "CANCEL"
-msgstr ""
+msgstr "CANCEL·LA"
 
 #: source_templates/logout_flashed_message.html:4
 #: source_templates/session_timeout.html:5
 msgid "Important!"
-msgstr ""
+msgstr "Important!"
 
 #: source_templates/logout_flashed_message.html:5
 msgid ""
@@ -1010,10 +1033,12 @@ msgid ""
 "Please rest assured that we were able to download your submission, and check "
 "back again later for a reply."
 msgstr ""
+"Assegureu-vos que hem pogut baixar el vostre enviament i comproveu més "
+"endavant si hi ha cap resposta."
 
 #: source_templates/lookup.html:18
 msgid "Submit Files or Messages"
-msgstr ""
+msgstr "Envia fitxers o missatges"
 
 #: source_templates/lookup.html:19
 msgid ""
@@ -1024,7 +1049,7 @@ msgstr ""
 
 #: source_templates/lookup.html:20
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
-msgstr ""
+msgstr "<a href=\"{url}\" class=\"text-link\">Més informació</a>."
 
 #: source_templates/lookup.html:22
 msgid "You can submit any kind of file, a message, or both."
@@ -1032,11 +1057,11 @@ msgstr ""
 
 #: source_templates/lookup.html:31
 msgid "Maximum upload size: 500 MB"
-msgstr ""
+msgstr "Mida màx. de pujada: 500 MB"
 
 #: source_templates/lookup.html:34
 msgid "Write a message."
-msgstr ""
+msgstr "Escriviu un missatge."
 
 #: source_templates/lookup.html:56
 msgid "Read Replies"
@@ -1052,47 +1077,47 @@ msgstr ""
 
 #: source_templates/lookup.html:74
 msgid "Delete this reply?"
-msgstr ""
+msgstr "Voleu suprimir aquesta resposta?"
 
 #: source_templates/lookup.html:76
 msgid "DELETE"
-msgstr ""
+msgstr "SUPRIMEIX"
 
 #: source_templates/lookup.html:85
 msgid "DELETE ALL REPLIES"
-msgstr ""
+msgstr "SUPRIMEIX TOTES LES RESPOSTES"
 
 #: source_templates/lookup.html:88
 msgid "Are you finished with the replies?"
-msgstr ""
+msgstr "Heu acabat amb les respostes?"
 
 #: source_templates/lookup.html:89
 msgid "YES, DELETE ALL REPLIES"
-msgstr ""
+msgstr "SÍ, SUPRIMEIX TOTES LES RESPOSTES"
 
 #: source_templates/lookup.html:90
 msgid "NO, NOT YET"
-msgstr ""
+msgstr "NO, NO ENCARA"
 
 #: source_templates/lookup.html:94
 msgid "There are no replies at this time."
-msgstr ""
+msgstr "No hi ha cap resposta ara mateix."
 
 #: source_templates/lookup.html:103
 msgid "Remember, your codename is:"
-msgstr ""
+msgstr "Recordeu, el vostre nom en clau és:"
 
 #: source_templates/lookup.html:104
 msgid "Show"
-msgstr ""
+msgstr "Mostra"
 
 #: source_templates/lookup.html:106
 msgid "Hide"
-msgstr ""
+msgstr "Amaga"
 
 #: source_templates/notfound.html:3
 msgid "Page not found"
-msgstr ""
+msgstr "No s'ha trobat la pàgina"
 
 #: source_templates/notfound.html:5
 msgid "Sorry, we couldn't locate what you requested."
@@ -1108,7 +1133,7 @@ msgstr ""
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
-msgstr ""
+msgstr "Per què hi ha un avis sobre el Tor2Web?"
 
 #: source_templates/tor2web-warning.html:4
 msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
@@ -1125,15 +1150,19 @@ msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor browser</a> instead."
 msgstr ""
+"Us <strong>recomanem molt</strong> que feu servir el <a href=\""
+"www.torproject.org/projects/torbrowser.html\">navegador Tor</a> com a "
+"alternativa."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
-msgstr ""
+msgstr "Hauríeu d'usar el navegador Tor"
 
 #: source_templates/use-tor-browser.html:4
 msgid ""
 "If you are not using Tor Browser, you <strong>may not be anonymous</strong>."
 msgstr ""
+"Si no esteu usant el navegador Tor, <strong>podríeu no ser anònim</strong>."
 
 #: source_templates/use-tor-browser.html:5
 msgid ""
@@ -1147,6 +1176,8 @@ msgid ""
 "Copy and paste the following address into your browser and follow the "
 "instructions to download and install Tor Browser:"
 msgstr ""
+"Copieu i enganxeu l'adreça següent en el vostre navegador i seguiu les "
+"instruccions per a baixar i instal·lar el navegador Tor:"
 
 #: source_templates/use-tor-browser.html:9
 msgid ""
@@ -1157,7 +1188,7 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
-msgstr ""
+msgstr "Per què cal baixar la clau pública del periodista?"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
@@ -1165,22 +1196,30 @@ msgid ""
 "messages and files before submission can provide an extra layer of security "
 "before your data reaches the SecureDrop server."
 msgstr ""
+"El SecureDrop xifra els fitxers i els missatges després que s'hagin enviat. "
+"El xifratge de missatges i fitxers abans de l'enviament pot proporcionar una "
+"capa extra de seguretat abans que les dades arribin al servidor del "
+"SecureDrop."
 
 #: source_templates/why-journalist-key.html:5
 msgid ""
 "If you are already familiar with the GPG encryption software, you may wish "
 "to encrypt your submissions yourself. To do so:"
 msgstr ""
+"Si ja esteu familiaritzat amb el programari de xifratge GPG, potser vulgueu "
+"xifrar els enviaments vós mateix. Per a fer-ho:"
 
 #: source_templates/why-journalist-key.html:7
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. The public key is a text file "
 "with the extension <code>.asc</code>"
 msgstr ""
+"<a href=\"{url}\">Baixeu</a> la clau pública. La clau pública és un fitxer "
+"de text amb l'extensió <code>.ac</code>"
 
 #: source_templates/why-journalist-key.html:8
 msgid "Import it into your GPG keyring."
-msgstr ""
+msgstr "Importeu-la al vostre clauer GPG."
 
 #: source_templates/why-journalist-key.html:10
 msgid ""
@@ -1194,10 +1233,12 @@ msgid ""
 "If you are using Mac/Linux, open the terminal. You can import the key with "
 "<code>gpg --import /path/to/key.asc</code>."
 msgstr ""
+"Si feu servir Mac o Linux, obriu el terminal. Podeu importar la clau amb "
+"<code>gpg --import /camí/de/la/clau.asc</code>."
 
 #: source_templates/why-journalist-key.html:14
 msgid "Encrypt your submission."
-msgstr ""
+msgstr "Xifreu l'enviament."
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
@@ -1212,6 +1253,8 @@ msgid ""
 "On all systems, open the Terminal and use this gpg command: <code>gpg --"
 "recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 msgstr ""
+"En tots els sistemes, obriu el terminal i useu aquesta ordre gpg: <code>gpg "
+"--recipient &lt;2user ID&gt;3 --encrypt roswell_photos.pdf</code>"
 
 #: source_templates/why-journalist-key.html:20
 msgid ""
