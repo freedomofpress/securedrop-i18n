@@ -198,35 +198,23 @@ p#max-file-size
   font-style: italic
   margin-bottom: 0
 
-
 div.bubble
   width: 415px
   position: absolute
   background-color: #ffffff
-  left: 28px
-  top: 58px
+  right: 28px
+  top: 10px
   border-radius: 10px
   border: 3px solid #666
   padding: 10px 25px
   display: none
 
-  &:before, &:after
-    content: ''
-    position: absolute
-    border-width: 25px
-    border-style: solid
-    width: 0px
-    height: 0px
-
-  &:before
-    border-color: transparent transparent #666 #666
-    top: -50px
-    left: 30px
-
-  &:after
-    border-color: transparent transparent #fff #fff
-    left: 33px
-    top: -43px
-
   .close
     cursor: pointer
+
+#upload-icon
+  // For forcing cleaner rendering of large PNG icons to smaller sizes
+  image-rendering: -moz-crisp-edges
+  image-rendering: crisp-edges
+  margin-bottom: 10px
+  margin-top: 5px

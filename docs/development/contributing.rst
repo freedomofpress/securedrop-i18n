@@ -60,10 +60,6 @@ Issues Sorted by Topic
 * `OSSEC <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3AOSSEC>`__
 * `Security <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3Asecurity>`__
 * `Research <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3Aresearch>`__
-
-Development Environment
------------------------
-
 * `Developer workflow <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3A%22goals%3A+improve+developer+workflow%22>`__
 * `Tests <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3A%22goals%3A+more+tests%22>`__
 * `Continuous Integration <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3A%22goals%3A+sick+CI%22>`__
@@ -89,7 +85,7 @@ Technical writers and editors are invited to review the `documentation
 If this is your first time helping with SecureDrop documentation, consider
 working on `low-hanging fruit`_ to become familiar with the process.
 
-.. _`low-hanging fruit`: https://github.com/freedomofpress/securedrop/issues?q=is%3Aopen+is%3Aissue+label%3Adocs+label%3AP-easy
+.. _`low-hanging fruit`: https://github.com/freedomofpress/securedrop/issues?q=is%3Aopen+label%3A%22good+first+issue%22+label%3Adocs
 
 Documentation Issues
 --------------------
@@ -119,7 +115,7 @@ are covered in :doc:`detailed documentation <release_management>`.
 If you are a `Debian developer <https://www.debian.org/devel/>`__ you can help
 improve packaging and the release process:
 
-* `Building SecureDrop application and OSSEC packages <https://github.com/freedomofpress/securedrop/blob/develop/install_files/ansible-base/build-deb-pkgs.yml>`__ and `pending bugs and tasks <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+package+label%3A%22goals%3A+packaging%22>`__
+* `Building SecureDrop application and OSSEC packages <https://github.com/freedomofpress/securedrop/tree/develop/molecule/builder-xenial>`__ and `pending bugs and tasks <https://github.com/freedomofpress/securedrop/issues?q=is%3Aissue+is%3Aopen+package+label%3A%22goals%3A+packaging%22>`__
 * Building `grsecurity kernels <https://github.com/freedomofpress/ansible-role-grsecurity>`__ and `pending bugs and tasks <https://github.com/freedomofpress/ansible-role-grsecurity/issues>`__
 
 

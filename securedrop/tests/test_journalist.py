@@ -160,6 +160,7 @@ def test_unauthorized_access_redirects_to_login(journalist_app):
 
 def test_login_throttle(journalist_app, test_journo):
     # Overwrite the default value used during testing
+    original_hardening = models.LOGIN_HARDENING
     models.LOGIN_HARDENING = True
     try:
         with journalist_app.test_client() as app:
@@ -183,13 +184,14 @@ def test_login_throttle(journalist_app, test_journo):
             assert ("Please wait at least {} seconds".format(
                 Journalist._LOGIN_ATTEMPT_PERIOD) in text)
     finally:
-        models.LOGIN_HARDENING = False
+        models.LOGIN_HARDENING = original_hardening
 
 
 def test_login_throttle_is_not_global(journalist_app, test_journo, test_admin):
     """The login throttling should be per-user, not global. Global login
     throttling can prevent all users logging into the application."""
 
+    original_hardening = models.LOGIN_HARDENING
     # Overwrite the default value used during testing
     # Note that this may break other tests if doing parallel testing
     models.LOGIN_HARDENING = True
@@ -226,7 +228,7 @@ def test_login_throttle_is_not_global(journalist_app, test_journo, test_admin):
             text = resp.data.decode('utf-8')
             assert "Sources" in text
     finally:
-        models.LOGIN_HARDENING = False
+        models.LOGIN_HARDENING = original_hardening
 
 
 def test_login_invalid_credentials(journalist_app, test_journo):
@@ -474,7 +476,7 @@ def test_admin_edits_user_password_error_response(journalist_app,
 def test_user_edits_password_success_response(journalist_app, test_journo):
     original_hardening = models.LOGIN_HARDENING
     try:
-        # Set this to false because we login then immedialtey reuse the same
+        # Set this to false because we login then immediately reuse the same
         # token when authenticating to change the password. This triggers login
         # hardening measures.
         models.LOGIN_HARDENING = False
@@ -499,7 +501,7 @@ def test_user_edits_password_success_response(journalist_app, test_journo):
 def test_user_edits_password_expires_session(journalist_app, test_journo):
     original_hardening = models.LOGIN_HARDENING
     try:
-        # Set this to false because we login then immedialtey reuse the same
+        # Set this to false because we login then immediately reuse the same
         # token when authenticating to change the password. This triggers login
         # hardening measures.
         models.LOGIN_HARDENING = False
@@ -527,7 +529,7 @@ def test_user_edits_password_expires_session(journalist_app, test_journo):
 def test_user_edits_password_error_reponse(journalist_app, test_journo):
     original_hardening = models.LOGIN_HARDENING
     try:
-        # Set this to false because we login then immedialtey reuse the same
+        # Set this to false because we login then immediately reuse the same
         # token when authenticating to change the password. This triggers login
         # hardening measures.
         models.LOGIN_HARDENING = False
@@ -555,13 +557,13 @@ def test_user_edits_password_error_reponse(journalist_app, test_journo):
         models.LOGIN_HARDENING = original_hardening
 
 
-def test_admin_add_user_when_username_already_taken(journalist_app,
-                                                    test_admin):
+def test_admin_add_user_when_username_already_taken(journalist_app, test_admin):
     with journalist_app.test_client() as app:
-        _login_user(app, test_admin['username'], test_admin['password'],
-                    test_admin['otp_secret'])
+        _login_user(app, test_admin['username'], test_admin['password'], test_admin['otp_secret'])
         resp = app.post(url_for('admin.add_user'),
                         data=dict(username=test_admin['username'],
+                                  first_name='',
+                                  last_name='',
                                   password=VALID_PASSWORD,
                                   is_admin=None))
         text = resp.data.decode('utf-8')
@@ -604,6 +606,8 @@ def test_admin_edits_user_password_too_long_warning(journalist_app,
             app.post(
                 url_for('admin.new_password', user_id=test_journo['id']),
                 data=dict(username=test_journo['username'],
+                          first_name='',
+                          last_name='',
                           is_admin=None,
                           password=overly_long_password),
                 follow_redirects=True)
@@ -624,6 +628,8 @@ def test_user_edits_password_too_long_warning(journalist_app, test_journo):
             app.post(
                 url_for('account.new_password'),
                 data=dict(username=test_journo['username'],
+                          first_name='',
+                          last_name='',
                           is_admin=None,
                           token=TOTP(test_journo['otp_secret']).now(),
                           current_password=test_journo['password'],
@@ -645,12 +651,42 @@ def test_admin_add_user_password_too_long_warning(journalist_app, test_admin):
             app.post(
                 url_for('admin.add_user'),
                 data=dict(username='dellsberg',
+                          first_name='',
+                          last_name='',
                           password=overly_long_password,
                           is_admin=None))
 
             ins.assert_message_flashed(
                 'There was an error with the autogenerated password. User not '
                 'created. Please try again.', 'error')
+
+
+def test_admin_add_user_first_name_too_long_warning(journalist_app, test_admin):
+    with journalist_app.test_client() as app:
+        overly_long_name = 'a' * (Journalist.MAX_NAME_LEN + 1)
+        _login_user(app, test_admin['username'], test_admin['password'], test_admin['otp_secret'])
+        resp = app.post(url_for('admin.add_user'),
+                        data=dict(username=test_admin['username'],
+                                  first_name=overly_long_name,
+                                  last_name='',
+                                  password=VALID_PASSWORD,
+                                  is_admin=None))
+        text = resp.data.decode('utf-8')
+        assert 'Field can not be more than' in text
+
+
+def test_admin_add_user_last_name_too_long_warning(journalist_app, test_admin):
+    with journalist_app.test_client() as app:
+        overly_long_name = 'a' * (Journalist.MAX_NAME_LEN + 1)
+        _login_user(app, test_admin['username'], test_admin['password'], test_admin['otp_secret'])
+        resp = app.post(url_for('admin.add_user'),
+                        data=dict(username=test_admin['username'],
+                                  first_name='',
+                                  last_name=overly_long_name,
+                                  password=VALID_PASSWORD,
+                                  is_admin=None))
+        text = resp.data.decode('utf-8')
+        assert 'Field can not be more than' in text
 
 
 def test_admin_edits_user_invalid_username(
@@ -665,7 +701,10 @@ def test_admin_edits_user_invalid_username(
         with InstrumentedApp(journalist_app) as ins:
             app.post(
                 url_for('admin.edit_user', user_id=test_admin['id']),
-                data=dict(username=new_username, is_admin=None))
+                data=dict(username=new_username,
+                          first_name='',
+                          last_name='',
+                          is_admin=None))
 
             ins.assert_message_flashed(
                 'Username "{}" already taken.'.format(new_username),
@@ -955,8 +994,7 @@ def test_http_get_on_admin_new_user_two_factor_page(
     with journalist_app.test_client() as app:
         _login_user(app, test_admin['username'], test_admin['password'],
                     test_admin['otp_secret'])
-        resp = app.get(
-                url_for('admin.new_user_two_factor', uid=test_journo['id']))
+        resp = app.get(url_for('admin.new_user_two_factor', uid=test_journo['id']))
     # any GET req should take a user to the admin.new_user_two_factor page
     assert 'FreeOTP' in resp.data.decode('utf-8')
 
@@ -974,12 +1012,13 @@ def test_admin_add_user(journalist_app, test_admin):
     username = 'dellsberg'
 
     with journalist_app.test_client() as app:
-        _login_user(app, test_admin['username'], test_admin['password'],
-                    test_admin['otp_secret'])
+        _login_user(app, test_admin['username'], test_admin['password'], test_admin['otp_secret'])
 
         with InstrumentedApp(journalist_app) as ins:
             resp = app.post(url_for('admin.add_user'),
                             data=dict(username=username,
+                                      first_name='',
+                                      last_name='',
                                       password=VALID_PASSWORD,
                                       is_admin=None))
 
@@ -1013,9 +1052,8 @@ def test_admin_add_user_too_short_username(journalist_app, test_admin):
                                   password='pentagonpapers',
                                   password_again='pentagonpapers',
                                   is_admin=None))
-        assert ('Field must be at least {} characters long'.format(
-                      Journalist.MIN_USERNAME_LEN) in
-                resp.data.decode('utf-8'))
+        msg = 'Field must be at least {} characters long'
+        assert (msg.format(Journalist.MIN_USERNAME_LEN) in resp.data.decode('utf-8'))
 
 
 def test_admin_add_user_yubikey_odd_length(journalist_app, test_admin):
@@ -1025,6 +1063,8 @@ def test_admin_add_user_yubikey_odd_length(journalist_app, test_admin):
 
         resp = app.post(url_for('admin.add_user'),
                         data=dict(username='dellsberg',
+                                  first_name='',
+                                  last_name='',
                                   password=VALID_PASSWORD,
                                   password_again=VALID_PASSWORD,
                                   is_admin=None,
@@ -1042,6 +1082,8 @@ def test_admin_add_user_yubikey_valid_length(journalist_app, test_admin):
 
         resp = app.post(url_for('admin.add_user'),
                         data=dict(username='dellsberg',
+                                  first_name='',
+                                  last_name='',
                                   password=VALID_PASSWORD,
                                   password_again=VALID_PASSWORD,
                                   is_admin=None,
@@ -1064,6 +1106,8 @@ def test_admin_add_user_yubikey_correct_length_with_whitespace(
 
         resp = app.post(url_for('admin.add_user'),
                         data=dict(username='dellsberg',
+                                  first_name='',
+                                  last_name='',
                                   password=VALID_PASSWORD,
                                   password_again=VALID_PASSWORD,
                                   is_admin=None,
@@ -1079,11 +1123,12 @@ def test_admin_sets_user_to_admin(journalist_app, test_admin):
     new_user = 'admin-set-user-to-admin-test'
 
     with journalist_app.test_client() as app:
-        _login_user(app, test_admin['username'], test_admin['password'],
-                    test_admin['otp_secret'])
+        _login_user(app, test_admin['username'], test_admin['password'], test_admin['otp_secret'])
 
         resp = app.post(url_for('admin.add_user'),
                         data=dict(username=new_user,
+                                  first_name='',
+                                  last_name='',
                                   password=VALID_PASSWORD,
                                   is_admin=None))
         assert resp.status_code in (200, 302)
@@ -1093,7 +1138,7 @@ def test_admin_sets_user_to_admin(journalist_app, test_admin):
         assert journo.is_admin is False
 
         resp = app.post(url_for('admin.edit_user', user_id=journo.id),
-                        data=dict(is_admin=True))
+                        data=dict(first_name='', last_name='', is_admin=True))
         assert resp.status_code in (200, 302)
 
         journo = Journalist.query.filter_by(username=new_user).one()
@@ -1109,6 +1154,8 @@ def test_admin_renames_user(journalist_app, test_admin):
 
         resp = app.post(url_for('admin.add_user'),
                         data=dict(username=new_user,
+                                  first_name='',
+                                  last_name='',
                                   password=VALID_PASSWORD,
                                   is_admin=None))
         assert resp.status_code in (200, 302)
@@ -1116,7 +1163,9 @@ def test_admin_renames_user(journalist_app, test_admin):
 
         new_user = new_user + 'a'
         resp = app.post(url_for('admin.edit_user', user_id=journo.id),
-                        data=dict(username=new_user))
+                        data=dict(username=new_user,
+                                  first_name='',
+                                  last_name=''))
     assert resp.status_code in (200, 302), resp.data.decode('utf-8')
 
     # the following will throw an exception if new_user is not found
@@ -1124,9 +1173,62 @@ def test_admin_renames_user(journalist_app, test_admin):
     Journalist.query.filter(Journalist.username == new_user).one()
 
 
+def test_admin_adds_first_name_last_name_to_user(journalist_app, test_admin):
+    new_user = 'admin-first-name-last-name-user-test'
+
+    with journalist_app.test_client() as app:
+        _login_user(app, test_admin['username'], test_admin['password'],
+                    test_admin['otp_secret'])
+
+        resp = app.post(url_for('admin.add_user'),
+                        data=dict(username=new_user,
+                                  first_name='',
+                                  last_name='',
+                                  password=VALID_PASSWORD,
+                                  is_admin=None))
+        assert resp.status_code in (200, 302)
+        journo = Journalist.query.filter(Journalist.username == new_user).one()
+
+        resp = app.post(url_for('admin.edit_user', user_id=journo.id),
+                        data=dict(username=new_user,
+                                  first_name='test name',
+                                  last_name='test name'))
+    assert resp.status_code in (200, 302)
+
+    # the following will throw an exception if new_user is not found
+    # therefore asserting it has been created
+    Journalist.query.filter(Journalist.username == new_user).one()
+
+
+def test_admin_adds_invalid_first_last_name_to_user(journalist_app, test_admin):
+    new_user = 'admin-invalid-first-name-last-name-user-test'
+
+    with journalist_app.test_client() as app:
+        _login_user(app, test_admin['username'], test_admin['password'],
+                    test_admin['otp_secret'])
+
+        resp = app.post(url_for('admin.add_user'),
+                        data=dict(username=new_user,
+                                  first_name='',
+                                  last_name='',
+                                  password=VALID_PASSWORD,
+                                  is_admin=None))
+        assert resp.status_code in (200, 302)
+        journo = Journalist.query.filter(Journalist.username == new_user).one()
+
+        overly_long_name = 'a' * (Journalist.MAX_NAME_LEN + 1)
+        resp = app.post(url_for('admin.edit_user', user_id=journo.id),
+                        data=dict(username=overly_long_name,
+                                  first_name=overly_long_name,
+                                  last_name='test name'),
+                        follow_redirects=True)
+    assert resp.status_code in (200, 302)
+    text = resp.data.decode('utf-8')
+    assert 'Name not updated' in text
+
+
 def test_admin_add_user_integrity_error(journalist_app, test_admin, mocker):
-    mocked_error_logger = mocker.patch(
-            'journalist_app.admin.current_app.logger.error')
+    mocked_error_logger = mocker.patch('journalist_app.admin.current_app.logger.error')
     mocker.patch('journalist_app.admin.Journalist',
                  side_effect=IntegrityError('STATEMENT', 'PARAMETERS', None))
 
@@ -1137,6 +1239,8 @@ def test_admin_add_user_integrity_error(journalist_app, test_admin, mocker):
         with InstrumentedApp(journalist_app) as ins:
             app.post(url_for('admin.add_user'),
                      data=dict(username='username',
+                               first_name='',
+                               last_name='',
                                password=VALID_PASSWORD,
                                is_admin=None))
             ins.assert_message_flashed(
@@ -1281,7 +1385,8 @@ def test_user_authorization_for_posts(journalist_app):
             url_for('main.bulk'),
             url_for('account.new_two_factor'),
             url_for('account.reset_two_factor_totp'),
-            url_for('account.reset_two_factor_hotp')]
+            url_for('account.reset_two_factor_hotp'),
+            url_for('account.change_name')]
     with journalist_app.test_client() as app:
         for url in urls:
             resp = app.post(url)
@@ -1397,6 +1502,33 @@ def test_valid_user_password_change(journalist_app, test_journo):
                         follow_redirects=True)
 
         assert 'Password updated.' in resp.data.decode('utf-8')
+
+
+def test_valid_user_first_last_name_change(journalist_app, test_journo):
+    with journalist_app.test_client() as app:
+        _login_user(app, test_journo['username'], test_journo['password'],
+                    test_journo['otp_secret'])
+
+        resp = app.post(url_for('account.change_name'),
+                        data=dict(first_name='test',
+                                  last_name='test'),
+                        follow_redirects=True)
+
+        assert 'Name updated.' in resp.data.decode('utf-8')
+
+
+def test_valid_user_invalid_first_last_name_change(journalist_app, test_journo):
+    with journalist_app.test_client() as app:
+        overly_long_name = 'a' * (Journalist.MAX_NAME_LEN + 1)
+        _login_user(app, test_journo['username'], test_journo['password'],
+                    test_journo['otp_secret'])
+
+        resp = app.post(url_for('account.change_name'),
+                        data=dict(first_name=overly_long_name,
+                                  last_name=overly_long_name),
+                        follow_redirects=True)
+
+        assert 'Name not updated' in resp.data.decode('utf-8')
 
 
 def test_regenerate_totp(journalist_app, test_journo):
@@ -1572,12 +1704,12 @@ def test_render_locales(config, journalist_app, test_journo, test_source):
     # (which are only triggered during `create_app`
     config.SUPPORTED_LOCALES = ['en_US', 'fr_FR']
     app = journalist_app_module.create_app(config)
-    app.config['SERVER_NAME'] = 'localhost'  # needed for url_for
+    app.config['SERVER_NAME'] = 'localhost.localdomain'  # needed for url_for
     url = url_for('col.col', filesystem_id=test_source['filesystem_id'])
 
     # we need the relative URL, not the full url including proto / localhost
     url_end = url.replace('http://', '')
-    url_end = url_end[url_end.index('/')+1:]
+    url_end = url_end[url_end.index('/') + 1:]
 
     with app.test_client() as app:
         _login_user(app, test_journo['username'], test_journo['password'],
@@ -1694,14 +1826,11 @@ def test_download_unread_all_sources(journalist_app, test_journo):
 
     # All the not dowloaded submissions are in the zipfile
     for submission in bulk['not_downloaded0']:
-        zipinfo = zipfile.ZipFile(BytesIO(resp.data)).getinfo(
-                os.path.join(
-                    "unread",
-                    bulk['source0'].journalist_designation,
-                    "%s_%s" % (submission.filename.split('-')[0],
-                               bulk['source0'].last_updated.date()),
-                    submission.filename
-                ))
+        zipinfo = zipfile.ZipFile(BytesIO(resp.data)).getinfo(os.path.join(
+            "unread",
+            bulk['source0'].journalist_designation,
+            "%s_%s" % (submission.filename.split('-')[0], bulk['source0'].last_updated.date()),
+            submission.filename))
         assert zipinfo
 
     for submission in bulk['not_downloaded1']:

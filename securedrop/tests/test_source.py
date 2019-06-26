@@ -3,6 +3,7 @@ import gzip
 import re
 import subprocess
 import six
+import time
 
 from io import BytesIO
 from flask import session, escape, current_app, url_for, g
@@ -545,7 +546,7 @@ def test_why_journalist_key(source_app):
         assert "Why download the journalist's public key?" in text
 
 
-def test_metadata_route(source_app):
+def test_metadata_route(config, source_app):
     with patch.object(source_app_api.platform, "linux_distribution") as mocked_platform:
         mocked_platform.return_value = ("Ubuntu", "16.04", "xenial")
         with source_app.test_client() as app:
@@ -554,6 +555,8 @@ def test_metadata_route(source_app):
             assert resp.headers.get('Content-Type') == 'application/json'
             assert resp.json.get('sd_version') == version.__version__
             assert resp.json.get('server_os') == '16.04'
+            assert resp.json.get('supported_languages') ==\
+                config.SUPPORTED_LOCALES
 
 
 def test_login_with_overly_long_codename(source_app):
@@ -579,25 +582,26 @@ def test_failed_normalize_timestamps_logs_warning(source_app):
     still occur, but a warning should be logged (this will trigger an
     OSSEC alert)."""
 
-    with patch.object(source_app.logger, 'warning') as logger:
-        with patch.object(subprocess, 'call', return_value=1):
-            with source_app.test_client() as app:
-                new_codename(app, session)
-                _dummy_submission(app)
-                resp = app.post(
-                    url_for('main.submit'),
-                    data=dict(
-                        msg="This is a test.",
-                        fh=(six.StringIO(six.u('')), '')),
-                    follow_redirects=True)
-                assert resp.status_code == 200
-                text = resp.data.decode('utf-8')
-                assert "Thanks! We received your message" in text
+    with patch("source_app.main.get_entropy_estimate", return_value=8192):
+        with patch.object(source_app.logger, 'warning') as logger:
+            with patch.object(subprocess, 'call', return_value=1):
+                with source_app.test_client() as app:
+                    new_codename(app, session)
+                    _dummy_submission(app)
+                    resp = app.post(
+                        url_for('main.submit'),
+                        data=dict(
+                            msg="This is a test.",
+                            fh=(six.StringIO(six.u('')), '')),
+                        follow_redirects=True)
+                    assert resp.status_code == 200
+                    text = resp.data.decode('utf-8')
+                    assert "Thanks! We received your message" in text
 
-                logger.assert_called_once_with(
-                    "Couldn't normalize submission "
-                    "timestamps (touch exited with 1)"
-                )
+                    logger.assert_called_once_with(
+                        "Couldn't normalize submission "
+                        "timestamps (touch exited with 1)"
+                    )
 
 
 def test_source_is_deleted_while_logged_in(source_app):
@@ -664,7 +668,33 @@ def test_source_session_expiration(config, source_app):
         # which is always present and 'csrf_token' which leaks no info)
         session.pop('expires', None)
         session.pop('csrf_token', None)
-        assert not session, session
+        assert not session
+
+        text = resp.data.decode('utf-8')
+        assert 'Your session timed out due to inactivity' in text
+
+
+def test_source_session_expiration_create(config, source_app):
+    with source_app.test_client() as app:
+
+        seconds_session_expire = 1
+        config.SESSION_EXPIRATION_MINUTES = seconds_session_expire / 60.
+
+        # Make codename, and then wait for session to expire.
+        resp = app.get(url_for('main.generate'))
+        assert resp.status_code == 200
+
+        time.sleep(seconds_session_expire + 0.1)
+
+        # Now when we click create, the session will have expired.
+        resp = app.post(url_for('main.create'), follow_redirects=True)
+
+        # check that the session was cleared (apart from 'expires'
+        # which is always present and 'csrf_token' which leaks no info)
+        session.pop('expires', None)
+        session.pop('csrf_token', None)
+        assert not session
+
         text = resp.data.decode('utf-8')
         assert 'Your session timed out due to inactivity' in text
 

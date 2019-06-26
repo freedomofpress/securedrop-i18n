@@ -30,7 +30,7 @@ RUN curl -LO https://ftp.mozilla.org/pub/firefox/releases/${FF_ESR_VER}/linux-x8
 
 COPY ./tor_project_public.pub /opt/
 
-ENV TBB_VERSION 8.0.8
+ENV TBB_VERSION 8.5.3
 RUN gpg --import /opt/tor_project_public.pub && \
     wget  https://www.torproject.org/dist/torbrowser/${TBB_VERSION}/tor-browser-linux64-${TBB_VERSION}_en-US.tar.xz && \
     wget https://www.torproject.org/dist/torbrowser/${TBB_VERSION}/tor-browser-linux64-${TBB_VERSION}_en-US.tar.xz.asc && \
@@ -50,7 +50,7 @@ RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckod
 
 COPY requirements requirements
 
-RUN pip install -r requirements/securedrop-app-code-requirements.txt && \
+RUN pip install --require-hashes -r requirements/securedrop-app-code-requirements.txt && \
     pip install -r requirements/test-requirements.txt && \
     pip install --upgrade setuptools  # Fixes #4036 pybabel requires latest version of setuptools
 

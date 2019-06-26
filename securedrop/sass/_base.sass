@@ -2,7 +2,6 @@
 
 // LIBRARIES
 @import libraries/normalize
-@import libraries/font-awesome-iconography
 
 // GLOBAL - order is significant
 @import global/border-box-size-everything
@@ -27,6 +26,8 @@
 @import modules/text-link
 // Some kind of button possibly sd=standard button. Belongs in button module?
 @import modules/sd-button
+// Tooltips for showing informations
+@import modules/tooltip
 //variation on button for select all / none. In journalist interface only?
 @import modules/select
 // Pull - Quick layout helper classes
@@ -101,7 +102,6 @@
 =base_rules
   // LIBRARIES
   +normalize
-  +font-awesome-iconography
 
   // GLOBAL - order is significant
   +border-box-size-everything
@@ -117,6 +117,7 @@
   +doc-check
   +text-link
   +sd-button
+  +tooltip
   +select
   +pull
   +header

@@ -46,6 +46,11 @@ common-steps:
       paths:
         - /caches/layers.tar
 
+  - &installenchant
+    run:
+      name: Install enchant
+      command: sudo apt-get install enchant
+
 version: 2
 jobs:
   lint:
@@ -54,7 +59,19 @@ jobs:
     steps:
       - checkout
       - *rebaseontarget
-      - run: make ci-lint
+      - *installenchant
+
+      - run:
+          name: Install development dependencies
+          command: pip install -U -r securedrop/requirements/develop-requirements.txt
+
+      - run:
+          name: Run code linting
+          command: make lint
+
+      - run:
+          name: Run documentation linting
+          command: make docs-lint
 
   app-tests:
     machine:
@@ -81,6 +98,9 @@ jobs:
           name: Run tests
           no_output_timeout: 20m
           command: |
+            BRANCH_MATCH=$(devops/scripts/match-ci-branch.sh "^(i18n|docs|update-builder)")
+            echo "match-ci-branch.sh said: ${BRANCH_MATCH}"
+            if [[ $BRANCH_MATCH =~ ^found ]]; then echo "Skipping: ${BRANCH_MATCH}"; exit 0; fi
             export TESTFILES=$(cd securedrop; circleci tests glob 'tests/test*py' 'tests/**/test*py' |circleci tests split --split-by=timings |xargs echo)
             docker rm -f securedrop-test-xenial-py2 || true
             fromtag=$(docker images |grep securedrop-test-xenial-py2 |head -n1 |awk '{print $2}')
@@ -138,6 +158,9 @@ jobs:
       - run:
           name: Run tests
           command: |
+            BRANCH_MATCH=$(devops/scripts/match-ci-branch.sh "^(i18n|docs|update-builder)")
+            echo "match-ci-branch.sh said: ${BRANCH_MATCH}"
+            if [[ $BRANCH_MATCH =~ ^found ]]; then echo "Skipping: ${BRANCH_MATCH}"; exit 0; fi
             export TESTFILES=$(cd securedrop; circleci tests glob 'tests/test*py' 'tests/**/test*py' |circleci tests split --split-by=timings |xargs echo)
             docker rm -f securedrop-test-xenial-py3 || true
             fromtag=$(docker images |grep securedrop-test-xenial-py3 |head -n1 |awk '{print $2}')
@@ -173,6 +196,9 @@ jobs:
       - run:
           name: Run tests
           command: |
+            BRANCH_MATCH=$(devops/scripts/match-ci-branch.sh "^i18n")
+            echo "match-ci-branch.sh said: ${BRANCH_MATCH}"
+            if ! [[ $BRANCH_MATCH =~ ^found ]]; then echo "Skipping: ${BRANCH_MATCH}"; exit 0; fi
             export TESTFILES=$(cd securedrop; circleci tests glob 'tests/pageslayout/test*py' |circleci tests split --split-by=timings |xargs echo)
             docker rm -f securedrop-test-xenial-py2 || true
             fromtag=$(docker images |grep securedrop-test-xenial-py2 |head -n1 |awk '{print $2}')
@@ -185,19 +211,31 @@ jobs:
     docker:
       - image: gcr.io/cloud-builders/docker
     steps:
-      - run: apt-get install -y make
+      - run: apt-get install -y make jq
       - checkout
       - setup_remote_docker
-      - run: cd admin ; make test
+      - run:
+          name: Run tests
+          command: |
+            BRANCH_MATCH=$(devops/scripts/match-ci-branch.sh "^(i18n|docs|update-builder)")
+            echo "match-ci-branch.sh said: ${BRANCH_MATCH}"
+            if [[ $BRANCH_MATCH =~ ^found ]]; then echo "Skipping: ${BRANCH_MATCH}"; exit 0; fi
+            cd admin; make test
 
   fetch-tor-debs:
     docker:
       - image: gcr.io/cloud-builders/docker
     steps:
-      - run: apt-get install -y make virtualenv python-pip
+      - run: apt-get install -y make virtualenv python-pip enchant jq
       - checkout
       - setup_remote_docker
-      - run: make fetch-tor-packages
+      - run:
+          name: Fetch Tor packages
+          command: |
+            BRANCH_MATCH=$(devops/scripts/match-ci-branch.sh "^(i18n|docs|update-builder)")
+            echo "match-ci-branch.sh said: ${BRANCH_MATCH}"
+            if [[ $BRANCH_MATCH =~ ^found ]]; then echo "Skipping: ${BRANCH_MATCH}"; exit 0; fi
+            make fetch-tor-packages
 
   updater-gui-tests:
     docker:
@@ -224,6 +262,9 @@ jobs:
       - run:
           name: Run tests
           command: |
+            BRANCH_MATCH=$(devops/scripts/match-ci-branch.sh "^(i18n|docs|update-builder)")
+            echo "match-ci-branch.sh said: ${BRANCH_MATCH}"
+            if [[ $BRANCH_MATCH =~ ^found ]]; then echo "Skipping: ${BRANCH_MATCH}"; exit 0; fi
             cd journalist_gui
             xvfb-run -a pipenv run python3 test_gui.py
 
@@ -248,10 +289,15 @@ jobs:
     steps:
       - checkout
       - *rebaseontarget
+      - *installenchant
 
       - run:
-          name: Run Staging tests on GCE (Xenial)
-          command: make ci-go
+          name: Run Staging tests on GCE
+          command: |
+            BRANCH_MATCH=$(devops/scripts/match-ci-branch.sh "^(i18n|docs)")
+            echo "match-ci-branch.sh said: ${BRANCH_MATCH}"
+            if [[ $BRANCH_MATCH =~ ^found ]]; then echo "Skipping: ${BRANCH_MATCH}"; exit 0; fi
+            make ci-go
           no_output_timeout: 20m
 
       - run:
@@ -271,10 +317,32 @@ jobs:
     docker:
       - image: gcr.io/cloud-builders/docker
     steps:
-      - run: apt-get install -y make virtualenv python-pip
+      - run: apt-get install -y make virtualenv python-pip enchant jq
       - checkout
       - setup_remote_docker
-      - run: make ci-deb-tests
+      - run:
+          name: Test Debian package build
+          command: |
+            BRANCH_MATCH=$(devops/scripts/match-ci-branch.sh "^update-builder")
+            echo "match-ci-branch.sh said: ${BRANCH_MATCH}"
+            if ! [[ $BRANCH_MATCH =~ ^found ]]; then echo "Skipping: ${BRANCH_MATCH}"; exit 0; fi
+            make ci-deb-tests
+
+  docs-linkcheck:
+    machine:
+      enabled: true
+    steps:
+      - checkout
+      - *rebaseontarget
+      - *installenchant
+
+      - run:
+          name: Install development dependencies
+          command: pip install -U -r securedrop/requirements/develop-requirements.txt
+
+      - run:
+          name: Run documentation linting
+          command: make docs-lint && make docs-linkcheck
 
 workflows:
   version: 2
@@ -287,36 +355,48 @@ workflows:
               ignore:
                 - /docs-.*/
                 - /i18n-.*/
+                - /update-builder-.*/
+          requires:
+            - lint
       - python3-app-tests:
           filters:
             branches:
               ignore:
                 - /docs-.*/
                 - /i18n-.*/
+                - /update-builder-.*/
+          requires:
+            - lint
       - admin-tests:
           filters:
             branches:
               ignore:
                 - /docs-.*/
                 - /i18n-.*/
+                - /update-builder-.*/
+          requires:
+            - lint
       - fetch-tor-debs:
           filters:
             branches:
               ignore:
                 - /docs-.*/
                 - /i18n-.*/
+                - /update-builder-.*/
+          requires:
+            - lint
       - updater-gui-tests:
           filters:
             branches:
               ignore:
                 - /docs-.*/
                 - /i18n-.*/
+                - /update-builder-.*/
+          requires:
+            - lint
       - static-analysis-and-no-known-cves:
-          filters:
-            branches:
-              ignore:
-                - /docs-.*/
-                - /i18n-.*/
+          requires:
+            - lint
       - staging-test-with-rebase:
           filters:
             branches:
@@ -326,15 +406,15 @@ workflows:
           requires:
             - lint
       - translation-tests:
-          filters:
-            branches:
-              only:
-                - /i18n-.*/
+          requires:
+            - lint
       - deb-tests:
           filters:
             branches:
               only:
                 - /update-builder-.*/
+          requires:
+            - lint
 
   nightly:
     triggers:
@@ -346,3 +426,16 @@ workflows:
                 - develop
     jobs:
       - static-analysis-and-no-known-cves
+
+  weekly:
+    triggers:
+      - schedule:
+          cron: "0 0 * * 0"
+          filters:
+            branches:
+              only:
+                - develop
+    jobs:
+      - deb-tests
+      - translation-tests
+      - docs-linkcheck

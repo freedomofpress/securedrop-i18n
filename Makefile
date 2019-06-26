@@ -13,10 +13,6 @@ ci-go: ## Creates, provisions, tests, and destroys GCE host for testing staging 
 ci-teardown: ## Destroys GCE host for testing staging environment.
 	./devops/gce-nested/gce-stop.sh
 
-.PHONY: ci-lint
-ci-lint: ## Runs linting in linting container.
-	devops/scripts/dev-shell-ci run make --keep-going lint typelint
-
 .PHONY: ci-deb-tests
 ci-deb-tests: ## Runs deb tests in ci
 	@./devops/scripts/test-built-packages.sh
@@ -37,16 +33,20 @@ typelint: install-mypy ## Runs type linting
 ansible-config-lint: ## Runs custom Ansible env linting tasks.
 	molecule verify -s ansible-config
 
+.PHONY: docs
+docs: ## Build project documentation in live reload for editing
+# Spins up livereload environment for editing; blocks.
+	make -C docs/ clean && sphinx-autobuild docs/ docs/_build/html
+
 .PHONY: docs-lint
 docs-lint: ## Check documentation for common syntax errors.
 # The `-W` option converts warnings to errors.
 # The `-n` option enables "nit-picky" mode.
 	make -C docs/ clean && sphinx-build -Wn docs/ docs/_build/html
 
-.PHONY: docs
-docs: ## Build project documentation in live reload for editing
-# Spins up livereload environment for editing; blocks.
-	make -C docs/ clean && sphinx-autobuild docs/ docs/_build/html
+.PHONY: docs-linkcheck
+docs-linkcheck: ## Check documentation for broken links
+	make -C docs/ clean && sphinx-build -b linkcheck -Wn docs/ docs/_build/html
 
 .PHONY: flake8
 flake8: ## Validates PEP8 compliance for Python source files.
@@ -76,7 +76,7 @@ shellcheckclean: ## Cleans up temporary container associated with shellcheck tar
 	@docker rm -f shellcheck-targets
 
 .PHONY: lint
-lint: docs-lint app-lint flake8 html-lint yamllint shellcheck ansible-config-lint ## Runs all linting tools (docs, pylint, flake8, HTML, YAML, shell, ansible-config).
+lint: app-lint flake8 html-lint yamllint shellcheck ansible-config-lint ## Runs all linting tools (pylint, flake8, HTML, YAML, shell, ansible-config).
 
 .PHONY: build-debs
 build-debs: ## Builds and tests debian packages
@@ -107,8 +107,8 @@ safety: ## Runs `safety check` to check python dependencies for vulnerabilities
 .PHONY: bandit
 bandit: ## Run bandit with medium level excluding test-related folders
 	pip install --upgrade pip && \
-        pip install --upgrade bandit!=1.6.0 && \
-	bandit --recursive . --exclude admin/.tox,admin/.venv,admin/.eggs,molecule,testinfra,securedrop/tests,.tox,.venv -ll
+        pip install --upgrade bandit && \
+	bandit --recursive . --exclude ./admin/.tox,./admin/.venv,./admin/.eggs,./molecule/,./testinfra,./securedrop/tests/,.tox,.venv -ll
 
 .PHONY: update-pip-requirements
 update-pip-requirements: ## Updates all Python requirements files via pip-compile.
@@ -118,7 +118,7 @@ update-pip-requirements: ## Updates all Python requirements files via pip-compil
 		securedrop/requirements/develop-requirements.in
 	pip-compile --output-file securedrop/requirements/test-requirements.txt \
 		securedrop/requirements/test-requirements.in
-	pip-compile --output-file securedrop/requirements/securedrop-app-code-requirements.txt \
+	pip-compile --generate-hashes --output-file securedrop/requirements/securedrop-app-code-requirements.txt \
 		securedrop/requirements/securedrop-app-code-requirements.in
 
 .PHONY: libvirt-share

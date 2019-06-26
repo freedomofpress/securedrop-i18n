@@ -1,5 +1,6 @@
 import tempfile
 import time
+import json
 
 from selenium.webdriver.common.action_chains import ActionChains
 
@@ -21,6 +22,13 @@ class SourceNavigationStepsMixin:
     def _source_visits_source_homepage(self):
         self.driver.get(self.source_location)
         assert self._is_on_source_homepage()
+
+    def _source_checks_instance_metadata(self):
+        self.driver.get(self.source_location + "/metadata")
+        j = json.loads(self.driver.find_element_by_tag_name("body").text)
+        assert j["server_os"] == "16.04"
+        assert j["sd_version"] == self.source_app.jinja_env.globals['version']
+        assert j["gpg_fpr"] != ""
 
     def _source_clicks_submit_documents_on_homepage(self):
         # First move the cursor to a known position in case it happens to
@@ -246,8 +254,8 @@ class SourceNavigationStepsMixin:
     def _source_why_journalist_key(self):
         self.driver.get(self.source_location + "/why-journalist-key")
 
-    def _source_waits_for_session_to_timeout(self, session_length_minutes):
-        time.sleep(session_length_minutes * 60 + 0.1)
+    def _source_waits_for_session_to_timeout(self):
+        time.sleep(self.session_expiration + 2)
 
     def _source_sees_session_timeout_message(self):
         notification = self.driver.find_element_by_css_selector(".important")

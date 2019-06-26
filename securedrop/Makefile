@@ -5,11 +5,11 @@ IMAGE = securedrop
 .PHONY: lint
 lint: ## Run the python linter with the project's default error settings
 	find . -name '*.py' | xargs pylint --reports=no --errors-only \
-	   --disable=import-error \
 	   --disable=no-name-in-module \
 	   --disable=unexpected-keyword-arg \
 	   --disable=too-many-function-args \
 	   --disable=import-error \
+	   --disable=no-member \
 	   --max-line-length=100
 
 .PHONY: lint-full
@@ -27,6 +27,14 @@ test-python3: ## Run the Python 3 test suite in a Ubuntu 16.04 (Xenial) dockeriz
 .PHONY: translation-test
 translation-test: ## Run all pages-layout tests in all supported languages
 	./bin/dev-shell ./bin/translation-test $${TESTFILES:-tests/pageslayout}
+
+.PHONY: list-translators
+list-translators: ## Collect the names of translators since the last merge from Weblate
+	@./bin/dev-shell ./i18n_tool.py list-translators
+
+.PHONY: list-all-translators
+list-all-translators: ## Collect the names of all translators in the project's history
+	@./bin/dev-shell ./i18n_tool.py list-translators --all
 
 .PHONY: dev
 dev: ## Run the dev server
