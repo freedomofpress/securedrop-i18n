@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-05-28 18:25+0000\n"
+"PO-Revision-Date: 2019-06-28 18:39+0000\n"
 "Last-Translator: AO <ao@localizationlab.org>\n"
 "Language-Team: French <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/fr/>\n"
@@ -73,7 +73,7 @@ msgstr ""
 #: journalist_app/admin.py:184 journalist_app/admin.py:192
 #: journalist_app/utils.py:281
 msgid "Name not updated: {}"
-msgstr ""
+msgstr "Le nom n’a pas été mis à jour : {}"
 
 #: journalist_app/admin.py:228
 msgid "Deleted user '{user}'"
@@ -109,7 +109,7 @@ msgstr ""
 
 #: journalist_app/forms.py:37
 msgid "Field can not be more than {max_chars} characters."
-msgstr ""
+msgstr "Le champ ne peut pas dépasser {max_chars} caractères."
 
 #: journalist_app/forms.py:42 source_app/forms.py:11
 msgid "This field is required."
@@ -204,7 +204,7 @@ msgstr[1] "{num} collections ont été supprimées"
 
 #: journalist_app/utils.py:279
 msgid "Name updated."
-msgstr ""
+msgstr "Le nom a été mis à jour."
 
 #: journalist_app/utils.py:288
 msgid "You submitted a bad password! Password not changed."
@@ -425,17 +425,17 @@ msgstr "Le nom d’utilisateur est sensible à la casse"
 #: journalist_templates/edit_account.html:16
 #: journalist_templates/edit_account.html:36
 msgid "First name"
-msgstr ""
+msgstr "Prénom"
 
 #: journalist_templates/admin_add_user.html:42
 #: journalist_templates/edit_account.html:19
 #: journalist_templates/edit_account.html:39
 msgid "Last name"
-msgstr ""
+msgstr "Nom de famille"
 
 #: journalist_templates/admin_add_user.html:52
 msgid "First name and last name are optional"
-msgstr ""
+msgstr "Le prénom et le nom de famille sont facultatifs"
 
 #: journalist_templates/admin_add_user.html:56
 msgid "The user's password will be:"
@@ -677,7 +677,7 @@ msgstr "Modifier l’utilisateur « {user} »"
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Name &amp; Admin Status"
-msgstr ""
+msgstr "Changer le nom et le rôle d’administrateur"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -690,7 +690,7 @@ msgstr "Modifier votre compte"
 
 #: journalist_templates/edit_account.html:31
 msgid "Change Name"
-msgstr ""
+msgstr "Changer le nom"
 
 #: journalist_templates/edit_account.html:47
 msgid "Reset Password"
@@ -699,6 +699,8 @@ msgstr "Réinitialiser le mot de passe"
 #: journalist_templates/edit_account.html:49
 msgid "SecureDrop uses automatically generated diceware passwords."
 msgstr ""
+"SecureDrop utilise des mots de passe générés automatiquement par la méthode "
+"du lancer de dés."
 
 #: journalist_templates/edit_account.html:50
 msgid ""
@@ -776,18 +778,20 @@ msgstr ""
 #: journalist_templates/edit_account.html:112
 msgid "Reset 2FA for mobile apps such as FreeOTP or Google Authenticator"
 msgstr ""
+"Réinitialiser l’A2F pour les applis mobiles telles que FreeOTP ou Google "
+"Authenticator"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
-msgstr ""
+msgstr "RÉINITIALISER LE JETON DES APPLIS"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset 2FA for hardware tokens like Yubikey"
-msgstr ""
+msgstr "Réinitialiser l’A2F pour les jetons matériels tels que la Yubikey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
-msgstr ""
+msgstr "RÉINITIALISER LE JETON MATÉRIEL"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -1031,6 +1035,10 @@ msgid ""
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
+"Le <a id=\"disable-js\" href=\"\"><strong>niveau de sécurité</strong></a> de "
+"votre Navigateur Tor est trop bas. Veuillez cliquer sur l’icône <img src=\""
+"{icon}\" alt=\"shield icon\"> de la barre d’outils de votre navigateur pour "
+"le changer."
 
 #: source_templates/index.html:17
 msgid ""
@@ -1083,18 +1091,20 @@ msgstr "CONSULTER LES RÉPONSES"
 #: source_templates/index.html:93
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
 msgstr ""
+"Cliquez sur l’<img src=\"{icon}\" alt=\"icône de bouclier\"> dans la barre d’"
+"outils ci-dessus"
 
 #: source_templates/index.html:94
 msgid "Select <strong>Advanced Security Settings</strong>"
-msgstr ""
+msgstr "Sélectionnez <strong>Paramètres de sécurité avancés</strong>"
 
 #: source_templates/index.html:95
 msgid "Select <strong>Safest</strong>"
-msgstr ""
+msgstr "Sélectionnez <strong>Le plus sûr</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
-msgstr ""
+msgstr "<a href=\"/\">Actualisez cette page </a> et vous êtes prêt !"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
