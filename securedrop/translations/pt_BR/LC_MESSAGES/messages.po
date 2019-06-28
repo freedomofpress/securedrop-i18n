@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-05-27 20:19+0000\n"
+"PO-Revision-Date: 2019-06-28 18:39+0000\n"
 "Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/pt_BR/>\n"
@@ -302,7 +302,7 @@ msgstr "Abrir o aplicativo FreeOTP"
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
 msgid "Tap the QR code symbol at the top"
-msgstr "Clique no símbolo do código QR no alto da tela"
+msgstr "Clique no ícone do código QR no alto da tela"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -317,7 +317,7 @@ msgstr ""
 #: journalist_templates/admin_new_user_two_factor.html:15
 msgid "Can't scan the barcode? Enter the following code manually:"
 msgstr ""
-"Não está conseguindo escanear o código de barras? Insira o código abaixo "
+"Não está conseguindo escanear o código de barras? Insira o código seguinte "
 "manualmente:"
 
 #: journalist_templates/account_new_two_factor.html:15
@@ -1056,6 +1056,8 @@ msgstr "LER RESPOSTAS"
 #: source_templates/index.html:93
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
 msgstr ""
+"Clique no <img src=\"{icon}\" alt=\"ícone do escudo\"> na barra de "
+"ferramentas, acima"
 
 #: source_templates/index.html:94
 msgid "Select <strong>Advanced Security Settings</strong>"
