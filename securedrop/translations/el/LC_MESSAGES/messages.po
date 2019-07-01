@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-05-28 18:25+0000\n"
-"Last-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\n"
+"PO-Revision-Date: 2019-07-02 19:42+0000\n"
+"Last-Translator: Adrian <pappasadrian@gmail.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/el/>\n"
 "Language: el\n"
@@ -70,7 +70,7 @@ msgstr ""
 #: journalist_app/admin.py:184 journalist_app/admin.py:192
 #: journalist_app/utils.py:281
 msgid "Name not updated: {}"
-msgstr ""
+msgstr "Το όνομα δεν ενημερώθηκε: {}"
 
 #: journalist_app/admin.py:228
 msgid "Deleted user '{user}'"
@@ -107,7 +107,7 @@ msgstr ""
 
 #: journalist_app/forms.py:37
 msgid "Field can not be more than {max_chars} characters."
-msgstr ""
+msgstr "Το πεδίο δεν μπορεί να περιέχει παραπάνω από {max_chars} χαρακτήρες."
 
 #: journalist_app/forms.py:42 source_app/forms.py:11
 msgid "This field is required."
@@ -200,7 +200,7 @@ msgstr[1] "{num} συλλογές διαγράφηκαν"
 
 #: journalist_app/utils.py:279
 msgid "Name updated."
-msgstr ""
+msgstr "Το όνομα ενημερώθηκε."
 
 #: journalist_app/utils.py:288
 msgid "You submitted a bad password! Password not changed."
@@ -420,17 +420,17 @@ msgstr "Το όνομα χρήστη κάνει διάκριση πεζών απ
 #: journalist_templates/edit_account.html:16
 #: journalist_templates/edit_account.html:36
 msgid "First name"
-msgstr ""
+msgstr "Όνομα"
 
 #: journalist_templates/admin_add_user.html:42
 #: journalist_templates/edit_account.html:19
 #: journalist_templates/edit_account.html:39
 msgid "Last name"
-msgstr ""
+msgstr "Επώνυμο"
 
 #: journalist_templates/admin_add_user.html:52
 msgid "First name and last name are optional"
-msgstr ""
+msgstr "Το όνομα και το επώνυμο είναι προαιρετικά"
 
 #: journalist_templates/admin_add_user.html:56
 msgid "The user's password will be:"
@@ -670,7 +670,7 @@ msgstr "Επεξεργασία χρήστη \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Name &amp; Admin Status"
-msgstr ""
+msgstr "Αλλαγή ονόματος &amp; Κατάσταση διαχειριστή"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -683,7 +683,7 @@ msgstr "Επεξεργαστείτε τον λογαριασμό σας"
 
 #: journalist_templates/edit_account.html:31
 msgid "Change Name"
-msgstr ""
+msgstr "Αλλαγή ονόματος"
 
 #: journalist_templates/edit_account.html:47
 msgid "Reset Password"
@@ -692,6 +692,8 @@ msgstr "Επαναφορά κωδικού πρόσβασης"
 #: journalist_templates/edit_account.html:49
 msgid "SecureDrop uses automatically generated diceware passwords."
 msgstr ""
+"Το SecureDrop χρησιμοποιεί κωδικούς που παράγονται αυτόματα με τη μέθοδο "
+"diceware."
 
 #: journalist_templates/edit_account.html:50
 msgid ""
@@ -768,6 +770,8 @@ msgstr ""
 #: journalist_templates/edit_account.html:112
 msgid "Reset 2FA for mobile apps such as FreeOTP or Google Authenticator"
 msgstr ""
+"Επαναφορά πιστοποίησης δυο παραγόντων για εφαρμογές όπως το FreeOTP ή το "
+"Google Authenticator"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
@@ -1025,6 +1029,9 @@ msgid ""
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
+"Η <a id=\"disable-js\" href=\"\"><strong>Ρύθμιση ασφαλείας</strong></a> του "
+"Tor Browser σας είναι πολύ χαμηλή. Χρησιμοποιήστε το κουμπί <img src=\"{icon}"
+"\" alt=\"shield icon\"> &nbsp; στη γραμμή εργαλειών για να την αλλάξετε."
 
 #: source_templates/index.html:17
 msgid ""
@@ -1080,18 +1087,20 @@ msgstr "ΕΛΕΓΧΟΣ ΓΙΑ ΑΠΑΝΤΗΣΕΙΣ"
 #: source_templates/index.html:93
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
 msgstr ""
+"Πατήστε το <img src=\"{icon}\" alt=\"shield icon\"> στην από πάνω γραμμή "
+"εργαλειών"
 
 #: source_templates/index.html:94
 msgid "Select <strong>Advanced Security Settings</strong>"
-msgstr ""
+msgstr "Επιλέξτε τις <strong>Ρυθμίσεις ασφαλείας για προχωρημένους</strong>"
 
 #: source_templates/index.html:95
 msgid "Select <strong>Safest</strong>"
-msgstr ""
+msgstr "Επιλέξτε <strong>Ασφαλέστατο</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
-msgstr ""
+msgstr "<a href=\"/\">Ανανεώστε τη σελίδα</a> και τελειώσατε!"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
