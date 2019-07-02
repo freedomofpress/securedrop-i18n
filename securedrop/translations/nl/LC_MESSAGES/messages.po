@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-07-02 08:57+0000\n"
-"Last-Translator: Yarno Ritzen <yarnoritzen@gmail.com>\n"
+"PO-Revision-Date: 2019-07-02 09:03+0000\n"
+"Last-Translator: Pander <pander@users.sourceforge.net>\n"
 "Language-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/nl/>\n"
 "Language: nl\n"
@@ -71,7 +71,7 @@ msgstr ""
 #: journalist_app/admin.py:184 journalist_app/admin.py:192
 #: journalist_app/utils.py:281
 msgid "Name not updated: {}"
-msgstr "Naam niet geüpdatet: {}"
+msgstr "Naam is niet geüpdatet: {}"
 
 #: journalist_app/admin.py:228
 msgid "Deleted user '{user}'"
@@ -198,7 +198,7 @@ msgstr[1] "{num} collecties verwijderd"
 
 #: journalist_app/utils.py:279
 msgid "Name updated."
-msgstr "Naam geüpdatet."
+msgstr "Naam is geüpdatet."
 
 #: journalist_app/utils.py:288
 msgid "You submitted a bad password! Password not changed."
@@ -426,7 +426,7 @@ msgstr "Achternaam"
 
 #: journalist_templates/admin_add_user.html:52
 msgid "First name and last name are optional"
-msgstr "Voornaam en achternaam zijn niet verplicht."
+msgstr "Voornaam en achternaam zijn niet verplicht"
 
 #: journalist_templates/admin_add_user.html:56
 msgid "The user's password will be:"
@@ -664,7 +664,7 @@ msgstr "Gebruiker \"{user}\" bewerken"
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Name &amp; Admin Status"
-msgstr ""
+msgstr "Wijzig naam &amp; beheerderstatus"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -677,7 +677,7 @@ msgstr "Bewerk uw account"
 
 #: journalist_templates/edit_account.html:31
 msgid "Change Name"
-msgstr "Verander naam"
+msgstr "Wijzig naam"
 
 #: journalist_templates/edit_account.html:47
 msgid "Reset Password"
@@ -685,7 +685,7 @@ msgstr "Herstel wachtwoord"
 
 #: journalist_templates/edit_account.html:49
 msgid "SecureDrop uses automatically generated diceware passwords."
-msgstr "SecureDrop gebruikt automatisch gegenereerde diceware wachtwoorden"
+msgstr "SecureDrop gebruikt automatisch gegenereerde diceware-wachtwoorden"
 
 #: journalist_templates/edit_account.html:50
 msgid ""
@@ -764,12 +764,12 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
-msgstr ""
+msgstr "RESET APP-TOKEN"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset 2FA for hardware tokens like Yubikey"
 msgstr ""
-"Stel tweefactorauthenticatie voor hardware token zoals Yubikey opnieuw in"
+"Stel tweefactorauthenticatie voor hardware-token zoals Yubikey opnieuw in"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
