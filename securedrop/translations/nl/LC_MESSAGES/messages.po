@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-07-02 09:03+0000\n"
-"Last-Translator: Yarno Ritzen <yarnoritzen@gmail.com>\n"
+"PO-Revision-Date: 2019-07-02 09:04+0000\n"
+"Last-Translator: Pander <pander@users.sourceforge.net>\n"
 "Language-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/nl/>\n"
 "Language: nl\n"
@@ -1075,11 +1075,11 @@ msgstr ""
 
 #: source_templates/index.html:94
 msgid "Select <strong>Advanced Security Settings</strong>"
-msgstr "Klik op <strong>Advanced Security Settings</strong>"
+msgstr "Klik op <strong>geavanceerde beveiligingsinstellingen</strong>"
 
 #: source_templates/index.html:95
 msgid "Select <strong>Safest</strong>"
-msgstr "Selecteer <strong>Safest</strong>"
+msgstr "Selecteer <strong>veiligst</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
