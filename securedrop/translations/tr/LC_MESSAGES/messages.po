@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-07-02 12:35+0000\n"
+"PO-Revision-Date: 2019-07-03 21:59+0000\n"
 "Last-Translator: Kaya Zeren <kayazeren@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
@@ -70,7 +70,7 @@ msgstr ""
 #: journalist_app/admin.py:184 journalist_app/admin.py:192
 #: journalist_app/utils.py:281
 msgid "Name not updated: {}"
-msgstr "İsim güncellenmedi: {}"
+msgstr "Ad güncellenmedi: {}"
 
 #: journalist_app/admin.py:228
 msgid "Deleted user '{user}'"
@@ -107,7 +107,7 @@ msgstr ""
 
 #: journalist_app/forms.py:37
 msgid "Field can not be more than {max_chars} characters."
-msgstr "Alana en fazla {max_chars} karakter girilebilir."
+msgstr "Alana en fazla {max_chars} karakter yazılabilir."
 
 #: journalist_app/forms.py:42 source_app/forms.py:11
 msgid "This field is required."
@@ -199,7 +199,7 @@ msgstr[1] "{num} derleme silindi"
 
 #: journalist_app/utils.py:279
 msgid "Name updated."
-msgstr "İsim güncellendi."
+msgstr "Ad güncellendi."
 
 #: journalist_app/utils.py:288
 msgid "You submitted a bad password! Password not changed."
@@ -414,7 +414,7 @@ msgstr "Kullanıcı adı büyük-küçük harflere duyarlıdır"
 #: journalist_templates/edit_account.html:16
 #: journalist_templates/edit_account.html:36
 msgid "First name"
-msgstr "İsim"
+msgstr "Ad"
 
 #: journalist_templates/admin_add_user.html:42
 #: journalist_templates/edit_account.html:19
@@ -424,7 +424,7 @@ msgstr "Soyad"
 
 #: journalist_templates/admin_add_user.html:52
 msgid "First name and last name are optional"
-msgstr "İsim ve soyad isteğe bağlıdır"
+msgstr "Ad ve soyad isteğe bağlıdır"
 
 #: journalist_templates/admin_add_user.html:56
 msgid "The user's password will be:"
@@ -660,7 +660,7 @@ msgstr "\"{user}\" kullanıcısını düzenle"
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Name &amp; Admin Status"
-msgstr "İsim Değişikliği &amp; Yönetici Durumu"
+msgstr "Ad Değişikliği ve Yönetici Durumu"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -673,17 +673,17 @@ msgstr "Hesabınızı düzenleyin"
 
 #: journalist_templates/edit_account.html:31
 msgid "Change Name"
-msgstr "İsim Değiştir"
+msgstr "Ad Değiştir"
 
 #: journalist_templates/edit_account.html:47
 msgid "Reset Password"
 msgstr "Parolayı Sıfırla"
 
 #: journalist_templates/edit_account.html:49
-#, fuzzy
 msgid "SecureDrop uses automatically generated diceware passwords."
 msgstr ""
-"SecureDrop otomatik olarak oluşturulmuş zar sistemli parolalar kullanır."
+"SecureDrop zar atma sistemi ile otomatik olarak oluşturulmuş parolalar "
+"kullanır."
 
 #: journalist_templates/edit_account.html:50
 msgid ""
@@ -757,27 +757,24 @@ msgstr ""
 "ikinci seçeneği seçin."
 
 #: journalist_templates/edit_account.html:112
-#, fuzzy
 msgid "Reset 2FA for mobile apps such as FreeOTP or Google Authenticator"
 msgstr ""
-"FreeOTP veya Google Authenticator gibi mobil uygulamaların iki faktörlü "
-"doğrulamalarını sıfırla"
+"FreeOTP ya da Google Authenticator gibi mobil uygulamaların iki aşamalı "
+"kimlik doğrulamasını sıfırla"
 
 #: journalist_templates/edit_account.html:112
-#, fuzzy
 msgid "RESET APP TOKEN"
-msgstr "UYGULAMA BELİRTECİNİ SIFIRLA"
+msgstr "UYGULAMA KODUNU SIFIRLA"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
 msgid "Reset 2FA for hardware tokens like Yubikey"
 msgstr ""
-"Yubikey gibi donanımsal belirteçler kullanan iki faktörlü doğrulamaları "
+"Yubikey gibi donanımsal çözümler kullanan iki aşamalı kimlik doğrulamasını "
 "sıfırla"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
-msgstr "DONANIMSAL BELİRTECİ SIFIRLA"
+msgstr "DONANIMSAL KOD ÜRETECİNİ SIFIRLA"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -1070,23 +1067,22 @@ msgid "CHECK FOR A RESPONSE"
 msgstr "YANITLARI KONTROL EDİN"
 
 #: source_templates/index.html:93
-#, fuzzy
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
 msgstr ""
-"Yukarıdaki araç çubuğunda olan <img src=\"{icon}\" alt=\"shield icon\"> "
-"ikonuna tıklayın."
+"Yukarıdaki araç çubuğundan <img src=\"{icon}\" alt=\"shield icon\"> "
+"düğmesine tıklayın"
 
 #: source_templates/index.html:94
 msgid "Select <strong>Advanced Security Settings</strong>"
-msgstr "<strong>Gelişmiş Güvenlik Ayarları</strong>nı seçin"
+msgstr "<strong>Gelişmiş Güvenlik Ayarlarını</strong> seçin"
 
 #: source_templates/index.html:95
 msgid "Select <strong>Safest</strong>"
-msgstr "<strong>En güvenli</strong>yi seçin"
+msgstr "<strong>En güvenli</strong> seçeneğini seçin"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
-msgstr "<a href=\"/\">Bu sayfayı yenileyin</a>, ve her şey hazır!"
+msgstr "<a href=\"/\">Bu sayfayı yenileyin</a> ve işlemi tamamlayın!"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
