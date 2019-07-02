@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-05-16 03:10+0000\n"
-"Last-Translator: Ali Mirjamali <ali.mirjamali@gmail.com>\n"
+"PO-Revision-Date: 2019-07-09 00:16+0000\n"
+"Last-Translator: Goudarz Jafari <goudarz.jafari@gmail.com>\n"
 "Language-Team: Persian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/fa/>\n"
 "Language: fa\n"
@@ -25,11 +25,11 @@ msgstr "{time} قبل"
 
 #: journalist_app/__init__.py:91 journalist_app/__init__.py:136
 msgid "You have been logged out due to inactivity"
-msgstr "شما به علت عدم فعالیت از سیستم خارج شده اید"
+msgstr "شما به علت عدم فعالیت از سیستم خارج شده‌اید"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
-msgstr "گذرواژه یا کد دو مرحله‌ای نادرست می‌باشد."
+msgstr "رمز عبور یا کد دو مرحله‌ای نادرست می‌باشد."
 
 #: journalist_app/account.py:49
 msgid "Token in two-factor authentication verified."
@@ -56,10 +56,6 @@ msgid "Username \"{user}\" already taken."
 msgstr "نام کاربری \"{user}\" قبلا گرفته شده‌ است."
 
 #: journalist_app/admin.py:89
-#, fuzzy
-#| msgid ""
-#| "An error occurred saving this user to the database. Please inform your "
-#| "administrator."
 msgid ""
 "An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
@@ -72,7 +68,7 @@ msgstr "شناسه‌ی احراز هویت دو مرحله‌ای برای کا
 #: journalist_app/admin.py:184 journalist_app/admin.py:192
 #: journalist_app/utils.py:281
 msgid "Name not updated: {}"
-msgstr ""
+msgstr "نام به روز نشد: {}"
 
 #: journalist_app/admin.py:228
 msgid "Deleted user '{user}'"
@@ -83,25 +79,21 @@ msgid "Test alert sent. Please check your email."
 msgstr "پیام هشدار آزمایشی ارسال شد. لطفا ایمیل خود را بررسی نماید."
 
 #: journalist_app/col.py:45
-#, fuzzy
 msgid "{source_name}'s collection deleted"
-msgstr "مجموعه‌ی {source_name} حذف شد."
+msgstr "مجموعه‌ی {source_name} حذف شد"
 
 #: journalist_app/col.py:56
 msgid "No collections selected."
 msgstr "هیچ مجموعه‌ای انتخاب نشد."
 
 #: journalist_app/decorators.py:15
-#, fuzzy
-#| msgid "Only administrators can access this page."
 msgid "Only admins can access this page."
 msgstr "تنها مدیران می‌توانند به این صفحه دسترسی داشته باشند."
 
 #: journalist_app/forms.py:19
-#, fuzzy
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgstr ""
-"طول هش رمز های یکبار مصرف 40 کاراکتر می‌باشد - شما {num_chars} وارد کرده‌اید."
+"طول هش رمزهای یکبار مصرف ۴۰ کاراکتر می‌باشد - شما {num_chars} وارد کرده‌اید."
 
 #: journalist_app/forms.py:30
 msgid ""
@@ -112,7 +104,7 @@ msgstr ""
 
 #: journalist_app/forms.py:37
 msgid "Field can not be more than {max_chars} characters."
-msgstr ""
+msgstr "رشته نمی‌تواند بیش از {max_chars} کاراکتر باشد."
 
 #: journalist_app/forms.py:42 source_app/forms.py:11
 msgid "This field is required."
@@ -132,8 +124,6 @@ msgstr "تنها می توانید تصاویر را با فرمت PNG بارگ�
 
 #: journalist_app/main.py:120 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
-#, fuzzy
-#| msgid "An unexpected error occurred! Please inform your administrator."
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "یک خطای غیر منتظره رخ داده است! لطفا به مدیر خود اطلاع دهید."
 
@@ -202,7 +192,7 @@ msgstr[1] "{num} مجموعه حذف شدند"
 
 #: journalist_app/utils.py:279
 msgid "Name updated."
-msgstr ""
+msgstr "نام به روز شد."
 
 #: journalist_app/utils.py:288
 msgid "You submitted a bad password! Password not changed."
@@ -417,17 +407,17 @@ msgstr "نام کاربری به بزرگی و کوچکی حروف حساس اس
 #: journalist_templates/edit_account.html:16
 #: journalist_templates/edit_account.html:36
 msgid "First name"
-msgstr ""
+msgstr "نام"
 
 #: journalist_templates/admin_add_user.html:42
 #: journalist_templates/edit_account.html:19
 #: journalist_templates/edit_account.html:39
 msgid "Last name"
-msgstr ""
+msgstr "نام خانوادگی"
 
 #: journalist_templates/admin_add_user.html:52
 msgid "First name and last name are optional"
-msgstr ""
+msgstr "نام و نام خانوادگی اختیاری است"
 
 #: journalist_templates/admin_add_user.html:56
 msgid "The user's password will be:"
@@ -435,10 +425,8 @@ msgstr "گذرواژه‌ی کاربر:"
 
 #: journalist_templates/admin_add_user.html:59
 #: journalist_templates/edit_account.html:25
-#, fuzzy
-#| msgid "Admin"
 msgid "Is Admin"
-msgstr "مدیر"
+msgstr "مدیر است"
 
 #: journalist_templates/admin_add_user.html:67
 msgid "Is using a YubiKey [HOTP]"
@@ -530,11 +518,8 @@ msgid "Read"
 msgstr "خواندن"
 
 #: journalist_templates/col.html:45
-#, fuzzy
-#| msgid "1 unread"
-#| msgid_plural "{num_unread} unread"
 msgid "Unread"
-msgstr "1 پیام خوانده نشده"
+msgstr "خوانده نشده"
 
 #: journalist_templates/col.html:56
 msgid "Uploaded Document"
@@ -625,6 +610,8 @@ msgstr "تصویر لوگو"
 msgid ""
 "Here you can update the image displayed on the SecureDrop web interfaces:"
 msgstr ""
+"در اینجا شما می‌توانید تصویر نمایش داده شده در رابط وب SecureDrop را به روز "
+"کنید:"
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
@@ -657,7 +644,7 @@ msgstr "ویرایش کاربر \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Name &amp; Admin Status"
-msgstr ""
+msgstr "تغییر نام &amp; وضعیت مدیر"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -670,11 +657,11 @@ msgstr "حساب خود را ویرایش کنید"
 
 #: journalist_templates/edit_account.html:31
 msgid "Change Name"
-msgstr ""
+msgstr "تغییر نام"
 
 #: journalist_templates/edit_account.html:47
 msgid "Reset Password"
-msgstr "باز نشانی گذرواژه"
+msgstr "باز نشانی رمز عبور"
 
 #: journalist_templates/edit_account.html:49
 msgid "SecureDrop uses automatically generated diceware passwords."
@@ -688,27 +675,27 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:56
 msgid "Please enter your current password and two-factor code."
-msgstr "لطفا گذرواژه ی فعلی و رمز دوم خود را وارد نمایید."
+msgstr "لطفا رمز عبور فعلی و کد دو مرحله‌ای خود را وارد نمایید."
 
 #: journalist_templates/edit_account.html:61
 msgid "Current Password"
-msgstr "گذرواژه ی فعلی"
+msgstr "رمز عبور فعلی"
 
 #: journalist_templates/edit_account.html:62 journalist_templates/login.html:11
 msgid "Two-factor Code"
-msgstr "رمز دوم"
+msgstr "کد دو مرحله‌ای"
 
 #: journalist_templates/edit_account.html:68
 msgid "The user's password will be changed to:"
-msgstr "گذرواژه ی شما تغییر خواهد کرد به :"
+msgstr "رمز عبور شما تغییر خواهد کرد به :"
 
 #: journalist_templates/edit_account.html:70
 msgid "Your password will be changed to:"
-msgstr "گذرواژه‌ی شما تغییر خواهد کرد به:"
+msgstr "رمز عبور شما تغییر خواهد کرد به:"
 
 #: journalist_templates/edit_account.html:75
 msgid "RESET PASSWORD"
-msgstr "بازنشانی گذرواژه"
+msgstr "بازنشانی رمز عبور"
 
 #: journalist_templates/edit_account.html:80
 msgid "Reset Two-Factor Authentication"
@@ -754,7 +741,7 @@ msgstr ""
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
-msgstr ""
+msgstr "با تشکر!"
 
 #: journalist_templates/flag.html:8
 msgid ""
@@ -766,72 +753,74 @@ msgstr ""
 
 #: journalist_templates/flag.html:10
 msgid "Continue to the list of documents for {codename}..."
-msgstr ""
+msgstr "ادامه فهرست اسناد برای {codename}..."
 
 #: journalist_templates/index.html:4
 msgid "Sources"
-msgstr ""
+msgstr "منابع"
 
 #: journalist_templates/index.html:11
 msgid "Download Unread"
-msgstr ""
+msgstr "دانلود خوانده نشده"
 
 #: journalist_templates/index.html:12
 msgid "Download"
-msgstr ""
+msgstr "دانلود"
 
 #: journalist_templates/index.html:13
 msgid "Star"
-msgstr ""
+msgstr "ستاره"
 
 #: journalist_templates/index.html:14
 msgid "Un-star"
-msgstr ""
+msgstr "بدون ستاره"
 
 #: journalist_templates/index.html:47
 msgid "Are you sure you want to delete the selected collections?"
-msgstr ""
+msgstr "آیا مطمئن هستید که می‌خواهید مجموعه‌های انتخاب شده را حذف کنید؟"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
-msgstr ""
+msgstr "هیچ اسنادی ارائه نشده است!"
 
 #: journalist_templates/js-strings.html:3
 msgid "filter by codename"
-msgstr ""
+msgstr "فیلتر با نام‌کد"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
-msgstr ""
+msgstr "انتخاب همه"
 
 #: journalist_templates/js-strings.html:5
 msgid "Select Unread"
-msgstr ""
+msgstr "خوانده نشده را انتخاب کنید"
 
 #: journalist_templates/js-strings.html:6
 msgid "Select None"
-msgstr ""
+msgstr "هیچ کدام را انتخاب نکنید"
 
 #: journalist_templates/js-strings.html:7
 msgid "Are you sure you want to delete the user {username}?"
-msgstr ""
+msgstr "آیا مطمئن هستید که می‌خواهید کاربر {username} را حذف کنید؟"
 
 #: journalist_templates/js-strings.html:8
 msgid ""
 "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr ""
+"آیا مطمئن هستید که می‌خواهید احراز هویت دو مرحله‌ای را برای {username} "
+"بازنشانی کنید؟"
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
-msgstr ""
+msgstr "برای دسترسی به رابط روزنامه‌نگار وارد شوید"
 
 #: journalist_templates/login.html:9
 msgid "Password"
-msgstr ""
+msgstr "رمز عبور"
 
 #: journalist_templates/login.html:12
 msgid "LOG IN"
-msgstr ""
+msgstr "ورود"
 
 #: source_app/__init__.py:128
 msgid ""
@@ -842,41 +831,43 @@ msgstr ""
 
 #: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
-msgstr ""
+msgstr "فیلد باید بین 1 تا {max_codename_len} کاراکتر طولانی باشد."
 
 #: source_app/forms.py:18
 msgid "Invalid input."
-msgstr ""
+msgstr "ورودی نامعتبر."
 
 #: source_app/main.py:33
 msgid ""
 "You were redirected because you are already logged in. If you want to create "
 "a new account, you should log out first."
 msgstr ""
+"شما به دلیل اینکه قبلا وارد سیستم شده‌اید هدایت می‌شوید. اگر می‌خواهید یک "
+"حساب جدید ایجاد کنید، ابتدا باید از سیستم خارج شوید."
 
 #: source_app/main.py:145
 msgid "You must enter a message or choose a file to submit."
-msgstr ""
+msgstr "شما باید یک پیام را وارد کنید یا یک فایل را برای ارسال انتخاب کنید."
 
 #: source_app/main.py:178
 msgid "Thanks! We received your message."
-msgstr ""
+msgstr "با تشکر! پیام شما را دریافت کردیم."
 
 #: source_app/main.py:180
 msgid "Thanks! We received your document."
-msgstr ""
+msgstr "با تشکر! سند شما را دریافت کردیم."
 
 #: source_app/main.py:182
 msgid "Thanks! We received your message and document."
-msgstr ""
+msgstr "با تشکر! پیام و سند شما را دریافت کردیم."
 
 #: source_app/main.py:241
 msgid "Reply deleted"
-msgstr ""
+msgstr "پاسخ حذف شد"
 
 #: source_app/main.py:259
 msgid "All replies have been deleted"
-msgstr ""
+msgstr "تمام پاسخ‌ها حذف شده‌اند"
 
 #: source_app/main.py:273
 msgid "Sorry, that is not a recognized codename."
@@ -884,16 +875,16 @@ msgstr ""
 
 #: source_templates/base.html:6 source_templates/index.html:4
 msgid "Protecting Journalists and Sources"
-msgstr ""
+msgstr "حفاظت از روزنامه نگاران و منابع"
 
 #: source_templates/base.html:25 source_templates/base.html:45
 #: source_templates/index.html:32 source_templates/index.html:84
 msgid "Powered by"
-msgstr ""
+msgstr "قدرت گرفته توسط"
 
 #: source_templates/base.html:34
 msgid "LOG OUT"
-msgstr ""
+msgstr "خروج"
 
 #: source_templates/base.html:45 source_templates/index.html:84
 msgid ""
@@ -903,13 +894,14 @@ msgstr ""
 
 #: source_templates/error.html:3
 msgid "Server error"
-msgstr ""
+msgstr "خطای سرور"
 
 #: source_templates/error.html:5
 msgid ""
 "Sorry, the website encountered an error and was unable to complete your "
 "request."
 msgstr ""
+"با عرض پوزش، وب‌سایت با خطایی مواجه شد و قادر به تکمیل درخواست شما نبود."
 
 #: source_templates/error.html:7 source_templates/notfound.html:7
 msgid "Look up a codename..."
@@ -917,27 +909,30 @@ msgstr ""
 
 #: source_templates/first_submission_flashed_message.html:2
 msgid "Success!"
-msgstr ""
+msgstr "موفقیت!"
 
 #: source_templates/first_submission_flashed_message.html:3
 msgid ""
 "Thank you for sending this information to us. Please check back later for "
 "replies."
 msgstr ""
+"با تشکر از شما برای ارسال این اطلاعات به ما. لطفاً بعداً برای پاسخ دوباره "
+"بررسی کنید."
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
-msgstr ""
+msgstr "نام‌کد خود را فراموش کرده‌اید؟"
 
 #: source_templates/generate.html:4
 msgid "Welcome"
-msgstr ""
+msgstr "خوش آمدید"
 
 #: source_templates/generate.html:7
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
 msgstr ""
+"لطفا نام‌کد را بنویسید و آن را در یک مکان امن نگه دارید یا آن را حفظ کنید."
 
 #: source_templates/generate.html:10
 msgid ""
@@ -983,7 +978,7 @@ msgstr ""
 
 #: source_templates/index.html:41
 msgid "Submit for the first time"
-msgstr ""
+msgstr "برای اولین بار ارسال کنید"
 
 #: source_templates/index.html:48
 msgid "Already submitted something?"
