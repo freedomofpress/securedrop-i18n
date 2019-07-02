@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-07-03 21:59+0000\n"
-"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
+"Last-Translator: Caio Volpato <caio.volpato@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -762,15 +762,16 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
-msgstr ""
+msgstr "Redefinir código de autenticação do app"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset 2FA for hardware tokens like Yubikey"
 msgstr ""
+"Redefinir autenticação em dois fatores para token em hardware como Yubikey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
-msgstr ""
+msgstr "Redefinir código de autenticação de hardware"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
