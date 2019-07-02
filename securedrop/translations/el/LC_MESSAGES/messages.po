@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-07-02 19:42+0000\n"
-"Last-Translator: Panagiotis Tabakis <tabakisp@tekhouse.info>\n"
+"PO-Revision-Date: 2019-07-03 21:58+0000\n"
+"Last-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/el/>\n"
 "Language: el\n"
@@ -670,7 +670,7 @@ msgstr "Επεξεργασία χρήστη \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Name &amp; Admin Status"
-msgstr "Αλλαγή ονόματος &amp; Κατάσταση διαχειριστή"
+msgstr "Αλλαγή ονόματος &amp; Κατάστασης διαχειριστή"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -775,15 +775,15 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
-msgstr "ΕΠΑΝΑΦΟΡΑ TOKEN ΕΦΑΡΜΟΓΗΣ"
+msgstr "ΕΠΑΝΑΦΟΡΑ ΚΩΔΙΚΩΝ ΠΡΟΣΒΑΣΗΣ ΕΦΑΡΜΟΓΗΣ"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset 2FA for hardware tokens like Yubikey"
-msgstr "Επαναφορά 2FA για tokens υλικού όπως το Yubikey"
+msgstr "Επαναφορά 2FA για κλειδιά ασφαλείας όπως το Yubikey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
-msgstr "ΕΠΑΝΑΦΟΡΑ TOKEN ΥΛΙΚΟΥ"
+msgstr "ΕΠΑΝΑΦΟΡΑ ΚΛΕΙΔΙΟΥ ΑΣΦΑΛΕΙΑΣ"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -1087,8 +1087,8 @@ msgstr "ΕΛΕΓΧΟΣ ΓΙΑ ΑΠΑΝΤΗΣΕΙΣ"
 #: source_templates/index.html:93
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
 msgstr ""
-"Πατήστε το <img src=\"{icon}\" alt=\"shield icon\"> στην από πάνω γραμμή "
-"εργαλειών"
+"Πατήστε το <img src=\"{icon}\" alt=\"shield icon\"> στη γραμμή εργαλειών "
+"επάνω"
 
 #: source_templates/index.html:94
 msgid "Select <strong>Advanced Security Settings</strong>"
