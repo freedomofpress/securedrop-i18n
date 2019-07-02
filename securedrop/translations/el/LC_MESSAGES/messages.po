@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-07-02 19:42+0000\n"
-"Last-Translator: Adrian <pappasadrian@gmail.com>\n"
+"Last-Translator: Panagiotis Tabakis <tabakisp@tekhouse.info>\n"
 "Language-Team: Greek <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/el/>\n"
 "Language: el\n"
@@ -775,15 +775,15 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
-msgstr ""
+msgstr "ΕΠΑΝΑΦΟΡΑ TOKEN ΕΦΑΡΜΟΓΗΣ"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset 2FA for hardware tokens like Yubikey"
-msgstr ""
+msgstr "Επαναφορά 2FA για tokens υλικού όπως το Yubikey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
-msgstr ""
+msgstr "ΕΠΑΝΑΦΟΡΑ TOKEN ΥΛΙΚΟΥ"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
