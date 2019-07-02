@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-05-28 18:25+0000\n"
-"Last-Translator: Volkan <volkangezer@gmail.com>\n"
+"PO-Revision-Date: 2019-07-02 12:35+0000\n"
+"Last-Translator: Orhan <ofy@protonmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
 "Language: tr\n"
@@ -70,7 +70,7 @@ msgstr ""
 #: journalist_app/admin.py:184 journalist_app/admin.py:192
 #: journalist_app/utils.py:281
 msgid "Name not updated: {}"
-msgstr ""
+msgstr "İsim güncellenmedi: {}"
 
 #: journalist_app/admin.py:228
 msgid "Deleted user '{user}'"
@@ -107,7 +107,7 @@ msgstr ""
 
 #: journalist_app/forms.py:37
 msgid "Field can not be more than {max_chars} characters."
-msgstr ""
+msgstr "Alana en fazla {max_chars} karakter girilebilir."
 
 #: journalist_app/forms.py:42 source_app/forms.py:11
 msgid "This field is required."
@@ -199,7 +199,7 @@ msgstr[1] "{num} derleme silindi"
 
 #: journalist_app/utils.py:279
 msgid "Name updated."
-msgstr ""
+msgstr "İsim güncellendi."
 
 #: journalist_app/utils.py:288
 msgid "You submitted a bad password! Password not changed."
@@ -414,17 +414,17 @@ msgstr "Kullanıcı adı büyük-küçük harflere duyarlıdır"
 #: journalist_templates/edit_account.html:16
 #: journalist_templates/edit_account.html:36
 msgid "First name"
-msgstr ""
+msgstr "İsim"
 
 #: journalist_templates/admin_add_user.html:42
 #: journalist_templates/edit_account.html:19
 #: journalist_templates/edit_account.html:39
 msgid "Last name"
-msgstr ""
+msgstr "Soyad"
 
 #: journalist_templates/admin_add_user.html:52
 msgid "First name and last name are optional"
-msgstr ""
+msgstr "İsim ve soyad isteğe bağlıdır"
 
 #: journalist_templates/admin_add_user.html:56
 msgid "The user's password will be:"
@@ -660,7 +660,7 @@ msgstr "\"{user}\" kullanıcısını düzenle"
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Name &amp; Admin Status"
-msgstr ""
+msgstr "İsim Değişikliği &amp; Yönetici Durumu"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -673,15 +673,17 @@ msgstr "Hesabınızı düzenleyin"
 
 #: journalist_templates/edit_account.html:31
 msgid "Change Name"
-msgstr ""
+msgstr "İsim Değiştir"
 
 #: journalist_templates/edit_account.html:47
 msgid "Reset Password"
 msgstr "Parolayı Sıfırla"
 
 #: journalist_templates/edit_account.html:49
+#, fuzzy
 msgid "SecureDrop uses automatically generated diceware passwords."
 msgstr ""
+"SecureDrop otomatik olarak oluşturulmuş zar sistemli parolalar kullanır."
 
 #: journalist_templates/edit_account.html:50
 msgid ""
@@ -755,20 +757,27 @@ msgstr ""
 "ikinci seçeneği seçin."
 
 #: journalist_templates/edit_account.html:112
+#, fuzzy
 msgid "Reset 2FA for mobile apps such as FreeOTP or Google Authenticator"
 msgstr ""
+"FreeOTP veya Google Authenticator gibi mobil uygulamaların iki faktörlü "
+"doğrulamalarını sıfırla"
 
 #: journalist_templates/edit_account.html:112
+#, fuzzy
 msgid "RESET APP TOKEN"
-msgstr ""
+msgstr "UYGULAMA BELİRTECİNİ SIFIRLA"
 
 #: journalist_templates/edit_account.html:113
+#, fuzzy
 msgid "Reset 2FA for hardware tokens like Yubikey"
 msgstr ""
+"Yubikey gibi donanımsal belirteçler kullanan iki faktörlü doğrulamaları "
+"sıfırla"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
-msgstr ""
+msgstr "DONANIMSAL BELİRTECİ SIFIRLA"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -1057,20 +1066,23 @@ msgid "CHECK FOR A RESPONSE"
 msgstr "YANITLARI KONTROL EDİN"
 
 #: source_templates/index.html:93
+#, fuzzy
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
 msgstr ""
+"Yukarıdaki araç çubuğunda olan <img src=\"{icon}\" alt=\"shield icon\"> "
+"ikonuna tıklayın."
 
 #: source_templates/index.html:94
 msgid "Select <strong>Advanced Security Settings</strong>"
-msgstr ""
+msgstr "<strong>Gelişmiş Güvenlik Ayarları</strong>nı seçin"
 
 #: source_templates/index.html:95
 msgid "Select <strong>Safest</strong>"
-msgstr ""
+msgstr "<strong>En güvenli</strong>yi seçin"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
-msgstr ""
+msgstr "<a href=\"/\">Bu sayfayı yenileyin</a>, ve her şey hazır!"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
