@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-05-28 18:25+0000\n"
+"PO-Revision-Date: 2019-07-03 21:59+0000\n"
 "Last-Translator: Maria Ovsyannikova <xella.design@gmail.com>\n"
 "Language-Team: Russian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ru/>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 3.4\n"
 "Generated-By: Babel 2.4.0\n"
 
@@ -104,8 +104,9 @@ msgstr ""
 "только {num_chars}."
 
 #: journalist_app/forms.py:37
+#, fuzzy
 msgid "Field can not be more than {max_chars} characters."
-msgstr ""
+msgstr "Поле не может быть длиннее чем {max_chars} знак(а/ов)"
 
 #: journalist_app/forms.py:42 source_app/forms.py:11
 msgid "This field is required."
@@ -420,17 +421,17 @@ msgstr "Имя пользователя с учетом регистра"
 #: journalist_templates/edit_account.html:16
 #: journalist_templates/edit_account.html:36
 msgid "First name"
-msgstr ""
+msgstr "Имя"
 
 #: journalist_templates/admin_add_user.html:42
 #: journalist_templates/edit_account.html:19
 #: journalist_templates/edit_account.html:39
 msgid "Last name"
-msgstr ""
+msgstr "Фамилия"
 
 #: journalist_templates/admin_add_user.html:52
 msgid "First name and last name are optional"
-msgstr ""
+msgstr "Имя и Фамилия необязательны"
 
 #: journalist_templates/admin_add_user.html:56
 msgid "The user's password will be:"
@@ -770,18 +771,23 @@ msgstr ""
 #: journalist_templates/edit_account.html:112
 msgid "Reset 2FA for mobile apps such as FreeOTP or Google Authenticator"
 msgstr ""
+"Сбросить двухэтапную аутентификацию для мобильных приложений, таких как "
+"FreeOTP или Google Authenticator"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
-msgstr ""
+msgstr "СБРОСИТЬ ТОКЕН ПРИЛОЖЕНИЯ"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset 2FA for hardware tokens like Yubikey"
 msgstr ""
+"Сбросить двухэтапную аутентификацию для аппаратных ключей безопасности, "
+"таких как Yubikey"
 
 #: journalist_templates/edit_account.html:113
+#, fuzzy
 msgid "RESET HARDWARE TOKEN"
-msgstr ""
+msgstr "СБРОСИТЬ АППАРАТНЫЙ ТОКЕН"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -1074,18 +1080,19 @@ msgstr "ПРОВЕРИТЬ ОТВЕТЫ"
 #: source_templates/index.html:93
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
 msgstr ""
+"Нажмите <img src=\"{icon}\" alt=\"shield icon\"> на панели инструментов выше"
 
 #: source_templates/index.html:94
 msgid "Select <strong>Advanced Security Settings</strong>"
-msgstr ""
+msgstr "Выберите <strong>Дополнительные настройки безопасности</strong>"
 
 #: source_templates/index.html:95
 msgid "Select <strong>Safest</strong>"
-msgstr ""
+msgstr "Выберите <strong>Самый безопасный</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
-msgstr ""
+msgstr "<a href=\"/\">Обновите эту страницу</a>, и готово!"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
