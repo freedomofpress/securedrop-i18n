@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-07-03 21:59+0000\n"
-"Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
+"PO-Revision-Date: 2019-07-05 14:13+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sv/>\n"
 "Language: sv\n"
@@ -417,7 +417,7 @@ msgstr "Efternamn"
 
 #: journalist_templates/admin_add_user.html:52
 msgid "First name and last name are optional"
-msgstr "För- och efternamn är valfria"
+msgstr "För- och efternamn är valfritt"
 
 #: journalist_templates/admin_add_user.html:56
 msgid "The user's password will be:"
@@ -646,7 +646,7 @@ msgstr "Redigera användaren \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Name &amp; Admin Status"
-msgstr "Ändra namn &amp; Admin status"
+msgstr "Ändra namn och administratorstatus"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -667,7 +667,7 @@ msgstr "Återställ lösenord"
 
 #: journalist_templates/edit_account.html:49
 msgid "SecureDrop uses automatically generated diceware passwords."
-msgstr "SecureDrop använder automatiskt genererade diceware-lösenord."
+msgstr "SecureDrop använder automatiskt genererade Diceware-lösenord."
 
 #: journalist_templates/edit_account.html:50
 msgid ""
@@ -742,7 +742,7 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset 2FA for mobile apps such as FreeOTP or Google Authenticator"
-msgstr "Nollställ 2FA för mobilappar som FreeOTP eller Google Authenticator"
+msgstr "Nollställ tvåfaktorsautentisering för mobilappar som FreeOTP"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
@@ -750,7 +750,7 @@ msgstr "NOLLSTÄLL APP TOKEN"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset 2FA for hardware tokens like Yubikey"
-msgstr "Nollställ 2FA för hårdvarutokens som Yubikey"
+msgstr "Nollställ tvåfaktorsautentisering för hårdvarutokens som YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
@@ -994,9 +994,10 @@ msgid ""
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
-"Din Tor Browsers <a id=\"disable-js\" href=\"\"><strong>Security "
-"Setting</strong></a> är ställd för låg. Använd <img src=\"{icon}\" alt=\""
-"shield icon\"> &nbsp;-knappen i din Tor Browsers menyrad för att ändra det."
+"Din Tor-nettläsares <a id=\"disable-js\" href=\"\""
+"><strong>Säkerhetsinställning</strong></a> är ställd för låg. Använd <img "
+"src=\"{icon}\" alt=\"sköldikon\"> &nbsp;-knappen i din Tor-nettläsars "
+"menyrad för att ändra det."
 
 #: source_templates/index.html:17
 msgid ""
@@ -1050,15 +1051,15 @@ msgstr "KONTROLLERA OM DU FÅTT ETT SVAR"
 
 #: source_templates/index.html:93
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
-msgstr "KLicka på <img src=\"{icon}\" alt=\"shield icon\"> i menyraden ovan"
+msgstr "Klicka på <img src=\"{icon}\" alt=\"sköldikon\"> i menyraden ovan"
 
 #: source_templates/index.html:94
 msgid "Select <strong>Advanced Security Settings</strong>"
-msgstr "Välj <strong>Advanced Security Settings</strong>"
+msgstr "Välj <strong>Avanserade säkerhetsinställningar</strong>"
 
 #: source_templates/index.html:95
 msgid "Select <strong>Safest</strong>"
-msgstr "Välj <strong>Safest</strong>"
+msgstr "Välj <strong>Tryggast</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
