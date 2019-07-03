@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2019-07-04 19:01+0000\n"
-"Last-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -413,7 +413,7 @@ msgstr "Etternavn"
 
 #: journalist_templates/admin_add_user.html:52
 msgid "First name and last name are optional"
-msgstr "Fornavn og etternavn er valgfritt"
+msgstr "For- og etternavn er valgfritt"
 
 #: journalist_templates/admin_add_user.html:56
 msgid "The user's password will be:"
@@ -647,7 +647,7 @@ msgstr "Rediger brukeren \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Name &amp; Admin Status"
-msgstr "Endre navn &amp; Admin status"
+msgstr "Endre navn og administratorstatus"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -668,7 +668,7 @@ msgstr "Tilbakestill passord"
 
 #: journalist_templates/edit_account.html:49
 msgid "SecureDrop uses automatically generated diceware passwords."
-msgstr "SecureDrop bruker automatisk genererte diceware-passord."
+msgstr "SecureDrop bruker automatisk genererte Diceware-passord."
 
 #: journalist_templates/edit_account.html:50
 msgid ""
@@ -743,21 +743,19 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset 2FA for mobile apps such as FreeOTP or Google Authenticator"
-msgstr ""
-"Nullstill tofaktor-oppsett for mobilapper som FreeOTP eller Google "
-"Authenticator"
+msgstr "Nullstill tofaktor-oppsett for mobilprogrammer som FreeOTP"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
-msgstr "TILBAKESTILL APP OPPSETT"
+msgstr "TILBAKESTILL MOBILPROGRAMSYMBOL"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset 2FA for hardware tokens like Yubikey"
-msgstr "Tilbakestill tofaktor-oppsett for fysiske nøkler som Yubikey"
+msgstr "Tilbakestill tofaktor-oppsett for fysiske nøkler som YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
-msgstr "TILBAKESTILL FYSISK NØKKEL"
+msgstr "TILBAKESTILL MASKINVARESYMBOL"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -993,10 +991,9 @@ msgid ""
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
-"Din Tor-nettlesers <a id=\"disable-js\" href=\"\""
-"><strong>sikkerhetsinnstillinger</strong></a> er satt for lavt. Bruk <img "
-"src=\"{icon}\" alt=\"shield icon\"> &nbsp;knappen i nettleserens "
-"verktøylinje for å endre nivået."
+"<a id=\"disable-js\" href=\"\"><strong>Sikkerhetsinnstillingene</strong></a> "
+"i din Tor-nettleser er satt for lavt. Bruk <img src=\"{icon}\" alt=\""
+"skjoldikon\"> &nbsp;knappen i nettleserens verktøylinje for å endre nivået."
 
 #: source_templates/index.html:17
 msgid ""
@@ -1048,19 +1045,20 @@ msgstr "SE ETTER SVAR"
 
 #: source_templates/index.html:93
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
-msgstr "Klikk på <img src=\"{icon}\" alt=\"shield icon\"> i verktøylinjen over"
+msgstr ""
+"Klikk på <img src=\"{icon}\" alt=\"skjoldikon\"> i verktøylinjen ovenfor"
 
 #: source_templates/index.html:94
 msgid "Select <strong>Advanced Security Settings</strong>"
-msgstr "Velg <strong>Advanced Security Settings</strong>"
+msgstr "Velg <strong>Advanserte sikkerhetsinnstillinger</strong>"
 
 #: source_templates/index.html:95
 msgid "Select <strong>Safest</strong>"
-msgstr "Velg <strong>Safest</strong>"
+msgstr "Velg <strong>Tryggest</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
-msgstr "<a href=\"/\">Oppdater denne siden</a>, og du er ferdig!"
+msgstr "<a href=\"/\">Last inn siden igjen</a>, og du er ferdig."
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
