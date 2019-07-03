@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2019-07-03 19:47+0000\n"
-"Last-Translator: Pander <pander@users.sourceforge.net>\n"
+"Last-Translator: Thom <thom.pp9@gmail.com>\n"
 "Language-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/nl/>\n"
 "Language: nl\n"
@@ -71,7 +71,7 @@ msgstr ""
 #: journalist_app/admin.py:184 journalist_app/admin.py:192
 #: journalist_app/utils.py:281
 msgid "Name not updated: {}"
-msgstr "Naam is niet geüpdatet: {}"
+msgstr "Naam is niet bijgewerkt: {}"
 
 #: journalist_app/admin.py:228
 msgid "Deleted user '{user}'"
@@ -198,7 +198,7 @@ msgstr[1] "{num} collecties verwijderd"
 
 #: journalist_app/utils.py:279
 msgid "Name updated."
-msgstr "Naam is geüpdatet."
+msgstr "Naam is bijgewerkt."
 
 #: journalist_app/utils.py:288
 msgid "You submitted a bad password! Password not changed."
