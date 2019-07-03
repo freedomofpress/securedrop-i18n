@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.12.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-06-28 18:39+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"PO-Revision-Date: 2019-07-04 10:53+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/is/>\n"
 "Language: is\n"
@@ -683,7 +683,7 @@ msgstr "Endurstilla lykilorð"
 
 #: journalist_templates/edit_account.html:49
 msgid "SecureDrop uses automatically generated diceware passwords."
-msgstr "SecureDrop notar sjálfvirkt útbúin diceware-lykilorð."
+msgstr "SecureDrop notar sjálfvirkt útbúin Diceware-lykilorð."
 
 #: journalist_templates/edit_account.html:50
 msgid ""
@@ -767,7 +767,7 @@ msgstr "ENDURSTILLA AUÐKENNINGARTEIKN FORRITA"
 #: journalist_templates/edit_account.html:113
 msgid "Reset 2FA for hardware tokens like Yubikey"
 msgstr ""
-"Endurstilla tveggja-þátta auðkenningu fyrir vélbúnaðarteikn eins og Yubikey"
+"Endurstilla tveggja-þátta auðkenningu fyrir vélbúnaðarteikn eins og YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
