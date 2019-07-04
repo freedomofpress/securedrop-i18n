@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-05-28 12:58+0000\n"
-"Last-Translator: Ahmad Gharbeia <gharbeia@gmail.com>\n"
+"PO-Revision-Date: 2019-07-04 15:19+0000\n"
+"Last-Translator: Thalia Rahme <trahme@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ar/>\n"
 "Language: ar\n"
@@ -68,7 +68,7 @@ msgstr "تمّ قبول رمز الاستيثاق ذي المعاملين للم
 #: journalist_app/admin.py:184 journalist_app/admin.py:192
 #: journalist_app/utils.py:281
 msgid "Name not updated: {}"
-msgstr ""
+msgstr "الاسم غير محدث: {}"
 
 #: journalist_app/admin.py:228
 msgid "Deleted user '{user}'"
@@ -104,7 +104,7 @@ msgstr ""
 
 #: journalist_app/forms.py:37
 msgid "Field can not be more than {max_chars} characters."
-msgstr ""
+msgstr "لا يمكن للحقل أن يتخطى {max_chars} رمز."
 
 #: journalist_app/forms.py:42 source_app/forms.py:11
 msgid "This field is required."
@@ -207,7 +207,7 @@ msgstr[5] "حُذِفَت {num} مجموعة"
 
 #: journalist_app/utils.py:279
 msgid "Name updated."
-msgstr ""
+msgstr "تم تحديث الاسم."
 
 #: journalist_app/utils.py:288
 msgid "You submitted a bad password! Password not changed."
@@ -431,17 +431,17 @@ msgstr "حقل اسم المستخدم يمايز ما بين الأحرف ال�
 #: journalist_templates/edit_account.html:16
 #: journalist_templates/edit_account.html:36
 msgid "First name"
-msgstr ""
+msgstr "الاسم"
 
 #: journalist_templates/admin_add_user.html:42
 #: journalist_templates/edit_account.html:19
 #: journalist_templates/edit_account.html:39
 msgid "Last name"
-msgstr ""
+msgstr "اسم العائلة"
 
 #: journalist_templates/admin_add_user.html:52
 msgid "First name and last name are optional"
-msgstr ""
+msgstr "الاسم والشهرة اخيتاريان"
 
 #: journalist_templates/admin_add_user.html:56
 msgid "The user's password will be:"
@@ -672,7 +672,7 @@ msgstr "تعديل حساب المستخدم \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Name &amp; Admin Status"
-msgstr ""
+msgstr "تغيير الاسم &amp ; حالة المسؤول"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -685,7 +685,7 @@ msgstr "حرّر حسابك"
 
 #: journalist_templates/edit_account.html:31
 msgid "Change Name"
-msgstr ""
+msgstr "تغيير الاسم"
 
 #: journalist_templates/edit_account.html:47
 msgid "Reset Password"
@@ -694,6 +694,8 @@ msgstr "صفِّر كلمة السر"
 #: journalist_templates/edit_account.html:49
 msgid "SecureDrop uses automatically generated diceware passwords."
 msgstr ""
+"يستخدم سيكيور دروب  كلمات سرّ مولّدة تلقائياً عن طريق نظام \"ديسوار\" أو رمي "
+"النرد"
 
 #: journalist_templates/edit_account.html:50
 msgid ""
@@ -763,19 +765,20 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset 2FA for mobile apps such as FreeOTP or Google Authenticator"
-msgstr ""
+msgstr "إعادة ضبت 2FA لبرمجيات الموبايل كFreeOTP أو تطبيق مصادقة غوغل"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
-msgstr ""
+msgstr "إعادة ضبط رمز البرمجية"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset 2FA for hardware tokens like Yubikey"
-msgstr ""
+msgstr "إعادة ضبط المصادقة ذات العاملين لرموز أجهزة الكمبيوتر كيوبيكاي Yubikey"
 
 #: journalist_templates/edit_account.html:113
+#, fuzzy
 msgid "RESET HARDWARE TOKEN"
-msgstr ""
+msgstr "إعادة ضبط رمز الجهاز"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -1007,6 +1010,9 @@ msgid ""
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
+"إن ال <a id=\"disable-js\" href=\"\"><strong>Security Setting</strong></a> "
+"المتعلّق بمتصفح تور الخاص بك منخفظ جداً. من فضلك اضغط على زر ال  <img src=\""
+"{icon}\" alt=\"shield icon\"> &nbsp المتواجد في شريط أدوات متصفحك لتغييره."
 
 #: source_templates/index.html:17
 msgid ""
@@ -1057,18 +1063,21 @@ msgstr "تَفحَّص إنْ وصلك رَدّ منّا"
 #: source_templates/index.html:93
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
 msgstr ""
+"إضغط على <img src=\"{icon}\" alt=\"shield icon\"> الموجود على شريط الأدوات "
+"أعلاه"
 
 #: source_templates/index.html:94
 msgid "Select <strong>Advanced Security Settings</strong>"
-msgstr ""
+msgstr "قم باختيار <strong>1 إعدادات الأمان المتقدمة </strong>"
 
 #: source_templates/index.html:95
 msgid "Select <strong>Safest</strong>"
-msgstr ""
+msgstr "قم باختيار <strong> الأكثر أماناً </strong>"
 
 #: source_templates/index.html:97
+#, fuzzy
 msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
-msgstr ""
+msgstr "<a href=\"/\"> حدّث هذه الصحفة </a> وها قد انتهت العملية!"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
