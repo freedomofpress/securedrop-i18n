@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.12.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-07-04 10:53+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Last-Translator: Oktavia <ojonsdottir@irex.org>\n"
 "Language-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/is/>\n"
 "Language: is\n"
@@ -25,7 +25,7 @@ msgstr "Fyrir {time} síðan"
 
 #: journalist_app/__init__.py:91 journalist_app/__init__.py:136
 msgid "You have been logged out due to inactivity"
-msgstr "Þú hefur verið skráð(ur) út vegna aðgerðaleysis"
+msgstr "Útskráning vegna aðgerðaleysis"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
@@ -49,7 +49,7 @@ msgid ""
 "try again."
 msgstr ""
 "Það kom upp villa með sjálfvirkt útbúna lykilorðið. Notandi var ekki búinn "
-"til. Endilega reyndu aftur."
+"til. Vinsamlegast reyndu aftur."
 
 #: journalist_app/admin.py:86 journalist_app/admin.py:170
 msgid "Username \"{user}\" already taken."
@@ -59,7 +59,7 @@ msgstr "Notandanafnið \"{user}\" er þegar í notkun."
 msgid ""
 "An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
-"Villa kom upp við að vista þennan notanda í gagnagrunninn. Hafðu samband við "
+"Villa kom upp við vistun þessa notanda í gagnagrunninn. Hafðu samband við "
 "kerfisstjórann þinn."
 
 #: journalist_app/admin.py:113
@@ -99,8 +99,8 @@ msgstr "HOTP leynilyklar eru 40 stafa langir - þú hefur sett inn {num_chars}."
 msgid ""
 "Field must be at least {min_chars} characters long but only got {num_chars}."
 msgstr ""
-"Gagnareitur verður að vera a.m.k. {min_chars} stafa langur en var þarna "
-"aðeins {num_chars} stafir."
+"Gagnareitur verður að vera a.m.k. {min_chars} stafa langur en var aðeins "
+"{num_chars} stafir."
 
 #: journalist_app/forms.py:37
 msgid "Field can not be more than {max_chars} characters."
@@ -125,7 +125,7 @@ msgstr "Þú getur einungis hlaðið upp PNG-myndskrár."
 #: journalist_app/main.py:120 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
 msgid "An unexpected error occurred! Please inform your admin."
-msgstr "Óvænt villa kom upp! Hafðu samband við kerfisstjórann þinn."
+msgstr "Óvæn villa kom upp! Hafðu samband við kerfisstjórann þinn."
 
 #: journalist_app/main.py:131
 msgid "Thanks. Your reply has been stored."
@@ -175,7 +175,8 @@ msgstr ""
 #: journalist_app/utils.py:126
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
-"Ógilt snið leynilykils: notaðu einungis stafi frá A-F og tölur frá 0-9."
+"Ógilt snið leynilykils: vinsamlegast notaðu einungis stafi frá A-F og tölur "
+"frá 0-9."
 
 #: journalist_app/utils.py:132
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
@@ -201,7 +202,7 @@ msgstr "Nafn uppfært."
 
 #: journalist_app/utils.py:288
 msgid "You submitted a bad password! Password not changed."
-msgstr "Þú sendir inn rangt lykilorð! Lykilorðið hefur ekki breyst."
+msgstr "Þú sendir inn rangt lykilorð! Lykilorðið ekki breytt."
 
 #: journalist_app/utils.py:295
 msgid ""
@@ -218,7 +219,7 @@ msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
 msgstr ""
-"Lykilorð uppfært. Ekki gleyma að vista það í KeePassX gagnagrunninn þinn. "
+"Lykilorð uppfært. Ekki gleyma að vista það í KeePassX gagnagrunninum þínum. "
 "Nýja lykilorðið:"
 
 #: journalist_app/utils.py:321
@@ -417,7 +418,7 @@ msgstr "Notandanafn er háð há/lágstöfum"
 #: journalist_templates/edit_account.html:16
 #: journalist_templates/edit_account.html:36
 msgid "First name"
-msgstr "Nafn"
+msgstr "Fornafn"
 
 #: journalist_templates/admin_add_user.html:42
 #: journalist_templates/edit_account.html:19
@@ -427,7 +428,7 @@ msgstr "Kenninafn"
 
 #: journalist_templates/admin_add_user.html:52
 msgid "First name and last name are optional"
-msgstr "Nafn og kenninafn (eftirnafn) eru valfrjáls"
+msgstr "Fornafn og kenninafn (eftirnafn) eru valfrjáls"
 
 #: journalist_templates/admin_add_user.html:56
 msgid "The user's password will be:"
