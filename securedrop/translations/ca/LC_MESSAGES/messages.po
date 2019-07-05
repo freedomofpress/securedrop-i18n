@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-07-05 16:20+0000\n"
-"Last-Translator: Joan Montané <joan@montane.cat>\n"
+"Last-Translator: Benet (BennyBeat) R. i Camps <bennybeat@gmail.com>\n"
 "Language-Team: Catalan <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ca/>\n"
 "Language: ca\n"
@@ -25,7 +25,7 @@ msgstr "fa {time}"
 
 #: journalist_app/__init__.py:91 journalist_app/__init__.py:136
 msgid "You have been logged out due to inactivity"
-msgstr "Heu estat desconnectat per inactivitat"
+msgstr "S'ha desconnectat la sessió per inactivitat"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
@@ -33,7 +33,7 @@ msgstr "La contrasenya o el codi de doble factor no són vàlids."
 
 #: journalist_app/account.py:49
 msgid "Token in two-factor authentication verified."
-msgstr "Testimoni de dos components verificat."
+msgstr "S'ha verificat el testimoni de factor doble."
 
 #: journalist_app/account.py:53 journalist_app/admin.py:120
 msgid "Could not verify token in two-factor authentication."
