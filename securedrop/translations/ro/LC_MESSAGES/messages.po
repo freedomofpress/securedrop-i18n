@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-05-28 18:25+0000\n"
-"Last-Translator: robbpa <robbpaun@gmail.com>\n"
+"PO-Revision-Date: 2019-07-08 12:39+0000\n"
+"Last-Translator: Andrada Fiscutean <andradaf@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
 "Language: ro\n"
@@ -72,7 +72,7 @@ msgstr ""
 #: journalist_app/admin.py:184 journalist_app/admin.py:192
 #: journalist_app/utils.py:281
 msgid "Name not updated: {}"
-msgstr ""
+msgstr "Nume neupdatat: {}"
 
 #: journalist_app/admin.py:228
 msgid "Deleted user '{user}'"
@@ -107,7 +107,7 @@ msgstr ""
 
 #: journalist_app/forms.py:37
 msgid "Field can not be more than {max_chars} characters."
-msgstr ""
+msgstr "Câmpul nu poate avea mai mult de {max_chars} caractere."
 
 #: journalist_app/forms.py:42 source_app/forms.py:11
 msgid "This field is required."
@@ -207,7 +207,7 @@ msgstr[2] "{num} de colecții au fost șterse"
 
 #: journalist_app/utils.py:279
 msgid "Name updated."
-msgstr ""
+msgstr "Nume updatat."
 
 #: journalist_app/utils.py:288
 msgid "You submitted a bad password! Password not changed."
@@ -427,17 +427,17 @@ msgstr "Numele de utilizator distinge literele mari și mici"
 #: journalist_templates/edit_account.html:16
 #: journalist_templates/edit_account.html:36
 msgid "First name"
-msgstr ""
+msgstr "Prenume"
 
 #: journalist_templates/admin_add_user.html:42
 #: journalist_templates/edit_account.html:19
 #: journalist_templates/edit_account.html:39
 msgid "Last name"
-msgstr ""
+msgstr "Nume de familie"
 
 #: journalist_templates/admin_add_user.html:52
 msgid "First name and last name are optional"
-msgstr ""
+msgstr "Prenumele și numele de familie sunt opționale"
 
 #: journalist_templates/admin_add_user.html:56
 msgid "The user's password will be:"
@@ -675,7 +675,7 @@ msgstr "Editează utilizatorul „{user}”"
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Name &amp; Admin Status"
-msgstr ""
+msgstr "Schimbare nume &amp; Status Administrator"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -688,7 +688,7 @@ msgstr "Editează-ți contul"
 
 #: journalist_templates/edit_account.html:31
 msgid "Change Name"
-msgstr ""
+msgstr "Schimbare Nume"
 
 #: journalist_templates/edit_account.html:47
 msgid "Reset Password"
@@ -696,7 +696,7 @@ msgstr "Resetează parola"
 
 #: journalist_templates/edit_account.html:49
 msgid "SecureDrop uses automatically generated diceware passwords."
-msgstr ""
+msgstr "SecureDrop folosește parole generate automat prin metoda diceware."
 
 #: journalist_templates/edit_account.html:50
 msgid ""
@@ -773,18 +773,22 @@ msgstr ""
 #: journalist_templates/edit_account.html:112
 msgid "Reset 2FA for mobile apps such as FreeOTP or Google Authenticator"
 msgstr ""
+"Resetează 2FA (autentificarea cu doi factori) pentru aplicații mobile ca "
+"FreeOTP sau Google Authenticator"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
-msgstr ""
+msgstr "RESETEAZĂ APLICAȚIA TOKEN"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset 2FA for hardware tokens like Yubikey"
 msgstr ""
+"Resetează 2FA (autentificarea cu doi factori) pentru token-uri hardware ca "
+"Yubikey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
-msgstr ""
+msgstr "RESETEAZĂ TOKEN HARDWARE"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -1024,6 +1028,10 @@ msgid ""
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
+"<strong>Setările de securitate</strong> ale browserului tău Tor <a id"
+"=\"disable-js\" href=\"\"></a>sunt prea scăzute. Folosește butonul <img src="
+"\"{icon}\" alt=\"shield icon\"> &nbsp;din toolbar-ul browserului pentru a le "
+"schimba."
 
 #: source_templates/index.html:17
 msgid ""
@@ -1076,18 +1084,19 @@ msgstr "VERIFICĂ DACĂ AI UN RĂSPUNS"
 #: source_templates/index.html:93
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
 msgstr ""
+"Dă click pe <img src=\"{icon}\" alt=\"shield icon\"> în toolbarul de deasupra"
 
 #: source_templates/index.html:94
 msgid "Select <strong>Advanced Security Settings</strong>"
-msgstr ""
+msgstr "Selectează <strong>Setări Avansate de Securitate</strong>"
 
 #: source_templates/index.html:95
 msgid "Select <strong>Safest</strong>"
-msgstr ""
+msgstr "Selectează <strong>Cel mai sigur</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
-msgstr ""
+msgstr "<a href=\"/\">Dă-i refresh acestei pagini</a>, și ai terminat!"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
