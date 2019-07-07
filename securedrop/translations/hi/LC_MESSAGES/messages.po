@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-05-28 18:25+0000\n"
-"Last-Translator: Drashti <drashtipandya37@gmail.com>\n"
+"PO-Revision-Date: 2019-07-08 12:35+0000\n"
+"Last-Translator: AbhayKaushik <abhay.gyanbharati@gmail.com>\n"
 "Language-Team: Hindi <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/hi/>\n"
 "Language: hi\n"
@@ -67,7 +67,7 @@ msgstr "उपयोगकर्ता {user} का दो कारक प्�
 #: journalist_app/admin.py:184 journalist_app/admin.py:192
 #: journalist_app/utils.py:281
 msgid "Name not updated: {}"
-msgstr ""
+msgstr "नाम अपडेट नही हुआ: {}"
 
 #: journalist_app/admin.py:228
 msgid "Deleted user '{user}'"
@@ -100,7 +100,7 @@ msgstr "फ़ील्ड कम से कम {min_chars} वर्ण लं�
 
 #: journalist_app/forms.py:37
 msgid "Field can not be more than {max_chars} characters."
-msgstr ""
+msgstr "फ़ील्ड {max_chars} वर्ण से लंबा नहीं होना चाहिए।"
 
 #: journalist_app/forms.py:42 source_app/forms.py:11
 msgid "This field is required."
@@ -187,7 +187,7 @@ msgstr[1] "{num} संग्रह हटाए गए"
 
 #: journalist_app/utils.py:279
 msgid "Name updated."
-msgstr ""
+msgstr "नाम अपडेट किया गया ।"
 
 #: journalist_app/utils.py:288
 msgid "You submitted a bad password! Password not changed."
@@ -398,17 +398,17 @@ msgstr "उपयोगकर्ता के नाम केस-संवे�
 #: journalist_templates/edit_account.html:16
 #: journalist_templates/edit_account.html:36
 msgid "First name"
-msgstr ""
+msgstr "प्रथम नाम"
 
 #: journalist_templates/admin_add_user.html:42
 #: journalist_templates/edit_account.html:19
 #: journalist_templates/edit_account.html:39
 msgid "Last name"
-msgstr ""
+msgstr "अन्तिम नाम"
 
 #: journalist_templates/admin_add_user.html:52
 msgid "First name and last name are optional"
-msgstr ""
+msgstr "प्रथम और अन्तिम नाम वैकल्पिक है"
 
 #: journalist_templates/admin_add_user.html:56
 msgid "The user's password will be:"
@@ -639,7 +639,7 @@ msgstr "उपयोगकर्ता \"{user}\" संपादित कर�
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Name &amp; Admin Status"
-msgstr ""
+msgstr "नाम और व्यवस्थापक अवस्था बदलें"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -652,7 +652,7 @@ msgstr "अपना खाता संपादित करें"
 
 #: journalist_templates/edit_account.html:31
 msgid "Change Name"
-msgstr ""
+msgstr "नाम बदलें"
 
 #: journalist_templates/edit_account.html:47
 msgid "Reset Password"
@@ -660,7 +660,7 @@ msgstr "पासवर्ड रीसेट"
 
 #: journalist_templates/edit_account.html:49
 msgid "SecureDrop uses automatically generated diceware passwords."
-msgstr ""
+msgstr "SecureDrop स्व - उत्पन्न डाईसवेर पासवर्ड का उपयोग करता है ।"
 
 #: journalist_templates/edit_account.html:50
 msgid ""
@@ -733,18 +733,20 @@ msgstr ""
 #: journalist_templates/edit_account.html:112
 msgid "Reset 2FA for mobile apps such as FreeOTP or Google Authenticator"
 msgstr ""
+"मोबाइल एप्लिकेशन जैसे कि (FreeOTP) या (Google Authenticator) के लिए दो-कारक "
+"प्रमाणीकरण को रीसेट करें"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
-msgstr ""
+msgstr "एप्लिकेशन  टोकन रीसेट  करें"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset 2FA for hardware tokens like Yubikey"
-msgstr ""
+msgstr "Yubikey जैसे हार्डवेयर टोकन के लिए दो-कारक प्रमाणीकरण को रीसेट  करें"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
-msgstr ""
+msgstr "हार्डवेयर टोकन रीसेट  करें"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -975,6 +977,9 @@ msgid ""
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
+"आपके Tor  ब्राउज़र  का <a id=\"disable-js\" href=\"\"><strong>सुरक्षा "
+"स्तर</strong></a> बहुत कम है। ब्राउज़र टूलबार के <img src=\"{icon}\" alt=\""
+"shield icon\"> &nbsp; बटन से इसे बदलें।"
 
 #: source_templates/index.html:17
 msgid ""
@@ -1027,18 +1032,20 @@ msgstr "जवाब के लिए जाँच करें"
 #: source_templates/index.html:93
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
 msgstr ""
+"ऊपर दिये गये टूलबार मे <img src=\"{icon}\" alt=\"shield icon\"> &nbsp; पर "
+"क्लिक करें"
 
 #: source_templates/index.html:94
 msgid "Select <strong>Advanced Security Settings</strong>"
-msgstr ""
+msgstr "<strong>उन्न्त सुरक्षा स्तर</strong> चुनें"
 
 #: source_templates/index.html:95
 msgid "Select <strong>Safest</strong>"
-msgstr ""
+msgstr "<strong>सबसे सुरक्षित</strong> चुनें"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
-msgstr ""
+msgstr "<a href=\"/\">पेज रीफ़्रेश करें</a> और कार्य पूर्न !"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
