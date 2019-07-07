@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-07-07 16:50+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Last-Translator: Andrey <andrey@mailbox.org>\n"
 "Language-Team: Russian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ru/>\n"
 "Language: ru\n"
@@ -70,7 +70,7 @@ msgstr "Токен двухфакторной аутентификации дл�
 #: journalist_app/admin.py:184 journalist_app/admin.py:192
 #: journalist_app/utils.py:281
 msgid "Name not updated: {}"
-msgstr ""
+msgstr "Имя не обновлено: {}"
 
 #: journalist_app/admin.py:228
 msgid "Deleted user '{user}'"
@@ -104,9 +104,8 @@ msgstr ""
 "только {num_chars}."
 
 #: journalist_app/forms.py:37
-#, fuzzy
 msgid "Field can not be more than {max_chars} characters."
-msgstr "Поле не может быть длиннее чем {max_chars} знак(а/ов)"
+msgstr "В поле можно ввести не более {max_chars} символов."
 
 #: journalist_app/forms.py:42 source_app/forms.py:11
 msgid "This field is required."
@@ -203,7 +202,7 @@ msgstr[2] "{num} коллекций удалено"
 
 #: journalist_app/utils.py:279
 msgid "Name updated."
-msgstr ""
+msgstr "Имя обновлено."
 
 #: journalist_app/utils.py:288
 msgid "You submitted a bad password! Password not changed."
@@ -431,7 +430,7 @@ msgstr "Фамилия"
 
 #: journalist_templates/admin_add_user.html:52
 msgid "First name and last name are optional"
-msgstr "Имя и Фамилия необязательны"
+msgstr "Имя и фамилия необязательны"
 
 #: journalist_templates/admin_add_user.html:56
 msgid "The user's password will be:"
@@ -675,7 +674,7 @@ msgstr "Редактировать пользователя \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Name &amp; Admin Status"
-msgstr ""
+msgstr "Изменение имени &amp; статуса администратора"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -688,7 +687,7 @@ msgstr "Изменить свою учетную запись"
 
 #: journalist_templates/edit_account.html:31
 msgid "Change Name"
-msgstr ""
+msgstr "Изменить имя"
 
 #: journalist_templates/edit_account.html:47
 msgid "Reset Password"
@@ -697,6 +696,8 @@ msgstr "Сбросить пароль"
 #: journalist_templates/edit_account.html:49
 msgid "SecureDrop uses automatically generated diceware passwords."
 msgstr ""
+"SecureDrop использует автоматически генерируемые методом игральной кости "
+"пароли."
 
 #: journalist_templates/edit_account.html:50
 msgid ""
@@ -785,7 +786,6 @@ msgstr ""
 "таких как YubiKey"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
 msgid "RESET HARDWARE TOKEN"
 msgstr "СБРОСИТЬ АППАРАТНЫЙ ТОКЕН"
 
@@ -1028,6 +1028,9 @@ msgid ""
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
+"Уровень настроек безопасности <a id=\"disable-js\" href=\"\"><strong>Tor "
+"Browser</strong></a> слишком низкий. Используйте <img src=\"{icon}\" alt=\""
+"shield icon\"> &nbsp;кнопку на панели инструментов для их изменения."
 
 #: source_templates/index.html:17
 msgid ""
@@ -1139,8 +1142,8 @@ msgid ""
 "Please rest assured that we were able to download your submission, and check "
 "back again later for a reply."
 msgstr ""
-"Пожалуйста, будьте уверены, что мы смогли загрузить Ваши отправленные "
-"данные. Проверьте ещё раз позже, чтобы получить ответ."
+"Мы подтверждаем, что нам удалось получить ваши данные. Зайдите позже, чтобы "
+"увидеть наш ответ."
 
 #: source_templates/lookup.html:18
 msgid "Submit Files or Messages"
