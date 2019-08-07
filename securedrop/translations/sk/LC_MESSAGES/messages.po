@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-08-13 20:38+0000\n"
-"Last-Translator: 1000101 <jan.hrnko@satoshilabs.com>\n"
+"Last-Translator: Oliver <oweb@pm.me>\n"
 "Language-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sk/>\n"
 "Language: sk\n"
@@ -444,6 +444,11 @@ msgid ""
 "of the 6-digit codes from the app to confirm that two factor "
 "authentication is set up correctly."
 msgstr ""
+"Máte takmer hotovo! Pre dokončenie pridávania tohoto používateľa, požiadajte "
+"danú osobu o nasledovanie nižšie uvedených pokynov k zapnutiu dvojfaktorovej "
+"autentifikácie pomocou FreeOTP. Akonáhle pridali záznam pre tento účet do "
+"aplikácie, požiadajte ich aby zadali jeden z 6-miestnych kódov pre povrdenie "
+"správnosti fungovania dvojfaktorovej autentifikácie."
 
 #: journalist_templates/base.html:23
 msgid "Logged on as"
@@ -539,33 +544,37 @@ msgstr "Zmazať potvrdenie"
 
 #: journalist_templates/col.html:71
 msgid "Are you sure you want to delete the selected documents?"
-msgstr ""
+msgstr "Ste si istí, že chcete vymazať označené dokumenty?"
 
 #: journalist_templates/col.html:86
 msgid "No documents to display."
-msgstr ""
+msgstr "Žiadne dokumenty k zobrazeniu."
 
 #: journalist_templates/col.html:93
 msgid "You can write a secure reply to the person who submitted these documents:"
 msgstr ""
+"Môžete napísať zabezpečenú odpoveď pre osobu, ktorá predložila tieto "
+"dokumenty:"
 
 #: journalist_templates/col.html:102
 msgid "You've flagged this source for reply."
-msgstr ""
+msgstr "Označili ste tento zdroj pre odpoveď."
 
 #: journalist_templates/col.html:103
 msgid ""
 "An encryption key will be generated for the source the next time they log"
 " in, after which you will be able to reply to the source here."
 msgstr ""
+"Keď sa zdroj nabudúce prihlási, bude mu vygenerovaný šifrovací kľúč. "
+"Následnete tu budete mať môžnosť tomuto zdroju odpovedať."
 
 #: journalist_templates/col.html:105
 msgid "Click below if you would like to write a reply to this source."
-msgstr ""
+msgstr "Kliknite nižšie, ak si prajete odpovedať tomuto zdroju."
 
 #: journalist_templates/col.html:109
 msgid "FLAG THIS SOURCE FOR REPLY"
-msgstr ""
+msgstr "OZNAČIŤ TENTO ZDROJ PRE ODPOVEĎ"
 
 #: journalist_templates/col.html:114
 msgid ""
@@ -573,14 +582,17 @@ msgid ""
 "this, the files seen here will be unrecoverable and the source will no "
 "longer be able to login using their previous codename.</em>"
 msgstr ""
+"Kliknite nižšie pre zmazanie zbierky tohoto zdroja. <em>Varovanie: Ak toto "
+"urobíte, zobrazené súbory budú neobnoviteľné a zdroju nebude naďalej "
+"umožnené prihlásiť sa pod predošlým krycím menom.</em>"
 
 #: journalist_templates/col.html:121
 msgid "DELETE SOURCE AND SUBMISSIONS"
-msgstr ""
+msgstr "ZMAZAŤ ZDROJ A PRÍSPEVKY"
 
 #: journalist_templates/col.html:129
 msgid "Are you sure you want to delete this collection?"
-msgstr ""
+msgstr "Ste si istí, že chcete zmazať túto zbierku?"
 
 #: journalist_templates/config.html:7
 msgid "Instance Configuration"
@@ -588,31 +600,33 @@ msgstr ""
 
 #: journalist_templates/config.html:9
 msgid "Alerts"
-msgstr ""
+msgstr "Výstrahy"
 
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr ""
+"Pošlite zašifrovaný email pre overenie správnosti fungovania OSSEC výstrah:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
-msgstr ""
+msgstr "POSLAŤ TESTOVACIU OSSEC VÝSTRAHU"
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
-msgstr ""
+msgstr "Logo Obrázok"
 
 #: journalist_templates/config.html:23
 msgid "Here you can update the image displayed on the SecureDrop web interfaces:"
 msgstr ""
+"Tu môžete aktualizovať obrázok zobrazený vo webových rozhraniach SecureDropu:"
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
-msgstr ""
+msgstr "Odporúčaná veľkosť: 500px * 450px"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
-msgstr ""
+msgstr "AKTUALIZOVAŤ LOGO"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -622,79 +636,83 @@ msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
 msgstr[0] ""
+"Nasledujúci súbor bol označený pre <strong>1nenávratné vymazanie</strong>2:"
 msgstr[1] ""
+"Nasledujúce súbory boli označené pre <strong>3nenávratné vymazanie</strong>4:"
 msgstr[2] ""
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
-msgstr ""
+msgstr "VYMAZAŤ SÚBORY NAVŽDY"
 
 #: journalist_templates/delete.html:23
 msgid "Return to the list of documents for {source_name}…"
-msgstr ""
+msgstr "Vrátiť sa na zoznam dokumentov od {source_name}…"
 
 #: journalist_templates/edit_account.html:6
 msgid "Edit user \"{user}\""
-msgstr ""
+msgstr "Upraviť používateľa \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Name &amp; Admin Status"
-msgstr ""
+msgstr "Zmeniť Meno &amp; Status Správcu"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
 msgid "UPDATE"
-msgstr ""
+msgstr "AKTUALIZOVAŤ"
 
 #: journalist_templates/edit_account.html:30
 msgid "Edit your account"
-msgstr ""
+msgstr "Upraviť váš účet"
 
 #: journalist_templates/edit_account.html:31
 msgid "Change Name"
-msgstr ""
+msgstr "Zmeniť Meno"
 
 #: journalist_templates/edit_account.html:47
 msgid "Reset Password"
-msgstr ""
+msgstr "Resetovať Heslo"
 
 #: journalist_templates/edit_account.html:49
 msgid "SecureDrop uses automatically generated diceware passwords."
-msgstr ""
+msgstr "SecureDrop používa automaticky generované diceware heslá."
 
 #: journalist_templates/edit_account.html:50
 msgid ""
 "Your password will be changed immediately, so you will need to save it "
 "before pressing the \"Reset Password\" button."
 msgstr ""
+"Vaše heslo sa zmení okamžite, takže si ho budete musieť uložiť pred "
+"stlačením tlačítka \"Resetovať Heslo\"."
 
 #: journalist_templates/edit_account.html:56
 msgid "Please enter your current password and two-factor code."
-msgstr ""
+msgstr "Prosím zadajte vaše súčasné heslo a dvojfaktorový kód."
 
 #: journalist_templates/edit_account.html:61
 msgid "Current Password"
-msgstr ""
+msgstr "Aktuálne Heslo"
 
 #: journalist_templates/edit_account.html:62 journalist_templates/login.html:11
 msgid "Two-factor Code"
-msgstr ""
+msgstr "Dvojfaktorový kód"
 
 #: journalist_templates/edit_account.html:68
 msgid "The user's password will be changed to:"
-msgstr ""
+msgstr "Heslo pre používateľa bude zmenené na:"
 
 #: journalist_templates/edit_account.html:70
 msgid "Your password will be changed to:"
-msgstr ""
+msgstr "Vaše heslo bude zmenené na:"
 
 #: journalist_templates/edit_account.html:75
 msgid "RESET PASSWORD"
-msgstr ""
+msgstr "RESETOVAŤ HESLO"
 
 #: journalist_templates/edit_account.html:80
 msgid "Reset Two-Factor Authentication"
-msgstr ""
+msgstr "Resetovať Dvojfaktorovú Autentifikáciu"
 
 #: journalist_templates/edit_account.html:83
 msgid ""
@@ -737,7 +755,7 @@ msgstr ""
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
-msgstr ""
+msgstr "Vďaka!"
 
 #: journalist_templates/flag.html:8
 msgid ""
