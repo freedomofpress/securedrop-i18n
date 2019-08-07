@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-08-07 19:19+0000\n"
+"PO-Revision-Date: 2019-08-13 20:38+0000\n"
 "Last-Translator: 1000101 <jan.hrnko@satoshilabs.com>\n"
 "Language-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sk/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 3.7.1\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:14
@@ -493,47 +493,49 @@ msgstr "Naozaj si prajete vygenerovať nové krycie meno?"
 
 #: journalist_templates/col.html:16
 msgid "CONFIRM"
-msgstr ""
+msgstr "POTVRDIŤ"
 
 #: journalist_templates/col.html:22
 msgid ""
 "The documents are stored encrypted for security. To read them, you will "
 "need to decrypt them using GPG."
 msgstr ""
+"Dokumenty sú uložené a zašifrované z dôvodu bezpečnosti. Ak si ich chcete "
+"prečítať, musíte ich dešifrovať za pomoci GPG."
 
 #: journalist_templates/col.html:26
 msgid "Download Selected"
-msgstr ""
+msgstr "Stiahnuť označené"
 
 #: journalist_templates/col.html:28
 msgid "Delete Selected"
-msgstr ""
+msgstr "Zmazať označené"
 
 #: journalist_templates/col.html:38 journalist_templates/col.html:58
 #: journalist_templates/col.html:91
 msgid "Reply"
-msgstr ""
+msgstr "Odpovedať"
 
 #: journalist_templates/col.html:41 journalist_templates/col.html:48
 msgid "Read"
-msgstr ""
+msgstr "Čítať"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
-msgstr ""
+msgstr "Neprečítané"
 
 #: journalist_templates/col.html:56
 msgid "Uploaded Document"
-msgstr ""
+msgstr "Nahratý dokument"
 
 #: journalist_templates/col.html:60
 msgid "Message"
-msgstr ""
+msgstr "Správa"
 
 #: journalist_templates/col.html:70 journalist_templates/col.html:128
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
-msgstr ""
+msgstr "Zmazať potvrdenie"
 
 #: journalist_templates/col.html:71
 msgid "Are you sure you want to delete the selected documents?"
