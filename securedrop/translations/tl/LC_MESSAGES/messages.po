@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-08-13 23:38+0000\n"
+"PO-Revision-Date: 2019-08-14 18:38+0000\n"
 "Last-Translator: redshiftzero <jen@freedom.press>\n"
 "Language-Team: Tagalog <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tl/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: template_filters.py:14
 msgid "{time} ago"
-msgstr "Test"
+msgstr ""
 
 #: journalist_app/__init__.py:91 journalist_app/__init__.py:136
 msgid "You have been logged out due to inactivity"
