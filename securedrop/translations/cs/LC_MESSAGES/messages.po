@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-08-13 20:38+0000\n"
+"PO-Revision-Date: 2019-08-18 18:38+0000\n"
 "Last-Translator: michaela-bot <michaela.rybickova@gmail.com>\n"
 "Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/cs/>\n"
@@ -592,7 +592,7 @@ msgstr ""
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
-msgstr ""
+msgstr "POSLAT TESTOVACÍ UPOZORNĚNÍ OSSEC"
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
@@ -601,14 +601,15 @@ msgstr ""
 #: journalist_templates/config.html:23
 msgid "Here you can update the image displayed on the SecureDrop web interfaces:"
 msgstr ""
+"Zde můžete aktualizovat obrázek zobrazený ve webovém rozhraní SecureDrop:"
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
-msgstr ""
+msgstr "Doporučená velikost: 500px * 450px"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
-msgstr ""
+msgstr "AKTUALIZOVAT LOGO"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -617,42 +618,42 @@ msgid ""
 msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Následující soubor byl vybrán pro  <strong>trvalé smazání</strong>:"
+msgstr[1] "Následující soubory byly vybrány pro  <strong>trvalé smazání</strong>:"
 msgstr[2] ""
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
-msgstr ""
+msgstr "TRVALE SMAZAT SOUBORY"
 
 #: journalist_templates/delete.html:23
 msgid "Return to the list of documents for {source_name}…"
-msgstr ""
+msgstr "Vrátit se k seznamu dokumentů pro {source_name}…"
 
 #: journalist_templates/edit_account.html:6
 msgid "Edit user \"{user}\""
-msgstr ""
+msgstr "Upravit uživatele \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Name &amp; Admin Status"
-msgstr ""
+msgstr "Změnit jméno &amp; Admin Status"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
 msgid "UPDATE"
-msgstr ""
+msgstr "AKTUALIZOVAT"
 
 #: journalist_templates/edit_account.html:30
 msgid "Edit your account"
-msgstr ""
+msgstr "Upravit Váš účet"
 
 #: journalist_templates/edit_account.html:31
 msgid "Change Name"
-msgstr ""
+msgstr "Změnit Jméno"
 
 #: journalist_templates/edit_account.html:47
 msgid "Reset Password"
-msgstr ""
+msgstr "Resetovat heslo"
 
 #: journalist_templates/edit_account.html:49
 msgid "SecureDrop uses automatically generated diceware passwords."
@@ -663,34 +664,36 @@ msgid ""
 "Your password will be changed immediately, so you will need to save it "
 "before pressing the \"Reset Password\" button."
 msgstr ""
+"Vaše heslo bude okamžitě změněno, proto si ho musíte uložit předtím než "
+"stisknete tlačítko \"Resetovat heslo\"."
 
 #: journalist_templates/edit_account.html:56
 msgid "Please enter your current password and two-factor code."
-msgstr ""
+msgstr "Prosím zadejte své aktuální heslo a dvoufaktorový kód."
 
 #: journalist_templates/edit_account.html:61
 msgid "Current Password"
-msgstr ""
+msgstr "Aktuální heslo"
 
 #: journalist_templates/edit_account.html:62 journalist_templates/login.html:11
 msgid "Two-factor Code"
-msgstr ""
+msgstr "Dvoufaktorový kód"
 
 #: journalist_templates/edit_account.html:68
 msgid "The user's password will be changed to:"
-msgstr ""
+msgstr "Heslo tohoto uživatele bude změněno na:"
 
 #: journalist_templates/edit_account.html:70
 msgid "Your password will be changed to:"
-msgstr ""
+msgstr "Vaše heslo bude změněno na:"
 
 #: journalist_templates/edit_account.html:75
 msgid "RESET PASSWORD"
-msgstr ""
+msgstr "RESETOVAT HESLO"
 
 #: journalist_templates/edit_account.html:80
 msgid "Reset Two-Factor Authentication"
-msgstr ""
+msgstr "Resetovat dvoufaktorovou autentizaci"
 
 #: journalist_templates/edit_account.html:83
 msgid ""
