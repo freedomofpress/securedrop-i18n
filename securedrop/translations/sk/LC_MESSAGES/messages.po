@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-08-14 22:38+0000\n"
-"Last-Translator: Oliver <oweb@pm.me>\n"
+"PO-Revision-Date: 2019-08-26 18:38+0000\n"
+"Last-Translator: Peter Kona <ikona23@gmail.com>\n"
 "Language-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sk/>\n"
 "Language: sk\n"
@@ -1016,11 +1016,11 @@ msgstr ""
 
 #: source_templates/index.html:41
 msgid "Submit for the first time"
-msgstr ""
+msgstr "Odoslané po prvý krat"
 
 #: source_templates/index.html:48
 msgid "Already submitted something?"
-msgstr ""
+msgstr "Už ste niečo odoslali?"
 
 #: source_templates/index.html:54
 msgid "If this is your first time submitting to journalists, start here."
