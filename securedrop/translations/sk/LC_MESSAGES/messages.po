@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-08-28 17:38+0000\n"
+"PO-Revision-Date: 2019-08-28 22:38+0000\n"
 "Last-Translator: Oliver <oweb@pm.me>\n"
 "Language-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sk/>\n"
@@ -1000,6 +1000,10 @@ msgid ""
 "Setting</strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield"
 " icon\"> &nbsp;button in your browser’s toolbar to change it."
 msgstr ""
+"<a id=\"disable-js\" href=\"\"><strong>Úroveň zabezpečenia</strong></a> vo "
+"vašom Tor prehliadači je príliš nízka.  Zmeňte to použím tlačítka s <img src="
+"\"{icon}\" alt=\"ikonkou štítu\"> &nbsp; v paneli nástrojov vašeho "
+"prehliadača."
 
 #: source_templates/index.html:17
 msgid ""
@@ -1008,6 +1012,10 @@ msgid ""
 "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
 "warning to continue."
 msgstr ""
+"<strong>Odporúča sa pre prístup k SecureDropu používať Tor "
+"Prehliadač:</strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">"
+"Zistite ako to nainštalovať</a>, alebo ignorujte toto varovanie a pokračujte "
+"ďalej."
 
 #: source_templates/index.html:18
 msgid ""
@@ -1017,6 +1025,11 @@ msgid ""
 "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
 "warning to continue."
 msgstr ""
+"<strong>Odporúča sa používať desktopovú verziu Tor Prehlidača pre prístup k "
+"SecureDropu, pretože Orfox neposkytuje rovnakú úroveň zabezpečenia a "
+"súkromia ako desktopové verzie.</strong><a id=\"recommend-tor\" href=\""
+"{tor_browser_url}\">Zistite ako to nainštalovať</a>, alebo ignorujte toto "
+"varovanie a pokračujte ďalej."
 
 #: source_templates/index.html:41
 msgid "Submit for the first time"
@@ -1035,22 +1048,25 @@ msgid ""
 "If you have already submitted to journalists, log in here to check for "
 "responses."
 msgstr ""
+"Ak ste už niečo posielali žurnalistom, prihláste sa tu pre kontrolu odpovedí."
 
 #: source_templates/index.html:73
 msgid "CHECK FOR A RESPONSE"
-msgstr ""
+msgstr "SKONTROLOVAŤ ODPOVEDE"
 
 #: source_templates/index.html:93
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
 msgstr ""
+"Kliknite na <img src=\"{icon}\" alt=\"ikonku štítu\"> v paneli nástrojov "
+"vyššie"
 
 #: source_templates/index.html:94
 msgid "Select <strong>Advanced Security Settings</strong>"
-msgstr ""
+msgstr "Vyberte <strong>Rozšírené Bezpečnostné Nastavenia</strong>"
 
 #: source_templates/index.html:95
 msgid "Select <strong>Safest</strong>"
-msgstr ""
+msgstr "Vyberte <strong>Najbezpečnejšie</strong>"
 
 #: source_templates/index.html:97
 msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
@@ -1058,20 +1074,20 @@ msgstr "<a href=\"/\">Obnovte túto stránku</a>, a máte hotovo!"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
-msgstr ""
+msgstr "Zadajte Krycie meno"
 
 #: source_templates/login.html:12
 msgid "Enter your codename"
-msgstr ""
+msgstr "Zadajte vaše krycie meno"
 
 #: source_templates/login.html:25 source_templates/lookup.html:49
 msgid "CANCEL"
-msgstr ""
+msgstr "ZRUŠIŤ"
 
 #: source_templates/logout_flashed_message.html:4
 #: source_templates/session_timeout.html:5
 msgid "Important!"
-msgstr ""
+msgstr "Dôležité!"
 
 #: source_templates/logout_flashed_message.html:5
 msgid ""
@@ -1079,10 +1095,13 @@ msgid ""
 "the onion button in the Tor browser's toolbar to clear all history of "
 "your SecureDrop usage from this device."
 msgstr ""
+"Ďakujeme za ukončenie vašej návštevy! Prosím vyberte \"Nová Identita\" spoza "
+"cibuľového tlačítka v paneli nástrojov Tor Prehliadača pre vymazanie celej "
+"histórie vašeho používania SecureDropu na tomto zariadení."
 
 #: source_templates/lookup.html:10
 msgid "Sorry we haven't responded yet!"
-msgstr ""
+msgstr "Ospravedlňujeme sa za to, že sme ešte sme neodpovedali!"
 
 #: source_templates/lookup.html:11
 msgid ""
