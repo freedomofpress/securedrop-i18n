@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-08-26 18:38+0000\n"
-"Last-Translator: Peter Kona <ikona23@gmail.com>\n"
+"PO-Revision-Date: 2019-08-28 17:38+0000\n"
+"Last-Translator: Oliver <oweb@pm.me>\n"
 "Language-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sk/>\n"
 "Language: sk\n"
@@ -985,6 +985,10 @@ msgid ""
 " questions or are interested in additional information. Unlike passwords,"
 " there is no way to retrieve a lost codename."
 msgstr ""
+"Keďže nesledujeme užívateľov služby <strong>SecureDrop</strong>, toto krycie "
+"meno je jediný spôsob ako s vami budeme môcť v budúcnosti komunikovať, ak "
+"budeme mať otázky, alebo budeme potrebovať ďalšie informácie. Narozdiel od "
+"hesiel sa krycie meno nedá obnoviť."
 
 #: source_templates/generate.html:44 source_templates/index.html:65
 msgid "SUBMIT DOCUMENTS"
@@ -1016,7 +1020,7 @@ msgstr ""
 
 #: source_templates/index.html:41
 msgid "Submit for the first time"
-msgstr "Odoslané po prvý krat"
+msgstr "Odoslať prvýkrát"
 
 #: source_templates/index.html:48
 msgid "Already submitted something?"
