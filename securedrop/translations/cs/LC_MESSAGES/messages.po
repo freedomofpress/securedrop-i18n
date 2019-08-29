@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-08-18 18:38+0000\n"
-"Last-Translator: michaela-bot <michaela.rybickova@gmail.com>\n"
+"PO-Revision-Date: 2019-08-29 21:39+0000\n"
+"Last-Translator: 1000101 <jan.hrnko@satoshilabs.com>\n"
 "Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/cs/>\n"
 "Language: cs\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: template_filters.py:14
 msgid "{time} ago"
-msgstr ""
+msgstr "před {time}"
 
 #: journalist_app/__init__.py:91 journalist_app/__init__.py:136
 msgid "You have been logged out due to inactivity"
@@ -74,19 +74,19 @@ msgstr "Jméno nebylo aktualizováno"
 
 #: journalist_app/admin.py:228
 msgid "Deleted user '{user}'"
-msgstr ""
+msgstr "Smazán uživatel '{user}'"
 
 #: journalist_app/admin.py:254
 msgid "Test alert sent. Please check your email."
-msgstr ""
+msgstr "Testovací upozornění zasláno. Prosím zkontrolujte váš e-mail."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
-msgstr ""
+msgstr "Kolekce {source_name} smazána"
 
 #: journalist_app/col.py:56
 msgid "No collections selected."
-msgstr ""
+msgstr "Nevybrali jste žádnou kolekci."
 
 #: journalist_app/decorators.py:15
 msgid "Only admins can access this page."
@@ -94,7 +94,7 @@ msgstr "Na tuto stránku mají přístup pouze administrátoři."
 
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
-msgstr ""
+msgstr "HOTP hesla jsou 40 znaků dlouhé - zadali jste {num_chars} znaků."
 
 #: journalist_app/forms.py:30
 msgid ""
@@ -159,45 +159,45 @@ msgstr "Přihlášení selhalo."
 #: journalist_app/utils.py:94
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Prosím vyčkejte alespoň {seconds} sekundu než se přihlásite znovu."
+msgstr[1] "Prosím vyčkejte alespoň {seconds} sekundy než se přihlásite znovu."
+msgstr[2] "Prosím vyčkejte alespoň {seconds} sekund než se přihlásite znovu."
 
 #: journalist_app/utils.py:105
 msgid ""
 "Please wait for a new code from your two-factor token or application "
 "before trying again."
-msgstr ""
+msgstr "Dřív než budete pokračovat prosím vyčkejte na nový kód."
 
 #: journalist_app/utils.py:126
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
-msgstr ""
+msgstr "Nesprávný formát hesla: prosím zadávejte jenom písmena A-F a čísla 0-9."
 
 #: journalist_app/utils.py:132
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
-msgstr ""
+msgstr "Nesprávná forma hesla: lichá délka hesla. Udělali ste překlep?"
 
 #: journalist_app/utils.py:188
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Podání smazáno."
+msgstr[1] "{num} podání smazány."
+msgstr[2] "{num} podání smazáno."
 
 #: journalist_app/utils.py:241
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{num} kolekce smazaná"
+msgstr[1] "{num} kolekce smazané"
+msgstr[2] "{num} kolekcí smazaných"
 
 #: journalist_app/utils.py:279
 msgid "Name updated."
-msgstr ""
+msgstr "Jméno upravené."
 
 #: journalist_app/utils.py:288
 msgid "You submitted a bad password! Password not changed."
-msgstr ""
+msgstr "Vložili jste nesprávné heslo! Heslo nebylo změneno."
 
 #: journalist_app/utils.py:295
 msgid ""
@@ -218,38 +218,38 @@ msgstr ""
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
-msgstr ""
+msgstr "Zavřít"
 
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:75
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušit"
 
 #: journalist_templates/_source_row.html:23
 msgid "1 doc"
 msgid_plural "{doc_num} docs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "1 dokument"
+msgstr[1] "{doc_num} dokumenty"
+msgstr[2] "{doc_num} dokumentů"
 
 #: journalist_templates/_source_row.html:24
 msgid "1 message"
 msgid_plural "{msg_num} messages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "1 zpráva"
+msgstr[1] "{msg_num} zprávy"
+msgstr[2] "{msg_num} zpráv"
 
 #: journalist_templates/_source_row.html:27
 msgid "1 unread"
 msgid_plural "{num_unread} unread"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "1 nepřečtená"
+msgstr[1] "{num_unread} nepřečteny"
+msgstr[2] "{num_unread} nepřečteno"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
 msgid "Change Secret"
-msgstr ""
+msgstr "Změnit heslo"
 
 #: journalist_templates/account_edit_hotp_secret.html:7
 #: journalist_templates/admin_add_user.html:68
@@ -261,12 +261,12 @@ msgstr "HOTP heslo"
 #: journalist_templates/admin_edit_hotp_secret.html:10
 #: source_templates/login.html:23
 msgid "CONTINUE"
-msgstr "Pokračujte"
+msgstr "POKRAČOVAT"
 
 #: journalist_templates/account_new_two_factor.html:4
 #: journalist_templates/admin_new_user_two_factor.html:5
 msgid "Enable FreeOTP"
-msgstr ""
+msgstr "Zapnout FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:5
 msgid ""
@@ -293,7 +293,7 @@ msgstr "Otevřete aplikaci FreeOTP"
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
 msgid "Tap the QR code symbol at the top"
-msgstr "Ťukněte na symbol QR kódu."
+msgstr "Ťukněte na symbol QR kódu"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -315,7 +315,7 @@ msgstr "Jakmile jste naskenovali čárový kód, zadejte šestimístný kód ní
 #: journalist_templates/account_new_two_factor.html:17
 #: journalist_templates/admin_new_user_two_factor.html:20
 msgid "Enable YubiKey (OATH-HOTP)"
-msgstr ""
+msgstr "Povolit YubiKey (OATH-HOTP)"
 
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:21
@@ -380,11 +380,11 @@ msgstr "nikdy"
 
 #: journalist_templates/admin.html:42
 msgid "No users to display"
-msgstr ""
+msgstr "Žádný uživatel na zobrazení"
 
 #: journalist_templates/admin.html:48
 msgid "INSTANCE CONFIG"
-msgstr ""
+msgstr "KONFIGURACE INSTANCE"
 
 #: journalist_templates/admin_add_user.html:4
 #: journalist_templates/config.html:4 journalist_templates/edit_account.html:7
@@ -459,10 +459,11 @@ msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" "
 "alt=\"SecureDrop\">"
 msgstr ""
+"Poháněno <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop\">"
 
 #: journalist_templates/base.html:55
 msgid "Powered by <em>SecureDrop {version}</em>."
-msgstr ""
+msgstr "Poháněno <em>SecureDrop {version}</em>."
 
 #: journalist_templates/col.html:10
 msgid "All Sources"
@@ -485,7 +486,7 @@ msgstr "Změnte krycí jméno"
 
 #: journalist_templates/col.html:14
 msgid "Are you sure you want to generate a new codename?"
-msgstr ""
+msgstr "Jste si jisti, že chcete vygenerovat nové krycí jméno?"
 
 #: journalist_templates/col.html:16
 msgid "CONFIRM"
@@ -501,11 +502,11 @@ msgstr ""
 
 #: journalist_templates/col.html:26
 msgid "Download Selected"
-msgstr ""
+msgstr "Stáhnout vybrané"
 
 #: journalist_templates/col.html:28
 msgid "Delete Selected"
-msgstr ""
+msgstr "Smazat vybrané"
 
 #: journalist_templates/col.html:38 journalist_templates/col.html:58
 #: journalist_templates/col.html:91
@@ -547,7 +548,7 @@ msgstr ""
 
 #: journalist_templates/col.html:102
 msgid "You've flagged this source for reply."
-msgstr ""
+msgstr "Označili jste tento zdroj na odpověď."
 
 #: journalist_templates/col.html:103
 msgid ""
@@ -561,7 +562,7 @@ msgstr ""
 
 #: journalist_templates/col.html:109
 msgid "FLAG THIS SOURCE FOR REPLY"
-msgstr ""
+msgstr "OZNAČIT TENTO ZDROJ NA ODPOVĚĎ"
 
 #: journalist_templates/col.html:114
 msgid ""
@@ -572,23 +573,23 @@ msgstr ""
 
 #: journalist_templates/col.html:121
 msgid "DELETE SOURCE AND SUBMISSIONS"
-msgstr ""
+msgstr "SMAZAT ZDROJ A PODÁNÍ"
 
 #: journalist_templates/col.html:129
 msgid "Are you sure you want to delete this collection?"
-msgstr ""
+msgstr "Jste si jisti, že chcete smazat tuto kolekci?"
 
 #: journalist_templates/config.html:7
 msgid "Instance Configuration"
-msgstr ""
+msgstr "Nastavení instance"
 
 #: journalist_templates/config.html:9
 msgid "Alerts"
-msgstr ""
+msgstr "Upozornění"
 
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
-msgstr ""
+msgstr "Poslat šifrovaný e-mail na ověření, že OSSEC výstrahy pracují správně:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
@@ -596,7 +597,7 @@ msgstr "POSLAT TESTOVACÍ UPOZORNĚNÍ OSSEC"
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
-msgstr ""
+msgstr "Obrázek loga"
 
 #: journalist_templates/config.html:23
 msgid "Here you can update the image displayed on the SecureDrop web interfaces:"
@@ -657,7 +658,7 @@ msgstr "Resetovat heslo"
 
 #: journalist_templates/edit_account.html:49
 msgid "SecureDrop uses automatically generated diceware passwords."
-msgstr ""
+msgstr "SecureDrop používá automaticky generované diceware heslá."
 
 #: journalist_templates/edit_account.html:50
 msgid ""
@@ -724,19 +725,19 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
-msgstr ""
+msgstr "RESETOVAT APP TOKEN"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset 2FA for hardware tokens like Yubikey"
-msgstr ""
+msgstr "Resetovat 2FA pro hardvérové tokeny jako Yubikey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
-msgstr ""
+msgstr "RESETOVAT HARDVÉROVÝ TOKEN"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
-msgstr ""
+msgstr "Díky!"
 
 #: journalist_templates/flag.html:8
 msgid ""
@@ -752,51 +753,51 @@ msgstr ""
 
 #: journalist_templates/index.html:4
 msgid "Sources"
-msgstr ""
+msgstr "Zdroje"
 
 #: journalist_templates/index.html:11
 msgid "Download Unread"
-msgstr ""
+msgstr "Stáhnout nepřečtené"
 
 #: journalist_templates/index.html:12
 msgid "Download"
-msgstr ""
+msgstr "Stáhnout"
 
 #: journalist_templates/index.html:13
 msgid "Star"
-msgstr ""
+msgstr "Označit"
 
 #: journalist_templates/index.html:14
 msgid "Un-star"
-msgstr ""
+msgstr "Odznačit"
 
 #: journalist_templates/index.html:47
 msgid "Are you sure you want to delete the selected collections?"
-msgstr ""
+msgstr "Jste si jisti, že chcete smazat označené kolekce?"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
-msgstr ""
+msgstr "Žádné dokumenty nebyli podány!"
 
 #: journalist_templates/js-strings.html:3
 msgid "filter by codename"
-msgstr ""
+msgstr "filtrovat podle krycího jména"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
-msgstr ""
+msgstr "Označit vše"
 
 #: journalist_templates/js-strings.html:5
 msgid "Select Unread"
-msgstr ""
+msgstr "Označit nepřečtené"
 
 #: journalist_templates/js-strings.html:6
 msgid "Select None"
-msgstr ""
+msgstr "Nevybrat nic"
 
 #: journalist_templates/js-strings.html:7
 msgid "Are you sure you want to delete the user {username}?"
-msgstr ""
+msgstr "Jste si jisti, že chcete smazat uživatela {username}?"
 
 #: journalist_templates/js-strings.html:8
 msgid "Are you sure you want to reset two-factor authentication for {username}?"
@@ -808,11 +809,11 @@ msgstr ""
 
 #: journalist_templates/login.html:9
 msgid "Password"
-msgstr ""
+msgstr "Heslo"
 
 #: journalist_templates/login.html:12
 msgid "LOG IN"
-msgstr ""
+msgstr "PŘIHLÁSIT SE"
 
 #: source_app/__init__.py:128
 msgid ""
@@ -827,7 +828,7 @@ msgstr ""
 
 #: source_app/forms.py:18
 msgid "Invalid input."
-msgstr ""
+msgstr "Neplatný vstup."
 
 #: source_app/main.py:33
 msgid ""
@@ -853,28 +854,28 @@ msgstr ""
 
 #: source_app/main.py:241
 msgid "Reply deleted"
-msgstr ""
+msgstr "Odpověd smazána"
 
 #: source_app/main.py:259
 msgid "All replies have been deleted"
-msgstr ""
+msgstr "Všechny odpovědi byli smazány"
 
 #: source_app/main.py:273
 msgid "Sorry, that is not a recognized codename."
-msgstr ""
+msgstr "Promiňte, ale toto není používané krycí jméno."
 
 #: source_templates/base.html:6 source_templates/index.html:4
 msgid "Protecting Journalists and Sources"
-msgstr ""
+msgstr "Chráníme novináře a zdroje"
 
 #: source_templates/base.html:25 source_templates/base.html:45
 #: source_templates/index.html:32 source_templates/index.html:84
 msgid "Powered by"
-msgstr ""
+msgstr "Běží na"
 
 #: source_templates/base.html:34
 msgid "LOG OUT"
-msgstr ""
+msgstr "ODHLÁSIT SE"
 
 #: source_templates/base.html:45 source_templates/index.html:84
 msgid ""
@@ -884,21 +885,21 @@ msgstr ""
 
 #: source_templates/error.html:3
 msgid "Server error"
-msgstr ""
+msgstr "Chyba serveru"
 
 #: source_templates/error.html:5
 msgid ""
 "Sorry, the website encountered an error and was unable to complete your "
 "request."
-msgstr ""
+msgstr "Je nám líto, ale web nebyl schopen dokončit váš požadavek."
 
 #: source_templates/error.html:7 source_templates/notfound.html:7
 msgid "Look up a codename..."
-msgstr ""
+msgstr "Vyhledat krycí jméno..."
 
 #: source_templates/first_submission_flashed_message.html:2
 msgid "Success!"
-msgstr ""
+msgstr "Úspěch!"
 
 #: source_templates/first_submission_flashed_message.html:3
 msgid ""
@@ -908,11 +909,11 @@ msgstr ""
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
-msgstr ""
+msgstr "Zapomněli jste vaše krycí jméno?"
 
 #: source_templates/generate.html:4
 msgid "Welcome"
-msgstr ""
+msgstr "Vítejte"
 
 #: source_templates/generate.html:7
 msgid ""
@@ -937,7 +938,7 @@ msgstr ""
 
 #: source_templates/generate.html:44 source_templates/index.html:65
 msgid "SUBMIT DOCUMENTS"
-msgstr ""
+msgstr "ODESLAT DOKUMENTY"
 
 #: source_templates/index.html:16
 msgid ""
@@ -965,11 +966,11 @@ msgstr ""
 
 #: source_templates/index.html:41
 msgid "Submit for the first time"
-msgstr ""
+msgstr "Odeslat poprvé"
 
 #: source_templates/index.html:48
 msgid "Already submitted something?"
-msgstr ""
+msgstr "Už jste něco odeslali?"
 
 #: source_templates/index.html:54
 msgid "If this is your first time submitting to journalists, start here."
@@ -983,7 +984,7 @@ msgstr ""
 
 #: source_templates/index.html:73
 msgid "CHECK FOR A RESPONSE"
-msgstr ""
+msgstr "ZKONTROLOVAT ODPOVĚĎ"
 
 #: source_templates/index.html:93
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
@@ -1003,20 +1004,20 @@ msgstr ""
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
-msgstr ""
+msgstr "Zadat krycí jméno"
 
 #: source_templates/login.html:12
 msgid "Enter your codename"
-msgstr ""
+msgstr "Zadejte vaše krycí jméno"
 
 #: source_templates/login.html:25 source_templates/lookup.html:49
 msgid "CANCEL"
-msgstr ""
+msgstr "ZRUŠIT"
 
 #: source_templates/logout_flashed_message.html:4
 #: source_templates/session_timeout.html:5
 msgid "Important!"
-msgstr ""
+msgstr "Důležité!"
 
 #: source_templates/logout_flashed_message.html:5
 msgid ""
@@ -1027,7 +1028,7 @@ msgstr ""
 
 #: source_templates/lookup.html:10
 msgid "Sorry we haven't responded yet!"
-msgstr ""
+msgstr "Promiňte že jsme ještě neodpověděli!"
 
 #: source_templates/lookup.html:11
 msgid ""
@@ -1068,7 +1069,7 @@ msgstr ""
 
 #: source_templates/lookup.html:34
 msgid "Write a message."
-msgstr ""
+msgstr "Napsat zprávu."
 
 #: source_templates/lookup.html:56
 msgid "Read Replies"
@@ -1088,11 +1089,11 @@ msgstr ""
 
 #: source_templates/lookup.html:76
 msgid "DELETE"
-msgstr ""
+msgstr "SMAZAT"
 
 #: source_templates/lookup.html:85
 msgid "DELETE ALL REPLIES"
-msgstr ""
+msgstr "SMAZAT VŠECHNY ODPOVĚDI"
 
 #: source_templates/lookup.html:88
 msgid "Are you finished with the replies?"
@@ -1100,35 +1101,35 @@ msgstr ""
 
 #: source_templates/lookup.html:89
 msgid "YES, DELETE ALL REPLIES"
-msgstr ""
+msgstr "ANO, SMAZAT VŠECHNY ODPOVĚDI"
 
 #: source_templates/lookup.html:90
 msgid "NO, NOT YET"
-msgstr ""
+msgstr "NE, JEŠTĚ NE"
 
 #: source_templates/lookup.html:94
 msgid "There are no replies at this time."
-msgstr ""
+msgstr "Momentálně tu nejsou žádné odpovědi."
 
 #: source_templates/lookup.html:103
 msgid "Remember, your codename is:"
-msgstr ""
+msgstr "Zapamatujte si vaše krycí jméno:"
 
 #: source_templates/lookup.html:104
 msgid "Show"
-msgstr ""
+msgstr "Zobrazit"
 
 #: source_templates/lookup.html:106
 msgid "Hide"
-msgstr ""
+msgstr "Skrýt"
 
 #: source_templates/notfound.html:3
 msgid "Page not found"
-msgstr ""
+msgstr "Stránka nenalezena"
 
 #: source_templates/notfound.html:5
 msgid "Sorry, we couldn't locate what you requested."
-msgstr ""
+msgstr "Promiňtě, nemohli jsme najít váš požadavek."
 
 #: source_templates/session_timeout.html:6
 msgid ""
@@ -1141,11 +1142,11 @@ msgstr ""
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
-msgstr ""
+msgstr "Proč je tady upozornění o Tor2Web?"
 
 #: source_templates/tor2web-warning.html:4
 msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
-msgstr ""
+msgstr "Používaní Tor2Web na připojení k SecureDrop neochrání vaši anonymitu."
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
@@ -1162,13 +1163,14 @@ msgstr ""
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
-msgstr ""
+msgstr "Měli by jste použít prohlížeč Tor"
 
 #: source_templates/use-tor-browser.html:4
 msgid ""
 "If you are not using Tor Browser, you <strong>may not be "
 "anonymous</strong>."
 msgstr ""
+"Když nepoužíváte prohlížeč Tor <strong>riskujete svoji anonymitu</strong>."
 
 #: source_templates/use-tor-browser.html:5
 msgid ""
@@ -1193,7 +1195,7 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
-msgstr ""
+msgstr "Proč si stáhnout veřejný klíč novináře?"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
