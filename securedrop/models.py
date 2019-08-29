@@ -17,7 +17,7 @@ from jinja2 import Markup
 from passlib.hash import argon2
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import relationship, backref
-from sqlalchemy import Column, Integer, String, Boolean, DateTime, Binary
+from sqlalchemy import Column, Integer, String, Boolean, DateTime, LargeBinary
 from sqlalchemy.orm.exc import MultipleResultsFound, NoResultFound
 
 from db import db
@@ -30,7 +30,6 @@ if typing.TYPE_CHECKING:
     # statements has to be marked as noqa.
     # http://flake8.pycqa.org/en/latest/user/error-codes.html?highlight=f401
     from typing import Callable, Optional, Union, Dict, List, Any  # noqa: F401
-    from tempfile import _TemporaryFileWrapper  # noqa: F401
     from io import BufferedIOBase  # noqa: F401
     from logging import Logger  # noqa: F401
     from sqlalchemy import Query  # noqa: F401
@@ -394,9 +393,10 @@ class Journalist(db.Model):
     username = Column(String(255), nullable=False, unique=True)
     first_name = Column(String(255))
     last_name = Column(String(255))
-    pw_salt = Column(Binary(32))
-    pw_hash = Column(Binary(256))
+    pw_salt = Column(LargeBinary(32))
+    pw_hash = Column(LargeBinary(256))
     is_admin = Column(Boolean)
+    session_nonce = Column(Integer, nullable=False, default=0)
 
     otp_secret = Column(String(16), default=pyotp.random_base32)
     is_totp = Column(Boolean, default=True)
@@ -670,10 +670,10 @@ class Journalist(db.Model):
         return user
 
     def generate_api_token(self, expiration):
-        # type: (int) -> unicode
+        # type: (int) -> str
         s = TimedJSONWebSignatureSerializer(
             current_app.config['SECRET_KEY'], expires_in=expiration)
-        return s.dumps({'id': self.id}).decode('ascii')
+        return s.dumps({'id': self.id}).decode('ascii')  # type:ignore
 
     @staticmethod
     def validate_token_is_not_expired_or_invalid(token):

@@ -25,8 +25,8 @@ securedrop_app_gpg_fingerprint: "65A1B5FF195B56353CC63DFFCC40EF1228271441"
 source_apache_log_location: "/var/log/apache2/source-error.log"
 apache_logging_level: "info"
 securedrop_supported_locales:
-- el
-- ar
+  - el
+  - ar
 ### Used by the mon role ###
 # The OSSEC alert GPG public key has to be in the install_files/ansible-base/ or
 # install_files/ansible-base/roles/app/files/ directory
@@ -49,6 +49,9 @@ postfix_enable_service: no
 # Permit direct access for SSH in the staging environment.
 # Otherwise, all SSH connections would be forced over Tor.
 enable_ssh_over_tor: false
+
+# v3 onion services should be available in staging for testing.
+v3_onion_services: true
 
 ### Use for backup restores ###
 # If the `backup_zip` variable is defined ansible will copy the defined file to

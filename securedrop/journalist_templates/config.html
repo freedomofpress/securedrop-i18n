@@ -11,8 +11,8 @@
 <p>{{ gettext('Send an encrypted email to verify if OSSEC alerts work correctly:') }}</p>
 
 <p>
-  <a class="btn sd-button" href="{{ url_for('admin.ossec_test') }}" id="test-ossec-alert">
-    <i class="fa fa-bell"></i>{{ gettext('SEND TEST OSSEC ALERT') }}
+  <a class="btn" href="{{ url_for('admin.ossec_test') }}" id="test-ossec-alert">
+    <i class="fa fa-bell"></i> {{ gettext('SEND TEST OSSEC ALERT') }}
   </a>
 </p>
 
@@ -23,7 +23,7 @@
 <p>{{ gettext('Here you can update the image displayed on the SecureDrop web interfaces:') }}</p>
 
 <p>
-  <img src="{{ url_for('main.select_logo') }}" class="logo small" alt="SecureDrop" width="250px">
+  <img src="{{ url_for('main.select_logo') }}" class="logo small" alt="SecureDrop" width="250">
 </p>
 
 <form method="post" enctype="multipart/form-data">
@@ -35,8 +35,8 @@
   <h5>
     {{ gettext('Recommended size: 500px * 450px') }}
   </h5>
-  <button type="submit" class="sd-button" id="submit-logo-update">
-    <i class="fas fa-pencil-alt"></i>{{ gettext('UPDATE LOGO') }}
+  <button type="submit" id="submit-logo-update">
+    <i class="fas fa-pencil-alt"></i> {{ gettext('UPDATE LOGO') }}
   </button>
   {% include 'logo_upload_flashed.html' %}
 </form>

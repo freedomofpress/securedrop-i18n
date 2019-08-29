@@ -14,7 +14,7 @@ from werkzeug.utils import secure_filename
 
 from secure_tempfile import SecureTemporaryFile
 
-from worker import rq_worker_queue
+from worker import create_queue
 
 
 import typing
@@ -25,20 +25,37 @@ if typing.TYPE_CHECKING:
     # statements has to be marked as noqa.
     # http://flake8.pycqa.org/en/latest/user/error-codes.html?highlight=f401
     from typing import List, Type, Union  # noqa: F401
-    from tempfile import _TemporaryFileWrapper  # noqa: F401
+    from tempfile import _TemporaryFileWrapper  # type: ignore # noqa: F401
     from io import BufferedIOBase  # noqa: F401
     from sqlalchemy.orm import Session  # noqa: F401
     from models import Reply, Submission  # noqa: F401
 
 
 VALIDATE_FILENAME = re.compile(
-    "^(?P<index>\d+)\-[a-z0-9-_]*"
-    "(?P<file_type>msg|doc\.(gz|zip)|reply)\.gpg$").match
+    r"^(?P<index>\d+)\-[a-z0-9-_]*"
+    r"(?P<file_type>msg|doc\.(gz|zip)|reply)\.gpg$").match
 
 
 class PathException(Exception):
     """An exception raised by `util.verify` when it encounters a bad path. A path
     can be bad when it is not absolute or not normalized.
+    """
+    pass
+
+
+class TooManyFilesException(Exception):
+    """An exception raised by path_without_filesystem_id when too many
+    files has been found for a given submission or reply.
+    This could be due to a very unlikely collision between
+    journalist_designations.
+    """
+    pass
+
+
+class NoFileFoundException(Exception):
+    """An exception raised by path_without_filesystem_id when a file could
+    not be found for a given submission or reply.
+    This is likely due to an admin manually deleting files from the server.
     """
     pass
 
@@ -104,6 +121,29 @@ class Storage:
         """
         joined = os.path.join(os.path.abspath(self.__storage_path), *s)
         absolute = os.path.abspath(joined)
+        self.verify(absolute)
+        return absolute
+
+    def path_without_filesystem_id(self, filename):
+        # type: (str) -> str
+        """Get the normalized, absolute file path, within
+           `self.__storage_path` for a filename when the filesystem_id
+           is not known.
+        """
+
+        joined_paths = []
+        for rootdir, _, files in os.walk(os.path.abspath(self.__storage_path)):
+            for file_ in files:
+                if file_ in filename:
+                    joined_paths.append(os.path.join(rootdir, file_))
+
+        if len(joined_paths) > 1:
+            raise TooManyFilesException('Found duplicate files!')
+        elif len(joined_paths) == 0:
+            raise NoFileFoundException('File not found: {}'.format(filename))
+        else:
+            absolute = joined_paths[0]
+
         self.verify(absolute)
         return absolute
 
@@ -226,7 +266,7 @@ class Storage:
 
 def async_add_checksum_for_file(db_obj):
     # type: (Union[Submission, Reply]) -> str
-    return rq_worker_queue.enqueue(
+    return create_queue().enqueue(
         queued_add_checksum_for_file,
         type(db_obj),
         db_obj.id,

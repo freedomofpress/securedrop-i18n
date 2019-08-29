@@ -38,12 +38,12 @@ def test_tor_torrc_options(host, torrc_option):
     These options should be present regardless of machine role,
     meaning both Application and Monitor server will have them.
 
-    Separate tests will check for specific hidden services.
+    Separate tests will check for specific Onion Services.
     """
     f = host.file("/etc/tor/torrc")
     assert f.is_file
     assert f.user == "debian-tor"
-    assert oct(f.mode) == "0644"
+    assert f.mode == 0o644
     assert f.contains("^{}$".format(torrc_option))
 
 

@@ -7,6 +7,7 @@ from flask_assets import Environment
 from flask_babel import gettext
 from flask_wtf.csrf import CSRFProtect, CSRFError
 from os import path
+import sys
 from werkzeug.exceptions import default_exceptions
 
 import i18n
@@ -21,7 +22,6 @@ from journalist_app.utils import (get_source, logged_in,
                                   cleanup_expired_revoked_tokens)
 from models import Journalist
 from store import Storage
-from worker import rq_worker_queue
 
 import typing
 # https://www.python.org/dev/peps/pep-0484/#runtime-or-type-checking
@@ -81,9 +81,6 @@ def create_app(config):
         gpg_key_dir=config.GPG_KEY_DIR,
     )
 
-    app.config['RQ_WORKER_NAME'] = config.RQ_WORKER_NAME
-    rq_worker_queue.init_app(app)
-
     @app.errorhandler(CSRFError)
     def handle_csrf_error(e):
         # type: (CSRFError) -> Response
@@ -136,10 +133,30 @@ def create_app(config):
             flash(gettext('You have been logged out due to inactivity'),
                   'error')
 
+        uid = session.get('uid', None)
+        if uid:
+            user = Journalist.query.get(uid)
+            if user and 'nonce' in session and \
+               session['nonce'] != user.session_nonce:
+                session.clear()
+                flash(gettext('You have been logged out due to password change'),
+                      'error')
+
         session['expires'] = datetime.utcnow() + \
             timedelta(minutes=getattr(config,
                                       'SESSION_EXPIRATION_MINUTES',
                                       120))
+
+        # Work around https://github.com/lepture/flask-wtf/issues/275
+        # -- after upgrading from Python 2 to Python 3, any existing
+        # session's csrf_token value will be retrieved as bytes,
+        # causing a TypeError. This simple fix, deleting the existing
+        # token, was suggested in the issue comments. This code will
+        # be safe to remove after Python 2 reaches EOL in 2020, and no
+        # supported SecureDrop installations can still have this
+        # problem.
+        if sys.version_info.major > 2 and type(session.get('csrf_token')) is bytes:
+            del session['csrf_token']
 
         uid = session.get('uid', None)
         if uid:

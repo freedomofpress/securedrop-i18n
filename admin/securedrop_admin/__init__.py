@@ -33,13 +33,20 @@ import string
 import subprocess
 import sys
 import types
+import json
+import base64
 import prompt_toolkit
 from prompt_toolkit.validation import Validator, ValidationError
 import yaml
 from pkg_resources import parse_version
+from cryptography.hazmat.primitives import serialization
+from cryptography.hazmat.primitives.asymmetric import x25519
 
 sdlog = logging.getLogger(__name__)
 RELEASE_KEY = '22245C81E3BAEB4138B36061310F561200F4AD77'
+DEFAULT_KEYSERVER = 'hkps://keys.openpgp.org'
+SUPPORT_ONION_URL = 'http://support6kv2242qx.onion'
+SUPPORT_URL = 'https://support.freedom.press'
 EXIT_SUCCESS = 0
 EXIT_SUBPROCESS_ERROR = 1
 EXIT_INTERRUPT = 2
@@ -79,7 +86,7 @@ class SiteConfig(object):
 
     class ValidateIP(Validator):
         def validate(self, document):
-            if re.match('((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}$',
+            if re.match(r'((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}$',
                         document.text):
                 return True
             raise ValidationError(
@@ -176,7 +183,7 @@ class SiteConfig(object):
 
     class ValidateInt(Validator):
         def validate(self, document):
-            if re.match('\d+$', document.text):
+            if re.match(r'\d+$', document.text):
                 return True
             raise ValidationError(message="Must be an integer")
 
@@ -406,10 +413,32 @@ class SiteConfig(object):
 
     def update_config(self):
         self.config.update(self.user_prompt_config())
+        self.update_onion_version_config()
         self.save()
         self.validate_gpg_keys()
         self.validate_journalist_alert_email()
         return True
+
+    def update_onion_version_config(self):
+        """
+        This method updates onion service related configurations.
+        """
+        v2 = False
+        v3 = True
+        source_ths = os.path.join(self.args.ansible_path, "app-source-ths")
+        if os.path.exists(source_ths):  # Means old installation
+            data = ""
+            with open(source_ths) as fobj:
+                data = fobj.read()
+
+            data = data.strip()
+            if len(data) < 56:  # Old v2 onion address
+                v2 = True
+
+        # Now update the configuration
+        config = {"v2_onion_services": v2,
+                  "v3_onion_services": v3}
+        self.config.update(config)
 
     def user_prompt_config(self):
         config = {}
@@ -443,7 +472,7 @@ class SiteConfig(object):
         if validator:
             kwargs['validator'] = validator
         value = prompt_toolkit.prompt(prompt,
-                                      default=unicode(default, 'utf-8'),
+                                      default=default.decode('utf-8'),
                                       **kwargs)
         if transform:
             return transform(value)
@@ -538,6 +567,73 @@ def setup_logger(verbose=False):
 def sdconfig(args):
     """Configure SD site settings"""
     SiteConfig(args).load_and_update_config()
+    return 0
+
+
+def generate_new_v3_keys():
+    """This function generate new keys for Tor v3 onion
+    services and returns them as as tuple.
+
+    :returns: Tuple(public_key, private_key)
+    """
+
+    private_key = x25519.X25519PrivateKey.generate()
+    private_bytes = private_key.private_bytes(
+        encoding=serialization.Encoding.Raw	,
+        format=serialization.PrivateFormat.Raw,
+        encryption_algorithm=serialization.NoEncryption())
+    public_key = private_key.public_key()
+    public_bytes = public_key.public_bytes(
+        encoding=serialization.Encoding.Raw,
+        format=serialization.PublicFormat.Raw)
+
+    # Base32 encode and remove base32 padding characters (`=`)
+    # Using try/except blocks for Python 2/3 support.
+    try:
+        public = base64.b32encode(public_bytes).replace('=', '') \
+                       .decode("utf-8")
+    except TypeError:
+        public = base64.b32encode(public_bytes).replace(b'=', b'') \
+                       .decode("utf-8")
+    try:
+        private = base64.b32encode(private_bytes).replace('=', '') \
+                        .decode("utf-8")
+    except TypeError:
+        private = base64.b32encode(private_bytes).replace(b'=', b'') \
+                        .decode("utf-8")
+    return public, private
+
+
+def find_or_generate_new_torv3_keys(args):
+    """
+    This method will either read v3 Tor onion service keys if found or generate
+    a new public/private keypair.
+    """
+    secret_key_path = os.path.join(args.ansible_path,
+                                   "tor_v3_keys.json")
+    if os.path.exists(secret_key_path):
+        print('Tor v3 onion service keys already exist in: {}'.format(
+            secret_key_path))
+        return 0
+    # No old keys, generate and store them first
+    app_journalist_public_key, \
+        app_journalist_private_key = generate_new_v3_keys()
+    # For app ssh service
+    app_ssh_public_key, app_ssh_private_key = generate_new_v3_keys()
+    # For mon ssh service
+    mon_ssh_public_key, mon_ssh_private_key = generate_new_v3_keys()
+    tor_v3_service_info = {
+            "app_journalist_public_key": app_journalist_public_key,
+            "app_journalist_private_key": app_journalist_private_key,
+            "app_ssh_public_key": app_ssh_public_key,
+            "app_ssh_private_key": app_ssh_private_key,
+            "mon_ssh_public_key": mon_ssh_public_key,
+            "mon_ssh_private_key": mon_ssh_private_key,
+    }
+    with open(secret_key_path, 'w') as fobj:
+        json.dump(tor_v3_service_info, fobj, indent=4)
+    print('Tor v3 onion service keys generated and stored in: {}'.format(
+        secret_key_path))
     return 0
 
 
@@ -667,14 +763,9 @@ def update(args):
 
     sdlog.info("Verifying signature on latest update...")
 
-    try:
-        # First try to get the release key using Tails default keyserver
-        get_release_key_from_keyserver(args)
-    except subprocess.CalledProcessError:
-        # Now try to get the key from a secondary keyserver.
-        secondary_keyserver = 'hkps://hkps.pool.sks-keyservers.net'
-        get_release_key_from_keyserver(args,
-                                       keyserver=secondary_keyserver)
+    # Retrieve key from openpgp.org keyserver
+    get_release_key_from_keyserver(args,
+                                   keyserver=DEFAULT_KEYSERVER)
 
     git_verify_tag_cmd = ['git', 'tag', '-v', latest_tag]
     try:
@@ -682,14 +773,23 @@ def update(args):
                                              stderr=subprocess.STDOUT,
                                              cwd=args.root)
 
-        good_sig_text = 'Good signature from "SecureDrop Release Signing Key"'
+        good_sig_text = ['Good signature from "SecureDrop Release Signing ' +
+                         'Key"',
+                         'Good signature from "SecureDrop Release Signing ' +
+                         'Key <securedrop-release-key@freedom.press>"']
         bad_sig_text = 'BAD signature'
-        # To ensure that an adversary cannot name a malicious key good_sig_text
-        # we check that bad_sig_text does not appear and that the release key
-        # appears on the second line of the output.
         gpg_lines = sig_result.split('\n')
+
+        # Check if any strings in good_sig_text match against gpg_lines[]
+        good_sig_matches = [s for s in gpg_lines if
+                            any(xs in s for xs in good_sig_text)]
+
+        # To ensure that an adversary cannot name a malicious key good_sig_text
+        # we check that bad_sig_text does not appear, that the release key
+        # appears on the second line of the output, and that there is a single
+        # match from good_sig_text[]
         if RELEASE_KEY in gpg_lines[1] and \
-                sig_result.count(good_sig_text) == 1 and \
+                len(good_sig_matches) == 1 and \
                 bad_sig_text not in sig_result:
             # Finally, we check that there is no branch of the same name
             # prior to reporting success.
@@ -702,7 +802,7 @@ def update(args):
                                         cwd=args.root)
                 sdlog.info("Signature verification failed.")
                 return 1
-            except subprocess.CalledProcessError, e:
+            except subprocess.CalledProcessError as e:
                 if 'not a valid ref' in e.output:
                     # Then there is no duplicate branch.
                     sdlog.info("Signature verification successful.")
@@ -736,8 +836,8 @@ def get_logs(args):
         os.path.join(args.ansible_path, 'securedrop-logs.yml'),
     ]
     subprocess.check_call(ansible_cmd, cwd=args.ansible_path)
-    sdlog.info("Encrypt logs and send to securedrop@freedom.press or upload "
-               "to the SecureDrop support portal.")
+    sdlog.info("Please send the encrypted logs to securedrop@freedom.press or "
+               "upload them to the SecureDrop support portal: " + SUPPORT_URL)
     return 0
 
 
@@ -752,6 +852,17 @@ def set_default_paths(args):
         args.app_path = args.root + "/securedrop"
     args.app_path = os.path.realpath(args.app_path)
     return args
+
+
+def reset_admin_access(args):
+    """Resets SSH access to the SecureDrop servers, locking it to
+    this Admin Workstation."""
+    sdlog.info("Resetting SSH access to the SecureDrop servers")
+    ansible_cmd = [
+        'ansible-playbook',
+        os.path.join(args.ansible_path, 'securedrop-reset-ssh-key.yml'),
+    ]
+    return subprocess.check_call(ansible_cmd, cwd=args.ansible_path)
 
 
 def parse_argv(argv):
@@ -787,6 +898,11 @@ def parse_argv(argv):
                                               help=run_tails_config.__doc__)
     parse_tailsconfig.set_defaults(func=run_tails_config)
 
+    parse_generate_tor_keys = subparsers.add_parser(
+        'generate_v3_keys',
+        help=find_or_generate_new_torv3_keys.__doc__)
+    parse_generate_tor_keys.set_defaults(func=find_or_generate_new_torv3_keys)
+
     parse_backup = subparsers.add_parser('backup',
                                          help=backup_securedrop.__doc__)
     parse_backup.set_defaults(func=backup_securedrop)
@@ -806,6 +922,10 @@ def parse_argv(argv):
     parse_logs = subparsers.add_parser('logs',
                                        help=get_logs.__doc__)
     parse_logs.set_defaults(func=get_logs)
+
+    parse_reset_ssh = subparsers.add_parser('reset_admin_access',
+                                            help=reset_admin_access.__doc__)
+    parse_reset_ssh.set_defaults(func=reset_admin_access)
 
     return set_default_paths(parser.parse_args(argv))
 

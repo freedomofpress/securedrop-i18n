@@ -39,7 +39,7 @@ def collect_custom_header_image(zf):
 
 
 def collect_tor_files(zf):
-    # All of the tor hidden service private keys are stored in the THS specific
+    # All of the tor Onion Service private keys are stored in the THS specific
     # subdirectory `/var/lib/tor/services` backing up this directory will back
     # up all of the THS and ATHS required keys needed to restore all the hidden
     # services on that system.
@@ -74,7 +74,7 @@ def main():
         collect_custom_header_image(zf)
         collect_tor_files(zf)
     encrypt_zip_file(zf_fn)
-    print zf_fn
+    print(zf_fn)
 
 
 if __name__ == "__main__":

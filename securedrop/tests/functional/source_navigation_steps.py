@@ -2,22 +2,19 @@ import tempfile
 import time
 import json
 
-from selenium.webdriver.common.action_chains import ActionChains
-
 
 class SourceNavigationStepsMixin:
     def _is_on_source_homepage(self):
-        return self.wait_for(
-            lambda: self.driver.find_element_by_id("source-index")
-        )
+        return self.wait_for(lambda: self.driver.find_element_by_id("source-index"))
 
     def _is_logged_in(self):
-        return self.wait_for(
-            lambda: self.driver.find_element_by_id("logout")
-        )
+        return self.wait_for(lambda: self.driver.find_element_by_id("logout"))
 
     def _is_on_lookup_page(self):
         return self.wait_for(lambda: self.driver.find_element_by_id("upload"))
+
+    def _is_on_generate_page(self):
+        return self.wait_for(lambda: self.driver.find_element_by_id("create-form"))
 
     def _source_visits_source_homepage(self):
         self.driver.get(self.source_location)
@@ -27,35 +24,18 @@ class SourceNavigationStepsMixin:
         self.driver.get(self.source_location + "/metadata")
         j = json.loads(self.driver.find_element_by_tag_name("body").text)
         assert j["server_os"] == "16.04"
-        assert j["sd_version"] == self.source_app.jinja_env.globals['version']
+        assert j["sd_version"] == self.source_app.jinja_env.globals["version"]
         assert j["gpg_fpr"] != ""
 
     def _source_clicks_submit_documents_on_homepage(self):
-        # First move the cursor to a known position in case it happens to
-        # be hovering over one of the buttons we are testing below.
-        header_image = self.driver.find_element_by_css_selector(".header")
-        ActionChains(self.driver).move_to_element(header_image).perform()
 
         # It's the source's first time visiting this SecureDrop site, so they
         # choose to "Submit Documents".
-        submit_button = self.driver.find_element_by_id("submit-documents-button")
+        self.safe_click_by_id("submit-documents-button")
 
-        submit_button_icon = self.driver.find_element_by_css_selector(
-            "a#submit-documents-button > img.off-hover"
-        )
-        self.wait_for(lambda: submit_button_icon.is_displayed())
-
-        # The source hovers their cursor over the button, and the visual style
-        # of the button changes to encourage them to click it.
-        ActionChains(self.driver).move_to_element(submit_button).perform()
-
-        # Let's make sure toggling the icon image with the hover state is working.
-        hovered_icon_selector = "a#submit-documents-button > img.on-hover"
-        submit_button_hover_icon = self.driver.find_element_by_css_selector(hovered_icon_selector)
-        self.wait_for(lambda: submit_button_hover_icon.is_displayed())
-
-        # The source clicks the submit button.
-        submit_button.click()
+        # The source should now be on the page where they are presented with
+        # a diceware codename they can use for subsequent logins
+        assert self._is_on_generate_page()
 
     def _source_chooses_to_submit_documents(self):
         self._source_clicks_submit_documents_on_homepage()
@@ -102,9 +82,7 @@ class SourceNavigationStepsMixin:
         assert self._is_on_source_homepage()
 
     def _source_proceeds_to_login(self):
-        codename_input = self.driver.find_element_by_id("login-with-existing-codename")
-        codename_input.send_keys(self.source_name)
-
+        self.safe_send_keys_by_id("login-with-existing-codename", self.source_name)
         self.safe_click_by_id("login")
 
         # Check that we've logged in
@@ -114,8 +92,9 @@ class SourceNavigationStepsMixin:
         assert len(replies) == 1
 
     def _source_enters_codename_in_login_form(self):
-        codename_input = self.driver.find_element_by_id("login-with-existing-codename")
-        codename_input.send_keys("ascension hypertext concert synopses")
+        self.safe_send_keys_by_id(
+            "login-with-existing-codename", "ascension hypertext concert synopses"
+        )
 
     def _source_hits_cancel_at_submit_page(self):
         self.driver.find_element_by_id("cancel").click()
@@ -125,24 +104,7 @@ class SourceNavigationStepsMixin:
             assert "Submit Files or Messages" == headline.text
 
     def _source_continues_to_submit_page(self):
-        continue_button = self.driver.find_element_by_id("continue-button")
-
-        continue_button_icon = self.driver.find_element_by_css_selector(
-            "button#continue-button > img.off-hover"
-        )
-        assert continue_button_icon.is_displayed()
-
-        # Hover over the continue button test toggle the icon images
-        # with the hover state.
-        ActionChains(self.driver).move_to_element(continue_button).perform()
-        assert continue_button_icon.is_displayed() is False
-
-        continue_button_hover_icon = self.driver.find_element_by_css_selector(
-            "button#continue-button img.on-hover"
-        )
-        assert continue_button_hover_icon.is_displayed()
-
-        continue_button.click()
+        self.safe_click_by_id("continue-button")
 
         def submit_page_loaded():
             if not hasattr(self, "accept_languages"):
@@ -153,23 +115,14 @@ class SourceNavigationStepsMixin:
 
     def _source_submits_a_file(self):
         with tempfile.NamedTemporaryFile() as file:
-            file.write(self.secret_message.encode('utf-8'))
+            file.write(self.secret_message.encode("utf-8"))
             file.seek(0)
 
             filename = file.name
 
-            file_upload_box = self.driver.find_element_by_css_selector("[name=fh]")
-            file_upload_box.send_keys(filename)
+            self.safe_send_keys_by_css_selector("[name=fh]", filename)
 
-            submit_button = self.driver.find_element_by_id("submit-doc-button")
-            ActionChains(self.driver).move_to_element(submit_button).perform()
-
-            toggled_submit_button_icon = self.driver.find_element_by_css_selector(
-                "button#submit-doc-button img.on-hover"
-            )
-            assert toggled_submit_button_icon.is_displayed()
-
-            submit_button.click()
+            self.safe_click_by_id("submit-doc-button")
             self.wait_for_source_key(self.source_name)
 
             def file_submitted():
@@ -199,8 +152,7 @@ class SourceNavigationStepsMixin:
         time.sleep(self.timeout)
 
     def _source_enters_text_in_message_field(self):
-        text_box = self.driver.find_element_by_css_selector("[name=msg]")
-        text_box.send_keys(self.secret_message)
+        self.safe_send_keys_by_css_selector("[name=msg]", self.secret_message)
 
     def _source_clicks_submit_button_on_submission_page(self):
         submit_button = self.driver.find_element_by_id("submit-doc-button")
@@ -235,9 +187,7 @@ class SourceNavigationStepsMixin:
         self.wait_for(reply_deleted)
 
     def _source_logs_out(self):
-        logout = self.driver.find_element_by_id("logout")
-        logout.send_keys(" ")
-        logout.click()
+        self.safe_click_by_id("logout")
         self.wait_for(lambda: ("Submit for the first time" in self.driver.page_source))
 
     def _source_not_found(self):

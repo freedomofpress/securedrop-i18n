@@ -4,7 +4,6 @@
 from __future__ import print_function
 import argparse
 import io
-import six
 import logging
 import os
 import glob
@@ -37,10 +36,11 @@ class I18NTool(object):
     #
     SUPPORTED_LANGUAGES = {
         'ar': {'name': 'Arabic', 'desktop': 'ar', },
+        'ca': {'name': 'Catalan', 'desktop': 'ca', },
         'de_DE': {'name': 'German', 'desktop': 'de_DE', },
+        'el': {'name': 'Greek', 'desktop': 'el', },
         'es_ES': {'name': 'Spanish', 'desktop': 'es_ES', },
         'fr_FR': {'name': 'French', 'desktop': 'fr', },
-        'el': {'name': 'Greek', 'desktop': 'el', },
         'hi': {'name': 'Hindi', 'desktop': 'hi', },
         'is': {'name': 'Icelandic', 'desktop': 'is', },
         'it_IT': {'name': 'Italian', 'desktop': 'it', },
@@ -60,7 +60,7 @@ class I18NTool(object):
 
     def ensure_i18n_remote(self, args):
         k = {'_cwd': args.root}
-        if six.b('i18n') not in git.remote(**k).stdout:
+        if b'i18n' not in git.remote(**k).stdout:
             git.remote.add('i18n', args.url, **k)
         git.fetch('i18n', **k)
 
@@ -283,20 +283,20 @@ class I18NTool(object):
             if updated:
                 self.upstream_commit(args, code)
 
-    def translators(self, args, path, range):
+    def translators(self, args, path, commit_range):
         """
         Return the set of people who've modified a file in Weblate.
 
         Extracts all the authors of translation changes to the given
-        path in the given range. Translation changes are identified by
-        the presence of "Translated using Weblate" in the commit
-        message.
+        path in the given commit range. Translation changes are
+        identified by the presence of "Translated using Weblate" in
+        the commit message.
         """
         translation_re = re.compile('Translated using Weblate')
 
         path_changes = git(
             '--no-pager', '-C', args.root,
-            'log', '--format=%aN\x1e%s', range, '--', path,
+            'log', '--format=%aN\x1e%s', commit_range, '--', path,
             _encoding='utf-8'
         )
         path_changes = u"{}".format(path_changes)
@@ -311,15 +311,11 @@ class I18NTool(object):
         authors = set()
         diffs = u"{}".format(git('--no-pager', '-C', args.root, 'diff', '--name-only', '--cached'))
 
-        # This change will need to be checked in the next translation
-        # cycle after 0.13.0, to ensure that only recent commits are
-        # being picked up here.
-        update_re = re.compile(r'(?:copied from|  revision:) (\w+)')
-
         for path in sorted(diffs.strip().split('\n')):
             previous_message = u"{}".format(git(
                 '--no-pager', '-C', args.root, 'log', '-n', '1', path,
                 _encoding='utf-8'))
+            update_re = re.compile(r'(?:updated from|  revision:) (\w+)')
             m = update_re.search(previous_message)
             if m:
                 origin = m.group(1)
@@ -369,6 +365,13 @@ class I18NTool(object):
             help='comma separated list of supported languages')
         parser.set_defaults(func=self.update_from_weblate)
 
+    def set_list_locales_parser(self, subps):
+        parser = subps.add_parser('list-locales', help='List supported locales')
+        parser.set_defaults(func=self.list_locales)
+
+    def list_locales(self, args):
+        print(sorted(list(self.SUPPORTED_LANGUAGES.keys()) + ['en_US']))
+
     def set_list_translators_parser(self, subps):
         parser = subps.add_parser('list-translators',
                                   help=('List contributing translators'))
@@ -387,39 +390,38 @@ class I18NTool(object):
         parser.add_argument(
             '--all',
             action="store_true",
-            help="List everyone who's ever contributed."
+            help=(
+                "List everyone who's ever contributed, instead of just since the last "
+                "sync from Weblate."
+            )
         )
         parser.set_defaults(func=self.list_translators)
 
+    def get_last_sync(self):
+        commits = git('--no-pager', 'log', '--format=%h:%s', 'i18n/i18n', _encoding='utf-8')
+        for commit in commits:
+            commit_hash, msg = commit.split(':', 1)
+            if msg.startswith("l10n: sync "):
+                return commit_hash
+        return ""
+
     def list_translators(self, args):
         self.ensure_i18n_remote(args)
-        codes = list(I18NTool.SUPPORTED_LANGUAGES.keys())
-        path_templates = [
-            "install_files/ansible-base/roles/tails-config/templates/{}.po",
-            "securedrop/translations/{}/LC_MESSAGES/messages.po",
-        ]
-        update_re = re.compile(r'(?:copied from|  revision:) (\w+)')
-        for code in sorted(codes):
+        app_template = "securedrop/translations/{}/LC_MESSAGES/messages.po"
+        desktop_template = "install_files/ansible-base/roles/tails-config/templates/{}.po"
+        last_sync = self.get_last_sync()
+        for code, info in sorted(I18NTool.SUPPORTED_LANGUAGES.items()):
             translators = set([])
-            info = I18NTool.SUPPORTED_LANGUAGES[code]
-            paths = [os.path.join(args.root, t.format(code)) for t in path_templates]
+            paths = [
+                app_template.format(code),
+                desktop_template.format(info["desktop"]),
+            ]
             for path in paths:
-                if not os.path.exists(path):
-                    print("Skipping non-existent .po file: {}".format(path), file=sys.stderr)
-                    continue
                 try:
-                    range = "i18n/i18n"
-                    if not args.all:
-                        previous_message = u"{}".format(git(
-                            '--no-pager', '-C', args.root, 'log', '-n', '1', path,
-                            _encoding='utf-8'))
-                        m = update_re.search(previous_message)
-                        if m:
-                            origin = m.group(1)
-                        else:
-                            origin = ''
-                        range = '{}..i18n/i18n'.format(origin)
-                    t = self.translators(args, path, range)
+                    commit_range = "i18n/i18n"
+                    if last_sync and not args.all:
+                        commit_range = '{}..{}'.format(last_sync, commit_range)
+                    t = self.translators(args, path, commit_range)
                     translators.update(t)
                 except Exception as e:
                     print("Could not check git history of {}: {}".format(path, e), file=sys.stderr)
@@ -437,6 +439,7 @@ class I18NTool(object):
         self.set_update_docs_parser(subps)
         self.set_update_from_weblate_parser(subps)
         self.set_list_translators_parser(subps)
+        self.set_list_locales_parser(subps)
 
         return parser
 

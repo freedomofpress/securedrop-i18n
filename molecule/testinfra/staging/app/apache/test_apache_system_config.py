@@ -6,7 +6,6 @@ securedrop_test_vars = pytest.securedrop_test_vars
 
 
 @pytest.mark.parametrize("package", [
-    "libapache2-mod-wsgi",
     "libapache2-mod-xsendfile",
 ])
 def test_apache_apt_packages(host, package):
@@ -58,8 +57,8 @@ def test_apache_config_settings(host, apache_opt):
     assert f.is_file
     assert f.user == "root"
     assert f.group == "root"
-    assert oct(f.mode) == "0644"
-    assert re.search("^{}$".format(re.escape(apache_opt)), f.content, re.M)
+    assert f.mode == 0o644
+    assert re.search("^{}$".format(re.escape(apache_opt)), f.content_string, re.M)
 
 
 @pytest.mark.parametrize("port", [
@@ -78,7 +77,7 @@ def test_apache_ports_config(host, port):
     assert f.is_file
     assert f.user == "root"
     assert f.group == "root"
-    assert oct(f.mode) == "0644"
+    assert f.mode == 0o644
 
     listening_regex = "^Listen {}:{}$".format(re.escape(
             securedrop_test_vars.apache_listening_address), port)

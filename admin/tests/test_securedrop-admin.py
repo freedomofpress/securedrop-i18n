@@ -18,9 +18,11 @@
 #
 
 import io
+import os
 import argparse
 from flaky import flaky
 from os.path import dirname, join, basename, exists
+import json
 import mock
 from prompt_toolkit.validation import ValidationError
 import pytest
@@ -138,47 +140,6 @@ class TestSecureDropAdmin(object):
             assert "Updated to SecureDrop" not in caplog.text
             assert ret_code == 0
 
-    def test_update_gpg_recv_primary_key_failure(self, tmpdir, caplog):
-        """We should try a secondary keyserver if for some reason the primary
-        keyserver is not available."""
-
-        git_repo_path = str(tmpdir)
-        args = argparse.Namespace(root=git_repo_path)
-
-        git_output = ('gpg: Signature made Tue 13 Mar 2018 01:14:11 AM UTC\n'
-                      'gpg:                using RSA key '
-                      '22245C81E3BAEB4138B36061310F561200F4AD77\n'
-                      'gpg: Good signature from "SecureDrop Release '
-                      'Signing Key" [unknown]\n')
-
-        patchers = [
-            mock.patch('securedrop_admin.check_for_updates',
-                       return_value=(True, "0.6.1")),
-            mock.patch('subprocess.check_call'),
-            mock.patch('subprocess.check_output',
-                       side_effect=[
-                           git_output,
-                           subprocess.CalledProcessError(1, 'cmd',
-                                                         'not a valid ref')]),
-            mock.patch('securedrop_admin.get_release_key_from_keyserver',
-                       side_effect=[
-                           subprocess.CalledProcessError(1, 'cmd', 'BANG'),
-                           None])
-            ]
-
-        for patcher in patchers:
-            patcher.start()
-
-        try:
-            ret_code = securedrop_admin.update(args)
-            assert "Applying SecureDrop updates..." in caplog.text
-            assert "Signature verification successful." in caplog.text
-            assert "Updated to SecureDrop" in caplog.text
-            assert ret_code == 0
-        finally:
-            for patcher in patchers:
-                patcher.stop()
-
     def test_get_release_key_from_valid_keyserver(self, tmpdir, caplog):
         git_repo_path = str(tmpdir)
         args = argparse.Namespace(root=git_repo_path)
@@ -190,16 +151,35 @@ class TestSecureDropAdmin(object):
             securedrop_admin.get_release_key_from_keyserver(
                 args, keyserver='test.com')
 
-    def test_update_signature_verifies(self, tmpdir, caplog):
+    @pytest.mark.parametrize("git_output",
+                             ['gpg: Signature made Tue 13 Mar '
+                              '2018 01:14:11 AM UTC\n'
+                              'gpg:                using RSA key '
+                              '22245C81E3BAEB4138B36061310F561200F4AD77\n'
+                              'gpg: Good signature from "SecureDrop Release '
+                              'Signing Key" [unknown]\n',
+
+                              'gpg: Signature made Thu 20 Jul '
+                              '2017 08:12:25 PM EDT\n'
+                              'gpg:                using RSA key '
+                              '22245C81E3BAEB4138B36061310F561200F4AD77\n'
+                              'gpg: Good signature from "SecureDrop Release '
+                              'Signing Key '
+                              '<securedrop-release-key@freedom.press>"\n',
+
+                              'gpg: Signature made Thu 20 Jul '
+                              '2017 08:12:25 PM EDT\n'
+                              'gpg:                using RSA key '
+                              '22245C81E3BAEB4138B36061310F561200F4AD77\n'
+                              'gpg: Good signature from "SecureDrop Release '
+                              'Signing Key" [unknown]\n'
+                              'gpg:                 aka "SecureDrop Release '
+                              'Signing Key '
+                              '<securedrop-release-key@freedom.press>" '
+                              '[unknown]\n'])
+    def test_update_signature_verifies(self, tmpdir, caplog, git_output):
         git_repo_path = str(tmpdir)
         args = argparse.Namespace(root=git_repo_path)
-
-        git_output = ('gpg: Signature made Tue 13 Mar 2018 01:14:11 AM UTC\n'
-                      'gpg:                using RSA key '
-                      '22245C81E3BAEB4138B36061310F561200F4AD77\n'
-                      'gpg: Good signature from "SecureDrop Release '
-                      'Signing Key" [unknown]\n')
-
         patchers = [
             mock.patch('securedrop_admin.check_for_updates',
                        return_value=(True, "0.6.1")),
@@ -639,6 +619,66 @@ class TestSiteConfig(object):
         """)
         assert expected == io.open(site_config_path).read()
 
+    def test_old_v2_onion_services(self, tmpdir):
+        "Checks for exitsing v2 source address"
+        site_config_path = join(str(tmpdir), 'site_config')
+        args = argparse.Namespace(site_config=site_config_path,
+                                  ansible_path='.',
+                                  app_path=dirname(__file__))
+        site_config = securedrop_admin.SiteConfig(args)
+        with open("app-source-ths", "w") as fobj:
+            fobj.write("aaaaaaaaaaaaaaaa.onion\n")
+        site_config.update_onion_version_config()
+        site_config.save()
+        data = ""
+        with open(site_config_path) as fobj:
+            data = fobj.read()
+        expected = textwrap.dedent("""\
+        v2_onion_services: true
+        v3_onion_services: true
+        """)
+        os.remove("app-source-ths")
+        assert expected == data
+
+    def test_no_v2_onion_services(self, tmpdir):
+        "Checks for new installation for only v3"
+        site_config_path = join(str(tmpdir), 'site_config')
+        args = argparse.Namespace(site_config=site_config_path,
+                                  ansible_path='.',
+                                  app_path=dirname(__file__))
+        site_config = securedrop_admin.SiteConfig(args)
+        site_config.update_onion_version_config()
+        site_config.save()
+        data = ""
+        with open(site_config_path) as fobj:
+            data = fobj.read()
+        expected = textwrap.dedent("""\
+        v2_onion_services: false
+        v3_onion_services: true
+        """)
+        assert expected == data
+
+    def test_only_v3_onion_services(self, tmpdir):
+        "Checks for new installation for only v3 ths file"
+        site_config_path = join(str(tmpdir), 'site_config')
+        args = argparse.Namespace(site_config=site_config_path,
+                                  ansible_path='.',
+                                  app_path=dirname(__file__))
+        site_config = securedrop_admin.SiteConfig(args)
+        with open("app-sourcev3-ths", "w") as fobj:
+            fobj.write("a" * 56 + ".onion\n")
+        site_config.update_onion_version_config()
+        site_config.save()
+        data = ""
+        with open(site_config_path) as fobj:
+            data = fobj.read()
+        expected = textwrap.dedent("""\
+        v2_onion_services: false
+        v3_onion_services: true
+        """)
+        os.remove("app-sourcev3-ths")
+        assert expected == data
+
     def test_validate_gpg_key(self, caplog):
         args = argparse.Namespace(site_config='INVALID',
                                   ansible_path='tests/files',
@@ -969,3 +1009,58 @@ class TestSiteConfig(object):
         with pytest.raises(yaml.YAMLError) as e:
             site_config.load()
         assert 'issue processing' in caplog.text
+
+
+def test_generate_new_v3_keys():
+    public, private = securedrop_admin.generate_new_v3_keys()
+
+    for key in [public, private]:
+        # base32 padding characters should be removed
+        assert '=' not in key
+        assert len(key) == 52
+
+
+def test_find_or_generate_new_torv3_keys_first_run(tmpdir, capsys):
+    args = argparse.Namespace(ansible_path=str(tmpdir))
+
+    return_code = securedrop_admin.find_or_generate_new_torv3_keys(args)
+
+    captured = capsys.readouterr()
+    assert 'Tor v3 onion service keys generated' in captured.out
+    assert return_code == 0
+
+    secret_key_path = os.path.join(args.ansible_path,
+                                   "tor_v3_keys.json")
+
+    with open(secret_key_path) as f:
+        v3_onion_service_keys = json.load(f)
+
+    expected_keys = ['app_journalist_public_key',
+                     'app_journalist_private_key',
+                     'app_ssh_public_key',
+                     'app_ssh_private_key',
+                     'mon_ssh_public_key',
+                     'mon_ssh_private_key']
+    for key in expected_keys:
+        assert key in v3_onion_service_keys.keys()
+
+
+def test_find_or_generate_new_torv3_keys_subsequent_run(tmpdir, capsys):
+    args = argparse.Namespace(ansible_path=str(tmpdir))
+
+    secret_key_path = os.path.join(args.ansible_path,
+                                   "tor_v3_keys.json")
+    old_keys = {'foo': 'bar'}
+    with open(secret_key_path, 'w') as f:
+        json.dump(old_keys, f)
+
+    return_code = securedrop_admin.find_or_generate_new_torv3_keys(args)
+
+    captured = capsys.readouterr()
+    assert 'Tor v3 onion service keys already exist' in captured.out
+    assert return_code == 0
+
+    with open(secret_key_path) as f:
+        v3_onion_service_keys = json.load(f)
+
+    assert v3_onion_service_keys == old_keys

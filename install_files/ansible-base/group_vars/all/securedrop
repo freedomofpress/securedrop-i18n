@@ -2,7 +2,9 @@
 # Variables that apply to both the app and monitor server go in this file
 # If the monitor or app server need different values define the variable in
 # hosts_vars/app.yml or host_vars/mon.yml
-securedrop_app_code_version: "0.14.0~rc1"
+securedrop_app_code_version: "1.0.0~rc1"
+securedrop_app_code_sdist_version: "securedrop-app-code-1.0.0-rc1"
+securedrop_app_code_sdist_name: "{{ securedrop_app_code_sdist_version }}.tar.gz"
 
 grsecurity: true
 install_local_packages: false
@@ -34,7 +36,7 @@ appserver_dependencies:
   - haveged
   - python
   - python-pip
-  - secure-delete
+  - coreutils
   - sqlite3
   - apparmor-utils
   - redis-server
@@ -43,7 +45,6 @@ appserver_dependencies:
 
 # Enable Tor over SSH by default
 enable_ssh_over_tor: true
-
 
 # If file is present on system at the end of ansible run
 # force a reboot. Needed because of the de-coupled nature of

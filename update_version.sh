@@ -38,6 +38,9 @@ old_version_regex="^__version__ = '(.*)'$"
 [[ "$(cat securedrop/version.py)" =~ $old_version_regex ]]
 OLD_VERSION=${BASH_REMATCH[1]}
 
+# Update setup.py
+sed -i "s@version=\"$(echo "${OLD_VERSION}" | sed 's/\./\\./g')\"@version=\"$NEW_VERSION\"@g" setup.py
+
 # Update the version shown to users of the web application.
 sed -i "s@$(echo "${OLD_VERSION}" | sed 's/\./\\./g')@$NEW_VERSION@g" securedrop/version.py
 
@@ -65,9 +68,6 @@ if [[ ! $NEW_VERSION == *~rc* ]]; then
     # Upgrade docs to Ubuntu 16.04 reference current stable version explicitly.
     # Where we're talking about the 0.12 _series_ (the first to support Xenial),
     # the phrase "0.12 series" is used, so this regex is safe to run.
-    sed -i "s@$(echo "${OLD_RELEASE}" | sed 's/\./\\./g')@$NEW_VERSION@g" docs/upgrade/xenial_upgrade_in_place.rst
-    sed -i "s@$(echo "${OLD_RELEASE}" | sed 's/\./\\./g')@$NEW_VERSION@g" docs/upgrade/xenial_prep.rst
-    sed -i "s@$(echo "${OLD_RELEASE}" | sed 's/\./\\./g')@$NEW_VERSION@g" docs/upgrade/xenial_backup_install_restore.rst
 fi
 
 # Update the changelog

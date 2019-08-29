@@ -12,10 +12,7 @@ import shutil
 import signal
 import subprocess
 
-try:
-    import configparser
-except ImportError:
-    from six.moves import configparser  # renamed in Python 3
+from six.moves import configparser
 
 from flask import url_for
 from pyotp import TOTP
@@ -241,7 +238,7 @@ def _start_test_rqworker(config):
         subprocess.Popen(['rqworker', config.RQ_WORKER_NAME,
                           '-P', config.SECUREDROP_ROOT,
                           '--pid', TEST_WORKER_PIDFILE,
-                          '--logging_level', 'debug',
+                          '--logging_level', 'DEBUG',
                           '-v'],
                          stdout=tmp_logfile,
                          stderr=subprocess.STDOUT)
