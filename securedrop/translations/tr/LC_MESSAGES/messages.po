@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-07-09 00:16+0000\n"
-"Last-Translator: Volkan <volkangezer@gmail.com>\n"
+"PO-Revision-Date: 2019-08-30 08:39+0000\n"
+"Last-Translator: Kaya Zeren <kayazeren@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 3.7.1\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -28,10 +28,8 @@ msgid "You have been logged out due to inactivity"
 msgstr "Uzun süredir bir işlem yapmadığınız için oturumunuz kapatıldı"
 
 #: journalist_app/__init__.py:142
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to password change"
-msgstr "Uzun süredir bir işlem yapmadığınız için oturumunuz kapatıldı"
+msgstr "Parolanız değiştirildiği için oturumunuz kapatıldı"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
@@ -754,11 +752,6 @@ msgstr ""
 "hesabınıza erişemezsiniz.</em>"
 
 #: journalist_templates/edit_account.html:87
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as FreeOTP, "
-#| "choose the first option. For hardware tokens like the Yubikey, choose the "
-#| "second."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the YubiKey, choose the second "
@@ -771,18 +764,16 @@ msgstr ""
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
 msgstr ""
+"FreeOTP gibi mobil uygulamalar için iki aşamalı kimlik doğrulamayı sıfırla"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
 msgstr "UYGULAMA KODUNU SIFIRLA"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Reset 2FA for hardware tokens like Yubikey"
 msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
 msgstr ""
-"YubiKey gibi donanımsal kodlar kullanan iki aşamalı kimlik doğrulamasını "
-"sıfırla"
+"YubiKey gibi donanımsal çözümler için iki aşamalı kimlik doğrulamayı sıfırla"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
@@ -977,10 +968,13 @@ msgid ""
 "Please note: Sharing sensitive documents may put you at risk, even when "
 "using Tor and SecureDrop."
 msgstr ""
+"Lütfen unutmayın: To ve SecureDrop kullanıyor olsanız da önemli belgeleri "
+"paylaşarak risk alırsınız."
 
 #: source_templates/footer.html:10
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
 msgstr ""
+"SecureDrop, Freedom of the Press (Basın Özgürlüğü) vakfının bir projesidir."
 
 #: source_templates/generate.html:4
 msgid "Welcome"
@@ -1057,32 +1051,31 @@ msgstr ""
 "görmezden gelerek devam edin."
 
 #: source_templates/index.html:45
-#, fuzzy
-#| msgid "Encrypt your submission."
 msgid "First submission"
-msgstr "Gönderinizi şifreleyin."
+msgstr "İlk gönderim"
 
 #: source_templates/index.html:47
-#, fuzzy
-#| msgid "If this is your first time submitting to journalists, start here."
 msgid "First time submitting to our SecureDrop? Start here."
-msgstr "Gazetecilere ilk defa bir şey gönderecekseniz, buradan başlayın."
+msgstr ""
+"SecureDrop uygulamamıza ilk defa bir şey gönderecekseniz, buradan başlayın."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
-msgstr ""
+msgstr "BAŞLAYIN"
 
 #: source_templates/index.html:59
 msgid "Return visit"
-msgstr ""
+msgstr "Daha önce gelmiştim"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
 msgstr ""
+"Daha önce bir kod adı aldıysanız yanıtlara bakabilir ya da yeni bir şeyler "
+"gönderebilirsiniz."
 
 #: source_templates/index.html:65
 msgid "CHECK-IN"
-msgstr ""
+msgstr "GİRİŞ"
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
