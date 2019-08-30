@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.12.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-07-09 00:16+0000\n"
-"Last-Translator: Oktavia <ojonsdottir@irex.org>\n"
+"PO-Revision-Date: 2019-08-30 08:39+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/is/>\n"
 "Language: is\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 3.7.1\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:14
@@ -28,10 +28,8 @@ msgid "You have been logged out due to inactivity"
 msgstr "Útskráning vegna aðgerðaleysis"
 
 #: journalist_app/__init__.py:142
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to password change"
-msgstr "Útskráning vegna aðgerðaleysis"
+msgstr "Þú hefur verið skráð/ur út vegna breytingar á lykilorði"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
@@ -753,11 +751,6 @@ msgstr ""
 "setja upp nýja tækið þitt, annars útilokast þú frá aðgangnum þínum.</em>"
 
 #: journalist_templates/edit_account.html:87
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as FreeOTP, "
-#| "choose the first option. For hardware tokens like the Yubikey, choose the "
-#| "second."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the YubiKey, choose the second "
@@ -769,15 +762,13 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
-msgstr ""
+msgstr "Endurstilla tvíþátta auðkenningu fyrir farsímaforrit á borð við FreeOTP"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
 msgstr "ENDURSTILLA AUÐKENNINGARTEIKN FORRITA"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Reset 2FA for hardware tokens like Yubikey"
 msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
 msgstr ""
 "Endurstilla tveggja-þátta auðkenningu fyrir vélbúnaðarteikn eins og YubiKey"
@@ -976,10 +967,12 @@ msgid ""
 "Please note: Sharing sensitive documents may put you at risk, even when "
 "using Tor and SecureDrop."
 msgstr ""
+"Athugaðu: Að deila viðkvæmum upplýsingum getur stefnt þér í ákveðna hættu, "
+"jafnvel þó veriði sé að nota  Tor og SecureDrop."
 
 #: source_templates/footer.html:10
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
-msgstr ""
+msgstr "SecureDrop er verkefni á vegum Freedom of the Press stofnuninnar."
 
 #: source_templates/generate.html:4
 msgid "Welcome"
@@ -1055,34 +1048,30 @@ msgstr ""
 "hunsaðu þessa aðvörun til að halda áfram."
 
 #: source_templates/index.html:45
-#, fuzzy
-#| msgid "Encrypt your submission."
 msgid "First submission"
-msgstr "Dulritaðu sendinguna þína."
+msgstr "Fyrsta innsending"
 
 #: source_templates/index.html:47
-#, fuzzy
-#| msgid "If this is your first time submitting to journalists, start here."
 msgid "First time submitting to our SecureDrop? Start here."
 msgstr ""
-"Ef þetta er í fyrsta skipti sem þú sendir fréttamönnum eitthvað, byrjaðu þá "
-"hér."
+"Er þetta í fyrsta skipti sem þú sendir eitthvað inn á SecureDrop-tilvikið "
+"okkar? Byrjaðu þá hér."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
-msgstr ""
+msgstr "AÐ KOMAST Í GANG"
 
 #: source_templates/index.html:59
 msgid "Return visit"
-msgstr ""
+msgstr "Endurtekin heimsókn"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
-msgstr ""
+msgstr "Ertu þegar með kóðanafn? Athugaðu með svör eða sendu inn eitthvað nýtt."
 
 #: source_templates/index.html:65
 msgid "CHECK-IN"
-msgstr ""
+msgstr "INNSKRÁNING"
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
