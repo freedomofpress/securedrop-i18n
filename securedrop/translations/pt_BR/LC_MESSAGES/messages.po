@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-07-09 00:16+0000\n"
+"PO-Revision-Date: 2019-08-30 12:39+0000\n"
 "Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/pt_BR/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 3.7.1\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -28,10 +28,8 @@ msgid "You have been logged out due to inactivity"
 msgstr "A sua sessão foi encerrada por inatividade"
 
 #: journalist_app/__init__.py:142
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to password change"
-msgstr "A sua sessão foi encerrada por inatividade"
+msgstr "A sua sessão foi encerrada após mudança de senha"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
@@ -753,11 +751,6 @@ msgstr ""
 "lo. Caso contrário, não será mais possível acessar a sua conta.</em>"
 
 #: journalist_templates/edit_account.html:87
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as FreeOTP, "
-#| "choose the first option. For hardware tokens like the Yubikey, choose the "
-#| "second."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the YubiKey, choose the second "
@@ -770,18 +763,18 @@ msgstr ""
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
 msgstr ""
+"Redefinir a autenticação de dois fatores para aplicativos móveis, como o "
+"FreeOTP"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
 msgstr "Redefinir código de autenticação do app"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Reset 2FA for hardware tokens like Yubikey"
 msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
 msgstr ""
-"Reiniciar autenticação de dois fatores (2FA) para códigos de autenticação de "
-"hardwares, como Yubikey"
+"Redefinir autenticação de dois fatores (2FA) para códigos de autenticação de "
+"hardwares, como YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
@@ -976,10 +969,14 @@ msgid ""
 "Please note: Sharing sensitive documents may put you at risk, even when "
 "using Tor and SecureDrop."
 msgstr ""
+"Por favor, preste atenção: Ao compartilhar documentos sensíveis, você se "
+"expõe a riscos, mesmo usando Tor e SecureDrop."
 
 #: source_templates/footer.html:10
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
 msgstr ""
+"SecureDrop é um projeto da Freedom of the Press Foundation (Fundação pela "
+"Liberdade de Imprensa)."
 
 #: source_templates/generate.html:4
 msgid "Welcome"
@@ -1052,32 +1049,29 @@ msgstr ""
 "continue."
 
 #: source_templates/index.html:45
-#, fuzzy
-#| msgid "Encrypt your submission."
 msgid "First submission"
-msgstr "Criptografe o seu envio."
+msgstr "Primeiro envio"
 
 #: source_templates/index.html:47
-#, fuzzy
-#| msgid "If this is your first time submitting to journalists, start here."
 msgid "First time submitting to our SecureDrop? Start here."
-msgstr "Se este for o seu primeiro envio, comece por aqui."
+msgstr "Este é o seu primeiro envio pelo nosso SecureDrop? Comece por aqui."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
-msgstr ""
+msgstr "COMO COMEÇAR"
 
 #: source_templates/index.html:59
 msgid "Return visit"
-msgstr ""
+msgstr "Visita de retorno"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
 msgstr ""
+"Você já criou um codinome? Verifique respostas ou envie novos documentos."
 
 #: source_templates/index.html:65
 msgid "CHECK-IN"
-msgstr ""
+msgstr "PASSAR O REGISTRO"
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
