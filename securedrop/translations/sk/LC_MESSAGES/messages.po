@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-08-29 21:39+0000\n"
-"Last-Translator: 1000101 <jan.hrnko@satoshilabs.com>\n"
+"PO-Revision-Date: 2019-08-31 01:39+0000\n"
+"Last-Translator: darmozrac <darmozrac@gmail.com>\n"
 "Language-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sk/>\n"
 "Language: sk\n"
@@ -1028,9 +1028,10 @@ msgid ""
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Odporúča sa pre prístup k SecureDropu používať Tor Prehliadač:</"
-"strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">Zistite ako to "
-"nainštalovať</a>, alebo ignorujte toto varovanie a pokračujte ďalej."
+"<strong>Odporúča sa používať Tor Prehliadač pre prístup k "
+"SecureDropu:</strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">"
+"Zistite ako ho nainštalovať</a>, alebo ignorujte toto varovanie a pokračujte "
+"ďalej."
 
 #: source_templates/index.html:18
 msgid ""
@@ -1047,20 +1048,16 @@ msgstr ""
 "varovanie a pokračujte ďalej."
 
 #: source_templates/index.html:45
-#, fuzzy
-#| msgid "Encrypt your submission."
 msgid "First submission"
-msgstr "Zašifrovať vaše podanie."
+msgstr "Prvé podanie"
 
 #: source_templates/index.html:47
-#, fuzzy
-#| msgid "If this is your first time submitting to journalists, start here."
 msgid "First time submitting to our SecureDrop? Start here."
-msgstr "Ak niečo žurnalistom posielate prvý raz, začnite tu."
+msgstr "Odosielate na Secure Drop prvý krát? Začnite tu."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
-msgstr ""
+msgstr "Začnite"
 
 #: source_templates/index.html:59
 msgid "Return visit"
@@ -1068,11 +1065,11 @@ msgstr ""
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
-msgstr ""
+msgstr "Už máte krycie meno? Skontrolujte odpovede alebo pošlite niečo nové."
 
 #: source_templates/index.html:65
 msgid "CHECK-IN"
-msgstr ""
+msgstr "CHECK-IN"
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
