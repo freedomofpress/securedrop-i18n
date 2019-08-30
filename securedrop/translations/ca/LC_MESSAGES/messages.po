@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-07-09 00:16+0000\n"
-"Last-Translator: Benet (BennyBeat) R. i Camps <bennybeat@gmail.com>\n"
+"PO-Revision-Date: 2019-08-30 12:39+0000\n"
+"Last-Translator: John Smith <ecron_89@hotmail.com>\n"
 "Language-Team: Catalan <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ca/>\n"
 "Language: ca\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 3.7.1\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -28,10 +28,8 @@ msgid "You have been logged out due to inactivity"
 msgstr "S'ha desconnectat la sessió per inactivitat"
 
 #: journalist_app/__init__.py:142
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to password change"
-msgstr "S'ha desconnectat la sessió per inactivitat"
+msgstr "S'ha desconnectat la sessió per un canvi de la contrasenya"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
@@ -755,11 +753,6 @@ msgstr ""
 "configurar l'aparell nou, altrament si us blocarà el compte.</em>"
 
 #: journalist_templates/edit_account.html:87
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as FreeOTP, "
-#| "choose the first option. For hardware tokens like the Yubikey, choose the "
-#| "second."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the YubiKey, choose the second "
@@ -767,23 +760,23 @@ msgid ""
 msgstr ""
 "Per restablir l'autenticació de factor doble per a aplicacions mòbils com "
 "ara el FreeOTP, trieu la primera opció. Per a testimonis físics com ara el "
-"Yubikey, trieu-ne la segona."
+"YubiKey, trieu la segona."
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
 msgstr ""
+"Restableix l'autenticació de factor doble per a aplicacions mòbils, com ara "
+"FreeOTP"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
 msgstr "RESTABLEIX EL TESTIMONI DE L'APLICACIÓ"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Reset 2FA for hardware tokens like Yubikey"
 msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
 msgstr ""
-"Restableix l'autenticació de factor doble per a testimonis físics com ara el "
-"YubiKey"
+"Restableix l'autenticació de factor doble per a testimonis físics, com ara "
+"el YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
@@ -978,10 +971,12 @@ msgid ""
 "Please note: Sharing sensitive documents may put you at risk, even when "
 "using Tor and SecureDrop."
 msgstr ""
+"Atenció: Si compartiu documents sensibles, podríeu estar en risc, inclús si "
+"utilitzeu el Tor i el SecureDrop."
 
 #: source_templates/footer.html:10
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
-msgstr ""
+msgstr "El SecureDrop és un projecte de la Fundació «Freedom of the Press»."
 
 #: source_templates/generate.html:4
 msgid "Welcome"
@@ -1058,21 +1053,17 @@ msgstr ""
 "ignoreu aquest avís per continuar."
 
 #: source_templates/index.html:45
-#, fuzzy
-#| msgid "Encrypt your submission."
 msgid "First submission"
-msgstr "Xifreu l'enviament."
+msgstr "Primer enviament"
 
 #: source_templates/index.html:47
-#, fuzzy
-#| msgid "If this is your first time submitting to journalists, start here."
 msgid "First time submitting to our SecureDrop? Start here."
 msgstr ""
-"Si és el primer cop que envieu informació a periodistes, comenceu aquí."
+"És el primer cop que envieu informació amb el SecureDrop? Comenceu aquí."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
-msgstr ""
+msgstr "PRIMERS PASSOS"
 
 #: source_templates/index.html:59
 msgid "Return visit"
@@ -1080,11 +1071,12 @@ msgstr ""
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
-msgstr ""
+msgstr "Ja teniu un nom en clau? Comproveu les respostes o envieu quelcom nou."
 
 #: source_templates/index.html:65
+#, fuzzy
 msgid "CHECK-IN"
-msgstr ""
+msgstr "ENTREU"
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
