@@ -23,8 +23,14 @@ msgstr ""
 msgid "{time} ago"
 msgstr "{time} قبل"
 
-#: journalist_app/__init__.py:91 journalist_app/__init__.py:136
+#: journalist_app/__init__.py:88 journalist_app/__init__.py:133
 msgid "You have been logged out due to inactivity"
+msgstr "شما به علت عدم فعالیت از سیستم خارج شده‌اید"
+
+#: journalist_app/__init__.py:142
+#, fuzzy
+#| msgid "You have been logged out due to inactivity"
+msgid "You have been logged out due to password change"
 msgstr "شما به علت عدم فعالیت از سیستم خارج شده‌اید"
 
 #: journalist_app/account.py:33
@@ -70,11 +76,11 @@ msgstr "شناسه‌ی احراز هویت دو مرحله‌ای برای کا
 msgid "Name not updated: {}"
 msgstr "نام به روز نشد: {}"
 
-#: journalist_app/admin.py:228
+#: journalist_app/admin.py:233
 msgid "Deleted user '{user}'"
 msgstr "کاربر '{user}' حذف شد"
 
-#: journalist_app/admin.py:254
+#: journalist_app/admin.py:263
 msgid "Test alert sent. Please check your email."
 msgstr "پیام هشدار آزمایشی ارسال شد. لطفا ایمیل خود را بررسی نماید."
 
@@ -122,28 +128,28 @@ msgstr "پرونده مورد نیاز است."
 msgid "You can only upload PNG image files."
 msgstr "تنها می توانید تصاویر را با فرمت PNG بارگزاری کنید."
 
-#: journalist_app/main.py:120 journalist_app/utils.py:48
+#: journalist_app/main.py:122 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "یک خطای غیر منتظره رخ داده است! لطفا به مدیر خود اطلاع دهید."
 
-#: journalist_app/main.py:131
+#: journalist_app/main.py:133
 msgid "Thanks. Your reply has been stored."
 msgstr "با تشکر. پاسخ شما ذخیره شد."
 
-#: journalist_app/main.py:152
+#: journalist_app/main.py:154
 msgid "No collections selected for download."
 msgstr "هیچ مجموعه‌ای برای بارگیری انتخاب نشده است."
 
-#: journalist_app/main.py:155 journalist_app/utils.py:236
+#: journalist_app/main.py:157 journalist_app/utils.py:236
 msgid "No collections selected for deletion."
 msgstr "هیچ مجموعه‌ای برای حذف انتخاب نشده است."
 
-#: journalist_app/main.py:181
+#: journalist_app/main.py:183
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
 msgstr "منبع آگاه '{original_name}' به '{new_name}' تغییر نام داده است"
 
-#: journalist_app/main.py:196
+#: journalist_app/main.py:198
 msgid "No unread submissions for this source."
 msgstr "هیچ محتوای ارسالی خوانده نشده‌‌ای از این منبع آگاه یافت نشد."
 
@@ -215,7 +221,7 @@ msgstr ""
 "گذرواژه بروزرسانی شد. فراموش نکنید که آن را در پایگاه داده‌ی KeePassX ذخیره "
 "نمایید. گذرواژه‌ی جدید:"
 
-#: journalist_app/utils.py:321
+#: journalist_app/utils.py:322
 msgid "No unread submissions in selected collections."
 msgstr "هیج محتوای ارسالی خوانده نشده‌ای در مجموعه‌ی انتخاب شده وجود ندارد."
 
@@ -224,7 +230,7 @@ msgid "Close"
 msgstr "بستن"
 
 #: journalist_templates/_confirmation_modal.html:7
-#: journalist_templates/col.html:15 source_templates/lookup.html:75
+#: journalist_templates/col.html:15 source_templates/lookup.html:77
 msgid "Cancel"
 msgstr "لغو"
 
@@ -259,7 +265,7 @@ msgstr "رمز HOTP"
 
 #: journalist_templates/account_edit_hotp_secret.html:9
 #: journalist_templates/admin_edit_hotp_secret.html:10
-#: source_templates/login.html:23
+#: source_templates/login.html:21
 msgid "CONTINUE"
 msgstr "ادامه"
 
@@ -333,7 +339,7 @@ msgstr "کد تایید"
 
 #: journalist_templates/account_new_two_factor.html:24
 #: journalist_templates/admin_new_user_two_factor.html:27
-#: journalist_templates/col.html:99 source_templates/lookup.html:43
+#: journalist_templates/col.html:99 source_templates/lookup.html:42
 msgid "SUBMIT"
 msgstr "ارسال"
 
@@ -356,9 +362,8 @@ msgstr "نام کاربری"
 msgid "Edit"
 msgstr "ویرایش"
 
-#: journalist_templates/admin.html:18 journalist_templates/col.html:75
-#: journalist_templates/col.html:133 journalist_templates/index.html:16
-#: journalist_templates/index.html:51
+#: journalist_templates/admin.html:18 journalist_templates/col.html:135
+#: journalist_templates/index.html:16 journalist_templates/index.html:51
 msgid "Delete"
 msgstr "حذف"
 
@@ -529,7 +534,7 @@ msgstr "اسناد بارگذاری شده"
 msgid "Message"
 msgstr "پیام"
 
-#: journalist_templates/col.html:70 journalist_templates/col.html:128
+#: journalist_templates/col.html:70 journalist_templates/col.html:130
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
 msgstr "تاییدیه‌ی حذف"
@@ -537,6 +542,10 @@ msgstr "تاییدیه‌ی حذف"
 #: journalist_templates/col.html:71
 msgid "Are you sure you want to delete the selected documents?"
 msgstr "آیا مطمئن هستید که می‌خواهید اسناد انتخاب شده را حذف کنید؟"
+
+#: journalist_templates/col.html:75 source_templates/lookup.html:78
+msgid "DELETE"
+msgstr ""
 
 #: journalist_templates/col.html:86
 msgid "No documents to display."
@@ -576,11 +585,11 @@ msgid ""
 "able to login using their previous codename.</em>"
 msgstr ""
 
-#: journalist_templates/col.html:121
+#: journalist_templates/col.html:122
 msgid "DELETE SOURCE AND SUBMISSIONS"
 msgstr "حذف محتواهای ارسالی و منبع آگاه"
 
-#: journalist_templates/col.html:129
+#: journalist_templates/col.html:131
 msgid "Are you sure you want to delete this collection?"
 msgstr "آیا برای حذف این مجموعه مطمئن هستید؟"
 
@@ -660,6 +669,7 @@ msgid "Change Name"
 msgstr "تغییر نام"
 
 #: journalist_templates/edit_account.html:47
+#: journalist_templates/edit_account.html:75
 msgid "Reset Password"
 msgstr "باز نشانی رمز عبور"
 
@@ -693,10 +703,6 @@ msgstr "رمز عبور شما تغییر خواهد کرد به :"
 msgid "Your password will be changed to:"
 msgstr "رمز عبور شما تغییر خواهد کرد به:"
 
-#: journalist_templates/edit_account.html:75
-msgid "RESET PASSWORD"
-msgstr "بازنشانی رمز عبور"
-
 #: journalist_templates/edit_account.html:80
 msgid "Reset Two-Factor Authentication"
 msgstr "بازنشانی احراز هویت دو مرحله‌ای"
@@ -720,11 +726,12 @@ msgstr ""
 #: journalist_templates/edit_account.html:87
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
-"the first option. For hardware tokens like the Yubikey, choose the second."
+"the first option. For hardware tokens like the YubiKey, choose the second "
+"one."
 msgstr ""
 
 #: journalist_templates/edit_account.html:112
-msgid "Reset 2FA for mobile apps such as FreeOTP or Google Authenticator"
+msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
 msgstr ""
 
 #: journalist_templates/edit_account.html:112
@@ -732,7 +739,7 @@ msgid "RESET APP TOKEN"
 msgstr ""
 
 #: journalist_templates/edit_account.html:113
-msgid "Reset 2FA for hardware tokens like Yubikey"
+msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
 msgstr ""
 
 #: journalist_templates/edit_account.html:113
@@ -822,7 +829,7 @@ msgstr "رمز عبور"
 msgid "LOG IN"
 msgstr "ورود"
 
-#: source_app/__init__.py:128
+#: source_app/__init__.py:124
 msgid ""
 "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This "
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href="
@@ -842,8 +849,8 @@ msgid ""
 "You were redirected because you are already logged in. If you want to create "
 "a new account, you should log out first."
 msgstr ""
-"شما به دلیل اینکه قبلا وارد سیستم شده‌اید هدایت می‌شوید. اگر می‌خواهید یک "
-"حساب جدید ایجاد کنید، ابتدا باید از سیستم خارج شوید."
+"شما به دلیل اینکه قبلا وارد سیستم شده‌اید هدایت می‌شوید. اگر می‌خواهید یک حساب "
+"جدید ایجاد کنید، ابتدا باید از سیستم خارج شوید."
 
 #: source_app/main.py:145
 msgid "You must enter a message or choose a file to submit."
@@ -877,20 +884,14 @@ msgstr ""
 msgid "Protecting Journalists and Sources"
 msgstr "حفاظت از روزنامه نگاران و منابع"
 
-#: source_templates/base.html:25 source_templates/base.html:45
-#: source_templates/index.html:32 source_templates/index.html:84
+#: source_templates/base.html:25 source_templates/footer.html:4
+#: source_templates/index.html:32
 msgid "Powered by"
 msgstr "قدرت گرفته توسط"
 
 #: source_templates/base.html:34
 msgid "LOG OUT"
 msgstr "خروج"
-
-#: source_templates/base.html:45 source_templates/index.html:84
-msgid ""
-"Like all software, SecureDrop may contain security bugs. Use at your own "
-"risk."
-msgstr ""
 
 #: source_templates/error.html:3
 msgid "Server error"
@@ -923,6 +924,16 @@ msgstr ""
 msgid "Forgot your codename?"
 msgstr "نام‌کد خود را فراموش کرده‌اید؟"
 
+#: source_templates/footer.html:7
+msgid ""
+"Please note: Sharing sensitive documents may put you at risk, even when "
+"using Tor and SecureDrop."
+msgstr ""
+
+#: source_templates/footer.html:10
+msgid "SecureDrop is a project of Freedom of the Press Foundation."
+msgstr ""
+
 #: source_templates/generate.html:4
 msgid "Welcome"
 msgstr "خوش آمدید"
@@ -949,7 +960,7 @@ msgid ""
 "there is no way to retrieve a lost codename."
 msgstr ""
 
-#: source_templates/generate.html:44 source_templates/index.html:65
+#: source_templates/generate.html:42
 msgid "SUBMIT DOCUMENTS"
 msgstr ""
 
@@ -976,41 +987,43 @@ msgid ""
 "continue."
 msgstr ""
 
-#: source_templates/index.html:41
-msgid "Submit for the first time"
-msgstr "برای اولین بار ارسال کنید"
-
-#: source_templates/index.html:48
-msgid "Already submitted something?"
+#: source_templates/index.html:45
+msgid "First submission"
 msgstr ""
 
-#: source_templates/index.html:54
-msgid "If this is your first time submitting to journalists, start here."
+#: source_templates/index.html:47
+msgid "First time submitting to our SecureDrop? Start here."
 msgstr ""
 
-#: source_templates/index.html:58
-msgid ""
-"If you have already submitted to journalists, log in here to check for "
-"responses."
+#: source_templates/index.html:51
+msgid "GET STARTED"
 msgstr ""
 
-#: source_templates/index.html:73
-msgid "CHECK FOR A RESPONSE"
+#: source_templates/index.html:59
+msgid "Return visit"
 msgstr ""
 
-#: source_templates/index.html:93
+#: source_templates/index.html:61
+msgid "Already have a codename? Check for replies or submit something new."
+msgstr ""
+
+#: source_templates/index.html:65
+msgid "CHECK-IN"
+msgstr ""
+
+#: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
 msgstr ""
 
-#: source_templates/index.html:94
+#: source_templates/index.html:80
 msgid "Select <strong>Advanced Security Settings</strong>"
 msgstr ""
 
-#: source_templates/index.html:95
+#: source_templates/index.html:81
 msgid "Select <strong>Safest</strong>"
 msgstr ""
 
-#: source_templates/index.html:97
+#: source_templates/index.html:83
 msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
 msgstr ""
 
@@ -1022,7 +1035,7 @@ msgstr ""
 msgid "Enter your codename"
 msgstr ""
 
-#: source_templates/login.html:25 source_templates/lookup.html:49
+#: source_templates/login.html:26 source_templates/lookup.html:50
 msgid "CANCEL"
 msgstr ""
 
@@ -1060,33 +1073,33 @@ msgid "Submit Files or Messages"
 msgstr ""
 
 #: source_templates/lookup.html:19
+msgid "You can submit any kind of file, a message, or both."
+msgstr ""
+
+#: source_templates/lookup.html:21
 msgid ""
 "If you are already familiar with GPG, you can optionally encrypt your files "
 "and messages with our <a href=\"{url}\" class=\"text-link\">public key</a> "
 "before submission. Files are encrypted as they are received by SecureDrop."
 msgstr ""
 
-#: source_templates/lookup.html:20
+#: source_templates/lookup.html:22
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
 msgstr ""
 
-#: source_templates/lookup.html:22
-msgid "You can submit any kind of file, a message, or both."
-msgstr ""
-
-#: source_templates/lookup.html:31
+#: source_templates/lookup.html:32
 msgid "Maximum upload size: 500 MB"
 msgstr ""
 
-#: source_templates/lookup.html:34
+#: source_templates/lookup.html:35
 msgid "Write a message."
 msgstr ""
 
-#: source_templates/lookup.html:56
+#: source_templates/lookup.html:57
 msgid "Read Replies"
 msgstr ""
 
-#: source_templates/lookup.html:61
+#: source_templates/lookup.html:62
 msgid ""
 "You have received a reply. To protect your identity in the unlikely event "
 "someone learns your codename, please delete all replies when you're done "
@@ -1094,43 +1107,39 @@ msgid ""
 "respond by submitting new files and messages above."
 msgstr ""
 
-#: source_templates/lookup.html:74
+#: source_templates/lookup.html:76
 msgid "Delete this reply?"
 msgstr ""
 
-#: source_templates/lookup.html:76
-msgid "DELETE"
-msgstr ""
-
-#: source_templates/lookup.html:85
+#: source_templates/lookup.html:87
 msgid "DELETE ALL REPLIES"
 msgstr ""
 
-#: source_templates/lookup.html:88
+#: source_templates/lookup.html:90
 msgid "Are you finished with the replies?"
 msgstr ""
 
-#: source_templates/lookup.html:89
+#: source_templates/lookup.html:91
 msgid "YES, DELETE ALL REPLIES"
 msgstr ""
 
-#: source_templates/lookup.html:90
+#: source_templates/lookup.html:92
 msgid "NO, NOT YET"
 msgstr ""
 
-#: source_templates/lookup.html:94
+#: source_templates/lookup.html:96
 msgid "There are no replies at this time."
 msgstr ""
 
-#: source_templates/lookup.html:103
+#: source_templates/lookup.html:105
 msgid "Remember, your codename is:"
 msgstr ""
 
-#: source_templates/lookup.html:104
+#: source_templates/lookup.html:106
 msgid "Show"
 msgstr ""
 
-#: source_templates/lookup.html:106
+#: source_templates/lookup.html:108
 msgid "Hide"
 msgstr ""
 
@@ -1274,6 +1283,12 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr ""
+
+#~ msgid "RESET PASSWORD"
+#~ msgstr "بازنشانی رمز عبور"
+
+#~ msgid "Submit for the first time"
+#~ msgstr "برای اولین بار ارسال کنید"
 
 #~ msgid "Change username"
 #~ msgstr "تغییر نام کاربری"
