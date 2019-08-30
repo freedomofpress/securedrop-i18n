@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-08-30 12:39+0000\n"
-"Last-Translator: John Smith <ecron_89@hotmail.com>\n"
+"PO-Revision-Date: 2019-08-30 23:39+0000\n"
+"Last-Translator: Benet (BennyBeat) R. i Camps <bennybeat@gmail.com>\n"
 "Language-Team: Catalan <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ca/>\n"
 "Language: ca\n"
@@ -1067,16 +1067,15 @@ msgstr "PRIMERS PASSOS"
 
 #: source_templates/index.html:59
 msgid "Return visit"
-msgstr ""
+msgstr "Torna a visitar"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
 msgstr "Ja teniu un nom en clau? Comproveu les respostes o envieu quelcom nou."
 
 #: source_templates/index.html:65
-#, fuzzy
 msgid "CHECK-IN"
-msgstr "ENTREU"
+msgstr "REGISTRE"
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
