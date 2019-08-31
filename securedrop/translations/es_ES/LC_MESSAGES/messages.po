@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-07-08 12:35+0000\n"
-"Last-Translator: Daniel Arauz <danarauz@gmail.com>\n"
+"PO-Revision-Date: 2019-08-31 07:39+0000\n"
+"Last-Translator: Adolfo Jayme-Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
 "Language: es_ES\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 3.7.1\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -781,6 +781,8 @@ msgstr ""
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
 msgstr ""
+"Restablecimiento de autenticación de dos factores en aplicaciones móviles "
+"como FreeOTP"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
@@ -987,10 +989,12 @@ msgid ""
 "Please note: Sharing sensitive documents may put you at risk, even when "
 "using Tor and SecureDrop."
 msgstr ""
+"Observe: compartir documentos confidenciales puede ponerlo en peligro, "
+"incluso si lo hace a través de Tor y SecureDrop."
 
 #: source_templates/footer.html:10
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
-msgstr ""
+msgstr "SecureDrop es un proyecto de la Freedom of the Press Foundation."
 
 #: source_templates/generate.html:4
 msgid "Welcome"
@@ -1082,19 +1086,20 @@ msgstr "Si esta es la primera vez que envía a periodistas, comience aquí."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
-msgstr ""
+msgstr "PRIMEROS PASOS"
 
 #: source_templates/index.html:59
 msgid "Return visit"
-msgstr ""
+msgstr "Visitar de vuelta"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
 msgstr ""
+"¿Ya tiene un nombre en clave? Revise si hay respuestas o envíe algo nuevo."
 
 #: source_templates/index.html:65
 msgid "CHECK-IN"
-msgstr ""
+msgstr "REGISTRO"
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
