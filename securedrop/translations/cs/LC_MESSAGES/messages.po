@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-09-01 17:39+0000\n"
-"Last-Translator: 1000101 <jan.hrnko@satoshilabs.com>\n"
+"Last-Translator: michaela-bot <michaela.rybickova@gmail.com>\n"
 "Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/cs/>\n"
 "Language: cs\n"
@@ -82,7 +82,7 @@ msgstr "Smazán uživatel '{user}'"
 #: journalist_app/admin.py:263
 msgid "Test alert sent. Please check your email."
 msgstr ""
-"Testovací upozornění odesláno. Prosím zkontrolujte svou e-mailovou schránku."
+"Testovací upozornění odesláno. Zkontrolujte prosím svojí e-mailovou schránku."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -606,7 +606,9 @@ msgstr "Upozornění"
 
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
-msgstr "Poslat šifrovaný e-mail na ověření, že OSSEC výstrahy pracují správně:"
+msgstr ""
+"Poslat zašifrovaný email abychom zkusili zda OSECC upozornění fungují "
+"správně:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
@@ -1040,7 +1042,7 @@ msgstr "Vracím se"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
-msgstr "Už máte krycí jméno? Zkontrolujte odpovědi anebo pošlite něco nového."
+msgstr "Už máte krycí jméno? Zkontrolujte odpovědi anebo pošlete něco nového."
 
 #: source_templates/index.html:65
 msgid "CHECK-IN"
