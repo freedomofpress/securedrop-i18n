@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-09-01 11:39+0000\n"
-"Last-Translator: darmozrac <darmozrac@gmail.com>\n"
+"PO-Revision-Date: 2019-09-01 16:37+0000\n"
+"Last-Translator: michaela-bot <michaela.rybickova@gmail.com>\n"
 "Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/cs/>\n"
 "Language: cs\n"
@@ -85,11 +85,11 @@ msgstr "Testovací upozornění zasláno. Prosím zkontrolujte váš e-mail."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
-msgstr "Kolekce {source_name} smazána"
+msgstr "{source_name} sada smazána"
 
 #: journalist_app/col.py:56
 msgid "No collections selected."
-msgstr "Nevybrali jste žádnou kolekci."
+msgstr "Nevybral/a jste žádnou sadu."
 
 #: journalist_app/decorators.py:15
 msgid "Only admins can access this page."
@@ -97,13 +97,13 @@ msgstr "Na tuto stránku mají přístup pouze administrátoři."
 
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
-msgstr "HOTP hesla jsou 40 znaků dlouhé - zadali jste {num_chars} znaků."
+msgstr "HOTP secrets mají 40 znaků - zadal/a jste {num_chars}."
 
 #: journalist_app/forms.py:30
 msgid ""
 "Field must be at least {min_chars} characters long but only got {num_chars}."
 msgstr ""
-"Pole musí mít alespoň {minimum_znaků} znaků ale obsahuje pouze {počet_znaků}."
+"Pole musí mít alespoň {min_chars}  znaků ale obsahuje pouze  {num_chars}."
 
 #: journalist_app/forms.py:37
 msgid "Field can not be more than {max_chars} characters."
@@ -538,7 +538,7 @@ msgstr "Zpráva"
 #: journalist_templates/col.html:70 journalist_templates/col.html:130
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
-msgstr "Smazat potvrzení"
+msgstr "Potvzení smazání"
 
 #: journalist_templates/col.html:71
 msgid "Are you sure you want to delete the selected documents?"
@@ -719,6 +719,10 @@ msgid ""
 "is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
+"Pokud jste ztratil/a údaje pro dvoufaktorovou autentizaci nebo došlo k "
+"jejich zneužití, můžete je resetovat zde.<em>Nejdříve se ale ujistěte,  že "
+"je daný uživatel  připraven nastavit si pro své zařízení nové dvoufaktorové "
+"přístupové údaje. Jinak uživatel ztratí přístup ke svému účtu."
 
 #: journalist_templates/edit_account.html:85
 msgid ""
@@ -727,6 +731,10 @@ msgid ""
 "this, make sure you are ready to set up your new device, otherwise you will "
 "be locked out of your account.</em>"
 msgstr ""
+"Pokud byly Vaše přístupy pro dvoufaktorovou autentizaci ztraceny nebo "
+"zneužity, nebo máte nové zařízení, můžete si svůj přístup resetovat zde.<em>"
+"Musíte si ale nové zařízení připravit k nastavení, jinak ztratíte přístup k "
+"Vašemu účtu.</em>"
 
 #: journalist_templates/edit_account.html:87
 msgid ""
@@ -734,10 +742,13 @@ msgid ""
 "the first option. For hardware tokens like the YubiKey, choose the second "
 "one."
 msgstr ""
+"Pro reset dvoufaktorové autentizace v mobilní aplikaci jako FreeOTP zvolte "
+"první možnost. Pro hardwarové tokeny jako Yubikey zvolte druhou možnost."
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
 msgstr ""
+"Resetujte dvoufaktorovou autentizaci pro mobilní aplikace (např. FreeOTP)"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
@@ -763,10 +774,14 @@ msgid ""
 "appear under their collection of documents. You can use this box to write "
 "encrypted replies to them."
 msgstr ""
+"SecureDrop vygeneruje bezpečný šifrovací klíč pro tento zdroj při jeho/"
+"jejíjm přístím přihlášení. Jakmile se klíč vygeneruje, objeví se pod kolekcí "
+"zdroje textové pole pro odpověď. Přes toto pole můžete  tomuto zdroji poslat "
+"zašifrovanou odpoveď."
 
 #: journalist_templates/flag.html:10
 msgid "Continue to the list of documents for {codename}..."
-msgstr ""
+msgstr "Pokračujte k seznamu dokumetů  {codename}..."
 
 #: journalist_templates/index.html:4
 msgid "Sources"
@@ -819,11 +834,11 @@ msgstr "Jste si jisti, že chcete smazat uživatela {username}?"
 #: journalist_templates/js-strings.html:8
 msgid ""
 "Are you sure you want to reset two-factor authentication for {username}?"
-msgstr ""
+msgstr "Určitě chcete resetovat dvoufaktorovu autentizaci pro {username}?"
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
-msgstr ""
+msgstr "Přihlaste se do rozhraní pro novináře"
 
 #: journalist_templates/login.html:9
 msgid "Password"
@@ -839,10 +854,13 @@ msgid ""
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href="
 "\"{url}\">Why is this dangerous?</a>"
 msgstr ""
+"<strong>VAROVÁNÍ:&nbsp;</strong> Vypadá to že používáte Tor2Web. To "
+"<strong>&nbsp;neposkytuje</strong> anonymitu. <a href=\"{url}\">Proč je to "
+"nebezpečné?</a>"
 
 #: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
-msgstr ""
+msgstr "Pole musí mít mezi 1 a {max_codename_len} znaků."
 
 #: source_app/forms.py:18
 msgid "Invalid input."
@@ -853,22 +871,24 @@ msgid ""
 "You were redirected because you are already logged in. If you want to create "
 "a new account, you should log out first."
 msgstr ""
+"Byl jste přesměrován/a protože jste již přihlášen/a. Chcete-li vytvořit nový "
+"účet, musíte se nejdřív odhlásit."
 
 #: source_app/main.py:145
 msgid "You must enter a message or choose a file to submit."
-msgstr ""
+msgstr "Musíte napsat zprávu nebo vybrat soubor pro nahrání."
 
 #: source_app/main.py:178
 msgid "Thanks! We received your message."
-msgstr ""
+msgstr "Děkujeme! Obdrželi jsme Vaši zprávu."
 
 #: source_app/main.py:180
 msgid "Thanks! We received your document."
-msgstr ""
+msgstr "Děkujeme! Obdrželi jsme Váš dokument."
 
 #: source_app/main.py:182
 msgid "Thanks! We received your message and document."
-msgstr ""
+msgstr "Děkujeme! Obdrželi jsme Vaši zprávu a dokument."
 
 #: source_app/main.py:241
 msgid "Reply deleted"
@@ -918,6 +938,8 @@ msgid ""
 "Thank you for sending this information to us. Please check back later for "
 "replies."
 msgstr ""
+"Děkujeme za zaslání těcho informací. Přihlaste se, prosím,  za nějaký čas "
+"znovu a zkontrolujte odpovědi."
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
@@ -928,10 +950,12 @@ msgid ""
 "Please note: Sharing sensitive documents may put you at risk, even when "
 "using Tor and SecureDrop."
 msgstr ""
+"Uvědomte si prosím, že sdílení citlivých dokumentů Vás může ohrozit, "
+"přestože použijete Tor a SecureDrop."
 
 #: source_templates/footer.html:10
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
-msgstr ""
+msgstr "SecureDrop je projekt Freedom of the Press Foundation."
 
 #: source_templates/generate.html:4
 msgid "Welcome"
@@ -942,12 +966,16 @@ msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
 msgstr ""
+"Zapište si, prosím, toto krycí jméno a schovejte ho na bezpečnm míste nebo "
+"si jej zapamatujte."
 
 #: source_templates/generate.html:10
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our journalists in response to what you submit on the next screen."
 msgstr ""
+"Toto krycí jméno budete v budoucnu využívat pro komunikaci s našimi novináři "
+"na základě toho, co pošlete na přístí obrazovce."
 
 #: source_templates/generate.html:34
 msgid ""
@@ -957,6 +985,11 @@ msgid ""
 " questions or are interested in additional information. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
+"Protože nesledujeme uživatele naší  služby <strong>SecureDrop</strong>,\n"
+" pro vaše přístí návštěvy bude použití tohoto krycího jména jedinou "
+"možností, jak s  Vámi  můžeme komunikovat, pokud budeme mít otázky nebo "
+"zájem o doplňující informace. Narozdíl od hesla neexistuje způsob, jak "
+"získat zpět zapomenuté krycí jméno."
 
 #: source_templates/generate.html:42
 msgid "SUBMIT DOCUMENTS"
