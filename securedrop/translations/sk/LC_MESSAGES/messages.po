@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-09-01 11:39+0000\n"
+"PO-Revision-Date: 2019-09-01 17:39+0000\n"
 "Last-Translator: 1000101 <jan.hrnko@satoshilabs.com>\n"
 "Language-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sk/>\n"
@@ -645,10 +645,13 @@ msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
 msgstr[0] ""
-"Nasledujúci súbor bol označený pre <strong>1nenávratné vymazanie</strong>2:"
+"Nasledujúci súbor bol označený na <strong>permanentné vymazanie</strong>:"
 msgstr[1] ""
-"Nasledujúce súbory boli označené pre <strong>3nenávratné vymazanie</strong>4:"
+"Nasledujúce {files} súbory boli označené na <strong>permanentné "
+"vymazanie</strong>:"
 msgstr[2] ""
+"Nasledujúcich {files} súborov bolo označených na <strong>permanentné "
+"vymazanie</strong>:"
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
@@ -1052,7 +1055,7 @@ msgstr "Podávate cez Secure Drop prvýkrát? Začnite tu."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
-msgstr "Začnite"
+msgstr "ZAČAŤ"
 
 #: source_templates/index.html:59
 msgid "Return visit"
@@ -1064,7 +1067,7 @@ msgstr "Už máte krycie meno? Skontrolujte odpovede alebo pošlite niečo nové
 
 #: source_templates/index.html:65
 msgid "CHECK-IN"
-msgstr "CHECK-IN"
+msgstr "KONTROLA"
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
