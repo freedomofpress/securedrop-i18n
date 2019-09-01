@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-08-30 23:39+0000\n"
-"Last-Translator: Benet (BennyBeat) R. i Camps <bennybeat@gmail.com>\n"
+"PO-Revision-Date: 2019-09-01 17:39+0000\n"
+"Last-Translator: John Smith <ecron_89@hotmail.com>\n"
 "Language-Team: Catalan <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ca/>\n"
 "Language: ca\n"
@@ -758,7 +758,7 @@ msgid ""
 "the first option. For hardware tokens like the YubiKey, choose the second "
 "one."
 msgstr ""
-"Per restablir l'autenticació de factor doble per a aplicacions mòbils com "
+"Per a restablir l'autenticació de factor doble per a aplicacions mòbils com "
 "ara el FreeOTP, trieu la primera opció. Per a testimonis físics com ara el "
 "YubiKey, trieu la segona."
 
@@ -766,7 +766,7 @@ msgstr ""
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
 msgstr ""
 "Restableix l'autenticació de factor doble per a aplicacions mòbils, com ara "
-"FreeOTP"
+"el FreeOTP"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
@@ -1067,7 +1067,7 @@ msgstr "PRIMERS PASSOS"
 
 #: source_templates/index.html:59
 msgid "Return visit"
-msgstr "Torna a visitar"
+msgstr "Visita nova"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
