@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-09-01 16:39+0000\n"
-"Last-Translator: 1000101 <jan.hrnko@satoshilabs.com>\n"
+"Last-Translator: michaela-bot <michaela.rybickova@gmail.com>\n"
 "Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/cs/>\n"
 "Language: cs\n"
@@ -301,7 +301,7 @@ msgstr "Otevřete aplikaci FreeOTP"
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
 msgid "Tap the QR code symbol at the top"
-msgstr "Ťukněte na symbol QR kódu"
+msgstr "Ťukněte na symbol QR kódu v horní části"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -387,11 +387,11 @@ msgstr "nikdy"
 
 #: journalist_templates/admin.html:42
 msgid "No users to display"
-msgstr "Žádný uživatel na zobrazení"
+msgstr "Žádní uživatelé k zobrazení"
 
 #: journalist_templates/admin.html:48
 msgid "INSTANCE CONFIG"
-msgstr "KONFIGURACE INSTANCE"
+msgstr "NASTAVENÍ INSTANCE"
 
 #: journalist_templates/admin_add_user.html:4
 #: journalist_templates/config.html:4 journalist_templates/edit_account.html:7
@@ -470,7 +470,7 @@ msgstr ""
 
 #: journalist_templates/base.html:55
 msgid "Powered by <em>SecureDrop {version}</em>."
-msgstr "Poháněno <em>SecureDrop {version}</em>."
+msgstr "Postaveno na <em>SecureDrop {version}</em>."
 
 #: journalist_templates/col.html:10
 msgid "All Sources"
@@ -482,10 +482,10 @@ msgid ""
 "the first random codename is difficult to say or remember. You can generate "
 "new random codenames as many times as you like."
 msgstr ""
-"Vygenereujte novou náhodnou přezdívku pro tento zdroj. Doporučujeme to v "
-"případě, že první náhodná přezdívka má složitou výslovnost nebo se nedá "
-"snadno zapamatovat. Náhodnou přezdívku můžete generovat opakovaně (počet "
-"není omezen)."
+"Vygenereujte novou náhodné krycí jméno pro tento zdroj. Doporučujeme to v "
+"případě, že první krycí jméno má složitou výslovnost nebo se nedá snadno "
+"zapamatovat. Náhodné krycí jméno můžete generovat opakovaně (počet není "
+"omezen)."
 
 #: journalist_templates/col.html:13
 msgid "Change codename"
@@ -493,7 +493,7 @@ msgstr "Změnte krycí jméno"
 
 #: journalist_templates/col.html:14
 msgid "Are you sure you want to generate a new codename?"
-msgstr "Jste si jisti, že chcete vygenerovat nové krycí jméno?"
+msgstr "Jste si jist/a, že chcete vygenerovat nové krycí jméno?"
 
 #: journalist_templates/col.html:16
 msgid "CONFIRM"
@@ -509,7 +509,7 @@ msgstr ""
 
 #: journalist_templates/col.html:26
 msgid "Download Selected"
-msgstr "Stáhnout vybrané"
+msgstr "Stažení zvoleno"
 
 #: journalist_templates/col.html:28
 msgid "Delete Selected"
