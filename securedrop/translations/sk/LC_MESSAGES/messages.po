@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-08-31 01:39+0000\n"
-"Last-Translator: darmozrac <darmozrac@gmail.com>\n"
+"PO-Revision-Date: 2019-09-01 11:39+0000\n"
+"Last-Translator: 1000101 <jan.hrnko@satoshilabs.com>\n"
 "Language-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sk/>\n"
 "Language: sk\n"
@@ -28,10 +28,8 @@ msgid "You have been logged out due to inactivity"
 msgstr "Boli ste odhlásení z dôvodu neaktivity"
 
 #: journalist_app/__init__.py:142
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to password change"
-msgstr "Boli ste odhlásení z dôvodu neaktivity"
+msgstr "Boli ste odhlásení z dôvodu zmeny Vášho hesla"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
@@ -747,33 +745,28 @@ msgstr ""
 "si vaše nové zariadenie, inak stratíte prístup k vašemu účtu.</em>"
 
 #: journalist_templates/edit_account.html:87
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as FreeOTP, "
-#| "choose the first option. For hardware tokens like the Yubikey, choose the "
-#| "second."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the YubiKey, choose the second "
 "one."
 msgstr ""
 "Pre resetovanie dvojfaktorovéj autentifikácie v mobilných aplikáciach ako "
-"FreeOTP, vyberte prvú možnosť. Pre hardvérové tokeny ako Yubikey, vyberte tu "
-"druhú."
+"FreeOTP, vyberte prvú možnosť. Pre hardvérové tokeny ako YubiKey, vyberte "
+"druhú možnosť."
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
 msgstr ""
+"Resetovať dvojfaktorové overenie pre mobilné aplikácie, ako napríklad FreeOTP"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
 msgstr "RESETOVAŤ APP TOKEN"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Reset 2FA for hardware tokens like Yubikey"
 msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
-msgstr "Resetovať 2FA pre hardvérové tokeny ako Yubikey"
+msgstr ""
+"Resetovať dvojfaktorové overenie pre hardvérové tokeny, ako napríklad YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
@@ -969,10 +962,12 @@ msgid ""
 "Please note: Sharing sensitive documents may put you at risk, even when "
 "using Tor and SecureDrop."
 msgstr ""
+"Nezabúdajte na to, že zdieľaním dokumentov s citlivým obsahom sa vystavujete "
+"nebezpečenstvu, dokonca aj vtedy, ak používate Tor alebo SecureDrop."
 
 #: source_templates/footer.html:10
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
-msgstr ""
+msgstr "SecureDrop je projekt organizácie Freedom of the Press Foundation."
 
 #: source_templates/generate.html:4
 msgid "Welcome"
@@ -1053,7 +1048,7 @@ msgstr "Prvé podanie"
 
 #: source_templates/index.html:47
 msgid "First time submitting to our SecureDrop? Start here."
-msgstr "Odosielate na Secure Drop prvý krát? Začnite tu."
+msgstr "Podávate cez Secure Drop prvýkrát? Začnite tu."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
@@ -1061,7 +1056,7 @@ msgstr "Začnite"
 
 #: source_templates/index.html:59
 msgid "Return visit"
-msgstr ""
+msgstr "Vraciam sa"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
