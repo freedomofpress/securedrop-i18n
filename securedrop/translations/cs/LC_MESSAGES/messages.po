@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-09-01 16:37+0000\n"
-"Last-Translator: michaela-bot <michaela.rybickova@gmail.com>\n"
+"Last-Translator: 1000101 <jan.hrnko@satoshilabs.com>\n"
 "Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/cs/>\n"
 "Language: cs\n"
@@ -81,7 +81,8 @@ msgstr "Smazán uživatel '{user}'"
 
 #: journalist_app/admin.py:263
 msgid "Test alert sent. Please check your email."
-msgstr "Testovací upozornění zasláno. Prosím zkontrolujte váš e-mail."
+msgstr ""
+"Testovací upozornění odesláno. Prosím zkontrolujte svou e-mailovou schránku."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -1001,6 +1002,9 @@ msgid ""
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
+"<a id=\"disable-js\" href=\"\"><strong>Úroveň zabezpečení</strong></a> "
+"vašeho Tor prohlížeče je příliš nízká. Použite tlačidlo <img src=\"{icon}\" "
+"alt=\"shield icon\"> &nbsp;na liště prohlížeče aby ste ji změnili."
 
 #: source_templates/index.html:17
 msgid ""
@@ -1020,43 +1024,44 @@ msgstr ""
 
 #: source_templates/index.html:45
 msgid "First submission"
-msgstr ""
+msgstr "První podání"
 
 #: source_templates/index.html:47
 msgid "First time submitting to our SecureDrop? Start here."
-msgstr ""
+msgstr "Podáváte na náš SecureDrop prvně? Začněte zde."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
-msgstr ""
+msgstr "ZAČÍT"
 
 #: source_templates/index.html:59
 msgid "Return visit"
-msgstr ""
+msgstr "Vracím se"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
-msgstr ""
+msgstr "Už máte krycí jméno? Zkontrolujte odpovědi anebo pošlite něco nového."
 
 #: source_templates/index.html:65
 msgid "CHECK-IN"
-msgstr ""
+msgstr "KONTROLA"
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
 msgstr ""
+"Klepněte na <img src=\"{icon}\" alt=\"ikona štítu\"> v paneli nástrojů výše"
 
 #: source_templates/index.html:80
 msgid "Select <strong>Advanced Security Settings</strong>"
-msgstr ""
+msgstr "Vyberte <strong>Rozšířené Bezpečnostní Nastavení</strong>"
 
 #: source_templates/index.html:81
 msgid "Select <strong>Safest</strong>"
-msgstr ""
+msgstr "Zvolte <strong>Nejbezpečnější</strong>"
 
 #: source_templates/index.html:83
 msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
-msgstr ""
+msgstr "<a href=\"/\">Obnovte tuto stránku</a>, a máte hotovo!"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
@@ -1314,7 +1319,7 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
-msgstr ""
+msgstr "Zpátky na stránku podání"
 
 #~ msgid "RESET PASSWORD"
 #~ msgstr "RESETOVAT HESLO"
