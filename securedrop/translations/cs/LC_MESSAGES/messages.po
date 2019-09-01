@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-08-29 21:39+0000\n"
+"PO-Revision-Date: 2019-09-01 11:39+0000\n"
 "Last-Translator: 1000101 <jan.hrnko@satoshilabs.com>\n"
 "Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/cs/>\n"
@@ -28,10 +28,8 @@ msgid "You have been logged out due to inactivity"
 msgstr "Byl/a jste odhlášen/a z důvodu neaktivity"
 
 #: journalist_app/__init__.py:142
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to password change"
-msgstr "Byl/a jste odhlášen/a z důvodu neaktivity"
+msgstr "Byl/a jste odhlášen/a z důvodu změny hesla"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
@@ -210,6 +208,8 @@ msgid ""
 "correctly. To prevent you from getting locked out of your account, you "
 "should reset your password again."
 msgstr ""
+"Vyskytla se chyba, v důsledku které vaše heslo nemuselo být uloženo správně. "
+"Abyste předešli problémům s přihlášením, měli byste si heslo resetovat znovu."
 
 #: journalist_app/utils.py:304
 msgid ""
@@ -219,7 +219,7 @@ msgstr ""
 
 #: journalist_app/utils.py:322
 msgid "No unread submissions in selected collections."
-msgstr ""
+msgstr "Žádná nepřečtená podání ve vybraných kolekcích."
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
@@ -553,7 +553,7 @@ msgstr "Žádné dokumenty k zobrazení."
 #: journalist_templates/col.html:93
 msgid ""
 "You can write a secure reply to the person who submitted these documents:"
-msgstr ""
+msgstr "Můžete napsat bezpečnou odpověď člověku, který podal tyto dokumenty:"
 
 #: journalist_templates/col.html:102
 msgid "You've flagged this source for reply."
@@ -564,10 +564,12 @@ msgid ""
 "An encryption key will be generated for the source the next time they log "
 "in, after which you will be able to reply to the source here."
 msgstr ""
+"Až se zdroj příště přihlásí, bude mu vygenerován šifrovací klíč a poté mu "
+"budete moci odpovědet zde."
 
 #: journalist_templates/col.html:105
 msgid "Click below if you would like to write a reply to this source."
-msgstr ""
+msgstr "Klepněte níže když si přejete tomuto zdroji odpovědet."
 
 #: journalist_templates/col.html:109
 msgid "FLAG THIS SOURCE FOR REPLY"
@@ -579,6 +581,9 @@ msgid ""
 "the files seen here will be unrecoverable and the source will no longer be "
 "able to login using their previous codename.</em>"
 msgstr ""
+"Klepněte níže pro smazání kolekce tohto zdroje. <em>Pozor: Když tohle "
+"uděláte, soubory které zde vidíte nebude již možné obnovit a zdroj se nebude "
+"moci přihlásit svým původním krycím jménem.</em>"
 
 #: journalist_templates/col.html:122
 msgid "DELETE SOURCE AND SUBMISSIONS"
@@ -628,10 +633,12 @@ msgid ""
 msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
-msgstr[0] "Následující soubor byl vybrán pro  <strong>trvalé smazání</strong>:"
+msgstr[0] "Následující soubor byl vybrán pro <strong>trvalé smazání</strong>:"
 msgstr[1] ""
-"Následující soubory byly vybrány pro  <strong>trvalé smazání</strong>:"
+"{files} následující soubory byly vybrány pro <strong>trvalé smazání</strong>:"
 msgstr[2] ""
+"{files} Následujících souborů bylo vybráno pro <strong>trvalé "
+"smazání</strong>:"
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
@@ -735,10 +742,9 @@ msgid "RESET APP TOKEN"
 msgstr "RESETOVAT APP TOKEN"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Reset 2FA for hardware tokens like Yubikey"
 msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
-msgstr "Resetovat 2FA pro hardvérové tokeny jako Yubikey"
+msgstr ""
+"Resetovat dvojfaktorovou autentikaci pro hardvérové tokeny, jako YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
