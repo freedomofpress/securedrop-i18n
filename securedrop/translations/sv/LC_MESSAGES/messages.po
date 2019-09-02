@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-07-09 02:10+0000\n"
-"Last-Translator: rmol <john@freedom.press>\n"
+"PO-Revision-Date: 2019-09-02 08:39+0000\n"
+"Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
 "Language-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sv/>\n"
 "Language: sv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 3.7.1\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -28,10 +28,8 @@ msgid "You have been logged out due to inactivity"
 msgstr "Du har blivit utloggad på grund av inaktivitet"
 
 #: journalist_app/__init__.py:142
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to password change"
-msgstr "Du har blivit utloggad på grund av inaktivitet"
+msgstr "Du har blivit utloggad på grund av lösenordsbyte"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
@@ -738,11 +736,6 @@ msgstr ""
 "din nya enhet, annars kommer du att låsas ut från ditt konto. </em>"
 
 #: journalist_templates/edit_account.html:87
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as FreeOTP, "
-#| "choose the first option. For hardware tokens like the Yubikey, choose the "
-#| "second."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the YubiKey, choose the second "
@@ -754,15 +747,13 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
-msgstr ""
+msgstr "Återställ tvåfaktorsautentisering för mobilappar, som t.ex FreeOTP"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
 msgstr "NOLLSTÄLL APP TOKEN"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Reset 2FA for hardware tokens like Yubikey"
 msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
 msgstr "Nollställ tvåfaktorsautentisering för hårdvarutokens som YubiKey"
 
@@ -960,10 +951,12 @@ msgid ""
 "Please note: Sharing sensitive documents may put you at risk, even when "
 "using Tor and SecureDrop."
 msgstr ""
+"Observera: Delning av känsliga dokument kan utsätta dig för risk, även om du "
+"använder Tor och SecureDrop."
 
 #: source_templates/footer.html:10
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
-msgstr ""
+msgstr "SecureDrop är ett projekt från Freedom of the Press Foundation."
 
 #: source_templates/generate.html:4
 msgid "Welcome"
@@ -1039,34 +1032,32 @@ msgstr ""
 "varning och fortsätt."
 
 #: source_templates/index.html:45
-#, fuzzy
-#| msgid "Encrypt your submission."
 msgid "First submission"
-msgstr "Kryptera din inlämning."
+msgstr "Första inlämning"
 
 #: source_templates/index.html:47
-#, fuzzy
-#| msgid "If this is your first time submitting to journalists, start here."
 msgid "First time submitting to our SecureDrop? Start here."
 msgstr ""
-"Ifall det här är första gången du skickar in information till "
-"journalisterna, börja här."
+"Är det här första gången du skickar in information till vår SecureDrop? "
+"Börja här."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
-msgstr ""
+msgstr "BÖRJA HÄR"
 
 #: source_templates/index.html:59
 msgid "Return visit"
-msgstr ""
+msgstr "Återkommande besök"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
 msgstr ""
+"Har du redan ett kodnamn? Kontrollera om du fått svar eller lämna in något "
+"nytt."
 
 #: source_templates/index.html:65
 msgid "CHECK-IN"
-msgstr ""
+msgstr "CHECKA-IN"
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
