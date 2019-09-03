@@ -762,14 +762,17 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
-msgstr "Endurstilla tvíþátta auðkenningu fyrir farsímaforrit á borð við FreeOTP"
+msgstr ""
+"Endurstilla tvíþátta auðkenningu fyrir farsímaforrit á borð við FreeOTP"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
 msgstr "ENDURSTILLA AUÐKENNINGARTEIKN FORRITA"
 
 #: journalist_templates/edit_account.html:113
-msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
+#, fuzzy
+#| msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
+msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgstr ""
 "Endurstilla tveggja-þátta auðkenningu fyrir vélbúnaðarteikn eins og YubiKey"
 
@@ -860,7 +863,7 @@ msgstr "Innskráning fyrir aðgang að fréttamannaviðmótinu"
 msgid "Password"
 msgstr "Lykilorð"
 
-#: journalist_templates/login.html:12
+#: journalist_templates/login.html:12 source_templates/index.html:65
 msgid "LOG IN"
 msgstr "SKRÁ INN"
 
@@ -1067,11 +1070,8 @@ msgstr "Endurtekin heimsókn"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
-msgstr "Ertu þegar með kóðanafn? Athugaðu með svör eða sendu inn eitthvað nýtt."
-
-#: source_templates/index.html:65
-msgid "CHECK-IN"
-msgstr "INNSKRÁNING"
+msgstr ""
+"Ertu þegar með kóðanafn? Athugaðu með svör eða sendu inn eitthvað nýtt."
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
@@ -1410,6 +1410,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Til baka á innsendingasíðuna"
+
+#~ msgid "CHECK-IN"
+#~ msgstr "INNSKRÁNING"
 
 #~ msgid "RESET PASSWORD"
 #~ msgstr "ENDURSTILLA LYKILORÐ"

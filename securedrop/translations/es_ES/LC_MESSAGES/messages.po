@@ -791,7 +791,7 @@ msgstr "RESTABLECER TOKEN DE APLICACIÓN"
 #: journalist_templates/edit_account.html:113
 #, fuzzy
 #| msgid "Reset 2FA for hardware tokens like Yubikey"
-msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
+msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgstr "Restablecer A2F para tokens de hardware como YubiKey"
 
 #: journalist_templates/edit_account.html:113
@@ -881,7 +881,7 @@ msgstr "Login para acceder la interfaz de periodista"
 msgid "Password"
 msgstr "Contraseña"
 
-#: journalist_templates/login.html:12
+#: journalist_templates/login.html:12 source_templates/index.html:65
 msgid "LOG IN"
 msgstr "INICIAR SESIÓN"
 
@@ -1096,10 +1096,6 @@ msgstr "Visitar de vuelta"
 msgid "Already have a codename? Check for replies or submit something new."
 msgstr ""
 "¿Ya tiene un nombre en clave? Revise si hay respuestas o envíe algo nuevo."
-
-#: source_templates/index.html:65
-msgid "CHECK-IN"
-msgstr "REGISTRO"
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
@@ -1437,6 +1433,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Regresar a la pagina de envío"
+
+#~ msgid "CHECK-IN"
+#~ msgstr "REGISTRO"
 
 #~ msgid "RESET PASSWORD"
 #~ msgstr "RESTABLECER CONTRASEÑA"

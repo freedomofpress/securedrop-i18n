@@ -647,8 +647,8 @@ msgid_plural ""
 msgstr[0] ""
 "Nasledujúci súbor bol označený na <strong>permanentné vymazanie</strong>:"
 msgstr[1] ""
-"Nasledujúce {files} súbory boli označené na <strong>permanentné "
-"vymazanie</strong>:"
+"Nasledujúce {files} súbory boli označené na <strong>permanentné vymazanie</"
+"strong>:"
 msgstr[2] ""
 "Nasledujúcich {files} súborov bolo označených na <strong>permanentné "
 "vymazanie</strong>:"
@@ -767,7 +767,9 @@ msgid "RESET APP TOKEN"
 msgstr "RESETOVAŤ APP TOKEN"
 
 #: journalist_templates/edit_account.html:113
-msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
+#, fuzzy
+#| msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
+msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgstr ""
 "Resetovať dvojfaktorové overenie pre hardvérové tokeny, ako napríklad YubiKey"
 
@@ -857,7 +859,7 @@ msgstr "Prihláste pre prístup do novinárskeho rozhrania"
 msgid "Password"
 msgstr "Heslo"
 
-#: journalist_templates/login.html:12
+#: journalist_templates/login.html:12 source_templates/index.html:65
 msgid "LOG IN"
 msgstr "PRIHLÁSIŤ SA"
 
@@ -1026,10 +1028,9 @@ msgid ""
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Odporúča sa používať Tor Prehliadač pre prístup k "
-"SecureDropu:</strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">"
-"Zistite ako ho nainštalovať</a>, alebo ignorujte toto varovanie a pokračujte "
-"ďalej."
+"<strong>Odporúča sa používať Tor Prehliadač pre prístup k SecureDropu:</"
+"strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">Zistite ako ho "
+"nainštalovať</a>, alebo ignorujte toto varovanie a pokračujte ďalej."
 
 #: source_templates/index.html:18
 msgid ""
@@ -1064,10 +1065,6 @@ msgstr "Vraciam sa"
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
 msgstr "Už máte krycie meno? Skontrolujte odpovede alebo pošlite niečo nové."
-
-#: source_templates/index.html:65
-msgid "CHECK-IN"
-msgstr "KONTROLA"
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
@@ -1400,6 +1397,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Späť na stránku podania"
+
+#~ msgid "CHECK-IN"
+#~ msgstr "KONTROLA"
 
 #~ msgid "RESET PASSWORD"
 #~ msgstr "RESETOVAŤ HESLO"

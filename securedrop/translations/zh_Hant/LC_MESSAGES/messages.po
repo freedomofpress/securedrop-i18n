@@ -720,7 +720,7 @@ msgstr "重設應用程式的令牌"
 #: journalist_templates/edit_account.html:113
 #, fuzzy
 #| msgid "Reset 2FA for hardware tokens like Yubikey"
-msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
+msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgstr "重設 2FA 的硬體令牌，例如 YubiKey"
 
 #: journalist_templates/edit_account.html:113
@@ -806,7 +806,7 @@ msgstr "登入記者使用介面"
 msgid "Password"
 msgstr "密碼"
 
-#: journalist_templates/login.html:12
+#: journalist_templates/login.html:12 source_templates/index.html:65
 msgid "LOG IN"
 msgstr "登錄"
 
@@ -1000,10 +1000,6 @@ msgstr ""
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
-msgstr ""
-
-#: source_templates/index.html:65
-msgid "CHECK-IN"
 msgstr ""
 
 #: source_templates/index.html:79

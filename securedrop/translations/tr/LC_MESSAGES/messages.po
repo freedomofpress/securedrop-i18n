@@ -771,7 +771,9 @@ msgid "RESET APP TOKEN"
 msgstr "UYGULAMA KODUNU SIFIRLA"
 
 #: journalist_templates/edit_account.html:113
-msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
+#, fuzzy
+#| msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
+msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgstr ""
 "YubiKey gibi donanımsal çözümler için iki aşamalı kimlik doğrulamayı sıfırla"
 
@@ -862,7 +864,7 @@ msgstr "Gazeteci arayüzüne erişmek için oturum açın"
 msgid "Password"
 msgstr "Parola"
 
-#: journalist_templates/login.html:12
+#: journalist_templates/login.html:12 source_templates/index.html:65
 msgid "LOG IN"
 msgstr "OTURUM AÇ"
 
@@ -1072,10 +1074,6 @@ msgid "Already have a codename? Check for replies or submit something new."
 msgstr ""
 "Daha önce bir kod adı aldıysanız yanıtlara bakabilir ya da yeni bir şeyler "
 "gönderebilirsiniz."
-
-#: source_templates/index.html:65
-msgid "CHECK-IN"
-msgstr "GİRİŞ"
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
@@ -1414,6 +1412,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Gönderi sayfasına geri dön"
+
+#~ msgid "CHECK-IN"
+#~ msgstr "GİRİŞ"
 
 #~ msgid "RESET PASSWORD"
 #~ msgstr "PAROLAYI SIFIRLA"

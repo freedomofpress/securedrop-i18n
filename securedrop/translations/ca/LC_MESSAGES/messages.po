@@ -773,7 +773,9 @@ msgid "RESET APP TOKEN"
 msgstr "RESTABLEIX EL TESTIMONI DE L'APLICACIÓ"
 
 #: journalist_templates/edit_account.html:113
-msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
+#, fuzzy
+#| msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
+msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgstr ""
 "Restableix l'autenticació de factor doble per a testimonis físics, com ara "
 "el YubiKey"
@@ -864,7 +866,7 @@ msgstr "Inicieu la sessió per accedir a la interfície de periodista"
 msgid "Password"
 msgstr "Contrasenya"
 
-#: journalist_templates/login.html:12
+#: journalist_templates/login.html:12 source_templates/index.html:65
 msgid "LOG IN"
 msgstr "INICIA LA SESSIÓ"
 
@@ -1072,10 +1074,6 @@ msgstr "Visita nova"
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
 msgstr "Ja teniu un nom en clau? Comproveu les respostes o envieu quelcom nou."
-
-#: source_templates/index.html:65
-msgid "CHECK-IN"
-msgstr "REGISTRE"
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
@@ -1412,6 +1410,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Vés enrere a la pàgina d'enviaments"
+
+#~ msgid "CHECK-IN"
+#~ msgstr "REGISTRE"
 
 #~ msgid "RESET PASSWORD"
 #~ msgstr "CANVIA LA CONTRASENYA"

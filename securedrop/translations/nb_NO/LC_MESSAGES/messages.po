@@ -764,7 +764,7 @@ msgstr "TILBAKESTILL MOBILPROGRAMSYMBOL"
 #: journalist_templates/edit_account.html:113
 #, fuzzy
 #| msgid "Reset 2FA for hardware tokens like Yubikey"
-msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
+msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgstr "Tilbakestill tofaktor-oppsett for fysiske nøkler som YubiKey"
 
 #: journalist_templates/edit_account.html:113
@@ -854,7 +854,7 @@ msgstr "Logg inn for å få tilgang til journalist-portalen"
 msgid "Password"
 msgstr "Passord"
 
-#: journalist_templates/login.html:12
+#: journalist_templates/login.html:12 source_templates/index.html:65
 msgid "LOG IN"
 msgstr "LOGG INN"
 
@@ -1057,10 +1057,6 @@ msgstr ""
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
-msgstr ""
-
-#: source_templates/index.html:65
-msgid "CHECK-IN"
 msgstr ""
 
 #: source_templates/index.html:79

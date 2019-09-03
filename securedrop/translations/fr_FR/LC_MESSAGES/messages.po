@@ -798,7 +798,7 @@ msgstr "RÉINITIALISER LE JETON DES APPLIS"
 #: journalist_templates/edit_account.html:113
 #, fuzzy
 #| msgid "Reset 2FA for hardware tokens like Yubikey"
-msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
+msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgstr "Réinitialiser l’A2F pour les jetons matériels tels que la YubiKey"
 
 #: journalist_templates/edit_account.html:113
@@ -889,7 +889,7 @@ msgstr "Connectez-vous pour accéder à l'interface des journalistes"
 msgid "Password"
 msgstr "Mot de passe"
 
-#: journalist_templates/login.html:12
+#: journalist_templates/login.html:12 source_templates/index.html:65
 msgid "LOG IN"
 msgstr "CONNEXION"
 
@@ -1100,10 +1100,6 @@ msgstr ""
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
-msgstr ""
-
-#: source_templates/index.html:65
-msgid "CHECK-IN"
 msgstr ""
 
 #: source_templates/index.html:79

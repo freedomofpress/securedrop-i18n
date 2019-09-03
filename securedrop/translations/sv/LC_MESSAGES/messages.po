@@ -754,7 +754,9 @@ msgid "RESET APP TOKEN"
 msgstr "NOLLSTÄLL APP TOKEN"
 
 #: journalist_templates/edit_account.html:113
-msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
+#, fuzzy
+#| msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
+msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgstr "Nollställ tvåfaktorsautentisering för hårdvarutokens som YubiKey"
 
 #: journalist_templates/edit_account.html:113
@@ -843,7 +845,7 @@ msgstr "Logga in för att få tillgång till journalistgränssnittet"
 msgid "Password"
 msgstr "Lösenord"
 
-#: journalist_templates/login.html:12
+#: journalist_templates/login.html:12 source_templates/index.html:65
 msgid "LOG IN"
 msgstr "LOGGA IN"
 
@@ -1054,10 +1056,6 @@ msgid "Already have a codename? Check for replies or submit something new."
 msgstr ""
 "Har du redan ett kodnamn? Kontrollera om du fått svar eller lämna in något "
 "nytt."
-
-#: source_templates/index.html:65
-msgid "CHECK-IN"
-msgstr "CHECKA-IN"
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
@@ -1392,6 +1390,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Tillbaka till inlämningssidan"
+
+#~ msgid "CHECK-IN"
+#~ msgstr "CHECKA-IN"
 
 #~ msgid "RESET PASSWORD"
 #~ msgstr "ÅTERSTÄLL LÖSENORD"

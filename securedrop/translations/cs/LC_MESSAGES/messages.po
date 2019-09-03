@@ -642,8 +642,8 @@ msgstr[0] "Následující soubor byl vybrán pro <strong>trvalé smazání</stro
 msgstr[1] ""
 "{files} následující soubory byly vybrány pro <strong>trvalé smazání</strong>:"
 msgstr[2] ""
-"{files} Následujících souborů bylo vybráno pro <strong>trvalé "
-"smazání</strong>:"
+"{files} Následujících souborů bylo vybráno pro <strong>trvalé smazání</"
+"strong>:"
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
@@ -735,9 +735,9 @@ msgid ""
 "be locked out of your account.</em>"
 msgstr ""
 "Pokud byly Vaše přístupy pro dvoufaktorovou autentizaci ztraceny nebo "
-"zneužity, nebo máte nové zařízení, můžete si svůj přístup resetovat zde.<em>"
-"Musíte si ale nové zařízení připravit k nastavení, jinak ztratíte přístup k "
-"Vašemu účtu.</em>"
+"zneužity, nebo máte nové zařízení, můžete si svůj přístup resetovat zde."
+"<em>Musíte si ale nové zařízení připravit k nastavení, jinak ztratíte "
+"přístup k Vašemu účtu.</em>"
 
 #: journalist_templates/edit_account.html:87
 msgid ""
@@ -758,7 +758,9 @@ msgid "RESET APP TOKEN"
 msgstr "RESETOVAT APP TOKEN"
 
 #: journalist_templates/edit_account.html:113
-msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
+#, fuzzy
+#| msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
+msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgstr ""
 "Resetovat dvojfaktorovou autentikaci pro hardvérové tokeny, jako YubiKey"
 
@@ -847,7 +849,7 @@ msgstr "Přihlaste se do rozhraní pro novináře"
 msgid "Password"
 msgstr "Heslo"
 
-#: journalist_templates/login.html:12
+#: journalist_templates/login.html:12 source_templates/index.html:65
 msgid "LOG IN"
 msgstr "PŘIHLÁSIT SE"
 
@@ -1043,10 +1045,6 @@ msgstr "Vracím se"
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
 msgstr "Už máte krycí jméno? Zkontrolujte odpovědi anebo pošlete něco nového."
-
-#: source_templates/index.html:65
-msgid "CHECK-IN"
-msgstr "KONTROLA"
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
@@ -1322,6 +1320,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Zpátky na stránku podání"
+
+#~ msgid "CHECK-IN"
+#~ msgstr "KONTROLA"
 
 #~ msgid "RESET PASSWORD"
 #~ msgstr "RESETOVAT HESLO"

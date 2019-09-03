@@ -771,7 +771,9 @@ msgid "RESET APP TOKEN"
 msgstr "Redefinir código de autenticação do app"
 
 #: journalist_templates/edit_account.html:113
-msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
+#, fuzzy
+#| msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
+msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgstr ""
 "Redefinir autenticação de dois fatores (2FA) para códigos de autenticação de "
 "hardwares, como YubiKey"
@@ -863,7 +865,7 @@ msgstr "Faça login para acessar a interface para jornalistas"
 msgid "Password"
 msgstr "Senha"
 
-#: journalist_templates/login.html:12
+#: journalist_templates/login.html:12 source_templates/index.html:65
 msgid "LOG IN"
 msgstr "ACESSAR"
 
@@ -1068,10 +1070,6 @@ msgstr "Visita de retorno"
 msgid "Already have a codename? Check for replies or submit something new."
 msgstr ""
 "Você já criou um codinome? Verifique respostas ou envie novos documentos."
-
-#: source_templates/index.html:65
-msgid "CHECK-IN"
-msgstr "PASSAR O REGISTRO"
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
@@ -1410,6 +1408,9 @@ msgstr ""
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
 msgstr "Voltar à página de envio"
+
+#~ msgid "CHECK-IN"
+#~ msgstr "PASSAR O REGISTRO"
 
 #~ msgid "RESET PASSWORD"
 #~ msgstr "REDEFINIR SENHA"
