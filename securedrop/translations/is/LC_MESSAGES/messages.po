@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.12.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-09-04 14:39+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"PO-Revision-Date: 2019-09-04 21:39+0000\n"
+"Last-Translator: Oktavia <oktaviahrund@gmail.com>\n"
 "Language-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/is/>\n"
 "Language: is\n"
@@ -757,8 +757,8 @@ msgid ""
 "one."
 msgstr ""
 "Til að endurstilla tvíþátta auðkenningu fyrir farsímaforrit á borð við "
-"FreeOTP, skaltu velja fyrsta valkostinn. Fyrir vélbúnaðarteikn eins og "
-"Yubikey, veldu þann næsta."
+"FreeOTP, veldu fyrri valkostinn. Fyrir vélbúnaðarteikn eins og Yubikey, "
+"veldu seinni valkostinn."
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
@@ -967,8 +967,8 @@ msgid ""
 "Please note: Sharing sensitive documents may put you at risk, even when "
 "using Tor and SecureDrop."
 msgstr ""
-"Athugaðu: Að deila viðkvæmum upplýsingum getur stefnt þér í ákveðna hættu, "
-"jafnvel þó veriði sé að nota  Tor og SecureDrop."
+"Athugaðu: Að deila viðkvæmum upplýsingum getur falið í sér áhættu, jafnvel "
+"þó notast sé við Tor og SecureDrop."
 
 #: source_templates/footer.html:10
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
@@ -1059,16 +1059,15 @@ msgstr ""
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
-msgstr "AÐ KOMAST Í GANG"
+msgstr "BYRJA HÉR"
 
 #: source_templates/index.html:59
 msgid "Return visit"
-msgstr "Endurtekin heimsókn"
+msgstr "Endurkomu heimsókn"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
-msgstr ""
-"Ertu þegar með kóðanafn? Athugaðu með svör eða sendu inn eitthvað nýtt."
+msgstr "Ertu þegar með kóðanafn? Skoðaðu  svör eða sendu inn eitthvað nýtt."
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
