@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-07-08 12:35+0000\n"
+"PO-Revision-Date: 2019-09-04 21:39+0000\n"
 "Last-Translator: AbhayKaushik <abhay.gyanbharati@gmail.com>\n"
 "Language-Team: Hindi <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/hi/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 3.7.1\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:14
@@ -28,10 +28,8 @@ msgid "You have been logged out due to inactivity"
 msgstr "निष्क्रियता के कारण आपको लॉग आउट कर दिया गया है"
 
 #: journalist_app/__init__.py:142
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to password change"
-msgstr "निष्क्रियता के कारण आपको लॉग आउट कर दिया गया है"
+msgstr "पासवर्ड में बदलाव के कारण आपको लॉग आउट कर दिया गया है"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
@@ -729,32 +727,26 @@ msgstr ""
 "हो जाएंगे।</ em>"
 
 #: journalist_templates/edit_account.html:87
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as FreeOTP, "
-#| "choose the first option. For hardware tokens like the Yubikey, choose the "
-#| "second."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the YubiKey, choose the second "
 "one."
 msgstr ""
-"मोबाइल एप्लिकेशन जैसे कि (FreeOTP) के लिए दो-कारक प्रमाणीकरण को रीसेट करने के लिए, "
-"पहला विकल्प चुनें। Yubikey जैसे हार्डवेयर टोकन के लिए, दूसरा चुनें |"
+"मोबाइल एप्लिकेशन जैसे कि (FreeOTP) के लिए दो-कारक प्रमाणीकरण को रीसेट करने के"
+" लिए, पहला विकल्प चुनें। YubiKey जैसे हार्डवेयर टोकन के लिए, दूसरा चुनें |"
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
 msgstr ""
+"मोबाइल एप्लिकेशन जैसे कि (FreeOTP) के लिए दो-कारक प्रमाणीकरण को रीसेट करें"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
 msgstr "एप्लिकेशन  टोकन रीसेट  करें"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Reset 2FA for hardware tokens like Yubikey"
 msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
-msgstr "Yubikey जैसे हार्डवेयर टोकन के लिए दो-कारक प्रमाणीकरण को रीसेट  करें"
+msgstr "YubiKey जैसे हार्डवेयर टोकन के लिए दो-कारक प्रमाणीकरण को रीसेट करें"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
@@ -944,6 +936,8 @@ msgid ""
 "Please note: Sharing sensitive documents may put you at risk, even when "
 "using Tor and SecureDrop."
 msgstr ""
+"ध्यान दें: Tor और SecureDrop का उपयोग करते समय भी, संवेदनशील दस्तावेज़ साझा "
+"करना आपको जोखिम में डाल सकता है।"
 
 #: source_templates/footer.html:10
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
@@ -1033,7 +1027,7 @@ msgstr "यदि यह पत्रकारों को जमा करन�
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
-msgstr ""
+msgstr "शुरु करें"
 
 #: source_templates/index.html:59
 msgid "Return visit"
