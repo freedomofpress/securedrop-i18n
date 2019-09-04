@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-09-04 04:39+0000\n"
-"Last-Translator: darmozrac <darmozrac@gmail.com>\n"
+"PO-Revision-Date: 2019-09-04 21:39+0000\n"
+"Last-Translator: Oliver <oweb@pm.me>\n"
 "Language-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sk/>\n"
 "Language: sk\n"
@@ -25,7 +25,7 @@ msgstr "pred {time}"
 
 #: journalist_app/__init__.py:88 journalist_app/__init__.py:133
 msgid "You have been logged out due to inactivity"
-msgstr "Boli ste odhlásení z dôvodu neaktivity"
+msgstr "Boli ste odhlásení z dôvodu nečinnosti"
 
 #: journalist_app/__init__.py:142
 msgid "You have been logged out due to password change"
