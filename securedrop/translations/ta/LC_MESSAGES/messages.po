@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 1.0.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-09-05 16:39+0000\n"
+"PO-Revision-Date: 2019-09-05 18:39+0000\n"
 "Last-Translator: Stymy RAT <stymyrat@outlook.com>\n"
 "Language-Team: Tamil <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ta/>\n"
@@ -212,11 +212,13 @@ msgstr[1] "{num} திரட்டுகள் நீக்கப்பட்�
 
 #: journalist_app/utils.py:279
 msgid "Name updated."
-msgstr ""
+msgstr "பெயர் புதுப்பிக்கப்பட்டுள்ளது."
 
 #: journalist_app/utils.py:288
 msgid "You submitted a bad password! Password not changed."
 msgstr ""
+"நீங்கள் ஒரு தவறான கடவுச்சொல்லை சமர்ப்பித்துள்ளீர்கள்! கடவுச்சொல் "
+"மாற்றப்படவில்லை."
 
 #: journalist_app/utils.py:295
 msgid ""
@@ -224,65 +226,72 @@ msgid ""
 "correctly. To prevent you from getting locked out of your account, you "
 "should reset your password again."
 msgstr ""
+"ஒரு பிழை நேர்ந்துவிட்டது, புதிய கடவுச்சொல்லும் சரியாகச் "
+"சேமிக்கப்படாதிருக்கலாம். உங்கள் பயனர்கணக்கிலிருந்து நீங்கள் "
+"வெளிப்பூட்டிடுவதைத் தடுக்கும் பொருட்டு நீங்கள் உங்களுடைய கடவுச்சொல்லை "
+"மறுவமைப்பு செய்ய வேண்டும்."
 
 #: journalist_app/utils.py:304
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
 msgstr ""
+"கடவுச்சொல் புதுப்பிக்கப்பட்டுள்ளது. உங்களுடைய KeePassX தரவுதளத்தில் "
+"சேமித்துக் கொள்ள மறவாதீர். புதிய கடவுச்சொல்:"
 
 #: journalist_app/utils.py:322
 msgid "No unread submissions in selected collections."
 msgstr ""
+"தேர்ந்தெடுக்கப்பட்ட திரட்டுகளில் படிக்கப்படாத சமர்ப்பிப்புகள் ஏதுமில்லை."
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
-msgstr ""
+msgstr "மூடுக"
 
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:77
 msgid "Cancel"
-msgstr ""
+msgstr "நீக்குக"
 
 #: journalist_templates/_source_row.html:23
 msgid "1 doc"
 msgid_plural "{doc_num} docs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 ஆவணம்"
+msgstr[1] "{doc_num} ஆவணங்கள்"
 
 #: journalist_templates/_source_row.html:24
 msgid "1 message"
 msgid_plural "{msg_num} messages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 செய்தி"
+msgstr[1] "{msg_num} செய்திகள்"
 
 #: journalist_templates/_source_row.html:27
 msgid "1 unread"
 msgid_plural "{num_unread} unread"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 படிக்கப்படாதது"
+msgstr[1] "{num_unread} படிக்கப்படாதவை"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
 msgid "Change Secret"
-msgstr ""
+msgstr "மறைசெய்தியை மாற்றுக"
 
 #: journalist_templates/account_edit_hotp_secret.html:7
 #: journalist_templates/admin_add_user.html:68
 #: journalist_templates/admin_edit_hotp_secret.html:8
 msgid "HOTP Secret"
-msgstr ""
+msgstr "ஹஒபக (HOTP) மறைசெய்தி"
 
 #: journalist_templates/account_edit_hotp_secret.html:9
 #: journalist_templates/admin_edit_hotp_secret.html:10
 #: source_templates/login.html:21
 msgid "CONTINUE"
-msgstr ""
+msgstr "தொடர்க"
 
 #: journalist_templates/account_new_two_factor.html:4
 #: journalist_templates/admin_new_user_two_factor.html:5
 msgid "Enable FreeOTP"
-msgstr ""
+msgstr "தளையற்ற ஒபகவை (FreeOTP) இயலச்செய்"
 
 #: journalist_templates/account_new_two_factor.html:5
 msgid ""
