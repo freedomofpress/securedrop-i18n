@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-09-04 21:39+0000\n"
+"PO-Revision-Date: 2019-09-05 08:39+0000\n"
 "Last-Translator: AbhayKaushik <abhay.gyanbharati@gmail.com>\n"
 "Language-Team: Hindi <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/hi/>\n"
@@ -941,7 +941,7 @@ msgstr ""
 
 #: source_templates/footer.html:10
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
-msgstr ""
+msgstr "Securedrop, Freedom of the Press Foundation का एक प्रोजेक्ट है।"
 
 #: source_templates/generate.html:4
 msgid "Welcome"
@@ -1014,10 +1014,8 @@ msgstr ""
 "चेतावनी को अनदेखा करें|"
 
 #: source_templates/index.html:45
-#, fuzzy
-#| msgid "Encrypt your submission."
 msgid "First submission"
-msgstr "अपना सबमिशन एन्क्रिप्ट करें|"
+msgstr "पहला सबमिशन"
 
 #: source_templates/index.html:47
 #, fuzzy
