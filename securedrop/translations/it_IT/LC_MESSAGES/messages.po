@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-09-04 21:39+0000\n"
-"Last-Translator: Beatrice <mail@beatricemartini.it>\n"
+"PO-Revision-Date: 2019-09-06 18:39+0000\n"
+"Last-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\n"
 "Language-Team: Italian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/it/>\n"
 "Language: it_IT\n"
@@ -33,7 +33,7 @@ msgstr "La sessione è stata terminata per inattività"
 
 #: journalist_app/__init__.py:142
 msgid "You have been logged out due to password change"
-msgstr "Sei stato disconnesso a causa della modifica della password"
+msgstr "Sei stato disconnesso a seguito della modifica della password"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
@@ -73,8 +73,7 @@ msgstr ""
 
 #: journalist_app/admin.py:113
 msgid "Token in two-factor authentication accepted for user {user}."
-msgstr ""
-"Token  nell'autenticazione a due fattori accettato per l'utente {user}."
+msgstr "Token nell'autenticazione a due fattori accettato per l'utente {user}."
 
 #: journalist_app/admin.py:184 journalist_app/admin.py:192
 #: journalist_app/utils.py:281
@@ -1064,7 +1063,7 @@ msgstr ""
 
 #: source_templates/index.html:45
 msgid "First submission"
-msgstr "Prima presentazione"
+msgstr "Primo invio"
 
 #: source_templates/index.html:47
 msgid "First time submitting to our SecureDrop? Start here."
@@ -1076,7 +1075,7 @@ msgstr "INIZIA"
 
 #: source_templates/index.html:59
 msgid "Return visit"
-msgstr "Visita di ritorno"
+msgstr "Visitatore di ritorno"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
