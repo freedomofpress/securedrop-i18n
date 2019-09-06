@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 1.0.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-09-05 18:39+0000\n"
+"PO-Revision-Date: 2019-09-06 13:39+0000\n"
 "Last-Translator: Stymy RAT <stymyrat@outlook.com>\n"
 "Language-Team: Tamil <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ta/>\n"
@@ -300,11 +300,16 @@ msgid ""
 "entry for your account in the app, enter one of the 6-digit codes from "
 "the app to confirm that two factor authentication is set up correctly."
 msgstr ""
+"நீங்கள் பெரும்பாலும் முடித்துவிட்டீர்கள்! உங்களுடைய இருகூற்று உறுதிப்படுத்தல்"
+" மறுவமைப்பை நிறைவு செய்யும் பொருட்டு, தளையற்ற ஒபகவை (FreeOTP) அமைக்கக் கீழுள்"
+"ள நெறிமுறைகளைப் பின்பற்றுக. செயலியில் உங்கள் பயனர்கணக்கிற்கான உள்ளீட்டை "
+"நீங்கள் இணைத்தவுடன், இருகூற்று உறுதிப்படுத்தல் சரியாக அமைந்துள்ளதை உறுதிசெய்"
+"ய செயலியிலிருந்து பெற்ற 6 இலக்கக்குறிகளில் ஒன்றை உள்ளிடுக."
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
 msgid "Install FreeOTP on your phone"
-msgstr ""
+msgstr "தளையற்ற ஒபகவை (FreeOTP) உங்கள் தொலைபேசியில் நிறுவுக"
 
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
