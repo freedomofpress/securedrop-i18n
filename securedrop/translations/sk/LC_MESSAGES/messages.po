@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-09-04 21:39+0000\n"
-"Last-Translator: Oliver <oweb@pm.me>\n"
+"PO-Revision-Date: 2019-09-08 20:39+0000\n"
+"Last-Translator: 1000101 <jan.hrnko@satoshilabs.com>\n"
 "Language-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sk/>\n"
 "Language: sk\n"
@@ -64,7 +64,7 @@ msgid ""
 "An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
 "Vyskytla sa chyba pri ukladaní používateľa do databázy. Prosím kontaktujte "
-"správcu."
+"admina."
 
 #: journalist_app/admin.py:113
 msgid "Token in two-factor authentication accepted for user {user}."
@@ -126,7 +126,7 @@ msgstr "Súbor je povinný."
 
 #: journalist_app/forms.py:71
 msgid "You can only upload PNG image files."
-msgstr "Môžete nahrať iba súbor typu PNG."
+msgstr "Môžete nahrať iba obrázkové súbory typu PNG."
 
 #: journalist_app/main.py:122 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
@@ -174,7 +174,9 @@ msgstr[2] "Pred opakovaním prihlásenia prosím počkajte aspoň {seconds} sek�
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
-msgstr "Pred pokračovaním prosím počkajte na nový kód."
+msgstr ""
+"Pred pokračovaním prosím počkajte na nový kód z aplikácie alebo tokenu pre "
+"dvojfaktorovú autentifikáciu."
 
 #: journalist_app/utils.py:126
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
@@ -286,7 +288,7 @@ msgid ""
 "confirm that two factor authentication is set up correctly."
 msgstr ""
 "Takmer hotovo! Aby ste si vyresetovali Vašu dvojfaktorovú autentifikáciu, je "
-"potreba postupovať podľa inštrukcií nižšie a nastaviť si FreeOTP. Po pridaní "
+"treba postupovať podľa inštrukcií nižšie a nastaviť si FreeOTP. Po pridaní "
 "záznamu pre Váš účet v aplikácii zadajte jeden zo 6-miestnych kódov z "
 "aplikácie pre potvrdenie, že dvojfaktorová autentifikácia je nastavená "
 "správne."
@@ -313,17 +315,17 @@ msgid ""
 "the barcode below:"
 msgstr ""
 "Váš telefón bude teraz v \"skenovacom\" móde. Vrámci tohto módu prosím "
-"naskenujte čiarový kód:"
+"naskenujte QR kód:"
 
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
 msgid "Can't scan the barcode? Enter the following code manually:"
-msgstr "Nedarí sa Vám naskenovať čiarový kód? Zadajte ho ručne:"
+msgstr "Nedarí sa Vám naskenovať QR kód? Zadajte ho ručne:"
 
 #: journalist_templates/account_new_two_factor.html:15
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid "Once you have scanned the barcode, enter the 6-digit code below:"
-msgstr "Po naskenovaní čiarového kódu zadajte 6-miestny kód nižšie:"
+msgstr "Po naskenovaní QR kódu zadajte 6-miestny kód nižšie:"
 
 #: journalist_templates/account_new_two_factor.html:17
 #: journalist_templates/admin_new_user_two_factor.html:20
@@ -527,7 +529,7 @@ msgstr "Odpovedať"
 
 #: journalist_templates/col.html:41 journalist_templates/col.html:48
 msgid "Read"
-msgstr "Čítať"
+msgstr "Prečítané"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
@@ -544,7 +546,7 @@ msgstr "Správa"
 #: journalist_templates/col.html:70 journalist_templates/col.html:130
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
-msgstr "Zmazať potvrdenie"
+msgstr "Potvrdiť zmazanie"
 
 #: journalist_templates/col.html:71
 msgid "Are you sure you want to delete the selected documents?"
@@ -556,14 +558,13 @@ msgstr "ZMAZAŤ"
 
 #: journalist_templates/col.html:86
 msgid "No documents to display."
-msgstr "Žiadne dokumenty k zobrazeniu."
+msgstr "Žiadne dokumenty na zobrazenie."
 
 #: journalist_templates/col.html:93
 msgid ""
 "You can write a secure reply to the person who submitted these documents:"
 msgstr ""
-"Môžete napísať zabezpečenú odpoveď pre osobu, ktorá predložila tieto "
-"dokumenty:"
+"Môžete napísať zabezpečenú odpoveď pre osobu, ktorá podala tieto dokumenty:"
 
 #: journalist_templates/col.html:102
 msgid "You've flagged this source for reply."
@@ -592,7 +593,7 @@ msgid ""
 "able to login using their previous codename.</em>"
 msgstr ""
 "Kliknite nižšie pre zmazanie zbierky tohoto zdroja. <em>Varovanie: Ak toto "
-"urobíte, zobrazené súbory budú neobnoviteľné a zdroju nebude naďalej "
+"urobíte, zobrazené súbory nebude možné obnoviť a zdroju nebude naďalej "
 "umožnené prihlásiť sa pod predošlým krycím menom.</em>"
 
 #: journalist_templates/col.html:122
@@ -609,7 +610,7 @@ msgstr "Nastavenie inštancie"
 
 #: journalist_templates/config.html:9
 msgid "Alerts"
-msgstr "Výstrahy"
+msgstr "Upozornenia"
 
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
@@ -618,7 +619,7 @@ msgstr ""
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
-msgstr "POSLAŤ TESTOVACIU OSSEC VÝSTRAHU"
+msgstr "POSLAŤ TESTOVACIE OSSEC UPOZORNENIE"
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
@@ -628,7 +629,7 @@ msgstr "Obrázok loga"
 msgid ""
 "Here you can update the image displayed on the SecureDrop web interfaces:"
 msgstr ""
-"Tu môžete aktualizovať obrázok zobrazený vo webových rozhraniach SecureDropu:"
+"Tu môžete aktualizovať obrázok zobrazený vo webových rozhraniach SecureDrop:"
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
@@ -667,7 +668,7 @@ msgstr "Upraviť používateľa \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Name &amp; Admin Status"
-msgstr "Zmeniť Meno &amp; Status Správcu"
+msgstr "Zmeniť meno &amp; Admin Status"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -676,16 +677,16 @@ msgstr "AKTUALIZOVAŤ"
 
 #: journalist_templates/edit_account.html:30
 msgid "Edit your account"
-msgstr "Upraviť váš účet"
+msgstr "Upraviť Váš účet"
 
 #: journalist_templates/edit_account.html:31
 msgid "Change Name"
-msgstr "Zmeniť Meno"
+msgstr "Zmeniť meno"
 
 #: journalist_templates/edit_account.html:47
 #: journalist_templates/edit_account.html:75
 msgid "Reset Password"
-msgstr "Resetovať Heslo"
+msgstr "Resetovať heslo"
 
 #: journalist_templates/edit_account.html:49
 msgid "SecureDrop uses automatically generated diceware passwords."
@@ -705,7 +706,7 @@ msgstr "Prosím zadajte vaše súčasné heslo a dvojfaktorový kód."
 
 #: journalist_templates/edit_account.html:61
 msgid "Current Password"
-msgstr "Aktuálne Heslo"
+msgstr "Aktuálne heslo"
 
 #: journalist_templates/edit_account.html:62 journalist_templates/login.html:11
 msgid "Two-factor Code"
@@ -713,7 +714,7 @@ msgstr "Dvojfaktorový kód"
 
 #: journalist_templates/edit_account.html:68
 msgid "The user's password will be changed to:"
-msgstr "Heslo pre používateľa bude zmenené na:"
+msgstr "Heslo používateľa bude zmenené na:"
 
 #: journalist_templates/edit_account.html:70
 msgid "Your password will be changed to:"
@@ -721,7 +722,7 @@ msgstr "Vaše heslo bude zmenené na:"
 
 #: journalist_templates/edit_account.html:80
 msgid "Reset Two-Factor Authentication"
-msgstr "Resetovať Dvojfaktorovú Autentifikáciu"
+msgstr "Resetovať dvojfaktorovú autentifikáciu"
 
 #: journalist_templates/edit_account.html:83
 msgid ""
@@ -760,7 +761,8 @@ msgstr ""
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
 msgstr ""
-"Resetovať dvojfaktorové overenie pre mobilné aplikácie, ako napríklad FreeOTP"
+"Resetovať dvojfaktorovú autentifikáciu pre mobilné aplikácie, ako napríklad "
+"FreeOTP"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
@@ -769,7 +771,8 @@ msgstr "RESETOVAŤ APP TOKEN"
 #: journalist_templates/edit_account.html:113
 msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgstr ""
-"Resetovať dvojfaktorové overenie pre hardvérové tokeny, ako napríklad YubiKey"
+"Resetovať dvojfaktorovú autnetifikáciu pre hardvérové tokeny, ako napríklad "
+"YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
@@ -788,8 +791,8 @@ msgid ""
 msgstr ""
 "Keď sa tento zdroj nabudúce prihlási, SecureDrop mu vygeneruje zabezpečený "
 "šifrovací kľúč. Keď bude kľúč vygenerovaný, pole pre odpoveď sa objaví pod "
-"ich zbierkou dokumentov. Toto pole môžete používaťe pre písanie "
-"zašifrovaných odpovedí."
+"ich zbierkou dokumentov. Toto pole môžete používať pre písanie zašifrovaných "
+"odpovedí."
 
 #: journalist_templates/flag.html:10
 msgid "Continue to the list of documents for {codename}..."
@@ -801,7 +804,7 @@ msgstr "Zdroje"
 
 #: journalist_templates/index.html:11
 msgid "Download Unread"
-msgstr "Stiahnuť Neprečítané"
+msgstr "Stiahnuť neprečítané"
 
 #: journalist_templates/index.html:12
 msgid "Download"
@@ -851,7 +854,7 @@ msgstr ""
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
-msgstr "Prihláste pre prístup do novinárskeho rozhrania"
+msgstr "Prihláste sa pre prístup do novinárskeho rozhrania"
 
 #: journalist_templates/login.html:9
 msgid "Password"
@@ -893,15 +896,15 @@ msgstr "Musíte vložiť správu alebo vybrať súbor na odoslanie."
 
 #: source_app/main.py:178
 msgid "Thanks! We received your message."
-msgstr "Vďaka! Prijali sme vašu správu."
+msgstr "Vďaka! Prijali sme Vašu správu."
 
 #: source_app/main.py:180
 msgid "Thanks! We received your document."
-msgstr "Vďaka! Prijali sme váš dokument."
+msgstr "Vďaka! Prijali sme Váš dokument."
 
 #: source_app/main.py:182
 msgid "Thanks! We received your message and document."
-msgstr "Vďaka! Prijali sme vašu správu a dokument."
+msgstr "Vďaka! Prijali sme Vašu správu a dokument."
 
 #: source_app/main.py:241
 msgid "Reply deleted"
@@ -917,12 +920,12 @@ msgstr "Prepáčte, toto nie je používané krycie meno."
 
 #: source_templates/base.html:6 source_templates/index.html:4
 msgid "Protecting Journalists and Sources"
-msgstr "Ochrana žurnalistov a zdrojov"
+msgstr "Chránime novinárov a zdroje"
 
 #: source_templates/base.html:25 source_templates/footer.html:4
 #: source_templates/index.html:32
 msgid "Powered by"
-msgstr "Beží na"
+msgstr "Postavené na"
 
 #: source_templates/base.html:34
 msgid "LOG OUT"
@@ -938,7 +941,7 @@ msgid ""
 "request."
 msgstr ""
 "Prepáčte, na webovej stránke sa vyskytla chyba a stránka nebola schopná "
-"dokončiť vašu požiadavku."
+"dokončiť Vašu požiadavku."
 
 #: source_templates/error.html:7 source_templates/notfound.html:7
 msgid "Look up a codename..."
@@ -958,7 +961,7 @@ msgstr ""
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
-msgstr "Zabudli ste vaše krycie meno?"
+msgstr "Zabudli ste Vaše krycie meno?"
 
 #: source_templates/footer.html:7
 msgid ""
@@ -989,8 +992,8 @@ msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our journalists in response to what you submit on the next screen."
 msgstr ""
-"Toto je krycie meno budete v budúcnosti používať na prijímanie odpovedí od "
-"našich žurnalistov k tomu čo zašlete na nasledujúcej obrazovke."
+"Toto krycie meno budete v budúcnosti používať na prijímanie odpovedí od "
+"našich novinárov ako odpoveď k tomu, čo zašlete na nasledujúcej obrazovke."
 
 #: source_templates/generate.html:34
 msgid ""
@@ -1000,10 +1003,11 @@ msgid ""
 " questions or are interested in additional information. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"Keďže nesledujeme užívateľov služby <strong>SecureDrop</strong>, toto krycie "
-"meno je jediný spôsob ako s vami budeme môcť v budúcnosti komunikovať, ak "
-"budeme mať otázky, alebo budeme potrebovať ďalšie informácie. Narozdiel od "
-"hesiel sa krycie meno nedá obnoviť."
+"Keďže nesledujeme používateľov služby <strong>SecureDrop</strong>\n"
+", toto krycie meno je jediný spôsob ako s Vami budeme môcť v budúcnosti "
+"komunikovať, ak budeme mať\n"
+" otázky, alebo budeme potrebovať ďalšie informácie. Narozdiel od hesiel sa "
+"krycie meno nedá obnoviť."
 
 #: source_templates/generate.html:42
 msgid "SUBMIT DOCUMENTS"
@@ -1016,7 +1020,7 @@ msgid ""
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
 "<a id=\"disable-js\" href=\"\"><strong>Úroveň zabezpečenia</strong></a> vo "
-"vašom Tor prehliadači je príliš nízka.  Zmeňte to použím tlačítka s <img src="
+"Vašom Tor prehliadači je príliš nízka.  Zmeňte to použím tlačítka s <img src="
 "\"{icon}\" alt=\"ikonkou štítu\"> &nbsp; v paneli nástrojov vašeho "
 "prehliadača."
 
@@ -1050,7 +1054,7 @@ msgstr "Prvé podanie"
 
 #: source_templates/index.html:47
 msgid "First time submitting to our SecureDrop? Start here."
-msgstr "Podávate cez Secure Drop prvýkrát? Začnite tu."
+msgstr "Podávate cez náš SecureDrop prvýkrát? Začnite tu."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
@@ -1072,7 +1076,7 @@ msgstr ""
 
 #: source_templates/index.html:80
 msgid "Select <strong>Advanced Security Settings</strong>"
-msgstr "Vyberte <strong>Rozšírené Bezpečnostné Nastavenia</strong>"
+msgstr "Vyberte <strong>Rozšírené bezpečnostné nastavenia</strong>"
 
 #: source_templates/index.html:81
 msgid "Select <strong>Safest</strong>"
@@ -1084,11 +1088,11 @@ msgstr "<a href=\"/\">Obnovte túto stránku</a>, a máte hotovo!"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
-msgstr "Zadajte Krycie meno"
+msgstr "Zadajte krycie meno"
 
 #: source_templates/login.html:12
 msgid "Enter your codename"
-msgstr "Zadajte vaše krycie meno"
+msgstr "Zadajte Vaše krycie meno"
 
 #: source_templates/login.html:26 source_templates/lookup.html:50
 msgid "CANCEL"
@@ -1105,13 +1109,13 @@ msgid ""
 "onion button in the Tor browser's toolbar to clear all history of your "
 "SecureDrop usage from this device."
 msgstr ""
-"Ďakujeme za ukončenie vašej návštevy! Prosím vyberte \"Nová Identita\" spoza "
-"cibuľového tlačítka v paneli nástrojov Tor Prehliadača pre vymazanie celej "
-"histórie vašeho používania SecureDropu na tomto zariadení."
+"Ďakujeme za ukončenie Vašej návštevy! Prosím vyberte \"Nová identita\" z "
+"ikonky cibule v paneli nástrojov Tor Prehliadača pre vymazanie celej "
+"histórie Vašeho používania SecureDrop na tomto zariadení."
 
 #: source_templates/lookup.html:10
 msgid "Sorry we haven't responded yet!"
-msgstr "Ospravedlňujeme sa za to, že sme ešte sme neodpovedali!"
+msgstr "Ospravedlňujeme sa,  ešte sme neodpovedali!"
 
 #: source_templates/lookup.html:11
 msgid ""
@@ -1172,8 +1176,8 @@ msgid ""
 "with them. This also lets us know that you are aware of our reply. You can "
 "respond by submitting new files and messages above."
 msgstr ""
-"Dostali ste odpoveď. Kvôli väčšej ochrane vašej identity, v prípade že by sa "
-"niekto dozvedel vaše krycie meno, prosím zmažte všetky odpovede v momente "
+"Dostali ste odpoveď. Kvôli väčšej ochrane Vašej identity, v prípade že by sa "
+"niekto dozvedel Vaše krycie meno, prosím zmažte všetky odpovede v momente "
 "keď ste s nimi hotoví. Toto nás zároveň upovedomí o tom, že viete o našej "
 "odpovedi. Môžete odpovedať podaním nových súborov a správ vyššie."
 
@@ -1187,7 +1191,7 @@ msgstr "ZMAZAŤ VŠETKY ODPOVEDE"
 
 #: source_templates/lookup.html:90
 msgid "Are you finished with the replies?"
-msgstr "Ste hotoví s odpoveďami?"
+msgstr "Máte odpovede prečítané?"
 
 #: source_templates/lookup.html:91
 msgid "YES, DELETE ALL REPLIES"
@@ -1203,7 +1207,7 @@ msgstr "Momentálne tu nie sú žiadne odpovede."
 
 #: source_templates/lookup.html:105
 msgid "Remember, your codename is:"
-msgstr "Zapamätajte si, vaše krycie meno je:"
+msgstr "Pamätajte, Vaše krycie meno je:"
 
 #: source_templates/lookup.html:106
 msgid "Show"
@@ -1219,7 +1223,7 @@ msgstr "Stránka nebola nájdená"
 
 #: source_templates/notfound.html:5
 msgid "Sorry, we couldn't locate what you requested."
-msgstr "Prepáčte, nemohli sme nájsť vašu požiadavku."
+msgstr "Prepáčte, nemohli sme nájsť Vašu požiadavku."
 
 #: source_templates/session_timeout.html:6
 msgid ""
@@ -1232,7 +1236,7 @@ msgstr ""
 "prihláste sa znova. Prípadne zvoľte \"novú identitu\" v paneli nástrojov "
 "prehliadača Tor (tlačidlo cibule), aby ste zmazali všetku históriu "
 "komunikácie so SecureDrop z tohto zariadenia. Ak nepoužívate prehliadač Tor, "
-"reštartujte váš prehliadač."
+"reštartujte Váš prehliadač."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1248,15 +1252,15 @@ msgid ""
 "It could be possible for anyone monitoring your Internet traffic (your "
 "government, your Internet provider), to identify you."
 msgstr ""
-"Ktokoľvek moniturujúci vašu Internetovú komunikáciu (vaša vláda, váš "
-"poskytovateľ internetu) vás môže identifikovať."
+"Ktokoľvek moniturujúci Vašu Internetovú komunikáciu (vláda, poskytovateľ "
+"pripojenia) Vás môže identifikovať."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor browser</a> instead."
 msgstr ""
-"<strong>Odporúčame</strong> vám použiť <a href=\"www.torproject.org/projects/"
+"<strong>Odporúčame</strong> Vám použiť <a href=\"www.torproject.org/projects/"
 "torbrowser.html\">prehliadač Tor</a>."
 
 #: source_templates/use-tor-browser.html:3
@@ -1266,7 +1270,8 @@ msgstr "Mali by ste použiť prehliadač Tor"
 #: source_templates/use-tor-browser.html:4
 msgid ""
 "If you are not using Tor Browser, you <strong>may not be anonymous</strong>."
-msgstr "Ak nepoužívate prehliadač Tor <strong>nie ste anonymní</strong>."
+msgstr ""
+"Ak nepoužívate prehliadač Tor, <strong>riskujete svoju anonymitu</strong>."
 
 #: source_templates/use-tor-browser.html:5
 msgid ""
@@ -1274,7 +1279,7 @@ msgid ""
 "you</strong> to install Tor Browser and use it to access our site safely and "
 "anonymously."
 msgstr ""
-"Ak chcete poslať informácie do SecureDrop <strong>odporúčame vám</strong> "
+"Ak chcete poslať informácie do SecureDrop <strong>odporúčame Vám</strong> "
 "nainštalovať prehliadač Tor a používať ho na bezpečný a anonymný prístup k "
 "našej stránke."
 
@@ -1292,14 +1297,14 @@ msgid ""
 "mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
-"Ak je tu šanca, že sťahovaním prehliadača Tor vzbudíte podozrenie a váš "
-"mailový poskytovateľ je zrejme monitorovaný, môžete poslať správu na adresu "
-"<pre>gettor@torproject.org</pre> a odpovie vám automatický bot s "
+"Ak je tu šanca, že sťahovaním prehliadača Tor vzbudíte podozrenie a Váš "
+"mailový poskytovateľ zrejme nie je monitorovaný, môžete poslať správu na "
+"adresu <pre>gettor@torproject.org</pre> a odpovie Vám automatický bot s "
 "inštrukciami."
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
-msgstr "Prečo si stiahnuť novinárov verejný kľúč?"
+msgstr "Prečo si stiahnuť verejný kľúč novinára?"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
@@ -1308,7 +1313,7 @@ msgid ""
 "before your data reaches the SecureDrop server."
 msgstr ""
 "SecureDrop šifruje súbory a správy po podarní. Šifrovanie správ a súborov "
-"pred podaním môže pridať dodatočnú vrstvu bezpečnosti predtým, než sa vaše "
+"pred podaním môže pridať dodatočnú vrstvu bezpečnosti predtým, než sa Vaše "
 "dáta dostanú na SecureDrop server."
 
 #: source_templates/why-journalist-key.html:5
@@ -1337,9 +1342,9 @@ msgid ""
 "<code>.asc</code> file you just downloaded and it will be automatically "
 "imported to your keyring."
 msgstr ""
-"Ak používate <a href=\"{url}\">Tails</a>, môžete dvojkliknúť na <code>.asc</"
-"code> súbor, ktorý ste si práve stiahli a okamžite bude pridaný na vašu "
-"kľúčenku."
+"Ak používate <a href=\"{url}\">Tails</a>, môžete dvojkliknúť na "
+"<code>.asc</code> súbor, ktorý ste si práve stiahli a okamžite bude pridaný "
+"na Vašu kľúčenku."
 
 #: source_templates/why-journalist-key.html:11
 msgid ""
@@ -1351,7 +1356,7 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:14
 msgid "Encrypt your submission."
-msgstr "Zašifrovať vaše podanie."
+msgstr "Zašifrovať Vaše podanie."
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
@@ -1360,18 +1365,18 @@ msgid ""
 "at the end), you can just copy and paste that. (don't include the <code>."
 "asc</code>!)"
 msgstr ""
-"Musíte byť schopní identifikovať tento kľúč (toto sa nazýva \"užívateľské ID"
-"\" alebo UID). Keďže názov súboru verejného kľúča je jeho otlačok (ten ktorý "
-"končí príponou .asc) môžete ho jednoducho skopírovať a vložiť. (Nevkladajte "
-"aj príponu <code>.asc</code>! )"
+"Musíte byť schopní identifikovať tento kľúč (toto sa nazýva \"ID "
+"používateľa\" alebo UID). Keďže názov súboru verejného kľúča je jeho otlačok "
+"(ten ktorý končí príponou .asc) môžete ho jednoducho skopírovať a vložiť. ("
+"Nevkladajte aj príponu <code>.asc</code>! )"
 
 #: source_templates/why-journalist-key.html:17
 msgid ""
 "On all systems, open the Terminal and use this gpg command: <code>gpg --"
 "recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 msgstr ""
-"Na všetkých systémoch, otvorte si terminál a použite tento GPG príkaz "
-"<code>gpg --recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
+"Na všetkých systémoch: otvorte si terminál a použite tento GPG príkaz <code>"
+"gpg --recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 
 #: source_templates/why-journalist-key.html:20
 msgid ""
@@ -1379,7 +1384,7 @@ msgid ""
 "unencrypted file, with .gpg at the end (e.g. <code>roswell_photos.pdf.gpg</"
 "code>)"
 msgstr ""
-"Nahrajte vaše šifrované podanie. Bude mať rovnaký názov ako nešifrovaný "
+"Nahrajte Vaše šifrované podanie. Bude mať rovnaký názov ako nešifrovaný "
 "súbor, s príponou .gpg na konci (napr. <code>roswell_photos.pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:23
@@ -1388,9 +1393,10 @@ msgid ""
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
-"<strong>Tip:</strong> Ak chcete zostať v anonymite, <strong>nepoužívajte</"
-"strong> GPG na podpisovanie šifrovaného súboru (príkazom <code>--sign</code> "
-"alebo <code>-s</code>) keďže toto nám vyzradí vašu GPG identitu."
+"<strong>Tip:</strong> Ak chcete zostať v anonymite, "
+"<strong>nepoužívajte</strong> GPG na podpisovanie šifrovaného súboru ("
+"príkazom <code>--sign</code> alebo <code>-s</code>) keďže toto nám vyzradí "
+"Vašu GPG identitu."
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
