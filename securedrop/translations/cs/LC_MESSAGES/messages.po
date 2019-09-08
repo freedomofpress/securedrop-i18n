@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-09-08 19:16+0000\n"
-"Last-Translator: michaela-bot <michaela.rybickova@gmail.com>\n"
+"Last-Translator: 1000101 <jan.hrnko@satoshilabs.com>\n"
 "Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/cs/>\n"
 "Language: cs\n"
@@ -57,7 +57,7 @@ msgstr ""
 
 #: journalist_app/admin.py:86 journalist_app/admin.py:170
 msgid "Username \"{user}\" already taken."
-msgstr "Uživatelské jméno \"{uživatel}\" už používá někdo jiný."
+msgstr "Uživatelské jméno \"{user}\" už používá někdo jiný."
 
 #: journalist_app/admin.py:89
 msgid ""
@@ -68,12 +68,12 @@ msgstr ""
 
 #: journalist_app/admin.py:113
 msgid "Token in two-factor authentication accepted for user {user}."
-msgstr "Token dvoufaktorové autentizace přijat pro uživatele {uživatel}."
+msgstr "Token dvoufaktorové autentizace přijat pro uživatele {user}."
 
 #: journalist_app/admin.py:184 journalist_app/admin.py:192
 #: journalist_app/utils.py:281
 msgid "Name not updated: {}"
-msgstr "Jméno nebylo aktualizováno"
+msgstr "Jméno nebylo aktualizováno: {}"
 
 #: journalist_app/admin.py:233
 msgid "Deleted user '{user}'"
@@ -104,11 +104,11 @@ msgstr "HOTP secrets mají 40 znaků - zadal/a jste {num_chars}."
 msgid ""
 "Field must be at least {min_chars} characters long but only got {num_chars}."
 msgstr ""
-"Pole musí mít alespoň {min_chars}  znaků ale obsahuje pouze  {num_chars}."
+"Pole musí mít alespoň {min_chars}  znaků ale obsahuje pouze {num_chars}."
 
 #: journalist_app/forms.py:37
 msgid "Field can not be more than {max_chars} characters."
-msgstr "Pole nemůže obsahovat více než {maximum_znaků} znaků."
+msgstr "Pole nemůže obsahovat více než {max_chars} znaků."
 
 #: journalist_app/forms.py:42 source_app/forms.py:11
 msgid "This field is required."
@@ -145,7 +145,7 @@ msgstr "Nevybral/a jste žádnou sadu pro smazání."
 
 #: journalist_app/main.py:183
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
-msgstr "Zdroj '{original_name}' byl přejmenová na '{new_name}'"
+msgstr "Zdroj '{original_name}' byl přejmenován na '{new_name}'"
 
 #: journalist_app/main.py:198
 msgid "No unread submissions for this source."
@@ -191,9 +191,9 @@ msgstr[2] "{num} podání smazáno."
 #: journalist_app/utils.py:241
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
-msgstr[0] "{num} kolekce smazaná"
-msgstr[1] "{num} kolekce smazané"
-msgstr[2] "{num} kolekcí smazaných"
+msgstr[0] "{num} sada smazaná"
+msgstr[1] "{num} sady smazané"
+msgstr[2] "{num} sad smazaných"
 
 #: journalist_app/utils.py:279
 msgid "Name updated."
@@ -313,12 +313,12 @@ msgstr "Váš telefon by nyní měl spustit mód skenování. Naskenujte QR kód
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
 msgid "Can't scan the barcode? Enter the following code manually:"
-msgstr "Nedaří se vám naskenovat čárový kód? Zadejte následující kód ručně:"
+msgstr "Nedaří se vám naskenovat QR kód? Zadejte následující kód ručně:"
 
 #: journalist_templates/account_new_two_factor.html:15
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid "Once you have scanned the barcode, enter the 6-digit code below:"
-msgstr "Jakmile jste naskenovali čárový kód, zadejte šestimístný kód níže:"
+msgstr "Jakmile jste naskenovali QR kód, zadejte šestimístný kód níže:"
 
 #: journalist_templates/account_new_two_factor.html:17
 #: journalist_templates/admin_new_user_two_factor.html:20
@@ -672,7 +672,7 @@ msgstr "Upravit Váš účet"
 
 #: journalist_templates/edit_account.html:31
 msgid "Change Name"
-msgstr "Změnit Jméno"
+msgstr "Změnit jméno"
 
 #: journalist_templates/edit_account.html:47
 #: journalist_templates/edit_account.html:75
@@ -724,7 +724,7 @@ msgid ""
 msgstr ""
 "Pokud jste ztratil/a údaje pro dvoufaktorovou autentizaci nebo došlo k "
 "jejich zneužití, můžete je resetovat zde.<em>Nejdříve se ale ujistěte,  že "
-"je daný uživatel  připraven nastavit si pro své zařízení nové dvoufaktorové "
+"je daný uživatel připraven nastavit si pro své zařízení nové dvoufaktorové "
 "přístupové údaje. Jinak uživatel ztratí přístup ke svému účtu."
 
 #: journalist_templates/edit_account.html:85
@@ -779,7 +779,7 @@ msgid ""
 msgstr ""
 "SecureDrop vygeneruje bezpečný šifrovací klíč pro tento zdroj při jeho/"
 "jejíjm přístím přihlášení. Jakmile se klíč vygeneruje, objeví se pod kolekcí "
-"zdroje textové pole pro odpověď. Přes toto pole můžete  tomuto zdroji poslat "
+"zdroje textové pole pro odpověď. Přes toto pole můžete tomuto zdroji poslat "
 "zašifrovanou odpoveď."
 
 #: journalist_templates/flag.html:10
@@ -808,7 +808,7 @@ msgstr "Odznačit"
 
 #: journalist_templates/index.html:47
 msgid "Are you sure you want to delete the selected collections?"
-msgstr "Jste si jisti, že chcete smazat označené kolekce?"
+msgstr "Jste si jisti, že chcete smazat označené sady?"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
@@ -926,7 +926,7 @@ msgstr "Chyba serveru"
 msgid ""
 "Sorry, the website encountered an error and was unable to complete your "
 "request."
-msgstr "Je nám líto, ale web nebyl schopen dokončit váš požadavek."
+msgstr "Je nám líto, ale web nebyl schopen dokončit Váš požadavek."
 
 #: source_templates/error.html:7 source_templates/notfound.html:7
 msgid "Look up a codename..."
@@ -941,12 +941,12 @@ msgid ""
 "Thank you for sending this information to us. Please check back later for "
 "replies."
 msgstr ""
-"Děkujeme za zaslání těcho informací. Přihlaste se, prosím,  za nějaký čas "
+"Děkujeme za zaslání těcho informací. Přihlaste se, prosím, za nějaký čas "
 "znovu a zkontrolujte odpovědi."
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
-msgstr "Zapomněli jste vaše krycí jméno?"
+msgstr "Zapomněli jste Vaše krycí jméno?"
 
 #: source_templates/footer.html:7
 msgid ""
@@ -1005,7 +1005,7 @@ msgid ""
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
 "<a id=\"disable-js\" href=\"\"><strong>Úroveň zabezpečení</strong></a> "
-"vašeho Tor prohlížeče je příliš nízká. Použite tlačidlo <img src=\"{icon}\" "
+"Vašeho Tor prohlížeče je příliš nízká. Použite tlačidlo <img src=\"{icon}\" "
 "alt=\"shield icon\"> &nbsp;na liště prohlížeče aby ste ji změnili."
 
 #: source_templates/index.html:17
@@ -1026,7 +1026,7 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
-"<strong>Doporučujeme používat SecureDrop v  desktopové verzi prohlížeče Tor, "
+"<strong>Doporučujeme používat SecureDrop v desktopové verzi prohlížeče Tor, "
 "protože Orfox neposkytuje stejnou úroveň bezpečnosti a anonymity jako "
 "desktopová verze.</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\""
 ">Zjistěte, jak ji nainstalovat</a>nebo ignorujte toto varování a pokračujte."
@@ -1058,7 +1058,7 @@ msgstr ""
 
 #: source_templates/index.html:80
 msgid "Select <strong>Advanced Security Settings</strong>"
-msgstr "Vyberte <strong>Rozšířené Bezpečnostní Nastavení</strong>"
+msgstr "Vyberte <strong>Rozšířené bezpečnostní nastavení</strong>"
 
 #: source_templates/index.html:81
 msgid "Select <strong>Safest</strong>"
@@ -1074,7 +1074,7 @@ msgstr "Zadat krycí jméno"
 
 #: source_templates/login.html:12
 msgid "Enter your codename"
-msgstr "Zadejte vaše krycí jméno"
+msgstr "Zadejte Vaše krycí jméno"
 
 #: source_templates/login.html:26 source_templates/lookup.html:50
 msgid "CANCEL"
@@ -1158,7 +1158,7 @@ msgid ""
 "with them. This also lets us know that you are aware of our reply. You can "
 "respond by submitting new files and messages above."
 msgstr ""
-"Obdržel/a jste odpověď. Pro případ, že se někdo dozví vaše krycí jméno (což "
+"Obdržel/a jste odpověď. Pro případ, že se někdo dozví Vaše krycí jméno (což "
 "je nepravděbodobné), smažte prosím všechny odpovědi jakmile je nebudete "
 "potřebovat. Díky tomu také budeme vědět, že jste si přečetl/a naši odpověď. "
 "Můžete odpovědět odesláním nových souborů a zpráv výše."
@@ -1189,7 +1189,7 @@ msgstr "Momentálně tu nejsou žádné odpovědi."
 
 #: source_templates/lookup.html:105
 msgid "Remember, your codename is:"
-msgstr "Zapamatujte si vaše krycí jméno:"
+msgstr "Pamatujte, Vaše krycí jméno:"
 
 #: source_templates/lookup.html:106
 msgid "Show"
@@ -1205,7 +1205,7 @@ msgstr "Stránka nenalezena"
 
 #: source_templates/notfound.html:5
 msgid "Sorry, we couldn't locate what you requested."
-msgstr "Promiňtě, nemohli jsme najít váš požadavek."
+msgstr "Promiňtě, nemohli jsme najít Váš požadavek."
 
 #: source_templates/session_timeout.html:6
 msgid ""
@@ -1252,7 +1252,7 @@ msgstr "Měli by jste použít prohlížeč Tor"
 msgid ""
 "If you are not using Tor Browser, you <strong>may not be anonymous</strong>."
 msgstr ""
-"Když nepoužíváte prohlížeč Tor <strong>riskujete svoji anonymitu</strong>."
+"Když nepoužíváte prohlížeč Tor, <strong>riskujete svoji anonymitu</strong>."
 
 #: source_templates/use-tor-browser.html:5
 msgid ""
