@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-09-08 12:39+0000\n"
+"PO-Revision-Date: 2019-09-08 19:16+0000\n"
 "Last-Translator: michaela-bot <michaela.rybickova@gmail.com>\n"
 "Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/cs/>\n"
@@ -77,7 +77,7 @@ msgstr "Jméno nebylo aktualizováno"
 
 #: journalist_app/admin.py:233
 msgid "Deleted user '{user}'"
-msgstr "Smazán uživatel '{user}'"
+msgstr "Byl smazán uživatel '{user}'"
 
 #: journalist_app/admin.py:263
 msgid "Test alert sent. Please check your email."
@@ -758,11 +758,9 @@ msgid "RESET APP TOKEN"
 msgstr "RESETOVAT APP TOKEN"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
 msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgstr ""
-"Resetovat dvojfaktorovou autentikaci pro hardvérové tokeny, jako YubiKey"
+"Resetovat dvojfaktorovou autentikaci pro hardwarové tokeny, jako YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
@@ -1093,6 +1091,9 @@ msgid ""
 "onion button in the Tor browser's toolbar to clear all history of your "
 "SecureDrop usage from this device."
 msgstr ""
+"Děkujeme za ukončení Vašeho připojení. Zvolte prosím \"Novou identitu\" z "
+"ikonky cibule v liště prohlížeče Tor, abyste mohli smazat data o použití "
+"SecureDrop z tohoto zařízení."
 
 #: source_templates/lookup.html:10
 msgid "Sorry we haven't responded yet!"
@@ -1172,7 +1173,7 @@ msgstr "SMAZAT VŠECHNY ODPOVĚDI"
 
 #: source_templates/lookup.html:90
 msgid "Are you finished with the replies?"
-msgstr ""
+msgstr "Máte odpovědi přečtené?"
 
 #: source_templates/lookup.html:91
 msgid "YES, DELETE ALL REPLIES"
@@ -1213,6 +1214,11 @@ msgid ""
 "in the Tor browser's toolbar to clear all history of your SecureDrop usage "
 "from this device. If you are not using Tor Browser, restart your browser."
 msgstr ""
+"Vaše připojení skončilo z důvodu neaktivity. Pokud chcete pokračovat, "
+"přihlaste se prosím znovu přes SecureDrop nebo použijte \"Novou identitu\" z "
+"tlačítka cibule v liště prohlížeče Tor abyste smazal/a celou historii "
+"SecureDrop z tohoto zařízení. Pokud nepoužíváte Tor, restartujte Váš "
+"prohlížeč."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1235,6 +1241,8 @@ msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor browser</a> instead."
 msgstr ""
+"<strong>Velmi doporučujeme</strong> použití <a href=\"www.torproject.org/"
+"projects/torbrowser.html\">prohlížeče Tor</a>."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
@@ -1252,12 +1260,17 @@ msgid ""
 "you</strong> to install Tor Browser and use it to access our site safely and "
 "anonymously."
 msgstr ""
+"Pokud chcete poslat informace přes SecureDrop,  <strong>důrazně "
+"doporučujeme</strong> abyste si nainstaloval/a prohlížeč Tor se kterým "
+"můžete používat naše stránky bezpečně a anonymně."
 
 #: source_templates/use-tor-browser.html:6
 msgid ""
 "Copy and paste the following address into your browser and follow the "
 "instructions to download and install Tor Browser:"
 msgstr ""
+"Zkopírujte a vložte následující adresu do Vašeho prohlížeče a následujte "
+"instrukce pro stažení a instalaci prohlížeče Tor:"
 
 #: source_templates/use-tor-browser.html:9
 msgid ""
@@ -1265,6 +1278,10 @@ msgid ""
 "mail provider is less likely to be monitored, you can send a mail to "
 "<pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgstr ""
+"Pokud existuje možnost, že stažení prohlížeče Tor vzbudí podezření a Vaše "
+"emailová schránka nejspíše není monitorovaná, můžete poslat e-mail na "
+"<pre>gettor@torproject.org</pre> a dostanete automatickou odpoveď s "
+"instrukcemi."
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
@@ -1276,22 +1293,29 @@ msgid ""
 "messages and files before submission can provide an extra layer of security "
 "before your data reaches the SecureDrop server."
 msgstr ""
+"SecureDrop šifruje soubory a zprávy až po jejich odeslání. Zašifrování zpráv "
+"a souborů před jejich odesláním může poskytnout extra ochranu než Vaše data "
+"dorazí na server SecureDropu."
 
 #: source_templates/why-journalist-key.html:5
 msgid ""
 "If you are already familiar with the GPG encryption software, you may wish "
 "to encrypt your submissions yourself. To do so:"
 msgstr ""
+"Pokud ovládáte software GPG, možná si chcete zašifrovat si informace sám/a. "
+"K tomu je třeba dodržet následující kroky:"
 
 #: source_templates/why-journalist-key.html:7
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. The public key is a text file "
 "with the extension <code>.asc</code>"
 msgstr ""
+"<a href=\"{url}\">Stáhněte si</a> veřejný klíč. Veřejný klíč je textový "
+"soubor s příponou<code>.asc</code>"
 
 #: source_templates/why-journalist-key.html:8
 msgid "Import it into your GPG keyring."
-msgstr ""
+msgstr "Importujte jej do Vaší GPG klíčenky."
 
 #: source_templates/why-journalist-key.html:10
 msgid ""
@@ -1299,16 +1323,21 @@ msgid ""
 "<code>.asc</code> file you just downloaded and it will be automatically "
 "imported to your keyring."
 msgstr ""
+"Pokud používáte <a href=\"{url}\">Tails</a>, můžete dvojkliknout na "
+"<code>.asc</code> soubor, který jste právě stáhl/a a bude automaticky "
+"importován do Vaší klíčenky."
 
 #: source_templates/why-journalist-key.html:11
 msgid ""
 "If you are using Mac/Linux, open the terminal. You can import the key with "
 "<code>gpg --import /path/to/key.asc</code>."
 msgstr ""
+"Používáte-li Mac/Linux, otevřete terminál. Můžete importovat klíč příkazem "
+"<code>gpg --import /path/to/key.asc</code>."
 
 #: source_templates/why-journalist-key.html:14
 msgid "Encrypt your submission."
-msgstr ""
+msgstr "Zašifrujte svůj příspěvek."
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
@@ -1317,12 +1346,18 @@ msgid ""
 "at the end), you can just copy and paste that. (don't include the <code>."
 "asc</code>!)"
 msgstr ""
+"Musíte být schopni identifikovat tento klíč (nazvaný  \"user ID\" nebo UID). "
+"Název souboru s veřejným klíčem je jeho unikátním otiskem (končící příponou "
+".asc), a proto jej nemůžete zkopírovat a vložit. (nepřikládejte "
+"<code>.asc</code>!)"
 
 #: source_templates/why-journalist-key.html:17
 msgid ""
 "On all systems, open the Terminal and use this gpg command: <code>gpg --"
 "recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 msgstr ""
+"Pro všechny systémy: otevřete příkazovou řádku a použijte tento gpg příkaz: "
+"<code>gpg --recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 
 #: source_templates/why-journalist-key.html:20
 msgid ""
@@ -1330,6 +1365,9 @@ msgid ""
 "unencrypted file, with .gpg at the end (e.g. <code>roswell_photos.pdf.gpg</"
 "code>)"
 msgstr ""
+"Nahrajte svůj zašifrovaný příspěvek. Bude mít stejný název jako "
+"nezašifrovaný soubor s .gpg na konci  (např. "
+"<code>roswell_photos.pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:23
 msgid ""
@@ -1337,6 +1375,9 @@ msgid ""
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
+"<strong>Tip:</strong> Chcete-li zůstat anonymní <strong>nepoužívejte</strong>"
+" GPG k podepsání zašifrovaného souboru (with the <code>--sign</code> or "
+"<code>-s</code> flag) protože byste nám tím odhalil/a svoji identitu."
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
