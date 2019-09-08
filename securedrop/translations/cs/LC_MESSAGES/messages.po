@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-09-01 17:39+0000\n"
+"PO-Revision-Date: 2019-09-08 12:39+0000\n"
 "Last-Translator: michaela-bot <michaela.rybickova@gmail.com>\n"
 "Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/cs/>\n"
@@ -1016,6 +1016,9 @@ msgid ""
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
+"<strong>Doporučujeme používat SecureDrop v prohlížeci Tor :</strong> <a id"
+"=\"recommend-tor\" href=\"{tor_browser_url}\">Zjistěte, jak Tor "
+"nainstalovat</a> nebo ignorujte tuto zprávu a pokračujte."
 
 #: source_templates/index.html:18
 msgid ""
@@ -1025,6 +1028,10 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
+"<strong>Doporučujeme používat SecureDrop v  desktopové verzi prohlížeče Tor, "
+"protože Orfox neposkytuje stejnou úroveň bezpečnosti a anonymity jako "
+"desktopová verze.</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\""
+">Zjistěte, jak ji nainstalovat</a>nebo ignorujte toto varování a pokračujte."
 
 #: source_templates/index.html:45
 msgid "First submission"
@@ -1097,20 +1104,25 @@ msgid ""
 "reasons, the creation of a two-way communication channel was delayed until "
 "you checked in again."
 msgstr ""
+"Náš SecureDrop nedávno zaznamenal prudký nárůst activity. Z bezpečnostních "
+"důvodů jsme odložili vytvoření obousměrného komunikačního kanálu až do  "
+"dalšího přihlášení."
 
 #: source_templates/lookup.html:12
 msgid ""
 "Please rest assured that we were able to download your submission, and check "
 "back again later for a reply."
 msgstr ""
+"Podařilo se nám stáhnout Váš příspěvek, prosím přihlaste se později abyste "
+"si mohl/a přečíst naši odpověď."
 
 #: source_templates/lookup.html:18
 msgid "Submit Files or Messages"
-msgstr ""
+msgstr "Nahrát soubor nebo zprávy"
 
 #: source_templates/lookup.html:19
 msgid "You can submit any kind of file, a message, or both."
-msgstr ""
+msgstr "Můžete odeslat jakýkoliv soubor, zprávu nebo oboje."
 
 #: source_templates/lookup.html:21
 msgid ""
@@ -1118,14 +1130,17 @@ msgid ""
 "and messages with our <a href=\"{url}\" class=\"text-link\">public key</a> "
 "before submission. Files are encrypted as they are received by SecureDrop."
 msgstr ""
+"Pokud již ovládáte GPG, můžete zašifrovat Vaše soubory a zprávy naším <a "
+"href=\"{url}\" class=\"text-link\">veřejným klíčem</a> předtím, než je "
+"odešlete. Soubory jsou zašifrované jakmile dorazí do SecureDrop."
 
 #: source_templates/lookup.html:22
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
-msgstr ""
+msgstr "<a href=\"{url}\" class=\"text-link\">Více informací</a>."
 
 #: source_templates/lookup.html:32
 msgid "Maximum upload size: 500 MB"
-msgstr ""
+msgstr "Maximální velikost uploadu: 500 MB"
 
 #: source_templates/lookup.html:35
 msgid "Write a message."
@@ -1133,7 +1148,7 @@ msgstr "Napsat zprávu."
 
 #: source_templates/lookup.html:57
 msgid "Read Replies"
-msgstr ""
+msgstr "Přečtěte si odpovědi"
 
 #: source_templates/lookup.html:62
 msgid ""
@@ -1142,10 +1157,14 @@ msgid ""
 "with them. This also lets us know that you are aware of our reply. You can "
 "respond by submitting new files and messages above."
 msgstr ""
+"Obdržel/a jste odpověď. Pro případ, že se někdo dozví vaše krycí jméno (což "
+"je nepravděbodobné), smažte prosím všechny odpovědi jakmile je nebudete "
+"potřebovat. Díky tomu také budeme vědět, že jste si přečetl/a naši odpověď. "
+"Můžete odpovědět odesláním nových souborů a zpráv výše."
 
 #: source_templates/lookup.html:76
 msgid "Delete this reply?"
-msgstr ""
+msgstr "Smazat tuto odpověď?"
 
 #: source_templates/lookup.html:87
 msgid "DELETE ALL REPLIES"
@@ -1208,6 +1227,8 @@ msgid ""
 "It could be possible for anyone monitoring your Internet traffic (your "
 "government, your Internet provider), to identify you."
 msgstr ""
+"Kdokoliv, kdo sleduje Vaši aktivitu na internetu (vláda nebo poskytovatel "
+"připojení) Vás může identifikovat."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
