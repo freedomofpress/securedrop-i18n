@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-07-09 00:16+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2019-09-10 16:39+0000\n"
+"Last-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/el/>\n"
 "Language: el\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 3.7.1\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:14
@@ -28,10 +28,8 @@ msgid "You have been logged out due to inactivity"
 msgstr "Αποσυνδεθήκατε λόγω αδράνειας"
 
 #: journalist_app/__init__.py:142
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to password change"
-msgstr "Αποσυνδεθήκατε λόγω αδράνειας"
+msgstr "Αποσυνδεθήκατε λόγω αλλαγής κωδικού πρόσβασης"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
@@ -765,33 +763,28 @@ msgstr ""
 "έτοιμη προς ρύθμιση, αλλιώς θα χάσετε την πρόσβαση στο λογαριασμό σας.</em>"
 
 #: journalist_templates/edit_account.html:87
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as FreeOTP, "
-#| "choose the first option. For hardware tokens like the Yubikey, choose the "
-#| "second."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the YubiKey, choose the second "
 "one."
 msgstr ""
-"Για επαναφορα της πιστοποίησης δύο παραγόντων για εφαρμογές κινητού όπως το "
-"FreeOTP, επιλέξτε την πρώτη επιλογή. Για συσκευές όπως το Yubikey, επιλέξτε "
-"τη δεύτερη."
+"Για επαναφορά της πιστοποίησης δύο παραγόντων για εφαρμογές κινητού όπως το "
+"FreeOTP, επιλέξτε την πρώτη επιλογή. Για κλειδιά ασφαλείας όπως το YubiKey, "
+"επιλέξτε τη δεύτερη."
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
 msgstr ""
+"Επαναφορά πιστοποιήσης δύο παραγόντων για εφαρμογές κινητού, όπως το FreeOTP"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
 msgstr "ΕΠΑΝΑΦΟΡΑ ΚΩΔΙΚΩΝ ΠΡΟΣΒΑΣΗΣ ΕΦΑΡΜΟΓΗΣ"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Reset 2FA for hardware tokens like Yubikey"
 msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
-msgstr "Επαναφορά 2FA για κλειδιά ασφαλείας όπως το YubiKey"
+msgstr ""
+"Επαναφορά πιστοποίησης δύο παραγόντων για κλειδιά ασφαλείας, όπως το YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
@@ -992,10 +985,12 @@ msgid ""
 "Please note: Sharing sensitive documents may put you at risk, even when "
 "using Tor and SecureDrop."
 msgstr ""
+"Σημείωση: Η κοινοποίηση ευαίσθητων αρχείων μπορεί να εκθέσει σε κινδύνους, "
+"ακόμα και όταν χρησιμοποιείτε το Tor και το SecureDrop."
 
 #: source_templates/footer.html:10
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
-msgstr ""
+msgstr "Το SecureDrop είναι έργο του ιδρύματος Freedom of the Press."
 
 #: source_templates/generate.html:4
 msgid "Welcome"
@@ -1074,30 +1069,25 @@ msgstr ""
 "εγκαταστήσετε</a>, ή αγνοήστε αυτή την προειδοποίηση για να συνεχίσετε."
 
 #: source_templates/index.html:45
-#, fuzzy
-#| msgid "Encrypt your submission."
 msgid "First submission"
-msgstr "Κρυπτογραφήστε την υποβολή σας."
+msgstr "Πρώτη υποβολή"
 
 #: source_templates/index.html:47
-#, fuzzy
-#| msgid "If this is your first time submitting to journalists, start here."
 msgid "First time submitting to our SecureDrop? Start here."
-msgstr ""
-"Αν είναι η πρώτη σας φορά που υποβάλετε κάτι στους δημοσιογράφους, ξεκινήστε "
-"από εδώ."
+msgstr "Υποβάλετε κάτι στο SecureDrop μας για πρώτη φορά; Ξεκινήστε από εδώ."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
-msgstr ""
+msgstr "ΞΕΚΙΝΗΣΤΕ"
 
 #: source_templates/index.html:59
 msgid "Return visit"
-msgstr ""
+msgstr "Επιστροφή"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
 msgstr ""
+"Έχετε ήδη κωδικό όνομα; Ελέγξτε για απαντήσεις ή υποβάλετε κάτι καινούριο."
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
