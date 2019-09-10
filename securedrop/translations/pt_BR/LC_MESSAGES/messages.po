@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-08-30 12:39+0000\n"
+"PO-Revision-Date: 2019-09-10 16:39+0000\n"
 "Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/pt_BR/>\n"
@@ -771,8 +771,6 @@ msgid "RESET APP TOKEN"
 msgstr "Redefinir código de autenticação do app"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
 msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgstr ""
 "Redefinir autenticação de dois fatores (2FA) para códigos de autenticação de "
@@ -971,7 +969,7 @@ msgid ""
 "Please note: Sharing sensitive documents may put you at risk, even when "
 "using Tor and SecureDrop."
 msgstr ""
-"Por favor, preste atenção: Ao compartilhar documentos sensíveis, você se "
+"Por favor, preste atenção: Ao compartilhar documentos confidenciais, você se "
 "expõe a riscos, mesmo usando Tor e SecureDrop."
 
 #: source_templates/footer.html:10
@@ -1064,7 +1062,7 @@ msgstr "COMO COMEÇAR"
 
 #: source_templates/index.html:59
 msgid "Return visit"
-msgstr "Visita de retorno"
+msgstr "Nova visita"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
