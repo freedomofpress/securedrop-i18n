@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-07-07 16:50+0000\n"
-"Last-Translator: Andrey <andrey@mailbox.org>\n"
+"PO-Revision-Date: 2019-09-10 09:39+0000\n"
+"Last-Translator: Adham Kurbanov <uz@zu.uz>\n"
 "Language-Team: Russian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.4\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.7.1\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -29,10 +29,8 @@ msgid "You have been logged out due to inactivity"
 msgstr "Ваша сессия была завершена из-за неактивности"
 
 #: journalist_app/__init__.py:142
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to password change"
-msgstr "Ваша сессия была завершена из-за неактивности"
+msgstr "Ваша сессия была завершена из-за смены пароля"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
@@ -767,31 +765,26 @@ msgstr ""
 "настроить новое устройство, иначе вы будете заблокированы.</em>"
 
 #: journalist_templates/edit_account.html:87
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as FreeOTP, "
-#| "choose the first option. For hardware tokens like the Yubikey, choose the "
-#| "second."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the YubiKey, choose the second "
 "one."
 msgstr ""
 "Для сброса двухэтапной аутентификации для мобильных приложений, таких как  "
-"FreeOTP, выберите первый вариант. Для аппаратных токенов, таких как Yubikey, "
+"FreeOTP, выберите первый вариант. Для аппаратных токенов, таких как YubiKey, "
 "выберите второй."
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
 msgstr ""
+"Сбросить двухэтапную аутентификацию для мобильных приложений, таких как  "
+"FreeOTP"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
 msgstr "СБРОСИТЬ ТОКЕН ПРИЛОЖЕНИЯ"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Reset 2FA for hardware tokens like Yubikey"
 msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgstr ""
 "Сбросить двухэтапную аутентификацию для аппаратных ключей безопасности, "
@@ -990,10 +983,12 @@ msgid ""
 "Please note: Sharing sensitive documents may put you at risk, even when "
 "using Tor and SecureDrop."
 msgstr ""
+"Пометка: выкладывать секретными документами может быть опасным, даже если "
+"используется Tor и SecureDrop."
 
 #: source_templates/footer.html:10
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
-msgstr ""
+msgstr "SecureDrop - Это проект Фонда поддержки свободы прессы."
 
 #: source_templates/generate.html:4
 msgid "Welcome"
@@ -1070,28 +1065,26 @@ msgstr ""
 "проигнорируйте для продолжения."
 
 #: source_templates/index.html:45
-#, fuzzy
-#| msgid "Encrypt your submission."
 msgid "First submission"
-msgstr "Шифрование вашего материала."
+msgstr "Первая отправка."
 
 #: source_templates/index.html:47
-#, fuzzy
-#| msgid "If this is your first time submitting to journalists, start here."
 msgid "First time submitting to our SecureDrop? Start here."
 msgstr "Если вы впервые отправляете журналистам, начните здесь."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
-msgstr ""
+msgstr "НАЧАТЬ"
 
 #: source_templates/index.html:59
 msgid "Return visit"
 msgstr ""
+"Это сообщение начальной страницы. Если Вы уже отправляли документы, нажмите "
+"\"Повторый визит\" для проверки ответов."
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
-msgstr ""
+msgstr "Уже получали код? Введите для проверки ответов."
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
