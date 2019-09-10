@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-07-09 00:16+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2019-09-10 18:39+0000\n"
+"Last-Translator: AO <ao@localizationlab.org>\n"
 "Language-Team: French <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/fr/>\n"
 "Language: fr_FR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 3.7.1\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -29,10 +29,8 @@ msgid "You have been logged out due to inactivity"
 msgstr "Vous avez été déconnecté pour cause d’inactivité"
 
 #: journalist_app/__init__.py:142
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to password change"
-msgstr "Vous avez été déconnecté pour cause d’inactivité"
+msgstr "Vous avez été déconnecté en raison d’un changement du mot de passe"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
@@ -773,33 +771,30 @@ msgstr ""
 "votre compte.</em>"
 
 #: journalist_templates/edit_account.html:87
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as FreeOTP, "
-#| "choose the first option. For hardware tokens like the Yubikey, choose the "
-#| "second."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the YubiKey, choose the second "
 "one."
 msgstr ""
-"Pour réinitialiser l’authentification à deux facteurs pour des applis "
+"Afin de réinitialiser l’authentification à deux facteurs pour des applis "
 "mobiles telles que FreeOTP, choisissez la première option. Pour les jetons "
-"matériels tels que la Yubikey, choisissez la seconde."
+"matériels tels que la YubiKey, choisissez la seconde."
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
 msgstr ""
+"Réinitialiser l’authentification à deux facteurs pour les applis mobiles "
+"telles que FreeOTP"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
 msgstr "RÉINITIALISER LE JETON DES APPLIS"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Reset 2FA for hardware tokens like Yubikey"
 msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
-msgstr "Réinitialiser l’A2F pour les jetons matériels tels que la YubiKey"
+msgstr ""
+"Réinitialiser l’authentification à deux facteurs pour les jetons matériels "
+"tels que la YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
@@ -997,10 +992,14 @@ msgid ""
 "Please note: Sharing sensitive documents may put you at risk, even when "
 "using Tor and SecureDrop."
 msgstr ""
+"Veuillez noter : le partage de documents délicats pourrait vous mettre en "
+"danger, même en utilisant Tor et SecureDrop."
 
 #: source_templates/footer.html:10
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
 msgstr ""
+"SecureDrop est un projet de la fondation « Freedom of the Press » (liberté "
+"des médias)."
 
 #: source_templates/generate.html:4
 msgid "Welcome"
@@ -1050,9 +1049,9 @@ msgid ""
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
 "Le <a id=\"disable-js\" href=\"\"><strong>niveau de sécurité</strong></a> de "
-"votre Navigateur Tor est trop bas. Veuillez cliquer sur l’icône <img src="
-"\"{icon}\" alt=\"shield icon\"> de la barre d’outils de votre navigateur "
-"pour le changer."
+"votre Navigateur Tor est trop bas. Veuillez cliquer sur l’<img src=\"{icon}\""
+" alt=\"icône de bouclier\"> de la barre d’outils de votre navigateur pour le "
+"changer."
 
 #: source_templates/index.html:17
 msgid ""
@@ -1079,28 +1078,26 @@ msgstr ""
 "a> ou ignorez cet avertissement pour poursuivre."
 
 #: source_templates/index.html:45
-#, fuzzy
-#| msgid "Encrypt your submission."
 msgid "First submission"
-msgstr "Chiffrez votre envoi."
+msgstr "Premier envoi"
 
 #: source_templates/index.html:47
-#, fuzzy
-#| msgid "If this is your first time submitting to journalists, start here."
 msgid "First time submitting to our SecureDrop? Start here."
-msgstr "Si cela est votre premier envoi à des journalistes, commencez ici."
+msgstr "Est-ce votre premier envoi à notre SecureDrop ? Commencez ici."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
-msgstr ""
+msgstr "COMMENÇONS"
 
 #: source_templates/index.html:59
 msgid "Return visit"
-msgstr ""
+msgstr "Visite de suivi"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
 msgstr ""
+"Avez-vous déjà un nom de code ? Vérifiez la présence de réponses ou envoyez "
+"quelque chose de nouveau."
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
