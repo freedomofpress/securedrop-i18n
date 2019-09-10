@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-09-02 08:39+0000\n"
+"PO-Revision-Date: 2019-09-10 09:39+0000\n"
 "Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
 "Language-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sv/>\n"
@@ -754,10 +754,8 @@ msgid "RESET APP TOKEN"
 msgstr "NOLLSTÄLL APP TOKEN"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Reset two-factor authentication for hardware tokens, like YubiKey"
 msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
-msgstr "Nollställ tvåfaktorsautentisering för hårdvarutokens som YubiKey"
+msgstr "Nollställ tvåfaktorsautentisering för hårdvarutokens som t.ex YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
