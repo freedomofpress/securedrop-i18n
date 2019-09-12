@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 1.0.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-09-06 13:39+0000\n"
+"PO-Revision-Date: 2019-09-12 19:39+0000\n"
 "Last-Translator: Stymy RAT <stymyrat@outlook.com>\n"
 "Language-Team: Tamil <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ta/>\n"
@@ -314,12 +314,12 @@ msgstr "தளையற்ற ஒபகவை (FreeOTP) உங்கள் த�
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
 msgid "Open the FreeOTP app"
-msgstr ""
+msgstr "தளையற்ற ஒபக (FreeOTP) செயலியைத் திறக்கவும்"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
 msgid "Tap the QR code symbol at the top"
-msgstr ""
+msgstr "மேலேயுள்ள QR குறிச் சின்னத்தைத் தட்டுக"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -327,131 +327,134 @@ msgid ""
 "Your phone will now be in \"scanning\" mode. When you are in this mode, "
 "scan the barcode below:"
 msgstr ""
+"உங்கள் தொலைபேசி இப்பொழுது தேடி வருடும் முறைமையில் இருக்கும். இந்த நிலையில் "
+"இருக்கையில், கீழுள்ள பட்டைக்குறியைத் தேடி வருடுக:"
 
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
 msgid "Can't scan the barcode? Enter the following code manually:"
 msgstr ""
+"பட்டைக்குறியைத் தேடி வருட இயலவில்லையா? பின்வரும் குறியைக் கையால் உள்ளிடுக:"
 
 #: journalist_templates/account_new_two_factor.html:15
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid "Once you have scanned the barcode, enter the 6-digit code below:"
-msgstr ""
+msgstr "பட்டைக்குறியைத் தேடி வருடியபின், 6-இலக்கக் குறியைக் கீழே உள்ளிடுக:"
 
 #: journalist_templates/account_new_two_factor.html:17
 #: journalist_templates/admin_new_user_two_factor.html:20
 msgid "Enable YubiKey (OATH-HOTP)"
-msgstr ""
+msgstr "YubiKey (OATH-HOTP)-ஐ இயலச்செய்க"
 
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:21
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
-msgstr ""
+msgstr "YubiKey ஐ உருவமைவு செய்தபின், 6-இலக்கக் குறியை கீழே உள்ளிடுக:"
 
 #: journalist_templates/account_new_two_factor.html:22
 #: journalist_templates/admin_new_user_two_factor.html:25
 msgid "Verification code"
-msgstr ""
+msgstr "சரிபார்ப்புக் குறி"
 
 #: journalist_templates/account_new_two_factor.html:24
 #: journalist_templates/admin_new_user_two_factor.html:27
 #: journalist_templates/col.html:99 source_templates/lookup.html:42
 msgid "SUBMIT"
-msgstr ""
+msgstr "சமர்ப்பிக்கவும்"
 
 #: journalist_templates/admin.html:3
 msgid "Admin Interface"
-msgstr ""
+msgstr "நிர்வாக இடைமுகம்"
 
 #: journalist_templates/admin.html:6
 #: journalist_templates/admin_add_user.html:74
 msgid "ADD USER"
-msgstr ""
+msgstr "பயனரைச் சேர்க்கவும்"
 
 #: journalist_templates/admin.html:16
 #: journalist_templates/admin_add_user.html:14
 #: journalist_templates/edit_account.html:12 journalist_templates/login.html:8
 msgid "Username"
-msgstr ""
+msgstr "பயனர்பெயர்"
 
 #: journalist_templates/admin.html:17
 msgid "Edit"
-msgstr ""
+msgstr "திருத்துக"
 
 #: journalist_templates/admin.html:18 journalist_templates/col.html:135
 #: journalist_templates/index.html:16 journalist_templates/index.html:51
 msgid "Delete"
-msgstr ""
+msgstr "அழித்து விடுக"
 
 #: journalist_templates/admin.html:19
 msgid "Created"
-msgstr ""
+msgstr "உருவாக்கப்பட்டுள்ளது"
 
 #: journalist_templates/admin.html:20
 msgid "Last login"
-msgstr ""
+msgstr "கடந்த புகுபதிகை"
 
 #: journalist_templates/admin.html:25
 msgid "Edit user {username}"
-msgstr ""
+msgstr "{username} பயனரைத் திருத்துக"
 
 #: journalist_templates/admin.html:29
 msgid "Delete user {username}"
-msgstr ""
+msgstr "{username} பயனரை நீக்குக"
 
 #: journalist_templates/admin.html:35
 msgid "never"
-msgstr ""
+msgstr "எப்போதுமில்லை"
 
 #: journalist_templates/admin.html:42
 msgid "No users to display"
-msgstr ""
+msgstr "காண்பிக்கப் பயனர்கள் யாரும் இல்லை"
 
 #: journalist_templates/admin.html:48
 msgid "INSTANCE CONFIG"
-msgstr ""
+msgstr "நேர்வு உருவமைப்பு"
 
 #: journalist_templates/admin_add_user.html:4
 #: journalist_templates/config.html:4 journalist_templates/edit_account.html:7
 msgid "Back to admin interface"
-msgstr ""
+msgstr "நிர்வாக இடைமுகத்துக்குத் திரும்புக"
 
 #: journalist_templates/admin_add_user.html:24
 msgid "Username can contain spaces"
-msgstr ""
+msgstr "பயனர்பெயர் வெற்றிடங்களைக் கொண்டிருக்கலாம்"
 
 #: journalist_templates/admin_add_user.html:25
 msgid "Username is case-sensitive"
-msgstr ""
+msgstr "பயனர்பெயர் பெரிய சிறிய எழுத்து வகையுணர்வு கொண்டது"
 
 #: journalist_templates/admin_add_user.html:32
 #: journalist_templates/edit_account.html:16
 #: journalist_templates/edit_account.html:36
 msgid "First name"
-msgstr ""
+msgstr "வழங்கு பெயர்"
 
 #: journalist_templates/admin_add_user.html:42
 #: journalist_templates/edit_account.html:19
 #: journalist_templates/edit_account.html:39
 msgid "Last name"
-msgstr ""
+msgstr "குடும்பப் பெயர்"
 
 #: journalist_templates/admin_add_user.html:52
 msgid "First name and last name are optional"
-msgstr ""
+msgstr "வழங்கு பெயரும் குடும்பப் பெயரும் விருப்பத்தேர்வுகள்"
 
 #: journalist_templates/admin_add_user.html:56
 msgid "The user's password will be:"
-msgstr ""
+msgstr "பயனரின் கடவுச்சொல்:"
 
 #: journalist_templates/admin_add_user.html:59
 #: journalist_templates/edit_account.html:25
 msgid "Is Admin"
-msgstr ""
+msgstr "நிர்வாகியா"
 
 #: journalist_templates/admin_add_user.html:67
 msgid "Is using a YubiKey [HOTP]"
-msgstr ""
+msgstr "ஒரு YubiKey [HOTP]-ஐப் பயன்படுத்துபவரா"
 
 #: journalist_templates/admin_new_user_two_factor.html:6
 msgid ""
@@ -461,32 +464,39 @@ msgid ""
 "of the 6-digit codes from the app to confirm that two factor "
 "authentication is set up correctly."
 msgstr ""
+"நீங்கள் ஏறத்தாழ முடித்துவிட்டீர்கள்! புதுப்பயனர் சேர்க்கையை முடிக்க, கீழுள்ள "
+"தகவல்களைப் பின்பற்றி இருகூற்றுக் குறியடன் தளையற்ற ஒபகவை அமைக்கச் செய்க. "
+"செயலியில் இந்தக் கணக்கை அவர்கள் உள்ளிட்டு இணைத்தவுடன், இருகூற்றுக் குறி சரியா"
+"க அமைக்கப்பட்டதை உறுதிசெய்யும் பொருட்டு அவர்களைச் செயலியிலிருந்து பெற்ற "
+"6-இலக்கக் குறிகளுள் ஒன்றை உள்ளிடச் செய்க."
 
 #: journalist_templates/base.html:23
 msgid "Logged on as"
-msgstr ""
+msgstr "புகுபதிகை செய்தவர்"
 
 #: journalist_templates/base.html:25
 msgid "Admin"
-msgstr ""
+msgstr "நிர்வாகி"
 
 #: journalist_templates/base.html:27
 msgid "Log Out"
-msgstr ""
+msgstr "விடுபதிகை"
 
 #: journalist_templates/base.html:40
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" "
 "alt=\"SecureDrop\">"
 msgstr ""
+"திறனூட்டம் <br> <img src=\"/static/i/securedrop_small.png\" alt=\""
+"SecureDrop\">"
 
 #: journalist_templates/base.html:55
 msgid "Powered by <em>SecureDrop {version}</em>."
-msgstr ""
+msgstr "திறனூட்டம் <em>SecureDrop {version}</em>."
 
 #: journalist_templates/col.html:10
 msgid "All Sources"
-msgstr ""
+msgstr "எல்லா மூலங்கள்"
 
 #: journalist_templates/col.html:13
 msgid ""
@@ -494,92 +504,101 @@ msgid ""
 "if the first random codename is difficult to say or remember. You can "
 "generate new random codenames as many times as you like."
 msgstr ""
+"இந்த மூலத்துக்கென ஒரு புதிய சீரற்ற குறிப்பெயரை உண்டாக்குக. முதலில் "
+"உண்டாக்கப்பட்ட சீரற்ற குறிப்பெயரைச் சொல்லவோ நினைவில் கொள்ளவோ கடினமாக "
+"இருக்கையில் இதை நாம் பரிந்துரைக்கிறோம். உங்கள் விருப்பத்திற்கேற்ப எத்தனை "
+"முறையேனும் புதிய சீரற்ற குறிப்பெயரை உண்டாக்கிக் கொள்ள முடியும்."
 
 #: journalist_templates/col.html:13
 msgid "Change codename"
-msgstr ""
+msgstr "குறிப்பெயரை மாற்றுக"
 
 #: journalist_templates/col.html:14
 msgid "Are you sure you want to generate a new codename?"
-msgstr ""
+msgstr "உறுதியாக நீங்கள் ஒரு புதிய குறிப்பெயரை உண்டாக்க வேண்டுமா?"
 
 #: journalist_templates/col.html:16
 msgid "CONFIRM"
-msgstr ""
+msgstr "உறுதிப்படுத்துக"
 
 #: journalist_templates/col.html:22
 msgid ""
 "The documents are stored encrypted for security. To read them, you will "
 "need to decrypt them using GPG."
 msgstr ""
+"ஆவணங்கள் பாதுகாப்பிற்காக மறைகுறியிடப்பட்டு செமிக்கப்படுகின்றன. அவற்றைப் படிக்"
+"க நீங்கள் GPG-ஐப் பயன்படுத்தி மறைகுறியை விலக்கவேண்டும்."
 
 #: journalist_templates/col.html:26
 msgid "Download Selected"
-msgstr ""
+msgstr "தேர்ந்தெடுக்கப்பட்டதைப் பதிவிறக்குக"
 
 #: journalist_templates/col.html:28
 msgid "Delete Selected"
-msgstr ""
+msgstr "தேர்ந்தெடுக்கப்பட்டதைப் அழித்துவிடுக"
 
 #: journalist_templates/col.html:38 journalist_templates/col.html:58
 #: journalist_templates/col.html:91
 msgid "Reply"
-msgstr ""
+msgstr "மறுமொழி"
 
 #: journalist_templates/col.html:41 journalist_templates/col.html:48
 msgid "Read"
-msgstr ""
+msgstr "படிக்கப்பட்டவை"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
-msgstr ""
+msgstr "படிக்கப்படாதவை"
 
 #: journalist_templates/col.html:56
 msgid "Uploaded Document"
-msgstr ""
+msgstr "ஆவணத்தைப் பதிவேற்றுக"
 
 #: journalist_templates/col.html:60
 msgid "Message"
-msgstr ""
+msgstr "செய்தி"
 
 #: journalist_templates/col.html:70 journalist_templates/col.html:130
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
-msgstr ""
+msgstr "அழித்தலை உறுதிப்படுத்துதல்"
 
 #: journalist_templates/col.html:71
 msgid "Are you sure you want to delete the selected documents?"
-msgstr ""
+msgstr "தேர்ந்தெடுக்கப்பட்ட ஆவணங்கள் உறுதியாக அழிக்கப்பட வேண்டுமா?"
 
 #: journalist_templates/col.html:75 source_templates/lookup.html:78
 msgid "DELETE"
-msgstr ""
+msgstr "அழித்து விடுக"
 
 #: journalist_templates/col.html:86
 msgid "No documents to display."
-msgstr ""
+msgstr "காண்பிக்க ஆவணங்கள் ஏதுமில்லை."
 
 #: journalist_templates/col.html:93
 msgid "You can write a secure reply to the person who submitted these documents:"
 msgstr ""
+"இந்த ஆவணங்களைச் சமர்ப்பித்தவருக்கு நீங்கள் பாதுகாப்பான மறுமொழி அளிக்கவியலும்:"
 
 #: journalist_templates/col.html:102
 msgid "You've flagged this source for reply."
-msgstr ""
+msgstr "இந்த மூலத்திற்கு மறுமொழியிட நீங்கள் கொடிக்குறியிட்டுள்ளீர்கள்."
 
 #: journalist_templates/col.html:103
 msgid ""
 "An encryption key will be generated for the source the next time they log"
 " in, after which you will be able to reply to the source here."
 msgstr ""
+"அடுத்த முறை புகுபதிகை செய்கையில் மூலத்திற்காக ஒரு மறைகுறிச் சாவி "
+"உண்டாக்கப்படும், அதன்பிறகு அவர்களுக்கு இங்கே நீங்கள் மறுமொழியிட இயலும்."
 
 #: journalist_templates/col.html:105
 msgid "Click below if you would like to write a reply to this source."
-msgstr ""
+msgstr "இந்த மூலத்திற்கு நீங்கள் மறுமொழி எழுத விரும்பினால் கீழே சுட்டுக."
 
 #: journalist_templates/col.html:109
 msgid "FLAG THIS SOURCE FOR REPLY"
-msgstr ""
+msgstr "இந்த மூலத்திற்கு மறுமொழியிட கொடிக்குறியிடுக"
 
 #: journalist_templates/col.html:114
 msgid ""
@@ -587,46 +606,54 @@ msgid ""
 "this, the files seen here will be unrecoverable and the source will no "
 "longer be able to login using their previous codename.</em>"
 msgstr ""
+"இந்த மூலத்தின் திரட்டை அழித்துவிட கீழே சுட்டுக. <em>எச்சரிக்கை: இதை நீங்கள் "
+"செய்தால், இங்கு காணப்படும் கோப்புகள் மீட்கப்படவியலாது போகும், மேலும் "
+"மூலத்தாலும் தமது முந்தைய குறிப்பெயர் மூலம் இனிமேல் ஒருபோதும் புகுபதிகை "
+"செய்யவியலாது.</em>"
 
 #: journalist_templates/col.html:122
 msgid "DELETE SOURCE AND SUBMISSIONS"
-msgstr ""
+msgstr "மூலத்தையும் சமர்ப்பிப்புகளையும் அழித்து விடுக"
 
 #: journalist_templates/col.html:131
 msgid "Are you sure you want to delete this collection?"
-msgstr ""
+msgstr "உறுதியாக இந்தத் திரட்டை நீங்கள் அழிக்க வேண்டுமா?"
 
 #: journalist_templates/config.html:7
 msgid "Instance Configuration"
-msgstr ""
+msgstr "நேர்வு உருவமைப்பு"
 
 #: journalist_templates/config.html:9
 msgid "Alerts"
-msgstr ""
+msgstr "முன்னறிவிப்புகள்"
 
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr ""
+"OSSEC முன்னறிவிப்புகள் சரியாக வேலை செய்கின்றனவா என்பதைச் சரிபார்க்க ஒரு "
+"மறைகுறியிட்ட மின்னஞ்சலை அனுப்புக:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
-msgstr ""
+msgstr "OSSEC சோதனை முன்னறிவிப்பை அனுப்புக"
 
 #: journalist_templates/config.html:21
 msgid "Logo Image"
-msgstr ""
+msgstr "குறியப்படிமம்"
 
 #: journalist_templates/config.html:23
 msgid "Here you can update the image displayed on the SecureDrop web interfaces:"
 msgstr ""
+"இங்கு நீங்கள் SecureDrop இணைய இடைமுகங்களில் காண்பிக்கப்படும் படிமத்தை "
+"புதுப்பிக்கவியலும்:"
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
-msgstr ""
+msgstr "பரிந்துரைக்கப்படும் அளவு: 500புள் * 450புள்"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
-msgstr ""
+msgstr "குறியத்தைப் புதுப்பிக்கவும்"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -636,75 +663,84 @@ msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
 msgstr[0] ""
+"பின்வரும் கோப்பு <strong>நிரந்தரமாக அழிப்பதற்காகத்</strong> "
+"தேர்ந்தெடுக்கப்பட்டுள்ளது:"
 msgstr[1] ""
+"பின்வரும் கோப்புகள் <strong>நிரந்தரமாக அழிப்பதற்காகத்</strong> "
+"தேர்ந்தெடுக்கப்பட்டுள்ளன:"
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
-msgstr ""
+msgstr "நிரந்தரமாகக் கோப்புகளை அழித்துவிடுக"
 
 #: journalist_templates/delete.html:23
 msgid "Return to the list of documents for {source_name}…"
-msgstr ""
+msgstr "{source_name}-இன் ஆவணங்கள் பட்டியலுக்குத் திரும்புக…"
 
 #: journalist_templates/edit_account.html:6
 msgid "Edit user \"{user}\""
-msgstr ""
+msgstr "\"{user}\" பயனரைத் திருத்துக"
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Name &amp; Admin Status"
-msgstr ""
+msgstr "பெயரை மாற்றுக &amp; நிர்வாகி நிலை"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
 msgid "UPDATE"
-msgstr ""
+msgstr "புதுப்பித்தல்"
 
 #: journalist_templates/edit_account.html:30
 msgid "Edit your account"
-msgstr ""
+msgstr "உங்களுடைய பயனர்கணக்கைத் திருத்துக"
 
 #: journalist_templates/edit_account.html:31
 msgid "Change Name"
-msgstr ""
+msgstr "பெயரை மாற்றுக"
 
 #: journalist_templates/edit_account.html:47
 #: journalist_templates/edit_account.html:75
 msgid "Reset Password"
-msgstr ""
+msgstr "கடவுச்சொல்லை மறுவமைக்கவும்"
 
 #: journalist_templates/edit_account.html:49
 msgid "SecureDrop uses automatically generated diceware passwords."
 msgstr ""
+"SecureDrop தானாக உண்டாக்கப்பட்ட diceware கடவுச்சொற்களைப் பயன்படுத்துகின்றது."
 
 #: journalist_templates/edit_account.html:50
 msgid ""
 "Your password will be changed immediately, so you will need to save it "
 "before pressing the \"Reset Password\" button."
 msgstr ""
+"உங்கள் கடவுச்சொல் உடனடியாக மாற்றப்படும், எனவே \"கடவுச்சொல்லை மறுவமைக்கவும்\" "
+"பொத்தானை அழுத்தும் முன்னரே நீங்கள் சேமித்துக்கொள்ள வேண்டும்."
 
 #: journalist_templates/edit_account.html:56
 msgid "Please enter your current password and two-factor code."
 msgstr ""
+"தயவுசெய்து உங்களுடைய தற்போதைய கடவுச்சொல்லையும் இருகூற்றுக் குறியையும் "
+"உள்ளிடுக."
 
 #: journalist_templates/edit_account.html:61
 msgid "Current Password"
-msgstr ""
+msgstr "தற்போதைய கடவுச்சொல்"
 
 #: journalist_templates/edit_account.html:62 journalist_templates/login.html:11
 msgid "Two-factor Code"
-msgstr ""
+msgstr "இருகூற்றுக் குறி"
 
 #: journalist_templates/edit_account.html:68
 msgid "The user's password will be changed to:"
-msgstr ""
+msgstr "பயனரின் கடவுச்சொல் இவ்வாறு மாற்றம் பெறும்:"
 
 #: journalist_templates/edit_account.html:70
 msgid "Your password will be changed to:"
-msgstr ""
+msgstr "உங்களுடைய கடவுச்சொல் இவ்வாறு மாற்றம் பெறும்:"
 
 #: journalist_templates/edit_account.html:80
 msgid "Reset Two-Factor Authentication"
-msgstr ""
+msgstr "இருகூற்று உறுதிப்படுத்தலை மறுவமைக்கவும்"
 
 #: journalist_templates/edit_account.html:83
 msgid ""
@@ -713,6 +749,11 @@ msgid ""
 "user is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
+"ஒரு பயனரின் இருகூற்று உறுதிப்படுத்தல் சான்றாவணங்கள் இழந்துவிட்டாலோ "
+"களவாடப்பட்டாலோ இங்கே அவற்றை நீங்கள் மறுவமைப்பு செய்ய முடியும். இதை நீங்கள் "
+"செய்கையில், பயனர் இருப்பையும் அவர்களுடைய கருவியில் புது இருகூற்றுச் "
+"சான்றாவணங்களை அமைக்க ஆயத்தமாக இருப்பதையும் உறுதி செய்துகொள்க. இல்லையெனில் "
+"அவர்கள் தங்கள் கணக்கிலிருந்து வெளிப்பூட்டிட்டுக் கொள்வர்."
 
 #: journalist_templates/edit_account.html:85
 msgid ""
@@ -721,6 +762,12 @@ msgid ""
 "here. <em>If you do this, make sure you are ready to set up your new "
 "device, otherwise you will be locked out of your account.</em>"
 msgstr ""
+"உங்களுடைய இருகூற்று உறுதிப்படுத்தல் சான்றாவணங்கள் இழந்துவிட்டாலோ "
+"களவாடப்பட்டாலோ அல்லது நீங்கள் புதிய கருவியைப் பெற்றாலோ, இங்கே உங்களுடைய "
+"சான்றாவணங்களை மறுவமைப்பு செய்து கொள்ள முடியும்.  <em>இதை நீங்கள் செய்கையில்"
+",  கருவியில் புது இருகூற்றுச் சான்றாவணங்களை அமைக்க ஆயத்தமாக இருப்பதை உறுதி "
+"செய்துகொள்க. இல்லையெனில் நீங்கள் உங்களுடைய கணக்கிலிருந்து வெளிப்பூட்டிட்டுக் "
+"கொள்வீர்கள்.</em>"
 
 #: journalist_templates/edit_account.html:87
 msgid ""
@@ -728,26 +775,33 @@ msgid ""
 "choose the first option. For hardware tokens like the YubiKey, choose the"
 " second one."
 msgstr ""
+"தளையற்ற ஒபகவைப் போன்ற கைபேசிச் செயலிகளின் இருகூற்று உறுதிப்படுத்தலை மறுவமைக்"
+"க முதல் விருப்பத்தேர்வைத் தேர்ந்தெடுக்கவும். YubiKey-ஐப் போன்ற வன்பொருள் "
+"சீட்டுகளுக்கு இரண்டாவதைத் தேர்ந்தெடுக்கவும்."
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
 msgstr ""
+"தளையற்ற ஒபகவைப் போன்ற கைபேசிச் செயலிகளின் இருகூற்று உறுதிப்படுத்தலை "
+"மறுவமைக்கவும்"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
-msgstr ""
+msgstr "செயலிச் சீட்டை மறுவமைக்கவும்"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgstr ""
+"YubiKey-ஐப் போன்ற வன்பொருள் சீட்டுகளின் இருகூற்று உறுதிப்படுத்தலை "
+"மறுவமைக்கவும்"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
-msgstr ""
+msgstr "வன்பொருள் சீட்டை மறுவமைக்கவும்"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
-msgstr ""
+msgstr "நன்றி!"
 
 #: journalist_templates/flag.html:8
 msgid ""
@@ -756,74 +810,81 @@ msgid ""
 " appear under their collection of documents. You can use this box to "
 "write encrypted replies to them."
 msgstr ""
+"SecureDrop இந்த மூலத்திற்காக ஒரு பாதுகாப்பான மறைகுறிச் சாவியை அவர்கள் அடுத்த "
+"முறை புகுபதிகை செய்கையில் உண்டாக்கும். அந்தச் சாவியை உண்டாக்கிய பின் "
+"அவர்களுடைய ஆவணங்களின் திரட்டின் கீழ் ஒரு மறுமொழிப் பெட்டி தோன்றும். "
+"அவர்களுக்கு  மறைகுறிட்ட மறுமொழிகளை எழுத இந்தப் பெட்டியை நீங்கள் "
+"பயன்படுத்தலாம்."
 
 #: journalist_templates/flag.html:10
 msgid "Continue to the list of documents for {codename}..."
-msgstr ""
+msgstr "{codename}-க்கான கோப்புகளின் பட்டியலுக்குத் தொடர்க..."
 
 #: journalist_templates/index.html:4
 msgid "Sources"
-msgstr ""
+msgstr "மூலங்கள்"
 
 #: journalist_templates/index.html:11
 msgid "Download Unread"
-msgstr ""
+msgstr "படிக்கப்படாதவற்றைப் பதிவிறக்குக"
 
 #: journalist_templates/index.html:12
 msgid "Download"
-msgstr ""
+msgstr "பதிவிறக்குக"
 
 #: journalist_templates/index.html:13
 msgid "Star"
-msgstr ""
+msgstr "விண்மீன் குறியிடுக"
 
 #: journalist_templates/index.html:14
 msgid "Un-star"
-msgstr ""
+msgstr "விண்மீன் குறியை நீக்குக"
 
 #: journalist_templates/index.html:47
 msgid "Are you sure you want to delete the selected collections?"
-msgstr ""
+msgstr "தேர்ந்தெடுத்த திரட்டுகளை உறுதியாக நீங்கள் அழிக்க வேண்டுமா?"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
-msgstr ""
+msgstr "எந்தவொரு ஆவணங்களும் சமர்ப்பிக்கப்படவில்லை!"
 
 #: journalist_templates/js-strings.html:3
 msgid "filter by codename"
-msgstr ""
+msgstr "குறிப்பெயரின் படி வடிகட்டுக"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
-msgstr ""
+msgstr "எல்லாவற்றையும் தேர்ந்தெடுக்கவும்"
 
 #: journalist_templates/js-strings.html:5
 msgid "Select Unread"
-msgstr ""
+msgstr "படிக்கப்படாதவற்றைத் தேர்ந்தெடுக்கவும்"
 
 #: journalist_templates/js-strings.html:6
 msgid "Select None"
-msgstr ""
+msgstr "எதையும் தேர்ந்தெடுக்கவேண்டாம்"
 
 #: journalist_templates/js-strings.html:7
 msgid "Are you sure you want to delete the user {username}?"
-msgstr ""
+msgstr "{username} பயனரை உறுதியாக நீங்கள் அழிக்க வேண்டுமா?"
 
 #: journalist_templates/js-strings.html:8
 msgid "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr ""
+"{username} பயனருக்கான இருகூற்று உறுதிப்படுத்தலை உறுதியாக நீங்கள் மறுவமைக்க "
+"வேண்டுமா?"
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
-msgstr ""
+msgstr "இதழியலாளர் இடைமுகத்தை அணுக புகுபதிகை செய்க"
 
 #: journalist_templates/login.html:9
 msgid "Password"
-msgstr ""
+msgstr "கடவுச்சொல்"
 
 #: journalist_templates/login.html:12 source_templates/index.html:65
 msgid "LOG IN"
-msgstr ""
+msgstr "புகுபதிக"
 
 #: source_app/__init__.py:124
 msgid ""
@@ -831,115 +892,135 @@ msgid ""
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a "
 "href=\"{url}\">Why is this dangerous?</a>"
 msgstr ""
+"<strong>எச்சரிக்கை:&nbsp;</strong> நீங்கள் Tor2Web ஐப் பயன்படுத்துவதாகத் "
+"தோன்றுகின்றது. இது பெயரிலா நிலையை <strong>&nbsp;வழங்காது &nbsp;</strong>. <a "
+"href=\"{url}\"> இது ஏன் ஆபத்தானது?</a>"
 
 #: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr ""
+"புலம் 1-க்கும் {max_codename_len} இடையிலான எண்ணிக்கையில் எழுத்துக்களைக் "
+"கொண்டிருக்கவேண்டும்."
 
 #: source_app/forms.py:18
 msgid "Invalid input."
-msgstr ""
+msgstr "செல்லத்தகாத உள்ளீடு."
 
 #: source_app/main.py:33
 msgid ""
 "You were redirected because you are already logged in. If you want to "
 "create a new account, you should log out first."
 msgstr ""
+"ஏற்கனவே புகுபதிந்துள்ளதால் நீங்கள் வழிமாற்றப்பட்டுள்ளீர்கள். நீங்கள் ஒரு புதி"
+"ய கணக்கைத் தொடங்க வேண்டினால், முதலில் நீங்கள் விடுபதிகை செய்யவேண்டும்."
 
 #: source_app/main.py:145
 msgid "You must enter a message or choose a file to submit."
 msgstr ""
+"நீங்கள் ஒரு செய்தியை உள்ளிட வேண்டும் அல்லது ஒரு கோப்பைச் சமர்ப்பிக்கத் "
+"தேர்ந்தெடுக்க வேண்டும்."
 
 #: source_app/main.py:178
 msgid "Thanks! We received your message."
-msgstr ""
+msgstr "நன்றி! உங்கள் செய்தியை நாங்கள் பெற்றுக்கொண்டோம்."
 
 #: source_app/main.py:180
 msgid "Thanks! We received your document."
-msgstr ""
+msgstr "நன்றி! உங்கள் கோப்பை நாங்கள் பெற்றுக்கொண்டோம்."
 
 #: source_app/main.py:182
 msgid "Thanks! We received your message and document."
-msgstr ""
+msgstr "நன்றி! உங்கள் செய்தியையும் கோப்பையும் நாங்கள் பெற்றுக்கொண்டோம்."
 
 #: source_app/main.py:241
 msgid "Reply deleted"
-msgstr ""
+msgstr "மறுமொழி அழிக்கப்பட்டுள்ளது"
 
 #: source_app/main.py:259
 msgid "All replies have been deleted"
-msgstr ""
+msgstr "எல்லா மறுமொழிகளும் அழிக்கப்பட்டுவிட்டன"
 
 #: source_app/main.py:273
 msgid "Sorry, that is not a recognized codename."
-msgstr ""
+msgstr "பொறுத்தருள்க, அது ஒரு அறியக்கூடிய குறிப்பெயரில்லை."
 
 #: source_templates/base.html:6 source_templates/index.html:4
 msgid "Protecting Journalists and Sources"
-msgstr ""
+msgstr "இதழியலாளர்களையும் மூலங்களையும் பாதுகாத்தல்"
 
 #: source_templates/base.html:25 source_templates/footer.html:4
 #: source_templates/index.html:32
 msgid "Powered by"
-msgstr ""
+msgstr "திறனூட்டம்"
 
 #: source_templates/base.html:34
 msgid "LOG OUT"
-msgstr ""
+msgstr "விடுபதிகை"
 
 #: source_templates/error.html:3
 msgid "Server error"
-msgstr ""
+msgstr "வழங்கர் பிழை"
 
 #: source_templates/error.html:5
 msgid ""
 "Sorry, the website encountered an error and was unable to complete your "
 "request."
 msgstr ""
+"பொறுத்தருள்க, இணையதளத்தில் ஒரு பிழை நேர்ந்துள்ளது எனவே உங்களுடைய வேண்டுகோளை "
+"நிறைவேற்ற இயலவில்லை."
 
 #: source_templates/error.html:7 source_templates/notfound.html:7
 msgid "Look up a codename..."
-msgstr ""
+msgstr "குறிப்பெயரைத் தேடுக..."
 
 #: source_templates/first_submission_flashed_message.html:2
 msgid "Success!"
-msgstr ""
+msgstr "வெற்றி!"
 
 #: source_templates/first_submission_flashed_message.html:3
 msgid ""
 "Thank you for sending this information to us. Please check back later for"
 " replies."
 msgstr ""
+"இந்தத் தகவலை எங்களுக்கு அனுப்பியமைக்கு நன்றி. தயவு செய்து மறுமொழிகளுக்கு "
+"சிறிது நேரம் கழித்துப் பார்க்கவும்."
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
-msgstr ""
+msgstr "உங்களுடைய குறிப்பெயர் மறந்துவிட்டதா?"
 
 #: source_templates/footer.html:7
 msgid ""
 "Please note: Sharing sensitive documents may put you at risk, even when "
 "using Tor and SecureDrop."
 msgstr ""
+"தயவு செய்து கவனிக்கவும்: Tor மற்றும் SecureDrop-ஐப் பயன்படுத்தினாலும் முக்கி"
+"ய ஆவணங்களைப் பகிர்ந்துகொள்வது உங்களை இன்னலில் ஆழ்த்தலாம்."
 
 #: source_templates/footer.html:10
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
-msgstr ""
+msgstr "SecureDrop பதிப்போர் விடுதலை நிறுவனத்தின் ஒரு திட்டமாகும்."
 
 #: source_templates/generate.html:4
 msgid "Welcome"
-msgstr ""
+msgstr "வருக"
 
 #: source_templates/generate.html:7
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
 msgstr ""
+"தயவு செய்து இந்தக் குறிப்பெயரை எழுதி பாதுகாப்பான இடத்தில் வைக்கவும் அல்லது  "
+"நினைவில நிறுத்திக் கொள்ளவும்."
 
 #: source_templates/generate.html:10
 msgid ""
 "This codename is what you will use in future visits to receive messages "
 "from our journalists in response to what you submit on the next screen."
 msgstr ""
+"அடுத்த திரையில் நீங்கள் சமர்ப்பிப்பனவற்றிற்கு மறுமொழியாக இதழாளர்களிடமிருந்து "
+"செய்திகளைப் பெற இந்தக் குறிப்பெயரையே வருங்கால வருகைகளில் நீங்கள் பயன்படுத்த "
+"வேண்டியிருக்கும்."
 
 #: source_templates/generate.html:34
 msgid ""
@@ -949,10 +1030,15 @@ msgid ""
 " questions or are interested in additional information. Unlike passwords,"
 " there is no way to retrieve a lost codename."
 msgstr ""
+"<strong>SecureDrop</strong> சேவையைப் பயன்படுத்துவோரின் தடங்களை நாம் "
+"தொடர்வதில்லை என்பதால்  வருங்கால வருகைகளில் உங்களுக்கு ஏதும் கேள்விகள் "
+"எழுந்தாலோ அல்லது மேலும் தகவல்களை அறிய விரும்பினாலோ இந்தக் குறிப்பெயர் ஒன்றே "
+"நாம் தொடர்பு கொள்ளும் ஒரே வழியாக இருக்கும். கடவுச்சொற்களைப் போலன்றி இழந்த "
+"குறிப்பெயரை மீட்டெடுக்க எந்தவொரு வழியுமில்லை."
 
 #: source_templates/generate.html:42
 msgid "SUBMIT DOCUMENTS"
-msgstr ""
+msgstr "ஆவணங்களைச் சமர்ப்பிக்கவும்"
 
 #: source_templates/index.html:16
 msgid ""
@@ -960,6 +1046,10 @@ msgid ""
 "Setting</strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield"
 " icon\"> &nbsp;button in your browser’s toolbar to change it."
 msgstr ""
+"உங்களுடைய Tor உலாவியின் <a id=\"disable-js\" href=\"\"><strong>பாதுகாப்பு "
+"அமைப்பு</strong></a> மிகவும் குறைவானதாக உள்ளது. கருவிப்பட்டையிலுள்ள <img src="
+"\"{icon}\" alt=\"கவசக் குறிப்படம்\"> &nbsp;கவசப் பொத்தானைக் கொண்டு இதை "
+"மாற்றப் பயன்படுத்துக."
 
 #: source_templates/index.html:17
 msgid ""
@@ -968,6 +1058,10 @@ msgid ""
 "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
 "warning to continue."
 msgstr ""
+"<strong>SecureDrop-ஐ அணுக Tor Browser-ஐப் பயன்படுத்துமாறு "
+"பரிந்துரைக்கப்படுகின்றது:</strong> <a id=\"recommend-tor\" href=\""
+"{tor_browser_url}\">இதனை எவ்வாறு நிறுவுவது என்பதை அறிந்துகொள்க</a>, அல்லது "
+"தொடர்வதற்கு இந்த எச்சரிக்கையைப் புறந்தள்ளுக."
 
 #: source_templates/index.html:18
 msgid ""
@@ -977,59 +1071,71 @@ msgid ""
 "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
 "warning to continue."
 msgstr ""
+"<strong>SecureDrop-ஐ அணுக Tor உலாவியின் கணிணிப்பதிப்பைப் பயன்படுத்துமாறு "
+"பரிந்துரைக்கப்படுகின்றது ஏனெனில் கணிணிப்பதிப்புகளை ஒப்புநோக்குகையில் Orfox "
+"ஒரே பாதுகாப்பு மற்றும் பெயரிலா நிலையை வழங்குவதில்லை:</strong> <a id"
+"=\"recommend-tor\" href=\"{tor_browser_url}\">இதனை எவ்வாறு நிறுவுவது என்பதை "
+"அறிந்துகொள்க</a>, அல்லது தொடர்வதற்கு இந்த எச்சரிக்கையைப் புறந்தள்ளுக."
 
 #: source_templates/index.html:45
 msgid "First submission"
-msgstr ""
+msgstr "முதல் சமர்ப்பிப்பு"
 
 #: source_templates/index.html:47
 msgid "First time submitting to our SecureDrop? Start here."
 msgstr ""
+"நமது SecureDrop-இல் முதன்முறையாகச் சமர்ப்பிக்கின்றீர்களா? இங்கே தொடங்குக."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
-msgstr ""
+msgstr "தொடங்குக"
 
 #: source_templates/index.html:59
 msgid "Return visit"
-msgstr ""
+msgstr "மறு வருகை"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
 msgstr ""
+"ஏற்கனவே ஒரு குறிப்பெயர் உள்ளதா? மறுமொழிகளைப் பார்க்கவும் அல்லது ஏதேனும் "
+"புதியதாகச் சமர்ப்பிக்கவும்."
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
 msgstr ""
+"மேலேயுள்ள கருவிப்பட்டையிலுள்ள <img src=\"{icon}\" alt=\"கவசக் குறிப்படம்\"> "
+"படிமத்தைச் சுட்டுக"
 
 #: source_templates/index.html:80
 msgid "Select <strong>Advanced Security Settings</strong>"
-msgstr ""
+msgstr "<strong>மேம்பட்ட பாதுகாப்பு அமைப்புகளைத்</strong> தேர்வு செய்க"
 
 #: source_templates/index.html:81
 msgid "Select <strong>Safest</strong>"
-msgstr ""
+msgstr "<strong>மிகவும் பாதுகாப்பான நிலையைத்</strong> தேர்வு செய்க"
 
 #: source_templates/index.html:83
 msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
 msgstr ""
+"<a href=\"/\">இந்தப் பக்கத்தை புதுப்பிப்பு செய்க</a>, நீங்கள் "
+"முடித்துவிட்டீர்கள்!"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
-msgstr ""
+msgstr "குறிப்பெயரை உள்ளிடுக"
 
 #: source_templates/login.html:12
 msgid "Enter your codename"
-msgstr ""
+msgstr "உங்களுடைய குறிப்பெயரை உள்ளிடுக"
 
 #: source_templates/login.html:26 source_templates/lookup.html:50
 msgid "CANCEL"
-msgstr ""
+msgstr "விலக்குக"
 
 #: source_templates/logout_flashed_message.html:4
 #: source_templates/session_timeout.html:5
 msgid "Important!"
-msgstr ""
+msgstr "முக்கியம்!"
 
 #: source_templates/logout_flashed_message.html:5
 msgid ""
@@ -1037,10 +1143,14 @@ msgid ""
 "the onion button in the Tor browser's toolbar to clear all history of "
 "your SecureDrop usage from this device."
 msgstr ""
+"உங்கள் அமர்விலிருந்து வெளியேறியமைக்கு நன்றி! இந்தக் கருவியிலிருந்து நீங்கள் "
+"SecureDrop-ஐப் பயன்படுத்திய வரலாற்றனைத்தையும் அழித்துவிட தயவு செய்து Tor "
+"உலாவியின் கருவிப்பட்டையிலிருக்கும் ஆனியன் பொத்தானிலுள்ள \"புதிய அடையாளத்தைத்"
+"\" தேர்வு செய்க."
 
 #: source_templates/lookup.html:10
 msgid "Sorry we haven't responded yet!"
-msgstr ""
+msgstr "பொறுத்தருள்க நாங்கள் இன்னும் மறுமொழியளிக்கவில்லை!"
 
 #: source_templates/lookup.html:11
 msgid ""
@@ -1048,20 +1158,27 @@ msgid ""
 "reasons, the creation of a two-way communication channel was delayed "
 "until you checked in again."
 msgstr ""
+"நமது SecureDrop அண்மையில் பயன்பாட்டு எழுச்சியைக் கண்டுள்ளது. பாதுகாப்புக் "
+"காரணங்களுக்காக நீங்கள் மீண்டும் சரிபார்க்கும்வரை இரு வழித்தொடர்பு வழியை "
+"உருவாக்குவது காலம்தாழ்த்தி வைக்கப்பட்டுள்ளது."
 
 #: source_templates/lookup.html:12
 msgid ""
 "Please rest assured that we were able to download your submission, and "
 "check back again later for a reply."
 msgstr ""
+"உங்களுடைய சமர்ப்பிப்பை எங்களால் பதிவிறக்கம் செய்ய முடிந்தது என்பதில் தயவு "
+"செய்து உறுதிகொள்ளவும்,  மறுமொழிகளுக்கு சிறிது நேரம் கழித்துப் பார்க்கவும்."
 
 #: source_templates/lookup.html:18
 msgid "Submit Files or Messages"
-msgstr ""
+msgstr "கோப்புகளையோ செய்திகளையோ சமர்ப்பிக்கவும்"
 
 #: source_templates/lookup.html:19
 msgid "You can submit any kind of file, a message, or both."
 msgstr ""
+"நீங்கள் எந்த வகையான கோப்பையோ செய்தியையோ அல்லது இரண்டையுமோ சமர்ப்பிக்க "
+"முடியும்."
 
 #: source_templates/lookup.html:21
 msgid ""
@@ -1070,22 +1187,26 @@ msgid ""
 "key</a> before submission. Files are encrypted as they are received by "
 "SecureDrop."
 msgstr ""
+"நீங்கள் GPG-ஐப் பற்றி முன்பே அறிந்திருந்தால், உங்களுடைய விருப்பப்படி நீங்களே "
+"உங்களுடைய கோப்புகளையும் செய்திகளையும் சமர்ப்பிக்கும் முன்பே நமது  <a href=\""
+"{url}\" class=\"text-link\">பொதுச் சாவியைக்</a> கொண்டு மறைகுறியிடுக்கொள்ளலாம்"
+". SecureDrop-இல் கோப்புகள் மறைகுறியிடப்பட்டே பெற்றுக் கொள்ளப்படுகின்றன."
 
 #: source_templates/lookup.html:22
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
-msgstr ""
+msgstr "<a href=\"{url}\" class=\"text-link\">மேலும் அறிந்து கொள்க</a>."
 
 #: source_templates/lookup.html:32
 msgid "Maximum upload size: 500 MB"
-msgstr ""
+msgstr "பதிவேற்ற உயர் அளவு: 500 MB"
 
 #: source_templates/lookup.html:35
 msgid "Write a message."
-msgstr ""
+msgstr "ஒரு செய்தியை எழுதுக."
 
 #: source_templates/lookup.html:57
 msgid "Read Replies"
-msgstr ""
+msgstr "மறுமொழிகளைப் படிக்கவும்"
 
 #: source_templates/lookup.html:62
 msgid ""
@@ -1094,50 +1215,56 @@ msgid ""
 " with them. This also lets us know that you are aware of our reply. You "
 "can respond by submitting new files and messages above."
 msgstr ""
+"நீங்கள் ஒரு மறுமொழியைப் பெற்றுள்ளீர்கள். உங்களுடைய குறிப்பெயரை யாரேனும் "
+"அறிந்துகொள்ளும் நடக்கவியலா நிகழ்விலிருந்து உங்களுடைய அடையாளத்தைப் "
+"பாதுகாத்துக் கொள்ள மறுமொழிகளைப் படித்துமுடித்தவுடன் எல்லா மறுமொழிகளையும் "
+"தயவுசெய்து அழித்துவிடுக. எமது மறுமொழியை நீங்கள் அறிந்துள்ளமையை எங்களுக்கு இது"
+" தெரியப்படுத்தும். நீங்கள் மேலுள்ளவற்றுக்குப் புதிய கோப்புகளையும் "
+"செய்திகளையும் சமர்ப்பித்து மறுமொழியளிக்கலாம்."
 
 #: source_templates/lookup.html:76
 msgid "Delete this reply?"
-msgstr ""
+msgstr "இந்த மறுமொழியை அழிக்க வேண்டுமா?"
 
 #: source_templates/lookup.html:87
 msgid "DELETE ALL REPLIES"
-msgstr ""
+msgstr "எல்லா மறுமொழிகளையும் அழித்துவிடுக"
 
 #: source_templates/lookup.html:90
 msgid "Are you finished with the replies?"
-msgstr ""
+msgstr "மறுமொழிகளைப் படித்து முடித்துவிட்டீர்களா?"
 
 #: source_templates/lookup.html:91
 msgid "YES, DELETE ALL REPLIES"
-msgstr ""
+msgstr "ஆம் எல்லா மறுமொழிகளையும் அழித்துவிடுக"
 
 #: source_templates/lookup.html:92
 msgid "NO, NOT YET"
-msgstr ""
+msgstr "இல்லை, இன்னும் இல்லை"
 
 #: source_templates/lookup.html:96
 msgid "There are no replies at this time."
-msgstr ""
+msgstr "தற்பொழுது மறுமொழிகள் ஏதுமில்லை."
 
 #: source_templates/lookup.html:105
 msgid "Remember, your codename is:"
-msgstr ""
+msgstr "நினைவில கொள்க, உங்கள் குறிப்பெயர்:"
 
 #: source_templates/lookup.html:106
 msgid "Show"
-msgstr ""
+msgstr "காண்பிக்கவும்"
 
 #: source_templates/lookup.html:108
 msgid "Hide"
-msgstr ""
+msgstr "மறைக்கவும்"
 
 #: source_templates/notfound.html:3
 msgid "Page not found"
-msgstr ""
+msgstr "பக்கம் காணப்படவில்லை"
 
 #: source_templates/notfound.html:5
 msgid "Sorry, we couldn't locate what you requested."
-msgstr ""
+msgstr "பொறுத்தருள்க, நீங்கள் வேண்டியதைத் தேடிப் பெற இயலவில்லை."
 
 #: source_templates/session_timeout.html:6
 msgid ""
@@ -1147,20 +1274,31 @@ msgid ""
 "SecureDrop usage from this device. If you are not using Tor Browser, "
 "restart your browser."
 msgstr ""
+"உங்களுடைய அமர்வு செயலின்மையால் முடிக்கப்பட்டுவிட்டது. SecureDrop-ஐப் "
+"பயன்படுத்துவதை நீங்கள் தொடர வேண்டினால் தயவு செய்து மீண்டும் புகுபதிக "
+"இல்லையெனில் இந்தக் கருவியிலிருந்து நீங்கள் SecureDrop-ஐப் பயன்படுத்திய "
+"வரலாற்றனைத்தையும் அழித்துவிட தயவு செய்து Tor உலாவியின் "
+"கருவிப்பட்டையிலிருக்கும் ஆனியன் பொத்தானிலுள்ள \"புதிய அடையாளத்தைத்\" தேர்வு "
+"செய்க. Tor உலாவியை நீங்கள் பயன்படுத்தவில்லையெனில், உங்களுடைய உலாவியை "
+"மீள்தொடங்குக."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
-msgstr ""
+msgstr "Tor2Web-ஐப் பற்றி ஏன் இந்த எச்சரிக்கை?"
 
 #: source_templates/tor2web-warning.html:4
 msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
 msgstr ""
+"Tor2Web-ஐப் பயன்படுத்தி SecureDrop-ஐத் தொடர்புகொள்வது உங்களுடைய பெயரிலாமையைப்"
+" பாதுகாக்காது."
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
 "It could be possible for anyone monitoring your Internet traffic (your "
 "government, your Internet provider), to identify you."
 msgstr ""
+"உங்களுடைய இணையப் போக்குவரத்தைக் கண்காணிக்கும் எவராலும் (உங்களுடைய அரசு, "
+"உங்களுடைய இணையச் சேவை வழங்குனர்) உங்களை அடையாளம் காணமுடியும்\t."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
@@ -1168,16 +1306,20 @@ msgid ""
 "href=\"www.torproject.org/projects/torbrowser.html\">Tor browser</a> "
 "instead."
 msgstr ""
+"நாம் அதற்கு மாற்றாக <a href=\"www.torproject.org/projects/torbrowser.html\">"
+"Tor உலாவியைப் </a> பயன்படுத்த <strong>மிகவும் அறிவுறுத்துகின்றோம்</strong>."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
-msgstr ""
+msgstr "நீங்கள் Tor உலாவியைப் பயன்படுத்தவேண்டும்"
 
 #: source_templates/use-tor-browser.html:4
 msgid ""
 "If you are not using Tor Browser, you <strong>may not be "
 "anonymous</strong>."
 msgstr ""
+"Tor உலாவியை நீங்கள் பயன்படுத்தவில்லையெனில் நீங்கள் <strong>பெயரிலாதிருக்க "
+"முடியாது</strong>."
 
 #: source_templates/use-tor-browser.html:5
 msgid ""
@@ -1185,12 +1327,17 @@ msgid ""
 "advise you</strong> to install Tor Browser and use it to access our site "
 "safely and anonymously."
 msgstr ""
+"நீங்கள் SecureDrop-இடம் தகவலைச் சமர்ப்பிக்க வேண்டினால் நாம் உங்களளை Tor "
+"உலாவியை நிறுவி அதனைக் கொண்டு நமது இணையதளத்தை பாதுகாப்பாகவும் பெயரிலாதும் அணு"
+"க <strong>மிகவும் அறிவுறுத்துகின்றோம்</strong>."
 
 #: source_templates/use-tor-browser.html:6
 msgid ""
 "Copy and paste the following address into your browser and follow the "
 "instructions to download and install Tor Browser:"
 msgstr ""
+"பின்வரும் இணையமுகவரியை உங்களுடைய உலாவியில் படியெடுத்து ஒட்டி Tor உலாவியைப் "
+"பதிவிறக்கவும் நிறுவவும் உரைக்கப்பட்ட தகவல்களைப் பின்பற்றுக:"
 
 #: source_templates/use-tor-browser.html:9
 msgid ""
@@ -1199,10 +1346,14 @@ msgid ""
 " <pre>gettor@torproject.org</pre> and a bot will answer with "
 "instructions."
 msgstr ""
+"Tor உலாவியைப் பதிவிறக்குவது ஏதேனும் ஐயத்தை எழுப்பும் வாய்ப்பிருந்தாலும், "
+"உங்களுடைய இணைய அஞ்சல்சேவை வழங்குனர் கண்காணிக்கப்படாதிருந்தாலும் நீங்கள் "
+"<pre>gettor@torproject.org</pre>-க்கு ஒரு மின்னஞ்சலை அனுப்பலாம், ஒரு இயலி "
+"தகவல்களுடன் விடையளிக்கும்."
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
-msgstr ""
+msgstr "ஏன் இதழாளருக்கான பொதுச் சாவியைப் பதிவிறக்க வேண்டும்?"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
@@ -1210,22 +1361,31 @@ msgid ""
 "Encrypting messages and files before submission can provide an extra "
 "layer of security before your data reaches the SecureDrop server."
 msgstr ""
+"SecureDrop கோப்புகளையும் செய்திகளையும் அவை சமர்ப்பிக்கப்பட்ட பின்பு "
+"மறைகுறியிடும். செய்திகளையும் கோப்புகளையும் சமர்ப்பிக்கும் முன்பு "
+"மறைகுறியிடுவது அந்தத் தரவுகள் SecureDrop வழங்கருக்கு வந்துசேரும் முன்பே ஒரு "
+"கூடுதலான பாதுகாப்பு அடுக்கைக் கொடுக்கும்."
 
 #: source_templates/why-journalist-key.html:5
 msgid ""
 "If you are already familiar with the GPG encryption software, you may "
 "wish to encrypt your submissions yourself. To do so:"
 msgstr ""
+"நீங்கள் GPG மறைகுறி மென்பொருளைப் பற்றி முன்பே அறிந்திருந்தால், உங்களுடைய "
+"விருப்பப்படி நீங்களே உங்களுடைய சமர்ப்பிப்புகளை மறைகுறியிடுக்கொள்ளலாம். "
+"அவ்வாறு செய்ய:"
 
 #: source_templates/why-journalist-key.html:7
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. The public key is a text "
 "file with the extension <code>.asc</code>"
 msgstr ""
+"இந்த பொதுச் சாவியைப் <a href=\"{url}\">பதிவிறக்குக </a>. இந்த பொதுச் சாவி "
+"என்பது <code>.asc</code> என்ற கோப்புநீட்சியைக் கொண்ட ஒரு உரைகோப்பு"
 
 #: source_templates/why-journalist-key.html:8
 msgid "Import it into your GPG keyring."
-msgstr ""
+msgstr "உங்களுடைய GPG சாவிக்கொத்துகளுடன் இதை இறக்குமதி செய்க."
 
 #: source_templates/why-journalist-key.html:10
 msgid ""
@@ -1233,16 +1393,22 @@ msgid ""
 "<code>.asc</code> file you just downloaded and it will be automatically "
 "imported to your keyring."
 msgstr ""
+"நீங்கள் <a href=\"{url}\">Tails</a>-ஐப் பயன்படுத்தினால், சற்றுமுன் நீங்கள் "
+"பதிவிறக்கிய <code>.asc</code> கோப்பை இருமுறை-சுட்டலாம் இது தானாகவே உங்களுடைய "
+"சாவிக்கொத்தில் இறக்குமதி செய்யப்படும்."
 
 #: source_templates/why-journalist-key.html:11
 msgid ""
 "If you are using Mac/Linux, open the terminal. You can import the key "
 "with <code>gpg --import /path/to/key.asc</code>."
 msgstr ""
+"நீங்கள் Mac/Linux-ஐப் பயன்படுத்தினால்,  முனையத்தைத் திறக்கவும். சாவியை <code>"
+"gpg --import /path/to/key.asc</code> என்ற கட்டளை மூலம் இறக்குமதி "
+"செய்யமுடியும்."
 
 #: source_templates/why-journalist-key.html:14
 msgid "Encrypt your submission."
-msgstr ""
+msgstr "உங்கள் சமர்ப்பிப்பை மறைகுறியிடுக."
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
@@ -1251,12 +1417,19 @@ msgid ""
 "(with .asc at the end), you can just copy and paste that. (don't include "
 "the <code>.asc</code>!)"
 msgstr ""
+"நீங்கள் இந்தச் சாவியை அடையாளம் காணும் வகையில் வைத்திருக்க வேண்டும் (இது \""
+"user ID\" அல்லது UID) என்று அழைக்கப்படும். இந்த பொதுச் சாவியின் கோப்புப்பெயரே"
+" இந்தச் சாவியின் (முடிவில் .asc எனக்கொண்ட) ரேகையாகும் எனவே நீங்கள் எளிமையாக "
+"அதைப் படியெடுத்து ஒட்டிக்கொள்ள முடியும். (முடிவிலுள்ள <code>.asc</code>-ஐச் "
+"சேர்க்கக்கூடாது)"
 
 #: source_templates/why-journalist-key.html:17
 msgid ""
 "On all systems, open the Terminal and use this gpg command: <code>gpg "
 "--recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 msgstr ""
+"எல்லா இயங்கிகளிலும், முனையத்தைத் திறந்து  இந்த gpg கட்டளையைப் பயன்படுத்துக: "
+"<code>gpg --recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 
 #: source_templates/why-journalist-key.html:20
 msgid ""
@@ -1264,6 +1437,9 @@ msgid ""
 "unencrypted file, with .gpg at the end (e.g. "
 "<code>roswell_photos.pdf.gpg</code>)"
 msgstr ""
+"உங்களுடைய மறைகுறியிட்ட சமர்ப்பிப்பைப் பதிவேற்றுக. இது மறைகுறி விலக்கப்பட்ட "
+"கோப்பின் அதே பெயரை இறுதியில் .gpg என்ற கோப்புநீட்சியைக் கொண்டிருக்கும் "
+"(எடுத்துக்காட்டு <code>roswell_photos.pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:23
 msgid ""
@@ -1272,7 +1448,11 @@ msgid ""
 "<code>--sign</code> or <code>-s</code> flag) as this will reveal your GPG"
 " identity to us."
 msgstr ""
+"<strong>குறிப்பு:</strong> நீங்கள் பெயரிலாமலேயே இருக்க விரும்பினால், "
+"மறைகுறியிட்ட கோப்பை (<code>--sign</code> அல்லது <code>-s</code> "
+"கொடிக்குறிகளுடன்) கையெழுத்திட GPG-ஐப் <strong>பயன்படுத்த வேண்டாம்</strong> "
+"ஏனெனில் இது உங்களுடைய GPG அடையாளத்தை எங்களுக்குத் தெரியப்படுத்திவிடும்."
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
-msgstr ""
+msgstr "சமர்ப்பிப்புப் பக்கத்திற்குத் திரும்புக"
