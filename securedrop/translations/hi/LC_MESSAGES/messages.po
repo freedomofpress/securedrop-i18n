@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-09-05 08:39+0000\n"
-"Last-Translator: AbhayKaushik <abhay.gyanbharati@gmail.com>\n"
+"PO-Revision-Date: 2019-09-13 22:39+0000\n"
+"Last-Translator: Drashti <drashtipandya37@gmail.com>\n"
 "Language-Team: Hindi <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/hi/>\n"
 "Language: hi\n"
@@ -1018,10 +1018,8 @@ msgid "First submission"
 msgstr "पहला सबमिशन"
 
 #: source_templates/index.html:47
-#, fuzzy
-#| msgid "If this is your first time submitting to journalists, start here."
 msgid "First time submitting to our SecureDrop? Start here."
-msgstr "यदि यह पत्रकारों को जमा करने वाला आपका पहला समय है, तो यहां से शुरू करें।"
+msgstr "पहली बार हमारे सिक्योरड्रॉप को सबमिट करना?, तो यहां से शुरू करें।"
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
@@ -1029,11 +1027,11 @@ msgstr "शुरु करें"
 
 #: source_templates/index.html:59
 msgid "Return visit"
-msgstr ""
+msgstr "वापसी का दौरा"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
-msgstr ""
+msgstr "पहले से ही एक संकेत नाम है? उत्तर के लिए जांचें या कुछ नया सबमिट करें।"
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
