@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-09-10 09:39+0000\n"
-"Last-Translator: Adham Kurbanov <uz@zu.uz>\n"
+"PO-Revision-Date: 2019-09-13 22:39+0000\n"
+"Last-Translator: erinm <erinm@riseup.net>\n"
 "Language-Team: Russian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ru/>\n"
 "Language: ru\n"
@@ -1066,7 +1066,7 @@ msgstr ""
 
 #: source_templates/index.html:45
 msgid "First submission"
-msgstr "Первая отправка."
+msgstr "Первая отправка"
 
 #: source_templates/index.html:47
 msgid "First time submitting to our SecureDrop? Start here."
