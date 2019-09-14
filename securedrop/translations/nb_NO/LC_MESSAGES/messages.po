@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-09-10 09:39+0000\n"
+"PO-Revision-Date: 2019-09-14 11:39+0000\n"
 "Last-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/nb_NO/>\n"
@@ -1034,7 +1034,8 @@ msgstr "Første innsendelse"
 #: source_templates/index.html:47
 msgid "First time submitting to our SecureDrop? Start here."
 msgstr ""
-"Hvis dette er første gang du sender informasjon til SecureDrop? Start her."
+"Hvis dette er første gang du sender informasjon til vår SecureDrop? Start "
+"her."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
