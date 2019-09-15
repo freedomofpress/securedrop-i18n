@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-09-15 19:39+0000\n"
-"Last-Translator: 1000101 <jan.hrnko@satoshilabs.com>\n"
+"Last-Translator: michaela-bot <michaela.rybickova@gmail.com>\n"
 "Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/cs/>\n"
 "Language: cs\n"
@@ -104,8 +104,7 @@ msgstr "HOTP hesla mají 40 znaků - zadali jste {num_chars} znaků."
 msgid ""
 "Field must be at least {min_chars} characters long but only got {num_chars}."
 msgstr ""
-"Pole musí obsahoval alespoň {min_chars} znaků, ale zadali jste pouze "
-"{num_chars} znaků."
+"Pole musí mít alespoň {min_chars}  znaků, ale obsahuje pouze {num_chars}."
 
 #: journalist_app/forms.py:37
 msgid "Field can not be more than {max_chars} characters."
@@ -142,7 +141,7 @@ msgstr "Nevybrali jste žádnou sadu ke stažení."
 
 #: journalist_app/main.py:157 journalist_app/utils.py:236
 msgid "No collections selected for deletion."
-msgstr "Nevybrali jste žádnou sadu ke smazání."
+msgstr "Nevybral/a jste žádnou sadu k smazání."
 
 #: journalist_app/main.py:183
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
@@ -173,7 +172,7 @@ msgstr[2] ""
 msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
-msgstr "Před pokračováním prosím vyčkejte na nový kód."
+msgstr "Dřív než budete pokračovat, prosím vyčkejte na nový kód."
 
 #: journalist_app/utils.py:126
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
@@ -181,7 +180,7 @@ msgstr "Nesprávný formát hesla: prosím použijte pouze písmena A-F a čísl
 
 #: journalist_app/utils.py:132
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
-msgstr "Nesprávný formát hesla: lichá délka hesla. Neudělali jste překlep?"
+msgstr "Nesprávná forma hesla: lichá délka hesla. Neudělali jste překlep?"
 
 #: journalist_app/utils.py:188
 msgid "Submission deleted."
@@ -211,8 +210,8 @@ msgid ""
 "correctly. To prevent you from getting locked out of your account, you "
 "should reset your password again."
 msgstr ""
-"Nastala chyba a nové heslo možná nebylo uloženo správně. Zadejte prosím "
-"heslo znovu abyste zabránili ztrátě přístupu k vašemu účtu."
+"Nastala chyba a nové heslo možná nebylo uloženo správně. Měli byste znovu "
+"zadat heslo, abyste zabránili ztrátě přístupu k Vašemu účtu."
 
 #: journalist_app/utils.py:304
 msgid ""
@@ -310,7 +309,7 @@ msgstr "Ťukněte na symbol QR kódu v horní části"
 msgid ""
 "Your phone will now be in \"scanning\" mode. When you are in this mode, scan "
 "the barcode below:"
-msgstr "Váš telefon nyní měl spustí rezim skenování. Naskenujte QR kód níže:"
+msgstr "Váš telefon spustil mód skenování. Naskenujte QR kód níže:"
 
 #: journalist_templates/account_new_two_factor.html:14
 #: journalist_templates/admin_new_user_two_factor.html:15
@@ -422,7 +421,7 @@ msgstr "Příjmení"
 
 #: journalist_templates/admin_add_user.html:52
 msgid "First name and last name are optional"
-msgstr "Křestní jméno a příjmení nejsou povinné"
+msgstr "Jméno a příjmení jsou nepovinné"
 
 #: journalist_templates/admin_add_user.html:56
 msgid "The user's password will be:"
