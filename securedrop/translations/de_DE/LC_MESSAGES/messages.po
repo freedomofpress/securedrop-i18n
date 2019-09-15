@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-09-10 09:39+0000\n"
-"Last-Translator: Robin Schubert <robin.schubert@gmx.de>\n"
+"PO-Revision-Date: 2019-09-15 16:39+0000\n"
+"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/de/>\n"
 "Language: de_DE\n"
@@ -766,7 +766,7 @@ msgid ""
 "the first option. For hardware tokens like the YubiKey, choose the second "
 "one."
 msgstr ""
-"Wählen Sie die erste Option, um die Zwei-Faktor-Authentifizierung für Mobile-"
+"Wählen Sie die erste Option, um die Zwei-Faktor-Authentifizierung für mobile "
 "Apps wie FreeOTP zurückzusetzen. Für Hardware-Token wie YubiKey wählen Sie "
 "die zweite Option."
 
@@ -986,7 +986,7 @@ msgstr ""
 
 #: source_templates/footer.html:10
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
-msgstr "SecureDrop ist ein Project der Freedom of the Press Foundation."
+msgstr "SecureDrop ist ein Projekt der Freedom of the Press Foundation."
 
 #: source_templates/generate.html:4
 msgid "Welcome"
@@ -1070,21 +1070,21 @@ msgstr "Erste Einreichung"
 
 #: source_templates/index.html:47
 msgid "First time submitting to our SecureDrop? Start here."
-msgstr "Sie senden zum ersten Mal an SecureDrop? Starten Sie hier."
+msgstr "Erstmalige Einreichung bei unserem SecureDrop? Beginnen Sie hier."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
-msgstr "STARTEN"
+msgstr "ERSTE SCHRITTE"
 
 #: source_templates/index.html:59
 msgid "Return visit"
-msgstr "Widerholungsbesuch"
+msgstr "Wiederholungsbesuch"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
 msgstr ""
-"Haben Sie bereits einen Decknamen? Schauen Sie nach Antworten oder senden "
-"Sie etwas Neues."
+"Haben Sie bereits einen Decknamen? Schauen Sie nach Antworten oder reichen "
+"Sie etwas Neues ein."
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
