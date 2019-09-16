@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2019-09-16 08:52+0000\n"
-"Last-Translator: erinm <erinm@riseup.net>\n"
+"Last-Translator: carlos <carlosm2@riseup.net>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
 "Language: es_ES\n"
@@ -1066,16 +1066,12 @@ msgstr ""
 "a>, o ignore esta advertencia para continuar."
 
 #: source_templates/index.html:45
-#, fuzzy
-#| msgid "Encrypt your submission."
 msgid "First submission"
-msgstr "Cifre su envío."
+msgstr "Primer envío."
 
 #: source_templates/index.html:47
-#, fuzzy
-#| msgid "If this is your first time submitting to journalists, start here."
 msgid "First time submitting to our SecureDrop? Start here."
-msgstr "Si esta es la primera vez que envía a periodistas, comience aquí."
+msgstr "¿Primera vez enviando a nuestro SecureDrop? Comience aquí."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
