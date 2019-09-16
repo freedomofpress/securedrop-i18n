@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-09-16 08:51+0000\n"
+"PO-Revision-Date: 2019-09-16 08:52+0000\n"
 "Last-Translator: erinm <erinm@riseup.net>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
@@ -784,7 +784,8 @@ msgstr "RESTABLECER TOKEN DE APLICACIÓN"
 #: journalist_templates/edit_account.html:113
 msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgstr ""
-"Restablecer autenticación de 2 factores para tokens de hardware como YubiKey"
+"Restablecer autenticación de dos factores para tokens de hardware como "
+"YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
