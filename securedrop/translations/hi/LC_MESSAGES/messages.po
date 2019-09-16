@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-09-13 22:39+0000\n"
-"Last-Translator: Drashti <drashtipandya37@gmail.com>\n"
+"PO-Revision-Date: 2019-09-16 06:04+0000\n"
+"Last-Translator: Chandan Kumar (raukadah) <raukadah@gmail.com>\n"
 "Language-Team: Hindi <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/hi/>\n"
 "Language: hi\n"
@@ -29,7 +29,7 @@ msgstr "निष्क्रियता के कारण आपको ल�
 
 #: journalist_app/__init__.py:142
 msgid "You have been logged out due to password change"
-msgstr "पासवर्ड में बदलाव के कारण आपको लॉग आउट कर दिया गया है"
+msgstr "पासवर्ड बदलने  के कारण आप लॉग आउट हो गये है"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
@@ -732,13 +732,12 @@ msgid ""
 "the first option. For hardware tokens like the YubiKey, choose the second "
 "one."
 msgstr ""
-"मोबाइल एप्लिकेशन जैसे कि (FreeOTP) के लिए दो-कारक प्रमाणीकरण को रीसेट करने के"
-" लिए, पहला विकल्प चुनें। YubiKey जैसे हार्डवेयर टोकन के लिए, दूसरा चुनें |"
+"दो-कारक प्रमाणीकरण को रीसेट करने के लिए, मोबाइल एप्लिकेशन जैसे FreeOTP के लि"
+"ए, पहला विकल्प चुनें। हार्डवेयर टोकन जैसे YubiKey के लिए, दूसरा विकल्प चुनें।"
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
-msgstr ""
-"मोबाइल एप्लिकेशन जैसे कि (FreeOTP) के लिए दो-कारक प्रमाणीकरण को रीसेट करें"
+msgstr "मोबाइल एप्लिकेशन में दो-कारक प्रमाणीकरण को रीसेट करें, जैसे FreeOTP"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
@@ -746,7 +745,7 @@ msgstr "एप्लिकेशन  टोकन रीसेट  करें"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
-msgstr "YubiKey जैसे हार्डवेयर टोकन के लिए दो-कारक प्रमाणीकरण को रीसेट करें"
+msgstr "हार्डवेयर टोकन जैसे YubiKey के द्वारा दो-कारक प्रमाणीकरण को रीसेट करें"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
@@ -936,12 +935,12 @@ msgid ""
 "Please note: Sharing sensitive documents may put you at risk, even when "
 "using Tor and SecureDrop."
 msgstr ""
-"ध्यान दें: Tor और SecureDrop का उपयोग करते समय भी, संवेदनशील दस्तावेज़ साझा "
-"करना आपको जोखिम में डाल सकता है।"
+"कृपया ध्यान दें: Tor और SecureDrop द्वारा संवेदनशील दस्तावेज़ साझा करना आपको "
+"जोखिम में डाल सकता है।"
 
 #: source_templates/footer.html:10
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
-msgstr "Securedrop, Freedom of the Press Foundation का एक प्रोजेक्ट है।"
+msgstr "Securedrop Freedom of the Press Foundation का एक प्रोजेक्ट है।"
 
 #: source_templates/generate.html:4
 msgid "Welcome"
