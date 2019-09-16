@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-08-31 07:39+0000\n"
-"Last-Translator: Adolfo Jayme-Barrientos <fitojb@ubuntu.com>\n"
+"PO-Revision-Date: 2019-09-16 08:51+0000\n"
+"Last-Translator: carlos <carlosm2@riseup.net>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
 "Language: es_ES\n"
@@ -29,10 +29,8 @@ msgid "You have been logged out due to inactivity"
 msgstr "Su sesión ha sido terminada debido a inactividad"
 
 #: journalist_app/__init__.py:142
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to password change"
-msgstr "Su sesión ha sido terminada debido a inactividad"
+msgstr "Su sesión ha sido terminada debido a un cambio de contraseña"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
@@ -789,10 +787,9 @@ msgid "RESET APP TOKEN"
 msgstr "RESTABLECER TOKEN DE APLICACIÓN"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Reset 2FA for hardware tokens like Yubikey"
 msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
-msgstr "Restablecer A2F para tokens de hardware como YubiKey"
+msgstr ""
+"Restablecer autenticación de 2 factores para tokens de hardware como YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
