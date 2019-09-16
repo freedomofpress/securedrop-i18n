@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-07-09 00:16+0000\n"
-"Last-Translator: rmol <john@freedom.press>\n"
+"PO-Revision-Date: 2019-09-16 16:43+0000\n"
+"Last-Translator: mickael e. <m@mickael.ca>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
 "Language: ro\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 3.7.1\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:14
@@ -29,10 +29,8 @@ msgid "You have been logged out due to inactivity"
 msgstr "Ai fost deconectat(ă) în urma inactivității"
 
 #: journalist_app/__init__.py:142
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to password change"
-msgstr "Ai fost deconectat(ă) în urma inactivității"
+msgstr "Ai fost deconectat(ă) în urma schimbării parolei"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
@@ -791,12 +789,10 @@ msgid "RESET APP TOKEN"
 msgstr "RESETEAZĂ APLICAȚIA TOKEN"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Reset 2FA for hardware tokens like Yubikey"
 msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgstr ""
 "Resetează 2FA (autentificarea cu doi factori) pentru token-uri hardware ca "
-"Yubikey"
+"YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
@@ -1072,10 +1068,8 @@ msgstr ""
 "avertisment pentru a continua."
 
 #: source_templates/index.html:45
-#, fuzzy
-#| msgid "Encrypt your submission."
 msgid "First submission"
-msgstr "Criptează-ți trimiterea."
+msgstr "Prima trimitere"
 
 #: source_templates/index.html:47
 #, fuzzy
@@ -1085,7 +1079,7 @@ msgstr "Dacă este prima dată când trimiți ceva jurnaliștilor, începe de ai
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
-msgstr ""
+msgstr "INCEPE"
 
 #: source_templates/index.html:59
 msgid "Return visit"
