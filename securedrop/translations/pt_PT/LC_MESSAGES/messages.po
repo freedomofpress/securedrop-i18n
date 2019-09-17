@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-07-09 00:16+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2019-09-17 22:39+0000\n"
+"Last-Translator: deeplow <deeplow@tutanota.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/"
 "projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 3.7.1\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -28,18 +28,16 @@ msgid "You have been logged out due to inactivity"
 msgstr "A sua sessão foi encerrada por inactividade"
 
 #: journalist_app/__init__.py:142
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to password change"
-msgstr "A sua sessão foi encerrada por inactividade"
+msgstr "A sua sessão foi encerrada por mudança de palavra-passe"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
-msgstr "palavra-passe ou código de verificação de dois fatores incorreto."
+msgstr "Palavra-passe ou código de autenticação de dois fatores incorrento."
 
 #: journalist_app/account.py:49
 msgid "Token in two-factor authentication verified."
-msgstr "Código de autenticação de dois fatores verificado."
+msgstr "O token na autenticação de dois fatores foi verificado."
 
 #: journalist_app/account.py:53 journalist_app/admin.py:120
 msgid "Could not verify token in two-factor authentication."
@@ -47,7 +45,7 @@ msgstr "Não foi possível verificar o código de autenticação de dois fatores
 
 #: journalist_app/admin.py:38
 msgid "Image updated."
-msgstr "Imagem atualizada."
+msgstr "Imagem de conta actualizada."
 
 #: journalist_app/admin.py:75
 msgid ""
@@ -66,7 +64,7 @@ msgid ""
 "An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
 "Ocorreu um erro ao gravar este utilizador na base de dados. Por favor, "
-"informe o administrador."
+"informe o administrador do sistema."
 
 #: journalist_app/admin.py:113
 msgid "Token in two-factor authentication accepted for user {user}."
@@ -83,11 +81,11 @@ msgstr "Utilizador '{user}' apagado"
 
 #: journalist_app/admin.py:263
 msgid "Test alert sent. Please check your email."
-msgstr "Teste de alerta enviado. Por favor, verifique seu e-mail."
+msgstr "Alterta de teste enviado. Por favor, verifique o seu email."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
-msgstr "A coleção de {source_name} foi apagada"
+msgstr "Coleção de {source_name} apagada"
 
 #: journalist_app/col.py:56
 msgid "No collections selected."
@@ -99,14 +97,13 @@ msgstr "Apenas administradores podem aceder a esta página."
 
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
-msgstr "Senhas HOTP contêm 40 caracteres. Inseriu {num_chars}."
+msgstr "Segredos HOTP têm comprimento de 40 caracteres - inseriu {num_chars}."
 
 #: journalist_app/forms.py:30
 msgid ""
 "Field must be at least {min_chars} characters long but only got {num_chars}."
 msgstr ""
-"Este campo deve conter pelo menos {min_chars} caracteres, mas contém apenas "
-"{num_chars}."
+"Tem que ter pelo menos {min_chars} caracters mas apenas inseriu {num_chars}."
 
 #: journalist_app/forms.py:37
 msgid "Field can not be more than {max_chars} characters."
@@ -118,32 +115,32 @@ msgstr "Este campo é obrigatório."
 
 #: journalist_app/forms.py:61
 msgid "You cannot send an empty reply."
-msgstr "Não é possível enviar uma resposta em branco."
+msgstr "Não pode enviar uma resposta vazia."
 
 #: journalist_app/forms.py:69
 msgid "File required."
-msgstr "Ficheiro obrigatório."
+msgstr "É necessário o ficheiro."
 
 #: journalist_app/forms.py:71
 msgid "You can only upload PNG image files."
-msgstr "Apenas pode carregar imagens de formato PNG."
+msgstr "Apenas pode enviar imagens PNG."
 
 #: journalist_app/main.py:122 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
 msgid "An unexpected error occurred! Please inform your admin."
-msgstr "Ocorreu um erro inesperado! Por favor, informe o administrador."
+msgstr "Um erro inesperado ocorreu! Por favor informe o seu administrador."
 
 #: journalist_app/main.py:133
 msgid "Thanks. Your reply has been stored."
-msgstr "Obrigado. A sua resposta foi registrada."
+msgstr "Obrigado. A sua resposta for guardada."
 
 #: journalist_app/main.py:154
 msgid "No collections selected for download."
-msgstr "Nenhuma coleção selecionada para download."
+msgstr "Nenhuma coleção selecionada para transferir."
 
 #: journalist_app/main.py:157 journalist_app/utils.py:236
 msgid "No collections selected for deletion."
-msgstr "Nenhuma coleção selecionada para ser apagada."
+msgstr "Nenhuma coleção foi selecionada para apagar."
 
 #: journalist_app/main.py:183
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
@@ -175,8 +172,8 @@ msgid ""
 "Please wait for a new code from your two-factor token or application before "
 "trying again."
 msgstr ""
-"Por favor espere por um novo token de autenticação em dois fatores  antes de "
-"tentar novalmente."
+"Por favor espere por um novo código de autenticação de dois fatores antes "
+"tentar de novo."
 
 #: journalist_app/utils.py:126
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
@@ -230,7 +227,7 @@ msgstr ""
 
 #: journalist_app/utils.py:322
 msgid "No unread submissions in selected collections."
-msgstr "Nenhuma submissão por ler nas coleções selecionadas."
+msgstr "Nenhuma submissão por ler das selecionadas."
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
@@ -239,7 +236,7 @@ msgstr "Fechar"
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:77
 msgid "Cancel"
-msgstr "Canclear"
+msgstr "Cancelar"
 
 #: journalist_templates/_source_row.html:23
 msgid "1 doc"
@@ -297,17 +294,17 @@ msgstr ""
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
 msgid "Install FreeOTP on your phone"
-msgstr "Instale o FreeOTP no seu telefone"
+msgstr "Instale FreeOTP no seu telemóvel"
 
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
 msgid "Open the FreeOTP app"
-msgstr "Abra a aplicação FreeOTP no seu telefone"
+msgstr "Abra a app FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
 msgid "Tap the QR code symbol at the top"
-msgstr "Clique no símbolo do código QR no topo do ecrã"
+msgstr "Carregue no símbolo do código QR no topo"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -750,11 +747,6 @@ msgstr ""
 "aceder à sua conta.</em>"
 
 #: journalist_templates/edit_account.html:87
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as FreeOTP, "
-#| "choose the first option. For hardware tokens like the Yubikey, choose the "
-#| "second."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For hardware tokens like the YubiKey, choose the second "
@@ -767,17 +759,18 @@ msgstr ""
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
 msgstr ""
+"Redefinir código de autenticação de dois fatores para aplicações móveis como "
+"FreeOTP"
 
 #: journalist_templates/edit_account.html:112
-#, fuzzy
 msgid "RESET APP TOKEN"
 msgstr "REINICIALIZAR TOKEN DA APP"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Reset 2FA for hardware tokens like Yubikey"
 msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
-msgstr "Reinicializar 2FA para tokens de hardware como YubiKey"
+msgstr ""
+"Reinicializar autenticação de dois fatores para tokens de hardware, como a "
+"YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
@@ -971,10 +964,12 @@ msgid ""
 "Please note: Sharing sensitive documents may put you at risk, even when "
 "using Tor and SecureDrop."
 msgstr ""
+"Atenção: Partilhar documentos sensíveis pode colocá-lo(a) em risco, mesmo "
+"usando Tor e Securedrop."
 
 #: source_templates/footer.html:10
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
-msgstr ""
+msgstr "SecureDrop é um projeto da Freedom of the Press Foundation."
 
 #: source_templates/generate.html:4
 msgid "Welcome"
@@ -1051,28 +1046,24 @@ msgstr ""
 "continue."
 
 #: source_templates/index.html:45
-#, fuzzy
-#| msgid "Encrypt your submission."
 msgid "First submission"
-msgstr "Cifrar a sua submissão."
+msgstr "Primeira submissão"
 
 #: source_templates/index.html:47
-#, fuzzy
-#| msgid "If this is your first time submitting to journalists, start here."
 msgid "First time submitting to our SecureDrop? Start here."
-msgstr "Se este for o seu primeiro envio, comece por aqui."
+msgstr "Primera vez que submete no nosso SecureDrop? Começe aqui."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
-msgstr ""
+msgstr "COMEÇAR"
 
 #: source_templates/index.html:59
 msgid "Return visit"
-msgstr ""
+msgstr "Nova visita"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
-msgstr ""
+msgstr "Já tem um nome-código? Veja se tem respostas ou envie novos documentos."
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
