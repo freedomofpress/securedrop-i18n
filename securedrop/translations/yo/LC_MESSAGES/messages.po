@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 1.0.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-09-20 22:26+0000\n"
+"PO-Revision-Date: 2019-09-21 00:39+0000\n"
 "Last-Translator: Adéṣínà Ayẹni <yobamoodua@gmail.com>\n"
 "Language-Team: Yoruba <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/yo/>\n"
@@ -126,51 +126,55 @@ msgstr "Fáìlì pọn dandan."
 
 #: journalist_app/forms.py:71
 msgid "You can only upload PNG image files."
-msgstr ""
+msgstr "Irúfẹ́ fáìlì àwòrán PNG nìkan ni o lè gbé sí i."
 
 #: journalist_app/main.py:122 journalist_app/utils.py:48
 #: journalist_app/utils.py:138
 msgid "An unexpected error occurred! Please inform your admin."
-msgstr ""
+msgstr "Àṣìṣe àìròtẹ́lẹ̀ kan ṣẹlẹ̀! Jọ̀wọ́ fi tó alákòósoò rẹ létí."
 
 #: journalist_app/main.py:133
 msgid "Thanks. Your reply has been stored."
-msgstr ""
+msgstr "O ṣeun. Èsì rẹ ti wá ní apamọ́."
 
 #: journalist_app/main.py:154
 msgid "No collections selected for download."
-msgstr ""
+msgstr "Àkójọ kankan ó jẹ́ yíyàn fún àgbàsílẹ̀-sórí-ẹ̀rọ."
 
 #: journalist_app/main.py:157 journalist_app/utils.py:236
 msgid "No collections selected for deletion."
-msgstr ""
+msgstr "Àkójọ kankan kò jẹ́ yíyàn fún ìparẹ́."
 
 #: journalist_app/main.py:183
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
-msgstr ""
+msgstr "Orúkọ orísun náà '{ògidì_orúkọ}' ti di àtúnsọ sí '{orúkọ_tuntun}'"
 
 #: journalist_app/main.py:198
 msgid "No unread submissions for this source."
-msgstr ""
+msgstr "Kò sí ìfàkalẹ̀ àìkà fún orísun yìí."
 
 #: journalist_app/utils.py:55
 msgid "Account updated."
-msgstr ""
+msgstr "Àfikún sí ìṣàmúlò."
 
 #: journalist_app/utils.py:86
 msgid "Login failed."
-msgstr ""
+msgstr "Ìfàṣẹwọlé kọ̀ jálẹ̀."
 
 #: journalist_app/utils.py:94
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] ""
+"Jọ̀wọ́ dúró fún ó kéré jù {ìṣẹ́jú àáyá} ìṣẹ́jú àáyá kí o tó tún fàṣẹwọlé "
+"lẹ́ẹ̀kan sí i."
 
 #: journalist_app/utils.py:105
 msgid ""
 "Please wait for a new code from your two-factor token or application "
 "before trying again."
 msgstr ""
+"Jọ̀wọ́ wararo fún odù tuntun láti ìfẹ̀rílàdí ọlọ́nà-méjì rẹ tàbí irinṣẹ́ kí "
+"o tó gbìyànjúu rẹ̀ lẹ́rìnkan sí i."
 
 #: journalist_app/utils.py:126
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
