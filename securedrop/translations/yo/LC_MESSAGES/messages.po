@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 1.0.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-09-22 22:39+0000\n"
+"PO-Revision-Date: 2019-09-23 14:39+0000\n"
 "Last-Translator: Adéṣínà Ayẹni <yobamoodua@gmail.com>\n"
 "Language-Team: Yoruba <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/yo/>\n"
@@ -237,10 +237,9 @@ msgid "Cancel"
 msgstr "Fa-igi-lé"
 
 #: journalist_templates/_source_row.html:23
-#, fuzzy
 msgid "1 doc"
 msgid_plural "{doc_num} docs"
-msgstr[0] "1 doc"
+msgstr[0] "Ìwé-ìrídìí 1"
 
 #: journalist_templates/_source_row.html:24
 msgid "1 message"
@@ -850,115 +849,128 @@ msgid ""
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a "
 "href=\"{url}\">Why is this dangerous?</a>"
 msgstr ""
+"<lágbára>ÌKÌLỌ̀:&nbsp;</lágbára> Ó jọ wípé Tor2Web ni ò ń lò. Èyí "
+"<lágbára>&nbsp;kò &nbsp;</lágbára> sọ ọ́ di àìlórúkọ. <a href=\"{url}\">Èé "
+"ṣe tí èyí fi léwu? </a>"
 
 #: source_app/forms.py:15
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr ""
+"Ọ̀rọ̀ tí o fi sílẹ̀ gbọdọ̀ gùn ju ọmọ-ọ̀rọ̀ kan sí {pọ̀jùu_orúkọodù_gígùn} "
+"lọ."
 
 #: source_app/forms.py:18
 msgid "Invalid input."
-msgstr ""
+msgstr "Ohun-tí-o-fi-sílẹ̀ kòlágbára"
 
 #: source_app/main.py:33
 msgid ""
 "You were redirected because you are already logged in. If you want to "
 "create a new account, you should log out first."
 msgstr ""
+"A dáríi rẹ síbí nitori pé o ti fàṣẹwọlé tẹ́lẹ̀. Bí o bá fẹ́ ṣí ìṣàmúlò "
+"tuntun, wà á ní láti kọ́kọ́ fàṣẹ jáde."
 
 #: source_app/main.py:145
 msgid "You must enter a message or choose a file to submit."
-msgstr ""
+msgstr "O gbọ́dọ̀ fi iṣẹ́-ìjẹ́ sílẹ̀ tàbí kí o yan fáìlì kan."
 
 #: source_app/main.py:178
 msgid "Thanks! We received your message."
-msgstr ""
+msgstr "O ṣeun! A rí iṣẹ́-ìjẹ́ẹ̀ rẹ."
 
 #: source_app/main.py:180
 msgid "Thanks! We received your document."
-msgstr ""
+msgstr "O ṣeun! A rí ìwé-ìrídìíì rẹ."
 
 #: source_app/main.py:182
 msgid "Thanks! We received your message and document."
-msgstr ""
+msgstr "O ṣeun! A rí iṣẹ́-ìjẹ́ àti ìwé-ìrídìíì rẹ."
 
 #: source_app/main.py:241
 msgid "Reply deleted"
-msgstr ""
+msgstr "Èsì ti parẹ́"
 
 #: source_app/main.py:259
 msgid "All replies have been deleted"
-msgstr ""
+msgstr "Gbogbo èsì ti parẹ́"
 
 #: source_app/main.py:273
 msgid "Sorry, that is not a recognized codename."
-msgstr ""
+msgstr "Ó dun'ni, ìyẹn kì í ṣe orúkọ-odù tí a dá mọ̀."
 
 #: source_templates/base.html:6 source_templates/index.html:4
 msgid "Protecting Journalists and Sources"
-msgstr ""
+msgstr "Ìdáàbòbo Oníròyìn àti àwọn Orísun ìròyìn"
 
 #: source_templates/base.html:25 source_templates/footer.html:4
 #: source_templates/index.html:32
 msgid "Powered by"
-msgstr ""
+msgstr "Àgbékalẹ̀ẹ"
 
 #: source_templates/base.html:34
 msgid "LOG OUT"
-msgstr ""
+msgstr "FÀṢẸ JÁDE"
 
 #: source_templates/error.html:3
 msgid "Server error"
-msgstr ""
+msgstr "Ìsopọ̀ kùnà"
 
 #: source_templates/error.html:5
 msgid ""
 "Sorry, the website encountered an error and was unable to complete your "
 "request."
-msgstr ""
+msgstr "Ó dun'ni, ibùdó-ìtakùn ko ìṣòro kan, kò sì leè parí ìbéèrè rẹ."
 
 #: source_templates/error.html:7 source_templates/notfound.html:7
 msgid "Look up a codename..."
-msgstr ""
+msgstr "Ṣàwárí orúkọ-odù kan..."
 
 #: source_templates/first_submission_flashed_message.html:2
 msgid "Success!"
-msgstr ""
+msgstr "Àṣeyọrí!"
 
 #: source_templates/first_submission_flashed_message.html:3
 msgid ""
 "Thank you for sending this information to us. Please check back later for"
 " replies."
-msgstr ""
+msgstr "O ṣeun tí o fi ìwífún yìí ránṣẹ́ sí wá. Jọ̀wọ́ padà wá síbí fún èsì."
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
-msgstr ""
+msgstr "O gbàgbé orúkọ-odù rẹ?"
 
 #: source_templates/footer.html:7
 msgid ""
 "Please note: Sharing sensitive documents may put you at risk, even when "
 "using Tor and SecureDrop."
 msgstr ""
+"Jọ̀wọ́ kíyèsíi: Pínpín ìwé-ìrídìí tí ó ní àlàyé ohun ìkọ̀kọ̀ nípa araà rẹ "
+"leè kó ọ sí ewu, kódà bí o bá ń lo Tor àti SecureDrop."
 
 #: source_templates/footer.html:10
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
-msgstr ""
+msgstr "Freedom of the Press Foundation ni ó ṣe iṣẹ́-àkànṣe SecureDrop."
 
 #: source_templates/generate.html:4
 msgid "Welcome"
-msgstr ""
+msgstr "Káàbọ̀"
 
 #: source_templates/generate.html:7
 msgid ""
 "Please either write this codename down and keep it in a safe place, or "
 "memorize it."
 msgstr ""
+"Jọ̀wọ́ kọ orúkọ-odù yìí sílẹ̀ kí o fi pamọ́ sí ibìkan, tàbí kí o há a sí "
+"agbárí."
 
 #: source_templates/generate.html:10
 msgid ""
 "This codename is what you will use in future visits to receive messages "
 "from our journalists in response to what you submit on the next screen."
 msgstr ""
+"Orúkọ-odù yìí ni ohun tí o ó lò ní ọjọ́ iwájú tí o ó fi máa gba iṣẹ́-ìjẹ́ "
+"láti ọwọ́ọ àwọn oníròyìn-in wa ní ìfèsì sí ohun tí o kọ sí wa."
 
 #: source_templates/generate.html:34
 msgid ""
@@ -968,10 +980,19 @@ msgid ""
 " questions or are interested in additional information. Unlike passwords,"
 " there is no way to retrieve a lost codename."
 msgstr ""
+"Nítorí pé a kò ń tọpa àwọn tó ń lo <lágbára>SecureDrop</lágbára>\n"
+"wa, \n"
+"ní ọjọ́ iwájú, orúkọ-odù yìí ni yóò jẹ́ ọ̀nà kan ṣoṣo tí a ó máa fi bá ọ "
+"tàkùrọ̀sọ nígbàkúùgbà tí a bá ní \n"
+" àwọn \n"
+"ìbéèrè tàbí bí a bá fẹ́ àlàyé sí i. Kò jọ ti ọ̀rọ̀-ìfiwọlé, kò sí bí o ti lè "
+"ṣe rí orúkọ-odù tí o bá sọnù gbà padà.\n"
+" Kò jọ ti ọ̀rọ̀-ìfiwọlé, kò sí bí o ti lè ṣe rí orúkọ-odù tí o bá sọnù gbà "
+"padà."
 
 #: source_templates/generate.html:42
 msgid "SUBMIT DOCUMENTS"
-msgstr ""
+msgstr "TARI ÌWÉ-ÌRÍDÌÍ"
 
 #: source_templates/index.html:16
 msgid ""
