@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 1.0.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-09-23 14:39+0000\n"
+"PO-Revision-Date: 2019-09-24 13:39+0000\n"
 "Last-Translator: Adéṣínà Ayẹni <yobamoodua@gmail.com>\n"
 "Language-Team: Yoruba <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/yo/>\n"
@@ -1000,6 +1000,9 @@ msgid ""
 "Setting</strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield"
 " icon\"> &nbsp;button in your browser’s toolbar to change it."
 msgstr ""
+"Tor Browser rẹ<a id=\"yọ-js\" href=\"\"><lágbára>kò ní Ààtò Ààbò</strong></a>"
+" tó tó. Lo bọ́tììnì <img src=\"{àmì ìdámọ̀}\" alt=\"àmì ìdámọ̀ apata\"> "
+"&nbsp;ní oríi pátákòirinṣẹ́ aṣàwáríkiriì rẹ láti pààrọ rẹ̀."
 
 #: source_templates/index.html:17
 msgid ""
@@ -1008,6 +1011,10 @@ msgid ""
 "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
 "warning to continue."
 msgstr ""
+"<lágbára>A fi òǹtẹ̀ lu Aṣàwáríkiriì Tor fún ọ bí o bá fẹ́ lo "
+"SecureDrop:</lágbára> <a id=\"fòǹtẹ̀lu-tor\" href=\"{url_aṣàwáríkiri_tor}\""
+">Kọ́ bí o ṣe lè fi sí orí ẹ̀rọ</a>, tàbí kí o tẹ̀síwájú láì ka ìkìlọ̀ yìí "
+"kún."
 
 #: source_templates/index.html:18
 msgid ""
@@ -1017,59 +1024,66 @@ msgid ""
 "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
 "warning to continue."
 msgstr ""
+"<lágbára>A gbà ọ́ níyànjú kí o lo ẹ̀da Aṣàwáríkiri Tor fún ẹ̀rọ àgbélétábìlì "
+"fún SecureDrop, nítorí Orfox kò pèsè ààbò àti àìlórúkọ bíi ẹ̀dà ti "
+"ẹ̀rọ-àgbélétábìlì.</lágbára> <a id=\"fòǹtẹ̀lu-tor\" href=\""
+"{url_aṣàwáríkiri_tor}\">Kọ́ bí o ṣe lè fi sí orí ẹ̀rọ</a>, tàbí kí o tẹ̀"
+"síwájú láì ka ìkìlọ̀ yìí kún."
 
 #: source_templates/index.html:45
 msgid "First submission"
-msgstr ""
+msgstr "Àfisílẹ̀ àkọ́kọ́"
 
 #: source_templates/index.html:47
 msgid "First time submitting to our SecureDrop? Start here."
-msgstr ""
+msgstr "Ìgbà àkọ́kọ́ tí o ó lo SecureDrop wa? Bẹ̀rẹ̀ níbí."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
-msgstr ""
+msgstr "BẸ̀RẸ̀"
 
 #: source_templates/index.html:59
 msgid "Return visit"
-msgstr ""
+msgstr "Àbẹ̀wò padà"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
-msgstr ""
+msgstr "O ti ní orúkọ-odù tẹ́lẹ̀? Wo èsì tàbí fi nǹkan tuntun sílẹ̀."
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
 msgstr ""
+"Tẹ <img src=\"{àmì ìdámọ̀}\" alt=\"àmì ìdámọ̀ apata\"> ní orí pátákòirinṣẹ́ "
+"tí ó wà lókè."
 
 #: source_templates/index.html:80
 msgid "Select <strong>Advanced Security Settings</strong>"
-msgstr ""
+msgstr "Mú <lágbára>Ààtò Ààbò Àràọ̀tọ̀</lágbára>"
 
 #: source_templates/index.html:81
 msgid "Select <strong>Safest</strong>"
-msgstr ""
+msgstr "Mú <lágbára>Aláàbòjùlọ</lágbára>"
 
 #: source_templates/index.html:83
 msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
-msgstr ""
+msgstr "<a href=\"/\">Tún ojú-ìwé yìí tẹ̀</a>, ni o bá parí!"
 
 #: source_templates/login.html:6
 msgid "Enter Codename"
-msgstr ""
+msgstr "Fi orúkọ-odù sílẹ̀"
 
 #: source_templates/login.html:12
 msgid "Enter your codename"
-msgstr ""
+msgstr "Fi orúkọ-odù rẹ sílẹ̀"
 
 #: source_templates/login.html:26 source_templates/lookup.html:50
 msgid "CANCEL"
-msgstr ""
+msgstr "FAGILÉ"
 
 #: source_templates/logout_flashed_message.html:4
 #: source_templates/session_timeout.html:5
 msgid "Important!"
-msgstr ""
+msgstr "Pàtàkì!"
 
 #: source_templates/logout_flashed_message.html:5
 msgid ""
