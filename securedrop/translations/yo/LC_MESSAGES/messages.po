@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 1.0.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-09-24 13:39+0000\n"
+"PO-Revision-Date: 2019-09-25 15:39+0000\n"
 "Last-Translator: Adéṣínà Ayẹni <yobamoodua@gmail.com>\n"
 "Language-Team: Yoruba <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/yo/>\n"
@@ -1091,10 +1091,13 @@ msgid ""
 "the onion button in the Tor browser's toolbar to clear all history of "
 "your SecureDrop usage from this device."
 msgstr ""
+"O ṣeun tí o jáde kúrò ní sáà rẹ! Jọ̀wọ́ yan \"Ìdánimọ̀ Tuntun\" nínúu bọ́"
+"tììnì àlùbọ́sà lóríi pátákòirinṣẹ́ aṣàwáríkiri Tor láti pa gbogbo àkọsílẹ̀ "
+"rẹ bí o ṣe lo SecureDrop lórí ẹ̀rọ yìí rẹ́."
 
 #: source_templates/lookup.html:10
 msgid "Sorry we haven't responded yet!"
-msgstr ""
+msgstr "Máà bínú a ò tíì fèsì!"
 
 #: source_templates/lookup.html:11
 msgid ""
@@ -1102,20 +1105,24 @@ msgid ""
 "reasons, the creation of a two-way communication channel was delayed "
 "until you checked in again."
 msgstr ""
+"SecureDrop wa rí ìrúsókèe lílò láì pẹ́ yìí. Fún aabo tí ó yanrantí, a ṣe "
+"ìdádúró sí ìfẹ̀rílàdí ọlọ́nà-méjì kan títí tí o ó fi padà wá."
 
 #: source_templates/lookup.html:12
 msgid ""
 "Please rest assured that we were able to download your submission, and "
 "check back again later for a reply."
 msgstr ""
+"Jọ̀wọ́ a fi dá ọ lójú wípé a lè ṣe-àgbàálẹ̀ ìfisílẹ̀ rẹ, kí o padà wá fún "
+"èsì."
 
 #: source_templates/lookup.html:18
 msgid "Submit Files or Messages"
-msgstr ""
+msgstr "Ṣe-àfisílẹ̀ Fáìlì tàbí Iṣẹ́-ìjẹ́"
 
 #: source_templates/lookup.html:19
 msgid "You can submit any kind of file, a message, or both."
-msgstr ""
+msgstr "O leè Ṣe-àfisílẹ̀ onírúurú fáìlì, iṣẹ́-ìjẹ́, tàbí méjèèjì."
 
 #: source_templates/lookup.html:21
 msgid ""
@@ -1124,10 +1131,14 @@ msgid ""
 "key</a> before submission. Files are encrypted as they are received by "
 "SecureDrop."
 msgstr ""
+"Bí o bá mọ bí a ṣe ń lo GPG, o lè yí-odù fáìlì àti iṣẹ́-ìjẹ́ẹ̀ rẹ padà sí "
+"odù ààbò pẹ̀lú <a href=\"{url}\" ẹgbẹ́=\"àyọkà-ìsopọ̀\">kọ́kọ́rọ́ gbogboògbò "
+"wa</a> kí o tó ṣe-àfisílẹ̀. Odù fáìlì ń yí padà sí ti ààbò bí SecureDrop ṣe "
+"ń gbà á."
 
 #: source_templates/lookup.html:22
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
-msgstr ""
+msgstr "<a href=\"{url}\" ẹgbẹ́=\"àyọkà-ìsopọ̀\">Kọ́ sí i</a>."
 
 #: source_templates/lookup.html:32
 msgid "Maximum upload size: 500 MB"
@@ -1135,11 +1146,11 @@ msgstr ""
 
 #: source_templates/lookup.html:35
 msgid "Write a message."
-msgstr ""
+msgstr "Kọ iṣẹ́-ìjẹ́ kan."
 
 #: source_templates/lookup.html:57
 msgid "Read Replies"
-msgstr ""
+msgstr "Ka àwọn Èsì"
 
 #: source_templates/lookup.html:62
 msgid ""
@@ -1148,50 +1159,53 @@ msgid ""
 " with them. This also lets us know that you are aware of our reply. You "
 "can respond by submitting new files and messages above."
 msgstr ""
+"O ti ní èsì kan. Láti dáàbò bo ìdánimọ̀ rẹ bí ẹnìkan bá jí orúkọ-odù rẹ, "
+"jọ̀wọ́ pa gbogbo èsì rẹ́ bí o bá bùṣe pẹ̀lúu wọn. Èyí tún mú wa mọ̀ wípé o "
+"mọ̀ sí èsìi wa. O lè fèsì nípa fífi fáìlì àti iṣẹ́-ìjẹ́ tuntun sílẹ̀ sókè."
 
 #: source_templates/lookup.html:76
 msgid "Delete this reply?"
-msgstr ""
+msgstr "Pa èsì yìí rẹ́?"
 
 #: source_templates/lookup.html:87
 msgid "DELETE ALL REPLIES"
-msgstr ""
+msgstr "PA GBOGBO ÈSÌ RẸ́"
 
 #: source_templates/lookup.html:90
 msgid "Are you finished with the replies?"
-msgstr ""
+msgstr "Ṣé o ti parí pẹ̀lú àwọn èsì náà?"
 
 #: source_templates/lookup.html:91
 msgid "YES, DELETE ALL REPLIES"
-msgstr ""
+msgstr "BẸ́Ẹ̀NI, PA GBOGBO ÈSÌ RẸ́"
 
 #: source_templates/lookup.html:92
 msgid "NO, NOT YET"
-msgstr ""
+msgstr "RÁRÁ, KÒÌ YÁ"
 
 #: source_templates/lookup.html:96
 msgid "There are no replies at this time."
-msgstr ""
+msgstr "Kò sí èsì kankan ní àsìkò yìí."
 
 #: source_templates/lookup.html:105
 msgid "Remember, your codename is:"
-msgstr ""
+msgstr "Rántí, orúkọ-odù rẹ ni:"
 
 #: source_templates/lookup.html:106
 msgid "Show"
-msgstr ""
+msgstr "Ṣ'àfihàn"
 
 #: source_templates/lookup.html:108
 msgid "Hide"
-msgstr ""
+msgstr "Fi-pamọ́"
 
 #: source_templates/notfound.html:3
 msgid "Page not found"
-msgstr ""
+msgstr "Ojú-ìwé ò jẹ́ rírí"
 
 #: source_templates/notfound.html:5
 msgid "Sorry, we couldn't locate what you requested."
-msgstr ""
+msgstr "Ó dun'ni, a kò leè rí ohun tí o béèrè fún."
 
 #: source_templates/session_timeout.html:6
 msgid ""
@@ -1201,20 +1215,28 @@ msgid ""
 "SecureDrop usage from this device. If you are not using Tor Browser, "
 "restart your browser."
 msgstr ""
+"Àsìkò sáà rẹ ti tán nítorí pé o kò ṣe nǹkan kan. Jọ̀wọ́ fàṣẹwọlé lẹ́ẹ̀kan sí "
+"i bí o bá fẹ́ tẹ̀síwájú pẹ̀lú SecureDrop, tàbí kí o yan \"Ìdánimọ̀ Tuntun\" "
+"láti inúu bọ́tììnì àlùbọ́sà lóríi pátákòirinṣẹ́ aṣàwáríkiri Tor láti pa "
+"gbogbo àkọsílẹ̀ oríi SecureDrop rẹ́ ní orí ẹ̀rọ yìí. Bí o kò bá lo "
+"Aṣàwáríkiri Tor, tún aṣàwáríkiriì rẹ bẹ̀rẹ̀."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
-msgstr ""
+msgstr "Èé ṣe tí ìkìlọ̀ ṣe wà nípa Tor2Web?"
 
 #: source_templates/tor2web-warning.html:4
 msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
 msgstr ""
+"Lílo Tor2Web láti ṣe-ìṣàsopọ̀ sí SecureDrop kò ní fi ààbò bo àìlórúkọọ̀ rẹ."
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
 "It could be possible for anyone monitoring your Internet traffic (your "
 "government, your Internet provider), to identify you."
 msgstr ""
+"Ó ṣe é ṣe fún ẹnikẹ́ni láti máa ṣọ́ bí o ti ṣe ń lo Ayélujára (ìjọbaà rẹ, "
+"apèsè Ayélujáraà rẹ), láti dá ọ mọ̀."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
@@ -1222,16 +1244,20 @@ msgid ""
 "href=\"www.torproject.org/projects/torbrowser.html\">Tor browser</a> "
 "instead."
 msgstr ""
+"A <lágbára>fi tọ̀wọ̀tọ̀wọ̀ rọ̀ ọ́ </lágbára> kí o kúkú lo \n"
+"<a href=\"www.torproject.org/projects/torbrowser.html\">aṣàwáríkiri Tor </a> "
+"náà."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
-msgstr ""
+msgstr "Ó Yẹ Kí O Lo Aṣàwáríkiri Tor"
 
 #: source_templates/use-tor-browser.html:4
 msgid ""
 "If you are not using Tor Browser, you <strong>may not be "
 "anonymous</strong>."
 msgstr ""
+"Bí o kò bá lo Aṣàwáríkiri Tor, o <strong>lè máà wà ní ipò àìlórúkọ</lágbára>."
 
 #: source_templates/use-tor-browser.html:5
 msgid ""
@@ -1239,12 +1265,17 @@ msgid ""
 "advise you</strong> to install Tor Browser and use it to access our site "
 "safely and anonymously."
 msgstr ""
+"Bí o bá fẹ́ ṣe-àfisílẹ̀ ìwífún sí oríi SecureDrop, a <lágbára>rọ̀ "
+"ọ́</lágbára> kí o fi Aṣàwáríkiri Tor sí orí ẹ̀rọọ̀ rẹ, kí o sì lò ó láti fi "
+"wọ inú ibùdóo wa pẹ̀lú ààbò àti ìpamọ́ ipò àìlórúkọ."
 
 #: source_templates/use-tor-browser.html:6
 msgid ""
 "Copy and paste the following address into your browser and follow the "
 "instructions to download and install Tor Browser:"
 msgstr ""
+"Gbé ẹ̀dà ojúlé lẹ́sẹẹsẹ sórí aṣàwáríkiriì rẹ, kí o sì tẹ̀lé ìtọ́nà náà láti "
+"gbà á sílẹ̀ àti fi Aṣàwáríkiri Tor sí orí ẹ̀rọọ̀ rẹ:"
 
 #: source_templates/use-tor-browser.html:9
 msgid ""
@@ -1253,10 +1284,15 @@ msgid ""
 " <pre>gettor@torproject.org</pre> and a bot will answer with "
 "instructions."
 msgstr ""
+"Bí gbígba Aṣàwáríkiri Tor sí orí ẹ̀rọọ̀ rẹ bá mú ìfura dání àti pé kò sí "
+"àrídájú wípé apèsè ìfìwéránṣẹ́ (ímeèlì) rẹ wà ní abẹ́ ìṣọ́, o lè kọ̀wé "
+"sí<pre>gettor@torproject.org</pre>, tí ẹ̀rọ yóò sì dáhùn pẹ̀lú ìtọ́nà ohun "
+"tí o ó ṣe."
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the journalist's public key?"
 msgstr ""
+"Kí ló dé tí ó fi yẹ kí akọ̀ròyìn ó gba kọ́kọ́rọ́ọ gbogboògbò sílẹ̀ sórí ẹ̀rọ?"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
@@ -1264,22 +1300,29 @@ msgid ""
 "Encrypting messages and files before submission can provide an extra "
 "layer of security before your data reaches the SecureDrop server."
 msgstr ""
+"SecureDrop máa ń yí odù fáìlì àti iṣẹ́-ìjẹ́ padà fún ààbò ní kété tí o bá ti "
+"ṣe-àfisílẹ̀. Yíyí iṣẹ́-ìjẹ́ àti fáìlì padà-sì-odù-ààbò kí o tó ó ṣe-àfisílẹ̀ "
+"leè pèsè àlékún ìpele ààbò kí dátà rẹ ó dé apèsè SecureDrop náà."
 
 #: source_templates/why-journalist-key.html:5
 msgid ""
 "If you are already familiar with the GPG encryption software, you may "
 "wish to encrypt your submissions yourself. To do so:"
 msgstr ""
+"Bí o bá mọ iṣẹ́-àrídìmú ìyí-data-padà-sí-odù-fún-ààbò GPG, ó lè hùn ọ́ kí o "
+"yí odù àfisílẹ̀ rẹ padà fún ààbò fúnraà rẹ. Láti ṣe bẹ́ẹ̀:"
 
 #: source_templates/why-journalist-key.html:7
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. The public key is a text "
 "file with the extension <code>.asc</code>"
 msgstr ""
+"<a href=\"{url}\">Ṣàgbàsílẹ̀</a> kọ́kọ́rọ́ gbogboògbò náà. Fáìlì àyọkà náà "
+"ni kọ́kọ́rọ́ gbogboògbò pẹ̀lú <odù>.asc</odù>"
 
 #: source_templates/why-journalist-key.html:8
 msgid "Import it into your GPG keyring."
-msgstr ""
+msgstr "Kó o wọlé sínúu GPG rẹ pẹ̀lú òrùkakọ́kọ́rọ́."
 
 #: source_templates/why-journalist-key.html:10
 msgid ""
@@ -1287,16 +1330,22 @@ msgid ""
 "<code>.asc</code> file you just downloaded and it will be automatically "
 "imported to your keyring."
 msgstr ""
+"Bí o bá ń lo <a href=\"{url}\">Tails</a>, o lè tẹ <odù>.asc</odù> fáìlì tí o "
+"ṣẹ̀ṣẹ̀ ṣàgbàsílẹ̀ẹ rẹ̀ lẹ́ẹ̀-mejì yóò sì di kíkó wọlé sí òrùkakọ́kọ́rọ́ọ̀ rẹ "
+"fúnra rẹ̀."
 
 #: source_templates/why-journalist-key.html:11
 msgid ""
 "If you are using Mac/Linux, open the terminal. You can import the key "
 "with <code>gpg --import /path/to/key.asc</code>."
 msgstr ""
+"Bí o bá ń lo Mac/Linux, ṣí terminal. O leè kó kọ́kọ́rọ́ wọlé pẹ̀lú <odù>gpg "
+"--\n"
+"kówọlé/ipaọ̀nà/sí/kọ́kọ́rọ́.asc</odù>."
 
 #: source_templates/why-journalist-key.html:14
 msgid "Encrypt your submission."
-msgstr ""
+msgstr "Yí àfisílẹ̀ rẹ padà fún odù ààbò."
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
@@ -1305,12 +1354,18 @@ msgid ""
 "(with .asc at the end), you can just copy and paste that. (don't include "
 "the <code>.asc</code>!)"
 msgstr ""
+"O máa ní láti dá kọ́kọ́rọ́ náà mọ̀ (èyí ni a pè ní \"Ìdánimọ̀ Òǹlò\" tàbí "
+"UID). Nítorí pé orúkọ fáìlì kọ́kọ́rọ́ gbogboògbò jẹ́ ìtẹ̀kà kọ́kọ́rọ́ náà "
+"(pẹ̀lú .asc ní ẹ̀yin rẹ), o leè gbé ẹ̀dà ìyẹn kọ sílẹ̀. (máà fi "
+"<odù>.asc</odù> náà kún un!)"
 
 #: source_templates/why-journalist-key.html:17
 msgid ""
 "On all systems, open the Terminal and use this gpg command: <code>gpg "
 "--recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 msgstr ""
+"Ní oríi gbogbo ẹ̀rọ, ṣí Terminal kí o lo àṣẹ gpg yìí: <odù>gpg --agbaṣẹ́ẹ̀jẹ́"
+" &lt;Ìdánimọ̀ òǹlò&gt; --yí odù àwòránan_roswell.pdf</odù>"
 
 #: source_templates/why-journalist-key.html:20
 msgid ""
@@ -1318,6 +1373,9 @@ msgid ""
 "unencrypted file, with .gpg at the end (e.g. "
 "<code>roswell_photos.pdf.gpg</code>)"
 msgstr ""
+"Ṣàgbésí àfisílẹ̀ tí odùu rẹ̀ ti yí padà fún ààbò. Yóò ní orúkọ fáìlì kan náà "
+"bíi fáìlì tí a kò yí odùu rẹ̀ padà fún ààbò, pẹ̀lú .gpg ní ẹ̀yìn (fún àpẹẹrẹ "
+"<odù>àwòránan_roswell.pdf.gpg</odù>)"
 
 #: source_templates/why-journalist-key.html:23
 msgid ""
@@ -1326,7 +1384,11 @@ msgid ""
 "<code>--sign</code> or <code>-s</code> flag) as this will reveal your GPG"
 " identity to us."
 msgstr ""
+"<lágbára>Olobó:</lágbára> Bí o bá fẹ́ wà ní ipò àìlórúkọ, <lágbára>o kò "
+"gbọdọ̀ </lágbára> lo GPG láti fi ọwọ́ bọ fáìlì náà tí o yí odùu rẹ̀ padà fún "
+"ààbò (pẹ̀lú <odù>--fi ọwọ́ bọ</odù> tàbí <odù>-s</odù> àsíá) nítorí èyí yóò "
+"fi ìdánimọ̀ GPG rẹ hàn wá."
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
-msgstr ""
+msgstr "Padà sí ojú-ìwé asàfisílẹ̀"
