@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-09-16 23:39+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2019-10-15 14:39+0000\n"
+"Last-Translator: John Hensley <john@freedom.press>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -752,7 +752,7 @@ msgstr "Nullstill tofaktor-oppsett for mobilapper, som f.eks. FreeOTP"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
-msgstr "TILBAKESTILL MOBILPROGRAMSYMBOL"
+msgstr "TILBAKESTILL APP OPPSETT"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
@@ -760,7 +760,7 @@ msgstr "Tilbakestill tofaktor-oppsett for fysiske nøkler, som YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
-msgstr "TILBAKESTILL MASKINVARESYMBOL"
+msgstr "TILBAKESTILL FYSISK NØKKEL"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
