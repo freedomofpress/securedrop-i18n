@@ -434,7 +434,7 @@ msgstr ""
 
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid ""
-"Once you have pair FreeOTP with this account, enter the 6-digit code "
+"Once you have paired FreeOTP with this account, enter the 6-digit code "
 "below:"
 msgstr ""
 

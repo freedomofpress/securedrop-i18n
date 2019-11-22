@@ -495,7 +495,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Once you have scanned the barcode, enter the 6-digit code below:"
 msgid ""
-"Once you have pair FreeOTP with this account, enter the 6-digit code below:"
+"Once you have paired FreeOTP with this account, enter the 6-digit code below:"
 msgstr ""
 "Quan hàgiu escanejat el codi de barres, introduïu aquest codi de sis dígits:"
 

@@ -510,7 +510,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Once you have scanned the barcode, enter the 6-digit code below:"
 msgid ""
-"Once you have pair FreeOTP with this account, enter the 6-digit code below:"
+"Once you have paired FreeOTP with this account, enter the 6-digit code below:"
 msgstr ""
 "بعد إتمام خطوة المسح الضوئي، أدخل في الحقل التالي الرمز المكون من 6 أرقام:"
 

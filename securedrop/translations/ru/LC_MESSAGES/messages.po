@@ -503,7 +503,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Once you have scanned the barcode, enter the 6-digit code below:"
 msgid ""
-"Once you have pair FreeOTP with this account, enter the 6-digit code below:"
+"Once you have paired FreeOTP with this account, enter the 6-digit code below:"
 msgstr ""
 "После того, как вы отсканировали штрих-код, введите 6-значный код ниже:"
 

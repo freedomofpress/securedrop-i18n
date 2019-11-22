@@ -551,7 +551,7 @@ msgstr ""
 #: journalist_templates/admin_new_user_two_factor.html:18
 #, fuzzy
 msgid ""
-"Once you have pair FreeOTP with this account, enter the 6-digit code below:"
+"Once you have paired FreeOTP with this account, enter the 6-digit code below:"
 msgstr "Nuskaitę barkodą, įveskite žemiau esantį 6 skaitmenų kodą:"
 
 #: journalist_templates/admin_new_user_two_factor.html:21
