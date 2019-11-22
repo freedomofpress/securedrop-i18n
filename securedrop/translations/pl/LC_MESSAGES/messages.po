@@ -194,8 +194,8 @@ msgstr[2] ""
 #, fuzzy
 #| msgid "Please wait for a new two-factor token before trying again."
 msgid ""
-"Please wait for a new code from your two-factor device (mobile app or "
-"security key) before trying again."
+"Please wait for a new code from your two-factor mobile app or security key "
+"before trying again."
 msgstr "Poczekaj na nowy token dwuetapowy przed ponowną próbą."
 
 #: journalist_app/utils.py:124

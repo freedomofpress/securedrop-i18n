@@ -179,8 +179,8 @@ msgstr[1] "אנא המתן לפחות {seconds} שניות לפני שתנסה �
 #| "Please wait for a new code from your two-factor token or application "
 #| "before trying again."
 msgid ""
-"Please wait for a new code from your two-factor device (mobile app or "
-"security key) before trying again."
+"Please wait for a new code from your two-factor mobile app or security key "
+"before trying again."
 msgstr "אנא המתן לקוד חדש עבור האימות הדו שלבי לפני שתנסה שוב."
 
 #: journalist_app/utils.py:124

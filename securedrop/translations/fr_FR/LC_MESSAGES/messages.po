@@ -175,9 +175,13 @@ msgstr[1] ""
 "Veuillez patienter au moins {seconds} secondes avant de vous reconnecter."
 
 #: journalist_app/utils.py:103
+#, fuzzy
+#| msgid ""
+#| "Please wait for a new code from your two-factor device (mobile app or "
+#| "security key) before trying again."
 msgid ""
-"Please wait for a new code from your two-factor device (mobile app or "
-"security key) before trying again."
+"Please wait for a new code from your two-factor mobile app or security key "
+"before trying again."
 msgstr ""
 "Veuillez attendre un nouveau code de votre appareil A2F (appli mobile ou clé "
 "de sécurité) avant de ressayer."

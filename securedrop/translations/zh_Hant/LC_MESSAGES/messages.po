@@ -169,8 +169,8 @@ msgstr[0] "請等待至少 {seconds} 秒後再次登錄。"
 #| "Please wait for a new code from your two-factor token or application "
 #| "before trying again."
 msgid ""
-"Please wait for a new code from your two-factor device (mobile app or "
-"security key) before trying again."
+"Please wait for a new code from your two-factor mobile app or security key "
+"before trying again."
 msgstr "請等待産生新的雙因素認證碼或新的應用認證碼後再重試一遍。"
 
 #: journalist_app/utils.py:124

@@ -187,8 +187,8 @@ msgstr[0] "Mohon tunggu setidaknya {seconds} detik sebelum log masuk kembali."
 #, fuzzy
 #| msgid "Please wait for a new two-factor token before trying again."
 msgid ""
-"Please wait for a new code from your two-factor device (mobile app or "
-"security key) before trying again."
+"Please wait for a new code from your two-factor mobile app or security key "
+"before trying again."
 msgstr "Mohon tunggu token dua faktor baru terbuat sebelum mencoba lagi."
 
 #: journalist_app/utils.py:124

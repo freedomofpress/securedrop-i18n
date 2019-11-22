@@ -207,8 +207,8 @@ msgstr[2] ""
 #: journalist_app/utils.py:103
 #, fuzzy
 msgid ""
-"Please wait for a new code from your two-factor device (mobile app or "
-"security key) before trying again."
+"Please wait for a new code from your two-factor mobile app or security key "
+"before trying again."
 msgstr ""
 "Prašome palaukti naujo kodo iš jūsų dviejų dalių autentifikatoriaus prieš "
 "bandydami dar kartą."

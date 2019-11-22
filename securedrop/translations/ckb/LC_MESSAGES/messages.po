@@ -158,8 +158,8 @@ msgstr[1] ""
 
 #: journalist_app/utils.py:103
 msgid ""
-"Please wait for a new code from your two-factor device (mobile app or "
-"security key) before trying again."
+"Please wait for a new code from your two-factor mobile app or security key "
+"before trying again."
 msgstr ""
 
 #: journalist_app/utils.py:124

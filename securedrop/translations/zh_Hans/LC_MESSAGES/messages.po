@@ -170,8 +170,8 @@ msgstr[0] "请至少等待 {seconds} 秒后再登录。"
 #| "Please wait for a new code from your two-factor token or application "
 #| "before trying again."
 msgid ""
-"Please wait for a new code from your two-factor device (mobile app or "
-"security key) before trying again."
+"Please wait for a new code from your two-factor mobile app or security key "
+"before trying again."
 msgstr "在重试前，请等待您的双重验证应用的新验证码。"
 
 #: journalist_app/utils.py:124
