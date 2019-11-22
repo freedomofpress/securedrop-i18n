@@ -16,7 +16,7 @@ and power the server back up.
 If you have access to the password for your admin user, you can use it to log into
 each server without the use of two-factor authentication, which was disabled
 for keyboard logins in SecureDrop 0.8.0. You may have saved the password in the
-KeePassX database on your *Admin Workstation*. If you do not have the password,
+KeePassXC database on your *Admin Workstation*. If you do not have the password,
 you can boot into single user mode instead.
 
 Boot into Single User Mode
@@ -175,7 +175,7 @@ Run the following commands via SSH from the *Admin Workstation*:
 .. code:: sh
 
   cd ~/Persistent/securedrop/
-  source .venv/bin/activate
+  source admin/.venv3/bin/activate
   cd install_files/ansible-base
   ansible all -b -m setup > server-facts.log
 

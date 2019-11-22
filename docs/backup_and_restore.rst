@@ -1,6 +1,7 @@
 Back Up, Restore, Migrate
 =========================
 
+
 There are a number of reasons why you might want to backup and restore a
 SecureDrop installation. Maintaining periodic backups is generally a good
 practice to guard against data loss. In the event of hardware failure on
@@ -31,13 +32,17 @@ You can use the following command to determine the volume of submissions
 currently on the *Application Server*: log in over SSH and run
 ``sudo du -sh /var/lib/securedrop/store``.
 
-.. note:: Submissions are deleted asynchronously and one at a time, so if you
-          delete a lot of submissions through the *Journalist Interface*, it may
-          take a while for all of the submissions to actually be
-          deleted. SecureDrop uses ``srm`` to securely erase files, which takes
-          significantly more time than normal file deletion. You can monitor the
-          progress of queued deletion jobs with ``sudo tail -f
-          /var/log/securedrop_worker/err.log``.
+.. note:: Submissions are deleted asynchronously and one at a time, so
+          if you delete a lot of submissions through the *Journalist
+          Interface*, it may take a while for all of the submissions
+          to actually be deleted. SecureDrop uses ``shred`` to
+          securely erase files, which takes significantly more time
+          than normal file deletion. You can monitor the progress of
+          queued deletion jobs by logging in to the *Application
+          Server* over SSH and running::
+
+            sudo journalctl -u securedrop_rqworker
+
 
 If you find you cannot perform a backup or restore due to this constraint,
 and have already deleted old submissions from the *Journalist Interface*,
@@ -80,13 +85,12 @@ to debug your connectivity before proceeding further. Make sure:
 * Ansible is installed
 * the *Admin Workstation* is connected to the Internet
 * Tor starts successfully
-* the ``HidServAuth`` values from ``install_files/ansible-base/app-ssh-aths``
-  and ``install_files/ansible-base/mon-ssh-aths`` are in Tails at
-  ``/etc/tor/torrc``
+* The appropriate onion service configuration files are present in
+  ``~/Persistent/securedrop/install_files/ansible-base`` and the
+  ``./securedrop-admin tailsconfig`` command completes successfully
 
-(If Ansible is not installed, or the ``HidServAuth`` values are missing
-or incorrect, see :doc:`configure_admin_workstation_post_install` for detailed
-instructions.)
+If Ansible is not installed, or ``./securedrop-admin tailsconfig`` fails, see
+:doc:`configure_admin_workstation_post_install` for detailed setup instructions.
 
 Create the Backup
 '''''''''''''''''
@@ -138,6 +142,11 @@ command. Otherwise, you should copy the backup archive that you wish to restore 
 
 Restoring From a Backup File
 ''''''''''''''''''''''''''''
+
+.. important:: This documentation applies to a SecureDrop instance using
+               v2 onion services. If your instance uses v3 onion services,
+               you will need to follow additional steps depending on your
+               specific restore scenario.
 
 To perform a restore, you must already have a backup archive. Provide its
 filename in the following command:

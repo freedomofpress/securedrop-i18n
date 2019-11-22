@@ -2,7 +2,6 @@
 import os
 import pytest
 import io
-import six
 import random
 import zipfile
 import base64
@@ -26,7 +25,7 @@ os.environ['SECUREDROP_ENV'] = 'test'  # noqa
 from sdconfig import SDConfig, config
 
 from db import db
-from models import (InvalidPasswordLength, Journalist, Reply, Source,
+from models import (InvalidPasswordLength, InstanceConfig, Journalist, Reply, Source,
                     Submission)
 from .utils.instrument import InstrumentedApp
 
@@ -1284,12 +1283,29 @@ def test_admin_add_user_integrity_error(journalist_app, test_admin, mocker):
                 "error")
 
     log_event = mocked_error_logger.call_args[0][0]
-    if six.PY2:
-        assert ("Adding user 'username' failed: (__builtin__.NoneType) "
-                "None\n[SQL: STATEMENT]\n[parameters: 'PARAMETERS']") in log_event
-    else:
-        assert ("Adding user 'username' failed: (builtins.NoneType) "
-                "None\n[SQL: STATEMENT]\n[parameters: 'PARAMETERS']") in log_event
+    assert ("Adding user 'username' failed: (builtins.NoneType) "
+            "None\n[SQL: STATEMENT]\n[parameters: 'PARAMETERS']") in log_event
+
+
+def test_prevent_document_uploads(journalist_app, test_admin):
+    with journalist_app.test_client() as app:
+        _login_user(app, test_admin['username'], test_admin['password'],
+                    test_admin['otp_secret'])
+        form = journalist_app_module.forms.SubmissionPreferencesForm(
+            prevent_document_uploads=True)
+        app.post(url_for('admin.update_submission_preferences'),
+                 data=form.data,
+                 follow_redirects=True)
+        assert InstanceConfig.get_current().allow_document_uploads is False
+
+
+def test_no_prevent_document_uploads(journalist_app, test_admin):
+    with journalist_app.test_client() as app:
+        _login_user(app, test_admin['username'], test_admin['password'],
+                    test_admin['otp_secret'])
+        app.post(url_for('admin.update_submission_preferences'),
+                 follow_redirects=True)
+        assert InstanceConfig.get_current().allow_document_uploads is True
 
 
 def test_logo_upload_with_valid_image_succeeds(journalist_app, test_admin):
@@ -1694,19 +1710,15 @@ def test_delete_source_deletes_docs_on_disk(journalist_app,
         utils.db_helper.submit(source, 2)
         utils.db_helper.reply(journo, source, 2)
 
-        # Encrypted documents exists
-        dir_source_docs = os.path.join(config.STORE_DIR,
-                                       test_source['filesystem_id'])
+        dir_source_docs = os.path.join(config.STORE_DIR, test_source['filesystem_id'])
         assert os.path.exists(dir_source_docs)
 
-        job = journalist_app_module.utils.delete_collection(
-            test_source['filesystem_id'])
+        journalist_app_module.utils.delete_collection(test_source['filesystem_id'])
 
-        # Wait up to 5s to wait for Redis worker secure deletion to complete
-        utils.asynchronous.wait_for_redis_worker(job)
+        def assertion():
+            assert not os.path.exists(dir_source_docs)
 
-        # Encrypted documents no longer exist
-        assert not os.path.exists(dir_source_docs)
+        utils.asynchronous.wait_for_assertion(assertion)
 
 
 def test_login_with_invalid_password_doesnt_call_argon2(mocker, test_journo):

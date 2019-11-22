@@ -12,12 +12,7 @@ specific type of development task. We use Vagrant, VirtualBox, and
 Docker and our Ansible playbooks can provision these environments on
 either virtual machines or physical hardware.
 
-.. note:: SecureDrop is written in Python 2. We plan to migrate to
-          Python 3 in a future release. Please use a Python 3
-          virtualenv for development, while ensuring that your changes
-          are compatible with both Python 3 and Python 2, to ensure
-          they work in production and CI, both of which use Python
-          2.7.
+.. note:: SecureDrop is written in Python 3 only.
 
 Quick Start
 -----------
@@ -110,16 +105,6 @@ To get started, you can try the following:
    bin/dev-shell bin/run-test tests/functional # functional tests only
    bin/dev-shell bash                          # shell inside the container
 
-To specify the version of Python you want to use, set the ``PYTHON_VERSION``
-environmental variable, like so:
-
-.. code:: sh
-
-    PYTHON_VERSION=3 make test    # Run tests on Python 3
-    PYTHON_VERSION=2 make test    # Run tests on Python 2
-    PYTHON_VERSION=3 make dev     # Run dev container on Python 3
-    PYTHON_VERSION=2 make dev     # Run dev container on Python 2
-
 .. tip:: The interactive shell in the container does not run
          ``redis``, ``Xvfb`` etc.  However you can import shell helper
          functions with ``source bin/dev-deps`` and call ``run_xvfb``,
@@ -147,7 +132,7 @@ development.
 * **Password:** ``correct horse battery staple profanity oil chewy``
 * **TOTP secret:** ``JHCO GO7V CER3 EJ4L``
 
-If you need to generate the six digit token, use the TOTP secret in
+If you need to generate the six digit two-factor code, use the TOTP secret in
 combination with an authenticator application that implements
 `RFC 6238 <https://tools.ietf.org/html/rfc6238>`__, such as
 `FreeOTP <https://freeotp.github.io/>`__ (Android and iOS) or
@@ -157,7 +142,7 @@ can simply scan the following QR code:
 
 .. image:: ../images/devenv/test-users-totp-qrcode.png
 
-You can also generate the 2FA code using the Python interpreter:
+You can also generate the two-factor code using the Python interpreter:
 
 .. code:: python
 
@@ -185,7 +170,7 @@ Ubuntu or Debian GNU/Linux
 .. code:: sh
 
    sudo apt-get update
-   sudo apt-get install -y build-essential libssl-dev libffi-dev python-dev \
+   sudo apt-get install -y build-essential libssl-dev libffi-dev python3-dev \
        dpkg-dev git linux-headers-$(uname -r) virtualbox
 
 We recommend using the latest stable version of Vagrant, ``1.8.5`` at the time
@@ -221,7 +206,7 @@ you have the latest stable version.
 
 .. code:: sh
 
-    sudo apt-get install python-pip
+    sudo apt-get install python3-pip
 
 The version of Ansible recommended to provision SecureDrop VMs may not be the
 same as the version in your distro's repos, or may at some point flux out of
@@ -254,8 +239,8 @@ Install the dependencies for the development environment:
 If you use homebrew-cask_ to manage macOS apps, you can install Vagrant and
 VirtualBox that way. As for Ansible, we strongly recommend installing it
 in a virtual environment using ``virtualenvwrapper`` and ``pip``, so as not to
-install the older version we use system-wide. The following commands assume your
-default Python is the Python 2 that ships with macOS. If you are using a
+install the older version we use system-wide. You should create your virtualenv
+using the Python 3 install on your system. If you are using a
 different version, the path to ``virtualenvwrapper.sh`` will differ. Running
 ``pip show virtualenvwrapper`` should help you find it.
 
@@ -264,7 +249,7 @@ different version, the path to ``virtualenvwrapper.sh`` will differ. Running
     sudo easy_install pip # if you don't already have pip
     sudo -H pip install -U virtualenvwrapper --ignore-installed six
     source /usr/local/bin/virtualenvwrapper.sh
-    mkvirtualenv -p python securedrop
+    mkvirtualenv -p python3 securedrop
 
 .. note:: You'll want to add the command to source ``virtualenvwrapper.sh``
           to your ``~/.bashrc`` (or whatever your default shell configuration
@@ -295,11 +280,11 @@ Visit our repository_ fork it and clone it on you local machine:
 Install Python Requirements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-SecureDrop uses many third-party open source packages from the python community.
+SecureDrop uses many third-party open source packages from the Python community.
 Ensure your virtualenv is activated and install the packages.
 
 .. code:: sh
 
-    pip install -r securedrop/requirements/python3/develop-requirements.txt
+    pip install --require-hashes -r securedrop/requirements/python3/develop-requirements.txt
 
 .. note:: You will need to run this everytime new packages are added.

@@ -24,7 +24,7 @@ Any special considerations for deployment? Consider both:
 
 ### If you made changes to the server application code:
 
-- [ ] Linting (`make lint`) and tests (`make -C securedrop test`) pass in the development container
+- [ ] Linting (`make lint`) and tests (`make test`) pass in the development container
 
 ### If you made changes to `securedrop-admin`:
 
@@ -41,3 +41,10 @@ Any special considerations for deployment? Consider both:
 ### If you made changes to documentation:
 
 - [ ] Doc linting (`make docs-lint`) passed locally
+
+### If you added or updated a code dependency:
+
+Choose one of the following:
+
+- [ ] I have performed a diff review and pasted the contents to [the packaging wiki](https://github.com/freedomofpress/securedrop-debian-packaging/wiki)
+- [ ] I would like someone else to do the diff review

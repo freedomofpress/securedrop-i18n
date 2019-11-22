@@ -13,7 +13,7 @@ command:
 
     ./securedrop-admin setup
 
-The package installation will take approximately 10 minutes, depending
+The package installation will take approximately 10 minutes or longer, depending
 on network speed and computing power.
 
 .. note:: On Tails 3.9 or later, the apt persistence feature will prompt
@@ -26,8 +26,7 @@ on network speed and computing power.
 .. note:: Occasionally this command times out due to network latency issues. You
           should be able to re-run the command and complete the setup. If you
           run into a problem, try removing the
-          ``~/Persistent/securedrop/admin/.venv/`` directory and the
-          ``~/Persistent/securedrop/.venv`` symbolic link and running the
+          ``~/Persistent/securedrop/admin/.venv3/`` directory and running the
           command again.
 
 .. important:: The setup command should only be run as the ``amnesia`` user,
@@ -52,6 +51,18 @@ parentheses.
           submitting documents are likely to expect a journalist fluent in
           French to be available to read the documents and follow up in that
           language.
+
+Onion Service Options
+---------------------
+SecureDrop supports the use of tradtional (v2)  or next-generation (v3) onion
+services for the *Source* and *Journalist Interfaces*, as well as the SSH proxy
+services if they are configured. Either or both may be enabled, but we recommend
+the use of v3 onion services for any new instances, as they offer greater
+security.
+
+For more information on v3 onion services, including upgrade options 
+for existing instances, see 
+:doc:`SecureDrop v3 onion services <v3_services>`.
 
 Configure the Installation
 --------------------------
@@ -156,9 +167,12 @@ an email to securedrop@freedom.press.
 
 .. _`Source Offer`: https://github.com/freedomofpress/securedrop/blob/develop/SOURCE_OFFER
 
-Once the installation is complete, addresses and credentials for each Tor Hidden
-Service will be available in the following files under
+Once the installation is complete, addresses and credentials for each 
+onion service will be available in the following files under
 ``install_files/ansible-base``:
+
+V2 onion services
+^^^^^^^^^^^^^^^^^
 
 - ``app-source-ths`` contains the ``.onion`` address of the *Source
   Interface*.
@@ -174,13 +188,38 @@ Service will be available in the following files under
 
 .. warning:: The ``app-journalist-aths``, ``app-ssh-aths``, and
              ``mon-ssh-aths`` files contain passwords for their corresponding
-             authenticated Onion Services. They should not be shared with
+             authenticated onion services. They should not be shared with
              third parties or copied from the *Admin Workstation* for any
              reason other than well-defined administrative tasks such as
              onboarding new users or performing backups.
 
-The dynamic inventory file will automatically read the Onion URLs
-from the ``app-ssh-aths`` and ``mon-ssh-aths`` files and use them to connect
-to the servers over SSH during subsequent playbook runs.
+If v3 onion services are not enabled, the dynamic inventory file will 
+automatically read the Onion URLs from the ``app-ssh-aths`` and ``mon-ssh-aths``
+files and use them to connect to the servers over SSH during subsequent playbook
+runs.
+
+V3 onion services
+^^^^^^^^^^^^^^^^^
+
+- ``app-sourcev3-ths`` contains the v3 ``.onion`` address of the *Source
+  Interface*.
+- ``app-journalist.auth_private`` contains the ``onion`` address and private key
+  providing access to the *Journalist Interface*.
+- ``app-ssh.auth_private`` contains the ``onion`` address and private key
+  providing SSH access to the *Application Server*.
+- ``mon-ssh.auth_private`` contains the ``onion`` address and private key
+  providing SSH access to the *Monitor Server*.
+- ``tor_v3_keys.json`` contains the keypairs required for access to the
+  *Journalist Interface* and SSH access to the servers - it is required for 
+  future runs of ``./securedrop-admin install``.
+
+.. warning:: The three ``.auth_private`` files and the ``tor_v3_keys.json`` file 
+             contain secret keys that should not be shared with third parties,
+             or copied from the *Admin Workstation* for any purpose other than
+             tasks such as performing backups or onboarding new users.
+
+The dynamic inventory file will automatically read the ``onion`` addresses from
+the ``app-ssh.auth_private`` and ``mon-ssh.auth_private`` files and use them to
+connect to the servers over SSH during subsequent playbook runs.
 
 .. |Tails Apt Persistence| image:: images/tails-install-once-or-every-time.png

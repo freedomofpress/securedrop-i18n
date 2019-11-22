@@ -20,13 +20,14 @@
 import argparse
 import logging
 import os
+import shutil
 import subprocess
 import sys
 
 sdlog = logging.getLogger(__name__)
 
 DIR = os.path.dirname(os.path.realpath(__file__))
-VENV_DIR = os.path.join(DIR, ".venv")
+VENV_DIR = os.path.join(DIR, ".venv3")
 
 
 def setup_logger(verbose=False):
@@ -52,7 +53,7 @@ def run_command(command):
     popen = subprocess.Popen(command,
                              stdout=subprocess.PIPE,
                              stderr=subprocess.STDOUT)
-    for stdout_line in iter(popen.stdout.readline, ""):
+    for stdout_line in iter(popen.stdout.readline, b""):
         yield stdout_line
     popen.stdout.close()
     return_code = popen.wait()
@@ -63,10 +64,51 @@ def run_command(command):
 def is_tails():
     try:
         id = subprocess.check_output('lsb_release --id --short',
-                                     shell=True).strip()
+                                     shell=True).decode('utf-8').strip()
     except subprocess.CalledProcessError:
         id = None
+
+    # dirty hack to unreliably detect Tails 4.0~beta2
+    if id == 'Debian':
+        if os.uname()[1] == 'amnesia':
+            id = 'Tails'
+
     return id == 'Tails'
+
+
+def clean_up_tails3_venv(virtualenv_dir=VENV_DIR):
+    """
+    Tails 3.x, based on debian stretch uses libpython3.5, whereas Tails 4.x is
+    based on Debian Buster and uses libpython3.7. This means that the Tails 3.x
+    virtualenv will not work under Tails 4.x, and will need to be destroyed and
+    rebuilt. We can detect if the version of libpython is 3.5 in the
+    admin/.venv3/ folder, and delete it if that's the case. This will ensure a
+    smooth upgrade from Tails 3.x to Tails 4.x.
+    """
+    if is_tails():
+        try:
+            dist = subprocess.check_output('lsb_release --codename --short',
+                                           shell=True).strip()
+        except subprocess.CalledProcessError:
+            dist = None
+
+        # tails4 is based on buster
+        if dist == b'buster':
+            python_lib_path = os.path.join(virtualenv_dir, "lib/python3.5")
+            if os.path.exists(os.path.join(python_lib_path)):
+                sdlog.info(
+                    "Tails 3 Python 3 virtualenv detected. "
+                    "Removing it."
+                )
+                shutil.rmtree(virtualenv_dir)
+                sdlog.info("Tails 3 Python 3 virtualenv deleted.")
+
+
+def checkenv(args):
+    clean_up_tails3_venv(VENV_DIR)
+    if not os.path.exists(os.path.join(VENV_DIR, "bin/activate")):
+        sdlog.error('Please run "securedrop-admin setup".')
+        sys.exit(1)
 
 
 def maybe_torify():
@@ -88,21 +130,21 @@ def install_apt_dependencies(args):
     apt_command = ['sudo', 'su', '-c',
                    "apt-get update && \
                    apt-get -q -o=Dpkg::Use-Pty=0 install -y \
-                   python-virtualenv \
-                   python-yaml \
-                   python-pip \
+                   python3-virtualenv \
+                   python3-yaml \
+                   python3-pip \
                    ccontrol \
                    virtualenv \
                    libffi-dev \
                    libssl-dev \
-                   libpython2.7-dev",
+                   libpython3-dev",
                    ]
 
     try:
         # Print command results in real-time, to keep Admin apprised
         # of progress during long-running command.
         for output_line in run_command(apt_command):
-            print(output_line.rstrip())
+            print(output_line.decode('utf-8').rstrip())
     except subprocess.CalledProcessError:
         # Tails supports apt persistence, which was used by SecureDrop
         # under Tails 2.x. If updates are being applied, don't try to pile
@@ -112,7 +154,7 @@ def install_apt_dependencies(args):
         raise
 
 
-def envsetup(args):
+def envsetup(args, virtualenv_dir=VENV_DIR):
     """Installs Admin tooling required for managing SecureDrop. Specifically:
 
         * updates apt-cache
@@ -124,8 +166,11 @@ def envsetup(args):
     Ansible is available to the Admin on subsequent boots without requiring
     installation of packages again.
     """
+    # clean up tails 3.x venv when migrating to tails 4.x
+    clean_up_tails3_venv(virtualenv_dir)
+
     # virtualenv doesnt exist? Install dependencies and create
-    if not os.path.exists(VENV_DIR):
+    if not os.path.exists(virtualenv_dir):
 
         install_apt_dependencies(args)
 
@@ -136,12 +181,18 @@ def envsetup(args):
         sdlog.info("Setting up virtualenv")
         try:
             sdlog.debug(subprocess.check_output(
-                maybe_torify() + ['virtualenv', VENV_DIR],
+                maybe_torify() + ['virtualenv',
+                                  '--python=python3',
+                                  virtualenv_dir
+                                  ],
                 stderr=subprocess.STDOUT))
         except subprocess.CalledProcessError as e:
             sdlog.debug(e.output)
             sdlog.error(("Unable to create virtualenv. Check network settings"
                          " and try again."))
+            sdlog.debug("Cleaning up virtualenv")
+            if os.path.exists(virtualenv_dir):
+                shutil.rmtree(virtualenv_dir)
             raise
     else:
         sdlog.info("Virtualenv already exists, not creating")
@@ -155,7 +206,7 @@ def envsetup(args):
 
 def install_pip_self(args):
     pip_install_cmd = [
-        os.path.join(VENV_DIR, 'bin', 'pip'),
+        os.path.join(VENV_DIR, 'bin', 'pip3'),
         'install', '-e', DIR
     ]
     try:
@@ -168,7 +219,7 @@ def install_pip_self(args):
 
 
 def install_pip_dependencies(args, pip_install_cmd=[
-        os.path.join(VENV_DIR, 'bin', 'pip'),
+        os.path.join(VENV_DIR, 'bin', 'pip3'),
         'install',
         # Specify requirements file.
         '-r', os.path.join(DIR, 'requirements.txt'),
@@ -191,7 +242,7 @@ def install_pip_dependencies(args, pip_install_cmd=[
         raise
 
     sdlog.debug(pip_output)
-    if "Successfully installed" in pip_output:
+    if "Successfully installed" in str(pip_output):
         sdlog.info("Python dependencies for securedrop-admin upgraded")
     else:
         sdlog.info("Python dependencies for securedrop-admin are up-to-date")
@@ -203,18 +254,30 @@ def parse_argv(argv):
                         help="Increase verbosity on output")
     parser.set_defaults(func=envsetup)
 
+    subparsers = parser.add_subparsers()
+
+    envsetup_parser = subparsers.add_parser(
+        'envsetup',
+        help='Set up the admin virtualenv.'
+    )
+    envsetup_parser.set_defaults(func=envsetup)
+
+    checkenv_parser = subparsers.add_parser(
+        'checkenv',
+        help='Check that the admin virtualenv is properly set up.'
+    )
+    checkenv_parser.set_defaults(func=checkenv)
+
     return parser.parse_args(argv)
 
 
 if __name__ == "__main__":
     args = parse_argv(sys.argv[1:])
     setup_logger(args.v)
-    if args.v:
+
+    try:
         args.func(args)
+    except Exception:
+        sys.exit(1)
     else:
-        try:
-            args.func(args)
-        except Exception:
-            sys.exit(1)
-        else:
-            sys.exit(0)
+        sys.exit(0)

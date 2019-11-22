@@ -1,6 +1,88 @@
 # Changelog
 
-## 1.0.0~rc1
+## 1.2.0~rc1
+
+## 1.1.0
+
+### Web Applications
+
+* Added Czech to supported languages (#4885).
+* Added Slovak to supported languages (#4940).
+* Reordered and updated wording of manage.py (#4850, #4858).
+* Remove python 2 support in SecureDrop server code (#4859).
+
+### Operations
+
+* Update Tor to 0.4.1.6 (#4848).
+* Updated dependencies for app server and admin workstation (#4865, #4884).
+* Fixes to packaging (#4870, #4871).
+* Improve specification of securedrop-app-code dependencies (#4876).
+
+### Admin Tails workstation
+
+* Added StartupNotify=true to desktop shortcuts (#4841).
+* Adds workarounds for Tails 4.0 detection (#4852).
+* Moves securedrop-admin into Python 3 (#4867).
+* Enables Source and Journalist desktop icons in Tails 4 (#4872).
+* Added check for admin password in GUI updater (#4877).
+
+### Documentation
+
+* Transfer device and export recommendations (#4838).
+* Miscellaneous documentation fixes (#4844, #4853, #4874, #4886).
+
+### Web Applications
+
+* Reordered and updated wording of manage.py (#4850, #4858).
+* Remove python 2 support in SecureDrop server code (#4859).
+
+### Operations
+
+* Updated dependencies for app server and admin workstation (#4865, #4884).
+* Fixes to packaging (#4870, #4871).
+* Improve specification of securedrop-app-code dependencies (#4876).
+
+### Admin Tails workstation
+
+* Added StartupNotify=true to desktop shortcuts (#4841).
+* Adds workarounds for Tails 4.0 detection (#4852).
+* Moves securedrop-admin into Python 3 (#4867).
+* Enables Source and Journalist desktop icons in Tails 4 (#4872).
+* Added check for admin password in GUI updater (#4877).
+
+### Documentation
+
+* Transfer device and export recommendations (#4838).
+* Miscellaneous documentation fixes (#4844, #4853, #4874).
+
+## 1.0.0
+
+### Web Applications
+
+* UI: refresh source and journalist interface design (#4634, #4666).
+* Update copyright dates (#4638).
+* Update language selector design in the menu to be more accessible (#4662).
+* Add commands to manage.py for admins to detect and correct deletion issues (#4713).
+* Use shred instead of srm to securely delete files (#4713).
+* Bug fix: Invalidate Session When Admin Resets Journalist Password (#2300).
+* Bug fix: Interrupted deletion jobs are now resumed on reboot (#4713).
+* Bug fix: Clean up any orphaned submissions/replies where source has already been deleted (#4672).
+* Bug fix: Resolve a bug with the “Select unread” feature on the journalist interface (#4654).
+
+### Operations
+
+* Use dh-virtualenv and mod_wsgi to create securedrop-app-code package, run Python 3 version of the web applications on instances (#4622).
+* Adds support for v3 onion services for SecureDrop source, journalist, and SSH interfaces (#4652, #4710, #4690, #4675).
+* Adds warning in securedrop-admin sdconfig if v3 onion services and HTTPS on the source interface are both enabled (#4720).
+* Uses latest Tor series (0.4.x) instead of LTS (0.3.x) series (#4658).
+* Move tasks removing old kernels to common Ansible role (#4641).
+
+### Documentation
+
+* Update translator documentation (#4719).
+* Fix incorrect alias name in firewall documentation, update screenshots (#4685).
+* Remove redundant Tails guide (#4673).
+* Remove old printer troubleshooting guide (#4651).
 
 ## 0.14.0
 

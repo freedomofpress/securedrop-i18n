@@ -16,8 +16,7 @@ def test_ssh_motd_disabled(host):
 
 
 @pytest.mark.parametrize("package", [
-    'linux-firmware-image-{}-grsec'.format(KERNEL_VERSION),
-    'linux-image-{}-grsec'.format(KERNEL_VERSION),
+    'linux-image-{}-grsec-securedrop'.format(KERNEL_VERSION),
     'paxctl',
     'securedrop-grsec',
 ])
@@ -52,7 +51,7 @@ def test_generic_kernels_absent(host, package):
     c = host.run("dpkg -l {}".format(package))
     assert c.rc == 1
     error_text = "dpkg-query: no packages found matching {}".format(package)
-    assert c.stderr == error_text
+    assert error_text in c.stderr.strip()
 
 
 def test_grsecurity_lock_file(host):
@@ -71,8 +70,8 @@ def test_grsecurity_kernel_is_running(host):
     Make sure the currently running kernel is specific grsec kernel.
     """
     c = host.run('uname -r')
-    assert c.stdout.endswith('-grsec')
-    assert c.stdout == '{}-grsec'.format(KERNEL_VERSION)
+    assert c.stdout.strip().endswith('-grsec-securedrop')
+    assert c.stdout.strip() == '{}-grsec-securedrop'.format(KERNEL_VERSION)
 
 
 @pytest.mark.parametrize('sysctl_opt', [
@@ -130,7 +129,7 @@ def test_grub_pc_marked_manual(host):
     """
     c = host.run('apt-mark showmanual grub-pc')
     assert c.rc == 0
-    assert c.stdout == "grub-pc"
+    assert c.stdout.strip() == "grub-pc"
 
 
 def test_apt_autoremove(host):
@@ -187,10 +186,27 @@ def test_wireless_disabled_in_kernel_config(host, kernel_opts):
     disabled in the running kernel config!
     """
 
-    kernel_config_path = "/boot/config-{}-grsec".format(KERNEL_VERSION)
+    kernel_config_path = "/boot/config-{}-grsec-securedrop".format(KERNEL_VERSION)
     kernel_config = host.file(kernel_config_path).content_string
 
     line = "# CONFIG_{} is not set".format(kernel_opts)
+    assert line in kernel_config
+
+
+@pytest.mark.parametrize('kernel_opts', [
+  'CONFIG_X86_INTEL_TSX_MODE_OFF',
+  'CONFIG_PAX',
+  'CONFIG_GRKERNSEC',
+])
+def test_kernel_options_enabled_config(host, kernel_opts):
+    """
+    Tests kernel config for options that should be enabled
+    """
+
+    kernel_config_path = "/boot/config-{}-grsec-securedrop".format(KERNEL_VERSION)
+    kernel_config = host.file(kernel_config_path).content_string
+
+    line = "{}=y".format(kernel_opts)
     assert line in kernel_config
 
 

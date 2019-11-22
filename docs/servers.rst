@@ -109,7 +109,7 @@ with an ISO image of Ubuntu on it, you may begin the Ubuntu installation on both
 SecureDrop servers.
 
 To use `dd` you first need to find where the USB device you wish to install
-Tails on has been mapped. Simply running the command ``lsblk`` in the terminal
+Ubuntu on has been mapped. Simply running the command ``lsblk`` in the terminal
 will give you a list of your block storage device mappings (this includes hard
 drives and USB). If the USB you are writing the Ubuntu installer to is of a
 different size or brand than the USB you are running Tails from, it should be
@@ -196,7 +196,7 @@ Continue the Installation
 You can choose whatever username and passphrase you would like. To make
 things easier later you should use the same username and same passphrase
 on both servers (but not the same passphrase as username). Make sure to
-save this passphrase in your admin KeePassX database afterwards.
+save this passphrase in your admin KeePassXC database afterwards.
 
 Click 'no' when asked to encrypt the home directory. Then configure your
 time zone.
@@ -233,8 +233,8 @@ reboot. An admin will need to be on hand to enter the passphrase
 in order to decrypt the disks and complete the startup process, which
 will occur anytime there is an automatic software update, and also
 several times during SecureDrop's installation. We recommend that the
-servers be integrated with a monitoring solution that so that you
-receive an alert when the system becomes unavailable.
+servers be integrated with a monitoring solution so that you receive
+an alert when the system becomes unavailable.
 
 To enable FDE, select *Guided - use entire disk and set up encrypted
 LVM* during the disk partitioning step and write the changes to disk.

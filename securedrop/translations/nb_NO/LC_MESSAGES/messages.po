@@ -752,7 +752,7 @@ msgstr "Nullstill tofaktor-oppsett for mobilapper, som f.eks. FreeOTP"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET APP TOKEN"
-msgstr "TILBAKESTILL MOBILPROGRAMSYMBOL"
+msgstr "TILBAKESTILL APP OPPSETT"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
@@ -760,7 +760,7 @@ msgstr "Tilbakestill tofaktor-oppsett for maskinvaresymboler, som YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET HARDWARE TOKEN"
-msgstr "TILBAKESTILL MASKINVARESYMBOL"
+msgstr "TILBAKESTILL FYSISK NØKKEL"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"

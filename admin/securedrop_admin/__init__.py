@@ -23,16 +23,13 @@ For use by administrators to install, maintain, and manage their SD
 instances.
 """
 
-from __future__ import print_function
 import argparse
 import logging
 import os
 import io
 import re
-import string
 import subprocess
 import sys
-import types
 import json
 import base64
 import prompt_toolkit
@@ -91,45 +88,6 @@ class SiteConfig(object):
                 return True
             raise ValidationError(
                 message="An IP address must be something like 10.240.20.83")
-
-    class ValidateDNS(Validator):
-        def validate(self):
-            raise Exception()  # pragma: no cover
-
-        def is_tails(self):
-            try:
-                id = subprocess.check_output('lsb_release --id --short',
-                                             shell=True).strip()
-            except subprocess.CalledProcessError:
-                id = None
-            return id == 'Tails'
-
-        def lookup_fqdn(self, fqdn, dns=None):
-            cmd = 'host -W=10 -T -4 ' + fqdn
-            if self.is_tails():
-                cmd = 'torify ' + cmd
-            cmd += ' ' + (dns and dns or '8.8.8.8')
-            try:
-                result = subprocess.check_output(cmd.split(' '),
-                                                 stderr=subprocess.STDOUT)
-            except subprocess.CalledProcessError as e:
-                result = e.output
-            sdlog.debug(cmd + ' => ' + result)
-            return 'has address' in result
-
-    class ValidateDNSServer(ValidateDNS):
-        def validate(self, document):
-            if self.lookup_fqdn('gnu.org', document.text):
-                return True
-            raise ValidationError(
-                message='Unable to resolve gnu.org using this DNS')
-
-    class ValidateFQDN(ValidateDNS):
-        def validate(self, document):
-            if self.lookup_fqdn(document.text):
-                return True
-            raise ValidationError(
-                message='Unable to resolve ' + document.text)
 
     class ValidatePath(Validator):
         def __init__(self, basedir):
@@ -417,11 +375,11 @@ class SiteConfig(object):
              SiteConfig.ValidateYesNo(),
              lambda x: x.lower() == 'yes',
              lambda config: True],
-            ['securedrop_supported_locales', [], types.ListType,
+            ['securedrop_supported_locales', [], list,
              u'Space separated list of additional locales to support '
              '(' + translations + ')',
              SiteConfig.ValidateLocales(self.args.app_path),
-             string.split,
+             str.split,
              lambda config: True],
             ['v2_onion_services', self.check_for_v2_onion(), bool,
              u'Do you want to enable v2 onion services (recommended only for SecureDrop instances installed before 1.0.0)?',  # noqa: E501
@@ -526,7 +484,7 @@ class SiteConfig(object):
             default = default and 'yes' or 'no'
         if type(default) is int:
             default = str(default)
-        if isinstance(default, types.ListType):
+        if isinstance(default, list):
             default = " ".join(default)
         if type(default) is not str:
             default = str(default)
@@ -534,7 +492,7 @@ class SiteConfig(object):
         if validator:
             kwargs['validator'] = validator
         value = prompt_toolkit.prompt(prompt,
-                                      default=default.decode('utf-8'),
+                                      default=default,
                                       **kwargs)
         if transform:
             return transform(value)
@@ -736,6 +694,10 @@ def restore_securedrop(args):
     # but the securedrop-admin
     # script will be invoked from the repo root, so preceding dirs are likely.
     restore_file_basename = os.path.basename(args.restore_file)
+
+    # Would like readable output if there's a problem
+    os.environ["ANSIBLE_STDOUT_CALLBACK"] = "debug"
+
     ansible_cmd = [
         'ansible-playbook',
         os.path.join(args.ansible_path, 'securedrop-restore.yml'),
@@ -773,7 +735,7 @@ def check_for_updates(args):
 
     # Determine what branch we are on
     current_tag = subprocess.check_output(['git', 'describe'],
-                                          cwd=args.root).rstrip('\n')
+                                          cwd=args.root).decode('utf-8').rstrip('\n')  # noqa: E501
 
     # Fetch all branches
     git_fetch_cmd = ['git', 'fetch', '--all']
@@ -782,7 +744,7 @@ def check_for_updates(args):
     # Get latest tag
     git_all_tags = ["git", "tag"]
     all_tags = subprocess.check_output(git_all_tags,
-                                       cwd=args.root).rstrip('\n').split('\n')
+                                       cwd=args.root).decode('utf-8').rstrip('\n').split('\n')  # noqa: E501
 
     # Do not check out any release candidate tags
     all_prod_tags = [x for x in all_tags if 'rc' not in x]
@@ -833,7 +795,7 @@ def update(args):
     try:
         sig_result = subprocess.check_output(git_verify_tag_cmd,
                                              stderr=subprocess.STDOUT,
-                                             cwd=args.root)
+                                             cwd=args.root).decode('utf-8')
 
         good_sig_text = ['Good signature from "SecureDrop Release Signing ' +
                          'Key"',
@@ -865,7 +827,7 @@ def update(args):
                 sdlog.info("Signature verification failed.")
                 return 1
             except subprocess.CalledProcessError as e:
-                if 'not a valid ref' in e.output:
+                if 'not a valid ref' in e.output.decode('utf-8'):
                     # Then there is no duplicate branch.
                     sdlog.info("Signature verification successful.")
                 else:  # If any other exception occurs, we bail.
@@ -989,7 +951,12 @@ def parse_argv(argv):
                                             help=reset_admin_access.__doc__)
     parse_reset_ssh.set_defaults(func=reset_admin_access)
 
-    return set_default_paths(parser.parse_args(argv))
+    args = parser.parse_args(argv)
+    if getattr(args, 'func', None) is None:
+        print('Please specify an operation.\n')
+        parser.print_help()
+        sys.exit(1)
+    return set_default_paths(args)
 
 
 def main(argv):

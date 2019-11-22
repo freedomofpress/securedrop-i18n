@@ -1,9 +1,9 @@
-from . import functional_test
+from . import functional_test as ft
 from . import journalist_navigation_steps
 
 
 class TestAdminInterface(
-        functional_test.FunctionalTest,
+        ft.FunctionalTest,
         journalist_navigation_steps.JournalistNavigationStepsMixin):
 
     def test_admin_interface(self):
@@ -14,6 +14,10 @@ class TestAdminInterface(
         self._admin_can_edit_new_user()
 
     def test_admin_edits_hotp_secret(self):
+        # Toggle security slider to force prefs change
+        self.set_tbb_securitylevel(ft.TBB_SECURITY_HIGH)
+        self.set_tbb_securitylevel(ft.TBB_SECURITY_LOW)
+
         self._admin_logs_in()
         self._admin_visits_admin_interface()
         self._admin_adds_a_user()
@@ -22,6 +26,10 @@ class TestAdminInterface(
         self._admin_visits_edit_hotp()
 
     def test_admin_edits_totp_secret(self):
+        # Toggle security slider to force prefs change
+        self.set_tbb_securitylevel(ft.TBB_SECURITY_HIGH)
+        self.set_tbb_securitylevel(ft.TBB_SECURITY_LOW)
+
         self._admin_logs_in()
         self._admin_visits_admin_interface()
         self._admin_adds_a_user()

@@ -2,10 +2,9 @@
 import gzip
 import re
 import subprocess
-import six
 import time
 
-from io import BytesIO
+from io import BytesIO, StringIO
 from flask import session, escape, current_app, url_for, g
 from mock import patch, ANY
 
@@ -15,7 +14,7 @@ from . import utils
 import version
 
 from db import db
-from models import Source, Reply
+from models import InstanceConfig, Source, Reply
 from source_app import main as source_app_main
 from source_app import api as source_app_api
 from .utils.db_helper import new_codename
@@ -296,7 +295,7 @@ def _dummy_submission(app):
     """
     return app.post(
         url_for('main.submit'),
-        data=dict(msg=six.u("Pay no attention to the man behind the curtain."),
+        data=dict(msg="Pay no attention to the man behind the curtain.",
                   fh=(BytesIO(b''), '')),
         follow_redirects=True)
 
@@ -321,7 +320,7 @@ def test_submit_message(source_app):
         _dummy_submission(app)
         resp = app.post(
             url_for('main.submit'),
-            data=dict(msg=six.u("This is a test."), fh=(six.StringIO(six.u('')), '')),
+            data=dict(msg="This is a test.", fh=(StringIO(''), '')),
             follow_redirects=True)
         assert resp.status_code == 200
         text = resp.data.decode('utf-8')
@@ -333,7 +332,7 @@ def test_submit_empty_message(source_app):
         new_codename(app, session)
         resp = app.post(
             url_for('main.submit'),
-            data=dict(msg="", fh=(six.StringIO(six.u('')), '')),
+            data=dict(msg="", fh=(StringIO(''), '')),
             follow_redirects=True)
         assert resp.status_code == 200
         text = resp.data.decode('utf-8')
@@ -352,7 +351,7 @@ def test_submit_big_message(source_app):
         _dummy_submission(app)
         resp = app.post(
             url_for('main.submit'),
-            data=dict(msg="AA" * (1024 * 512), fh=(six.StringIO(six.u('')), '')),
+            data=dict(msg="AA" * (1024 * 512), fh=(StringIO(''), '')),
             follow_redirects=True)
         assert resp.status_code == 200
         text = resp.data.decode('utf-8')
@@ -398,7 +397,7 @@ def test_submit_message_with_low_entropy(source_app):
                 _dummy_submission(app)
                 resp = app.post(
                     url_for('main.submit'),
-                    data=dict(msg="This is a test.", fh=(six.StringIO(six.u('')), '')),
+                    data=dict(msg="This is a test.", fh=(StringIO(''), '')),
                     follow_redirects=True)
                 assert resp.status_code == 200
                 assert not async_genkey.called
@@ -415,7 +414,7 @@ def test_submit_message_with_enough_entropy(source_app):
                 _dummy_submission(app)
                 resp = app.post(
                     url_for('main.submit'),
-                    data=dict(msg="This is a test.", fh=(six.StringIO(six.u('')), '')),
+                    data=dict(msg="This is a test.", fh=(StringIO(''), '')),
                     follow_redirects=True)
                 assert resp.status_code == 200
                 assert async_genkey.called
@@ -553,6 +552,8 @@ def test_metadata_route(config, source_app):
             resp = app.get(url_for('api.metadata'))
             assert resp.status_code == 200
             assert resp.headers.get('Content-Type') == 'application/json'
+            assert resp.json.get('allow_document_uploads') ==\
+                InstanceConfig.get_current().allow_document_uploads
             assert resp.json.get('sd_version') == version.__version__
             assert resp.json.get('server_os') == '16.04'
             assert resp.json.get('supported_languages') ==\
@@ -592,7 +593,7 @@ def test_failed_normalize_timestamps_logs_warning(source_app):
                         url_for('main.submit'),
                         data=dict(
                             msg="This is a test.",
-                            fh=(six.StringIO(six.u('')), '')),
+                            fh=(StringIO(''), '')),
                         follow_redirects=True)
                     assert resp.status_code == 200
                     text = resp.data.decode('utf-8')

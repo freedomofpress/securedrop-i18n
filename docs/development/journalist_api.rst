@@ -27,15 +27,15 @@ Clients shall send the following headers:
 Authentication
 ~~~~~~~~~~~~~~
 
-``POST /api/v1/token`` to get a token with the username, password, and 2FA
-token in the request body:
+``POST /api/v1/token`` to get a token with the username, password, and two-factor
+code in the request body:
 
 .. code:: sh
 
   {
-  	"username": "journalist",
-  	"passphrase": "monkey potato pizza quality silica growing deduce",
-  	"one_time_code": "123456"
+    "username": "journalist",
+    "passphrase": "monkey potato pizza quality silica growing deduce",
+    "one_time_code": "123456"
   }
 
 This will produce a response with your Authorization token:
@@ -45,7 +45,9 @@ This will produce a response with your Authorization token:
   {
       "expiration": "2018-07-10T04:29:41.696321Z",
       "token": "eyJhbGciOiJIUzI1NiIsImV4cCI6MTUzMTE5Njk4MSwiaWF0IjoxNTMxMTY4MTgxfQ.eyJpZCI6MX0.TBSvfrICMxtvWgpVZzqTl6wHYNQuGPOaZpuAKwwIXXo",
-      "journalist_uuid": "54d81dae-9d94-4145-8a57-4c804a04cfe0"
+      "journalist_uuid": "54d81dae-9d94-4145-8a57-4c804a04cfe0",
+      "journalist_first_name": "daniel",
+      "journalist_last_name": "ellsberg"
   }
 
 Thereafter in order to authenticate to protected endpoints, send the token in
@@ -56,7 +58,7 @@ HTTP Authorization header:
   Authorization: Token eyJhbGciOiJIUzI1NiIsImV4cCI6MTUzMDU4NjU4MiwifWF0IjoxNTMwNTc5MzgyfQ.eyJpZCI6MX0.P_PfcLMk1Dq5VCIANo-lJbu0ZyCL2VcT8qf9fIZsTCM
 
 This header will be checked with each API request to see if it is valid and
-not yet expired. Tokens currently expire after 8 hours. 
+not yet expired. Tokens currently expire after 8 hours.
 
 Logout
 ------

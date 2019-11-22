@@ -50,7 +50,6 @@
         state: directory
         path: "/var/log/{{ item }}"
       with_items:
-        - securedrop_worker
         - cron-apt
     # Reuse existing "reboot-and-wait" logic from site config
     - import_tasks: ../../install_files/ansible-base/tasks/reboot.yml
@@ -75,14 +74,6 @@
         state: started
         enabled: yes
       tags: always
-
-    - name: Ensure supervisor is running
-      service:
-        name: supervisor
-        state: started
-      delegate_to: app-staging
-      runonce: yes
-      tags: always
   become: yes
 
 - import_playbook: apt.yml
@@ -94,10 +85,13 @@
   tasks:
     - name: Spit out tor details
       debug:
-        msg: "Source interface available at {{ lookup('file', molecule_ephemeral_directory+'/sd-orig/'+source_ths_path) }}"
+        msg:
+          - "V2 Source interface available at {{ lookup('file', molecule_ephemeral_directory+'/sd-orig/'+source_ths_path) }}"
+          - "V3 Source interface available at {{ lookup('file', molecule_ephemeral_directory+'/sd-orig/'+source_ths_v3_path) }}"
       tags:
         - onion
         - always
   vars:
     molecule_ephemeral_directory: "{{ lookup('env', 'MOLECULE_EPHEMERAL_DIRECTORY') }}"
     source_ths_path: /install_files/ansible-base/app-source-ths
+    source_ths_v3_path: /install_files/ansible-base/app-sourcev3-ths

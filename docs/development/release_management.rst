@@ -65,27 +65,33 @@ Pre-Release
          git mktag < 0.x.y-rcN.tag > .git/refs/tags/0.x.y-rcN
 
 9. Push the branch and tags.
-10. Build Debian packages and place them on ``apt-test.freedom.press``.
-11. Write a test plan that focuses on the new functionality introduced in the release.
+10. Build Debian packages and place them on ``apt-test.freedom.press``. This is currently done
+    by making a PR into `a git-lfs repo here <https://github.com/freedomofpress/securedrop-dev-packages-lfs>`_.
+    Only commit packages with an incremented version number: do not clobber existing packages.
+    That is, if there is already a deb called e.g. ``ossec-agent-3.0.0-amd64.deb`` in ``master``, do
+    not commit a new version of this deb. Changes merged to ``master`` in this repo will be published within 15 minutes.
+11. Build logs from the above debian package builds should be saved and published according to the
+    `build log guidelines <https://github.com/freedomofpress/securedrop/wiki/Build-logs>`_.
+12. Write a test plan that focuses on the new functionality introduced in the release.
     Post for feedback and make changes based on suggestions from the community.
-12. Encourage QA participants to QA the release on production VMs and hardware. They
+13. Encourage QA participants to QA the release on production VMs and hardware. They
     should post their QA reports in the release issue such that it is clear what
     was and what was not tested. It is the responsibility of the release manager
     to ensure that sufficient QA is done on the release candidate prior to
     final release.
-13. Triage bugs as they are reported, if a bug is important to fix and does not
+14. Triage bugs as they are reported, if a bug is important to fix and does not
     receive attention, you should fix the bug yourself or find someone who agrees
     to work on a fix.
-14. Backport release QA fixes merged into ``develop`` into the
+15. Backport release QA fixes merged into ``develop`` into the
     release branch using ``git cherry-pick -x <commit>`` to clearly indicate
     where the commit originated from.
-15. At your discretion - for example when a significant fix is merged - prepare
+16. At your discretion - for example when a significant fix is merged - prepare
     additional release candidates and have fresh Debian packages prepared for
     testing.
-16. For a regular release, the string freeze will be declared by the
+17. For a regular release, the string freeze will be declared by the
     translation administrator one week prior to the release. After this is done, ensure
     that no changes involving string changes are backported into the release branch.
-17. Ensure that a draft of the release notes are prepared and shared with the
+18. Ensure that a draft of the release notes are prepared and shared with the
     community for feedback.
 
 Release Process
@@ -93,9 +99,9 @@ Release Process
 
 1. If this is a regular release, work with the translation administrator
    responsible for this release cycle to review and merge the final translations
-   and screenshots (if necessary) they prepare. Refer to the 
-   :ref:`i18n documentation <i18n_release>` for more information about the i18n 
-   release process. Note that you *must* manually inspect each line in the diff 
+   and screenshots (if necessary) they prepare. Refer to the
+   :ref:`i18n documentation <i18n_release>` for more information about the i18n
+   release process. Note that you *must* manually inspect each line in the diff
    to ensure no malicious content is introduced.
 2. Prepare the final release commit and tag. Do not push the tag file.
 3. Step through the signing ceremony for the tag file. If you do not have
@@ -130,22 +136,49 @@ Release Process
 
     git push origin 0.x.y
 
-9. Build Debian packages. People building Debian packages should verify and build
-   off the signed tag.
-10. Step through the signing ceremony for the ``Release``
+9. Ensure there are no local changes (whether tracked, untracked or git ignored)
+   prior to building the debs. If you did not freshly clone the repository, you
+   can use git clean:
+
+   Dry run (it will list the files/folders that will be deleted):
+
+   ::
+
+      git clean -ndfx
+
+   Actually delete the files:
+
+   ::
+
+      git clean -dfx
+
+10. Build Debian packages. People building Debian packages should verify and build
+    off the signed tag. Build logs should be saved and published according to the
+    `build log guidelines <https://github.com/freedomofpress/securedrop/wiki/Build-logs>`_.
+11. Step through the signing ceremony for the ``Release``
     file(s) (there may be multiple if Tor is also updated along
     with the SecureDrop release).
-11. Put signed Debian packages on ``apt-test.freedom.press``.
-12. Coordinate with one or more team members to confirm a successful clean install
+12. Put signed Debian packages on ``apt-test.freedom.press``.
+13. Coordinate with one or more team members to confirm a successful clean install
     in production VMs using the packages on ``apt-test.freedom.press``.
-13. Put signed Debian packages on ``apt.freedom.press``. The release is now live.
-14. Make sure that the default branch of documentation is being built off the tip
-    of the release branch.
-15. Create a `release <https://github.com/freedomofpress/securedrop/releases>`_
+14. Put signed Debian packages on ``apt.freedom.press``. The release is now live.
+15. Make sure that the default branch of documentation is being built off the tip
+    of the release branch. Building from the branch instead of a given tag enables
+    us to more easily add documentation changes after release. You should:
+
+  * Log into readthedocs.
+  * Navigate to **Projects** → **securedrop** → **Versions** → **Inactive Versions** → **release/branch** → **Edit**.
+  * Mark the branch as Active by checking the box and save your changes. This will kick off a new docs build.
+  * Once the documentation has built, it will appear in the version selector at the bottom of the column of the.
+  * Now set this new release as default by navigating to **Admin** → **Advanced Settings** → **Global Settings** → **Default Version**.
+  * Select ``release/branch`` from the dropdown menu and save the changes.
+  * Verify that docs.securedrop.org redirects users to the documentation built from the release branch.
+
+16. Create a `release <https://github.com/freedomofpress/securedrop/releases>`_
     on GitHub with a brief summary of the changes in this release.
-16. Make sure that release notes are written and posted on the SecureDrop blog.
-17. Make sure that the release is announced from the SecureDrop Twitter account.
-18. Make sure that members of `the support portal <https://support.freedom.press>`_
+17. Make sure that release notes are written and posted on the SecureDrop blog.
+18. Make sure that the release is announced from the SecureDrop Twitter account.
+19. Make sure that members of `the support portal <https://support.freedom.press>`_
     are notified about the release.
 
 Post-Release

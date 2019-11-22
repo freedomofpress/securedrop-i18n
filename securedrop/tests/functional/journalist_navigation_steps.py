@@ -17,6 +17,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 # Number of times to try flaky clicks.
@@ -341,7 +342,7 @@ class JournalistNavigationStepsMixin:
                 # Successfully verifying the code should redirect to the admin
                 # interface, and flash a message indicating success
                 flash_msg = self.driver.find_elements_by_css_selector(".flash")
-                assert ("Token in two-factor authentication accepted for user {}.").format(
+                assert "The two-factor code for user \"{user}\" was verified successfully.".format(
                     self.new_user["username"]
                 ) in [el.text for el in flash_msg]
 
@@ -720,12 +721,14 @@ class JournalistNavigationStepsMixin:
     def _visit_edit_hotp_secret(self):
         self._visit_edit_secret(
             "hotp",
-            "Reset 2FA for hardware tokens like Yubikey")
+            "Reset two-factor authentication for security keys like Yubikey")
 
     def _visit_edit_totp_secret(self):
         self._visit_edit_secret(
             "totp",
-            "Reset 2FA for mobile apps such as FreeOTP or Google Authenticator")
+            "Reset two-factor authentication for mobile apps such as FreeOTP or "
+            "Google Authenticator"
+        )
 
     def _admin_visits_add_user(self):
         add_user_btn = self.driver.find_element_by_css_selector("button#add-user")
@@ -792,7 +795,7 @@ class JournalistNavigationStepsMixin:
             assert tip_opacity == "1"
 
             if not hasattr(self, "accept_languages"):
-                assert tip_text == "Reset 2FA for hardware tokens like Yubikey"
+                assert tip_text == "Reset two-factor authentication for security keys like Yubikey"
 
             self.safe_click_by_id("button-reset-two-factor-hotp")
 
@@ -822,7 +825,10 @@ class JournalistNavigationStepsMixin:
 
             assert tip_opacity == "1"
             if not hasattr(self, "accept_languages"):
-                expected_text = "Reset 2FA for mobile apps such as FreeOTP or Google Authenticator"
+                expected_text = (
+                    "Reset two-factor authentication for mobile apps such as FreeOTP "
+                    "or Google Authenticator"
+                )
                 assert tip_text == expected_text
 
             self.safe_click_by_id("button-reset-two-factor-totp")
@@ -879,7 +885,12 @@ class JournalistNavigationStepsMixin:
 
     def _journalist_delete_one(self):
         self.safe_click_by_css_selector("[name=doc_names_selected]")
-        self.safe_click_by_id("delete-selected-link")
+
+        el = WebDriverWait(self.driver, self.timeout, self.poll_frequency).until(
+            expected_conditions.element_to_be_clickable((By.ID, "delete-selected-link"))
+        )
+        el.location_once_scrolled_into_view
+        ActionChains(self.driver).move_to_element(el).click().perform()
 
     def _journalist_flags_source(self):
         self.safe_click_by_id("flag-button")

@@ -32,7 +32,7 @@ anonymous sources.
    before_you_begin
    set_up_tails
    set_up_svs
-   set_up_transfer_device
+   set_up_transfer_and_export_device
    generate_submission_key
    set_up_admin_tails
    network_firewall
@@ -77,18 +77,19 @@ anonymous sources.
    yubikey_setup
    backup_and_restore
    backup_workstations
+   update_tails_usbs
    rebuild_admin
    kernel_troubleshooting
    getting_support
+   v3_services
 
 .. toctree::
    :caption: Upgrade SecureDrop
    :name: upgradetoc
    :maxdepth: 2
 
-   upgrade/0.13.1_to_0.14.0.rst
-   upgrade/0.13.0_to_0.13.1.rst
-   upgrade/0.12.2_to_0.13.0.rst
+   upgrade/1.0.0_to_1.1.0.rst
+   upgrade/0.14.0_to_1.0.0.rst
    upgrade/xenial_after_april_30.rst
 
 .. toctree::
