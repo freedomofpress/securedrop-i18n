@@ -12,8 +12,9 @@ ansible-lint==4.1.0 \
     --hash=sha256:9430ea6e654ba4bf5b9c6921efc040f46cda9c4fd2896a99ff71d21037bcb123 \
     --hash=sha256:c1b442b01091eca13ef11d98c3376e9489ba5b69a8467828ca86044f384bc0a1 \
     # via molecule
-ansible==2.7.13 \
-    --hash=sha256:339c87a1bf9e8555ce1e1c1a9452d8ed1df240944ec1a3fc2e813e6c7d70aeae
+ansible==2.9.1 \
+    --hash=sha256:d87cb25df02284d59226ff1d935d7075a175f31d0db83564c2f1ca28bbbd4cb4 \
+    # via ansible-lint, molecule
 anyconfig==0.9.7 \
     --hash=sha256:4d6016ae6eecc5e502bc7e99ae0639c5710c5c67bde5f21b06b9eaafd9ce0e7e \
     # via molecule
@@ -183,7 +184,8 @@ cryptography==2.7 \
     --hash=sha256:cfee9164954c186b191b91d4193989ca994703b2fff406f71cf454a2d3c7327e \
     --hash=sha256:e6347742ac8f35ded4a46ff835c60e68c22a536a8ae5c4422966d06946b6d4c6 \
     --hash=sha256:f27d93f0139a3c056172ebb5d4f9056e770fdf0206c2f422ff2ebbad142e09ed \
-    --hash=sha256:f57b76e46a58b63d1c6375017f4564a28f19a5ca912691fd2e4261b3414b618d
+    --hash=sha256:f57b76e46a58b63d1c6375017f4564a28f19a5ca912691fd2e4261b3414b618d \
+    # via ansible, paramiko
 dnspython==1.15.0 \
     --hash=sha256:40f563e1f7a7b80dc5a4e76ad75c23da53d62f1e15e6e517293b04e1f84ead7c \
     --hash=sha256:861e6e58faa730f9845aaaa9c6c832851fbf89382ac52915a51f89c71accdd31
@@ -254,10 +256,6 @@ imagesize==0.7.1 \
 importlib-metadata==0.23 \
     --hash=sha256:aa18d7378b00b40847790e7c27e11673d7fed219354109d0e7b9e5b25dc3ad26 \
     --hash=sha256:d5f18a79777f3aa179c145737780282e27b508fc8fd688cb17c7a813e8bd39af \
-    # via pre-commit
-importlib-resources==1.0.2 \
-    --hash=sha256:6e2783b2538bd5a14678284a3962b0660c715e5a0f10243fd5e00a4b5974f50b \
-    --hash=sha256:d3279fd0f6f847cced9f7acc19bd3e5df54d34f93a2e7bb5f238f81545787078 \
     # via pre-commit
 isort==4.2.15 \
     --hash=sha256:79f46172d3a4e2e53e7016e663cc7a8b538bec525c36675fcfd2767df30b3983 \
@@ -357,7 +355,7 @@ packaging==16.8 \
 paramiko==2.6.0 \
     --hash=sha256:99f0179bdc176281d21961a003ffdb2ec369daac1a1007241f53374e376576cf \
     --hash=sha256:f4b2edfa0d226b70bd4ca31ea7e389325990283da23465d572ed1f70a7583041 \
-    # via ansible, molecule
+    # via molecule
 pathspec==0.5.5 \
     --hash=sha256:72c495d1bbe76674219e307f6d1c6062f2e1b0b483a5e4886435127d0df3d0d3 \
     # via yamllint
@@ -386,10 +384,6 @@ pre-commit==1.18.3 \
     --hash=sha256:1d3c0587bda7c4e537a46c27f2c84aa006acc18facf9970bf947df596ce91f3f \
     --hash=sha256:fa78ff96e8e9ac94c748388597693f18b041a181c94a4f039ad20f45287ba44a \
     # via molecule
-prompt_toolkit==2.0.9 \
-    --hash=sha256:11adf3389a996a6d45cc277580d0d53e8a5afd281d0c9ec71b28e6f121463780 \
-    --hash=sha256:2519ad1d8038fd5fc8e770362237ad0364d16a7650fb5724af6997ed5515e3c1 \
-    --hash=sha256:977c6583ae813a37dc1c2e1b715892461fcbdaa57f6fc62f33a528c4886c8f55
 psutil==5.4.6 \
     --hash=sha256:0ff2b16e9045d01edb1dd10d7fbcc184012e37f6cd38029e959f2be9c6223f50 \
     --hash=sha256:254adb6a27c888f141d2a6032ae231d8ed4fc5f7583b4c825e5f7d7c78d26d2e \
@@ -501,7 +495,8 @@ pyyaml==5.1.2 \
     --hash=sha256:b0997827b4f6a7c286c01c5f60384d218dca4ed7d9efa945c3e1aa623d5709ae \
     --hash=sha256:b631ef96d3222e62861443cc89d6563ba3eeb816eeb96b2629345ab795e53681 \
     --hash=sha256:bf47c0607522fdbca6c9e817a6e81b08491de50f3766a7a0e6a5be7905961b41 \
-    --hash=sha256:f81025eddd0327c7d4cfe9b62cf33190e1e736cc6e97502b3ec425f574b3e7a8
+    --hash=sha256:f81025eddd0327c7d4cfe9b62cf33190e1e736cc6e97502b3ec425f574b3e7a8 \
+    # via ansible, ansible-lint, aspy.yaml, bandit, dparse, molecule, pre-commit, python-gilt, sphinx-autobuild, watchdog, yamllint
 requests==2.22.0 \
     --hash=sha256:11e007a8a2aa0323f5a921e9e6a2d7e4e67d9877e85773fba9ba6419025cbeb4 \
     --hash=sha256:9cf5292fcd0f598c671cfc1e0d7d1a7f13bb8085e9a590f48c010551dc6c4b31 \
@@ -540,7 +535,7 @@ sh==1.12.14 \
 six==1.11.0 \
     --hash=sha256:70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9 \
     --hash=sha256:832dc0e10feb1aa2c68dcc57dbb658f1c7e65b9b61af69048abc87a2db00a0eb \
-    # via ansible-lint, astroid, bandit, bcrypt, cfgv, click-completion, cryptography, docker-py, docker-pycreds, dparse, fasteners, git-url-parse, livereload, molecule, packaging, pip-tools, pre-commit, prompt-toolkit, pylint, pynacl, python-dateutil, sphinx, stevedore, testinfra, websocket-client
+    # via ansible-lint, astroid, bandit, bcrypt, cfgv, click-completion, cryptography, docker-py, docker-pycreds, dparse, fasteners, git-url-parse, livereload, molecule, packaging, pip-tools, pre-commit, pylint, pynacl, python-dateutil, sphinx, stevedore, testinfra, websocket-client
 smmap2==2.0.3 \
     --hash=sha256:b78ee0f1f5772d69ff50b1cbdb01b8c6647a8354f02f23b488cf4b2cfc923956 \
     --hash=sha256:c7530db63f15f09f8251094b22091298e82bf6c699a6b8344aaaef3f2e1276c3 \
@@ -621,10 +616,6 @@ virtualenv==16.7.5 \
 watchdog==0.8.3 \
     --hash=sha256:7e65882adb7746039b6f3876ee174952f8eaaa34491ba34333ddf1fe35de4162 \
     # via sphinx-autobuild
-wcwidth==0.1.7 \
-    --hash=sha256:3df37372226d6e63e1b1e1eda15c594bca98a22d33a23832a90998faa96bc65e \
-    --hash=sha256:f4ebe71925af7b40a864553f761ed559b43544f8f71746c2d756c7fe788ade7c \
-    # via prompt-toolkit
 websocket-client==0.44.0 \
     --hash=sha256:15f585566e2ea7459136a632b9785aa081093064391878a448c382415e948d72 \
     --hash=sha256:91222bb3a22ba989ac87eec9121655f295dcb746b6207c5576ffa549ab69302c \
