@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.12.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-11-25 12:41+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"PO-Revision-Date: 2019-11-26 16:41+0000\n"
+"Last-Translator: Oktavia <oktaviahrund@gmail.com>\n"
 "Language-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/is/>\n"
 "Language: is\n"
@@ -41,7 +41,7 @@ msgstr "Það tókst að endurstilla tvíþátta-auðkennin þín."
 
 #: journalist_app/account.py:53 journalist_app/admin.py:135
 msgid "There was a problem verifying the two-factor code. Please try again."
-msgstr "Það kom upp villa við að sannreyna tvíþátta-kóðann. Reyndu aftur."
+msgstr "Það kom upp villa við að staðfesta tvíþátta-kóðann. Reyndu aftur."
 
 #: journalist_app/admin.py:42
 msgid "Image updated."
@@ -68,7 +68,7 @@ msgstr ""
 
 #: journalist_app/admin.py:129
 msgid "The two-factor code for user \"{user}\" was verified successfully."
-msgstr "Það tókst að sannreyna tvíþátta-kóðann fyrir notandann \"{user}\"."
+msgstr "Það tókst að staðfesta tvíþátta-kóðann fyrir notandann \"{user}\"."
 
 #: journalist_app/admin.py:199 journalist_app/admin.py:207
 #: journalist_app/utils.py:279
