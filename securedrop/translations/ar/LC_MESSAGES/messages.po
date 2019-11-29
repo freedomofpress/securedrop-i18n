@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-09-04 21:39+0000\n"
+"PO-Revision-Date: 2019-11-30 01:41+0000\n"
 "Last-Translator: Thalia Rahme <trahme@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -501,18 +501,20 @@ msgstr ""
 "من 6 أرقام للتأكد من صحّة الإعداد."
 
 #: journalist_templates/admin_new_user_two_factor.html:15
+#, fuzzy
 msgid ""
 "Can't scan the barcode? You can manually pair FreeOTP with this account by "
 "entering the following two-factor secret into the app:"
 msgstr ""
+"هل عجزت عن مسح وقراءة شريط الرموز أي البار كود؟ بامكانك مطابقة وربط بنفسك "
+"FreeOTP مع هذا الحساب وذلك عبر تسجيل رمز التوثيق الثنائي التالي في التطبيق."
 
 #: journalist_templates/admin_new_user_two_factor.html:18
-#, fuzzy
-#| msgid "Once you have scanned the barcode, enter the 6-digit code below:"
 msgid ""
 "Once you have paired FreeOTP with this account, enter the 6-digit code below:"
 msgstr ""
-"بعد إتمام خطوة المسح الضوئي، أدخل في الحقل التالي الرمز المكون من 6 أرقام:"
+"بعد  مطابقة ووصل FreeOTP بهذا الحساب ، أدخل في الحقل التالي الرمز المكون من "
+"6 أرقام:"
 
 #: journalist_templates/admin_new_user_two_factor.html:21
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
@@ -701,21 +703,20 @@ msgid "UPDATE LOGO"
 msgstr "تغيير الشعار"
 
 #: journalist_templates/config.html:46
-#, fuzzy
-#| msgid "Submission deleted."
-#| msgid_plural "{num} submissions deleted."
 msgid "Submission Preferences"
-msgstr "لَمْ تُحذف أي رسالة."
+msgstr "تفضيلات الإرسال أو التقديم"
 
 #: journalist_templates/config.html:52
+#, fuzzy
 msgid ""
 "Prevent sources from uploading documents.  Sources will still be able to "
 "send messages."
-msgstr ""
+msgstr "منع المصادر من رفع وثائق. ما تزال المصادر قادرة على توجيه رسائل."
 
 #: journalist_templates/config.html:55
+#, fuzzy
 msgid "UPDATE SUBMISSION PREFERENCES"
-msgstr ""
+msgstr "تحديث تفضيلات الإرسال"
 
 #: journalist_templates/delete.html:5
 msgid ""
