@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-11-30 01:41+0000\n"
-"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
+"Last-Translator: Cecília do Lago <ceciliadolago@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -469,14 +469,14 @@ msgid ""
 "Can't scan the barcode? You can manually pair FreeOTP with this account by "
 "entering the following two-factor secret into the app:"
 msgstr ""
+"Não consegue escanear o código de barras? Você pode parear manualmente o "
+"FreeOTP com sua conta preenchendo o código em dois fatores no aplicativo:"
 
 #: journalist_templates/admin_new_user_two_factor.html:18
-#, fuzzy
-#| msgid "Once you have scanned the barcode, enter the 6-digit code below:"
 msgid ""
 "Once you have paired FreeOTP with this account, enter the 6-digit code below:"
 msgstr ""
-"Depois de escanear o código de barras, insira o código de seis dígitos "
+"Depois de parear o FreeOTP com sua conta, insira o código de seis dígitos "
 "abaixo:"
 
 #: journalist_templates/admin_new_user_two_factor.html:21
@@ -792,11 +792,6 @@ msgstr ""
 "lo. Caso contrário, não será mais possível acessar a sua conta.</em>"
 
 #: journalist_templates/edit_account.html:87
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as FreeOTP, "
-#| "choose the first option. For hardware tokens like the YubiKey, choose the "
-#| "second one."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For security keys like the YubiKey, choose the second one."
@@ -813,19 +808,17 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET MOBILE APP CREDENTIALS"
-msgstr ""
+msgstr "REDEFINIR CREDENCIAIS DO APLICATIVO PARA CELULAR"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
 msgstr ""
 "Redefinir autenticação de dois fatores (2FA) para códigos de autenticação de "
-"hardwares, como YubiKey"
+"segurança, como YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET SECURITY KEY CREDENTIALS"
-msgstr ""
+msgstr "REDEFINIR CREDENCIAIS DO CÓDIGO DE SEGURANÇA"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
