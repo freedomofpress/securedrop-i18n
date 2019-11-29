@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-11-29 14:29+0000\n"
-"Last-Translator: Maria Ovsyannikova <xella.design@gmail.com>\n"
+"PO-Revision-Date: 2019-11-29 17:41+0000\n"
+"Last-Translator: Adham Kurbanov <uz@zu.uz>\n"
 "Language-Team: Russian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ru/>\n"
 "Language: ru\n"
@@ -38,7 +38,7 @@ msgstr "Неверный пароль или двухэтапный код."
 
 #: journalist_app/account.py:49
 msgid "Your two-factor credentials have been reset successfully."
-msgstr "Ваши данные двухфакторной аутентификации были успешно сброшены."
+msgstr "Ваш доступ двухфакторной аутентификации был успешно сброшен."
 
 #: journalist_app/account.py:53 journalist_app/admin.py:135
 msgid "There was a problem verifying the two-factor code. Please try again."
@@ -176,16 +176,12 @@ msgstr[2] ""
 "систему."
 
 #: journalist_app/utils.py:103
-#, fuzzy
-#| msgid ""
-#| "Please wait for a new code from your two-factor token or application "
-#| "before trying again."
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
 msgstr ""
-"Пожалуйста, дождитесь нового кода от вашего приложения двухфакторной "
-"аутентификации или токена, прежде чем повторить попытку."
+"Пожалуйста, дождитесь нового кода от вашего двухфакторного приложения или "
+"электронного ключа, прежде чем повторить попытку."
 
 #: journalist_app/utils.py:124
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
@@ -298,11 +294,11 @@ msgid ""
 "for your account in the app, enter one of the 6-digit codes from the app to "
 "confirm that two-factor authentication is set up correctly."
 msgstr ""
-"Вы почти закончили! Чтобы завершить процедуру сброса двухфакторной "
-"аутентификации, используйте инструкцию ниже для настройки FreeOTP. После "
-"того, как вы добавили запись для своей учетной записи в приложение, введите "
-"один из 6-значных кодов из приложения, чтобы подтвердить правильность "
-"настройки двухфакторной аутентификации."
+"Почти готово! Чтобы завершить процедуру сброса двухфакторной аутентификации, "
+"используйте инструкцию ниже для настройки FreeOTP. После того, как вы "
+"добавили запись для своей учетной записи в приложение, введите один из 6-"
+"значных кодов из приложения, чтобы подтвердить правильность настройки "
+"двухфакторной аутентификации."
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
@@ -483,14 +479,15 @@ msgid ""
 "Can't scan the barcode? You can manually pair FreeOTP with this account by "
 "entering the following two-factor secret into the app:"
 msgstr ""
+"Не получается считать штрихкод? Вы можете вручную соединить FreeOTP с этим "
+"аккаунтом, введя следующий двухфакторный секретный ключ в приложение:"
 
 #: journalist_templates/admin_new_user_two_factor.html:18
-#, fuzzy
-#| msgid "Once you have scanned the barcode, enter the 6-digit code below:"
 msgid ""
 "Once you have paired FreeOTP with this account, enter the 6-digit code below:"
 msgstr ""
-"После того, как вы отсканировали штрих-код, введите 6-значный код ниже:"
+"После того, как вы связали FreeOTP с этим аккаунтом, введите 6-значный код "
+"ниже:"
 
 #: journalist_templates/admin_new_user_two_factor.html:21
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
@@ -686,21 +683,20 @@ msgid "UPDATE LOGO"
 msgstr "ОБНОВИТЬ ЛОГОТИП"
 
 #: journalist_templates/config.html:46
-#, fuzzy
-#| msgid "Submission deleted."
-#| msgid_plural "{num} submissions deleted."
 msgid "Submission Preferences"
-msgstr "Материал удален."
+msgstr "Параметры публикации"
 
 #: journalist_templates/config.html:52
 msgid ""
 "Prevent sources from uploading documents.  Sources will still be able to "
 "send messages."
 msgstr ""
+"Запретить источникам загрузку документов. Источники все ещё смогут "
+"отправлять сообщения."
 
 #: journalist_templates/config.html:55
 msgid "UPDATE SUBMISSION PREFERENCES"
-msgstr ""
+msgstr "ОБНОВИТЬ ПАРАМЕТРЫ ПУБЛИКАЦИЙ"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -816,17 +812,12 @@ msgstr ""
 "настроить новое устройство, иначе вы будете заблокированы.</em>"
 
 #: journalist_templates/edit_account.html:87
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as FreeOTP, "
-#| "choose the first option. For hardware tokens like the YubiKey, choose the "
-#| "second one."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For security keys like the YubiKey, choose the second one."
 msgstr ""
 "Для сброса двухэтапной аутентификации для мобильных приложений, таких как  "
-"FreeOTP, выберите первый вариант. Для аппаратных токенов, таких как YubiKey, "
+"FreeOTP, выберите первый вариант. Для электронных ключей, таких как YubiKey, "
 "выберите второй."
 
 #: journalist_templates/edit_account.html:112
@@ -837,19 +828,16 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET MOBILE APP CREDENTIALS"
-msgstr ""
+msgstr "СБРОСИТЬ ДОСТУП МОБИЛЬНОГО ПРИЛОЖЕНИЯ"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
 msgstr ""
-"Сбросить двухэтапную аутентификацию для аппаратных ключей безопасности, "
-"таких как YubiKey"
+"Сбросить двухэтапную аутентификацию для электронных ключей, таких как YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET SECURITY KEY CREDENTIALS"
-msgstr ""
+msgstr "СБРОСИТЬ ДОСТУП ЭЛЕКТРОННОГО КЛЮЧА"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -969,10 +957,8 @@ msgid "You must enter a message or choose a file to submit."
 msgstr "Вы должны ввести сообщение или выбрать файл для отправки."
 
 #: source_app/main.py:148
-#, fuzzy
-#| msgid "You must enter a message or choose a file to submit."
 msgid "You must enter a message."
-msgstr "Вы должны ввести сообщение или выбрать файл для отправки."
+msgstr "Вы должны ввести сообщение."
 
 #: source_app/main.py:179
 msgid "Thanks! We received your message."
@@ -1221,10 +1207,8 @@ msgid "You can submit any kind of file, a message, or both."
 msgstr "Вы можете отправить любой файл, сообщение или и то, и другое."
 
 #: source_templates/lookup.html:22
-#, fuzzy
-#| msgid "Submit Files or Messages"
 msgid "Submit Messages"
-msgstr "Отправить файлы или сообщения"
+msgstr "Отправить сообщения"
 
 #: source_templates/lookup.html:27
 msgid ""
@@ -1238,21 +1222,14 @@ msgstr ""
 "SecureDrop."
 
 #: source_templates/lookup.html:29
-#, fuzzy
-#| msgid ""
-#| "If you are already familiar with GPG, you can optionally encrypt your "
-#| "files and messages with our <a href=\"{url}\" class=\"text-link\">public "
-#| "key</a> before submission. Files are encrypted as they are received by "
-#| "SecureDrop."
 msgid ""
 "If you are already familiar with GPG, you can optionally encrypt your "
 "messages with our <a href=\"{url}\" class=\"text-link\">public key</a> "
 "before submission."
 msgstr ""
 "Если вы уже знакомы с GPG, то перед отправкой вы можете дополнительно "
-"зашифровать свои файлы и сообщения с помощью нашего <a href=\"{url}\" class="
-"\"text-link\">публичного ключа</a>. Файлы шифруются по мере их получения "
-"SecureDrop."
+"зашифровать свои сообщения с помощью нашего <a href=\"{url}\" class=\"text-"
+"link\">публичного ключа</a>."
 
 #: source_templates/lookup.html:31
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
