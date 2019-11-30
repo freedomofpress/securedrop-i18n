@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-11-23 23:41+0000\n"
-"Last-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\n"
+"PO-Revision-Date: 2019-11-30 05:41+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -38,11 +38,11 @@ msgstr "Feil passord eller tofaktor-kode."
 
 #: journalist_app/account.py:49
 msgid "Your two-factor credentials have been reset successfully."
-msgstr "To-faktor-innloggingen din ble vellykket satt opp nytt."
+msgstr "Tofaktorinnloggingen din har blitt tilbakestilt."
 
 #: journalist_app/account.py:53 journalist_app/admin.py:135
 msgid "There was a problem verifying the two-factor code. Please try again."
-msgstr "En feil oppstod ved verifisering av to-faktor-koden. Prøv igjen."
+msgstr "En feil oppstod ved bekreftelse av tofaktorkoden. Prøv igjen."
 
 #: journalist_app/admin.py:42
 msgid "Image updated."
@@ -67,7 +67,7 @@ msgstr "Kunne ikke lagre brukeren i databasen. Gi din administrator beskjed."
 
 #: journalist_app/admin.py:129
 msgid "The two-factor code for user \"{user}\" was verified successfully."
-msgstr "To-faktor-koden for brukeren \"{user}\" ble kontrollert og stemte."
+msgstr "Tofaktorkoden for brukeren \"{user}\" stemmer."
 
 #: journalist_app/admin.py:199 journalist_app/admin.py:207
 #: journalist_app/utils.py:279
@@ -167,7 +167,7 @@ msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
 msgstr ""
-"Vent på ny to-faktor-kode fra din mobilapp eller sikkerhetsnøkkel før du "
+"Vent på ny tofaktorkode fra ditt mobilprogram eller sikkerhetsnøkkel før du "
 "forsøker igjen."
 
 #: journalist_app/utils.py:124
@@ -319,8 +319,8 @@ msgid ""
 "Once you have paired FreeOTP with this account, enter the 6-digit "
 "verification code below:"
 msgstr ""
-"Etter å ha koblet FreeOTP med brukerkontoen, skriv inn den 6-sifrede koden "
-"under:"
+"Etter å ha koblet FreeOTP med brukerkontoen, skriv inn den 6-sifrede "
+"bekreftelseskoden under:"
 
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:20
@@ -333,7 +333,7 @@ msgid ""
 "below:"
 msgstr ""
 "Når du har satt opp din YubiKey, skriv inn den 6 tegn lange "
-"verifiseringskoden nedenfor:"
+"bekreftelseskoden nedenfor:"
 
 #: journalist_templates/account_new_two_factor.html:23
 #: journalist_templates/admin_new_user_two_factor.html:25
@@ -786,9 +786,9 @@ msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For security keys like the YubiKey, choose the second one."
 msgstr ""
-"For å tilbakestille to-faktor-autentisering for mobilapper som FreeOTP, bruk "
-"det første alternativet. For sikkerhetsnøkler som YubiKey, bruk det andre "
-"alternativet."
+"For å tilbakestille to-faktorbekreftelse for mobilprogrammer som FreeOTP, "
+"bruk det første alternativet. For sikkerhetsnøkler som YubiKey, bruk det "
+"andre alternativet."
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
@@ -808,7 +808,7 @@ msgstr "TILBAKESTILL SIKKERHETSNØKLER"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
-msgstr "Takk!"
+msgstr "Takk."
 
 #: journalist_templates/flag.html:8
 msgid ""
@@ -1081,7 +1081,7 @@ msgstr "Første innsendelse"
 
 #: source_templates/index.html:47
 msgid "First time submitting to our SecureDrop? Start here."
-msgstr "Første gang du sender informasjon til vår SecureDrop? Start her."
+msgstr "Førstegangsinnsendelse? Start her."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
@@ -1194,8 +1194,7 @@ msgid ""
 msgstr ""
 "Om du allerede er komfortabel med GPG, kan du velge å kryptere meldingene "
 "dine med vår <a href=\"{url}\" class=\"text-link\">offentlige nøkkel</a> før "
-"du sender dem inn. Alle filer krypteres automatisk av seg selv i det de "
-"mottas av SecureDrop."
+"du sender dem inn."
 
 #: source_templates/lookup.html:31
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
