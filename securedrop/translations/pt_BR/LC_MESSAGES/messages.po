@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-11-30 01:41+0000\n"
-"Last-Translator: Cecília do Lago <ceciliadolago@gmail.com>\n"
+"PO-Revision-Date: 2019-11-30 22:41+0000\n"
+"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -69,7 +69,7 @@ msgstr ""
 
 #: journalist_app/admin.py:129
 msgid "The two-factor code for user \"{user}\" was verified successfully."
-msgstr "O código 2FA da usuária \"{user}\" foi verificado com sucesso."
+msgstr "O código 2FA da.o usuária.o \"{user}\" foi verificado com sucesso."
 
 #: journalist_app/admin.py:199 journalist_app/admin.py:207
 #: journalist_app/utils.py:279
@@ -288,9 +288,9 @@ msgid ""
 "confirm that two-factor authentication is set up correctly."
 msgstr ""
 "Está quase terminando! Para completar a redefinição da autenticação de dois "
-"fatores, siga as instruções abaixo para configurar o FreeOTP. Depois de "
-"registrar a sua conta no aplicativo, insira um dos códigos de seis dígitos "
-"do aplicativo para verificar se a 2FA foi configurada corretamente."
+"fatores (2FA), siga as instruções abaixo para configurar o FreeOTP. Depois "
+"de registrar a sua conta no aplicativo, insira um dos códigos de seis "
+"dígitos do aplicativo para verificar se a 2FA foi configurada corretamente."
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
@@ -342,8 +342,8 @@ msgid ""
 "Once you have configured your YubiKey, enter the 6-digit verification code "
 "below:"
 msgstr ""
-"Após configurar a sua YubiKey, insira o ódigo de verificação de seis dígitos "
-"abaixo:"
+"Após configurar a sua YubiKey, insira o código de verificação de seis "
+"dígitos abaixo:"
 
 #: journalist_templates/account_new_two_factor.html:23
 #: journalist_templates/admin_new_user_two_factor.html:25
@@ -460,24 +460,24 @@ msgid ""
 msgstr ""
 "Está quase terminando! Para finalizar a criação deste novo usuário, peça "
 "para essa pessoa seguir as instruções abaixo e configurar a autenticação de "
-"dois fatores com o FreeOTP. Ao registrar a nova conta no aplicativo, um "
-"código de seis dígitos será gerado. Ele deve ser usado pelo usuário para "
-"verificar a configuração do 2FA."
+"dois fatores (2FA) com o FreeOTP. Ao registrar a nova conta no aplicativo, "
+"um código de seis dígitos será gerado. Ele deve ser usado pela.o usuária.o "
+"para verificar a configuração do 2FA."
 
 #: journalist_templates/admin_new_user_two_factor.html:15
 msgid ""
 "Can't scan the barcode? You can manually pair FreeOTP with this account by "
 "entering the following two-factor secret into the app:"
 msgstr ""
-"Não consegue escanear o código de barras? Você pode parear manualmente o "
-"FreeOTP com sua conta preenchendo o código em dois fatores no aplicativo:"
+"Não consegue escanear o código de barras? Você pode emparelhar manualmente o "
+"FreeOTP com esta conta inserindo o seguinte 2FA no aplicativo:"
 
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid ""
 "Once you have paired FreeOTP with this account, enter the 6-digit code below:"
 msgstr ""
-"Depois de parear o FreeOTP com sua conta, insira o código de seis dígitos "
-"abaixo:"
+"Depois de emparelhar o FreeOTP com esta conta, insira o código de seis "
+"dígitos abaixo:"
 
 #: journalist_templates/admin_new_user_two_factor.html:21
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
@@ -670,21 +670,20 @@ msgid "UPDATE LOGO"
 msgstr "ATUALIZAR LOGO"
 
 #: journalist_templates/config.html:46
-#, fuzzy
-#| msgid "Submission deleted."
-#| msgid_plural "{num} submissions deleted."
 msgid "Submission Preferences"
-msgstr "Envio apagado."
+msgstr "Configurações de Envio"
 
 #: journalist_templates/config.html:52
 msgid ""
 "Prevent sources from uploading documents.  Sources will still be able to "
 "send messages."
 msgstr ""
+"Não permitir que as fontes possam carregar documentos. Elas continuarão a "
+"ter permissão para enviar mensagens."
 
 #: journalist_templates/config.html:55
 msgid "UPDATE SUBMISSION PREFERENCES"
-msgstr ""
+msgstr "ATUALIZAR CONFIGURAÇÕES DE ENVIO"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -796,9 +795,8 @@ msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For security keys like the YubiKey, choose the second one."
 msgstr ""
-"Para redefinir a autenticação de dois fatores para aplicativos móveis como o "
-"FreeOTP, selecione a primeira opção. Para tokens de segurança como o "
-"Yubikey, selecione a segunda."
+"Para redefinir a 2FA para aplicativos de celular como o FreeOTP, selecione a "
+"primeira opção. Para chaves de segurança como o Yubikey, selecione a segunda."
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
@@ -813,12 +811,12 @@ msgstr "REDEFINIR CREDENCIAIS DO APLICATIVO PARA CELULAR"
 #: journalist_templates/edit_account.html:113
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
 msgstr ""
-"Redefinir autenticação de dois fatores (2FA) para códigos de autenticação de "
-"segurança, como YubiKey"
+"Redefinir autenticação de dois fatores (2FA) para chaves de segurança, como "
+"YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET SECURITY KEY CREDENTIALS"
-msgstr "REDEFINIR CREDENCIAIS DO CÓDIGO DE SEGURANÇA"
+msgstr "REDEFINIR CREDENCIAIS DE CHAVE DE SEGURANÇA"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -937,10 +935,8 @@ msgid "You must enter a message or choose a file to submit."
 msgstr "É preciso escrever uma mensagem ou escolher um arquivo para enviar."
 
 #: source_app/main.py:148
-#, fuzzy
-#| msgid "You must enter a message or choose a file to submit."
 msgid "You must enter a message."
-msgstr "É preciso escrever uma mensagem ou escolher um arquivo para enviar."
+msgstr "Você deve escrever uma mensagem."
 
 #: source_app/main.py:179
 msgid "Thanks! We received your message."
@@ -1162,7 +1158,7 @@ msgstr ""
 
 #: source_templates/lookup.html:10
 msgid "Sorry we haven't responded yet!"
-msgstr "Desculpas por ainda não termos respondido."
+msgstr "Desculpas por ainda não termos respondido!"
 
 #: source_templates/lookup.html:11
 msgid ""
@@ -1191,10 +1187,8 @@ msgid "You can submit any kind of file, a message, or both."
 msgstr "Você pode enviar todos os tipos de arquivos, uma mensagem ou ambos."
 
 #: source_templates/lookup.html:22
-#, fuzzy
-#| msgid "Submit Files or Messages"
 msgid "Submit Messages"
-msgstr "Enviar documentos ou mensagens"
+msgstr "Enviar mensagens"
 
 #: source_templates/lookup.html:27
 msgid ""
@@ -1208,21 +1202,14 @@ msgstr ""
 "SecureDrop."
 
 #: source_templates/lookup.html:29
-#, fuzzy
-#| msgid ""
-#| "If you are already familiar with GPG, you can optionally encrypt your "
-#| "files and messages with our <a href=\"{url}\" class=\"text-link\">public "
-#| "key</a> before submission. Files are encrypted as they are received by "
-#| "SecureDrop."
 msgid ""
 "If you are already familiar with GPG, you can optionally encrypt your "
 "messages with our <a href=\"{url}\" class=\"text-link\">public key</a> "
 "before submission."
 msgstr ""
-"Se você já conhece o GPG, poderá optar por criptografar seus arquivos e "
-"mensagens com nossa <a href=\"{url}\" class=\"text-link\">chave pública</a> "
-"antes de enviá-los. Os arquivos são criptografados depois de recebidos pelo "
-"SecureDrop."
+"Se você já conhece o GPG, poderá optar por criptografar suas mensagens com a "
+"nossa <a href=\"{url}\" class=\"text-link\">chave pública</a> antes de "
+"enviá-las."
 
 #: source_templates/lookup.html:31
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
