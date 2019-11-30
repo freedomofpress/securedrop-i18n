@@ -46,7 +46,7 @@ def make_blueprint(config):
         if request.method == 'POST':
             token = request.form['token']
             if g.user.verify_token(token):
-                flash(gettext("Your two-factor credentials have been reset successfully."),
+                flash(gettext("Your two-factor credentials have been reset."),
                       "notification")
                 return redirect(url_for('account.edit'))
             else:
