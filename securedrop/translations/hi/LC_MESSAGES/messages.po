@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2019-11-30 19:23+0000\n"
-"Last-Translator: Drashti <drashtipandya37@gmail.com>\n"
+"Last-Translator: Chandan Kumar <chkumar246@gmail.com>\n"
 "Language-Team: Hindi <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/hi/>\n"
 "Language: hi\n"
@@ -33,7 +33,7 @@ msgstr "पासवर्ड बदलने  के कारण आप लॉ
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
-msgstr "गलत पासवर्ड या दो-कारक कोड ।"
+msgstr "पासवर्ड या दो-कारक कोड गलत है।"
 
 #: journalist_app/account.py:49
 msgid "Your two-factor credentials have been reset successfully."
