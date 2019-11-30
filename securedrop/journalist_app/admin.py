@@ -127,8 +127,8 @@ def make_blueprint(config):
             token = request.form['token']
             if user.verify_token(token):
                 flash(gettext(
-                    "The two-factor code for user \"{user}\" was verified "
-                    "successfully.").format(user=user.username),
+                    "The two-factor code for user \"{user}\" was verified.").format(
+                    user=user.username),
                     "notification")
                 return redirect(url_for("admin.index"))
             else:
