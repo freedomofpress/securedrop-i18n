@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-11-30 05:41+0000\n"
+"PO-Revision-Date: 2019-11-30 22:41+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/nb_NO/>\n"
@@ -275,11 +275,9 @@ msgid ""
 "for your account in the app, enter one of the 6-digit codes from the app to "
 "confirm that two-factor authentication is set up correctly."
 msgstr ""
-"Du er nesten ferdig! For å fullføre tilbakestillingen av to-faktor-"
-"autentiseringen, følg instruksjonene under for å sette opp FreeOTP. Når du "
-"har fått lagt til SecureDrop-kontoen i appen, legg så inn én av de 6-sifrede "
-"kodene fra appen i skjemaet under for å bekrefte at autentiseringen er satt "
-"opp riktig."
+"Når du har fått lagt til SecureDrop-kontoen i FreeOTP, legg inn én av de 6-"
+"sifrede kodene fra det i skjemaet under for å sjekke at tofaktorbekreftelse "
+"virker."
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
@@ -311,8 +309,8 @@ msgid ""
 "account by entering the following two-factor secret into the app:"
 msgstr ""
 "Kan du ikke skanne strekkoden? Du kan koble FreeOTP manuelt til din "
-"SecureDrop-konto ved å skrive inn denne to-faktor-hemmeligheten manuelt i "
-"appen:"
+"SecureDrop-konto ved å skrive inn denne tofaktorhemmeligheten manuelt i "
+"FreeOTP:"
 
 #: journalist_templates/account_new_two_factor.html:16
 msgid ""
@@ -459,8 +457,8 @@ msgid ""
 "Can't scan the barcode? You can manually pair FreeOTP with this account by "
 "entering the following two-factor secret into the app:"
 msgstr ""
-"Kan du ikke skanne strekkoden? Du kan koble FreeOTP med denne kontoen "
-"manuelt ved å skrive inn følgende to-faktor-hemmelighet i appen:"
+"Kan du ikke skanne strekkoden? Du kan koble FreeOTP til denne kontoen "
+"manuelt ved å skrive inn følgende tofaktorhemmelighet i FreeOTP:"
 
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid ""
@@ -661,19 +659,19 @@ msgstr "OPPDATER LOGO"
 
 #: journalist_templates/config.html:46
 msgid "Submission Preferences"
-msgstr "Innstillinger for kilde-forsendelser"
+msgstr "Forsendelsesinnstillinger"
 
 #: journalist_templates/config.html:52
 msgid ""
 "Prevent sources from uploading documents.  Sources will still be able to "
 "send messages."
 msgstr ""
-"Hindre kilder fra å laste opp filer.  Kilder vil fortsatt kunne sende inn "
+"Hindre kilder fra å laste opp filer, de vil fortsatt kunne sende inn "
 "meldinger."
 
 #: journalist_templates/config.html:55
 msgid "UPDATE SUBMISSION PREFERENCES"
-msgstr "Oppdater innstillinger for kilde-forsendelser"
+msgstr "Oppdater innstillinger for forsendelser"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -786,7 +784,7 @@ msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For security keys like the YubiKey, choose the second one."
 msgstr ""
-"For å tilbakestille to-faktorbekreftelse for mobilprogrammer som FreeOTP, "
+"For å tilbakestille tofaktorbekreftelse for mobilprogrammer som FreeOTP, "
 "bruk det første alternativet. For sikkerhetsnøkler som YubiKey, bruk det "
 "andre alternativet."
 
@@ -796,15 +794,15 @@ msgstr "Nullstill tofaktor-oppsett for mobilapper, som f.eks. FreeOTP"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET MOBILE APP CREDENTIALS"
-msgstr "TILBAKESTILL MOBILAPP-OPPSETT"
+msgstr "Tilbakestill mobilprogramsoppsett"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
-msgstr "Tilbakestill to-faktor-oppsett for sikkerhetsnøkler, som YubiKey"
+msgstr "Tilbakestill tofaktoroppsett for sikkerhetsnøkler, som YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET SECURITY KEY CREDENTIALS"
-msgstr "TILBAKESTILL SIKKERHETSNØKLER"
+msgstr "Tilbakestill identitetsdetaljer fra sikkerhetsnøkkel"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
