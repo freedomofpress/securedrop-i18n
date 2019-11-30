@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-11-30 01:41+0000\n"
-"Last-Translator: Nicolas <me@n-thumann.de>\n"
+"PO-Revision-Date: 2019-11-30 22:41+0000\n"
+"Last-Translator: Robin Schubert <robin.schubert@gmx.de>\n"
 "Language-Team: German <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/de/>\n"
 "Language: de_DE\n"
@@ -172,16 +172,12 @@ msgstr[1] ""
 "anmelden."
 
 #: journalist_app/utils.py:103
-#, fuzzy
-#| msgid ""
-#| "Please wait for a new code from your two-factor token or application "
-#| "before trying again."
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
 msgstr ""
-"Bitte warten Sie auf einen neuen Code von Ihrem Zwei-Faktor-Token oder Ihrer "
-"Anwendung, bevor Sie es erneut versuchen."
+"Bitte warten Sie auf einen neuen Code von Ihrer Zwei-Faktor mobilen "
+"Anwendung oder Ihrem Security-Token, bevor Sie es erneut versuchen."
 
 #: journalist_app/utils.py:124
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
@@ -328,6 +324,9 @@ msgid ""
 "Can't scan the barcode? You can manually pair FreeOTP with your SecureDrop "
 "account by entering the following two-factor secret into the app:"
 msgstr ""
+"Können Sie den Barcode nicht scannen? Um FreeOTP manuell mit Ihrem "
+"SecureDrop Konto zu verbinden, geben Sie den folgenden Zwei-Faktor Schlüssel "
+"in die App ein:"
 
 #: journalist_templates/account_new_two_factor.html:16
 msgid ""
@@ -475,6 +474,8 @@ msgid ""
 "Can't scan the barcode? You can manually pair FreeOTP with this account by "
 "entering the following two-factor secret into the app:"
 msgstr ""
+"Können Sie den Barcode nicht scannen? Um FreeOTP manuell mit diesem Konto zu "
+"verbinden, geben Sie den folgenden Zwei-Faktor Schlüssel in die App ein:"
 
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid ""
@@ -687,10 +688,12 @@ msgid ""
 "Prevent sources from uploading documents.  Sources will still be able to "
 "send messages."
 msgstr ""
+"Quellen am Hochladen von Dokumenten hindern.  Quellen werden immernoch "
+"Nachrichten senden können."
 
 #: journalist_templates/config.html:55
 msgid "UPDATE SUBMISSION PREFERENCES"
-msgstr ""
+msgstr "EINREICHUNGSEINSTELLUNGEN AKTUALISIEREN"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -801,17 +804,12 @@ msgstr ""
 "Zugriff auf Ihr Konto.</em>"
 
 #: journalist_templates/edit_account.html:87
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as FreeOTP, "
-#| "choose the first option. For hardware tokens like the YubiKey, choose the "
-#| "second one."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For security keys like the YubiKey, choose the second one."
 msgstr ""
 "Wählen Sie die erste Option, um die Zwei-Faktor-Authentifizierung für mobile "
-"Apps wie FreeOTP zurückzusetzen. Für Hardware-Token wie YubiKey wählen Sie "
+"Apps wie FreeOTP zurückzusetzen. Für Security-Token wie YubiKey wählen Sie "
 "die zweite Option."
 
 #: journalist_templates/edit_account.html:112
@@ -820,18 +818,16 @@ msgstr "Zwei-Faktor Authentifizierung für mobile Apps wie FreeOTP zurücksetzen
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET MOBILE APP CREDENTIALS"
-msgstr ""
+msgstr "MOBILE APP ZUGANGSDATEN ZURÜCKSETZEN"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
 msgstr ""
-"Zwei-Faktor Authentifizierung für Hardware Tokens wie Yubikey zurücksetzen"
+"Zwei-Faktor Authentifizierung für Security-Token wie Yubikey zurücksetzen"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET SECURITY KEY CREDENTIALS"
-msgstr ""
+msgstr "SECURITY-TOKEN ZUGANGSDATEN ZURÜCKSETZEN"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -954,11 +950,8 @@ msgstr ""
 "Sie müssen eine Nachricht eingeben oder eine Datei zum Versenden auswählen."
 
 #: source_app/main.py:148
-#, fuzzy
-#| msgid "You must enter a message or choose a file to submit."
 msgid "You must enter a message."
-msgstr ""
-"Sie müssen eine Nachricht eingeben oder eine Datei zum Versenden auswählen."
+msgstr "Sie müssen eine Nachricht eingeben."
 
 #: source_app/main.py:179
 msgid "Thanks! We received your message."
@@ -1217,10 +1210,8 @@ msgid "You can submit any kind of file, a message, or both."
 msgstr "Sie können jede Art von Datei, eine Nachricht oder beides versenden."
 
 #: source_templates/lookup.html:22
-#, fuzzy
-#| msgid "Submit Files or Messages"
 msgid "Submit Messages"
-msgstr "Dateien oder Nachrichten versenden"
+msgstr "Dateien versenden"
 
 #: source_templates/lookup.html:27
 msgid ""
@@ -1234,21 +1225,14 @@ msgstr ""
 "verschlüsselt, wenn Sie von SecureDrop empfangen werden."
 
 #: source_templates/lookup.html:29
-#, fuzzy
-#| msgid ""
-#| "If you are already familiar with GPG, you can optionally encrypt your "
-#| "files and messages with our <a href=\"{url}\" class=\"text-link\">public "
-#| "key</a> before submission. Files are encrypted as they are received by "
-#| "SecureDrop."
 msgid ""
 "If you are already familiar with GPG, you can optionally encrypt your "
 "messages with our <a href=\"{url}\" class=\"text-link\">public key</a> "
 "before submission."
 msgstr ""
-"Wenn Sie bereits mit GPG vertraut sind, können Sie Ihre Dateien und "
-"Nachrichten vor dem Versenden zusätzlich mit unserem<a href=\"{url}\" class="
-"\"text-link\">öffentlichen Schlüssel</a> verschlüsseln. Die Dateien werden "
-"verschlüsselt, wenn Sie von SecureDrop empfangen werden."
+"Wenn Sie bereits mit GPG vertraut sind, können Sie Ihre Nachrichten vor dem "
+"Versenden zusätzlich mit unserem<a href=\"{url}\" class=\"text-link\">"
+"öffentlichen Schlüssel</a> verschlüsseln."
 
 #: source_templates/lookup.html:31
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
