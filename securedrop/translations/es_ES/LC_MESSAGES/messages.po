@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-12-01 14:34+0000\n"
-"Last-Translator: Adolfo Jayme-Barrientos <fitojb@ubuntu.com>\n"
+"PO-Revision-Date: 2019-12-01 16:41+0000\n"
+"Last-Translator: Freddy Martinez <freddymartinez9@gmail.com>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
 "Language: es_ES\n"
@@ -961,8 +961,6 @@ msgid "You must enter a message or choose a file to submit."
 msgstr "Debe escribir un mensaje o elegir un archivo para enviar."
 
 #: source_app/main.py:148
-#, fuzzy
-#| msgid "You must enter a message or choose a file to submit."
 msgid "You must enter a message."
 msgstr "Debe escribir un mensaje."
 
@@ -1219,8 +1217,6 @@ msgid "You can submit any kind of file, a message, or both."
 msgstr "Usted puede enviar cualquier tipo de archivo, un mensaje, o ambos."
 
 #: source_templates/lookup.html:22
-#, fuzzy
-#| msgid "Submit Files or Messages"
 msgid "Submit Messages"
 msgstr "Enviar Mensajes"
 
