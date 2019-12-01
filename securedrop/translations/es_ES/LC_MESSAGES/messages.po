@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2019-12-01 14:34+0000\n"
-"Last-Translator: Freddy Martinez <freddymartinez9@gmail.com>\n"
+"Last-Translator: Adolfo Jayme-Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
 "Language: es_ES\n"
@@ -26,7 +26,7 @@ msgstr "hace {time}"
 
 #: journalist_app/__init__.py:88 journalist_app/__init__.py:137
 msgid "You have been logged out due to inactivity"
-msgstr "Su sesión ha sido terminada debido a inactividad"
+msgstr "Su sesión ha terminado debido a la inactividad"
 
 #: journalist_app/__init__.py:146
 msgid "You have been logged out due to password change"
