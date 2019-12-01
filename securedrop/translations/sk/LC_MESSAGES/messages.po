@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-12-01 08:41+0000\n"
-"Last-Translator: Oliver <oweb@pm.me>\n"
+"PO-Revision-Date: 2019-12-01 11:41+0000\n"
+"Last-Translator: 1000101 <jan.hrnko@satoshilabs.com>\n"
 "Language-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sk/>\n"
 "Language: sk\n"
@@ -292,7 +292,7 @@ msgid ""
 msgstr ""
 "Takmer hotovo! Aby ste si vyresetovali vašu dvojfaktorovú autentifikáciu, je "
 "treba postupovať podľa inštrukcií nižšie a nastaviť si FreeOTP. Po pridaní "
-"záznamu pre Váš účet v aplikácii zadajte jeden zo 6-miestnych kódov z "
+"záznamu pre váš účet v aplikácii zadajte jeden zo 6-miestnych kódov z "
 "aplikácie. Týmto potvrdíte, že dvojfaktorová autentifikácia je nastavená "
 "správne."
 
@@ -346,7 +346,7 @@ msgid ""
 "Once you have configured your YubiKey, enter the 6-digit verification code "
 "below:"
 msgstr ""
-"Akonáhle nastavíte Váš YubiKey, zadajte šesťmiestny overovací kód nižšie:"
+"Akonáhle nastavíte váš YubiKey, zadajte šesťmiestny overovací kód nižšie:"
 
 #: journalist_templates/account_new_two_factor.html:23
 #: journalist_templates/admin_new_user_two_factor.html:25
@@ -670,7 +670,7 @@ msgstr "AKTUALIZOVAŤ LOGO"
 
 #: journalist_templates/config.html:46
 msgid "Submission Preferences"
-msgstr "Preferencie podávania"
+msgstr "Preferencie podania"
 
 #: journalist_templates/config.html:52
 msgid ""
@@ -682,7 +682,7 @@ msgstr ""
 
 #: journalist_templates/config.html:55
 msgid "UPDATE SUBMISSION PREFERENCES"
-msgstr "AUTUALIZUJTE PREFERENCIE PODÁVANIA"
+msgstr "AKTUALIZOVAŤ PREFERENCIE PODANIA"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -820,7 +820,7 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET SECURITY KEY CREDENTIALS"
-msgstr "RESETOVAŤ ÚDAJE BEZPEČNOSTNÉHO KĽÚČU"
+msgstr "RESETOVAŤ PRIHLASOVACIE ÚDAJE BEZPEČNOSTNÉHO KĽÚČA"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
