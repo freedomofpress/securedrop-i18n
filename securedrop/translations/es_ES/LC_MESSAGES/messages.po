@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-12-01 16:41+0000\n"
-"Last-Translator: Freddy Martinez <freddymartinez9@gmail.com>\n"
+"PO-Revision-Date: 2019-12-02 00:05+0000\n"
+"Last-Translator: Daniel Arauz <danarauz@gmail.com>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
 "Language: es_ES\n"
@@ -692,6 +692,8 @@ msgid ""
 "Prevent sources from uploading documents.  Sources will still be able to "
 "send messages."
 msgstr ""
+"Evite que las fuentes carguen documentos.   Las fuentes todpabia podrán "
+"seguir enviando mensajes."
 
 #: journalist_templates/config.html:55
 msgid "UPDATE SUBMISSION PREFERENCES"
@@ -807,11 +809,6 @@ msgstr ""
 "cuenta.</em>"
 
 #: journalist_templates/edit_account.html:87
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as FreeOTP, "
-#| "choose the first option. For hardware tokens like the YubiKey, choose the "
-#| "second one."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For security keys like the YubiKey, choose the second one."
@@ -831,8 +828,6 @@ msgid "RESET MOBILE APP CREDENTIALS"
 msgstr "RESTABLECER CREDENCIALES DE APLICACIONES MÓVILES"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
 msgstr ""
 "Restablecer autenticación de dos factores para tokens de seguridad como "
