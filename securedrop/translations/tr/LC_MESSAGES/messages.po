@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-11-23 07:41+0000\n"
-"Last-Translator: Kaya Zeren <kayazeren@gmail.com>\n"
+"PO-Revision-Date: 2019-12-01 20:41+0000\n"
+"Last-Translator: Orhan <orya@pm.me>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
 "Language: tr\n"
@@ -178,7 +178,7 @@ msgid ""
 "before trying again."
 msgstr ""
 "Yeniden denemeden önce lütfen iki aşamalı kimlik doğrulama mobil "
-"uygulamasından yeni bir kod gelmesini bekleyin."
+"uygulamanızdan yeni bir kod gelmesini bekleyin."
 
 #: journalist_app/utils.py:124
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
@@ -473,8 +473,8 @@ msgid ""
 "Can't scan the barcode? You can manually pair FreeOTP with this account by "
 "entering the following two-factor secret into the app:"
 msgstr ""
-"Barkodu  okutamıyor musunuz? Şu iki aşamalı kimlik doğrulama parolasını "
-"uygulamaya yazarak FreeOTP ile bu hesabı  el ile eşleştirebilirsiniz:"
+"Barkodu okutamıyor musunuz? Şu iki aşamalı kimlik doğrulama parolasını "
+"uygulamaya yazarak FreeOTP ile bu hesabı el ile eşleştirebilirsiniz:"
 
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid ""
@@ -675,17 +675,18 @@ msgstr "LOGOYU GÜNCELLE"
 
 #: journalist_templates/config.html:46
 msgid "Submission Preferences"
-msgstr "Gönderim Ayarları"
+msgstr "Gönderim Tercihleri"
 
 #: journalist_templates/config.html:52
 msgid ""
 "Prevent sources from uploading documents.  Sources will still be able to "
 "send messages."
-msgstr "Kaynaklar belge yükleyemez. Kaynaklar ileti gönderebilir."
+msgstr ""
+"Kaynakların belge yüklemelerini engeller.  Kaynaklar ileti gönderebilir."
 
 #: journalist_templates/config.html:55
 msgid "UPDATE SUBMISSION PREFERENCES"
-msgstr "GÖNDERİM AYARLARINI GÜNCELLE"
+msgstr "GÖNDERİM TERCİHLERİNİ GÜNCELLE"
 
 #: journalist_templates/delete.html:5
 msgid ""
