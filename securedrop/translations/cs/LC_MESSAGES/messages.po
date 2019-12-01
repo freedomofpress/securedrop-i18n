@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-11-29 17:41+0000\n"
-"Last-Translator: michaela-bot <michaela.rybickova@gmail.com>\n"
+"PO-Revision-Date: 2019-12-01 11:41+0000\n"
+"Last-Translator: 1000101 <jan.hrnko@satoshilabs.com>\n"
 "Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/cs/>\n"
 "Language: cs\n"
@@ -175,7 +175,7 @@ msgid ""
 "before trying again."
 msgstr ""
 "Dřív než budete pokračovat,  počkejte prosím na nový dvoufaktorový kód z "
-"Vaší mobilní aplikace nebo bezpečnostního klíče."
+"vaší mobilní aplikace nebo bezpečnostního klíče."
 
 #: journalist_app/utils.py:124
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
@@ -289,7 +289,7 @@ msgid ""
 msgstr ""
 "Jste skoro u konce! Pro dokončení obnovení dvoufaktorové autentizace "
 "následujte instrukce níže a nastavte FreeOTP. Až přidáte do aplikace přístup "
-"k Vašemu účtu, zadejte jeden z šesticiferných kódů z aplikace. Kód potvrdí, "
+"k vašemu účtu, zadejte jeden z šesticiferných kódů z aplikace. Kód potvrdí, "
 "že je dvoufaktorová autentizace správně nastavena."
 
 #: journalist_templates/account_new_two_factor.html:8
@@ -319,14 +319,14 @@ msgid ""
 "Can't scan the barcode? You can manually pair FreeOTP with your SecureDrop "
 "account by entering the following two-factor secret into the app:"
 msgstr ""
-"Nemůžete načíst čárový kód? Zkuste manuálně spárovat FreeOTP s Vaším "
+"Nemůžete načíst čárový kód? Zkuste manuálně spárovat FreeOTP s vaším "
 "SecureDrop účtem. Stačí zadat následující dvoufaktorový kód do aplikace:"
 
 #: journalist_templates/account_new_two_factor.html:16
 msgid ""
 "Once you have paired FreeOTP with this account, enter the 6-digit "
 "verification code below:"
-msgstr "Po spárování FreeOTP s Vaším účtem zadejte šestimístný kód níže:"
+msgstr "Po spárování FreeOTP s vaším účtem zadejte šestimístný kód níže:"
 
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:20
@@ -669,11 +669,11 @@ msgid ""
 "Prevent sources from uploading documents.  Sources will still be able to "
 "send messages."
 msgstr ""
-"Zabraňte zdrojům nahrávat dokumenty. Zdroje stále budou moci posílat zprávy."
+"Zabraňte zdrojům nahrávat dokumenty. Zdroje budou stále moci posílat zprávy."
 
 #: journalist_templates/config.html:55
 msgid "UPDATE SUBMISSION PREFERENCES"
-msgstr "AKTUALIZUJTE PREFERENCE PODÁNÍ"
+msgstr "AKTUALIZOVAT PREFERENCE PODÁNÍ"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -798,7 +798,7 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET MOBILE APP CREDENTIALS"
-msgstr "RESETUJTE PŘIHLAŠOVACÍ ÚDAJE  MOBILNÍ APLIKACE"
+msgstr "RESETOVAT PŘIHLAŠOVACÍ ÚDAJE  MOBILNÍ APLIKACE"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
@@ -807,7 +807,7 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET SECURITY KEY CREDENTIALS"
-msgstr "RESETUJE PŘIHLAŠOVACÍ ÚDAJE BEZPEČNOSTNÍHO KLÍČE"
+msgstr "RESETOVAT PŘIHLAŠOVACÍ ÚDAJE BEZPEČNOSTNÍHO KLÍČE"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
