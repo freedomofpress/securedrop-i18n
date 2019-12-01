@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2019-12-01 14:25+0000\n"
-"Last-Translator: carlos <carlosm2@riseup.net>\n"
+"Last-Translator: erinm <erinm@riseup.net>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
 "Language: es_ES\n"
@@ -346,14 +346,12 @@ msgid "Enable YubiKey (OATH-HOTP)"
 msgstr "Habilitar el dispositivo YubiKey (OATH-HOTP)"
 
 #: journalist_templates/account_new_two_factor.html:19
-#, fuzzy
-#| msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgid ""
 "Once you have configured your YubiKey, enter the 6-digit verification code "
 "below:"
 msgstr ""
 "Una vez que usted haya configurado su dispositivo YubiKey, ingrese abajo el "
-"código de 6 dígitos:"
+"código de verificación de 6 dígitos:"
 
 #: journalist_templates/account_new_two_factor.html:23
 #: journalist_templates/admin_new_user_two_factor.html:25
@@ -461,13 +459,6 @@ msgid "Is using a YubiKey [HOTP]"
 msgstr "Está utilizando un dispositivo YubiKey [HOTP]"
 
 #: journalist_templates/admin_new_user_two_factor.html:6
-#, fuzzy
-#| msgid ""
-#| "You're almost done! To finish adding this new user, have them follow the "
-#| "instructions below to set up two-factor authentication with FreeOTP. Once "
-#| "they've added an entry for this account in the app, have them enter one "
-#| "of the 6-digit codes from the app to confirm that two factor "
-#| "authentication is set up correctly."
 msgid ""
 "You're almost done! To finish adding this new user, have them follow the "
 "instructions below to set up two-factor authentication with FreeOTP. Once "
@@ -693,11 +684,8 @@ msgid "UPDATE LOGO"
 msgstr "ACTUALIZAR LOGOTIPO"
 
 #: journalist_templates/config.html:46
-#, fuzzy
-#| msgid "Submission deleted."
-#| msgid_plural "{num} submissions deleted."
 msgid "Submission Preferences"
-msgstr "Envio eliminado."
+msgstr "Preferencias de envio"
 
 #: journalist_templates/config.html:52
 msgid ""
@@ -829,7 +817,7 @@ msgid ""
 "the first option. For security keys like the YubiKey, choose the second one."
 msgstr ""
 "Para restablecer la autenticación de dos factores para aplicaciones móviles "
-"como FreeOTP, elija la primera opción. Para tokens de hardware como el "
+"como FreeOTP, elija la primera opción. Para tokens de seguridad como el "
 "YubiKey, elija la segunda."
 
 #: journalist_templates/edit_account.html:112
@@ -847,7 +835,7 @@ msgstr "RESTABLECER CREDENCIALES DE APLICACIONES MÓVILES"
 #| msgid "Reset two-factor authentication for hardware tokens, like a YubiKey"
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
 msgstr ""
-"Restablecer autenticación de dos factores para tokens de hardware como "
+"Restablecer autenticación de dos factores para tokens de seguridad como "
 "YubiKey"
 
 #: journalist_templates/edit_account.html:113
@@ -976,7 +964,7 @@ msgstr "Debe escribir un mensaje o elegir un archivo para enviar."
 #, fuzzy
 #| msgid "You must enter a message or choose a file to submit."
 msgid "You must enter a message."
-msgstr "Debe escribir un mensaje o elegir un archivo para enviar."
+msgstr "Debe escribir un mensaje."
 
 #: source_app/main.py:179
 msgid "Thanks! We received your message."
@@ -1234,7 +1222,7 @@ msgstr "Usted puede enviar cualquier tipo de archivo, un mensaje, o ambos."
 #, fuzzy
 #| msgid "Submit Files or Messages"
 msgid "Submit Messages"
-msgstr "Enviar Archivos o Mensajes"
+msgstr "Enviar Mensajes"
 
 #: source_templates/lookup.html:27
 msgid ""
@@ -1249,22 +1237,14 @@ msgstr ""
 "recibidos por SecureDrop."
 
 #: source_templates/lookup.html:29
-#, fuzzy
-#| msgid ""
-#| "If you are already familiar with GPG, you can optionally encrypt your "
-#| "files and messages with our <a href=\"{url}\" class=\"text-link\">public "
-#| "key</a> before submission. Files are encrypted as they are received by "
-#| "SecureDrop."
 msgid ""
 "If you are already familiar with GPG, you can optionally encrypt your "
 "messages with our <a href=\"{url}\" class=\"text-link\">public key</a> "
 "before submission."
 msgstr ""
-"Si usted esta familiarizado con GPG, puede cifrar sus archivos y mensajes de "
-"forma opcional con nuestra <a href=\"{url}\" class=\"text-link\">llave "
-"publica</a> antes de enviarlos. Sin importar si usted ha cifrado sus "
-"mensajes con GPG o no, todos los archivos son cifrados tan pronto son "
-"recibidos por SecureDrop."
+"Si usted esta familiarizado con GPG, puede cifrar sus mensajes de forma "
+"opcional con nuestra <a href=\"{url}\" class=\"text-link\">llave publica</a> "
+"antes de enviarlos."
 
 #: source_templates/lookup.html:31
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
