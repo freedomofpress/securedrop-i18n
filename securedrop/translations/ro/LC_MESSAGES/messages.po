@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-12-01 16:41+0000\n"
-"Last-Translator: Jobava <jobaval10n@gmail.com>\n"
+"PO-Revision-Date: 2019-12-02 12:41+0000\n"
+"Last-Translator: robbpa <robbpaun@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
 "Language: ro\n"
@@ -38,14 +38,13 @@ msgstr "Parolă sau cod de autentificare cu doi factori greșit(ă)."
 
 #: journalist_app/account.py:49
 msgid "Your two-factor credentials have been reset successfully."
-msgstr ""
-"Datele tale pentru autentificarea cu doi factori au fost resetate cu succes."
+msgstr "Datele pentru autentificarea cu doi factori au fost resetate cu succes."
 
 #: journalist_app/account.py:53 journalist_app/admin.py:135
 msgid "There was a problem verifying the two-factor code. Please try again."
 msgstr ""
-"A apărut o problemă la verificarea datelor pentru autentificarea în doi "
-"pași. Te rugăm să încerci din nou."
+"A apărut o problemă la verificarea datelor pentru autentificarea cu doi "
+"factori. Te rugăm să încerci din nou."
 
 #: journalist_app/admin.py:42
 msgid "Image updated."
@@ -184,8 +183,8 @@ msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
 msgstr ""
-"Te rugăm să aștepți un cod nou de la aplicația mobilă sau de la cheia de "
-"securitate înainte de a încerca iar autentificarea în doi pași."
+"Te rugăm să aștepți un cod nou de la aplicația mobilă pentru autentificarea "
+"cu doi factori sau cheia de securitate înainte de a încerca din nou."
 
 #: journalist_app/utils.py:124
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
@@ -336,17 +335,17 @@ msgid ""
 "Can't scan the barcode? You can manually pair FreeOTP with your SecureDrop "
 "account by entering the following two-factor secret into the app:"
 msgstr ""
-"Nu poți scana codul de bare? Poți împerechea manual FreeOTP cu contul tău de "
-"SecureDrop prin introducerea următorului secret pentru doi factori în "
-"aplicație:"
+"Nu poți scana codul de bare? Poți asocia manual FreeOTP cu contul tău de "
+"SecureDrop introducând în aplicație următorul cod secret de autentificare cu "
+"doi factori:"
 
 #: journalist_templates/account_new_two_factor.html:16
 msgid ""
 "Once you have paired FreeOTP with this account, enter the 6-digit "
 "verification code below:"
 msgstr ""
-"După ce ai împerecheat FreeOTP cu acest cont, introdu codul de verificare de "
-"6 cifre mai jos:"
+"După ce ai asociat FreeOTP cu acest cont, introdu aici mai jos codul de "
+"verificare din 6 cifre:"
 
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:20
@@ -358,8 +357,8 @@ msgid ""
 "Once you have configured your YubiKey, enter the 6-digit verification code "
 "below:"
 msgstr ""
-"După ce ai configurat cheia fizică YubiKey, introdu codul de verificare de 6 "
-"cifre mai jos:"
+"După ce ai configurat cheia fizică YubiKey, introdu aici mai jos codul de "
+"verificare din 6 cifre:"
 
 #: journalist_templates/account_new_two_factor.html:23
 #: journalist_templates/admin_new_user_two_factor.html:25
@@ -486,8 +485,9 @@ msgid ""
 "Can't scan the barcode? You can manually pair FreeOTP with this account by "
 "entering the following two-factor secret into the app:"
 msgstr ""
-"Nu poți scana codul de bare? Poți împerechea manual FreeOTP cu acest cont "
-"prin introducerea următorului secret pentru doi factori în aplicație:"
+"Nu poți scana codul de bare? Poți asocia manual FreeOTP cu acest cont "
+"introducând în aplicație următorul cod secret de autentificare cu doi "
+"factori:"
 
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid ""
@@ -695,8 +695,8 @@ msgid ""
 "Prevent sources from uploading documents.  Sources will still be able to "
 "send messages."
 msgstr ""
-"Nu permite surselor să încarce documente.  Sursele vor putea în continuare "
-"să trimită mesaje."
+"Împiedică sursele să încarce documente.  Sursele vor putea să trimită mesaje "
+"în continuare."
 
 #: journalist_templates/config.html:55
 msgid "UPDATE SUBMISSION PREFERENCES"
@@ -831,7 +831,8 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET MOBILE APP CREDENTIALS"
-msgstr "RESETEAZĂ DATELE DE AUTENTIFICARE MOBILE"
+msgstr ""
+"RESETEAZĂ DATELE DE AUTENTIFICARE PENTRU APLICAȚII DE DISPOZITIVE MOBILE"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
@@ -841,7 +842,7 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET SECURITY KEY CREDENTIALS"
-msgstr "RESETEAZĂ DATELE DE AUTENTIFICARE DE CHEIE DE SECURITATE"
+msgstr "RESETEAZĂ DATELE DE AUTENTIFICARE PENTRU CHEIA DE SECURITATE"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -1037,12 +1038,12 @@ msgid ""
 "Please note: Sharing sensitive documents may put you at risk, even when "
 "using Tor and SecureDrop."
 msgstr ""
-"Notă: Împărtășirea de documente sensibile te poate pune în pericol chiar și "
+"Notă: Partajarea de documente sensibile te poate supune la riscuri, chiar și "
 "când folosești Tor sau SecureDrop."
 
 #: source_templates/footer.html:10
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
-msgstr "SecureDrop este un proiect al Freedom of the Press Foundation."
+msgstr "SecureDrop este un proiect al Fundației Freedom of the Press."
 
 #: source_templates/generate.html:4
 msgid "Welcome"
@@ -1125,8 +1126,8 @@ msgstr "Prima trimitere"
 #: source_templates/index.html:47
 msgid "First time submitting to our SecureDrop? Start here."
 msgstr ""
-"Dacă este prima dată când trimiți ceva la serverul nostru de SecureDrop, "
-"începe de aici."
+"Este prima dată când trimiți ceva către serverul nostru SecureDrop? Începe "
+"de aici."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
@@ -1134,11 +1135,12 @@ msgstr "INCEPE"
 
 #: source_templates/index.html:59
 msgid "Return visit"
-msgstr "Am revenit"
+msgstr "Revenire"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
-msgstr "Ai deja un nume de cod? Verifică răspunsurile sau adaugă ceva nou."
+msgstr ""
+"Ai deja un nume de cod? Vezi dacă ai primit răspunsuri sau trimite ceva nou."
 
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
