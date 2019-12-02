@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-12-02 21:39+0000\n"
-"Last-Translator: Thalia Rahme <trahme@gmail.com>\n"
+"PO-Revision-Date: 2019-12-02 23:21+0000\n"
+"Last-Translator: erinm <erinm@riseup.net>\n"
 "Language-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ar/>\n"
 "Language: ar\n"
@@ -35,16 +35,15 @@ msgstr "تم الخروج من الحساب بسبب تغيير كلمة الس�
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
-msgstr "كلمة السر أو رمز الاستيثاق ذي المعاملين غير صحيح."
+msgstr "كلمة السر أو رمز الاستيثاق في خطوتين غير صحيح."
 
 #: journalist_app/account.py:49
-#, fuzzy
 msgid "Your two-factor credentials have been reset successfully."
-msgstr "لقد تم تصفير بيانات اعتماد المصادقة الثنائية بنجاح."
+msgstr "لقد تم تصفير بيانات اعتماد الاستيثاق في خطوتين بنجاح."
 
 #: journalist_app/account.py:53 journalist_app/admin.py:135
 msgid "There was a problem verifying the two-factor code. Please try again."
-msgstr "هناك مشكلة في التأكد  الرمز الثنائي. حاول مجدًّدا."
+msgstr "هناك مشكلة في التأكد  الرمز الاستيثاق في خطوتين. حاول مجدًّدا."
 
 #: journalist_app/admin.py:42
 msgid "Image updated."
@@ -67,9 +66,8 @@ msgstr ""
 "حدث عطل أثناء حفظ حساب المستخدم في قاعدة البيانات. الرجاء إبلاغ الإداري."
 
 #: journalist_app/admin.py:129
-#, fuzzy
 msgid "The two-factor code for user \"{user}\" was verified successfully."
-msgstr "لقد تم التحقق بنجاح من الرمز الثنائي للمستخدم \"{user}\"."
+msgstr "لقد تم التحقق بنجاح من رمز الاستيثاق في خطوتين للمستخدم \"{user}\"."
 
 #: journalist_app/admin.py:199 journalist_app/admin.py:207
 #: journalist_app/utils.py:279
@@ -172,16 +170,12 @@ msgstr[4] "ينبغي الانتظار {seconds} ثانية على الأقل ق
 msgstr[5] "ينبغي الانتظار {seconds} ثانية على الأقل قبل محاولة الولوج مجدّدا."
 
 #: journalist_app/utils.py:103
-#, fuzzy
-#| msgid ""
-#| "Please wait for a new code from your two-factor token or application "
-#| "before trying again."
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
 msgstr ""
-"انتظر حتّى يظهر رمز استيثاق جديد على التطبيق الهاتفي أو مفتاح الأمان قبل "
-"معاودة  المحاولة."
+"انتظر حتّى يظهر رمز الاستيثاق في خطوتين الجديد على التطبيق الهاتفي أو مفتاح "
+"المصادقة قبل معاودة  المحاولة."
 
 #: journalist_app/utils.py:124
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
@@ -306,21 +300,15 @@ msgid "Enable FreeOTP"
 msgstr "فعِّل FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:5
-#, fuzzy
-#| msgid ""
-#| "You're almost done! To finish resetting your two-factor authentication, "
-#| "follow the instructions below to set up FreeOTP. Once you've added the "
-#| "entry for your account in the app, enter one of the 6-digit codes from "
-#| "the app to confirm that two factor authentication is set up correctly."
 msgid ""
 "You're almost done! To finish resetting your two-factor authentication, "
 "follow the instructions below to set up FreeOTP. Once you've added the entry "
 "for your account in the app, enter one of the 6-digit codes from the app to "
 "confirm that two-factor authentication is set up correctly."
 msgstr ""
-"أنت على وشك الانتهاء! لإتمام تصفير الاستيثاق ذي المعاملين يجب اتبّاع "
-"التعليمات التالية لإعداد FreeOTP. بعد إضافة حسابك في التطبيق أدخل أحد الرموز "
-"المكونة من 6 أرقام للتأكد من سلامة الإعداد."
+"أنت على وشك الانتهاء! لإتمام تصفير الاستيثاق في خطوتين يجب اتبّاع التعليمات "
+"التالية لإعداد FreeOTP. بعد إضافة حسابك في التطبيق أدخل أحد الرموز المكونة "
+"من 6 أرقام للتأكد من سلامة الإعداد."
 
 #: journalist_templates/account_new_two_factor.html:8
 #: journalist_templates/admin_new_user_two_factor.html:9
@@ -345,13 +333,12 @@ msgid ""
 msgstr "الهاتف الآن في وضعية \"المسح الضوئي\". امسح الرمز التالي:"
 
 #: journalist_templates/account_new_two_factor.html:14
-#, fuzzy
 msgid ""
 "Can't scan the barcode? You can manually pair FreeOTP with your SecureDrop "
 "account by entering the following two-factor secret into the app:"
 msgstr ""
 "لم تنجح في قراءة ومسح الشفرة المخططة؟ حاول بنفسك المطابقة ووصل FreeOTP "
-"وحسابك على SecureDrop وذلك بتسجيل رمز التوثيق الثانئي التالي في التطبيث:"
+"وحسابك على SecureDrop وذلك بتسجيل رمز الاستيثاق في خطوتين التالي في التطبيث:"
 
 #: journalist_templates/account_new_two_factor.html:16
 msgid ""
@@ -479,13 +466,6 @@ msgid "Is using a YubiKey [HOTP]"
 msgstr "يستخدم [YubiKey [HOTP"
 
 #: journalist_templates/admin_new_user_two_factor.html:6
-#, fuzzy
-#| msgid ""
-#| "You're almost done! To finish adding this new user, have them follow the "
-#| "instructions below to set up two-factor authentication with FreeOTP. Once "
-#| "they've added an entry for this account in the app, have them enter one "
-#| "of the 6-digit codes from the app to confirm that two factor "
-#| "authentication is set up correctly."
 msgid ""
 "You're almost done! To finish adding this new user, have them follow the "
 "instructions below to set up two-factor authentication with FreeOTP. Once "
@@ -494,18 +474,18 @@ msgid ""
 "set up correctly."
 msgstr ""
 "قاربت على الانتهاء! لإتمام إضافة الحساب على المستخدم الجديد اتّباع التعليمات "
-"التالية لضبط الاستيثاق ذي المعاملين بواسطة FreeOTP.\n"
+"التالية لضبط الاستيثاق في خطوتين بواسطة FreeOTP.\n"
 "و&nbsp;بعد إضافة مدخلة لهذا الحساب في التطبيق يجب إدخال أحد الرموز المؤلّفة "
 "من 6 أرقام للتأكد من صحّة الإعداد."
 
 #: journalist_templates/admin_new_user_two_factor.html:15
-#, fuzzy
 msgid ""
 "Can't scan the barcode? You can manually pair FreeOTP with this account by "
 "entering the following two-factor secret into the app:"
 msgstr ""
 "هل عجزت عن مسح وقراءة شريط الرموز أي البار كود؟ بامكانك مطابقة وربط بنفسك "
-"FreeOTP مع هذا الحساب وذلك عبر تسجيل رمز التوثيق الثنائي التالي في التطبيق."
+"FreeOTP مع هذا الحساب وذلك عبر تسجيل رمز الاستيثاق في خطوتين التالي في "
+"التطبيق."
 
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid ""
@@ -702,17 +682,15 @@ msgstr "تغيير الشعار"
 
 #: journalist_templates/config.html:46
 msgid "Submission Preferences"
-msgstr "تفضيلات الإرسال أو التقديم"
+msgstr "تفضيلات الإرسال"
 
 #: journalist_templates/config.html:52
-#, fuzzy
 msgid ""
 "Prevent sources from uploading documents.  Sources will still be able to "
 "send messages."
 msgstr "منع المصادر من رفع وثائق. ما تزال المصادر قادرة على توجيه رسائل."
 
 #: journalist_templates/config.html:55
-#, fuzzy
 msgid "UPDATE SUBMISSION PREFERENCES"
 msgstr "تحديث تفضيلات الإرسال"
 
@@ -778,7 +756,7 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:56
 msgid "Please enter your current password and two-factor code."
-msgstr "أدخل كلمة السر الحالية و&nbsp;رمز الاستيثاق ذي المعاملين."
+msgstr "أدخل كلمة السر الحالية و&nbsp;رمز الاستيثاق في خطوتين."
 
 #: journalist_templates/edit_account.html:61
 msgid "Current Password"
@@ -798,7 +776,7 @@ msgstr "كلمة سرّك ستصير:"
 
 #: journalist_templates/edit_account.html:80
 msgid "Reset Two-Factor Authentication"
-msgstr "صفِّر وظيفة الاستيثاق ذي المعاملين"
+msgstr "صفِّر وظيفة الاستيثاق في خطوتين"
 
 #: journalist_templates/edit_account.html:83
 msgid ""
@@ -808,8 +786,8 @@ msgid ""
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
 "إذا فقد المستخدم بيانات الاستيثاق في خطوتين أو انكشفت فيمكن تصفيرها من هنا. "
-"<em> لفعل ذلك ينبغي أن يكون المستخدم حاضرًا و&nbsp;مستعدًّا بجهازه لضبط وظيفة "
-"الاستيثاق ذي المعاملين مجدّدًا و&nbsp;إلا لن يمكنه الولوج إلى الحساب."
+"<em> لفعل ذلك ينبغي أن يكون المستخدم حاضرًا و&nbsp;مستعدًّا بجهازه لضبط "
+"وظيفة الاستيثاق في خطوتين مجدّدًا و&nbsp;إلا لن يمكنه الولوج إلى الحساب."
 
 #: journalist_templates/edit_account.html:85
 msgid ""
@@ -818,21 +796,21 @@ msgid ""
 "this, make sure you are ready to set up your new device, otherwise you will "
 "be locked out of your account.</em>"
 msgstr ""
-"إذا فقدت بيانات الاستيثاق ذي المعاملين أو انكشفت فيمكنك تصفيرها هنا. "
-"<em>لفعل ذلك ينبغي عليك تحضير جهازك لضبطه و&nbsp;إلا فلن يمكنك الولوج إلى "
-"الحساب بعد الآن.</em>"
+"إذا فقدت بيانات الاستيثاق في خطوتين أو انكشفت فيمكنك تصفيرها هنا. <em>لفعل "
+"ذلك ينبغي عليك تحضير جهازك لضبطه و&nbsp;إلا فلن يمكنك الولوج إلى الحساب بعد "
+"الآن.</em>"
 
 #: journalist_templates/edit_account.html:87
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For security keys like the YubiKey, choose the second one."
 msgstr ""
-"‏لتصفير التوثيق الثنائي على تطبيقات الهاتف المحمول مثل FreeOTP اختَر الخيار "
-"الأول. أما لاستخدام مفاتيح المصادقة مثل YubiKey فاختَر الخيار الثاني."
+"‏لتصفير الاستيثاق في خطوتين على تطبيقات الهاتف المحمول مثل FreeOTP اختَر "
+"الخيار الأول. أما لاستخدام مفاتيح المصادقة مثل YubiKey فاختَر الخيار الثاني."
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
-msgstr "أعد ضبط التوثيق الثنائي للتطبيقات الهاتفية ك FreeOTP"
+msgstr "أعد ضبط الاستيثاق في خطوتين للتطبيقات الهاتفية ك FreeOTP"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET MOBILE APP CREDENTIALS"
@@ -840,11 +818,11 @@ msgstr "إعادة ضبط وتصفير بيانات اعتماد التطبيق�
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
-msgstr "تصفير  التوثيق الثنائي لمفاتيح الأمان ك يوبيكي  YubiKey"
+msgstr "تصفير الاستيثاق في خطوتين لمفاتيح المصادقة ك يوبيكي YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET SECURITY KEY CREDENTIALS"
-msgstr "إعادة ضبط وتصفير بيانات اعتماد مفاتيح الأمان"
+msgstr "إعادة ضبط وتصفير بيانات اعتماد مفاتيح المصادقة"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -917,7 +895,7 @@ msgstr "هل أنت متأكد من أنك تريد حذف المستخدم {use
 msgid ""
 "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr ""
-"هل أنت متأكد من أنّك تريد تصفير الاستيثاق ذي المعاملين للمستخدم {username}؟"
+"هل أنت متأكد من أنّك تريد تصفير الاستيثاق في خطوتين للمستخدم {username}؟"
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
