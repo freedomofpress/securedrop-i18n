@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-11-30 01:41+0000\n"
-"Last-Translator: Thalia Rahme <trahme@gmail.com>\n"
+"PO-Revision-Date: 2019-12-02 17:41+0000\n"
+"Last-Translator: erinm <erinm@riseup.net>\n"
 "Language-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ar/>\n"
 "Language: ar\n"
@@ -825,16 +825,11 @@ msgstr ""
 "الحساب بعد الآن.</em>"
 
 #: journalist_templates/edit_account.html:87
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as FreeOTP, "
-#| "choose the first option. For hardware tokens like the YubiKey, choose the "
-#| "second one."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For security keys like the YubiKey, choose the second one."
 msgstr ""
-"‏لتصفير  التوثيق الثنائي على تطبيقات الهاتف المحمول مثل FreeOTP اختَر الخيار "
+"‏لتصفير التوثيق الثنائي على تطبيقات الهاتف المحمول مثل FreeOTP اختَر الخيار "
 "الأول. أما لاستخدام مفاتيح المصادقة مثل YubiKey فاختَر الخيار الثاني."
 
 #: journalist_templates/edit_account.html:112
@@ -971,10 +966,8 @@ msgid "You must enter a message or choose a file to submit."
 msgstr "يجب إدخال نصّ رسالة أو اختيار ملف لإيداعه."
 
 #: source_app/main.py:148
-#, fuzzy
-#| msgid "You must enter a message or choose a file to submit."
 msgid "You must enter a message."
-msgstr "يجب إدخال نصّ رسالة أو اختيار ملف لإيداعه."
+msgstr "يجب إدخال نصّ رسالة."
 
 #: source_app/main.py:179
 msgid "Thanks! We received your message."
@@ -1220,10 +1213,8 @@ msgid "You can submit any kind of file, a message, or both."
 msgstr "يمكنك إيداع أي نوع من الملفات أو الرسائل، أو كليهما."
 
 #: source_templates/lookup.html:22
-#, fuzzy
-#| msgid "Submit Files or Messages"
 msgid "Submit Messages"
-msgstr "إيداع ملفات أو رسائل"
+msgstr "إيداع رسائل"
 
 #: source_templates/lookup.html:27
 msgid ""
@@ -1237,21 +1228,13 @@ msgstr ""
 "SecureDrop."
 
 #: source_templates/lookup.html:29
-#, fuzzy
-#| msgid ""
-#| "If you are already familiar with GPG, you can optionally encrypt your "
-#| "files and messages with our <a href=\"{url}\" class=\"text-link\">public "
-#| "key</a> before submission. Files are encrypted as they are received by "
-#| "SecureDrop."
 msgid ""
 "If you are already familiar with GPG, you can optionally encrypt your "
 "messages with our <a href=\"{url}\" class=\"text-link\">public key</a> "
 "before submission."
 msgstr ""
-"إذا كنت على دراية باستعمال GPG فيمكنك (اختياريا) تعمية الملفّات و&nbsp;"
-"الرسائل <a href=\"{url}\" class=\"text-link\">بمفتاحنا العلني</a> قبل "
-"إيداعها. و في كلّ الأحوال فإنّ الملفات تُعمّى تلقائيّا أثناء إيداعها عبر "
-"SecureDrop."
+"إذا كنت على دراية باستعمال GPG فيمكنك (اختياريا) تعمية الرسائل <a href=\""
+"{url}\" class=\"text-link\">بمفتاحنا العلني</a> قبل إيداعها."
 
 #: source_templates/lookup.html:31
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
