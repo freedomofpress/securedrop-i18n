@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-12-01 04:41+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2019-12-02 23:52+0000\n"
+"Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
 "Language-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sv/>\n"
 "Language: sv\n"
@@ -37,12 +37,13 @@ msgstr "Felaktigt lösenord eller tvåfaktorskod."
 
 #: journalist_app/account.py:49
 msgid "Your two-factor credentials have been reset successfully."
-msgstr "Dina tvåfaktoruppgifter har blivit återställd."
+msgstr "Din tvåfaktorsautentisering har blivit återställd."
 
 #: journalist_app/account.py:53 journalist_app/admin.py:135
 msgid "There was a problem verifying the two-factor code. Please try again."
 msgstr ""
-"Det uppstod ett fel med att bekräfta tvåfaktorkoden. Vänligen försök på nytt."
+"Det uppstod ett fel med att bekräfta tvåfaktorsautentisering. Vänligen "
+"försök igen."
 
 #: journalist_app/admin.py:42
 msgid "Image updated."
@@ -69,7 +70,7 @@ msgstr ""
 
 #: journalist_app/admin.py:129
 msgid "The two-factor code for user \"{user}\" was verified successfully."
-msgstr "Tvåfaktorkoden for användaren \"[user]\" bekräftades."
+msgstr "Tvåfaktorsautentisering för användaren \"{user}\" bekräftades."
 
 #: journalist_app/admin.py:199 journalist_app/admin.py:207
 #: journalist_app/utils.py:279
@@ -172,7 +173,7 @@ msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
 msgstr ""
-"Var snäll och vänta på en ny kod från din tvåfaktormobilprogram eller "
+"Var snäll och vänta på en ny kod från din tvåfaktor-app eller "
 "säkerhetsnyckel innan du försöker på nytt."
 
 #: journalist_app/utils.py:124
@@ -316,16 +317,16 @@ msgid ""
 "Can't scan the barcode? You can manually pair FreeOTP with your SecureDrop "
 "account by entering the following two-factor secret into the app:"
 msgstr ""
-"Kan ni inte skanna streckkoden? Ni kan manuellt koppla FreeOTP med ditt "
-"SecureDrop-konto vid att skriva in denna tvåfaktorhemmligheten i FreeOTP:"
+"Kan ni inte skanna koden? Du kan manuellt koppla FreeOTP med ditt SecureDrop-"
+"konto genom att skriva in denna tvåfaktorhemmligheten i FreeOTP:"
 
 #: journalist_templates/account_new_two_factor.html:16
 msgid ""
 "Once you have paired FreeOTP with this account, enter the 6-digit "
 "verification code below:"
 msgstr ""
-"När ni har kopplad til kontot med FreeOTP, ange sedan den sexsiffriga koden "
-"nedan:"
+"När du har kopplat FreeOTP till kontot, ange sedan den sexsiffriga "
+"verifieringskoden nedan:"
 
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:20
@@ -337,7 +338,7 @@ msgid ""
 "Once you have configured your YubiKey, enter the 6-digit verification code "
 "below:"
 msgstr ""
-"När du har konfigurerat din Yubikey, ange den sexsiffriga bekräftelseskoden "
+"När du har konfigurerat din Yubikey, ange den sexsiffriga verifieringskoden "
 "nedan:"
 
 #: journalist_templates/account_new_two_factor.html:23
@@ -453,7 +454,7 @@ msgid ""
 "the 6-digit codes from the app to confirm that two-factor authentication is "
 "set up correctly."
 msgstr ""
-"Det är strax klart! För att avsluta användarkonfigureringen, följ "
+"Du är nästan klar! För att avsluta användarkonfigureringen, följ "
 "instruktionerna nedan för att sätta upp tvåfaktorsautentisering med FreeOTP. "
 "När det här kontot har lagts till i appen, mata in den sexsiffriga koden "
 "från appen för att bekräfta tvåfaktorsautentiseringen."
@@ -463,15 +464,14 @@ msgid ""
 "Can't scan the barcode? You can manually pair FreeOTP with this account by "
 "entering the following two-factor secret into the app:"
 msgstr ""
-"Kan ni inte skanna streckkoden?  Ni kan manuellt koppla FreeOTP med denna "
-"konton vid at skriva in denna tvåfaktorhemligheten i FreeOTP:"
+"Kan du inte skanna koden?  Du kan manuellt koppla FreeOTP till detta konto "
+"genom att skriva in denna tvåfaktorhemligheten i FreeOTP:"
 
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid ""
 "Once you have paired FreeOTP with this account, enter the 6-digit code below:"
 msgstr ""
-"När ni har kopplad kontot med FreeOTP, ange sedan den sexsiffriga koden "
-"nedan:"
+"När du har kopplad kontot med FreeOTP, ange den sexsiffriga koden nedan:"
 
 #: journalist_templates/admin_new_user_two_factor.html:21
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
@@ -668,12 +668,12 @@ msgid ""
 "Prevent sources from uploading documents.  Sources will still be able to "
 "send messages."
 msgstr ""
-"Förhindra källor från att ladda upp dokument, men tillåt dom att skicka "
-"meddelande."
+"Förhindra källor från att ladda upp dokument.  Källor kommer fortfarande "
+"kunna skicka meddelanden."
 
 #: journalist_templates/config.html:55
 msgid "UPDATE SUBMISSION PREFERENCES"
-msgstr "Uppdatera Inlämningsinställningar"
+msgstr "UPPDATERA INLÄMNINGSINSTÄLLNINGAR"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -796,7 +796,7 @@ msgstr "Återställ tvåfaktorsautentisering för mobilappar, som t.ex FreeOTP"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET MOBILE APP CREDENTIALS"
-msgstr "Återställ mobilprogramsuppgifter"
+msgstr "ÅTERSTÄLL AUTHENTISERINGS-APP"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
@@ -804,7 +804,7 @@ msgstr "Nollställ tvåfaktorsautentisering för säkerhetsnyckler som t.ex Yubi
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET SECURITY KEY CREDENTIALS"
-msgstr "Återställ säkerhetsnyckelsuppgifter"
+msgstr "ÅTERSTÄLL SÄKERHETSNYCKELSUPPGIFTER"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
