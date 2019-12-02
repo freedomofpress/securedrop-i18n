@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-12-01 04:41+0000\n"
-"Last-Translator: H.-L. Lee <hsulei.lee@gmail.com>\n"
+"PO-Revision-Date: 2019-12-02 01:41+0000\n"
+"Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.securedrop.org/"
 "projects/securedrop/securedrop/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -38,7 +38,7 @@ msgstr "密碼或是雙因素驗證認證碼不正確。"
 
 #: journalist_app/account.py:49
 msgid "Your two-factor credentials have been reset successfully."
-msgstr "已成功重設您的雙重驗證憑證。"
+msgstr "已成功重設您的雙因子驗證。"
 
 #: journalist_app/account.py:53 journalist_app/admin.py:135
 msgid "There was a problem verifying the two-factor code. Please try again."
@@ -728,7 +728,7 @@ msgstr ""
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For security keys like the YubiKey, choose the second one."
-msgstr "重新設定手機應用雙重驗證例如 FreeOPT，請選擇第一個選項。如果需要 YubiKey 一類的安全密鑰，請選擇第二個選項。"
+msgstr "重新設定手機應用雙重驗證軟體例如 FreeOPT，請選擇第一個選項。如果需要 YubiKey 一類的安全密鑰，請選擇第二個選項。"
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
