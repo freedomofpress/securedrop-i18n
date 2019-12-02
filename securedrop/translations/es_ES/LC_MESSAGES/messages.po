@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2019-12-02 00:05+0000\n"
-"Last-Translator: Daniel Arauz <danarauz@gmail.com>\n"
+"Last-Translator: Freddy Martinez <freddymartinez9@gmail.com>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
 "Language: es_ES\n"
@@ -482,13 +482,11 @@ msgstr ""
 "cuenta ingresando el siguiente secreto de dos factores en la aplicación:"
 
 #: journalist_templates/admin_new_user_two_factor.html:18
-#, fuzzy
-#| msgid "Once you have scanned the barcode, enter the 6-digit code below:"
 msgid ""
 "Once you have paired FreeOTP with this account, enter the 6-digit code below:"
 msgstr ""
-"Una vez que haya escaneado el código de barras, ingrese el código de 6 "
-"dígitos abajo:"
+"Una vez que conecte FreeOTP con esta cuenta, ingrese el código de 6 dígitos "
+"abajo:"
 
 #: journalist_templates/admin_new_user_two_factor.html:21
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
