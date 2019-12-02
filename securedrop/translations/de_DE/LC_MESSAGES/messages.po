@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-11-30 22:41+0000\n"
-"Last-Translator: Robin Schubert <robin.schubert@gmx.de>\n"
+"PO-Revision-Date: 2019-12-02 23:45+0000\n"
+"Last-Translator: Erik Moeller <eloquence@gmail.com>\n"
 "Language-Team: German <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/de/>\n"
 "Language: de_DE\n"
@@ -33,12 +33,12 @@ msgstr "Falsches Passwort oder Zwei-Faktor-Authentifizierungstoken."
 
 #: journalist_app/account.py:49
 msgid "Your two-factor credentials have been reset successfully."
-msgstr "Ihre Zwei-Faktor Anmeldedaten wurden erfolgreich zurückgesetzt."
+msgstr "Ihre Zwei-Faktor-Anmeldedaten wurden erfolgreich zurückgesetzt."
 
 #: journalist_app/account.py:53 journalist_app/admin.py:135
 msgid "There was a problem verifying the two-factor code. Please try again."
 msgstr ""
-"Es gab einen Fehler beim Verifizieren des Zwei-Faktor Codes. Bitte versuchen "
+"Es gab einen Fehler beim Verifizieren des Zwei-Faktor-Codes. Bitte versuchen "
 "Sie es erneut."
 
 #: journalist_app/admin.py:42
@@ -67,7 +67,7 @@ msgstr ""
 #: journalist_app/admin.py:129
 msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr ""
-"Der Zwei-Faktor Code für Benutzer \"{user}\" wurde erfolgreich überprüft."
+"Der Zwei-Faktor-Code für Benutzer \"{user}\" wurde erfolgreich überprüft."
 
 #: journalist_app/admin.py:199 journalist_app/admin.py:207
 #: journalist_app/utils.py:279
@@ -176,7 +176,7 @@ msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
 msgstr ""
-"Bitte warten Sie auf einen neuen Code von Ihrer Zwei-Faktor mobilen "
+"Bitte warten Sie auf einen neuen Code von Ihrer mobilen Zwei-Faktor-"
 "Anwendung oder Ihrem Security-Token, bevor Sie es erneut versuchen."
 
 #: journalist_app/utils.py:124
@@ -325,7 +325,7 @@ msgid ""
 "account by entering the following two-factor secret into the app:"
 msgstr ""
 "Können Sie den Barcode nicht scannen? Um FreeOTP manuell mit Ihrem "
-"SecureDrop Konto zu verbinden, geben Sie den folgenden Zwei-Faktor Schlüssel "
+"SecureDrop-Konto zu verbinden, geben Sie den folgenden Zwei-Faktor-Schlüssel "
 "in die App ein:"
 
 #: journalist_templates/account_new_two_factor.html:16
@@ -475,7 +475,7 @@ msgid ""
 "entering the following two-factor secret into the app:"
 msgstr ""
 "Können Sie den Barcode nicht scannen? Um FreeOTP manuell mit diesem Konto zu "
-"verbinden, geben Sie den folgenden Zwei-Faktor Schlüssel in die App ein:"
+"verbinden, geben Sie den folgenden Zwei-Faktor-Schlüssel in die App ein:"
 
 #: journalist_templates/admin_new_user_two_factor.html:18
 msgid ""
@@ -688,7 +688,7 @@ msgid ""
 "Prevent sources from uploading documents.  Sources will still be able to "
 "send messages."
 msgstr ""
-"Quellen am Hochladen von Dokumenten hindern.  Quellen werden immernoch "
+"Quellen am Hochladen von Dokumenten hindern.  Quellen werden weiterhin "
 "Nachrichten senden können."
 
 #: journalist_templates/config.html:55
@@ -823,7 +823,7 @@ msgstr "MOBILE APP ZUGANGSDATEN ZURÜCKSETZEN"
 #: journalist_templates/edit_account.html:113
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
 msgstr ""
-"Zwei-Faktor Authentifizierung für Security-Token wie Yubikey zurücksetzen"
+"Zwei-Faktor-Authentifizierung für Security-Token wie YubiKey zurücksetzen"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET SECURITY KEY CREDENTIALS"
@@ -1211,7 +1211,7 @@ msgstr "Sie können jede Art von Datei, eine Nachricht oder beides versenden."
 
 #: source_templates/lookup.html:22
 msgid "Submit Messages"
-msgstr "Dateien versenden"
+msgstr "Nachrichten versenden"
 
 #: source_templates/lookup.html:27
 msgid ""
@@ -1231,7 +1231,7 @@ msgid ""
 "before submission."
 msgstr ""
 "Wenn Sie bereits mit GPG vertraut sind, können Sie Ihre Nachrichten vor dem "
-"Versenden zusätzlich mit unserem<a href=\"{url}\" class=\"text-link\">"
+"Versenden zusätzlich mit unserem <a href=\"{url}\" class=\"text-link\">"
 "öffentlichen Schlüssel</a> verschlüsseln."
 
 #: source_templates/lookup.html:31
