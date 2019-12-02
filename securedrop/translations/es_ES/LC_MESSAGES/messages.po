@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-12-02 00:05+0000\n"
+"PO-Revision-Date: 2019-12-02 17:41+0000\n"
 "Last-Translator: Freddy Martinez <freddymartinez9@gmail.com>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
@@ -812,7 +812,7 @@ msgid ""
 "the first option. For security keys like the YubiKey, choose the second one."
 msgstr ""
 "Para restablecer la autenticación de dos factores para aplicaciones móviles "
-"como FreeOTP, elija la primera opción. Para tokens de seguridad como el "
+"como FreeOTP, elija la primera opción. Para llaves de seguridad como el "
 "YubiKey, elija la segunda."
 
 #: journalist_templates/edit_account.html:112
@@ -828,7 +828,7 @@ msgstr "RESTABLECER CREDENCIALES DE APLICACIONES MÓVILES"
 #: journalist_templates/edit_account.html:113
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
 msgstr ""
-"Restablecer autenticación de dos factores para tokens de seguridad como "
+"Restablecer autenticación de dos factores para llaves de seguridad como "
 "YubiKey"
 
 #: journalist_templates/edit_account.html:113
