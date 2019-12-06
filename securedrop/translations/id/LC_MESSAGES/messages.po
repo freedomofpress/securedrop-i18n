@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-11-25 18:41+0000\n"
+"PO-Revision-Date: 2019-12-06 09:41+0000\n"
 "Last-Translator: Loved Jackal <VengefulJackal@protonmail.com>\n"
 "Language-Team: Indonesian <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/id/>\n"
@@ -37,7 +37,7 @@ msgstr "Kata sandi atau kode dua faktor salah."
 
 #: journalist_app/account.py:49
 msgid "Your two-factor credentials have been reset successfully."
-msgstr ""
+msgstr "Kredensial dua-faktor Anda telah berhasil diatur ulang."
 
 #: journalist_app/account.py:53 journalist_app/admin.py:135
 #, fuzzy
@@ -49,10 +49,8 @@ msgstr ""
 "Pembuatan kata sandi otomatis gagal. Pengguna tidak terbuat. Mohon coba lagi."
 
 #: journalist_app/admin.py:42
-#, fuzzy
-#| msgid "Account updated."
 msgid "Image updated."
-msgstr "Akun telah dimutakhirkan."
+msgstr "Gambar diperbarui."
 
 #: journalist_app/admin.py:91
 msgid ""
@@ -78,12 +76,12 @@ msgstr ""
 
 #: journalist_app/admin.py:129
 msgid "The two-factor code for user \"{user}\" was verified successfully."
-msgstr ""
+msgstr "Kode dua faktor untuk pengguna \"{user}\" telah berhasil diverifikasi."
 
 #: journalist_app/admin.py:199 journalist_app/admin.py:207
 #: journalist_app/utils.py:279
 msgid "Name not updated: {}"
-msgstr ""
+msgstr "Nama tidak diperbarui: {}"
 
 #: journalist_app/admin.py:248
 msgid "Deleted user '{user}'"
