@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-12-07 08:41+0000\n"
+"PO-Revision-Date: 2019-12-07 14:41+0000\n"
 "Last-Translator: ff98sha <ff98sha@163.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/zh_Hans/>\n"
@@ -25,7 +25,7 @@ msgstr "{time} 之前"
 
 #: journalist_app/__init__.py:88 journalist_app/__init__.py:137
 msgid "You have been logged out due to inactivity"
-msgstr "您因闲置过久而被登出"
+msgstr "您因过久未活动而被登出"
 
 #: journalist_app/__init__.py:146
 msgid "You have been logged out due to password change"
@@ -98,7 +98,7 @@ msgstr "HOTP 密码长度为 40 个字符 - 您已输入 {num_chars} 个字符�
 #: journalist_app/forms.py:30
 msgid ""
 "Field must be at least {min_chars} characters long but only got {num_chars}."
-msgstr "该字段需要至少  {min_chars} 个字符，目前仅获得  {num_chars} 个字符。"
+msgstr "该字段需要至少  {min_chars} 个字符，目前仅有  {num_chars} 个字符。"
 
 #: journalist_app/forms.py:37
 msgid "Field can not be more than {max_chars} characters."
@@ -139,11 +139,11 @@ msgstr "未选择要删除的集合。"
 
 #: journalist_app/main.py:183
 msgid "The source '{original_name}' has been renamed to '{new_name}'"
-msgstr "源 '{original_name}' 已被命名为 '{new_name}'"
+msgstr "线人 '{original_name}' 已被命名为 '{new_name}'"
 
 #: journalist_app/main.py:198
 msgid "No unread submissions for this source."
-msgstr "该源中无未读内容。"
+msgstr "该线人无未读内容。"
 
 #: journalist_app/utils.py:53
 msgid "Account updated."
@@ -320,7 +320,7 @@ msgstr "提交"
 
 #: journalist_templates/admin.html:3
 msgid "Admin Interface"
-msgstr "管理员页面"
+msgstr "管理员界面"
 
 #: journalist_templates/admin.html:6
 #: journalist_templates/admin_add_user.html:74
@@ -360,7 +360,7 @@ msgstr "删除用户 {username}"
 
 #: journalist_templates/admin.html:35
 msgid "never"
-msgstr "从来不"
+msgstr "从未"
 
 #: journalist_templates/admin.html:42
 msgid "No users to display"
@@ -387,13 +387,13 @@ msgstr "用户名需区分大小写"
 #: journalist_templates/edit_account.html:16
 #: journalist_templates/edit_account.html:36
 msgid "First name"
-msgstr "姓"
+msgstr "名"
 
 #: journalist_templates/admin_add_user.html:42
 #: journalist_templates/edit_account.html:19
 #: journalist_templates/edit_account.html:39
 msgid "Last name"
-msgstr "名"
+msgstr "姓"
 
 #: journalist_templates/admin_add_user.html:52
 msgid "First name and last name are optional"
@@ -464,7 +464,7 @@ msgstr "由 <em>SecureDrop</em> 提供支持。"
 
 #: journalist_templates/col.html:10
 msgid "All Sources"
-msgstr "所有源"
+msgstr "所有线人"
 
 #: journalist_templates/col.html:13
 msgid ""
@@ -491,7 +491,7 @@ msgstr "确认"
 msgid ""
 "The documents are stored encrypted for security. To read them, you will need "
 "to decrypt them using GPG."
-msgstr "安全起见，所有文件都经过加密存储。如果想要阅读他们，必需使用GPG解密。"
+msgstr "安全起见，所有文件都经过加密存储。如果想要阅读，必须使用GPG解密。"
 
 #: journalist_templates/col.html:26
 msgid "Download Selected"
@@ -520,7 +520,7 @@ msgstr "已上传的文件"
 
 #: journalist_templates/col.html:60
 msgid "Message"
-msgstr "讯息"
+msgstr "消息"
 
 #: journalist_templates/col.html:70 journalist_templates/col.html:130
 #: journalist_templates/index.html:46
@@ -546,7 +546,7 @@ msgstr "您可以撰写一个私密的回复给文件的提供者："
 
 #: journalist_templates/col.html:102
 msgid "You've flagged this source for reply."
-msgstr "您已经把这名线人标记为待恢复。"
+msgstr "您已经把这名线人标记为待回复。"
 
 #: journalist_templates/col.html:103
 msgid ""
@@ -560,16 +560,14 @@ msgstr "如果要回复此名线人，请点击下方。"
 
 #: journalist_templates/col.html:109
 msgid "FLAG THIS SOURCE FOR REPLY"
-msgstr "对此线人加以标注，已进行回复"
+msgstr "标记此线人为待回复"
 
 #: journalist_templates/col.html:114
 msgid ""
 "Click below to delete this source's collection. <em>Warning: If you do this, "
 "the files seen here will be unrecoverable and the source will no longer be "
 "able to login using their previous codename.</em>"
-msgstr ""
-"点击下方来删除这名线人的文件。<em>警告：如果你这么做，这里看到的档案无法恢"
-"复，且线人将无法用之前的代号登陆。</em>"
+msgstr "点击下方来删除这名线人的文件。<em>警告：如果你这么做，这里看到的文件无法恢复，且线人将无法用之前的代号登陆。</em>"
 
 #: journalist_templates/col.html:122
 msgid "DELETE SOURCE AND SUBMISSIONS"
@@ -581,7 +579,7 @@ msgstr "确认要删除这些文件？"
 
 #: journalist_templates/config.html:7
 msgid "Instance Configuration"
-msgstr "架设主机设定"
+msgstr "实例设置"
 
 #: journalist_templates/config.html:9
 msgid "Alerts"
@@ -598,7 +596,7 @@ msgstr "发送测试OSSEC警报"
 #: journalist_templates/config.html:21 source_templates/base.html:20
 #: source_templates/index.html:29
 msgid "Logo Image"
-msgstr "商标图片"
+msgstr "图标"
 
 #: journalist_templates/config.html:23
 msgid ""
@@ -611,21 +609,21 @@ msgstr "建议最佳尺寸：500px * 450px"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
-msgstr "更新商标"
+msgstr "更新图标"
 
 #: journalist_templates/config.html:46
 msgid "Submission Preferences"
-msgstr "提交偏好设置"
+msgstr "提交设置"
 
 #: journalist_templates/config.html:52
 msgid ""
 "Prevent sources from uploading documents.  Sources will still be able to "
 "send messages."
-msgstr "阻止线人上传文档，其将仍可发送信息。"
+msgstr "阻止线人上传文件，其将仍可发送信息。"
 
 #: journalist_templates/config.html:55
 msgid "UPDATE SUBMISSION PREFERENCES"
-msgstr "更新提交偏好设置"
+msgstr "更新提交设置"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -633,7 +631,7 @@ msgid ""
 msgid_plural ""
 "The following {files} files have been selected for <strong>permanent "
 "deletion</strong>:"
-msgstr[0] "下列选中的文件将被<strong>永久删除</strong>："
+msgstr[0] "下列选中的 {files} 文件将被<strong>永久删除</strong>："
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
@@ -662,7 +660,7 @@ msgstr "编辑你的账户"
 
 #: journalist_templates/edit_account.html:31
 msgid "Change Name"
-msgstr "更改名称"
+msgstr "更改名字"
 
 #: journalist_templates/edit_account.html:47
 #: journalist_templates/edit_account.html:75
@@ -792,7 +790,7 @@ msgstr "无已提交的文档！"
 
 #: journalist_templates/js-strings.html:3
 msgid "filter by codename"
-msgstr "按研发代码筛选"
+msgstr "按代码筛选"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
