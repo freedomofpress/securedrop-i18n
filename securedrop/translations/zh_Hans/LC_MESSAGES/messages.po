@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-11-30 01:41+0000\n"
-"Last-Translator: Forbidden <cptbl00dra1n@gmail.com>\n"
+"PO-Revision-Date: 2019-12-07 08:41+0000\n"
+"Last-Translator: ff98sha <ff98sha@163.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -106,7 +106,7 @@ msgstr "字段长度需小于 {max_chars} 个字符。"
 
 #: journalist_app/forms.py:42 source_app/forms.py:11
 msgid "This field is required."
-msgstr "这是必填字段。"
+msgstr "这是必填项。"
 
 #: journalist_app/forms.py:61
 msgid "You cannot send an empty reply."
@@ -1255,7 +1255,7 @@ msgstr "若您已熟知 GPG 加密软件，您可自行加密。请参阅："
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. The public key is a text file "
 "with the extension <code>.asc</code>"
-msgstr "<a href=\"{url}\">下载</a>公钥。公钥文件为扩展名是 <code>.asc</code> 的文本文件。"
+msgstr "<a href=\"{url}\">下载</a>此公钥。公钥文件为扩展名是 <code>.asc</code> 的文本文件"
 
 #: source_templates/why-journalist-key.html:8
 msgid "Import it into your GPG keyring."
