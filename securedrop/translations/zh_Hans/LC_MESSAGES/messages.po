@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-12-07 14:41+0000\n"
+"PO-Revision-Date: 2019-12-08 05:41+0000\n"
 "Last-Translator: ff98sha <ff98sha@163.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/zh_Hans/>\n"
@@ -93,7 +93,7 @@ msgstr "此页面仅供管理员访问。"
 
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
-msgstr "HOTP 密码长度为 40 个字符 - 您已输入 {num_chars} 个字符。"
+msgstr "HOTP 密码长度为40个字符 - 您已输入 {num_chars} 个字符。"
 
 #: journalist_app/forms.py:30
 msgid ""
@@ -790,7 +790,7 @@ msgstr "无已提交的文档！"
 
 #: journalist_templates/js-strings.html:3
 msgid "filter by codename"
-msgstr "按代码筛选"
+msgstr "按代号筛选"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
@@ -831,7 +831,7 @@ msgid ""
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href="
 "\"{url}\">Why is this dangerous?</a>"
 msgstr ""
-"<strong>警告:&nbsp;</strong> 您看似正使用 "
+"<strong>警告:&nbsp;</strong> 您似乎正使用 "
 "Tor2Web。此服务<strong>&nbsp;无法&nbsp;</strong>隐藏您的行踪。<a href=\"{url}\""
 ">为何存在风险？</a>"
 
@@ -1035,7 +1035,7 @@ msgstr "输入代码"
 
 #: source_templates/login.html:12
 msgid "Enter your codename"
-msgstr "输入您的代码"
+msgstr "输入您的代号"
 
 #: source_templates/login.html:26 source_templates/lookup.html:61
 msgid "CANCEL"
@@ -1151,7 +1151,7 @@ msgstr "当前没有回复。"
 
 #: source_templates/lookup.html:116
 msgid "Remember, your codename is:"
-msgstr "请牢记您的代码："
+msgstr "请牢记您的代号："
 
 #: source_templates/lookup.html:117
 msgid "Show"
