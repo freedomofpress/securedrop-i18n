@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-12-20 00:41+0000\n"
-"Last-Translator: Hubert P <hubertpl877@gmail.com>\n"
+"PO-Revision-Date: 2020-01-03 18:42+0000\n"
+"Last-Translator: Ewelina Wilkosz <ewe@praqma.net>\n"
 "Language-Team: Polish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/pl/>\n"
 "Language: pl\n"
@@ -81,7 +81,7 @@ msgstr ""
 #: journalist_app/admin.py:199 journalist_app/admin.py:207
 #: journalist_app/utils.py:279
 msgid "Name not updated: {}"
-msgstr ""
+msgstr "Imię/nazwisko nieuaktualnione: {}"
 
 #: journalist_app/admin.py:248
 msgid "Deleted user '{user}'"
@@ -89,7 +89,7 @@ msgstr "Usunięty użytkownik '{user}'"
 
 #: journalist_app/admin.py:278
 msgid "Test alert sent. Please check your email."
-msgstr ""
+msgstr "Testowy alert wysłany. Sprawdź swoją skrzynkę mailową."
 
 #: journalist_app/col.py:45
 msgid "{source_name}'s collection deleted"
@@ -118,7 +118,7 @@ msgstr "Pole musi mieć co najmniej {min_chars} znaków, a ma tylko {num_chars}.
 
 #: journalist_app/forms.py:37
 msgid "Field can not be more than {max_chars} characters."
-msgstr ""
+msgstr "Pole nie może być dłuższe niż {max_chars} znaków."
 
 #: journalist_app/forms.py:42 source_app/forms.py:11
 msgid "This field is required."
@@ -136,7 +136,7 @@ msgstr "To pole jest wymagane."
 
 #: journalist_app/forms.py:75
 msgid "You can only upload PNG image files."
-msgstr ""
+msgstr "Możesz przesłać jedynie pliki PNG."
 
 #: journalist_app/main.py:122 journalist_app/utils.py:46
 #: journalist_app/utils.py:136
@@ -217,7 +217,7 @@ msgstr[2] "{num} zbiory usunięte"
 
 #: journalist_app/utils.py:277
 msgid "Name updated."
-msgstr ""
+msgstr "Imię/nazwisko uaktualnione."
 
 #: journalist_app/utils.py:286
 msgid "You submitted a bad password! Password not changed."
@@ -246,7 +246,7 @@ msgstr "Brak nowych zgłoszeń w wybranych zbiorach."
 
 #: journalist_templates/_confirmation_modal.html:4
 msgid "Close"
-msgstr ""
+msgstr "Zamknij"
 
 #: journalist_templates/_confirmation_modal.html:7
 #: journalist_templates/col.html:15 source_templates/lookup.html:88
@@ -256,25 +256,23 @@ msgstr "Anuluj"
 #: journalist_templates/_source_row.html:23
 msgid "1 doc"
 msgid_plural "{doc_num} docs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "1 dokument"
+msgstr[1] "{doc_num} dokumenty"
+msgstr[2] "{doc_num} dokumentów"
 
 #: journalist_templates/_source_row.html:24
-#, fuzzy
-#| msgid "Message"
 msgid "1 message"
 msgid_plural "{msg_num} messages"
-msgstr[0] "Wiadomość"
-msgstr[1] "Wiadomość"
-msgstr[2] "Wiadomość"
+msgstr[0] "1 wiadomość"
+msgstr[1] "{msg_num} wiadomości"
+msgstr[2] "{msg_num} wiadomości"
 
 #: journalist_templates/_source_row.html:27
 msgid "1 unread"
 msgid_plural "{num_unread} unread"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "1 nieprzeczytany(a)"
+msgstr[1] "{num_unread} nieprzeczytane"
+msgstr[2] "{num_unread} nieprzeczytanych"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -296,7 +294,7 @@ msgstr "DALEJ"
 #: journalist_templates/account_new_two_factor.html:4
 #: journalist_templates/admin_new_user_two_factor.html:5
 msgid "Enable FreeOTP"
-msgstr ""
+msgstr "Włącz FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:5
 #, fuzzy
@@ -325,12 +323,12 @@ msgstr "Zainstaluj FreeOTP w Twoim telefonie"
 #: journalist_templates/account_new_two_factor.html:9
 #: journalist_templates/admin_new_user_two_factor.html:10
 msgid "Open the FreeOTP app"
-msgstr ""
+msgstr "Uruchom aplikację FreeOTP"
 
 #: journalist_templates/account_new_two_factor.html:10
 #: journalist_templates/admin_new_user_two_factor.html:11
 msgid "Tap the QR code symbol at the top"
-msgstr ""
+msgstr "Stuknij symbol kodu QR na górze"
 
 #: journalist_templates/account_new_two_factor.html:11
 #: journalist_templates/admin_new_user_two_factor.html:12
@@ -346,14 +344,17 @@ msgid ""
 "Can't scan the barcode? You can manually pair FreeOTP with your SecureDrop "
 "account by entering the following two-factor secret into the app:"
 msgstr ""
+"Problem z zeskanowaniem kodu? Możesz ręcznie sparować FreeOTP ze swoim "
+"kontem SecureDrop poprzez wprowadzenie poniższego, dwuskładnikowego sekretu "
+"do aplikacji:"
 
 #: journalist_templates/account_new_two_factor.html:16
-#, fuzzy
-#| msgid "Once you have scanned the barcode, enter the 6-digit code below:"
 msgid ""
 "Once you have paired FreeOTP with this account, enter the 6-digit "
 "verification code below:"
-msgstr "Po zeskanowaniu kodu kreskowego, wprowadź poniższy 6-cyfrowy kod:"
+msgstr ""
+"Po sparowaniu FreeOTP z tym kontem, wprowadź poniższy 6-cyfrowy kod "
+"weryfikacyjny:"
 
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:20
@@ -361,12 +362,11 @@ msgid "Enable YubiKey (OATH-HOTP)"
 msgstr "Włącz YubiKey (OATH-HOTP)"
 
 #: journalist_templates/account_new_two_factor.html:19
-#, fuzzy
-#| msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgid ""
 "Once you have configured your YubiKey, enter the 6-digit verification code "
 "below:"
-msgstr "Po skonfigurowaniu YubiKey, wprowadź poniższy 6-cyfrowy kod:"
+msgstr ""
+"Po skonfigurowaniu YubiKey, wprowadź poniższy 6-cyfrowy kod weryfikacyjny:"
 
 #: journalist_templates/account_new_two_factor.html:23
 #: journalist_templates/admin_new_user_two_factor.html:25
