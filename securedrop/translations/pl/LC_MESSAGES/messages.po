@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-01-03 18:42+0000\n"
+"PO-Revision-Date: 2020-01-05 20:42+0000\n"
 "Last-Translator: Ewelina Wilkosz <ewe@praqma.net>\n"
 "Language-Team: Polish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/pl/>\n"
@@ -38,7 +38,7 @@ msgstr "Nieprawidłowe hasło lub kod dwuetapowy."
 
 #: journalist_app/account.py:49
 msgid "Your two-factor credentials have been reset successfully."
-msgstr "Twoje uwierzytelnienie dwuskładnikowe zostało pomyślnie zresetowane."
+msgstr "Twoje uwierzytelnienie dwuetapowane zostało pomyślnie zresetowane."
 
 #: journalist_app/account.py:53 journalist_app/admin.py:135
 msgid "There was a problem verifying the two-factor code. Please try again."
@@ -438,27 +438,27 @@ msgstr "Powrót do interfejsu administracyjnego"
 
 #: journalist_templates/admin_add_user.html:24
 msgid "Username can contain spaces"
-msgstr ""
+msgstr "Nazwa użytkownika może zawierać spacje"
 
 #: journalist_templates/admin_add_user.html:25
 msgid "Username is case-sensitive"
-msgstr ""
+msgstr "Wielkość liter w nazwie użytkownika ma znaczenie"
 
 #: journalist_templates/admin_add_user.html:32
 #: journalist_templates/edit_account.html:16
 #: journalist_templates/edit_account.html:36
 msgid "First name"
-msgstr ""
+msgstr "Imię"
 
 #: journalist_templates/admin_add_user.html:42
 #: journalist_templates/edit_account.html:19
 #: journalist_templates/edit_account.html:39
 msgid "Last name"
-msgstr ""
+msgstr "Nazwisko"
 
 #: journalist_templates/admin_add_user.html:52
 msgid "First name and last name are optional"
-msgstr ""
+msgstr "Imię i nazwisko są opcjonalne"
 
 #: journalist_templates/admin_add_user.html:56
 msgid "The user's password will be:"
@@ -501,13 +501,15 @@ msgid ""
 "Can't scan the barcode? You can manually pair FreeOTP with this account by "
 "entering the following two-factor secret into the app:"
 msgstr ""
+"Problem z zeskanowaniem kodu? Możesz ręcznie sparować FreeOTP z tym kontem "
+"poprzez wprowadzenie poniższego, dwuetapowego sekretu do aplikacji:"
 
 #: journalist_templates/admin_new_user_two_factor.html:18
-#, fuzzy
-#| msgid "Once you have scanned the barcode, enter the 6-digit code below:"
 msgid ""
 "Once you have paired FreeOTP with this account, enter the 6-digit code below:"
-msgstr "Po zeskanowaniu kodu kreskowego, wprowadź poniższy 6-cyfrowy kod:"
+msgstr ""
+"Po sparowaniu FreeOTP z tym kontem, wprowadź poniższy 6-cyfrowy kod "
+"weryfikacyjny:"
 
 #: journalist_templates/admin_new_user_two_factor.html:21
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
@@ -586,13 +588,11 @@ msgstr "Odpisz"
 
 #: journalist_templates/col.html:41 journalist_templates/col.html:48
 msgid "Read"
-msgstr ""
+msgstr "Przeczytane"
 
 #: journalist_templates/col.html:45
-#, fuzzy
-#| msgid "Select Unread"
 msgid "Unread"
-msgstr "Zaznacz Nieczytane"
+msgstr "Nieprzeczytane"
 
 #: journalist_templates/col.html:56
 msgid "Uploaded Document"
@@ -605,7 +605,7 @@ msgstr "Wiadomość"
 #: journalist_templates/col.html:70 journalist_templates/col.html:130
 #: journalist_templates/index.html:46
 msgid "Delete Confirmation"
-msgstr ""
+msgstr "Potwierdzenie Usunięcia"
 
 #: journalist_templates/col.html:71
 msgid "Are you sure you want to delete the selected documents?"
@@ -657,7 +657,7 @@ msgstr ""
 
 #: journalist_templates/col.html:122
 msgid "DELETE SOURCE AND SUBMISSIONS"
-msgstr ""
+msgstr "USUŃ ŹRÓDŁO I ZGŁOSZENIA"
 
 #: journalist_templates/col.html:131
 msgid "Are you sure you want to delete this collection?"
@@ -674,10 +674,12 @@ msgstr "Ostrzeżenia"
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr ""
+"Wyślij zaszyfrowany email aby zweryfikować czy ostrzeżenia OSSEC działają "
+"poprawnie:"
 
 #: journalist_templates/config.html:15
 msgid "SEND TEST OSSEC ALERT"
-msgstr ""
+msgstr "WYŚLIJ TESTOWE OSTRZEŻENIE OSSEC"
 
 #: journalist_templates/config.html:21 source_templates/base.html:20
 #: source_templates/index.html:29
@@ -688,31 +690,32 @@ msgstr ""
 msgid ""
 "Here you can update the image displayed on the SecureDrop web interfaces:"
 msgstr ""
+"Tutaj możesz zaktualizować plik graficzny wyświetlany w interfejsie www "
+"SecureDrop:"
 
 #: journalist_templates/config.html:36
 msgid "Recommended size: 500px * 450px"
-msgstr ""
+msgstr "Zalecany rozmiar: 500px * 450px"
 
 #: journalist_templates/config.html:39
 msgid "UPDATE LOGO"
 msgstr "AKTUALIZACJA LOGO"
 
 #: journalist_templates/config.html:46
-#, fuzzy
-#| msgid "Submission deleted."
-#| msgid_plural "{num} submissions deleted."
 msgid "Submission Preferences"
-msgstr "Zgłoszenie usunięte."
+msgstr "Ustawienia dot. zgłoszeń"
 
 #: journalist_templates/config.html:52
 msgid ""
 "Prevent sources from uploading documents.  Sources will still be able to "
 "send messages."
 msgstr ""
+"Nie pozwalaj źródłom przesyłać dokumentów. Źródła ciągle bedą mogły "
+"przesyłać wiadomości."
 
 #: journalist_templates/config.html:55
 msgid "UPDATE SUBMISSION PREFERENCES"
-msgstr ""
+msgstr "ZAKTUALIZUJ USTAWIENIA DOT. ZGŁOSZEŃ"
 
 #: journalist_templates/delete.html:5
 msgid ""
@@ -757,7 +760,7 @@ msgstr "Edytuj swoje konto"
 
 #: journalist_templates/edit_account.html:31
 msgid "Change Name"
-msgstr ""
+msgstr "Zmień Imię/Nazwisko"
 
 #: journalist_templates/edit_account.html:47
 #: journalist_templates/edit_account.html:75
@@ -826,22 +829,19 @@ msgstr ""
 "razie utracisz dostęp do swojego konta.</em>"
 
 #: journalist_templates/edit_account.html:87
-#, fuzzy
-#| msgid ""
-#| "To reset two-factor authentication for mobile apps such as FreeOTP, "
-#| "choose the first option. For hardware tokens like the Yubikey, choose the "
-#| "second."
 msgid ""
 "To reset two-factor authentication for mobile apps such as FreeOTP, choose "
 "the first option. For security keys like the YubiKey, choose the second one."
 msgstr ""
 "Aby zresetować uwierzytelnianie dwuetapowe w aplikacjach mobilnych takich "
-"jak FreeOTP, wybierz pierwszą opcję. W przypadku tokenów sprzętowych, takich "
-"jak Yubikey, wybierz drugi."
+"jak FreeOTP, wybierz pierwszą opcję. W przypadku kluczy bezpieczeństwa, "
+"takich jak Yubikey, wybierz drugi."
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
 msgstr ""
+"Zresetuj uwierzytelnianie dwuetapowe dla aplikacji mobilnych, takich jak "
+"FreeOTP"
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET MOBILE APP CREDENTIALS"
