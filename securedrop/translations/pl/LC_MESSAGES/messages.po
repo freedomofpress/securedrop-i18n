@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2020-01-05 20:42+0000\n"
-"Last-Translator: Ewelina Wilkosz <ewe@praqma.net>\n"
+"Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
 "Language-Team: Polish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/pl/>\n"
 "Language: pl\n"
@@ -684,7 +684,7 @@ msgstr "WYŚLIJ TESTOWE OSTRZEŻENIE OSSEC"
 #: journalist_templates/config.html:21 source_templates/base.html:20
 #: source_templates/index.html:29
 msgid "Logo Image"
-msgstr ""
+msgstr "Obraz logo"
 
 #: journalist_templates/config.html:23
 msgid ""
