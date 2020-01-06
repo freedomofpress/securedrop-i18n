@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-01-05 20:42+0000\n"
-"Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
+"PO-Revision-Date: 2020-01-06 19:42+0000\n"
+"Last-Translator: Ewelina Wilkosz <ewe@praqma.net>\n"
 "Language-Team: Polish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/pl/>\n"
 "Language: pl\n"
@@ -845,18 +845,16 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET MOBILE APP CREDENTIALS"
-msgstr ""
+msgstr "Zresetuj dane uwierzytelniające aplikacji mobilnej"
 
 #: journalist_templates/edit_account.html:113
-#, fuzzy
-#| msgid "Token in two-factor authentication accepted for user {user}."
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
 msgstr ""
-"Token w uwierzytelnianiu dwuetapowym zaakceptowany dla użytkownika {user}."
+"Zresetuj uwierzytelnianie dwuetapowe dla kluczy bezpieczeństwa, jak YubiKey"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET SECURITY KEY CREDENTIALS"
-msgstr ""
+msgstr "Zresetuj dane uwierzytelniające klucza bezpieczeństwa"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -892,17 +890,15 @@ msgstr "Pobierz"
 
 #: journalist_templates/index.html:13
 msgid "Star"
-msgstr "Gwiazdka"
+msgstr "Oznacz gwiazdką"
 
 #: journalist_templates/index.html:14
 msgid "Un-star"
-msgstr "Usuń gwiazdkę"
+msgstr "Usuń zaznaczenie gwiazdką"
 
 #: journalist_templates/index.html:47
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected collections?"
 msgid "Are you sure you want to delete the selected collections?"
-msgstr "Czy napewno chcesz usunąć zbiory o pojemności {size}?"
+msgstr "Czy napewno chcesz usunąć wybrane zbiory?"
 
 #: journalist_templates/index.html:59
 msgid "No documents have been submitted!"
@@ -978,10 +974,8 @@ msgid "You must enter a message or choose a file to submit."
 msgstr "Musisz wprowadzić wiadomość lub wybrać plik do przesłania."
 
 #: source_app/main.py:148
-#, fuzzy
-#| msgid "You must enter a message or choose a file to submit."
 msgid "You must enter a message."
-msgstr "Musisz wprowadzić wiadomość lub wybrać plik do przesłania."
+msgstr "Musisz wprowadzić wiadomość."
 
 #: source_app/main.py:179
 msgid "Thanks! We received your message."
@@ -1055,10 +1049,12 @@ msgid ""
 "Please note: Sharing sensitive documents may put you at risk, even when "
 "using Tor and SecureDrop."
 msgstr ""
+"Proszę zauważ: Udostępnianie wrażliwych dokumentów może być dla Ciebie "
+"ryzykowne, nawet jeśli korzystasz z Tor oraz SecureDrop."
 
 #: source_templates/footer.html:10
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
-msgstr ""
+msgstr "SecureDrop jest projektem Freedom of the Press Foundation."
 
 #: source_templates/generate.html:4
 msgid "Welcome"
@@ -1082,14 +1078,6 @@ msgstr ""
 "prześlesz na następnym ekranie."
 
 #: source_templates/generate.html:34
-#, fuzzy
-#| msgid ""
-#| "Because we use none of the traditional means to track users of our "
-#| "<strong>SecureDrop</strong>\n"
-#| " service, using this codename with future visits is the  only way we have "
-#| "to communicate with you, should we have\n"
-#| " questions or are interested in additional documents. Unlike passwords, "
-#| "there is no way to retrieve a lost codename."
 msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"
 " service, in future visits, using this codename will be the only way we have "
@@ -1097,11 +1085,11 @@ msgid ""
 " questions or are interested in additional information. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"Ponieważ nie używamy żadnego z tradycyjnych sposobów śledzenia użytkowników "
-"naszego <strong> SecureDrop </strong>, używanie Twojego kryptonimu podczas "
-"przyszłych odwiedzin to jedyny sposób jaki mamy, aby z Tobą komunikować w "
-"przypadku pytań lub zainteresowaniem dodatkowymi dokumentami. W "
-"przeciwieństwie do haseł, nie ma sposobu na odzyskanie zaginionego "
+"Ponieważ nie śledzimy użytkowników <strong> SecureDrop </strong>,\n"
+"używanie Twojego kryptonimu podczas przyszłych odwiedzin to jedyny sposób "
+"jaki mamy, aby się z Tobą komunikować \n"
+"w przypadku pytań lub zainteresowania dodatkowymi dokumentami. W "
+"przeciwieństwie do haseł, nie ma sposobu na odzyskanie zapomnianego "
 "kryptonimu."
 
 #: source_templates/generate.html:42
