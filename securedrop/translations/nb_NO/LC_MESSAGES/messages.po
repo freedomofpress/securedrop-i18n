@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-11-30 22:41+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2020-04-22 17:06+0000\n"
+"Last-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.10.3\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -50,7 +50,7 @@ msgstr "Bilde oppdatert."
 
 #: journalist_app/admin.py:62
 msgid "Preferences saved."
-msgstr ""
+msgstr "Innstillinger lagret."
 
 #: journalist_app/admin.py:92
 msgid ""
@@ -896,6 +896,8 @@ msgid ""
 "You are already logged in. Please verify your codename below as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
+"Du er allerede logget inn. Vennligst verifiser kodenavnet under fordi det "
+"kan være annerledes enn det som ble vist på den forrige siden."
 
 #: source_app/main.py:163
 msgid "You must enter a message or choose a file to submit."
@@ -995,17 +997,13 @@ msgid ""
 msgstr "Husk, eller skriv ned kodenavnet på et sikkert sted."
 
 #: source_templates/generate.html:10
-#, fuzzy
-#| msgid ""
-#| "This codename is what you will use in future visits to receive messages "
-#| "from our journalists in response to what you submit on the next screen."
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our team in response to what you submit on the next screen."
 msgstr ""
 "Dette er kodenavnet som du i framtiden kan bruke for å fortsette "
-"kommunikasjonen med våre journalister, f.eks. for å sjekke om de har svart "
-"på det du sendte inn."
+"kommunikasjonen med oss, f.eks. for å sjekke om vi har svart på det du "
+"sendte inn."
 
 #: source_templates/generate.html:34
 msgid ""
@@ -1110,7 +1108,7 @@ msgstr "AVBRYT"
 
 #: source_templates/logout.html:6
 msgid "One more thing..."
-msgstr ""
+msgstr "En ting til..."
 
 #: source_templates/logout.html:7
 msgid ""
@@ -1118,6 +1116,9 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
+"Klikk på <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\""
+">&nbsp;<strong>Ny identitet</strong>-knappen i Tor-nettleserens "
+"verktøylinje. Det vil slette loggen over din bruk av Tor på denne enheten."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1236,7 +1237,7 @@ msgstr "NEI, IKKE ENDA"
 
 #: source_templates/lookup.html:123
 msgid "— No Messages —"
-msgstr ""
+msgstr "— Ingen Meldinger —"
 
 #: source_templates/notfound.html:3
 msgid "Page not found"
@@ -1247,10 +1248,8 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Beklager, men vi kunne ikke finne det du ba om."
 
 #: source_templates/session_timeout.html:2
-#, fuzzy
-#| msgid "Important!"
 msgid "Important"
-msgstr "Viktig!"
+msgstr "Viktig"
 
 #: source_templates/session_timeout.html:5
 msgid ""
@@ -1259,6 +1258,10 @@ msgid ""
 "in your Tor browser's toolbar before moving on. This will clear your Tor "
 "browser activity data on this device."
 msgstr ""
+"Du ble logget ut på grunn av inaktivitet. Klikk på <img src={icon} alt=\""
+"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Ny Identitiet</strong>-"
+"knappen i Tor-nettleserens verktøylinje før du fortsetter. Dette vil slette "
+"loggen over aktivitet i Tor-nettleseren på denne enheten."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1326,10 +1329,8 @@ msgstr ""
 "til <pre>gettor@otrproject.org</pre> og en robot vil svare med instruksjoner."
 
 #: source_templates/why-journalist-key.html:3
-#, fuzzy
-#| msgid "Why download the journalist's public key?"
 msgid "Why download the team's public key?"
-msgstr "Hvorfor laste ned journalistens nøkkel?"
+msgstr "Hvorfor laste ned vår offentlige nøkkel?"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
