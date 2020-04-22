@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.12.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-11-26 16:41+0000\n"
-"Last-Translator: Oktavia <oktaviahrund@gmail.com>\n"
+"PO-Revision-Date: 2020-04-22 17:06+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/is/>\n"
 "Language: is\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.10.3\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:14
@@ -49,7 +49,7 @@ msgstr "Mynd var uppfærð."
 
 #: journalist_app/admin.py:62
 msgid "Preferences saved."
-msgstr ""
+msgstr "Kjörstillingar vistaðar."
 
 #: journalist_app/admin.py:92
 msgid ""
@@ -911,6 +911,8 @@ msgid ""
 "You are already logged in. Please verify your codename below as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
+"Þú ert þegar skráð/ur inn. Yfirfarðu kóðanafnið þitt hér fyrir neðan þar sem "
+"það gæti verið öðruvísi en það sem birt var á fyrri síðu."
 
 #: source_app/main.py:163
 msgid "You must enter a message or choose a file to submit."
@@ -1013,17 +1015,13 @@ msgstr ""
 "eða leggja það á minnið."
 
 #: source_templates/generate.html:10
-#, fuzzy
-#| msgid ""
-#| "This codename is what you will use in future visits to receive messages "
-#| "from our journalists in response to what you submit on the next screen."
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our team in response to what you submit on the next screen."
 msgstr ""
 "Þetta kóðanafn er það sem þú munt framvegis nota við heimsóknir á vefsvæðið "
-"þegar þú athugar með svör og skilaboð frá fréttamönnum okkar, varðandi það "
-"sem þú sendir inn á næsta skjá."
+"þegar þú athugar með svör og skilaboð frá teyminu okkar, varðandi það sem þú "
+"sendir inn á næsta skjá."
 
 #: source_templates/generate.html:34
 msgid ""
@@ -1131,7 +1129,7 @@ msgstr "HÆTTA VIÐ"
 
 #: source_templates/logout.html:6
 msgid "One more thing..."
-msgstr ""
+msgstr "Eitt í viðbót..."
 
 #: source_templates/logout.html:7
 msgid ""
@@ -1139,6 +1137,9 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
+"Smelltu á hnappinn <img src={icon} alt=\"broom icon\" width=\"16\" height=\""
+"16\">&nbsp;<strong>Nýtt auðkenni</strong> í verkfærastiku Tor-vafrans. Það "
+"mun hreinsa út allr fyrri aðgerðir Tor-vafrans á þessu tæki."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1258,7 +1259,7 @@ msgstr "NEI, EKKI STRAX"
 
 #: source_templates/lookup.html:123
 msgid "— No Messages —"
-msgstr ""
+msgstr "— Engin skilaboð —"
 
 #: source_templates/notfound.html:3
 msgid "Page not found"
@@ -1269,10 +1270,8 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Því miður, við gátum ekki fundið það sem þú baðst um."
 
 #: source_templates/session_timeout.html:2
-#, fuzzy
-#| msgid "Important!"
 msgid "Important"
-msgstr "Mikilvægt!"
+msgstr "Mikilvægt"
 
 #: source_templates/session_timeout.html:5
 msgid ""
@@ -1281,6 +1280,10 @@ msgid ""
 "in your Tor browser's toolbar before moving on. This will clear your Tor "
 "browser activity data on this device."
 msgstr ""
+"Þú varst skráð/ur út vegna ónógrar virkni. Smelltu á hnappinn <img src={icon}"
+" alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Nýtt "
+"auðkenni</strong> í verkfærastiku Tor-vafrans. Það mun hreinsa út allr fyrri "
+"aðgerðir Tor-vafrans á þessu tæki."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1348,10 +1351,8 @@ msgstr ""
 "leiðbeiningum."
 
 #: source_templates/why-journalist-key.html:3
-#, fuzzy
-#| msgid "Why download the journalist's public key?"
 msgid "Why download the team's public key?"
-msgstr "Af hverju að ná í dreifilykil fréttamannsins?"
+msgstr "Af hverju að ná í dreifilykil teymisins?"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
