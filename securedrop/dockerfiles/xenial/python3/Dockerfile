@@ -29,7 +29,7 @@ RUN curl -LO https://ftp.mozilla.org/pub/firefox/releases/${FF_ESR_VER}/linux-x8
 
 COPY ./tor_project_public.pub /opt/
 
-ENV TBB_VERSION 9.0.1
+ENV TBB_VERSION 9.0.9
 RUN gpg --import /opt/tor_project_public.pub && \
     wget  https://www.torproject.org/dist/torbrowser/${TBB_VERSION}/tor-browser-linux64-${TBB_VERSION}_en-US.tar.xz && \
     wget https://www.torproject.org/dist/torbrowser/${TBB_VERSION}/tor-browser-linux64-${TBB_VERSION}_en-US.tar.xz.asc && \
@@ -49,9 +49,9 @@ RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckod
 
 COPY requirements requirements
 RUN python3 -m venv /opt/venvs/securedrop-app-code && \
-    /opt/venvs/securedrop-app-code/bin/pip3 install --require-hashes -r requirements/python3/docker-requirements.txt && \
-    /opt/venvs/securedrop-app-code/bin/pip3 install --require-hashes -r requirements/python3/securedrop-app-code-requirements.txt && \
-    /opt/venvs/securedrop-app-code/bin/pip3 install --require-hashes -r requirements/python3/test-requirements.txt
+    /opt/venvs/securedrop-app-code/bin/pip3 install --no-deps --require-hashes -r requirements/python3/docker-requirements.txt && \
+    /opt/venvs/securedrop-app-code/bin/pip3 install --no-deps --require-hashes -r requirements/python3/securedrop-app-code-requirements.txt && \
+    /opt/venvs/securedrop-app-code/bin/pip3 install --no-deps --require-hashes -r requirements/python3/test-requirements.txt
 
 RUN if test $USER_NAME != root ; then useradd --no-create-home --home-dir /tmp --uid $USER_ID $USER_NAME && echo "$USER_NAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers ; fi && \
     cp -r /root/.local /tmp/ && chmod +x /tmp/.local/tbb/tor-browser_en-US/Browser/firefox && chmod -R 777 /tmp/.local && \

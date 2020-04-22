@@ -108,7 +108,7 @@ def make_blueprint(config):
                                               g.source.journalist_filename)
         current_app.crypto_util.encrypt(
             form.message.data,
-            [current_app.crypto_util.getkey(g.filesystem_id),
+            [current_app.crypto_util.get_fingerprint(g.filesystem_id),
              config.JOURNALIST_KEY],
             output=current_app.storage.path(g.filesystem_id, filename),
         )
@@ -167,25 +167,6 @@ def make_blueprint(config):
             return confirm_bulk_delete(g.filesystem_id, selected_docs)
         else:
             abort(400)
-
-    @view.route('/regenerate-code', methods=('POST',))
-    def regenerate_code():
-        original_journalist_designation = g.source.journalist_designation
-        g.source.journalist_designation = current_app.crypto_util.display_id()
-
-        for item in g.source.collection:
-            item.filename = current_app.storage.rename_submission(
-                g.filesystem_id,
-                item.filename,
-                g.source.journalist_filename)
-        db.session.commit()
-
-        flash(gettext(
-            "The source '{original_name}' has been renamed to '{new_name}'")
-              .format(original_name=original_journalist_designation,
-                      new_name=g.source.journalist_designation),
-              "notification")
-        return redirect(url_for('col.col', filesystem_id=g.filesystem_id))
 
     @view.route('/download_unread/<filesystem_id>')
     def download_unread_filesystem_id(filesystem_id):

@@ -25,7 +25,7 @@ on the Tails welcome screen in order to use the graphical updater.
 
 Perform the update to 1.1.0 by clicking "Update Now":
 
-.. image:: ../images/0.6.x_to_0.7/securedrop-updater.png
+.. image:: ../images/securedrop-updater.png
 
 .. _manual_upgrade_to_110:
 
@@ -59,6 +59,8 @@ Finally, run the following commands: ::
 
   ./securedrop-admin setup
   ./securedrop-admin tailsconfig
+
+.. _upgrade_to_tails_4:
 
 Upgrading workstations to Tails 4
 ---------------------------------
@@ -100,6 +102,10 @@ commands: ::
   cd ~/Persistent/securedrop
  ./securedrop-admin setup
  ./securedrop-admin tailsconfig
+
+During the ``./securedrop-admin setup`` step, Tails will prompt you if you want
+to install a set of packages every time you start Tails. These packages are only
+required for the setup process, so you can safely click **Install Only Once**.
 
 .. important::
 

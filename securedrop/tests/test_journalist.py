@@ -1297,6 +1297,11 @@ def test_prevent_document_uploads(journalist_app, test_admin):
                  data=form.data,
                  follow_redirects=True)
         assert InstanceConfig.get_current().allow_document_uploads is False
+        with InstrumentedApp(journalist_app) as ins:
+            app.post(url_for('admin.update_submission_preferences'),
+                     data=form.data,
+                     follow_redirects=True)
+            ins.assert_message_flashed('Preferences saved.', 'submission-preferences-success')
 
 
 def test_no_prevent_document_uploads(journalist_app, test_admin):
@@ -1306,6 +1311,10 @@ def test_no_prevent_document_uploads(journalist_app, test_admin):
         app.post(url_for('admin.update_submission_preferences'),
                  follow_redirects=True)
         assert InstanceConfig.get_current().allow_document_uploads is True
+        with InstrumentedApp(journalist_app) as ins:
+            app.post(url_for('admin.update_submission_preferences'),
+                     follow_redirects=True)
+            ins.assert_message_flashed('Preferences saved.', 'submission-preferences-success')
 
 
 def test_logo_upload_with_valid_image_succeeds(journalist_app, test_admin):
@@ -1432,7 +1441,6 @@ def test_user_authorization_for_posts(journalist_app):
             url_for('col.process'),
             url_for('col.delete_single', filesystem_id='1'),
             url_for('main.reply'),
-            url_for('main.regenerate_code'),
             url_for('main.bulk'),
             url_for('account.new_two_factor'),
             url_for('account.reset_two_factor_totp'),
@@ -1683,7 +1691,7 @@ def test_delete_source_deletes_source_key(journalist_app,
         utils.db_helper.reply(journo, source, 2)
 
         # Source key exists
-        source_key = current_app.crypto_util.getkey(
+        source_key = current_app.crypto_util.get_fingerprint(
             test_source['filesystem_id'])
         assert source_key is not None
 
@@ -1691,7 +1699,7 @@ def test_delete_source_deletes_source_key(journalist_app,
             test_source['filesystem_id'])
 
         # Source key no longer exists
-        source_key = current_app.crypto_util.getkey(
+        source_key = current_app.crypto_util.get_fingerprint(
             test_source['filesystem_id'])
         assert source_key is None
 
