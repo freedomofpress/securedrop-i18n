@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-12-02 23:52+0000\n"
-"Last-Translator: Jonas Franzén <jonas.franzen@schibsted.se>\n"
+"PO-Revision-Date: 2020-04-23 18:06+0000\n"
+"Last-Translator: Jonas Waga <jonas.waga@schibsted.com>\n"
 "Language-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sv/>\n"
 "Language: sv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.10.3\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -51,7 +51,7 @@ msgstr "Bild uppdaterad."
 
 #: journalist_app/admin.py:62
 msgid "Preferences saved."
-msgstr ""
+msgstr "Inställningar sparade."
 
 #: journalist_app/admin.py:92
 msgid ""
@@ -898,6 +898,8 @@ msgid ""
 "You are already logged in. Please verify your codename below as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
+"Du är redan inloggad. Vänligen verifiera ditt kodnamn nedan, då det kan "
+"skilja sig från det som visades på föregående sida."
 
 #: source_app/main.py:163
 msgid "You must enter a message or choose a file to submit."
@@ -1001,16 +1003,12 @@ msgstr ""
 "memorera det."
 
 #: source_templates/generate.html:10
-#, fuzzy
-#| msgid ""
-#| "This codename is what you will use in future visits to receive messages "
-#| "from our journalists in response to what you submit on the next screen."
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our team in response to what you submit on the next screen."
 msgstr ""
 "Detta kodnamn är det du kommer kunna använda vid framtida besök för att ta "
-"emot våra journalisters svar på den information du lämnar på nästa sida."
+"emot vårt teams svar på den information du lämnar på nästa sida."
 
 #: source_templates/generate.html:34
 msgid ""
@@ -1119,7 +1117,7 @@ msgstr "AVBRYT"
 
 #: source_templates/logout.html:6
 msgid "One more thing..."
-msgstr ""
+msgstr "En sak till…"
 
 #: source_templates/logout.html:7
 msgid ""
@@ -1127,6 +1125,9 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
+"Klicka på <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\""
+">&nbsp;<strong>New Identity</strong>-knappen i din Tor browsers menyrad. "
+"Detta kommer att rensa din Tor browsers aktivitetsdata på den här enheten."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1243,7 +1244,7 @@ msgstr "NEJ, INTE ÄN"
 
 #: source_templates/lookup.html:123
 msgid "— No Messages —"
-msgstr ""
+msgstr "— Inga medelanden —"
 
 #: source_templates/notfound.html:3
 msgid "Page not found"
@@ -1254,10 +1255,8 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Förlåt, vi kunde inte hitta det du begärde."
 
 #: source_templates/session_timeout.html:2
-#, fuzzy
-#| msgid "Important!"
 msgid "Important"
-msgstr "Viktigt!"
+msgstr "Viktigt"
 
 #: source_templates/session_timeout.html:5
 msgid ""
@@ -1266,6 +1265,10 @@ msgid ""
 "in your Tor browser's toolbar before moving on. This will clear your Tor "
 "browser activity data on this device."
 msgstr ""
+"Du blev utloggad på grund av inaktivitet. Klicka på <img src={icon} alt=\""
+"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong>-"
+"knappen i din Tor browsers menyrad innan du går vidare. Detta kommer att "
+"rensa din Tor browsers aktivitetsdata på den här enheten."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1333,10 +1336,8 @@ msgstr ""
 "svara med instruktioner."
 
 #: source_templates/why-journalist-key.html:3
-#, fuzzy
-#| msgid "Why download the journalist's public key?"
 msgid "Why download the team's public key?"
-msgstr "Varför ska du ladda ner journalistens publika nyckel?"
+msgstr "Varför ska du ladda ner vårt teams publika nyckel?"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
