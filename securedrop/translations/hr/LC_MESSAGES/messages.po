@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 1.3.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-04-24 11:06+0000\n"
+"PO-Revision-Date: 2020-04-24 15:06+0000\n"
 "Last-Translator: Igor K. <igorkrainovic@gmail.com>\n"
 "Language-Team: Croatian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/hr/>\n"
@@ -1328,12 +1328,17 @@ msgid ""
 "advise you</strong> to install Tor Browser and use it to access our site "
 "safely and anonymously."
 msgstr ""
+"Ako želite predati informacije na SecureDrop, <strong>preporučamo</strong> "
+"da instalirate Tor preglednik i koristite ga za siguran i anoniman pristup "
+"našim stranicama."
 
 #: source_templates/use-tor-browser.html:6
 msgid ""
 "Copy and paste the following address into your browser and follow the "
 "instructions to download and install Tor Browser:"
 msgstr ""
+"Kopirajte sljedeću adresu u svoj preglednik i pratite upute kako bi preuzeli "
+"i instalirali Tor preglednik:"
 
 #: source_templates/use-tor-browser.html:9
 msgid ""
@@ -1342,10 +1347,14 @@ msgid ""
 " <pre>gettor@torproject.org</pre> and a bot will answer with "
 "instructions."
 msgstr ""
+"Ako postoji mogućnost da će preuzimanje Tor preglednika izazvati sumnju, i "
+"ako postoji mogućnost da je Vaš email manje nadziran, možete poslati email "
+"na <pre>gettor@torproject.org</pre>, odakle će Vam robot odgovoriti s "
+"daljnjim instrukcijama."
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the team's public key?"
-msgstr ""
+msgstr "Zašto preuzeti javni ključ našeg tima?"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
@@ -1353,22 +1362,29 @@ msgid ""
 "Encrypting messages and files before submission can provide an extra "
 "layer of security before your data reaches the SecureDrop server."
 msgstr ""
+"SecureDrop enkriptira datoteke i poruke nakon što su predani. Enkripcija "
+"poruka i datoteka prije predaje može pružiti dodatni sloj sigurnosti prije "
+"nego Vaši podaci dođu do SecureDrop poslužitelja."
 
 #: source_templates/why-journalist-key.html:5
 msgid ""
 "If you are already familiar with the GPG encryption software, you may "
 "wish to encrypt your submissions yourself. To do so:"
 msgstr ""
+"Ako ste već upoznati s GPG enkripcijskim software-om, možda bi hjteli "
+"enkriptirati svoje predaje sami. Kako bi to napravili:"
 
 #: source_templates/why-journalist-key.html:7
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. The public key is a text "
 "file with the extension <code>.asc</code>"
 msgstr ""
+"<a href=\"{url}\">Preuzmite</a> javni ključ. Javni ključ je tekstualna "
+"datoteka s <code>.asc</code> ekstenzijom"
 
 #: source_templates/why-journalist-key.html:8
 msgid "Import it into your GPG keyring."
-msgstr ""
+msgstr "Uvezite ju u svoj GPG privjesak za ključeve."
 
 #: source_templates/why-journalist-key.html:10
 msgid ""
@@ -1376,16 +1392,21 @@ msgid ""
 "<code>.asc</code> file you just downloaded and it will be automatically "
 "imported to your keyring."
 msgstr ""
+"Ako koristite <a href=\"{url}\">Tails</a>, možete dva put kliknuti na "
+"<code>.asc</code> datoteku koju ste upravo preuzeli kako bi se ista "
+"automatski dodala u Vaš privjesak za ključeve."
 
 #: source_templates/why-journalist-key.html:11
 msgid ""
 "If you are using Mac/Linux, open the terminal. You can import the key "
 "with <code>gpg --import /path/to/key.asc</code>."
 msgstr ""
+"Ako koristite Mac/Linux, otvorite terminal. Možete uvesti ključ s <code>gpg "
+"--import /putanja/do/ključa.asc</code>."
 
 #: source_templates/why-journalist-key.html:14
 msgid "Encrypt your submission."
-msgstr ""
+msgstr "Enkriptirajte svoju predaju."
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
@@ -1394,12 +1415,17 @@ msgid ""
 "(with .asc at the end), you can just copy and paste that. (don't include "
 "the <code>.asc</code>!)"
 msgstr ""
+"Morate moći identificirati ključ (ovo se zove korisnički ID ili UID). Kako "
+"su imena javnih ključeva otisak ključa (s .asc ekstenzijom na kraju), možete "
+"jednostavno kopirati taj podatak (ne uključujte <code>.asc</code>!)"
 
 #: source_templates/why-journalist-key.html:17
 msgid ""
 "On all systems, open the Terminal and use this gpg command: <code>gpg "
 "--recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
 msgstr ""
+"Na svim sustavima, otvorite Terminal i unesite ovu gpg naredbu: <code>gpg --"
+"recipient &lt;korisnički ID&gt; --encrypt ime_datoteke</code>"
 
 #: source_templates/why-journalist-key.html:20
 msgid ""
@@ -1407,6 +1433,9 @@ msgid ""
 "unencrypted file, with .gpg at the end (e.g. "
 "<code>roswell_photos.pdf.gpg</code>)"
 msgstr ""
+"Postavite svoju enkriptiranu predaju. Imat će isto ime kao i neenkriptirana "
+"datoteka, s .gpg ekstenzijom na kraju (npr. "
+"<code>ime_datoteke.pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:23
 msgid ""
@@ -1415,7 +1444,10 @@ msgid ""
 "<code>--sign</code> or <code>-s</code> flag) as this will reveal your GPG"
 " identity to us."
 msgstr ""
+"<strong>Savjet:</strong> Ako želite ostati anonimni, <strong>nemojte</strong>"
+" koristiti GPG kako bi potpisali enkriptiranu datoteku (s <code>--sign</code>"
+" ili <code>-s</code> zastavom) jer će to otkritit Vaš GPG identitet nama."
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
-msgstr ""
+msgstr "Natrag na stranicu predaja"
