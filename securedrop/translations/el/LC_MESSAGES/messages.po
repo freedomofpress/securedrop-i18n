@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-11-30 01:41+0000\n"
+"PO-Revision-Date: 2020-04-28 11:06+0000\n"
 "Last-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/el/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.10.3\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:14
@@ -51,7 +51,7 @@ msgstr "Η φωτογραφία ενημερώθηκε."
 
 #: journalist_app/admin.py:62
 msgid "Preferences saved."
-msgstr ""
+msgstr "Οι προτιμήσεις αποθηκεύτηκαν."
 
 #: journalist_app/admin.py:92
 msgid ""
