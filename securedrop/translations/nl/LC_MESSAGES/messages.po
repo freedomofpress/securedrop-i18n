@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-04-24 23:06+0000\n"
-"Last-Translator: Meteor0id <nielsl@xs4all.nl>\n"
+"PO-Revision-Date: 2020-04-28 17:06+0000\n"
+"Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
 "Language-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/nl/>\n"
 "Language: nl\n"
@@ -38,7 +38,7 @@ msgstr "Foutief wachtwoord of tweestapstoken."
 
 #: journalist_app/account.py:49
 msgid "Your two-factor credentials have been reset successfully."
-msgstr "Uw tweestapsauthenticatie is succesvol hersteld."
+msgstr "Uw tweestapsauthenticatie is succesvol opnieuw ingesteld."
 
 #: journalist_app/account.py:53 journalist_app/admin.py:136
 msgid "There was a problem verifying the two-factor code. Please try again."
