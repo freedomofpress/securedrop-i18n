@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-12-01 11:41+0000\n"
+"PO-Revision-Date: 2020-05-01 19:06+0000\n"
 "Last-Translator: 1000101 <jan.hrnko@satoshilabs.com>\n"
 "Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/cs/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.10.3\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:14
@@ -25,7 +25,7 @@ msgstr "před {time}"
 
 #: journalist_app/__init__.py:88 journalist_app/__init__.py:137
 msgid "You have been logged out due to inactivity"
-msgstr "Z důvodu neaktivity jste byli odhlášeni"
+msgstr "Z důvodu neaktivity jste byl/a odhlášen/a"
 
 #: journalist_app/__init__.py:146
 msgid "You have been logged out due to password change"
@@ -50,7 +50,7 @@ msgstr "Obrázek byl aktualizován."
 
 #: journalist_app/admin.py:62
 msgid "Preferences saved."
-msgstr ""
+msgstr "Preference uložené."
 
 #: journalist_app/admin.py:92
 msgid ""
@@ -684,7 +684,7 @@ msgstr "AKTUALIZOVAT"
 
 #: journalist_templates/edit_account.html:30
 msgid "Edit your account"
-msgstr "Upravit váš účet"
+msgstr "Upravit svůj účet"
 
 #: journalist_templates/edit_account.html:31
 msgid "Change Name"
@@ -750,9 +750,9 @@ msgid ""
 "this, make sure you are ready to set up your new device, otherwise you will "
 "be locked out of your account.</em>"
 msgstr ""
-"Pokud byly Vaše přístupy pro dvoufaktorovou autentizaci ztraceny nebo "
-"zneužity, nebo máte nové zařízení, můžete si zde obnovit svůj přístup. "
-"<em>Připravte si k nastavení nové zařízení, jinak ztratíte přístup ke svému "
+"Pokud byly vaše přístupy pro dvoufaktorovou autentizaci ztraceny nebo "
+"zneužity, nebo máte nové zařízení, můžete si zde obnovit svůj přístup. <em>"
+"Připravte si k nastavení nové zařízení, jinak ztratíte přístup ke svému "
 "účtu.</em>"
 
 #: journalist_templates/edit_account.html:87
@@ -900,6 +900,8 @@ msgid ""
 "You are already logged in. Please verify your codename below as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
+"Jste již přihlášen/a. Prosím, zkontrolujte zdali krycí jméno souhlasí, "
+"protože se může lišit od toho zobrazeného na předošlé stránce."
 
 #: source_app/main.py:163
 msgid "You must enter a message or choose a file to submit."
@@ -1001,16 +1003,12 @@ msgstr ""
 "si jej zapamatujte."
 
 #: source_templates/generate.html:10
-#, fuzzy
-#| msgid ""
-#| "This codename is what you will use in future visits to receive messages "
-#| "from our journalists in response to what you submit on the next screen."
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our team in response to what you submit on the next screen."
 msgstr ""
-"Toto krycí jméno budete v budoucnu využívat pro komunikaci s našimi novináři "
-"na základě toho, co pošlete na příští obrazovce."
+"Toto krycí jméno budete v budoucnu využívat pro komunikaci s našim tímem na "
+"základě toho, co pošlete na příští obrazovce."
 
 #: source_templates/generate.html:34
 msgid ""
@@ -1113,7 +1111,7 @@ msgstr "ZRUŠIT"
 
 #: source_templates/logout.html:6
 msgid "One more thing..."
-msgstr ""
+msgstr "Ještě jedna věc..."
 
 #: source_templates/logout.html:7
 msgid ""
@@ -1121,6 +1119,9 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
+"Klepněte na <img src={icon} alt=\"ikona koštěte\" width=\"16\" height=\"16\""
+">&nbsp;<strong>Nová identita</strong> na liště svého prohlížeče Tor. Smažete "
+"tím data o aktivitě prohlížeče Tor na tomhle zařízení."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1237,7 +1238,7 @@ msgstr "NE, JEŠTĚ NE"
 
 #: source_templates/lookup.html:123
 msgid "— No Messages —"
-msgstr ""
+msgstr "— Žádné zprávy —"
 
 #: source_templates/notfound.html:3
 msgid "Page not found"
@@ -1245,13 +1246,11 @@ msgstr "Stránka nenalezena"
 
 #: source_templates/notfound.html:5
 msgid "Sorry, we couldn't locate what you requested."
-msgstr "Promiňte, Váš požadavek jsme nenašli."
+msgstr "Promiňte, váš požadavek jsme nenašli."
 
 #: source_templates/session_timeout.html:2
-#, fuzzy
-#| msgid "Important!"
 msgid "Important"
-msgstr "Důležité!"
+msgstr "Důležité"
 
 #: source_templates/session_timeout.html:5
 msgid ""
@@ -1260,6 +1259,10 @@ msgid ""
 "in your Tor browser's toolbar before moving on. This will clear your Tor "
 "browser activity data on this device."
 msgstr ""
+"Z důvodu neaktivity jste byl/a odhlášen/a. Než budete pokračovať, klepněte "
+"na <img src={icon} alt=\"ikona koštěte\" width=\"16\" height=\"16\""
+">&nbsp;<strong>Nová identita</strong> na liště svého prohlížeče Tor. Smažete "
+"tím data o aktivitě prohlížeče Tor na tomhle zařízení."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1275,8 +1278,8 @@ msgid ""
 "It could be possible for anyone monitoring your Internet traffic (your "
 "government, your Internet provider), to identify you."
 msgstr ""
-"Kdokoliv, kdo sleduje Vaši aktivitu na internetu (vláda nebo poskytovatel "
-"připojení) Vás může identifikovat."
+"Kdokoliv, kdo sleduje vaši aktivitu na internetu (vláda nebo poskytovatel "
+"připojení) vás může identifikovat."
 
 #: source_templates/tor2web-warning.html:6
 msgid ""
@@ -1325,10 +1328,8 @@ msgstr ""
 "instrukcemi."
 
 #: source_templates/why-journalist-key.html:3
-#, fuzzy
-#| msgid "Why download the journalist's public key?"
 msgid "Why download the team's public key?"
-msgstr "Proč si stáhnout veřejný klíč novináře?"
+msgstr "Proč si stáhnout veřejný klíč tímu?"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
@@ -1345,7 +1346,7 @@ msgid ""
 "If you are already familiar with the GPG encryption software, you may wish "
 "to encrypt your submissions yourself. To do so:"
 msgstr ""
-"Pokud ovládáte software GPG, můžete zašifrovat informace sámi. K tomu je "
+"Pokud ovládáte software GPG, můžete zašifrovat informace sami. K tomu je "
 "třeba dodržet následující kroky:"
 
 #: source_templates/why-journalist-key.html:7
