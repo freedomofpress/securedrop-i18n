@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-11-30 22:41+0000\n"
-"Last-Translator: Benet (BennyBeat) R. i Camps <bennybeat@gmail.com>\n"
+"PO-Revision-Date: 2020-05-01 19:06+0000\n"
+"Last-Translator: Joan Montané <joan@montane.cat>\n"
 "Language-Team: Catalan <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ca/>\n"
 "Language: ca\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.10.3\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -51,7 +51,7 @@ msgstr "S’ha actualitzat la imatge."
 
 #: journalist_app/admin.py:62
 msgid "Preferences saved."
-msgstr ""
+msgstr "S'han desat les preferències."
 
 #: journalist_app/admin.py:92
 msgid ""
@@ -916,6 +916,8 @@ msgid ""
 "You are already logged in. Please verify your codename below as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
+"Ja teniu una sessió iniciada. Verifiqueu el nom en clau a sota, ja que "
+"podria diferir del que s'ha mostrat en la pàgina anterior."
 
 #: source_app/main.py:163
 msgid "You must enter a message or choose a file to submit."
@@ -1017,17 +1019,12 @@ msgstr ""
 "Escriviu aquest nom en clau i conserveu-lo en un lloc segur, o memoritzeu-lo."
 
 #: source_templates/generate.html:10
-#, fuzzy
-#| msgid ""
-#| "This codename is what you will use in future visits to receive messages "
-#| "from our journalists in response to what you submit on the next screen."
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our team in response to what you submit on the next screen."
 msgstr ""
-"Aquest nom en clau és el que usareu en visites futures per rebre missatges "
-"dels nostres periodistes en resposta a allò que envieu en la pantalla "
-"següent."
+"Aquest nom en clau és el que usareu en visites futures per a rebre missatges "
+"del nostre equip en resposta a allò que envieu en la pantalla següent."
 
 #: source_templates/generate.html:34
 msgid ""
@@ -1136,7 +1133,7 @@ msgstr "CANCEL·LA"
 
 #: source_templates/logout.html:6
 msgid "One more thing..."
-msgstr ""
+msgstr "Una cosa més..."
 
 #: source_templates/logout.html:7
 msgid ""
@@ -1144,6 +1141,10 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
+"Feu clic al botó <img src={icon} alt=\"broom icon\" width=\"16\" height=\""
+"16\">&nbsp;<strong>Identitat nova</strong> de la barra d'eines del navegador "
+"Tor. Això buidarà les dades d'activitat en el navegador Tor en aquest "
+"aparell."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1261,7 +1262,7 @@ msgstr "NO, NO ENCARA"
 
 #: source_templates/lookup.html:123
 msgid "— No Messages —"
-msgstr ""
+msgstr "— No hi ha cap missatge —"
 
 #: source_templates/notfound.html:3
 msgid "Page not found"
@@ -1272,10 +1273,8 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "No podem trobar el que demaneu."
 
 #: source_templates/session_timeout.html:2
-#, fuzzy
-#| msgid "Important!"
 msgid "Important"
-msgstr "Important!"
+msgstr "Important"
 
 #: source_templates/session_timeout.html:5
 msgid ""
@@ -1284,6 +1283,10 @@ msgid ""
 "in your Tor browser's toolbar before moving on. This will clear your Tor "
 "browser activity data on this device."
 msgstr ""
+"S'ha tancat la sessió per inactivitat. Feu clic en el botó <img src={icon} "
+"alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Identitat "
+"nova</strong> en la barra d'eines del navegador Tor abans d'anar-vos-en. "
+"Això buidarà les dades d'activitat en el navegador Tor d'aquest aparell."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1351,10 +1354,8 @@ msgstr ""
 "bot amb instruccions."
 
 #: source_templates/why-journalist-key.html:3
-#, fuzzy
-#| msgid "Why download the journalist's public key?"
 msgid "Why download the team's public key?"
-msgstr "Per què cal baixar la clau pública del periodista?"
+msgstr "Per què cal baixar la clau pública de l'equip?"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
