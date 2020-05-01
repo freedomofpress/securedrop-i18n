@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-12-01 20:41+0000\n"
-"Last-Translator: Orhan <orya@pm.me>\n"
+"PO-Revision-Date: 2020-05-01 19:06+0000\n"
+"Last-Translator: Kaya Zeren <kayazeren@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.10.3\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -51,7 +51,7 @@ msgstr "Görüntü güncellendi."
 
 #: journalist_app/admin.py:62
 msgid "Preferences saved."
-msgstr ""
+msgstr "Ayarlar kaydedildi."
 
 #: journalist_app/admin.py:92
 msgid ""
@@ -917,6 +917,8 @@ msgid ""
 "You are already logged in. Please verify your codename below as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
+"Zaten oturum açmışsınız. Lütfen aşağıdaki kod adınızın önceki sayfada "
+"görüntülenen ile aynı olup olmadığını denetleyin."
 
 #: source_app/main.py:163
 msgid "You must enter a message or choose a file to submit."
@@ -1019,16 +1021,12 @@ msgstr ""
 "ezberleyin."
 
 #: source_templates/generate.html:10
-#, fuzzy
-#| msgid ""
-#| "This codename is what you will use in future visits to receive messages "
-#| "from our journalists in response to what you submit on the next screen."
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our team in response to what you submit on the next screen."
 msgstr ""
-"Bir sonraki sayfada göndereceğiniz bilgilere gazetecilerin gönderdikleri "
-"yanıtları almak için yeniden geldiğinizde bu kod adını kullanacaksınız."
+"Bir sonraki sayfada göndereceğiniz bilgilere ekibimizin gönderdiği yanıtları "
+"almak için yeniden geldiğinizde bu kod adını kullanacaksınız."
 
 #: source_templates/generate.html:34
 msgid ""
@@ -1139,7 +1137,7 @@ msgstr "İPTAL"
 
 #: source_templates/logout.html:6
 msgid "One more thing..."
-msgstr ""
+msgstr "Bir şey daha var..."
 
 #: source_templates/logout.html:7
 msgid ""
@@ -1147,6 +1145,9 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
+"Tor Browser araç çubuğundan <img src={icon} alt=\"broom icon\" width=\"16\" "
+"height=\"16\">&nbsp;<strong>Yeni Kimlik</strong> üzerine tıklayın. Bu işlem "
+"bu aygıt üzerindeki Tor Browser işlemlerini siler."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1266,7 +1267,7 @@ msgstr "HAYIR, DAHA DEĞİL"
 
 #: source_templates/lookup.html:123
 msgid "— No Messages —"
-msgstr ""
+msgstr "— Henüz Bir İleti Yok —"
 
 #: source_templates/notfound.html:3
 msgid "Page not found"
@@ -1277,10 +1278,8 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Maalesef, isteğinizi yerine getiremiyoruz."
 
 #: source_templates/session_timeout.html:2
-#, fuzzy
-#| msgid "Important!"
 msgid "Important"
-msgstr "Önemli!"
+msgstr "Önemli"
 
 #: source_templates/session_timeout.html:5
 msgid ""
@@ -1289,6 +1288,10 @@ msgid ""
 "in your Tor browser's toolbar before moving on. This will clear your Tor "
 "browser activity data on this device."
 msgstr ""
+"Bir süredir işlem yapmadığınız için oturumunuz kapatıldı. İlerlemeden önce "
+"Tor Browser araç çubuğundan <img src={icon} alt=\"broom icon\" width=\"16\" "
+"height=\"16\">&nbsp;<strong>Yeni Kimlik</strong> üzerine tıklayın. Bu işlem "
+"bu aygıttaki Tor Browser işlemlerini siler."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1357,10 +1360,8 @@ msgstr ""
 "yapmanız gerekenleri size yanıt olarak gönderir."
 
 #: source_templates/why-journalist-key.html:3
-#, fuzzy
-#| msgid "Why download the journalist's public key?"
 msgid "Why download the team's public key?"
-msgstr "Neden gazetecinin açık anahtarını indirmelisiniz?"
+msgstr "Neden takımın açık anahtarını indirmelisiniz?"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
