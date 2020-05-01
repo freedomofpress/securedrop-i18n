@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.12.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-04-22 17:06+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"PO-Revision-Date: 2020-05-01 19:06+0000\n"
+"Last-Translator: Oktavia <oktaviahrund@gmail.com>\n"
 "Language-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/is/>\n"
 "Language: is\n"
@@ -29,7 +29,7 @@ msgstr "Útskráning vegna aðgerðaleysis"
 
 #: journalist_app/__init__.py:146
 msgid "You have been logged out due to password change"
-msgstr "Þú hefur verið skráð/ur út vegna breytingar á lykilorði"
+msgstr "Útskráning vegna breytingar á lykilorði"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
@@ -41,7 +41,7 @@ msgstr "Það tókst að endurstilla tvíþátta-auðkennin þín."
 
 #: journalist_app/account.py:53 journalist_app/admin.py:136
 msgid "There was a problem verifying the two-factor code. Please try again."
-msgstr "Það kom upp villa við að staðfesta tvíþátta-kóðann. Reyndu aftur."
+msgstr "Það kom upp villa við staðfestingu tvíþátta-kóðans. Reyndu aftur."
 
 #: journalist_app/admin.py:42
 msgid "Image updated."
