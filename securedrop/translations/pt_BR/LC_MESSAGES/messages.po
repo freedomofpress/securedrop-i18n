@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-11-30 22:41+0000\n"
+"PO-Revision-Date: 2020-05-01 19:06+0000\n"
 "Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/pt_BR/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.10.3\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -50,7 +50,7 @@ msgstr "Imagem atualizada."
 
 #: journalist_app/admin.py:62
 msgid "Preferences saved."
-msgstr ""
+msgstr "Preferências salvas."
 
 #: journalist_app/admin.py:92
 msgid ""
@@ -908,6 +908,8 @@ msgid ""
 "You are already logged in. Please verify your codename below as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
+"A sua sessão já foi iniciada. Por favor, verifique seu codinome abaixo, "
+"porque ele pode ser diferente daquele exibido na página anterior."
 
 #: source_app/main.py:163
 msgid "You must enter a message or choose a file to submit."
@@ -1011,10 +1013,6 @@ msgstr ""
 "Por favor, anote o seu codinome e guarde-o em um lugar seguro, ou memorize-o."
 
 #: source_templates/generate.html:10
-#, fuzzy
-#| msgid ""
-#| "This codename is what you will use in future visits to receive messages "
-#| "from our journalists in response to what you submit on the next screen."
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our team in response to what you submit on the next screen."
@@ -1126,7 +1124,7 @@ msgstr "CANCELAR"
 
 #: source_templates/logout.html:6
 msgid "One more thing..."
-msgstr ""
+msgstr "Uma última coisa..."
 
 #: source_templates/logout.html:7
 msgid ""
@@ -1134,6 +1132,10 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
+"Clique no botão <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\""
+">&nbsp;<strong>Nova identidade</strong> na barra de ferramentas do navegador "
+"Tor. Assim, os dados da sua atividade no navegador Tor serão eliminados "
+"deste aparelho."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1252,7 +1254,7 @@ msgstr "NÃO, AINDA NÃO"
 
 #: source_templates/lookup.html:123
 msgid "— No Messages —"
-msgstr ""
+msgstr "— Nenhuma Mensagem —"
 
 #: source_templates/notfound.html:3
 msgid "Page not found"
@@ -1263,10 +1265,8 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Desculpe, não pudemos localizar o conteúdo que você pediu."
 
 #: source_templates/session_timeout.html:2
-#, fuzzy
-#| msgid "Important!"
 msgid "Important"
-msgstr "Importante!"
+msgstr "Importante"
 
 #: source_templates/session_timeout.html:5
 msgid ""
@@ -1275,6 +1275,10 @@ msgid ""
 "in your Tor browser's toolbar before moving on. This will clear your Tor "
 "browser activity data on this device."
 msgstr ""
+"A sua sessão foi encerrada por inatividade. Clique no botão <img src={icon} "
+"alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Nova "
+"identidade</strong> na barra de ferramentas do navegador Tor. Assim, os "
+"dados da sua atividade no navegador Tor serão eliminados deste aparelho."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1343,10 +1347,8 @@ msgstr ""
 "automática com instruções."
 
 #: source_templates/why-journalist-key.html:3
-#, fuzzy
-#| msgid "Why download the journalist's public key?"
 msgid "Why download the team's public key?"
-msgstr "Por que baixar a chave pública do jornalista?"
+msgstr "Por que baixar as chaves públicas da nossa equipe?"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
