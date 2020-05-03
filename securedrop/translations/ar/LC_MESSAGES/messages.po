@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2019-12-02 23:21+0000\n"
-"Last-Translator: erinm <erinm@riseup.net>\n"
+"PO-Revision-Date: 2020-05-04 00:06+0000\n"
+"Last-Translator: Thalia Rahme <trahme@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ar/>\n"
 "Language: ar\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.10.3\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -50,8 +50,9 @@ msgid "Image updated."
 msgstr "تم تحديث الصورة بنجاح."
 
 #: journalist_app/admin.py:62
+#, fuzzy
 msgid "Preferences saved."
-msgstr ""
+msgstr "تم حفظ الاختيارات"
 
 #: journalist_app/admin.py:92
 msgid ""
@@ -914,6 +915,8 @@ msgid ""
 "You are already logged in. Please verify your codename below as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
+"أنت مسجّل أساساً. من فضلك تأكد من اسمك الرمزي ههنا إذ قد يكون مختلف عن الإسم "
+"الظاهر على الصفحة السابقة."
 
 #: source_app/main.py:163
 msgid "You must enter a message or choose a file to submit."
@@ -1015,15 +1018,11 @@ msgstr ""
 "حفظه في ذاكرتك."
 
 #: source_templates/generate.html:10
-#, fuzzy
-#| msgid ""
-#| "This codename is what you will use in future visits to receive messages "
-#| "from our journalists in response to what you submit on the next screen."
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our team in response to what you submit on the next screen."
 msgstr ""
-"هذا الاسم الرمزي هو ما ستستعمله في زياراتك المقبلة لتلقي الرسائل من صحافيينا "
+"هذا الاسم الرمزي هو ما ستستعمله في زياراتك المقبلة لتلقي الرسائل من فريقنا "
 "ردّا على ما ستودعه في الخطوة التالية."
 
 #: source_templates/generate.html:34
@@ -1128,8 +1127,9 @@ msgid "CANCEL"
 msgstr "ألغ"
 
 #: source_templates/logout.html:6
+#, fuzzy
 msgid "One more thing..."
-msgstr ""
+msgstr "هناك أمرٌ آخر نود أن نلفت نظرك إليه"
 
 #: source_templates/logout.html:7
 msgid ""
@@ -1137,6 +1137,9 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
+"أنقر على الزر <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\""
+">&nbsp;<strong>New Identity</strong> في شريط متصفحك تور إذ أن ذلك من شأنه أن "
+"يمسح أي نشاط قمت به على متصفح تور من عبر هذا الجهاز."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1252,7 +1255,7 @@ msgstr "لا، ليس بَعْد"
 
 #: source_templates/lookup.html:123
 msgid "— No Messages —"
-msgstr ""
+msgstr "—ليس هناك أي رسالة—"
 
 #: source_templates/notfound.html:3
 msgid "Page not found"
@@ -1263,10 +1266,8 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "عذرًا لم نتمكن من إيجاد المطلوب."
 
 #: source_templates/session_timeout.html:2
-#, fuzzy
-#| msgid "Important!"
 msgid "Important"
-msgstr "هام!"
+msgstr "هام"
 
 #: source_templates/session_timeout.html:5
 msgid ""
@@ -1275,6 +1276,9 @@ msgid ""
 "in your Tor browser's toolbar before moving on. This will clear your Tor "
 "browser activity data on this device."
 msgstr ""
+"لقد تم إخراجك من الحساب نظراً لعدم نشاطك. أضعط على زر <img src={icon} alt=\""
+"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong>  "
+"في متصفحك تور ومن شأن ذلك أن يمسح أي نشاط لك على متصفح تور  عبر هذا الجهاز."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1338,10 +1342,8 @@ msgstr ""
 "متصفح تور بطريقة بديلة."
 
 #: source_templates/why-journalist-key.html:3
-#, fuzzy
-#| msgid "Why download the journalist's public key?"
 msgid "Why download the team's public key?"
-msgstr "ما أهمية تنزيل المفتاح العلني للصحفي؟"
+msgstr "ما أهمية تنزيل المفتاح العلني للفريق؟"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
