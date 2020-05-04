@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-05-01 19:06+0000\n"
-"Last-Translator: Kaya Zeren <kayazeren@gmail.com>\n"
+"PO-Revision-Date: 2020-05-04 18:06+0000\n"
+"Last-Translator: Volkan <volkangezer@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
 "Language: tr\n"
@@ -51,7 +51,7 @@ msgstr "Görüntü güncellendi."
 
 #: journalist_app/admin.py:62
 msgid "Preferences saved."
-msgstr "Ayarlar kaydedildi."
+msgstr "Tercihler kaydedildi."
 
 #: journalist_app/admin.py:92
 msgid ""
@@ -1025,8 +1025,8 @@ msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our team in response to what you submit on the next screen."
 msgstr ""
-"Bir sonraki sayfada göndereceğiniz bilgilere ekibimizin gönderdiği yanıtları "
-"almak için yeniden geldiğinizde bu kod adını kullanacaksınız."
+"Bir sonraki sayfada göndereceğiniz bilgilere, ekibimizin gönderdiği "
+"yanıtları almak için yeniden geldiğinizde bu kod adını kullanacaksınız."
 
 #: source_templates/generate.html:34
 msgid ""
@@ -1147,7 +1147,7 @@ msgid ""
 msgstr ""
 "Tor Browser araç çubuğundan <img src={icon} alt=\"broom icon\" width=\"16\" "
 "height=\"16\">&nbsp;<strong>Yeni Kimlik</strong> üzerine tıklayın. Bu işlem "
-"bu aygıt üzerindeki Tor Browser işlemlerini siler."
+"bu aygıt üzerindeki Tor Browser etkinliklerini siler."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
