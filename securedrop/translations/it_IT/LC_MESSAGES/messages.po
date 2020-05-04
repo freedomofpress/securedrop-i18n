@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-04-22 17:06+0000\n"
+"PO-Revision-Date: 2020-05-04 11:06+0000\n"
 "Last-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\n"
 "Language-Team: Italian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/it/>\n"
@@ -110,7 +110,7 @@ msgstr "Solo gli amministratori possono accedere a questa pagina."
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgstr ""
-"Le password HTOP sono di 40 caratteri - ne sono stati inseriti {num_chars}."
+"Le password HOTP sono di 40 caratteri - ne sono stati inseriti {num_chars}."
 
 #: journalist_app/forms.py:30
 msgid ""
@@ -191,7 +191,7 @@ msgstr ""
 #: journalist_app/utils.py:130
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
-"Formato del segreto non valido: segreto di lunghezza insolita. Forse non è "
+"Formato del segreto non valido: segreto di lunghezza dispari. Forse non è "
 "stato digitato correttamente?"
 
 #: journalist_app/utils.py:186
@@ -328,7 +328,7 @@ msgid ""
 "account by entering the following two-factor secret into the app:"
 msgstr ""
 "Impossibile eseguire la scansione del codice a barre? È possibile accoppiare "
-"manualmente FreeOTp e l'account SecureDrop inserendo il seguente codice a "
+"manualmente FreeOTP e l'account SecureDrop inserendo il seguente codice a "
 "due fattori nell'applicazione:"
 
 #: journalist_templates/account_new_two_factor.html:16
@@ -479,7 +479,7 @@ msgid ""
 "entering the following two-factor secret into the app:"
 msgstr ""
 "Impossibile eseguire la scansione del codice a barre? È possibile accoppiare "
-"manualmente FreeOTp con questo account inserendo il seguente codice a due "
+"manualmente FreeOTP con questo account inserendo il seguente codice a due "
 "fattori nell'applicazione:"
 
 #: journalist_templates/admin_new_user_two_factor.html:21
@@ -1062,10 +1062,10 @@ msgid ""
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
-"L'<a id=\"disable-js\" href=\"\"><strong>impostazione di sicurezza</strong></"
-"a> del proprio browser Tor è troppo bassa. Utilizzare il <img src=\"{icon}\" "
-"alt=\"shield icon\"> &nbsp;pulsante nella barra degli strumenti del browser "
-"per modificarla."
+"L'<a id=\"disable-js\" href=\"\"><strong>impostazione di "
+"sicurezza</strong></a> del proprio browser Tor è troppo bassa. Utilizzare il "
+"pulsante <img src=\"{icon}\" alt=\"icona di uno scudo\"> &nbsp;nella barra "
+"degli strumenti del browser per modificarla."
 
 #: source_templates/index.html:17
 msgid ""
@@ -1115,8 +1115,8 @@ msgstr ""
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
 msgstr ""
-"Fare clic <img src=\"{icon}\" alt=\"shield icon\"> nella barra degli "
-"strumenti qui sopra"
+"Fare clic su <img src=\"{icon}\" alt=\"icona di uno scudo\"> nella barra "
+"degli strumenti qui sopra"
 
 #: source_templates/index.html:80
 msgid "Select <strong>Advanced Security Settings</strong>"
@@ -1152,8 +1152,8 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
-"Fare clic sul pulsante <img src={icon} alt=\"broom icon\" width=\"16\" "
-"height=\"16\">&nbsp;<strong>Nuova identità</strong> nella barra degli "
+"Fare clic sul pulsante <img src={icon} alt=\"icona di una scopa\" width=\""
+"16\" height=\"16\">&nbsp;<strong>Nuova identità</strong> nella barra degli "
 "strumenti del browser Tor. Questo cancellerà tutti i dati sulle attività di "
 "Tor da questo dispositivo."
 
@@ -1295,10 +1295,10 @@ msgid ""
 "browser activity data on this device."
 msgstr ""
 "È stata eseguita la disconnessione per inattività. Fare clic sul pulsante <"
-"img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>"
-"Nuova identità</strong> nella barra degli strumenti del browser Tor prima di "
-"proseguire. Questo cancellerà tutti i dati sulle attività di Tor da questo "
-"dispositivo."
+"img src={icon} alt=\"icona di una scopa\" width=\"16\" height=\"16\""
+">&nbsp;<strong>Nuova identità</strong> nella barra degli strumenti del "
+"browser Tor prima di proseguire. Questo cancellerà tutti i dati sulle "
+"attività di Tor da questo dispositivo."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1315,7 +1315,7 @@ msgid ""
 "It could be possible for anyone monitoring your Internet traffic (your "
 "government, your Internet provider), to identify you."
 msgstr ""
-"Potrebbe essere possibile per chiunque stia monitorando il traffcio Internet "
+"Potrebbe essere possibile per chiunque stia monitorando il traffico Internet "
 "(il governo, il fornitore dei servizi Internet), identificarti."
 
 #: source_templates/tor2web-warning.html:6
@@ -1328,14 +1328,14 @@ msgstr ""
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
-msgstr "Dovresti usare Tor Browser"
+msgstr "Dovresti usare il browser Tor"
 
 #: source_templates/use-tor-browser.html:4
 msgid ""
 "If you are not using Tor Browser, you <strong>may not be anonymous</strong>."
 msgstr ""
-"Se non stai usando Tor Browser, potresti <strong>non avere l'anonimato</"
-"strong>."
+"Se non stai usando il browser Tor, potresti <strong>non avere "
+"l'anonimato</strong>."
 
 #: source_templates/use-tor-browser.html:5
 msgid ""
@@ -1344,7 +1344,7 @@ msgid ""
 "anonymously."
 msgstr ""
 "Se vuoi inviare informazioni a SecureDrop, ti <strong>raccomandiamo "
-"caldamente</strong> di installare Tor Browser e usarlo per accedere al "
+"caldamente</strong> di installare il browser Tor e usarlo per accedere al "
 "nostro sito in maniera sicura e anonima."
 
 #: source_templates/use-tor-browser.html:6
@@ -1353,7 +1353,7 @@ msgid ""
 "instructions to download and install Tor Browser:"
 msgstr ""
 "Copia e incolla il seguente indirizzo nel tuo browser e segui le istruzioni "
-"per scaricare e installare Tor Browser:"
+"per scaricare e installare Tor:"
 
 #: source_templates/use-tor-browser.html:9
 msgid ""
