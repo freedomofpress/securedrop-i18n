@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-11-30 19:23+0000\n"
-"Last-Translator: Chandan Kumar <chkumar246@gmail.com>\n"
+"PO-Revision-Date: 2020-05-04 20:06+0000\n"
+"Last-Translator: Drashti <drashtipandya37@gmail.com>\n"
 "Language-Team: Hindi <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/hi/>\n"
 "Language: hi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.10.3\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:14
@@ -49,7 +49,7 @@ msgstr "छवि अपडेट की गई है।"
 
 #: journalist_app/admin.py:62
 msgid "Preferences saved."
-msgstr ""
+msgstr "प्राथमिकताएं सेव हो गयी।"
 
 #: journalist_app/admin.py:92
 msgid ""
@@ -879,6 +879,8 @@ msgid ""
 "You are already logged in. Please verify your codename below as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
+"आप पहले से लॉग इन हैं। कृपया अपना संकेत नाम नीचे सत्यापित करें क्योंकि यह "
+"पिछले पृष्ठ पर प्रदर्शित करे गए से भिन्न हो सकता है."
 
 #: source_app/main.py:163
 msgid "You must enter a message or choose a file to submit."
@@ -976,16 +978,12 @@ msgid ""
 msgstr "कृपया यह संकेत नाम नीचे लिखें और इसे किसी सुरक्षित स्थान पर रखें, या इसे याद रखें।"
 
 #: source_templates/generate.html:10
-#, fuzzy
-#| msgid ""
-#| "This codename is what you will use in future visits to receive messages "
-#| "from our journalists in response to what you submit on the next screen."
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our team in response to what you submit on the next screen."
 msgstr ""
-"यह संकेत नाम आप अगली स्क्रीन पर सबमिट की गई प्रतिक्रिया के उत्तर में हमारे पत्रकारों से "
-"संदेश प्राप्त करने के लिए भविष्य में आने वाले दौरा में उपयोग करें।"
+"यह संकेत नाम आप अगली स्क्रीन पर सबमिट की गई प्रतिक्रिया के उत्तर में हमारे टी"
+"म से संदेश प्राप्त करने के लिए भविष्य में आने वाले दौरा में उपयोग करें।"
 
 #: source_templates/generate.html:34
 msgid ""
@@ -1090,7 +1088,7 @@ msgstr "रद्द करें"
 
 #: source_templates/logout.html:6
 msgid "One more thing..."
-msgstr ""
+msgstr "एक और चीज़..."
 
 #: source_templates/logout.html:7
 msgid ""
@@ -1098,6 +1096,9 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
+"अपने Tor ब्राउज़र के टूलबार में <img src={icon} alt=\"broom icon\" width=\""
+"16\" height=\"16\">&nbsp;<strong>नई पहचान </strong> बटन पर क्लिक करें. यह इस "
+"उपकरण पर आपके Tor ब्राउज़र गतिविधि डेटा को साफ़ कर देगा."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1214,7 +1215,7 @@ msgstr "नहीं, अभी तक नहीं"
 
 #: source_templates/lookup.html:123
 msgid "— No Messages —"
-msgstr ""
+msgstr "— कोई संदेश नहीं —"
 
 #: source_templates/notfound.html:3
 msgid "Page not found"
@@ -1225,10 +1226,8 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "क्षमा करें, हम आपके द्वारा अनुरोध किए गए स्थान का पता नहीं लगा सके।"
 
 #: source_templates/session_timeout.html:2
-#, fuzzy
-#| msgid "Important!"
 msgid "Important"
-msgstr "जरूरी!"
+msgstr "जरूरी"
 
 #: source_templates/session_timeout.html:5
 msgid ""
@@ -1237,6 +1236,9 @@ msgid ""
 "in your Tor browser's toolbar before moving on. This will clear your Tor "
 "browser activity data on this device."
 msgstr ""
+"आप निष्क्रियता के कारण लॉग आउट हो गया. आगे बढ़ने से पहले अपने Tor ब्राउज़र के"
+" टूलबार में <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\""
+">&nbsp;<strong> नई पहचान </strong> बटन पर क्लिक करें."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1303,10 +1305,8 @@ msgstr ""
 "org</pre> और एक बॉट निर्देशों के साथ जवाब देंगे|"
 
 #: source_templates/why-journalist-key.html:3
-#, fuzzy
-#| msgid "Why download the journalist's public key?"
 msgid "Why download the team's public key?"
-msgstr "पत्रकार की सार्वजनिक कुंजी क्यों डाउनलोड करें?"
+msgstr "टीम की सार्वजनिक कुंजी क्यों डाउनलोड करें?"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
