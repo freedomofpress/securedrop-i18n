@@ -110,7 +110,7 @@ msgstr "फ़ील्ड कम से कम {min_chars} वर्ण लं�
 msgid "Field can not be more than {max_chars} characters."
 msgstr "फ़ील्ड {max_chars} वर्ण से लंबा नहीं होना चाहिए।"
 
-#: journalist_app/forms.py:42 source_app/forms.py:11
+#: journalist_app/forms.py:42 source_app/forms.py:12
 msgid "This field is required."
 msgstr "यह फ़ील्ड आवश्यक है।"
 
@@ -858,13 +858,25 @@ msgstr ""
 "गुमनामी सुनिश्चित <strong>&nbsp;नहीं &nbsp;</strong> करता| <a href=\"{url}\">यह "
 "घातक क्यों है?</a>"
 
-#: source_app/forms.py:15
+#: source_app/forms.py:16
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "फ़ील्ड 1 और {max_codename_len} वर्णों के बीच लंबा होना चाहिए।"
 
-#: source_app/forms.py:18
+#: source_app/forms.py:19
 msgid "Invalid input."
 msgstr "अमान्य निवेश।"
+
+#: source_app/forms.py:24
+msgid "Write a message."
+msgstr "सन्देश लिखिए।"
+
+#: source_app/forms.py:29
+msgid "Message text too long."
+msgstr ""
+
+#: source_app/forms.py:33
+msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
+msgstr ""
 
 #: source_app/main.py:33
 msgid ""
@@ -875,42 +887,46 @@ msgstr ""
 "बनाना चाहते हैं, तो आपको पहले लॉग आउट करना चाहिए।"
 
 #: source_app/main.py:64
+#, fuzzy
+#| msgid ""
+#| "You are already logged in. Please verify your codename below as it may "
+#| "differ from the one displayed on the previous page."
 msgid ""
-"You are already logged in. Please verify your codename below as it may "
+"You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
-"आप पहले से लॉग इन हैं। कृपया अपना संकेत नाम नीचे सत्यापित करें क्योंकि यह "
-"पिछले पृष्ठ पर प्रदर्शित करे गए से भिन्न हो सकता है."
+"आप पहले से लॉग इन हैं। कृपया अपना संकेत नाम नीचे सत्यापित करें क्योंकि यह पिछले पृष्ठ पर "
+"प्रदर्शित करे गए से भिन्न हो सकता है."
 
-#: source_app/main.py:163
+#: source_app/main.py:171
 msgid "You must enter a message or choose a file to submit."
 msgstr "सबमिट करने के लिए आपको कोई संदेश दर्ज करना होगा या एक फ़ाइल चुनें |"
 
-#: source_app/main.py:167
+#: source_app/main.py:175
 msgid "You must enter a message."
 msgstr "आपको कोई संदेश दर्ज करना होगा |"
 
-#: source_app/main.py:198
+#: source_app/main.py:206
 msgid "Thanks! We received your message."
 msgstr "धन्यवाद! हमें आपका संदेशा मिला|"
 
-#: source_app/main.py:200
+#: source_app/main.py:208
 msgid "Thanks! We received your document."
 msgstr "धन्यवाद! हमें आपका दस्तावेज़ मिला।"
 
-#: source_app/main.py:202
+#: source_app/main.py:210
 msgid "Thanks! We received your message and document."
 msgstr "धन्यवाद! हमें आपका संदेशा और दस्तावेज़ मिला।"
 
-#: source_app/main.py:261
+#: source_app/main.py:271
 msgid "Reply deleted"
 msgstr "जवाब हटा दिया गया"
 
-#: source_app/main.py:279
+#: source_app/main.py:289
 msgid "All replies have been deleted"
 msgstr "सभी उत्तर हटा दिए गए हैं"
 
-#: source_app/main.py:293
+#: source_app/main.py:303
 msgid "Sorry, that is not a recognized codename."
 msgstr "क्षमा करें, वह एक मान्यता प्राप्त कोडनाम नहीं है |"
 
@@ -982,8 +998,8 @@ msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our team in response to what you submit on the next screen."
 msgstr ""
-"यह संकेत नाम आप अगली स्क्रीन पर सबमिट की गई प्रतिक्रिया के उत्तर में हमारे टी"
-"म से संदेश प्राप्त करने के लिए भविष्य में आने वाले दौरा में उपयोग करें।"
+"यह संकेत नाम आप अगली स्क्रीन पर सबमिट की गई प्रतिक्रिया के उत्तर में हमारे टीम से संदेश "
+"प्राप्त करने के लिए भविष्य में आने वाले दौरा में उपयोग करें।"
 
 #: source_templates/generate.html:34
 msgid ""
@@ -1096,9 +1112,9 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
-"अपने Tor ब्राउज़र के टूलबार में <img src={icon} alt=\"broom icon\" width=\""
-"16\" height=\"16\">&nbsp;<strong>नई पहचान </strong> बटन पर क्लिक करें. यह इस "
-"उपकरण पर आपके Tor ब्राउज़र गतिविधि डेटा को साफ़ कर देगा."
+"अपने Tor ब्राउज़र के टूलबार में <img src={icon} alt=\"broom icon\" width=\"16\" "
+"height=\"16\">&nbsp;<strong>नई पहचान </strong> बटन पर क्लिक करें. यह इस उपकरण "
+"पर आपके Tor ब्राउज़र गतिविधि डेटा को साफ़ कर देगा."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1174,10 +1190,6 @@ msgstr "<a href=\"{url}\" class=\"text-link\">अधिक जानें</a>|"
 msgid "Maximum upload size: 500 MB"
 msgstr "अधिकतम अपलोड माप: 500 MB"
 
-#: source_templates/lookup.html:62
-msgid "Write a message."
-msgstr "सन्देश लिखिए।"
-
 #: source_templates/lookup.html:84
 msgid "Read Replies"
 msgstr "उत्तर पढ़ें"
@@ -1236,9 +1248,9 @@ msgid ""
 "in your Tor browser's toolbar before moving on. This will clear your Tor "
 "browser activity data on this device."
 msgstr ""
-"आप निष्क्रियता के कारण लॉग आउट हो गया. आगे बढ़ने से पहले अपने Tor ब्राउज़र के"
-" टूलबार में <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\""
-">&nbsp;<strong> नई पहचान </strong> बटन पर क्लिक करें."
+"आप निष्क्रियता के कारण लॉग आउट हो गया. आगे बढ़ने से पहले अपने Tor ब्राउज़र के टूलबार में "
+"<img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong> "
+"नई पहचान </strong> बटन पर क्लिक करें."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"

@@ -136,7 +136,7 @@ msgstr ""
 msgid "Field can not be more than {max_chars} characters."
 msgstr ""
 
-#: journalist_app/forms.py:42 source_app/forms.py:11
+#: journalist_app/forms.py:42 source_app/forms.py:12
 #, fuzzy
 msgid "This field is required."
 msgstr "Privalomas laukas."
@@ -1028,15 +1028,28 @@ msgstr ""
 "<strong>ĮSPĖJIMAS:&nbsp;</strong> Jūs naudojate Tor2Web. Tai<strong>&nbsp;"
 "nėra&nbsp;</strong> anonimiška. <a href=\"{url}\"Kodėl tai pavojinga?</a>"
 
-#: source_app/forms.py:15
+#: source_app/forms.py:16
 #, fuzzy
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "Laukas turi būti nuo 1 iki {max_codename_len} simbolių ilgio."
 
-#: source_app/forms.py:18
+#: source_app/forms.py:19
 #, fuzzy
 msgid "Invalid input."
 msgstr "Neteisinga laukelio reikšmė."
+
+#: source_app/forms.py:24
+#, fuzzy
+msgid "Write a message."
+msgstr "Rašyti žinutę."
+
+#: source_app/forms.py:29
+msgid "Message text too long."
+msgstr ""
+
+#: source_app/forms.py:33
+msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
+msgstr ""
 
 #: source_app/main.py:33
 #, fuzzy
@@ -1049,48 +1062,48 @@ msgstr ""
 
 #: source_app/main.py:64
 msgid ""
-"You are already logged in. Please verify your codename below as it may "
+"You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
 
-#: source_app/main.py:163
+#: source_app/main.py:171
 #, fuzzy
 msgid "You must enter a message or choose a file to submit."
 msgstr ""
 "Privalote įrašyti žinutę arba pasirinkti bylą (failą) kurį norite pateikti."
 
-#: source_app/main.py:167
+#: source_app/main.py:175
 #, fuzzy
 msgid "You must enter a message."
 msgstr ""
 "Privalote įrašyti žinutę arba pasirinkti bylą (failą) kurį norite pateikti."
 
-#: source_app/main.py:198
+#: source_app/main.py:206
 #, fuzzy
 msgid "Thanks! We received your message."
 msgstr "Ačiū! Žinutė pateikta sėkmingai."
 
-#: source_app/main.py:200
+#: source_app/main.py:208
 #, fuzzy
 msgid "Thanks! We received your document."
 msgstr "Ačiū! Dokumentas pateiktas sėkmingai."
 
-#: source_app/main.py:202
+#: source_app/main.py:210
 #, fuzzy
 msgid "Thanks! We received your message and document."
 msgstr "Ačiū! Tavo žinutė ir dokumentai pateikti sėkmingai."
 
-#: source_app/main.py:261
+#: source_app/main.py:271
 #, fuzzy
 msgid "Reply deleted"
 msgstr "Atsakymas ištrintas"
 
-#: source_app/main.py:279
+#: source_app/main.py:289
 #, fuzzy
 msgid "All replies have been deleted"
 msgstr "Visi atsakymai ištrinti"
 
-#: source_app/main.py:293
+#: source_app/main.py:303
 #, fuzzy
 msgid "Sorry, that is not a recognized codename."
 msgstr "Atsiprašome, šis slapyvardis neatpažintas."
@@ -1373,11 +1386,6 @@ msgstr "<a href=\"{url}\" class=\"text-link\">Sužinoti daugiau</a>."
 #, fuzzy
 msgid "Maximum upload size: 500 MB"
 msgstr "Maksimalus siunčiamų failų dydis: 500 MB"
-
-#: source_templates/lookup.html:62
-#, fuzzy
-msgid "Write a message."
-msgstr "Rašyti žinutę."
 
 #: source_templates/lookup.html:84
 #, fuzzy

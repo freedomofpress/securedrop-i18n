@@ -120,7 +120,7 @@ msgstr "השדה צריך להכיל לפחות {min_chars} תווים אך הת
 msgid "Field can not be more than {max_chars} characters."
 msgstr ""
 
-#: journalist_app/forms.py:42 source_app/forms.py:11
+#: journalist_app/forms.py:42 source_app/forms.py:12
 msgid "This field is required."
 msgstr "שדה חובה."
 
@@ -858,12 +858,24 @@ msgid ""
 "\"{url}\">Why is this dangerous?</a>"
 msgstr ""
 
-#: source_app/forms.py:15
+#: source_app/forms.py:16
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr ""
 
-#: source_app/forms.py:18
+#: source_app/forms.py:19
 msgid "Invalid input."
+msgstr ""
+
+#: source_app/forms.py:24
+msgid "Write a message."
+msgstr ""
+
+#: source_app/forms.py:29
+msgid "Message text too long."
+msgstr ""
+
+#: source_app/forms.py:33
+msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
 msgstr ""
 
 #: source_app/main.py:33
@@ -874,39 +886,39 @@ msgstr ""
 
 #: source_app/main.py:64
 msgid ""
-"You are already logged in. Please verify your codename below as it may "
+"You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
 
-#: source_app/main.py:163
+#: source_app/main.py:171
 msgid "You must enter a message or choose a file to submit."
 msgstr ""
 
-#: source_app/main.py:167
+#: source_app/main.py:175
 msgid "You must enter a message."
 msgstr ""
 
-#: source_app/main.py:198
+#: source_app/main.py:206
 msgid "Thanks! We received your message."
 msgstr ""
 
-#: source_app/main.py:200
+#: source_app/main.py:208
 msgid "Thanks! We received your document."
 msgstr ""
 
-#: source_app/main.py:202
+#: source_app/main.py:210
 msgid "Thanks! We received your message and document."
 msgstr ""
 
-#: source_app/main.py:261
+#: source_app/main.py:271
 msgid "Reply deleted"
 msgstr ""
 
-#: source_app/main.py:279
+#: source_app/main.py:289
 msgid "All replies have been deleted"
 msgstr ""
 
-#: source_app/main.py:293
+#: source_app/main.py:303
 msgid "Sorry, that is not a recognized codename."
 msgstr ""
 
@@ -1135,10 +1147,6 @@ msgstr ""
 
 #: source_templates/lookup.html:58
 msgid "Maximum upload size: 500 MB"
-msgstr ""
-
-#: source_templates/lookup.html:62
-msgid "Write a message."
 msgstr ""
 
 #: source_templates/lookup.html:84

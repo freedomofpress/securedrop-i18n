@@ -129,7 +129,7 @@ msgstr ""
 msgid "Field can not be more than {max_chars} characters."
 msgstr ""
 
-#: journalist_app/forms.py:42 source_app/forms.py:11
+#: journalist_app/forms.py:42 source_app/forms.py:12
 msgid "This field is required."
 msgstr "Trường nhập này bắt buộc."
 
@@ -903,13 +903,25 @@ msgstr ""
 "<strong> CHÚ Ý:</strong> Có vẻ rằng bạn đã sử dụng Tor2Web.<strong>non</"
 "strong> này không có ẩn danh. <a href=\"{url}\">Vì sao lại nguy hiểm?</a>"
 
-#: source_app/forms.py:15
+#: source_app/forms.py:16
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "Trường nhập phải bao gồm giữa 1 và {max_codename_len} kí tự."
 
-#: source_app/forms.py:18
+#: source_app/forms.py:19
 msgid "Invalid input."
 msgstr "Nhập không chính xác."
+
+#: source_app/forms.py:24
+msgid "Write a message."
+msgstr "Viết một tin nhắn."
+
+#: source_app/forms.py:29
+msgid "Message text too long."
+msgstr ""
+
+#: source_app/forms.py:33
+msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
+msgstr ""
 
 #: source_app/main.py:33
 msgid ""
@@ -921,41 +933,41 @@ msgstr ""
 
 #: source_app/main.py:64
 msgid ""
-"You are already logged in. Please verify your codename below as it may "
+"You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
 
-#: source_app/main.py:163
+#: source_app/main.py:171
 msgid "You must enter a message or choose a file to submit."
 msgstr "Bạn phải nhập một tin nhắn hay chọn một tài liệu để tải lên."
 
-#: source_app/main.py:167
+#: source_app/main.py:175
 #, fuzzy
 #| msgid "You must enter a message or choose a file to submit."
 msgid "You must enter a message."
 msgstr "Bạn phải nhập một tin nhắn hay chọn một tài liệu để tải lên."
 
-#: source_app/main.py:198
+#: source_app/main.py:206
 msgid "Thanks! We received your message."
 msgstr "Cảm ơn! Chúng tôi đã nhận được tin nhắn của bạn."
 
-#: source_app/main.py:200
+#: source_app/main.py:208
 msgid "Thanks! We received your document."
 msgstr "Cảm ơn! Chúng tôi đã nhận được tài liệu của bạn."
 
-#: source_app/main.py:202
+#: source_app/main.py:210
 msgid "Thanks! We received your message and document."
 msgstr "Cảm ơn! Chúng tôi đã nhận được tin nhắn và tài liệu của bạn."
 
-#: source_app/main.py:261
+#: source_app/main.py:271
 msgid "Reply deleted"
 msgstr "Câu trả lời đã được xóa"
 
-#: source_app/main.py:279
+#: source_app/main.py:289
 msgid "All replies have been deleted"
 msgstr "Tất cả các câu trả lời đã được xóa"
 
-#: source_app/main.py:293
+#: source_app/main.py:303
 msgid "Sorry, that is not a recognized codename."
 msgstr "Đây không phải là một mật danh trong cơ sở dữ liệu."
 
@@ -1202,10 +1214,6 @@ msgstr ""
 #: source_templates/lookup.html:58
 msgid "Maximum upload size: 500 MB"
 msgstr "Kích thước tải lên tối đa: 500 MB"
-
-#: source_templates/lookup.html:62
-msgid "Write a message."
-msgstr "Viết một tin nhắn."
 
 #: source_templates/lookup.html:84
 msgid "Read Replies"

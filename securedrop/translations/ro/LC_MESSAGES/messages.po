@@ -120,7 +120,7 @@ msgstr ""
 msgid "Field can not be more than {max_chars} characters."
 msgstr "Câmpul nu poate avea mai mult de {max_chars} caractere."
 
-#: journalist_app/forms.py:42 source_app/forms.py:11
+#: journalist_app/forms.py:42 source_app/forms.py:12
 msgid "This field is required."
 msgstr "Acest câmp este obligatoriu."
 
@@ -888,7 +888,8 @@ msgstr "Sigur vrei să ștergi utilizatorul {username}?"
 #: journalist_templates/js-strings.html:8
 msgid ""
 "Are you sure you want to reset two-factor authentication for {username}?"
-msgstr "Sigur vrei să resetezi autentificarea cu doi factori pentru {username}?"
+msgstr ""
+"Sigur vrei să resetezi autentificarea cu doi factori pentru {username}?"
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
@@ -913,13 +914,25 @@ msgstr ""
 "serviciu <strong>&nbsp;nu oferă&nbsp;</strong> anonimitate. <a href="
 "\"{url}\">De ce este periculos?</a>"
 
-#: source_app/forms.py:15
+#: source_app/forms.py:16
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "Câmpul trebuie să aibă între 1 și {max_codename_len} caractere."
 
-#: source_app/forms.py:18
+#: source_app/forms.py:19
 msgid "Invalid input."
 msgstr "Date introduse nevalide."
+
+#: source_app/forms.py:24
+msgid "Write a message."
+msgstr "Scrie un mesaj."
+
+#: source_app/forms.py:29
+msgid "Message text too long."
+msgstr ""
+
+#: source_app/forms.py:33
+msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
+msgstr ""
 
 #: source_app/main.py:33
 msgid ""
@@ -930,42 +943,46 @@ msgstr ""
 "creezi un cont nou trebuie să te deconectezi mai întâi."
 
 #: source_app/main.py:64
+#, fuzzy
+#| msgid ""
+#| "You are already logged in. Please verify your codename below as it may "
+#| "differ from the one displayed on the previous page."
 msgid ""
-"You are already logged in. Please verify your codename below as it may "
+"You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
 "Ești deja conectat(ă). Te rugăm să îți verifici numele de cod de mai jos, "
 "pentru că poate diferi de cel afișat în pagina anterioară."
 
-#: source_app/main.py:163
+#: source_app/main.py:171
 msgid "You must enter a message or choose a file to submit."
 msgstr "Trebuie să introduci un mesaj sau să alegi un fișier de trimis."
 
-#: source_app/main.py:167
+#: source_app/main.py:175
 msgid "You must enter a message."
 msgstr "Trebuie să introduci un mesaj."
 
-#: source_app/main.py:198
+#: source_app/main.py:206
 msgid "Thanks! We received your message."
 msgstr "Îți mulțumim! Am primit mesajul tău."
 
-#: source_app/main.py:200
+#: source_app/main.py:208
 msgid "Thanks! We received your document."
 msgstr "Îți mulțumim! Am primit documentul tău."
 
-#: source_app/main.py:202
+#: source_app/main.py:210
 msgid "Thanks! We received your message and document."
 msgstr "Îți mulțumim! Am primit mesajul și documentul."
 
-#: source_app/main.py:261
+#: source_app/main.py:271
 msgid "Reply deleted"
 msgstr "Răspunsul a fost șters"
 
-#: source_app/main.py:279
+#: source_app/main.py:289
 msgid "All replies have been deleted"
 msgstr "Toate răspunsurile au fost șterse"
 
-#: source_app/main.py:293
+#: source_app/main.py:303
 msgid "Sorry, that is not a recognized codename."
 msgstr "Ne pare rău, acesta nu este un nume de cod recunoscut."
 
@@ -1073,8 +1090,8 @@ msgid ""
 msgstr ""
 "<a id=\"disable-js\" href=\"\"><strong>Setările de securitate</strong></a> "
 "din browserul tău Tor sunt prea slabe. Folosește butonul <img src=\"{icon}\" "
-"alt=\"shield icon\"> &nbsp;din bara de instrumente a browserului și "
-"schimbă-le."
+"alt=\"shield icon\"> &nbsp;din bara de instrumente a browserului și schimbă-"
+"le."
 
 #: source_templates/index.html:17
 msgid ""
@@ -1082,9 +1099,9 @@ msgid ""
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
 "install it</a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Îți recomandăm să folosești browserul Tor pentru a accesa "
-"SecureDrop:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Află "
-"cum îl poți instala</a> sau ignoră acest avertisment pentru a continua."
+"<strong>Îți recomandăm să folosești browserul Tor pentru a accesa SecureDrop:"
+"</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Află cum îl "
+"poți instala</a> sau ignoră acest avertisment pentru a continua."
 
 #: source_templates/index.html:18
 msgid ""
@@ -1096,8 +1113,8 @@ msgid ""
 msgstr ""
 "<strong>Îți recomandăm să folosești browserul Tor în versiunea pentru "
 "calculator pentru a accesa SecureDrop, deoarece Orfox nu oferă același nivel "
-"de securitate și anonimitate.</strong> <a id=\"recommend-tor\" href=\""
-"{tor_browser_url}\">Află cum îl poți instala</a> sau ignoră acest "
+"de securitate și anonimitate.</strong> <a id=\"recommend-tor\" href="
+"\"{tor_browser_url}\">Află cum îl poți instala</a> sau ignoră acest "
 "avertisment pentru a continua."
 
 #: source_templates/index.html:45
@@ -1161,8 +1178,8 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
-"Dă clic pe butonul <img src={icon} alt=\"broom icon\" width=\"16\" height=\""
-"16\">&nbsp;<strong>Identitate nouă</strong> din bara de instrumente a "
+"Dă clic pe butonul <img src={icon} alt=\"broom icon\" width=\"16\" height="
+"\"16\">&nbsp;<strong>Identitate nouă</strong> din bara de instrumente a "
 "browserului Tor. Îți va șterge activitatea din browserul Tor de pe acest "
 "dispozitiv."
 
@@ -1241,10 +1258,6 @@ msgstr "<a href=\"{url}\" class=\"text-link\">Află mai multe</a>."
 msgid "Maximum upload size: 500 MB"
 msgstr "Mărime maximă fișiere la încărcare: 500 MB"
 
-#: source_templates/lookup.html:62
-msgid "Write a message."
-msgstr "Scrie un mesaj."
-
 #: source_templates/lookup.html:84
 msgid "Read Replies"
 msgstr "Citește răspunsurile"
@@ -1305,10 +1318,10 @@ msgid ""
 "browser activity data on this device."
 msgstr ""
 "Ai fost deconectat(ă) din cauza inactivității. Dă clic pe butonul <img "
-"src={icon} alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>"
-"Identitate nouă</strong> din bara de instrumente a browserului Tor înainte "
-"de a merge mai departe. Îți va șterge activitatea din browserul Tor de pe "
-"acest dispozitiv."
+"src={icon} alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;"
+"<strong>Identitate nouă</strong> din bara de instrumente a browserului Tor "
+"înainte de a merge mai departe. Îți va șterge activitatea din browserul Tor "
+"de pe acest dispozitiv."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1333,8 +1346,8 @@ msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor browser</a> instead."
 msgstr ""
-"<strong>Îți recomandăm puternic</strong> să folosești <a href=\""
-"www.torproject.org/projects/torbrowser.html\">browserul Tor</a> în schimb."
+"<strong>Îți recomandăm puternic</strong> să folosești <a href=\"www."
+"torproject.org/projects/torbrowser.html\">browserul Tor</a> în schimb."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
@@ -1470,10 +1483,9 @@ msgid ""
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
-"<strong>Pont:</strong> Dacă vrei să rămâi anonim(ă), <strong>nu "
-"folosi</strong> GPG pentru a semna fișiere criptate (cu argumentul "
-"<code>--sign</code> sau <code>-s</code>) pentru că ne va dezvălui "
-"identitatea ta GPG."
+"<strong>Pont:</strong> Dacă vrei să rămâi anonim(ă), <strong>nu folosi</"
+"strong> GPG pentru a semna fișiere criptate (cu argumentul <code>--sign</"
+"code> sau <code>-s</code>) pentru că ne va dezvălui identitatea ta GPG."
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"

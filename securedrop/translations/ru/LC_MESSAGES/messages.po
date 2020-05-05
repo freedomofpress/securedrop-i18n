@@ -117,7 +117,7 @@ msgstr ""
 msgid "Field can not be more than {max_chars} characters."
 msgstr "В поле можно ввести не более {max_chars} символов."
 
-#: journalist_app/forms.py:42 source_app/forms.py:11
+#: journalist_app/forms.py:42 source_app/forms.py:12
 msgid "This field is required."
 msgstr "Это обязательное поле."
 
@@ -908,13 +908,25 @@ msgstr ""
 "<strong>&nbsp;не обеспечивает&nbsp;</strong> анонимность. <a href="
 "\"{url}\">Почему это опасно?</a>"
 
-#: source_app/forms.py:15
+#: source_app/forms.py:16
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "Поле должно содержать от 1 до {max_codename_len} символов."
 
-#: source_app/forms.py:18
+#: source_app/forms.py:19
 msgid "Invalid input."
 msgstr "Неверный ввод."
+
+#: source_app/forms.py:24
+msgid "Write a message."
+msgstr "Написать сообщение."
+
+#: source_app/forms.py:29
+msgid "Message text too long."
+msgstr ""
+
+#: source_app/forms.py:33
+msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
+msgstr ""
 
 #: source_app/main.py:33
 msgid ""
@@ -926,39 +938,39 @@ msgstr ""
 
 #: source_app/main.py:64
 msgid ""
-"You are already logged in. Please verify your codename below as it may "
+"You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
 
-#: source_app/main.py:163
+#: source_app/main.py:171
 msgid "You must enter a message or choose a file to submit."
 msgstr "Вы должны ввести сообщение или выбрать файл для отправки."
 
-#: source_app/main.py:167
+#: source_app/main.py:175
 msgid "You must enter a message."
 msgstr "Вы должны ввести сообщение."
 
-#: source_app/main.py:198
+#: source_app/main.py:206
 msgid "Thanks! We received your message."
 msgstr "Спасибо! Мы получили ваше сообщение."
 
-#: source_app/main.py:200
+#: source_app/main.py:208
 msgid "Thanks! We received your document."
 msgstr "Спасибо! Мы получили ваш документ."
 
-#: source_app/main.py:202
+#: source_app/main.py:210
 msgid "Thanks! We received your message and document."
 msgstr "Спасибо! Мы получили ваше сообщение и документ."
 
-#: source_app/main.py:261
+#: source_app/main.py:271
 msgid "Reply deleted"
 msgstr "Ответ удален"
 
-#: source_app/main.py:279
+#: source_app/main.py:289
 msgid "All replies have been deleted"
 msgstr "Все ответы были удалены"
 
-#: source_app/main.py:293
+#: source_app/main.py:303
 msgid "Sorry, that is not a recognized codename."
 msgstr "К сожалению, это кодовое имя не распознано."
 
@@ -1228,10 +1240,6 @@ msgstr "<a href=\"{url}\" class=\"text-link\">Подробнее</a>."
 #: source_templates/lookup.html:58
 msgid "Maximum upload size: 500 MB"
 msgstr "Максимальный размер для загрузки: 500МБ"
-
-#: source_templates/lookup.html:62
-msgid "Write a message."
-msgstr "Написать сообщение."
 
 #: source_templates/lookup.html:84
 msgid "Read Replies"

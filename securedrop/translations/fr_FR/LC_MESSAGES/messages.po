@@ -119,7 +119,7 @@ msgstr ""
 msgid "Field can not be more than {max_chars} characters."
 msgstr "Le champ ne peut pas dépasser {max_chars} caractères."
 
-#: journalist_app/forms.py:42 source_app/forms.py:11
+#: journalist_app/forms.py:42 source_app/forms.py:12
 msgid "This field is required."
 msgstr "Ce champ est exigé."
 
@@ -904,16 +904,28 @@ msgid ""
 "\"{url}\">Why is this dangerous?</a>"
 msgstr ""
 "<strong>AVERTISSEMENT&nbsp;:&nbsp;</strong> il semble que vous utilisez "
-"Tor2Web. Cela <strong>ne garantit pas</strong> votre anonymat. <a href=\""
-"{url}\">Pourquoi est-ce dangereux ?</a>"
+"Tor2Web. Cela <strong>ne garantit pas</strong> votre anonymat. <a href="
+"\"{url}\">Pourquoi est-ce dangereux ?</a>"
 
-#: source_app/forms.py:15
+#: source_app/forms.py:16
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "Le champ doit comprendre entre 1 et {max_codename_len} caractères."
 
-#: source_app/forms.py:18
+#: source_app/forms.py:19
 msgid "Invalid input."
 msgstr "L’entrée est invalide."
+
+#: source_app/forms.py:24
+msgid "Write a message."
+msgstr "Rédiger un message."
+
+#: source_app/forms.py:29
+msgid "Message text too long."
+msgstr ""
+
+#: source_app/forms.py:33
+msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
+msgstr ""
 
 #: source_app/main.py:33
 msgid ""
@@ -924,42 +936,46 @@ msgstr ""
 "un nouveau compte, vous devriez d’abord vous déconnecter."
 
 #: source_app/main.py:64
+#, fuzzy
+#| msgid ""
+#| "You are already logged in. Please verify your codename below as it may "
+#| "differ from the one displayed on the previous page."
 msgid ""
-"You are already logged in. Please verify your codename below as it may "
+"You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
 "Vous êtes déjà connecté. Veuillez vérifier votre nom de code ci-dessous, car "
 "il pourrait être différent de celui affiché sur la page précédente."
 
-#: source_app/main.py:163
+#: source_app/main.py:171
 msgid "You must enter a message or choose a file to submit."
 msgstr "Vous devez saisir un message ou sélectionner un fichier à envoyer."
 
-#: source_app/main.py:167
+#: source_app/main.py:175
 msgid "You must enter a message."
 msgstr "Vous devez saisir un message."
 
-#: source_app/main.py:198
+#: source_app/main.py:206
 msgid "Thanks! We received your message."
 msgstr "Merci ! Nous avons reçu votre message."
 
-#: source_app/main.py:200
+#: source_app/main.py:208
 msgid "Thanks! We received your document."
 msgstr "Merci ! Nous avons reçu votre document."
 
-#: source_app/main.py:202
+#: source_app/main.py:210
 msgid "Thanks! We received your message and document."
 msgstr "Merci ! Nous avons reçu vos document et message."
 
-#: source_app/main.py:261
+#: source_app/main.py:271
 msgid "Reply deleted"
 msgstr "La réponse a été supprimée"
 
-#: source_app/main.py:279
+#: source_app/main.py:289
 msgid "All replies have been deleted"
 msgstr "Toutes les réponses ont été supprimées"
 
-#: source_app/main.py:293
+#: source_app/main.py:303
 msgid "Sorry, that is not a recognized codename."
 msgstr "Désolé, ce nom de code n’est pas reconnu."
 
@@ -1241,10 +1257,6 @@ msgstr "<a href=\"{url}\" class=\"text-link\">En apprendre davantage</a>."
 msgid "Maximum upload size: 500 MB"
 msgstr "Taille maximale de téléversement : 500 Mo"
 
-#: source_templates/lookup.html:62
-msgid "Write a message."
-msgstr "Rédiger un message."
-
 #: source_templates/lookup.html:84
 msgid "Read Replies"
 msgstr "Consulter les réponses"
@@ -1306,10 +1318,10 @@ msgid ""
 "browser activity data on this device."
 msgstr ""
 "Vous avez été déconnecté pour cause d'inactivité. Cliquez sur le bouton <img "
-"src={icon} alt=\"icône de balai\" width=\"16\" height=\"16\">&nbsp;<strong>"
-"Nouvelle identité</strong> dans la barre d'outils de votre Navigateur Tor "
-"avant de poursuivre. Cela effacera les données d'activités de votre "
-"Navigateur Tor sur cette appareil."
+"src={icon} alt=\"icône de balai\" width=\"16\" height=\"16\">&nbsp;"
+"<strong>Nouvelle identité</strong> dans la barre d'outils de votre "
+"Navigateur Tor avant de poursuivre. Cela effacera les données d'activités de "
+"votre Navigateur Tor sur cette appareil."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"

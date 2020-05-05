@@ -117,7 +117,7 @@ msgstr ""
 msgid "Field can not be more than {max_chars} characters."
 msgstr "Pole nesmie byť dlhšie ako {max_chars} znakov."
 
-#: journalist_app/forms.py:42 source_app/forms.py:11
+#: journalist_app/forms.py:42 source_app/forms.py:12
 msgid "This field is required."
 msgstr "Toto pole je povinné."
 
@@ -894,13 +894,25 @@ msgstr ""
 "<strong>&nbsp;neposkytuje&nbsp;</strong> anonymitu.\n"
 "<a href=\"{url}\">Prečo je to nebezpečné?</a>"
 
-#: source_app/forms.py:15
+#: source_app/forms.py:16
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "Pole musí mať 1 až {max_codename_len} znakov."
 
-#: source_app/forms.py:18
+#: source_app/forms.py:19
 msgid "Invalid input."
 msgstr "Neplatný vstup."
+
+#: source_app/forms.py:24
+msgid "Write a message."
+msgstr "Napísať správu."
+
+#: source_app/forms.py:29
+msgid "Message text too long."
+msgstr ""
+
+#: source_app/forms.py:33
+msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
+msgstr ""
 
 #: source_app/main.py:33
 msgid ""
@@ -911,42 +923,46 @@ msgstr ""
 "nový účet, musíte sa najprv odhlásiť."
 
 #: source_app/main.py:64
+#, fuzzy
+#| msgid ""
+#| "You are already logged in. Please verify your codename below as it may "
+#| "differ from the one displayed on the previous page."
 msgid ""
-"You are already logged in. Please verify your codename below as it may "
+"You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
 "Už ste prihlásený/á. Overte si svoje krycie meno dolu, keďže sa môže líšiť "
 "od toho zobrazeného na predošlej stránke."
 
-#: source_app/main.py:163
+#: source_app/main.py:171
 msgid "You must enter a message or choose a file to submit."
 msgstr "Musíte napísať správu alebo vybrať súbor na odoslanie."
 
-#: source_app/main.py:167
+#: source_app/main.py:175
 msgid "You must enter a message."
 msgstr "Musíte napísať správu."
 
-#: source_app/main.py:198
+#: source_app/main.py:206
 msgid "Thanks! We received your message."
 msgstr "Vďaka! Prijali sme vašu správu."
 
-#: source_app/main.py:200
+#: source_app/main.py:208
 msgid "Thanks! We received your document."
 msgstr "Vďaka! Prijali sme váš dokument."
 
-#: source_app/main.py:202
+#: source_app/main.py:210
 msgid "Thanks! We received your message and document."
 msgstr "Vďaka! Prijali sme vašu správu a dokument."
 
-#: source_app/main.py:261
+#: source_app/main.py:271
 msgid "Reply deleted"
 msgstr "Odpoveď zmazaná"
 
-#: source_app/main.py:279
+#: source_app/main.py:289
 msgid "All replies have been deleted"
 msgstr "Všetky odpovede boli zmazané"
 
-#: source_app/main.py:293
+#: source_app/main.py:303
 msgid "Sorry, that is not a recognized codename."
 msgstr "Prepáčte, toto krycie meno nie je používané."
 
@@ -1139,8 +1155,8 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
-"Kliknite na ikonu <img src={icon} alt=\"ikona metly\" width=\"16\" height=\""
-"16\">&nbsp;<strong>Nová identita</strong> na lište prehliadača Tor. Toto "
+"Kliknite na ikonu <img src={icon} alt=\"ikona metly\" width=\"16\" height="
+"\"16\">&nbsp;<strong>Nová identita</strong> na lište prehliadača Tor. Toto "
 "zmaže dáta o aktivite Tor prehlidača na tomto zariadení."
 
 #: source_templates/lookup.html:7
@@ -1216,10 +1232,6 @@ msgstr "<a href=\"{url}\" class=\"text-link\">Dozvedieť sa viac</a>."
 msgid "Maximum upload size: 500 MB"
 msgstr "Maximálna veľkosť uploadu: 500 MB"
 
-#: source_templates/lookup.html:62
-msgid "Write a message."
-msgstr "Napísať správu."
-
 #: source_templates/lookup.html:84
 msgid "Read Replies"
 msgstr "Prečítať si odpovede"
@@ -1281,8 +1293,8 @@ msgid ""
 "browser activity data on this device."
 msgstr ""
 "Boli ste odhlásený/á z dôvodu nečinnosti. Skôr než budete pokračovať, "
-"kliknite na ikonu <img src={icon} alt=\"ikona metly\" width=\"16\" height=\""
-"16\">&nbsp;<strong>Nová identita</strong> na lište prehliadača Tor. Toto "
+"kliknite na ikonu <img src={icon} alt=\"ikona metly\" width=\"16\" height="
+"\"16\">&nbsp;<strong>Nová identita</strong> na lište prehliadača Tor. Toto "
 "zmaže dáta o aktivite Tor prehlidača na tomto zariadení."
 
 #: source_templates/tor2web-warning.html:3
@@ -1291,7 +1303,8 @@ msgstr "Prečo je tu upozornenie o Tor2Web?"
 
 #: source_templates/tor2web-warning.html:4
 msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
-msgstr "Používanie Tor2Web na pripojenie k SecureDrop neochráni vašu anonymitu."
+msgstr ""
+"Používanie Tor2Web na pripojenie k SecureDrop neochráni vašu anonymitu."
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
@@ -1388,9 +1401,9 @@ msgid ""
 "<code>.asc</code> file you just downloaded and it will be automatically "
 "imported to your keyring."
 msgstr ""
-"Ak používate <a href=\"{url}\">Tails</a>, môžete dvojkliknúť na "
-"<code>.asc</code> súbor, ktorý ste si práve stiahli a okamžite bude pridaný "
-"na vašu kľúčenku."
+"Ak používate <a href=\"{url}\">Tails</a>, môžete dvojkliknúť na <code>.asc</"
+"code> súbor, ktorý ste si práve stiahli a okamžite bude pridaný na vašu "
+"kľúčenku."
 
 #: source_templates/why-journalist-key.html:11
 msgid ""
@@ -1413,8 +1426,8 @@ msgid ""
 msgstr ""
 "Musíte byť schopný/á identifikovať tento kľúč (toto sa nazýva \"ID "
 "používateľa\" alebo UID). Keďže názov súboru verejného kľúča je jeho otlačok "
-"(ktorý končí príponou .asc), môžete ho jednoducho skopírovať a vložiť. ("
-"Nevkladajte aj príponu <code>.asc</code>! )"
+"(ktorý končí príponou .asc), môžete ho jednoducho skopírovať a vložiť. "
+"(Nevkladajte aj príponu <code>.asc</code>! )"
 
 #: source_templates/why-journalist-key.html:17
 msgid ""
@@ -1439,10 +1452,9 @@ msgid ""
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
-"<strong>Tip:</strong> Ak chcete zostať v anonymite, "
-"<strong>nepoužívajte</strong> GPG na podpisovanie šifrovaného súboru ("
-"príkazom <code>--sign</code> alebo <code>-s</code>), prezradili by ste nám "
-"svoju GPG identitu."
+"<strong>Tip:</strong> Ak chcete zostať v anonymite, <strong>nepoužívajte</"
+"strong> GPG na podpisovanie šifrovaného súboru (príkazom <code>--sign</code> "
+"alebo <code>-s</code>), prezradili by ste nám svoju GPG identitu."
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"

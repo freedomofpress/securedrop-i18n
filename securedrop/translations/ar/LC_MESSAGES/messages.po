@@ -115,7 +115,7 @@ msgstr ""
 msgid "Field can not be more than {max_chars} characters."
 msgstr "هذا الحقل لا يقبل أكثر من {max_chars} محرفًا."
 
-#: journalist_app/forms.py:42 source_app/forms.py:11
+#: journalist_app/forms.py:42 source_app/forms.py:12
 msgid "This field is required."
 msgstr "هذا الحقل مطلوب."
 
@@ -894,13 +894,25 @@ msgstr ""
 "إلى أنّ هذه الوسيلة لا تحقق المجهولية للمستخدم</strong>.\n"
 "<a href=\"{url}\">  ما الخطر في ذلك؟</a>"
 
-#: source_app/forms.py:15
+#: source_app/forms.py:16
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "يجب أن يتراوح طول الحقل بين محرف واحد و&nbsp;{max_codename_len} محرفا."
 
-#: source_app/forms.py:18
+#: source_app/forms.py:19
 msgid "Invalid input."
 msgstr "دَخل غير صالح."
+
+#: source_app/forms.py:24
+msgid "Write a message."
+msgstr "اكتب رسالة."
+
+#: source_app/forms.py:29
+msgid "Message text too long."
+msgstr ""
+
+#: source_app/forms.py:33
+msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
+msgstr ""
 
 #: source_app/main.py:33
 msgid ""
@@ -911,42 +923,46 @@ msgstr ""
 "جديد فعليك الخروج من هذا الحساب أوّلا."
 
 #: source_app/main.py:64
+#, fuzzy
+#| msgid ""
+#| "You are already logged in. Please verify your codename below as it may "
+#| "differ from the one displayed on the previous page."
 msgid ""
-"You are already logged in. Please verify your codename below as it may "
+"You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
 "أنت مسجّل أساساً. من فضلك تأكد من اسمك الرمزي ههنا إذ قد يكون مختلف عن الإسم "
 "الظاهر على الصفحة السابقة."
 
-#: source_app/main.py:163
+#: source_app/main.py:171
 msgid "You must enter a message or choose a file to submit."
 msgstr "يجب إدخال نصّ رسالة أو اختيار ملف لإيداعه."
 
-#: source_app/main.py:167
+#: source_app/main.py:175
 msgid "You must enter a message."
 msgstr "يجب إدخال نصّ رسالة."
 
-#: source_app/main.py:198
+#: source_app/main.py:206
 msgid "Thanks! We received your message."
 msgstr "شكرا! لقد تلقينا الرسالة."
 
-#: source_app/main.py:200
+#: source_app/main.py:208
 msgid "Thanks! We received your document."
 msgstr "شكرا! لقد تلقينا المستند."
 
-#: source_app/main.py:202
+#: source_app/main.py:210
 msgid "Thanks! We received your message and document."
 msgstr "شكرا! لقد تلقينا الرسالة و&nbsp;المستند."
 
-#: source_app/main.py:261
+#: source_app/main.py:271
 msgid "Reply deleted"
 msgstr "حُذِفَ الرد"
 
-#: source_app/main.py:279
+#: source_app/main.py:289
 msgid "All replies have been deleted"
 msgstr "حُذِفَت كُلّ الردود"
 
-#: source_app/main.py:293
+#: source_app/main.py:303
 msgid "Sorry, that is not a recognized codename."
 msgstr "عذرًا، لا يمكن التعرف على الاسم الرمزي."
 
@@ -1137,9 +1153,9 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
-"أنقر على الزر <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\""
-">&nbsp;<strong>New Identity</strong> في شريط متصفحك تور إذ أن ذلك من شأنه أن "
-"يمسح أي نشاط قمت به على متصفح تور من عبر هذا الجهاز."
+"أنقر على الزر <img src={icon} alt=\"broom icon\" width=\"16\" height="
+"\"16\">&nbsp;<strong>New Identity</strong> في شريط متصفحك تور إذ أن ذلك من "
+"شأنه أن يمسح أي نشاط قمت به على متصفح تور من عبر هذا الجهاز."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1214,10 +1230,6 @@ msgstr "<a href=\"{url}\" class=\"text-link\">لمعرفة المزيد</a>."
 msgid "Maximum upload size: 500 MB"
 msgstr "الحجم الأقصى الممكن رفعه: 500 ميجابايت"
 
-#: source_templates/lookup.html:62
-msgid "Write a message."
-msgstr "اكتب رسالة."
-
 #: source_templates/lookup.html:84
 msgid "Read Replies"
 msgstr "قراءة الردود"
@@ -1276,9 +1288,10 @@ msgid ""
 "in your Tor browser's toolbar before moving on. This will clear your Tor "
 "browser activity data on this device."
 msgstr ""
-"لقد تم إخراجك من الحساب نظراً لعدم نشاطك. أضعط على زر <img src={icon} alt=\""
-"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong>  "
-"في متصفحك تور ومن شأن ذلك أن يمسح أي نشاط لك على متصفح تور  عبر هذا الجهاز."
+"لقد تم إخراجك من الحساب نظراً لعدم نشاطك. أضعط على زر <img src={icon} alt="
+"\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</"
+"strong>  في متصفحك تور ومن شأن ذلك أن يمسح أي نشاط لك على متصفح تور  عبر هذا "
+"الجهاز."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"

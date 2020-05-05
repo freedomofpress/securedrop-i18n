@@ -111,7 +111,7 @@ msgstr "Må være minst {min_chars} tegn langt, men er nå på bare {num_chars}.
 msgid "Field can not be more than {max_chars} characters."
 msgstr "Feltet kan ikke inneholde mer enn {max_chars} tegn."
 
-#: journalist_app/forms.py:42 source_app/forms.py:11
+#: journalist_app/forms.py:42 source_app/forms.py:12
 msgid "This field is required."
 msgstr "Dette feltet er påkrevd."
 
@@ -875,13 +875,25 @@ msgstr ""
 "<strong>&nbsp;gir ikke&nbsp;</strong> anonym kommunikasjon. <a href="
 "\"{url}\">Hvorfor kan dette være problematisk?</a>"
 
-#: source_app/forms.py:15
+#: source_app/forms.py:16
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "Feltet må være mellom ett og {max_codename_len} tegn langt."
 
-#: source_app/forms.py:18
+#: source_app/forms.py:19
 msgid "Invalid input."
 msgstr "Ugyldig inndata."
+
+#: source_app/forms.py:24
+msgid "Write a message."
+msgstr "Skriv en melding."
+
+#: source_app/forms.py:29
+msgid "Message text too long."
+msgstr ""
+
+#: source_app/forms.py:33
+msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
+msgstr ""
 
 #: source_app/main.py:33
 msgid ""
@@ -892,42 +904,46 @@ msgstr ""
 "konto må du først logge ut."
 
 #: source_app/main.py:64
+#, fuzzy
+#| msgid ""
+#| "You are already logged in. Please verify your codename below as it may "
+#| "differ from the one displayed on the previous page."
 msgid ""
-"You are already logged in. Please verify your codename below as it may "
+"You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
 "Du er allerede logget inn. Vennligst verifiser kodenavnet under fordi det "
 "kan være annerledes enn det som ble vist på den forrige siden."
 
-#: source_app/main.py:163
+#: source_app/main.py:171
 msgid "You must enter a message or choose a file to submit."
 msgstr "Du må skrive inn en melding eller velge ei fil å sende inn."
 
-#: source_app/main.py:167
+#: source_app/main.py:175
 msgid "You must enter a message."
 msgstr "Du må skrive inn en melding."
 
-#: source_app/main.py:198
+#: source_app/main.py:206
 msgid "Thanks! We received your message."
 msgstr "Takk! Vi mottok meldingen din."
 
-#: source_app/main.py:200
+#: source_app/main.py:208
 msgid "Thanks! We received your document."
 msgstr "Takk! Vi har mottatt dokumentet ditt."
 
-#: source_app/main.py:202
+#: source_app/main.py:210
 msgid "Thanks! We received your message and document."
 msgstr "Takk! Vi mottok meldingen og dokumentet ditt."
 
-#: source_app/main.py:261
+#: source_app/main.py:271
 msgid "Reply deleted"
 msgstr "Svar slettet"
 
-#: source_app/main.py:279
+#: source_app/main.py:289
 msgid "All replies have been deleted"
 msgstr "Alle svar har blitt slettet"
 
-#: source_app/main.py:293
+#: source_app/main.py:303
 msgid "Sorry, that is not a recognized codename."
 msgstr "Beklager, det er ikke et gjenkjent kodenavn."
 
@@ -1116,9 +1132,9 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
-"Klikk på <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\""
-">&nbsp;<strong>Ny identitet</strong>-knappen i Tor-nettleserens "
-"verktøylinje. Det vil slette loggen over din bruk av Tor på denne enheten."
+"Klikk på <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;"
+"<strong>Ny identitet</strong>-knappen i Tor-nettleserens verktøylinje. Det "
+"vil slette loggen over din bruk av Tor på denne enheten."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1195,10 +1211,6 @@ msgstr "<a href=\"{url}\" class=\"text-link\">Lær mer</a>."
 msgid "Maximum upload size: 500 MB"
 msgstr "Maksimal opplastningsstørrelse: 500MB"
 
-#: source_templates/lookup.html:62
-msgid "Write a message."
-msgstr "Skriv en melding."
-
 #: source_templates/lookup.html:84
 msgid "Read Replies"
 msgstr "Les svar"
@@ -1258,10 +1270,10 @@ msgid ""
 "in your Tor browser's toolbar before moving on. This will clear your Tor "
 "browser activity data on this device."
 msgstr ""
-"Du ble logget ut på grunn av inaktivitet. Klikk på <img src={icon} alt=\""
-"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Ny Identitiet</strong>-"
-"knappen i Tor-nettleserens verktøylinje før du fortsetter. Dette vil slette "
-"loggen over aktivitet i Tor-nettleseren på denne enheten."
+"Du ble logget ut på grunn av inaktivitet. Klikk på <img src={icon} alt="
+"\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Ny Identitiet</"
+"strong>-knappen i Tor-nettleserens verktøylinje før du fortsetter. Dette vil "
+"slette loggen over aktivitet i Tor-nettleseren på denne enheten."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"

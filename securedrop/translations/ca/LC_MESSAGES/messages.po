@@ -118,7 +118,7 @@ msgstr ""
 msgid "Field can not be more than {max_chars} characters."
 msgstr "El camp no pot tenir més de {max_chars} caràcters."
 
-#: journalist_app/forms.py:42 source_app/forms.py:11
+#: journalist_app/forms.py:42 source_app/forms.py:12
 msgid "This field is required."
 msgstr "Aquest camp és obligatori."
 
@@ -895,13 +895,25 @@ msgstr ""
 "<strong>&nbsp;no&nbsp;</strong> proporciona anonimat. <a href=\"{url}\">Per "
 "què és perillós?</a>"
 
-#: source_app/forms.py:15
+#: source_app/forms.py:16
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "El camp ha de tenir entre 1 i {max_codename_len} caràcters."
 
-#: source_app/forms.py:18
+#: source_app/forms.py:19
 msgid "Invalid input."
 msgstr "L'entrada no és vàlida."
+
+#: source_app/forms.py:24
+msgid "Write a message."
+msgstr "Escriviu un missatge."
+
+#: source_app/forms.py:29
+msgid "Message text too long."
+msgstr ""
+
+#: source_app/forms.py:33
+msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
+msgstr ""
 
 #: source_app/main.py:33
 msgid ""
@@ -912,42 +924,46 @@ msgstr ""
 "compte nou, primer heu de tancar la sessió."
 
 #: source_app/main.py:64
+#, fuzzy
+#| msgid ""
+#| "You are already logged in. Please verify your codename below as it may "
+#| "differ from the one displayed on the previous page."
 msgid ""
-"You are already logged in. Please verify your codename below as it may "
+"You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
 "Ja teniu una sessió iniciada. Verifiqueu el nom en clau a sota, ja que "
 "podria diferir del que s'ha mostrat en la pàgina anterior."
 
-#: source_app/main.py:163
+#: source_app/main.py:171
 msgid "You must enter a message or choose a file to submit."
 msgstr "Cal que introduïu un missatge o trieu un fitxer per enviar."
 
-#: source_app/main.py:167
+#: source_app/main.py:175
 msgid "You must enter a message."
 msgstr "Cal que introduïu un missatge."
 
-#: source_app/main.py:198
+#: source_app/main.py:206
 msgid "Thanks! We received your message."
 msgstr "Gràcies! Hem rebut el missatge."
 
-#: source_app/main.py:200
+#: source_app/main.py:208
 msgid "Thanks! We received your document."
 msgstr "Gràcies! Hem rebut el document."
 
-#: source_app/main.py:202
+#: source_app/main.py:210
 msgid "Thanks! We received your message and document."
 msgstr "Gràcies! Hem rebut el missatge i el document."
 
-#: source_app/main.py:261
+#: source_app/main.py:271
 msgid "Reply deleted"
 msgstr "S'ha suprimit la resposta"
 
-#: source_app/main.py:279
+#: source_app/main.py:289
 msgid "All replies have been deleted"
 msgstr "S'han suprimit totes les respostes"
 
-#: source_app/main.py:293
+#: source_app/main.py:303
 msgid "Sorry, that is not a recognized codename."
 msgstr "No es reconeix aquest nom en clau."
 
@@ -1141,10 +1157,10 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
-"Feu clic al botó <img src={icon} alt=\"broom icon\" width=\"16\" height=\""
-"16\">&nbsp;<strong>Identitat nova</strong> de la barra d'eines del navegador "
-"Tor. Això buidarà les dades d'activitat en el navegador Tor en aquest "
-"aparell."
+"Feu clic al botó <img src={icon} alt=\"broom icon\" width=\"16\" height="
+"\"16\">&nbsp;<strong>Identitat nova</strong> de la barra d'eines del "
+"navegador Tor. Això buidarà les dades d'activitat en el navegador Tor en "
+"aquest aparell."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1220,10 +1236,6 @@ msgstr "<a href=\"{url}\" class=\"text-link\">Més informació</a>."
 msgid "Maximum upload size: 500 MB"
 msgstr "Mida màx. de pujada: 500 MB"
 
-#: source_templates/lookup.html:62
-msgid "Write a message."
-msgstr "Escriviu un missatge."
-
 #: source_templates/lookup.html:84
 msgid "Read Replies"
 msgstr "Llegeix les respostes"
@@ -1284,9 +1296,9 @@ msgid ""
 "browser activity data on this device."
 msgstr ""
 "S'ha tancat la sessió per inactivitat. Feu clic en el botó <img src={icon} "
-"alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Identitat "
-"nova</strong> en la barra d'eines del navegador Tor abans d'anar-vos-en. "
-"Això buidarà les dades d'activitat en el navegador Tor d'aquest aparell."
+"alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Identitat nova</"
+"strong> en la barra d'eines del navegador Tor abans d'anar-vos-en. Això "
+"buidarà les dades d'activitat en el navegador Tor d'aquest aparell."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"

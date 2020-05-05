@@ -114,7 +114,7 @@ msgstr ""
 msgid "Field can not be more than {max_chars} characters."
 msgstr "Dieses Feld kann nicht länger als {max_chars} Zeichen sein."
 
-#: journalist_app/forms.py:42 source_app/forms.py:11
+#: journalist_app/forms.py:42 source_app/forms.py:12
 msgid "This field is required."
 msgstr "Dieses Feld ist erforderlich."
 
@@ -901,13 +901,25 @@ msgstr ""
 "garantiert <strong>&nbsp;keine Anonymität.&nbsp;</strong> <a href="
 "\"{url}\">Warum ist das gefährlich?</a>"
 
-#: source_app/forms.py:15
+#: source_app/forms.py:16
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "Feld muss zwischen 1 und {max_codename_len} Zeichen lang sein."
 
-#: source_app/forms.py:18
+#: source_app/forms.py:19
 msgid "Invalid input."
 msgstr "Ungültige Eingabe."
+
+#: source_app/forms.py:24
+msgid "Write a message."
+msgstr "Nachricht schreiben."
+
+#: source_app/forms.py:29
+msgid "Message text too long."
+msgstr ""
+
+#: source_app/forms.py:33
+msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
+msgstr ""
 
 #: source_app/main.py:33
 msgid ""
@@ -918,44 +930,48 @@ msgstr ""
 "Konto erstellen möchten, müssen Sie sich zuerst abmelden."
 
 #: source_app/main.py:64
+#, fuzzy
+#| msgid ""
+#| "You are already logged in. Please verify your codename below as it may "
+#| "differ from the one displayed on the previous page."
 msgid ""
-"You are already logged in. Please verify your codename below as it may "
+"You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
 "Sie sind bereits angemeldet. Bitte überprüfen Sie Ihren unten stehenden "
 "Decknamen, da er sich von dem auf der vorherigen Seite angezeigten "
 "unterscheiden könnte."
 
-#: source_app/main.py:163
+#: source_app/main.py:171
 msgid "You must enter a message or choose a file to submit."
 msgstr ""
 "Sie müssen eine Nachricht eingeben oder eine Datei zum Versenden auswählen."
 
-#: source_app/main.py:167
+#: source_app/main.py:175
 msgid "You must enter a message."
 msgstr "Sie müssen eine Nachricht eingeben."
 
-#: source_app/main.py:198
+#: source_app/main.py:206
 msgid "Thanks! We received your message."
 msgstr "Danke! Wir haben Ihre Nachricht erhalten."
 
-#: source_app/main.py:200
+#: source_app/main.py:208
 msgid "Thanks! We received your document."
 msgstr "Danke! Wir haben Ihr Dokument erhalten."
 
-#: source_app/main.py:202
+#: source_app/main.py:210
 msgid "Thanks! We received your message and document."
 msgstr "Danke! Wir haben Ihre Nachricht und Dokument erhalten."
 
-#: source_app/main.py:261
+#: source_app/main.py:271
 msgid "Reply deleted"
 msgstr "Antwort gelöscht"
 
-#: source_app/main.py:279
+#: source_app/main.py:289
 msgid "All replies have been deleted"
 msgstr "Alle Antworten wurden gelöscht"
 
-#: source_app/main.py:293
+#: source_app/main.py:303
 msgid "Sorry, that is not a recognized codename."
 msgstr "Entschuldigung, das ist kein erkannter Deckname."
 
@@ -1158,10 +1174,10 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
-"Klicken Sie die <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\""
-">&nbsp;<strong>Neue Identität</strong> Schaltfläche in der Werkzeugleiste "
-"Ihres Tor Browsers. So löschen Sie die Tor Browser Adtivitätsdaten auf "
-"diesem Gerät."
+"Klicken Sie die <img src={icon} alt=\"broom icon\" width=\"16\" height="
+"\"16\">&nbsp;<strong>Neue Identität</strong> Schaltfläche in der "
+"Werkzeugleiste Ihres Tor Browsers. So löschen Sie die Tor Browser "
+"Adtivitätsdaten auf diesem Gerät."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1239,10 +1255,6 @@ msgstr "<a href=\"{url}\" class=\"text-link\">Erfahren Sie mehr</a>."
 msgid "Maximum upload size: 500 MB"
 msgstr "Maximale Upload-Größe: 500 MB"
 
-#: source_templates/lookup.html:62
-msgid "Write a message."
-msgstr "Nachricht schreiben."
-
 #: source_templates/lookup.html:84
 msgid "Read Replies"
 msgstr "Antworten lesen"
@@ -1306,10 +1318,10 @@ msgid ""
 "browser activity data on this device."
 msgstr ""
 "Sie wurden wegen Inaktivität abgemeldet. Klicken Sie die <img src={icon} alt="
-"\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Neue "
-"Identität</strong> Schaltfläche in der Werkzeugleiste Ihres Tor Browsers "
-"bevor Sie weitermachen. So löschen Sie die Tor Browser Aktivitätsdaten von "
-"diesem Gerät."
+"\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Neue Identität</"
+"strong> Schaltfläche in der Werkzeugleiste Ihres Tor Browsers bevor Sie "
+"weitermachen. So löschen Sie die Tor Browser Aktivitätsdaten von diesem "
+"Gerät."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"

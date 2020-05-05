@@ -117,7 +117,7 @@ msgstr "O gbọ́dọ̀ tẹ ó kéré jù  {min_ọ̀rọ̀} ọ̀rọ̀ tí ó
 msgid "Field can not be more than {max_chars} characters."
 msgstr "Ohun tí o máa tẹ̀ kò gbọdọ̀ ju {ó pọ̀ jù_ọ̀rọ̀} ọ̀rọ̀."
 
-#: journalist_app/forms.py:42 source_app/forms.py:11
+#: journalist_app/forms.py:42 source_app/forms.py:12
 msgid "This field is required."
 msgstr "Àyè yìí pọn dandan."
 
@@ -890,14 +890,26 @@ msgstr ""
 "<lágbára>&nbsp;kò &nbsp;</lágbára> sọ ọ́ di àìlórúkọ. <a href=\"{url}\">Èé ṣe "
 "tí èyí fi léwu? </a>"
 
-#: source_app/forms.py:15
+#: source_app/forms.py:16
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr ""
 "Ọ̀rọ̀ tí o fi sílẹ̀ gbọdọ̀ gùn ju ọmọ-ọ̀rọ̀ kan sí {pọ̀jùu_orúkọodù_gígùn} lọ."
 
-#: source_app/forms.py:18
+#: source_app/forms.py:19
 msgid "Invalid input."
 msgstr "Ohun-tí-o-fi-sílẹ̀ kòlágbára"
+
+#: source_app/forms.py:24
+msgid "Write a message."
+msgstr "Kọ iṣẹ́-ìjẹ́ kan."
+
+#: source_app/forms.py:29
+msgid "Message text too long."
+msgstr ""
+
+#: source_app/forms.py:33
+msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
+msgstr ""
 
 #: source_app/main.py:33
 msgid ""
@@ -909,41 +921,41 @@ msgstr ""
 
 #: source_app/main.py:64
 msgid ""
-"You are already logged in. Please verify your codename below as it may "
+"You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
 
-#: source_app/main.py:163
+#: source_app/main.py:171
 msgid "You must enter a message or choose a file to submit."
 msgstr "O gbọ́dọ̀ fi iṣẹ́-ìjẹ́ sílẹ̀ tàbí kí o yan fáìlì kan."
 
-#: source_app/main.py:167
+#: source_app/main.py:175
 #, fuzzy
 #| msgid "You must enter a message or choose a file to submit."
 msgid "You must enter a message."
 msgstr "O gbọ́dọ̀ fi iṣẹ́-ìjẹ́ sílẹ̀ tàbí kí o yan fáìlì kan."
 
-#: source_app/main.py:198
+#: source_app/main.py:206
 msgid "Thanks! We received your message."
 msgstr "O ṣeun! A rí iṣẹ́-ìjẹ́ẹ̀ rẹ."
 
-#: source_app/main.py:200
+#: source_app/main.py:208
 msgid "Thanks! We received your document."
 msgstr "O ṣeun! A rí ìwé-ìrídìíì rẹ."
 
-#: source_app/main.py:202
+#: source_app/main.py:210
 msgid "Thanks! We received your message and document."
 msgstr "O ṣeun! A rí iṣẹ́-ìjẹ́ àti ìwé-ìrídìíì rẹ."
 
-#: source_app/main.py:261
+#: source_app/main.py:271
 msgid "Reply deleted"
 msgstr "Èsì ti parẹ́"
 
-#: source_app/main.py:279
+#: source_app/main.py:289
 msgid "All replies have been deleted"
 msgstr "Gbogbo èsì ti parẹ́"
 
-#: source_app/main.py:293
+#: source_app/main.py:303
 msgid "Sorry, that is not a recognized codename."
 msgstr "Ó dun'ni, ìyẹn kì í ṣe orúkọ-odù tí a dá mọ̀."
 
@@ -1219,10 +1231,6 @@ msgstr "<a href=\"{url}\" ẹgbẹ́=\"àyọkà-ìsopọ̀\">Kọ́ sí i</a>."
 #: source_templates/lookup.html:58
 msgid "Maximum upload size: 500 MB"
 msgstr ""
-
-#: source_templates/lookup.html:62
-msgid "Write a message."
-msgstr "Kọ iṣẹ́-ìjẹ́ kan."
 
 #: source_templates/lookup.html:84
 msgid "Read Replies"

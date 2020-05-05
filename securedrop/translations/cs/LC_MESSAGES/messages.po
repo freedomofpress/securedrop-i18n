@@ -114,7 +114,7 @@ msgstr ""
 msgid "Field can not be more than {max_chars} characters."
 msgstr "Pole nemůže obsahovat více než {max_chars} znaků."
 
-#: journalist_app/forms.py:42 source_app/forms.py:11
+#: journalist_app/forms.py:42 source_app/forms.py:12
 msgid "This field is required."
 msgstr "Toto pole je povinné."
 
@@ -751,8 +751,8 @@ msgid ""
 "be locked out of your account.</em>"
 msgstr ""
 "Pokud byly vaše přístupy pro dvoufaktorovou autentizaci ztraceny nebo "
-"zneužity, nebo máte nové zařízení, můžete si zde obnovit svůj přístup. <em>"
-"Připravte si k nastavení nové zařízení, jinak ztratíte přístup ke svému "
+"zneužity, nebo máte nové zařízení, můžete si zde obnovit svůj přístup. "
+"<em>Připravte si k nastavení nové zařízení, jinak ztratíte přístup ke svému "
 "účtu.</em>"
 
 #: journalist_templates/edit_account.html:87
@@ -879,13 +879,25 @@ msgstr ""
 "<strong>&nbsp;neposkytuje</strong> anonymitu. <a href=\"{url}\">Proč je to "
 "nebezpečné?</a>"
 
-#: source_app/forms.py:15
+#: source_app/forms.py:16
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "Pole musí mít mezi 1 a {max_codename_len} znaky."
 
-#: source_app/forms.py:18
+#: source_app/forms.py:19
 msgid "Invalid input."
 msgstr "Neplatný vstup."
+
+#: source_app/forms.py:24
+msgid "Write a message."
+msgstr "Napsat zprávu."
+
+#: source_app/forms.py:29
+msgid "Message text too long."
+msgstr ""
+
+#: source_app/forms.py:33
+msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
+msgstr ""
 
 #: source_app/main.py:33
 msgid ""
@@ -896,42 +908,46 @@ msgstr ""
 "Pokud chcete vytvořit nový účet, nejprve se odhlaste."
 
 #: source_app/main.py:64
+#, fuzzy
+#| msgid ""
+#| "You are already logged in. Please verify your codename below as it may "
+#| "differ from the one displayed on the previous page."
 msgid ""
-"You are already logged in. Please verify your codename below as it may "
+"You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
 "Jste již přihlášen/a. Prosím, zkontrolujte zdali krycí jméno souhlasí, "
 "protože se může lišit od toho zobrazeného na předchozí stránce."
 
-#: source_app/main.py:163
+#: source_app/main.py:171
 msgid "You must enter a message or choose a file to submit."
 msgstr "Musíte napsat zprávu nebo vybrat soubor pro nahrání."
 
-#: source_app/main.py:167
+#: source_app/main.py:175
 msgid "You must enter a message."
 msgstr "Musíte vložit zprávu."
 
-#: source_app/main.py:198
+#: source_app/main.py:206
 msgid "Thanks! We received your message."
 msgstr "Děkujeme! Obdrželi jsme vaši zprávu."
 
-#: source_app/main.py:200
+#: source_app/main.py:208
 msgid "Thanks! We received your document."
 msgstr "Děkujeme! Obdrželi jsme váš dokument."
 
-#: source_app/main.py:202
+#: source_app/main.py:210
 msgid "Thanks! We received your message and document."
 msgstr "Děkujeme! Obdrželi jsme vaši zprávu a dokument."
 
-#: source_app/main.py:261
+#: source_app/main.py:271
 msgid "Reply deleted"
 msgstr "Odpověď smazána"
 
-#: source_app/main.py:279
+#: source_app/main.py:289
 msgid "All replies have been deleted"
 msgstr "Všechny odpovědi byly smazány"
 
-#: source_app/main.py:293
+#: source_app/main.py:303
 msgid "Sorry, that is not a recognized codename."
 msgstr "Promiňte, toto krycí jméno nikdo nepoužívá."
 
@@ -1119,9 +1135,9 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
-"Klepněte na <img src={icon} alt=\"ikona koštěte\" width=\"16\" height=\"16\""
-">&nbsp;<strong>Nová identita</strong> na liště svého prohlížeče Tor. Smažete "
-"tím data o aktivitě prohlížeče Tor na tomhle zařízení."
+"Klepněte na <img src={icon} alt=\"ikona koštěte\" width=\"16\" height="
+"\"16\">&nbsp;<strong>Nová identita</strong> na liště svého prohlížeče Tor. "
+"Smažete tím data o aktivitě prohlížeče Tor na tomhle zařízení."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1196,10 +1212,6 @@ msgstr "<a href=\"{url}\" class=\"text-link\">Více informací</a>."
 msgid "Maximum upload size: 500 MB"
 msgstr "Maximální velikost uploadu: 500 MB"
 
-#: source_templates/lookup.html:62
-msgid "Write a message."
-msgstr "Napsat zprávu."
-
 #: source_templates/lookup.html:84
 msgid "Read Replies"
 msgstr "Přečtěte si odpovědi"
@@ -1260,9 +1272,9 @@ msgid ""
 "browser activity data on this device."
 msgstr ""
 "Z důvodu neaktivity jste byl/a odhlášen/a. Než budete pokračovat, klepněte "
-"na <img src={icon} alt=\"ikona koštěte\" width=\"16\" height=\"16\""
-">&nbsp;<strong>Nová identita</strong> na liště svého prohlížeče Tor. Smažete "
-"tím data o aktivitě prohlížeče Tor na tomto zařízení."
+"na <img src={icon} alt=\"ikona koštěte\" width=\"16\" height=\"16\">&nbsp;"
+"<strong>Nová identita</strong> na liště svého prohlížeče Tor. Smažete tím "
+"data o aktivitě prohlížeče Tor na tomto zařízení."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"

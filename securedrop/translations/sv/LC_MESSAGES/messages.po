@@ -115,7 +115,7 @@ msgstr ""
 msgid "Field can not be more than {max_chars} characters."
 msgstr "Fältet kan inte innehålla mer än {max_chars} tecken."
 
-#: journalist_app/forms.py:42 source_app/forms.py:11
+#: journalist_app/forms.py:42 source_app/forms.py:12
 msgid "This field is required."
 msgstr "Detta fält är obligatoriskt."
 
@@ -877,13 +877,25 @@ msgstr ""
 "<strong>&nbsp; inte &nbsp;</strong>anonym. <a href=\"{url}\"> Varför är det "
 "farligt?</a>"
 
-#: source_app/forms.py:15
+#: source_app/forms.py:16
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "Fältet måste innehålla mellan 1 och {max_codename_len} tecken."
 
-#: source_app/forms.py:18
+#: source_app/forms.py:19
 msgid "Invalid input."
 msgstr "Ogiltigt innehåll."
+
+#: source_app/forms.py:24
+msgid "Write a message."
+msgstr "Skriv ett meddelande."
+
+#: source_app/forms.py:29
+msgid "Message text too long."
+msgstr ""
+
+#: source_app/forms.py:33
+msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
+msgstr ""
 
 #: source_app/main.py:33
 msgid ""
@@ -894,42 +906,46 @@ msgstr ""
 "konto, logga ut först."
 
 #: source_app/main.py:64
+#, fuzzy
+#| msgid ""
+#| "You are already logged in. Please verify your codename below as it may "
+#| "differ from the one displayed on the previous page."
 msgid ""
-"You are already logged in. Please verify your codename below as it may "
+"You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
 "Du är redan inloggad. Vänligen verifiera ditt kodnamn nedan, då det kan "
 "skilja sig från det som visades på föregående sida."
 
-#: source_app/main.py:163
+#: source_app/main.py:171
 msgid "You must enter a message or choose a file to submit."
 msgstr "Du måste ange ett meddelande eller välja en fil att lämna in."
 
-#: source_app/main.py:167
+#: source_app/main.py:175
 msgid "You must enter a message."
 msgstr "Du måste ange ett meddelande."
 
-#: source_app/main.py:198
+#: source_app/main.py:206
 msgid "Thanks! We received your message."
 msgstr "Tack! Vi har tagit emot ditt meddelande."
 
-#: source_app/main.py:200
+#: source_app/main.py:208
 msgid "Thanks! We received your document."
 msgstr "Tack! Vi har tagit emot ditt dokument."
 
-#: source_app/main.py:202
+#: source_app/main.py:210
 msgid "Thanks! We received your message and document."
 msgstr "Tack! Vi har tagit emot ditt meddelande och dokument."
 
-#: source_app/main.py:261
+#: source_app/main.py:271
 msgid "Reply deleted"
 msgstr "Svaret har tagits bort"
 
-#: source_app/main.py:279
+#: source_app/main.py:289
 msgid "All replies have been deleted"
 msgstr "Alla svar har tagits bort"
 
-#: source_app/main.py:293
+#: source_app/main.py:303
 msgid "Sorry, that is not a recognized codename."
 msgstr "Tyvärr, detta kodnamn är okänt."
 
@@ -1125,9 +1141,10 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
-"Klicka på <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\""
-">&nbsp;<strong>New Identity</strong>-knappen i din Tor browsers menyrad. "
-"Detta kommer att rensa din Tor browsers aktivitetsdata på den här enheten."
+"Klicka på <img src={icon} alt=\"broom icon\" width=\"16\" height="
+"\"16\">&nbsp;<strong>New Identity</strong>-knappen i din Tor browsers "
+"menyrad. Detta kommer att rensa din Tor browsers aktivitetsdata på den här "
+"enheten."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1202,10 +1219,6 @@ msgstr "<a href=\"{url}\" class=\"text-link\">Fortsätt läsa</a>."
 msgid "Maximum upload size: 500 MB"
 msgstr "Maximal storlek för uppladdningar: 500 MB"
 
-#: source_templates/lookup.html:62
-msgid "Write a message."
-msgstr "Skriv ett meddelande."
-
 #: source_templates/lookup.html:84
 msgid "Read Replies"
 msgstr "Läs svar"
@@ -1265,10 +1278,10 @@ msgid ""
 "in your Tor browser's toolbar before moving on. This will clear your Tor "
 "browser activity data on this device."
 msgstr ""
-"Du blev utloggad på grund av inaktivitet. Klicka på <img src={icon} alt=\""
-"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong>-"
-"knappen i din Tor browsers menyrad innan du går vidare. Detta kommer att "
-"rensa din Tor browsers aktivitetsdata på den här enheten."
+"Du blev utloggad på grund av inaktivitet. Klicka på <img src={icon} alt="
+"\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</"
+"strong>-knappen i din Tor browsers menyrad innan du går vidare. Detta kommer "
+"att rensa din Tor browsers aktivitetsdata på den här enheten."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"

@@ -114,7 +114,7 @@ msgstr ""
 msgid "Field can not be more than {max_chars} characters."
 msgstr "Gagnasvið má ekki vera meira en {max_chars} stafir."
 
-#: journalist_app/forms.py:42 source_app/forms.py:11
+#: journalist_app/forms.py:42 source_app/forms.py:12
 msgid "This field is required."
 msgstr "Það er nauðsynlegt að fylla þennan reit út."
 
@@ -890,13 +890,25 @@ msgstr ""
 "Tor2Web. Það  <strong>&nbsp;gefur þér ekki&nbsp;</strong> nafnleysi. <a href="
 "\"{url}\">Hversvegna er það hættulegt?</a>"
 
-#: source_app/forms.py:15
+#: source_app/forms.py:16
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "Gagnasvið verður að vera á milli 1 og {max_codename_len} stafa langt."
 
-#: source_app/forms.py:18
+#: source_app/forms.py:19
 msgid "Invalid input."
 msgstr "Ógilt ílag."
+
+#: source_app/forms.py:24
+msgid "Write a message."
+msgstr "Skrifaðu skilaboð."
+
+#: source_app/forms.py:29
+msgid "Message text too long."
+msgstr ""
+
+#: source_app/forms.py:33
+msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
+msgstr ""
 
 #: source_app/main.py:33
 msgid ""
@@ -907,42 +919,46 @@ msgstr ""
 "þú ætlar að útbúa annan aðgang, ættirðu að skrá þig fyrst út."
 
 #: source_app/main.py:64
+#, fuzzy
+#| msgid ""
+#| "You are already logged in. Please verify your codename below as it may "
+#| "differ from the one displayed on the previous page."
 msgid ""
-"You are already logged in. Please verify your codename below as it may "
+"You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
 "Þú ert þegar skráð/ur inn. Yfirfarðu kóðanafnið þitt hér fyrir neðan þar sem "
 "það gæti verið öðruvísi en það sem birt var á fyrri síðu."
 
-#: source_app/main.py:163
+#: source_app/main.py:171
 msgid "You must enter a message or choose a file to submit."
 msgstr "Þú verður að setja inn skilaboð eða velja skrá til að senda inn."
 
-#: source_app/main.py:167
+#: source_app/main.py:175
 msgid "You must enter a message."
 msgstr "Þú verður að setja inn skilaboð."
 
-#: source_app/main.py:198
+#: source_app/main.py:206
 msgid "Thanks! We received your message."
 msgstr "Takk fyrir! Við fengum skilaboðin þín."
 
-#: source_app/main.py:200
+#: source_app/main.py:208
 msgid "Thanks! We received your document."
 msgstr "Takk fyrir! Við fengum skjalið þitt."
 
-#: source_app/main.py:202
+#: source_app/main.py:210
 msgid "Thanks! We received your message and document."
 msgstr "Takk fyrir! Við fengum skilaboðin og skjalið þitt."
 
-#: source_app/main.py:261
+#: source_app/main.py:271
 msgid "Reply deleted"
 msgstr "Svari var eytt"
 
-#: source_app/main.py:279
+#: source_app/main.py:289
 msgid "All replies have been deleted"
 msgstr "Öllum svörum hefur verið eytt"
 
-#: source_app/main.py:293
+#: source_app/main.py:303
 msgid "Sorry, that is not a recognized codename."
 msgstr "Því miður, þetta er ekki þekkt kóðanafn."
 
@@ -1137,8 +1153,8 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
-"Smelltu á hnappinn <img src={icon} alt=\"broom icon\" width=\"16\" height=\""
-"16\">&nbsp;<strong>Nýtt auðkenni</strong> í verkfærastiku Tor-vafrans. Það "
+"Smelltu á hnappinn <img src={icon} alt=\"broom icon\" width=\"16\" height="
+"\"16\">&nbsp;<strong>Nýtt auðkenni</strong> í verkfærastiku Tor-vafrans. Það "
 "mun hreinsa út allr fyrri aðgerðir Tor-vafrans á þessu tæki."
 
 #: source_templates/lookup.html:7
@@ -1216,10 +1232,6 @@ msgstr "<a href=\"{url}\" class=\"text-link\">Kanna nánar</a>."
 msgid "Maximum upload size: 500 MB"
 msgstr "Hámarksstærð innsendingar: 500 MB"
 
-#: source_templates/lookup.html:62
-msgid "Write a message."
-msgstr "Skrifaðu skilaboð."
-
 #: source_templates/lookup.html:84
 msgid "Read Replies"
 msgstr "Lesa svör"
@@ -1280,8 +1292,8 @@ msgid ""
 "in your Tor browser's toolbar before moving on. This will clear your Tor "
 "browser activity data on this device."
 msgstr ""
-"Þú varst skráð/ur út vegna ónógrar virkni. Smelltu á hnappinn <img src={icon}"
-" alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Nýtt "
+"Þú varst skráð/ur út vegna ónógrar virkni. Smelltu á hnappinn <img "
+"src={icon} alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Nýtt "
 "auðkenni</strong> í verkfærastiku Tor-vafrans. Það mun hreinsa út allr fyrri "
 "aðgerðir Tor-vafrans á þessu tæki."
 
