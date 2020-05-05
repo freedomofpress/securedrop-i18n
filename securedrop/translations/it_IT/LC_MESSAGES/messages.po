@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-05-04 11:06+0000\n"
+"PO-Revision-Date: 2020-05-05 19:06+0000\n"
 "Last-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\n"
 "Language-Team: Italian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/it/>\n"
@@ -916,11 +916,13 @@ msgstr "Scrivi un messaggio."
 
 #: source_app/forms.py:29
 msgid "Message text too long."
-msgstr ""
+msgstr "Testo del messaggio troppo lungo."
 
 #: source_app/forms.py:33
 msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
 msgstr ""
+"I blocchi di testo di grandi dimensioni devono essere caricati come file, "
+"non copiati e incollati."
 
 #: source_app/main.py:33
 msgid ""
@@ -932,16 +934,12 @@ msgstr ""
 "corrente."
 
 #: source_app/main.py:64
-#, fuzzy
-#| msgid ""
-#| "You are already logged in. Please verify your codename below as it may "
-#| "differ from the one displayed on the previous page."
 msgid ""
 "You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
 "È già stato eseguito l'accesso. Verificare il proprio nome in codice "
-"riportato di seguito poiché potrebbe differire da quello visualizzato nella "
+"riportato sopra poiché potrebbe differire da quello visualizzato nella "
 "pagina precedente."
 
 #: source_app/main.py:171
