@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-05-04 03:06+0000\n"
+"PO-Revision-Date: 2020-05-05 09:06+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.securedrop.org/"
 "projects/securedrop/securedrop/zh_Hant/>\n"
@@ -1182,12 +1182,12 @@ msgid ""
 "in your Tor browser's toolbar before moving on. This will clear your Tor "
 "browser activity data on this device."
 msgstr ""
-"因為無動作已遭系統登入，可先點擊 Tor 瀏覽器工具列<img src={icon} alt=\"broom icon\" width=\"16\" "
+"因聞置過久已遭系統登出，可先點擊 Tor 瀏覽器工具列<img src={icon} alt=\"broom icon\" width=\"16\" "
 "height=\"16\">&nbsp;<strong>New Identity</strong>按鍵來清除此設備上的瀏覽記錄。"
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
-msgstr "為什麼出現一個關於 Tor2Web 的警告？"
+msgstr "為什麼出現一個 Tor2Web 的警告？"
 
 #: source_templates/tor2web-warning.html:4
 msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
