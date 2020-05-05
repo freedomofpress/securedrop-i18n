@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-12-08 05:41+0000\n"
+"PO-Revision-Date: 2020-05-05 09:06+0000\n"
 "Last-Translator: ff98sha <ff98sha@163.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/zh_Hans/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.10.3\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:14
@@ -49,7 +49,7 @@ msgstr "图片已更新。"
 
 #: journalist_app/admin.py:62
 msgid "Preferences saved."
-msgstr ""
+msgstr "设置已保存。"
 
 #: journalist_app/admin.py:92
 msgid ""
@@ -840,7 +840,7 @@ msgstr "您由于已经登录而被重定向。若您想要创建新账户，请
 msgid ""
 "You are already logged in. Please verify your codename below as it may "
 "differ from the one displayed on the previous page."
-msgstr ""
+msgstr "您已登录。请验证下方的代号，它可能与上个页面的不同。"
 
 #: source_app/main.py:163
 msgid "You must enter a message or choose a file to submit."
@@ -937,14 +937,10 @@ msgid ""
 msgstr "请写下并妥善保管或牢记此代号。"
 
 #: source_templates/generate.html:10
-#, fuzzy
-#| msgid ""
-#| "This codename is what you will use in future visits to receive messages "
-#| "from our journalists in response to what you submit on the next screen."
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our team in response to what you submit on the next screen."
-msgstr "此代号将是您之后接收我们记者对您在下一界面提交的信息的反馈途径。"
+msgstr "此代号将是您之后接收我们团队对您在下一界面提交的信息的反馈途径。"
 
 #: source_templates/generate.html:34
 msgid ""
@@ -1044,7 +1040,7 @@ msgstr "取消"
 
 #: source_templates/logout.html:6
 msgid "One more thing..."
-msgstr ""
+msgstr "还有一件事..."
 
 #: source_templates/logout.html:7
 msgid ""
@@ -1052,6 +1048,8 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
+"点击 Tor 浏览器工具栏的<img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\""
+">&nbsp;<strong>新身份</strong>按钮。这能清除此设备上的 Tor 浏览器活动记录。"
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1163,7 +1161,7 @@ msgstr "否，尚未阅读完毕"
 
 #: source_templates/lookup.html:123
 msgid "— No Messages —"
-msgstr ""
+msgstr "— 无新信息 —"
 
 #: source_templates/notfound.html:3
 msgid "Page not found"
@@ -1174,10 +1172,8 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "很抱歉，我们无法找到您所请求的内容。"
 
 #: source_templates/session_timeout.html:2
-#, fuzzy
-#| msgid "Important!"
 msgid "Important"
-msgstr "重中之重！"
+msgstr "重中之重"
 
 #: source_templates/session_timeout.html:5
 msgid ""
@@ -1186,6 +1182,8 @@ msgid ""
 "in your Tor browser's toolbar before moving on. This will clear your Tor "
 "browser activity data on this device."
 msgstr ""
+"您因为长时间无操作而被注销。再继续操作前，点击 Tor 浏览器工具栏上的<img src={icon} alt=\"broom icon\" width="
+"\"16\" height=\"16\">&nbsp;<strong>新身份</strong>按钮。这能清除此设备上 Tor 浏览器的活动记录。"
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1243,10 +1241,8 @@ msgstr ""
 "件至<pre>gettor@torproject.org</pre>，机器人将回复您下载指示。"
 
 #: source_templates/why-journalist-key.html:3
-#, fuzzy
-#| msgid "Why download the journalist's public key?"
 msgid "Why download the team's public key?"
-msgstr "为何要下载记者的公钥？"
+msgstr "为何要下载团队的公钥？"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
