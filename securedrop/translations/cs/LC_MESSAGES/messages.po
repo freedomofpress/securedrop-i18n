@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-05-01 19:06+0000\n"
-"Last-Translator: 1000101 <jan.hrnko@satoshilabs.com>\n"
+"PO-Revision-Date: 2020-05-05 13:06+0000\n"
+"Last-Translator: michaela-bot <michaela.rybickova@gmail.com>\n"
 "Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/cs/>\n"
 "Language: cs\n"
@@ -901,7 +901,7 @@ msgid ""
 "differ from the one displayed on the previous page."
 msgstr ""
 "Jste již přihlášen/a. Prosím, zkontrolujte zdali krycí jméno souhlasí, "
-"protože se může lišit od toho zobrazeného na předošlé stránce."
+"protože se může lišit od toho zobrazeného na předchozí stránce."
 
 #: source_app/main.py:163
 msgid "You must enter a message or choose a file to submit."
@@ -1007,7 +1007,7 @@ msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our team in response to what you submit on the next screen."
 msgstr ""
-"Toto krycí jméno budete v budoucnu využívat pro komunikaci s našim tímem na "
+"Toto krycí jméno budete v budoucnu využívat pro komunikaci s naším týmem na "
 "základě toho, co pošlete na příští obrazovce."
 
 #: source_templates/generate.html:34
@@ -1259,10 +1259,10 @@ msgid ""
 "in your Tor browser's toolbar before moving on. This will clear your Tor "
 "browser activity data on this device."
 msgstr ""
-"Z důvodu neaktivity jste byl/a odhlášen/a. Než budete pokračovať, klepněte "
+"Z důvodu neaktivity jste byl/a odhlášen/a. Než budete pokračovat, klepněte "
 "na <img src={icon} alt=\"ikona koštěte\" width=\"16\" height=\"16\""
 ">&nbsp;<strong>Nová identita</strong> na liště svého prohlížeče Tor. Smažete "
-"tím data o aktivitě prohlížeče Tor na tomhle zařízení."
+"tím data o aktivitě prohlížeče Tor na tomto zařízení."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1329,7 +1329,7 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:3
 msgid "Why download the team's public key?"
-msgstr "Proč si stáhnout veřejný klíč tímu?"
+msgstr "Proč si stáhnout veřejný klíč týmu?"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
