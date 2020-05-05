@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-04-22 17:06+0000\n"
+"PO-Revision-Date: 2020-05-05 19:06+0000\n"
 "Last-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/nb_NO/>\n"
@@ -889,11 +889,12 @@ msgstr "Skriv en melding."
 
 #: source_app/forms.py:29
 msgid "Message text too long."
-msgstr ""
+msgstr "Meldingsteksten er for lang."
 
 #: source_app/forms.py:33
 msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
 msgstr ""
+"Store mengder tekst må lastes opp som ei fil, ikke klippes og limes inn her."
 
 #: source_app/main.py:33
 msgid ""
@@ -904,16 +905,12 @@ msgstr ""
 "konto må du først logge ut."
 
 #: source_app/main.py:64
-#, fuzzy
-#| msgid ""
-#| "You are already logged in. Please verify your codename below as it may "
-#| "differ from the one displayed on the previous page."
 msgid ""
 "You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
-"Du er allerede logget inn. Vennligst verifiser kodenavnet under fordi det "
-"kan være annerledes enn det som ble vist på den forrige siden."
+"Du er allerede logget inn. Vennligst verifiser kodenavnet over fordi det kan "
+"være annerledes enn det som ble vist på den forrige siden."
 
 #: source_app/main.py:171
 msgid "You must enter a message or choose a file to submit."
