@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-04-22 23:06+0000\n"
-"Last-Translator: Zuhualime Akoochimoya <zakooch@protonmail.ch>\n"
+"PO-Revision-Date: 2020-05-05 19:06+0000\n"
+"Last-Translator: erinm <erinm@riseup.net>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
 "Language: es_ES\n"
@@ -935,15 +935,11 @@ msgstr ""
 "nueva, debe cerrar la sesión primero."
 
 #: source_app/main.py:64
-#, fuzzy
-#| msgid ""
-#| "You are already logged in. Please verify your codename below as it may "
-#| "differ from the one displayed on the previous page."
 msgid ""
 "You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
-"Ya tiene una sesión iniciada. Por favor verifique abajo su nombre clave ya "
+"Ya tiene una sesión iniciada. Por favor verifique arriba su nombre clave ya "
 "que pudiera diferir del mostrado en la página previa."
 
 #: source_app/main.py:171
