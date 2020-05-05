@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.12.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-05-01 19:06+0000\n"
-"Last-Translator: Oktavia <oktaviahrund@gmail.com>\n"
+"PO-Revision-Date: 2020-05-05 19:06+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/is/>\n"
 "Language: is\n"
@@ -904,11 +904,11 @@ msgstr "Skrifaðu skilaboð."
 
 #: source_app/forms.py:29
 msgid "Message text too long."
-msgstr ""
+msgstr "Texti skilaboðanna er of langur."
 
 #: source_app/forms.py:33
 msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
-msgstr ""
+msgstr "Langa texta verður að senda inn sem skrá, ekki afrita þá og líma."
 
 #: source_app/main.py:33
 msgid ""
@@ -919,15 +919,11 @@ msgstr ""
 "þú ætlar að útbúa annan aðgang, ættirðu að skrá þig fyrst út."
 
 #: source_app/main.py:64
-#, fuzzy
-#| msgid ""
-#| "You are already logged in. Please verify your codename below as it may "
-#| "differ from the one displayed on the previous page."
 msgid ""
 "You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
-"Þú ert þegar skráð/ur inn. Yfirfarðu kóðanafnið þitt hér fyrir neðan þar sem "
+"Þú ert þegar skráð/ur inn. Yfirfarðu kóðanafnið þitt hér fyrir ofan þar sem "
 "það gæti verið öðruvísi en það sem birt var á fyrri síðu."
 
 #: source_app/main.py:171
