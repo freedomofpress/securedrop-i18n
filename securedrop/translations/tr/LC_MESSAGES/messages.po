@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-05-04 18:06+0000\n"
-"Last-Translator: Volkan <volkangezer@gmail.com>\n"
+"PO-Revision-Date: 2020-05-06 17:06+0000\n"
+"Last-Translator: tekrei <tekrei@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
 "Language: tr\n"
@@ -910,11 +910,13 @@ msgstr "Bir ileti yazın."
 
 #: source_app/forms.py:29
 msgid "Message text too long."
-msgstr ""
+msgstr "İleti metni çok uzun."
 
 #: source_app/forms.py:33
 msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
 msgstr ""
+"Büyük metin gövdeleri dosya olarak yüklenmelidir, kopyala ve yapıştır "
+"yapılmamalıdır."
 
 #: source_app/main.py:33
 msgid ""
@@ -925,15 +927,11 @@ msgstr ""
 "açmak istiyorsanız, önce oturumunuzu kapatmalısınız."
 
 #: source_app/main.py:64
-#, fuzzy
-#| msgid ""
-#| "You are already logged in. Please verify your codename below as it may "
-#| "differ from the one displayed on the previous page."
 msgid ""
 "You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
-"Zaten oturum açmışsınız. Lütfen aşağıdaki kod adınızın önceki sayfada "
+"Zaten oturum açmışsınız. Lütfen yukarıdaki kod adınızın önceki sayfada "
 "görüntülenen ile aynı olup olmadığını denetleyin."
 
 #: source_app/main.py:171
