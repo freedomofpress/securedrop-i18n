@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-05-05 13:06+0000\n"
-"Last-Translator: michaela-bot <michaela.rybickova@gmail.com>\n"
+"PO-Revision-Date: 2020-05-06 17:06+0000\n"
+"Last-Translator: 1000101 <jan.hrnko@satoshilabs.com>\n"
 "Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/cs/>\n"
 "Language: cs\n"
@@ -893,11 +893,12 @@ msgstr "Napsat zprávu."
 
 #: source_app/forms.py:29
 msgid "Message text too long."
-msgstr ""
+msgstr "Zpráva je příliš dlouhá."
 
 #: source_app/forms.py:33
 msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
 msgstr ""
+"Rozsáhlé bloky textu musí být nahrány jako soubor, ne zkopírovány a vloženy."
 
 #: source_app/main.py:33
 msgid ""
@@ -908,16 +909,12 @@ msgstr ""
 "Pokud chcete vytvořit nový účet, nejprve se odhlaste."
 
 #: source_app/main.py:64
-#, fuzzy
-#| msgid ""
-#| "You are already logged in. Please verify your codename below as it may "
-#| "differ from the one displayed on the previous page."
 msgid ""
 "You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
-"Jste již přihlášen/a. Prosím, zkontrolujte zdali krycí jméno souhlasí, "
-"protože se může lišit od toho zobrazeného na předchozí stránce."
+"Jste již přihlášen/a. Prosím, zkontrolujte zdali výše uvedené krycí jméno "
+"souhlasí, protože se může lišit od toho zobrazeného na předchozí stránce."
 
 #: source_app/main.py:171
 msgid "You must enter a message or choose a file to submit."
