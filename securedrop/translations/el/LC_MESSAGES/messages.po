@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-05-06 01:06+0000\n"
-"Last-Translator: Adrian <pappasadrian@gmail.com>\n"
+"PO-Revision-Date: 2020-05-06 12:06+0000\n"
+"Last-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/el/>\n"
 "Language: el\n"
@@ -921,13 +921,13 @@ msgstr "Γράψτε ένα μήνυμα."
 
 #: source_app/forms.py:29
 msgid "Message text too long."
-msgstr "Το μήκος του μηνύματος είναι πολύ μεγάλο."
+msgstr "Το κείμενο του μηνύματος είναι πολύ μεγάλο."
 
 #: source_app/forms.py:33
 msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
 msgstr ""
-"Τα μεγάλα κείμενα πρέπει να ανεβαίνουν ως αρχεία, και όχι να αντιγράφονται "
-"και να επικολλούνται."
+"Μεγάλα κείμενα πρέπει να ανεβαίνουν ως αρχεία, και όχι να αντιγράφονται και "
+"να επικολλούνται."
 
 #: source_app/main.py:33
 msgid ""
@@ -1054,8 +1054,8 @@ msgid ""
 "our team in response to what you submit on the next screen."
 msgstr ""
 "Αυτό το κωδικό όνομα είναι αυτό που θα χρησιμοποιείτε σε μελλοντικές "
-"επισκέψεις σας για να λαμβάνετε μηνύματα από εμάς, σε απάντηση σε αυτά που "
-"θα υποβάλετε στην επόμενη οθόνη."
+"επισκέψεις σας για να λαμβάνετε μηνύματα από την ομάδα μας σε απάντηση σε "
+"αυτά που θα υποβάλετε στην επόμενη οθόνη."
 
 #: source_templates/generate.html:34
 msgid ""
@@ -1175,7 +1175,7 @@ msgid ""
 msgstr ""
 "Πατήστε το κουμπί <img src={icon} alt=\"broom icon\" width=\"16\" height=\""
 "16\">&nbsp;<strong>Νέα Ταυτότητα</strong> στη γραμμη εργαλείων του Tor "
-"browser σας. Αυτό θα εκκαθαρίσει τα δεδομένα δραστηριότητας του Tor Browser "
+"browser σας. Αυτό θα διαγράψει τα δεδομένα δραστηριότητας του Tor Browser "
 "σας σε αυτή τη συσκευή."
 
 #: source_templates/lookup.html:7
@@ -1317,7 +1317,7 @@ msgstr ""
 "Αποσυνδεθήκατε επειδή δεν κάνατε κάποια ενέργεια. Πατήστε το κουμπί <img "
 "src={icon} alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Νέα "
 "Ταυτότητα</strong> στη γραμμή εργαλείων του Tor browser σας πριν φύγετε. "
-"Αυτό θα εκκαθαρίσει τα δεδομένα δραστηριότητας του Tor browser σε αυτή τη "
+"Αυτό θα διαγράψει τα δεδομένα δραστηριότητας του Tor browser σε αυτή τη "
 "συσκευή."
 
 #: source_templates/tor2web-warning.html:3
