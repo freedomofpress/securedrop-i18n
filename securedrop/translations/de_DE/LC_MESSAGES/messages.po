@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-05-05 19:06+0000\n"
-"Last-Translator: John Hensley <john@freedom.press>\n"
+"PO-Revision-Date: 2020-05-06 17:06+0000\n"
+"Last-Translator: Robin Schubert <robin.schubert@gmx.de>\n"
 "Language-Team: German <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/de/>\n"
 "Language: de_DE\n"
@@ -915,11 +915,13 @@ msgstr "Nachricht schreiben."
 
 #: source_app/forms.py:29
 msgid "Message text too long."
-msgstr ""
+msgstr "Nachricht zu lang."
 
 #: source_app/forms.py:33
 msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
 msgstr ""
+"Längere Texte müssen als Datei hochgeladen, und nicht kopiert und eingefügt "
+"werden."
 
 #: source_app/main.py:33
 msgid ""
@@ -930,15 +932,11 @@ msgstr ""
 "Konto erstellen möchten, müssen Sie sich zuerst abmelden."
 
 #: source_app/main.py:64
-#, fuzzy
-#| msgid ""
-#| "You are already logged in. Please verify your codename below as it may "
-#| "differ from the one displayed on the previous page."
 msgid ""
 "You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
-"Sie sind bereits angemeldet. Bitte überprüfen Sie Ihren unten stehenden "
+"Sie sind bereits angemeldet. Bitte überprüfen Sie Ihren oben stehenden "
 "Decknamen, da er sich von dem auf der vorherigen Seite angezeigten "
 "unterscheiden könnte."
 
@@ -1045,17 +1043,13 @@ msgstr ""
 "sicheren Ort auf, oder merken Sie ihn sich."
 
 #: source_templates/generate.html:10
-#, fuzzy
-#| msgid ""
-#| "This codename is what you will use in future visits to receive messages "
-#| "from our journalists in response to what you submit on the next screen."
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our team in response to what you submit on the next screen."
 msgstr ""
 "Diesen Decknamen benutzen Sie, um bei zukünftigen Besuchen Nachrichten von "
-"unseren Journalisten zu erhalten, die darauf antworten, was Sie im nächsten "
-"Schritt versenden."
+"unserem Team zu erhalten, die darauf antworten, was Sie im nächsten Schritt "
+"versenden."
 
 #: source_templates/generate.html:34
 msgid ""
@@ -1305,10 +1299,8 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Leider konnten wir nicht finden, was Sie angefordert haben."
 
 #: source_templates/session_timeout.html:2
-#, fuzzy
-#| msgid "Important!"
 msgid "Important"
-msgstr "Wichtig!"
+msgstr "Wichtig"
 
 #: source_templates/session_timeout.html:5
 msgid ""
@@ -1390,10 +1382,8 @@ msgstr ""
 "senden und ein Bot wird mit Anweisungen antworten."
 
 #: source_templates/why-journalist-key.html:3
-#, fuzzy
-#| msgid "Why download the journalist's public key?"
 msgid "Why download the team's public key?"
-msgstr "Warum den öffentlichen Schlüssel des Journalisten herunterladen?"
+msgstr "Warum den öffentlichen Schlüssel des Teams herunterladen?"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
