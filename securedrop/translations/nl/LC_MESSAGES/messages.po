@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-04-28 17:06+0000\n"
+"PO-Revision-Date: 2020-05-06 21:06+0000\n"
 "Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
 "Language-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/nl/>\n"
@@ -907,11 +907,13 @@ msgstr "Schrijf een bericht."
 
 #: source_app/forms.py:29
 msgid "Message text too long."
-msgstr ""
+msgstr "Bericht is te lang."
 
 #: source_app/forms.py:33
 msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
 msgstr ""
+"Grote stukken teksten moeten als bestand worden geüpload, niet gekopieerd en "
+"geplakt."
 
 #: source_app/main.py:33
 msgid ""
@@ -922,15 +924,11 @@ msgstr ""
 "aanmaken, moet u eerst uitloggen."
 
 #: source_app/main.py:64
-#, fuzzy
-#| msgid ""
-#| "You are already logged in. Please verify your codename below as it may "
-#| "differ from the one displayed on the previous page."
 msgid ""
 "You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
-"U bent al ingelogd. Verifieer uw codenaam hieronder want die zou kunnen "
+"U bent al ingelogd. Verifieer uw codenaam hierboven want die zou kunnen "
 "afwijken van de codenaam op de vorige pagina."
 
 #: source_app/main.py:171
@@ -1109,7 +1107,7 @@ msgstr "BEGIN"
 
 #: source_templates/index.html:59
 msgid "Return visit"
-msgstr "Herhaalbezoek"
+msgstr "Terugkerend bezoek"
 
 #: source_templates/index.html:61
 msgid "Already have a codename? Check for replies or submit something new."
