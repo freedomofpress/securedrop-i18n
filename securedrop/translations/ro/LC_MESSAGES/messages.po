@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-05-02 09:06+0000\n"
+"PO-Revision-Date: 2020-05-06 05:06+0000\n"
 "Last-Translator: robbpa <robbpaun@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
@@ -928,11 +928,12 @@ msgstr "Scrie un mesaj."
 
 #: source_app/forms.py:29
 msgid "Message text too long."
-msgstr ""
+msgstr "Textul mesajului este prea lung."
 
 #: source_app/forms.py:33
 msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
 msgstr ""
+"Blocurile mari de text trebuie încărcate ca fișier, nu copiate și lipite."
 
 #: source_app/main.py:33
 msgid ""
@@ -943,15 +944,11 @@ msgstr ""
 "creezi un cont nou trebuie să te deconectezi mai întâi."
 
 #: source_app/main.py:64
-#, fuzzy
-#| msgid ""
-#| "You are already logged in. Please verify your codename below as it may "
-#| "differ from the one displayed on the previous page."
 msgid ""
 "You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
-"Ești deja conectat(ă). Te rugăm să îți verifici numele de cod de mai jos, "
+"Ești deja conectat(ă). Te rugăm să îți verifici numele de cod de mai sus, "
 "pentru că poate diferi de cel afișat în pagina anterioară."
 
 #: source_app/main.py:171
