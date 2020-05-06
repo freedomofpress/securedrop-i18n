@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-04-23 18:06+0000\n"
+"PO-Revision-Date: 2020-05-06 08:06+0000\n"
 "Last-Translator: Jonas Waga <jonas.waga@schibsted.com>\n"
 "Language-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sv/>\n"
@@ -891,11 +891,12 @@ msgstr "Skriv ett meddelande."
 
 #: source_app/forms.py:29
 msgid "Message text too long."
-msgstr ""
+msgstr "Meddelandet är för långt."
 
 #: source_app/forms.py:33
 msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
 msgstr ""
+"Stora textblock måste laddas upp som filer, de kan inte kopieras in som text."
 
 #: source_app/main.py:33
 msgid ""
@@ -906,15 +907,11 @@ msgstr ""
 "konto, logga ut först."
 
 #: source_app/main.py:64
-#, fuzzy
-#| msgid ""
-#| "You are already logged in. Please verify your codename below as it may "
-#| "differ from the one displayed on the previous page."
 msgid ""
 "You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
-"Du är redan inloggad. Vänligen verifiera ditt kodnamn nedan, då det kan "
+"Du är redan inloggad. Vänligen verifiera ditt kodnamn ovan, då det kan "
 "skilja sig från det som visades på föregående sida."
 
 #: source_app/main.py:171
