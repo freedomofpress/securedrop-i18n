@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-05-01 19:06+0000\n"
+"PO-Revision-Date: 2020-05-06 17:06+0000\n"
 "Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/pt_BR/>\n"
@@ -902,11 +902,13 @@ msgstr "Escreva uma mensagem."
 
 #: source_app/forms.py:29
 msgid "Message text too long."
-msgstr ""
+msgstr "Mensagem de texto muito longa."
 
 #: source_app/forms.py:33
 msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
 msgstr ""
+"Longos textos devem ser carregados como arquivos, não simplesmente copiados "
+"e colados."
 
 #: source_app/main.py:33
 msgid ""
@@ -916,15 +918,11 @@ msgstr ""
 "Sessão já iniciada. Para criar uma nova conta, é preciso encerrar a sessão."
 
 #: source_app/main.py:64
-#, fuzzy
-#| msgid ""
-#| "You are already logged in. Please verify your codename below as it may "
-#| "differ from the one displayed on the previous page."
 msgid ""
 "You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
-"A sua sessão já foi iniciada. Por favor, verifique seu codinome abaixo, "
+"A sua sessão já foi iniciada. Por favor, verifique seu codinome acima, "
 "porque ele pode ser diferente daquele exibido na página anterior."
 
 #: source_app/main.py:171
