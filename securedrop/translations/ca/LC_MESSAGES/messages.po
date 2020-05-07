@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-05-01 19:06+0000\n"
-"Last-Translator: Joan Montané <joan@montane.cat>\n"
+"PO-Revision-Date: 2020-05-07 11:06+0000\n"
+"Last-Translator: John Smith <ecron_89@hotmail.com>\n"
 "Language-Team: Catalan <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ca/>\n"
 "Language: ca\n"
@@ -909,11 +909,13 @@ msgstr "Escriviu un missatge."
 
 #: source_app/forms.py:29
 msgid "Message text too long."
-msgstr ""
+msgstr "El missatge de text és massa llarg."
 
 #: source_app/forms.py:33
 msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
 msgstr ""
+"Els blocs de text grans s'han de pujar en un fitxer, no copiant-los i "
+"enganxant-los."
 
 #: source_app/main.py:33
 msgid ""
@@ -924,15 +926,11 @@ msgstr ""
 "compte nou, primer heu de tancar la sessió."
 
 #: source_app/main.py:64
-#, fuzzy
-#| msgid ""
-#| "You are already logged in. Please verify your codename below as it may "
-#| "differ from the one displayed on the previous page."
 msgid ""
 "You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
-"Ja teniu una sessió iniciada. Verifiqueu el nom en clau a sota, ja que "
+"Ja teniu una sessió iniciada. Verifiqueu el nom en clau a sobre, ja que "
 "podria diferir del que s'ha mostrat en la pàgina anterior."
 
 #: source_app/main.py:171
