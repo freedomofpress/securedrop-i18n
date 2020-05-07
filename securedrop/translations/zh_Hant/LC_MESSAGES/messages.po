@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-05-05 09:06+0000\n"
+"PO-Revision-Date: 2020-05-07 02:06+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.securedrop.org/"
 "projects/securedrop/securedrop/zh_Hant/>\n"
@@ -835,11 +835,11 @@ msgstr "撰寫一則訊息。"
 
 #: source_app/forms.py:29
 msgid "Message text too long."
-msgstr ""
+msgstr "訊息文字過長。"
 
 #: source_app/forms.py:33
 msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
-msgstr ""
+msgstr "大量文字必須以檔案方式上傳，不要用複製貼上的作法。"
 
 #: source_app/main.py:33
 msgid ""
@@ -848,14 +848,10 @@ msgid ""
 msgstr "你被重定向了， 因為已在登錄狀態。如果想創建一個新帳戶，請先登出。"
 
 #: source_app/main.py:64
-#, fuzzy
-#| msgid ""
-#| "You are already logged in. Please verify your codename below as it may "
-#| "differ from the one displayed on the previous page."
 msgid ""
 "You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
-msgstr "您已登入，請驗證下方之代號其可能與之前頁面顯示不同。"
+msgstr "您已登入，請驗證上方代號其可能與不同於先前頁面顯示。"
 
 #: source_app/main.py:171
 msgid "You must enter a message or choose a file to submit."
