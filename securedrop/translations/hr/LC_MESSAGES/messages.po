@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 1.3.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-05-06 17:06+0000\n"
+"PO-Revision-Date: 2020-05-08 19:07+0000\n"
 "Last-Translator: Igor K. <igorkrainovic@gmail.com>\n"
 "Language-Team: Croatian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/hr/>\n"
@@ -38,7 +38,7 @@ msgstr "Netočna lozinka ili dvofaktorski kod."
 
 #: journalist_app/account.py:49
 msgid "Your two-factor credentials have been reset successfully."
-msgstr "Vaši dvofaktorski kredencijali su uspješno resetirani."
+msgstr "Vaši dvofaktorski kredencijali su uspješno ponovno postavljeni."
 
 #: journalist_app/account.py:53 journalist_app/admin.py:136
 msgid "There was a problem verifying the two-factor code. Please try again."
@@ -259,9 +259,9 @@ msgstr[2] "{msg_num} poruka"
 #: journalist_templates/_source_row.html:27
 msgid "1 unread"
 msgid_plural "{num_unread} unread"
-msgstr[0] "1 nepročitano"
-msgstr[1] "{msg_unread} nepročitano"
-msgstr[2] "{msg_unread} nepročitano"
+msgstr[0] "1 nepročitana"
+msgstr[1] "{msg_unread} nepročitane"
+msgstr[2] "{msg_unread} nepročitanih"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -319,7 +319,7 @@ msgid ""
 "Your phone will now be in \"scanning\" mode. When you are in this mode, scan "
 "the barcode below:"
 msgstr ""
-"Vaš telefon će sad \"skenirajućem\" načinu rada. Skenirajte barkod ispod:"
+"Vaš telefon će biti u \"skenirajućem\" načinu rada. Skenirajte barkod ispod:"
 
 #: journalist_templates/account_new_two_factor.html:14
 msgid ""
@@ -466,8 +466,8 @@ msgstr ""
 "Skoro ste gotovi! Kako bi dovršili dodavanje novog korisnika, uputite ga "
 "neka prati niže navedene upute kako bi postavio dvofaktorsku autentikaciju s "
 "FreeOTP-om. Nakon što korisnik doda unos za ovaj račun u aplikaciju, uputite "
-"ga da unese jedan od 6-znamenkastih kodova iz aplikacije kako potvrdio da je "
-"dvofaktorska autentikacija uspješno postavljena."
+"ga da unese jedan od 6-znamenkastih kodova iz aplikacije kako bi potvrdio da "
+"je dvofaktorska autentikacija uspješno postavljena."
 
 #: journalist_templates/admin_new_user_two_factor.html:15
 msgid ""
@@ -491,7 +491,7 @@ msgstr "Administrator"
 
 #: journalist_templates/base.html:27
 msgid "Log Out"
-msgstr "Odjavi se"
+msgstr "Odjava"
 
 #: journalist_templates/base.html:40
 msgid ""
@@ -519,11 +519,11 @@ msgstr ""
 
 #: journalist_templates/col.html:16
 msgid "Download Selected"
-msgstr "Preuzimanje odabrano"
+msgstr "Preuzmi odabrano"
 
 #: journalist_templates/col.html:18
 msgid "Delete Selected"
-msgstr "Brisanje odabrano"
+msgstr "Obriši odabrano"
 
 #: journalist_templates/col.html:28 journalist_templates/col.html:48
 #: journalist_templates/col.html:81
@@ -577,7 +577,7 @@ msgid ""
 "An encryption key will be generated for the source the next time they log "
 "in, after which you will be able to reply to the source here."
 msgstr ""
-"Sljedeći put kad se prijavite generirat će se enkripcijski ključ za izvor, "
+"Sljedeći put kad se izvor prijavi generirat će mu se enkripcijski ključ, "
 "nakon čega će te moći sigurno odgovarati na njega."
 
 #: journalist_templates/col.html:95
@@ -617,7 +617,7 @@ msgstr "Upozorenja"
 #: journalist_templates/config.html:11
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr ""
-"Pošalji enkriptirani email kako bi verificirao ako OSSEC upozorenja rade "
+"Pošalji enkriptirani email kako bi verificirao da OSSEC upozorenja rade "
 "ispravno:"
 
 #: journalist_templates/config.html:15
@@ -694,7 +694,7 @@ msgstr "Ažuriraj"
 
 #: journalist_templates/edit_account.html:30
 msgid "Edit your account"
-msgstr "Uredi svoj račun"
+msgstr "Uredite svoj račun"
 
 #: journalist_templates/edit_account.html:31
 msgid "Change Name"
@@ -714,7 +714,7 @@ msgid ""
 "Your password will be changed immediately, so you will need to save it "
 "before pressing the \"Reset Password\" button."
 msgstr ""
-"Vaša lozinka će biti odmah promjenjena, tako da ju trebate pospremiti prije "
+"Vaša lozinka će biti odmah promjenjena, tako da ju trebate spremiti prije "
 "nego kliknete \"Ponovno postavi lozinku\"."
 
 #: journalist_templates/edit_account.html:56
@@ -731,7 +731,7 @@ msgstr "Dvofaktorski kod"
 
 #: journalist_templates/edit_account.html:68
 msgid "The user's password will be changed to:"
-msgstr "Korisnička lozinka će biti promjenjna u:"
+msgstr "Korisnička lozinka će biti promjenjena u:"
 
 #: journalist_templates/edit_account.html:70
 msgid "Your password will be changed to:"
@@ -749,8 +749,8 @@ msgid ""
 "credentials. Otherwise, they will be locked out of their account."
 msgstr ""
 "Ako su korisnički dvofaktorski kredencijali izgubljeni ili kompromitirani, "
-"možete ih ponovno postaviti ovdje. <em>Ako ovo radite, osigurajte korisničku "
-"prisutnost i spremnost da postavi svoj uređaj s novim dvofkatorski "
+"možete ih ponovno postaviti ovdje. <em>Ako ovo radite, osigurajte prisutnost "
+"i spremnost korisnika da postavi svoj uređaj s novim dvofkatorski "
 "vjerodajnicama. U suprotnom će korisnik biti zaključan iz svog računa."
 
 #: journalist_templates/edit_account.html:85
@@ -808,7 +808,7 @@ msgstr ""
 "SecureDrop će generirati sigurni enkripcijski ključ za ovaj izvor kod Vaše "
 "sljedeće prijave. Nakon što je ključ generiran, prozor za odgovore će se "
 "pojaviti ispod kolekcije dokumenata. Možete iskoristit taj prozor za pisanje "
-"nekriptiranih odgovora na kolekcije."
+"enkriptiranih odgovora na kolekcije."
 
 #: journalist_templates/flag.html:10
 msgid "Continue to the list of documents for {codename}..."
@@ -871,7 +871,7 @@ msgstr ""
 
 #: journalist_templates/login.html:4
 msgid "Login to access the journalist interface"
-msgstr "Prijavi se na novinarsko sučelje"
+msgstr "Prijavite se za pristup na novinarsko sučelje"
 
 #: journalist_templates/login.html:9
 msgid "Password"
@@ -880,7 +880,7 @@ msgstr "Lozinka"
 #: journalist_templates/login.html:12 source_templates/index.html:65
 #: source_templates/logout.html:3
 msgid "LOG IN"
-msgstr "Prijavi se"
+msgstr "Prijava"
 
 #: source_app/__init__.py:124
 msgid ""
@@ -911,23 +911,24 @@ msgstr "Tekst poruke je predug."
 #: source_app/forms.py:33
 msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
 msgstr ""
-"Veliki komadi teksta moraju biti postavljeni kao datoteka, a ne kopirani."
+"Veliki komadi teksta moraju biti postavljeni kao datoteka, a ne kopirani i "
+"zaljepljeni."
 
 #: source_app/main.py:33
 msgid ""
 "You were redirected because you are already logged in. If you want to create "
 "a new account, you should log out first."
 msgstr ""
-"Preusmjereni ste već prijavljeni. Ako želite kreirati novi račun, prvo se "
-"odjavite."
+"Preusmjereni ste jer ste već prijavljeni. Ako želite kreirati novi račun, "
+"prvo se odjavite."
 
 #: source_app/main.py:64
 msgid ""
 "You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
-"Već ste prijavljeni. Molimo provjerite svoje kodno ime iznadjer bi moglo "
-"biti različito od onog prikazano na prijašnjoj stranici."
+"Već ste prijavljeni. Molimo provjerite svoje kodno ime iznad jer bi moglo "
+"biti različito od onog prikazanog na prošloj stranici."
 
 #: source_app/main.py:171
 msgid "You must enter a message or choose a file to submit."
@@ -1046,10 +1047,10 @@ msgid ""
 "there is no way to retrieve a lost codename."
 msgstr ""
 "Zato jer ne pratimo korisnike <strong>SecureDrop</strong>\n"
-"usluge, u budućim posjetima, korištenje ovog kodnog imena će nam biti jedini "
+"usluge, u budućim posjetima korištenje ovog kodnog imena će nam biti jedini "
 "način komunikacije s Vama, ako budemo\n"
-"imali pitanja ili nam trebaju dodatne informacije. Za razliku od lozinke, "
-"nema načina da se vrati izgubljeno kodno ime."
+"imali pitanja ili nam budu trebale dodatne informacije. Za razliku od "
+"lozinke, nema načina da se vrati izgubljeno kodno ime."
 
 #: source_templates/generate.html:43
 msgid "SUBMIT DOCUMENTS"
@@ -1062,8 +1063,8 @@ msgid ""
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
 "<a id=\"disable-js\" href=\"\"><strong>Sigurnosne postavke</strong></a> "
-"Vašeg Tor preglednika su preniske. Koristite <img src=\"{icon}\" alt="
-"\"shield icon\"> &nbsp;gumb na alatnoj traci kako bi to promjenili."
+"Vašeg Tor preglednika su preniske. Koristite <img src=\"{icon}\" alt=\"ikonu "
+"štita\"> &nbsp; na alatnoj traci kako bi to promjenili."
 
 #: source_templates/index.html:17
 msgid ""
@@ -1085,9 +1086,8 @@ msgid ""
 msgstr ""
 "<strong>Preporuča se da koristite desktop verziju Tor preglednika za pristup "
 "SecureDrop-u, jer Orfox ne pruža istu razinu sigurnosti i anonimnosti kao "
-"računalne verzije.</strong><a id=\"recommend-tor\" href="
-"\"{tor_browser_url}\">Naučite kako ga instalirati</a>, ili ignorirajte ovo "
-"upozorenje za nastavak."
+"desktop verzije.</strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">"
+"Naučite kako ga instalirati</a>, ili ignorirajte ovo upozorenje za nastavak."
 
 #: source_templates/index.html:45
 msgid "First submission"
@@ -1095,7 +1095,7 @@ msgstr "Prva predaja"
 
 #: source_templates/index.html:47
 msgid "First time submitting to our SecureDrop? Start here."
-msgstr "Prvi put predajte na SecureDrop? Počnite ovdje."
+msgstr "Prvi put predajete na SecureDrop? Počnite ovdje."
 
 #: source_templates/index.html:51
 msgid "GET STARTED"
@@ -1112,7 +1112,7 @@ msgstr "Već imate kodno ime? Provjerite odgovore ili predajte nešto novo."
 #: source_templates/index.html:79
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
 msgstr ""
-"Kliknite na <img src=\"{icon}\" alt=\"ikona štita\"> na alatnoj traci iznad"
+"Kliknite na <img src=\"{icon}\" alt=\"ikonu štita\"> na alatnoj traci iznad"
 
 #: source_templates/index.html:80
 msgid "Select <strong>Advanced Security Settings</strong>"
@@ -1166,7 +1166,7 @@ msgstr "Sakrij"
 
 #: source_templates/lookup.html:26
 msgid "Sorry we haven't responded yet!"
-msgstr "Žao nam je što nismo još odgovorili!"
+msgstr "Žao nam je što još nismo odgovorili!"
 
 #: source_templates/lookup.html:27
 msgid ""
@@ -1175,8 +1175,8 @@ msgid ""
 "you checked in again."
 msgstr ""
 "SecureDrop je nedavno doživio porast aktivnosti. Iz sigurnosnih razloga, "
-"stvaranje dvosmjernog komunikacijskog kanala je odgođeno dok se opet ne "
-"prijavite."
+"stvaranje dvosmjernog komunikacijskog kanala je bilo odgođeno do Vaše "
+"ponovne prijave."
 
 #: source_templates/lookup.html:28
 msgid ""
@@ -1192,7 +1192,7 @@ msgstr "Predaj datoteke ili poruke"
 
 #: source_templates/lookup.html:36
 msgid "You can submit any kind of file, a message, or both."
-msgstr "Možete predatibilo koju vrstu datoteke, ili poruku, ili oboje."
+msgstr "Možete predati bilo koju vrstu datoteke, ili poruku, ili oboje."
 
 #: source_templates/lookup.html:38
 msgid "Submit Messages"
@@ -1285,7 +1285,7 @@ msgid ""
 "in your Tor browser's toolbar before moving on. This will clear your Tor "
 "browser activity data on this device."
 msgstr ""
-"Odjavljeni ste zbog neaktivnosti. Kliknite na <img src={icon} alt=\"ikona "
+"Odjavljeni ste zbog neaktivnosti. Kliknite na <img src={icon} alt=\"ikonu "
 "metle\" width=\"16\" height=\"16\">&nbsp;<strong>Novi idnetitet</strong> u "
 "alatnoj traci Tor preglednika kako bi nastavili. Ovime će te očistiti Tor "
 "aktivnost na ovom uređaju."
@@ -1297,7 +1297,8 @@ msgstr "Zašto imate upozorenje o Tor2Web-u?"
 #: source_templates/tor2web-warning.html:4
 msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
 msgstr ""
-"Korištenje Tor2Web-a za spajanje na SecureDrop neće zaštitit Vašu anonimnost."
+"Korištenje Tor2Web-a za spajanje na SecureDrop neće zaštititi Vašu "
+"anonimnost."
 
 #: source_templates/tor2web-warning.html:5
 msgid ""
@@ -1322,8 +1323,7 @@ msgstr "Trebali bi koristiti Tor preglednik"
 #: source_templates/use-tor-browser.html:4
 msgid ""
 "If you are not using Tor Browser, you <strong>may not be anonymous</strong>."
-msgstr ""
-"Ako ne koristite Tor preglednikm, <strong>možda niste anonimni</strong>."
+msgstr "Ako ne koristite Tor preglednik, <strong>možda niste anonimni</strong>."
 
 #: source_templates/use-tor-browser.html:5
 msgid ""
@@ -1418,8 +1418,8 @@ msgid ""
 "asc</code>!)"
 msgstr ""
 "Morate moći identificirati ključ (ovo se zove korisnički ID ili UID). Kako "
-"su imena javnih ključeva otisak ključa (s .asc ekstenzijom na kraju), možete "
-"jednostavno kopirati taj podatak (ne uključujte <code>.asc</code>!)"
+"su imena javnih ključeva ujedno i otisak ključa (s .asc ekstenzijom na kraju)"
+", možete jednostavno kopirati taj podatak (ne uključujte <code>.asc</code>!)"
 
 #: source_templates/why-journalist-key.html:17
 msgid ""
@@ -1452,4 +1452,4 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:25
 msgid "Back to submission page"
-msgstr "Natrag na stranicu predaja"
+msgstr "Natrag na stranicu predaje"
