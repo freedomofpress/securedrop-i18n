@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-05-06 08:06+0000\n"
+"PO-Revision-Date: 2020-05-09 09:06+0000\n"
 "Last-Translator: Jonas Waga <jonas.waga@schibsted.com>\n"
 "Language-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sv/>\n"
@@ -33,7 +33,7 @@ msgstr "Du har blivit utloggad på grund av lösenordsbyte"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
-msgstr "Felaktigt lösenord eller tvåfaktorskod."
+msgstr "Felaktigt lösenord eller tvåfaktorsautentisering."
 
 #: journalist_app/account.py:49
 msgid "Your two-factor credentials have been reset successfully."
@@ -42,8 +42,8 @@ msgstr "Din tvåfaktorsautentisering har blivit återställd."
 #: journalist_app/account.py:53 journalist_app/admin.py:136
 msgid "There was a problem verifying the two-factor code. Please try again."
 msgstr ""
-"Det uppstod ett fel med att bekräfta tvåfaktorsautentisering. Vänligen "
-"försök igen."
+"Det uppstod ett fel vid bekräftelse tvåfaktorsautentisering. Vänligen försök "
+"igen."
 
 #: journalist_app/admin.py:42
 msgid "Image updated."
