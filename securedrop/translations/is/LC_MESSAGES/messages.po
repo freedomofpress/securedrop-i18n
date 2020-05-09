@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.12.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-05-05 19:06+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"PO-Revision-Date: 2020-05-09 22:06+0000\n"
+"Last-Translator: Oktavia <oktaviahrund@gmail.com>\n"
 "Language-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/is/>\n"
 "Language: is\n"
@@ -908,7 +908,7 @@ msgstr "Texti skilaboðanna er of langur."
 
 #: source_app/forms.py:33
 msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
-msgstr "Langa texta verður að senda inn sem skrá, ekki afrita þá og líma."
+msgstr "Langa texta verður að senda inn sem skrá, ekki afritað og límt."
 
 #: source_app/main.py:33
 msgid ""
