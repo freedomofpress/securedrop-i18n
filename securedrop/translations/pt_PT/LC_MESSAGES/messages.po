@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2019-11-24 16:41+0000\n"
+"PO-Revision-Date: 2020-05-12 10:06+0000\n"
 "Last-Translator: deeplow <deeplow@tutanota.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/"
 "projects/securedrop/securedrop/pt_PT/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.10.3\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -51,7 +51,7 @@ msgstr "Imagem de conta actualizada."
 
 #: journalist_app/admin.py:62
 msgid "Preferences saved."
-msgstr ""
+msgstr "Preferências guardadas."
 
 #: journalist_app/admin.py:92
 msgid ""
@@ -907,11 +907,13 @@ msgstr "Escreva uma mensagem."
 
 #: source_app/forms.py:29
 msgid "Message text too long."
-msgstr ""
+msgstr "Mensagem de texto demasiado longa."
 
 #: source_app/forms.py:33
 msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
 msgstr ""
+"Longos textos devem ser carregados como arquivos, não simplesmente copiados "
+"e colados."
 
 #: source_app/main.py:33
 msgid ""
@@ -926,6 +928,8 @@ msgid ""
 "You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
 msgstr ""
+"Já estava com sessão iniciada. Por favor, verifique o seu nome-código acima, "
+"porque pode ser diferente daquele exibido na página anterior."
 
 #: source_app/main.py:171
 msgid "You must enter a message or choose a file to submit."
@@ -1026,16 +1030,12 @@ msgstr ""
 "memorize-o."
 
 #: source_templates/generate.html:10
-#, fuzzy
-#| msgid ""
-#| "This codename is what you will use in future visits to receive messages "
-#| "from our journalists in response to what you submit on the next screen."
 msgid ""
 "This codename is what you will use in future visits to receive messages from "
 "our team in response to what you submit on the next screen."
 msgstr ""
-"Este nome-código é o que usará em futuras visitas para receber mensagens dos "
-"nossos jornalistas como resposta ao que enviar no próximo ecrã."
+"Este nome-código é o que usará em futuras visitas para receber mensagens da "
+"nossa equipa como resposta ao que enviar no próximo ecrã."
 
 #: source_templates/generate.html:34
 msgid ""
@@ -1144,7 +1144,7 @@ msgstr "CANCELAR"
 
 #: source_templates/logout.html:6
 msgid "One more thing..."
-msgstr ""
+msgstr "Uma última coisa..."
 
 #: source_templates/logout.html:7
 msgid ""
@@ -1152,6 +1152,10 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
 "toolbar. This will clear your Tor browser activity data on this device."
 msgstr ""
+"Clique no botão <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\""
+">&nbsp;<strong>Nova identidade</strong> na barra de ferramentas do navegador "
+"Tor. Assim, os dados da sua atividade no navegador Tor serão eliminados "
+"deste dispositivo."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1266,7 +1270,7 @@ msgstr "NÃO, AINDA NÃO"
 
 #: source_templates/lookup.html:123
 msgid "— No Messages —"
-msgstr ""
+msgstr "— Sem Mensagens —"
 
 #: source_templates/notfound.html:3
 msgid "Page not found"
@@ -1277,10 +1281,8 @@ msgid "Sorry, we couldn't locate what you requested."
 msgstr "Desculpe, não conseguimos localizar o conteúdo que pediu."
 
 #: source_templates/session_timeout.html:2
-#, fuzzy
-#| msgid "Important!"
 msgid "Important"
-msgstr "Importante!"
+msgstr "Importante"
 
 #: source_templates/session_timeout.html:5
 msgid ""
@@ -1289,6 +1291,10 @@ msgid ""
 "in your Tor browser's toolbar before moving on. This will clear your Tor "
 "browser activity data on this device."
 msgstr ""
+"A sua sessão terminada por inatividade. Clique no botão <img src={icon} alt="
+"\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Nova "
+"identidade</strong> na barra de ferramentas do navegador Tor. Assim, os "
+"dados da sua atividade no navegador Tor serão eliminados deste dispositivo."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1357,10 +1363,8 @@ msgstr ""
 "com instruções."
 
 #: source_templates/why-journalist-key.html:3
-#, fuzzy
-#| msgid "Why download the journalist's public key?"
 msgid "Why download the team's public key?"
-msgstr "Por que transferir a chave pública do jornalista?"
+msgstr "Porquê transferir a chave pública da equipa?"
 
 #: source_templates/why-journalist-key.html:4
 msgid ""
