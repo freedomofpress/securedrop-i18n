@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 1.3.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-06-24 13:16+0000\n"
+"PO-Revision-Date: 2020-06-25 05:16+0000\n"
 "Last-Translator: yogiks <yogesh@karnatakaeducation.org.in>\n"
 "Language-Team: Kannada <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/kn/>\n"
@@ -25,11 +25,11 @@ msgstr "{time} ಹಿಂದೆ"
 
 #: journalist_app/__init__.py:88 journalist_app/__init__.py:137
 msgid "You have been logged out due to inactivity"
-msgstr ""
+msgstr "ನೀವು ನಿಷ್ಕ್ರಿಯತೆಯ ಕಾರಣದಿಂದಾಗಿ ಲಾಗ್ ಔಟ್ ಆಗಿದ್ದೀರಿ"
 
 #: journalist_app/__init__.py:146
 msgid "You have been logged out due to password change"
-msgstr ""
+msgstr "ನಿಮ್ಮ ಗುಪ್ತಪದ ಬದಲಾದ ಕಾರಣದಿಂದಾಗಿ ಲಾಗ್ ಔಟ್ ಆಗಿದ್ದೀರಿ"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
