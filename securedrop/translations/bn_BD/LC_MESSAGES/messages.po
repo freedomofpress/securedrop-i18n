@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 1.3.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-06-21 13:16+0000\n"
-"Last-Translator: Posirac Feic <posirac651@uhtso.com>\n"
+"PO-Revision-Date: 2020-07-01 08:16+0000\n"
+"Last-Translator: Oymate <dhruboadittya96@gmail.com>\n"
 "Language-Team: Bengali (Bangladesh) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/bn_BD/>\n"
 "Language: bn_BD\n"
@@ -72,7 +72,7 @@ msgstr ""
 
 #: journalist_app/admin.py:130
 msgid "The two-factor code for user \"{user}\" was verified successfully."
-msgstr ""
+msgstr "বাবহারকারী \"{user}\" এর জন্য টু-ফ্যাক্টর সত্যায়ন সফলভাবে হয়েছে।"
 
 #: journalist_app/admin.py:200 journalist_app/admin.py:208
 #: journalist_app/utils.py:279
@@ -136,7 +136,7 @@ msgstr ""
 
 #: journalist_app/main.py:133
 msgid "Thanks. Your reply has been stored."
-msgstr ""
+msgstr "ধন্যবাদ। তোমার উত্তর সংরক্ষণ করা হয়েছে।"
 
 #: journalist_app/main.py:154
 msgid "No collections selected for download."
