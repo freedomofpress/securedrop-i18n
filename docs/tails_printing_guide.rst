@@ -41,15 +41,15 @@ Installing and Printing via the Tails GUI
 
 Let's look at the flow in Tails 4 for installing a USB-connected printer.
 On the Tails welcome screen, unlock your persistent volume, and
-`set an admin password <https://tails.boum.org/doc/first_steps/startup_options/administration_password/index.en.html>`__.
+`set an admin password <https://tails.boum.org/doc/first_steps/welcome_screen/administration_password/>`__.
 This ensures that you won't have to reinstall the printer each time you start
 Tails.
 
 Connect the printer to your Tails-booted computer via USB, then turn the printer
 on.
 
-Now, you'll want to single-click your way through **Applications** ▸
-**System Tools** ▸ **Settings** ▸ **Devices** ▸ **Printers**. The screenshot
+Now, you'll want to single-click your way through **Applications ▸
+System Tools ▸ Settings**, then select **Devices ▸ Printers**. The screenshot
 below highlights the "Devices" section in which the printer settings can be
 found:
 

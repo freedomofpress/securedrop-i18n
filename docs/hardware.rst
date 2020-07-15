@@ -434,10 +434,6 @@ support is preferable, since you want neither WiFi nor Bluetooth.
 	  updating the BIOS according to `these instructions
 	  <http://arstechnica.com/gadgets/2014/02/new-intel-nuc-bios-update-fixes-steamos-other-linux-booting-problems/>`__.
 
-.. caution:: Some older NUC BIOS versions will cause the server to `brick itself <https://communities.intel.com/message/359708>`__ if the device
-    attempts to suspend. This has `since been fixed <https://communities.intel.com/message/432692>`__
-    in a BIOS update. See these `release notes <https://downloadmirror.intel.com/28826/eng/RY_0380_ReleaseNotes.pdf>`__ (PDF) for more details.
-
 2014 Mac Minis
 ~~~~~~~~~~~~~~
 
@@ -454,9 +450,8 @@ should remove. This requires a screwdriver for non-standard
 `TR6 Torx security screws <https://www.amazon.com/Mini-Torx-Security-Screwdriver-Tool/dp/B01BG8P2Q6>`__.
 
 However, on the first install of Ubuntu Server
-the Mac Minis will not boot: this is a known and
-`documented <https://nsrc.org/workshops/2015/nsrc-icann-dns-ttt-dubai/raw-attachment/wiki/Agenda/install-ubuntu-mac-mini.htm#your-mac-does-not-boot>`__
-issue. The workaround requires a one-time modification after you
+the Mac Minis will not boot: this is a known issue.
+The workaround requires a one-time modification after you
 install Ubuntu but before you move on to
 `install SecureDrop <https://docs.securedrop.org/en/stable/install.html>`__.
 After Ubuntu is installed, for each Mac Mini you should:

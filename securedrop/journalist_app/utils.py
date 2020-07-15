@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import binascii
+import datetime
+import os
 
-from datetime import datetime
 from flask import (g, flash, current_app, abort, send_file, redirect, url_for,
                    render_template, Markup, sessions, request)
 from flask_babel import gettext, ngettext
@@ -12,7 +13,8 @@ import i18n
 from db import db
 from models import (get_one_or_else, Source, Journalist, InvalidUsernameException,
                     WrongPasswordException, FirstOrLastNameError, LoginThrottledException,
-                    BadTokenException, SourceStar, PasswordError, Submission, RevokedToken)
+                    BadTokenException, SourceStar, PasswordError, Submission, RevokedToken,
+                    InvalidPasswordLength)
 from store import add_checksum_for_file
 
 import typing
@@ -25,8 +27,7 @@ if typing.TYPE_CHECKING:
     from sdconfig import SDConfig  # noqa: F401
 
 
-def logged_in():
-    # type: () -> bool
+def logged_in() -> bool:
     # When a user is logged in, we push their user ID (database primary key)
     # into the session. setup_g checks for this value, and if it finds it,
     # stores a reference to the user's Journalist object in g.
@@ -53,11 +54,17 @@ def commit_account_changes(user):
             flash(gettext("Account updated."), "success")
 
 
-def get_source(filesystem_id):
-    """Return a Source object, representing the database row, for the source
-    with the `filesystem_id`"""
+def get_source(filesystem_id, include_deleted=False):
+    """
+    Return the Source object with `filesystem_id`
+
+    If `include_deleted` is False, only sources with a null `deleted_at` will
+    be returned.
+    """
     source = None
     query = Source.query.filter(Source.filesystem_id == filesystem_id)
+    if not include_deleted:
+        query = query.filter_by(deleted_at=None)
     source = get_one_or_else(query, current_app.logger, abort)
 
     return source
@@ -77,7 +84,8 @@ def validate_user(username, password, token, error_message=None):
     except (InvalidUsernameException,
             BadTokenException,
             WrongPasswordException,
-            LoginThrottledException) as e:
+            LoginThrottledException,
+            InvalidPasswordLength) as e:
         current_app.logger.error("Login for '{}' failed: {}".format(
             username, e))
         if not error_message:
@@ -157,7 +165,7 @@ def download(zip_basename, submissions):
     zf = current_app.storage.get_bulk_archive(submissions,
                                               zip_directory=zip_basename)
     attachment_filename = "{}--{}.zip".format(
-        zip_basename, datetime.utcnow().strftime("%Y-%m-%d--%H-%M-%S"))
+        zip_basename, datetime.datetime.utcnow().strftime("%Y-%m-%d--%H-%M-%S"))
 
     # Mark the submissions that have been downloaded as such
     for submission in submissions:
@@ -233,8 +241,11 @@ def col_delete(cols_selected):
     if len(cols_selected) < 1:
         flash(gettext("No collections selected for deletion."), "error")
     else:
-        for filesystem_id in cols_selected:
-            delete_collection(filesystem_id)
+        now = datetime.datetime.utcnow()
+        sources = Source.query.filter(Source.filesystem_id.in_(cols_selected))
+        sources.update({Source.deleted_at: now}, synchronize_session="fetch")
+        db.session.commit()
+
         num = len(cols_selected)
         flash(ngettext('{num} collection deleted', '{num} collections deleted',
                        num).format(num=num),
@@ -243,8 +254,7 @@ def col_delete(cols_selected):
     return redirect(url_for('main.index'))
 
 
-def make_password(config):
-    # type: (SDConfig) -> str
+def make_password(config: 'SDConfig') -> str:
     while True:
         password = current_app.crypto_util.genrandomid(
             7,
@@ -259,15 +269,34 @@ def make_password(config):
 def delete_collection(filesystem_id):
     # Delete the source's collection of submissions
     path = current_app.storage.path(filesystem_id)
-    current_app.storage.move_to_shredder(path)
+    if os.path.exists(path):
+        current_app.storage.move_to_shredder(path)
 
     # Delete the source's reply keypair
-    current_app.crypto_util.delete_reply_keypair(filesystem_id)
+    try:
+        current_app.crypto_util.delete_reply_keypair(filesystem_id)
+    except ValueError as e:
+        current_app.logger.error("could not delete reply keypair: %s", e)
+        raise
 
     # Delete their entry in the db
-    source = get_source(filesystem_id)
+    source = get_source(filesystem_id, include_deleted=True)
     db.session.delete(source)
     db.session.commit()
+
+
+def purge_deleted_sources():
+    """
+    Deletes all Sources with a non-null `deleted_at` attribute.
+    """
+    sources = Source.query.filter(Source.deleted_at.isnot(None)).order_by(Source.deleted_at).all()
+    if sources:
+        current_app.logger.info("Purging deleted sources (%s)", len(sources))
+    for source in sources:
+        try:
+            delete_collection(source.filesystem_id)
+        except Exception as e:
+            current_app.logger.error("Error deleting source %s: %s", source.uuid, e)
 
 
 def set_name(user, first_name, last_name):
@@ -312,7 +341,7 @@ def col_download_unread(cols_selected):
     submissions = []
     for filesystem_id in cols_selected:
         id = Source.query.filter(Source.filesystem_id == filesystem_id) \
-                   .one().id
+                         .filter_by(deleted_at=None).one().id
         submissions += Submission.query.filter(
             Submission.downloaded == false(),
             Submission.source_id == id).all()
@@ -328,7 +357,7 @@ def col_download_all(cols_selected):
     submissions = []
     for filesystem_id in cols_selected:
         id = Source.query.filter(Source.filesystem_id == filesystem_id) \
-                   .one().id
+                         .filter_by(deleted_at=None).one().id
         submissions += Submission.query.filter(
             Submission.source_id == id).all()
     return download("all", submissions)

@@ -75,7 +75,7 @@ is completed.
    cannot spread from infected computers in your network to the *Secure Viewing
    Station*.
 
-   Another option is to purchase a hardware USB `write blocker <https://www.forensicswiki.org/wiki/Write_Blockers>`__
+   Another option is to purchase a hardware USB `write blocker <https://forensicswiki.xyz/wiki/index.php?title=Write_Blockers>`__
    as used in forensics, and enforce its usage whenever the *Export Device* is
    attached to an Internet-connected workstation.
 
@@ -232,7 +232,7 @@ mitigate that risk.
 
 One option is to restrict write access to the *Export Device* before it is
 plugged into a device other than the *Secure Viewing Station*. Some USB flash
-drives come with a physical write protection switch, and `write blockers <https://www.forensicswiki.org/wiki/Write_Blockers>`__
+drives come with a physical write protection switch, and `write blockers <https://forensicswiki.xyz/wiki/index.php?title=Write_Blockers>`__
 are used in forensics to ensure storage media are not modified during
 examination.
 

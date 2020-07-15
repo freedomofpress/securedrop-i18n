@@ -51,7 +51,9 @@ Debian packages on the staging machines:
    ./manage.py add-admin
    pytest -v tests/
 
-To rebuild the local packages for the app code and update on Xenial staging: ::
+To rebuild the local packages for the app code and update on Xenial staging: 
+
+.. code:: sh
 
    make build-debs
    make staging
@@ -224,8 +226,8 @@ Log out, then log in again. Verify that libvirt is installed and KVM is availabl
    kvm-ok
 
 
-Debian 9 setup
-^^^^^^^^^^^^^^
+Debian stable setup
+^^^^^^^^^^^^^^^^^^^
 
 Install Vagrant, libvirt, QEMU, and their dependencies:
 

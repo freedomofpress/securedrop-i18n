@@ -1016,7 +1016,6 @@ msgstr ""
 "Dette er kodenavnet du kan bruke i fremtiden for å fortsette kommunikasjonen "
 "med oss, f.eks. for å sjekke om vi har besvart det du sender inn i neste "
 "dialogvindu."
-
 #: source_templates/generate.html:34
 msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"

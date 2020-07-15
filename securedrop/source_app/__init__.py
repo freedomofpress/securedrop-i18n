@@ -31,8 +31,7 @@ if typing.TYPE_CHECKING:
     from sdconfig import SDConfig  # noqa: F401
 
 
-def create_app(config):
-    # type: (SDConfig) -> Flask
+def create_app(config: 'SDConfig') -> Flask:
     app = Flask(__name__,
                 template_folder=config.SOURCE_TEMPLATES_DIR,
                 static_folder=path.join(config.SECUREDROP_ROOT, 'static'))
@@ -165,6 +164,7 @@ def create_app(config):
             try:
                 g.source = Source.query \
                             .filter(Source.filesystem_id == g.filesystem_id) \
+                            .filter_by(deleted_at=None) \
                             .one()
             except NoResultFound as e:
                 app.logger.error(

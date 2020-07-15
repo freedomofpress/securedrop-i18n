@@ -52,19 +52,23 @@ Install Docker_.
 Qubes
 ~~~~~
 
-Create a StandaloneVM based on Debian 9, called ``sd-dev``.
+Create a StandaloneVM based on Debian 10, called ``sd-dev``.
 You can use the **Q** menu to configure a new VM, or run
 the following in ``dom0``:
 
 .. code:: sh
 
-   qvm-clone --class StandaloneVM debian-9 sd-dev
+   qvm-clone --class StandaloneVM debian-10 sd-dev
    qvm-start sd-dev
    qvm-sync-appmenus sd-dev
 
 The commands above will created a new StandaloneVM, boot it, then update
 the Qubes menus with applications within that VM. Open a terminal in
 ``sd-dev``, and proceed with installing `Docker CE for Debian`_.
+
+.. tip:: If you experience an error with the ``aufs-dkms`` dependency when
+   installing Docker CE, you can safely skip that package using the
+   ``--no-install-recommends`` argument for ``apt``.
 
 Fork & Clone the Repository
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -99,11 +103,11 @@ To get started, you can try the following:
 
 .. code:: sh
 
-   cd securedrop/securedrop
-   make dev                                    # run development servers
-   make test                                   # run tests
-   bin/dev-shell bin/run-test tests/functional # functional tests only
-   bin/dev-shell bash                          # shell inside the container
+   cd securedrop
+   make dev                                               # run development servers
+   make test                                              # run tests
+   securedrop/bin/dev-shell bin/run-test tests/functional # functional tests only
+   securedrop/bin/dev-shell bash                          # shell inside the container
 
 .. tip:: The interactive shell in the container does not run
          ``redis``, ``Xvfb`` etc.  However you can import shell helper
@@ -264,6 +268,7 @@ The version of rsync installed by default on macOS is extremely out-of-date, as 
 .. _Homebrew: https://brew.sh/
 .. _homebrew-cask: http://sourabhbajaj.com/mac-setup/Vagrant/README.html
 
+
 Fork & Clone the Repository
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -288,3 +293,12 @@ Ensure your virtualenv is activated and install the packages.
     pip install --no-deps --require-hashes -r securedrop/requirements/python3/develop-requirements.txt
 
 .. note:: You will need to run this everytime new packages are added.
+
+Qubes
+~~~~~
+
+To configure a multi-machine evironment in Qubes, follow the Quick Start instructions above to
+create a standalone VM named ``sd-dev``, then follow the Linux instructions above to install the
+required packages, *omitting* Virtualbox.
+
+Then, complete the steps described in :doc:`qubes_staging`.

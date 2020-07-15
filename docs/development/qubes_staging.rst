@@ -15,7 +15,7 @@ Standalone (HVM) Qubes VMs for use with staging:
 - ``sd-staging-app-base``, a base VM for the *SecureDrop Application Server*
 - ``sd-staging-mon-base``, a base VM for the *SecureDrop Monitor Server*
 
-While the development VM, ``sd-dev``, is based on Debian 9, the other VMs
+While the development VM, ``sd-dev``, is based on Debian 10, the other VMs
 will be based on Ubuntu Xenial.
 
 .. note:: The staging server VM names were recently changed from ``sd-app`` and
@@ -270,11 +270,11 @@ over VMs it creates:
 .. code:: sh
 
    /etc/qubes-rpc/policy/include/admin-local-rwx:
-     sd-dev $tag:created-by-sd-dev allow,target=$adminvm
+     sd-dev @tag:created-by-sd-dev allow,target=@adminvm
 
    /etc/qubes-rpc/policy/include/admin-global-rwx:
-     sd-dev $adminvm allow,target=$adminvm
-     sd-dev $tag:created-by-sd-dev allow,target=$adminvm
+     sd-dev @adminvm allow,target=@adminvm
+     sd-dev @tag:created-by-sd-dev allow,target=@adminvm
 
 .. tip::
 
@@ -299,9 +299,9 @@ environment. In from the root of the SecureDrop project in ``sd-dev``, run:
 
    make staging
 
-The ``make staging`` command invokes the ``qubes-staging`` Molecule scenario. 
+The ``make staging`` command invokes the ``qubes-staging`` Molecule scenario.
 You can also run constituent Molecule actions directly, rather than using
-the Makefile target: 
+the Makefile target:
 
 .. code:: sh
 
@@ -309,12 +309,12 @@ the Makefile target:
    molecule converge -s qubes-staging
    molecule test -s qubes-staging
 
-.. note:: 
+.. note::
 
-  If the Molecule converge scenario fails with an error like ``"stderr": 
-  "app: Failed to clone appmenus, qvm-appmenus missing\`` you may be running 
-  into a bug in Qubes that prevents non-dom0 VMs from cloning new VMs. A 
-  workaround is described `here <https://github.com/freedomofpress/securedrop/issues/3936>`_.
+  Previous `workarounds <https://github.com/freedomofpress/securedrop/issues/3936>`_ 
+  to mitigate the error ``"stderr": "app: Failed to clone appmenus, qvm-appmenus 
+  missing\`` are no longer required. If you experience errors at this stage, ensure you have
+  followed all the previous steps correctly. 
 
 That's it. You should now have a running, configured SecureDrop staging instance
 running on your Qubes machine. For day-to-day operation, you should run
@@ -324,4 +324,66 @@ to provision staging VMs on-demand. To remove the staging instance, use the Mole
 .. code:: sh
 
    molecule destroy -s qubes-staging
+
+Accessing the Journalist Interface (Staging) in Whonix-based VMs
+----------------------------------------------------------------
+.. warning::
+   These instructions are only appropriate for a staging setup and should not be
+   used to access a production instance of SecureDrop.
+
+To access the *Source* and *Journalist Interfaces* (staging) in a Debian- or
+Fedora-based VM, follow the instructions :doc:`here <virtual_environments>`.
+
+To use a Whonix-based VM, the following steps are required to configure access
+to the *Journalist Interface* (staging).
+
+In ``sd-dev``
+~~~~~~~~~~~~~
+
+You will have to copy the ``app-journalist.auth_private`` file (located in 
+your ``sd-dev`` VM in ``${SECUREDROP_HOME}/install_files/ansible_base`` and 
+generated after a successful run of ``make staging``) into your Whonix gateway 
+VM. On standard Qubes installations this VM is called ``sys-whonix``.
+
+To do this, in an ``sd-dev`` terminal, run the command:
+
+.. code:: sh
+   
+   qvm-copy ${SECUREDROP_HOME})/install_files/ansible_base/app-journalist.auth_private
+
+and select ``sys-whonix`` in the resulting permissions dialog. 
+
+In the Whonix Gateway
+~~~~~~~~~~~~~~~~~~~~~
+
+Open a terminal in ``sys-whonix`` and create a directory with appropriate 
+ownership and permissions, then move your credential file there:
+
+.. code:: sh
+
+   sudo mkdir -p /var/lib/tor/onion_auth
+   sudo mv ~/QubesIncoming/sd-dev/app-journalist.auth_private /var/lib/tor/onion_auth
+   sudo chown --recursive debian-tor:debian-tor /var/lib/tor/onion_auth
+
+Next, edit the Tor configuration so it recognizes the directory 
+containing your credentials:
+
+.. code:: sh
+
+   sudo vi /usr/local/etc/torrc.d/50_user.conf
+
+In this file, enter the following:
+
+.. code:: sh
+   
+   ClientOnionAuthDir /var/lib/tor/onion_auth
+
+Save and close the file. Finally, reload Tor by clicking 
+**Qubes Application Menu > sys-whonix > Reload Tor**   
+
+At this point, you should be able to access the *Journalist Interface* 
+(staging) in a Whonix VM that uses ``sys-whonix`` as its gateway.
+
+Note that you will have to replace the ``app-journalist.auth_private`` file 
+and reload Tor on the Whonix gateway every time you rerun ``make staging``.
 

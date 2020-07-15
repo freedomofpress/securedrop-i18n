@@ -5,6 +5,7 @@ import pexpect
 import pytest
 import re
 import requests
+import shutil
 import subprocess
 import tempfile
 
@@ -19,7 +20,9 @@ ANSI_ESCAPE = re.compile(r'\x1B\[[0-?]*[ -/]*[@-~]')
 OUTPUT1 = '''app_hostname: app
 app_ip: 10.20.2.2
 daily_reboot_time: 5
-dns_server: 8.8.8.8
+dns_server:
+- 8.8.8.8
+- 8.8.4.4
 enable_ssh_over_tor: true
 journalist_alert_email: ''
 journalist_alert_gpg_public_key: ''
@@ -51,7 +54,9 @@ v3_onion_services: true
 WHEN_BOTH_TRUE = '''app_hostname: app
 app_ip: 10.20.2.2
 daily_reboot_time: 5
-dns_server: 8.8.8.8
+dns_server:
+- 8.8.8.8
+- 8.8.4.4
 enable_ssh_over_tor: true
 journalist_alert_email: ''
 journalist_alert_gpg_public_key: ''
@@ -83,7 +88,9 @@ v3_onion_services: true
 WHEN_ONLY_V2 = '''app_hostname: app
 app_ip: 10.20.2.2
 daily_reboot_time: 5
-dns_server: 8.8.8.8
+dns_server:
+- 8.8.8.8
+- 8.8.4.4
 enable_ssh_over_tor: true
 journalist_alert_email: ''
 journalist_alert_gpg_public_key: ''
@@ -115,7 +122,9 @@ v3_onion_services: false
 JOURNALIST_ALERT_OUTPUT = '''app_hostname: app
 app_ip: 10.20.2.2
 daily_reboot_time: 5
-dns_server: 8.8.8.8
+dns_server:
+- 8.8.8.8
+- 8.8.4.4
 enable_ssh_over_tor: true
 journalist_alert_email: test@gmail.com
 journalist_alert_gpg_public_key: sd_admin_test.pub
@@ -147,7 +156,9 @@ v3_onion_services: true
 HTTPS_OUTPUT = '''app_hostname: app
 app_ip: 10.20.2.2
 daily_reboot_time: 5
-dns_server: 8.8.8.8
+dns_server:
+- 8.8.8.8
+- 8.8.4.4
 enable_ssh_over_tor: true
 journalist_alert_email: test@gmail.com
 journalist_alert_gpg_public_key: sd_admin_test.pub
@@ -181,6 +192,19 @@ def setup_function(function):
     global SD_DIR
     SD_DIR = tempfile.mkdtemp()
     ANSIBLE_BASE = '{0}/install_files/ansible-base'.format(SD_DIR)
+
+    for name in ["roles", "tasks"]:
+        shutil.copytree(
+            os.path.join(CURRENT_DIR, "../../install_files/ansible-base", name),
+            os.path.join(ANSIBLE_BASE, name)
+        )
+
+    for name in ["ansible.cfg", "securedrop-prod.yml"]:
+        shutil.copy(
+            os.path.join(CURRENT_DIR, '../../install_files/ansible-base', name),
+            ANSIBLE_BASE
+        )
+
     cmd = 'mkdir -p {0}/group_vars/all'.format(ANSIBLE_BASE).split()
     subprocess.check_call(cmd)
     for name in ['sd_admin_test.pub', 'ca.crt', 'sd.crt', 'key.asc']:
@@ -229,8 +253,8 @@ def verify_hostname_mon_prompt(child):
 
 
 def verify_dns_prompt(child):
-    child.expect(rb'DNS server specified during installation\:', timeout=2)
-    assert ANSI_ESCAPE.sub('', child.buffer.decode("utf-8")).strip() == '8.8.8.8'  # noqa: E501
+    child.expect(rb'DNS server\(s\):', timeout=2)
+    assert ANSI_ESCAPE.sub('', child.buffer.decode("utf-8")).strip() == '8.8.8.8 8.8.4.4'  # noqa: E501
 
 
 def verify_app_gpg_key_prompt(child):
@@ -316,7 +340,7 @@ def verify_locales_prompt(child):
 
 
 def verify_v2_onion_for_first_time(child):
-    child.expect(rb' installed before 1.0.0\)\?\:', timeout=2)  # noqa: E501
+    child.expect(rb'Do you want to enable v2 onion services\?\:', timeout=2)  # noqa: E501
     assert ANSI_ESCAPE.sub('', child.buffer.decode("utf-8")).strip() == 'no'  # noqa: E501
 
 
@@ -328,6 +352,29 @@ def verify_v3_onion_for_first_time(child):
 def verify_v3_onion_when_v2_is_enabled(child):
     child.expect(rb'Do you want to enable v3 onion services \(recommended\)\?\:', timeout=2)  # noqa: E501
     assert ANSI_ESCAPE.sub('', child.buffer.decode("utf-8")).strip() == 'yes'  # noqa: E501
+
+
+def verify_install_has_valid_config():
+    """
+    Checks that securedrop-admin install validates the configuration.
+    """
+    cmd = os.path.join(os.path.dirname(CURRENT_DIR), 'securedrop_admin/__init__.py')
+    child = pexpect.spawn('python {0} --root {1} install'.format(cmd, SD_DIR))
+    child.expect(b"SUDO password:", timeout=5)
+    child.close()
+
+
+def test_install_with_no_config():
+    """
+    Checks that securedrop-admin install complains about a missing config file.
+    """
+    cmd = os.path.join(os.path.dirname(CURRENT_DIR), 'securedrop_admin/__init__.py')
+    child = pexpect.spawn('python {0} --root {1} install'.format(cmd, SD_DIR))
+    child.expect(b'ERROR: Please run "securedrop-admin sdconfig" first.', timeout=5)
+    child.expect(pexpect.EOF, timeout=5)
+    child.close()
+    assert child.exitstatus == 1
+    assert child.signalstatus is None
 
 
 def test_sdconfig_on_first_run():
@@ -391,6 +438,8 @@ def test_sdconfig_on_first_run():
         data = fobj.read()
     assert data == OUTPUT1
 
+    verify_install_has_valid_config()
+
 
 def test_sdconfig_both_v2_v3_true():
     cmd = os.path.join(os.path.dirname(CURRENT_DIR),
@@ -453,6 +502,8 @@ def test_sdconfig_both_v2_v3_true():
         data = fobj.read()
     assert data == WHEN_BOTH_TRUE
 
+    verify_install_has_valid_config()
+
 
 def test_sdconfig_only_v2_true():
     cmd = os.path.join(os.path.dirname(CURRENT_DIR),
@@ -514,6 +565,8 @@ def test_sdconfig_only_v2_true():
     with open(os.path.join(SD_DIR, 'install_files/ansible-base/group_vars/all/site-specific')) as fobj:    # noqa: E501
         data = fobj.read()
     assert data == WHEN_ONLY_V2
+
+    verify_install_has_valid_config()
 
 
 def test_sdconfig_enable_journalist_alerts():
@@ -581,6 +634,8 @@ def test_sdconfig_enable_journalist_alerts():
     with open(os.path.join(SD_DIR, 'install_files/ansible-base/group_vars/all/site-specific')) as fobj:    # noqa: E501
         data = fobj.read()
     assert JOURNALIST_ALERT_OUTPUT == data
+
+    verify_install_has_valid_config()
 
 
 def test_sdconfig_enable_https_on_source_interface():
@@ -656,6 +711,8 @@ def test_sdconfig_enable_https_on_source_interface():
         data = fobj.read()
     assert HTTPS_OUTPUT == data
 
+    verify_install_has_valid_config()
+
 
 # The following is the minimal git configuration which can be used to fetch
 # from the SecureDrop Github repository. We want to use this because the
@@ -674,6 +731,7 @@ GIT_CONFIG = u'''[core]
 
 @pytest.fixture
 def securedrop_git_repo(tmpdir):
+    cwd = os.getcwd()
     os.chdir(str(tmpdir))
     # Clone the SecureDrop repository into the temp directory.
     cmd = ['git', 'clone',
@@ -697,6 +755,8 @@ def securedrop_git_repo(tmpdir):
     except subprocess.CalledProcessError:
         # It means the coverage file may not exist, don't error
         pass
+
+    os.chdir(cwd)
 
 
 def set_reliable_keyserver(gpgdir):
