@@ -23,11 +23,11 @@ msgstr ""
 msgid "{time} ago"
 msgstr "{time} முன்பு"
 
-#: journalist_app/__init__.py:88 journalist_app/__init__.py:137
+#: journalist_app/__init__.py:90 journalist_app/__init__.py:139
 msgid "You have been logged out due to inactivity"
 msgstr "செயலின்மையால் நீங்கள் விடுபதிகை செய்யப்பட்டுள்ளீர்கள்"
 
-#: journalist_app/__init__.py:146
+#: journalist_app/__init__.py:148
 msgid "You have been logged out due to password change"
 msgstr "கடவுச்சொல் மாற்றத்தால் நீங்கள் விடுபதிகை செய்யப்பட்டுள்ளீர்கள்"
 
@@ -81,7 +81,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr ""
 
 #: journalist_app/admin.py:200 journalist_app/admin.py:208
-#: journalist_app/utils.py:279
+#: journalist_app/utils.py:308
 msgid "Name not updated: {}"
 msgstr "பெயர் புதுப்பிக்கப்படவில்லை: {}"
 
@@ -93,11 +93,11 @@ msgstr "நீக்கப்பட்ட பயனர் '{user}'"
 msgid "Test alert sent. Please check your email."
 msgstr "சோதனை அறிக்கை அனுப்பப்பட்டுள்ளது. தயவு செய்து உங்கள் மின்னஞ்சலைச் சரிபார்க்கவும்."
 
-#: journalist_app/col.py:45
+#: journalist_app/col.py:50
 msgid "{source_name}'s collection deleted"
 msgstr "{source_name} இன் திரட்டு நீக்கப்பட்டுவிட்டது"
 
-#: journalist_app/col.py:56
+#: journalist_app/col.py:61
 msgid "No collections selected."
 msgstr "திரட்டுகள் ஏதும் தேர்வு செய்யப்படவில்லை."
 
@@ -121,24 +121,30 @@ msgstr ""
 msgid "Field can not be more than {max_chars} characters."
 msgstr "புலம் {max_chars} எழுத்துகளுக்கு மேல் இருக்கவியலாது."
 
-#: journalist_app/forms.py:42 source_app/forms.py:12
+#: journalist_app/forms.py:42
+msgid ""
+"This username is invalid because it is reserved for internal use by the "
+"software."
+msgstr ""
+
+#: journalist_app/forms.py:48 source_app/forms.py:12
 msgid "This field is required."
 msgstr "இந்தப் புலம் தேவைப்படுகின்றது."
 
-#: journalist_app/forms.py:61
+#: journalist_app/forms.py:67
 msgid "You cannot send an empty reply."
 msgstr "வெற்று மறுமொழியை நீங்கள் அனுப்பவியலாது."
 
-#: journalist_app/forms.py:73
+#: journalist_app/forms.py:79
 msgid "File required."
 msgstr "கோப்பு தேவைப்படுகின்றது."
 
-#: journalist_app/forms.py:75
+#: journalist_app/forms.py:81
 msgid "You can only upload PNG image files."
 msgstr "PNG படிமக் கோப்புகளை மட்டுமே நீங்கள் பதிவேற்றவியலும்."
 
-#: journalist_app/main.py:122 journalist_app/utils.py:46
-#: journalist_app/utils.py:136
+#: journalist_app/main.py:122 journalist_app/utils.py:47
+#: journalist_app/utils.py:144
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr ""
 "எதிர்பார்க்கப்படாதொரு பிழை ஏற்பட்டுள்ளது. தயவு செய்து உங்கள் நிர்வாகியிடம் தெரிவிக்கவும்."
@@ -151,7 +157,7 @@ msgstr "நன்றி. உங்களுடைய மறுமொழி ச�
 msgid "No collections selected for download."
 msgstr "பதிவிறக்கம் செய்யத் திரட்டுகள் ஏதும் தேர்வு செய்யப்படவில்லை."
 
-#: journalist_app/main.py:157 journalist_app/utils.py:234
+#: journalist_app/main.py:157 journalist_app/utils.py:242
 msgid "No collections selected for deletion."
 msgstr "நீக்கம் செய்யத் திரட்டுகள் ஏதும் தேர்வு செய்யப்படவில்லை."
 
@@ -159,15 +165,15 @@ msgstr "நீக்கம் செய்யத் திரட்டுகள�
 msgid "No unread submissions for this source."
 msgstr "இந்த மூல ஆவணத்திற்கான படிக்கப்படாத  சமர்ப்பிப்புகள் ஏதுமில்லை."
 
-#: journalist_app/utils.py:53
+#: journalist_app/utils.py:54
 msgid "Account updated."
 msgstr "பயனர்கணக்கு புதுப்பிக்கப்பட்டுள்ளது."
 
-#: journalist_app/utils.py:84
+#: journalist_app/utils.py:92
 msgid "Login failed."
 msgstr "புகுபதிகை தோல்வியுற்றது."
 
-#: journalist_app/utils.py:92
+#: journalist_app/utils.py:100
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] ""
@@ -175,7 +181,7 @@ msgstr[0] ""
 msgstr[1] ""
 "தயவு செய்து மீண்டும் புகுபதிகை செய்யுமுன் குறைந்தது {seconds} நொடிகள் காத்திருக்கவும்."
 
-#: journalist_app/utils.py:103
+#: journalist_app/utils.py:111
 #, fuzzy
 #| msgid ""
 #| "Please wait for a new code from your two-factor token or application "
@@ -187,39 +193,39 @@ msgstr ""
 "மீண்டும் முயற்சிக்கும் முன் தயவு செய்து உங்களுடைய இருகூற்றுச் சீட்டு அல்லது விண்ணப்பத்தின் "
 "புதிய குறிக்காகக் காத்திருக்கவும்."
 
-#: journalist_app/utils.py:124
+#: journalist_app/utils.py:132
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "செல்லுபடியாகாத மறைசெய்தி வடிவம்: தயவு செய்து எழுத்துக்கள் A-F மற்றும் எண்கள் 0-9 ஐ "
 "மட்டுமே சமர்ப்பிக்கவும்."
 
-#: journalist_app/utils.py:130
+#: journalist_app/utils.py:138
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "செல்லுபடியாகாத மறைசெய்தி வடிவம்: ஒற்றைப்படை-நீள-மறைசெய்தி. மறைசெய்தியைத் தவறுதலாகத் "
 "தட்டச்சு செய்துவிட்டீர்களா?"
 
-#: journalist_app/utils.py:186
+#: journalist_app/utils.py:194
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "சமர்ப்பிப்பு நீக்கப்பட்டது."
 msgstr[1] "{num} சமர்ப்பிப்புகள் நீக்கப்பட்டன."
 
-#: journalist_app/utils.py:239
+#: journalist_app/utils.py:250
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} திரட்டு நீக்கப்பட்டது"
 msgstr[1] "{num} திரட்டுகள் நீக்கப்பட்டன"
 
-#: journalist_app/utils.py:277
+#: journalist_app/utils.py:306
 msgid "Name updated."
 msgstr "பெயர் புதுப்பிக்கப்பட்டுள்ளது."
 
-#: journalist_app/utils.py:286
+#: journalist_app/utils.py:315
 msgid "You submitted a bad password! Password not changed."
 msgstr "நீங்கள் ஒரு தவறான கடவுச்சொல்லை சமர்ப்பித்துள்ளீர்கள்! கடவுச்சொல் மாற்றப்படவில்லை."
 
-#: journalist_app/utils.py:293
+#: journalist_app/utils.py:322
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -229,7 +235,7 @@ msgstr ""
 "பயனர்கணக்கிலிருந்து நீங்கள் வெளிப்பூட்டிடுவதைத் தடுக்கும் பொருட்டு நீங்கள் உங்களுடைய "
 "கடவுச்சொல்லை மறுவமைப்பு செய்ய வேண்டும்."
 
-#: journalist_app/utils.py:302
+#: journalist_app/utils.py:331
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -237,7 +243,7 @@ msgstr ""
 "கடவுச்சொல் புதுப்பிக்கப்பட்டுள்ளது. உங்களுடைய KeePassX தரவுதளத்தில் சேமித்துக் கொள்ள "
 "மறவாதீர். புதிய கடவுச்சொல்:"
 
-#: journalist_app/utils.py:320
+#: journalist_app/utils.py:349
 msgid "No unread submissions in selected collections."
 msgstr "தேர்ந்தெடுக்கப்பட்ட திரட்டுகளில் படிக்கப்படாத சமர்ப்பிப்புகள் ஏதுமில்லை."
 
@@ -245,7 +251,7 @@ msgstr "தேர்ந்தெடுக்கப்பட்ட திரட�
 msgid "Close"
 msgstr "மூடுக"
 
-#: journalist_templates/_confirmation_modal.html:7
+#: journalist_templates/_confirmation_modal.html:10
 #: source_templates/lookup.html:104
 msgid "Cancel"
 msgstr "நீக்குக"
@@ -392,7 +398,7 @@ msgid "Edit"
 msgstr "திருத்துக"
 
 #: journalist_templates/admin.html:18 journalist_templates/col.html:125
-#: journalist_templates/index.html:16 journalist_templates/index.html:51
+#: journalist_templates/index.html:16 journalist_templates/index.html:52
 msgid "Delete"
 msgstr "அழித்து விடுக"
 
@@ -496,26 +502,35 @@ msgstr ""
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "YubiKey ஐ உருவமைவு செய்தபின், 6-இலக்கக் குறியை கீழே உள்ளிடுக:"
 
-#: journalist_templates/base.html:23
+#: journalist_templates/base.html:24
+msgid ""
+"<strong>Update Required:</strong> Your SecureDrop servers are still running "
+"v2 Onion Services, which are being phased out for security reasons. In "
+"February 2021, v2 Onion Services will be disabled, and your SecureDrop "
+"servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
+"rel=\"noreferrer\">Learn More</a>"
+msgstr ""
+
+#: journalist_templates/base.html:29
 msgid "Logged on as"
 msgstr "புகுபதிகை செய்தவர்"
 
-#: journalist_templates/base.html:25
+#: journalist_templates/base.html:31
 msgid "Admin"
 msgstr "நிர்வாகி"
 
-#: journalist_templates/base.html:27
+#: journalist_templates/base.html:33
 msgid "Log Out"
 msgstr "விடுபதிகை"
 
-#: journalist_templates/base.html:40
+#: journalist_templates/base.html:46
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
 msgstr ""
 "திறனூட்டம் <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop\">"
 
-#: journalist_templates/base.html:55
+#: journalist_templates/base.html:61
 msgid "Powered by <em>SecureDrop {version}</em>."
 msgstr "திறனூட்டம் <em>SecureDrop {version}</em>."
 
@@ -666,8 +681,8 @@ msgstr "சமர்ப்பிப்பு நீக்கப்பட்ட�
 
 #: journalist_templates/config.html:52
 msgid ""
-"Prevent sources from uploading documents.  Sources will still be able to "
-"send messages."
+"Prevent sources from uploading documents. Sources will still be able to send "
+"messages."
 msgstr ""
 
 #: journalist_templates/config.html:55
@@ -857,7 +872,22 @@ msgstr "விண்மீன் குறியை நீக்குக"
 msgid "Are you sure you want to delete the selected collections?"
 msgstr "தேர்ந்தெடுத்த திரட்டுகளை உறுதியாக நீங்கள் அழிக்க வேண்டுமா?"
 
-#: journalist_templates/index.html:59
+#: journalist_templates/index.html:48
+#, fuzzy
+#| msgid ""
+#| "Click below to delete this source's collection. <em>Warning: If you do "
+#| "this, the files seen here will be unrecoverable and the source will no "
+#| "longer be able to login using their previous codename.</em>"
+msgid ""
+"Warning: If you do this, all files for the selected sources will be "
+"unrecoverable, and the sources will no longer be able to log in using their "
+"previous codename."
+msgstr ""
+"இந்த மூலத்தின் திரட்டை அழித்துவிட கீழே சுட்டுக. <em>எச்சரிக்கை: இதை நீங்கள் செய்தால், இங்கு "
+"காணப்படும் கோப்புகள் மீட்கப்படவியலாது போகும், மேலும் மூலத்தாலும் தமது முந்தைய குறிப்பெயர் "
+"மூலம் இனிமேல் ஒருபோதும் புகுபதிகை செய்யவியலாது.</em>"
+
+#: journalist_templates/index.html:60
 msgid "No documents have been submitted!"
 msgstr "எந்தவொரு ஆவணங்களும் சமர்ப்பிக்கப்படவில்லை!"
 
@@ -900,7 +930,7 @@ msgstr "கடவுச்சொல்"
 msgid "LOG IN"
 msgstr "புகுபதிக"
 
-#: source_app/__init__.py:124
+#: source_app/__init__.py:123
 msgid ""
 "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This "
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href="

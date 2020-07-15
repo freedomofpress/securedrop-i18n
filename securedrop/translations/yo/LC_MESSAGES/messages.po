@@ -23,11 +23,11 @@ msgstr ""
 msgid "{time} ago"
 msgstr "{àkókò} sẹ́yìn"
 
-#: journalist_app/__init__.py:88 journalist_app/__init__.py:137
+#: journalist_app/__init__.py:90 journalist_app/__init__.py:139
 msgid "You have been logged out due to inactivity"
 msgstr "O ti fàṣẹ jáde nítorí pé o kò ṣe nǹkan kan"
 
-#: journalist_app/__init__.py:146
+#: journalist_app/__init__.py:148
 msgid "You have been logged out due to password change"
 msgstr "O ti fàṣẹ jáde nítorí pé o pààrọ ọ̀rọ̀-ìfiwọlé"
 
@@ -80,7 +80,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr ""
 
 #: journalist_app/admin.py:200 journalist_app/admin.py:208
-#: journalist_app/utils.py:279
+#: journalist_app/utils.py:308
 msgid "Name not updated: {}"
 msgstr "Orúkọ kòì ṣe àfikún: {}"
 
@@ -92,11 +92,11 @@ msgstr "Pa òǹlò rẹ́ '{òǹlò}'"
 msgid "Test alert sent. Please check your email."
 msgstr "Itanijí àyẹ̀wó ti di àfiránṣẹ́. Jọ̀wọ́ yẹ àpótí ímeèlì rẹ wò."
 
-#: journalist_app/col.py:45
+#: journalist_app/col.py:50
 msgid "{source_name}'s collection deleted"
 msgstr "Àkójọ {orúkọ_orísun} ti di píparẹ́"
 
-#: journalist_app/col.py:56
+#: journalist_app/col.py:61
 msgid "No collections selected."
 msgstr "Kò sí àṣàyàn àkójọ kankan."
 
@@ -117,24 +117,30 @@ msgstr "O gbọ́dọ̀ tẹ ó kéré jù  {min_ọ̀rọ̀} ọ̀rọ̀ tí ó
 msgid "Field can not be more than {max_chars} characters."
 msgstr "Ohun tí o máa tẹ̀ kò gbọdọ̀ ju {ó pọ̀ jù_ọ̀rọ̀} ọ̀rọ̀."
 
-#: journalist_app/forms.py:42 source_app/forms.py:12
+#: journalist_app/forms.py:42
+msgid ""
+"This username is invalid because it is reserved for internal use by the "
+"software."
+msgstr ""
+
+#: journalist_app/forms.py:48 source_app/forms.py:12
 msgid "This field is required."
 msgstr "Àyè yìí pọn dandan."
 
-#: journalist_app/forms.py:61
+#: journalist_app/forms.py:67
 msgid "You cannot send an empty reply."
 msgstr "O kò le è fi èsì òfìfo ránṣẹ́."
 
-#: journalist_app/forms.py:73
+#: journalist_app/forms.py:79
 msgid "File required."
 msgstr "Fáìlì pọn dandan."
 
-#: journalist_app/forms.py:75
+#: journalist_app/forms.py:81
 msgid "You can only upload PNG image files."
 msgstr "Irúfẹ́ fáìlì àwòrán PNG nìkan ni o lè gbé sí i."
 
-#: journalist_app/main.py:122 journalist_app/utils.py:46
-#: journalist_app/utils.py:136
+#: journalist_app/main.py:122 journalist_app/utils.py:47
+#: journalist_app/utils.py:144
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Àṣìṣe àìròtẹ́lẹ̀ kan ṣẹlẹ̀! Jọ̀wọ́ fi tó alákòósoò rẹ létí."
 
@@ -146,7 +152,7 @@ msgstr "O ṣeun. Èsì rẹ ti wá ní apamọ́."
 msgid "No collections selected for download."
 msgstr "Àkójọ kankan ó jẹ́ yíyàn fún àgbàsílẹ̀-sórí-ẹ̀rọ."
 
-#: journalist_app/main.py:157 journalist_app/utils.py:234
+#: journalist_app/main.py:157 journalist_app/utils.py:242
 msgid "No collections selected for deletion."
 msgstr "Àkójọ kankan kò jẹ́ yíyàn fún ìparẹ́."
 
@@ -154,22 +160,22 @@ msgstr "Àkójọ kankan kò jẹ́ yíyàn fún ìparẹ́."
 msgid "No unread submissions for this source."
 msgstr "Kò sí ìfàkalẹ̀ àìkà fún orísun yìí."
 
-#: journalist_app/utils.py:53
+#: journalist_app/utils.py:54
 msgid "Account updated."
 msgstr "Àfikún sí ìṣàmúlò."
 
-#: journalist_app/utils.py:84
+#: journalist_app/utils.py:92
 msgid "Login failed."
 msgstr "Ìfàṣẹwọlé kọ̀ jálẹ̀."
 
-#: journalist_app/utils.py:92
+#: journalist_app/utils.py:100
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] ""
 "Jọ̀wọ́ dúró fún ó kéré jù {ìṣẹ́jú àáyá} ìṣẹ́jú àáyá kí o tó tún fàṣẹwọlé lẹ́ẹ̀kan "
 "sí i."
 
-#: journalist_app/utils.py:103
+#: journalist_app/utils.py:111
 #, fuzzy
 #| msgid ""
 #| "Please wait for a new code from your two-factor token or application "
@@ -181,35 +187,35 @@ msgstr ""
 "Jọ̀wọ́ wararo fún odù tuntun láti ìfẹ̀rílàdí ọlọ́nà-méjì rẹ tàbí irinṣẹ́ kí o tó "
 "gbìyànjúu rẹ̀ lẹ́rìnkan sí i."
 
-#: journalist_app/utils.py:124
+#: journalist_app/utils.py:132
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Àìlágbárató ààtò ìkọ̀kọ̀: jọ̀wọ́ fi lẹ́tà láti A-F àti nọ́mbà 0-9 nìkan sílẹ̀."
 
-#: journalist_app/utils.py:130
+#: journalist_app/utils.py:138
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Àìlágbárató ààtò ìkọ̀kọ̀: àìbá-gúngùn ìkọ̀kọ̀ mu. Ṣé o ṣàṣìtẹ̀ ìkọ̀kọ̀ náà ni?"
 
-#: journalist_app/utils.py:186
+#: journalist_app/utils.py:194
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Ìkósílẹ̀ ti di píparẹ́."
 
-#: journalist_app/utils.py:239
+#: journalist_app/utils.py:250
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{nọ́mbà} àwọn ìkósílẹ̀ ti parẹ́."
 
-#: journalist_app/utils.py:277
+#: journalist_app/utils.py:306
 msgid "Name updated."
 msgstr "Ìṣàfikún sí orúkọ."
 
-#: journalist_app/utils.py:286
+#: journalist_app/utils.py:315
 msgid "You submitted a bad password! Password not changed."
 msgstr "O ti fi ọ̀rọ̀-ìfiwọlé tí kò dára sílẹ̀! Ọ̀rọ̀-ìfiwọlé ò jẹ́ pípàrọ̀."
 
-#: journalist_app/utils.py:293
+#: journalist_app/utils.py:322
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -218,7 +224,7 @@ msgstr ""
 "Nǹkan ò ṣe bí ó ti yẹ, ó ṣe é ṣe kí ọ̀rọ̀-ìfiwọlé tuntun ó máà wọ àkọsílẹ̀ "
 "dáadáa. Ṣe àtúnyàn ọ̀rọ̀-ìfiwọléè rẹ lẹ́ẹ̀kan sí i, kí o máà di àsémọ́ta."
 
-#: journalist_app/utils.py:302
+#: journalist_app/utils.py:331
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -226,7 +232,7 @@ msgstr ""
 "Àfikún ọ̀rọ̀-ìfiwọlé. Má ṣe gbàgbé láti fi pamọ́ sí inúu àkópamọ́ọ KeePassX rẹ. "
 "Ọ̀rọ̀-ìfiwọlé tuntun:"
 
-#: journalist_app/utils.py:320
+#: journalist_app/utils.py:349
 msgid "No unread submissions in selected collections."
 msgstr "Kò sì ìfisílẹ̀ àkójọ tí o yàn tí kò tíì jẹ́ kíkà."
 
@@ -234,7 +240,7 @@ msgstr "Kò sì ìfisílẹ̀ àkójọ tí o yàn tí kò tíì jẹ́ kíkà."
 msgid "Close"
 msgstr "Padé"
 
-#: journalist_templates/_confirmation_modal.html:7
+#: journalist_templates/_confirmation_modal.html:10
 #: source_templates/lookup.html:104
 msgid "Cancel"
 msgstr "Fa-igi-lé"
@@ -377,7 +383,7 @@ msgid "Edit"
 msgstr "Ṣàtúnṣe"
 
 #: journalist_templates/admin.html:18 journalist_templates/col.html:125
-#: journalist_templates/index.html:16 journalist_templates/index.html:51
+#: journalist_templates/index.html:16 journalist_templates/index.html:52
 msgid "Delete"
 msgstr "Parẹ́"
 
@@ -481,19 +487,28 @@ msgstr ""
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Bí o bá ti gbé YubiKey sí i, fi odù nọ́mbà mẹ́fà sísàlẹ̀:"
 
-#: journalist_templates/base.html:23
+#: journalist_templates/base.html:24
+msgid ""
+"<strong>Update Required:</strong> Your SecureDrop servers are still running "
+"v2 Onion Services, which are being phased out for security reasons. In "
+"February 2021, v2 Onion Services will be disabled, and your SecureDrop "
+"servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
+"rel=\"noreferrer\">Learn More</a>"
+msgstr ""
+
+#: journalist_templates/base.html:29
 msgid "Logged on as"
 msgstr "Fàṣẹwọlé gẹ́gẹ́ bíi"
 
-#: journalist_templates/base.html:25
+#: journalist_templates/base.html:31
 msgid "Admin"
 msgstr "Alákòóso"
 
-#: journalist_templates/base.html:27
+#: journalist_templates/base.html:33
 msgid "Log Out"
 msgstr "Fàṣẹjáde"
 
-#: journalist_templates/base.html:40
+#: journalist_templates/base.html:46
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
@@ -501,7 +516,7 @@ msgstr ""
 "Àgbékalẹ̀ẹ <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
 
-#: journalist_templates/base.html:55
+#: journalist_templates/base.html:61
 msgid "Powered by <em>SecureDrop {version}</em>."
 msgstr "Àgbékalẹ̀ẹ <em>SecureDrop {version}</em>."
 
@@ -653,8 +668,8 @@ msgstr "Ìkósílẹ̀ ti di píparẹ́."
 
 #: journalist_templates/config.html:52
 msgid ""
-"Prevent sources from uploading documents.  Sources will still be able to "
-"send messages."
+"Prevent sources from uploading documents. Sources will still be able to send "
+"messages."
 msgstr ""
 
 #: journalist_templates/config.html:55
@@ -837,7 +852,22 @@ msgstr "Yọ àmì ìràwọ̀"
 msgid "Are you sure you want to delete the selected collections?"
 msgstr "Ṣé ó dá ọ lójú wípé o fẹ́ pa àwọn àkójọ tí o yàn rẹ́?"
 
-#: journalist_templates/index.html:59
+#: journalist_templates/index.html:48
+#, fuzzy
+#| msgid ""
+#| "Click below to delete this source's collection. <em>Warning: If you do "
+#| "this, the files seen here will be unrecoverable and the source will no "
+#| "longer be able to login using their previous codename.</em>"
+msgid ""
+"Warning: If you do this, all files for the selected sources will be "
+"unrecoverable, and the sources will no longer be able to log in using their "
+"previous codename."
+msgstr ""
+"Tẹ ìsàlẹ̀ láti pa àkójọ orísun yìí rẹ́. <em>Ìkìlọ̀: Bí o bá ṣèyí, àwọn fáìlì tí "
+"o rí níbí kò ní ṣe é gbà padà tí orísun náà kò ní le è fi-àṣẹ-wọlé bí wọ́n bá "
+"ń lo orúkọ-odùu ti tẹ́lẹ̀. </em>"
+
+#: journalist_templates/index.html:60
 msgid "No documents have been submitted!"
 msgstr "Ìwé-ìrídìí kankan kòì tíì jẹ́ fífisílẹ̀!"
 
@@ -880,7 +910,7 @@ msgstr "Ọ̀rọ̀-ìfiwọlé"
 msgid "LOG IN"
 msgstr "FÀṢẸ WỌLÉ"
 
-#: source_app/__init__.py:124
+#: source_app/__init__.py:123
 msgid ""
 "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This "
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href="

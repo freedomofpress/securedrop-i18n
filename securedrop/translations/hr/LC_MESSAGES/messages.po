@@ -15,8 +15,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 3.10.3\n"
 "Generated-By: Babel 2.5.1\n"
 
@@ -24,11 +24,11 @@ msgstr ""
 msgid "{time} ago"
 msgstr "prije {time}"
 
-#: journalist_app/__init__.py:88 journalist_app/__init__.py:137
+#: journalist_app/__init__.py:90 journalist_app/__init__.py:139
 msgid "You have been logged out due to inactivity"
 msgstr "Odjavljeni ste zbog neaktivnosti"
 
-#: journalist_app/__init__.py:146
+#: journalist_app/__init__.py:148
 msgid "You have been logged out due to password change"
 msgstr "Odjavljeni ste zbog promjene lozinke"
 
@@ -78,7 +78,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr "Dvofaktorski kod za korisnika \"{user}\" je uspješno provjeren."
 
 #: journalist_app/admin.py:200 journalist_app/admin.py:208
-#: journalist_app/utils.py:279
+#: journalist_app/utils.py:308
 msgid "Name not updated: {}"
 msgstr "Ime nije ažurirano: {}"
 
@@ -90,11 +90,11 @@ msgstr "Korisnik '{user}' obrisan"
 msgid "Test alert sent. Please check your email."
 msgstr "Testni alarm poslan. Molimo provjerite svoj email."
 
-#: journalist_app/col.py:45
+#: journalist_app/col.py:50
 msgid "{source_name}'s collection deleted"
 msgstr "Kolekcija {source_name} obrisana"
 
-#: journalist_app/col.py:56
+#: journalist_app/col.py:61
 msgid "No collections selected."
 msgstr "Nisu odabrane kolekcije."
 
@@ -117,24 +117,30 @@ msgstr ""
 msgid "Field can not be more than {max_chars} characters."
 msgstr "Polje ne može biti dulje od {max_chars} znakova."
 
-#: journalist_app/forms.py:42 source_app/forms.py:12
+#: journalist_app/forms.py:42
+msgid ""
+"This username is invalid because it is reserved for internal use by the "
+"software."
+msgstr ""
+
+#: journalist_app/forms.py:48 source_app/forms.py:12
 msgid "This field is required."
 msgstr "Ovo polje je obavezno."
 
-#: journalist_app/forms.py:61
+#: journalist_app/forms.py:67
 msgid "You cannot send an empty reply."
 msgstr "Ne možete poslati prazan odgovor."
 
-#: journalist_app/forms.py:73
+#: journalist_app/forms.py:79
 msgid "File required."
 msgstr "Datoteka obavezna."
 
-#: journalist_app/forms.py:75
+#: journalist_app/forms.py:81
 msgid "You can only upload PNG image files."
 msgstr "Možete postaviti samo slike PNG formata."
 
-#: journalist_app/main.py:122 journalist_app/utils.py:46
-#: journalist_app/utils.py:136
+#: journalist_app/main.py:122 journalist_app/utils.py:47
+#: journalist_app/utils.py:144
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr ""
 "Došlo je do neočekivane greške! Molimo obavijestite svog administratora."
@@ -147,7 +153,7 @@ msgstr "Hvala. Vaš odgovor je pohranjen."
 msgid "No collections selected for download."
 msgstr "Nisu odabrane kolekcije za preuzimanje."
 
-#: journalist_app/main.py:157 journalist_app/utils.py:234
+#: journalist_app/main.py:157 journalist_app/utils.py:242
 msgid "No collections selected for deletion."
 msgstr "Nisu odabrane kolekcije za brisanje."
 
@@ -155,22 +161,22 @@ msgstr "Nisu odabrane kolekcije za brisanje."
 msgid "No unread submissions for this source."
 msgstr "Nema nepročitanih predaja za ovaj izvor."
 
-#: journalist_app/utils.py:53
+#: journalist_app/utils.py:54
 msgid "Account updated."
 msgstr "Račun ažuriran."
 
-#: journalist_app/utils.py:84
+#: journalist_app/utils.py:92
 msgid "Login failed."
 msgstr "Prijava neuspjela."
 
-#: journalist_app/utils.py:92
+#: journalist_app/utils.py:100
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] "Molimo pričekjate barem {seconds} sekundu prije ponovne prijave."
 msgstr[1] "Molimo pričekajte barem {seconds} sekunde prije ponovne prijave."
 msgstr[2] "Molimo pričekajte barem {seconds} sekundi prije ponovne prijave."
 
-#: journalist_app/utils.py:103
+#: journalist_app/utils.py:111
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -178,41 +184,41 @@ msgstr ""
 "Molimo pričekajte novi kod iz Vaše dvofaktorske aplikacije ili sigurnosnog "
 "ključa prije nego pokušate ponovno."
 
-#: journalist_app/utils.py:124
+#: journalist_app/utils.py:132
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Neispravan format tajne: molimo unesite samo slova od A do F i brojeve od 0 "
 "do 9."
 
-#: journalist_app/utils.py:130
+#: journalist_app/utils.py:138
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Neispravan format tajne: neparna duljina tajne. Jeste li krivo natipkali "
 "tajnu?"
 
-#: journalist_app/utils.py:186
+#: journalist_app/utils.py:194
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Predaja obrisana."
 msgstr[1] "{num} predaje obrisane."
 msgstr[2] "{num} predaja obrisano."
 
-#: journalist_app/utils.py:239
+#: journalist_app/utils.py:250
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} kolekcija obrisana"
 msgstr[1] "{num} kolekcije obrisane"
 msgstr[2] "{num} kolekcija obrisano"
 
-#: journalist_app/utils.py:277
+#: journalist_app/utils.py:306
 msgid "Name updated."
 msgstr "Ime ažurirano."
 
-#: journalist_app/utils.py:286
+#: journalist_app/utils.py:315
 msgid "You submitted a bad password! Password not changed."
 msgstr "Unijeli ste pogrešnu lozinku! Lozinka nije promjenjena."
 
-#: journalist_app/utils.py:293
+#: journalist_app/utils.py:322
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -221,7 +227,7 @@ msgstr ""
 "Došlo je do greške, nova lozinka možda nije spremljena ispravno. Trebali bi "
 "ponovno postaviti lozinku kako bi spriječili zaključavanje svog računa."
 
-#: journalist_app/utils.py:302
+#: journalist_app/utils.py:331
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -229,7 +235,7 @@ msgstr ""
 "Lozinka ažurirana. Ne zaboravite ju spremiti u svoju KeePassX bazu. Nova "
 "lozinka:"
 
-#: journalist_app/utils.py:320
+#: journalist_app/utils.py:349
 msgid "No unread submissions in selected collections."
 msgstr "Nema nepročitanih predaja u odabranim kolekcijama."
 
@@ -237,7 +243,7 @@ msgstr "Nema nepročitanih predaja u odabranim kolekcijama."
 msgid "Close"
 msgstr "Zatvori"
 
-#: journalist_templates/_confirmation_modal.html:7
+#: journalist_templates/_confirmation_modal.html:10
 #: source_templates/lookup.html:104
 msgid "Cancel"
 msgstr "Otkaži"
@@ -381,7 +387,7 @@ msgid "Edit"
 msgstr "Uredi"
 
 #: journalist_templates/admin.html:18 journalist_templates/col.html:125
-#: journalist_templates/index.html:16 journalist_templates/index.html:51
+#: journalist_templates/index.html:16 journalist_templates/index.html:52
 msgid "Delete"
 msgstr "Obriši"
 
@@ -481,19 +487,28 @@ msgstr ""
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Nakon što konfigurirate YubiKey, unesite 6-znamenkasti kod ispod:"
 
-#: journalist_templates/base.html:23
+#: journalist_templates/base.html:24
+msgid ""
+"<strong>Update Required:</strong> Your SecureDrop servers are still running "
+"v2 Onion Services, which are being phased out for security reasons. In "
+"February 2021, v2 Onion Services will be disabled, and your SecureDrop "
+"servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
+"rel=\"noreferrer\">Learn More</a>"
+msgstr ""
+
+#: journalist_templates/base.html:29
 msgid "Logged on as"
 msgstr "Prijavljen kao"
 
-#: journalist_templates/base.html:25
+#: journalist_templates/base.html:31
 msgid "Admin"
 msgstr "Administrator"
 
-#: journalist_templates/base.html:27
+#: journalist_templates/base.html:33
 msgid "Log Out"
 msgstr "Odjava"
 
-#: journalist_templates/base.html:40
+#: journalist_templates/base.html:46
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
@@ -501,7 +516,7 @@ msgstr ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
 
-#: journalist_templates/base.html:55
+#: journalist_templates/base.html:61
 msgid "Powered by <em>SecureDrop {version}</em>."
 msgstr "Powered by <em>SecureDrop {version}</em>."
 
@@ -648,9 +663,13 @@ msgid "Submission Preferences"
 msgstr "Postavke predaje"
 
 #: journalist_templates/config.html:52
+#, fuzzy
+#| msgid ""
+#| "Prevent sources from uploading documents.  Sources will still be able to "
+#| "send messages."
 msgid ""
-"Prevent sources from uploading documents.  Sources will still be able to "
-"send messages."
+"Prevent sources from uploading documents. Sources will still be able to send "
+"messages."
 msgstr ""
 "Onemogući izvorima postavljanje dokumenata.  Izvori će i dalje moći slati "
 "poruke."
@@ -838,7 +857,22 @@ msgstr "Ukloni zvijezdu"
 msgid "Are you sure you want to delete the selected collections?"
 msgstr "Jeste li sigurni da želite obrisati odabrane kolekcije?"
 
-#: journalist_templates/index.html:59
+#: journalist_templates/index.html:48
+#, fuzzy
+#| msgid ""
+#| "Click below to delete this source's collection. <em>Warning: If you do "
+#| "this, the files seen here will be unrecoverable and the source will no "
+#| "longer be able to login using their previous codename.</em>"
+msgid ""
+"Warning: If you do this, all files for the selected sources will be "
+"unrecoverable, and the sources will no longer be able to log in using their "
+"previous codename."
+msgstr ""
+"Kliknite ispod kako bi obrisali kolekciju ovog izvora. <em>Upozorenje: Ako "
+"to učinite, datoteke koje vidite ovdje će biti trajno obrisane i izvor se "
+"više neće moći prijaviti korištenjem starog kodnog imena.</em>"
+
+#: journalist_templates/index.html:60
 msgid "No documents have been submitted!"
 msgstr "Dokumenti nisu predani!"
 
@@ -882,7 +916,7 @@ msgstr "Lozinka"
 msgid "LOG IN"
 msgstr "Prijava"
 
-#: source_app/__init__.py:124
+#: source_app/__init__.py:123
 msgid ""
 "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This "
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href="
@@ -1086,8 +1120,9 @@ msgid ""
 msgstr ""
 "<strong>Preporuča se da koristite desktop verziju Tor preglednika za pristup "
 "SecureDrop-u, jer Orfox ne pruža istu razinu sigurnosti i anonimnosti kao "
-"desktop verzije.</strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">"
-"Naučite kako ga instalirati</a>, ili ignorirajte ovo upozorenje za nastavak."
+"desktop verzije.</strong><a id=\"recommend-tor\" href="
+"\"{tor_browser_url}\">Naučite kako ga instalirati</a>, ili ignorirajte ovo "
+"upozorenje za nastavak."
 
 #: source_templates/index.html:45
 msgid "First submission"
@@ -1323,7 +1358,8 @@ msgstr "Trebali bi koristiti Tor preglednik"
 #: source_templates/use-tor-browser.html:4
 msgid ""
 "If you are not using Tor Browser, you <strong>may not be anonymous</strong>."
-msgstr "Ako ne koristite Tor preglednik, <strong>možda niste anonimni</strong>."
+msgstr ""
+"Ako ne koristite Tor preglednik, <strong>možda niste anonimni</strong>."
 
 #: source_templates/use-tor-browser.html:5
 msgid ""
@@ -1418,8 +1454,9 @@ msgid ""
 "asc</code>!)"
 msgstr ""
 "Morate moći identificirati ključ (ovo se zove korisnički ID ili UID). Kako "
-"su imena javnih ključeva ujedno i otisak ključa (s .asc ekstenzijom na kraju)"
-", možete jednostavno kopirati taj podatak (ne uključujte <code>.asc</code>!)"
+"su imena javnih ključeva ujedno i otisak ključa (s .asc ekstenzijom na "
+"kraju), možete jednostavno kopirati taj podatak (ne uključujte <code>.asc</"
+"code>!)"
 
 #: source_templates/why-journalist-key.html:17
 msgid ""

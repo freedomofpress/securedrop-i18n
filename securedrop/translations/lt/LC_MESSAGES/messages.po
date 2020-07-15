@@ -26,12 +26,12 @@ msgstr ""
 msgid "{time} ago"
 msgstr "Prieš {time}"
 
-#: journalist_app/__init__.py:88 journalist_app/__init__.py:137
+#: journalist_app/__init__.py:90 journalist_app/__init__.py:139
 #, fuzzy
 msgid "You have been logged out due to inactivity"
 msgstr "Buvote atjungtas nes paskyra ilgai buvo neaktyvi."
 
-#: journalist_app/__init__.py:146
+#: journalist_app/__init__.py:148
 #, fuzzy
 msgid "You have been logged out due to password change"
 msgstr "Buvote atjungtas nes paskyra ilgai buvo neaktyvi."
@@ -88,7 +88,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr ""
 
 #: journalist_app/admin.py:200 journalist_app/admin.py:208
-#: journalist_app/utils.py:279
+#: journalist_app/utils.py:308
 msgid "Name not updated: {}"
 msgstr ""
 
@@ -103,12 +103,12 @@ msgid "Test alert sent. Please check your email."
 msgstr ""
 "Bandomasis įspėjimas išsiųstas. Galite pasitikrinti savo el. pašto dėžutę."
 
-#: journalist_app/col.py:45
+#: journalist_app/col.py:50
 #, fuzzy
 msgid "{source_name}'s collection deleted"
 msgstr "Šaltinio {source_name} medžiaga ištrinta"
 
-#: journalist_app/col.py:56
+#: journalist_app/col.py:61
 #, fuzzy
 msgid "No collections selected."
 msgstr "Nepasirinkta jokios medžiagos."
@@ -136,28 +136,34 @@ msgstr ""
 msgid "Field can not be more than {max_chars} characters."
 msgstr ""
 
-#: journalist_app/forms.py:42 source_app/forms.py:12
+#: journalist_app/forms.py:42
+msgid ""
+"This username is invalid because it is reserved for internal use by the "
+"software."
+msgstr ""
+
+#: journalist_app/forms.py:48 source_app/forms.py:12
 #, fuzzy
 msgid "This field is required."
 msgstr "Privalomas laukas."
 
-#: journalist_app/forms.py:61
+#: journalist_app/forms.py:67
 #, fuzzy
 msgid "You cannot send an empty reply."
 msgstr "Neleidžiama siųsti tuščio atsakymo."
 
-#: journalist_app/forms.py:73
+#: journalist_app/forms.py:79
 #, fuzzy
 msgid "File required."
 msgstr "Byla (failas) privalomas."
 
-#: journalist_app/forms.py:75
+#: journalist_app/forms.py:81
 #, fuzzy
 msgid "You can only upload PNG image files."
 msgstr "Prisegti galima tik PNG formato paveikslėlius."
 
-#: journalist_app/main.py:122 journalist_app/utils.py:46
-#: journalist_app/utils.py:136
+#: journalist_app/main.py:122 journalist_app/utils.py:47
+#: journalist_app/utils.py:144
 #, fuzzy
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Nenumatyta klaida! Prašome informuoti savo administratorių."
@@ -172,7 +178,7 @@ msgstr "Dėkojame. Jūsų atsakymas išsaugotas."
 msgid "No collections selected for download."
 msgstr "Nepasirinkta jokios medžiagos atsisiuntimui."
 
-#: journalist_app/main.py:157 journalist_app/utils.py:234
+#: journalist_app/main.py:157 journalist_app/utils.py:242
 #, fuzzy
 msgid "No collections selected for deletion."
 msgstr "Nepasirinkta jokios medžiagos ištrynimui."
@@ -182,17 +188,17 @@ msgstr "Nepasirinkta jokios medžiagos ištrynimui."
 msgid "No unread submissions for this source."
 msgstr "Šaltinis neturi neperskaitytų paraiškų."
 
-#: journalist_app/utils.py:53
+#: journalist_app/utils.py:54
 #, fuzzy
 msgid "Account updated."
 msgstr "Paskyra atnaujinta."
 
-#: journalist_app/utils.py:84
+#: journalist_app/utils.py:92
 #, fuzzy
 msgid "Login failed."
 msgstr "Prisijungimas nesėkmingas."
 
-#: journalist_app/utils.py:92
+#: journalist_app/utils.py:100
 #, fuzzy
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
@@ -203,7 +209,7 @@ msgstr[1] ""
 msgstr[2] ""
 "Prašome palaukti bent {seconds} sekundžių prieš vėl bandydami prisijungti."
 
-#: journalist_app/utils.py:103
+#: journalist_app/utils.py:111
 #, fuzzy
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
@@ -212,19 +218,19 @@ msgstr ""
 "Prašome palaukti naujo kodo iš jūsų dviejų dalių autentifikatoriaus prieš "
 "bandydami dar kartą."
 
-#: journalist_app/utils.py:124
+#: journalist_app/utils.py:132
 #, fuzzy
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Netinkamas slapto kodo formatas: prašome pateikti tik raides A-F ir skaičius "
 "0-9."
 
-#: journalist_app/utils.py:130
+#: journalist_app/utils.py:138
 #, fuzzy
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "Netinkamas slapto kodo ilgis - ar suklydote?"
 
-#: journalist_app/utils.py:186
+#: journalist_app/utils.py:194
 #, fuzzy
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
@@ -232,7 +238,7 @@ msgstr[0] "Paraiška ištrinta."
 msgstr[1] "Ištrintos {num} paraiškos."
 msgstr[2] "Ištrinta {num} paraiškų."
 
-#: journalist_app/utils.py:239
+#: journalist_app/utils.py:250
 #, fuzzy
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
@@ -240,16 +246,16 @@ msgstr[0] "Ištrintas {num} surinktos medžiagos vienetas"
 msgstr[1] "Ištrinti {num} surinktos medžiagos vienetai"
 msgstr[2] "Ištrinta {num} surinktos medžiagos vienetų"
 
-#: journalist_app/utils.py:277
+#: journalist_app/utils.py:306
 msgid "Name updated."
 msgstr ""
 
-#: journalist_app/utils.py:286
+#: journalist_app/utils.py:315
 #, fuzzy
 msgid "You submitted a bad password! Password not changed."
 msgstr "Pateikėte neteisingą slaptažodį! Slaptažodis nepakeistas."
 
-#: journalist_app/utils.py:293
+#: journalist_app/utils.py:322
 #, fuzzy
 msgid ""
 "There was an error, and the new password might not have been saved "
@@ -259,7 +265,7 @@ msgstr ""
 "Įvyko klaida ir naujas slaptažodis galimai nebuvo išsaugotas. Atstatykite "
 "slaptažodį dar kartą, kad nebūtumėte užrakintas iš savo paskyros."
 
-#: journalist_app/utils.py:302
+#: journalist_app/utils.py:331
 #, fuzzy
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
@@ -268,7 +274,7 @@ msgstr ""
 "Slaptažodis atnaujintas. Nepamirškite jį išsaugoti savo KeePassX duomenų "
 "bazėje. Naujas slaptažodis:"
 
-#: journalist_app/utils.py:320
+#: journalist_app/utils.py:349
 #, fuzzy
 msgid "No unread submissions in selected collections."
 msgstr "Pasirinktoje medžiagoje nėra neperskaitytų paraiškų."
@@ -278,7 +284,7 @@ msgstr "Pasirinktoje medžiagoje nėra neperskaitytų paraiškų."
 msgid "Close"
 msgstr "Uždaryti"
 
-#: journalist_templates/_confirmation_modal.html:7
+#: journalist_templates/_confirmation_modal.html:10
 #: source_templates/lookup.html:104
 #, fuzzy
 msgid "Cancel"
@@ -441,7 +447,7 @@ msgid "Edit"
 msgstr "Redaguoti"
 
 #: journalist_templates/admin.html:18 journalist_templates/col.html:125
-#: journalist_templates/index.html:16 journalist_templates/index.html:51
+#: journalist_templates/index.html:16 journalist_templates/index.html:52
 #, fuzzy
 msgid "Delete"
 msgstr "Ištrinti"
@@ -555,22 +561,31 @@ msgstr ""
 "Kai sukonfigūruosite savo YubiKey, įveskite žemiau esantį šešių skaitmenų "
 "kodą:"
 
-#: journalist_templates/base.html:23
+#: journalist_templates/base.html:24
+msgid ""
+"<strong>Update Required:</strong> Your SecureDrop servers are still running "
+"v2 Onion Services, which are being phased out for security reasons. In "
+"February 2021, v2 Onion Services will be disabled, and your SecureDrop "
+"servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
+"rel=\"noreferrer\">Learn More</a>"
+msgstr ""
+
+#: journalist_templates/base.html:29
 #, fuzzy
 msgid "Logged on as"
 msgstr "Prisijungęs kaip"
 
-#: journalist_templates/base.html:25
+#: journalist_templates/base.html:31
 #, fuzzy
 msgid "Admin"
 msgstr "Administratorius"
 
-#: journalist_templates/base.html:27
+#: journalist_templates/base.html:33
 #, fuzzy
 msgid "Log Out"
 msgstr "Atsijungti"
 
-#: journalist_templates/base.html:40
+#: journalist_templates/base.html:46
 #, fuzzy
 msgid ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
@@ -579,7 +594,7 @@ msgstr ""
 "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
 "\">"
 
-#: journalist_templates/base.html:55
+#: journalist_templates/base.html:61
 #, fuzzy
 msgid "Powered by <em>SecureDrop {version}</em>."
 msgstr "Powered by <em>SecureDrop {version}</em>."
@@ -755,8 +770,8 @@ msgstr "Paraiška ištrinta."
 
 #: journalist_templates/config.html:52
 msgid ""
-"Prevent sources from uploading documents.  Sources will still be able to "
-"send messages."
+"Prevent sources from uploading documents. Sources will still be able to send "
+"messages."
 msgstr ""
 
 #: journalist_templates/config.html:55
@@ -964,7 +979,18 @@ msgstr "Pašalinti žvaigždutę"
 msgid "Are you sure you want to delete the selected collections?"
 msgstr "Ar tikrai norite ištrinti pasirinktą medžiagą?"
 
-#: journalist_templates/index.html:59
+#: journalist_templates/index.html:48
+#, fuzzy
+msgid ""
+"Warning: If you do this, all files for the selected sources will be "
+"unrecoverable, and the sources will no longer be able to log in using their "
+"previous codename."
+msgstr ""
+"Spauskite žemiau norėdami ištrinti šio šaltinio surinktą medžiagą. "
+"<em>Įspėjimas: Ištrynus medžiagą jos atkurti nebebus įmanoma ir šaltinis "
+"nebegalės prisijungti su buvusiu slapyvardžiu.</em>"
+
+#: journalist_templates/index.html:60
 #, fuzzy
 msgid "No documents have been submitted!"
 msgstr "Nauji dokumentai nebuvo pateikti!"
@@ -1018,7 +1044,7 @@ msgstr "Slaptažodis"
 msgid "LOG IN"
 msgstr "PRISIJUNGTI"
 
-#: source_app/__init__.py:124
+#: source_app/__init__.py:123
 #, fuzzy
 msgid ""
 "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This "
