@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-05-06 05:06+0000\n"
+"PO-Revision-Date: 2020-07-17 05:51+0000\n"
 "Last-Translator: robbpa <robbpaun@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Weblate 3.10.3\n"
+"X-Generator: Weblate 4.1.1\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:14
@@ -125,6 +125,8 @@ msgid ""
 "This username is invalid because it is reserved for internal use by the "
 "software."
 msgstr ""
+"Acest nume de utilizator este nevalid deoarece este rezervat pentru "
+"utilizare internă de către software."
 
 #: journalist_app/forms.py:48 source_app/forms.py:12
 msgid "This field is required."
@@ -511,6 +513,11 @@ msgid ""
 "servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Actualizare necesară:</strong> Serverele dvs. SecureDrop încă "
+"rulează v2 Onion Services, care sunt înlocuite treptat din motive de "
+"securitate. În Februarie 2021, v2 Onion Services vor fi dezactivate, iar "
+"serverele dvs. SecureDrop vor deveni imposibil de accesat. <a href=\""
+"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Află mai multe</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -679,15 +686,11 @@ msgid "Submission Preferences"
 msgstr "Preferințe de trimitere"
 
 #: journalist_templates/config.html:52
-#, fuzzy
-#| msgid ""
-#| "Prevent sources from uploading documents.  Sources will still be able to "
-#| "send messages."
 msgid ""
 "Prevent sources from uploading documents. Sources will still be able to send "
 "messages."
 msgstr ""
-"Împiedică sursele să încarce documente.  Sursele vor putea să trimită mesaje "
+"Împiedică sursele să încarce documente. Sursele vor putea să trimită mesaje "
 "în continuare."
 
 #: journalist_templates/config.html:55
@@ -881,19 +884,14 @@ msgid "Are you sure you want to delete the selected collections?"
 msgstr "Sigur vrei să ștergi colecțiile selectate?"
 
 #: journalist_templates/index.html:48
-#, fuzzy
-#| msgid ""
-#| "Click below to delete this source's collection. <em>Warning: If you do "
-#| "this, the files seen here will be unrecoverable and the source will no "
-#| "longer be able to login using their previous codename.</em>"
 msgid ""
 "Warning: If you do this, all files for the selected sources will be "
 "unrecoverable, and the sources will no longer be able to log in using their "
 "previous codename."
 msgstr ""
-"Dă clic mai jos pentru a șterge colecția acestei surse. <em>Avertisment: "
-"Dacă o ștergi, fișierele de aici nu vor mai putea fi recuperate și sursa nu "
-"se va mai putea autentifica folosind numele de cod anterior.</em>"
+"Avertisment: Dacă ștergi, toate fișierele surselor selectate vor fi "
+"irecuperabile și sursele nu se vor mai putea autentifica folosind numele de "
+"cod anterioare."
 
 #: journalist_templates/index.html:60
 msgid "No documents have been submitted!"
