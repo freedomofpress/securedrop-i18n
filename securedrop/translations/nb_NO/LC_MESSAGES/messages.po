@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-05-11 20:06+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2020-07-18 21:51+0000\n"
+"Last-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10.3\n"
+"X-Generator: Weblate 4.1.1\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -116,6 +116,8 @@ msgid ""
 "This username is invalid because it is reserved for internal use by the "
 "software."
 msgstr ""
+"Dette brukernavnet er ugyldig fordi det er reservert for intern bruk av "
+"programvaren."
 
 #: journalist_app/forms.py:48 source_app/forms.py:12
 msgid "This field is required."
@@ -480,6 +482,11 @@ msgid ""
 "servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Oppdatering nødvendig:</strong> Dine SecureDrop-servere kjører "
+"fortsatt v2 Onion-tjenester, som fases ut av sikkerhetsgrunner. I february "
+"2021, vil v2 Onion-tjenester bli deaktivert, og dine SecureDrop-servere vil "
+"kunne bli utilgjengelige. <a href=\"//securedrop.org/v2-onion-eol\" rel="
+"\"noreferrer\">Lær mer</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -650,15 +657,11 @@ msgid "Submission Preferences"
 msgstr "Forsendelsesinnstillinger"
 
 #: journalist_templates/config.html:52
-#, fuzzy
-#| msgid ""
-#| "Prevent sources from uploading documents.  Sources will still be able to "
-#| "send messages."
 msgid ""
 "Prevent sources from uploading documents. Sources will still be able to send "
 "messages."
 msgstr ""
-"Hindre kilder fra å laste opp filer, de vil fortsatt kunne sende inn "
+"Hindre kilder fra å laste opp filer. De vil fortsatt kunne sende inn "
 "meldinger."
 
 #: journalist_templates/config.html:55
@@ -841,20 +844,14 @@ msgid "Are you sure you want to delete the selected collections?"
 msgstr "Er du sikker på at du vil slette de markerte kildeoppføringene?"
 
 #: journalist_templates/index.html:48
-#, fuzzy
-#| msgid ""
-#| "Click below to delete this source's collection. <em>Warning: If you do "
-#| "this, the files seen here will be unrecoverable and the source will no "
-#| "longer be able to login using their previous codename.</em>"
 msgid ""
 "Warning: If you do this, all files for the selected sources will be "
 "unrecoverable, and the sources will no longer be able to log in using their "
 "previous codename."
 msgstr ""
-"Klikk nedenfor for å slette kildeoppføringer fra denne kilden. <em>Advarsel: "
-"Om du gjør dette, vil alle filene under bli slettet for godt og kilden vil "
-"ikke lenger kunne logge seg inn med kodenavnet for å fortsette "
-"kommunikasjonen.</em>"
+"Advarsel: Om du gjør dette, vil alle filene knyttet til de valgte kildene "
+"bli slettet for godt, og kildene vil ikke lenger kunne logge seg inn med "
+"kodenavnet for å fortsette kommunikasjonen."
 
 #: journalist_templates/index.html:60
 msgid "No documents have been submitted!"
