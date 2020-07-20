@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-05-05 09:06+0000\n"
+"PO-Revision-Date: 2020-07-20 11:51+0000\n"
 "Last-Translator: ff98sha <ff98sha@163.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/zh_Hans/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.10.3\n"
+"X-Generator: Weblate 4.1.1\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:14
@@ -112,7 +112,7 @@ msgstr "字段长度需小于 {max_chars} 个字符。"
 msgid ""
 "This username is invalid because it is reserved for internal use by the "
 "software."
-msgstr ""
+msgstr "此用户名无效，因为其被保留为软件内部使用。"
 
 #: journalist_app/forms.py:48 source_app/forms.py:12
 msgid "This field is required."
@@ -453,6 +453,9 @@ msgid ""
 "servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>需要更新：</strong>你的 SecureDrop "
+"服务器仍在使用v2版洋葱服务，其因为安全问题已过时。在2021年2月，v2版洋葱服务将被禁用，届时你的 SecureDrop 服务器会无法访问。<a "
+"href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">了解更多</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -613,10 +616,6 @@ msgid "Submission Preferences"
 msgstr "提交设置"
 
 #: journalist_templates/config.html:52
-#, fuzzy
-#| msgid ""
-#| "Prevent sources from uploading documents.  Sources will still be able to "
-#| "send messages."
 msgid ""
 "Prevent sources from uploading documents. Sources will still be able to send "
 "messages."
@@ -791,18 +790,11 @@ msgid "Are you sure you want to delete the selected collections?"
 msgstr "您是否确定要删除选定合集？"
 
 #: journalist_templates/index.html:48
-#, fuzzy
-#| msgid ""
-#| "Click below to delete this source's collection. <em>Warning: If you do "
-#| "this, the files seen here will be unrecoverable and the source will no "
-#| "longer be able to login using their previous codename.</em>"
 msgid ""
 "Warning: If you do this, all files for the selected sources will be "
 "unrecoverable, and the sources will no longer be able to log in using their "
 "previous codename."
-msgstr ""
-"点击下方来删除这名线人的文件。<em>警告：如果你这么做，这里看到的文件无法恢"
-"复，且线人将无法用之前的代号登陆。</em>"
+msgstr "警告：如果你这么做，选中的线人的所有文件无法恢复，且线人将无法用之前的代号登陆。"
 
 #: journalist_templates/index.html:60
 msgid "No documents have been submitted!"
@@ -869,11 +861,11 @@ msgstr "撰写信息。"
 
 #: source_app/forms.py:29
 msgid "Message text too long."
-msgstr ""
+msgstr "消息文本太长。"
 
 #: source_app/forms.py:33
 msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
-msgstr ""
+msgstr "大量的文本必须以文件方式上传，而不是复制粘贴。"
 
 #: source_app/main.py:33
 msgid ""
@@ -882,14 +874,10 @@ msgid ""
 msgstr "您由于已经登录而被重定向。若您想要创建新账户，请先登出。"
 
 #: source_app/main.py:64
-#, fuzzy
-#| msgid ""
-#| "You are already logged in. Please verify your codename below as it may "
-#| "differ from the one displayed on the previous page."
 msgid ""
 "You are already logged in. Please verify your codename above as it may "
 "differ from the one displayed on the previous page."
-msgstr "您已登录。请验证下方的代号，它可能与上个页面的不同。"
+msgstr "您已登录。请验证上方的代号，它可能与上个页面的不同。"
 
 #: source_app/main.py:171
 msgid "You must enter a message or choose a file to submit."
