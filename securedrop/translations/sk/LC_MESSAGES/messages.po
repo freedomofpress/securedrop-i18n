@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-05-06 17:06+0000\n"
-"Last-Translator: 1000101 <jan.hrnko@satoshilabs.com>\n"
+"PO-Revision-Date: 2020-07-20 14:51+0000\n"
+"Last-Translator: Katarina Kasalova <katka.kasalova@gmail.com>\n"
 "Language-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sk/>\n"
 "Language: sk\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.10.3\n"
+"X-Generator: Weblate 4.1.1\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:14
@@ -122,6 +122,8 @@ msgid ""
 "This username is invalid because it is reserved for internal use by the "
 "software."
 msgstr ""
+"Toto užívateľské meno je neplatné, pretože je softvérom rezerované na "
+"interné použitie."
 
 #: journalist_app/forms.py:48 source_app/forms.py:12
 msgid "This field is required."
@@ -495,6 +497,11 @@ msgid ""
 "servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Vyžaduje sa aktualizácia:</strong>Vaše SecureDrop servery stále "
+"používajú v2 Onion Services, ktoré sa z bezpečnostných dôvodov vyraďujú. Vo "
+"februári 2021, bude v2 Onion Services deaktivovaný a vaše SecureDrop servery "
+"sa môžu stať nedostupnými. <a href=\"//securedrop.org/v2-onion-eol\" rel="
+"\"noreferrer\">Learn More</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -662,15 +669,11 @@ msgid "Submission Preferences"
 msgstr "Preferencie podania"
 
 #: journalist_templates/config.html:52
-#, fuzzy
-#| msgid ""
-#| "Prevent sources from uploading documents.  Sources will still be able to "
-#| "send messages."
 msgid ""
 "Prevent sources from uploading documents. Sources will still be able to send "
 "messages."
 msgstr ""
-"Zabráňte zdrojom nahrávanie dokumentov.  Zdroje budú stále môcť posielať "
+"Zabráňte zdrojom v nahrávaní dokumentov. Zdroje budú stále môcť posielať "
 "správy."
 
 #: journalist_templates/config.html:55
@@ -860,19 +863,13 @@ msgid "Are you sure you want to delete the selected collections?"
 msgstr "Naozaj chcete zmazať označené sady?"
 
 #: journalist_templates/index.html:48
-#, fuzzy
-#| msgid ""
-#| "Click below to delete this source's collection. <em>Warning: If you do "
-#| "this, the files seen here will be unrecoverable and the source will no "
-#| "longer be able to login using their previous codename.</em>"
 msgid ""
 "Warning: If you do this, all files for the selected sources will be "
 "unrecoverable, and the sources will no longer be able to log in using their "
 "previous codename."
 msgstr ""
-"Kliknite nižšie pre zmazanie sady tohto zdroja. <em>Varovanie: Ak to "
-"urobíte, zobrazené súbory nebude možné obnoviť a zdroj sa už nebude môcť "
-"prihlásiť pod pôvodným krycím menom.</em>"
+"Varovanie: Ak to urobíte, zobrazené súbory nebude možné obnoviť a zdroj sa "
+"už nebude môcť prihlásiť pod pôvodným krycím menom."
 
 #: journalist_templates/index.html:60
 msgid "No documents have been submitted!"
