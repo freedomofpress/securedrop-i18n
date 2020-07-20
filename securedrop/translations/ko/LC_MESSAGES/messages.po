@@ -7,46 +7,49 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 1.5.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2020-07-20 11:51+0000\n"
+"Last-Translator: Jinseo Kim <7020kjs@naver.com>\n"
+"Language-Team: Korean <https://weblate.securedrop.org/projects/securedrop/"
+"securedrop/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.1.1\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:14
 msgid "{time} ago"
-msgstr ""
+msgstr "{time} 전"
 
 #: journalist_app/__init__.py:90 journalist_app/__init__.py:139
 msgid "You have been logged out due to inactivity"
-msgstr ""
+msgstr "활동이 없어 자동으로 로그아웃되었습니다"
 
 #: journalist_app/__init__.py:148
 msgid "You have been logged out due to password change"
-msgstr ""
+msgstr "비밀번호를 변경하여 자동으로 로그아웃되었습니다"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
-msgstr ""
+msgstr "비밀번호나 2단계 인증 번호가 틀립니다."
 
 #: journalist_app/account.py:49
 msgid "Your two-factor credentials have been reset successfully."
-msgstr ""
+msgstr "2단계 인증이 성공적으로 초기화되었습니다."
 
 #: journalist_app/account.py:53 journalist_app/admin.py:136
 msgid "There was a problem verifying the two-factor code. Please try again."
-msgstr ""
+msgstr "2단계 인증 번호를 확인하는 중 문제가 발생했습니다. 다시 시도해주세요."
 
 #: journalist_app/admin.py:42
 msgid "Image updated."
-msgstr ""
+msgstr "이미지가 업데이트되었습니다."
 
 #: journalist_app/admin.py:62
 msgid "Preferences saved."
-msgstr ""
+msgstr "설정이 저장되었습니다."
 
 #: journalist_app/admin.py:92
 msgid ""
@@ -56,17 +59,17 @@ msgstr ""
 
 #: journalist_app/admin.py:103 journalist_app/admin.py:186
 msgid "Username \"{user}\" already taken."
-msgstr ""
+msgstr "사용자명 \"{user}\"는 이미 사용 중입니다."
 
 #: journalist_app/admin.py:106
 msgid ""
 "An error occurred saving this user to the database. Please inform your "
 "admin."
-msgstr ""
+msgstr "사용자를 데이터베이스에 저장하는 도중 오류가 발생했습니다. 관리자에게 문의하세요."
 
 #: journalist_app/admin.py:130
 msgid "The two-factor code for user \"{user}\" was verified successfully."
-msgstr ""
+msgstr "사용자 \"{user}\"의 2단계 인증 번호가 성공적으로 확인되었습니다."
 
 #: journalist_app/admin.py:200 journalist_app/admin.py:208
 #: journalist_app/utils.py:308
@@ -79,7 +82,7 @@ msgstr ""
 
 #: journalist_app/admin.py:279
 msgid "Test alert sent. Please check your email."
-msgstr ""
+msgstr "테스트 알림을 보냈습니다. 이메일을 확인해 주세요."
 
 #: journalist_app/col.py:50
 msgid "{source_name}'s collection deleted"
@@ -91,7 +94,7 @@ msgstr ""
 
 #: journalist_app/decorators.py:15
 msgid "Only admins can access this page."
-msgstr ""
+msgstr "관리자만 접근할 수 있습니다."
 
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
@@ -111,11 +114,11 @@ msgstr ""
 msgid ""
 "This username is invalid because it is reserved for internal use by the "
 "software."
-msgstr ""
+msgstr "이 사용자명은 내부적으로 확보되어, 이용하실 수 없습니다."
 
 #: journalist_app/forms.py:48 source_app/forms.py:12
 msgid "This field is required."
-msgstr ""
+msgstr "이 칸을 채워야 합니다."
 
 #: journalist_app/forms.py:67
 msgid "You cannot send an empty reply."
@@ -132,11 +135,11 @@ msgstr ""
 #: journalist_app/main.py:122 journalist_app/utils.py:47
 #: journalist_app/utils.py:144
 msgid "An unexpected error occurred! Please inform your admin."
-msgstr ""
+msgstr "알 수 없는 오류가 발생했습니다! 관리자에게 문의하세요."
 
 #: journalist_app/main.py:133
 msgid "Thanks. Your reply has been stored."
-msgstr ""
+msgstr "감사합니다. 답변이 저장되었습니다."
 
 #: journalist_app/main.py:154
 msgid "No collections selected for download."
@@ -161,7 +164,7 @@ msgstr ""
 #: journalist_app/utils.py:100
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
-msgstr[0] ""
+msgstr[0] "다시 로그인하려면 적어도 {seconds}초 기다려 주세요."
 
 #: journalist_app/utils.py:111
 msgid ""
@@ -316,37 +319,37 @@ msgstr ""
 #: journalist_templates/account_new_two_factor.html:23
 #: journalist_templates/admin_new_user_two_factor.html:25
 msgid "Verification code"
-msgstr ""
+msgstr "인증 번호"
 
 #: journalist_templates/account_new_two_factor.html:25
 #: journalist_templates/admin_new_user_two_factor.html:27
 #: journalist_templates/col.html:89 source_templates/lookup.html:69
 msgid "SUBMIT"
-msgstr ""
+msgstr "제출"
 
 #: journalist_templates/admin.html:3
 msgid "Admin Interface"
-msgstr ""
+msgstr "관리자 인터페이스"
 
 #: journalist_templates/admin.html:6
 #: journalist_templates/admin_add_user.html:74
 msgid "ADD USER"
-msgstr ""
+msgstr "사용자 추가"
 
 #: journalist_templates/admin.html:16
 #: journalist_templates/admin_add_user.html:14
 #: journalist_templates/edit_account.html:12 journalist_templates/login.html:8
 msgid "Username"
-msgstr ""
+msgstr "사용자명"
 
 #: journalist_templates/admin.html:17
 msgid "Edit"
-msgstr ""
+msgstr "수정"
 
 #: journalist_templates/admin.html:18 journalist_templates/col.html:125
 #: journalist_templates/index.html:16 journalist_templates/index.html:52
 msgid "Delete"
-msgstr ""
+msgstr "삭제"
 
 #: journalist_templates/admin.html:19
 msgid "Created"
@@ -354,7 +357,7 @@ msgstr ""
 
 #: journalist_templates/admin.html:20
 msgid "Last login"
-msgstr ""
+msgstr "마지막 로그인"
 
 #: journalist_templates/admin.html:25
 msgid "Edit user {username}"
