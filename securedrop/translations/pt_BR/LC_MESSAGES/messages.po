@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-07-21 15:37+0000\n"
+"PO-Revision-Date: 2020-07-21 17:05+0000\n"
 "Last-Translator: communiaa <ameaneantie@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/pt_BR/>\n"
@@ -493,6 +493,12 @@ msgid ""
 "servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Atualização Necessária:</strong> Os servidores do seu SecureDrop "
+"ainda estão rodando serviços onion v2, que estão deixando de ser usados por "
+"razões de segurança Em fevereiro de 2021, os serviços onion v2 serão "
+"desabilitados e os servidores do seu SecureDrop poderão não ser mais "
+"acessíveis. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\""
+">Saiba mais</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -663,16 +669,12 @@ msgid "Submission Preferences"
 msgstr "Configurações de Envio"
 
 #: journalist_templates/config.html:52
-#, fuzzy
-#| msgid ""
-#| "Prevent sources from uploading documents.  Sources will still be able to "
-#| "send messages."
 msgid ""
 "Prevent sources from uploading documents. Sources will still be able to send "
 "messages."
 msgstr ""
-"Não permitir que as fontes possam carregar documentos. Elas continuarão a "
-"ter permissão para enviar mensagens."
+"Impedir que as fontes carreguem documentos. Elas continuarão a ter permissão "
+"para enviar mensagens."
 
 #: journalist_templates/config.html:55
 msgid "UPDATE SUBMISSION PREFERENCES"
@@ -856,19 +858,13 @@ msgid "Are you sure you want to delete the selected collections?"
 msgstr "Tem certeza de que deseja apagar as coleções selecionadas?"
 
 #: journalist_templates/index.html:48
-#, fuzzy
-#| msgid ""
-#| "Click below to delete this source's collection. <em>Warning: If you do "
-#| "this, the files seen here will be unrecoverable and the source will no "
-#| "longer be able to login using their previous codename.</em>"
 msgid ""
 "Warning: If you do this, all files for the selected sources will be "
 "unrecoverable, and the sources will no longer be able to log in using their "
 "previous codename."
 msgstr ""
-"Clique abaixo para excluir a coleção desta fonte. <em> Cuidado: Se você "
-"fizer isso, os arquivos serão irrecuperáveis e a fonte não poderá mais usar "
-"o codinome atual para se conectar. </em>"
+"Cuidado: Se você fizer isso, os arquivos selecionados serão irrecuperáveis e "
+"a fonte não poderá mais usar o codinome atual para se conectar."
 
 #: journalist_templates/index.html:60
 msgid "No documents have been submitted!"
