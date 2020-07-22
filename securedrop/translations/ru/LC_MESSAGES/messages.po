@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-07-22 18:21+0000\n"
-"Last-Translator: Adham Kurbanov <adham@kurbanov.info>\n"
+"PO-Revision-Date: 2020-07-22 19:37+0000\n"
+"Last-Translator: Adham Kurbanov <uz@zu.uz>\n"
 "Language-Team: Russian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ru/>\n"
 "Language: ru\n"
@@ -34,7 +34,7 @@ msgstr "Ваша сессия была завершена из-за смены �
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
-msgstr "Неверный пароль или двухэтапный код."
+msgstr "Неверный пароль или код двухфакторной аутентификации."
 
 #: journalist_app/account.py:49
 msgid "Your two-factor credentials have been reset successfully."
