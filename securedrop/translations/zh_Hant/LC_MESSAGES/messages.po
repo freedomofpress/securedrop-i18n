@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-05-11 13:07+0000\n"
-"Last-Translator: Kushal Das <kushaldas@gmail.com>\n"
+"PO-Revision-Date: 2020-07-22 02:37+0000\n"
+"Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.securedrop.org/"
 "projects/securedrop/securedrop/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.10.3\n"
+"X-Generator: Weblate 4.1.1\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -113,7 +113,7 @@ msgstr "本欄位不可多於 {max_chars} 字元。"
 msgid ""
 "This username is invalid because it is reserved for internal use by the "
 "software."
-msgstr ""
+msgstr "因軟體本身保留自用故無法選用此帳戶名稱。"
 
 #: journalist_app/forms.py:48 source_app/forms.py:12
 msgid "This field is required."
@@ -455,6 +455,9 @@ msgid ""
 "servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>更新需求：</strong> SecureDrop 伺服器若使用 v2 Onion 服務須注意因安全考量將逐步淡出，自 2021 "
+"年2月起 v2 Onion 將被取消。仍使用它的 SecureDrop 伺服器可能無法訪問。 <a href=\"//securedrop.org/v2"
+"-onion-eol\" rel=\"noreferrer\">詳情請參考</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -614,14 +617,10 @@ msgid "Submission Preferences"
 msgstr "提交偏好"
 
 #: journalist_templates/config.html:52
-#, fuzzy
-#| msgid ""
-#| "Prevent sources from uploading documents.  Sources will still be able to "
-#| "send messages."
 msgid ""
 "Prevent sources from uploading documents. Sources will still be able to send "
 "messages."
-msgstr "防止消息來源上傳文件。來源依然可以傳送訊息。"
+msgstr "防止消息來源上傳文件，但來源仍可以傳送訊息。"
 
 #: journalist_templates/config.html:55
 msgid "UPDATE SUBMISSION PREFERENCES"
@@ -790,18 +789,11 @@ msgid "Are you sure you want to delete the selected collections?"
 msgstr "確認要刪除所挑選的集件？"
 
 #: journalist_templates/index.html:48
-#, fuzzy
-#| msgid ""
-#| "Click below to delete this source's collection. <em>Warning: If you do "
-#| "this, the files seen here will be unrecoverable and the source will no "
-#| "longer be able to login using their previous codename.</em>"
 msgid ""
 "Warning: If you do this, all files for the selected sources will be "
 "unrecoverable, and the sources will no longer be able to log in using their "
 "previous codename."
-msgstr ""
-"點擊下方來刪除這名線人的集件。<em>警告：如果這麼做，這裏看到的檔案將無法恢"
-"復，而線人將無法用之前的代號登錄。</em>"
+msgstr "警告：如果這麼做，所選取的檔案將無法回復，而線人將無法再利用之前的代號登錄。"
 
 #: journalist_templates/index.html:60
 msgid "No documents have been submitted!"
