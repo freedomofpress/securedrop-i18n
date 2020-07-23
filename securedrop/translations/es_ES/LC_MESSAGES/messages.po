@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-07-16 22:51+0000\n"
-"Last-Translator: Gonzalo Bulnes Guilpain <gon.bulnes@fastmail.com>\n"
+"PO-Revision-Date: 2020-07-23 01:37+0000\n"
+"Last-Translator: Zuhualime Akoochimoya <zakooch@protonmail.ch>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
 "Language: es_ES\n"
@@ -126,6 +126,8 @@ msgid ""
 "This username is invalid because it is reserved for internal use by the "
 "software."
 msgstr ""
+"Este nombre de usuario es inválido porque está reservado para su uso interno "
+"por el software."
 
 #: journalist_app/forms.py:48 source_app/forms.py:12
 msgid "This field is required."
@@ -502,6 +504,11 @@ msgid ""
 "servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Actualización Requerida:</strong> Tus servidores SecureDrop todavía "
+"están ejecutando onion services v2, los cuales están siendo discontinuados "
+"por razones de seguridad. En Febrero de 2021, onion services v2 será "
+"deshabilitado, y tus servidores SecureDrop pueden resultar inaccesibles. <a "
+"href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Aprende más</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -673,16 +680,12 @@ msgid "Submission Preferences"
 msgstr "Preferencias de envio"
 
 #: journalist_templates/config.html:52
-#, fuzzy
-#| msgid ""
-#| "Prevent sources from uploading documents.  Sources will still be able to "
-#| "send messages."
 msgid ""
 "Prevent sources from uploading documents. Sources will still be able to send "
 "messages."
 msgstr ""
-"Evite que las fuentes carguen documentos.   Las fuentes todpabia podrán "
-"seguir enviando mensajes."
+"Evite que las fuentes suban documentos. Las fuentes todavía podrán seguir "
+"enviando mensajes."
 
 #: journalist_templates/config.html:55
 msgid "UPDATE SUBMISSION PREFERENCES"
@@ -871,19 +874,13 @@ msgid "Are you sure you want to delete the selected collections?"
 msgstr "¿Está seguro de que desea eliminar las colecciones seleccionadas?"
 
 #: journalist_templates/index.html:48
-#, fuzzy
-#| msgid ""
-#| "Click below to delete this source's collection. <em>Warning: If you do "
-#| "this, the files seen here will be unrecoverable and the source will no "
-#| "longer be able to login using their previous codename.</em>"
 msgid ""
 "Warning: If you do this, all files for the selected sources will be "
 "unrecoverable, and the sources will no longer be able to log in using their "
 "previous codename."
 msgstr ""
-"Haga clic abajo para eliminar la colección de esta fuente. <em>Advertencia: "
-"Si hace esto, los archivos que se ven aquí serán irrecuperables y la fuente "
-"ya no podrá acceder usando su nombre clave anterior.</em>"
+"Advertencia: Si haces esto, los archivos serán irrecuperables, y las fuentes "
+"ya no podrán acceder usando su nombre clave anterior."
 
 #: journalist_templates/index.html:60
 msgid "No documents have been submitted!"
