@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-07-23 01:37+0000\n"
-"Last-Translator: Zuhualime Akoochimoya <zakooch@protonmail.ch>\n"
+"PO-Revision-Date: 2020-07-23 17:37+0000\n"
+"Last-Translator: Gonzalo Bulnes Guilpain <gon.bulnes@fastmail.com>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
 "Language: es_ES\n"
@@ -200,14 +200,14 @@ msgstr ""
 #: journalist_app/utils.py:138
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
-"El formato del secreto es invalido: secreto de longitud impar. ¿Ha escrito "
+"El formato del secreto es inválido: secreto de longitud impar. ¿Ha escrito "
 "mal el secreto?"
 
 #: journalist_app/utils.py:194
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
-msgstr[0] "Envio eliminado."
-msgstr[1] "{num} envios eliminados."
+msgstr[0] "Envío eliminado."
+msgstr[1] "{num} envíos eliminados."
 
 #: journalist_app/utils.py:250
 msgid "{num} collection deleted"
@@ -938,8 +938,7 @@ msgstr ""
 
 #: source_app/forms.py:16
 msgid "Field must be between 1 and {max_codename_len} characters long."
-msgstr ""
-"Esta campo debe tener de 1 a {max_codename_len} caracteres de longitud."
+msgstr "Este campo debe tener de 1 a {max_codename_len} caracteres de longitud."
 
 #: source_app/forms.py:19
 msgid "Invalid input."
@@ -951,7 +950,7 @@ msgstr "Escriba un mensaje."
 
 #: source_app/forms.py:29
 msgid "Message text too long."
-msgstr "Mensaje de texto demasiado largo."
+msgstr "Texto del mensaje demasiado largo."
 
 #: source_app/forms.py:33
 msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
@@ -1037,7 +1036,7 @@ msgstr "Buscar un nombre clave..."
 
 #: source_templates/first_submission_flashed_message.html:2
 msgid "Success!"
-msgstr "¡Exito!"
+msgstr "¡Éxito!"
 
 #: source_templates/first_submission_flashed_message.html:3
 msgid ""
@@ -1049,7 +1048,7 @@ msgstr ""
 
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
-msgstr "¿Olvido su nombre clave?"
+msgstr "¿Olvidó su nombre clave?"
 
 #: source_templates/footer.html:7
 msgid ""
@@ -1343,7 +1342,7 @@ msgid ""
 msgstr ""
 "Su sesión fue cerrada debido a inactividad. Haga clic en el botón <img "
 "src={icon} alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Nueva "
-"Identidad</strong> en la barra de herramientas del navegador Tor. Esto "
+"identidad</strong> en la barra de herramientas del navegador Tor. Esto "
 "borrará los datos de actividad de su navegador Tor en este dispositivo."
 
 #: source_templates/tor2web-warning.html:3
@@ -1442,7 +1441,7 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:8
 msgid "Import it into your GPG keyring."
-msgstr "Importela en su llavero GPG."
+msgstr "Impórtela en su llavero GPG."
 
 #: source_templates/why-journalist-key.html:10
 msgid ""
