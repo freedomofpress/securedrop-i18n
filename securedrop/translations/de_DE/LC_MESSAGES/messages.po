@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-05-06 17:06+0000\n"
+"PO-Revision-Date: 2020-07-23 10:37+0000\n"
 "Last-Translator: Robin Schubert <robin.schubert@gmx.de>\n"
 "Language-Team: German <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/de/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10.3\n"
+"X-Generator: Weblate 4.1.1\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -119,6 +119,8 @@ msgid ""
 "This username is invalid because it is reserved for internal use by the "
 "software."
 msgstr ""
+"Dieser Benutzername ist ungültig, da er für interne Nutzung durch die "
+"Software reserviert ist."
 
 #: journalist_app/forms.py:48 source_app/forms.py:12
 msgid "This field is required."
@@ -498,6 +500,11 @@ msgid ""
 "servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Aktualisierung Erforderlich:</strong> Ihre SecureDrop Server "
+"verwenden noch v2 Onion Dienste, die aus Sicherheitsgründen auslaufen. Im "
+"Februar 2021 werden v2 Onion Dienste abgeschaltet und Ihre SecureDrop "
+"könnten nicht mehr zu erreichen sein. <a href=\"//securedrop.org/v2-onion-"
+"eol\" rel=\"noreferrer\">Mehr Erfahren</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -670,15 +677,11 @@ msgid "Submission Preferences"
 msgstr "Einreichungseinstellungen"
 
 #: journalist_templates/config.html:52
-#, fuzzy
-#| msgid ""
-#| "Prevent sources from uploading documents.  Sources will still be able to "
-#| "send messages."
 msgid ""
 "Prevent sources from uploading documents. Sources will still be able to send "
 "messages."
 msgstr ""
-"Quellen am Hochladen von Dokumenten hindern.  Quellen werden weiterhin "
+"Quellen am Hochladen von Dokumenten hindern. Quellen werden weiterhin "
 "Nachrichten senden können."
 
 #: journalist_templates/config.html:55
@@ -866,19 +869,14 @@ msgid "Are you sure you want to delete the selected collections?"
 msgstr "Sind Sie sicher, dass Sie die markierten Sammlungen löschen möchten?"
 
 #: journalist_templates/index.html:48
-#, fuzzy
-#| msgid ""
-#| "Click below to delete this source's collection. <em>Warning: If you do "
-#| "this, the files seen here will be unrecoverable and the source will no "
-#| "longer be able to login using their previous codename.</em>"
 msgid ""
 "Warning: If you do this, all files for the selected sources will be "
 "unrecoverable, and the sources will no longer be able to log in using their "
 "previous codename."
 msgstr ""
-"Klicken Sie hier, um die Sammlung dieser Quelle zu löschen. <em>Warnung: Die "
-"Dateien können anschließend nicht wiederhergestellt werden und die Quelle "
-"kann sich nicht mehr mit ihrem früheren Decknamen anmelden.</em>"
+"Warnung: Alle Dateien der ausgewählten Quellen können anschließend nicht "
+"wiederhergestellt werden und die Quelle kann sich nicht mehr mit ihrem "
+"früheren Decknamen anmelden."
 
 #: journalist_templates/index.html:60
 msgid "No documents have been submitted!"
