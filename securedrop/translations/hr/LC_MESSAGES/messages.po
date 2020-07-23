@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 1.3.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-05-08 19:07+0000\n"
+"PO-Revision-Date: 2020-07-23 10:37+0000\n"
 "Last-Translator: Igor K. <igorkrainovic@gmail.com>\n"
 "Language-Team: Croatian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/hr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.10.3\n"
+"X-Generator: Weblate 4.1.1\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:14
@@ -122,6 +122,8 @@ msgid ""
 "This username is invalid because it is reserved for internal use by the "
 "software."
 msgstr ""
+"Ovo korisničko ime je neispravno jer je rezervirano za interne potrebe "
+"software-a."
 
 #: journalist_app/forms.py:48 source_app/forms.py:12
 msgid "This field is required."
@@ -495,6 +497,11 @@ msgid ""
 "servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Potrebno je ažuriranje:</strong> Vaši SecureDrop poslužitelji još "
+"uvijek koriste v2 Onion Services, koje se izbacuju iz upotrebe zbog "
+"sigurnosnih razloga. U veljači 2021., v2 Onion Services će biti onemogućene, "
+"a Vaši SecureDrop poslužitelji možda postanu nedostupni. <a href=\""
+"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Saznajte više</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -663,15 +670,11 @@ msgid "Submission Preferences"
 msgstr "Postavke predaje"
 
 #: journalist_templates/config.html:52
-#, fuzzy
-#| msgid ""
-#| "Prevent sources from uploading documents.  Sources will still be able to "
-#| "send messages."
 msgid ""
 "Prevent sources from uploading documents. Sources will still be able to send "
 "messages."
 msgstr ""
-"Onemogući izvorima postavljanje dokumenata.  Izvori će i dalje moći slati "
+"Onemogući izvorima postavljanje dokumenata. Izvori će i dalje moći slati "
 "poruke."
 
 #: journalist_templates/config.html:55
@@ -858,19 +861,13 @@ msgid "Are you sure you want to delete the selected collections?"
 msgstr "Jeste li sigurni da želite obrisati odabrane kolekcije?"
 
 #: journalist_templates/index.html:48
-#, fuzzy
-#| msgid ""
-#| "Click below to delete this source's collection. <em>Warning: If you do "
-#| "this, the files seen here will be unrecoverable and the source will no "
-#| "longer be able to login using their previous codename.</em>"
 msgid ""
 "Warning: If you do this, all files for the selected sources will be "
 "unrecoverable, and the sources will no longer be able to log in using their "
 "previous codename."
 msgstr ""
-"Kliknite ispod kako bi obrisali kolekciju ovog izvora. <em>Upozorenje: Ako "
-"to učinite, datoteke koje vidite ovdje će biti trajno obrisane i izvor se "
-"više neće moći prijaviti korištenjem starog kodnog imena.</em>"
+"Upozorenje: Ako ovo učinite, datoteke koje vidite ovdje će biti trajno "
+"obrisane i izvor se više neće moći prijaviti korištenjem starog kodnog imena."
 
 #: journalist_templates/index.html:60
 msgid "No documents have been submitted!"
