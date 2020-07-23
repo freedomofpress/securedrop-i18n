@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-05-12 10:06+0000\n"
-"Last-Translator: Jonas Waga <jonas.waga@schibsted.com>\n"
+"PO-Revision-Date: 2020-07-23 06:37+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sv/>\n"
 "Language: sv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10.3\n"
+"X-Generator: Weblate 4.1.1\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -120,6 +120,8 @@ msgid ""
 "This username is invalid because it is reserved for internal use by the "
 "software."
 msgstr ""
+"Detta användarnamn får inte nyttas, av den anledning att det är reserverad "
+"av programvaran för intern bruk."
 
 #: journalist_app/forms.py:48 source_app/forms.py:12
 msgid "This field is required."
@@ -486,6 +488,11 @@ msgid ""
 "servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Oppdatering krävs:</strong> Dina SecureDrop-servare kör fortfarande "
+"v2-löktjänster, som fasas ur i säkerhetsmått. I Februari 2021 vill v2-"
+"löktjänster stängs av, och det kan bli omöjligt att nå dina SecureDrop-"
+"servare. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Lär "
+"mer</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -652,15 +659,11 @@ msgid "Submission Preferences"
 msgstr "Inlämningsinställningar"
 
 #: journalist_templates/config.html:52
-#, fuzzy
-#| msgid ""
-#| "Prevent sources from uploading documents.  Sources will still be able to "
-#| "send messages."
 msgid ""
 "Prevent sources from uploading documents. Sources will still be able to send "
 "messages."
 msgstr ""
-"Förhindra källor från att ladda upp dokument.  Källor kommer fortfarande "
+"Förhindra källor från att ladda upp dokument. Källor kommer fortfarande "
 "kunna skicka meddelanden."
 
 #: journalist_templates/config.html:55
@@ -844,19 +847,14 @@ msgid "Are you sure you want to delete the selected collections?"
 msgstr "Är du säker att du vill ta bort de markerade samlingarna?"
 
 #: journalist_templates/index.html:48
-#, fuzzy
-#| msgid ""
-#| "Click below to delete this source's collection. <em>Warning: If you do "
-#| "this, the files seen here will be unrecoverable and the source will no "
-#| "longer be able to login using their previous codename.</em>"
 msgid ""
 "Warning: If you do this, all files for the selected sources will be "
 "unrecoverable, and the sources will no longer be able to log in using their "
 "previous codename."
 msgstr ""
-"Klicka nedan för att ta bort den här källans samling. <em>Varning: Ifall du "
-"gör detta blir det omöjligt att återskapa filerna som listas här och källan "
-"kommer inte längre att kunna logga in med sitt förra kodnamn. </em>"
+"Varning: Ifall du gör detta blir det omöjligt att återskapa alla filerna for "
+"utvalda källor, och dom kommer inte längre att kunna logga in med sina förra "
+"kodnamn."
 
 #: journalist_templates/index.html:60
 msgid "No documents have been submitted!"
