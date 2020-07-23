@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-05-06 17:06+0000\n"
+"PO-Revision-Date: 2020-07-23 10:37+0000\n"
 "Last-Translator: tekrei <tekrei@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10.3\n"
+"X-Generator: Weblate 4.1.1\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:14
@@ -124,6 +124,8 @@ msgid ""
 "This username is invalid because it is reserved for internal use by the "
 "software."
 msgstr ""
+"Bu kullanıcı adı geçersizdir, çünkü yazılım tarafından içsel olarak "
+"kullanıma tahsis edilmiştir."
 
 #: journalist_app/forms.py:48 source_app/forms.py:12
 msgid "This field is required."
@@ -496,6 +498,12 @@ msgid ""
 "servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Güncelleme Gerekiyor:</strong> SecureDrop sunucularınız hala, "
+"güvenlik nedenleriyle aşamalı olarak kullanımdan kaldırılan Onion "
+"Hizmetlerinin 2. sürümünü kullanıyor. 2021 yılı Şubat ayında Onion "
+"Hizmetleri 2. sürümü etkisizleştirilecektir, bu durumda SecureDrop "
+"sunucularınız erişilemez hale gelebilir. <a href=\"//securedrop.org/v2-onion-"
+"eol\" rel=\"noreferrer\">Daha fazlasını öğrenmek için</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -665,15 +673,10 @@ msgid "Submission Preferences"
 msgstr "Gönderim Tercihleri"
 
 #: journalist_templates/config.html:52
-#, fuzzy
-#| msgid ""
-#| "Prevent sources from uploading documents.  Sources will still be able to "
-#| "send messages."
 msgid ""
 "Prevent sources from uploading documents. Sources will still be able to send "
 "messages."
-msgstr ""
-"Kaynakların belge yüklemelerini engeller.  Kaynaklar ileti gönderebilir."
+msgstr "Kaynakların belge yüklemelerini engeller. Kaynaklar ileti gönderebilir."
 
 #: journalist_templates/config.html:55
 msgid "UPDATE SUBMISSION PREFERENCES"
@@ -862,19 +865,13 @@ msgid "Are you sure you want to delete the selected collections?"
 msgstr "Seçili derlemeleri silmek istediğinize emin misiniz?"
 
 #: journalist_templates/index.html:48
-#, fuzzy
-#| msgid ""
-#| "Click below to delete this source's collection. <em>Warning: If you do "
-#| "this, the files seen here will be unrecoverable and the source will no "
-#| "longer be able to login using their previous codename.</em>"
 msgid ""
 "Warning: If you do this, all files for the selected sources will be "
 "unrecoverable, and the sources will no longer be able to log in using their "
 "previous codename."
 msgstr ""
-"Bu kaynağın derlemesini silmek için aşağıya tıklayın. <em>Uyarı: Bu işlemi "
-"yaptığınızda, burada görülen dosyalar geri alınamaz ve kaynak önceki kod "
-"adıyla oturum açamaz.</em>"
+"Uyarı: Bu işlemi yaptığınızda, seçili kaynakların burada görülen tüm "
+"dosyaları geri alınamaz ve kaynak önceki kod adıyla oturum açamaz."
 
 #: journalist_templates/index.html:60
 msgid "No documents have been submitted!"
