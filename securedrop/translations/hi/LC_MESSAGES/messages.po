@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-05-07 20:06+0000\n"
+"PO-Revision-Date: 2020-07-24 20:37+0000\n"
 "Last-Translator: Drashti <drashtipandya37@gmail.com>\n"
 "Language-Team: Hindi <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/hi/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10.3\n"
+"X-Generator: Weblate 4.1.1\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:14
@@ -115,6 +115,8 @@ msgid ""
 "This username is invalid because it is reserved for internal use by the "
 "software."
 msgstr ""
+"यह उपयोगकर्ता नाम अमान्य है क्योंकि यह सॉफ़्टवेयर द्वारा आंतरिक उपयोग के लिए "
+"आरक्षित है।"
 
 #: journalist_app/forms.py:48 source_app/forms.py:12
 msgid "This field is required."
@@ -474,6 +476,11 @@ msgid ""
 "servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>अपडेट की आवश्यकता:</strong> आपके SecureDrop सर्वर अभी भी v2 प्याज "
+"सेवाएँ चला रहे हैं, जिन्हें सुरक्षा कारणों से चरणबद्ध किया जा रहा है। फरवरी "
+"2021 में, v2 Onion सेवाएँ अक्षम हो जाएंगी, और आपके SecureDrop सर्वर अनुपलब्ध "
+"हो सकते हैं। <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\"> "
+"और अधिक जानें</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -641,14 +648,12 @@ msgid "Submission Preferences"
 msgstr "सबमिशन पसंदगी"
 
 #: journalist_templates/config.html:52
-#, fuzzy
-#| msgid ""
-#| "Prevent sources from uploading documents.  Sources will still be able to "
-#| "send messages."
 msgid ""
 "Prevent sources from uploading documents. Sources will still be able to send "
 "messages."
-msgstr "दस्तावेज़ अपलोड करने से स्रोतों को रोकें|  स्रोत अभी भी संदेश भेजने में सक्षम होंगे|"
+msgstr ""
+"दस्तावेज़ अपलोड करने से स्रोतों को रोकें। स्रोत अभी भी संदेश भेजने में सक्षम "
+"होंगे।"
 
 #: journalist_templates/config.html:55
 msgid "UPDATE SUBMISSION PREFERENCES"
@@ -826,19 +831,13 @@ msgid "Are you sure you want to delete the selected collections?"
 msgstr "क्या आप वाकई चयनित संग्रह हटाना चाहते हैं?"
 
 #: journalist_templates/index.html:48
-#, fuzzy
-#| msgid ""
-#| "Click below to delete this source's collection. <em>Warning: If you do "
-#| "this, the files seen here will be unrecoverable and the source will no "
-#| "longer be able to login using their previous codename.</em>"
 msgid ""
 "Warning: If you do this, all files for the selected sources will be "
 "unrecoverable, and the sources will no longer be able to log in using their "
 "previous codename."
 msgstr ""
-"इस स्रोत के संग्रह को हटाने के लिए नीचे क्लिक करें <em> चेतावनी: अगर आप ऐसा करते हैं, तो "
-"यहां देखी जाने वाली फ़ाइलें पुनर्प्राप्त नहीं हो सकेंगी और स्रोत अब उनके पिछले कोडनाम का "
-"उपयोग करके लॉगिन नहीं कर पाएगे।</em>"
+"चेतावनी: अगर आप ऐसा करते हैं, तो चयनित स्रोतों के लिए सभी फाइलें अपरिवर्तनीय "
+"होंगी, और स्रोत अब उनके पिछले कोडनाम का उपयोग करने में लॉग इन नहीं कर पाएंगे।"
 
 #: journalist_templates/index.html:60
 msgid "No documents have been submitted!"
