@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-07-23 17:37+0000\n"
+"PO-Revision-Date: 2020-07-24 13:37+0000\n"
 "Last-Translator: Gonzalo Bulnes Guilpain <gon.bulnes@fastmail.com>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
@@ -34,7 +34,7 @@ msgstr "Su sesión ha sido terminada debido a un cambio de contraseña"
 
 #: journalist_app/account.py:33
 msgid "Incorrect password or two-factor code."
-msgstr "Clave o código de autenticación de dos factores incorrecto."
+msgstr "Contraseña o código de autenticación de dos factores incorrecto."
 
 #: journalist_app/account.py:49
 msgid "Your two-factor credentials have been reset successfully."
