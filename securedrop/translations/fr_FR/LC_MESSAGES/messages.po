@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-07-17 16:51+0000\n"
+"PO-Revision-Date: 2020-09-23 15:56+0000\n"
 "Last-Translator: AO Localization Lab <ao@localizationlab.org>\n"
 "Language-Team: French <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/fr/>\n"
@@ -25,8 +25,6 @@ msgid "{time} ago"
 msgstr "il y a {time}"
 
 #: journalist_app/__init__.py:90 journalist_app/__init__.py:131
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to inactivity."
 msgstr "Vous avez été déconnecté pour cause d’inactivité."
 
