@@ -97,7 +97,7 @@ organization for both technical and legal reasons:
   the context of SecureDrop, this means that the provider could
   access extremely sensitive information, such as the plaintext of
   submissions or the encryption keys used to identify and access
-  the Tor Onion Services.
+  the onion services.
 
 * In addition, attackers with legal authority such as law
   enforcement agencies may (depending on the jurisdiction) be able
@@ -432,7 +432,7 @@ support is preferable, since you want neither WiFi nor Bluetooth.
 
 .. note:: If you encounter issues booting Ubuntu on the NUCs, try
 	  updating the BIOS according to `these instructions
-	  <http://arstechnica.com/gadgets/2014/02/new-intel-nuc-bios-update-fixes-steamos-other-linux-booting-problems/>`__.
+	  <https://arstechnica.com/gadgets/2014/02/new-intel-nuc-bios-update-fixes-steamos-other-linux-booting-problems/>`__.
 
 2014 Mac Minis
 ~~~~~~~~~~~~~~

@@ -24,7 +24,7 @@ older submissions in the *Journalist Interface*. As a general practice, you shou
 encourage Journalists to delete regularly unneeded submissions from the *Journalist
 Interface*.
 
-.. tip:: Although it varies, the average throughput of a Tor Hidden Service is
+.. tip:: Although it varies, the average throughput of an onion service is
          about 150 kB/s, or roughly 4 hours for 2GB. Plan your backup and
          restore accordingly.
 
@@ -167,7 +167,7 @@ to update the corresponding files on the *Admin Workstation*:
 * ``app-journalist-aths``
 * ``app-ssh-aths``
 
-Once ssh access to the servers has been established (or if using ssh over
+Once SSH access to the servers has been established (or if using SSH over
 local network), Onion URLs for the *Source Interface* and *Journalist Interfaces*
 can be fetched using the installer:
 

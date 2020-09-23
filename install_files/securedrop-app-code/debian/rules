@@ -26,10 +26,9 @@ override_dh_strip_nondeterminism:
 
 override_dh_virtualenv:
 	dh_virtualenv \
-		--python=/usr/bin/python3.5 \
-		--setuptools \
+		--python=/usr/bin/python3 \
+		--builtin-venv \
 		--extra-pip-arg "--verbose" \
-		--extra-pip-arg "--ignore-installed" \
 		--extra-pip-arg "--no-deps" \
 		--extra-pip-arg "--no-binary=:all:" \
 		--extra-pip-arg "--no-cache-dir"

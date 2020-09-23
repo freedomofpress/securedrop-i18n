@@ -721,7 +721,7 @@ def test_admin_edits_user_password_too_long_warning(journalist_app,
                           password=overly_long_password),
                 follow_redirects=True)
 
-            ins.assert_message_flashed('You submitted a bad password! '
+            ins.assert_message_flashed('The password you submitted is invalid. '
                                        'Password not changed.', 'error')
 
 
@@ -745,7 +745,7 @@ def test_user_edits_password_too_long_warning(journalist_app, test_journo):
                           password=overly_long_password),
                 follow_redirects=True)
 
-            ins.assert_message_flashed('You submitted a bad password! '
+            ins.assert_message_flashed('The password you submitted is invalid. '
                                        'Password not changed.', 'error')
 
 
@@ -781,7 +781,7 @@ def test_admin_add_user_first_name_too_long_warning(journalist_app, test_admin):
                                   password=VALID_PASSWORD,
                                   is_admin=None))
         text = resp.data.decode('utf-8')
-        assert 'Field can not be more than' in text
+        assert 'Cannot be longer than' in text
 
 
 def test_admin_add_user_last_name_too_long_warning(journalist_app, test_admin):
@@ -795,7 +795,7 @@ def test_admin_add_user_last_name_too_long_warning(journalist_app, test_admin):
                                   password=VALID_PASSWORD,
                                   is_admin=None))
         text = resp.data.decode('utf-8')
-        assert 'Field can not be more than' in text
+        assert 'Cannot be longer than' in text
 
 
 def test_admin_edits_user_invalid_username(
@@ -818,6 +818,29 @@ def test_admin_edits_user_invalid_username(
             ins.assert_message_flashed(
                 'Username "{}" already taken.'.format(new_username),
                 'error')
+
+
+def test_admin_edits_user_invalid_username_deleted(
+        journalist_app, test_admin, test_journo):
+    """Test expected error message when admin attempts to change a user's
+    username to deleted"""
+    new_username = "deleted"
+    with journalist_app.test_client() as app:
+        _login_user(app, test_admin['username'], test_admin['password'],
+                    test_admin['otp_secret'])
+
+        with InstrumentedApp(journalist_app) as ins:
+            app.post(
+                url_for('admin.edit_user', user_id=test_admin['id']),
+                data=dict(username=new_username,
+                          first_name='',
+                          last_name='',
+                          is_admin=None))
+
+            ins.assert_message_flashed(
+                    'Invalid username: This username is invalid because it '
+                    'is reserved for internal use by the software.',
+                    'error')
 
 
 def test_admin_resets_user_hotp_format_non_hexa(
@@ -1221,7 +1244,7 @@ def test_admin_add_user_too_short_username(journalist_app, test_admin):
                                   password='pentagonpapers',
                                   password_again='pentagonpapers',
                                   is_admin=None))
-        msg = 'Field must be at least {} characters long'
+        msg = 'Must be at least {} characters long'
         assert (msg.format(Journalist.MIN_USERNAME_LEN) in resp.data.decode('utf-8'))
 
 
@@ -1681,7 +1704,8 @@ def test_too_long_user_password_change(journalist_app, test_journo):
                      follow_redirects=True)
 
             ins.assert_message_flashed(
-                'You submitted a bad password! Password not changed.', 'error')
+                'The password you submitted is invalid. '
+                'Password not changed.', 'error')
 
 
 def test_valid_user_password_change(journalist_app, test_journo):

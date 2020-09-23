@@ -720,9 +720,9 @@ def find_or_generate_new_torv3_keys(args):
     # No old keys, generate and store them first
     app_journalist_public_key, \
         app_journalist_private_key = generate_new_v3_keys()
-    # For app ssh service
+    # For app SSH service
     app_ssh_public_key, app_ssh_private_key = generate_new_v3_keys()
-    # For mon ssh service
+    # For mon SSH service
     mon_ssh_public_key, mon_ssh_private_key = generate_new_v3_keys()
     tor_v3_service_info = {
             "app_journalist_public_key": app_journalist_public_key,
@@ -751,6 +751,15 @@ def install_securedrop(args):
     return subprocess.check_call([os.path.join(args.ansible_path,
                                  'securedrop-prod.yml'), '--ask-become-pass'],
                                  cwd=args.ansible_path)
+
+
+def verify_install(args):
+    """Run configuration tests against SecureDrop servers"""
+
+    sdlog.info("Running configuration tests: ")
+    testinfra_cmd = ["./devops/scripts/run_prod_testinfra"]
+    return subprocess.check_call(testinfra_cmd,
+                                 cwd=os.getcwd())
 
 
 def backup_securedrop(args):
@@ -1049,6 +1058,10 @@ def parse_argv(argv):
     parse_reset_ssh = subparsers.add_parser('reset_admin_access',
                                             help=reset_admin_access.__doc__)
     parse_reset_ssh.set_defaults(func=reset_admin_access)
+
+    parse_verify = subparsers.add_parser('verify',
+                                         help=verify_install.__doc__)
+    parse_verify.set_defaults(func=verify_install)
 
     args = parser.parse_args(argv)
     if getattr(args, 'func', None) is None:

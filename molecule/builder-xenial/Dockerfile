@@ -1,5 +1,5 @@
-# ubuntu:xenial-20190122
-FROM ubuntu@sha256:e4a134999bea4abb4a27bc437e6118fdddfb172e1b9d683129b74d254af51675
+# ubuntu:xenial-20200902
+FROM ubuntu@sha256:3dd44f7ca10f07f86add9d0dc611998a1641f501833692a2651c96defe8db940
 
 # additional meta-data makes it easier to clean up, find
 LABEL org="Freedom of the Press"
@@ -27,6 +27,7 @@ RUN apt-get -y update && apt-get upgrade -y && apt-get install -y \
         python3-all \
         python3-pip \
         python3-setuptools \
+        python3-venv \
         rsync \
         ruby \
         sqlite \

@@ -42,8 +42,6 @@ provisioner:
   config_options:
     defaults:
       interpreter_python: auto
-  options:
-    e: "@ansible-override-vars.yml"
   env:
     ANSIBLE_ROLES_PATH: ../../install_files/ansible-base/roles
     ANSIBLE_ACTION_PLUGINS: ../../install_files/ansible-base/action_plugins
@@ -74,6 +72,7 @@ verifier:
     n: auto
   env:
     SECUREDROP_TARGET_PLATFORM: xenial
+    SECUREDROP_PYTHON_VERSION: "3.5"
   directory: tests/
   lint:
     name: flake8

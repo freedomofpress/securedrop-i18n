@@ -14,7 +14,7 @@ The source code, and related issues are `hosted on GitHub <https://github.com/fr
 Developer Setup
 ---------------
 
-You may find developer setup instructions in the `SecureDrop Client README <https://github.com/freedomofpress/securedrop-client/blob/master/README.md>`_.
+You may find developer setup instructions in the `SecureDrop Client README <https://github.com/freedomofpress/securedrop-client/blob/HEAD/README.md>`_.
 
 How to Find Help
 ----------------
@@ -26,7 +26,7 @@ into our `Gitter chat channel for the project <https://gitter.im/freedomofpress/
 
 Every non-public holiday weekday (except Fridays) at 10am (Pacific Time) we
 take part in a public daily stand-up, usually via a
-`meeting on Jitsi <https://meet.jit.si/QuickWizardsDanceHigh>`_
+`meeting on Google Meet <https://meet.google.com/ekb-kkhf-mrk>`_
 (although the details of each daily meeting are published on the Gitter channel
 five minutes before the start of the meeting). All are welcome to contribute.
 
@@ -107,7 +107,7 @@ abide by it.
 
 Before submitting a pull request, make sure the test suite passes
 (``make check``), because our CI tools will flag broken tests before we're able
-to merge your code into ``master``.
+to merge your code into ``main``.
 
 Most of all, please don't hesitate to get in touch if you need help, advice or
 would like guidance.

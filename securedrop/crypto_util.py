@@ -16,6 +16,8 @@ from redis import Redis
 
 import rm
 
+from models import Source
+
 import typing
 # https://www.python.org/dev/peps/pep-0484/#runtime-or-type-checking
 if typing.TYPE_CHECKING:
@@ -26,7 +28,7 @@ if typing.TYPE_CHECKING:
     from typing import Dict, List, Text  # noqa: F401
 
 
-# to fix gpg error #78 on production
+# to fix GPG error #78 on production
 os.environ['USERNAME'] = 'www-data'
 
 # SystemRandom sources from the system rand (e.g. urandom, CryptGenRandom, etc)
@@ -105,8 +107,8 @@ class CryptoUtil:
 
         self.do_runtime_tests()
 
-        # --pinentry-mode, required for SecureDrop on gpg 2.1.x+, was
-        # added in gpg 2.1.
+        # --pinentry-mode, required for SecureDrop on GPG 2.1.x+, was
+        # added in GPG 2.1.
         self.gpg_key_dir = gpg_key_dir
         gpg_binary = gnupg.GPG(binary='gpg2', homedir=self.gpg_key_dir)
         if StrictVersion(gpg_binary.binary_version) >= StrictVersion('2.1'):
@@ -172,8 +174,21 @@ class CryptoUtil:
                         for x in range(words_in_random_id))
 
     def display_id(self):
-        return ' '.join([random.choice(self.adjectives),
-                         random.choice(self.nouns)])
+        """Generate random journalist_designation until we get an unused one"""
+
+        tries = 0
+
+        while tries < 50:
+            new_designation = ' '.join([random.choice(self.adjectives),
+                                        random.choice(self.nouns)])
+
+            collisions = Source.query.filter(Source.journalist_designation == new_designation)
+            if collisions.count() == 0:
+                return new_designation
+
+            tries += 1
+
+        raise ValueError("Could not generate unique journalist designation for new source")
 
     def hash_codename(self, codename, salt=None):
         """Salts and hashes a codename using scrypt.

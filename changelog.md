@@ -1,12 +1,45 @@
 # Changelog
 
-## 1.5.0~rc1
+## 1.6.0~rc1
 
-* 
+
+
+## 1.5.0
+
+### Web Applications
+
+* Fixes #5378, adds more checks for invalid username (#5380)
+* Add v2 onion service deprecation warning to journalist interface (#5366)
+* Changed modal_warning message in the delete source dialogue to match the context (#5358)
+* Further redaction of wordlist (#5357)
+* Handle case of deleted journalists (#5284)
+
+### Operations
+
+* Remove unused/disabled source onion service info files (#5404)
+* Update Tor to 0.4.3.6 (#5374)
+* Add v2 onion service deprecation warning to securedrop-admin (#5370)
+* Update kernel version to 4.14.188 (#5365)
+* Ignore tmp files in /var/lib/securedrop/shredder (#5308)
+
+### Journalist API
+
+* Handle disconnected replies in API endpoint (#5351)
+* Handle disconnected submissions in API endpoint (#5345)
+
+### Documentation
+
+* Consistent usage of "onion services" terminology (#5379)
+* Add v2 deprecation timeline & warnings to docs (#5373)
+
+### Development
+
+* Add type annotations for source_app/utils.py (#5300)
+* Update syntax for existing type annotations (#5298)
 
 ## 1.4.1
 
-* Bugfix: Updated securedrop-admin utility to validate instance configuration correctly when v3 onion services are disabled (#5334)`
+* Bugfix: Updated securedrop-admin utility to validate instance configuration correctly when v3 onion services are disabled (#5334)
 
 ## 1.4.0
 
@@ -63,7 +96,7 @@
 
 * Improved QA loader script to produce datasets more consistent with production data (#5174, #5200)
 * Updated SecureDrop Core’s Qubes staging environment provisioning, removing requirement for manual reboots and renaming VMs to avoid conflicts with SecureDrop Workstation (#5190, #5099)
-* Dependency updates: 
+* Dependency updates:
   *  pyyaml from 5.1.2 to 5.3.1;
   * urllib from 1.25.3 to  1.25.8;
   * safety from 1.8.4 to 1.8.7;
@@ -72,7 +105,7 @@
   * pylint from 1.8.1 to 2.4.4;
   * markupsafe from 1.0 to 1.1.1;
   * setuptools from 41.6.0 to 46.0.0
-  * astroid from 2.3.3 to 2.4.0 
+  * astroid from 2.3.3 to 2.4.0
   (#5182, #5151, #5133, #5219)
 * Updated makefile lint target to ignore SC2230 shellcheck warnings (#5171)
 * CI: Updated translation tests to run in parallel across set of supported languages (#5062)
@@ -285,7 +318,7 @@
 
 ### Developer Workflow
 
-* Updated functional tests to run against the Tor Browser (#4347)
+* Updated functional tests to run against Tor Browser (#4347)
 * Consolidated CI lint Makefile targets (#4435)
 * Added 0.12.2  boxes for use with the Molecule upgrade scenario (#4393)
 * Added deb tests to builder image update (#4388)
@@ -506,7 +539,7 @@ https://github.com/freedomofpress/securedrop/milestone/47
 ### Operations
 
 * Updated the grsecurity-hardened Linux Kernels to 4.4.144 for app and mon servers (#3662)
-* Updated tor to version 0.3.3.9 (#3624)
+* Updated Tor to version 0.3.3.9 (#3624)
 * Updated Flask to 1.0.2 and Werkzeug to 0.14.1 (#3741)
 * Updated securedrop-keyring package to 0.1.2 (#3752)
 
@@ -1025,8 +1058,8 @@ This release contains fixes for issues described in the most recent security aud
 * Ensure correct permissions for Tor hidden service directories so new installs won't break (#1052)
 * Clarify server setup steps in the install documentation (#1027, #1061)
 * Clarify that Tor ATHS setup is now automatic and does not require manual changes (#1030)
-* Explain that you can only download files to the "Tor Browser" folder on Tails as of Tails 1.3, due to the addition of AppArmor confinement for the Tor Browser (#1036, #1062).
-* Explain that you must use the Unsafe Browser to configure the network firewall because the Tor Browser will be blocked from accessing LAN addresses starting in Tails 1.5 (#1050)
+* Explain that you can only download files to the "Tor Browser" folder on Tails as of Tails 1.3, due to the addition of AppArmor confinement for Tor Browser (#1036, #1062).
+* Explain that you must use the Unsafe Browser to configure the network firewall because Tor Browser will be blocked from accessing LAN addresses starting in Tails 1.5 (#1050)
 * Fix "gotcha" in network firewall configuration where pfSense guesses the wrong CIDR subnet (#1060)
 * Update the upgrade docs to refer to the latest version of the 0.3.x release series instead of a specific version that would need to be updated every time (#1063)
 
@@ -1111,7 +1144,7 @@ to minimize metadata that could be used for correlation
 ### Environment
 
 * Add egress host firewall rules
-* Add google-authenticator apache module and basic auth for access to
+* Add google-authenticator Apache module and basic auth for access to
 document interface
 * Encrypt bodies of OSSEC email alerts (add postfix+procmail to monitor
 server)

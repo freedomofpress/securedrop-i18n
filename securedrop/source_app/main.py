@@ -72,8 +72,18 @@ def make_blueprint(config):
             del session['codenames']
 
             filesystem_id = current_app.crypto_util.hash_codename(codename)
+            try:
+                source = Source(filesystem_id, current_app.crypto_util.display_id())
+            except ValueError as e:
+                current_app.logger.error(e)
+                flash(
+                    gettext("There was a temporary problem creating your account. "
+                            "Please try again."
+                            ),
+                    'error'
+                )
+                return redirect(url_for('.index'))
 
-            source = Source(filesystem_id, current_app.crypto_util.display_id())
             db.session.add(source)
             try:
                 db.session.commit()
@@ -118,6 +128,9 @@ def make_blueprint(config):
                 reply.decrypted = reply_obj
             except UnicodeDecodeError:
                 current_app.logger.error("Could not decode reply %s" %
+                                         reply.filename)
+            except FileNotFoundError:
+                current_app.logger.error("Reply file missing: %s" %
                                          reply.filename)
             else:
                 reply.date = datetime.utcfromtimestamp(

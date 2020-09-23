@@ -18,7 +18,7 @@ code. A Python example:
 In this code, the string ``You must enter a message or choose a file to
 submit.`` can be automatically extracted for translation. The
 ``gettext`` function to which it is passed is used as a marker by
-`pybabel <http://babel.pocoo.org/>`__ or similar tools to collect the
+`pybabel <https://babel.pocoo.org/en/latest/>`__ or similar tools to collect the
 strings to be translated and store them into a `.pot`_ file at
 ``securedrop/translations/messages.pot``. For instance:
 
@@ -342,6 +342,35 @@ request.
 
 .. _i18n_release:
 
+
+Update Weblate screenshots
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can use the script ``securedrop/upload_screenshots.py`` to update
+UI screenshots that are used to illustrate strings in Weblate. The script
+depends on the existence of up-to-date layout test results, which you can
+generate using this command in the base directory:
+
+.. code:: sh
+
+    $ LOCALES=en_US make translation-test
+
+Inspect the screenshots in the directory ``securedrop/tests/pageslayout/screenshots/en_US``
+and make sure that their content corresponds to the expected version of the
+codebase.
+
+`Obtain your API key <https://weblate.securedrop.org/accounts/profile/#api>`__
+in Weblate. Export the token to the environment variable ``WEBLATE_API_TOKEN``.
+You can now run this command to perform an upload:
+
+.. code:: sh
+
+    $ securedrop/upload-screenshots.py
+
+If new screenshots were added as part of this run, make sure to associate them
+with relevant strings in Weblate, which you can do from the
+`screenshots list <https://weblate.securedrop.org/screenshots/securedrop/securedrop/>`__.
+
 Release Management
 ------------------
 
@@ -351,6 +380,7 @@ Two weeks before the release: string freeze
 When features for a new SecureDrop release are frozen, the localization manager for the release will:
 
 * :ref:`merge_develop_to_weblate`.
+* `Update Weblate screenshots`_ so translators can see new or modified source strings in context.
 * Update the `i18n timeline`_ in the translation section of the forum.
 * Post an announcement `to the translation section of the forum <https://forum.securedrop.org/c/translations>`__ (see `an example  <https://forum.securedrop.org/t/4-securedrop-strings-need-work-march-2018-string-freeze/461>`__).
 * Remind all developers about the string freeze in `Gitter <https://gitter.im/freedomofpress/securedrop>`__.
@@ -361,7 +391,7 @@ Release day
 ^^^^^^^^^^^
 
 * :ref:`merge_weblate_to_develop`.
-* :ref:`Update the screenshots <updating_screenshots>`.
+* :ref:`Update the documentation screenshots <updating_screenshots>`.
 * Remove the `Weblate announcement`_ about this release's translation timeline.
 * Provide translator credits to add to the SecureDrop release announcement.
 * Update the `i18n timeline`_ in the forum.
@@ -456,7 +486,7 @@ with a release looming, the server can be rebooted.
 .. _`.pot`: https://www.gnu.org/software/gettext/manual/gettext.html#index-files_002c-_002epot
 .. _`.po`: https://www.gnu.org/software/gettext/manual/gettext.html#PO-Files
 .. _`.mo`: https://www.gnu.org/software/gettext/manual/gettext.html#MO-Files
-.. _`pybabel`: http://babel.pocoo.org/
+.. _`pybabel`: https://babel.pocoo.org/en/latest/
 .. _`Weblate`: http://weblate.securedrop.org/
 .. _`SecureDrop git repository`: https://github.com/freedomofpress/securedrop
 .. _`Weblate SecureDrop branch`: https://github.com/freedomofpress/securedrop-i18n

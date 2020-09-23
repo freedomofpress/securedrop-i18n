@@ -12,7 +12,7 @@
     tor_repo_pubkey: "{{ sd_repo_root + '/install_files/ansible-base/roles/tor-hidden-services/files/tor-signing-key.pub' }}"
     tor_repo_url: "deb https://deb.torproject.org/torproject.org {{ ansible_distribution_release }} main"
     # Used to fetch a precise version; must also be updated in the test vars
-    tor_version: "0.4.3.6-1~xenial+1"
+    tor_version: "0.4.4.5-1~{{ ansible_distribution_release }}+1"
 
   tasks:
     - name: Add Tor apt repo pubkey
@@ -30,7 +30,7 @@
         state: directory
         path: "{{ tor_download_dir }}"
 
-    - name: Download tor debs
+    - name: Download Tor debs
       command: apt-get download "{{ item }}={{ tor_version }}"
       args:
         chdir: "{{ tor_download_dir }}"
@@ -40,7 +40,7 @@
       tags: skip_ansible_lint
       with_items: "{{ tor_debs }}"
 
-    - name: Find downloaded tor debs
+    - name: Find downloaded Tor debs
       find:
         paths:
           - "{{ tor_download_dir }}"
@@ -48,7 +48,7 @@
           - '*.deb'
       register: _find_tor_debs_result
 
-    - name: Fetch downloaded tor debs back to submodule
+    - name: Fetch downloaded Tor debs back to submodule
       fetch:
         flat: yes
         src: "{{ item.path }}"

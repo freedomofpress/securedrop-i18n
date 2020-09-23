@@ -48,7 +48,7 @@ Pre-Release
          playbook.yml>`_ and open a PR.
 
       b. Run ``make fetch-tor-packages`` to download the new debs. The script uses
-         apt under the hood, so the Release file on the tor packages is verified according
+         apt under the hood, so the Release file on the Tor packages is verified according
          to Tor's signature, ensuring package integrity.
 
       c. Copy the downloaded packages into the ``securedrop-dev-packages-lfs`` repo,
@@ -128,13 +128,13 @@ Pre-Release
       log guidelines
       <https://github.com/freedomofpress/securedrop/wiki/Build-logs>`_.
    #. Open a PR on `securedrop-dev-packages-lfs
-      <https://github.com/freedomofpress/securedrop-dev-packages-lfs>`_ that targets the `master`
+      <https://github.com/freedomofpress/securedrop-dev-packages-lfs>`_ that targets the `main`
       branch. Changes merged to this branch will be published to ``apt-test.freedom.press``
       within 15 minutes.
 
    .. warning:: Only commit packages with an incremented version number: do not clobber existing
                 packages.  That is, if there is already a deb called e.g.
-                ``ossec-agent-3.6.0-amd64.deb`` in ``master``, do not commit a new version of this
+                ``ossec-agent-3.6.0-amd64.deb`` in ``main``, do not commit a new version of this
                 deb.
 
    .. note:: If the release contains other packages not created by
@@ -232,7 +232,7 @@ Release Process
       <https://github.com/freedomofpress/securedrop/wiki/Build-logs>`_.
 #. In a clone of the private
    `securedrop-debian-packages-lfs <https://github.com/freedomofpress/securedrop-debian-packages-lfs>`_
-   repository, create a branch from ``master`` called ``release``.
+   repository, create a branch from ``main`` called ``release``.
 #. In your local branch, commit the built packages to the ``core/xenial``
    directory.
 
@@ -248,7 +248,7 @@ Release Process
    automatic upload of the packages to ``apt-qa.freedom.press``, but the
    packages will not yet be installable.
 #. Create a `draft PR <https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests>`__
-   from ``release`` into ``master``. Make sure to include a link to the build
+   from ``release`` into ``main``. Make sure to include a link to the build
    logs in the PR description.
 #. A reviewer must verify the build logs, obtain and sign the generated ``Release``
    file, and append the detached signature to the PR. The PR should remain in
@@ -262,11 +262,20 @@ Release Process
    ``apt.freedom.press``.
 #. The reviewer must delete the ``release`` branch so that it can be re-created
    during the next release.
-#. Issue a PR in the ``securedrop`` repository to merge the release branch
-   changes into ``master``. Once the PR is merged, verify that the
-   `public documentation <https://docs.securedrop.org/>`_
-   refers to the new release version. If not, log in to ReadTheDocs and start a
-   build of the ``master`` version.
+#. Update the `public documentation <https://docs.securedrop.org/en/stable>`_ by
+   synchronising the ``stable`` branch with the release branch:
+
+   * If a repository maintainer is available, remove the branch protection on
+     the ``stable`` branch, hard-reset it to the release branch, and force push
+     ``stable``. Then restore branch protection on ``stable``.
+
+   * If a maintainer is not available, create a PR with the release branch
+     changes using ``stable`` as the base. Version number updates will cause
+     conflicts which must be resolved manually before issuing the PR.
+
+#. Verify that the public documentation has been updated, by checking the
+   `ReadTheDocs build history <https://readthedocs.org/projects/securedrop/builds/>`_.
+   If necessary, restart the build.
 #. Create a `release
    <https://github.com/freedomofpress/securedrop/releases>`_ on GitHub
    with a brief summary of the changes in this release.

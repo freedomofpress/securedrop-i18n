@@ -87,7 +87,7 @@ def create_app(config: 'SDConfig') -> Flask:
     @app.errorhandler(CSRFError)
     def handle_csrf_error(e: CSRFError) -> 'Response':
         # render the message first to ensure it's localized.
-        msg = gettext('You have been logged out due to inactivity')
+        msg = gettext('You have been logged out due to inactivity.')
         session.clear()
         flash(msg, 'error')
         return redirect(url_for('main.login'))
@@ -111,24 +111,16 @@ def create_app(config: 'SDConfig') -> Flask:
     app.jinja_env.trim_blocks = True
     app.jinja_env.lstrip_blocks = True
     app.jinja_env.globals['version'] = version.__version__
-    if hasattr(config, 'CUSTOM_HEADER_IMAGE'):
-        app.jinja_env.globals['header_image'] = \
-            config.CUSTOM_HEADER_IMAGE  # type: ignore
-        app.jinja_env.globals['use_custom_header_image'] = True
-    else:
-        app.jinja_env.globals['header_image'] = 'logo.png'
-        app.jinja_env.globals['use_custom_header_image'] = False
-
     app.jinja_env.filters['rel_datetime_format'] = \
         template_filters.rel_datetime_format
     app.jinja_env.filters['filesizeformat'] = template_filters.filesizeformat
 
     @app.before_first_request
-    def expire_blacklisted_tokens():
-        return cleanup_expired_revoked_tokens()
+    def expire_blacklisted_tokens() -> None:
+        cleanup_expired_revoked_tokens()
 
     @app.before_request
-    def load_instance_config():
+    def load_instance_config() -> None:
         app.instance_config = InstanceConfig.get_current()
 
     @app.before_request
@@ -136,7 +128,7 @@ def create_app(config: 'SDConfig') -> Flask:
         """Store commonly used values in Flask's special g object"""
         if 'expires' in session and datetime.utcnow() >= session['expires']:
             session.clear()
-            flash(gettext('You have been logged out due to inactivity'),
+            flash(gettext('You have been logged out due to inactivity.'),
                   'error')
 
         uid = session.get('uid', None)

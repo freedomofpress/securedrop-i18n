@@ -39,7 +39,7 @@ update-python3-requirements:  ## Update Python 3 requirements with pip-compile.
 		--output-file requirements/python3/test-requirements.txt \
 		requirements/python3/test-requirements.in
 	@$(DEVSHELL) pip-compile --generate-hashes \
-                --allow-unsafe \
+				--allow-unsafe \
 		--output-file requirements/python3/securedrop-app-code-requirements.txt \
 		requirements/python3/securedrop-app-code-requirements.in
 	@$(DEVSHELL) pip-compile --generate-hashes \
@@ -176,7 +176,7 @@ securedrop/config.py: ## Generate the test SecureDrop application config.
 		 ctx.update(dict((k, {"stdout":v}) for k,v in os.environ.items())); \
 		 ctx = open("config.py", "w").write(env.get_template("config.py.example").render(ctx))'
 	@echo >> securedrop/config.py
-	@echo "SUPPORTED_LOCALES = $$(if test -f /opt/venvs/securedrop-app-code/bin/python3; then ./securedrop/i18n_tool.py list-locales --python; else DOCKER_BUILD_VERBOSE=false $(DEVSHELL) ./i18n_tool.py list-locales --python; fi)" >> securedrop/config.py
+	@echo "SUPPORTED_LOCALES = $$(if test -f /opt/venvs/securedrop-app-code/bin/python3; then ./securedrop/i18n_tool.py list-locales --python; else DOCKER_BUILD_VERBOSE=false $(DEVSHELL) ./i18n_tool.py list-locales --python; fi)" | sed 's/\r//' >> securedrop/config.py
 	@echo
 
 .PHONY: test-config
@@ -195,11 +195,16 @@ docs:  ## Build project documentation with live reload for editing.
 	@echo
 
 .PHONY: staging
-staging:  ## Create a local staging environment in virtual machines.
-	@echo "███ Creating staging environment..."
+staging:  ## Create a local staging environment in virtual machines (Xenial)
+	@echo "███ Creating staging environment on Ubuntu Xenial..."
 	@$(SDROOT)/devops/scripts/create-staging-env
 	@echo
 
+.PHONY: staging-focal
+staging-focal:  ## Create a local staging environment in virtual machines (Focal)
+	@echo "███ Creating staging environment on Ubuntu Focal..."
+	@$(SDROOT)/devops/scripts/create-staging-env focal
+	@echo
 
 .PHONY: testinfra
 testinfra:  ## Run infra tests against a local staging environment.
@@ -292,7 +297,7 @@ translate:  ## Update POT files from translated strings in source code.
 .PHONY: translation-test
 translation-test:  ## Run page layout tests in all supported languages.
 	@echo "Running translation tests..."
-	@$(DEVSHELL) $(SDBIN)/translation-test "$${LOCALE:-$(./i18n_tool.py list-locales)}"
+	@$(DEVSHELL) $(SDBIN)/translation-test $${LOCALES}
 	@echo
 
 .PHONY: list-translators
@@ -318,15 +323,27 @@ update-user-guides:  ## Run the page layout tests to regenerate screenshots.
 ###########
 
 .PHONY: build-debs
-build-debs: ## Build and test SecureDrop Debian packages.
-	@echo "Building SecureDrop Debian packages..."
+build-debs: ## Build and test SecureDrop Debian packages (for Xenial)
+	@echo "Building SecureDrop Debian packages for Xenial..."
 	@$(SDROOT)/devops/scripts/build-debs.sh
 	@echo
 
 .PHONY: build-debs-notest
-build-debs-notest: ## Build SecureDrop Debian packages without running tests.
-	@echo "Building SecureDrop Debian packages; skipping tests..."
+build-debs-notest: ## Build SecureDrop Debian packages (for Xenial) without running tests.
+	@echo "Building SecureDrop Debian packages for Xenial; skipping tests..."
 	@$(SDROOT)/devops/scripts/build-debs.sh notest
+	@echo
+
+.PHONY: build-debs-focal
+build-debs-focal: ## Build and test SecureDrop Debian packages (for Focal)
+	@echo "Building SecureDrop Debian packages for Focal..."
+	@$(SDROOT)/devops/scripts/build-debs.sh test focal
+	@echo
+
+.PHONY: build-debs-notest-focal
+build-debs-notest-focal: ## Build SecureDrop Debian packages (for Focal) without running tests.
+	@echo "Building SecureDrop Debian packages for Focal; skipping tests..."
+	@$(SDROOT)/devops/scripts/build-debs.sh notest focal
 	@echo
 
 
@@ -353,6 +370,14 @@ ci-deb-tests:  ## Test SecureDrop Debian packages in CI environment.
 	@echo "███ Running Debian package tests in CI..."
 	@$(SDROOT)/devops/scripts/test-built-packages.sh
 	@echo
+
+.PHONY: ci-deb-tests-focal
+ci-deb-tests-focal:  ## Test SecureDrop Debian packages in CI environment.
+	@echo "███ Running Debian package tests in CI..."
+	@$(SDROOT)/devops/scripts/test-built-packages.sh focal
+	@echo
+
+
 
 .PHONY: build-gcloud-docker
 build-gcloud-docker:  ## Build Docker container for Google Cloud SDK.
