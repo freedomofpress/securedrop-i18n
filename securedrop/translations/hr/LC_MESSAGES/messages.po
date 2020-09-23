@@ -24,23 +24,25 @@ msgstr ""
 msgid "{time} ago"
 msgstr "prije {time}"
 
-#: journalist_app/__init__.py:90 journalist_app/__init__.py:139
-msgid "You have been logged out due to inactivity"
+#: journalist_app/__init__.py:90 journalist_app/__init__.py:131
+#, fuzzy
+#| msgid "You have been logged out due to inactivity"
+msgid "You have been logged out due to inactivity."
 msgstr "Odjavljeni ste zbog neaktivnosti"
 
-#: journalist_app/__init__.py:148
+#: journalist_app/__init__.py:140
 msgid "You have been logged out due to password change"
 msgstr "Odjavljeni ste zbog promjene lozinke"
 
-#: journalist_app/account.py:33
+#: journalist_app/account.py:36
 msgid "Incorrect password or two-factor code."
 msgstr "Netočna lozinka ili dvofaktorski kod."
 
-#: journalist_app/account.py:49
+#: journalist_app/account.py:52
 msgid "Your two-factor credentials have been reset successfully."
 msgstr "Vaši dvofaktorski kredencijali su uspješno ponovno postavljeni."
 
-#: journalist_app/account.py:53 journalist_app/admin.py:136
+#: journalist_app/account.py:56 journalist_app/admin.py:136
 msgid "There was a problem verifying the two-factor code. Please try again."
 msgstr ""
 "Došlo je do problema prilikom provjere dvofaktorskog koda. Molimo pokušajte "
@@ -78,20 +80,24 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr "Dvofaktorski kod za korisnika \"{user}\" je uspješno provjeren."
 
 #: journalist_app/admin.py:200 journalist_app/admin.py:208
-#: journalist_app/utils.py:308
+#: journalist_app/utils.py:309
 msgid "Name not updated: {}"
 msgstr "Ime nije ažurirano: {}"
 
-#: journalist_app/admin.py:249
-msgid "Deleted user '{user}'"
+#: journalist_app/admin.py:232
+#, fuzzy
+#| msgid "Deleted user '{user}'"
+msgid "Deleted user '{user}'."
 msgstr "Korisnik '{user}' obrisan"
 
-#: journalist_app/admin.py:279
+#: journalist_app/admin.py:262
 msgid "Test alert sent. Please check your email."
 msgstr "Testni alarm poslan. Molimo provjerite svoj email."
 
 #: journalist_app/col.py:50
-msgid "{source_name}'s collection deleted"
+#, fuzzy
+#| msgid "{source_name}'s collection deleted"
+msgid "{source_name}'s collection deleted."
 msgstr "Kolekcija {source_name} obrisana"
 
 #: journalist_app/col.py:61
@@ -106,18 +112,23 @@ msgstr "Samo administratori mogu pristupiti ovoj stranici."
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgstr "HOTP tajne su 40 znakova duge - Vi ste unijeli {num_chars}."
 
-#: journalist_app/forms.py:30
-msgid ""
-"Field must be at least {min_chars} characters long but only got {num_chars}."
+#: journalist_app/forms.py:28
+#, fuzzy
+#| msgid ""
+#| "Field must be at least {min_chars} characters long but only got "
+#| "{num_chars}."
+msgid "Must be at least {min_chars} characters long."
 msgstr ""
 "Polje mora biti najmanje {min_chars} znakova dugo, a primilo je samo "
 "{num_chars}."
 
-#: journalist_app/forms.py:37
-msgid "Field can not be more than {max_chars} characters."
+#: journalist_app/forms.py:35
+#, fuzzy
+#| msgid "Field can not be more than {max_chars} characters."
+msgid "Cannot be longer than {max_chars} characters."
 msgstr "Polje ne može biti dulje od {max_chars} znakova."
 
-#: journalist_app/forms.py:42
+#: journalist_app/forms.py:40
 msgid ""
 "This username is invalid because it is reserved for internal use by the "
 "software."
@@ -125,24 +136,24 @@ msgstr ""
 "Ovo korisničko ime je neispravno jer je rezervirano za interne potrebe "
 "software-a."
 
-#: journalist_app/forms.py:48 source_app/forms.py:12
+#: journalist_app/forms.py:46 source_app/forms.py:12
 msgid "This field is required."
 msgstr "Ovo polje je obavezno."
 
-#: journalist_app/forms.py:67
+#: journalist_app/forms.py:65
 msgid "You cannot send an empty reply."
 msgstr "Ne možete poslati prazan odgovor."
 
-#: journalist_app/forms.py:79
+#: journalist_app/forms.py:77
 msgid "File required."
 msgstr "Datoteka obavezna."
 
-#: journalist_app/forms.py:81
+#: journalist_app/forms.py:79
 msgid "You can only upload PNG image files."
 msgstr "Možete postaviti samo slike PNG formata."
 
-#: journalist_app/main.py:122 journalist_app/utils.py:47
-#: journalist_app/utils.py:144
+#: journalist_app/main.py:122 journalist_app/utils.py:43
+#: journalist_app/utils.py:142
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr ""
 "Došlo je do neočekivane greške! Molimo obavijestite svog administratora."
@@ -155,7 +166,7 @@ msgstr "Hvala. Vaš odgovor je pohranjen."
 msgid "No collections selected for download."
 msgstr "Nisu odabrane kolekcije za preuzimanje."
 
-#: journalist_app/main.py:157 journalist_app/utils.py:242
+#: journalist_app/main.py:157 journalist_app/utils.py:243
 msgid "No collections selected for deletion."
 msgstr "Nisu odabrane kolekcije za brisanje."
 
@@ -163,22 +174,22 @@ msgstr "Nisu odabrane kolekcije za brisanje."
 msgid "No unread submissions for this source."
 msgstr "Nema nepročitanih predaja za ovaj izvor."
 
-#: journalist_app/utils.py:54
+#: journalist_app/utils.py:50
 msgid "Account updated."
 msgstr "Račun ažuriran."
 
-#: journalist_app/utils.py:92
+#: journalist_app/utils.py:91
 msgid "Login failed."
 msgstr "Prijava neuspjela."
 
-#: journalist_app/utils.py:100
+#: journalist_app/utils.py:98
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] "Molimo pričekjate barem {seconds} sekundu prije ponovne prijave."
 msgstr[1] "Molimo pričekajte barem {seconds} sekunde prije ponovne prijave."
 msgstr[2] "Molimo pričekajte barem {seconds} sekundi prije ponovne prijave."
 
-#: journalist_app/utils.py:111
+#: journalist_app/utils.py:109
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -186,41 +197,43 @@ msgstr ""
 "Molimo pričekajte novi kod iz Vaše dvofaktorske aplikacije ili sigurnosnog "
 "ključa prije nego pokušate ponovno."
 
-#: journalist_app/utils.py:132
+#: journalist_app/utils.py:130
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Neispravan format tajne: molimo unesite samo slova od A do F i brojeve od 0 "
 "do 9."
 
-#: journalist_app/utils.py:138
+#: journalist_app/utils.py:136
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Neispravan format tajne: neparna duljina tajne. Jeste li krivo natipkali "
 "tajnu?"
 
-#: journalist_app/utils.py:194
+#: journalist_app/utils.py:195
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Predaja obrisana."
 msgstr[1] "{num} predaje obrisane."
 msgstr[2] "{num} predaja obrisano."
 
-#: journalist_app/utils.py:250
+#: journalist_app/utils.py:251
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} kolekcija obrisana"
 msgstr[1] "{num} kolekcije obrisane"
 msgstr[2] "{num} kolekcija obrisano"
 
-#: journalist_app/utils.py:306
+#: journalist_app/utils.py:307
 msgid "Name updated."
 msgstr "Ime ažurirano."
 
-#: journalist_app/utils.py:315
-msgid "You submitted a bad password! Password not changed."
+#: journalist_app/utils.py:316
+#, fuzzy
+#| msgid "You submitted a bad password! Password not changed."
+msgid "The password you submitted is invalid. Password not changed."
 msgstr "Unijeli ste pogrešnu lozinku! Lozinka nije promjenjena."
 
-#: journalist_app/utils.py:322
+#: journalist_app/utils.py:323
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -229,7 +242,7 @@ msgstr ""
 "Došlo je do greške, nova lozinka možda nije spremljena ispravno. Trebali bi "
 "ponovno postaviti lozinku kako bi spriječili zaključavanje svog računa."
 
-#: journalist_app/utils.py:331
+#: journalist_app/utils.py:332
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -237,7 +250,7 @@ msgstr ""
 "Lozinka ažurirana. Ne zaboravite ju spremiti u svoju KeePassX bazu. Nova "
 "lozinka:"
 
-#: journalist_app/utils.py:349
+#: journalist_app/utils.py:350
 msgid "No unread submissions in selected collections."
 msgstr "Nema nepročitanih predaja u odabranim kolekcijama."
 
@@ -490,18 +503,25 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Nakon što konfigurirate YubiKey, unesite 6-znamenkasti kod ispod:"
 
 #: journalist_templates/base.html:24
+#, fuzzy
+#| msgid ""
+#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
+#| "running v2 Onion Services, which are being phased out for security "
+#| "reasons. In February 2021, v2 Onion Services will be disabled, and your "
+#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
+#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required:</strong> Your SecureDrop servers are still running "
-"v2 Onion Services, which are being phased out for security reasons. In "
-"February 2021, v2 Onion Services will be disabled, and your SecureDrop "
+"v2 onion services, which are being phased out for security reasons. In "
+"February 2021, v2 onion services will be disabled, and your SecureDrop "
 "servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
 "<strong>Potrebno je ažuriranje:</strong> Vaši SecureDrop poslužitelji još "
 "uvijek koriste v2 Onion Services, koje se izbacuju iz upotrebe zbog "
 "sigurnosnih razloga. U veljači 2021., v2 Onion Services će biti onemogućene, "
-"a Vaši SecureDrop poslužitelji možda postanu nedostupni. <a href=\""
-"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Saznajte više</a>"
+"a Vaši SecureDrop poslužitelji možda postanu nedostupni. <a href=\"//"
+"securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Saznajte više</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -515,15 +535,7 @@ msgstr "Administrator"
 msgid "Log Out"
 msgstr "Odjava"
 
-#: journalist_templates/base.html:46
-msgid ""
-"Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
-"\">"
-msgstr ""
-"Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
-"\">"
-
-#: journalist_templates/base.html:61
+#: journalist_templates/base.html:56
 msgid "Powered by <em>SecureDrop {version}</em>."
 msgstr "Powered by <em>SecureDrop {version}</em>."
 
@@ -706,7 +718,9 @@ msgid "Edit user \"{user}\""
 msgstr "Uredi korisnika \"{user}\""
 
 #: journalist_templates/edit_account.html:8
-msgid "Change Name &amp; Admin Status"
+#, fuzzy
+#| msgid "Change Name &amp; Admin Status"
+msgid "Change Name and Admin Status"
 msgstr "Promjeni ime &amp; Administratorski status"
 
 #: journalist_templates/edit_account.html:27
@@ -764,11 +778,17 @@ msgid "Reset Two-Factor Authentication"
 msgstr "Ponovno postavi dvofaktorsku autentikaciju"
 
 #: journalist_templates/edit_account.html:83
+#, fuzzy
+#| msgid ""
+#| "If a user's two-factor authentication credentials have been lost or "
+#| "compromised, you can reset them here. <em>If you do this, make sure the "
+#| "user is present and ready to set up their device with the new two-factor "
+#| "credentials. Otherwise, they will be locked out of their account."
 msgid ""
 "If a user's two-factor authentication credentials have been lost or "
 "compromised, you can reset them here. <em>If you do this, make sure the user "
 "is present and ready to set up their device with the new two-factor "
-"credentials. Otherwise, they will be locked out of their account."
+"credentials. Otherwise, they will be locked out of their account.</em>"
 msgstr ""
 "Ako su korisnički dvofaktorski kredencijali izgubljeni ili kompromitirani, "
 "možete ih ponovno postaviti ovdje. <em>Ako ovo radite, osigurajte prisutnost "
@@ -908,12 +928,18 @@ msgstr "Prijavite se za pristup na novinarsko sučelje"
 msgid "Password"
 msgstr "Lozinka"
 
-#: journalist_templates/login.html:12 source_templates/index.html:65
+#: journalist_templates/login.html:10
+#, fuzzy
+#| msgid "Password"
+msgid "Show password"
+msgstr "Lozinka"
+
+#: journalist_templates/login.html:12 source_templates/index.html:59
 #: source_templates/logout.html:3
 msgid "LOG IN"
 msgstr "Prijava"
 
-#: source_app/__init__.py:123
+#: source_app/__init__.py:117
 msgid ""
 "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This "
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href="
@@ -961,35 +987,43 @@ msgstr ""
 "Već ste prijavljeni. Molimo provjerite svoje kodno ime iznad jer bi moglo "
 "biti različito od onog prikazanog na prošloj stranici."
 
-#: source_app/main.py:171
+#: source_app/main.py:80
+#, fuzzy
+#| msgid "There was a problem verifying the two-factor code. Please try again."
+msgid "There was a temporary problem creating your account. Please try again."
+msgstr ""
+"Došlo je do problema prilikom provjere dvofaktorskog koda. Molimo pokušajte "
+"ponovno."
+
+#: source_app/main.py:184
 msgid "You must enter a message or choose a file to submit."
 msgstr "Morate unijeti poruku ili odabrati datoteku za predaju."
 
-#: source_app/main.py:175
+#: source_app/main.py:188
 msgid "You must enter a message."
 msgstr "Morate unijeti poruku."
 
-#: source_app/main.py:206
+#: source_app/main.py:219
 msgid "Thanks! We received your message."
 msgstr "Hvala! Primili smo Vašu poruku."
 
-#: source_app/main.py:208
+#: source_app/main.py:221
 msgid "Thanks! We received your document."
 msgstr "Hvala! Primili smo Vaš dokument."
 
-#: source_app/main.py:210
+#: source_app/main.py:223
 msgid "Thanks! We received your message and document."
 msgstr "Hvala! Primili smo Vašu poruku i dokument."
 
-#: source_app/main.py:271
+#: source_app/main.py:284
 msgid "Reply deleted"
 msgstr "Odgovor obrisan"
 
-#: source_app/main.py:289
+#: source_app/main.py:302
 msgid "All replies have been deleted"
 msgstr "Svi odgovori obrisani"
 
-#: source_app/main.py:303
+#: source_app/main.py:316
 msgid "Sorry, that is not a recognized codename."
 msgstr "Žao nam je, to nije prepoznato kodno ime."
 
@@ -997,12 +1031,7 @@ msgstr "Žao nam je, to nije prepoznato kodno ime."
 msgid "Protecting Journalists and Sources"
 msgstr "Zaštita novinara i izvora"
 
-#: source_templates/base.html:25 source_templates/footer.html:4
-#: source_templates/index.html:32
-msgid "Powered by"
-msgstr "Powered by"
-
-#: source_templates/base.html:34
+#: source_templates/base.html:28
 msgid "LOG OUT"
 msgstr "Odjava"
 
@@ -1036,6 +1065,10 @@ msgstr ""
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
 msgstr "Zaboravili ste kodno ime?"
+
+#: source_templates/footer.html:4
+msgid "Powered by"
+msgstr "Powered by"
 
 #: source_templates/footer.html:7
 msgid ""
@@ -1088,8 +1121,13 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "Predaj dokumente"
 
 #: source_templates/index.html:16
+#, fuzzy
+#| msgid ""
+#| "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security "
+#| "Setting</strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield "
+#| "icon\"> &nbsp;button in your browser’s toolbar to change it."
 msgid ""
-"Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security Setting</"
+"Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security Level</"
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
@@ -1098,20 +1136,32 @@ msgstr ""
 "štita\"> &nbsp; na alatnoj traci kako bi to promjenili."
 
 #: source_templates/index.html:17
+#, fuzzy
+#| msgid ""
+#| "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
+#| "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
+#| "install it</a>, or ignore this warning to continue."
 msgid ""
-"<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
-"strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
-"install it</a>, or ignore this warning to continue."
+"<strong>It is recommended to use Tor Browser to access SecureDrop:</strong> "
+"<a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
+"a>, or ignore this warning to continue."
 msgstr ""
 "<strong>Preporuča se da koristite Tor preglednik za pristup SecureDrop-u:</"
 "strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">Naučite kako ga "
 "instalirati</a>, ili ignorirajte ovo upozorenje za nastavak."
 
 #: source_templates/index.html:18
+#, fuzzy
+#| msgid ""
+#| "<strong>It is recommended you use the desktop version of Tor Browser to "
+#| "access SecureDrop, as Orfox does not provide the same level of security "
+#| "and anonymity as the desktop versions.</strong> <a id=\"recommend-tor\" "
+#| "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
+#| "warning to continue."
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
-"anonymity as the desktop versions.</strong> <a id=\"recommend-tor\" href="
+"anonymity as the desktop version.</strong> <a id=\"recommend-tor\" href="
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
@@ -1121,40 +1171,40 @@ msgstr ""
 "\"{tor_browser_url}\">Naučite kako ga instalirati</a>, ili ignorirajte ovo "
 "upozorenje za nastavak."
 
-#: source_templates/index.html:45
+#: source_templates/index.html:39
 msgid "First submission"
 msgstr "Prva predaja"
 
-#: source_templates/index.html:47
+#: source_templates/index.html:41
 msgid "First time submitting to our SecureDrop? Start here."
 msgstr "Prvi put predajete na SecureDrop? Počnite ovdje."
 
-#: source_templates/index.html:51
+#: source_templates/index.html:45
 msgid "GET STARTED"
 msgstr "Počnite"
 
-#: source_templates/index.html:59
+#: source_templates/index.html:53
 msgid "Return visit"
 msgstr "Povratni posjet"
 
-#: source_templates/index.html:61
+#: source_templates/index.html:55
 msgid "Already have a codename? Check for replies or submit something new."
 msgstr "Već imate kodno ime? Provjerite odgovore ili predajte nešto novo."
 
-#: source_templates/index.html:79
+#: source_templates/index.html:73
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
 msgstr ""
 "Kliknite na <img src=\"{icon}\" alt=\"ikonu štita\"> na alatnoj traci iznad"
 
-#: source_templates/index.html:80
+#: source_templates/index.html:74
 msgid "Select <strong>Advanced Security Settings</strong>"
 msgstr "Odaberite <strong>Napredne sigurnosne postavke</strong>"
 
-#: source_templates/index.html:81
+#: source_templates/index.html:75
 msgid "Select <strong>Safest</strong>"
 msgstr "Odaberite <strong>Najsigurnije</strong>"
 
-#: source_templates/index.html:83
+#: source_templates/index.html:77
 msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
 msgstr "<a href=\"/\">Osvježite ovu stranicu</a>, i gotovi ste!"
 
@@ -1175,10 +1225,15 @@ msgid "One more thing..."
 msgstr "Još jedna stvar..."
 
 #: source_templates/logout.html:7
+#, fuzzy
+#| msgid ""
+#| "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
+#| "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
+#| "toolbar. This will clear your Tor browser activity data on this device."
 msgid ""
 "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
-"\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
-"toolbar. This will clear your Tor browser activity data on this device."
+"\"16\">&nbsp;<strong>New Identity</strong> button in your Tor Browser's "
+"toolbar. This will clear your Tor Browser activity data on this device."
 msgstr ""
 "Kliknite na <img src={icon} alt=\"ikonu metle\" width=\"16\" height="
 "\"16\">&nbsp;<strong>Novi identitet</strong> na alatnoj traci Tor "
@@ -1311,11 +1366,17 @@ msgid "Important"
 msgstr "Važno"
 
 #: source_templates/session_timeout.html:5
+#, fuzzy
+#| msgid ""
+#| "You were logged out due to inactivity. Click the <img src={icon} alt="
+#| "\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</"
+#| "strong> button in your Tor browser's toolbar before moving on. This will "
+#| "clear your Tor browser activity data on this device."
 msgid ""
 "You were logged out due to inactivity. Click the <img src={icon} alt=\"broom "
 "icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong> button "
-"in your Tor browser's toolbar before moving on. This will clear your Tor "
-"browser activity data on this device."
+"in your Tor Browser's toolbar before moving on. This will clear your Tor "
+"Browser activity data on this device."
 msgstr ""
 "Odjavljeni ste zbog neaktivnosti. Kliknite na <img src={icon} alt=\"ikonu "
 "metle\" width=\"16\" height=\"16\">&nbsp;<strong>Novi idnetitet</strong> u "
@@ -1341,9 +1402,13 @@ msgstr ""
 "bi Vas mogao identificirati."
 
 #: source_templates/tor2web-warning.html:6
+#, fuzzy
+#| msgid ""
+#| "We <strong>strongly advise</strong> you to use the <a href=\"www."
+#| "torproject.org/projects/torbrowser.html\">Tor browser</a> instead."
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
-"org/projects/torbrowser.html\">Tor browser</a> instead."
+"org/projects/torbrowser.html\">Tor Browser</a> instead."
 msgstr ""
 "<strong>Snažno preporučamo</strong> da koristite <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor preglednik</a>."
@@ -1410,18 +1475,23 @@ msgstr ""
 "enkriptirati svoje predaje sami. Kako bi to napravili:"
 
 #: source_templates/why-journalist-key.html:7
+#, fuzzy
+#| msgid ""
+#| "<a href=\"{url}\">Download</a> the public key. The public key is a text "
+#| "file with the extension <code>.asc</code>"
 msgid ""
-"<a href=\"{url}\">Download</a> the public key. The public key is a text file "
-"with the extension <code>.asc</code>"
+"<a href=\"{url}\">Download</a> the public key. It will be saved to a file "
+"called:\n"
+"        <p><code>{submission_key_fpr_filename}</code></p>"
 msgstr ""
 "<a href=\"{url}\">Preuzmite</a> javni ključ. Javni ključ je tekstualna "
 "datoteka s <code>.asc</code> ekstenzijom"
 
-#: source_templates/why-journalist-key.html:8
+#: source_templates/why-journalist-key.html:9
 msgid "Import it into your GPG keyring."
 msgstr "Uvezite ju u svoj GPG privjesak za ključeve."
 
-#: source_templates/why-journalist-key.html:10
+#: source_templates/why-journalist-key.html:11
 msgid ""
 "If you are using <a href=\"{url}\">Tails</a>, you can double-click the "
 "<code>.asc</code> file you just downloaded and it will be automatically "
@@ -1431,51 +1501,51 @@ msgstr ""
 "asc</code> datoteku koju ste upravo preuzeli kako bi se ista automatski "
 "dodala u Vaš privjesak za ključeve."
 
-#: source_templates/why-journalist-key.html:11
+#: source_templates/why-journalist-key.html:12
+#, fuzzy
+#| msgid ""
+#| "If you are using Mac/Linux, open the terminal. You can import the key "
+#| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
-"If you are using Mac/Linux, open the terminal. You can import the key with "
-"<code>gpg --import /path/to/key.asc</code>."
+"If you are using a Mac or Linux, open the terminal. You can import the key "
+"with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
 "Ako koristite Mac/Linux, otvorite terminal. Možete uvesti ključ s <code>gpg "
 "--import /putanja/do/ključa.asc</code>."
 
-#: source_templates/why-journalist-key.html:14
-msgid "Encrypt your submission."
-msgstr "Enkriptirajte svoju predaju."
+#: source_templates/why-journalist-key.html:15
+msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
+msgstr ""
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
-"You will need to be able to identify the key (this is called the \"user ID\" "
-"or UID). Since the public key's filename is the key's fingerprint (with .asc "
-"at the end), you can just copy and paste that. (don't include the <code>."
-"asc</code>!)"
+"<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submission</"
+"code>"
 msgstr ""
-"Morate moći identificirati ključ (ovo se zove korisnički ID ili UID). Kako "
-"su imena javnih ključeva ujedno i otisak ključa (s .asc ekstenzijom na "
-"kraju), možete jednostavno kopirati taj podatak (ne uključujte <code>.asc</"
-"code>!)"
 
-#: source_templates/why-journalist-key.html:17
-msgid ""
-"On all systems, open the Terminal and use this gpg command: <code>gpg --"
-"recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
-msgstr ""
-"Na svim sustavima, otvorite Terminal i unesite ovu gpg naredbu: <code>gpg --"
-"recipient &lt;korisnički ID&gt; --encrypt ime_datoteke</code>"
-
-#: source_templates/why-journalist-key.html:20
+#: source_templates/why-journalist-key.html:18
+#, fuzzy
+#| msgid ""
+#| "Upload your encrypted submission. It will have the same filename as the "
+#| "unencrypted file, with .gpg at the end (e.g. <code>roswell_photos.pdf."
+#| "gpg</code>)"
 msgid ""
 "Upload your encrypted submission. It will have the same filename as the "
-"unencrypted file, with .gpg at the end (e.g. <code>roswell_photos.pdf.gpg</"
+"unencrypted file, with .gpg at the end (e.g. <code>internal_memo.pdf.gpg</"
 "code>)"
 msgstr ""
 "Postavite svoju enkriptiranu predaju. Imat će isto ime kao i neenkriptirana "
 "datoteka, s .gpg ekstenzijom na kraju (npr. <code>ime_datoteke.pdf.gpg</"
 "code>)"
 
-#: source_templates/why-journalist-key.html:23
+#: source_templates/why-journalist-key.html:21
+#, fuzzy
+#| msgid ""
+#| "<strong>Tip:</strong> If you wish to remain anonymous, <strong>do not</"
+#| "strong> use GPG to sign the encrypted file (with the <code>--sign</code> "
+#| "or <code>-s</code> flag) as this will reveal your GPG identity to us."
 msgid ""
-"<strong>Tip:</strong> If you wish to remain anonymous, <strong>do not</"
+"<strong>Important:</strong> If you wish to remain anonymous, <strong>do not</"
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
@@ -1484,6 +1554,34 @@ msgstr ""
 "sign</code> ili <code>-s</code> zastavom) jer će to otkritit Vaš GPG "
 "identitet nama."
 
-#: source_templates/why-journalist-key.html:25
+#: source_templates/why-journalist-key.html:23
 msgid "Back to submission page"
 msgstr "Natrag na stranicu predaje"
+
+#~ msgid ""
+#~ "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt="
+#~ "\"SecureDrop\">"
+#~ msgstr ""
+#~ "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt="
+#~ "\"SecureDrop\">"
+
+#~ msgid "Encrypt your submission."
+#~ msgstr "Enkriptirajte svoju predaju."
+
+#~ msgid ""
+#~ "You will need to be able to identify the key (this is called the \"user ID"
+#~ "\" or UID). Since the public key's filename is the key's fingerprint "
+#~ "(with .asc at the end), you can just copy and paste that. (don't include "
+#~ "the <code>.asc</code>!)"
+#~ msgstr ""
+#~ "Morate moći identificirati ključ (ovo se zove korisnički ID ili UID). "
+#~ "Kako su imena javnih ključeva ujedno i otisak ključa (s .asc ekstenzijom "
+#~ "na kraju), možete jednostavno kopirati taj podatak (ne uključujte <code>."
+#~ "asc</code>!)"
+
+#~ msgid ""
+#~ "On all systems, open the Terminal and use this gpg command: <code>gpg --"
+#~ "recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
+#~ msgstr ""
+#~ "Na svim sustavima, otvorite Terminal i unesite ovu gpg naredbu: <code>gpg "
+#~ "--recipient &lt;korisnički ID&gt; --encrypt ime_datoteke</code>"

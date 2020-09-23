@@ -23,23 +23,25 @@ msgstr ""
 msgid "{time} ago"
 msgstr "fa {time}"
 
-#: journalist_app/__init__.py:90 journalist_app/__init__.py:139
-msgid "You have been logged out due to inactivity"
+#: journalist_app/__init__.py:90 journalist_app/__init__.py:131
+#, fuzzy
+#| msgid "You have been logged out due to inactivity"
+msgid "You have been logged out due to inactivity."
 msgstr "S'ha desconnectat la sessió per inactivitat"
 
-#: journalist_app/__init__.py:148
+#: journalist_app/__init__.py:140
 msgid "You have been logged out due to password change"
 msgstr "S'ha desconnectat la sessió per un canvi de la contrasenya"
 
-#: journalist_app/account.py:33
+#: journalist_app/account.py:36
 msgid "Incorrect password or two-factor code."
 msgstr "La contrasenya o el testimoni de factor doble no són vàlids."
 
-#: journalist_app/account.py:49
+#: journalist_app/account.py:52
 msgid "Your two-factor credentials have been reset successfully."
 msgstr "Les credencials de factor doble s'han restablert correctament."
 
-#: journalist_app/account.py:53 journalist_app/admin.py:136
+#: journalist_app/account.py:56 journalist_app/admin.py:136
 msgid "There was a problem verifying the two-factor code. Please try again."
 msgstr ""
 "S'ha produït un error amb la contrasenya generada automàticament. No s'ha "
@@ -77,20 +79,24 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr "El codi de factor doble per a «{user}» s'ha verificat correctament."
 
 #: journalist_app/admin.py:200 journalist_app/admin.py:208
-#: journalist_app/utils.py:308
+#: journalist_app/utils.py:309
 msgid "Name not updated: {}"
 msgstr "El nom no s'ha actualitzat: {}"
 
-#: journalist_app/admin.py:249
-msgid "Deleted user '{user}'"
+#: journalist_app/admin.py:232
+#, fuzzy
+#| msgid "Deleted user '{user}'"
+msgid "Deleted user '{user}'."
 msgstr "S’ha suprimit el compte d’usuari «{user}»"
 
-#: journalist_app/admin.py:279
+#: journalist_app/admin.py:262
 msgid "Test alert sent. Please check your email."
 msgstr "S’ha enviat una alerta de prova. Reviseu la vostra safata de correu."
 
 #: journalist_app/col.py:50
-msgid "{source_name}'s collection deleted"
+#, fuzzy
+#| msgid "{source_name}'s collection deleted"
+msgid "{source_name}'s collection deleted."
 msgstr "S’ha suprimit la col·lecció de {source_name}"
 
 #: journalist_app/col.py:61
@@ -107,18 +113,23 @@ msgstr ""
 "Els secrets HOTP tenen una mida de 40 caràcters, però n’heu introduït "
 "{num_chars}."
 
-#: journalist_app/forms.py:30
-msgid ""
-"Field must be at least {min_chars} characters long but only got {num_chars}."
+#: journalist_app/forms.py:28
+#, fuzzy
+#| msgid ""
+#| "Field must be at least {min_chars} characters long but only got "
+#| "{num_chars}."
+msgid "Must be at least {min_chars} characters long."
 msgstr ""
 "El camp ha de tenir com a mínim {min_chars} caràcters, però només heu "
 "introduït {num_chars}."
 
-#: journalist_app/forms.py:37
-msgid "Field can not be more than {max_chars} characters."
+#: journalist_app/forms.py:35
+#, fuzzy
+#| msgid "Field can not be more than {max_chars} characters."
+msgid "Cannot be longer than {max_chars} characters."
 msgstr "El camp no pot tenir més de {max_chars} caràcters."
 
-#: journalist_app/forms.py:42
+#: journalist_app/forms.py:40
 msgid ""
 "This username is invalid because it is reserved for internal use by the "
 "software."
@@ -126,24 +137,24 @@ msgstr ""
 "Aquest nom d'usuari no és vàlid perquè és reservat per a ús intern del "
 "programari."
 
-#: journalist_app/forms.py:48 source_app/forms.py:12
+#: journalist_app/forms.py:46 source_app/forms.py:12
 msgid "This field is required."
 msgstr "Aquest camp és obligatori."
 
-#: journalist_app/forms.py:67
+#: journalist_app/forms.py:65
 msgid "You cannot send an empty reply."
 msgstr "No podeu enviar una resposta buida."
 
-#: journalist_app/forms.py:79
+#: journalist_app/forms.py:77
 msgid "File required."
 msgstr "El fitxer és obligatori."
 
-#: journalist_app/forms.py:81
+#: journalist_app/forms.py:79
 msgid "You can only upload PNG image files."
 msgstr "Només podeu pujar fitxers d’imatge PNG."
 
-#: journalist_app/main.py:122 journalist_app/utils.py:47
-#: journalist_app/utils.py:144
+#: journalist_app/main.py:122 journalist_app/utils.py:43
+#: journalist_app/utils.py:142
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "S’ha produït un error inesperat! Informeu-ne l’administrador."
 
@@ -155,7 +166,7 @@ msgstr "Gràcies. S'ha emmagatzemat la resposta."
 msgid "No collections selected for download."
 msgstr "No s’ha seleccionat cap col·lecció per baixar."
 
-#: journalist_app/main.py:157 journalist_app/utils.py:242
+#: journalist_app/main.py:157 journalist_app/utils.py:243
 msgid "No collections selected for deletion."
 msgstr "No s’ha seleccionat cap col·lecció per suprimir."
 
@@ -163,15 +174,15 @@ msgstr "No s’ha seleccionat cap col·lecció per suprimir."
 msgid "No unread submissions for this source."
 msgstr "Aquesta font no té cap enviament sense llegir."
 
-#: journalist_app/utils.py:54
+#: journalist_app/utils.py:50
 msgid "Account updated."
 msgstr "S’ha actualitzat el compte."
 
-#: journalist_app/utils.py:92
+#: journalist_app/utils.py:91
 msgid "Login failed."
 msgstr "Ha fallat l’inici de la sessió."
 
-#: journalist_app/utils.py:100
+#: journalist_app/utils.py:98
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] ""
@@ -179,7 +190,7 @@ msgstr[0] ""
 msgstr[1] ""
 "Espereu com a mínim {seconds} segons abans d’iniciar la sessió novament."
 
-#: journalist_app/utils.py:111
+#: journalist_app/utils.py:109
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -187,38 +198,40 @@ msgstr ""
 "Espereu un codi nou de la vostra aplicació de factor doble o clau de "
 "seguretat abans de tornar-ho a provar."
 
-#: journalist_app/utils.py:132
+#: journalist_app/utils.py:130
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "El format del secret no és vàlid: introduïu només lletres A-F i números 0-9."
 
-#: journalist_app/utils.py:138
+#: journalist_app/utils.py:136
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "El format del secret no és vàlid: la mida no coincideix. L’heu inserit "
 "correctament?"
 
-#: journalist_app/utils.py:194
+#: journalist_app/utils.py:195
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "S’ha suprimit l’enviament."
 msgstr[1] "S’han suprimit {num} enviaments."
 
-#: journalist_app/utils.py:250
+#: journalist_app/utils.py:251
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "S’ha suprimit {num} col·lecció"
 msgstr[1] "S’han suprimit {num} col·leccions"
 
-#: journalist_app/utils.py:306
+#: journalist_app/utils.py:307
 msgid "Name updated."
 msgstr "S'ha actualitzat el nom."
 
-#: journalist_app/utils.py:315
-msgid "You submitted a bad password! Password not changed."
+#: journalist_app/utils.py:316
+#, fuzzy
+#| msgid "You submitted a bad password! Password not changed."
+msgid "The password you submitted is invalid. Password not changed."
 msgstr "Heu enviat una contrasenya dolenta! No s’ha canviat la contrasenya."
 
-#: journalist_app/utils.py:322
+#: journalist_app/utils.py:323
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -227,7 +240,7 @@ msgstr ""
 "S'ha produït un error i potser la contrasenya nova no s'ha desat "
 "correctament. Per evitar blocar el compte, canvieu novament la contrasenya."
 
-#: journalist_app/utils.py:331
+#: journalist_app/utils.py:332
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -235,7 +248,7 @@ msgstr ""
 "S'ha actualitzat la contrasenya. No oblideu desar-la en la vostra base de "
 "dades del KeePassX. Contrasenya nova:"
 
-#: journalist_app/utils.py:349
+#: journalist_app/utils.py:350
 msgid "No unread submissions in selected collections."
 msgstr "No hi ha cap enviament sense llegir a les col·leccions seleccionades."
 
@@ -488,10 +501,17 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Quan hàgiu configurat la YubiKey, introduïu aquest codi de sis dígits:"
 
 #: journalist_templates/base.html:24
+#, fuzzy
+#| msgid ""
+#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
+#| "running v2 Onion Services, which are being phased out for security "
+#| "reasons. In February 2021, v2 Onion Services will be disabled, and your "
+#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
+#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required:</strong> Your SecureDrop servers are still running "
-"v2 Onion Services, which are being phased out for security reasons. In "
-"February 2021, v2 Onion Services will be disabled, and your SecureDrop "
+"v2 onion services, which are being phased out for security reasons. In "
+"February 2021, v2 onion services will be disabled, and your SecureDrop "
 "servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
@@ -514,15 +534,7 @@ msgstr "Administrador"
 msgid "Log Out"
 msgstr "Tanca la sessió"
 
-#: journalist_templates/base.html:46
-msgid ""
-"Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt=\"SecureDrop"
-"\">"
-msgstr ""
-"Funciona amb <br> <img src=\"/static/i/securedrop_small.png\" alt="
-"\"SecureDrop\">"
-
-#: journalist_templates/base.html:61
+#: journalist_templates/base.html:56
 msgid "Powered by <em>SecureDrop {version}</em>."
 msgstr "Funciona amb <em>SecureDrop {version}</em>."
 
@@ -709,7 +721,9 @@ msgid "Edit user \"{user}\""
 msgstr "Edita l'usuari «{user}»"
 
 #: journalist_templates/edit_account.html:8
-msgid "Change Name &amp; Admin Status"
+#, fuzzy
+#| msgid "Change Name &amp; Admin Status"
+msgid "Change Name and Admin Status"
 msgstr "Canvia el nom i l'estat de l'administració"
 
 #: journalist_templates/edit_account.html:27
@@ -769,11 +783,17 @@ msgid "Reset Two-Factor Authentication"
 msgstr "Restableix l'autenticació de factor doble"
 
 #: journalist_templates/edit_account.html:83
+#, fuzzy
+#| msgid ""
+#| "If a user's two-factor authentication credentials have been lost or "
+#| "compromised, you can reset them here. <em>If you do this, make sure the "
+#| "user is present and ready to set up their device with the new two-factor "
+#| "credentials. Otherwise, they will be locked out of their account."
 msgid ""
 "If a user's two-factor authentication credentials have been lost or "
 "compromised, you can reset them here. <em>If you do this, make sure the user "
 "is present and ready to set up their device with the new two-factor "
-"credentials. Otherwise, they will be locked out of their account."
+"credentials. Otherwise, they will be locked out of their account.</em>"
 msgstr ""
 "Si les credencials d'autenticació de factor doble d'un usuari s'han perdut o "
 "compromès, podeu restablir-les aquí. <em>Si feu això, assegureu-vos que "
@@ -913,12 +933,18 @@ msgstr "Inicieu la sessió per accedir a la interfície de periodista"
 msgid "Password"
 msgstr "Contrasenya"
 
-#: journalist_templates/login.html:12 source_templates/index.html:65
+#: journalist_templates/login.html:10
+#, fuzzy
+#| msgid "Password"
+msgid "Show password"
+msgstr "Contrasenya"
+
+#: journalist_templates/login.html:12 source_templates/index.html:59
 #: source_templates/logout.html:3
 msgid "LOG IN"
 msgstr "INICIA LA SESSIÓ"
 
-#: source_app/__init__.py:123
+#: source_app/__init__.py:117
 msgid ""
 "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This "
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href="
@@ -966,35 +992,43 @@ msgstr ""
 "Ja teniu una sessió iniciada. Verifiqueu el nom en clau a sobre, ja que "
 "podria diferir del que s'ha mostrat en la pàgina anterior."
 
-#: source_app/main.py:171
+#: source_app/main.py:80
+#, fuzzy
+#| msgid "There was a problem verifying the two-factor code. Please try again."
+msgid "There was a temporary problem creating your account. Please try again."
+msgstr ""
+"S'ha produït un error amb la contrasenya generada automàticament. No s'ha "
+"creat l'usuari. Torneu a provar."
+
+#: source_app/main.py:184
 msgid "You must enter a message or choose a file to submit."
 msgstr "Cal que introduïu un missatge o trieu un fitxer per enviar."
 
-#: source_app/main.py:175
+#: source_app/main.py:188
 msgid "You must enter a message."
 msgstr "Cal que introduïu un missatge."
 
-#: source_app/main.py:206
+#: source_app/main.py:219
 msgid "Thanks! We received your message."
 msgstr "Gràcies! Hem rebut el missatge."
 
-#: source_app/main.py:208
+#: source_app/main.py:221
 msgid "Thanks! We received your document."
 msgstr "Gràcies! Hem rebut el document."
 
-#: source_app/main.py:210
+#: source_app/main.py:223
 msgid "Thanks! We received your message and document."
 msgstr "Gràcies! Hem rebut el missatge i el document."
 
-#: source_app/main.py:271
+#: source_app/main.py:284
 msgid "Reply deleted"
 msgstr "S'ha suprimit la resposta"
 
-#: source_app/main.py:289
+#: source_app/main.py:302
 msgid "All replies have been deleted"
 msgstr "S'han suprimit totes les respostes"
 
-#: source_app/main.py:303
+#: source_app/main.py:316
 msgid "Sorry, that is not a recognized codename."
 msgstr "No es reconeix aquest nom en clau."
 
@@ -1002,12 +1036,7 @@ msgstr "No es reconeix aquest nom en clau."
 msgid "Protecting Journalists and Sources"
 msgstr "Protegeix els periodistes i les fonts"
 
-#: source_templates/base.html:25 source_templates/footer.html:4
-#: source_templates/index.html:32
-msgid "Powered by"
-msgstr "Funciona amb"
-
-#: source_templates/base.html:34
+#: source_templates/base.html:28
 msgid "LOG OUT"
 msgstr "TANCA LA SESSIÓ"
 
@@ -1041,6 +1070,10 @@ msgstr ""
 #: source_templates/first_submission_flashed_message.html:5
 msgid "Forgot your codename?"
 msgstr "Heu oblidat el vostre nom en clau?"
+
+#: source_templates/footer.html:4
+msgid "Powered by"
+msgstr "Funciona amb"
 
 #: source_templates/footer.html:7
 msgid ""
@@ -1093,8 +1126,13 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "ENVIA DOCUMENTS"
 
 #: source_templates/index.html:16
+#, fuzzy
+#| msgid ""
+#| "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security "
+#| "Setting</strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield "
+#| "icon\"> &nbsp;button in your browser’s toolbar to change it."
 msgid ""
-"Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security Setting</"
+"Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security Level</"
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
@@ -1104,20 +1142,32 @@ msgstr ""
 "canviar-ho."
 
 #: source_templates/index.html:17
+#, fuzzy
+#| msgid ""
+#| "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
+#| "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
+#| "install it</a>, or ignore this warning to continue."
 msgid ""
-"<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
-"strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
-"install it</a>, or ignore this warning to continue."
+"<strong>It is recommended to use Tor Browser to access SecureDrop:</strong> "
+"<a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
+"a>, or ignore this warning to continue."
 msgstr ""
 "<strong>És recomanable l'ús del navegador Tor per accedir a SecureDrop:</"
 "strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">Apreneu com "
 "instal·lar-lo</a> o ignoreu aquest avís per continuar."
 
 #: source_templates/index.html:18
+#, fuzzy
+#| msgid ""
+#| "<strong>It is recommended you use the desktop version of Tor Browser to "
+#| "access SecureDrop, as Orfox does not provide the same level of security "
+#| "and anonymity as the desktop versions.</strong> <a id=\"recommend-tor\" "
+#| "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
+#| "warning to continue."
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
-"anonymity as the desktop versions.</strong> <a id=\"recommend-tor\" href="
+"anonymity as the desktop version.</strong> <a id=\"recommend-tor\" href="
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
@@ -1127,42 +1177,42 @@ msgstr ""
 "\"recommend-tor\" href=\"{tor_browser_url}\">Apreneu com instal·lar-lo</a> o "
 "ignoreu aquest avís per continuar."
 
-#: source_templates/index.html:45
+#: source_templates/index.html:39
 msgid "First submission"
 msgstr "Primer enviament"
 
-#: source_templates/index.html:47
+#: source_templates/index.html:41
 msgid "First time submitting to our SecureDrop? Start here."
 msgstr ""
 "És el primer cop que envieu informació amb el SecureDrop? Comenceu aquí."
 
-#: source_templates/index.html:51
+#: source_templates/index.html:45
 msgid "GET STARTED"
 msgstr "PRIMERS PASSOS"
 
-#: source_templates/index.html:59
+#: source_templates/index.html:53
 msgid "Return visit"
 msgstr "Visita nova"
 
-#: source_templates/index.html:61
+#: source_templates/index.html:55
 msgid "Already have a codename? Check for replies or submit something new."
 msgstr "Ja teniu un nom en clau? Comproveu les respostes o envieu quelcom nou."
 
-#: source_templates/index.html:79
+#: source_templates/index.html:73
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
 msgstr ""
 "Feu clic en el botó <img src=\"{icon}\" alt=\"icona d'escut\"> de la barra "
 "d'eines superior"
 
-#: source_templates/index.html:80
+#: source_templates/index.html:74
 msgid "Select <strong>Advanced Security Settings</strong>"
 msgstr "Seleccioneu <strong>Configuració avançada de seguretat</strong>"
 
-#: source_templates/index.html:81
+#: source_templates/index.html:75
 msgid "Select <strong>Safest</strong>"
 msgstr "Seleccioneu <strong>El més segur</strong>"
 
-#: source_templates/index.html:83
+#: source_templates/index.html:77
 msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
 msgstr "<a href=\"/\">Actualitzeu aquesta pàgina</a>, i ja heu acabat!"
 
@@ -1183,10 +1233,15 @@ msgid "One more thing..."
 msgstr "Una cosa més..."
 
 #: source_templates/logout.html:7
+#, fuzzy
+#| msgid ""
+#| "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
+#| "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
+#| "toolbar. This will clear your Tor browser activity data on this device."
 msgid ""
 "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
-"\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
-"toolbar. This will clear your Tor browser activity data on this device."
+"\"16\">&nbsp;<strong>New Identity</strong> button in your Tor Browser's "
+"toolbar. This will clear your Tor Browser activity data on this device."
 msgstr ""
 "Feu clic al botó <img src={icon} alt=\"broom icon\" width=\"16\" height="
 "\"16\">&nbsp;<strong>Identitat nova</strong> de la barra d'eines del "
@@ -1320,11 +1375,17 @@ msgid "Important"
 msgstr "Important"
 
 #: source_templates/session_timeout.html:5
+#, fuzzy
+#| msgid ""
+#| "You were logged out due to inactivity. Click the <img src={icon} alt="
+#| "\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</"
+#| "strong> button in your Tor browser's toolbar before moving on. This will "
+#| "clear your Tor browser activity data on this device."
 msgid ""
 "You were logged out due to inactivity. Click the <img src={icon} alt=\"broom "
 "icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong> button "
-"in your Tor browser's toolbar before moving on. This will clear your Tor "
-"browser activity data on this device."
+"in your Tor Browser's toolbar before moving on. This will clear your Tor "
+"Browser activity data on this device."
 msgstr ""
 "S'ha tancat la sessió per inactivitat. Feu clic en el botó <img src={icon} "
 "alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Identitat nova</"
@@ -1349,9 +1410,13 @@ msgstr ""
 "d'Internet (govern, proveïdor d'Internet) us identifiqui."
 
 #: source_templates/tor2web-warning.html:6
+#, fuzzy
+#| msgid ""
+#| "We <strong>strongly advise</strong> you to use the <a href=\"www."
+#| "torproject.org/projects/torbrowser.html\">Tor browser</a> instead."
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
-"org/projects/torbrowser.html\">Tor browser</a> instead."
+"org/projects/torbrowser.html\">Tor Browser</a> instead."
 msgstr ""
 "Us <strong>encoratgem</strong> que utilitzeu el <a href=\"www.torproject.org/"
 "projects/torbrowser.html\">navegador Tor</a> com a alternativa."
@@ -1420,18 +1485,23 @@ msgstr ""
 "xifrar els enviaments vós mateix. Per a fer-ho:"
 
 #: source_templates/why-journalist-key.html:7
+#, fuzzy
+#| msgid ""
+#| "<a href=\"{url}\">Download</a> the public key. The public key is a text "
+#| "file with the extension <code>.asc</code>"
 msgid ""
-"<a href=\"{url}\">Download</a> the public key. The public key is a text file "
-"with the extension <code>.asc</code>"
+"<a href=\"{url}\">Download</a> the public key. It will be saved to a file "
+"called:\n"
+"        <p><code>{submission_key_fpr_filename}</code></p>"
 msgstr ""
 "<a href=\"{url}\">Baixeu</a> la clau pública. La clau pública és un fitxer "
 "de text amb l'extensió <code>.ac</code>"
 
-#: source_templates/why-journalist-key.html:8
+#: source_templates/why-journalist-key.html:9
 msgid "Import it into your GPG keyring."
 msgstr "Importeu-la al vostre clauer GPG."
 
-#: source_templates/why-journalist-key.html:10
+#: source_templates/why-journalist-key.html:11
 msgid ""
 "If you are using <a href=\"{url}\">Tails</a>, you can double-click the "
 "<code>.asc</code> file you just downloaded and it will be automatically "
@@ -1441,51 +1511,51 @@ msgstr ""
 "<code>.asc</code> en finalitzar la baixada i s'importarà automàticament al "
 "vostre magatzem de claus."
 
-#: source_templates/why-journalist-key.html:11
+#: source_templates/why-journalist-key.html:12
+#, fuzzy
+#| msgid ""
+#| "If you are using Mac/Linux, open the terminal. You can import the key "
+#| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
-"If you are using Mac/Linux, open the terminal. You can import the key with "
-"<code>gpg --import /path/to/key.asc</code>."
+"If you are using a Mac or Linux, open the terminal. You can import the key "
+"with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
 "Si feu servir Mac o Linux, podeu importar la clau des del terminal amb "
 "<code>gpg --import /camí/de/la/clau.asc</code>."
 
-#: source_templates/why-journalist-key.html:14
-msgid "Encrypt your submission."
-msgstr "Xifreu l'enviament."
+#: source_templates/why-journalist-key.html:15
+msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
+msgstr ""
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
-"You will need to be able to identify the key (this is called the \"user ID\" "
-"or UID). Since the public key's filename is the key's fingerprint (with .asc "
-"at the end), you can just copy and paste that. (don't include the <code>."
-"asc</code>!)"
+"<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submission</"
+"code>"
 msgstr ""
-"Caldrà que pugueu identificar la clau (això s'anomena la «ID d'usuari» o "
-"UID). Atès que el nom de fitxer de la clau pública és l'empremta de la clau "
-"(amb .asc al final), podeu copiar i enganxar això. (sense incloure-hi el "
-"<code>.asc</code>!)"
 
-#: source_templates/why-journalist-key.html:17
-msgid ""
-"On all systems, open the Terminal and use this gpg command: <code>gpg --"
-"recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
-msgstr ""
-"En tots els sistemes, obriu el terminal i useu aquesta ordre gpg: <code>gpg "
-"--recipient &lt;2user ID&gt;3 --encrypt roswell_photos.pdf</code>"
-
-#: source_templates/why-journalist-key.html:20
+#: source_templates/why-journalist-key.html:18
+#, fuzzy
+#| msgid ""
+#| "Upload your encrypted submission. It will have the same filename as the "
+#| "unencrypted file, with .gpg at the end (e.g. <code>roswell_photos.pdf."
+#| "gpg</code>)"
 msgid ""
 "Upload your encrypted submission. It will have the same filename as the "
-"unencrypted file, with .gpg at the end (e.g. <code>roswell_photos.pdf.gpg</"
+"unencrypted file, with .gpg at the end (e.g. <code>internal_memo.pdf.gpg</"
 "code>)"
 msgstr ""
 "Pugeu el vostre enviament xifrat. Tindrà el mateix nom de fitxer que el "
 "fitxer sense xifrar, amb .gpg al final (p. ex. <code>fotos_roswell.pdf.gpg</"
 "code>)"
 
-#: source_templates/why-journalist-key.html:23
+#: source_templates/why-journalist-key.html:21
+#, fuzzy
+#| msgid ""
+#| "<strong>Tip:</strong> If you wish to remain anonymous, <strong>do not</"
+#| "strong> use GPG to sign the encrypted file (with the <code>--sign</code> "
+#| "or <code>-s</code> flag) as this will reveal your GPG identity to us."
 msgid ""
-"<strong>Tip:</strong> If you wish to remain anonymous, <strong>do not</"
+"<strong>Important:</strong> If you wish to remain anonymous, <strong>do not</"
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
@@ -1493,9 +1563,38 @@ msgstr ""
 "GPG per signar el fitxer xifrat (amb el paràmetre <code>--sign</code> "
 "o<code>-s</code>) perquè això ens revelarà la vostra identitat GPG."
 
-#: source_templates/why-journalist-key.html:25
+#: source_templates/why-journalist-key.html:23
 msgid "Back to submission page"
 msgstr "Vés enrere a la pàgina d'enviaments"
+
+#~ msgid ""
+#~ "Powered by <br> <img src=\"/static/i/securedrop_small.png\" alt="
+#~ "\"SecureDrop\">"
+#~ msgstr ""
+#~ "Funciona amb <br> <img src=\"/static/i/securedrop_small.png\" alt="
+#~ "\"SecureDrop\">"
+
+#~ msgid "Encrypt your submission."
+#~ msgstr "Xifreu l'enviament."
+
+#~ msgid ""
+#~ "You will need to be able to identify the key (this is called the \"user ID"
+#~ "\" or UID). Since the public key's filename is the key's fingerprint "
+#~ "(with .asc at the end), you can just copy and paste that. (don't include "
+#~ "the <code>.asc</code>!)"
+#~ msgstr ""
+#~ "Caldrà que pugueu identificar la clau (això s'anomena la «ID d'usuari» o "
+#~ "UID). Atès que el nom de fitxer de la clau pública és l'empremta de la "
+#~ "clau (amb .asc al final), podeu copiar i enganxar això. (sense incloure-"
+#~ "hi el <code>.asc</code>!)"
+
+#~ msgid ""
+#~ "On all systems, open the Terminal and use this gpg command: <code>gpg --"
+#~ "recipient &lt;user ID&gt; --encrypt roswell_photos.pdf</code>"
+#~ msgstr ""
+#~ "En tots els sistemes, obriu el terminal i useu aquesta ordre gpg: "
+#~ "<code>gpg --recipient &lt;2user ID&gt;3 --encrypt roswell_photos.pdf</"
+#~ "code>"
 
 #~ msgid "The source '{original_name}' has been renamed to '{new_name}'"
 #~ msgstr "Ha canviat el nom de la font «{original_name}» a «{new_name}»"
