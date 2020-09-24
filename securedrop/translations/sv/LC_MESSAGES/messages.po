@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-08-17 10:16+0000\n"
+"PO-Revision-Date: 2020-09-24 11:10+0000\n"
 "Last-Translator: Jonas Waga <jonas.waga@schibsted.com>\n"
 "Language-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sv/>\n"
@@ -24,10 +24,8 @@ msgid "{time} ago"
 msgstr "{time} sedan"
 
 #: journalist_app/__init__.py:90 journalist_app/__init__.py:131
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to inactivity."
-msgstr "Du har blivit utloggad på grund av inaktivitet"
+msgstr "Du har blivit utloggad på grund av inaktivitet."
 
 #: journalist_app/__init__.py:140
 msgid "You have been logged out due to password change"
@@ -84,20 +82,16 @@ msgid "Name not updated: {}"
 msgstr "Namn ej uppdaterat: {}"
 
 #: journalist_app/admin.py:232
-#, fuzzy
-#| msgid "Deleted user '{user}'"
 msgid "Deleted user '{user}'."
-msgstr "Användare '{user}' har tagits bort"
+msgstr "Användare '{user}' har tagits bort."
 
 #: journalist_app/admin.py:262
 msgid "Test alert sent. Please check your email."
 msgstr "Test-larm skickat. Vänligen kontrollera din e-post."
 
 #: journalist_app/col.py:50
-#, fuzzy
-#| msgid "{source_name}'s collection deleted"
 msgid "{source_name}'s collection deleted."
-msgstr "{source_name}s samling har raderats"
+msgstr "{source_name}s samling har raderats."
 
 #: journalist_app/col.py:61
 msgid "No collections selected."
@@ -112,19 +106,12 @@ msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgstr "HOTP-hemligheter är 40 tecken långa - du har fyllt i {num_chars}."
 
 #: journalist_app/forms.py:28
-#, fuzzy
-#| msgid ""
-#| "Field must be at least {min_chars} characters long but only got "
-#| "{num_chars}."
 msgid "Must be at least {min_chars} characters long."
-msgstr ""
-"Fältet måste vara minst {min_chars} tecken långt, men har nu {num_chars}."
+msgstr "Måste vara minst {min_chars} tecken långt."
 
 #: journalist_app/forms.py:35
-#, fuzzy
-#| msgid "Field can not be more than {max_chars} characters."
 msgid "Cannot be longer than {max_chars} characters."
-msgstr "Fältet kan inte innehålla mer än {max_chars} tecken."
+msgstr "Kan inte vara längre än {max_chars} tecken."
 
 #: journalist_app/forms.py:40
 msgid ""
@@ -222,10 +209,8 @@ msgid "Name updated."
 msgstr "Namn uppdaterat."
 
 #: journalist_app/utils.py:316
-#, fuzzy
-#| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
-msgstr "Du angav ett ogiltigt lösenord! Lösenordet har inte ändrats."
+msgstr "Lösenordet du angav är ogiltigt! Lösenordet har inte ändrats."
 
 #: journalist_app/utils.py:323
 msgid ""
@@ -494,13 +479,6 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "När du har konfigurerat din Yubikey, ange den sexsiffriga koden nedan:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 Onion Services, which are being phased out for security "
-#| "reasons. In February 2021, v2 Onion Services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required:</strong> Your SecureDrop servers are still running "
 "v2 onion services, which are being phased out for security reasons. In "
@@ -508,10 +486,10 @@ msgid ""
 "servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
-"<strong>Oppdatering krävs:</strong> Dina SecureDrop-servare kör fortfarande "
-"v2-löktjänster, som fasas ur i säkerhetsmått. I Februari 2021 vill v2-"
-"löktjänster stängs av, och det kan bli omöjligt att nå dina SecureDrop-"
-"servare. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Lär "
+"<strong>Uppdatering krävs:</strong> Dina SecureDrop-servrar kör fortfarande "
+"v2 onion services, som fasas ut av säkerhetsskäl. I Februari 2021 vill v2 "
+"onion service stängs av, och det kan bli omöjligt att nå dina SecureDrop-"
+"servrar. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Lär "
 "mer</a>"
 
 #: journalist_templates/base.html:29
@@ -706,10 +684,8 @@ msgid "Edit user \"{user}\""
 msgstr "Redigera användaren \"{user}\""
 
 #: journalist_templates/edit_account.html:8
-#, fuzzy
-#| msgid "Change Name &amp; Admin Status"
 msgid "Change Name and Admin Status"
-msgstr "Ändra namn &amp; administratörsstatus"
+msgstr "Ändra namn och administratörsstatus"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -767,12 +743,6 @@ msgid "Reset Two-Factor Authentication"
 msgstr "Återställ tvåfaktorsautentisering"
 
 #: journalist_templates/edit_account.html:83
-#, fuzzy
-#| msgid ""
-#| "If a user's two-factor authentication credentials have been lost or "
-#| "compromised, you can reset them here. <em>If you do this, make sure the "
-#| "user is present and ready to set up their device with the new two-factor "
-#| "credentials. Otherwise, they will be locked out of their account."
 msgid ""
 "If a user's two-factor authentication credentials have been lost or "
 "compromised, you can reset them here. <em>If you do this, make sure the user "
@@ -782,8 +752,8 @@ msgstr ""
 "Om användarens lösenord med tvåfaktorsautentisering har förlorats eller "
 "utsatts för en säkerhetsrisk så kan du återställa det här. <em>Ifall du gör "
 "det, försäkra dig om att användaren är närvarande och kan skapa en ny "
-"tvåfaktorsautentisering.</em> Annars kommer användaren att bli utelåst från "
-"sitt konto."
+"tvåfaktorsautentisering. Annars kommer användaren att bli utelåst från sitt "
+"konto.</em>"
 
 #: journalist_templates/edit_account.html:85
 msgid ""
@@ -916,10 +886,8 @@ msgid "Password"
 msgstr "Lösenord"
 
 #: journalist_templates/login.html:10
-#, fuzzy
-#| msgid "Password"
 msgid "Show password"
-msgstr "Lösenord"
+msgstr "Visa lösenord"
 
 #: journalist_templates/login.html:12 source_templates/index.html:59
 #: source_templates/logout.html:3
@@ -975,11 +943,9 @@ msgstr ""
 "sig från det som visas på föregående sida."
 
 #: source_app/main.py:80
-#, fuzzy
-#| msgid "There was a problem verifying the two-factor code. Please try again."
 msgid "There was a temporary problem creating your account. Please try again."
 msgstr ""
-"Det uppstod ett fel vid bekräftelse tvåfaktorsautentisering. Vänligen försök "
+"Det uppstod ett tillfälligt fel vid skapandet av ditt konto. Vänligen försök "
 "igen."
 
 #: source_app/main.py:184
@@ -1110,26 +1076,17 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "LÄMNA IN DOKUMENT"
 
 #: source_templates/index.html:16
-#, fuzzy
-#| msgid ""
-#| "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security "
-#| "Setting</strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield "
-#| "icon\"> &nbsp;button in your browser’s toolbar to change it."
 msgid ""
 "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security Level</"
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
-"Din Tor Browsers <a id=\"disable-js\" href=\"\"><strong>Säkerhetsnivå</"
-"strong></a> är ställd för låg. Använd <img src=\"{icon}\" alt=\"shield icon"
-"\"> &nbsp;-knappen i din Tor Browsers menyrad för att ändra det."
+"Din Tor Browsers <a id=\"disable-js\" href=\"\""
+"><strong>Säkerhetsnivå</strong></a> är ställd för låg. Använd <img src=\""
+"{icon}\" alt=\"shield icon\"> &nbsp;-knappen i din Tor Browsers menyrad för "
+"att ändra det."
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
-#| "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
-#| "install it</a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to use Tor Browser to access SecureDrop:</strong> "
 "<a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
@@ -1140,13 +1097,6 @@ msgstr ""
 "dig hur den installeras</a>, eller ignorera denna varning och fortsätt."
 
 #: source_templates/index.html:18
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended you use the desktop version of Tor Browser to "
-#| "access SecureDrop, as Orfox does not provide the same level of security "
-#| "and anonymity as the desktop versions.</strong> <a id=\"recommend-tor\" "
-#| "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
-#| "warning to continue."
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
@@ -1156,8 +1106,8 @@ msgid ""
 msgstr ""
 "<strong> Det är rekommenderat att använda datorversionen av TorBrowser för "
 "att använda SecureDrop, då Orfox inte erbjuder samma nivå av säkerhet och "
-"anonymitet som datorversionerna.</strong> <a id=\"recommend-tor\" href="
-"\"{tor_browser_url}\"> Lär dig hur den installeras</a> eller ignorera denna "
+"anonymitet som datorversionen.</strong> <a id=\"recommend-tor\" href=\""
+"{tor_browser_url}\"> Lär dig hur den installeras</a> eller ignorera denna "
 "varning och fortsätt."
 
 #: source_templates/index.html:39
@@ -1217,18 +1167,13 @@ msgid "One more thing..."
 msgstr "En sak till…"
 
 #: source_templates/logout.html:7
-#, fuzzy
-#| msgid ""
-#| "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
-#| "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
-#| "toolbar. This will clear your Tor browser activity data on this device."
 msgid ""
 "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor Browser's "
 "toolbar. This will clear your Tor Browser activity data on this device."
 msgstr ""
-"Klicka på knappen <img src={icon} alt=\"broom icon\" width=\"16\" height="
-"\"16\">&nbsp;<strong>Ny identitet</strong> i din Tor Browsers verktygsfält. "
+"Klicka på knappen <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16"
+"\">&nbsp;<strong>Ny identitet</strong> i din Tor Browsers verktygsfält. "
 "Detta kommer att rensa dina Tor Browsers aktiviteter på den här enheten."
 
 #: source_templates/lookup.html:7
@@ -1357,12 +1302,6 @@ msgid "Important"
 msgstr "Viktigt"
 
 #: source_templates/session_timeout.html:5
-#, fuzzy
-#| msgid ""
-#| "You were logged out due to inactivity. Click the <img src={icon} alt="
-#| "\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</"
-#| "strong> button in your Tor browser's toolbar before moving on. This will "
-#| "clear your Tor browser activity data on this device."
 msgid ""
 "You were logged out due to inactivity. Click the <img src={icon} alt=\"broom "
 "icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong> button "
@@ -1393,16 +1332,12 @@ msgstr ""
 "myndigheter, din internetleverantör), att identifiera dig."
 
 #: source_templates/tor2web-warning.html:6
-#, fuzzy
-#| msgid ""
-#| "We <strong>strongly advise</strong> you to use the <a href=\"www."
-#| "torproject.org/projects/torbrowser.html\">Tor browser</a> instead."
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor Browser</a> instead."
 msgstr ""
 "Vi <strong>rekommenderar starkt</strong> att du använder <a href=\"www."
-"torproject.org/projects/torbrowser.html\"> Tor browser</a> istället."
+"torproject.org/projects/torbrowser.html\"> Tor Browser</a> istället."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
@@ -1466,17 +1401,14 @@ msgstr ""
 "dina inlämningar själv. Så här gör du:"
 
 #: source_templates/why-journalist-key.html:7
-#, fuzzy
-#| msgid ""
-#| "<a href=\"{url}\">Download</a> the public key. The public key is a text "
-#| "file with the extension <code>.asc</code>"
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. It will be saved to a file "
 "called:\n"
 "        <p><code>{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"<a href=\"{url}\">Ladda ned</a> den publika nyckeln. Den publika nyckeln är "
-"en textfil med filändelsen <code> .asc</code>"
+"<a href=\"{url}\">Ladda ned</a> den publika nyckeln. Den kommer att sparas "
+"som en fil som heter:\n"
+"        <p><code>{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:9
 msgid "Import it into your GPG keyring."
@@ -1493,57 +1425,47 @@ msgstr ""
 "din nyckelring."
 
 #: source_templates/why-journalist-key.html:12
-#, fuzzy
-#| msgid ""
-#| "If you are using Mac/Linux, open the terminal. You can import the key "
-#| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
 "If you are using a Mac or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"Ifall du använder Mac/Linux, öppna terminalen. Du kan importera nyckeln "
-"genom kommandot <code>gpg --import /path/to/key.asc</code>."
+"Ifall du använder Mac eller Linux, öppna terminalen. Du kan importera "
+"nyckeln med kommandot:<p><code>gpg --import /path/to/"
+"{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:15
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
 msgstr ""
+"Kryptera din inlämning. Öppna terminalen och skriv in följande gpg kommando:"
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
 "<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submission</"
 "code>"
 msgstr ""
+"<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/"
+"submission</code>"
 
 #: source_templates/why-journalist-key.html:18
-#, fuzzy
-#| msgid ""
-#| "Upload your encrypted submission. It will have the same filename as the "
-#| "unencrypted file, with .gpg at the end (e.g. <code>roswell_photos.pdf."
-#| "gpg</code>)"
 msgid ""
 "Upload your encrypted submission. It will have the same filename as the "
 "unencrypted file, with .gpg at the end (e.g. <code>internal_memo.pdf.gpg</"
 "code>)"
 msgstr ""
 "Ladda upp din krypterade inlämning. Den kommer att ha samma filnamn som den "
-"okrypterade filen, med .gpg i slutet (t.ex. <code> 1roswell_photos.pdf.gpg</"
-"code>)"
+"okrypterade filen, med .gpg i slutet (t.ex. <code> interal_memo.pdf."
+"gpg</code>)"
 
 #: source_templates/why-journalist-key.html:21
-#, fuzzy
-#| msgid ""
-#| "<strong>Tip:</strong> If you wish to remain anonymous, <strong>do not</"
-#| "strong> use GPG to sign the encrypted file (with the <code>--sign</code> "
-#| "or <code>-s</code> flag) as this will reveal your GPG identity to us."
 msgid ""
 "<strong>Important:</strong> If you wish to remain anonymous, <strong>do not</"
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
-"<strong> Tips:</strong> Ifall du önskar att förbli anonym, <strong> använd "
-"inte</strong> GPG för att signera den krypterade filen (med <code> --sign</"
-"code> eller <code>-s</code> flaggan) efter som detta avslöjar din GPG-"
-"identitet för oss."
+"<strong> Viktigt:</strong> Ifall du önskar att förbli anonym, <strong> "
+"använd inte</strong> GPG för att signera den krypterade filen (med <code> "
+"--sign</code> eller <code>-s</code> flaggan) efter som detta avslöjar din "
+"GPG-identitet för oss."
 
 #: source_templates/why-journalist-key.html:23
 msgid "Back to submission page"
