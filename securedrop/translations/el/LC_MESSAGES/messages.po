@@ -79,7 +79,7 @@ msgstr ""
 "επαληθεύτηκε επιτυχώς."
 
 #: journalist_app/admin.py:200 journalist_app/admin.py:208
-#: journalist_app/utils.py:309
+#: journalist_app/utils.py:350
 msgid "Name not updated: {}"
 msgstr "Το όνομα δεν ενημερώθηκε: {}"
 
@@ -93,11 +93,11 @@ msgstr ""
 "Η δοκιμαστική ειδοποίηση στάλθηκε. Παρακαλώ δείτε το ηλεκτρονικό ταχυδρομείο "
 "σας."
 
-#: journalist_app/col.py:50
+#: journalist_app/col.py:60
 msgid "{source_name}'s collection deleted."
 msgstr "Η συλλογή του/της {source_name} διαγράφηκε."
 
-#: journalist_app/col.py:61
+#: journalist_app/col.py:71
 msgid "No collections selected."
 msgstr "Δεν έχουν επιλεχθεί συλλογές."
 
@@ -141,36 +141,36 @@ msgstr "Απαιτείται αρχείο."
 msgid "You can only upload PNG image files."
 msgstr "Μπορείτε να ανεβάσετε μόνο αρχεία εικόνας τύπου PNG."
 
-#: journalist_app/main.py:122 journalist_app/utils.py:43
-#: journalist_app/utils.py:142
+#: journalist_app/main.py:124 journalist_app/utils.py:58
+#: journalist_app/utils.py:157
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Παρουσιάστηκε απρόσμενο σφάλμα! Παρακαλώ ειδοποιήστε τον διαχειριστή."
 
-#: journalist_app/main.py:133
+#: journalist_app/main.py:135
 msgid "Thanks. Your reply has been stored."
 msgstr "Ευχαριστώ. Η απάντησή σας αποθηκεύτηκε."
 
-#: journalist_app/main.py:154
+#: journalist_app/main.py:156
 msgid "No collections selected for download."
 msgstr "Δεν έχουν επιλεχθεί συλλογές για λήψη."
 
-#: journalist_app/main.py:157 journalist_app/utils.py:243
+#: journalist_app/main.py:159 journalist_app/utils.py:284
 msgid "No collections selected for deletion."
 msgstr "Δεν έχουν επιλεχθεί συλλογές για διαγραφή."
 
-#: journalist_app/main.py:179
+#: journalist_app/main.py:180
 msgid "No unread submissions for this source."
 msgstr "Δεν υπάρχουν μη αναγνωσμένες υποβολές για αυτή την πηγή."
 
-#: journalist_app/utils.py:50
+#: journalist_app/utils.py:65
 msgid "Account updated."
 msgstr "Ο λογαριασμός ενημερώθηκε."
 
-#: journalist_app/utils.py:91
+#: journalist_app/utils.py:106
 msgid "Login failed."
 msgstr "Η σύνδεση απέτυχε."
 
-#: journalist_app/utils.py:98
+#: journalist_app/utils.py:113
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] ""
@@ -178,7 +178,7 @@ msgstr[0] ""
 msgstr[1] ""
 "Παρακαλώ περιμένετε τουλάχιστον {seconds} δευτερόλεπτα πριν ξανασυνδεθείτε."
 
-#: journalist_app/utils.py:109
+#: journalist_app/utils.py:124
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -186,39 +186,39 @@ msgstr ""
 "Παρακαλώ περιμένετε για έναν νέο κωδικό από την εφαρμογή ή το κλειδί "
 "ασφαλείας πριν ξαναδοκιμάσετε."
 
-#: journalist_app/utils.py:130
+#: journalist_app/utils.py:145
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Άκυρη μορφή μυστικού: παρακαλώ πληκτρολογήστε μόνο γράμματα από A έως F και "
 "αριθμούς από 0 έως 9."
 
-#: journalist_app/utils.py:136
+#: journalist_app/utils.py:151
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Άκυρη μορφή μυστικού: το μυστικό έχει μονό αριθμό ψηφίων. Μήπως κάνατε "
 "κάποιο λάθος στην πληκτρολόγηση;"
 
-#: journalist_app/utils.py:195
+#: journalist_app/utils.py:236
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Η καταχώρηση διαγράφηκε."
 msgstr[1] "{num} καταχωρήσεις διαγράφηκαν."
 
-#: journalist_app/utils.py:251
+#: journalist_app/utils.py:292
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "Μία συλλογή διαγράφηκε"
 msgstr[1] "{num} συλλογές διαγράφηκαν"
 
-#: journalist_app/utils.py:307
+#: journalist_app/utils.py:348
 msgid "Name updated."
 msgstr "Το όνομα ενημερώθηκε."
 
-#: journalist_app/utils.py:316
+#: journalist_app/utils.py:357
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "Ο κωδικός που καταχωρήσατε δεν είναι έγκυρος. Ο κωδικός δεν άλλαξε."
 
-#: journalist_app/utils.py:323
+#: journalist_app/utils.py:364
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -228,7 +228,7 @@ msgstr ""
 "να μην χάσετε την πρόσβαση στον λογαριασμό σας, παρακαλώ επαναφέρετε τον "
 "κωδικό σας ξανά."
 
-#: journalist_app/utils.py:332
+#: journalist_app/utils.py:373
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -236,7 +236,7 @@ msgstr ""
 "Ο κωδικός ανανεώθηκε. Μη ξεχάσετε να τον αποθηκεύσετε στη βάση δεδομένων του "
 "KeePassX σας. Νέος κωδικός:"
 
-#: journalist_app/utils.py:350
+#: journalist_app/utils.py:397
 msgid "No unread submissions in selected collections."
 msgstr "Δεν υπάρχουν μη αναγνωσμένες καταχωρήσεις στις επιλεγμένες συλλογές."
 
@@ -504,8 +504,8 @@ msgstr ""
 "λειτουργούν ακόμα με v2 onion services, οι οποίες είναι σε φάση απόσυρσης "
 "για λόγους ασφαλείας. Το Φεβρουάριο του 2021, οι v2 onion services θα "
 "απενεργοποιηθούν οπότε οι διακομιστές SecureDrop σας πιθανόν να είναι "
-"απροσπέλαστοι. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\""
-">Μάθετε περισσότερα</a>"
+"απροσπέλαστοι. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
+"\">Μάθετε περισσότερα</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -1114,8 +1114,9 @@ msgid ""
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
 "Το <a id=\"disable-js\" href=\"\"><strong>Επίπεδο ασφαλείας</strong></a> του "
-"Tor Browser σας είναι πολύ χαμηλό. Χρησιμοποιήστε το κουμπί <img src=\"{icon}"
-"\" alt=\"shield icon\"> &nbsp; στη γραμμή εργαλειών για να το αλλάξετε."
+"Tor Browser σας είναι πολύ χαμηλό. Χρησιμοποιήστε το κουμπί <img src="
+"\"{icon}\" alt=\"shield icon\"> &nbsp; στη γραμμή εργαλειών για να το "
+"αλλάξετε."
 
 #: source_templates/index.html:17
 msgid ""
@@ -1124,9 +1125,9 @@ msgid ""
 "a>, or ignore this warning to continue."
 msgstr ""
 "<strong>Προτείνεται να χρησιμοποιείτε τον Tor Browser για να επισκέπτεστε το "
-"SecureDrop:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\""
-">Μάθετε πως να τον εγκαταστήσετε</a>, ή αγνοήστε αυτή την προειδοποίηση για "
-"να συνεχίσετε."
+"SecureDrop:</strong> <a id=\"recommend-tor\" href="
+"\"{tor_browser_url}\">Μάθετε πως να τον εγκαταστήσετε</a>, ή αγνοήστε αυτή "
+"την προειδοποίηση για να συνεχίσετε."
 
 #: source_templates/index.html:18
 msgid ""
@@ -1138,8 +1139,8 @@ msgid ""
 msgstr ""
 "<strong>Προτείνεται να χρησιμοποιήσετε την έκδοση για υπολογιστή του Tor "
 "browser για να επισκεφτείτε το SecureDrop, καθώς ο Orfox δεν παρέχει το ίδιο "
-"επίπεδο ασφάλειας και ανωνυμίας με την έκδοση για υπολογιστή.</strong> <a id"
-"=\"recommend-tor\" href=\"{tor_browser_url}\">Μάθετε πώς να τον "
+"επίπεδο ασφάλειας και ανωνυμίας με την έκδοση για υπολογιστή.</strong> <a id="
+"\"recommend-tor\" href=\"{tor_browser_url}\">Μάθετε πώς να τον "
 "εγκαταστήσετε</a>, ή αγνοήστε αυτή την προειδοποίηση για να συνεχίσετε."
 
 #: source_templates/index.html:39
@@ -1203,10 +1204,10 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor Browser's "
 "toolbar. This will clear your Tor Browser activity data on this device."
 msgstr ""
-"Πατήστε το κουμπί <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16"
-"\">&nbsp;<strong>Νέα Ταυτότητα</strong> στη γραμμη εργαλείων του Tor Browser "
-"σας. Αυτό θα διαγράψει τα δεδομένα δραστηριότητας του Tor Browser σας σε "
-"αυτή τη συσκευή."
+"Πατήστε το κουμπί <img src={icon} alt=\"broom icon\" width=\"16\" height="
+"\"16\">&nbsp;<strong>Νέα Ταυτότητα</strong> στη γραμμη εργαλείων του Tor "
+"Browser σας. Αυτό θα διαγράψει τα δεδομένα δραστηριότητας του Tor Browser "
+"σας σε αυτή τη συσκευή."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1464,8 +1465,13 @@ msgstr ""
 "αυτόματα στην κλειδοθήκη σας."
 
 #: source_templates/why-journalist-key.html:12
+#, fuzzy
+#| msgid ""
+#| "If you are using a Mac or Linux, open the terminal. You can import the "
+#| "key with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</"
+#| "code></p>"
 msgid ""
-"If you are using a Mac or Linux, open the terminal. You can import the key "
+"If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
 "Αν χρησιμοποιείτε Mac ή Linux, ανοίξτε το τερματικό. Μπορείτε να εισάγετε το "
@@ -1483,8 +1489,8 @@ msgid ""
 "<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submission</"
 "code>"
 msgstr ""
-"<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/"
-"submission</code>"
+"<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submission</"
+"code>"
 
 #: source_templates/why-journalist-key.html:18
 msgid ""

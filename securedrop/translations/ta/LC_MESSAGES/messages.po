@@ -83,7 +83,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr ""
 
 #: journalist_app/admin.py:200 journalist_app/admin.py:208
-#: journalist_app/utils.py:309
+#: journalist_app/utils.py:350
 msgid "Name not updated: {}"
 msgstr "பெயர் புதுப்பிக்கப்படவில்லை: {}"
 
@@ -97,13 +97,13 @@ msgstr "நீக்கப்பட்ட பயனர் '{user}'"
 msgid "Test alert sent. Please check your email."
 msgstr "சோதனை அறிக்கை அனுப்பப்பட்டுள்ளது. தயவு செய்து உங்கள் மின்னஞ்சலைச் சரிபார்க்கவும்."
 
-#: journalist_app/col.py:50
+#: journalist_app/col.py:60
 #, fuzzy
 #| msgid "{source_name}'s collection deleted"
 msgid "{source_name}'s collection deleted."
 msgstr "{source_name} இன் திரட்டு நீக்கப்பட்டுவிட்டது"
 
-#: journalist_app/col.py:61
+#: journalist_app/col.py:71
 msgid "No collections selected."
 msgstr "திரட்டுகள் ஏதும் தேர்வு செய்யப்படவில்லை."
 
@@ -154,37 +154,37 @@ msgstr "கோப்பு தேவைப்படுகின்றது."
 msgid "You can only upload PNG image files."
 msgstr "PNG படிமக் கோப்புகளை மட்டுமே நீங்கள் பதிவேற்றவியலும்."
 
-#: journalist_app/main.py:122 journalist_app/utils.py:43
-#: journalist_app/utils.py:142
+#: journalist_app/main.py:124 journalist_app/utils.py:58
+#: journalist_app/utils.py:157
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr ""
 "எதிர்பார்க்கப்படாதொரு பிழை ஏற்பட்டுள்ளது. தயவு செய்து உங்கள் நிர்வாகியிடம் தெரிவிக்கவும்."
 
-#: journalist_app/main.py:133
+#: journalist_app/main.py:135
 msgid "Thanks. Your reply has been stored."
 msgstr "நன்றி. உங்களுடைய மறுமொழி சேமிக்கப்பட்டுள்ளது."
 
-#: journalist_app/main.py:154
+#: journalist_app/main.py:156
 msgid "No collections selected for download."
 msgstr "பதிவிறக்கம் செய்யத் திரட்டுகள் ஏதும் தேர்வு செய்யப்படவில்லை."
 
-#: journalist_app/main.py:157 journalist_app/utils.py:243
+#: journalist_app/main.py:159 journalist_app/utils.py:284
 msgid "No collections selected for deletion."
 msgstr "நீக்கம் செய்யத் திரட்டுகள் ஏதும் தேர்வு செய்யப்படவில்லை."
 
-#: journalist_app/main.py:179
+#: journalist_app/main.py:180
 msgid "No unread submissions for this source."
 msgstr "இந்த மூல ஆவணத்திற்கான படிக்கப்படாத  சமர்ப்பிப்புகள் ஏதுமில்லை."
 
-#: journalist_app/utils.py:50
+#: journalist_app/utils.py:65
 msgid "Account updated."
 msgstr "பயனர்கணக்கு புதுப்பிக்கப்பட்டுள்ளது."
 
-#: journalist_app/utils.py:91
+#: journalist_app/utils.py:106
 msgid "Login failed."
 msgstr "புகுபதிகை தோல்வியுற்றது."
 
-#: journalist_app/utils.py:98
+#: journalist_app/utils.py:113
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] ""
@@ -192,7 +192,7 @@ msgstr[0] ""
 msgstr[1] ""
 "தயவு செய்து மீண்டும் புகுபதிகை செய்யுமுன் குறைந்தது {seconds} நொடிகள் காத்திருக்கவும்."
 
-#: journalist_app/utils.py:109
+#: journalist_app/utils.py:124
 #, fuzzy
 #| msgid ""
 #| "Please wait for a new code from your two-factor token or application "
@@ -204,41 +204,41 @@ msgstr ""
 "மீண்டும் முயற்சிக்கும் முன் தயவு செய்து உங்களுடைய இருகூற்றுச் சீட்டு அல்லது விண்ணப்பத்தின் "
 "புதிய குறிக்காகக் காத்திருக்கவும்."
 
-#: journalist_app/utils.py:130
+#: journalist_app/utils.py:145
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "செல்லுபடியாகாத மறைசெய்தி வடிவம்: தயவு செய்து எழுத்துக்கள் A-F மற்றும் எண்கள் 0-9 ஐ "
 "மட்டுமே சமர்ப்பிக்கவும்."
 
-#: journalist_app/utils.py:136
+#: journalist_app/utils.py:151
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "செல்லுபடியாகாத மறைசெய்தி வடிவம்: ஒற்றைப்படை-நீள-மறைசெய்தி. மறைசெய்தியைத் தவறுதலாகத் "
 "தட்டச்சு செய்துவிட்டீர்களா?"
 
-#: journalist_app/utils.py:195
+#: journalist_app/utils.py:236
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "சமர்ப்பிப்பு நீக்கப்பட்டது."
 msgstr[1] "{num} சமர்ப்பிப்புகள் நீக்கப்பட்டன."
 
-#: journalist_app/utils.py:251
+#: journalist_app/utils.py:292
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} திரட்டு நீக்கப்பட்டது"
 msgstr[1] "{num} திரட்டுகள் நீக்கப்பட்டன"
 
-#: journalist_app/utils.py:307
+#: journalist_app/utils.py:348
 msgid "Name updated."
 msgstr "பெயர் புதுப்பிக்கப்பட்டுள்ளது."
 
-#: journalist_app/utils.py:316
+#: journalist_app/utils.py:357
 #, fuzzy
 #| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "நீங்கள் ஒரு தவறான கடவுச்சொல்லை சமர்ப்பித்துள்ளீர்கள்! கடவுச்சொல் மாற்றப்படவில்லை."
 
-#: journalist_app/utils.py:323
+#: journalist_app/utils.py:364
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -248,7 +248,7 @@ msgstr ""
 "பயனர்கணக்கிலிருந்து நீங்கள் வெளிப்பூட்டிடுவதைத் தடுக்கும் பொருட்டு நீங்கள் உங்களுடைய "
 "கடவுச்சொல்லை மறுவமைப்பு செய்ய வேண்டும்."
 
-#: journalist_app/utils.py:332
+#: journalist_app/utils.py:373
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -256,7 +256,7 @@ msgstr ""
 "கடவுச்சொல் புதுப்பிக்கப்பட்டுள்ளது. உங்களுடைய KeePassX தரவுதளத்தில் சேமித்துக் கொள்ள "
 "மறவாதீர். புதிய கடவுச்சொல்:"
 
-#: journalist_app/utils.py:350
+#: journalist_app/utils.py:397
 msgid "No unread submissions in selected collections."
 msgstr "தேர்ந்தெடுக்கப்பட்ட திரட்டுகளில் படிக்கப்படாத சமர்ப்பிப்புகள் ஏதுமில்லை."
 
@@ -1527,7 +1527,7 @@ msgstr ""
 #| "If you are using Mac/Linux, open the terminal. You can import the key "
 #| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
-"If you are using a Mac or Linux, open the terminal. You can import the key "
+"If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
 "நீங்கள் Mac/Linux-ஐப் பயன்படுத்தினால்,  முனையத்தைத் திறக்கவும். சாவியை <code>gpg --"

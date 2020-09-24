@@ -76,7 +76,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr "Tofaktorkoden for brukeren \"{user}\" stemmer."
 
 #: journalist_app/admin.py:200 journalist_app/admin.py:208
-#: journalist_app/utils.py:309
+#: journalist_app/utils.py:350
 msgid "Name not updated: {}"
 msgstr "Navn ikke oppdatert: {}"
 
@@ -90,13 +90,13 @@ msgstr "Slettet brukeren '{user}'"
 msgid "Test alert sent. Please check your email."
 msgstr "Testvarsel sendt. Sjekk e-posten din."
 
-#: journalist_app/col.py:50
+#: journalist_app/col.py:60
 #, fuzzy
 #| msgid "{source_name}'s collection deleted"
 msgid "{source_name}'s collection deleted."
 msgstr "{source_name}s kildeoppføring slettet"
 
-#: journalist_app/col.py:61
+#: journalist_app/col.py:71
 msgid "No collections selected."
 msgstr "Ingen kildeoppføringer valgt."
 
@@ -146,42 +146,42 @@ msgstr "Fil påkrevd."
 msgid "You can only upload PNG image files."
 msgstr "Du kan kun laste opp PNG-bildefiler."
 
-#: journalist_app/main.py:122 journalist_app/utils.py:43
-#: journalist_app/utils.py:142
+#: journalist_app/main.py:124 journalist_app/utils.py:58
+#: journalist_app/utils.py:157
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "En uventet feil oppstod! Gi din administrator beskjed."
 
-#: journalist_app/main.py:133
+#: journalist_app/main.py:135
 msgid "Thanks. Your reply has been stored."
 msgstr "Takk. Svaret ditt har blitt lagret."
 
-#: journalist_app/main.py:154
+#: journalist_app/main.py:156
 msgid "No collections selected for download."
 msgstr "Ingen kildeoppføringer valgt for nedlasting."
 
-#: journalist_app/main.py:157 journalist_app/utils.py:243
+#: journalist_app/main.py:159 journalist_app/utils.py:284
 msgid "No collections selected for deletion."
 msgstr "Ingen kildeoppføringer valgt for sletting."
 
-#: journalist_app/main.py:179
+#: journalist_app/main.py:180
 msgid "No unread submissions for this source."
 msgstr "Ingen uleste innsendelser fra denne kilden."
 
-#: journalist_app/utils.py:50
+#: journalist_app/utils.py:65
 msgid "Account updated."
 msgstr "Konto oppdatert."
 
-#: journalist_app/utils.py:91
+#: journalist_app/utils.py:106
 msgid "Login failed."
 msgstr "Innlogging mislyktes."
 
-#: journalist_app/utils.py:98
+#: journalist_app/utils.py:113
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] "Vent i minst {seconds} sekund før du forsøker å logge inn igjen."
 msgstr[1] "Vent i minst {seconds} sekunder før du forsøker å logge inn igjen."
 
-#: journalist_app/utils.py:109
+#: journalist_app/utils.py:124
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -189,37 +189,37 @@ msgstr ""
 "Vent på ny tofaktorkode fra ditt mobilprogram eller sikkerhetsnøkkel før du "
 "forsøker igjen."
 
-#: journalist_app/utils.py:130
+#: journalist_app/utils.py:145
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr "Ugyldig hemmelighetsformat: Kun bruk bokstavene A-F og tall fra 0-9."
 
-#: journalist_app/utils.py:136
+#: journalist_app/utils.py:151
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "Feil hemmelighet, du har lagt til eller glemt noe."
 
-#: journalist_app/utils.py:195
+#: journalist_app/utils.py:236
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Innsendelse slettet."
 msgstr[1] "{num} innsendelser slettet."
 
-#: journalist_app/utils.py:251
+#: journalist_app/utils.py:292
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} kildeoppføring slettet"
 msgstr[1] "{num} kildeoppføringer slettet"
 
-#: journalist_app/utils.py:307
+#: journalist_app/utils.py:348
 msgid "Name updated."
 msgstr "Navn oppdatert."
 
-#: journalist_app/utils.py:316
+#: journalist_app/utils.py:357
 #, fuzzy
 #| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "Du la inn et ugyldig passord! Passordet ble derfor ikke endret."
 
-#: journalist_app/utils.py:323
+#: journalist_app/utils.py:364
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -228,7 +228,7 @@ msgstr ""
 "En feil oppstod, og det nye passordet ble kanskje ikke lagret riktig. For å "
 "unngå å bli utelåst fra kontoen bør du tilbakestille passordet ditt på nytt."
 
-#: journalist_app/utils.py:332
+#: journalist_app/utils.py:373
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -236,7 +236,7 @@ msgstr ""
 "Passord oppdatert. Ikke glem å lagre passordet i din KeePassX-database. Det "
 "nye passordet er:"
 
-#: journalist_app/utils.py:350
+#: journalist_app/utils.py:397
 msgid "No unread submissions in selected collections."
 msgstr "Ingen uleste innsendelser i valgte kildeoppføringer."
 
@@ -1486,7 +1486,7 @@ msgstr ""
 #| "If you are using Mac/Linux, open the terminal. You can import the key "
 #| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
-"If you are using a Mac or Linux, open the terminal. You can import the key "
+"If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
 "Om du bruker Mac/Linux, åpne terminalen. Du kan importere nøkkelen med "

@@ -82,7 +82,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr ""
 
 #: journalist_app/admin.py:200 journalist_app/admin.py:208
-#: journalist_app/utils.py:309
+#: journalist_app/utils.py:350
 msgid "Name not updated: {}"
 msgstr "Orúkọ kòì ṣe àfikún: {}"
 
@@ -96,13 +96,13 @@ msgstr "Pa òǹlò rẹ́ '{òǹlò}'"
 msgid "Test alert sent. Please check your email."
 msgstr "Itanijí àyẹ̀wó ti di àfiránṣẹ́. Jọ̀wọ́ yẹ àpótí ímeèlì rẹ wò."
 
-#: journalist_app/col.py:50
+#: journalist_app/col.py:60
 #, fuzzy
 #| msgid "{source_name}'s collection deleted"
 msgid "{source_name}'s collection deleted."
 msgstr "Àkójọ {orúkọ_orísun} ti di píparẹ́"
 
-#: journalist_app/col.py:61
+#: journalist_app/col.py:71
 msgid "No collections selected."
 msgstr "Kò sí àṣàyàn àkójọ kankan."
 
@@ -150,43 +150,43 @@ msgstr "Fáìlì pọn dandan."
 msgid "You can only upload PNG image files."
 msgstr "Irúfẹ́ fáìlì àwòrán PNG nìkan ni o lè gbé sí i."
 
-#: journalist_app/main.py:122 journalist_app/utils.py:43
-#: journalist_app/utils.py:142
+#: journalist_app/main.py:124 journalist_app/utils.py:58
+#: journalist_app/utils.py:157
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Àṣìṣe àìròtẹ́lẹ̀ kan ṣẹlẹ̀! Jọ̀wọ́ fi tó alákòósoò rẹ létí."
 
-#: journalist_app/main.py:133
+#: journalist_app/main.py:135
 msgid "Thanks. Your reply has been stored."
 msgstr "O ṣeun. Èsì rẹ ti wá ní apamọ́."
 
-#: journalist_app/main.py:154
+#: journalist_app/main.py:156
 msgid "No collections selected for download."
 msgstr "Àkójọ kankan ó jẹ́ yíyàn fún àgbàsílẹ̀-sórí-ẹ̀rọ."
 
-#: journalist_app/main.py:157 journalist_app/utils.py:243
+#: journalist_app/main.py:159 journalist_app/utils.py:284
 msgid "No collections selected for deletion."
 msgstr "Àkójọ kankan kò jẹ́ yíyàn fún ìparẹ́."
 
-#: journalist_app/main.py:179
+#: journalist_app/main.py:180
 msgid "No unread submissions for this source."
 msgstr "Kò sí ìfàkalẹ̀ àìkà fún orísun yìí."
 
-#: journalist_app/utils.py:50
+#: journalist_app/utils.py:65
 msgid "Account updated."
 msgstr "Àfikún sí ìṣàmúlò."
 
-#: journalist_app/utils.py:91
+#: journalist_app/utils.py:106
 msgid "Login failed."
 msgstr "Ìfàṣẹwọlé kọ̀ jálẹ̀."
 
-#: journalist_app/utils.py:98
+#: journalist_app/utils.py:113
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] ""
 "Jọ̀wọ́ dúró fún ó kéré jù {ìṣẹ́jú àáyá} ìṣẹ́jú àáyá kí o tó tún fàṣẹwọlé lẹ́ẹ̀kan "
 "sí i."
 
-#: journalist_app/utils.py:109
+#: journalist_app/utils.py:124
 #, fuzzy
 #| msgid ""
 #| "Please wait for a new code from your two-factor token or application "
@@ -198,37 +198,37 @@ msgstr ""
 "Jọ̀wọ́ wararo fún odù tuntun láti ìfẹ̀rílàdí ọlọ́nà-méjì rẹ tàbí irinṣẹ́ kí o tó "
 "gbìyànjúu rẹ̀ lẹ́rìnkan sí i."
 
-#: journalist_app/utils.py:130
+#: journalist_app/utils.py:145
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Àìlágbárató ààtò ìkọ̀kọ̀: jọ̀wọ́ fi lẹ́tà láti A-F àti nọ́mbà 0-9 nìkan sílẹ̀."
 
-#: journalist_app/utils.py:136
+#: journalist_app/utils.py:151
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Àìlágbárató ààtò ìkọ̀kọ̀: àìbá-gúngùn ìkọ̀kọ̀ mu. Ṣé o ṣàṣìtẹ̀ ìkọ̀kọ̀ náà ni?"
 
-#: journalist_app/utils.py:195
+#: journalist_app/utils.py:236
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Ìkósílẹ̀ ti di píparẹ́."
 
-#: journalist_app/utils.py:251
+#: journalist_app/utils.py:292
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{nọ́mbà} àwọn ìkósílẹ̀ ti parẹ́."
 
-#: journalist_app/utils.py:307
+#: journalist_app/utils.py:348
 msgid "Name updated."
 msgstr "Ìṣàfikún sí orúkọ."
 
-#: journalist_app/utils.py:316
+#: journalist_app/utils.py:357
 #, fuzzy
 #| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "O ti fi ọ̀rọ̀-ìfiwọlé tí kò dára sílẹ̀! Ọ̀rọ̀-ìfiwọlé ò jẹ́ pípàrọ̀."
 
-#: journalist_app/utils.py:323
+#: journalist_app/utils.py:364
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -237,7 +237,7 @@ msgstr ""
 "Nǹkan ò ṣe bí ó ti yẹ, ó ṣe é ṣe kí ọ̀rọ̀-ìfiwọlé tuntun ó máà wọ àkọsílẹ̀ "
 "dáadáa. Ṣe àtúnyàn ọ̀rọ̀-ìfiwọléè rẹ lẹ́ẹ̀kan sí i, kí o máà di àsémọ́ta."
 
-#: journalist_app/utils.py:332
+#: journalist_app/utils.py:373
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -245,7 +245,7 @@ msgstr ""
 "Àfikún ọ̀rọ̀-ìfiwọlé. Má ṣe gbàgbé láti fi pamọ́ sí inúu àkópamọ́ọ KeePassX rẹ. "
 "Ọ̀rọ̀-ìfiwọlé tuntun:"
 
-#: journalist_app/utils.py:350
+#: journalist_app/utils.py:397
 msgid "No unread submissions in selected collections."
 msgstr "Kò sì ìfisílẹ̀ àkójọ tí o yàn tí kò tíì jẹ́ kíkà."
 
@@ -1494,7 +1494,7 @@ msgstr ""
 #| "If you are using Mac/Linux, open the terminal. You can import the key "
 #| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
-"If you are using a Mac or Linux, open the terminal. You can import the key "
+"If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
 "Bí o bá ń lo Mac/Linux, ṣí terminal. O leè kó kọ́kọ́rọ́ wọlé pẹ̀lú <odù>gpg --\n"

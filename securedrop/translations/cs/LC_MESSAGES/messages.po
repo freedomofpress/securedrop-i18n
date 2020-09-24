@@ -78,7 +78,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr "Dvoufaktorový kód pro uživatele \"{user}\" byl ověřen."
 
 #: journalist_app/admin.py:200 journalist_app/admin.py:208
-#: journalist_app/utils.py:309
+#: journalist_app/utils.py:350
 msgid "Name not updated: {}"
 msgstr "Jméno nebylo aktualizováno: {}"
 
@@ -92,13 +92,13 @@ msgstr "Uživatel „{user}“ byl smazán"
 msgid "Test alert sent. Please check your email."
 msgstr "Testovací upozornění odesláno. Zkontrolujte prosím svůj e-mail."
 
-#: journalist_app/col.py:50
+#: journalist_app/col.py:60
 #, fuzzy
 #| msgid "{source_name}'s collection deleted"
 msgid "{source_name}'s collection deleted."
 msgstr "Sada {source_name} smazána"
 
-#: journalist_app/col.py:61
+#: journalist_app/col.py:71
 msgid "No collections selected."
 msgstr "Nevybral/a jste žádnou sadu."
 
@@ -149,36 +149,36 @@ msgstr "Soubor je povinný."
 msgid "You can only upload PNG image files."
 msgstr "Nahrávat lze jen obrázky ve formátu PNG."
 
-#: journalist_app/main.py:122 journalist_app/utils.py:43
-#: journalist_app/utils.py:142
+#: journalist_app/main.py:124 journalist_app/utils.py:58
+#: journalist_app/utils.py:157
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Došlo k nečekané chybě. Informujte prosím administrátora."
 
-#: journalist_app/main.py:133
+#: journalist_app/main.py:135
 msgid "Thanks. Your reply has been stored."
 msgstr "Děkujeme. Vaše odpověď byla uložena."
 
-#: journalist_app/main.py:154
+#: journalist_app/main.py:156
 msgid "No collections selected for download."
 msgstr "Nevybral/a jste žádnou sadu ke stažení."
 
-#: journalist_app/main.py:157 journalist_app/utils.py:243
+#: journalist_app/main.py:159 journalist_app/utils.py:284
 msgid "No collections selected for deletion."
 msgstr "Nevybral/a jste žádnou sadu k smazání."
 
-#: journalist_app/main.py:179
+#: journalist_app/main.py:180
 msgid "No unread submissions for this source."
 msgstr "Žádné nepřečtené příspěvky z tohoto zdroje."
 
-#: journalist_app/utils.py:50
+#: journalist_app/utils.py:65
 msgid "Account updated."
 msgstr "Uživatelský účet aktualizován."
 
-#: journalist_app/utils.py:91
+#: journalist_app/utils.py:106
 msgid "Login failed."
 msgstr "Přihlášení selhalo."
 
-#: journalist_app/utils.py:98
+#: journalist_app/utils.py:113
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] ""
@@ -188,7 +188,7 @@ msgstr[1] ""
 msgstr[2] ""
 "Před dalším pokusem o přihlášení prosím počkejte alespoň {seconds} vteřin."
 
-#: journalist_app/utils.py:109
+#: journalist_app/utils.py:124
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -196,39 +196,39 @@ msgstr ""
 "Dřív než budete pokračovat,  počkejte prosím na nový dvoufaktorový kód z "
 "vaší mobilní aplikace nebo bezpečnostního klíče."
 
-#: journalist_app/utils.py:130
+#: journalist_app/utils.py:145
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr "Nesprávný formát hesla: prosím použijte pouze písmena A-F a čísla 0-9."
 
-#: journalist_app/utils.py:136
+#: journalist_app/utils.py:151
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "Nesprávná forma hesla: lichá délka hesla. Neudělal/a jste překlep?"
 
-#: journalist_app/utils.py:195
+#: journalist_app/utils.py:236
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Podání smazáno."
 msgstr[1] "{num} podání smazána."
 msgstr[2] "{num} podání smazáno."
 
-#: journalist_app/utils.py:251
+#: journalist_app/utils.py:292
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} sada smazaná"
 msgstr[1] "{num} sady smazány"
 msgstr[2] "{num} sad smazano"
 
-#: journalist_app/utils.py:307
+#: journalist_app/utils.py:348
 msgid "Name updated."
 msgstr "Jméno aktualizováno."
 
-#: journalist_app/utils.py:316
+#: journalist_app/utils.py:357
 #, fuzzy
 #| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "Vložili jste nesprávné heslo! Heslo nebylo změněno."
 
-#: journalist_app/utils.py:323
+#: journalist_app/utils.py:364
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -237,7 +237,7 @@ msgstr ""
 "Nastala chyba a nové heslo možná nebylo uloženo správně. Měl/a byste znovu "
 "zadat heslo, abyste zabránil/a ztrátě přístupu k Vašemu účtu."
 
-#: journalist_app/utils.py:332
+#: journalist_app/utils.py:373
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -245,7 +245,7 @@ msgstr ""
 "Heslo aktualizováno. Nezapomeňte si jej uložit do vaší KeePassX databáze. "
 "Nové heslo:"
 
-#: journalist_app/utils.py:350
+#: journalist_app/utils.py:397
 msgid "No unread submissions in selected collections."
 msgstr "Ve vybraných sadách nejsou žádná nepřečtená podání."
 
@@ -1486,7 +1486,7 @@ msgstr ""
 #| "If you are using Mac/Linux, open the terminal. You can import the key "
 #| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
-"If you are using a Mac or Linux, open the terminal. You can import the key "
+"If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
 "Pokud používáte Mac či Linux, otevřete terminál. Klíč pak můžete importovat "

@@ -75,7 +75,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr "Það tókst að staðfesta tvíþátta-kóðann fyrir notandann \"{user}\"."
 
 #: journalist_app/admin.py:200 journalist_app/admin.py:208
-#: journalist_app/utils.py:309
+#: journalist_app/utils.py:350
 msgid "Name not updated: {}"
 msgstr "Nafn ekki uppfært: {}"
 
@@ -87,11 +87,11 @@ msgstr "Eyddi notandanum '{user}'."
 msgid "Test alert sent. Please check your email."
 msgstr "Sendi prufuviðvörun. Athugaðu tölvupóstinn þinn."
 
-#: journalist_app/col.py:50
+#: journalist_app/col.py:60
 msgid "{source_name}'s collection deleted."
 msgstr "Safninu {source_name} var eytt."
 
-#: journalist_app/col.py:61
+#: journalist_app/col.py:71
 msgid "No collections selected."
 msgstr "Engin söfn valin."
 
@@ -135,36 +135,36 @@ msgstr "Skrá er nauðsynleg."
 msgid "You can only upload PNG image files."
 msgstr "Þú getur einungis hlaðið upp PNG-myndskrár."
 
-#: journalist_app/main.py:122 journalist_app/utils.py:43
-#: journalist_app/utils.py:142
+#: journalist_app/main.py:124 journalist_app/utils.py:58
+#: journalist_app/utils.py:157
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Óvæn villa kom upp! Hafðu samband við kerfisstjórann þinn."
 
-#: journalist_app/main.py:133
+#: journalist_app/main.py:135
 msgid "Thanks. Your reply has been stored."
 msgstr "Takk. Svarið þitt hefur verið vistað."
 
-#: journalist_app/main.py:154
+#: journalist_app/main.py:156
 msgid "No collections selected for download."
 msgstr "Engin söfn valin til niðurhals."
 
-#: journalist_app/main.py:157 journalist_app/utils.py:243
+#: journalist_app/main.py:159 journalist_app/utils.py:284
 msgid "No collections selected for deletion."
 msgstr "Engin söfn valin til eyðingar."
 
-#: journalist_app/main.py:179
+#: journalist_app/main.py:180
 msgid "No unread submissions for this source."
 msgstr "Engar ólesnar innsendingar hjá þessum heimildarmanni."
 
-#: journalist_app/utils.py:50
+#: journalist_app/utils.py:65
 msgid "Account updated."
 msgstr "Aðgangur uppfærður."
 
-#: journalist_app/utils.py:91
+#: journalist_app/utils.py:106
 msgid "Login failed."
 msgstr "Innskráning mistókst."
 
-#: journalist_app/utils.py:98
+#: journalist_app/utils.py:113
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] ""
@@ -172,7 +172,7 @@ msgstr[0] ""
 msgstr[1] ""
 "Bíddu í a.m.k. {seconds} sekúndur áður en þú reynir innskráningu aftur."
 
-#: journalist_app/utils.py:109
+#: journalist_app/utils.py:124
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -180,39 +180,39 @@ msgstr ""
 "Bíddu eftir nýjum kóða frá tvíþátta farsímaforriti eða settu inn "
 "dulritunarlykil áður en þú reynir aftur."
 
-#: journalist_app/utils.py:130
+#: journalist_app/utils.py:145
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Ógilt snið leynilykils: vinsamlegast notaðu einungis stafi frá A-F og tölur "
 "frá 0-9."
 
-#: journalist_app/utils.py:136
+#: journalist_app/utils.py:151
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Ógilt snið leynilykils: óvenjuleg lengd leynilykils. Slóstu leynilykilinn "
 "rétt inn?"
 
-#: journalist_app/utils.py:195
+#: journalist_app/utils.py:236
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Innsendingu eytt."
 msgstr[1] "{num} innsendingum eytt."
 
-#: journalist_app/utils.py:251
+#: journalist_app/utils.py:292
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} safni eytt"
 msgstr[1] "{num} söfnum eytt"
 
-#: journalist_app/utils.py:307
+#: journalist_app/utils.py:348
 msgid "Name updated."
 msgstr "Nafn uppfært."
 
-#: journalist_app/utils.py:316
+#: journalist_app/utils.py:357
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "Þú sendir inn ógilt lykilorð. Lykilorði ekki breytt."
 
-#: journalist_app/utils.py:323
+#: journalist_app/utils.py:364
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -222,7 +222,7 @@ msgstr ""
 "að koma í veg fyrir að þú læsist út úr aðgangnum þínum, ættirðu að "
 "endurstilla lykilorðið þitt aftur."
 
-#: journalist_app/utils.py:332
+#: journalist_app/utils.py:373
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -230,7 +230,7 @@ msgstr ""
 "Lykilorð uppfært. Ekki gleyma að vista það í KeePassX gagnagrunninum þínum. "
 "Nýja lykilorðið:"
 
-#: journalist_app/utils.py:350
+#: journalist_app/utils.py:397
 msgid "No unread submissions in selected collections."
 msgstr "Engar ólesnar innsendingar í völdum söfnum."
 
@@ -496,8 +496,8 @@ msgstr ""
 "<strong>Uppfærsla er nauðsynleg:</strong> SecureDrop-þjónarnir þínir eru enn "
 "að keyra v2 onion-þjónustur, sem af öryggisástæðum er verið að leggja niður. "
 "Í febrúar 2021 verða v2 onion-þjónustur gerðar óvirkar, óvíst er að þá verði "
-"hægt að tengjast SecureDrop-þjónum þínum. <a href=\"//securedrop.org/v2"
-"-onion-eol\" rel=\"noreferrer\">Kanna nánar</a>"
+"hægt að tengjast SecureDrop-þjónum þínum. <a href=\"//securedrop.org/v2-"
+"onion-eol\" rel=\"noreferrer\">Kanna nánar</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -1113,8 +1113,8 @@ msgid ""
 msgstr ""
 "<strong>Mælt er með því að nota borðtölvuútgáfu Tor-vafrans til aðgangs að "
 "SecureDrop, þar sem Orfox gefur ekki sama stig öryggis og nafnleyndar eins "
-"og skjáborðsútgáfurnar.</strong> <a id=\"recommend-tor\" href=\""
-"{tor_browser_url}\">Sjáðu hvernig á að setja upp Tor-vafrann</a>, eða "
+"og skjáborðsútgáfurnar.</strong> <a id=\"recommend-tor\" href="
+"\"{tor_browser_url}\">Sjáðu hvernig á að setja upp Tor-vafrann</a>, eða "
 "hunsaðu þessa aðvörun til að halda áfram."
 
 #: source_templates/index.html:39
@@ -1318,10 +1318,10 @@ msgid ""
 "in your Tor Browser's toolbar before moving on. This will clear your Tor "
 "Browser activity data on this device."
 msgstr ""
-"Þú varst skráð/ur út vegna ónógrar virkni. Smelltu á hnappinn <img src={icon}"
-" alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Nýtt auðkenni</"
-"strong> í verkfærastiku Tor-vafrans. Það mun hreinsa út allar fyrri aðgerðir "
-"Tor-vafrans á þessu tæki."
+"Þú varst skráð/ur út vegna ónógrar virkni. Smelltu á hnappinn <img "
+"src={icon} alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Nýtt "
+"auðkenni</strong> í verkfærastiku Tor-vafrans. Það mun hreinsa út allar "
+"fyrri aðgerðir Tor-vafrans á þessu tæki."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1435,13 +1435,18 @@ msgstr ""
 "lyklakippuna þína."
 
 #: source_templates/why-journalist-key.html:12
+#, fuzzy
+#| msgid ""
+#| "If you are using a Mac or Linux, open the terminal. You can import the "
+#| "key with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</"
+#| "code></p>"
 msgid ""
-"If you are using a Mac or Linux, open the terminal. You can import the key "
+"If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
 "Ef þú ert að nota Mac eða Linux, opnaðu þá skjáhermi (terminal). Þú getur "
-"flutt inn dulritunarlykilinn með skipuninni: <p><code>gpg --import "
-"/slóð/á/{submission_key_fpr_filename}</code></p>"
+"flutt inn dulritunarlykilinn með skipuninni: <p><code>gpg --import /slóð/á/"
+"{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:15
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"

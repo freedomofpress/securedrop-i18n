@@ -88,7 +88,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr ""
 
 #: journalist_app/admin.py:200 journalist_app/admin.py:208
-#: journalist_app/utils.py:309
+#: journalist_app/utils.py:350
 msgid "Name not updated: {}"
 msgstr ""
 
@@ -103,12 +103,12 @@ msgid "Test alert sent. Please check your email."
 msgstr ""
 "Bandomasis įspėjimas išsiųstas. Galite pasitikrinti savo el. pašto dėžutę."
 
-#: journalist_app/col.py:50
+#: journalist_app/col.py:60
 #, fuzzy
 msgid "{source_name}'s collection deleted."
 msgstr "Šaltinio {source_name} medžiaga ištrinta"
 
-#: journalist_app/col.py:61
+#: journalist_app/col.py:71
 #, fuzzy
 msgid "No collections selected."
 msgstr "Nepasirinkta jokios medžiagos."
@@ -161,43 +161,43 @@ msgstr "Byla (failas) privalomas."
 msgid "You can only upload PNG image files."
 msgstr "Prisegti galima tik PNG formato paveikslėlius."
 
-#: journalist_app/main.py:122 journalist_app/utils.py:43
-#: journalist_app/utils.py:142
+#: journalist_app/main.py:124 journalist_app/utils.py:58
+#: journalist_app/utils.py:157
 #, fuzzy
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Nenumatyta klaida! Prašome informuoti savo administratorių."
 
-#: journalist_app/main.py:133
+#: journalist_app/main.py:135
 #, fuzzy
 msgid "Thanks. Your reply has been stored."
 msgstr "Dėkojame. Jūsų atsakymas išsaugotas."
 
-#: journalist_app/main.py:154
+#: journalist_app/main.py:156
 #, fuzzy
 msgid "No collections selected for download."
 msgstr "Nepasirinkta jokios medžiagos atsisiuntimui."
 
-#: journalist_app/main.py:157 journalist_app/utils.py:243
+#: journalist_app/main.py:159 journalist_app/utils.py:284
 #, fuzzy
 msgid "No collections selected for deletion."
 msgstr "Nepasirinkta jokios medžiagos ištrynimui."
 
-#: journalist_app/main.py:179
+#: journalist_app/main.py:180
 #, fuzzy
 msgid "No unread submissions for this source."
 msgstr "Šaltinis neturi neperskaitytų paraiškų."
 
-#: journalist_app/utils.py:50
+#: journalist_app/utils.py:65
 #, fuzzy
 msgid "Account updated."
 msgstr "Paskyra atnaujinta."
 
-#: journalist_app/utils.py:91
+#: journalist_app/utils.py:106
 #, fuzzy
 msgid "Login failed."
 msgstr "Prisijungimas nesėkmingas."
 
-#: journalist_app/utils.py:98
+#: journalist_app/utils.py:113
 #, fuzzy
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
@@ -208,7 +208,7 @@ msgstr[1] ""
 msgstr[2] ""
 "Prašome palaukti bent {seconds} sekundžių prieš vėl bandydami prisijungti."
 
-#: journalist_app/utils.py:109
+#: journalist_app/utils.py:124
 #, fuzzy
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
@@ -217,19 +217,19 @@ msgstr ""
 "Prašome palaukti naujo kodo iš jūsų dviejų dalių autentifikatoriaus prieš "
 "bandydami dar kartą."
 
-#: journalist_app/utils.py:130
+#: journalist_app/utils.py:145
 #, fuzzy
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Netinkamas slapto kodo formatas: prašome pateikti tik raides A-F ir skaičius "
 "0-9."
 
-#: journalist_app/utils.py:136
+#: journalist_app/utils.py:151
 #, fuzzy
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "Netinkamas slapto kodo ilgis - ar suklydote?"
 
-#: journalist_app/utils.py:195
+#: journalist_app/utils.py:236
 #, fuzzy
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
@@ -237,7 +237,7 @@ msgstr[0] "Paraiška ištrinta."
 msgstr[1] "Ištrintos {num} paraiškos."
 msgstr[2] "Ištrinta {num} paraiškų."
 
-#: journalist_app/utils.py:251
+#: journalist_app/utils.py:292
 #, fuzzy
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
@@ -245,16 +245,16 @@ msgstr[0] "Ištrintas {num} surinktos medžiagos vienetas"
 msgstr[1] "Ištrinti {num} surinktos medžiagos vienetai"
 msgstr[2] "Ištrinta {num} surinktos medžiagos vienetų"
 
-#: journalist_app/utils.py:307
+#: journalist_app/utils.py:348
 msgid "Name updated."
 msgstr ""
 
-#: journalist_app/utils.py:316
+#: journalist_app/utils.py:357
 #, fuzzy
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "Pateikėte neteisingą slaptažodį! Slaptažodis nepakeistas."
 
-#: journalist_app/utils.py:323
+#: journalist_app/utils.py:364
 #, fuzzy
 msgid ""
 "There was an error, and the new password might not have been saved "
@@ -264,7 +264,7 @@ msgstr ""
 "Įvyko klaida ir naujas slaptažodis galimai nebuvo išsaugotas. Atstatykite "
 "slaptažodį dar kartą, kad nebūtumėte užrakintas iš savo paskyros."
 
-#: journalist_app/utils.py:332
+#: journalist_app/utils.py:373
 #, fuzzy
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
@@ -273,7 +273,7 @@ msgstr ""
 "Slaptažodis atnaujintas. Nepamirškite jį išsaugoti savo KeePassX duomenų "
 "bazėje. Naujas slaptažodis:"
 
-#: journalist_app/utils.py:350
+#: journalist_app/utils.py:397
 #, fuzzy
 msgid "No unread submissions in selected collections."
 msgstr "Pasirinktoje medžiagoje nėra neperskaitytų paraiškų."
@@ -1611,7 +1611,7 @@ msgstr ""
 #: source_templates/why-journalist-key.html:12
 #, fuzzy
 msgid ""
-"If you are using a Mac or Linux, open the terminal. You can import the key "
+"If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
 "Jei naudoji Mac/Linux operacinę sistemą, atverk terminalo langą. Rakto "

@@ -81,7 +81,7 @@ msgstr ""
 "com sucesso."
 
 #: journalist_app/admin.py:200 journalist_app/admin.py:208
-#: journalist_app/utils.py:309
+#: journalist_app/utils.py:350
 msgid "Name not updated: {}"
 msgstr "O nome foi atualizado: {}"
 
@@ -95,13 +95,13 @@ msgstr "Utilizador '{user}' apagado"
 msgid "Test alert sent. Please check your email."
 msgstr "Alterta de teste enviado. Por favor, verifique o seu email."
 
-#: journalist_app/col.py:50
+#: journalist_app/col.py:60
 #, fuzzy
 #| msgid "{source_name}'s collection deleted"
 msgid "{source_name}'s collection deleted."
 msgstr "Coleção de {source_name} apagada"
 
-#: journalist_app/col.py:61
+#: journalist_app/col.py:71
 msgid "No collections selected."
 msgstr "Nenhuma coleção selecionada."
 
@@ -150,36 +150,36 @@ msgstr "É necessário o ficheiro."
 msgid "You can only upload PNG image files."
 msgstr "Apenas pode enviar imagens PNG."
 
-#: journalist_app/main.py:122 journalist_app/utils.py:43
-#: journalist_app/utils.py:142
+#: journalist_app/main.py:124 journalist_app/utils.py:58
+#: journalist_app/utils.py:157
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Um erro inesperado ocorreu! Por favor informe o seu administrador."
 
-#: journalist_app/main.py:133
+#: journalist_app/main.py:135
 msgid "Thanks. Your reply has been stored."
 msgstr "Obrigado. A sua resposta for guardada."
 
-#: journalist_app/main.py:154
+#: journalist_app/main.py:156
 msgid "No collections selected for download."
 msgstr "Nenhuma coleção selecionada para transferir."
 
-#: journalist_app/main.py:157 journalist_app/utils.py:243
+#: journalist_app/main.py:159 journalist_app/utils.py:284
 msgid "No collections selected for deletion."
 msgstr "Nenhuma coleção foi selecionada para apagar."
 
-#: journalist_app/main.py:179
+#: journalist_app/main.py:180
 msgid "No unread submissions for this source."
 msgstr "Não tem submissões por ler desta fonte."
 
-#: journalist_app/utils.py:50
+#: journalist_app/utils.py:65
 msgid "Account updated."
 msgstr "Conta actualizada."
 
-#: journalist_app/utils.py:91
+#: journalist_app/utils.py:106
 msgid "Login failed."
 msgstr "Erro de início de sessão."
 
-#: journalist_app/utils.py:98
+#: journalist_app/utils.py:113
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] ""
@@ -188,7 +188,7 @@ msgstr[1] ""
 "Por favor espere pelo menos {seconds} segundos antes de tentar entrar de "
 "novo."
 
-#: journalist_app/utils.py:109
+#: journalist_app/utils.py:124
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -196,41 +196,41 @@ msgstr ""
 "Por favor espere por um novo código de autenticação de dois fatores ou chave "
 "de segurança antes tentar de novo."
 
-#: journalist_app/utils.py:130
+#: journalist_app/utils.py:145
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Formato do segredo inválido: por favor, utilize apenas letras de A a F e "
 "números de 0 a 9."
 
-#: journalist_app/utils.py:136
+#: journalist_app/utils.py:151
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Formato do segredo inválido: número ímpar de caracteres. O segredo foi "
 "digitado corretamente?"
 
-#: journalist_app/utils.py:195
+#: journalist_app/utils.py:236
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Submissão apagada."
 msgstr[1] "{num} submissões apagadas."
 
-#: journalist_app/utils.py:251
+#: journalist_app/utils.py:292
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} coleção apagada"
 msgstr[1] "{num} coleções apagadas"
 
-#: journalist_app/utils.py:307
+#: journalist_app/utils.py:348
 msgid "Name updated."
 msgstr "Nome atualizado."
 
-#: journalist_app/utils.py:316
+#: journalist_app/utils.py:357
 #, fuzzy
 #| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "Submeteu uma palavra-passe incorreta! Palavra-passe não atualizada."
 
-#: journalist_app/utils.py:323
+#: journalist_app/utils.py:364
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -240,7 +240,7 @@ msgstr ""
 "Para evitar perder o acesso à sua conta, deverá redefinir a sua palavra-"
 "passe."
 
-#: journalist_app/utils.py:332
+#: journalist_app/utils.py:373
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -248,7 +248,7 @@ msgstr ""
 "Palavra-passe actualizada. Não se esqueça de a gravar na sua base de dados "
 "KeePassX. Nova palavra-passe:"
 
-#: journalist_app/utils.py:350
+#: journalist_app/utils.py:397
 msgid "No unread submissions in selected collections."
 msgstr "Nenhuma submissão por ler das selecionadas."
 
@@ -1509,7 +1509,7 @@ msgstr ""
 #| "If you are using Mac/Linux, open the terminal. You can import the key "
 #| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
-"If you are using a Mac or Linux, open the terminal. You can import the key "
+"If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
 "No Mac/Linux, abra o terminal. Pode importar a chave com o comando <code>gpg "

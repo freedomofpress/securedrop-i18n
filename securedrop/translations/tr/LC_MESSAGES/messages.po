@@ -80,7 +80,7 @@ msgstr ""
 "\"{user}\" kullanıcısı için iki aşamalı kimlik doğrulama kodu doğrulandı."
 
 #: journalist_app/admin.py:200 journalist_app/admin.py:208
-#: journalist_app/utils.py:309
+#: journalist_app/utils.py:350
 msgid "Name not updated: {}"
 msgstr "Ad güncellenmedi: {}"
 
@@ -94,13 +94,13 @@ msgstr "'{user}' kullanıcısı silindi"
 msgid "Test alert sent. Please check your email."
 msgstr "Deneme uyarısı gönderildi. Lütfen e-postanızı denetleyin."
 
-#: journalist_app/col.py:50
+#: journalist_app/col.py:60
 #, fuzzy
 #| msgid "{source_name}'s collection deleted"
 msgid "{source_name}'s collection deleted."
 msgstr "{source_name} derlemeleri silindi"
 
-#: journalist_app/col.py:61
+#: journalist_app/col.py:71
 msgid "No collections selected."
 msgstr "Herhangi bir derleme seçilmemiş."
 
@@ -154,36 +154,36 @@ msgstr "Dosya gerekli."
 msgid "You can only upload PNG image files."
 msgstr "Yalnız PNG biçiminde görsel dosyaları yükleyebilirsiniz."
 
-#: journalist_app/main.py:122 journalist_app/utils.py:43
-#: journalist_app/utils.py:142
+#: journalist_app/main.py:124 journalist_app/utils.py:58
+#: journalist_app/utils.py:157
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Beklenmeyen bir sorun çıktı! Lütfen sistem yöneticinizi bilgilendirin."
 
-#: journalist_app/main.py:133
+#: journalist_app/main.py:135
 msgid "Thanks. Your reply has been stored."
 msgstr "Teşekkürler. Yanıtınız kaydedildi."
 
-#: journalist_app/main.py:154
+#: journalist_app/main.py:156
 msgid "No collections selected for download."
 msgstr "İndirilecek bir derleme seçilmemiş."
 
-#: journalist_app/main.py:157 journalist_app/utils.py:243
+#: journalist_app/main.py:159 journalist_app/utils.py:284
 msgid "No collections selected for deletion."
 msgstr "Silinecek bir derleme seçilmemiş."
 
-#: journalist_app/main.py:179
+#: journalist_app/main.py:180
 msgid "No unread submissions for this source."
 msgstr "Bu kaynağın okunmamış gönderimi yok."
 
-#: journalist_app/utils.py:50
+#: journalist_app/utils.py:65
 msgid "Account updated."
 msgstr "Hesap güncellendi."
 
-#: journalist_app/utils.py:91
+#: journalist_app/utils.py:106
 msgid "Login failed."
 msgstr "Oturum açılamadı."
 
-#: journalist_app/utils.py:98
+#: journalist_app/utils.py:113
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] ""
@@ -191,7 +191,7 @@ msgstr[0] ""
 msgstr[1] ""
 "Lütfen yeniden oturum açmayı denemeden önce {seconds} saniye bekleyin."
 
-#: journalist_app/utils.py:109
+#: journalist_app/utils.py:124
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -199,40 +199,40 @@ msgstr ""
 "Yeniden denemeden önce lütfen iki aşamalı kimlik doğrulama mobil "
 "uygulamanızdan yeni bir kod gelmesini bekleyin."
 
-#: journalist_app/utils.py:130
+#: journalist_app/utils.py:145
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Gizli biçim hatalı: lütfen A-F arasındaki harfleri ve 0-9 arasındaki "
 "rakamları kullanın."
 
-#: journalist_app/utils.py:136
+#: journalist_app/utils.py:151
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Gizli biçim hatalı: Gizli kod tek uzunlukta. Gizli kodu yanlış mı yazdınız?"
 
-#: journalist_app/utils.py:195
+#: journalist_app/utils.py:236
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Gönderi silindi."
 msgstr[1] "{num} gönderi silindi."
 
-#: journalist_app/utils.py:251
+#: journalist_app/utils.py:292
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} derleme silindi"
 msgstr[1] "{num} derleme silindi"
 
-#: journalist_app/utils.py:307
+#: journalist_app/utils.py:348
 msgid "Name updated."
 msgstr "Ad güncellendi."
 
-#: journalist_app/utils.py:316
+#: journalist_app/utils.py:357
 #, fuzzy
 #| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "Yazdığınız parola kötü! Parola değiştirilmedi."
 
-#: journalist_app/utils.py:323
+#: journalist_app/utils.py:364
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -241,7 +241,7 @@ msgstr ""
 "Bir sorun çıktı. Yeni parola doğru olarak kaydedilmemiş olabilir. Hesabınızı "
 "kullanmaya devam edebilmeniz için parolayı yeniden sıfırlamanız gerekli."
 
-#: journalist_app/utils.py:332
+#: journalist_app/utils.py:373
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -249,7 +249,7 @@ msgstr ""
 "Parola güncellendi. Parolanızı KeePassX veritabanınıza kaydetmeyi unutmayın. "
 "Yeni parola:"
 
-#: journalist_app/utils.py:350
+#: journalist_app/utils.py:397
 msgid "No unread submissions in selected collections."
 msgstr "Seçilmiş derlemelerde okunmamış bir gönderi yok."
 
@@ -1521,7 +1521,7 @@ msgstr ""
 #| "If you are using Mac/Linux, open the terminal. You can import the key "
 #| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
-"If you are using a Mac or Linux, open the terminal. You can import the key "
+"If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
 "Mac/Linux kullanıyorsanız bir uçbirim (terminal) açın. Anahtarı <code>gpg --"

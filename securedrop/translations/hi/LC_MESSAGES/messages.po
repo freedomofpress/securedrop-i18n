@@ -75,7 +75,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr "उपयोगकर्ता \"{user}\" के लिए दो-कारक कोड सफलतापूर्वक सत्यापित किया गया था।"
 
 #: journalist_app/admin.py:200 journalist_app/admin.py:208
-#: journalist_app/utils.py:309
+#: journalist_app/utils.py:350
 msgid "Name not updated: {}"
 msgstr "नाम अपडेट नही हुआ: {}"
 
@@ -89,13 +89,13 @@ msgstr "उपयोगकर्ता '{user}' हटा दिया गया
 msgid "Test alert sent. Please check your email."
 msgstr "टेस्ट अलर्ट भेजा गया है। कृपया अपना ईमेल देखें।"
 
-#: journalist_app/col.py:50
+#: journalist_app/col.py:60
 #, fuzzy
 #| msgid "{source_name}'s collection deleted"
 msgid "{source_name}'s collection deleted."
 msgstr "{source_name} का संग्रह हटाया गया"
 
-#: journalist_app/col.py:61
+#: journalist_app/col.py:71
 msgid "No collections selected."
 msgstr "कोई संग्रह चयनित नहीं।"
 
@@ -144,42 +144,42 @@ msgstr "आवश्यक फाइल।"
 msgid "You can only upload PNG image files."
 msgstr "आप केवल PNG छवि फ़ाइलों को अपलोड कर सकते हैं।"
 
-#: journalist_app/main.py:122 journalist_app/utils.py:43
-#: journalist_app/utils.py:142
+#: journalist_app/main.py:124 journalist_app/utils.py:58
+#: journalist_app/utils.py:157
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "अप्रत्याशित त्रुटि हुई ! कृपया अपने व्यवस्थापक को सूचित करें।"
 
-#: journalist_app/main.py:133
+#: journalist_app/main.py:135
 msgid "Thanks. Your reply has been stored."
 msgstr "धन्यवाद। आपका उत्तर संग्रहीत किया गया है।"
 
-#: journalist_app/main.py:154
+#: journalist_app/main.py:156
 msgid "No collections selected for download."
 msgstr "डाउनलोड के लिए कोई संग्रह नहीं चुना गया।"
 
-#: journalist_app/main.py:157 journalist_app/utils.py:243
+#: journalist_app/main.py:159 journalist_app/utils.py:284
 msgid "No collections selected for deletion."
 msgstr "हटाए जाने के लिए कोई संग्रह नहीं चुना गया।"
 
-#: journalist_app/main.py:179
+#: journalist_app/main.py:180
 msgid "No unread submissions for this source."
 msgstr "इस स्रोत के लिए कोई अपठित सबमिशन नहीं है |"
 
-#: journalist_app/utils.py:50
+#: journalist_app/utils.py:65
 msgid "Account updated."
 msgstr "खाता अपडेट किया गया।"
 
-#: journalist_app/utils.py:91
+#: journalist_app/utils.py:106
 msgid "Login failed."
 msgstr "लॉगिन विफल।"
 
-#: journalist_app/utils.py:98
+#: journalist_app/utils.py:113
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] "पुनः प्रवेश करने से पहले कृपया कम से कम {seconds} सेकंड प्रतीक्षा करें।"
 msgstr[1] "पुनः प्रवेश करने से पहले कृपया कम से कम {seconds} सेकंड प्रतीक्षा करें।"
 
-#: journalist_app/utils.py:109
+#: journalist_app/utils.py:124
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -187,37 +187,37 @@ msgstr ""
 "फिर से प्रयास करने से पहले कृपया अपने दो-कारक मोबाइल ऐप या सुरक्षा से एक नया कोड की "
 "प्रतीक्षा करें।"
 
-#: journalist_app/utils.py:130
+#: journalist_app/utils.py:145
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr "अमान्य गुप्त स्वरूप: कृपया केवल A-F और संख्याएँ 0- 9 ही जमा करें।"
 
-#: journalist_app/utils.py:136
+#: journalist_app/utils.py:151
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "अवैध गुप्त स्वरूप: विषम-लंबाई रहस्य| क्या आपने गुप्त टेक्स्ट को गलत तरीके से लिखा है?"
 
-#: journalist_app/utils.py:195
+#: journalist_app/utils.py:236
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "सबमिशन हटाया गया।"
 msgstr[1] "{num} सबमिशन हटाए गए।"
 
-#: journalist_app/utils.py:251
+#: journalist_app/utils.py:292
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} संग्रह हटाया गया"
 msgstr[1] "{num} संग्रह हटाए गए"
 
-#: journalist_app/utils.py:307
+#: journalist_app/utils.py:348
 msgid "Name updated."
 msgstr "नाम अपडेट किया गया ।"
 
-#: journalist_app/utils.py:316
+#: journalist_app/utils.py:357
 #, fuzzy
 #| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "आपने एक गलत पासवर्ड सबमिट किया है! पासवर्ड नहीं बदला गया।"
 
-#: journalist_app/utils.py:323
+#: journalist_app/utils.py:364
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -226,14 +226,14 @@ msgstr ""
 "एक त्रुटि थी, और नया पासवर्ड ठीक से सहेजा नहीं गया हो सकता है। आपको अपने खाते से बंद "
 "होने से रोकने के लिए, आपको अपना पासवर्ड दोबारा रीसेट करना चाहिए।"
 
-#: journalist_app/utils.py:332
+#: journalist_app/utils.py:373
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
 msgstr ""
 "पासवर्ड अपडेट किया गया। इसे अपने KeePassX डेटाबेस में सहेजने के लिए मत भूलना नया पासवर्ड:"
 
-#: journalist_app/utils.py:350
+#: journalist_app/utils.py:397
 msgid "No unread submissions in selected collections."
 msgstr "चयनित संग्रह में कोई अपठित सबमिशन नहीं है।"
 
@@ -1461,7 +1461,7 @@ msgstr ""
 #| "If you are using Mac/Linux, open the terminal. You can import the key "
 #| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
-"If you are using a Mac or Linux, open the terminal. You can import the key "
+"If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
 "यदि आप Mac/Linux का उपयोग कर रहे हैं तो, टर्मिनल खोलें। आप कुंजी को <code>gpg --"

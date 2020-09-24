@@ -80,7 +80,7 @@ msgstr ""
 "verificado exitosamente."
 
 #: journalist_app/admin.py:200 journalist_app/admin.py:208
-#: journalist_app/utils.py:309
+#: journalist_app/utils.py:350
 msgid "Name not updated: {}"
 msgstr "Nombre no actualizado: {}"
 
@@ -92,11 +92,11 @@ msgstr "Usuario '{user}' eliminado."
 msgid "Test alert sent. Please check your email."
 msgstr "Alerta de prueba enviada. Por favor revise su correo electrónico."
 
-#: journalist_app/col.py:50
+#: journalist_app/col.py:60
 msgid "{source_name}'s collection deleted."
 msgstr "Colección de {source_name} eliminada."
 
-#: journalist_app/col.py:61
+#: journalist_app/col.py:71
 msgid "No collections selected."
 msgstr "No hay colecciones seleccionadas."
 
@@ -142,36 +142,36 @@ msgstr "Archivo requerido."
 msgid "You can only upload PNG image files."
 msgstr "Solo puede subir archivos de imágenes PNG."
 
-#: journalist_app/main.py:122 journalist_app/utils.py:43
-#: journalist_app/utils.py:142
+#: journalist_app/main.py:124 journalist_app/utils.py:58
+#: journalist_app/utils.py:157
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "¡Ocurrió un error inesperado! Por favor informe a su administrador."
 
-#: journalist_app/main.py:133
+#: journalist_app/main.py:135
 msgid "Thanks. Your reply has been stored."
 msgstr "Gracias. Su respuesta ha sido guardada."
 
-#: journalist_app/main.py:154
+#: journalist_app/main.py:156
 msgid "No collections selected for download."
 msgstr "No hay colecciones seleccionadas para descargar."
 
-#: journalist_app/main.py:157 journalist_app/utils.py:243
+#: journalist_app/main.py:159 journalist_app/utils.py:284
 msgid "No collections selected for deletion."
 msgstr "No hay colecciones seleccionadas para eliminar."
 
-#: journalist_app/main.py:179
+#: journalist_app/main.py:180
 msgid "No unread submissions for this source."
 msgstr "No hay envíos sin leer para esta fuente."
 
-#: journalist_app/utils.py:50
+#: journalist_app/utils.py:65
 msgid "Account updated."
 msgstr "Cuenta actualizada."
 
-#: journalist_app/utils.py:91
+#: journalist_app/utils.py:106
 msgid "Login failed."
 msgstr "El inicio de sesión falló."
 
-#: journalist_app/utils.py:98
+#: journalist_app/utils.py:113
 msgid "Please wait at least {seconds} second before logging in again."
 msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgstr[0] ""
@@ -180,7 +180,7 @@ msgstr[1] ""
 "Por favor espere al menos {seconds} segundos antes de iniciar sesión de "
 "nuevo."
 
-#: journalist_app/utils.py:109
+#: journalist_app/utils.py:124
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -188,39 +188,39 @@ msgstr ""
 "Por favor espere un nuevo código de dos factores de su aplicación móvil o "
 "clave de seguridad antes de volver a intentarlo."
 
-#: journalist_app/utils.py:130
+#: journalist_app/utils.py:145
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Formato del secreto inválido: por favor envíe solo las letras A-F y los "
 "números 0-9."
 
-#: journalist_app/utils.py:136
+#: journalist_app/utils.py:151
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "El formato del secreto es inválido: secreto de longitud impar. ¿Ha escrito "
 "mal el secreto?"
 
-#: journalist_app/utils.py:195
+#: journalist_app/utils.py:236
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Envío eliminado."
 msgstr[1] "{num} envíos eliminados."
 
-#: journalist_app/utils.py:251
+#: journalist_app/utils.py:292
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} colección eliminada"
 msgstr[1] "{num} colecciones eliminadas"
 
-#: journalist_app/utils.py:307
+#: journalist_app/utils.py:348
 msgid "Name updated."
 msgstr "Nombre actualizado."
 
-#: journalist_app/utils.py:316
+#: journalist_app/utils.py:357
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "Envió una contraseña incorrecta. La contraseña no fue cambiada."
 
-#: journalist_app/utils.py:323
+#: journalist_app/utils.py:364
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -230,7 +230,7 @@ msgstr ""
 "correctamente. Para evitar que se bloquee su cuenta, debe restablecer su "
 "contraseña nuevamente."
 
-#: journalist_app/utils.py:332
+#: journalist_app/utils.py:373
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -238,7 +238,7 @@ msgstr ""
 "Contraseña actualizada. No olvide guardarla en su base de datos KeePassX. "
 "Contraseña nueva:"
 
-#: journalist_app/utils.py:350
+#: journalist_app/utils.py:397
 msgid "No unread submissions in selected collections."
 msgstr "No hay envíos sin leer en las colecciones seleccionadas."
 
@@ -773,8 +773,8 @@ msgstr ""
 "Si un usuario ha perdido o comprometido las credenciales de autenticación de "
 "dos factores, puede restablecerlas aquí. <em>Si hace esto, asegúrese que el "
 "usuario esté presente y listo para configurar su dispositivo con las nuevas "
-"credenciales de dos factores. De lo contrario, será bloqueado de su "
-"cuenta.</em>"
+"credenciales de dos factores. De lo contrario, será bloqueado de su cuenta.</"
+"em>"
 
 #: journalist_templates/edit_account.html:85
 msgid ""
@@ -1132,9 +1132,9 @@ msgid ""
 msgstr ""
 "<strong>Se recomienda que use la versión de escritorio del Navegador Tor "
 "para acceder a SecureDrop, ya que Orfox no proporciona el mismo nivel de "
-"seguridad y anonimato que ellas.</strong><a id=\"recommend-tor\" href=\""
-"{tor_browser_url}\"> Aprenda cómo instalarlo</a>, o ignore esta advertencia "
-"para continuar."
+"seguridad y anonimato que ellas.</strong><a id=\"recommend-tor\" href="
+"\"{tor_browser_url}\"> Aprenda cómo instalarlo</a>, o ignore esta "
+"advertencia para continuar."
 
 #: source_templates/index.html:39
 msgid "First submission"
@@ -1455,8 +1455,13 @@ msgstr ""
 "importado a su llavero."
 
 #: source_templates/why-journalist-key.html:12
+#, fuzzy
+#| msgid ""
+#| "If you are using a Mac or Linux, open the terminal. You can import the "
+#| "key with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</"
+#| "code></p>"
 msgid ""
-"If you are using a Mac or Linux, open the terminal. You can import the key "
+"If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
 "Si está usando Mac o Linux, abra la terminal. Puede importar la llave con:"
