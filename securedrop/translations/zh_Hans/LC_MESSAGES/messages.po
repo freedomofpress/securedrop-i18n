@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-07-20 11:51+0000\n"
+"PO-Revision-Date: 2020-09-24 01:53+0000\n"
 "Last-Translator: ff98sha <ff98sha@163.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/zh_Hans/>\n"
@@ -24,10 +24,8 @@ msgid "{time} ago"
 msgstr "{time} 之前"
 
 #: journalist_app/__init__.py:90 journalist_app/__init__.py:131
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to inactivity."
-msgstr "您因过久未活动而被登出"
+msgstr "您因过久未活动而被登出。"
 
 #: journalist_app/__init__.py:140
 msgid "You have been logged out due to password change"
@@ -78,20 +76,16 @@ msgid "Name not updated: {}"
 msgstr "未更新名称: {}"
 
 #: journalist_app/admin.py:232
-#, fuzzy
-#| msgid "Deleted user '{user}'"
 msgid "Deleted user '{user}'."
-msgstr "已删除用户 '{user}'"
+msgstr "已删除用户'{user}'。"
 
 #: journalist_app/admin.py:262
 msgid "Test alert sent. Please check your email."
 msgstr "已发送测试警报。请检查您的邮箱。"
 
 #: journalist_app/col.py:50
-#, fuzzy
-#| msgid "{source_name}'s collection deleted"
 msgid "{source_name}'s collection deleted."
-msgstr "{source_name} 集合已删除"
+msgstr "{source_name} 集合已删除。"
 
 #: journalist_app/col.py:61
 msgid "No collections selected."
@@ -106,16 +100,10 @@ msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgstr "HOTP 密码长度为40个字符 - 您已输入 {num_chars} 个字符。"
 
 #: journalist_app/forms.py:28
-#, fuzzy
-#| msgid ""
-#| "Field must be at least {min_chars} characters long but only got "
-#| "{num_chars}."
 msgid "Must be at least {min_chars} characters long."
-msgstr "该字段需要至少  {min_chars} 个字符，目前仅有  {num_chars} 个字符。"
+msgstr "该字段需要至少 {min_chars} 个字符。"
 
 #: journalist_app/forms.py:35
-#, fuzzy
-#| msgid "Field can not be more than {max_chars} characters."
 msgid "Cannot be longer than {max_chars} characters."
 msgstr "字段长度需小于 {max_chars} 个字符。"
 
@@ -204,8 +192,6 @@ msgid "Name updated."
 msgstr "已更新名称。"
 
 #: journalist_app/utils.py:316
-#, fuzzy
-#| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "您提交的密码无效！密码未更改。"
 
@@ -459,13 +445,6 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "当你配置好 YubiKey 后，输入下面的 6 位口令："
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 Onion Services, which are being phased out for security "
-#| "reasons. In February 2021, v2 Onion Services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required:</strong> Your SecureDrop servers are still running "
 "v2 onion services, which are being phased out for security reasons. In "
@@ -473,10 +452,9 @@ msgid ""
 "servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
-"<strong>需要更新：</strong>你的 SecureDrop 服务器仍在使用v2版洋葱服务，其因为"
-"安全问题已过时。在2021年2月，v2版洋葱服务将被禁用，届时你的 SecureDrop 服务器"
-"会无法访问。<a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">了解"
-"更多</a>"
+"<strong>需要更新：</strong>你的 SecureDrop "
+"服务器仍在使用v2版洋葱服务，其因为安全问题已过时。在2021年2月，v2版洋葱服务将被禁用，届时你的 SecureDrop 服务器会无法访问。<a "
+"href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">了解更多</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -659,10 +637,8 @@ msgid "Edit user \"{user}\""
 msgstr "编辑账户 \"{user}\""
 
 #: journalist_templates/edit_account.html:8
-#, fuzzy
-#| msgid "Change Name &amp; Admin Status"
 msgid "Change Name and Admin Status"
-msgstr "更改名称 &amp; 管理员状态"
+msgstr "更改名称和管理员状态"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -717,21 +693,14 @@ msgid "Reset Two-Factor Authentication"
 msgstr "重置双重认证授权"
 
 #: journalist_templates/edit_account.html:83
-#, fuzzy
-#| msgid ""
-#| "If a user's two-factor authentication credentials have been lost or "
-#| "compromised, you can reset them here. <em>If you do this, make sure the "
-#| "user is present and ready to set up their device with the new two-factor "
-#| "credentials. Otherwise, they will be locked out of their account."
 msgid ""
 "If a user's two-factor authentication credentials have been lost or "
 "compromised, you can reset them here. <em>If you do this, make sure the user "
 "is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account.</em>"
 msgstr ""
-"如果一个用户的双重认证已丢失或者遭到破坏，可以在此重置它们。<em>如果这么做，"
-"确认该用户在场，而且在其设置上已设好新的双因素验证。否则，它们的账户将被锁"
-"住。"
+"如果一个用户的双重认证已丢失或者遭到破坏，可以在此重置它们。<em>如果这么做，确认该用户在场，而且在其设置上已设好新的双因素验证。否则，它们的账户将被锁"
+"住。</em>"
 
 #: journalist_templates/edit_account.html:85
 msgid ""
@@ -857,10 +826,8 @@ msgid "Password"
 msgstr "密码"
 
 #: journalist_templates/login.html:10
-#, fuzzy
-#| msgid "Password"
 msgid "Show password"
-msgstr "密码"
+msgstr "显示密码"
 
 #: journalist_templates/login.html:12 source_templates/index.html:59
 #: source_templates/logout.html:3
@@ -909,10 +876,8 @@ msgid ""
 msgstr "您已登录。请验证上方的代号，它可能与上个页面的不同。"
 
 #: source_app/main.py:80
-#, fuzzy
-#| msgid "There was a problem verifying the two-factor code. Please try again."
 msgid "There was a temporary problem creating your account. Please try again."
-msgstr "验证两步认证码时出现问题。请稍后重试。"
+msgstr "创建账户时出现问题。请稍后重试。"
 
 #: source_app/main.py:184
 msgid "You must enter a message or choose a file to submit."
@@ -1030,43 +995,24 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "提交文档"
 
 #: source_templates/index.html:16
-#, fuzzy
-#| msgid ""
-#| "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security "
-#| "Setting</strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield "
-#| "icon\"> &nbsp;button in your browser’s toolbar to change it."
 msgid ""
 "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security Level</"
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
-"您洋葱浏览器的<a id=\"disable-js\" href=\"\"><strong>安全设置</strong></a>过"
-"低。请点选您浏览器工具栏的 <img src=\"{icon}\" alt=\"盾牌图标\">&nbsp; 以更"
-"改。"
+"您洋葱浏览器的<a id=\"disable-js\" href=\"\"><strong>安全等级</strong></a>过低。"
+"请点选您浏览器工具栏的 <img src=\"{icon}\" alt=\"盾牌图标\">以更改。"
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
-#| "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
-#| "install it</a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to use Tor Browser to access SecureDrop:</strong> "
 "<a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
 "a>, or ignore this warning to continue."
 msgstr ""
-"<strong>我们推荐您搭配洋葱浏览器访问 SecureDrop：</strong> <a id=\"recommend-"
-"tor\" href=\"{tor_browser_url}\">了解如何安装</a>，您也可以忽略此警告继续访"
-"问。"
+"<strong>我们推荐您搭配 Tor 浏览器访问 SecureDrop：</strong> <a id=\"recommend-tor\" href="
+"\"{tor_browser_url}\">了解如何安装</a>，您也可以忽略此警告继续访问。"
 
 #: source_templates/index.html:18
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended you use the desktop version of Tor Browser to "
-#| "access SecureDrop, as Orfox does not provide the same level of security "
-#| "and anonymity as the desktop versions.</strong> <a id=\"recommend-tor\" "
-#| "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
-#| "warning to continue."
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
@@ -1074,9 +1020,9 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
-"<strong>我们推荐您使用桌面版洋葱浏览器访问 SecureDrop，Orfox 相对桌面版而言无"
-"法提供相同水准的安全性和匿名性。</strong> <a id=\"recommend-tor\" href="
-"\"{tor_browser_url}\">了解如何安装</a>，您也可以忽略此警告继续访问。"
+"<strong>我们推荐您使用桌面版 Tor 浏览器访问 SecureDrop，Orfox 相对桌面版而言无法提供相同水准的安全性和匿名性。</"
+"strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\""
+">了解如何安装</a>，您也可以忽略此警告继续访问。"
 
 #: source_templates/index.html:39
 msgid "First submission"
@@ -1131,19 +1077,13 @@ msgid "One more thing..."
 msgstr "还有一件事..."
 
 #: source_templates/logout.html:7
-#, fuzzy
-#| msgid ""
-#| "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
-#| "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
-#| "toolbar. This will clear your Tor browser activity data on this device."
 msgid ""
 "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor Browser's "
 "toolbar. This will clear your Tor Browser activity data on this device."
 msgstr ""
-"点击 Tor 浏览器工具栏的<img src={icon} alt=\"broom icon\" width=\"16\" "
-"height=\"16\">&nbsp;<strong>新身份</strong>按钮。这能清除此设备上的 Tor 浏览"
-"器活动记录。"
+"点击 Tor 浏览器工具栏的<img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\""
+">&nbsp;<strong>新身份</strong>按钮。这能清除此设备上的 Tor 浏览器活动记录。"
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1266,21 +1206,14 @@ msgid "Important"
 msgstr "重中之重"
 
 #: source_templates/session_timeout.html:5
-#, fuzzy
-#| msgid ""
-#| "You were logged out due to inactivity. Click the <img src={icon} alt="
-#| "\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</"
-#| "strong> button in your Tor browser's toolbar before moving on. This will "
-#| "clear your Tor browser activity data on this device."
 msgid ""
 "You were logged out due to inactivity. Click the <img src={icon} alt=\"broom "
 "icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong> button "
 "in your Tor Browser's toolbar before moving on. This will clear your Tor "
 "Browser activity data on this device."
 msgstr ""
-"您因为长时间无操作而被注销。再继续操作前，点击 Tor 浏览器工具栏上的<img "
-"src={icon} alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>新身份"
-"</strong>按钮。这能清除此设备上 Tor 浏览器的活动记录。"
+"您因为长时间无操作而被注销。再继续操作前，点击 Tor 浏览器工具栏上的<img src={icon} alt=\"broom icon\" width="
+"\"16\" height=\"16\">&nbsp;<strong>新身份</strong>按钮。这能清除此设备上 Tor 浏览器的活动记录。"
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1297,16 +1230,12 @@ msgid ""
 msgstr "监听您网络流量的人（如您的政府、互联网提供商）将可以识别您的身份。"
 
 #: source_templates/tor2web-warning.html:6
-#, fuzzy
-#| msgid ""
-#| "We <strong>strongly advise</strong> you to use the <a href=\"www."
-#| "torproject.org/projects/torbrowser.html\">Tor browser</a> instead."
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor Browser</a> instead."
 msgstr ""
-"我们<strong>强烈建议</strong>您使用<a href=\"www.torproject.org/projects/"
-"torbrowser.html\">洋葱浏览器</a>。"
+"我们<strong>强烈建议</strong>您使用 <a href=\"www.torproject.org/projects/torbrowser."
+"html\">Tor 浏览器</a>。"
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
@@ -1350,9 +1279,7 @@ msgid ""
 "SecureDrop encrypts files and messages after they are submitted. Encrypting "
 "messages and files before submission can provide an extra layer of security "
 "before your data reaches the SecureDrop server."
-msgstr ""
-"SecureDrop 将在提交后加密文件及信息。在提交文件至 SecureDrop  服务器前之前进"
-"行加密将提供额外的保护。"
+msgstr "SecureDrop 将在提交后加密文件及信息。在提交文件至 SecureDrop 服务器前之前进行加密将提供额外的保护。"
 
 #: source_templates/why-journalist-key.html:5
 msgid ""
@@ -1361,17 +1288,13 @@ msgid ""
 msgstr "若您已熟知 GPG 加密软件，您可自行加密。请参阅："
 
 #: source_templates/why-journalist-key.html:7
-#, fuzzy
-#| msgid ""
-#| "<a href=\"{url}\">Download</a> the public key. The public key is a text "
-#| "file with the extension <code>.asc</code>"
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. It will be saved to a file "
 "called:\n"
 "        <p><code>{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"<a href=\"{url}\">下载</a>此公钥。公钥文件为扩展名是 <code>.asc</code> 的文本"
-"文件"
+"<a href=\"{url}\">下载</a>此公钥。文件名为：\n"
+"        <p><code>{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:9
 msgid "Import it into your GPG keyring."
@@ -1387,55 +1310,41 @@ msgstr ""
 "以自动导入至您的密钥串。"
 
 #: source_templates/why-journalist-key.html:12
-#, fuzzy
-#| msgid ""
-#| "If you are using Mac/Linux, open the terminal. You can import the key "
-#| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
 "If you are using a Mac or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"若您正使用 macOS/Linux，请打开终端。您可使用 <code>gpg --import /path/to/key."
-"asc</code> 目录导入密钥。"
+"若您正使用 macOS/Linux，请打开终端。您可使用 <p><code>gpg --import /path/to/"
+"{submission_key_fpr_filename}</code> 导入密钥。"
 
 #: source_templates/why-journalist-key.html:15
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
-msgstr ""
+msgstr "加密你的提交内容。打开命令行并输入此 PGP 命令："
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
 "<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submission</"
 "code>"
 msgstr ""
+"<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/"
+"submission</code>"
 
 #: source_templates/why-journalist-key.html:18
-#, fuzzy
-#| msgid ""
-#| "Upload your encrypted submission. It will have the same filename as the "
-#| "unencrypted file, with .gpg at the end (e.g. <code>roswell_photos.pdf."
-#| "gpg</code>)"
 msgid ""
 "Upload your encrypted submission. It will have the same filename as the "
 "unencrypted file, with .gpg at the end (e.g. <code>internal_memo.pdf.gpg</"
 "code>)"
 msgstr ""
-"上传您的加密档案，其文件名将与未加密版文件一致，但以 .gpg 文件结尾（如  "
-"<code>roswell_photos.pdf.gpg</code>）"
+"上传您的加密档案，其文件名将与未加密版文件一致，但以 .gpg 文件结尾（如  <code>internal_memo.pdf.gpg</code>）"
 
 #: source_templates/why-journalist-key.html:21
-#, fuzzy
-#| msgid ""
-#| "<strong>Tip:</strong> If you wish to remain anonymous, <strong>do not</"
-#| "strong> use GPG to sign the encrypted file (with the <code>--sign</code> "
-#| "or <code>-s</code> flag) as this will reveal your GPG identity to us."
 msgid ""
 "<strong>Important:</strong> If you wish to remain anonymous, <strong>do not</"
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
-"<strong>提示：</strong>若您想保持匿名身份，<strong>请勿</strong>使用 GPG 签名"
-"加密文件（即加入 <code>--sign</code> 或  <code>-s</code> 命令行参数），这将向"
-"我们泄露您的 GPG 身份。"
+"<strong>重要提示：</strong>若您想保持匿名身份，<strong>请勿</strong>使用 GPG 签名加密文件（即加入 "
+"<code>--sign</code> 或  <code>-s</code> 命令行参数），这将向我们泄露您的 GPG 身份。"
 
 #: source_templates/why-journalist-key.html:23
 msgid "Back to submission page"
