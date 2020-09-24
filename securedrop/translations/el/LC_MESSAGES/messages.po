@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-07-22 11:37+0000\n"
-"Last-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\n"
+"PO-Revision-Date: 2020-09-24 16:20+0000\n"
+"Last-Translator: Adrian <pappasadrian@gmail.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/el/>\n"
 "Language: el\n"
@@ -24,10 +24,8 @@ msgid "{time} ago"
 msgstr "πριν από {time}"
 
 #: journalist_app/__init__.py:90 journalist_app/__init__.py:131
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to inactivity."
-msgstr "Αποσυνδεθήκατε λόγω αδράνειας"
+msgstr "Αποσυνδεθήκατε λόγω αδράνειας."
 
 #: journalist_app/__init__.py:140
 msgid "You have been logged out due to password change"
@@ -86,10 +84,8 @@ msgid "Name not updated: {}"
 msgstr "Το όνομα δεν ενημερώθηκε: {}"
 
 #: journalist_app/admin.py:232
-#, fuzzy
-#| msgid "Deleted user '{user}'"
 msgid "Deleted user '{user}'."
-msgstr "Ο χρήστης «{user}» διαγράφηκε"
+msgstr "Ο χρήστης «{user}» διαγράφτηκε."
 
 #: journalist_app/admin.py:262
 msgid "Test alert sent. Please check your email."
@@ -98,10 +94,8 @@ msgstr ""
 "σας."
 
 #: journalist_app/col.py:50
-#, fuzzy
-#| msgid "{source_name}'s collection deleted"
 msgid "{source_name}'s collection deleted."
-msgstr "Η συλλογή του/της {source_name} διαγράφηκε"
+msgstr "Η συλλογή του/της {source_name} διαγράφτηκε."
 
 #: journalist_app/col.py:61
 msgid "No collections selected."
@@ -116,20 +110,12 @@ msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgstr "Τα μυστικά HOTP έχουν μήκος 40 χαρακτήρων - έχετε εισάγει {num_chars}."
 
 #: journalist_app/forms.py:28
-#, fuzzy
-#| msgid ""
-#| "Field must be at least {min_chars} characters long but only got "
-#| "{num_chars}."
 msgid "Must be at least {min_chars} characters long."
-msgstr ""
-"Το πεδίο πρέπει να έχει τουλάχιστον {min_chars} χαρακτήρες αλλά εσείς έχετε "
-"εισάγει {num_chars}."
+msgstr "Πρέπει να έχει τουλάχιστον {min_chars} χαρακτήρες."
 
 #: journalist_app/forms.py:35
-#, fuzzy
-#| msgid "Field can not be more than {max_chars} characters."
 msgid "Cannot be longer than {max_chars} characters."
-msgstr "Το πεδίο δεν μπορεί να περιέχει παραπάνω από {max_chars} χαρακτήρες."
+msgstr "Δεν μπορεί να περιέχει παραπάνω από {max_chars} χαρακτήρες."
 
 #: journalist_app/forms.py:40
 msgid ""
@@ -229,10 +215,8 @@ msgid "Name updated."
 msgstr "Το όνομα ενημερώθηκε."
 
 #: journalist_app/utils.py:316
-#, fuzzy
-#| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
-msgstr "Ο κωδικός που καταχωρήσατε είναι λανθασμένος! Ο κωδικός δεν άλλαξε."
+msgstr "Ο κωδικός που καταχωρήσατε δεν είναι έγκυρος. Ο κωδικός δεν άλλαξε."
 
 #: journalist_app/utils.py:323
 msgid ""
@@ -509,13 +493,6 @@ msgstr ""
 "εξαψήφιο κωδικό παρακάτω:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 Onion Services, which are being phased out for security "
-#| "reasons. In February 2021, v2 Onion Services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required:</strong> Your SecureDrop servers are still running "
 "v2 onion services, which are being phased out for security reasons. In "
@@ -524,11 +501,11 @@ msgid ""
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
 "<strong>Απαιτείται αναβάθμιση:</strong>Οι διακομιστές SecureDrop σας "
-"λειτουργούν ακόμα με v2 Onion Services, οι οποίες είναι σε φάση απόσυρσης "
-"για λόγους ασφαλείας. Το Φεβρουάριο του 2021, οι v2 Onion Services θα "
+"λειτουργούν ακόμα με v2 onion services, οι οποίες είναι σε φάση απόσυρσης "
+"για λόγους ασφαλείας. Το Φεβρουάριο του 2021, οι v2 onion services θα "
 "απενεργοποιηθούν οπότε οι διακομιστές SecureDrop σας πιθανώς να είναι "
-"απροσπέλαστοι. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
-"\">Μάθετε περισσότερα</a>"
+"απροσπέλαστοι. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\""
+">Μάθετε περισσότερα</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -729,10 +706,8 @@ msgid "Edit user \"{user}\""
 msgstr "Επεξεργασία χρήστη \"{user}\""
 
 #: journalist_templates/edit_account.html:8
-#, fuzzy
-#| msgid "Change Name &amp; Admin Status"
 msgid "Change Name and Admin Status"
-msgstr "Αλλαγή ονόματος &amp; Κατάστασης διαχειριστή"
+msgstr "Αλλαγή ονόματος και Κατάστασης διαχειριστή"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -793,12 +768,6 @@ msgid "Reset Two-Factor Authentication"
 msgstr "Επαναφορά πιστοποίησης δύο παραγόντων"
 
 #: journalist_templates/edit_account.html:83
-#, fuzzy
-#| msgid ""
-#| "If a user's two-factor authentication credentials have been lost or "
-#| "compromised, you can reset them here. <em>If you do this, make sure the "
-#| "user is present and ready to set up their device with the new two-factor "
-#| "credentials. Otherwise, they will be locked out of their account."
 msgid ""
 "If a user's two-factor authentication credentials have been lost or "
 "compromised, you can reset them here. <em>If you do this, make sure the user "
@@ -809,7 +778,7 @@ msgstr ""
 "κλαπούν, μπορείτε να τα επαναφέρετε εδώ. <em>Αν το κάνετε αυτό, επιβεβαιώστε "
 "πως ο χρήστης είναι παρών και έτοιμος να ρυθμίσει τη συσκευή του με τα νέα "
 "διαπιστευτήρια πιστοποίησης δύο παραγόντων. Διαφορετικά, θα χάσει την "
-"πρόσβαση στο λογαριασμό του."
+"πρόσβαση στο λογαριασμό του.</em>"
 
 #: journalist_templates/edit_account.html:85
 msgid ""
@@ -945,10 +914,8 @@ msgid "Password"
 msgstr "Κωδικός πρόσβασης"
 
 #: journalist_templates/login.html:10
-#, fuzzy
-#| msgid "Password"
 msgid "Show password"
-msgstr "Κωδικός πρόσβασης"
+msgstr "Προβολή κωδικού"
 
 #: journalist_templates/login.html:12 source_templates/index.html:59
 #: source_templates/logout.html:3
@@ -1005,11 +972,9 @@ msgstr ""
 "αυτό ενδέχεται να διαφέρει από αυτό που εμφανίστηκε στη προηγούμενη σελίδα."
 
 #: source_app/main.py:80
-#, fuzzy
-#| msgid "There was a problem verifying the two-factor code. Please try again."
 msgid "There was a temporary problem creating your account. Please try again."
 msgstr ""
-"Υπήρξε πρόβλημα με την επαλήθευση του κωδικού πιστοποίησης δυο παραγόντων. "
+"Υπήρξε κάποιο προσωρινό πρόβλημα κατά την δημιουργία του λογαριασμού σας. "
 "Παρακαλώ δοκιμάστε ξανά."
 
 #: source_app/main.py:184
@@ -1143,20 +1108,14 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "ΥΠΟΒΟΛΗ ΕΓΓΡΑΦΩΝ"
 
 #: source_templates/index.html:16
-#, fuzzy
-#| msgid ""
-#| "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security "
-#| "Setting</strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield "
-#| "icon\"> &nbsp;button in your browser’s toolbar to change it."
 msgid ""
 "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security Level</"
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
-"Η <a id=\"disable-js\" href=\"\"><strong>Ρύθμιση ασφαλείας</strong></a> του "
-"Tor Browser σας είναι πολύ χαμηλή. Χρησιμοποιήστε το κουμπί <img src="
-"\"{icon}\" alt=\"shield icon\"> &nbsp; στη γραμμή εργαλειών για να την "
-"αλλάξετε."
+"Η <a id=\"disable-js\" href=\"\"><strong>Επίπεδο ασφαλείας</strong></a> του "
+"Tor Browser σας είναι πολύ χαμηλή. Χρησιμοποιήστε το κουμπί <img src=\"{icon}"
+"\" alt=\"shield icon\"> &nbsp; στη γραμμή εργαλειών για να την αλλάξετε."
 
 #: source_templates/index.html:17
 #, fuzzy
@@ -1175,13 +1134,6 @@ msgstr ""
 "την προειδοποίηση για να συνεχίσετε."
 
 #: source_templates/index.html:18
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended you use the desktop version of Tor Browser to "
-#| "access SecureDrop, as Orfox does not provide the same level of security "
-#| "and anonymity as the desktop versions.</strong> <a id=\"recommend-tor\" "
-#| "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
-#| "warning to continue."
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
@@ -1191,8 +1143,8 @@ msgid ""
 msgstr ""
 "<strong>Προτείνεται να χρησιμοποιήσετε την έκδοση για υπολογιστή του Tor "
 "browser για να επισκεφτείτε το SecureDrop, καθώς ο Orfox δεν παρέχει το ίδιο "
-"επίπεδο ασφάλειας και ανωνυμίας με τις εκδόσεις για υπολογιστή.</strong> <a "
-"id=\"recommend-tor\" href=\"{tor_browser_url}\">Μάθετε πώς να τον "
+"επίπεδο ασφάλειας και ανωνυμίας με την έκδοση για υπολογιστή.</strong> <a id"
+"=\"recommend-tor\" href=\"{tor_browser_url}\">Μάθετε πώς να τον "
 "εγκαταστήσετε</a>, ή αγνοήστε αυτή την προειδοποίηση για να συνεχίσετε."
 
 #: source_templates/index.html:39
@@ -1251,20 +1203,15 @@ msgid "One more thing..."
 msgstr "Ένα ακόμα πράγμα..."
 
 #: source_templates/logout.html:7
-#, fuzzy
-#| msgid ""
-#| "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
-#| "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
-#| "toolbar. This will clear your Tor browser activity data on this device."
 msgid ""
 "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor Browser's "
 "toolbar. This will clear your Tor Browser activity data on this device."
 msgstr ""
-"Πατήστε το κουμπί <img src={icon} alt=\"broom icon\" width=\"16\" height="
-"\"16\">&nbsp;<strong>Νέα Ταυτότητα</strong> στη γραμμη εργαλείων του Tor "
-"browser σας. Αυτό θα διαγράψει τα δεδομένα δραστηριότητας του Tor Browser "
-"σας σε αυτή τη συσκευή."
+"Πατήστε το κουμπί <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16"
+"\">&nbsp;<strong>Νέα Ταυτότητα</strong> στη γραμμη εργαλείων του Tor Browser "
+"σας. Αυτό θα διαγράψει τα δεδομένα δραστηριότητας του Tor Browser σας σε "
+"αυτή τη συσκευή."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1396,12 +1343,6 @@ msgid "Important"
 msgstr "Σημαντικό"
 
 #: source_templates/session_timeout.html:5
-#, fuzzy
-#| msgid ""
-#| "You were logged out due to inactivity. Click the <img src={icon} alt="
-#| "\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</"
-#| "strong> button in your Tor browser's toolbar before moving on. This will "
-#| "clear your Tor browser activity data on this device."
 msgid ""
 "You were logged out due to inactivity. Click the <img src={icon} alt=\"broom "
 "icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong> button "
@@ -1410,8 +1351,8 @@ msgid ""
 msgstr ""
 "Αποσυνδεθήκατε επειδή δεν κάνατε κάποια ενέργεια. Πατήστε το κουμπί <img "
 "src={icon} alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Νέα "
-"Ταυτότητα</strong> στη γραμμή εργαλείων του Tor browser σας πριν φύγετε. "
-"Αυτό θα διαγράψει τα δεδομένα δραστηριότητας του Tor browser σε αυτή τη "
+"Ταυτότητα</strong> στη γραμμή εργαλείων του Tor Browser σας πριν φύγετε. "
+"Αυτό θα διαγράψει τα δεδομένα δραστηριότητας του Tor Browser σε αυτή τη "
 "συσκευή."
 
 #: source_templates/tor2web-warning.html:3
