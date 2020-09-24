@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-09-24 16:20+0000\n"
+"PO-Revision-Date: 2020-09-24 18:01+0000\n"
 "Last-Translator: Adrian <pappasadrian@gmail.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/el/>\n"
@@ -1118,20 +1118,15 @@ msgstr ""
 "\" alt=\"shield icon\"> &nbsp; στη γραμμή εργαλειών για να την αλλάξετε."
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
-#| "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
-#| "install it</a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to use Tor Browser to access SecureDrop:</strong> "
 "<a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
 "a>, or ignore this warning to continue."
 msgstr ""
 "<strong>Προτείνεται να χρησιμοποιείτε τον Tor Browser για να επισκέπτεστε το "
-"SecureDrop:</strong> <a id=\"recommend-tor\" href="
-"\"{tor_browser_url}\">Μάθετε πως να τον εγκαταστήσετε</a>, ή αγνοήστε αυτή "
-"την προειδοποίηση για να συνεχίσετε."
+"SecureDrop:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\""
+">Μάθετε πως να τον εγκαταστήσετε</a>, ή αγνοήστε αυτή την προειδοποίηση για "
+"να συνεχίσετε."
 
 #: source_templates/index.html:18
 msgid ""
@@ -1374,10 +1369,6 @@ msgstr ""
 "κυβέρνηση, ο πάροχός σας) για να σας ταυτοποιήσει."
 
 #: source_templates/tor2web-warning.html:6
-#, fuzzy
-#| msgid ""
-#| "We <strong>strongly advise</strong> you to use the <a href=\"www."
-#| "torproject.org/projects/torbrowser.html\">Tor browser</a> instead."
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor Browser</a> instead."
@@ -1450,17 +1441,14 @@ msgstr ""
 "να κρυπτογραφήσετε εσείς τις υποβολές σας. Για να το κάνετε:"
 
 #: source_templates/why-journalist-key.html:7
-#, fuzzy
-#| msgid ""
-#| "<a href=\"{url}\">Download</a> the public key. The public key is a text "
-#| "file with the extension <code>.asc</code>"
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. It will be saved to a file "
 "called:\n"
 "        <p><code>{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"<a href=\"{url}\">Κατεβάστε</a> το δημόσιο κλειδί. Το δημόσιο κλειδί είναι "
-"ένα αρχείο κειμένου με την κατάληξη <code>.asc</code>"
+"<a href=\"{url}\">Κατεβάστε</a> το δημόσιο κλειδί. Θα αποθηκευτεί σε ένα "
+"αρχείο με όνομα:\n"
+"        <p><code>{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:9
 msgid "Import it into your GPG keyring."
@@ -1477,54 +1465,45 @@ msgstr ""
 "αυτόματα στην κλειδοθήκη σας."
 
 #: source_templates/why-journalist-key.html:12
-#, fuzzy
-#| msgid ""
-#| "If you are using Mac/Linux, open the terminal. You can import the key "
-#| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
 "If you are using a Mac or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"Αν χρησιμοποιείτε Mac/Linux, ανοίξτε το τερματικό. Μπορείτε να εισάγετε το "
-"κλειδί με την εντολή <code>gpg --import /path/to/key.asc</code>."
+"Αν χρησιμοποιείτε Mac ή Linux, ανοίξτε το τερματικό. Μπορείτε να εισάγετε το "
+"κλειδί με την εντολή:<p><code>gpg --import /path/to/"
+"{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:15
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
 msgstr ""
+"Κρυπτογραφήστε την υποβολή σας. Ανοίξτε το τερματικό και εισάγετε αυτή την "
+"εντολή gpg:"
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
 "<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submission</"
 "code>"
 msgstr ""
+"<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/"
+"submission</code>"
 
 #: source_templates/why-journalist-key.html:18
-#, fuzzy
-#| msgid ""
-#| "Upload your encrypted submission. It will have the same filename as the "
-#| "unencrypted file, with .gpg at the end (e.g. <code>roswell_photos.pdf."
-#| "gpg</code>)"
 msgid ""
 "Upload your encrypted submission. It will have the same filename as the "
 "unencrypted file, with .gpg at the end (e.g. <code>internal_memo.pdf.gpg</"
 "code>)"
 msgstr ""
 "Ανεβάστε την κρυπτογραφημένη υποβολή σας. Αυτή θα έχει το ίδιο όνομα αρχείου "
-"με το μη κρυπτογραφημένο αρχείο, με κατάληξη .gpg (π.χ. <code>roswell_photos."
+"με το μη κρυπτογραφημένο αρχείο, με κατάληξη .gpg (π.χ. <code>internal_memo."
 "pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:21
-#, fuzzy
-#| msgid ""
-#| "<strong>Tip:</strong> If you wish to remain anonymous, <strong>do not</"
-#| "strong> use GPG to sign the encrypted file (with the <code>--sign</code> "
-#| "or <code>-s</code> flag) as this will reveal your GPG identity to us."
 msgid ""
 "<strong>Important:</strong> If you wish to remain anonymous, <strong>do not</"
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
-"<strong>Συμβουλή:</strong> Αν επιθυμείτε να διατηρήσετε την ανωνυμία σας, "
+"<strong>Σημαντικό:</strong> Αν επιθυμείτε να διατηρήσετε την ανωνυμία σας, "
 "<strong>μην</strong> χρησιμοποιήσετε το GPG για να υπογράψετε το "
 "κρυπτογραφημένο αρχείο (χρησιμοποιώντας τα διακριτικά <code>--sign</code> ή "
 "<code>-s</code>), καθώς αυτό θα μας αποκαλύψει την ταυτότητα GPG σας."
