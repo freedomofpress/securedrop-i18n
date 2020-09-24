@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-09-24 18:01+0000\n"
-"Last-Translator: Adrian <pappasadrian@gmail.com>\n"
+"PO-Revision-Date: 2020-09-24 21:01+0000\n"
+"Last-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/el/>\n"
 "Language: el\n"
@@ -85,7 +85,7 @@ msgstr "Το όνομα δεν ενημερώθηκε: {}"
 
 #: journalist_app/admin.py:232
 msgid "Deleted user '{user}'."
-msgstr "Ο χρήστης «{user}» διαγράφτηκε."
+msgstr "Ο χρήστης «{user}» διαγράφηκε."
 
 #: journalist_app/admin.py:262
 msgid "Test alert sent. Please check your email."
@@ -95,7 +95,7 @@ msgstr ""
 
 #: journalist_app/col.py:50
 msgid "{source_name}'s collection deleted."
-msgstr "Η συλλογή του/της {source_name} διαγράφτηκε."
+msgstr "Η συλλογή του/της {source_name} διαγράφηκε."
 
 #: journalist_app/col.py:61
 msgid "No collections selected."
@@ -503,7 +503,7 @@ msgstr ""
 "<strong>Απαιτείται αναβάθμιση:</strong>Οι διακομιστές SecureDrop σας "
 "λειτουργούν ακόμα με v2 onion services, οι οποίες είναι σε φάση απόσυρσης "
 "για λόγους ασφαλείας. Το Φεβρουάριο του 2021, οι v2 onion services θα "
-"απενεργοποιηθούν οπότε οι διακομιστές SecureDrop σας πιθανώς να είναι "
+"απενεργοποιηθούν οπότε οι διακομιστές SecureDrop σας πιθανόν να είναι "
 "απροσπέλαστοι. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\""
 ">Μάθετε περισσότερα</a>"
 
@@ -707,7 +707,7 @@ msgstr "Επεξεργασία χρήστη \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Name and Admin Status"
-msgstr "Αλλαγή ονόματος και Κατάστασης διαχειριστή"
+msgstr "Αλλαγή Ονόματος και Κατάστασης διαχειριστή"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -1113,9 +1113,9 @@ msgid ""
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
-"Η <a id=\"disable-js\" href=\"\"><strong>Επίπεδο ασφαλείας</strong></a> του "
-"Tor Browser σας είναι πολύ χαμηλή. Χρησιμοποιήστε το κουμπί <img src=\"{icon}"
-"\" alt=\"shield icon\"> &nbsp; στη γραμμή εργαλειών για να την αλλάξετε."
+"Το <a id=\"disable-js\" href=\"\"><strong>Επίπεδο ασφαλείας</strong></a> του "
+"Tor Browser σας είναι πολύ χαμηλό. Χρησιμοποιήστε το κουμπί <img src=\"{icon}"
+"\" alt=\"shield icon\"> &nbsp; στη γραμμή εργαλειών για να το αλλάξετε."
 
 #: source_templates/index.html:17
 msgid ""
@@ -1344,11 +1344,10 @@ msgid ""
 "in your Tor Browser's toolbar before moving on. This will clear your Tor "
 "Browser activity data on this device."
 msgstr ""
-"Αποσυνδεθήκατε επειδή δεν κάνατε κάποια ενέργεια. Πατήστε το κουμπί <img "
-"src={icon} alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Νέα "
-"Ταυτότητα</strong> στη γραμμή εργαλείων του Tor Browser σας πριν φύγετε. "
-"Αυτό θα διαγράψει τα δεδομένα δραστηριότητας του Tor Browser σε αυτή τη "
-"συσκευή."
+"Αποσυνδεθήκατε λόγω αδράνειας. Πατήστε το κουμπί <img src={icon} alt=\"broom "
+"icon\" width=\"16\" height=\"16\">&nbsp;<strong>Νέα Ταυτότητα</strong> στη "
+"γραμμή εργαλείων του Tor Browser σας πριν φύγετε. Αυτό θα διαγράψει τα "
+"δεδομένα δραστηριότητας του Tor Browser σε αυτή τη συσκευή."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
