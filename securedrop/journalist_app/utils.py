@@ -9,15 +9,30 @@ import werkzeug
 from flask import (g, flash, current_app, abort, send_file, redirect, url_for,
                    render_template, Markup, sessions, request)
 from flask_babel import gettext, ngettext
-from sqlalchemy.sql.expression import false
+from sqlalchemy.exc import IntegrityError
 
 import i18n
 
 from db import db
-from models import (get_one_or_else, Source, Journalist, InvalidUsernameException,
-                    WrongPasswordException, FirstOrLastNameError, LoginThrottledException,
-                    BadTokenException, SourceStar, PasswordError, Submission, RevokedToken,
-                    InvalidPasswordLength, Reply)
+from models import (
+    BadTokenException,
+    FirstOrLastNameError,
+    InvalidPasswordLength,
+    InvalidUsernameException,
+    Journalist,
+    LoginThrottledException,
+    PasswordError,
+    Reply,
+    RevokedToken,
+    SeenFile,
+    SeenMessage,
+    SeenReply,
+    Source,
+    SourceStar,
+    Submission,
+    WrongPasswordException,
+    get_one_or_else,
+)
 from store import add_checksum_for_file
 
 from sdconfig import SDConfig
@@ -149,6 +164,32 @@ def validate_hotp_secret(user: Journalist, otp_secret: str) -> bool:
     return True
 
 
+def mark_seen(targets: List[Union[Submission, Reply]], user: Journalist) -> None:
+    """
+    Marks a list of submissions or replies seen by the given journalist.
+    """
+    for t in targets:
+        try:
+            if isinstance(t, Submission):
+                t.downloaded = True
+                if t.is_file:
+                    sf = SeenFile(file_id=t.id, journalist_id=user.id)
+                    db.session.add(sf)
+                elif t.is_message:
+                    sm = SeenMessage(message_id=t.id, journalist_id=user.id)
+                    db.session.add(sm)
+                db.session.commit()
+            elif isinstance(t, Reply):
+                sr = SeenReply(reply_id=t.id, journalist_id=user.id)
+                db.session.add(sr)
+                db.session.commit()
+        except IntegrityError as e:
+            db.session.rollback()
+            if 'UNIQUE constraint failed' in str(e):
+                continue
+            raise
+
+
 def download(zip_basename: str, submissions: List[Union[Submission, Reply]]) -> werkzeug.Response:
     """Send client contents of ZIP-file *zip_basename*-<timestamp>.zip
     containing *submissions*. The ZIP-file, being a
@@ -160,19 +201,19 @@ def download(zip_basename: str, submissions: List[Union[Submission, Reply]]) -> 
     :param list submissions: A list of :class:`models.Submission`s to
                              include in the ZIP-file.
     """
-    zf = current_app.storage.get_bulk_archive(submissions,
-                                              zip_directory=zip_basename)
+    zf = current_app.storage.get_bulk_archive(submissions, zip_directory=zip_basename)
     attachment_filename = "{}--{}.zip".format(
-        zip_basename, datetime.datetime.utcnow().strftime("%Y-%m-%d--%H-%M-%S"))
+        zip_basename, datetime.datetime.utcnow().strftime("%Y-%m-%d--%H-%M-%S")
+    )
 
-    # Mark the submissions that have been downloaded as such
-    for submission in submissions:
-        submission.downloaded = True
-    db.session.commit()
+    mark_seen(submissions, g.user)
 
-    return send_file(zf.name, mimetype="application/zip",
-                     attachment_filename=attachment_filename,
-                     as_attachment=True)
+    return send_file(
+        zf.name,
+        mimetype="application/zip",
+        attachment_filename=attachment_filename,
+        as_attachment=True,
+    )
 
 
 def delete_file_object(file_object: Union[Submission, Reply]) -> None:
@@ -338,19 +379,25 @@ def set_diceware_password(user: Journalist, password: Optional[str]) -> bool:
 
 
 def col_download_unread(cols_selected: List[str]) -> werkzeug.Response:
-    """Download all unread submissions from all selected sources."""
-    submissions = []  # type: List[Union[Source, Submission]]
+    """
+    Download all unseen submissions from all selected sources.
+    """
+    unseen_submissions = []  # type: List[Union[Source, Submission]]
+
     for filesystem_id in cols_selected:
-        id = Source.query.filter(Source.filesystem_id == filesystem_id) \
-                         .filter_by(deleted_at=None).one().id
-        submissions += Submission.query.filter(
-            Submission.downloaded == false(),
-            Submission.source_id == id).all()
-    if submissions == []:
-        flash(gettext("No unread submissions in selected collections."),
-              "error")
-        return redirect(url_for('main.index'))
-    return download("unread", submissions)
+        source = (
+            Source.query.filter(Source.filesystem_id == filesystem_id)
+            .filter_by(deleted_at=None)
+            .one()
+        )
+        submissions = Submission.query.filter_by(source_id=source.id).all()
+        unseen_submissions += [s for s in submissions if not s.seen]
+
+    if not unseen_submissions:
+        flash(gettext("No unread submissions in selected collections."), "error")
+        return redirect(url_for("main.index"))
+
+    return download("unread", unseen_submissions)
 
 
 def col_download_all(cols_selected: List[str]) -> werkzeug.Response:

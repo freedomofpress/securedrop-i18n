@@ -1,7 +1,8 @@
+import collections.abc
 import json
 
 from datetime import datetime, timedelta
-from typing import Tuple, Callable, Any
+from typing import Tuple, Callable, Any, Set, Union
 
 import flask
 import werkzeug
@@ -15,7 +16,7 @@ from werkzeug.exceptions import default_exceptions
 
 from db import db
 from journalist_app import utils
-from models import (Journalist, Reply, Source, Submission,
+from models import (Journalist, Reply, SeenReply, Source, Submission,
                     LoginThrottledException, InvalidUsernameException,
                     BadTokenException, WrongPasswordException)
 from sdconfig import SDConfig
@@ -66,8 +67,10 @@ def make_blueprint(config: SDConfig) -> Blueprint:
     def get_endpoints() -> Tuple[flask.Response, int]:
         endpoints = {'sources_url': '/api/v1/sources',
                      'current_user_url': '/api/v1/user',
+                     'all_users_url': '/api/v1/users',
                      'submissions_url': '/api/v1/submissions',
                      'replies_url': '/api/v1/replies',
+                     'seen_url': '/api/v1/seen',
                      'auth_token_url': '/api/v1/token'}
         return jsonify(endpoints), 200
 
@@ -185,18 +188,11 @@ def make_blueprint(config: SDConfig) -> Blueprint:
             {'submissions': [submission.to_json() for
                              submission in source.submissions]}), 200
 
-    @api.route('/sources/<source_uuid>/submissions/<submission_uuid>/download',  # noqa
-               methods=['GET'])
+    @api.route("/sources/<source_uuid>/submissions/<submission_uuid>/download", methods=["GET"])
     @token_required
     def download_submission(source_uuid: str, submission_uuid: str) -> flask.Response:
         get_or_404(Source, source_uuid, column=Source.uuid)
-        submission = get_or_404(Submission, submission_uuid,
-                                column=Submission.uuid)
-
-        # Mark as downloaded
-        submission.downloaded = True
-        db.session.commit()
-
+        submission = get_or_404(Submission, submission_uuid, column=Submission.uuid)
         return utils.serve_file_with_etag(submission)
 
     @api.route('/sources/<source_uuid>/replies/<reply_uuid>/download',
@@ -274,6 +270,9 @@ def make_blueprint(config: SDConfig) -> Blueprint:
 
             try:
                 db.session.add(reply)
+                db.session.flush()
+                seen_reply = SeenReply(reply_id=reply.id, journalist_id=user.id)
+                db.session.add(seen_reply)
                 db.session.add(source)
                 db.session.commit()
             except IntegrityError as e:
@@ -317,11 +316,61 @@ def make_blueprint(config: SDConfig) -> Blueprint:
         return jsonify(
             {'replies': [reply.to_json() for reply in replies if reply.source]}), 200
 
+    @api.route("/seen", methods=["POST"])
+    @token_required
+    def seen() -> Tuple[flask.Response, int]:
+        """
+        Lists or marks the source conversation items that the journalist has seen.
+        """
+        user = _authenticate_user_from_auth_header(request)
+
+        if request.method == "POST":
+            if request.json is None or not isinstance(request.json, collections.abc.Mapping):
+                abort(400, "Please send requests in valid JSON.")
+
+            if not any(map(request.json.get, ["files", "messages", "replies"])):
+                abort(400, "Please specify the resources to mark seen.")
+
+            # gather everything to be marked seen. if any don't exist,
+            # reject the request.
+            targets = set()  # type: Set[Union[Submission, Reply]]
+            for file_uuid in request.json.get("files", []):
+                f = Submission.query.filter(Submission.uuid == file_uuid).one_or_none()
+                if f is None or not f.is_file:
+                    abort(404, "file not found: {}".format(file_uuid))
+                targets.add(f)
+
+            for message_uuid in request.json.get("messages", []):
+                m = Submission.query.filter(Submission.uuid == message_uuid).one_or_none()
+                if m is None or not m.is_message:
+                    abort(404, "message not found: {}".format(message_uuid))
+                targets.add(m)
+
+            for reply_uuid in request.json.get("replies", []):
+                r = Reply.query.filter(Reply.uuid == reply_uuid).one_or_none()
+                if r is None:
+                    abort(404, "reply not found: {}".format(reply_uuid))
+                targets.add(r)
+
+            # now mark everything seen.
+            utils.mark_seen(list(targets), user)
+
+            return jsonify({"message": "resources marked seen"}), 200
+
+        abort(405)
+
     @api.route('/user', methods=['GET'])
     @token_required
     def get_current_user() -> Tuple[flask.Response, int]:
         user = _authenticate_user_from_auth_header(request)
         return jsonify(user.to_json()), 200
+
+    @api.route('/users', methods=['GET'])
+    @token_required
+    def get_all_users() -> Tuple[flask.Response, int]:
+        users = Journalist.query.all()
+        return jsonify(
+            {'users': [user.to_json(all_info=False) for user in users]}), 200
 
     @api.route('/logout', methods=['POST'])
     @token_required

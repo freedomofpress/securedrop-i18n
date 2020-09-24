@@ -3,14 +3,21 @@ import json
 import os
 import random
 
+from flask import current_app, url_for
+from itsdangerous import TimedJSONWebSignatureSerializer
 from pyotp import TOTP
 from uuid import UUID, uuid4
 
-from flask import current_app, url_for
-from itsdangerous import TimedJSONWebSignatureSerializer
-
 from db import db
-from models import Journalist, Reply, Source, SourceStar, Submission, RevokedToken
+from models import (
+    Journalist,
+    Reply,
+    Source,
+    SourceStar,
+    Submission,
+    RevokedToken,
+)
+
 
 os.environ['SECUREDROP_ENV'] = 'test'  # noqa
 from .utils.api_helper import get_api_headers
@@ -22,9 +29,9 @@ def test_unauthenticated_user_gets_all_endpoints(journalist_app):
     with journalist_app.test_client() as app:
         response = app.get(url_for('api.get_endpoints'))
 
-        expected_endpoints = ['current_user_url', 'submissions_url',
-                              'sources_url', 'auth_token_url',
-                              'replies_url']
+        expected_endpoints = ['current_user_url', 'all_users_url',
+                              'submissions_url', 'sources_url',
+                              'auth_token_url', 'replies_url', 'seen_url']
         expected_endpoints.sort()
         sorted_observed_endpoints = list(response.json.keys())
         sorted_observed_endpoints.sort()
@@ -153,7 +160,8 @@ def test_user_without_token_cannot_get_protected_endpoints(journalist_app,
             url_for('api.single_reply', source_uuid=uuid,
                     reply_uuid=test_files['replies'][0].uuid),
             url_for('api.all_source_replies', source_uuid=uuid),
-            url_for('api.get_current_user')
+            url_for('api.get_current_user'),
+            url_for('api.get_all_users'),
             ]
 
     with journalist_app.test_client() as app:
@@ -585,17 +593,16 @@ def test_authorized_user_can_download_submission(journalist_app,
         submission_uuid = test_submissions['source'].submissions[0].uuid
         uuid = test_submissions['source'].uuid
 
-        response = app.get(url_for('api.download_submission',
-                                   source_uuid=uuid,
-                                   submission_uuid=submission_uuid),
-                           headers=get_api_headers(journalist_api_token))
+        response = app.get(
+            url_for(
+                "api.download_submission",
+                source_uuid=uuid,
+                submission_uuid=submission_uuid,
+            ),
+            headers=get_api_headers(journalist_api_token),
+        )
 
         assert response.status_code == 200
-
-        # Submission should now be marked as downloaded in the database
-        submission = Submission.query.get(
-            test_submissions['source'].submissions[0].id)
-        assert submission.downloaded
 
         # Response should be a PGP encrypted download
         assert response.mimetype == 'application/pgp-encrypted'
@@ -637,6 +644,25 @@ def test_authorized_user_can_get_current_user_endpoint(journalist_app,
         assert response.json['uuid'] == test_journo['journalist'].uuid
         assert response.json['first_name'] == test_journo['journalist'].first_name
         assert response.json['last_name'] == test_journo['journalist'].last_name
+
+
+def test_authorized_user_can_get_all_users(journalist_app, test_journo, test_admin,
+                                           journalist_api_token):
+    with journalist_app.test_client() as app:
+        response = app.get(url_for('api.get_all_users'),
+                           headers=get_api_headers(journalist_api_token))
+
+        assert response.status_code == 200
+
+        # Ensure that all the users in the database are returned
+        observed_users = [user['uuid'] for user in response.json['users']]
+        expected_users = [user.uuid for user in Journalist.query.all()]
+        assert observed_users == expected_users
+
+        # Ensure that no fields other than the expected ones are returned
+        expected_fields = ['first_name', 'last_name', 'username', 'uuid']
+        for user in response.json['users']:
+            assert sorted(user.keys()) == expected_fields
 
 
 def test_request_with_missing_auth_header_triggers_403(journalist_app):
@@ -1013,3 +1039,127 @@ def test_revoke_token(journalist_app, test_journo, journalist_api_token):
         resp = app.get(url_for('api.get_all_sources'),
                        headers=get_api_headers(journalist_api_token))
         assert resp.status_code == 403
+
+
+def test_seen(journalist_app, journalist_api_token, test_files, test_journo, test_submissions):
+    """
+    Happy path for seen: marking things seen works.
+    """
+    with journalist_app.test_client() as app:
+        replies_url = url_for('api.get_all_replies')
+        seen_url = url_for('api.seen')
+        submissions_url = url_for('api.get_all_submissions')
+        headers = get_api_headers(journalist_api_token)
+
+        # check that /submissions contains no seen items
+        response = app.get(submissions_url, headers=headers)
+        assert response.status_code == 200
+        assert not any([s["seen_by"] for s in response.json["submissions"]])
+
+        # check that /replies only contains seen items
+        response = app.get(replies_url, headers=headers)
+        assert response.status_code == 200
+        assert all([r["seen_by"] for r in response.json["replies"]])
+
+        # now mark one of each type of conversation item seen
+        file_uuid = test_files['submissions'][0].uuid
+        msg_uuid = test_submissions['submissions'][0].uuid
+        reply_uuid = test_files['replies'][0].uuid
+        data = {
+            "files": [file_uuid],
+            "messages": [msg_uuid],
+            "replies": [reply_uuid],
+        }
+        response = app.post(seen_url, data=json.dumps(data), headers=headers)
+        assert response.status_code == 200
+        assert response.json["message"] == "resources marked seen"
+
+        # check that /submissions now contains the seen items
+        response = app.get(submissions_url, headers=headers)
+        assert response.status_code == 200
+        assert [
+            s for s in response.json["submissions"]
+            if s["is_file"] and s["uuid"] == file_uuid
+            and test_journo["uuid"] in s["seen_by"]
+        ]
+        assert [
+            s for s in response.json["submissions"]
+            if s["is_message"] and s["uuid"] == msg_uuid
+            and test_journo["uuid"] in s["seen_by"]
+        ]
+
+        # check that /replies still only contains one seen reply
+        response = app.get(replies_url, headers=headers)
+        assert response.status_code == 200
+        assert len(response.json["replies"]) == 1
+        assert all([r["seen_by"] for r in response.json["replies"]])
+
+        # now mark the same things seen. this should be fine.
+        response = app.post(seen_url, data=json.dumps(data), headers=headers)
+        assert response.status_code == 200
+        assert response.json["message"] == "resources marked seen"
+
+        # check that /submissions still only has the test journalist
+        # once in the seen_by list of the submissions we marked
+        response = app.get(submissions_url, headers=headers)
+        assert response.status_code == 200
+        assert [
+            s for s in response.json["submissions"]
+            if s["uuid"] in [file_uuid, msg_uuid]
+            and s["seen_by"] == [test_journo["uuid"]]
+        ]
+
+        # check that /replies still only contains one seen reply
+        response = app.get(replies_url, headers=headers)
+        assert response.status_code == 200
+        assert len(response.json["replies"]) == 1
+        assert all([r["seen_by"] for r in response.json["replies"]])
+
+
+def test_seen_bad_requests(journalist_app, journalist_api_token):
+    """
+    Check that /seen rejects invalid requests.
+    """
+    with journalist_app.test_client() as app:
+        seen_url = url_for('api.seen')
+        headers = get_api_headers(journalist_api_token)
+
+        # invalid JSON
+        data = "not a mapping"
+        response = app.post(seen_url, data=json.dumps(data), headers=headers)
+        assert response.status_code == 400
+        assert response.json["message"] == "Please send requests in valid JSON."
+
+        # valid JSON, but with invalid content
+        data = {"valid mapping": False}
+        response = app.post(seen_url, data=json.dumps(data), headers=headers)
+        assert response.status_code == 400
+        assert response.json["message"] == "Please specify the resources to mark seen."
+
+        # unsupported HTTP method
+        response = app.head(seen_url, headers=headers)
+        assert response.status_code == 405
+
+        # nonexistent file
+        data = {
+            "files": ["not-a-file"],
+        }
+        response = app.post(seen_url, data=json.dumps(data), headers=headers)
+        assert response.status_code == 404
+        assert response.json["message"] == "file not found: not-a-file"
+
+        # nonexistent message
+        data = {
+            "messages": ["not-a-message"],
+        }
+        response = app.post(seen_url, data=json.dumps(data), headers=headers)
+        assert response.status_code == 404
+        assert response.json["message"] == "message not found: not-a-message"
+
+        # nonexistent reply
+        data = {
+            "replies": ["not-a-reply"],
+        }
+        response = app.post(seen_url, data=json.dumps(data), headers=headers)
+        assert response.status_code == 404
+        assert response.json["message"] == "reply not found: not-a-reply"
