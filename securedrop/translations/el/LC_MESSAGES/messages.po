@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2020-09-25 17:01+0000\n"
-"Last-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\n"
+"Last-Translator: Adrian <pappasadrian@gmail.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/el/>\n"
 "Language: el\n"
@@ -1196,7 +1196,7 @@ msgstr "ΆΚΥΡΟ"
 
 #: source_templates/logout.html:6
 msgid "One more thing..."
-msgstr "Ένα ακόμα πράγμα..."
+msgstr "Κάτι ακόμα..."
 
 #: source_templates/logout.html:7
 msgid ""
