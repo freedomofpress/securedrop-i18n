@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-09-25 14:44+0000\n"
-"Last-Translator: Adrian <pappasadrian@gmail.com>\n"
+"PO-Revision-Date: 2020-09-25 14:45+0000\n"
+"Last-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/el/>\n"
 "Language: el\n"
@@ -1009,7 +1009,7 @@ msgstr "Όλες οι απαντήσεις διαγράφτηκαν"
 
 #: source_app/main.py:316
 msgid "Sorry, that is not a recognized codename."
-msgstr "Συγγνώμη, αυτό το κωδικό όνομα δεν αναγνωρίζεται."
+msgstr "Συγγνώμη, το κωδικό όνομα δεν αναγνωρίζεται."
 
 #: source_templates/base.html:6 source_templates/index.html:4
 msgid "Protecting Journalists and Sources"
