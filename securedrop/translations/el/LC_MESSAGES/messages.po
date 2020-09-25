@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.8.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-09-24 21:01+0000\n"
+"PO-Revision-Date: 2020-09-25 11:30+0000\n"
 "Last-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\n"
 "Language-Team: Greek <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/el/>\n"
@@ -1465,17 +1465,12 @@ msgstr ""
 "αυτόματα στην κλειδοθήκη σας."
 
 #: source_templates/why-journalist-key.html:12
-#, fuzzy
-#| msgid ""
-#| "If you are using a Mac or Linux, open the terminal. You can import the "
-#| "key with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</"
-#| "code></p>"
 msgid ""
 "If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"Αν χρησιμοποιείτε Mac ή Linux, ανοίξτε το τερματικό. Μπορείτε να εισάγετε το "
-"κλειδί με την εντολή:<p><code>gpg --import /path/to/"
+"Αν χρησιμοποιείτε macOS ή Linux, ανοίξτε το τερματικό. Μπορείτε να εισάγετε "
+"το κλειδί με την εντολή:<p><code>gpg --import /path/to/"
 "{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:15
@@ -1510,7 +1505,7 @@ msgid ""
 msgstr ""
 "<strong>Σημαντικό:</strong> Αν επιθυμείτε να διατηρήσετε την ανωνυμία σας, "
 "<strong>μην</strong> χρησιμοποιήσετε το GPG για να υπογράψετε το "
-"κρυπτογραφημένο αρχείο (χρησιμοποιώντας τα διακριτικά <code>--sign</code> ή "
+"κρυπτογραφημένο αρχείο (χρησιμοποιώντας τα ορίσματα <code>--sign</code> ή "
 "<code>-s</code>), καθώς αυτό θα μας αποκαλύψει την ταυτότητα GPG σας."
 
 #: source_templates/why-journalist-key.html:23
