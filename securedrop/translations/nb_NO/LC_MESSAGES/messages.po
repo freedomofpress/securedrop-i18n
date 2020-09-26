@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-07-25 22:37+0000\n"
+"PO-Revision-Date: 2020-09-26 19:20+0000\n"
 "Last-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/nb_NO/>\n"
@@ -25,10 +25,8 @@ msgid "{time} ago"
 msgstr "{time} siden"
 
 #: journalist_app/__init__.py:90 journalist_app/__init__.py:131
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to inactivity."
-msgstr "Du har blitt utlogget som følge av inaktivitet"
+msgstr "Du har blitt utlogget som følge av inaktivitet."
 
 #: journalist_app/__init__.py:140
 msgid "You have been logged out due to password change"
@@ -81,20 +79,16 @@ msgid "Name not updated: {}"
 msgstr "Navn ikke oppdatert: {}"
 
 #: journalist_app/admin.py:232
-#, fuzzy
-#| msgid "Deleted user '{user}'"
 msgid "Deleted user '{user}'."
-msgstr "Slettet brukeren '{user}'"
+msgstr "Slettet brukeren '{user}'."
 
 #: journalist_app/admin.py:262
 msgid "Test alert sent. Please check your email."
 msgstr "Testvarsel sendt. Sjekk e-posten din."
 
 #: journalist_app/col.py:60
-#, fuzzy
-#| msgid "{source_name}'s collection deleted"
 msgid "{source_name}'s collection deleted."
-msgstr "{source_name}s kildeoppføring slettet"
+msgstr "{source_name}s kildeoppføring slettet."
 
 #: journalist_app/col.py:71
 msgid "No collections selected."
@@ -109,18 +103,12 @@ msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgstr "HOTP-koden skal være 40 tegn lang – du har skrevet inn {num_chars}."
 
 #: journalist_app/forms.py:28
-#, fuzzy
-#| msgid ""
-#| "Field must be at least {min_chars} characters long but only got "
-#| "{num_chars}."
 msgid "Must be at least {min_chars} characters long."
-msgstr "Må være minst {min_chars} tegn langt, men er nå på bare {num_chars}."
+msgstr "Må være minst {min_chars} tegn langt."
 
 #: journalist_app/forms.py:35
-#, fuzzy
-#| msgid "Field can not be more than {max_chars} characters."
 msgid "Cannot be longer than {max_chars} characters."
-msgstr "Feltet kan ikke inneholde mer enn {max_chars} tegn."
+msgstr "Kan ikke inneholde mer enn {max_chars} tegn."
 
 #: journalist_app/forms.py:40
 msgid ""
@@ -214,10 +202,8 @@ msgid "Name updated."
 msgstr "Navn oppdatert."
 
 #: journalist_app/utils.py:357
-#, fuzzy
-#| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
-msgstr "Du la inn et ugyldig passord! Passordet ble derfor ikke endret."
+msgstr "Passordet du la inn er ikke gyldig. Passordet ble derfor ikke endret."
 
 #: journalist_app/utils.py:364
 msgid ""
@@ -488,13 +474,6 @@ msgstr ""
 "Når du har satt opp din YubiKey, skriv inn den 6 tegn lange koden nedenfor:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 Onion Services, which are being phased out for security "
-#| "reasons. In February 2021, v2 Onion Services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required:</strong> Your SecureDrop servers are still running "
 "v2 onion services, which are being phased out for security reasons. In "
@@ -503,9 +482,9 @@ msgid ""
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
 "<strong>Oppdatering nødvendig:</strong> Dine SecureDrop-tjenere kjører "
-"fortsatt v2 løk-tjenester, som fases ut av sikkerhetsgrunner. I februar 2021 "
-"vil v2 løk-tjenester bli deaktivert, og dine SecureDrop-tjenere vil kunne "
-"bli utilgjengelige. <a href=\"//securedrop.org/v2-onion-eol\" rel="
+"fortsatt v2 Onion-tjenester, som fases ut av sikkerhetsgrunner. I februar "
+"2021 vil v2 Onion-tjenester bli deaktivert, og dine SecureDrop-tjenere vil "
+"kunne bli utilgjengelige. <a href=\"//securedrop.org/v2-onion-eol\" rel="
 "\"noreferrer\">Lær mer</a>"
 
 #: journalist_templates/base.html:29
@@ -703,8 +682,6 @@ msgid "Edit user \"{user}\""
 msgstr "Rediger brukeren \"{user}\""
 
 #: journalist_templates/edit_account.html:8
-#, fuzzy
-#| msgid "Change Name &amp; Admin Status"
 msgid "Change Name and Admin Status"
 msgstr "Endre navn og administratorstatus"
 
@@ -763,12 +740,6 @@ msgid "Reset Two-Factor Authentication"
 msgstr "Tilbakestill tofaktor-autentisering"
 
 #: journalist_templates/edit_account.html:83
-#, fuzzy
-#| msgid ""
-#| "If a user's two-factor authentication credentials have been lost or "
-#| "compromised, you can reset them here. <em>If you do this, make sure the "
-#| "user is present and ready to set up their device with the new two-factor "
-#| "credentials. Otherwise, they will be locked out of their account."
 msgid ""
 "If a user's two-factor authentication credentials have been lost or "
 "compromised, you can reset them here. <em>If you do this, make sure the user "
@@ -778,7 +749,7 @@ msgstr ""
 "Hvis oppsettet av tofaktor-autentisering for en bruker har gått tapt eller "
 "er på avveie, kan du tilbakestille tofaktor her. <em>Forsikre deg om at "
 "brukeren er til stede og klar for å sette opp enheten sin på nytt med "
-"tofaktor-autentisering. Ellers vil de bli låst ute av kontoen sin."
+"tofaktor-autentisering. Ellers vil de bli låst ute av kontoen sin.</em>"
 
 #: journalist_templates/edit_account.html:85
 msgid ""
@@ -913,10 +884,8 @@ msgid "Password"
 msgstr "Passord"
 
 #: journalist_templates/login.html:10
-#, fuzzy
-#| msgid "Password"
 msgid "Show password"
-msgstr "Passord"
+msgstr "Vis passord"
 
 #: journalist_templates/login.html:12 source_templates/index.html:59
 #: source_templates/logout.html:3
@@ -970,10 +939,9 @@ msgstr ""
 "være annerledes enn det som ble vist på den forrige siden."
 
 #: source_app/main.py:80
-#, fuzzy
-#| msgid "There was a problem verifying the two-factor code. Please try again."
 msgid "There was a temporary problem creating your account. Please try again."
-msgstr "En feil oppstod ved bekreftelse av tofaktorkoden. Prøv igjen."
+msgstr ""
+"En midlertidig feil oppstod ved opprettelsen av kontoen din. Prøv igjen."
 
 #: source_app/main.py:184
 msgid "You must enter a message or choose a file to submit."
@@ -1098,11 +1066,6 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "SEND INN DOKUMENTER"
 
 #: source_templates/index.html:16
-#, fuzzy
-#| msgid ""
-#| "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security "
-#| "Setting</strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield "
-#| "icon\"> &nbsp;button in your browser’s toolbar to change it."
 msgid ""
 "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security Level</"
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
@@ -1113,11 +1076,6 @@ msgstr ""
 "\"skjoldikon\"> &nbsp;knappen i nettleserens verktøylinje for å endre nivået."
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
-#| "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
-#| "install it</a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to use Tor Browser to access SecureDrop:</strong> "
 "<a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
@@ -1128,13 +1086,6 @@ msgstr ""
 "installerer den</a>, eller se bort fra denne advarselen for å fortsette uten."
 
 #: source_templates/index.html:18
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended you use the desktop version of Tor Browser to "
-#| "access SecureDrop, as Orfox does not provide the same level of security "
-#| "and anonymity as the desktop versions.</strong> <a id=\"recommend-tor\" "
-#| "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
-#| "warning to continue."
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
@@ -1143,9 +1094,10 @@ msgid ""
 "continue."
 msgstr ""
 "<strong>Det anbefales å bruke Tor-nettleseren på en datamaskin for å nå "
-"SecureDrop, fordi Orfox ikke gir det samme nivået av sikkerhet og anonymitet:"
-"</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Lær hvordan du "
-"installerer den</a>, eller se bort fra denne advarselen for å fortsette uten."
+"SecureDrop, fordi Orfox ikke gir det samme nivået av sikkerhet og "
+"anonymitet:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Lær "
+"hvordan du installerer den</a>, eller se bort fra denne advarselen for å "
+"fortsette uten."
 
 #: source_templates/index.html:39
 msgid "First submission"
@@ -1203,11 +1155,6 @@ msgid "One more thing..."
 msgstr "Én ting til…"
 
 #: source_templates/logout.html:7
-#, fuzzy
-#| msgid ""
-#| "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
-#| "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
-#| "toolbar. This will clear your Tor browser activity data on this device."
 msgid ""
 "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor Browser's "
@@ -1345,12 +1292,6 @@ msgid "Important"
 msgstr "Viktig"
 
 #: source_templates/session_timeout.html:5
-#, fuzzy
-#| msgid ""
-#| "You were logged out due to inactivity. Click the <img src={icon} alt="
-#| "\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</"
-#| "strong> button in your Tor browser's toolbar before moving on. This will "
-#| "clear your Tor browser activity data on this device."
 msgid ""
 "You were logged out due to inactivity. Click the <img src={icon} alt=\"broom "
 "icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong> button "
@@ -1358,9 +1299,10 @@ msgid ""
 "Browser activity data on this device."
 msgstr ""
 "Du ble utlogget som følge av inaktivitet. Klikk på <img src={icon} alt="
-"\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Ny identitiet</"
-"strong>-knappen i Tor-nettleserens verktøylinje før du fortsetter. Dette vil "
-"slette loggen over aktivitet i Tor-nettleseren på denne enheten."
+"\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Ny "
+"identitiet</strong>-knappen i Tor-nettleserens verktøylinje før du "
+"fortsetter. Dette vil slette loggen over aktivitet i Tor-nettleseren på "
+"denne enheten."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1381,10 +1323,6 @@ msgstr ""
 "(myndigheter, internettilbyderen din) kan identifisere deg."
 
 #: source_templates/tor2web-warning.html:6
-#, fuzzy
-#| msgid ""
-#| "We <strong>strongly advise</strong> you to use the <a href=\"www."
-#| "torproject.org/projects/torbrowser.html\">Tor browser</a> instead."
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor Browser</a> instead."
@@ -1454,17 +1392,14 @@ msgstr ""
 "velge å kryptere din innsendelse selv. Gjør da følgende:"
 
 #: source_templates/why-journalist-key.html:7
-#, fuzzy
-#| msgid ""
-#| "<a href=\"{url}\">Download</a> the public key. The public key is a text "
-#| "file with the extension <code>.asc</code>"
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. It will be saved to a file "
 "called:\n"
 "        <p><code>{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"<a href=\"{url}\">Last ned</a> den offentlige nøkkelen. Den offentlige "
-"nøkkelen er ei tekstfil med filendelsen <code>.asc</code>"
+"<a href=\"{url}\">Last ned</a> den offentlige nøkkelen. Den vil bli lagret "
+"som en fil kalt:\n"
+"        <p><code>{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:9
 msgid "Import it into your GPG keyring."
@@ -1481,55 +1416,44 @@ msgstr ""
 "nøkkelringen på systemet ditt."
 
 #: source_templates/why-journalist-key.html:12
-#, fuzzy
-#| msgid ""
-#| "If you are using Mac/Linux, open the terminal. You can import the key "
-#| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
 "If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"Om du bruker Mac/Linux, åpne terminalen. Du kan importere nøkkelen med "
-"følgende kommando <code>gpg --import /plassering/på/disken/for/key.asc</"
-"code>."
+"Om du bruker MacOS eller Linux, åpne terminalen. Du kan importere nøkkelen "
+"med:<p> <code>gpg --import /plassering/på/disken/for/"
+"{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:15
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
 msgstr ""
+"Krypter innsendelsen din. Åpne terminalen og skriv inn denne gpg-kommandoen:"
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
 "<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submission</"
 "code>"
 msgstr ""
+"<code>gpg --recipient '{submission_key_fpr}' --encrypt /plassering/på/disken/"
+"for/innsendelsen</code>"
 
 #: source_templates/why-journalist-key.html:18
-#, fuzzy
-#| msgid ""
-#| "Upload your encrypted submission. It will have the same filename as the "
-#| "unencrypted file, with .gpg at the end (e.g. <code>roswell_photos.pdf."
-#| "gpg</code>)"
 msgid ""
 "Upload your encrypted submission. It will have the same filename as the "
 "unencrypted file, with .gpg at the end (e.g. <code>internal_memo.pdf.gpg</"
 "code>)"
 msgstr ""
 "Last så opp din krypterte innsendelse. Det vil ha samme filnavnet som den "
-"ukrypterte filen, men med .gpg-filendelse (f.eks. <code>roswell_photos.pdf."
+"ukrypterte filen, men med .gpg-filendelse (f.eks. <code>internal_memo.pdf."
 "gpg</code>)"
 
 #: source_templates/why-journalist-key.html:21
-#, fuzzy
-#| msgid ""
-#| "<strong>Tip:</strong> If you wish to remain anonymous, <strong>do not</"
-#| "strong> use GPG to sign the encrypted file (with the <code>--sign</code> "
-#| "or <code>-s</code> flag) as this will reveal your GPG identity to us."
 msgid ""
 "<strong>Important:</strong> If you wish to remain anonymous, <strong>do not</"
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
-"<strong>Tips:</strong> Om du ønsker å være helt anonym, <strong>ikke</"
+"<strong>Viktig:</strong> Om du ønsker å være helt anonym, <strong>ikke</"
 "strong> bruk GPG for å signere den krypterte filen (med <code>--sign</code> "
 "eller <code>-s</code> flagget på kommandolinjen) fordi dette vil avsløre din "
 "GPG-identitet."
