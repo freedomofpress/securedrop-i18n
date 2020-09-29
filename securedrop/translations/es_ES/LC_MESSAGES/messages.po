@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-09-28 17:48+0000\n"
+"PO-Revision-Date: 2020-09-29 19:01+0000\n"
 "Last-Translator: Zuhualime Akoochimoya <zakooch@protonmail.ch>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
@@ -112,7 +112,7 @@ msgstr ""
 
 #: journalist_app/forms.py:28
 msgid "Must be at least {min_chars} characters long."
-msgstr "El campo debe ser por lo menos {min_chars} caracteres de longitud."
+msgstr "Debe ser por lo menos {min_chars} caracteres de longitud."
 
 #: journalist_app/forms.py:35
 msgid "Cannot be longer than {max_chars} characters."
@@ -707,7 +707,7 @@ msgstr "Editar usuario \"{user}\""
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Name and Admin Status"
-msgstr "Cambiar nombre y Estado de Admin"
+msgstr "Cambiar Nombre y Estado de Administrador"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -1132,9 +1132,9 @@ msgid ""
 msgstr ""
 "<strong>Se recomienda que use la versión de escritorio del Navegador Tor "
 "para acceder a SecureDrop, ya que Orfox no proporciona el mismo nivel de "
-"seguridad y anonimato que ellas.</strong><a id=\"recommend-tor\" href="
-"\"{tor_browser_url}\"> Aprenda cómo instalarlo</a>, o ignore esta "
-"advertencia para continuar."
+"seguridad y anonimato que ella.</strong><a id=\"recommend-tor\" href=\""
+"{tor_browser_url}\"> Aprenda cómo instalarlo</a>, o ignore esta advertencia "
+"para continuar."
 
 #: source_templates/index.html:39
 msgid "First submission"
