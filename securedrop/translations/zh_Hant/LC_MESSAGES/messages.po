@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-09-30 01:23+0000\n"
+"PO-Revision-Date: 2020-09-30 03:01+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.securedrop.org/"
 "projects/securedrop/securedrop/zh_Hant/>\n"
@@ -876,10 +876,8 @@ msgid ""
 msgstr "您已登入，請驗證上方代號其可能與不同於先前頁面顯示。"
 
 #: source_app/main.py:80
-#, fuzzy
-#| msgid "There was a problem verifying the two-factor code. Please try again."
 msgid "There was a temporary problem creating your account. Please try again."
-msgstr "確認雙重驗證碼時出現問題。請再次嘗試。"
+msgstr "創建新帳號發生問題。請再次嘗試。"
 
 #: source_app/main.py:184
 msgid "You must enter a message or choose a file to submit."
@@ -999,43 +997,24 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "提交文件"
 
 #: source_templates/index.html:16
-#, fuzzy
-#| msgid ""
-#| "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security "
-#| "Setting</strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield "
-#| "icon\"> &nbsp;button in your browser’s toolbar to change it."
 msgid ""
 "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security Level</"
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
-"Tor 瀏覽器的 <a id=\"disable-js\" href=\"\"><strong>安全性設置</strong></a>等"
-"級過低。請使用瀏覽器工具列中的 <img src=\"{icon}\" alt=\"shield icon\"> "
-"&nbsp;按鈕來變更之。"
+"Tor 瀏覽器的 <a id=\"disable-js\" href=\"\"><strong>安全性</strong></a>等級過低。"
+"請使用瀏覽器工具列中的 <img src=\"{icon}\" alt=\"shield icon\"> &nbsp;按鈕來變更之。"
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
-#| "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
-#| "install it</a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to use Tor Browser to access SecureDrop:</strong> "
 "<a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
 "a>, or ignore this warning to continue."
 msgstr ""
-"<strong>高度建議用 Tor 瀏覽器來訪問 SecureDrop :</strong> <a id=\"recommend-"
-"tor\" href=\"{tor_browser_url}\"> 學習如何安裝 Tor</a>，或忽略這則警告繼續操"
-"作。"
+"<strong>高度建議用 Tor 瀏覽器來訪問 SecureDrop :</strong> <a id=\"recommend-tor\" href="
+"\"{tor_browser_url}\"> 學習如何安裝 Tor</a>，或忽略這則警告繼續操作。"
 
 #: source_templates/index.html:18
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended you use the desktop version of Tor Browser to "
-#| "access SecureDrop, as Orfox does not provide the same level of security "
-#| "and anonymity as the desktop versions.</strong> <a id=\"recommend-tor\" "
-#| "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
-#| "warning to continue."
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
@@ -1043,9 +1022,9 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
-"<strong>高度建議使用桌面版本的 Tor 瀏覽器來訪問 SecureDrop， Orfox 的安全層級"
-"與匿名保護程度遠不如桌面版:</strong> <a id=\"recommend-tor\" href="
-"\"{tor_browser_url}\"> 學習如何安裝 Tor</a>，或忽略這則警告繼續操作。"
+"<strong>高度建議使用桌面版本的 Tor 瀏覽器來訪問 SecureDrop， Orfox 的安全層級與匿名保護程度遠不如桌面版:</"
+"strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\"> 學習如何安裝 "
+"Tor</a>，或忽略這則警告繼續操作。"
 
 #: source_templates/index.html:39
 msgid "First submission"
@@ -1100,19 +1079,13 @@ msgid "One more thing..."
 msgstr "還有一件事...."
 
 #: source_templates/logout.html:7
-#, fuzzy
-#| msgid ""
-#| "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
-#| "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
-#| "toolbar. This will clear your Tor browser activity data on this device."
 msgid ""
 "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor Browser's "
 "toolbar. This will clear your Tor Browser activity data on this device."
 msgstr ""
-"點擊 Tor 瀏覽器工具列 <img src={icon} alt=\"broom icon\" width=\"16\" height="
-"\"16\">&nbsp;<strong>New Identity</strong>按鈕，將可清除此設備上的瀏覽資料記"
-"錄。"
+"點擊 Tor 瀏覽器工具列 <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\""
+">&nbsp;<strong>New Identity</strong>按鈕，將可清除此設備上的瀏覽資料記錄。"
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1235,21 +1208,14 @@ msgid "Important"
 msgstr "重要"
 
 #: source_templates/session_timeout.html:5
-#, fuzzy
-#| msgid ""
-#| "You were logged out due to inactivity. Click the <img src={icon} alt="
-#| "\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</"
-#| "strong> button in your Tor browser's toolbar before moving on. This will "
-#| "clear your Tor browser activity data on this device."
 msgid ""
 "You were logged out due to inactivity. Click the <img src={icon} alt=\"broom "
 "icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong> button "
 "in your Tor Browser's toolbar before moving on. This will clear your Tor "
 "Browser activity data on this device."
 msgstr ""
-"因聞置過久已遭系統登出，可先點擊 Tor 瀏覽器工具列<img src={icon} alt=\"broom "
-"icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong>按鍵來清"
-"除此設備上的瀏覽記錄。"
+"因聞置過久已遭系統登出，可先點擊 Tor 瀏覽器工具列<img src={icon} alt=\"broom icon\" width=\"16\" "
+"height=\"16\">&nbsp;<strong>New Identity</strong>按鍵來清除此設備上的瀏覽記錄。"
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1266,16 +1232,12 @@ msgid ""
 msgstr "任何網路流量監控者（如政府、網路服務業者）都有可能認出您。"
 
 #: source_templates/tor2web-warning.html:6
-#, fuzzy
-#| msgid ""
-#| "We <strong>strongly advise</strong> you to use the <a href=\"www."
-#| "torproject.org/projects/torbrowser.html\">Tor browser</a> instead."
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor Browser</a> instead."
 msgstr ""
-"<strong>強烈建議</strong>以<a href=\"www.torproject.org/projects/torbrowser."
-"html\">Tor 瀏覽器</a>為替代。"
+"<strong>強烈建議</strong>以<a href=\"www.torproject.org/projects/torbrowser.html\""
+">Tor 瀏覽器</a>為替代。"
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
@@ -1330,17 +1292,13 @@ msgid ""
 msgstr "如果您熟悉 GPG 加密軟體，您可以在上傳文件前先自行加密。操作方式為："
 
 #: source_templates/why-journalist-key.html:7
-#, fuzzy
-#| msgid ""
-#| "<a href=\"{url}\">Download</a> the public key. The public key is a text "
-#| "file with the extension <code>.asc</code>"
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. It will be saved to a file "
 "called:\n"
 "        <p><code>{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"<a href=\"{url}\">下載</a>公鑰。公鑰是一種文字類型檔案，其副檔名為 <code>."
-"asc</code>"
+"<a href=\"{url}\">下載</a>公鑰。它會自動儲存為 "
+"<p><code>{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:9
 msgid "Import it into your GPG keyring."
@@ -1356,55 +1314,42 @@ msgstr ""
 "code>文件，它會自動地加入到您的鑰匙圈中。"
 
 #: source_templates/why-journalist-key.html:12
-#, fuzzy
-#| msgid ""
-#| "If you are using Mac/Linux, open the terminal. You can import the key "
-#| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
 "If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"如果您使用 Mac/Linux 系統，請打開終端機，用以下指令匯入金鑰：<code>gpg --"
-"import /path/to/key.asc</code>。"
+"如果您使用 MacOS/Linux 系統，請打開終端機，用以下指令匯入金鑰：<p><code>gpg --import /path/to/"
+"{submission_key_fpr_filename}</code></p>。"
 
 #: source_templates/why-journalist-key.html:15
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
-msgstr ""
+msgstr "加密提交的文件，請在文字指令程式下輸入以下 gpg 指令："
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
 "<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submission</"
 "code>"
 msgstr ""
+"<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/"
+"submission</code>"
 
 #: source_templates/why-journalist-key.html:18
-#, fuzzy
-#| msgid ""
-#| "Upload your encrypted submission. It will have the same filename as the "
-#| "unencrypted file, with .gpg at the end (e.g. <code>roswell_photos.pdf."
-#| "gpg</code>)"
 msgid ""
 "Upload your encrypted submission. It will have the same filename as the "
 "unencrypted file, with .gpg at the end (e.g. <code>internal_memo.pdf.gpg</"
 "code>)"
 msgstr ""
-"上傳已加密的提交文件。文件名稱應該和未加密前的文件一樣，但多添加了 .gpg 副檔"
-"名，（例如  <code>roswell_photos.pdf.gpg</code>）"
+"上傳已加密的提交文件。文件名稱應該和未加密前的文件一樣，但多添加了 .gpg 副檔名，（例如  <code>internal_memo.pdf."
+"gpg</code>）"
 
 #: source_templates/why-journalist-key.html:21
-#, fuzzy
-#| msgid ""
-#| "<strong>Tip:</strong> If you wish to remain anonymous, <strong>do not</"
-#| "strong> use GPG to sign the encrypted file (with the <code>--sign</code> "
-#| "or <code>-s</code> flag) as this will reveal your GPG identity to us."
 msgid ""
 "<strong>Important:</strong> If you wish to remain anonymous, <strong>do not</"
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
-"<strong>提示：</strong>如果您希望保持匿名，<strong>請勿</strong>在 GPG 加密文"
-"件時進行數位簽署（使用 <code>--sign</code> 或 <code>-s</code> 指令參數），這"
-"樣做會向我們揭示您的 GPG 身份。"
+"<strong>重要：</strong>如果您希望保持匿名，<strong>請勿</strong>在 GPG 加密文件時進行數位簽署（使用 "
+"<code>--sign</code> 或 <code>-s</code> 指令參數），這樣做會向我們揭示您的 GPG 身份。"
 
 #: source_templates/why-journalist-key.html:23
 msgid "Back to submission page"
