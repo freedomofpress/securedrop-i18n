@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-09-23 20:01+0000\n"
-"Last-Translator: sobeitnow0 <sobeitnow0@gmail.com>\n"
+"PO-Revision-Date: 2020-09-30 17:26+0000\n"
+"Last-Translator: yyyyyyyan <contact@yyyyyyyan.tech>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -81,20 +81,16 @@ msgid "Name not updated: {}"
 msgstr "O seu nome não foi atualizado: {}"
 
 #: journalist_app/admin.py:232
-#, fuzzy
-#| msgid "Deleted user '{user}'"
 msgid "Deleted user '{user}'."
-msgstr "Usuário '{user}' apagado"
+msgstr "Usuário '{user}' apagado."
 
 #: journalist_app/admin.py:262
 msgid "Test alert sent. Please check your email."
 msgstr "Teste de alerta enviado. Por favor, verifique seu e-mail."
 
 #: journalist_app/col.py:60
-#, fuzzy
-#| msgid "{source_name}'s collection deleted"
 msgid "{source_name}'s collection deleted."
-msgstr "A coleção de {source_name} foi apagada"
+msgstr "A coleção de {source_name} foi apagada."
 
 #: journalist_app/col.py:71
 msgid "No collections selected."
@@ -109,20 +105,12 @@ msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgstr "Senhas HOTP contêm 40 caracteres. Você inseriu {num_chars}."
 
 #: journalist_app/forms.py:28
-#, fuzzy
-#| msgid ""
-#| "Field must be at least {min_chars} characters long but only got "
-#| "{num_chars}."
 msgid "Must be at least {min_chars} characters long."
-msgstr ""
-"Este campo deve conter pelo menos {min_chars} caracteres, mas contém apenas "
-"{num_chars}."
+msgstr "Deve conter pelo menos {min_chars} caracteres."
 
 #: journalist_app/forms.py:35
-#, fuzzy
-#| msgid "Field can not be more than {max_chars} characters."
 msgid "Cannot be longer than {max_chars} characters."
-msgstr "Este campo não pode conter mais do que {max_chars} caracteres."
+msgstr "Não pode conter mais do que {max_chars} caracteres."
 
 #: journalist_app/forms.py:40
 msgid ""
@@ -224,10 +212,8 @@ msgid "Name updated."
 msgstr "O seu nome foi atualizado."
 
 #: journalist_app/utils.py:357
-#, fuzzy
-#| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
-msgstr "Senha incorreta! A sua senha não foi alterada."
+msgstr "A senha enviada é inválida. Sua senha não foi alterada."
 
 #: journalist_app/utils.py:364
 msgid ""
@@ -497,13 +483,6 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Após configurar a sua YubiKey, insira o código de seis dígitos abaixo:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 Onion Services, which are being phased out for security "
-#| "reasons. In February 2021, v2 Onion Services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required:</strong> Your SecureDrop servers are still running "
 "v2 onion services, which are being phased out for security reasons. In "
@@ -515,8 +494,8 @@ msgstr ""
 "ainda estão rodando serviços onion v2, que estão deixando de ser usados por "
 "razões de segurança Em fevereiro de 2021, os serviços onion v2 serão "
 "desabilitados e os servidores do seu SecureDrop poderão não ser mais "
-"acessíveis. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
-"\">Saiba mais</a>"
+"acessíveis. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\""
+">Saiba mais</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -713,10 +692,8 @@ msgid "Edit user \"{user}\""
 msgstr "Editar usuário \"{user}\""
 
 #: journalist_templates/edit_account.html:8
-#, fuzzy
-#| msgid "Change Name &amp; Admin Status"
 msgid "Change Name and Admin Status"
-msgstr "Mudar nome e &amp; status de admin"
+msgstr "Mudar Nome e Status de Admin"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -773,12 +750,6 @@ msgid "Reset Two-Factor Authentication"
 msgstr "Redefinir Autenticação de Dois Fatores"
 
 #: journalist_templates/edit_account.html:83
-#, fuzzy
-#| msgid ""
-#| "If a user's two-factor authentication credentials have been lost or "
-#| "compromised, you can reset them here. <em>If you do this, make sure the "
-#| "user is present and ready to set up their device with the new two-factor "
-#| "credentials. Otherwise, they will be locked out of their account."
 msgid ""
 "If a user's two-factor authentication credentials have been lost or "
 "compromised, you can reset them here. <em>If you do this, make sure the user "
@@ -789,7 +760,7 @@ msgstr ""
 "perdidas ou comprometidas, você poderá redefini-las aqui. <em>Ao fazê-lo, "
 "essa pessoa deverá estar presente e preparada para configurar o aparelho "
 "dela com as novas credenciais. Caso contrário, ela não poderá mais acessar a "
-"própria conta."
+"própria conta.</em>"
 
 #: journalist_templates/edit_account.html:85
 msgid ""
@@ -924,10 +895,8 @@ msgid "Password"
 msgstr "Senha"
 
 #: journalist_templates/login.html:10
-#, fuzzy
-#| msgid "Password"
 msgid "Show password"
-msgstr "Senha"
+msgstr "Mostrar senha"
 
 #: journalist_templates/login.html:12 source_templates/index.html:59
 #: source_templates/logout.html:3
@@ -982,11 +951,9 @@ msgstr ""
 "porque ele pode ser diferente daquele exibido na página anterior."
 
 #: source_app/main.py:80
-#, fuzzy
-#| msgid "There was a problem verifying the two-factor code. Please try again."
 msgid "There was a temporary problem creating your account. Please try again."
 msgstr ""
-"Houve um problema na verificação do código 2FA. Por favor, tente novamente."
+"Houve um problema temporário ao criar sua conta. Por favor, tente novamente."
 
 #: source_app/main.py:184
 msgid "You must enter a message or choose a file to submit."
@@ -1114,26 +1081,16 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "ENVIAR DOCUMENTOS"
 
 #: source_templates/index.html:16
-#, fuzzy
-#| msgid ""
-#| "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security "
-#| "Setting</strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield "
-#| "icon\"> &nbsp;button in your browser’s toolbar to change it."
 msgid ""
 "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security Level</"
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
-"Os <a id=\"disable-js\" href=\"\"><strong>níveis de segurança</strong></a> "
-"do seu navegador Tor estão muito baixas. Use o <img src=\"{icon}\" alt="
-"\"ícone do escudo\"> &nbsp;no seu navegador para modificá-la."
+"O <a id=\"disable-js\" href=\"\"><strong>nível de segurança</strong></a> do "
+"seu navegador Tor está muito baixo. Use o botão <img src=\"{icon}\" alt="
+"\"ícone do escudo\"> &nbsp;no seu navegador para modificá-lo."
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
-#| "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
-#| "install it</a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to use Tor Browser to access SecureDrop:</strong> "
 "<a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
@@ -1144,13 +1101,6 @@ msgstr ""
 "instalar o Tor</a>, ou ignore este aviso e continue."
 
 #: source_templates/index.html:18
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended you use the desktop version of Tor Browser to "
-#| "access SecureDrop, as Orfox does not provide the same level of security "
-#| "and anonymity as the desktop versions.</strong> <a id=\"recommend-tor\" "
-#| "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
-#| "warning to continue."
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
@@ -1159,9 +1109,9 @@ msgid ""
 "continue."
 msgstr ""
 "<strong>Recomenda-se o uso da versão desktop do Navegador Tor para acessar o "
-"SecureDrop, já que Orfox não oferece o mesmo nível de segurança e anonimato "
-"que as versões desktop.</strong> <a id=\"recommend-tor\" href="
-"\"{tor_browser_url}\">Veja como instalar o Tor</a>, ou ignore este aviso e "
+"SecureDrop, já que o Orfox não oferece o mesmo nível de segurança e "
+"anonimato que a versão desktop.</strong> <a id=\"recommend-tor\" href=\""
+"{tor_browser_url}\">Veja como instalar o Tor</a>, ou ignore este aviso e "
 "continue."
 
 #: source_templates/index.html:39
@@ -1220,20 +1170,15 @@ msgid "One more thing..."
 msgstr "Uma última coisa..."
 
 #: source_templates/logout.html:7
-#, fuzzy
-#| msgid ""
-#| "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
-#| "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
-#| "toolbar. This will clear your Tor browser activity data on this device."
 msgid ""
 "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor Browser's "
 "toolbar. This will clear your Tor Browser activity data on this device."
 msgstr ""
-"Clique no botão <img src={icon} alt=\"broom icon\" width=\"16\" height="
-"\"16\">&nbsp;<strong>Nova identidade</strong> na barra de ferramentas do "
-"navegador Tor. Assim, os dados da sua atividade no navegador Tor serão "
-"eliminados deste aparelho."
+"Clique no botão <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\""
+">&nbsp;<strong>Nova identidade</strong> na barra de ferramentas do Tor "
+"Browser. Assim, os dados da sua atividade no navegador Tor serão eliminados "
+"deste aparelho."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1363,12 +1308,6 @@ msgid "Important"
 msgstr "Importante"
 
 #: source_templates/session_timeout.html:5
-#, fuzzy
-#| msgid ""
-#| "You were logged out due to inactivity. Click the <img src={icon} alt="
-#| "\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</"
-#| "strong> button in your Tor browser's toolbar before moving on. This will "
-#| "clear your Tor browser activity data on this device."
 msgid ""
 "You were logged out due to inactivity. Click the <img src={icon} alt=\"broom "
 "icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong> button "
@@ -1377,7 +1316,7 @@ msgid ""
 msgstr ""
 "A sua sessão foi encerrada por inatividade. Clique no botão <img src={icon} "
 "alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Nova identidade</"
-"strong> na barra de ferramentas do navegador Tor. Assim, os dados da sua "
+"strong> na barra de ferramentas do Tor Browser. Assim, os dados da sua "
 "atividade no navegador Tor serão eliminados deste aparelho."
 
 #: source_templates/tor2web-warning.html:3
@@ -1398,17 +1337,12 @@ msgstr ""
 "a sua atividade na Internet (seu governo, seu provedor de Internet)."
 
 #: source_templates/tor2web-warning.html:6
-#, fuzzy
-#| msgid ""
-#| "We <strong>strongly advise</strong> you to use the <a href=\"www."
-#| "torproject.org/projects/torbrowser.html\">Tor browser</a> instead."
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor Browser</a> instead."
 msgstr ""
-"Nós<strong>recomendamos fortemente</strong> que você use o <a href=\"www."
-"torproject.org/projects/torbrowser.html\">Navegador Tor</a> em vez do "
-"Tor2Web."
+"Nós <strong>recomendamos fortemente</strong> que você use o <a href=\"www."
+"torproject.org/projects/torbrowser.html\">Tor Browser</a> em vez do Tor2Web."
 
 #: source_templates/use-tor-browser.html:3
 msgid "You Should Use Tor Browser"
@@ -1473,17 +1407,14 @@ msgstr ""
 "criptografar seus dados por conta própria. Para fazê-lo:"
 
 #: source_templates/why-journalist-key.html:7
-#, fuzzy
-#| msgid ""
-#| "<a href=\"{url}\">Download</a> the public key. The public key is a text "
-#| "file with the extension <code>.asc</code>"
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. It will be saved to a file "
 "called:\n"
 "        <p><code>{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"<a href=\"{url}\">Faça o download</a> da chave pública. A chave pública é um "
-"arquivo de texto com a extensão <code>.asc</code>"
+"<a href=\"{url}\">Faça o download</a> da chave pública. Ela será salva em um "
+"arquivo chamado:\n"
+"        <p><code>{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:9
 msgid "Import it into your GPG keyring."
@@ -1500,56 +1431,48 @@ msgstr ""
 "automaticamente."
 
 #: source_templates/why-journalist-key.html:12
-#, fuzzy
-#| msgid ""
-#| "If you are using Mac/Linux, open the terminal. You can import the key "
-#| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
 "If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"No Mac/Linux, abra o terminal. Você pode importar a chave com o comando "
-"<code>gpg --import /path/to/key.asc</code>."
+"Se você está usando macOS ou Linux, abra o terminal. Você pode importar a "
+"chave com o comando <p><code>gpg --import /caminho/para/"
+"{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:15
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
 msgstr ""
+"Criptografe o conteúdo de seu envio. Abra o terminal e digite esse comando "
+"gpg:"
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
 "<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submission</"
 "code>"
 msgstr ""
+"<code>gpg --recipient '{submission_key_fpr}' --encrypt /caminho/do/"
+"conteudo</code>"
 
 #: source_templates/why-journalist-key.html:18
-#, fuzzy
-#| msgid ""
-#| "Upload your encrypted submission. It will have the same filename as the "
-#| "unencrypted file, with .gpg at the end (e.g. <code>roswell_photos.pdf."
-#| "gpg</code>)"
 msgid ""
 "Upload your encrypted submission. It will have the same filename as the "
 "unencrypted file, with .gpg at the end (e.g. <code>internal_memo.pdf.gpg</"
 "code>)"
 msgstr ""
 "Envie o conteúdo criptografado. O nome do arquivo será o mesmo da versão não "
-"criptografada, mas com \".gpg\" no final (por exemplo <code>roswell_photos."
-"pdf.gpg</code>)"
+"criptografada, mas com \".gpg\" no final (por exemplo <code>internal_memo.pdf"
+".gpg</code>)"
 
 #: source_templates/why-journalist-key.html:21
-#, fuzzy
-#| msgid ""
-#| "<strong>Tip:</strong> If you wish to remain anonymous, <strong>do not</"
-#| "strong> use GPG to sign the encrypted file (with the <code>--sign</code> "
-#| "or <code>-s</code> flag) as this will reveal your GPG identity to us."
 msgid ""
 "<strong>Important:</strong> If you wish to remain anonymous, <strong>do not</"
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
-"<strong>Dica:</strong> para manter o seu anonimato, <strong>não</strong> use "
-"o GPG para assinar o arquivo criptografado (com as opções <code>--sign</"
-"code> ou <code>-s</code>), pois isso revelaria a sua identidade."
+"<strong>Importante:</strong> Para manter o seu anonimato, <strong>não</"
+"strong> use o GPG para assinar o arquivo criptografado (com as opções "
+"<code>--sign</code> ou <code>-s</code>), pois isso revelaria a sua "
+"identidade para nós."
 
 #: source_templates/why-journalist-key.html:23
 msgid "Back to submission page"
