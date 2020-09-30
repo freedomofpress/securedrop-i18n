@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-07-22 02:37+0000\n"
+"PO-Revision-Date: 2020-09-30 01:23+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.securedrop.org/"
 "projects/securedrop/securedrop/zh_Hant/>\n"
@@ -25,8 +25,6 @@ msgid "{time} ago"
 msgstr "{time} 之前"
 
 #: journalist_app/__init__.py:90 journalist_app/__init__.py:131
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to inactivity."
 msgstr "您因閒置太久已被登出"
 
@@ -79,8 +77,6 @@ msgid "Name not updated: {}"
 msgstr "名稱未更新: {}"
 
 #: journalist_app/admin.py:232
-#, fuzzy
-#| msgid "Deleted user '{user}'"
 msgid "Deleted user '{user}'."
 msgstr "删除了用户「{user}」"
 
@@ -89,8 +85,6 @@ msgid "Test alert sent. Please check your email."
 msgstr "已送出測試警報，請檢查電郵信箱。"
 
 #: journalist_app/col.py:60
-#, fuzzy
-#| msgid "{source_name}'s collection deleted"
 msgid "{source_name}'s collection deleted."
 msgstr "{source_name} 集件已删除"
 
@@ -107,18 +101,12 @@ msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgstr "HOTP secrets 需為 40 個字符長，已輸入 {num_chars} 個字符。"
 
 #: journalist_app/forms.py:28
-#, fuzzy
-#| msgid ""
-#| "Field must be at least {min_chars} characters long but only got "
-#| "{num_chars}."
 msgid "Must be at least {min_chars} characters long."
-msgstr "字段必须至少有 {min_chars} 個字符長度，但是只得到 {num_chars}。"
+msgstr "须至少有 {min_chars} 個字符長度。"
 
 #: journalist_app/forms.py:35
-#, fuzzy
-#| msgid "Field can not be more than {max_chars} characters."
 msgid "Cannot be longer than {max_chars} characters."
-msgstr "本欄位不可多於 {max_chars} 字元。"
+msgstr "不可多於 {max_chars} 字元。"
 
 #: journalist_app/forms.py:40
 msgid ""
@@ -205,10 +193,8 @@ msgid "Name updated."
 msgstr "名稱已更新。"
 
 #: journalist_app/utils.py:357
-#, fuzzy
-#| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
-msgstr "你提交的密碼不對！原密碼未更改。"
+msgstr "提交的密碼不對！原密碼未更改。"
 
 #: journalist_app/utils.py:364
 msgid ""
@@ -461,13 +447,6 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "設定 Yubikey 後，請在下面輸入 6 位數字代碼："
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 Onion Services, which are being phased out for security "
-#| "reasons. In February 2021, v2 Onion Services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required:</strong> Your SecureDrop servers are still running "
 "v2 onion services, which are being phased out for security reasons. In "
@@ -475,10 +454,9 @@ msgid ""
 "servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
-"<strong>更新需求：</strong> SecureDrop 伺服器若使用 v2 Onion 服務須注意因安全"
-"考量將逐步淡出，自 2021 年2月起 v2 Onion 將被取消。仍使用它的 SecureDrop 伺服"
-"器可能無法訪問。 <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
-"\">詳情請參考</a>"
+"<strong>更新需求：</strong> SecureDrop 伺服器若使用 v2 Onion 服務須注意因安全考量將逐步淡出，自 2021 "
+"年2月起 v2 Onion 將被取消。仍使用它的 SecureDrop 伺服器可能無法訪問。 <a href=\"//securedrop.org/v2"
+"-onion-eol\" rel=\"noreferrer\">詳情請參考</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -661,10 +639,8 @@ msgid "Edit user \"{user}\""
 msgstr "編輯帳户 \"{user}\""
 
 #: journalist_templates/edit_account.html:8
-#, fuzzy
-#| msgid "Change Name &amp; Admin Status"
 msgid "Change Name and Admin Status"
-msgstr "更動名稱 &amp; 管理者狀態"
+msgstr "更動名稱與管理者狀態"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -719,20 +695,14 @@ msgid "Reset Two-Factor Authentication"
 msgstr "重置雙因素驗證授權"
 
 #: journalist_templates/edit_account.html:83
-#, fuzzy
-#| msgid ""
-#| "If a user's two-factor authentication credentials have been lost or "
-#| "compromised, you can reset them here. <em>If you do this, make sure the "
-#| "user is present and ready to set up their device with the new two-factor "
-#| "credentials. Otherwise, they will be locked out of their account."
 msgid ""
 "If a user's two-factor authentication credentials have been lost or "
 "compromised, you can reset them here. <em>If you do this, make sure the user "
 "is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account.</em>"
 msgstr ""
-"如果用户雙因素驗證的證明已丢失或遭破壞，可以在此重置它們。<em>如果這麼做，確"
-"認該用戶在場，而且在其設置上已設好新的雙因素驗證。否则，他們的帳戶將被鎖住。"
+"如果用户雙因素驗證的證明已丢失或遭破壞，可以在此重置它們。<em>如果這麼做，確認該用戶在場，而且在其設置上已設好新的雙因素驗證。否则，他們的帳戶將被鎖住"
+"。"
 
 #: journalist_templates/edit_account.html:85
 msgid ""
@@ -856,8 +826,6 @@ msgid "Password"
 msgstr "密碼"
 
 #: journalist_templates/login.html:10
-#, fuzzy
-#| msgid "Password"
 msgid "Show password"
 msgstr "密碼"
 
