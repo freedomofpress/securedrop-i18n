@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-07-27 21:00+0000\n"
-"Last-Translator: Pavel Ruzicka <ruza@ruza.eu>\n"
+"PO-Revision-Date: 2020-09-30 17:26+0000\n"
+"Last-Translator: Honza Cibulka <honza@datastory.cz>\n"
 "Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/cs/>\n"
 "Language: cs\n"
@@ -24,10 +24,8 @@ msgid "{time} ago"
 msgstr "před {time}"
 
 #: journalist_app/__init__.py:90 journalist_app/__init__.py:131
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to inactivity."
-msgstr "Z důvodu neaktivity jste byl/a odhlášen/a"
+msgstr "Z důvodu neaktivity jste byl/a odhlášen/a."
 
 #: journalist_app/__init__.py:140
 msgid "You have been logged out due to password change"
@@ -83,20 +81,16 @@ msgid "Name not updated: {}"
 msgstr "Jméno nebylo aktualizováno: {}"
 
 #: journalist_app/admin.py:232
-#, fuzzy
-#| msgid "Deleted user '{user}'"
 msgid "Deleted user '{user}'."
-msgstr "Uživatel „{user}“ byl smazán"
+msgstr "Uživatel „{user}“ byl smazán."
 
 #: journalist_app/admin.py:262
 msgid "Test alert sent. Please check your email."
 msgstr "Testovací upozornění odesláno. Zkontrolujte prosím svůj e-mail."
 
 #: journalist_app/col.py:60
-#, fuzzy
-#| msgid "{source_name}'s collection deleted"
 msgid "{source_name}'s collection deleted."
-msgstr "Sada {source_name} smazána"
+msgstr "Sada {source_name} smazána."
 
 #: journalist_app/col.py:71
 msgid "No collections selected."
@@ -111,19 +105,12 @@ msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgstr "HOTP hesla mají 40 znaků - zadal/a jste {num_chars} znaků."
 
 #: journalist_app/forms.py:28
-#, fuzzy
-#| msgid ""
-#| "Field must be at least {min_chars} characters long but only got "
-#| "{num_chars}."
 msgid "Must be at least {min_chars} characters long."
-msgstr ""
-"Pole musí mít alespoň {min_chars}  znaků, ale obsahuje pouze {num_chars}."
+msgstr "Musí mít alespoň {min_chars}  znaků."
 
 #: journalist_app/forms.py:35
-#, fuzzy
-#| msgid "Field can not be more than {max_chars} characters."
 msgid "Cannot be longer than {max_chars} characters."
-msgstr "Pole nemůže obsahovat více než {max_chars} znaků."
+msgstr "Nemůže obsahovat více než {max_chars} znaků."
 
 #: journalist_app/forms.py:40
 msgid ""
@@ -223,10 +210,8 @@ msgid "Name updated."
 msgstr "Jméno aktualizováno."
 
 #: journalist_app/utils.py:357
-#, fuzzy
-#| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
-msgstr "Vložili jste nesprávné heslo! Heslo nebylo změněno."
+msgstr "Vložené heslo je neplatné! Heslo nebylo změněno."
 
 #: journalist_app/utils.py:364
 msgid ""
@@ -494,13 +479,6 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Jakmile nastavíte svůj YubiKey, zadejte šesticiferný kód níže:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 Onion Services, which are being phased out for security "
-#| "reasons. In February 2021, v2 Onion Services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required:</strong> Your SecureDrop servers are still running "
 "v2 onion services, which are being phased out for security reasons. In "
@@ -509,8 +487,8 @@ msgid ""
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
 "<strong>Je vyžadována aktualizace:</strong> Vaše SecureDrop servery stále "
-"běží na Onion Services verze 2 (v2), která je z bezpečnostních důvodů "
-"pozastavována. V únoru 2021 budou v2 Onion Services deaktivovány a vaše "
+"běží na onion services verze 2 (v2), která je z bezpečnostních důvodů "
+"pozastavována. V únoru 2021 budou v2 onion services deaktivovány a vaše "
 "SecureDrop servery mohou být nedostupné. <a href=\"//securedrop.org/v2-onion-"
 "eol\" rel=\"noreferrer\">Dozvědět se víc</a>"
 
@@ -708,10 +686,8 @@ msgid "Edit user \"{user}\""
 msgstr "Upravit uživatele „{user}“"
 
 #: journalist_templates/edit_account.html:8
-#, fuzzy
-#| msgid "Change Name &amp; Admin Status"
 msgid "Change Name and Admin Status"
-msgstr "Změnit jméno &amp; stav administrátora"
+msgstr "Změnit jméno a status administrátora"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -768,12 +744,6 @@ msgid "Reset Two-Factor Authentication"
 msgstr "Resetovat dvoufaktorovou autentizaci"
 
 #: journalist_templates/edit_account.html:83
-#, fuzzy
-#| msgid ""
-#| "If a user's two-factor authentication credentials have been lost or "
-#| "compromised, you can reset them here. <em>If you do this, make sure the "
-#| "user is present and ready to set up their device with the new two-factor "
-#| "credentials. Otherwise, they will be locked out of their account."
 msgid ""
 "If a user's two-factor authentication credentials have been lost or "
 "compromised, you can reset them here. <em>If you do this, make sure the user "
@@ -783,7 +753,7 @@ msgstr ""
 "Pokud jste ztratil/a údaje pro dvoufaktorovou autentizaci nebo došlo k "
 "jejich zneužití, můžete je zde obnovit. <em>Nejdříve se ale ujistěte,  že je "
 "daný uživatel připraven nastavit si pro své zařízení nové dvoufaktorové "
-"přístupové údaje. Jinak uživatel ztratí přístup ke svému účtu."
+"přístupové údaje. Jinak uživatel ztratí přístup ke svému účtu.</em>"
 
 #: journalist_templates/edit_account.html:85
 msgid ""
@@ -916,10 +886,8 @@ msgid "Password"
 msgstr "Heslo"
 
 #: journalist_templates/login.html:10
-#, fuzzy
-#| msgid "Password"
 msgid "Show password"
-msgstr "Heslo"
+msgstr "Zobrazit heslo"
 
 #: journalist_templates/login.html:12 source_templates/index.html:59
 #: source_templates/logout.html:3
@@ -974,11 +942,10 @@ msgstr ""
 "souhlasí, protože se může lišit od toho zobrazeného na předchozí stránce."
 
 #: source_app/main.py:80
-#, fuzzy
-#| msgid "There was a problem verifying the two-factor code. Please try again."
 msgid "There was a temporary problem creating your account. Please try again."
 msgstr ""
-"Při ověřování  dvoufaktorového kódu došlo k problému. Zkuste to prosím znovu."
+"Při ověřování dvoufaktorového kódu došlo k dočasnému problému. Zkuste to "
+"prosím znovu."
 
 #: source_app/main.py:184
 msgid "You must enter a message or choose a file to submit."
@@ -1104,11 +1071,6 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "ODESLAT DOKUMENTY"
 
 #: source_templates/index.html:16
-#, fuzzy
-#| msgid ""
-#| "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security "
-#| "Setting</strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield "
-#| "icon\"> &nbsp;button in your browser’s toolbar to change it."
 msgid ""
 "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security Level</"
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
@@ -1119,28 +1081,16 @@ msgstr ""
 "<img src=\"{icon}\" alt=\"shield icon\"> na liště prohlížeče."
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
-#| "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
-#| "install it</a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to use Tor Browser to access SecureDrop:</strong> "
 "<a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
 "a>, or ignore this warning to continue."
 msgstr ""
-"<strong>SecureDrop doporučujeme používat v prohlížeči Tor:</strong> <a id="
-"\"recommend-tor\" href=\"{tor_browser_url}\">Zjistěte, jak Tor nainstalovat</"
-"a>."
+"<strong>SecureDrop doporučujeme používat v prohlížeči Tor:</strong> <a id"
+"=\"recommend-tor\" href=\"{tor_browser_url}\">Zjistěte, jak Tor "
+"nainstalovat</a>."
 
 #: source_templates/index.html:18
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended you use the desktop version of Tor Browser to "
-#| "access SecureDrop, as Orfox does not provide the same level of security "
-#| "and anonymity as the desktop versions.</strong> <a id=\"recommend-tor\" "
-#| "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
-#| "warning to continue."
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
@@ -1150,8 +1100,8 @@ msgid ""
 msgstr ""
 "<strong>SecureDrop doporučujeme používat ve verzi prohlížeče Tor pro "
 "počítač, protože Orfox neposkytuje stejnou úroveň bezpečnosti a anonymity "
-"jako verze pro počítač.</strong> <a id=\"recommend-tor\" href="
-"\"{tor_browser_url}\">Zjistěte, jak ji nainstalovat</a>."
+"jako verze pro počítač.</strong> <a id=\"recommend-tor\" href=\""
+"{tor_browser_url}\">Zjistěte, jak ji nainstalovat</a>."
 
 #: source_templates/index.html:39
 msgid "First submission"
@@ -1207,19 +1157,14 @@ msgid "One more thing..."
 msgstr "Ještě jedna věc..."
 
 #: source_templates/logout.html:7
-#, fuzzy
-#| msgid ""
-#| "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
-#| "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
-#| "toolbar. This will clear your Tor browser activity data on this device."
 msgid ""
 "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor Browser's "
 "toolbar. This will clear your Tor Browser activity data on this device."
 msgstr ""
-"Klepněte na <img src={icon} alt=\"ikona koštěte\" width=\"16\" height="
-"\"16\">&nbsp;<strong>Nová identita</strong> na liště svého prohlížeče Tor. "
-"Smažete tím data o aktivitě prohlížeče Tor na tomhle zařízení."
+"Klepněte na <img src={icon} alt=\"ikona koštěte\" width=\"16\" height=\"16\""
+">&nbsp;<strong>Nová identita</strong> na liště svého prohlížeče Tor. Smažete "
+"tím data o aktivitě prohlížeče Tor na tomhle zařízení."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1347,12 +1292,6 @@ msgid "Important"
 msgstr "Důležité"
 
 #: source_templates/session_timeout.html:5
-#, fuzzy
-#| msgid ""
-#| "You were logged out due to inactivity. Click the <img src={icon} alt="
-#| "\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</"
-#| "strong> button in your Tor browser's toolbar before moving on. This will "
-#| "clear your Tor browser activity data on this device."
 msgid ""
 "You were logged out due to inactivity. Click the <img src={icon} alt=\"broom "
 "icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong> button "
@@ -1382,10 +1321,6 @@ msgstr ""
 "připojení) vás může identifikovat."
 
 #: source_templates/tor2web-warning.html:6
-#, fuzzy
-#| msgid ""
-#| "We <strong>strongly advise</strong> you to use the <a href=\"www."
-#| "torproject.org/projects/torbrowser.html\">Tor browser</a> instead."
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor Browser</a> instead."
@@ -1454,17 +1389,13 @@ msgstr ""
 "třeba dodržet následující kroky:"
 
 #: source_templates/why-journalist-key.html:7
-#, fuzzy
-#| msgid ""
-#| "<a href=\"{url}\">Download</a> the public key. The public key is a text "
-#| "file with the extension <code>.asc</code>"
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. It will be saved to a file "
 "called:\n"
 "        <p><code>{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"<a href=\"{url}\">Stáhněte si</a> veřejný klíč. Veřejný klíč je textový "
-"soubor s příponou<code>.asc</code>"
+"<a href=\"{url}\">Stáhněte si</a> veřejný klíč. Veřejný klíč bude uložen do "
+"souboru: <p><code>{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:9
 msgid "Import it into your GPG keyring."
@@ -1481,56 +1412,45 @@ msgstr ""
 "Vaší klíčenky."
 
 #: source_templates/why-journalist-key.html:12
-#, fuzzy
-#| msgid ""
-#| "If you are using Mac/Linux, open the terminal. You can import the key "
-#| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
 "If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"Pokud používáte Mac či Linux, otevřete terminál. Klíč pak můžete importovat "
-"příkazem <code>gpg --import /path/to/key.asc</code>."
+"Pokud používáte mac či Linux, otevřete terminál. Klíč pak můžete importovat "
+"příkazem <p><code>gpg --import /path/to/"
+"{submission_key_fpr_filename}</code></p>."
 
 #: source_templates/why-journalist-key.html:15
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
-msgstr ""
+msgstr "Zašifrujte své podání. Otevřete terminál a zadejte tento gpg příkaz:"
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
 "<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submission</"
 "code>"
 msgstr ""
+"<code>gpg --recipient '{submission_key_fpr}' --encrypt /cesta/k/podani</code>"
 
 #: source_templates/why-journalist-key.html:18
-#, fuzzy
-#| msgid ""
-#| "Upload your encrypted submission. It will have the same filename as the "
-#| "unencrypted file, with .gpg at the end (e.g. <code>roswell_photos.pdf."
-#| "gpg</code>)"
 msgid ""
 "Upload your encrypted submission. It will have the same filename as the "
 "unencrypted file, with .gpg at the end (e.g. <code>internal_memo.pdf.gpg</"
 "code>)"
 msgstr ""
 "Nahrajte svůj zašifrovaný příspěvek. Bude mít stejný název jako "
-"nezašifrovaný soubor s .gpg na konci  (např. <code>roswell_photos.pdf.gpg</"
-"code>)"
+"nezašifrovaný soubor s .gpg na konci  (např. <code>interni_informace.pdf."
+"gpg</code>)"
 
 #: source_templates/why-journalist-key.html:21
-#, fuzzy
-#| msgid ""
-#| "<strong>Tip:</strong> If you wish to remain anonymous, <strong>do not</"
-#| "strong> use GPG to sign the encrypted file (with the <code>--sign</code> "
-#| "or <code>-s</code> flag) as this will reveal your GPG identity to us."
 msgid ""
 "<strong>Important:</strong> If you wish to remain anonymous, <strong>do not</"
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
-"<strong>Tip:</strong> Chcete-li zůstat v anonymitě <strong>nepoužívejte</"
-"strong> GPG k podepsání zašifrovaného souboru (s <code>--sign</code> nebo "
-"<code>-s</code>), čímž byste odhalil/a svou identitu."
+"<strong>Důležité:</strong> Chcete-li zůstat v anonymitě "
+"<strong>nepoužívejte</strong> GPG k podepsání zašifrovaného souboru (s "
+"<code>--sign</code> nebo <code>-s</code>), čímž byste odhalil/a svou "
+"identitu."
 
 #: source_templates/why-journalist-key.html:23
 msgid "Back to submission page"
