@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-07-24 00:37+0000\n"
-"Last-Translator: Volkan <volkangezer@gmail.com>\n"
+"PO-Revision-Date: 2020-09-30 10:01+0000\n"
+"Last-Translator: tekrei <tekrei@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
 "Language: tr\n"
@@ -24,10 +24,8 @@ msgid "{time} ago"
 msgstr "{time} önce"
 
 #: journalist_app/__init__.py:90 journalist_app/__init__.py:131
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to inactivity."
-msgstr "Uzun süredir bir işlem yapmadığınız için oturumunuz kapatıldı"
+msgstr "Uzun süredir bir işlem yapmadığınız için oturumunuz kapatıldı."
 
 #: journalist_app/__init__.py:140
 msgid "You have been logged out due to password change"
@@ -85,20 +83,16 @@ msgid "Name not updated: {}"
 msgstr "Ad güncellenmedi: {}"
 
 #: journalist_app/admin.py:232
-#, fuzzy
-#| msgid "Deleted user '{user}'"
 msgid "Deleted user '{user}'."
-msgstr "'{user}' kullanıcısı silindi"
+msgstr "'{user}' kullanıcısı silindi."
 
 #: journalist_app/admin.py:262
 msgid "Test alert sent. Please check your email."
 msgstr "Deneme uyarısı gönderildi. Lütfen e-postanızı denetleyin."
 
 #: journalist_app/col.py:60
-#, fuzzy
-#| msgid "{source_name}'s collection deleted"
 msgid "{source_name}'s collection deleted."
-msgstr "{source_name} derlemeleri silindi"
+msgstr "{source_name} derlemeleri silindi."
 
 #: journalist_app/col.py:71
 msgid "No collections selected."
@@ -115,20 +109,12 @@ msgstr ""
 "yazdınız."
 
 #: journalist_app/forms.py:28
-#, fuzzy
-#| msgid ""
-#| "Field must be at least {min_chars} characters long but only got "
-#| "{num_chars}."
 msgid "Must be at least {min_chars} characters long."
-msgstr ""
-"Alan en az {min_chars} karakter uzunluğunda olmalıdır. Henüz {num_chars} "
-"karakter yazılmış."
+msgstr "En az {min_chars} karakter uzunluğunda olmalıdır."
 
 #: journalist_app/forms.py:35
-#, fuzzy
-#| msgid "Field can not be more than {max_chars} characters."
 msgid "Cannot be longer than {max_chars} characters."
-msgstr "Alana en fazla {max_chars} karakter yazılabilir."
+msgstr "En fazla {max_chars} karakter yazılabilir."
 
 #: journalist_app/forms.py:40
 msgid ""
@@ -227,10 +213,8 @@ msgid "Name updated."
 msgstr "Ad güncellendi."
 
 #: journalist_app/utils.py:357
-#, fuzzy
-#| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
-msgstr "Yazdığınız parola kötü! Parola değiştirilmedi."
+msgstr "Girdiğiniz parola kötü! Parola değiştirilmedi."
 
 #: journalist_app/utils.py:364
 msgid ""
@@ -504,13 +488,6 @@ msgstr ""
 "YubiKey yapılandırmasını tamamladığınızda, aşağıdaki 6 haneli kodu yazın:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 Onion Services, which are being phased out for security "
-#| "reasons. In February 2021, v2 Onion Services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required:</strong> Your SecureDrop servers are still running "
 "v2 onion services, which are being phased out for security reasons. In "
@@ -519,9 +496,9 @@ msgid ""
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
 "<strong>Güncelleme Gerekiyor:</strong> SecureDrop sunucularınız hala, "
-"güvenlik nedenleriyle aşamalı olarak kullanımdan kaldırılan Onion "
-"Hizmetlerinin 2. sürümünü kullanıyor. 2021 yılı Şubat ayında Onion "
-"Hizmetleri 2. sürümü etkisizleştirilecektir, bu durumda SecureDrop "
+"güvenlik nedenleriyle aşamalı olarak kullanımdan kaldırılan onion "
+"hizmetlerinin 2. sürümünü kullanıyor. 2021 yılı Şubat ayında onion "
+"hizmetleri 2. sürümü etkisizleştirilecektir, bu durumda SecureDrop "
 "sunucularınız erişilemez hale gelebilir. <a href=\"//securedrop.org/v2-onion-"
 "eol\" rel=\"noreferrer\">Daha Fazlasını Öğren</a>"
 
@@ -720,10 +697,8 @@ msgid "Edit user \"{user}\""
 msgstr "\"{user}\" kullanıcısını düzenle"
 
 #: journalist_templates/edit_account.html:8
-#, fuzzy
-#| msgid "Change Name &amp; Admin Status"
 msgid "Change Name and Admin Status"
-msgstr "Ad Değişikliği ve Yönetici Durumu"
+msgstr "Adı ve Yönetici Durumunu Değiştir"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -783,23 +758,17 @@ msgid "Reset Two-Factor Authentication"
 msgstr "İki Aşamalı Kimlik Doğrulamayı Sıfırla"
 
 #: journalist_templates/edit_account.html:83
-#, fuzzy
-#| msgid ""
-#| "If a user's two-factor authentication credentials have been lost or "
-#| "compromised, you can reset them here. <em>If you do this, make sure the "
-#| "user is present and ready to set up their device with the new two-factor "
-#| "credentials. Otherwise, they will be locked out of their account."
 msgid ""
 "If a user's two-factor authentication credentials have been lost or "
 "compromised, you can reset them here. <em>If you do this, make sure the user "
 "is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account.</em>"
 msgstr ""
-"Bir kullanıcının iki aşamalı kimlik doğrulama bilgileri kaybolursa ya da ele "
+"Bir kullanıcının iki aşamalı kimlik doğrulama bilgileri kaybolursa veya ele "
 "geçirilirse buradan sıfırlayabilirsiniz. <em>Bu işlemi yaparsanız, "
 "kullanıcının var olduğundan ve aygıtlarını yeni iki aşamalı kimlik doğrulama "
 "bilgilerine göre ayarlayabileceğinden emin olun. Yoksa kullanıcılar "
-"hesaplarına erişemez."
+"hesaplarına erişemez.</em>"
 
 #: journalist_templates/edit_account.html:85
 msgid ""
@@ -935,10 +904,8 @@ msgid "Password"
 msgstr "Parola"
 
 #: journalist_templates/login.html:10
-#, fuzzy
-#| msgid "Password"
 msgid "Show password"
-msgstr "Parola"
+msgstr "Parolayı Göster"
 
 #: journalist_templates/login.html:12 source_templates/index.html:59
 #: source_templates/logout.html:3
@@ -994,12 +961,8 @@ msgstr ""
 "görüntülenen ile aynı olup olmadığını denetleyin."
 
 #: source_app/main.py:80
-#, fuzzy
-#| msgid "There was a problem verifying the two-factor code. Please try again."
 msgid "There was a temporary problem creating your account. Please try again."
-msgstr ""
-"İki aşamalı kimlik doğrulama kodu doğrulanırken bir sorun çıktı. Lütfen "
-"yeniden deneyin."
+msgstr "Hesabınızı oluştururken geçici bir sorun çıktı. Lütfen yeniden deneyin."
 
 #: source_app/main.py:184
 msgid "You must enter a message or choose a file to submit."
@@ -1128,27 +1091,16 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "BELGE GÖNDER"
 
 #: source_templates/index.html:16
-#, fuzzy
-#| msgid ""
-#| "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security "
-#| "Setting</strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield "
-#| "icon\"> &nbsp;button in your browser’s toolbar to change it."
 msgid ""
 "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security Level</"
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
-"Tor Browser <a id=\"disable-js\" href=\"\"><strong>Güvenlik Ayarlarınızın</"
-"strong></a> düzeyi çok düşük. Tor Browser araç çubuğundaki <img src="
-"\"{icon}\" alt=\"shield icon\"> &nbsp;düğmesini kullanarak "
-"değiştirebilirsiniz."
+"Tor Tarayıcı<a id=\"disable-js\" href=\"\"><strong>Güvenlik Düzeyi</strong></"
+"a> çok düşük. Tor Browser araç çubuğundaki <img src=\"{icon}\" alt=\"shield "
+"icon\"> &nbsp;düğmesini kullanarak değiştirebilirsiniz."
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
-#| "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
-#| "install it</a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to use Tor Browser to access SecureDrop:</strong> "
 "<a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
@@ -1156,16 +1108,9 @@ msgid ""
 msgstr ""
 "<strong>SecureDrop uygulamasına erişmek için Tor Tarayıcı kullanmanız "
 "önerilir:</strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">Nasıl "
-"kuracağınızı öğrenin</a> ya da bu uyarıyı görmezden gelerek devam edin."
+"kuracağınızı öğrenin</a> veya bu uyarıyı görmezden gelerek devam edin."
 
 #: source_templates/index.html:18
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended you use the desktop version of Tor Browser to "
-#| "access SecureDrop, as Orfox does not provide the same level of security "
-#| "and anonymity as the desktop versions.</strong> <a id=\"recommend-tor\" "
-#| "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
-#| "warning to continue."
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
@@ -1175,9 +1120,9 @@ msgid ""
 msgstr ""
 "<strong>SecureDrop uygulamasına erişmek için Tor Tarayıcının masaüstü "
 "sürümünü kullanmanız önerilir. Orfox masaüstü sürümlerle aynı güvenlik ve "
-"anonimlik düzeylerini sağlamaz</strong>.<a id=\"recommend-tor\" href="
-"\"{tor_browser_url}\">Nasıl kuracağınızı öğrenin</a> ya da bu uyarıyı "
-"görmezden gelerek devam edin."
+"anonimlik düzeylerini sağlamaz</strong>.<a id=\"recommend-tor\" href=\""
+"{tor_browser_url}\">Nasıl kuracağınızı öğrenin</a> veya bu uyarıyı görmezden "
+"gelerek devam edin."
 
 #: source_templates/index.html:39
 msgid "First submission"
@@ -1237,19 +1182,14 @@ msgid "One more thing..."
 msgstr "Bir şey daha var..."
 
 #: source_templates/logout.html:7
-#, fuzzy
-#| msgid ""
-#| "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
-#| "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
-#| "toolbar. This will clear your Tor browser activity data on this device."
 msgid ""
 "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor Browser's "
 "toolbar. This will clear your Tor Browser activity data on this device."
 msgstr ""
-"Tor Browser araç çubuğundan <img src={icon} alt=\"broom icon\" width=\"16\" "
+"Tor Tarayıcı araç çubuğundan <img src={icon} alt=\"broom icon\" width=\"16\" "
 "height=\"16\">&nbsp;<strong>Yeni Kimlik</strong> üzerine tıklayın. Bu işlem "
-"bu aygıt üzerindeki Tor Browser etkinliklerini siler."
+"bu aygıt üzerindeki Tor Tarayıcı etkinliklerini siler."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1380,12 +1320,6 @@ msgid "Important"
 msgstr "Önemli"
 
 #: source_templates/session_timeout.html:5
-#, fuzzy
-#| msgid ""
-#| "You were logged out due to inactivity. Click the <img src={icon} alt="
-#| "\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</"
-#| "strong> button in your Tor browser's toolbar before moving on. This will "
-#| "clear your Tor browser activity data on this device."
 msgid ""
 "You were logged out due to inactivity. Click the <img src={icon} alt=\"broom "
 "icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong> button "
@@ -1393,9 +1327,9 @@ msgid ""
 "Browser activity data on this device."
 msgstr ""
 "Bir süredir işlem yapmadığınız için oturumunuz kapatıldı. İlerlemeden önce "
-"Tor Browser araç çubuğundan <img src={icon} alt=\"broom icon\" width=\"16\" "
+"Tor Tarayıcı araç çubuğundan <img src={icon} alt=\"broom icon\" width=\"16\" "
 "height=\"16\">&nbsp;<strong>Yeni Kimlik</strong> üzerine tıklayın. Bu işlem "
-"bu aygıttaki Tor Browser işlemlerini siler."
+"bu aygıttaki Tor Tarayıcı işlemlerini siler."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1416,10 +1350,6 @@ msgstr ""
 "sağlayıcınız) sizin kim olduğunuzu belirleyebilir."
 
 #: source_templates/tor2web-warning.html:6
-#, fuzzy
-#| msgid ""
-#| "We <strong>strongly advise</strong> you to use the <a href=\"www."
-#| "torproject.org/projects/torbrowser.html\">Tor browser</a> instead."
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor Browser</a> instead."
@@ -1490,17 +1420,14 @@ msgstr ""
 "isteyebilirsiniz. Bunun için şunları yapın:"
 
 #: source_templates/why-journalist-key.html:7
-#, fuzzy
-#| msgid ""
-#| "<a href=\"{url}\">Download</a> the public key. The public key is a text "
-#| "file with the extension <code>.asc</code>"
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. It will be saved to a file "
 "called:\n"
 "        <p><code>{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"Açık anahtarı <a href=\"{url}\">indirin</a>. Açık anahtar <code>.asc</code> "
-"uzantısına sahip bir metin dosyasıdır"
+"Açık anahtarı <a href=\"{url}\">indirin</a>. Açık anahtar aşağıdaki dosyaya "
+"kaydedilecektir:\n"
+"        <p><code>{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:9
 msgid "Import it into your GPG keyring."
@@ -1516,55 +1443,43 @@ msgstr ""
 "dosyasına çift tıklayarak anahtarı otomatik olarak içe aktarabilirsiniz."
 
 #: source_templates/why-journalist-key.html:12
-#, fuzzy
-#| msgid ""
-#| "If you are using Mac/Linux, open the terminal. You can import the key "
-#| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
 "If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"Mac/Linux kullanıyorsanız bir uçbirim (terminal) açın. Anahtarı <code>gpg --"
-"import /dosyanin/bulundugu/dizin/key.asc</code> komutunu kullanarak içe "
-"aktarabilirsiniz."
+"Mac veya Linux kullanıyorsanız bir uçbirim (terminal) açın. Anahtarı şu "
+"komutla içe aktarabilirsiniz:<p><code>gpg --import /anahtarin/dizini/"
+"{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:15
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
-msgstr ""
+msgstr "Gönderinizi şifreleyin. Uçbirimi açın ve şu gpg komutunu girin:"
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
 "<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submission</"
 "code>"
 msgstr ""
+"<code>gpg --recipient '{submission_key_fpr}' --encrypt /gonderi/dizini/"
+"gonderi_dosyasi</code>"
 
 #: source_templates/why-journalist-key.html:18
-#, fuzzy
-#| msgid ""
-#| "Upload your encrypted submission. It will have the same filename as the "
-#| "unencrypted file, with .gpg at the end (e.g. <code>roswell_photos.pdf."
-#| "gpg</code>)"
 msgid ""
 "Upload your encrypted submission. It will have the same filename as the "
 "unencrypted file, with .gpg at the end (e.g. <code>internal_memo.pdf.gpg</"
 "code>)"
 msgstr ""
-"Şifrelenmiş gönderilerinizi yükleyin. Ad şifreli olmayan dosya ile aynı "
-"olur. Yalnız en sona .gpg uzantısı eklenir (örneğin <code>gizli_belgeler.pdf."
-"gpg</code>)"
+"Şifrelenmiş gönderilerinizi yükleyin. Şifrelenmiş dosyanın adı şifreli "
+"olmayan dosya ile aynı olur, yalnızca sonuna .gpg uzantısı eklenir (örneğin "
+"<code>ic_not.pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:21
-#, fuzzy
-#| msgid ""
-#| "<strong>Tip:</strong> If you wish to remain anonymous, <strong>do not</"
-#| "strong> use GPG to sign the encrypted file (with the <code>--sign</code> "
-#| "or <code>-s</code> flag) as this will reveal your GPG identity to us."
 msgid ""
 "<strong>Important:</strong> If you wish to remain anonymous, <strong>do not</"
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
-"<strong>İpucu:</strong> Anonim kalmak istiyorsanız, dosyanın GPG tarafından "
+"<strong>Önemli:</strong> Anonim kalmak istiyorsanız, dosyanın GPG tarafından "
 "(<code>--sign</code> ya da <code>-s</code> parametreleriyle) imzalanmasına "
 "<strong>izin vermeyin</strong>. Yoksa GPG kimliğiniz açığa çıkar."
 
