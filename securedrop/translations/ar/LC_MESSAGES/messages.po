@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-07-20 14:51+0000\n"
-"Last-Translator: Ahmed Essam <ahmedessamdev@gmail.com>\n"
+"PO-Revision-Date: 2020-10-01 14:01+0000\n"
+"Last-Translator: Thalia Rahme <trahme@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ar/>\n"
 "Language: ar\n"
@@ -26,10 +26,8 @@ msgid "{time} ago"
 msgstr "{time} مضت"
 
 #: journalist_app/__init__.py:90 journalist_app/__init__.py:131
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to inactivity."
-msgstr "تم الخروج من الحساب بسبب انعدام النشاط"
+msgstr "تم الخروج من الحساب بسبب انعدام النشاط."
 
 #: journalist_app/__init__.py:140
 msgid "You have been logged out due to password change"
@@ -81,20 +79,16 @@ msgid "Name not updated: {}"
 msgstr "الاسم لم يُحدَّث: {}"
 
 #: journalist_app/admin.py:232
-#, fuzzy
-#| msgid "Deleted user '{user}'"
 msgid "Deleted user '{user}'."
-msgstr "حُذِفَ المستخدم '{user}'"
+msgstr "حُذِفَ المستخدم '{user}'."
 
 #: journalist_app/admin.py:262
 msgid "Test alert sent. Please check your email."
 msgstr "تم إرسال تنبيه تجريبي. تفقّد بريدك الإلكتروني."
 
 #: journalist_app/col.py:60
-#, fuzzy
-#| msgid "{source_name}'s collection deleted"
 msgid "{source_name}'s collection deleted."
-msgstr "المجموعة {source_name} حُذفت"
+msgstr "المجموعة {source_name} حُذفت."
 
 #: journalist_app/col.py:71
 msgid "No collections selected."
@@ -111,13 +105,8 @@ msgstr ""
 "محرفا."
 
 #: journalist_app/forms.py:28
-#, fuzzy
-#| msgid ""
-#| "Field must be at least {min_chars} characters long but only got "
-#| "{num_chars}."
 msgid "Must be at least {min_chars} characters long."
-msgstr ""
-"يجب أن يحوي هذا الحقل {min_chars} مَحرَفًا على الأقل لكنه الآن يحوي {num_chars}."
+msgstr "يجب أن يحوي {min_chars} محرَفًا على الأقل."
 
 #: journalist_app/forms.py:35
 #, fuzzy
@@ -232,10 +221,8 @@ msgid "Name updated."
 msgstr "تم تحديث الاسم."
 
 #: journalist_app/utils.py:357
-#, fuzzy
-#| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
-msgstr "كلمة السّرّ المُدخلة غير صحيحة! لذا لا يمكنك تغييرها."
+msgstr "كلمة السّرّ المُدخلة غير صحيحة! لم يتم تغييرها."
 
 #: journalist_app/utils.py:364
 msgid ""
@@ -514,13 +501,6 @@ msgstr ""
 "بعد إتمام ضبط مفتاح الاستيثاق \"YubiKey\" أدخل الرمز المكون من 6 أرقام:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 Onion Services, which are being phased out for security "
-#| "reasons. In February 2021, v2 Onion Services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required:</strong> Your SecureDrop servers are still running "
 "v2 onion services, which are being phased out for security reasons. In "
@@ -529,11 +509,11 @@ msgid ""
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
 "<strong>مطلوب التحديث:</strong> خوادم SecureDrop الخاصة بك لا زالت تستخدم "
-"الإصدار الثانى من خدمات البصلة v2 Onion Services و التى سوف يتم إنهاء العمل "
+"الإصدار الثانى من خدمات البصلة v2 onion services و التى سوف يتم إنهاء العمل "
 "بها لأسباب أمنية. سوف يتم إلغاء تفعيل الإصدار الثانى من خدمات البصلة v2 "
-"Onion Services في فبراير 2021، و ربما يتعذر الوصول إلي خوادم SecureDrop "
-"الخاصة بك. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
-"\">معرفة المزيد</a>"
+"onion services في فبراير 2021، و ربما يتعذر الوصول إلي خوادم SecureDrop "
+"الخاصة بك. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\""
+">معرفة المزيد</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -727,10 +707,8 @@ msgid "Edit user \"{user}\""
 msgstr "تعديل حساب المستخدم \"{user}\""
 
 #: journalist_templates/edit_account.html:8
-#, fuzzy
-#| msgid "Change Name &amp; Admin Status"
 msgid "Change Name and Admin Status"
-msgstr "تغيير الاسم و حالة الإدارية"
+msgstr "تغيير الاسم و حالة المدير"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -788,12 +766,6 @@ msgid "Reset Two-Factor Authentication"
 msgstr "صفِّر وظيفة الاستيثاق في خطوتين"
 
 #: journalist_templates/edit_account.html:83
-#, fuzzy
-#| msgid ""
-#| "If a user's two-factor authentication credentials have been lost or "
-#| "compromised, you can reset them here. <em>If you do this, make sure the "
-#| "user is present and ready to set up their device with the new two-factor "
-#| "credentials. Otherwise, they will be locked out of their account."
 msgid ""
 "If a user's two-factor authentication credentials have been lost or "
 "compromised, you can reset them here. <em>If you do this, make sure the user "
@@ -801,8 +773,8 @@ msgid ""
 "credentials. Otherwise, they will be locked out of their account.</em>"
 msgstr ""
 "إذا فقد المستخدم بيانات الاستيثاق في خطوتين أو انكشفت فيمكن تصفيرها من هنا. "
-"<em> لفعل ذلك ينبغي أن يكون المستخدم حاضرًا و&nbsp;مستعدًّا بجهازه لضبط وظيفة "
-"الاستيثاق في خطوتين مجدّدًا و&nbsp;إلا لن يمكنه الولوج إلى الحساب."
+"<em> لفعل ذلك ينبغي أن يكون المستخدم حاضرًا و&nbsp;مستعدًّا بجهازه لضبط "
+"وظيفة الاستيثاق في خطوتين مجدّدًا وإلا لن يمكنه الولوج إلى الحساب.</em>"
 
 #: journalist_templates/edit_account.html:85
 msgid ""
@@ -930,10 +902,8 @@ msgid "Password"
 msgstr "كلمة السر"
 
 #: journalist_templates/login.html:10
-#, fuzzy
-#| msgid "Password"
 msgid "Show password"
-msgstr "كلمة السر"
+msgstr "إظهار كلمة السر"
 
 #: journalist_templates/login.html:12 source_templates/index.html:59
 #: source_templates/logout.html:3
@@ -988,10 +958,8 @@ msgstr ""
 "الظاهر على الصفحة السابقة."
 
 #: source_app/main.py:80
-#, fuzzy
-#| msgid "There was a problem verifying the two-factor code. Please try again."
 msgid "There was a temporary problem creating your account. Please try again."
-msgstr "هناك مشكلة في التأكد  الرمز الاستيثاق في خطوتين. حاول مجدًّدا."
+msgstr "طرأت مشكلة مؤقتة فيما يتعلّق بانشاء حسابك. حاول مجدًّدا."
 
 #: source_app/main.py:184
 msgid "You must enter a message or choose a file to submit."
@@ -1117,19 +1085,14 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "أودع مستندات"
 
 #: source_templates/index.html:16
-#, fuzzy
-#| msgid ""
-#| "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security "
-#| "Setting</strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield "
-#| "icon\"> &nbsp;button in your browser’s toolbar to change it."
 msgid ""
 "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security Level</"
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
-"حاليًا <a id=\"disable-js\" href=\"\"><strong>تضبيطات الأمان</strong></a> في "
-"متصفّح تور أضعف مما ينبغي. اضغط على زرّ <img src=\"{icon}\" alt=\"shield icon"
-"\"> &nbsp في شريط أدوات متصفحك لتغييرها."
+"حاليًا <a id=\"disable-js\" href=\"\"><strong>مستوى الأمان</strong></a> في "
+"متصفّح تور أضعف مما ينبغي. اضغط على زرّ <img src=\"{icon}\" alt=\"shield "
+"icon\"> &nbsp في شريط أدوات متصفحك لتغييرها."
 
 #: source_templates/index.html:17
 #, fuzzy
@@ -1147,13 +1110,6 @@ msgstr ""
 "هذا التحذير للمواصلة."
 
 #: source_templates/index.html:18
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended you use the desktop version of Tor Browser to "
-#| "access SecureDrop, as Orfox does not provide the same level of security "
-#| "and anonymity as the desktop versions.</strong> <a id=\"recommend-tor\" "
-#| "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
-#| "warning to continue."
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
@@ -1162,7 +1118,7 @@ msgid ""
 "continue."
 msgstr ""
 "<strong>نوصي باستخدام  متصفح تور للنفاذ إلى سِكيوردرُپ إذ أنّ Orfox لا يوفّر "
-"القدر ذاته من السرية و&nbsp;المجهوليّة اللتين توفّرهما إصدارة سطح المكتب :</"
+"القدر ذاته من السرية و&nbsp;المجهوليّة اللتين يوفّرهما إصدار سطح المكتب :</"
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">طالع خطوات "
 "التنصيب</a> أو تجاهل هذا التحذير للمواصلة."
 
@@ -1466,17 +1422,13 @@ msgstr ""
 "تعمية إيداعك بنفسك. لفعل ذلك:"
 
 #: source_templates/why-journalist-key.html:7
-#, fuzzy
-#| msgid ""
-#| "<a href=\"{url}\">Download</a> the public key. The public key is a text "
-#| "file with the extension <code>.asc</code>"
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. It will be saved to a file "
 "called:\n"
 "        <p><code>{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"<a href=\"{url}\">نزِّل</a>المفتاح العلني. المفتاح العلني ملف نصي اسمه ينتهي "
-"بالامتداد <code>.asc</code>"
+"<a href=\"{url}\">نزِّل</a>المفتاح العلني. سيتم حفظه في ملف "
+"يدعى:<p><code>{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:9
 msgid "Import it into your GPG keyring."
@@ -1500,48 +1452,41 @@ msgid ""
 "If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"إذا كنت تستخدم گنو\\لينُكس أو ماك فيمكنك استيراد المفتاح من خلال الطرفيّة "
-"بالأمر التالي <code dir=\"ltr\">gpg --import /path/to/key.asc</code>."
+"إذا كنت تستخدم ماك اوس macOS\\لينُكس أو ماك فيمكنك استيراد المفتاح  بواسطة "
+"<p><code>  من خلال الطرفيّة بالأمر التالي <code dir=\"ltr\">gpg --import /"
+"path/to/key.asc</code>."
 
 #: source_templates/why-journalist-key.html:15
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
-msgstr ""
+msgstr "قم بتشفير ما أرستله. أفتح الطرفية وأدخل أمر التعمية gpg:"
 
 #: source_templates/why-journalist-key.html:16
+#, fuzzy
 msgid ""
 "<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submission</"
 "code>"
 msgstr ""
+"<code>gpg -المتلقي '{submission_key_fpr}' --تعمية /الطريق/ل/الإرسال</code>"
 
 #: source_templates/why-journalist-key.html:18
-#, fuzzy
-#| msgid ""
-#| "Upload your encrypted submission. It will have the same filename as the "
-#| "unencrypted file, with .gpg at the end (e.g. <code>roswell_photos.pdf."
-#| "gpg</code>)"
 msgid ""
 "Upload your encrypted submission. It will have the same filename as the "
 "unencrypted file, with .gpg at the end (e.g. <code>internal_memo.pdf.gpg</"
 "code>)"
 msgstr ""
-"ارفع المستندات المُعماة المراد إيداعها. سوف يكون لها نفس اسم الملف غير المُعمّى "
-"مع الامتداد gpg. في نهاية الاسم (مثال <code dir=\"ltr\">roswell_photos.pdf."
-"gpg</code>)"
+"ارفع المستندات المُعماة المراد إيداعها. سوف يكون لها نفس اسم الملف غير "
+"المُعمّى مع الامتداد gpg. في نهاية الاسم (مثال <code dir=\"ltr\""
+">internal_memo..pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:21
-#, fuzzy
-#| msgid ""
-#| "<strong>Tip:</strong> If you wish to remain anonymous, <strong>do not</"
-#| "strong> use GPG to sign the encrypted file (with the <code>--sign</code> "
-#| "or <code>-s</code> flag) as this will reveal your GPG identity to us."
 msgid ""
 "<strong>Important:</strong> If you wish to remain anonymous, <strong>do not</"
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
-"<strong>نصيحة:</strong> إذا كنت ترغب في البقاء مجهول الهوية،<strong>فلا "
-"توقّع</strong> الملف المُعمى باستخدام <code>--sign</code> أو <code>-s</code>) "
-"في GPG إذ من شأن ذلك الكشف لنا عن هويتك التي تستعملها مع مفاتيح GPG."
+"<strong>مهم:</strong> إذا كنت ترغب في البقاء مجهول الهوية،<strong>فلا توقّع</"
+"strong> الملف المُعمى باستخدام <code>--sign</code> أو <code>-s</code>) في "
+"GPG إذ من شأن ذلك الكشف لنا عن هويتك التي تستعملها مع مفاتيح GPG."
 
 #: source_templates/why-journalist-key.html:23
 msgid "Back to submission page"
