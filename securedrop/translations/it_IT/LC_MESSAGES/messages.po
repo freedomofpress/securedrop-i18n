@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-10-02 10:25+0000\n"
+"PO-Revision-Date: 2020-10-02 11:00+0000\n"
 "Last-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\n"
 "Language-Team: Italian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/it/>\n"
@@ -343,7 +343,7 @@ msgid ""
 "verification code below:"
 msgstr ""
 "Una volta accoppiato FreeOTP con questo account, inserire il codice di "
-"verifica a  sei cifre qui sotto:"
+"verifica a sei cifre qui sotto:"
 
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:20
@@ -1131,8 +1131,8 @@ msgid ""
 "continue."
 msgstr ""
 "<strong>Si consiglia di usare la versione desktop del browser Tor per "
-"accedere a SecureDrop, in quanto Orfox non non garantisce lo stesso livello "
-"di sicurezza e anonimato della versione desktop. </strong><a id=\"recommend-"
+"accedere a SecureDrop, in quanto Orfox non garantisce lo stesso livello di "
+"sicurezza e anonimato della versione desktop. </strong><a id=\"recommend-"
 "tor\" href=\"{tor_browser_url}\">Scopri come installarlo</a>, o ignora "
 "questo avviso per continuare."
 
@@ -1430,17 +1430,14 @@ msgstr ""
 "autonomamente quel che vuoi inviare. Per fare questo:"
 
 #: source_templates/why-journalist-key.html:7
-#, fuzzy
-#| msgid ""
-#| "<a href=\"{url}\">Download</a> the public key. The public key is a text "
-#| "file with the extension <code>.asc</code>"
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. It will be saved to a file "
 "called:\n"
 "        <p><code>{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"<a href=\"{url}\">Scarica</a> la chiave pubblica. La chiave pubblica è un "
-"file di testo con estensione <code>.asc</code>"
+"<a href=\"{url}\">Scarica</a> la chiave pubblica. Verrà salvata in un file "
+"chiamato:\n"
+"        <p><code>{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:9
 msgid "Import it into your GPG keyring."
@@ -1457,56 +1454,47 @@ msgstr ""
 "portachiavi."
 
 #: source_templates/why-journalist-key.html:12
-#, fuzzy
-#| msgid ""
-#| "If you are using Mac/Linux, open the terminal. You can import the key "
-#| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
 "If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"Se stai utilizzando Mac/Linux, apri il terminale. Puoi importare la chiave "
-"con il comando <code>gpg --import /path/to/key.asc</code>."
+"Se stai utilizzando Mac OS o Linux, apri il terminale. Puoi importare la "
+"chiave con: <p><code>gpg --import /percorso/file/"
+"{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:15
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
 msgstr ""
+"Esegui la cifratura dell'invio. Apri il terminale e digita questo comando "
+"gpg:"
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
 "<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submission</"
 "code>"
 msgstr ""
+"<code>gpg --recipient '{submission_key_fpr}' --encrypt /percoso/file/"
+"inviato</code>"
 
 #: source_templates/why-journalist-key.html:18
-#, fuzzy
-#| msgid ""
-#| "Upload your encrypted submission. It will have the same filename as the "
-#| "unencrypted file, with .gpg at the end (e.g. <code>roswell_photos.pdf."
-#| "gpg</code>)"
 msgid ""
 "Upload your encrypted submission. It will have the same filename as the "
 "unencrypted file, with .gpg at the end (e.g. <code>internal_memo.pdf.gpg</"
 "code>)"
 msgstr ""
 "Carica il materiale cifrato. Il file avrà lo stesso nome del file originale "
-"con l'aggiunta dell'estensione .gpg alla fine (ad esempio "
-"<code>roswell_photos.pdf.gpg</code>)"
+"con l'aggiunta dell'estensione .gpg alla fine (ad esempio <code>memo_interno."
+"pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:21
-#, fuzzy
-#| msgid ""
-#| "<strong>Tip:</strong> If you wish to remain anonymous, <strong>do not</"
-#| "strong> use GPG to sign the encrypted file (with the <code>--sign</code> "
-#| "or <code>-s</code> flag) as this will reveal your GPG identity to us."
 msgid ""
 "<strong>Important:</strong> If you wish to remain anonymous, <strong>do not</"
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
-"<strong>Consiglio:</strong> per rimanere anonimi <strong>non usare</strong> "
-"GPG per firmare il file cifrato (con il flag <code>--sign</code> o <code>-s</"
-"code>) perché questo ci rivelerebbe la tua identità GPG."
+"<strong>Importante:</strong> per rimanere anonimi <strong>non usare</strong> "
+"GPG per firmare il file cifrato (con il flag <code>--sign</code> o "
+"<code>-s</code>) perché questo ci rivelerebbe la tua identità GPG."
 
 #: source_templates/why-journalist-key.html:23
 msgid "Back to submission page"
