@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-09-30 17:26+0000\n"
-"Last-Translator: yyyyyyyan <contact@yyyyyyyan.tech>\n"
+"PO-Revision-Date: 2020-10-02 15:19+0000\n"
+"Last-Translator: erinm <erinm@riseup.net>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -25,7 +25,7 @@ msgstr "há {time}"
 
 #: journalist_app/__init__.py:90 journalist_app/__init__.py:131
 msgid "You have been logged out due to inactivity."
-msgstr "A sua sessão foi encerrada por inatividade"
+msgstr "A sua sessão foi encerrada por inatividade."
 
 #: journalist_app/__init__.py:140
 msgid "You have been logged out due to password change"
@@ -181,7 +181,7 @@ msgid ""
 "before trying again."
 msgstr ""
 "Por favor, aguarde um novo código 2FA do seu aplicativo de celular ou  chave "
-"de segurança  antes de tentar novamente."
+"de segurança antes de tentar novamente."
 
 #: journalist_app/utils.py:145
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
@@ -335,7 +335,7 @@ msgid ""
 "Once you have paired FreeOTP with this account, enter the 6-digit "
 "verification code below:"
 msgstr ""
-"Depois de emparelhar FreeOTP com esta conta, insira o código  verificação de "
+"Depois de emparelhar FreeOTP com esta conta, insira o código verificação de "
 "seis dígitos abaixo:"
 
 #: journalist_templates/account_new_two_factor.html:18
