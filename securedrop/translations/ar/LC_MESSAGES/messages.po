@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-10-01 14:01+0000\n"
-"Last-Translator: Thalia Rahme <trahme@gmail.com>\n"
+"PO-Revision-Date: 2020-10-02 15:19+0000\n"
+"Last-Translator: erinm <erinm@riseup.net>\n"
 "Language-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ar/>\n"
 "Language: ar\n"
@@ -43,7 +43,7 @@ msgstr "لقد تم تصفير بيانات اعتماد الاستيثاق في
 
 #: journalist_app/account.py:56 journalist_app/admin.py:136
 msgid "There was a problem verifying the two-factor code. Please try again."
-msgstr "هناك مشكلة في التأكد  الرمز الاستيثاق في خطوتين. حاول مجدًّدا."
+msgstr "هناك مشكلة في التأكد الرمز الاستيثاق في خطوتين. حاول مجدًّدا."
 
 #: journalist_app/admin.py:42
 msgid "Image updated."
@@ -109,8 +109,6 @@ msgid "Must be at least {min_chars} characters long."
 msgstr "يجب أن يحوي {min_chars} محرَفًا على الأقل."
 
 #: journalist_app/forms.py:35
-#, fuzzy
-#| msgid "Field can not be more than {max_chars} characters."
 msgid "Cannot be longer than {max_chars} characters."
 msgstr "هذا الحقل لا يقبل أكثر من {max_chars} محرفًا."
 
@@ -182,7 +180,7 @@ msgid ""
 "before trying again."
 msgstr ""
 "انتظر حتّى يظهر رمز الاستيثاق في خطوتين الجديد على التطبيق الهاتفي أو مفتاح "
-"المصادقة قبل معاودة  المحاولة."
+"المصادقة قبل معاودة المحاولة."
 
 #: journalist_app/utils.py:145
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
@@ -353,8 +351,8 @@ msgid ""
 "Once you have paired FreeOTP with this account, enter the 6-digit "
 "verification code below:"
 msgstr ""
-"بعد  مطابقة ووصل FreeOTP مغ هذا الحساب أدخل في الحقل التالي رمز التحقق "
-"المكون من 6 أرقام:"
+"بعد مطابقة ووصل FreeOTP مغ هذا الحساب أدخل في الحقل التالي رمز التحقق المكون "
+"من 6 أرقام:"
 
 #: journalist_templates/account_new_two_factor.html:18
 #: journalist_templates/admin_new_user_two_factor.html:20
@@ -482,9 +480,9 @@ msgid ""
 "set up correctly."
 msgstr ""
 "قاربت على الانتهاء! لإتمام إضافة الحساب على المستخدم الجديد اتّباع التعليمات "
-"التالية لضبط الاستيثاق في خطوتين بواسطة FreeOTP.\n"
-"و&nbsp;بعد إضافة مدخلة لهذا الحساب في التطبيق يجب إدخال أحد الرموز المؤلّفة "
-"من 6 أرقام للتأكد من صحّة الإعداد."
+"التالية لضبط الاستيثاق في خطوتين بواسطة FreeOTP. و&nbsp;بعد إضافة مدخلة لهذا "
+"الحساب في التطبيق يجب إدخال أحد الرموز المؤلّفة من 6 أرقام للتأكد من صحّة "
+"الإعداد."
 
 #: journalist_templates/admin_new_user_two_factor.html:15
 msgid ""
@@ -917,8 +915,8 @@ msgid ""
 "\"{url}\">Why is this dangerous?</a>"
 msgstr ""
 "<strong>تنبيه:</strong> يبدو أنك تستخدم خدمة Tor2Web. يجب <strong> الانتباه "
-"إلى أنّ هذه الوسيلة لا تحقق المجهولية للمستخدم</strong>.\n"
-"<a href=\"{url}\">  ما الخطر في ذلك؟</a>"
+"إلى أنّ هذه الوسيلة لا تحقق المجهولية للمستخدم</strong>. <a href=\"{url}\"> "
+"ما الخطر في ذلك؟</a>"
 
 #: source_app/forms.py:16
 msgid "Field must be between 1 and {max_codename_len} characters long."
@@ -1075,10 +1073,11 @@ msgid ""
 " questions or are interested in additional information. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"لاحظ أننا لا نتتبّع مستخدمي خدمة <strong>SecureDrop</strong>، لذا فاستعمال "
-"الاسم الرمزي في الزيارات المقبلة هو الوسيلة الوحيدة التي يمكننا بها التواصل "
-"معك في حال وجود أسئلة أو اهتمام بمزيد من المعلومات. وعلى خلاف كلمات السر، لا "
-"توجد أيّة وسيلة لاسترجاع الاسم الرمزي في حال فقدانه."
+"لاحظ أننا لا نتتبّع مستخدمي خدمة <strong>SecureDrop</strong>،\n"
+"لذا فاستعمال الاسم الرمزي في الزيارات المقبلة هو الوسيلة الوحيدة التي يمكننا "
+"بها التواصل معك في حال وجود أسئلة\n"
+" أو اهتمام بمزيد من المعلومات. وعلى خلاف كلمات السر، لا توجد أيّة وسيلة "
+"لاسترجاع الاسم الرمزي في حال فقدانه."
 
 #: source_templates/generate.html:43
 msgid "SUBMIT DOCUMENTS"
@@ -1095,19 +1094,14 @@ msgstr ""
 "icon\"> &nbsp في شريط أدوات متصفحك لتغييرها."
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
-#| "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
-#| "install it</a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to use Tor Browser to access SecureDrop:</strong> "
 "<a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
 "a>, or ignore this warning to continue."
 msgstr ""
-"<strong>نوصي باستخدام  متصفح تور للنفاذ إلى سِكيوردرُپ :</strong> <a id="
-"\"recommend-tor\" href=\"{tor_browser_url}\">طالع خطوات التنصيب</a> أو تجاهل "
-"هذا التحذير للمواصلة."
+"<strong>نوصي باستخدام متصفح تور للنفاذ إلى سِكيوردرُپ :</strong> <a id"
+"=\"recommend-tor\" href=\"{tor_browser_url}\">طالع خطوات التنصيب</a> أو "
+"تجاهل هذا التحذير للمواصلة."
 
 #: source_templates/index.html:18
 msgid ""
@@ -1117,7 +1111,7 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
-"<strong>نوصي باستخدام  متصفح تور للنفاذ إلى سِكيوردرُپ إذ أنّ Orfox لا يوفّر "
+"<strong>نوصي باستخدام متصفح تور للنفاذ إلى سِكيوردرُپ إذ أنّ Orfox لا يوفّر "
 "القدر ذاته من السرية و&nbsp;المجهوليّة اللتين يوفّرهما إصدار سطح المكتب :</"
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">طالع خطوات "
 "التنصيب</a> أو تجاهل هذا التحذير للمواصلة."
@@ -1129,7 +1123,7 @@ msgstr "الإيداع الأول"
 #: source_templates/index.html:41
 msgid "First time submitting to our SecureDrop? Start here."
 msgstr ""
-"هل هي المرة الأولى التي تودع فيها مستندات في سيكيور دروب  SecureDrop؟ ابدأ "
+"هل هي المرة الأولى التي تودع فيها مستندات في سيكيور دروب SecureDrop؟ ابدأ "
 "هنا."
 
 #: source_templates/index.html:45
@@ -1138,7 +1132,7 @@ msgstr "انطلق"
 
 #: source_templates/index.html:53
 msgid "Return visit"
-msgstr "زائر  متكرر"
+msgstr "زائر متكرر"
 
 #: source_templates/index.html:55
 msgid "Already have a codename? Check for replies or submit something new."
@@ -1178,19 +1172,14 @@ msgid "One more thing..."
 msgstr "هناك أمرٌ آخر نود أن نلفت نظرك إليه..."
 
 #: source_templates/logout.html:7
-#, fuzzy
-#| msgid ""
-#| "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
-#| "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
-#| "toolbar. This will clear your Tor browser activity data on this device."
 msgid ""
 "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor Browser's "
 "toolbar. This will clear your Tor Browser activity data on this device."
 msgstr ""
-"أنقر على الزر <img src={icon} alt=\"broom icon\" width=\"16\" height="
-"\"16\">&nbsp;<strong>هوية جديدة</strong> في شريط متصفحك تور إذ أن ذلك من "
-"شأنه أن يمسح أي نشاط قمت به على متصفح تور من عبر هذا الجهاز."
+"أنقر على الزر <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\""
+">&nbsp;<strong>هوية جديدة</strong> في شريط متصفحك تور إذ أن ذلك من شأنه أن "
+"يمسح أي نشاط قمت به على متصفح تور من عبر هذا الجهاز."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1317,12 +1306,6 @@ msgid "Important"
 msgstr "هام"
 
 #: source_templates/session_timeout.html:5
-#, fuzzy
-#| msgid ""
-#| "You were logged out due to inactivity. Click the <img src={icon} alt="
-#| "\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</"
-#| "strong> button in your Tor browser's toolbar before moving on. This will "
-#| "clear your Tor browser activity data on this device."
 msgid ""
 "You were logged out due to inactivity. Click the <img src={icon} alt=\"broom "
 "icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong> button "
@@ -1351,10 +1334,6 @@ msgstr ""
 "معرفة هويتك."
 
 #: source_templates/tor2web-warning.html:6
-#, fuzzy
-#| msgid ""
-#| "We <strong>strongly advise</strong> you to use the <a href=\"www."
-#| "torproject.org/projects/torbrowser.html\">Tor browser</a> instead."
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor Browser</a> instead."
@@ -1427,8 +1406,8 @@ msgid ""
 "called:\n"
 "        <p><code>{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"<a href=\"{url}\">نزِّل</a>المفتاح العلني. سيتم حفظه في ملف "
-"يدعى:<p><code>{submission_key_fpr_filename}</code></p>"
+"<a href=\"{url}\">نزِّل</a>المفتاح العلني. سيتم حفظه في ملف يدعى:\n"
+"        <p><code>{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:9
 msgid "Import it into your GPG keyring."
@@ -1444,24 +1423,19 @@ msgstr ""
 "على ملف <code>asc</code> الذي نزّلته و&nbsp;سيُستورد تلقائيا إلى حلقة المفاتيح."
 
 #: source_templates/why-journalist-key.html:12
-#, fuzzy
-#| msgid ""
-#| "If you are using Mac/Linux, open the terminal. You can import the key "
-#| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
 "If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"إذا كنت تستخدم ماك اوس macOS\\لينُكس أو ماك فيمكنك استيراد المفتاح  بواسطة "
-"<p><code>  من خلال الطرفيّة بالأمر التالي <code dir=\"ltr\">gpg --import /"
-"path/to/key.asc</code>."
+"إذا كنت تستخدم ماك اوس macOS\\لينُكس أو ماك فيمكنك استيراد المفتاح بواسطة "
+"<p><code> من خلال الطرفيّة بالأمر التالي :<p><code>gpg --import /path/to/"
+"{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:15
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
 msgstr "قم بتشفير ما أرستله. أفتح الطرفية وأدخل أمر التعمية gpg:"
 
 #: source_templates/why-journalist-key.html:16
-#, fuzzy
 msgid ""
 "<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submission</"
 "code>"
@@ -1476,7 +1450,7 @@ msgid ""
 msgstr ""
 "ارفع المستندات المُعماة المراد إيداعها. سوف يكون لها نفس اسم الملف غير "
 "المُعمّى مع الامتداد gpg. في نهاية الاسم (مثال <code dir=\"ltr\""
-">internal_memo..pdf.gpg</code>)"
+">internal_memo.pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:21
 msgid ""
