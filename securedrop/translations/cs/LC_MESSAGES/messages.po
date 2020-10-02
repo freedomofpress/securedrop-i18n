@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-09-30 17:26+0000\n"
-"Last-Translator: Honza Cibulka <honza@datastory.cz>\n"
+"PO-Revision-Date: 2020-10-02 15:19+0000\n"
+"Last-Translator: erinm <erinm@riseup.net>\n"
 "Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/cs/>\n"
 "Language: cs\n"
@@ -42,7 +42,7 @@ msgstr "Vaše dvoufaktorové přihlašovací údaje byly resetovány."
 #: journalist_app/account.py:56 journalist_app/admin.py:136
 msgid "There was a problem verifying the two-factor code. Please try again."
 msgstr ""
-"Při ověřování  dvoufaktorového kódu došlo k problému. Zkuste to prosím znovu."
+"Při ověřování dvoufaktorového kódu došlo k problému. Zkuste to prosím znovu."
 
 #: journalist_app/admin.py:42
 msgid "Image updated."
@@ -106,7 +106,7 @@ msgstr "HOTP hesla mají 40 znaků - zadal/a jste {num_chars} znaků."
 
 #: journalist_app/forms.py:28
 msgid "Must be at least {min_chars} characters long."
-msgstr "Musí mít alespoň {min_chars}  znaků."
+msgstr "Musí mít alespoň {min_chars} znaků."
 
 #: journalist_app/forms.py:35
 msgid "Cannot be longer than {max_chars} characters."
@@ -180,8 +180,8 @@ msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
 msgstr ""
-"Dřív než budete pokračovat,  počkejte prosím na nový dvoufaktorový kód z "
-"vaší mobilní aplikace nebo bezpečnostního klíče."
+"Dřív než budete pokračovat, počkejte prosím na nový dvoufaktorový kód z vaší "
+"mobilní aplikace nebo bezpečnostního klíče."
 
 #: journalist_app/utils.py:145
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
@@ -751,7 +751,7 @@ msgid ""
 "credentials. Otherwise, they will be locked out of their account.</em>"
 msgstr ""
 "Pokud jste ztratil/a údaje pro dvoufaktorovou autentizaci nebo došlo k "
-"jejich zneužití, můžete je zde obnovit. <em>Nejdříve se ale ujistěte,  že je "
+"jejich zneužití, můžete je zde obnovit. <em>Nejdříve se ale ujistěte, že je "
 "daný uživatel připraven nastavit si pro své zařízení nové dvoufaktorové "
 "přístupové údaje. Jinak uživatel ztratí přístup ke svému účtu.</em>"
 
@@ -783,7 +783,7 @@ msgstr ""
 
 #: journalist_templates/edit_account.html:112
 msgid "RESET MOBILE APP CREDENTIALS"
-msgstr "RESETOVAT PŘIHLAŠOVACÍ ÚDAJE  MOBILNÍ APLIKACE"
+msgstr "RESETOVAT PŘIHLAŠOVACÍ ÚDAJE MOBILNÍ APLIKACE"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
@@ -1061,10 +1061,11 @@ msgid ""
 " questions or are interested in additional information. Unlike passwords, "
 "there is no way to retrieve a lost codename."
 msgstr ""
-"Protože nesledujeme uživatele naší  služby <strong>SecureDrop</strong>,\n"
+"Protože nesledujeme uživatele naší služby <strong>SecureDrop</strong>,\n"
 " pro Vaše příští návštěvy bude použití tohoto krycího jména jedinou "
-"možností, jak s Vámi  můžeme komunikovat, budete-li se chtít na něco zeptat. "
-"Na rozdíl od hesla neexistuje způsob, jak zapomenuté krycí jméno získat zpět."
+"možností, jak s Vámi můžeme komunikovat,\n"
+" budete-li se chtít na něco zeptat. Na rozdíl od hesla neexistuje způsob, "
+"jak zapomenuté krycí jméno získat zpět."
 
 #: source_templates/generate.html:43
 msgid "SUBMIT DOCUMENTS"
@@ -1210,7 +1211,7 @@ msgstr "Můžete odeslat jakýkoliv soubor, zprávu nebo oboje."
 
 #: source_templates/lookup.html:38
 msgid "Submit Messages"
-msgstr "Nahrání  zpráv"
+msgstr "Nahrání zpráv"
 
 #: source_templates/lookup.html:43
 msgid ""
@@ -1395,7 +1396,8 @@ msgid ""
 "        <p><code>{submission_key_fpr_filename}</code></p>"
 msgstr ""
 "<a href=\"{url}\">Stáhněte si</a> veřejný klíč. Veřejný klíč bude uložen do "
-"souboru: <p><code>{submission_key_fpr_filename}</code></p>"
+"souboru:\n"
+"        <p><code>{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:9
 msgid "Import it into your GPG keyring."
@@ -1418,7 +1420,7 @@ msgid ""
 msgstr ""
 "Pokud používáte mac či Linux, otevřete terminál. Klíč pak můžete importovat "
 "příkazem <p><code>gpg --import /path/to/"
-"{submission_key_fpr_filename}</code></p>."
+"{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:15
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
@@ -1438,7 +1440,7 @@ msgid ""
 "code>)"
 msgstr ""
 "Nahrajte svůj zašifrovaný příspěvek. Bude mít stejný název jako "
-"nezašifrovaný soubor s .gpg na konci  (např. <code>interni_informace.pdf."
+"nezašifrovaný soubor s .gpg na konci (např. <code>interni_informace.pdf."
 "gpg</code>)"
 
 #: source_templates/why-journalist-key.html:21
