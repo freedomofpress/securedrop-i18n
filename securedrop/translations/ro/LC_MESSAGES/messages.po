@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-07-17 05:51+0000\n"
-"Last-Translator: robbpa <robbpaun@gmail.com>\n"
+"PO-Revision-Date: 2020-10-03 10:15+0000\n"
+"Last-Translator: erinm <erinm@riseup.net>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
 "Language: ro\n"
@@ -25,10 +25,8 @@ msgid "{time} ago"
 msgstr "acum {time}"
 
 #: journalist_app/__init__.py:90 journalist_app/__init__.py:131
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to inactivity."
-msgstr "Ai fost deconectat(ă) din cauza inactivității"
+msgstr "Ai fost deconectat(ă) din cauza inactivității."
 
 #: journalist_app/__init__.py:140
 msgid "You have been logged out due to password change"
@@ -88,20 +86,16 @@ msgid "Name not updated: {}"
 msgstr "Nume neactualizat: {}"
 
 #: journalist_app/admin.py:232
-#, fuzzy
-#| msgid "Deleted user '{user}'"
 msgid "Deleted user '{user}'."
-msgstr "Utilizatorul „{user}” a fost șters"
+msgstr "Utilizatorul „{user}” a fost șters."
 
 #: journalist_app/admin.py:262
 msgid "Test alert sent. Please check your email."
 msgstr "A fost transmisă alerta de test. Te rugăm să îți verifici e-mailul."
 
 #: journalist_app/col.py:60
-#, fuzzy
-#| msgid "{source_name}'s collection deleted"
 msgid "{source_name}'s collection deleted."
-msgstr "Colecția lui {source_name} a fost ștearsă"
+msgstr "Colecția lui {source_name} a fost ștearsă."
 
 #: journalist_app/col.py:71
 msgid "No collections selected."
@@ -519,13 +513,6 @@ msgstr ""
 "jos:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 Onion Services, which are being phased out for security "
-#| "reasons. In February 2021, v2 Onion Services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required:</strong> Your SecureDrop servers are still running "
 "v2 onion services, which are being phased out for security reasons. In "
@@ -534,10 +521,10 @@ msgid ""
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
 "<strong>Actualizare necesară:</strong> Serverele dvs. SecureDrop încă "
-"rulează v2 Onion Services, care sunt înlocuite treptat din motive de "
-"securitate. În Februarie 2021, v2 Onion Services vor fi dezactivate, iar "
-"serverele dvs. SecureDrop vor deveni imposibil de accesat. <a href=\"//"
-"securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Află mai multe</a>"
+"rulează v2 onion services, care sunt înlocuite treptat din motive de "
+"securitate. În Februarie 2021, v2 onion services vor fi dezactivate, iar "
+"serverele dvs. SecureDrop vor deveni imposibil de accesat. <a href=\""
+"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Află mai multe</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -799,12 +786,6 @@ msgid "Reset Two-Factor Authentication"
 msgstr "Resetează autentificarea cu doi factori"
 
 #: journalist_templates/edit_account.html:83
-#, fuzzy
-#| msgid ""
-#| "If a user's two-factor authentication credentials have been lost or "
-#| "compromised, you can reset them here. <em>If you do this, make sure the "
-#| "user is present and ready to set up their device with the new two-factor "
-#| "credentials. Otherwise, they will be locked out of their account."
 msgid ""
 "If a user's two-factor authentication credentials have been lost or "
 "compromised, you can reset them here. <em>If you do this, make sure the user "
@@ -815,7 +796,7 @@ msgstr ""
 "fost pierdute sau compromise, le poți reseta aici.<em>Dacă le resetezi, "
 "asigură-te că utilizatorul este prezent și gata să-și seteze dispozitivul "
 "folosind noile acreditări cu doi factori de autentificare, altminteri nu va "
-"mai putea intra în cont."
+"mai putea intra în cont.</em>"
 
 #: journalist_templates/edit_account.html:85
 msgid ""
