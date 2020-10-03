@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-10-02 15:19+0000\n"
-"Last-Translator: erinm <erinm@riseup.net>\n"
+"PO-Revision-Date: 2020-10-03 13:01+0000\n"
+"Last-Translator: michaela-bot <michaela.rybickova@gmail.com>\n"
 "Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/cs/>\n"
 "Language: cs\n"
@@ -25,7 +25,7 @@ msgstr "před {time}"
 
 #: journalist_app/__init__.py:90 journalist_app/__init__.py:131
 msgid "You have been logged out due to inactivity."
-msgstr "Z důvodu neaktivity jste byl/a odhlášen/a."
+msgstr "Z důvodu neaktivity jste byli odhlášeni."
 
 #: journalist_app/__init__.py:140
 msgid "You have been logged out due to password change"
@@ -106,11 +106,11 @@ msgstr "HOTP hesla mají 40 znaků - zadal/a jste {num_chars} znaků."
 
 #: journalist_app/forms.py:28
 msgid "Must be at least {min_chars} characters long."
-msgstr "Musí mít alespoň {min_chars} znaků."
+msgstr "Uživatelské jméno musí mít alespoň {min_chars} znaků."
 
 #: journalist_app/forms.py:35
 msgid "Cannot be longer than {max_chars} characters."
-msgstr "Nemůže obsahovat více než {max_chars} znaků."
+msgstr "Uživatelské jméno nemůže obsahovat více než {max_chars} znaků."
 
 #: journalist_app/forms.py:40
 msgid ""
@@ -211,7 +211,7 @@ msgstr "Jméno aktualizováno."
 
 #: journalist_app/utils.py:357
 msgid "The password you submitted is invalid. Password not changed."
-msgstr "Vložené heslo je neplatné! Heslo nebylo změněno."
+msgstr "Vložené heslo je neplatné. Heslo nebylo změněno."
 
 #: journalist_app/utils.py:364
 msgid ""
@@ -750,9 +750,9 @@ msgid ""
 "is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account.</em>"
 msgstr ""
-"Pokud jste ztratil/a údaje pro dvoufaktorovou autentizaci nebo došlo k "
-"jejich zneužití, můžete je zde obnovit. <em>Nejdříve se ale ujistěte, že je "
-"daný uživatel připraven nastavit si pro své zařízení nové dvoufaktorové "
+"Pokud jste ztratili údaje pro dvoufaktorovou autentizaci nebo došlo k jejich "
+"zneužití, můžete je zde obnovit. <em>Nejdříve se ale ujistěte, že je daný "
+"uživatel připraven nastavit si pro své zařízení nové dvoufaktorové "
 "přístupové údaje. Jinak uživatel ztratí přístup ke svému účtu.</em>"
 
 #: journalist_templates/edit_account.html:85
@@ -1089,7 +1089,7 @@ msgid ""
 msgstr ""
 "<strong>SecureDrop doporučujeme používat v prohlížeči Tor:</strong> <a id"
 "=\"recommend-tor\" href=\"{tor_browser_url}\">Zjistěte, jak Tor "
-"nainstalovat</a>."
+"nainstalovat</a> nebo ignorujte tuto zprávu a pokračujte."
 
 #: source_templates/index.html:18
 msgid ""
@@ -1165,7 +1165,7 @@ msgid ""
 msgstr ""
 "Klepněte na <img src={icon} alt=\"ikona koštěte\" width=\"16\" height=\"16\""
 ">&nbsp;<strong>Nová identita</strong> na liště svého prohlížeče Tor. Smažete "
-"tím data o aktivitě prohlížeče Tor na tomhle zařízení."
+"tím data o aktivitě prohlížeče Tor na tomto zařízení."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1299,8 +1299,8 @@ msgid ""
 "in your Tor Browser's toolbar before moving on. This will clear your Tor "
 "Browser activity data on this device."
 msgstr ""
-"Z důvodu neaktivity jste byl/a odhlášen/a. Než budete pokračovat, klepněte "
-"na <img src={icon} alt=\"ikona koštěte\" width=\"16\" height=\"16\">&nbsp;"
+"Z důvodu neaktivity jste byli odhlášeni. Než budete pokračovat, klepněte na "
+"<img src={icon} alt=\"ikona koštěte\" width=\"16\" height=\"16\">&nbsp;"
 "<strong>Nová identita</strong> na liště svého prohlížeče Tor. Smažete tím "
 "data o aktivitě prohlížeče Tor na tomto zařízení."
 
@@ -1449,10 +1449,9 @@ msgid ""
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
-"<strong>Důležité:</strong> Chcete-li zůstat v anonymitě "
+"<strong>Důležité:</strong> Chcete-li zůstat v anonymitě, "
 "<strong>nepoužívejte</strong> GPG k podepsání zašifrovaného souboru (s "
-"<code>--sign</code> nebo <code>-s</code>), čímž byste odhalil/a svou "
-"identitu."
+"<code>--sign</code> nebo <code>-s</code>), čímž byste odhalili svou identitu."
 
 #: source_templates/why-journalist-key.html:23
 msgid "Back to submission page"
