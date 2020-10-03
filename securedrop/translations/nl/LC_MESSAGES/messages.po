@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2020-10-03 09:33+0000\n"
-"Last-Translator: Thom <thom.pp9@gmail.com>\n"
+"Last-Translator: John Hensley <john@freedom.press>\n"
 "Language-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/nl/>\n"
 "Language: nl\n"
@@ -787,7 +787,8 @@ msgid ""
 "the first option. For security keys like the YubiKey, choose the second one."
 msgstr ""
 "Om tweestapsauthenticatie voor mobiele apps zoals FreeOTP te herstellen, "
-"kies de eerste optie. Voor tokens zoals YubiKeys kiest u de tweede."
+"kies de eerste optie. Voor beveiligingssleutels zoals YubiKeys kiest u de "
+"tweede."
 
 #: journalist_templates/edit_account.html:112
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
@@ -799,11 +800,11 @@ msgstr "HERSTEL INSTELLINGEN VOOR MOBIELE APPLICATIE"
 
 #: journalist_templates/edit_account.html:113
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
-msgstr "Reset tweefactorauthenticatie voor tokens, zoals YubiKeys"
+msgstr "Reset tweefactorauthenticatie voor beveiligingssleutels, zoals YubiKeys"
 
 #: journalist_templates/edit_account.html:113
 msgid "RESET SECURITY KEY CREDENTIALS"
-msgstr "HERSTEL INSTELLINGEN VOOR TOKEN"
+msgstr "HERSTEL INSTELLINGEN VOOR BEVEILIGINGSSLEUTEL"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
