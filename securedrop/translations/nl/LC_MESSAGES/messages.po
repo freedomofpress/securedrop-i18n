@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-10-03 09:33+0000\n"
-"Last-Translator: John Hensley <john@freedom.press>\n"
+"PO-Revision-Date: 2020-10-04 11:07+0000\n"
+"Last-Translator: Thom <thom.pp9@gmail.com>\n"
 "Language-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/nl/>\n"
 "Language: nl\n"
@@ -26,7 +26,7 @@ msgstr "{time} geleden"
 
 #: journalist_app/__init__.py:90 journalist_app/__init__.py:131
 msgid "You have been logged out due to inactivity."
-msgstr "U bent uitgelogd wegens inactiviteit."
+msgstr "U bent wegens inactiviteit uitgelogd."
 
 #: journalist_app/__init__.py:140
 msgid "You have been logged out due to password change"
@@ -43,8 +43,8 @@ msgstr "Uw tweestapsauthenticatie is succesvol opnieuw ingesteld."
 #: journalist_app/account.py:56 journalist_app/admin.py:136
 msgid "There was a problem verifying the two-factor code. Please try again."
 msgstr ""
-"Er is een fout opgetreden tijdens de verificatie van de "
-"tweestapsauthenticatie. Probeer het nogmaals."
+"Er was een probleem bij de verificatie van de tweestapstoken. Probeer het "
+"nogmaals."
 
 #: journalist_app/admin.py:42
 msgid "Image updated."
@@ -64,14 +64,14 @@ msgstr ""
 
 #: journalist_app/admin.py:103 journalist_app/admin.py:186
 msgid "Username \"{user}\" already taken."
-msgstr "Gebruikersnaam \"{user}\" is al in gebruik."
+msgstr "Gebruikersnaam \"{user}\" al in gebruik."
 
 #: journalist_app/admin.py:106
 msgid ""
 "An error occurred saving this user to the database. Please inform your admin."
 msgstr ""
-"Er is een fout opgetreden bij het opslaan van deze gebruiker in de database. "
-"Neem contact op met uw beheerder."
+"Er trad een fout op bij het opslaan van deze gebruiker in de database. Neem "
+"contact op met uw beheerder."
 
 #: journalist_app/admin.py:130
 msgid "The two-factor code for user \"{user}\" was verified successfully."
@@ -104,7 +104,7 @@ msgstr "Alleen beheerders hebben toegang tot deze pagina."
 
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
-msgstr "HOTP geheimen zijn 40 tekens lang - u heeft er {num_chars} ingevoerd."
+msgstr "HOTP-geheimen zijn 40 tekens lang - u heeft er {num_chars} ingevoerd."
 
 #: journalist_app/forms.py:28
 msgid "Must be at least {min_chars} characters long."
@@ -136,7 +136,7 @@ msgstr "Bestand verplicht."
 
 #: journalist_app/forms.py:79
 msgid "You can only upload PNG image files."
-msgstr "U kunt alleen PNG-afbeeldingen uploaden."
+msgstr "U kunt alleen PNG-afbeeldingsbestanden uploaden."
 
 #: journalist_app/main.py:124 journalist_app/utils.py:58
 #: journalist_app/utils.py:157
