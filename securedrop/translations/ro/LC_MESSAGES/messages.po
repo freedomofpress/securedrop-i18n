@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-10-03 10:15+0000\n"
+"PO-Revision-Date: 2020-10-05 14:56+0000\n"
 "Last-Translator: erinm <erinm@riseup.net>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
@@ -1537,19 +1537,13 @@ msgid ""
 msgstr ""
 
 #: source_templates/why-journalist-key.html:18
-#, fuzzy
-#| msgid ""
-#| "Upload your encrypted submission. It will have the same filename as the "
-#| "unencrypted file, with .gpg at the end (e.g. <code>roswell_photos.pdf."
-#| "gpg</code>)"
 msgid ""
 "Upload your encrypted submission. It will have the same filename as the "
 "unencrypted file, with .gpg at the end (e.g. <code>internal_memo.pdf.gpg</"
 "code>)"
 msgstr ""
 "Încarcă trimiterea criptată. Va avea aceeași denumire de fișier ca fișierul "
-"necriptat, dar cu .gpg la sfârșit (de ex. <code>roswell_photos.pdf.gpg</"
-"code>)"
+"necriptat, dar cu .gpg la sfârșit (de ex. <code>internal_memo.pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:21
 #, fuzzy
