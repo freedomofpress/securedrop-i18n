@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-07-25 16:37+0000\n"
-"Last-Translator: 1000101 <b1000101@pm.me>\n"
+"PO-Revision-Date: 2020-10-05 14:56+0000\n"
+"Last-Translator: erinm <erinm@riseup.net>\n"
 "Language-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sk/>\n"
 "Language: sk\n"
@@ -24,10 +24,8 @@ msgid "{time} ago"
 msgstr "pred {time}"
 
 #: journalist_app/__init__.py:90 journalist_app/__init__.py:131
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to inactivity."
-msgstr "Boli ste odhlásený/á z dôvodu nečinnosti"
+msgstr "Boli ste odhlásený/á z dôvodu nečinnosti."
 
 #: journalist_app/__init__.py:140
 msgid "You have been logged out due to password change"
@@ -85,20 +83,16 @@ msgid "Name not updated: {}"
 msgstr "Meno nebolo aktualizované: {}"
 
 #: journalist_app/admin.py:232
-#, fuzzy
-#| msgid "Deleted user '{user}'"
 msgid "Deleted user '{user}'."
-msgstr "Používateľ '{user}' bol vymazaný"
+msgstr "Používateľ '{user}' bol vymazaný."
 
 #: journalist_app/admin.py:262
 msgid "Test alert sent. Please check your email."
 msgstr "Testovacie upozornenie odoslané. Prosím, skontrolujte si svoj e-mail."
 
 #: journalist_app/col.py:60
-#, fuzzy
-#| msgid "{source_name}'s collection deleted"
 msgid "{source_name}'s collection deleted."
-msgstr "Sada {source_name} zmazaná"
+msgstr "Sada {source_name} zmazaná."
 
 #: journalist_app/col.py:71
 msgid "No collections selected."
@@ -503,13 +497,6 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Akonáhle nastavíte svoj YubiKey, zadajte šesťmiestny kód nižšie:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 Onion Services, which are being phased out for security "
-#| "reasons. In February 2021, v2 Onion Services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required:</strong> Your SecureDrop servers are still running "
 "v2 onion services, which are being phased out for security reasons. In "
@@ -518,8 +505,8 @@ msgid ""
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
 "<strong>Vyžaduje sa aktualizácia:</strong>Vaše SecureDrop servery stále "
-"používajú v2 Onion Services, ktoré sa z bezpečnostných dôvodov vyraďujú. Vo "
-"Februári 2021 bude v2 Onion Services deaktivovaný a vaše SecureDrop servery "
+"používajú v2 onion services, ktoré sa z bezpečnostných dôvodov vyraďujú. Vo "
+"Februári 2021 bude v2 onion services deaktivovaný a vaše SecureDrop servery "
 "sa môžu stať nedostupnými. <a href=\"//securedrop.org/v2-onion-eol\" rel="
 "\"noreferrer\">Learn More</a>"
 
@@ -780,12 +767,6 @@ msgid "Reset Two-Factor Authentication"
 msgstr "Resetovať dvojfaktorovú autentifikáciu"
 
 #: journalist_templates/edit_account.html:83
-#, fuzzy
-#| msgid ""
-#| "If a user's two-factor authentication credentials have been lost or "
-#| "compromised, you can reset them here. <em>If you do this, make sure the "
-#| "user is present and ready to set up their device with the new two-factor "
-#| "credentials. Otherwise, they will be locked out of their account."
 msgid ""
 "If a user's two-factor authentication credentials have been lost or "
 "compromised, you can reset them here. <em>If you do this, make sure the user "
@@ -795,7 +776,7 @@ msgstr ""
 "Ak boli používateľove údaje k dvojfaktorovému overovaniu stratené alebo "
 "kompromitované, môžete ich resetovať tu. <em>Najskôr sa však uistite, že "
 "daný používateľ je prítomný a pripravený nastaviť na zariadenie nové údaje k "
-"dvojfaktorovému overovaniu. V opačnom prípade prístup k účtu stratí."
+"dvojfaktorovému overovaniu. V opačnom prípade prístup k účtu stratí.</em>"
 
 #: journalist_templates/edit_account.html:85
 msgid ""
@@ -1526,18 +1507,13 @@ msgid ""
 msgstr ""
 
 #: source_templates/why-journalist-key.html:18
-#, fuzzy
-#| msgid ""
-#| "Upload your encrypted submission. It will have the same filename as the "
-#| "unencrypted file, with .gpg at the end (e.g. <code>roswell_photos.pdf."
-#| "gpg</code>)"
 msgid ""
 "Upload your encrypted submission. It will have the same filename as the "
 "unencrypted file, with .gpg at the end (e.g. <code>internal_memo.pdf.gpg</"
 "code>)"
 msgstr ""
 "Nahrajte svoje šifrované podanie. Bude mať rovnaký názov ako nešifrovaný "
-"súbor, s príponou .gpg na konci (napr. <code>roswell_photos.pdf.gpg</code>)"
+"súbor, s príponou .gpg na konci (napr. <code>internal_memo.pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:21
 #, fuzzy
