@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-10-05 14:56+0000\n"
-"Last-Translator: erinm <erinm@riseup.net>\n"
+"PO-Revision-Date: 2020-10-06 23:01+0000\n"
+"Last-Translator: John Hensley <john@freedom.press>\n"
 "Language-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sk/>\n"
 "Language: sk\n"
@@ -107,20 +107,12 @@ msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgstr "HOTP heslá sú 40 znakov dlhé - zadali ste {num_chars} znakov."
 
 #: journalist_app/forms.py:28
-#, fuzzy
-#| msgid ""
-#| "Field must be at least {min_chars} characters long but only got "
-#| "{num_chars}."
 msgid "Must be at least {min_chars} characters long."
-msgstr ""
-"Pole musí byť aspoň {min_chars} znakov dlhé, ale je dlhé iba {num_chars} "
-"znakov."
+msgstr "Musí byť aspoň {min_chars} znakov dlhé."
 
 #: journalist_app/forms.py:35
-#, fuzzy
-#| msgid "Field can not be more than {max_chars} characters."
 msgid "Cannot be longer than {max_chars} characters."
-msgstr "Pole nesmie byť dlhšie ako {max_chars} znakov."
+msgstr "Nesmie byť dlhšie ako {max_chars} znakov."
 
 #: journalist_app/forms.py:40
 msgid ""
@@ -220,10 +212,8 @@ msgid "Name updated."
 msgstr "Meno aktualizované."
 
 #: journalist_app/utils.py:357
-#, fuzzy
-#| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
-msgstr "Vložili ste nesprávne heslo! Heslo nebolo zmenené."
+msgstr "Zadané heslo je neplatné. Heslo nebolo zmenené."
 
 #: journalist_app/utils.py:364
 msgid ""
@@ -707,10 +697,8 @@ msgid "Edit user \"{user}\""
 msgstr "Upraviť používateľa „{user}“"
 
 #: journalist_templates/edit_account.html:8
-#, fuzzy
-#| msgid "Change Name &amp; Admin Status"
 msgid "Change Name and Admin Status"
-msgstr "Zmeniť meno &amp; administračný stav"
+msgstr "Zmeniť meno and administračný stav"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -912,10 +900,8 @@ msgid "Password"
 msgstr "Heslo"
 
 #: journalist_templates/login.html:10
-#, fuzzy
-#| msgid "Password"
 msgid "Show password"
-msgstr "Heslo"
+msgstr "Ukázať heslo"
 
 #: journalist_templates/login.html:12 source_templates/index.html:59
 #: source_templates/logout.html:3
@@ -929,8 +915,8 @@ msgid ""
 "\"{url}\">Why is this dangerous?</a>"
 msgstr ""
 "<strong>VAROVANIE:&nbsp;</strong> Zdá sa, že používate Tor2Web. Toto "
-"<strong>&nbsp;neposkytuje&nbsp;</strong> anonymitu.\n"
-"<a href=\"{url}\">Prečo je to nebezpečné?</a>"
+"<strong>&nbsp;neposkytuje&nbsp;</strong> anonymitu. <a href=\"{url}\">Prečo "
+"je to nebezpečné?</a>"
 
 #: source_app/forms.py:16
 msgid "Field must be between 1 and {max_codename_len} characters long."
@@ -970,11 +956,9 @@ msgstr ""
 "môže líšiť od toho zobrazeného na predošlej stránke."
 
 #: source_app/main.py:80
-#, fuzzy
-#| msgid "There was a problem verifying the two-factor code. Please try again."
 msgid "There was a temporary problem creating your account. Please try again."
 msgstr ""
-"Vyskytla sa chyba pri overovaní dvojfaktorového kódu. Prosím, skúste to "
+"Pri vytváraní vášho účtu sa vyskytol dočasný problém. Prosím, skúste to "
 "znova."
 
 #: source_app/main.py:184
@@ -1104,11 +1088,6 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "ODOSLAŤ DOKUMENTY"
 
 #: source_templates/index.html:16
-#, fuzzy
-#| msgid ""
-#| "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security "
-#| "Setting</strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield "
-#| "icon\"> &nbsp;button in your browser’s toolbar to change it."
 msgid ""
 "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security Level</"
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
@@ -1119,11 +1098,6 @@ msgstr ""
 "\"{icon}\" alt=\"ikonkou štítu\"> &nbsp;v paneli nástrojov prehliadača."
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
-#| "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
-#| "install it</a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to use Tor Browser to access SecureDrop:</strong> "
 "<a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
@@ -1134,13 +1108,6 @@ msgstr ""
 "nainštalovať</a>, alebo ignorujte toto varovanie a pokračujte ďalej."
 
 #: source_templates/index.html:18
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended you use the desktop version of Tor Browser to "
-#| "access SecureDrop, as Orfox does not provide the same level of security "
-#| "and anonymity as the desktop versions.</strong> <a id=\"recommend-tor\" "
-#| "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
-#| "warning to continue."
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
@@ -1150,8 +1117,8 @@ msgid ""
 msgstr ""
 "<strong>Pre prístup k SecureDrop odporúčame používať desktopovú verziu "
 "prehliadača Tor, pretože Orfox neposkytuje rovnakú úroveň zabezpečenia a "
-"súkromia ako desktopové verzie.</strong> <a id=\"recommend-tor\" href="
-"\"{tor_browser_url}\">Zistite ako ju nainštalovať</a>, alebo ignorujte toto "
+"súkromia ako desktopové verzia.</strong> <a id=\"recommend-tor\" href=\""
+"{tor_browser_url}\">Zistite ako ju nainštalovať</a>, alebo ignorujte toto "
 "varovanie a pokračujte ďalej."
 
 #: source_templates/index.html:39
@@ -1237,7 +1204,7 @@ msgstr "Skryť"
 
 #: source_templates/lookup.html:26
 msgid "Sorry we haven't responded yet!"
-msgstr "Ospravedlňujeme sa,  ešte sme neodpovedali!"
+msgstr "Ospravedlňujeme sa, ešte sme neodpovedali!"
 
 #: source_templates/lookup.html:27
 msgid ""
@@ -1485,26 +1452,25 @@ msgstr ""
 "kľúčenku."
 
 #: source_templates/why-journalist-key.html:12
-#, fuzzy
-#| msgid ""
-#| "If you are using Mac/Linux, open the terminal. You can import the key "
-#| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
 "If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
 "Ak používate Mac/Linux, otvorte si terminál. Kľúč si môžete importovať "
-"pomocou príkazu <code>gpg --import /path/to/key.asc</code>."
+"pomocou: <p><code>gpg --import /path/to/"
+"{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:15
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
-msgstr ""
+msgstr "Zašifrujte svoj príspevok. Otvorte terminál a zadajte tento príkaz gpg:"
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
 "<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submission</"
 "code>"
 msgstr ""
+"<code>gpg --recipient '{submission_key_fpr}' --encrypt /ceska/k/"
+"príspevok</code>"
 
 #: source_templates/why-journalist-key.html:18
 msgid ""
