@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-10-05 14:56+0000\n"
-"Last-Translator: erinm <erinm@riseup.net>\n"
+"PO-Revision-Date: 2020-10-06 12:01+0000\n"
+"Last-Translator: robbpa <robbpaun@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
 "Language: ro\n"
@@ -110,20 +110,12 @@ msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgstr "Secretele HOTP au 40 de caractere lungime - ai introdus {num_chars}."
 
 #: journalist_app/forms.py:28
-#, fuzzy
-#| msgid ""
-#| "Field must be at least {min_chars} characters long but only got "
-#| "{num_chars}."
 msgid "Must be at least {min_chars} characters long."
-msgstr ""
-"Câmpul trebuie să aibă cel puțin {min_chars} caractere, dar sunt numai "
-"{num_chars}."
+msgstr "Trebuie să aibă cel puțin {min_chars} caractere."
 
 #: journalist_app/forms.py:35
-#, fuzzy
-#| msgid "Field can not be more than {max_chars} characters."
 msgid "Cannot be longer than {max_chars} characters."
-msgstr "Câmpul nu poate avea mai mult de {max_chars} caractere."
+msgstr "Nu poate avea mai mult de {max_chars} caractere."
 
 #: journalist_app/forms.py:40
 msgid ""
@@ -230,10 +222,8 @@ msgid "Name updated."
 msgstr "Numele a fost actualizat."
 
 #: journalist_app/utils.py:357
-#, fuzzy
-#| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
-msgstr "Ai introdus o parolă greșită! Parola nu a fost schimbată."
+msgstr "Parola introdusă este nevalidă. Parola nu a fost modificată."
 
 #: journalist_app/utils.py:364
 msgid ""
@@ -724,10 +714,8 @@ msgid "Edit user \"{user}\""
 msgstr "Editează utilizatorul „{user}”"
 
 #: journalist_templates/edit_account.html:8
-#, fuzzy
-#| msgid "Change Name &amp; Admin Status"
 msgid "Change Name and Admin Status"
-msgstr "Schimbă numele &amp; rolul de administrator"
+msgstr "Schimbă numele și rolul de administrator"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -933,10 +921,8 @@ msgid "Password"
 msgstr "Parolă"
 
 #: journalist_templates/login.html:10
-#, fuzzy
-#| msgid "Password"
 msgid "Show password"
-msgstr "Parolă"
+msgstr "Arată parola"
 
 #: journalist_templates/login.html:12 source_templates/index.html:59
 #: source_templates/logout.html:3
@@ -991,12 +977,10 @@ msgstr ""
 "pentru că poate diferi de cel afișat în pagina anterioară."
 
 #: source_app/main.py:80
-#, fuzzy
-#| msgid "There was a problem verifying the two-factor code. Please try again."
 msgid "There was a temporary problem creating your account. Please try again."
 msgstr ""
-"A apărut o problemă la verificarea datelor pentru autentificarea cu doi "
-"factori. Te rugăm să încerci din nou."
+"A apărut o problemă temporară la crearea contului. Te rugăm să încerci din "
+"nou."
 
 #: source_app/main.py:184
 msgid "You must enter a message or choose a file to submit."
@@ -1126,44 +1110,27 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "TRIMITE DOCUMENTE"
 
 #: source_templates/index.html:16
-#, fuzzy
-#| msgid ""
-#| "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security "
-#| "Setting</strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield "
-#| "icon\"> &nbsp;button in your browser’s toolbar to change it."
 msgid ""
 "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security Level</"
 "strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> "
 "&nbsp;button in your browser’s toolbar to change it."
 msgstr ""
-"<a id=\"disable-js\" href=\"\"><strong>Setările de securitate</strong></a> "
-"din browserul tău Tor sunt prea slabe. Folosește butonul <img src=\"{icon}\" "
-"alt=\"shield icon\"> &nbsp;din bara de instrumente a browserului și schimbă-"
-"le."
+"<a id=\"disable-js\" href=\"\"><strong>Nivelul de securitate</strong></a> "
+"din browserul tău Tor este prea slab. Folosește butonul <img src=\"{icon}\" "
+"alt=\"shield icon\"> &nbsp;din bara de instrumente a browserului și "
+"schimbă-le."
 
 #: source_templates/index.html:17
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended to use the Tor Browser to access SecureDrop:</"
-#| "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to "
-#| "install it</a>, or ignore this warning to continue."
 msgid ""
 "<strong>It is recommended to use Tor Browser to access SecureDrop:</strong> "
 "<a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</"
 "a>, or ignore this warning to continue."
 msgstr ""
-"<strong>Îți recomandăm să folosești browserul Tor pentru a accesa SecureDrop:"
-"</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Află cum îl "
-"poți instala</a> sau ignoră acest avertisment pentru a continua."
+"<strong>Îți recomandăm să folosești browserul Tor pentru a accesa "
+"SecureDrop:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Află "
+"cum îl poți instala</a> sau ignoră acest avertisment pentru a continua."
 
 #: source_templates/index.html:18
-#, fuzzy
-#| msgid ""
-#| "<strong>It is recommended you use the desktop version of Tor Browser to "
-#| "access SecureDrop, as Orfox does not provide the same level of security "
-#| "and anonymity as the desktop versions.</strong> <a id=\"recommend-tor\" "
-#| "href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this "
-#| "warning to continue."
 msgid ""
 "<strong>It is recommended you use the desktop version of Tor Browser to "
 "access SecureDrop, as Orfox does not provide the same level of security and "
@@ -1172,9 +1139,9 @@ msgid ""
 "continue."
 msgstr ""
 "<strong>Îți recomandăm să folosești browserul Tor în versiunea pentru "
-"calculator pentru a accesa SecureDrop, deoarece Orfox nu oferă același nivel "
-"de securitate și anonimitate.</strong> <a id=\"recommend-tor\" href="
-"\"{tor_browser_url}\">Află cum îl poți instala</a> sau ignoră acest "
+"calculator ca să accesezi SecureDrop, deoarece Orfox nu oferă același nivel "
+"de securitate și anonimitate.</strong> <a id=\"recommend-tor\" href=\""
+"{tor_browser_url}\">Află cum îl poți instala</a> sau ignoră acest "
 "avertisment pentru a continua."
 
 #: source_templates/index.html:39
@@ -1233,11 +1200,6 @@ msgid "One more thing..."
 msgstr "Încă ceva..."
 
 #: source_templates/logout.html:7
-#, fuzzy
-#| msgid ""
-#| "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
-#| "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
-#| "toolbar. This will clear your Tor browser activity data on this device."
 msgid ""
 "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor Browser's "
@@ -1376,12 +1338,6 @@ msgid "Important"
 msgstr "Important"
 
 #: source_templates/session_timeout.html:5
-#, fuzzy
-#| msgid ""
-#| "You were logged out due to inactivity. Click the <img src={icon} alt="
-#| "\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</"
-#| "strong> button in your Tor browser's toolbar before moving on. This will "
-#| "clear your Tor browser activity data on this device."
 msgid ""
 "You were logged out due to inactivity. Click the <img src={icon} alt=\"broom "
 "icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong> button "
@@ -1413,10 +1369,6 @@ msgstr ""
 "internet) poate să te identifice."
 
 #: source_templates/tor2web-warning.html:6
-#, fuzzy
-#| msgid ""
-#| "We <strong>strongly advise</strong> you to use the <a href=\"www."
-#| "torproject.org/projects/torbrowser.html\">Tor browser</a> instead."
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor Browser</a> instead."
@@ -1488,17 +1440,14 @@ msgstr ""
 "pentru a cripta chiar tu ce trimiți. Pentru aceasta:"
 
 #: source_templates/why-journalist-key.html:7
-#, fuzzy
-#| msgid ""
-#| "<a href=\"{url}\">Download</a> the public key. The public key is a text "
-#| "file with the extension <code>.asc</code>"
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. It will be saved to a file "
 "called:\n"
 "        <p><code>{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"<a href=\"{url}\">Descarcă</a> cheia publică. Cheia publică este un fișier "
-"text cu extensia <code>.asc</code>"
+"<a href=\"{url}\">Descarcă</a> cheia publică. Va fi salvată într-un fișier "
+"denumit:\n"
+"        <p><code>{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:9
 msgid "Import it into your GPG keyring."
@@ -1515,26 +1464,26 @@ msgstr ""
 "tău de securitate."
 
 #: source_templates/why-journalist-key.html:12
-#, fuzzy
-#| msgid ""
-#| "If you are using Mac/Linux, open the terminal. You can import the key "
-#| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
 "If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"Dacă folosești Mac/Linux, deschide terminalul. Poți importa cheia cu "
-"<code>gpg --import /cale/către/key.asc</code>."
+"Dacă folosești macOS sau Linux, deschide terminalul. Poți importa cheia cu:"
+"<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:15
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
 msgstr ""
+"Criptează fișierele trimise. Deschide terminalul și introdu această comandă "
+"gpg:"
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
 "<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submission</"
 "code>"
 msgstr ""
+"<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/"
+"submission</code>"
 
 #: source_templates/why-journalist-key.html:18
 msgid ""
@@ -1546,17 +1495,12 @@ msgstr ""
 "necriptat, dar cu .gpg la sfârșit (de ex. <code>internal_memo.pdf.gpg</code>)"
 
 #: source_templates/why-journalist-key.html:21
-#, fuzzy
-#| msgid ""
-#| "<strong>Tip:</strong> If you wish to remain anonymous, <strong>do not</"
-#| "strong> use GPG to sign the encrypted file (with the <code>--sign</code> "
-#| "or <code>-s</code> flag) as this will reveal your GPG identity to us."
 msgid ""
 "<strong>Important:</strong> If you wish to remain anonymous, <strong>do not</"
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
-"<strong>Pont:</strong> Dacă vrei să rămâi anonim(ă), <strong>nu folosi</"
+"<strong>Important:</strong> Dacă vrei să rămâi anonim(ă), <strong>nu folosi</"
 "strong> GPG pentru a semna fișiere criptate (cu argumentul <code>--sign</"
 "code> sau <code>-s</code>) pentru că ne va dezvălui identitatea ta GPG."
 
