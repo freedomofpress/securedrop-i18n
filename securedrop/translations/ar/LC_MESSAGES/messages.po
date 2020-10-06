@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-10-06 16:16+0000\n"
+"PO-Revision-Date: 2020-10-06 18:01+0000\n"
 "Last-Translator: erinm <erinm@riseup.net>\n"
 "Language-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -43,7 +43,7 @@ msgstr "لقد تم تصفير بيانات اعتماد الاستيثاق في
 
 #: journalist_app/account.py:56 journalist_app/admin.py:136
 msgid "There was a problem verifying the two-factor code. Please try again."
-msgstr "هناك مشكلة في التأكد  من رمز التسجيل في خطوتين. حاول مرة أخرى."
+msgstr "هناك مشكلة في التأكد من رمز التسجيل في خطوتين. حاول مرة أخرى."
 
 #: journalist_app/admin.py:42
 msgid "Image updated."
@@ -268,8 +268,8 @@ msgid_plural "{msg_num} messages"
 msgstr[0] "لا رسائل"
 msgstr[1] "رسالة واحدة"
 msgstr[2] "رسالتان"
-msgstr[3] "رسائل"
-msgstr[4] "رسالة"
+msgstr[3] "{msg_num} رسائل"
+msgstr[4] "{msg_num} رسالة"
 msgstr[5] "{msg_num} رسالة"
 
 #: journalist_templates/_source_row.html:27
@@ -1432,7 +1432,7 @@ msgstr ""
 
 #: source_templates/why-journalist-key.html:15
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
-msgstr "قم بتشفير ما أرستله. أفتح الطرفية وأدخل أمر التعمية gpg:"
+msgstr "قم بتعمية ما أرسلته. افتح الطرفية وادخل أمر التعمية gpg:"
 
 #: source_templates/why-journalist-key.html:16
 msgid ""
@@ -1457,9 +1457,9 @@ msgid ""
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
-"<strong>مهم:</strong> إذا كنت ترغب في البقاء مجهول الهوية،<strong>فلا توقّع</"
-"strong> الملف المُعمى باستخدام <code>--sign</code> أو <code>-s</code>) في "
-"GPG إذ من شأن ذلك الكشف لنا عن هويتك التي تستعملها مع مفاتيح GPG."
+"<strong>هام:</strong> إذا كنت ترغب في البقاء مجهول الهوية،<strong>فلا توقّع</"
+"strong> الملف المُعمّى باستخدام <code>--sign</code> أو <code>-s</code>) في "
+"GPG، إذ من شأن ذلك الكشف لنا عن هويتك التي تستعملها مع مفاتيح GPG."
 
 #: source_templates/why-journalist-key.html:23
 msgid "Back to submission page"
