@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-10-02 15:19+0000\n"
+"PO-Revision-Date: 2020-10-06 16:16+0000\n"
 "Last-Translator: erinm <erinm@riseup.net>\n"
 "Language-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -43,7 +43,7 @@ msgstr "لقد تم تصفير بيانات اعتماد الاستيثاق في
 
 #: journalist_app/account.py:56 journalist_app/admin.py:136
 msgid "There was a problem verifying the two-factor code. Please try again."
-msgstr "هناك مشكلة في التأكد الرمز الاستيثاق في خطوتين. حاول مجدًّدا."
+msgstr "هناك مشكلة في التأكد  من رمز التسجيل في خطوتين. حاول مرة أخرى."
 
 #: journalist_app/admin.py:42
 msgid "Image updated."
@@ -106,7 +106,7 @@ msgstr ""
 
 #: journalist_app/forms.py:28
 msgid "Must be at least {min_chars} characters long."
-msgstr "يجب أن يحوي {min_chars} محرَفًا على الأقل."
+msgstr "يجب أن يحوي {min_chars} حرفًا على الأقل."
 
 #: journalist_app/forms.py:35
 msgid "Cannot be longer than {max_chars} characters."
@@ -180,7 +180,7 @@ msgid ""
 "before trying again."
 msgstr ""
 "انتظر حتّى يظهر رمز الاستيثاق في خطوتين الجديد على التطبيق الهاتفي أو مفتاح "
-"المصادقة قبل معاودة المحاولة."
+"المصادقة قبل إعادة المحاولة."
 
 #: journalist_app/utils.py:145
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
@@ -220,7 +220,7 @@ msgstr "تم تحديث الاسم."
 
 #: journalist_app/utils.py:357
 msgid "The password you submitted is invalid. Password not changed."
-msgstr "كلمة السّرّ المُدخلة غير صحيحة! لم يتم تغييرها."
+msgstr "كلمة السر المُدخلة غير صحيحة! لم يتم تغييرها."
 
 #: journalist_app/utils.py:364
 msgid ""
@@ -351,7 +351,7 @@ msgid ""
 "Once you have paired FreeOTP with this account, enter the 6-digit "
 "verification code below:"
 msgstr ""
-"بعد مطابقة ووصل FreeOTP مغ هذا الحساب أدخل في الحقل التالي رمز التحقق المكون "
+"بعد مطابقة ووصل FreeOTP مع هذا الحساب أدخل في الحقل أسفله رمز التحقق المكون "
 "من 6 أرقام:"
 
 #: journalist_templates/account_new_two_factor.html:18
@@ -506,12 +506,12 @@ msgid ""
 "servers may become unreachable. <a href=\"//securedrop.org/v2-onion-eol\" "
 "rel=\"noreferrer\">Learn More</a>"
 msgstr ""
-"<strong>مطلوب التحديث:</strong> خوادم SecureDrop الخاصة بك لا زالت تستخدم "
-"الإصدار الثانى من خدمات البصلة v2 onion services و التى سوف يتم إنهاء العمل "
-"بها لأسباب أمنية. سوف يتم إلغاء تفعيل الإصدار الثانى من خدمات البصلة v2 "
-"onion services في فبراير 2021، و ربما يتعذر الوصول إلي خوادم SecureDrop "
-"الخاصة بك. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\""
-">معرفة المزيد</a>"
+"<strong>التحديث مطلوب:</strong> خوادم SecureDrop الخاصة بك لا زالت تستخدم "
+"الإصدار الثاني من خدمات البصلة onion services و التى سوف يتم إنهاء العمل بها "
+"لأسباب أمنية. سوف يتم إلغاء تفعيل الإصدار الثاني من خدمات البصلة onion "
+"services في فبراير 2021، و ربما يتعذر الوصول إلي خوادم SecureDrop الخاصة بك. "
+"<a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">لمعرفة "
+"المزيد</a>"
 
 #: journalist_templates/base.html:29
 msgid "Logged on as"
@@ -770,9 +770,9 @@ msgid ""
 "is present and ready to set up their device with the new two-factor "
 "credentials. Otherwise, they will be locked out of their account.</em>"
 msgstr ""
-"إذا فقد المستخدم بيانات الاستيثاق في خطوتين أو انكشفت فيمكن تصفيرها من هنا. "
-"<em> لفعل ذلك ينبغي أن يكون المستخدم حاضرًا و&nbsp;مستعدًّا بجهازه لضبط "
-"وظيفة الاستيثاق في خطوتين مجدّدًا وإلا لن يمكنه الولوج إلى الحساب.</em>"
+"إذا فقد المستخدم بيانات الاستيثاق في خطوتين أو انكشفت، فيمكن تصفيرها من هنا. "
+"<em> لفعل ذلك ينبغي أن يكون المستخدم حاضرًا و&nbsp;مستعدًّا لضبط جهازه "
+"بوظيفة الاستيثاق في خطوتين مجدّدًا وإلا لن يمكنه الولوج إلى الحساب.</em>"
 
 #: journalist_templates/edit_account.html:85
 msgid ""
@@ -957,7 +957,7 @@ msgstr ""
 
 #: source_app/main.py:80
 msgid "There was a temporary problem creating your account. Please try again."
-msgstr "طرأت مشكلة مؤقتة فيما يتعلّق بانشاء حسابك. حاول مجدًّدا."
+msgstr "طرأت مشكلة مؤقتة فيما يتعلّق بإنشاء حسابك. حاول مجددًا."
 
 #: source_app/main.py:184
 msgid "You must enter a message or choose a file to submit."
@@ -1111,10 +1111,10 @@ msgid ""
 "\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to "
 "continue."
 msgstr ""
-"<strong>نوصي باستخدام متصفح تور للنفاذ إلى سِكيوردرُپ إذ أنّ Orfox لا يوفّر "
+"<strong>نوصي باستخدام متصفح تور للنفاذ إلى SecureDrop إذ أنّ Orfox لا يوفّر "
 "القدر ذاته من السرية و&nbsp;المجهوليّة اللتين يوفّرهما إصدار سطح المكتب :</"
 "strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">طالع خطوات "
-"التنصيب</a> أو تجاهل هذا التحذير للمواصلة."
+"التثبيت</a> أو تجاهل هذا التحذير للمواصلة."
 
 #: source_templates/index.html:39
 msgid "First submission"
@@ -1177,9 +1177,9 @@ msgid ""
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor Browser's "
 "toolbar. This will clear your Tor Browser activity data on this device."
 msgstr ""
-"أنقر على الزر <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\""
+"اضغط على الزر <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\""
 ">&nbsp;<strong>هوية جديدة</strong> في شريط متصفحك تور إذ أن ذلك من شأنه أن "
-"يمسح أي نشاط قمت به على متصفح تور من عبر هذا الجهاز."
+"يمسح أي نشاط قمت به على متصفح تور من هذا الجهاز."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1312,10 +1312,9 @@ msgid ""
 "in your Tor Browser's toolbar before moving on. This will clear your Tor "
 "Browser activity data on this device."
 msgstr ""
-"لقد تم إخراجك من الحساب نظراً لعدم نشاطك. أضعط على زر <img src={icon} alt="
+"لقد تم إخراجك من الحساب نظراً لعدم نشاطك. اضغط على زر <img src={icon} alt="
 "\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>هوية جديدة</"
-"strong>في متصفحك تور ومن شأن ذلك أن يمسح أي نشاط لك على متصفح تور عبر هذا "
-"الجهاز."
+"strong>في متصفحك تور. إن ذلك سيمسح أي نشاط لك على متصفح تور في هذا الجهاز."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1406,7 +1405,7 @@ msgid ""
 "called:\n"
 "        <p><code>{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"<a href=\"{url}\">نزِّل</a>المفتاح العلني. سيتم حفظه في ملف يدعى:\n"
+"<a href=\"{url}\">نزِّل</a>المفتاح العلني. سيتم حفظه في ملف يُدعَى:\n"
 "        <p><code>{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:9
@@ -1427,8 +1426,8 @@ msgid ""
 "If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"إذا كنت تستخدم ماك اوس macOS\\لينُكس أو ماك فيمكنك استيراد المفتاح بواسطة "
-"<p><code> من خلال الطرفيّة بالأمر التالي :<p><code>gpg --import /path/to/"
+"إذا كنت تستخدم macOS أو لينُكس، فيمكنك استيراد المفتاح بواسطة <p><code> من "
+"خلال الطرفيّة بواسطة الأمر التالي :<p><code>gpg --import /path/to/"
 "{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:15
