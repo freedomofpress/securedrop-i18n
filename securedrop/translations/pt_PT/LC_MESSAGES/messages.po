@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-10-06 16:16+0000\n"
+"PO-Revision-Date: 2020-10-06 19:25+0000\n"
 "Last-Translator: John Hensley <john@freedom.press>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/"
 "projects/securedrop/securedrop/pt_PT/>\n"
@@ -1484,7 +1484,7 @@ msgid ""
 msgstr ""
 "<a href=\"{url}\">Transfira</a> a chave pública. Ele será salvo em um "
 "arquivo chamado:\n"
-"         <p>{submissions_key_fpr_filename}</p>"
+"         <p><code>{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:9
 msgid "Import it into your GPG keyring."
@@ -1501,16 +1501,13 @@ msgstr ""
 "automaticamente."
 
 #: source_templates/why-journalist-key.html:12
-#, fuzzy
-#| msgid ""
-#| "If you are using Mac/Linux, open the terminal. You can import the key "
-#| "with <code>gpg --import /path/to/key.asc</code>."
 msgid ""
 "If you are using macOS or Linux, open the terminal. You can import the key "
 "with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"No Mac/Linux, abra o terminal. Pode importar a chave com o comando <code>gpg "
-"--import /caminho/para/a/key.asc</code>."
+"No Mac/Linux, abra o terminal. Pode importar a chave com o comando:"
+"<p><code>gpg --import /caminho/para/a/"
+"{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-journalist-key.html:15
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
