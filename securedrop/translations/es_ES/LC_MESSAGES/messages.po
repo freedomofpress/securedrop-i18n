@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2020-10-06 13:38+0000\n"
-"Last-Translator: Fernando Ramos Orihuela <fernandoramosorihuela@gmail.com>\n"
+"Last-Translator: Gonzalo Bulnes Guilpain <gon.bulnes@fastmail.com>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
 "Language: es_ES\n"
@@ -1165,7 +1165,7 @@ msgstr ""
 
 #: source_templates/index.html:74
 msgid "Select <strong>Advanced Security Settings</strong>"
-msgstr "Seleccione <strong>Ajustes Avanzados de Seguridad</strong>"
+msgstr "Seleccione <strong>Configuración de seguridad avanzada...</strong>"
 
 #: source_templates/index.html:75
 msgid "Select <strong>Safest</strong>"
