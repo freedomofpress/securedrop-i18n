@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2020-10-08 08:57+0000\n"
-"Last-Translator: tekrei <tekrei@gmail.com>\n"
+"Last-Translator: Volkan <volkangezer@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
 "Language: tr\n"
@@ -214,7 +214,7 @@ msgstr "Ad güncellendi."
 
 #: journalist_app/utils.py:357
 msgid "The password you submitted is invalid. Password not changed."
-msgstr "Girdiğiniz parola kötü! Parola değiştirilmedi."
+msgstr "Girdiğiniz parola geçerli değil. Parola değiştirilmedi."
 
 #: journalist_app/utils.py:364
 msgid ""
@@ -498,7 +498,7 @@ msgstr ""
 "<strong>Güncelleme Gerekiyor:</strong> SecureDrop sunucularınız hala, "
 "güvenlik nedenleriyle aşamalı olarak kullanımdan kaldırılan onion "
 "hizmetlerinin 2. sürümünü kullanıyor. 2021 yılı Şubat ayında onion "
-"hizmetleri 2. sürümü etkisizleştirilecektir, bu durumda SecureDrop "
+"hizmetleri 2. sürümü devre dışı bırakılacaktır, bu durumda SecureDrop "
 "sunucularınız erişilemez hale gelebilir. <a href=\"//securedrop.org/v2-onion-"
 "eol\" rel=\"noreferrer\">Daha Fazlasını Öğren</a>"
 
@@ -698,7 +698,7 @@ msgstr "\"{user}\" kullanıcısını düzenle"
 
 #: journalist_templates/edit_account.html:8
 msgid "Change Name and Admin Status"
-msgstr "Adı ve Yönetici Durumunu Değiştir"
+msgstr "Ad ve Yönetici Durumunu Değiştir"
 
 #: journalist_templates/edit_account.html:27
 #: journalist_templates/edit_account.html:43
@@ -1329,7 +1329,7 @@ msgstr ""
 "Bir süredir işlem yapmadığınız için oturumunuz kapatıldı. İlerlemeden önce "
 "Tor Tarayıcı araç çubuğundan <img src={icon} alt=\"broom icon\" width=\"16\" "
 "height=\"16\">&nbsp;<strong>Yeni Kimlik</strong> üzerine tıklayın. Bu işlem "
-"bu aygıttaki Tor Tarayıcı işlemlerini siler."
+"bu aygıttaki Tor Tarayıcı etkinlik bilgilerini siler."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
