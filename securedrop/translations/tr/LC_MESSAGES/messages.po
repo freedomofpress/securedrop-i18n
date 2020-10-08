@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-09-30 10:01+0000\n"
+"PO-Revision-Date: 2020-10-08 08:57+0000\n"
 "Last-Translator: tekrei <tekrei@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
@@ -516,7 +516,7 @@ msgstr "Oturumu Kapat"
 
 #: journalist_templates/base.html:56
 msgid "Powered by <em>SecureDrop {version}</em>."
-msgstr "Gücünü <em>SecureDrop {version}</em> tarafından almaktadır."
+msgstr "<em>SecureDrop {version}</em> tarafından desteklenmektedir."
 
 #: journalist_templates/col.html:6
 msgid "All Sources"
