@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2020-10-18 12:45+0000\n"
-"Last-Translator: Markus Ottela <oottela@cs.helsinki.fi>\n"
+"Last-Translator: pkm808 <pkm808@protonmail.com>\n"
 "Language-Team: Finnish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/fi/>\n"
 "Language: fi\n"
@@ -581,7 +581,7 @@ msgstr "Ei tiedostoja näytettäviksi."
 msgid ""
 "You can write a secure reply to the person who submitted these documents:"
 msgstr ""
-"Voit kirjoittaa suojatun vastauksen henkilölle, joka lähetti nämä tiedostot:"
+"Voit kirjoittaa salatun vastauksen henkilölle, joka lähetti nämä tiedostot:"
 
 #: journalist_templates/col.html:92
 msgid "You've flagged this source for reply."
@@ -735,7 +735,7 @@ msgstr ""
 #: journalist_templates/edit_account.html:56
 msgid "Please enter your current password and two-factor code."
 msgstr ""
-"Anna nykyinen salasanasi ja kaksiasteisen tunnistusmekanismin varmenne."
+"Anna nykyinen salasanasi ja kaksivaiheisen tunnistusmekanismin varmenne."
 
 #: journalist_templates/edit_account.html:61
 msgid "Current Password"
@@ -743,7 +743,7 @@ msgstr "Nykyinen Salasana"
 
 #: journalist_templates/edit_account.html:62 journalist_templates/login.html:11
 msgid "Two-factor Code"
-msgstr "Kaksitasoisen tunnistusmekanismin varmenne"
+msgstr "Kaksivaiheisen tunnistusmekanismin varmenne"
 
 #: journalist_templates/edit_account.html:68
 msgid "The user's password will be changed to:"
@@ -777,7 +777,7 @@ msgid ""
 "this, make sure you are ready to set up your new device, otherwise you will "
 "be locked out of your account.</em>"
 msgstr ""
-"Jos kaksitasoisen tunnistusmekanismin tunnukset ovat kadonneet tai "
+"Jos kaksivaiheisen tunnistusmekanismin tunnukset ovat kadonneet tai "
 "vaarannettu, tai jos käytät uutta laitetta, voit palauttaa tilisi täällä. "
 "<em>Jos teet tämän, varmista että olet valmis asentamaan tunnuksesi uudelle "
 "laitteellesi. Muutoin lukkiudut ulos käyttäjätililtäsi.</em>"
@@ -893,7 +893,7 @@ msgstr "Oletko varma, että haluat poistaa käyttäjän {username}?"
 msgid ""
 "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr ""
-"Oletko varma, että haluat palauttaa käyttäjän {username} kaksitasoisen "
+"Oletko varma, että haluat palauttaa käyttäjän {username} kaksivaiheisen "
 "tunnistamismekanismin?"
 
 #: journalist_templates/login.html:4
