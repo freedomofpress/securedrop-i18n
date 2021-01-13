@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.12.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-09-29 19:01+0000\n"
-"Last-Translator: Oktavia <oktaviahrund@gmail.com>\n"
+"PO-Revision-Date: 2021-01-13 23:37+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/is/>\n"
 "Language: is\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
-"X-Generator: Weblate 4.1.1\n"
+"X-Generator: Weblate 4.3.2\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:19
@@ -34,7 +34,7 @@ msgstr "Útskráning vegna breytingar á lykilorði"
 #: journalist_app/__init__.py:164 source_app/__init__.py:172
 #: source_templates/base.html:9 source_templates/index.html:7
 msgid "SecureDrop"
-msgstr ""
+msgstr "SecureDrop"
 
 #: journalist_app/account.py:39
 msgid "Incorrect password or two-factor code."
@@ -58,11 +58,11 @@ msgstr "Kjörstillingar vistaðar."
 
 #: journalist_app/admin.py:81
 msgid "Preferences not updated."
-msgstr ""
+msgstr "Kjörstillingar ekki uppfærðar."
 
 #: journalist_app/admin.py:95
 msgid "Failed to update organization name."
-msgstr ""
+msgstr "Mistókst að uppfæra heiti stofnunar/félags."
 
 #: journalist_app/admin.py:128
 msgid ""
@@ -113,6 +113,8 @@ msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
 msgstr ""
+"Niðurhalið þitt mistókst vegna þess að skrá fannst ekki. Stjórnandi getur "
+"fundið ítarlegri upplýsingar í kerfinu og vöktunarskrám."
 
 #: journalist_app/decorators.py:18
 msgid "Only admins can access this page."
@@ -269,11 +271,11 @@ msgstr "Hætta við"
 #: journalist_templates/_source_row.html:8
 #: journalist_templates/_source_row.html:17
 msgid "starred icon"
-msgstr ""
+msgstr "stjörnumerkt tákn"
 
 #: journalist_templates/_source_row.html:16
 msgid "unstarred icon"
-msgstr ""
+msgstr "óstjörnumerkt tákn"
 
 #: journalist_templates/_source_row.html:28
 msgid "1 doc"
@@ -289,7 +291,7 @@ msgstr[1] "{num} skilaboð"
 
 #: journalist_templates/_source_row.html:37
 msgid "download icon"
-msgstr ""
+msgstr "táknmynd fyrir niðurhal"
 
 #: journalist_templates/_source_row.html:38
 msgid "1 unread"
@@ -435,14 +437,12 @@ msgid "Edit user {username}"
 msgstr "Breyta notandanum {username}"
 
 #: journalist_templates/admin.html:31
-#, fuzzy
-#| msgid "Edit your account"
 msgid "edit user icon"
-msgstr "Breyta aðganginum þínum"
+msgstr "breyta táknmynd notanda"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
-msgstr ""
+msgstr "tákn fyrir rusl óvirkt"
 
 #: journalist_templates/admin.html:42
 msgid "Delete user {username}"
@@ -450,7 +450,7 @@ msgstr "Eyða notandanum {username}"
 
 #: journalist_templates/admin.html:43 journalist_templates/admin.html:44
 msgid "trash icon"
-msgstr ""
+msgstr "tákn fyrir rusl"
 
 #: journalist_templates/admin.html:53
 msgid "never"
@@ -536,24 +536,16 @@ msgstr ""
 "hér fyrir neðan:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 onion services, which are being phased out for security "
-#| "reasons. In February 2021, v2 onion services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before "
 "April 30 to keep your SecureDrop servers online. Please contact your "
 "administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
 "\">Learn More</a>"
 msgstr ""
-"<strong>Uppfærsla er nauðsynleg:</strong> SecureDrop-þjónarnir þínir eru enn "
-"að keyra v2 onion-þjónustur, sem af öryggisástæðum er verið að leggja niður. "
-"Í febrúar 2021 verða v2 onion-þjónustur gerðar óvirkar, óvíst er að þá verði "
-"hægt að tengjast SecureDrop-þjónum þínum. <a href=\"//securedrop.org/v2-"
-"onion-eol\" rel=\"noreferrer\">Kanna nánar</a>"
+"<strong>Uppfærsla er nauðsynleg:</strong>&nbsp;&nbsp; Settu upp v3 onion-"
+"þjónustur fyrir 30. apríl 2021 til að halda SecureDrop-þjónum þínum "
+"gangandi. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Kanna "
+"nánar</a>"
 
 #: journalist_templates/base.html:30
 msgid ""
@@ -561,6 +553,9 @@ msgid ""
 "setup before April 30. Please contact your administrator. <a href=\"//"
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Uppfærsla nauðsynleg</strong>&nbsp;&nbsp;Ljúktu uppsetningu v3 Onion-"
+"þjónustna fyrir 30. apríl 2021. Hafðu samband við kerfisstjórann þinn. <a "
+"href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Kanna nánar</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"
@@ -605,7 +600,7 @@ msgstr "Svara"
 
 #: journalist_templates/col.html:35 journalist_templates/col.html:65
 msgid "reply icon"
-msgstr ""
+msgstr "tákn fyrir svar"
 
 #: journalist_templates/col.html:39 journalist_templates/col.html:50
 msgid "Read"
@@ -613,7 +608,7 @@ msgstr "Lesa"
 
 #: journalist_templates/col.html:40
 msgid "check icon"
-msgstr ""
+msgstr "tákn fyrir virkni/val"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
@@ -621,11 +616,11 @@ msgstr "Ólesið"
 
 #: journalist_templates/col.html:46
 msgid "closed envelope icon"
-msgstr ""
+msgstr "tákn fyrir lokað umslag"
 
 #: journalist_templates/col.html:51
 msgid "open envelope icon"
-msgstr ""
+msgstr "tákn fyrir opið umslag"
 
 #: journalist_templates/col.html:60
 msgid "Uploaded Document"
@@ -633,7 +628,7 @@ msgstr "Innsent skjal"
 
 #: journalist_templates/col.html:61
 msgid "files icon"
-msgstr ""
+msgstr "tákn fyrir skrár"
 
 #: journalist_templates/col.html:68
 msgid "Message"
@@ -641,7 +636,7 @@ msgstr "Skilaboð"
 
 #: journalist_templates/col.html:69
 msgid "messages icon"
-msgstr ""
+msgstr "tákn fyrir skilaboð"
 
 #: journalist_templates/col.html:80 journalist_templates/col.html:144
 #: journalist_templates/index.html:62
@@ -711,15 +706,15 @@ msgstr "Uppsetning á kerfiseintaki"
 
 #: journalist_templates/config.html:10
 msgid "Organization Name"
-msgstr ""
+msgstr "Nafn stofnunar/félags"
 
 #: journalist_templates/config.html:15
 msgid "Set the organization name used on the SecureDrop web interfaces:"
-msgstr ""
+msgstr "Settu það nafn stofnunar/félags sem notað er í vefviðmótum SecureDrop:"
 
 #: journalist_templates/config.html:20
 msgid "SET ORGANIZATION NAME"
-msgstr ""
+msgstr "SETJA HEITI STOFNUNAR/FÉLAGS"
 
 #: journalist_templates/config.html:28 source_templates/index.html:33
 msgid "Logo Image"
@@ -904,7 +899,7 @@ msgstr "ENDURSTILLA AUÐKENNI ÖRYGGISLYKILS"
 
 #: journalist_templates/flag.html:4
 msgid "info icon"
-msgstr ""
+msgstr "tákn fyrir upplýsingar"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -964,10 +959,8 @@ msgid "No documents have been submitted!"
 msgstr "Engin skjöl hafa verið send inn!"
 
 #: journalist_templates/js-strings.html:3
-#, fuzzy
-#| msgid "filter by codename"
 msgid "Filter by codename"
-msgstr "sía eftir kóðanafni"
+msgstr "Sía eftir kóðanafni"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
@@ -1099,7 +1092,7 @@ msgstr "Verndum frétta- og heimildarmenn"
 
 #: source_templates/base.html:24
 msgid "SecureDrop Home"
-msgstr ""
+msgstr "Forsíða SecureDrop"
 
 #: source_templates/base.html:32
 msgid "LOG OUT"
