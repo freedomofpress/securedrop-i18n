@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-10-01 09:01+0000\n"
-"Last-Translator: Benet (BennyBeat) R. i Camps <bennybeat@gmail.com>\n"
+"PO-Revision-Date: 2021-01-13 23:37+0000\n"
+"Last-Translator: Joan Montané <joan@montane.cat>\n"
 "Language-Team: Catalan <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ca/>\n"
 "Language: ca\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.1.1\n"
+"X-Generator: Weblate 4.3.2\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:19
@@ -34,7 +34,7 @@ msgstr "S'ha desconnectat la sessió per un canvi de la contrasenya"
 #: journalist_app/__init__.py:164 source_app/__init__.py:172
 #: source_templates/base.html:9 source_templates/index.html:7
 msgid "SecureDrop"
-msgstr ""
+msgstr "SecureDrop"
 
 #: journalist_app/account.py:39
 msgid "Incorrect password or two-factor code."
@@ -60,11 +60,11 @@ msgstr "S'han desat les preferències."
 
 #: journalist_app/admin.py:81
 msgid "Preferences not updated."
-msgstr ""
+msgstr "No s'han pogut actualitzar les preferències."
 
 #: journalist_app/admin.py:95
 msgid "Failed to update organization name."
-msgstr ""
+msgstr "No s'ha pogut actualitzar el nom de l'organització."
 
 #: journalist_app/admin.py:128
 msgid ""
@@ -115,6 +115,8 @@ msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
 msgstr ""
+"La baixada ha fallat perquè no s'ha pogut trobar un fitxer. Un administrador "
+"pot obtenir més informació en els registres de sistema i seguiment."
 
 #: journalist_app/decorators.py:18
 msgid "Only admins can access this page."
@@ -131,13 +133,13 @@ msgstr[1] ""
 #: journalist_app/forms.py:30
 msgid "Must be at least {num} characters long."
 msgid_plural "Must be at least {num} characters long."
-msgstr[0] "Cal que tingui com a mínim {num} caràcters."
+msgstr[0] "Cal que tingui com a mínim {num} caràcter."
 msgstr[1] "Cal que tingui com a mínim {num} caràcters."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
 msgid "Cannot be longer than {num} characters."
 msgid_plural "Cannot be longer than {num} characters."
-msgstr[0] "No pot tenir més de {num} caràcters."
+msgstr[0] "No pot tenir més d'{num} caràcter."
 msgstr[1] "No pot tenir més de {num} caràcters."
 
 #: journalist_app/forms.py:62
@@ -273,11 +275,11 @@ msgstr "Cancel·la"
 #: journalist_templates/_source_row.html:8
 #: journalist_templates/_source_row.html:17
 msgid "starred icon"
-msgstr ""
+msgstr "icona de marcat com a preferit"
 
 #: journalist_templates/_source_row.html:16
 msgid "unstarred icon"
-msgstr ""
+msgstr "icona de desmarcat com a preferit"
 
 #: journalist_templates/_source_row.html:28
 msgid "1 doc"
@@ -293,7 +295,7 @@ msgstr[1] "{num} missatges"
 
 #: journalist_templates/_source_row.html:37
 msgid "download icon"
-msgstr ""
+msgstr "icona de baixada"
 
 #: journalist_templates/_source_row.html:38
 msgid "1 unread"
@@ -440,11 +442,11 @@ msgstr "Edita el compte {username}"
 
 #: journalist_templates/admin.html:31
 msgid "edit user icon"
-msgstr ""
+msgstr "icona d'editar usuari"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
-msgstr ""
+msgstr "icona de paperera inhabilitada"
 
 #: journalist_templates/admin.html:42
 msgid "Delete user {username}"
@@ -452,7 +454,7 @@ msgstr "Suprimeix el compte {username}"
 
 #: journalist_templates/admin.html:43 journalist_templates/admin.html:44
 msgid "trash icon"
-msgstr ""
+msgstr "icona de paperera"
 
 #: journalist_templates/admin.html:53
 msgid "never"
@@ -535,25 +537,16 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Quan hàgiu configurat la YubiKey, introduïu aquest codi de sis dígits:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 onion services, which are being phased out for security "
-#| "reasons. In February 2021, v2 onion services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before "
 "April 30 to keep your SecureDrop servers online. Please contact your "
 "administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
 "\">Learn More</a>"
 msgstr ""
-"<strong>Actualització necessària:</strong> els vostres servidors de "
-"SecureDrop encara executen serveis onion v2, que s'estan substituint per "
-"motius de seguretat. El febrer de 20201, els serveis onion v2 "
-"s'inhabilitaran i els vostres servidors de SecureDrop podrien no ser "
-"accessibles. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
-"\">Més informació</a>"
+"<strong>Actualització necessària</strong>&nbsp;&nbsp;configureu la versió 3 "
+"dels serveis Onion abans del 30 d'abril per a mantenir els servidors de "
+"SecureDrop en línia. Contacteu amb l'administrador <a href=\"//securedrop."
+"org/v2-onion-eol\" rel=\"noreferrer\">Més informació</a>"
 
 #: journalist_templates/base.html:30
 msgid ""
@@ -561,6 +554,10 @@ msgid ""
 "setup before April 30. Please contact your administrator. <a href=\"//"
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Actualització requerida</strong>&nbsp;&nbsp;completeu la "
+"configuració dels serveis Onion v3 abans del 30 d'abril. Contacteu amb "
+"l'administrador. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\""
+">Més informació</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"
@@ -605,7 +602,7 @@ msgstr "Respon"
 
 #: journalist_templates/col.html:35 journalist_templates/col.html:65
 msgid "reply icon"
-msgstr ""
+msgstr "icona de resposta"
 
 #: journalist_templates/col.html:39 journalist_templates/col.html:50
 msgid "Read"
@@ -613,7 +610,7 @@ msgstr "Llegit"
 
 #: journalist_templates/col.html:40
 msgid "check icon"
-msgstr ""
+msgstr "icona de verificació"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
@@ -621,11 +618,11 @@ msgstr "Per llegir"
 
 #: journalist_templates/col.html:46
 msgid "closed envelope icon"
-msgstr ""
+msgstr "icona de sobre tancat"
 
 #: journalist_templates/col.html:51
 msgid "open envelope icon"
-msgstr ""
+msgstr "icona de sobre obert"
 
 #: journalist_templates/col.html:60
 msgid "Uploaded Document"
@@ -633,7 +630,7 @@ msgstr "Document penjat"
 
 #: journalist_templates/col.html:61
 msgid "files icon"
-msgstr ""
+msgstr "icona de fitxers"
 
 #: journalist_templates/col.html:68
 msgid "Message"
@@ -641,7 +638,7 @@ msgstr "Missatge"
 
 #: journalist_templates/col.html:69
 msgid "messages icon"
-msgstr ""
+msgstr "icona de missatge"
 
 #: journalist_templates/col.html:80 journalist_templates/col.html:144
 #: journalist_templates/index.html:62
@@ -711,15 +708,17 @@ msgstr "Configuració de la instància"
 
 #: journalist_templates/config.html:10
 msgid "Organization Name"
-msgstr ""
+msgstr "Nom de l'organtizació"
 
 #: journalist_templates/config.html:15
 msgid "Set the organization name used on the SecureDrop web interfaces:"
 msgstr ""
+"Configureu el nom de l'organització usat en les interfícies web del "
+"SecureDrop:"
 
 #: journalist_templates/config.html:20
 msgid "SET ORGANIZATION NAME"
-msgstr ""
+msgstr "ESTABLEIX EL NOM DE L'ORGANITZACIÓ"
 
 #: journalist_templates/config.html:28 source_templates/index.html:33
 msgid "Logo Image"
@@ -777,11 +776,11 @@ msgid_plural ""
 "The following {num} files have been selected for <strong>permanent deletion</"
 "strong>:"
 msgstr[0] ""
-"S'ha seleccionat el fitxer següent per <strong>suprimir definitivament</"
-"strong>:"
+"S'ha seleccionat el fitxer següent per <strong>suprimir "
+"definitivament</strong>:"
 msgstr[1] ""
-"S'han seleccionat els fitxers següents per <strong>suprimir definitivament</"
-"strong>:"
+"S'han seleccionat els {num} fitxers següents per <strong>suprimir "
+"definitivament</strong>:"
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
@@ -910,7 +909,7 @@ msgstr "RESTABLEIX LES CREDENCIALS DE CLAUS DE SEGURETAT"
 
 #: journalist_templates/flag.html:4
 msgid "info icon"
-msgstr ""
+msgstr "icona d'informació"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -971,10 +970,8 @@ msgid "No documents have been submitted!"
 msgstr "No s'ha enviat cap document!"
 
 #: journalist_templates/js-strings.html:3
-#, fuzzy
-#| msgid "filter by codename"
 msgid "Filter by codename"
-msgstr "filtra per nom en clau"
+msgstr "Filtra per nom en clau"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
@@ -1107,7 +1104,7 @@ msgstr "Protegeix els periodistes i les fonts"
 
 #: source_templates/base.html:24
 msgid "SecureDrop Home"
-msgstr ""
+msgstr "Inici de SecureDrop"
 
 #: source_templates/base.html:32
 msgid "LOG OUT"
