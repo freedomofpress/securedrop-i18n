@@ -2,7 +2,9 @@
 import base64
 import binascii
 import io
+from mock import call
 import os
+from pathlib import Path
 import pytest
 import random
 import zipfile
@@ -15,8 +17,8 @@ from pyotp import TOTP
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm.exc import StaleDataError
 from sqlalchemy.sql.expression import func
+from html import escape as htmlescape
 
-import crypto_util
 import journalist_app as journalist_app_module
 from journalist_app.utils import mark_seen
 import models
@@ -33,7 +35,7 @@ from models import (
     InvalidUsernameException,
     Submission
 )
-from sdconfig import SDConfig, config
+from sdconfig import config
 
 from .utils.instrument import InstrumentedApp
 from . import utils
@@ -74,7 +76,8 @@ def test_user_sees_v2_eol_warning_if_only_v2_is_enabled(config, journalist_app, 
         resp = app.get(url_for('main.index'))
 
     text = resp.data.decode('utf-8')
-    assert "v2-onion-eol" in text, text
+    assert 'id="v2-onion-eol"' in text, text
+    assert 'id="v2-complete-migration"' not in text, text
 
 
 def test_user_sees_v2_eol_warning_if_both_v2_and_v3_enabled(config, journalist_app, test_journo):
@@ -89,7 +92,8 @@ def test_user_sees_v2_eol_warning_if_both_v2_and_v3_enabled(config, journalist_a
         resp = app.get(url_for('main.index'))
 
     text = resp.data.decode('utf-8')
-    assert "v2-onion-eol" in text, text
+    assert 'id="v2-onion-eol"' not in text, text
+    assert 'id="v2-complete-migration"' in text, text
 
 
 def test_user_does_not_see_v2_eol_warning_if_only_v3_enabled(config, journalist_app, test_journo):
@@ -104,22 +108,8 @@ def test_user_does_not_see_v2_eol_warning_if_only_v3_enabled(config, journalist_
         resp = app.get(url_for('main.index'))
 
     text = resp.data.decode('utf-8')
-    assert "v2-onion-eol" not in text, text
-
-
-def test_user_sees_v2_eol_warning_if_both_urls_do_not_exist(config, journalist_app, test_journo):
-    journalist_app.config.update(V2_ONION_ENABLED=False, V3_ONION_ENABLED=False)
-    with journalist_app.test_client() as app:
-        _login_user(
-            app,
-            test_journo['username'],
-            test_journo['password'],
-            test_journo['otp_secret'])
-
-        resp = app.get(url_for('main.index'))
-
-    text = resp.data.decode('utf-8')
-    assert "v2-onion-eol" in text, text
+    assert 'id="v2-onion-eol"' not in text, text
+    assert 'id="v2-complete-migration"' not in text, text
 
 
 def test_user_with_whitespace_in_username_can_login(journalist_app):
@@ -136,15 +126,6 @@ def test_user_with_whitespace_in_username_can_login(journalist_app):
     with journalist_app.test_client() as app:
         _login_user(app, username_with_whitespace, password,
                     otp_secret)
-
-
-def test_make_password(journalist_app):
-    with patch.object(crypto_util.CryptoUtil, 'genrandomid',
-                      side_effect=['bad', VALID_PASSWORD]):
-        fake_config = SDConfig()
-        with journalist_app.test_request_context('/'):
-            password = journalist_app_module.utils.make_password(fake_config)
-            assert password == VALID_PASSWORD
 
 
 def test_reply_error_logging(journalist_app, test_journo, test_source):
@@ -564,6 +545,7 @@ def test_admin_edits_user_password_session_invalidate(journalist_app,
         # Also ensure that session is now invalid.
         session.pop('expires', None)
         session.pop('csrf_token', None)
+        session.pop('locale', None)
         assert not session, session
 
 
@@ -1503,6 +1485,119 @@ def test_no_prevent_document_uploads(journalist_app, test_admin):
             app.post(url_for('admin.update_submission_preferences'),
                      follow_redirects=True)
             ins.assert_message_flashed('Preferences saved.', 'submission-preferences-success')
+            assert InstanceConfig.get_current().allow_document_uploads is True
+
+
+def test_prevent_document_uploads_invalid(journalist_app, test_admin):
+    with journalist_app.test_client() as app:
+        _login_user(app, test_admin['username'], test_admin['password'],
+                    test_admin['otp_secret'])
+        form_true = journalist_app_module.forms.SubmissionPreferencesForm(
+            prevent_document_uploads=True)
+        app.post(url_for('admin.update_submission_preferences'),
+                 data=form_true.data,
+                 follow_redirects=True)
+        assert InstanceConfig.get_current().allow_document_uploads is False
+
+        with patch('flask_wtf.FlaskForm.validate_on_submit') as fMock:
+            fMock.return_value = False
+            form_false = journalist_app_module.forms.SubmissionPreferencesForm(
+                prevent_document_uploads=False)
+            app.post(url_for('admin.update_submission_preferences'),
+                     data=form_false.data,
+                     follow_redirects=True)
+            assert InstanceConfig.get_current().allow_document_uploads is False
+
+
+def test_orgname_default_set(journalist_app, test_admin):
+
+    class dummy_current():
+        organization_name = None
+
+    with patch.object(InstanceConfig, 'get_current') as iMock:
+        with journalist_app.test_client() as app:
+            iMock.return_value = dummy_current()
+            _login_user(app, test_admin['username'], test_admin['password'],
+                        test_admin['otp_secret'])
+            assert g.organization_name == "SecureDrop"
+
+
+def test_orgname_valid_succeeds(journalist_app, test_admin):
+    test_name = "Walden Inquirer"
+    with journalist_app.test_client() as app:
+        _login_user(app, test_admin['username'], test_admin['password'],
+                    test_admin['otp_secret'])
+        form = journalist_app_module.forms.OrgNameForm(
+            organization_name=test_name)
+        assert InstanceConfig.get_current().organization_name == "SecureDrop"
+        with InstrumentedApp(journalist_app) as ins:
+            app.post(url_for('admin.update_org_name'),
+                     data=form.data,
+                     follow_redirects=True)
+            ins.assert_message_flashed('Preferences saved.', 'org-name-success')
+            assert InstanceConfig.get_current().organization_name == test_name
+
+
+def test_orgname_null_fails(journalist_app, test_admin):
+    with journalist_app.test_client() as app:
+        _login_user(app, test_admin['username'], test_admin['password'],
+                    test_admin['otp_secret'])
+        form = journalist_app_module.forms.OrgNameForm(
+            organization_name=None)
+        assert InstanceConfig.get_current().organization_name == "SecureDrop"
+        with InstrumentedApp(journalist_app) as ins:
+            app.post(url_for('admin.update_org_name'),
+                     data=form.data,
+                     follow_redirects=True)
+            ins.assert_message_flashed('This field is required.', 'org-name-error')
+            assert InstanceConfig.get_current().organization_name == "SecureDrop"
+
+
+def test_orgname_oversized_fails(journalist_app, test_admin):
+    test_name = "1234567812345678123456781234567812345678123456781234567812345678a"
+    with journalist_app.test_client() as app:
+        _login_user(app, test_admin['username'], test_admin['password'],
+                    test_admin['otp_secret'])
+        form = journalist_app_module.forms.OrgNameForm(
+            organization_name=test_name)
+        assert InstanceConfig.get_current().organization_name == "SecureDrop"
+        with InstrumentedApp(journalist_app) as ins:
+            app.post(url_for('admin.update_org_name'),
+                     data=form.data,
+                     follow_redirects=True)
+            ins.assert_message_flashed('Cannot be longer than 64 characters.', 'org-name-error')
+            assert InstanceConfig.get_current().organization_name == "SecureDrop"
+
+
+def test_orgname_html_escaped(journalist_app, test_admin):
+    t_name = '"> <a href=foo>'
+    with journalist_app.test_client() as app:
+        _login_user(app, test_admin['username'], test_admin['password'],
+                    test_admin['otp_secret'])
+        form = journalist_app_module.forms.OrgNameForm(
+            organization_name=t_name)
+        assert InstanceConfig.get_current().organization_name == "SecureDrop"
+        with InstrumentedApp(journalist_app) as ins:
+            app.post(url_for('admin.update_org_name'),
+                     data=form.data,
+                     follow_redirects=True)
+            ins.assert_message_flashed('Preferences saved.', 'org-name-success')
+            assert InstanceConfig.get_current().organization_name == htmlescape(t_name, quote=True)
+
+
+def test_logo_default_available(journalist_app):
+    # if the custom image is available, this test will fail
+    custom_image_location = os.path.join(config.SECUREDROP_ROOT, "static/i/custom_logo.png")
+    if os.path.exists(custom_image_location):
+        os.remove(custom_image_location)
+
+    with journalist_app.test_client() as app:
+        response = app.get(url_for('main.select_logo'), follow_redirects=False)
+
+        assert response.status_code == 302
+        observed_headers = response.headers
+        assert 'Location' in list(observed_headers.keys())
+        assert url_for('static', filename='i/logo.png') in observed_headers['Location']
 
 
 def test_logo_upload_with_valid_image_succeeds(journalist_app, test_admin):
@@ -1528,6 +1623,13 @@ def test_logo_upload_with_valid_image_succeeds(journalist_app, test_admin):
                          follow_redirects=True)
 
                 ins.assert_message_flashed("Image updated.", "logo-success")
+        with journalist_app.test_client() as app:
+            response = app.get(url_for('main.select_logo'), follow_redirects=False)
+
+            assert response.status_code == 302
+            observed_headers = response.headers
+            assert 'Location' in list(observed_headers.keys())
+            assert url_for('static', filename='i/custom_logo.png') in observed_headers['Location']
     finally:
         # Restore original image to logo location for subsequent tests
         with io.open(logo_image_location, 'wb') as logo_file:
@@ -1550,6 +1652,38 @@ def test_logo_upload_with_invalid_filetype_fails(journalist_app, test_admin):
                                        "logo-error")
         text = resp.data.decode('utf-8')
         assert "You can only upload PNG image files." in text
+
+
+def test_logo_upload_save_fails(journalist_app, test_admin):
+    # Save original logo to restore after test run
+    logo_image_location = os.path.join(config.SECUREDROP_ROOT,
+                                       "static/i/logo.png")
+    with io.open(logo_image_location, 'rb') as logo_file:
+        original_image = logo_file.read()
+
+    try:
+        with journalist_app.test_client() as app:
+            _login_user(app, test_admin['username'], test_admin['password'],
+                        test_admin['otp_secret'])
+            # Create 1px * 1px 'white' PNG file from its base64 string
+            form = journalist_app_module.forms.LogoForm(
+                logo=(BytesIO(base64.decodebytes
+                      (b"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQ"
+                       b"VR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=")), 'test.png')
+            )
+            with InstrumentedApp(journalist_app) as ins:
+                with patch('werkzeug.datastructures.FileStorage.save') as sMock:
+                    sMock.side_effect = Exception
+                    app.post(url_for('admin.manage_config'),
+                             data=form.data,
+                             follow_redirects=True)
+
+                    ins.assert_message_flashed("Unable to process the image file."
+                                               " Try another one.", "logo-error")
+    finally:
+        # Restore original image to logo location for subsequent tests
+        with io.open(logo_image_location, 'wb') as logo_file:
+            logo_file.write(original_image)
 
 
 def test_creation_of_ossec_test_log_event(journalist_app, test_admin, mocker):
@@ -1940,6 +2074,94 @@ def test_delete_source_deletes_docs_on_disk(journalist_app,
         utils.asynchronous.wait_for_assertion(assertion)
 
 
+def test_bulk_delete_deletes_db_entries(journalist_app,
+                                        test_source,
+                                        test_journo,
+                                        config):
+    """
+    Verify that when files are deleted, the corresponding db entries are
+    also deleted.
+    """
+
+    with journalist_app.app_context():
+        source = Source.query.get(test_source['id'])
+        journo = Journalist.query.get(test_journo['id'])
+
+        utils.db_helper.submit(source, 2)
+        utils.db_helper.reply(journo, source, 2)
+
+        dir_source_docs = os.path.join(config.STORE_DIR, test_source['filesystem_id'])
+        assert os.path.exists(dir_source_docs)
+
+        subs = Submission.query.filter_by(source_id=source.id).all()
+        assert subs
+
+        replies = Reply.query.filter_by(source_id=source.id).all()
+        assert replies
+
+        file_list = []
+        file_list.extend(subs)
+        file_list.extend(replies)
+
+        with journalist_app.test_request_context('/'):
+            journalist_app_module.utils.bulk_delete(test_source['filesystem_id'],
+                                                    file_list)
+
+        def db_assertion():
+            subs = Submission.query.filter_by(source_id=source.id).all()
+            assert not subs
+
+            replies = Reply.query.filter_by(source_id=source.id).all()
+            assert not replies
+
+        utils.asynchronous.wait_for_assertion(db_assertion)
+
+
+def test_bulk_delete_works_when_files_absent(journalist_app,
+                                             test_source,
+                                             test_journo,
+                                             config):
+    """
+    Verify that when files are deleted but are already missing,
+    the corresponding db entries are still
+    """
+
+    with journalist_app.app_context():
+        source = Source.query.get(test_source['id'])
+        journo = Journalist.query.get(test_journo['id'])
+
+        utils.db_helper.submit(source, 2)
+        utils.db_helper.reply(journo, source, 2)
+
+        dir_source_docs = os.path.join(config.STORE_DIR, test_source['filesystem_id'])
+        assert os.path.exists(dir_source_docs)
+
+        subs = Submission.query.filter_by(source_id=source.id).all()
+        assert subs
+
+        replies = Reply.query.filter_by(source_id=source.id).all()
+        assert replies
+
+        file_list = []
+        file_list.extend(subs)
+        file_list.extend(replies)
+
+        with journalist_app.test_request_context('/'):
+            with patch("store.Storage.move_to_shredder") as delMock:
+                delMock.side_effect = ValueError
+                journalist_app_module.utils.bulk_delete(test_source['filesystem_id'],
+                                                        file_list)
+
+        def db_assertion():
+            subs = Submission.query.filter_by(source_id=source.id).all()
+            assert not subs
+
+            replies = Reply.query.filter_by(source_id=source.id).all()
+            assert not replies
+
+        utils.asynchronous.wait_for_assertion(db_assertion)
+
+
 def test_login_with_invalid_password_doesnt_call_argon2(mocker, test_journo):
     mock_argon2 = mocker.patch('models.argon2.verify')
     invalid_pw = 'a'*(Journalist.MAX_PASSWORD_LEN + 1)
@@ -2198,6 +2420,97 @@ def test_download_selected_submissions_previously_downloaded(
             )
 
 
+@pytest.fixture(scope="function")
+def selected_missing_files(journalist_app, test_source):
+    """Fixture for the download tests with missing files in storage."""
+    source = Source.query.get(test_source["id"])
+    submissions = utils.db_helper.submit(source, 2)
+    selected = sorted([s.filename for s in submissions])
+
+    storage_path = Path(journalist_app.storage.storage_path)
+    msg_files = sorted([p for p in storage_path.rglob("*") if p.is_file()])
+    assert len(msg_files) == 2
+    for file in msg_files:
+        file.unlink()
+
+    yield selected
+
+
+def test_download_selected_submissions_missing_files(
+    journalist_app, test_journo, test_source, mocker, selected_missing_files
+):
+    """Tests download of selected submissions with missing files in storage."""
+    mocked_error_logger = mocker.patch('journalist.app.logger.error')
+    journo = Journalist.query.get(test_journo["id"])
+
+    with journalist_app.test_client() as app:
+        _login_user(
+            app,
+            journo.username,
+            test_journo["password"],
+            test_journo["otp_secret"]
+        )
+        resp = app.post(
+            url_for("main.bulk"),
+            data=dict(
+                action="download",
+                filesystem_id=test_source["filesystem_id"],
+                doc_names_selected=selected_missing_files,
+            )
+        )
+
+    assert resp.status_code == 302
+
+    expected_calls = []
+    for file in selected_missing_files:
+        missing_file = (
+            Path(journalist_app.storage.storage_path)
+            .joinpath(test_source["filesystem_id"])
+            .joinpath(file)
+            .as_posix()
+        )
+        expected_calls.append(call("File {} not found".format(missing_file)))
+
+    mocked_error_logger.assert_has_calls(expected_calls)
+
+
+def test_download_single_submission_missing_file(
+    journalist_app, test_journo, test_source, mocker, selected_missing_files
+):
+    """Tests download of single submissions with missing files in storage."""
+    mocked_error_logger = mocker.patch('journalist.app.logger.error')
+    journo = Journalist.query.get(test_journo["id"])
+    missing_file = selected_missing_files[0]
+
+    with journalist_app.test_client() as app:
+        _login_user(
+            app,
+            journo.username,
+            test_journo["password"],
+            test_journo["otp_secret"]
+        )
+        resp = app.get(
+            url_for(
+                "col.download_single_file",
+                filesystem_id=test_source["filesystem_id"],
+                fn=missing_file,
+            )
+        )
+
+    assert resp.status_code == 302
+
+    missing_file = (
+        Path(journalist_app.storage.storage_path)
+        .joinpath(test_source["filesystem_id"])
+        .joinpath(missing_file)
+        .as_posix()
+    )
+
+    mocked_error_logger.assert_called_once_with(
+        "File {} not found".format(missing_file)
+    )
+
+
 def test_download_unread_all_sources(journalist_app, test_journo):
     """
     Test that downloading all unread creates a zip that contains all unread submissions from the
@@ -2407,6 +2720,7 @@ def test_journalist_session_expiration(config, journalist_app, test_journo):
         # which is always present and 'csrf_token' which leaks no info)
         session.pop('expires', None)
         session.pop('csrf_token', None)
+        session.pop('locale', None)
         assert not session, session
         assert ('You have been logged out due to inactivity' in
                 resp.data.decode('utf-8'))

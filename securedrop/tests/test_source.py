@@ -3,13 +3,16 @@ import gzip
 import re
 import subprocess
 import time
+import os
+import shutil
 
 from io import BytesIO, StringIO
-from flask import session, escape, current_app, url_for, g
+from flask import session, escape, url_for, g, request
 from mock import patch, ANY
 
 import crypto_util
 import source
+from passphrases import PassphraseGenerator
 from . import utils
 import version
 
@@ -20,8 +23,40 @@ from source_app import main as source_app_main
 from source_app import api as source_app_api
 from .utils.db_helper import new_codename
 from .utils.instrument import InstrumentedApp
+from sdconfig import config
 
-overly_long_codename = 'a' * (Source.MAX_CODENAME_LEN + 1)
+overly_long_codename = 'a' * (PassphraseGenerator.MAX_PASSPHRASE_LENGTH + 1)
+
+
+def test_logo_default_available(source_app):
+    # if the custom image is available, this test will fail
+    custom_image_location = os.path.join(config.SECUREDROP_ROOT, "static/i/custom_logo.png")
+    if os.path.exists(custom_image_location):
+        os.remove(custom_image_location)
+
+    with source_app.test_client() as app:
+        response = app.get(url_for('main.select_logo'), follow_redirects=False)
+
+        assert response.status_code == 302
+        observed_headers = response.headers
+        assert 'Location' in list(observed_headers.keys())
+        assert url_for('static', filename='i/logo.png') in observed_headers['Location']
+
+
+def test_logo_custom_available(source_app):
+    # if the custom image is available, this test will fail
+    custom_image = os.path.join(config.SECUREDROP_ROOT, "static/i/custom_logo.png")
+    default_image = os.path.join(config.SECUREDROP_ROOT, "static/i/logo.png")
+    if os.path.exists(default_image) and not os.path.exists(custom_image):
+        shutil.copyfile(default_image, custom_image)
+
+    with source_app.test_client() as app:
+        response = app.get(url_for('main.select_logo'), follow_redirects=False)
+
+        assert response.status_code == 302
+        observed_headers = response.headers
+        assert 'Location' in list(observed_headers.keys())
+        assert url_for('static', filename='i/custom_logo.png') in observed_headers['Location']
 
 
 def test_page_not_found(source_app):
@@ -31,6 +66,19 @@ def test_page_not_found(source_app):
             resp = app.get('UNKNOWN')
             assert resp.status_code == 404
             ins.assert_template_used('notfound.html')
+
+
+def test_orgname_default_set(source_app):
+
+    class dummy_current():
+        organization_name = None
+
+    with patch.object(InstanceConfig, 'get_current') as iMock:
+        with source_app.test_client() as app:
+            iMock.return_value = dummy_current()
+            resp = app.get(url_for('main.index'))
+            assert resp.status_code == 200
+            assert g.organization_name == "SecureDrop"
 
 
 def test_index(source_app):
@@ -43,32 +91,6 @@ def test_index(source_app):
         assert 'Return visit' in text
 
 
-def test_all_words_in_wordlist_validate(source_app):
-    """Verify that all words in the wordlist are allowed by the form
-    validation. Otherwise a source will have a codename and be unable to
-    return."""
-
-    with source_app.app_context():
-        wordlist_en = current_app.crypto_util.get_wordlist('en')
-
-    # chunk the words to cut down on the number of requets we make
-    # otherwise this test is *slow*
-    chunks = [wordlist_en[i:i + 7] for i in range(0, len(wordlist_en), 7)]
-
-    with source_app.test_client() as app:
-        for words in chunks:
-            resp = app.post(url_for('main.login'),
-                            data=dict(codename=' '.join(words)),
-                            follow_redirects=True)
-            assert resp.status_code == 200
-            text = resp.data.decode('utf-8')
-            # If the word does not validate, then it will show
-            # 'Invalid input'. If it does validate, it should show that
-            # it isn't a recognized codename.
-            assert 'Sorry, that is not a recognized codename.' in text
-            assert 'logged_in' not in session
-
-
 def _find_codename(html):
     """Find a source codename (diceware passphrase) in HTML"""
     # Codenames may contain HTML escape characters, and the wordlist
@@ -78,22 +100,6 @@ def _find_codename(html):
     codename_match = re.search(codename_re, html)
     assert codename_match is not None
     return codename_match.group('codename')
-
-
-def test_generate(source_app):
-    with source_app.test_client() as app:
-        resp = app.get(url_for('main.generate'))
-        assert resp.status_code == 200
-        session_codename = next(iter(session['codenames'].values()))
-
-    text = resp.data.decode('utf-8')
-    assert "This codename is what you will use in future visits" in text
-
-    codename = _find_codename(resp.data.decode('utf-8'))
-    assert len(codename.split()) == Source.NUM_WORDS
-    # codename is also stored in the session - make sure it matches the
-    # codename displayed to the source
-    assert codename == escape(session_codename)
 
 
 def test_generate_already_logged_in(source_app):
@@ -123,22 +129,19 @@ def test_create_new_source(source_app):
         assert 'codenames' not in session
 
 
-def test_generate_too_long_codename(source_app):
-    """Generate a codename that exceeds the maximum codename length"""
+def test_generate(source_app):
+    with source_app.test_client() as app:
+        resp = app.get(url_for('main.generate'))
+        assert resp.status_code == 200
+        session_codename = next(iter(session['codenames'].values()))
 
-    with patch.object(source_app.logger, 'warning') as logger:
-        with patch.object(crypto_util.CryptoUtil, 'genrandomid',
-                          side_effect=[overly_long_codename,
-                                       'short codename']):
-            with source_app.test_client() as app:
-                resp = app.post(url_for('main.generate'))
-                assert resp.status_code == 200
+    text = resp.data.decode('utf-8')
+    assert "This codename is what you will use in future visits" in text
 
-    logger.assert_called_with(
-        "Generated a source codename that was too long, "
-        "skipping it. This should not happen. "
-        "(Codename='{}')".format(overly_long_codename)
-    )
+    codename = _find_codename(resp.data.decode('utf-8'))
+    # codename is also stored in the session - make sure it matches the
+    # codename displayed to the source
+    assert codename == escape(session_codename)
 
 
 def test_create_duplicate_codename_logged_in_not_in_session(source_app):
@@ -204,9 +207,19 @@ def test_lookup(source_app):
         text = resp.data.decode('utf-8')
         assert "public key" in text
         # download the public key
-        resp = app.get(url_for('info.download_journalist_pubkey'))
+        resp = app.get(url_for('info.download_public_key'))
         text = resp.data.decode('utf-8')
         assert "BEGIN PGP PUBLIC KEY BLOCK" in text
+
+
+def test_journalist_key_redirects_to_public_key(source_app):
+    """Test that the /journalist-key route redirects to /public-key."""
+    with source_app.test_client() as app:
+        resp = app.get(url_for('info.download_journalist_key'))
+        assert resp.status_code == 301
+        resp = app.get(url_for('info.download_journalist_key'), follow_redirects=True)
+        assert request.path == url_for('info.download_public_key')
+        assert "BEGIN PGP PUBLIC KEY BLOCK" in resp.data.decode('utf-8')
 
 
 def test_login_and_logout(source_app):
@@ -576,15 +589,14 @@ def test_why_use_tor_browser(source_app):
 
 def test_why_journalist_key(source_app):
     with source_app.test_client() as app:
-        resp = app.get(url_for('info.why_download_journalist_pubkey'))
+        resp = app.get(url_for('info.why_download_public_key'))
         assert resp.status_code == 200
         text = resp.data.decode('utf-8')
         assert "Why download the team's public key?" in text
 
 
 def test_metadata_route(config, source_app):
-    with patch.object(source_app_api.platform, "linux_distribution") as mocked_platform:
-        mocked_platform.return_value = ("Ubuntu", "16.04", "xenial")
+    with patch.object(source_app_api, "server_os", new="16.04"):
         with source_app.test_client() as app:
             resp = app.get(url_for('api.metadata'))
             assert resp.status_code == 200
@@ -635,7 +647,7 @@ def test_login_with_overly_long_codename(source_app):
             assert resp.status_code == 200
             text = resp.data.decode('utf-8')
             assert ("Field must be between 1 and {} characters long."
-                    .format(Source.MAX_CODENAME_LEN)) in text
+                    .format(PassphraseGenerator.MAX_PASSPHRASE_LENGTH)) in text
             assert not mock_hash_codename.called, \
                 "Called hash_codename for codename w/ invalid length"
 
@@ -728,6 +740,8 @@ def test_source_session_expiration(config, source_app):
         # which is always present and 'csrf_token' which leaks no info)
         session.pop('expires', None)
         session.pop('csrf_token', None)
+        session.pop('locale', None)
+        session.pop('show_expiration_message', None)
         assert not session
 
         text = resp.data.decode('utf-8')
@@ -753,10 +767,30 @@ def test_source_session_expiration_create(config, source_app):
         # which is always present and 'csrf_token' which leaks no info)
         session.pop('expires', None)
         session.pop('csrf_token', None)
+        session.pop('locale', None)
+        session.pop('show_expiration_message', None)
         assert not session
 
         text = resp.data.decode('utf-8')
         assert 'You were logged out due to inactivity' in text
+
+
+def test_source_no_session_expiration_message_when_not_logged_in(config, source_app):
+    """If sources never logged in, no message should be displayed
+    after SESSION_EXPIRATION_MINUTES."""
+
+    with source_app.test_client() as app:
+        seconds_session_expire = 1
+        config.SESSION_EXPIRATION_MINUTES = seconds_session_expire / 60.
+
+        resp = app.get(url_for('main.index'))
+        assert resp.status_code == 200
+
+        time.sleep(seconds_session_expire + 1)
+
+        refreshed_resp = app.get(url_for('main.index'), follow_redirects=True)
+        text = refreshed_resp.data.decode('utf-8')
+        assert 'You were logged out due to inactivity' not in text
 
 
 def test_csrf_error_page(config, source_app):

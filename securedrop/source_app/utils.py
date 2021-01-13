@@ -10,15 +10,19 @@ from threading import Thread
 
 import typing
 
-import i18n
 import re
 
 from crypto_util import CryptoUtil, CryptoException
 from models import Source
+from passphrases import PassphraseGenerator, DicewarePassphrase
 from sdconfig import SDConfig
 
 if typing.TYPE_CHECKING:
     from typing import Optional  # noqa: F401
+
+
+def was_in_generate_flow() -> bool:
+    return 'codenames' in session
 
 
 def logged_in() -> bool:
@@ -38,33 +42,19 @@ def valid_codename(codename: str) -> bool:
     return source is not None
 
 
-def generate_unique_codename(config: SDConfig) -> str:
+def generate_unique_codename(config: SDConfig) -> DicewarePassphrase:
     """Generate random codenames until we get an unused one"""
     while True:
-        codename = current_app.crypto_util.genrandomid(
-            Source.NUM_WORDS,
-            i18n.get_language(config))
-
-        # The maximum length of a word in the wordlist is 9 letters and the
-        # codename length is 7 words, so it is currently impossible to
-        # generate a codename that is longer than the maximum codename length
-        # (currently 128 characters). This code is meant to be defense in depth
-        # to guard against potential future changes, such as modifications to
-        # the word list or the maximum codename length.
-        if len(codename) > Source.MAX_CODENAME_LEN:
-            current_app.logger.warning(
-                    "Generated a source codename that was too long, "
-                    "skipping it. This should not happen. "
-                    "(Codename='{}')".format(codename))
-            continue
-
+        passphrase = PassphraseGenerator.get_default().generate_passphrase(
+            preferred_language=g.localeinfo.language
+        )
         # scrypt (slow)
-        filesystem_id = current_app.crypto_util.hash_codename(codename)
+        filesystem_id = current_app.crypto_util.hash_codename(passphrase)
 
         matching_sources = Source.query.filter(
             Source.filesystem_id == filesystem_id).all()
         if len(matching_sources) == 0:
-            return codename
+            return passphrase
 
 
 def get_entropy_estimate() -> int:
@@ -83,7 +73,7 @@ def asynchronous(f):               # type: ignore
 def async_genkey(crypto_util_: CryptoUtil,
                  db_uri: str,
                  filesystem_id: str,
-                 codename: str) -> None:
+                 codename: DicewarePassphrase) -> None:
     # We pass in the `crypto_util_` so we don't have to reference `current_app`
     # here. The app might not have a pushed context during testing which would
     # cause this asynchronous function to break.

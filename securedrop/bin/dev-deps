@@ -2,6 +2,8 @@
 
 export DISPLAY=:1
 
+export REPOROOT="${REPOROOT:-$(git rev-parse --show-toplevel)}"
+
 function run_tor {
     tor > /tmp/tor.out 2>&1 || cat /tmp/tor.out
 }
@@ -19,6 +21,7 @@ function run_xvfb() {
 }
 
 function run_redis() {
+    rm -f "${REPOROOT}/securedrop/dump.rdb"
     setsid redis-server >& /tmp/redis.out || cat /tmp/redis.out
 }
 
@@ -42,7 +45,6 @@ function append_to_exit() {
 }
 
 function maybe_create_config_py() {
-    REPOROOT=$(git rev-parse --show-toplevel)
     if ! test -f "${REPOROOT}/securedrop/config.py" ; then
         append_to_exit "rm ${REPOROOT}/securedrop/config.py"
         (cd "$REPOROOT" && make test-config)
@@ -88,7 +90,15 @@ function reset_demo() {
 
     ./manage.py reset
 
-    gpg2 --homedir /var/lib/securedrop/keys --import /var/lib/securedrop/keys/test_journalist_key.pub
+    gpg2 --homedir /var/lib/securedrop/keys --no-default-keyring --keyring /var/lib/securedrop/keys/pubring.gpg --import /var/lib/securedrop/keys/test_journalist_key.pub
 
-    ./create-dev-data.py
+    # Can't pass an array environment variable with "docker --env", so
+    # break up the string we can pass.
+    if [ -n "${LOADDATA_ARGS:-""}" ]
+    then
+        IFS=" " read -r -a loaddata_arg_array <<< "${LOADDATA_ARGS}"
+        ./loaddata.py "${loaddata_arg_array[@]}"
+    else
+        ./loaddata.py
+    fi
 }

@@ -1,11 +1,16 @@
 # -*- coding: utf-8 -*-
 
 import configparser
+from pathlib import Path
+from tempfile import TemporaryDirectory
+from typing import Any, Generator
+
 import pretty_bad_protocol as gnupg
 import logging
+
+from flask import Flask
 from hypothesis import settings
 import os
-import io
 import json
 import psutil
 import pytest
@@ -15,6 +20,7 @@ import subprocess
 
 from flask import url_for
 from pyotp import TOTP
+from typing import Dict
 
 os.environ['SECUREDROP_ENV'] = 'test'  # noqa
 from sdconfig import SDConfig, config as original_config
@@ -78,56 +84,66 @@ def setUpTearDown():
     _cleanup_test_securedrop_dataroot(original_config)
 
 
-@pytest.fixture(scope='function')
-def config(tmpdir):
-    '''Clone the module so we can modify it per test.'''
+@pytest.fixture(scope="session")
+def gpg_key_dir() -> Generator[Path, None, None]:
+    """Set up the journalist test key in GPG and the parent folder.
 
-    cnf = SDConfig()
+    This fixture takes about 2s to complete hence we use the "session" scope to only run it once.
+    """
+    with TemporaryDirectory() as tmp_gpg_dir_name:
+        tmp_gpg_dir = Path(tmp_gpg_dir_name)
 
-    data = tmpdir.mkdir('data')
-    keys = data.mkdir('keys')
-    os.chmod(str(keys), 0o700)
-    store = data.mkdir('store')
-    tmp = data.mkdir('tmp')
-    sqlite = data.join('db.sqlite')
+        # GPG 2.1+ requires gpg-agent, see #4013
+        gpg_agent_config = tmp_gpg_dir / "gpg-agent.conf"
+        gpg_agent_config.write_text("allow-loopback-pinentry")
 
-    # GPG 2.1+ requires gpg-agent, see #4013
-    gpg_agent_config = str(keys.join('gpg-agent.conf'))
-    with open(gpg_agent_config, 'w+') as f:
-        f.write('allow-loopback-pinentry')
+        # Import the test key in GPG
+        gpg = gnupg.GPG("gpg2", homedir=str(tmp_gpg_dir))
+        test_keys_dir = Path(__file__).parent / "files"
+        for ext in ["sec", "pub"]:
+            key_file = test_keys_dir / "test_journalist_key.{}".format(ext)
+            gpg.import_keys(key_file.read_text())
 
-    gpg = gnupg.GPG('gpg2', homedir=str(keys))
-    for ext in ['sec', 'pub']:
-        with io.open(path.join(path.dirname(__file__),
-                               'files',
-                               'test_journalist_key.{}'.format(ext))) as f:
-            gpg.import_keys(f.read())
-
-    cnf.SECUREDROP_DATA_ROOT = str(data)
-    cnf.GPG_KEY_DIR = str(keys)
-    cnf.STORE_DIR = str(store)
-    cnf.TEMP_DIR = str(tmp)
-    cnf.DATABASE_FILE = str(sqlite)
-
-    # create the db file
-    subprocess.check_call(['sqlite3', cnf.DATABASE_FILE, '.databases'])
-
-    return cnf
+        yield tmp_gpg_dir
 
 
 @pytest.fixture(scope='function')
-def alembic_config(config):
+def config(gpg_key_dir: Path) -> Generator[SDConfig, None, None]:
+    config = SDConfig()
+    config.GPG_KEY_DIR = str(gpg_key_dir)
+
+    # Setup the filesystem for the application
+    with TemporaryDirectory() as data_dir_name:
+        data_dir = Path(data_dir_name)
+        config.SECUREDROP_DATA_ROOT = str(data_dir)
+
+        store_dir = data_dir / "store"
+        store_dir.mkdir()
+        config.STORE_DIR = str(store_dir)
+
+        tmp_dir = data_dir / "tmp"
+        tmp_dir.mkdir()
+        config.TEMP_DIR = str(tmp_dir)
+
+        # Create the db file
+        sqlite_db_path = data_dir / "db.sqlite"
+        config.DATABASE_FILE = str(sqlite_db_path)
+        subprocess.check_call(["sqlite3", config.DATABASE_FILE, ".databases"])
+
+        yield config
+
+
+@pytest.fixture(scope='function')
+def alembic_config(config: SDConfig) -> str:
     base_dir = path.join(path.dirname(__file__), '..')
     migrations_dir = path.join(base_dir, 'alembic')
     ini = configparser.ConfigParser()
     ini.read(path.join(base_dir, 'alembic.ini'))
 
     ini.set('alembic', 'script_location', path.join(migrations_dir))
-    ini.set('alembic', 'sqlalchemy.url', 'sqlite:///' + config.DATABASE_FILE)
+    ini.set('alembic', 'sqlalchemy.url', config.DATABASE_URI)
 
     alembic_path = path.join(config.SECUREDROP_DATA_ROOT, 'alembic.ini')
-    config.TESTING_ALEMBIC_PATH = alembic_path
-
     with open(alembic_path, 'w') as f:
         ini.write(f)
 
@@ -135,25 +151,33 @@ def alembic_config(config):
 
 
 @pytest.fixture(scope='function')
-def source_app(config):
+def source_app(config: SDConfig) -> Generator[Flask, None, None]:
     app = create_source_app(config)
     app.config['SERVER_NAME'] = 'localhost.localdomain'
     with app.app_context():
         db.create_all()
-        yield app
+        try:
+            yield app
+        finally:
+            db.session.rollback()
+            db.drop_all()
 
 
 @pytest.fixture(scope='function')
-def journalist_app(config):
+def journalist_app(config: SDConfig) -> Generator[Flask, None, None]:
     app = create_journalist_app(config)
     app.config['SERVER_NAME'] = 'localhost.localdomain'
     with app.app_context():
         db.create_all()
-        yield app
+        try:
+            yield app
+        finally:
+            db.session.rollback()
+            db.drop_all()
 
 
 @pytest.fixture(scope='function')
-def test_journo(journalist_app):
+def test_journo(journalist_app: Flask) -> Dict[str, Any]:
     with journalist_app.app_context():
         user, password = utils.db_helper.init_journalist(is_admin=False)
         username = user.username
@@ -169,7 +193,7 @@ def test_journo(journalist_app):
 
 
 @pytest.fixture(scope='function')
-def test_admin(journalist_app):
+def test_admin(journalist_app: Flask) -> Dict[str, Any]:
     with journalist_app.app_context():
         user, password = utils.db_helper.init_journalist(is_admin=True)
         username = user.username
@@ -182,7 +206,7 @@ def test_admin(journalist_app):
 
 
 @pytest.fixture(scope='function')
-def test_source(journalist_app):
+def test_source(journalist_app: Flask) -> Dict[str, Any]:
     with journalist_app.app_context():
         source, codename = utils.db_helper.init_source()
         return {'source': source,
@@ -193,7 +217,7 @@ def test_source(journalist_app):
 
 
 @pytest.fixture(scope='function')
-def test_submissions(journalist_app):
+def test_submissions(journalist_app: Flask) -> Dict[str, Any]:
     with journalist_app.app_context():
         source, codename = utils.db_helper.init_source()
         utils.db_helper.submit(source, 2)
@@ -248,9 +272,9 @@ def journalist_api_token(journalist_app, test_journo):
         return response.json['token']
 
 
-def _start_test_rqworker(config):
+def _start_test_rqworker(config: SDConfig) -> None:
     if not psutil.pid_exists(_get_pid_from_file(TEST_WORKER_PIDFILE)):
-        tmp_logfile = io.open('/tmp/test_rqworker.log', 'w')
+        tmp_logfile = open('/tmp/test_rqworker.log', 'w')
         subprocess.Popen(['rqworker', config.RQ_WORKER_NAME,
                           '-P', config.SECUREDROP_ROOT,
                           '--pid', TEST_WORKER_PIDFILE,
@@ -260,7 +284,7 @@ def _start_test_rqworker(config):
                          stderr=subprocess.STDOUT)
 
 
-def _stop_test_rqworker():
+def _stop_test_rqworker() -> None:
     rqworker_pid = _get_pid_from_file(TEST_WORKER_PIDFILE)
     if rqworker_pid:
         os.kill(rqworker_pid, signal.SIGTERM)
@@ -270,14 +294,14 @@ def _stop_test_rqworker():
             pass
 
 
-def _get_pid_from_file(pid_file_name):
+def _get_pid_from_file(pid_file_name: str) -> int:
     try:
-        return int(io.open(pid_file_name).read())
+        return int(open(pid_file_name).read())
     except IOError:
         return -1
 
 
-def _cleanup_test_securedrop_dataroot(config):
+def _cleanup_test_securedrop_dataroot(config: SDConfig) -> None:
     # Keyboard interrupts or dropping to pdb after a test failure sometimes
     # result in the temporary test SecureDrop data root not being deleted.
     try:

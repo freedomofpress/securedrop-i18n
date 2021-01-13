@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from pathlib import Path
+
 from flask import (
     Blueprint,
     abort,
@@ -12,6 +14,7 @@ from flask import (
     send_file,
     url_for,
 )
+import werkzeug
 from flask_babel import gettext
 from sqlalchemy.orm.exc import NoResultFound
 
@@ -22,25 +25,26 @@ from journalist_app.utils import (make_star_true, make_star_false, get_source,
                                   delete_collection, col_download_unread,
                                   col_download_all, col_star, col_un_star,
                                   col_delete, mark_seen)
+from sdconfig import SDConfig
 
 
-def make_blueprint(config):
+def make_blueprint(config: SDConfig) -> Blueprint:
     view = Blueprint('col', __name__)
 
     @view.route('/add_star/<filesystem_id>', methods=('POST',))
-    def add_star(filesystem_id):
+    def add_star(filesystem_id: str) -> werkzeug.Response:
         make_star_true(filesystem_id)
         db.session.commit()
         return redirect(url_for('main.index'))
 
     @view.route("/remove_star/<filesystem_id>", methods=('POST',))
-    def remove_star(filesystem_id):
+    def remove_star(filesystem_id: str) -> werkzeug.Response:
         make_star_false(filesystem_id)
         db.session.commit()
         return redirect(url_for('main.index'))
 
     @view.route('/<filesystem_id>')
-    def col(filesystem_id):
+    def col(filesystem_id: str) -> str:
         form = ReplyForm()
         source = get_source(filesystem_id)
         source.has_key = current_app.crypto_util.get_fingerprint(filesystem_id)
@@ -48,7 +52,7 @@ def make_blueprint(config):
                                source=source, form=form)
 
     @view.route('/delete/<filesystem_id>', methods=('POST',))
-    def delete_single(filesystem_id):
+    def delete_single(filesystem_id: str) -> werkzeug.Response:
         """deleting a single collection from its /col page"""
         source = get_source(filesystem_id)
         try:
@@ -63,7 +67,7 @@ def make_blueprint(config):
         return redirect(url_for('main.index'))
 
     @view.route('/process', methods=('POST',))
-    def process():
+    def process() -> werkzeug.Response:
         actions = {'download-unread': col_download_unread,
                    'download-all': col_download_all, 'star': col_star,
                    'un-star': col_un_star, 'delete': col_delete}
@@ -82,7 +86,7 @@ def make_blueprint(config):
         return method(cols_selected)
 
     @view.route('/<filesystem_id>/<fn>')
-    def download_single_file(filesystem_id, fn):
+    def download_single_file(filesystem_id: str, fn: str) -> werkzeug.Response:
         """
         Marks the file being download (the file being downloaded is either a submission message,
         submission file attachement, or journalist reply) as seen by the current logged-in user and
@@ -90,6 +94,18 @@ def make_blueprint(config):
         """
         if '..' in fn or fn.startswith('/'):
             abort(404)
+
+        file = current_app.storage.path(filesystem_id, fn)
+        if not Path(file).is_file():
+            flash(
+                gettext(
+                    "Your download failed because a file could not be found. An admin can find "
+                    + "more information in the system and monitoring logs."
+                ),
+                "error"
+            )
+            current_app.logger.error("File {} not found".format(file))
+            return redirect(url_for("col.col", filesystem_id=filesystem_id))
 
         # mark as seen by the current user
         try:

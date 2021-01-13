@@ -1,41 +1,63 @@
 # -*- coding: utf-8 -*-
 
-from flask_babel import lazy_gettext as gettext
+from flask_babel import lazy_gettext as gettext, ngettext
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed, FileRequired
+from wtforms import Field
 from wtforms import (TextAreaField, StringField, BooleanField, HiddenField,
                      ValidationError)
 from wtforms.validators import InputRequired, Optional
 
-from models import Journalist
+from models import Journalist, InstanceConfig
 
 
-def otp_secret_validation(form, field):
+def otp_secret_validation(form: FlaskForm, field: Field) -> None:
     strip_whitespace = field.data.replace(' ', '')
-    if len(strip_whitespace) != 40:
-        raise ValidationError(gettext(
-            'HOTP secrets are 40 characters long - '
-            'you have entered {num_chars}.'.format(
-                num_chars=len(strip_whitespace)
-            )))
+    input_length = len(strip_whitespace)
+    if input_length != 40:
+        raise ValidationError(
+            ngettext(
+                'HOTP secrets are 40 characters long - you have entered {num}.',
+                'HOTP secrets are 40 characters long - you have entered {num}.',
+                input_length
+            ).format(num=input_length)
+        )
 
 
-def minimum_length_validation(form, field):
+def minimum_length_validation(form: FlaskForm, field: Field) -> None:
     if len(field.data) < Journalist.MIN_USERNAME_LEN:
         raise ValidationError(
-            gettext('Must be at least {min_chars} '
-                    'characters long.'
-                    .format(min_chars=Journalist.MIN_USERNAME_LEN)))
+            ngettext(
+                'Must be at least {num} characters long.',
+                'Must be at least {num} characters long.',
+                Journalist.MIN_USERNAME_LEN
+            ).format(num=Journalist.MIN_USERNAME_LEN)
+        )
 
 
-def name_length_validation(form, field):
+def name_length_validation(form: FlaskForm, field: Field) -> None:
     if len(field.data) > Journalist.MAX_NAME_LEN:
-        raise ValidationError(gettext(
-            'Cannot be longer than {max_chars} characters.'
-            .format(max_chars=Journalist.MAX_NAME_LEN)))
+        raise ValidationError(
+            ngettext(
+                'Cannot be longer than {num} characters.',
+                'Cannot be longer than {num} characters.',
+                Journalist.MAX_NAME_LEN
+            ).format(num=Journalist.MAX_NAME_LEN)
+        )
 
 
-def check_invalid_usernames(form, field):
+def check_orgname(form: FlaskForm, field: Field) -> None:
+    if len(field.data) > InstanceConfig.MAX_ORG_NAME_LEN:
+        raise ValidationError(
+            ngettext(
+                'Cannot be longer than {num} characters.',
+                'Cannot be longer than {num} characters.',
+                InstanceConfig.MAX_ORG_NAME_LEN
+            ).format(num=InstanceConfig.MAX_ORG_NAME_LEN)
+        )
+
+
+def check_invalid_usernames(form: FlaskForm, field: Field) -> None:
     if field.data in Journalist.INVALID_USERNAMES:
         raise ValidationError(gettext(
             "This username is invalid because it is reserved for internal use by the software."))
@@ -70,6 +92,13 @@ class ReplyForm(FlaskForm):
 
 class SubmissionPreferencesForm(FlaskForm):
     prevent_document_uploads = BooleanField('prevent_document_uploads')
+
+
+class OrgNameForm(FlaskForm):
+    organization_name = StringField('organization_name', validators=[
+        InputRequired(message=gettext('This field is required.')),
+        check_orgname
+    ])
 
 
 class LogoForm(FlaskForm):

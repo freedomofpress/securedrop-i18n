@@ -3,6 +3,7 @@ import binascii
 import datetime
 import os
 from typing import Optional, List, Union, Any
+from urllib.parse import urlparse
 
 import flask
 import werkzeug
@@ -10,8 +11,6 @@ from flask import (g, flash, current_app, abort, send_file, redirect, url_for,
                    render_template, Markup, sessions, request)
 from flask_babel import gettext, ngettext
 from sqlalchemy.exc import IntegrityError
-
-import i18n
 
 from db import db
 from models import (
@@ -34,8 +33,6 @@ from models import (
     get_one_or_else,
 )
 from store import add_checksum_for_file
-
-from sdconfig import SDConfig
 
 
 def logged_in() -> bool:
@@ -111,10 +108,10 @@ def validate_user(
             # ngettext is needed although we always have period > 1
             # see https://github.com/freedomofpress/securedrop/issues/2422
             login_flashed_msg += ngettext(
-                "Please wait at least {seconds} second "
-                "before logging in again.",
-                "Please wait at least {seconds} seconds "
-                "before logging in again.", period).format(seconds=period)
+                "Please wait at least {num} second before logging in again.",
+                "Please wait at least {num} seconds before logging in again.",
+                period
+            ).format(num=period)
         else:
             try:
                 user = Journalist.query.filter_by(
@@ -201,7 +198,19 @@ def download(zip_basename: str, submissions: List[Union[Submission, Reply]]) -> 
     :param list submissions: A list of :class:`models.Submission`s to
                              include in the ZIP-file.
     """
-    zf = current_app.storage.get_bulk_archive(submissions, zip_directory=zip_basename)
+    try:
+        zf = current_app.storage.get_bulk_archive(submissions, zip_directory=zip_basename)
+    except FileNotFoundError:
+        flash(
+            gettext(
+                "Your download failed because a file could not be found. An admin can find "
+                + "more information in the system and monitoring logs."
+            ),
+            "error"
+        )
+        referrer = urlparse(str(request.referrer)).path
+        return redirect(referrer)
+
     attachment_filename = "{}--{}.zip".format(
         zip_basename, datetime.datetime.utcnow().strftime("%Y-%m-%d--%H-%M-%S")
     )
@@ -218,22 +227,39 @@ def download(zip_basename: str, submissions: List[Union[Submission, Reply]]) -> 
 
 def delete_file_object(file_object: Union[Submission, Reply]) -> None:
     path = current_app.storage.path(file_object.source.filesystem_id, file_object.filename)
-    current_app.storage.move_to_shredder(path)
-    db.session.delete(file_object)
-    db.session.commit()
+    try:
+        current_app.storage.move_to_shredder(path)
+    except ValueError as e:
+        current_app.logger.error("could not queue file for deletion: %s", e)
+        raise
+    finally:
+        db.session.delete(file_object)
+        db.session.commit()
 
 
 def bulk_delete(
     filesystem_id: str,
     items_selected: List[Union[Submission, Reply]]
 ) -> werkzeug.Response:
+    deletion_errors = 0
     for item in items_selected:
-        delete_file_object(item)
+        try:
+            delete_file_object(item)
+        except ValueError:
+            deletion_errors += 1
 
-    flash(ngettext("Submission deleted.",
-                   "{num} submissions deleted.".format(
-                       num=len(items_selected)),
-                   len(items_selected)), "notification")
+    num_selected = len(items_selected)
+    flash(
+        ngettext(
+            "Submission deleted.",
+            "{num} submissions deleted.",
+            num_selected
+        ).format(num=num_selected),
+        "notification"
+    )
+    if deletion_errors > 0:
+        current_app.logger.error("Disconnected submission entries (%d) were detected",
+                                 deletion_errors)
     return redirect(url_for('col.col', filesystem_id=filesystem_id))
 
 
@@ -294,18 +320,6 @@ def col_delete(cols_selected: List[str]) -> werkzeug.Response:
               "notification")
 
     return redirect(url_for('main.index'))
-
-
-def make_password(config: SDConfig) -> str:
-    while True:
-        password = current_app.crypto_util.genrandomid(
-            7,
-            i18n.get_language(config))
-        try:
-            Journalist.check_password_acceptable(password)
-            return password
-        except PasswordError:
-            continue
 
 
 def delete_collection(filesystem_id: str) -> None:
@@ -455,6 +469,11 @@ def cleanup_expired_revoked_tokens() -> None:
 
 
 def revoke_token(user: Journalist, auth_token: str) -> None:
-    revoked_token = RevokedToken(token=auth_token, journalist_id=user.id)
-    db.session.add(revoked_token)
-    db.session.commit()
+    try:
+        revoked_token = RevokedToken(token=auth_token, journalist_id=user.id)
+        db.session.add(revoked_token)
+        db.session.commit()
+    except IntegrityError as e:
+        db.session.rollback()
+        if "UNIQUE constraint failed: revoked_tokens.token" not in str(e):
+            raise e

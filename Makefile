@@ -81,18 +81,6 @@ app-lint-full: ## Test pylint compliance, with no checks disabled.
 	@cd securedrop && find . -name '*.py' | xargs pylint
 	@echo
 
-.PHONY: docs-lint
-docs-lint:  ## Check documentation for common syntax errors.
-	@echo "███ Linting documentation..."
-# The `-W` option converts warnings to errors.
-# The `-n` option enables "nit-picky" mode.
-	@make -C docs/ clean && sphinx-build -Wn docs/ docs/_build/html
-	@echo
-
-.PHONY: docs-linkcheck
-docs-linkcheck:  ## Check documentation for broken links.
-	@make -C docs/ clean && sphinx-build -b linkcheck -Wn docs/ docs/_build/html
-
 .PHONY: flake8
 flake8:  ## Validate PEP8 compliance for Python source files.
 	@echo "███ Running flake8..."
@@ -132,7 +120,7 @@ yamllint:  ## Lint YAML files (does not validate syntax!).
 	@echo
 
 .PHONY: lint
-lint: ansible-config-lint app-lint docs-lint flake8 html-lint shellcheck typelint yamllint ## Runs all lint checks
+lint: ansible-config-lint app-lint flake8 html-lint shellcheck typelint yamllint ## Runs all lint checks
 
 .PHONY: safety
 safety:  ## Run `safety check` to check python dependencies for vulnerabilities.
@@ -140,7 +128,7 @@ safety:  ## Run `safety check` to check python dependencies for vulnerabilities.
 	@echo "███ Running safety..."
 	@for req_file in `find . -type f -name '*requirements.txt'`; do \
 		echo "Checking file $$req_file" \
-		&& safety check --full-report -r $$req_file \
+		&& safety check --ignore 39252 --full-report -r $$req_file \
 		&& echo -e '\n' \
 		|| exit 1; \
 	done
@@ -153,9 +141,9 @@ safety:  ## Run `safety check` to check python dependencies for vulnerabilities.
 bandit: test-config ## Run bandit with medium level excluding test-related folders.
 	@command -v bandit || (echo "Please run 'pip install -U bandit'."; exit 1)
 	@echo "███ Running bandit..."
-	@bandit -ll --skip B322 --exclude ./admin/.tox,./admin/.venv,./admin/.eggs,./molecule,./testinfra,./securedrop/tests,./.tox,./.venv*,securedrop/config.py --recursive .
+	@bandit -ll --exclude ./admin/.tox,./admin/.venv,./admin/.eggs,./molecule,./testinfra,./securedrop/tests,./.tox,./.venv*,securedrop/config.py --recursive .
 	@echo "███ Running bandit on securedrop/config.py..."
-	@bandit -ll --skip B108,B322 securedrop/config.py
+	@bandit -ll --skip B108 securedrop/config.py
 	@echo
 
 #############
@@ -188,16 +176,17 @@ dev:  ## Run the development server in a Docker container.
 	@OFFSET_PORTS='false' DOCKER_BUILD_VERBOSE='true' $(DEVSHELL) $(SDBIN)/run
 	@echo
 
-.PHONY: docs
-docs:  ## Build project documentation with live reload for editing.
-	@echo "███ Building docs and watching for changes..."
-	make -C docs/ clean && sphinx-autobuild docs/ docs/_build/html
+.PHONY: dev-focal
+dev-focal:  ## Run the development server in a Docker container.
+	@echo "███ Starting development server..."
+	@OFFSET_PORTS='false' DOCKER_BUILD_VERBOSE='true' BASE_OS='focal' $(DEVSHELL) $(SDBIN)/run
 	@echo
+
 
 .PHONY: staging
 staging:  ## Create a local staging environment in virtual machines (Xenial)
 	@echo "███ Creating staging environment on Ubuntu Xenial..."
-	@$(SDROOT)/devops/scripts/create-staging-env
+	@$(SDROOT)/devops/scripts/create-staging-env xenial
 	@echo
 
 .PHONY: staging-focal
@@ -210,13 +199,6 @@ staging-focal:  ## Create a local staging environment in virtual machines (Focal
 testinfra:  ## Run infra tests against a local staging environment.
 	@echo "███ Creating staging environment..."
 	@MOLECULE_ACTION=verify $(SDROOT)/devops/scripts/create-staging-env
-	@echo
-
-.PHONY: libvirt-share
-libvirt-share:  ## Configure ACLs to allow RWX for libvirt VM (e.g. Admin Workstation).
-	@echo "███ Configuring ACLs for admin workstation..."
-	@find "$(SDROOT)" -type d -and -user $$USER -exec setfacl -m u:libvirt-qemu:rwx {} +
-	@find "$(SDROOT)" -type f -and -user $$USER -exec setfacl -m u:libvirt-qemu:rw {} +
 	@echo
 
 .PHONY: self-signed-https-certs
@@ -241,6 +223,12 @@ clean:  ## DANGER! Delete all uncommitted files, virtual machines, Onion address
 test:  ## Run the test suite in a Docker container.
 	@echo "███ Running SecureDrop application tests..."
 	@$(DEVSHELL) $(SDBIN)/run-test -v $${TESTFILES:-tests}
+	@echo
+
+.PHONY: test-focal
+test-focal:  ## Run the test suite in a Docker container.
+	@echo "███ Running SecureDrop application tests..."
+	@BASE_OS='focal' $(DEVSHELL) $(SDBIN)/run-test -v $${TESTFILES:-tests}
 	@echo
 
 .PHONY: docker-vnc
@@ -308,11 +296,15 @@ list-translators:  ## Collect the names of translators since the last merge from
 list-all-translators:  ## Collect the names of all translators in the project's history.
 	@$(DEVSHELL) $(SDROOT)/securedrop/i18n_tool.py list-translators --all
 
-# TODO: test this to make sure the paths in update-user-guides work
 .PHONY: update-user-guides
-update-user-guides:  ## Run the page layout tests to regenerate screenshots.
-	@echo "Running page layout tests to update guide screenshots..."
-	@$(DEVSHELL) $(SDBIN)/update-user-guides
+update-user-guides:  ## Regenerate docs screenshots. Set DOCS_REPO_DIR to repo checkout root.
+ifndef DOCS_REPO_DIR
+	$(error DOCS_REPO_DIR must be set to the documentation repo checkout root.)
+endif
+	@echo "Running page layout tests to update screenshots used in user guide..."
+	@$(DEVSHELL) $(SDBIN)/generate-docs-screenshots
+	@echo "Copying screenshots..."
+	cp securedrop/tests/pageslayout/screenshots/en_US/*.png $${DOCS_REPO_DIR}/docs/images/manual/screenshots
 	@echo
 
 

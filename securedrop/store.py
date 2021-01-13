@@ -68,7 +68,7 @@ class NotEncrypted(Exception):
     pass
 
 
-def safe_renames(old, new):
+def safe_renames(old: str, new: str) -> None:
     """safe_renames(old, new)
 
     This is a modified version of Python's os.renames that does not
@@ -108,11 +108,11 @@ class Storage:
             os.makedirs(self.__shredder_path, mode=0o700)
 
     @property
-    def storage_path(self):
+    def storage_path(self) -> str:
         return self.__storage_path
 
     @property
-    def shredder_path(self):
+    def shredder_path(self) -> str:
         return self.__shredder_path
 
     def shredder_contains(self, path: str) -> bool:
@@ -201,6 +201,8 @@ class Storage:
                        for i in selected_submissions])
         # The below nested for-loops are there to create a more usable
         # folder structure per #383
+        missing_files = False
+
         with zipfile.ZipFile(zip_file, 'w') as zip:
             for source in sources:
                 fname = ""
@@ -208,20 +210,29 @@ class Storage:
                                if s.source.journalist_designation == source]
                 for submission in submissions:
                     filename = self.path(submission.source.filesystem_id, submission.filename)
-                    document_number = submission.filename.split('-')[0]
-                    if zip_directory == submission.source.journalist_filename:
-                        fname = zip_directory
-                    else:
-                        fname = os.path.join(zip_directory, source)
-                    zip.write(filename, arcname=os.path.join(
-                        fname,
-                        "%s_%s" % (document_number,
-                                   submission.source.last_updated.date()),
-                        os.path.basename(filename)
-                    ))
-        return zip_file
 
-    def move_to_shredder(self, path: str):
+                    if os.path.exists(filename):
+                        document_number = submission.filename.split('-')[0]
+                        if zip_directory == submission.source.journalist_filename:
+                            fname = zip_directory
+                        else:
+                            fname = os.path.join(zip_directory, source)
+                        zip.write(filename, arcname=os.path.join(
+                            fname,
+                            "%s_%s" % (document_number,
+                                       submission.source.last_updated.date()),
+                            os.path.basename(filename)
+                        ))
+                    else:
+                        missing_files = True
+                        current_app.logger.error("File {} not found".format(filename))
+
+        if missing_files:
+            raise FileNotFoundError
+        else:
+            return zip_file
+
+    def move_to_shredder(self, path: str) -> None:
         """
         Moves content from the store to the shredder for secure deletion.
 
@@ -250,7 +261,7 @@ class Storage:
         current_app.logger.info("Moving {} to shredder: {}".format(path, dest))
         safe_renames(path, dest)
 
-    def clear_shredder(self):
+    def clear_shredder(self) -> None:
         current_app.logger.info("Clearing shredder")
         directories = []
         targets = []
@@ -331,7 +342,7 @@ class Storage:
                     gzf.write(buf)
 
             current_app.crypto_util.encrypt(
-                stf, self.__gpg_key, encrypted_file_path)
+                stf, [self.__gpg_key], encrypted_file_path)
 
         return encrypted_file_name
 
@@ -359,7 +370,7 @@ class Storage:
                                 message: str) -> str:
         filename = "{0}-{1}-msg.gpg".format(count, journalist_filename)
         msg_loc = self.path(filesystem_id, filename)
-        current_app.crypto_util.encrypt(message, self.__gpg_key, msg_loc)
+        current_app.crypto_util.encrypt(message, [self.__gpg_key], msg_loc)
         return filename
 
 

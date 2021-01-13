@@ -2,6 +2,7 @@
 import os
 from datetime import datetime
 from datetime import timedelta
+from pathlib import Path
 
 from db import db
 import i18n
@@ -19,7 +20,7 @@ os.environ['SECUREDROP_ENV'] = 'test'  # noqa
 def verify_rel_datetime_format(app):
     with app.test_client() as c:
         c.get('/')
-        assert session.get('locale') is None
+        assert session.get('locale') == "en_US"
         result = template_filters.rel_datetime_format(
             datetime(2016, 1, 1, 1, 1, 1))
         assert "Jan 01, 2016 01:01 AM" == result
@@ -52,7 +53,7 @@ def verify_rel_datetime_format(app):
 def verify_filesizeformat(app):
     with app.test_client() as c:
         c.get('/')
-        assert session.get('locale') is None
+        assert session.get('locale') == "en_US"
         assert "1 byte" == template_filters.filesizeformat(1)
         assert "2 bytes" == template_filters.filesizeformat(2)
         value = 1024 * 3
@@ -96,7 +97,7 @@ def test_journalist_filters(config):
 
 def do_test(config, create_app):
     config.SUPPORTED_LOCALES = ['en_US', 'fr_FR']
-    config.TRANSLATION_DIRS = config.TEMP_DIR
+    config.TRANSLATION_DIRS = Path(config.TEMP_DIR)
     i18n_tool.I18NTool().main([
         '--verbose',
         'translate-messages',
@@ -115,6 +116,6 @@ def do_test(config, create_app):
     with app.app_context():
         db.create_all()
 
-    assert i18n.LOCALES == config.SUPPORTED_LOCALES
+    assert list(i18n.LOCALES.keys()) == config.SUPPORTED_LOCALES
     verify_filesizeformat(app)
     verify_rel_datetime_format(app)

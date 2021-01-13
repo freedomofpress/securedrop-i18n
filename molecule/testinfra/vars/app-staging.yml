@@ -13,7 +13,7 @@ wanted_apache_headers:
 
 securedrop_venv: /opt/venvs/securedrop-app-code
 securedrop_venv_bin: /opt/venvs/securedrop-app-code/bin
-securedrop_venv_site_packages: /opt/venvs/securedrop-app-code/lib/python3.5/site-packages
+securedrop_venv_site_packages: /opt/venvs/securedrop-app-code/lib/python{}/site-packages
 securedrop_code: /var/www/securedrop
 securedrop_data: /var/lib/securedrop
 securedrop_user: www-data
@@ -38,7 +38,7 @@ pip_deps:
 apparmor_complain: []
 
 apparmor_enforce:
-  - "/sbin/dhclient"
+  - "sbin/dhclient"
   - "/usr/lib/NetworkManager/nm-dhcp-client.action"
   - "/usr/lib/connman/scripts/dhclient-script"
   - "/usr/sbin/ntpd"

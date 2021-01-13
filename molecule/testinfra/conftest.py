@@ -9,7 +9,7 @@ Vars should be placed in `testinfra/vars/<hostname>.yml`.
 import io
 import os
 import yaml
-
+import testutils
 
 # The config tests target staging by default. It's possible to override
 # for e.g. prod, but the associated vars files are not yet ported.
@@ -27,6 +27,22 @@ def securedrop_import_testinfra_vars(hostname, with_header=False):
     filepath = os.path.join(os.path.dirname(__file__), "vars", hostname+".yml")
     with io.open(filepath, 'r') as f:
         hostvars = yaml.safe_load(f)
+
+    # Testing against both Focal and Xenial must be supported for now in both
+    # staging scenarios, and in prod via `USE_FOCAL=1 ./securedrop-admin verify`
+    testing_focal = False
+    scenario_env = "MOLECULE_SCENARIO_NAME"
+    if scenario_env in os.environ and os.environ.get(scenario_env).endswith("focal"):
+        testing_focal = True
+    if "USE_FOCAL" in os.environ:
+        testing_focal = True
+
+    if testing_focal:
+        hostvars['securedrop_venv_site_packages'] = hostvars["securedrop_venv_site_packages"].format("3.8")  # noqa: E501
+        hostvars['python_version'] = "3.8"
+    else:
+        hostvars['securedrop_venv_site_packages'] = hostvars["securedrop_venv_site_packages"].format("3.5")  # noqa: E501
+        hostvars['python_version'] = "3.5"
 
     if with_header:
         hostvars = dict(securedrop_test_vars=hostvars)
@@ -46,5 +62,13 @@ def lookup_molecule_info():
     return molecule_instance_config
 
 
-def pytest_namespace():
-    return securedrop_import_testinfra_vars(target_host, with_header=True)
+class Myvalues:
+    def __init__(self):
+        pass
+
+
+value = securedrop_import_testinfra_vars(target_host)
+res = Myvalues()
+for key, value in value.items():
+    setattr(res, key, value)
+testutils.securedrop_test_vars = res

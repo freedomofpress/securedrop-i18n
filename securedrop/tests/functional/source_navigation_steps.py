@@ -22,6 +22,9 @@ class SourceNavigationStepsMixin:
     def _is_on_logout_page(self):
         return self.wait_for(lambda: self.driver.find_element_by_id("click-new-identity-tor"))
 
+    def _source_sees_orgname(self, name="SecureDrop"):
+        assert name in self.driver.title
+
     def _source_visits_source_homepage(self):
         self.driver.get(self.source_location)
         assert self._is_on_source_homepage()
@@ -29,7 +32,7 @@ class SourceNavigationStepsMixin:
     def _source_checks_instance_metadata(self):
         self.driver.get(self.source_location + "/metadata")
         j = json.loads(self.driver.find_element_by_tag_name("body").text)
-        assert j["server_os"] == "16.04"
+        assert j["server_os"] in ["16.04", "20.04"]
         assert j["sd_version"] == self.source_app.jinja_env.globals["version"]
         assert j["gpg_fpr"] != ""
 
@@ -109,17 +112,20 @@ class SourceNavigationStepsMixin:
     def _source_hits_cancel_at_submit_page(self):
         self.driver.find_element_by_id("cancel").click()
 
-        if not hasattr(self, "accept_languages"):
+        if not self.accept_languages:
             headline = self.driver.find_element_by_class_name("headline")
             assert "Submit Files or Messages" == headline.text
 
-    def _source_continues_to_submit_page(self):
+    def _source_continues_to_submit_page(self, files_allowed=True):
         self.safe_click_by_id("continue-button")
 
         def submit_page_loaded():
-            if not hasattr(self, "accept_languages"):
+            if not self.accept_languages:
                 headline = self.driver.find_element_by_class_name("headline")
-                assert "Submit Files or Messages" == headline.text
+                if files_allowed:
+                    assert "Submit Files or Messages" == headline.text
+                else:
+                    assert "Submit Messages" == headline.text
 
         self.wait_for(submit_page_loaded)
 
@@ -144,7 +150,7 @@ class SourceNavigationStepsMixin:
             self.wait_for_source_key(self.source_name)
 
             def file_submitted():
-                if not hasattr(self, "accept_languages"):
+                if not self.accept_languages:
                     notification = self.driver.find_element_by_css_selector(".success")
                     expected_notification = "Thank you for sending this information to us"
                     assert expected_notification in notification.text
@@ -160,7 +166,7 @@ class SourceNavigationStepsMixin:
         self._source_clicks_submit_button_on_submission_page()
 
         def message_submitted():
-            if not hasattr(self, "accept_languages"):
+            if not self.accept_languages:
                 notification = self.driver.find_element_by_css_selector(".success")
                 assert "Thank" in notification.text
 
@@ -198,7 +204,7 @@ class SourceNavigationStepsMixin:
         confirm_button.click()
 
         def reply_deleted():
-            if not hasattr(self, "accept_languages"):
+            if not self.accept_languages:
                 notification = self.driver.find_element_by_class_name("notification")
                 assert "Reply deleted" in notification.text
 
@@ -220,7 +226,7 @@ class SourceNavigationStepsMixin:
         self.driver.get(self.source_location + "/tor2web-warning")
 
     def _source_why_journalist_key(self):
-        self.driver.get(self.source_location + "/why-journalist-key")
+        self.driver.get(self.source_location + "/why-public-key")
 
     def _source_waits_for_session_to_timeout(self):
         time.sleep(self.session_expiration + 2)
@@ -228,7 +234,7 @@ class SourceNavigationStepsMixin:
     def _source_sees_session_timeout_message(self):
         notification = self.driver.find_element_by_css_selector(".important")
 
-        if not hasattr(self, "accept_languages"):
+        if not self.accept_languages:
             expected_text = "You were logged out due to inactivity."
             assert expected_text in notification.text
 
@@ -242,13 +248,13 @@ class SourceNavigationStepsMixin:
     def _source_sees_already_logged_in_in_other_tab_message(self):
         notification = self.driver.find_element_by_css_selector(".notification")
 
-        if not hasattr(self, "accepted_languages"):
+        if not self.accept_languages:
             expected_text = "You are already logged in."
             assert expected_text in notification.text
 
     def _source_sees_redirect_already_logged_in_message(self):
         notification = self.driver.find_element_by_css_selector(".notification")
 
-        if not hasattr(self, "accepted_languages"):
+        if not self.accept_languages:
             expected_text = "You were redirected because you are already logged in."
             assert expected_text in notification.text

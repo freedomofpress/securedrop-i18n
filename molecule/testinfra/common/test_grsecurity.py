@@ -1,8 +1,9 @@
 import pytest
 import re
 
+import testutils
 
-sdvars = pytest.securedrop_test_vars
+sdvars = testutils.securedrop_test_vars
 KERNEL_VERSION = sdvars.grsec_version
 testinfra_hosts = [sdvars.app_hostname, sdvars.monitor_hostname]
 
@@ -172,6 +173,21 @@ def test_pax_flags(host, binary):
     # the "p" and "m" flags.
     assert "PAGEEXEC is disabled" not in c.stdout
     assert "MPROTECT is disabled" not in c.stdout
+
+
+def test_paxctld(host):
+    """
+    Ensures that paxctld is configured and running. Only relevant
+    for Focal hosts.
+    """
+    if host.system_info.codename == "xenial":
+        return True
+    assert host.package("paxctld").is_installed
+    assert host.file("/etc/paxctld.conf").is_file
+    assert host.file("/opt/securedrop/paxctld.conf").is_file
+    s = host.service("paxctld")
+    assert s.is_enabled
+    assert s.is_running
 
 
 @pytest.mark.parametrize('kernel_opts', [

@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% block body %}
 <p>
-  <a href="/admin">« {{ gettext('Back to admin interface') }}</a>
+  <img src="{{ url_for('static', filename='icons/chevron-left.png') }}" class="icon" width="9" height="14" alt="">
+  <a href="/admin">{{ gettext('Back to admin interface') }}</a>
 </p>
 <form method="post">
   <input name="csrf_token" type="hidden" value="{{ csrf_token() }}">
@@ -71,6 +72,9 @@
       <span class="form-validation-error">{{ error }}</span><br>
     {% endfor %}
   </p>
-  <button type="submit"><i class="fa fa-plus"></i>{{ gettext('ADD USER') }}</button>
+  <button type="submit">
+    <img src="{{ url_for('static', filename='icons/plus.png') }}" class="icon" width="13" height="15" alt="">
+    {{ gettext('ADD USER') }}
+  </button>
 </form>
 {% endblock %}

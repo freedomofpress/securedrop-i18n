@@ -9,6 +9,7 @@ import werkzeug
 from flask import abort, Blueprint, current_app, jsonify, request
 from functools import wraps
 
+from sqlalchemy import Column
 from sqlalchemy.exc import IntegrityError
 from os import path
 from uuid import UUID
@@ -53,7 +54,7 @@ def token_required(f: Callable) -> Callable:
     return decorated_function
 
 
-def get_or_404(model: db.Model, object_id: str, column: str) -> db.Model:
+def get_or_404(model: db.Model, object_id: str, column: Column) -> db.Model:
     result = model.query.filter(column == object_id).one_or_none()
     if result is None:
         abort(404)
@@ -153,7 +154,7 @@ def make_blueprint(config: SDConfig) -> Blueprint:
             utils.delete_collection(source.filesystem_id)
             return jsonify({'message': 'Source and submissions deleted'}), 200
         else:
-            abort(404)
+            abort(405)
 
     @api.route('/sources/<source_uuid>/add_star', methods=['POST'])
     @token_required
@@ -218,7 +219,7 @@ def make_blueprint(config: SDConfig) -> Blueprint:
             utils.delete_file_object(submission)
             return jsonify({'message': 'Submission deleted'}), 200
         else:
-            abort(404)
+            abort(405)
 
     @api.route('/sources/<source_uuid>/replies', methods=['GET', 'POST'])
     @token_required
@@ -286,7 +287,7 @@ def make_blueprint(config: SDConfig) -> Blueprint:
                             'uuid': reply.uuid,
                             'filename': reply.filename}), 201
         else:
-            abort(404)
+            abort(405)
 
     @api.route('/sources/<source_uuid>/replies/<reply_uuid>',
                methods=['GET', 'DELETE'])
@@ -300,7 +301,7 @@ def make_blueprint(config: SDConfig) -> Blueprint:
             utils.delete_file_object(reply)
             return jsonify({'message': 'Reply deleted'}), 200
         else:
-            abort(404)
+            abort(405)
 
     @api.route('/submissions', methods=['GET'])
     @token_required

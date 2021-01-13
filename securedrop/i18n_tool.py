@@ -1,7 +1,6 @@
 #!/opt/venvs/securedrop-app-code/bin/python
 # -*- coding: utf-8 -*-
 
-from __future__ import print_function
 import argparse
 import io
 import logging
@@ -12,9 +11,14 @@ import signal
 import subprocess
 import sys
 import textwrap
+from argparse import _SubParsersAction
+from typing import Optional
+from typing import Set
+from typing import List
+
 import version
 
-from os.path import dirname, join, realpath
+from os.path import abspath, dirname, join, realpath
 
 from sh import git, pybabel, sed, msgmerge, xgettext, msgfmt
 
@@ -22,8 +26,7 @@ logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s')
 log = logging.getLogger(__name__)
 
 
-class I18NTool(object):
-
+class I18NTool:
     #
     # The database of support language, indexed by the language code
     # used by weblate (i.e. whatever shows as CODE in
@@ -34,7 +37,7 @@ class I18NTool(object):
     #       display in the interface.
     # desktop: The language code used for dekstop icons.
     #
-    SUPPORTED_LANGUAGES = {
+    supported_languages = {
         'ar': {'name': 'Arabic', 'desktop': 'ar', },
         'ca': {'name': 'Catalan', 'desktop': 'ca', },
         'cs': {'name': 'Czech', 'desktop': 'cs', },
@@ -53,20 +56,27 @@ class I18NTool(object):
         'sk': {'name': 'Slovak', 'desktop': 'sk', },
         'sv': {'name': 'Swedish', 'desktop': 'sv', },
         'tr': {'name': 'Turkish', 'desktop': 'tr', },
+        'zh_Hans': {'name': 'Chinese, Simplified', 'desktop': 'zh_Hans', },
         'zh_Hant': {'name': 'Chinese, Traditional', 'desktop': 'zh_Hant', },
     }
+    release_tag_re = re.compile(r"^\d+\.\d+\.\d+$")
+    translated_commit_re = re.compile('Translated using Weblate')
+    updated_commit_re = re.compile(r'(?:updated from|  (?:revision|commit):) (\w+)')
 
-    def file_is_modified(self, path):
-        dir = dirname(path)
-        return subprocess.call(['git', '-C', dir, 'diff', '--quiet', path])
+    def file_is_modified(self, path: str) -> bool:
+        return bool(subprocess.call(['git', '-C', dirname(path), 'diff', '--quiet', path]))
 
-    def ensure_i18n_remote(self, args):
+    def ensure_i18n_remote(self, args: argparse.Namespace) -> None:
+        """
+        Make sure we have a git remote for the i18n repo.
+        """
+
         k = {'_cwd': args.root}
         if b'i18n' not in git.remote(**k).stdout:
             git.remote.add('i18n', args.url, **k)
         git.fetch('i18n', **k)
 
-    def translate_messages(self, args):
+    def translate_messages(self, args: argparse.Namespace) -> None:
         messages_file = os.path.join(args.translations_dir, 'messages.pot')
 
         if args.extract_update:
@@ -98,7 +108,7 @@ class I18NTool(object):
         if args.compile and len(os.listdir(args.translations_dir)) > 1:
             pybabel.compile('--directory', args.translations_dir)
 
-    def translate_desktop(self, args):
+    def translate_desktop(self, args: argparse.Namespace) -> None:
         messages_file = os.path.join(args.translations_dir, 'desktop.pot')
 
         if args.extract_update:
@@ -142,10 +152,9 @@ class I18NTool(object):
                        _cwd=args.translations_dir)
 
     def set_translate_parser(self,
-                             subps,
-                             parser,
-                             translations_dir,
-                             sources):
+                             parser: argparse.ArgumentParser,
+                             translations_dir: str,
+                             sources: str) -> None:
         parser.add_argument(
             '--extract-update',
             action='store_true',
@@ -172,13 +181,13 @@ class I18NTool(object):
             help='Source files and directories to extract (default {})'.format(
                 sources))
 
-    def set_translate_messages_parser(self, subps):
+    def set_translate_messages_parser(self, subps: _SubParsersAction) -> None:
         parser = subps.add_parser('translate-messages',
                                   help=('Update and compile '
                                         'source and template translations'))
         translations_dir = join(dirname(realpath(__file__)), 'translations')
         sources = '.,source_templates,journalist_templates'
-        self.set_translate_parser(subps, parser, translations_dir, sources)
+        self.set_translate_parser(parser, translations_dir, sources)
         mapping = 'babel.cfg'
         parser.add_argument(
             '--mapping',
@@ -187,7 +196,7 @@ class I18NTool(object):
                 mapping))
         parser.set_defaults(func=self.translate_messages)
 
-    def set_translate_desktop_parser(self, subps):
+    def set_translate_desktop_parser(self, subps: _SubParsersAction) -> None:
         parser = subps.add_parser('translate-desktop',
                                   help=('Update and compile '
                                         'desktop icons translations'))
@@ -195,11 +204,11 @@ class I18NTool(object):
             dirname(realpath(__file__)),
             '../install_files/ansible-base/roles/tails-config/templates')
         sources = 'desktop-journalist-icon.j2.in,desktop-source-icon.j2.in'
-        self.set_translate_parser(subps, parser, translations_dir, sources)
+        self.set_translate_parser(parser, translations_dir, sources)
         parser.set_defaults(func=self.translate_desktop)
 
     @staticmethod
-    def require_git_email_name(git_dir):
+    def require_git_email_name(git_dir: str) -> bool:
         cmd = ('git -C {d} config --get user.name > /dev/null && '
                'git -C {d} config --get user.email > /dev/null'.format(
                    d=git_dir))
@@ -211,11 +220,11 @@ class I18NTool(object):
             raise Exception(cmd + ' returned false, please set name and email')
         return True
 
-    def update_docs(self, args):
+    def update_docs(self, args: argparse.Namespace) -> None:
         l10n_content = u'.. GENERATED BY i18n_tool.py DO NOT EDIT:\n\n'
-        for (code, info) in sorted(I18NTool.SUPPORTED_LANGUAGES.items()):
+        for (code, info) in sorted(self.supported_languages.items()):
             l10n_content += '* ' + info['name'] + ' (``' + code + '``)\n'
-        includes = join(args.documentation_dir, 'includes')
+        includes = abspath(join(args.docs_repo_dir, 'docs/includes'))
         l10n_txt = join(includes, 'l10n.txt')
         io.open(l10n_txt, mode='w').write(l10n_content)
         self.require_git_email_name(includes)
@@ -230,105 +239,119 @@ class I18NTool(object):
         else:
             log.warning(l10n_txt + " already up to date")
 
-    def set_update_docs_parser(self, subps):
+    def set_update_docs_parser(self, subps: _SubParsersAction) -> None:
         parser = subps.add_parser('update-docs',
                                   help=('Update the documentation'))
-        documentation_dir = join(dirname(realpath(__file__)), '..', 'docs')
         parser.add_argument(
-            '--documentation-dir',
-            default=documentation_dir,
-            help=('root directory of the SecureDrop documentation'
-                  ' (default {})'.format(documentation_dir)))
+            '--docs-repo-dir',
+            required=True,
+            help=('root directory of the SecureDrop documentation repository'))
         parser.set_defaults(func=self.update_docs)
 
-    def update_from_weblate(self, args):
+    def update_from_weblate(self, args: argparse.Namespace) -> None:
+        """
+        Pull in updated translations from the i18n repo.
+        """
         self.ensure_i18n_remote(args)
-        codes = list(I18NTool.SUPPORTED_LANGUAGES.keys())
+        codes = list(self.supported_languages.keys())
         if args.supported_languages:
             codes = args.supported_languages.split(',')
         for code in sorted(codes):
-            info = I18NTool.SUPPORTED_LANGUAGES[code]
+            info = self.supported_languages[code]
 
-            def need_update(p):
-                exists = os.path.exists(join(args.root, p))
+            def need_update(path: str) -> bool:
+                """
+                Check if the file is different in the i18n repo.
+                """
+
+                exists = os.path.exists(join(args.root, path))
                 k = {'_cwd': args.root}
-                git.checkout('i18n/i18n', '--', p, **k)
-                git.reset('HEAD', '--', p, **k)
+                git.checkout(args.target, '--', path, **k)
+                git.reset('HEAD', '--', path, **k)
                 if not exists:
                     return True
-                else:
-                    return self.file_is_modified(join(args.root, p))
 
-            def add(p):
-                git('-C', args.root, 'add', p)
+                return self.file_is_modified(join(args.root, path))
+
+            def add(path: str) -> None:
+                """
+                Add the file to the git index.
+                """
+                git('-C', args.root, 'add', path)
 
             updated = False
             #
-            # Update messages
+            # Add changes to web .po files
             #
-            p = "securedrop/translations/{l}/LC_MESSAGES/messages.po".format(
+            path = "securedrop/translations/{l}/LC_MESSAGES/messages.po".format(
                 l=code)  # noqa: E741
-            if need_update(p):
-                add(p)
+            if need_update(path):
+                add(path)
                 updated = True
             #
-            # Update desktop
+            # Add changes to desktop .po files
             #
             desktop_code = info['desktop']
-            p = join("install_files/ansible-base/roles",
+            path = join("install_files/ansible-base/roles",
                      "tails-config/templates/{l}.po".format(
                          l=desktop_code))  # noqa: E741
-            if need_update(p):
-                add(p)
+            if need_update(path):
+                add(path)
                 updated = True
 
             if updated:
-                self.upstream_commit(args, code)
+                self.commit_changes(args, code)
 
-    def translators(self, args, path, commit_range):
+    def translators(self, args: argparse.Namespace, path: str, since: Optional[str]) -> Set[str]:
         """
         Return the set of people who've modified a file in Weblate.
 
         Extracts all the authors of translation changes to the given
-        path in the given commit range. Translation changes are
+        path since the given timestamp. Translation changes are
         identified by the presence of "Translated using Weblate" in
         the commit message.
         """
-        translation_re = re.compile('Translated using Weblate')
 
-        path_changes = git(
-            '--no-pager', '-C', args.root,
-            'log', '--format=%aN\x1e%s', commit_range, '--', path,
-            _encoding='utf-8'
-        )
+        if since:
+            path_changes = git(
+                '--no-pager', '-C', args.root,
+                'log', '--format=%aN\x1e%s', '--since', since, args.target, '--', path,
+                _encoding='utf-8'
+            )
+        else:
+            path_changes = git(
+                '--no-pager', '-C', args.root,
+                'log', '--format=%aN\x1e%s', args.target, '--', path,
+                _encoding='utf-8'
+            )
         path_changes = u"{}".format(path_changes)
         path_changes = [c.split('\x1e') for c in path_changes.strip().split('\n')]
-        path_changes = [c for c in path_changes if len(c) > 1 and translation_re.match(c[1])]
-
+        path_changes = [
+            c for c in path_changes if len(c) > 1 and self.translated_commit_re.match(c[1])
+        ]
         path_authors = [c[0] for c in path_changes]
         return set(path_authors)
 
-    def upstream_commit(self, args, code):
+    def commit_changes(self, args: argparse.Namespace, code: str) -> None:
         self.require_git_email_name(args.root)
-        authors = set()
+        authors = set()  # type: Set[str]
         diffs = u"{}".format(git('--no-pager', '-C', args.root, 'diff', '--name-only', '--cached'))
 
         for path in sorted(diffs.strip().split('\n')):
             previous_message = u"{}".format(git(
                 '--no-pager', '-C', args.root, 'log', '-n', '1', path,
                 _encoding='utf-8'))
-            update_re = re.compile(r'(?:updated from|  revision:) (\w+)')
-            m = update_re.search(previous_message)
+            m = self.updated_commit_re.search(previous_message)
+            origin = None
             if m:
                 origin = m.group(1)
-            else:
-                origin = ''
-            authors |= self.translators(args, path, '{}..i18n/i18n'.format(origin))
+            since = self.get_commit_timestamp(args.root, origin)
+            authors |= self.translators(args, path, since)
 
-        authors = u"\n  ".join(sorted(authors))
+        authors_as_str = u"\n  ".join(sorted(authors))
 
-        current = git('-C', args.root, 'rev-parse', 'i18n/i18n')
-        info = I18NTool.SUPPORTED_LANGUAGES[code]
+        current = git('-C', args.root, 'rev-parse', args.target)
+        info = self.supported_languages[code]
         message = textwrap.dedent(u"""
         l10n: updated {name} ({code})
 
@@ -337,17 +360,17 @@ class I18NTool(object):
 
         updated from:
           repo: {remote}
-          revision: {current}
+          commit: {current}
         """).format(
             remote=args.url,
             name=info['name'],
-            authors=authors,
+            authors=authors_as_str,
             code=code,
             current=current
         )
         git('-C', args.root, 'commit', '-m', message)
 
-    def set_update_from_weblate_parser(self, subps):
+    def set_update_from_weblate_parser(self, subps: _SubParsersAction) -> None:
         parser = subps.add_parser('update-from-weblate',
                                   help=('Import translations from weblate'))
         root = join(dirname(realpath(__file__)), '..')
@@ -363,11 +386,19 @@ class I18NTool(object):
             help=('URL of the weblate repository'
                   ' (default {})'.format(url)))
         parser.add_argument(
+            '--target',
+            default="i18n/i18n",
+            help=(
+                'Commit on i18n branch at which to stop gathering translator contributions '
+                '(default: i18n/i18n)'
+            )
+        )
+        parser.add_argument(
             '--supported-languages',
             help='comma separated list of supported languages')
         parser.set_defaults(func=self.update_from_weblate)
 
-    def set_list_locales_parser(self, subps):
+    def set_list_locales_parser(self, subps: _SubParsersAction) -> None:
         parser = subps.add_parser('list-locales', help='List supported locales')
         parser.add_argument(
             '--python',
@@ -381,16 +412,16 @@ class I18NTool(object):
         )
         parser.set_defaults(func=self.list_locales)
 
-    def list_locales(self, args):
+    def list_locales(self, args: argparse.Namespace) -> None:
         if args.lines:
-            for l in sorted(list(self.SUPPORTED_LANGUAGES.keys()) + ['en_US']):
+            for l in sorted(list(self.supported_languages.keys()) + ['en_US']):
                 print(l)
         elif args.python:
-            print(sorted(list(self.SUPPORTED_LANGUAGES.keys()) + ['en_US']))
+            print(sorted(list(self.supported_languages.keys()) + ['en_US']))
         else:
-            print(" ".join(sorted(list(self.SUPPORTED_LANGUAGES.keys()) + ['en_US'])))
+            print(" ".join(sorted(list(self.supported_languages.keys()) + ['en_US'])))
 
-    def set_list_translators_parser(self, subps):
+    def set_list_translators_parser(self, subps: _SubParsersAction) -> None:
         parser = subps.add_parser('list-translators',
                                   help=('List contributing translators'))
         root = join(dirname(realpath(__file__)), '..')
@@ -406,29 +437,63 @@ class I18NTool(object):
             help=('URL of the weblate repository'
                   ' (default {})'.format(url)))
         parser.add_argument(
+            '--target',
+            default="i18n/i18n",
+            help=(
+                'Commit on i18n branch at which to stop gathering translator contributions '
+                '(default: i18n/i18n)'
+            )
+        )
+        parser.add_argument(
+            '--since',
+            help=(
+                'Gather translator contributions from the time of this commit '
+                '(default: last release tag)'
+            )
+        )
+        parser.add_argument(
             '--all',
             action="store_true",
             help=(
                 "List everyone who's ever contributed, instead of just since the last "
-                "sync from Weblate."
+                "release or specified commit."
             )
         )
         parser.set_defaults(func=self.list_translators)
 
-    def get_last_sync(self):
-        commits = git('--no-pager', 'log', '--format=%h:%s', 'i18n/i18n', _encoding='utf-8')
-        for commit in commits:
-            commit_hash, msg = commit.split(':', 1)
-            if msg.startswith("l10n: sync "):
-                return commit_hash
-        return ""
+    def get_last_release(self, root: str) -> str:
+        """
+        Returns the last release tag, e.g. 1.5.0.
+        """
+        tags = subprocess.check_output(
+            ["git", "-C", root, "tag", "--list"]
+        ).decode("utf-8").splitlines()
+        release_tags = sorted([t.strip() for t in tags if self.release_tag_re.match(t)])
+        if not release_tags:
+            raise ValueError("Could not find a release tag!")
+        return release_tags[-1]
 
-    def list_translators(self, args):
+    def get_commit_timestamp(self, root: str, commit: Optional[str]) -> str:
+        """
+        Returns the UNIX timestamp of the given commit.
+        """
+        cmd = ["git", "-C", root, "log", "-n", "1", '--pretty=format:%ct']
+        if commit:
+            cmd.append(commit)
+
+        timestamp = subprocess.check_output(cmd)
+        return timestamp.decode("utf-8").strip()
+
+    def list_translators(self, args: argparse.Namespace) -> None:
         self.ensure_i18n_remote(args)
         app_template = "securedrop/translations/{}/LC_MESSAGES/messages.po"
         desktop_template = "install_files/ansible-base/roles/tails-config/templates/{}.po"
-        last_sync = self.get_last_sync()
-        for code, info in sorted(I18NTool.SUPPORTED_LANGUAGES.items()):
+        since = self.get_commit_timestamp(args.root, args.since) if not args.all else None
+        if args.all:
+            print("Listing all translators who have ever helped")
+        else:
+            print("Listing translators who have helped since {}".format(args.since))
+        for code, info in sorted(self.supported_languages.items()):
             translators = set([])
             paths = [
                 app_template.format(code),
@@ -436,19 +501,24 @@ class I18NTool(object):
             ]
             for path in paths:
                 try:
-                    commit_range = "i18n/i18n"
-                    if last_sync and not args.all:
-                        commit_range = '{}..{}'.format(last_sync, commit_range)
-                    t = self.translators(args, path, commit_range)
+                    t = self.translators(args, path, since)
                     translators.update(t)
                 except Exception as e:
                     print("Could not check git history of {}: {}".format(path, e), file=sys.stderr)
-            print(u"{} ({}):\n  {}".format(code, info["name"], "\n  ".join(sorted(translators))))
+            print(
+                "{} ({}):{}".format(
+                    code, info["name"],
+                    "\n  {}\n".format(
+                        "\n  ".join(sorted(translators))) if translators else "\n"
+                )
+            )
 
-    def get_args(self):
+    def get_args(self) -> argparse.ArgumentParser:
         parser = argparse.ArgumentParser(
             prog=__file__,
             description='i18n tool for SecureDrop.')
+        parser.set_defaults(func=lambda args: parser.print_help())
+
         parser.add_argument('-v', '--verbose', action='store_true')
         subps = parser.add_subparsers()
 
@@ -461,14 +531,14 @@ class I18NTool(object):
 
         return parser
 
-    def setup_verbosity(self, args):
+    def setup_verbosity(self, args: argparse.Namespace) -> None:
         if args.verbose:
             logging.getLogger('sh.command').setLevel(logging.INFO)
             log.setLevel(logging.DEBUG)
         else:
             log.setLevel(logging.INFO)
 
-    def main(self, argv):
+    def main(self, argv: List[str]) -> int:
         try:
             args = self.get_args().parse_args(argv)
             self.setup_verbosity(args)

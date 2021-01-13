@@ -2,7 +2,9 @@ import os
 import re
 import pytest
 
-sdvars = pytest.securedrop_test_vars
+import testutils
+
+sdvars = testutils.securedrop_test_vars
 testinfra_hosts = [sdvars.app_hostname]
 
 
@@ -17,6 +19,20 @@ def test_hosts_files(host):
     assert f.contains(r'^{}\s*{}\s*securedrop-monitor-server-alias$'.format(
                                                                     mon_ip,
                                                                     mon_host))
+
+
+def test_ossec_service_start_style(host):
+    """
+    Ensure that the OSSEC services are managed by systemd under Focal,
+    but by sysv under Xenial.
+    """
+    if host.system_info.codename == "focal":
+        value = "/etc/systemd/system/ossec.service"
+    else:
+        value = "/etc/init.d/ossec"
+    with host.sudo():
+        c = host.check_output("systemctl status ossec")
+        assert value in c
 
 
 def test_hosts_duplicate(host):

@@ -43,42 +43,38 @@ def create_app(config: 'SDConfig') -> Flask:
                 template_folder=config.JOURNALIST_TEMPLATES_DIR,
                 static_folder=path.join(config.SECUREDROP_ROOT, 'static'))
 
-    app.config.from_object(config.JournalistInterfaceFlaskConfig)  # type: ignore
-    app.sdconfig = config
+    app.config.from_object(config.JOURNALIST_APP_FLASK_CONFIG_CLS)
     app.session_interface = JournalistInterfaceSessionInterface()
 
     csrf = CSRFProtect(app)
     Environment(app)
 
-    if config.DATABASE_ENGINE == "sqlite":
-        db_uri = (config.DATABASE_ENGINE + ":///" +
-                  config.DATABASE_FILE)
-    else:
-        db_uri = (
-            config.DATABASE_ENGINE + '://' +
-            config.DATABASE_USERNAME + ':' +
-            config.DATABASE_PASSWORD + '@' +
-            config.DATABASE_HOST + '/' +
-            config.DATABASE_NAME
-        )
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
+    app.config['SQLALCHEMY_DATABASE_URI'] = config.DATABASE_URI
     db.init_app(app)
 
-    v2_enabled = path.exists(path.join(config.SECUREDROP_DATA_ROOT, 'source_v2_url'))
-    v3_enabled = path.exists(path.join(config.SECUREDROP_DATA_ROOT, 'source_v3_url'))
+    def _url_exists(u: str) -> bool:
+        return path.exists(path.join(config.SECUREDROP_DATA_ROOT, u))
+
+    v2_enabled = _url_exists('source_v2_url') or ((not _url_exists('source_v2_url'))
+                                                  and (not _url_exists('source_v3_url')))
+    v3_enabled = _url_exists('source_v3_url')
+
     app.config.update(V2_ONION_ENABLED=v2_enabled, V3_ONION_ENABLED=v3_enabled)
 
+    # TODO: Attaching a Storage dynamically like this disables all type checking (and
+    # breaks code analysis tools) for code that uses current_app.storage; it should be refactored
     app.storage = Storage(config.STORE_DIR,
                           config.TEMP_DIR,
                           config.JOURNALIST_KEY)
 
+    # TODO: Attaching a CryptoUtil dynamically like this disables all type checking (and
+    # breaks code analysis tools) for code that uses current_app.storage; it should be refactored
     app.crypto_util = CryptoUtil(
         scrypt_params=config.SCRYPT_PARAMS,
         scrypt_id_pepper=config.SCRYPT_ID_PEPPER,
         scrypt_gpg_pepper=config.SCRYPT_GPG_PEPPER,
         securedrop_root=config.SECUREDROP_ROOT,
-        word_list=config.WORD_LIST,
         nouns_file=config.NOUNS,
         adjectives_file=config.ADJECTIVES,
         gpg_key_dir=config.GPG_KEY_DIR,
@@ -106,7 +102,7 @@ def create_app(config: 'SDConfig') -> Flask:
     for code in default_exceptions:
         app.errorhandler(code)(_handle_http_exception)
 
-    i18n.setup_app(config, app)
+    i18n.configure(config, app)
 
     app.jinja_env.trim_blocks = True
     app.jinja_env.lstrip_blocks = True
@@ -160,13 +156,18 @@ def create_app(config: 'SDConfig') -> Flask:
         if uid:
             g.user = Journalist.query.get(uid)
 
-        g.locale = i18n.get_locale(config)
-        g.text_direction = i18n.get_text_direction(g.locale)
-        g.html_lang = i18n.locale_to_rfc_5646(g.locale)
-        g.locales = i18n.get_locale2name()
+        i18n.set_locale(config)
 
-        if not app.config['V3_ONION_ENABLED'] or app.config['V2_ONION_ENABLED']:
+        if app.instance_config.organization_name:
+            g.organization_name = app.instance_config.organization_name
+        else:
+            g.organization_name = gettext('SecureDrop')
+
+        if app.config['V2_ONION_ENABLED'] and not app.config['V3_ONION_ENABLED']:
             g.show_v2_onion_eol_warning = True
+
+        if app.config['V2_ONION_ENABLED'] and app.config['V3_ONION_ENABLED']:
+            g.show_v2_onion_migration_warning = True
 
         if request.path.split('/')[1] == 'api':
             pass  # We use the @token_required decorator for the API endpoints
