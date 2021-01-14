@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-01-14 22:19+0000\n"
+"PO-Revision-Date: 2021-01-14 23:37+0000\n"
 "Last-Translator: Andrey <andrey@mailbox.org>\n"
 "Language-Team: Russian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ru/>\n"
@@ -124,8 +124,6 @@ msgid "Only admins can access this page."
 msgstr "Только администраторы имеют доступ к этой странице."
 
 #: journalist_app/forms.py:19
-#, fuzzy
-#| msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgid "HOTP secrets are 40 characters long - you have entered {num}."
 msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
 msgstr[0] "Секреты HOTP должны содержать 40 символов. Вы ввели {num}."
@@ -133,8 +131,6 @@ msgstr[1] "Секреты HOTP должны содержать 40 символо
 msgstr[2] "Секреты HOTP должны содержать 40 символов. Вы ввели {num}."
 
 #: journalist_app/forms.py:30
-#, fuzzy
-#| msgid "Must be at least {min_chars} characters long."
 msgid "Must be at least {num} characters long."
 msgid_plural "Must be at least {num} characters long."
 msgstr[0] "Должно быть не менее {num} символов."
@@ -142,8 +138,6 @@ msgstr[1] "Должно быть не менее {num} символов."
 msgstr[2] "Должно быть не менее {num} символов."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-#, fuzzy
-#| msgid "Cannot be longer than {max_chars} characters."
 msgid "Cannot be longer than {num} characters."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "Длина не может превышать {num} символов."
@@ -292,9 +286,10 @@ msgstr "значок избранного"
 
 #: journalist_templates/_source_row.html:16
 msgid "unstarred icon"
-msgstr ""
+msgstr "значок без пометки"
 
 #: journalist_templates/_source_row.html:28
+#, fuzzy
 msgid "1 doc"
 msgid_plural "{num} docs"
 msgstr[0] "1 документ"
@@ -302,6 +297,7 @@ msgstr[1] "{num} документа"
 msgstr[2] "{num} документов"
 
 #: journalist_templates/_source_row.html:32
+#, fuzzy
 msgid "1 message"
 msgid_plural "{num} messages"
 msgstr[0] "1 сообщение"
@@ -313,11 +309,12 @@ msgid "download icon"
 msgstr "значок загрузки"
 
 #: journalist_templates/_source_row.html:38
+#, fuzzy
 msgid "1 unread"
 msgid_plural "{num} unread"
-msgstr[0] "1 непрочитанный материал"
+msgstr[0] "1 непрочитанный"
 msgstr[1] "{num} непрочитанных"
-msgstr[2] "{num} непрочитанных материалов"
+msgstr[2] "{num} непрочитанных"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -554,24 +551,16 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "После того, как вы настроили ваш YubiKey, введите 6-значный код ниже:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 onion services, which are being phased out for security "
-#| "reasons. In February 2021, v2 onion services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before "
 "April 30 to keep your SecureDrop servers online. Please contact your "
 "administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
 "\">Learn More</a>"
 msgstr ""
-"<strong>Необходимо обновить:</strong> Ваши серверы SecureDrop все еще "
-"работают под управлением сервисов onion v2, которые постепенно выводятся из "
-"эксплуатации по соображениям безопасности. В феврале 2021 года сервисы onion "
-"v2 будут отключены, и ваши серверы SecureDrop могут стать недоступными. <a "
-"href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Подробнее</a>"
+"<strong>Требуется обновление</strong>&nbsp;&nbsp;Настройте версию 3 служб "
+"Onion до 30 апреля, чтобы обеспечить работу ваших серверов SecureDrop. "
+"Пожалуйста, свяжитесь с вашим администратором. <a href=\"//securedrop.org/v2"
+"-onion-eol\" rel=\"noreferrer\">Подробнее</a>"
 
 #: journalist_templates/base.html:30
 msgid ""
@@ -997,10 +986,8 @@ msgid "No documents have been submitted!"
 msgstr "Отправленные документы отсутствуют!"
 
 #: journalist_templates/js-strings.html:3
-#, fuzzy
-#| msgid "filter by codename"
 msgid "Filter by codename"
-msgstr "фильтр по кодовому имени"
+msgstr "Фильтр по кодовому имени"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
