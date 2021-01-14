@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-09-29 17:01+0000\n"
-"Last-Translator: Adham Kurbanov <uz@zu.uz>\n"
+"PO-Revision-Date: 2021-01-14 22:19+0000\n"
+"Last-Translator: Andrey <andrey@mailbox.org>\n"
 "Language-Team: Russian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ru/>\n"
 "Language: ru\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.1.1\n"
+"X-Generator: Weblate 4.3.2\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:19
@@ -35,7 +35,7 @@ msgstr "Ваша сессия была завершена из-за смены �
 #: journalist_app/__init__.py:164 source_app/__init__.py:172
 #: source_templates/base.html:9 source_templates/index.html:7
 msgid "SecureDrop"
-msgstr ""
+msgstr "SecureDrop"
 
 #: journalist_app/account.py:39
 msgid "Incorrect password or two-factor code."
@@ -61,11 +61,11 @@ msgstr "Настройки сохранены."
 
 #: journalist_app/admin.py:81
 msgid "Preferences not updated."
-msgstr ""
+msgstr "Настройки не были изменены."
 
 #: journalist_app/admin.py:95
 msgid "Failed to update organization name."
-msgstr ""
+msgstr "Не удалось обновить название организации."
 
 #: journalist_app/admin.py:128
 msgid ""
@@ -116,6 +116,8 @@ msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
 msgstr ""
+"Загрузка не удалась, поскольку файл не был найден. Администратор может "
+"получить более подробную информацию в журналах системы и мониторинга."
 
 #: journalist_app/decorators.py:18
 msgid "Only admins can access this page."
@@ -286,7 +288,7 @@ msgstr "Отменить"
 #: journalist_templates/_source_row.html:8
 #: journalist_templates/_source_row.html:17
 msgid "starred icon"
-msgstr ""
+msgstr "значок избранного"
 
 #: journalist_templates/_source_row.html:16
 msgid "unstarred icon"
@@ -308,7 +310,7 @@ msgstr[2] "{num} сообщений"
 
 #: journalist_templates/_source_row.html:37
 msgid "download icon"
-msgstr ""
+msgstr "значок загрузки"
 
 #: journalist_templates/_source_row.html:38
 msgid "1 unread"
@@ -456,11 +458,11 @@ msgstr "Редактирование пользователя {username}"
 
 #: journalist_templates/admin.html:31
 msgid "edit user icon"
-msgstr ""
+msgstr "изменить значок пользователя"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
-msgstr ""
+msgstr "значок корзины отключен"
 
 #: journalist_templates/admin.html:42
 msgid "Delete user {username}"
@@ -468,7 +470,7 @@ msgstr "Удалить пользователя {username}"
 
 #: journalist_templates/admin.html:43 journalist_templates/admin.html:44
 msgid "trash icon"
-msgstr ""
+msgstr "значок корзины"
 
 #: journalist_templates/admin.html:53
 msgid "never"
@@ -577,6 +579,9 @@ msgid ""
 "setup before April 30. Please contact your administrator. <a href=\"//"
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Требуется обновление</strong>&nbsp;&nbsp;Завершите настройку службы "
+"Onion версии 3 до 30 апреля. Пожалуйста, свяжитесь с вашим администратором. "
+"<a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Подробнее</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"
@@ -621,7 +626,7 @@ msgstr "Ответить"
 
 #: journalist_templates/col.html:35 journalist_templates/col.html:65
 msgid "reply icon"
-msgstr ""
+msgstr "значок ответа"
 
 #: journalist_templates/col.html:39 journalist_templates/col.html:50
 msgid "Read"
@@ -629,7 +634,7 @@ msgstr "Прочитано"
 
 #: journalist_templates/col.html:40
 msgid "check icon"
-msgstr ""
+msgstr "значок проверки"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
@@ -637,11 +642,11 @@ msgstr "Не прочитано"
 
 #: journalist_templates/col.html:46
 msgid "closed envelope icon"
-msgstr ""
+msgstr "значок закрытого конверта"
 
 #: journalist_templates/col.html:51
 msgid "open envelope icon"
-msgstr ""
+msgstr "значок открытого конверта"
 
 #: journalist_templates/col.html:60
 msgid "Uploaded Document"
@@ -649,7 +654,7 @@ msgstr "Загруженный документ"
 
 #: journalist_templates/col.html:61
 msgid "files icon"
-msgstr ""
+msgstr "значок файлов"
 
 #: journalist_templates/col.html:68
 msgid "Message"
@@ -657,7 +662,7 @@ msgstr "Сообщение"
 
 #: journalist_templates/col.html:69
 msgid "messages icon"
-msgstr ""
+msgstr "значок сообщения"
 
 #: journalist_templates/col.html:80 journalist_templates/col.html:144
 #: journalist_templates/index.html:62
@@ -728,15 +733,17 @@ msgstr "Пример конфигурации"
 
 #: journalist_templates/config.html:10
 msgid "Organization Name"
-msgstr ""
+msgstr "Название организации"
 
 #: journalist_templates/config.html:15
 msgid "Set the organization name used on the SecureDrop web interfaces:"
 msgstr ""
+"Укажите название организации, которое будет использоваться в веб-интерфейсе "
+"SecureDrop:"
 
 #: journalist_templates/config.html:20
 msgid "SET ORGANIZATION NAME"
-msgstr ""
+msgstr "УКАЗАТЬ НАЗВАНИЕ ОРГАНИЗАЦИИ"
 
 #: journalist_templates/config.html:28 source_templates/index.html:33
 msgid "Logo Image"
@@ -929,7 +936,7 @@ msgstr "СБРОСИТЬ ДОСТУП ЭЛЕКТРОННОГО КЛЮЧА"
 
 #: journalist_templates/flag.html:4
 msgid "info icon"
-msgstr ""
+msgstr "значок информации"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -1128,7 +1135,7 @@ msgstr "Защита журналистов и источников"
 
 #: source_templates/base.html:24
 msgid "SecureDrop Home"
-msgstr ""
+msgstr "Главная SecureDrop"
 
 #: source_templates/base.html:32
 msgid "LOG OUT"
