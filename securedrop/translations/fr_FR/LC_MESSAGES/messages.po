@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-10-07 20:01+0000\n"
+"PO-Revision-Date: 2021-01-14 22:19+0000\n"
 "Last-Translator: AO Localization Lab <ao@localizationlab.org>\n"
 "Language-Team: French <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/fr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.1.1\n"
+"X-Generator: Weblate 4.3.2\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:19
@@ -35,7 +35,7 @@ msgstr "Vous avez été déconnecté en raison d’un changement du mot de passe
 #: journalist_app/__init__.py:164 source_app/__init__.py:172
 #: source_templates/base.html:9 source_templates/index.html:7
 msgid "SecureDrop"
-msgstr ""
+msgstr "SecureDrop"
 
 #: journalist_app/account.py:39
 msgid "Incorrect password or two-factor code."
@@ -62,11 +62,11 @@ msgstr "Les préférences ont été enregistrées."
 
 #: journalist_app/admin.py:81
 msgid "Preferences not updated."
-msgstr ""
+msgstr "Les préférences n’ont pas été mises à jour."
 
 #: journalist_app/admin.py:95
 msgid "Failed to update organization name."
-msgstr ""
+msgstr "Échec de mise à jour du nom de l’organisme."
 
 #: journalist_app/admin.py:128
 msgid ""
@@ -117,6 +117,9 @@ msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
 msgstr ""
+"Votre téléchargement a échoué, car un fichier est introuvable. Un "
+"administrateur peut trouver de plus amples renseignements dans les journaux "
+"du système et dans les journaux de suivi."
 
 #: journalist_app/decorators.py:18
 msgid "Only admins can access this page."
@@ -133,13 +136,13 @@ msgstr[1] ""
 #: journalist_app/forms.py:30
 msgid "Must be at least {num} characters long."
 msgid_plural "Must be at least {num} characters long."
-msgstr[0] "Doit comporter au moins {num} caractères."
+msgstr[0] "Doit comporter au moins {num} caractère."
 msgstr[1] "Doit comporter au moins {num} caractères."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
 msgid "Cannot be longer than {num} characters."
 msgid_plural "Cannot be longer than {num} characters."
-msgstr[0] "Ne peut pas dépasser {num} caractères."
+msgstr[0] "Ne peut pas dépasser {num} caractère."
 msgstr[1] "Ne peut pas dépasser {num} caractères."
 
 #: journalist_app/forms.py:62
@@ -281,11 +284,11 @@ msgstr "Annuler"
 #: journalist_templates/_source_row.html:8
 #: journalist_templates/_source_row.html:17
 msgid "starred icon"
-msgstr ""
+msgstr "icône Étoilé"
 
 #: journalist_templates/_source_row.html:16
 msgid "unstarred icon"
-msgstr ""
+msgstr "icône Non étoilé"
 
 #: journalist_templates/_source_row.html:28
 msgid "1 doc"
@@ -301,7 +304,7 @@ msgstr[1] "{num} messages"
 
 #: journalist_templates/_source_row.html:37
 msgid "download icon"
-msgstr ""
+msgstr "icône Télécharger"
 
 #: journalist_templates/_source_row.html:38
 msgid "1 unread"
@@ -448,11 +451,11 @@ msgstr "Modifier l’utilisateur {username}"
 
 #: journalist_templates/admin.html:31
 msgid "edit user icon"
-msgstr ""
+msgstr "icône Modifier l’utilisateur"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
-msgstr ""
+msgstr "l’icône de la corbeille est désactivée"
 
 #: journalist_templates/admin.html:42
 msgid "Delete user {username}"
@@ -460,7 +463,7 @@ msgstr "Supprimer l’utilisateur {username}"
 
 #: journalist_templates/admin.html:43 journalist_templates/admin.html:44
 msgid "trash icon"
-msgstr ""
+msgstr "icône Corbeille"
 
 #: journalist_templates/admin.html:53
 msgid "never"
@@ -546,25 +549,16 @@ msgstr ""
 "dessous :"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 onion services, which are being phased out for security "
-#| "reasons. In February 2021, v2 onion services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before "
 "April 30 to keep your SecureDrop servers online. Please contact your "
 "administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
 "\">Learn More</a>"
 msgstr ""
-"<strong>Une mise à jour est exigée :</strong> vos serveurs SecureDrop "
-"exécutent encore les services onion v2, qui sont progressivement remplacés "
-"pour des questions de sécurité. En février 2021, les services onion v2 "
-"seront désactivés et il sera alors peut-être impossible d’accéder à vos "
-"serveurs SecureDrop. <a href=\"//securedrop.org/v2-onion-eol\" rel="
-"\"noreferrer\">En apprendre davantage</a>"
+"<strong>Mise à jour requise</strong>&nbsp;&nbsp;Mettez en place les services "
+"Onion v3 avant le 30 avril afin d’assurer la disponibilité en ligne de vos "
+"serveurs. Veuillez contacter votre administrateur. <a href=\"//securedrop."
+"org/v2-onion-eol\" rel=\"noreferrer\">En apprendre davantage</a>"
 
 #: journalist_templates/base.html:30
 msgid ""
@@ -572,6 +566,10 @@ msgid ""
 "setup before April 30. Please contact your administrator. <a href=\"//"
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Mise à jour requise</strong>&nbsp;&nbsp;Terminez la mise en place "
+"des services Onion v3 avant le 30 avril. Veuillez contacter votre "
+"administrateur. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\""
+">En apprendre davantage</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"
@@ -616,7 +614,7 @@ msgstr "Répondre"
 
 #: journalist_templates/col.html:35 journalist_templates/col.html:65
 msgid "reply icon"
-msgstr ""
+msgstr "icône Réponse"
 
 #: journalist_templates/col.html:39 journalist_templates/col.html:50
 msgid "Read"
@@ -624,7 +622,7 @@ msgstr "Lu"
 
 #: journalist_templates/col.html:40
 msgid "check icon"
-msgstr ""
+msgstr "icône Coche"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
@@ -632,11 +630,11 @@ msgstr "Non lu"
 
 #: journalist_templates/col.html:46
 msgid "closed envelope icon"
-msgstr ""
+msgstr "icône Enveloppe fermée"
 
 #: journalist_templates/col.html:51
 msgid "open envelope icon"
-msgstr ""
+msgstr "Icône Enveloppe ouverte"
 
 #: journalist_templates/col.html:60
 msgid "Uploaded Document"
@@ -644,7 +642,7 @@ msgstr "Le document a été téléversé"
 
 #: journalist_templates/col.html:61
 msgid "files icon"
-msgstr ""
+msgstr "Icône Fichiers"
 
 #: journalist_templates/col.html:68
 msgid "Message"
@@ -652,7 +650,7 @@ msgstr "Message"
 
 #: journalist_templates/col.html:69
 msgid "messages icon"
-msgstr ""
+msgstr "Icône Messages"
 
 #: journalist_templates/col.html:80 journalist_templates/col.html:144
 #: journalist_templates/index.html:62
@@ -724,15 +722,17 @@ msgstr "Configuration de l’Instance"
 
 #: journalist_templates/config.html:10
 msgid "Organization Name"
-msgstr ""
+msgstr "Nom de l’organisme"
 
 #: journalist_templates/config.html:15
 msgid "Set the organization name used on the SecureDrop web interfaces:"
 msgstr ""
+"Définissez le nom de l’organisme utilisé dans les interfaces Web de "
+"SecureDrop :"
 
 #: journalist_templates/config.html:20
 msgid "SET ORGANIZATION NAME"
-msgstr ""
+msgstr "DÉFINIR LE NOM DE L’ORGANISME"
 
 #: journalist_templates/config.html:28 source_templates/index.html:33
 msgid "Logo Image"
@@ -922,7 +922,7 @@ msgstr "RÉINITIALISER LES AUTHENTIFIANTS DE LA CLÉ DE SÉCURITÉ"
 
 #: journalist_templates/flag.html:4
 msgid "info icon"
-msgstr ""
+msgstr "Icône Renseignements"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -984,8 +984,6 @@ msgid "No documents have been submitted!"
 msgstr "Aucun document n’a été envoyé !"
 
 #: journalist_templates/js-strings.html:3
-#, fuzzy
-#| msgid "filter by codename"
 msgid "Filter by codename"
 msgstr "Filtrer par nom de code"
 
@@ -1035,9 +1033,9 @@ msgid ""
 "<strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href="
 "\"{url}\">Why is this dangerous?</a>"
 msgstr ""
-"<strong>AVERTISSEMENT&nbsp;:&nbsp;</strong> il semble que vous utilisez "
-"Tor2Web. Cela <strong>ne garantit pas</strong> votre anonymat. <a href="
-"\"{url}\">Pourquoi est-ce dangereux ?</a>"
+"<strong>AVERTISSEMENT :&nbsp;</strong> il semble que vous utilisez Tor2Web. "
+"Cela <strong>ne garantit pas</strong> votre anonymat. <a href=\"{url}\""
+">Pourquoi est-ce dangereux ?</a>"
 
 #: source_app/forms.py:19
 msgid "Field must be between 1 and {max_codename_len} characters long."
@@ -1121,7 +1119,7 @@ msgstr "Protège les journalistes et les sources"
 
 #: source_templates/base.html:24
 msgid "SecureDrop Home"
-msgstr ""
+msgstr "Accueil SecureDrop"
 
 #: source_templates/base.html:32
 msgid "LOG OUT"
