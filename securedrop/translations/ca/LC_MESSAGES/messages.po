@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-01-13 23:37+0000\n"
-"Last-Translator: Joan Montané <joan@montane.cat>\n"
+"PO-Revision-Date: 2021-01-17 12:37+0000\n"
+"Last-Translator: John Smith <ecron_89@hotmail.com>\n"
 "Language-Team: Catalan <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ca/>\n"
 "Language: ca\n"
@@ -198,9 +198,8 @@ msgstr "Ha fallat l’inici de la sessió."
 #: journalist_app/utils.py:110
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
-msgstr[0] "Espereu com a mínim {num} segon abans d’iniciar la sessió novament."
-msgstr[1] ""
-"Espereu com a mínim {num} segons abans d’iniciar la sessió novament."
+msgstr[0] "Espereu com a mínim {num} segon abans d’iniciar la sessió de nou."
+msgstr[1] "Espereu com a mínim {num} segons abans d’iniciar la sessió de nou."
 
 #: journalist_app/utils.py:121
 msgid ""
@@ -300,8 +299,8 @@ msgstr "icona de baixada"
 #: journalist_templates/_source_row.html:38
 msgid "1 unread"
 msgid_plural "{num} unread"
-msgstr[0] "1 sense llegir"
-msgstr[1] "{num} sense llegir"
+msgstr[0] "1 per llegir"
+msgstr[1] "{num} per llegir"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -442,11 +441,11 @@ msgstr "Edita el compte {username}"
 
 #: journalist_templates/admin.html:31
 msgid "edit user icon"
-msgstr "icona d'editar usuari"
+msgstr "icona d'edició d'usuari"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
-msgstr "icona de paperera inhabilitada"
+msgstr "icona de paperera desactivada"
 
 #: journalist_templates/admin.html:42
 msgid "Delete user {username}"
@@ -543,9 +542,9 @@ msgid ""
 "administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
 "\">Learn More</a>"
 msgstr ""
-"<strong>Actualització necessària</strong>&nbsp;&nbsp;configureu la versió 3 "
+"<strong>Actualització necessària</strong>&nbsp;&nbsp;Configureu la versió 3 "
 "dels serveis Onion abans del 30 d'abril per a mantenir els servidors de "
-"SecureDrop en línia. Contacteu amb l'administrador <a href=\"//securedrop."
+"SecureDrop en línia. Contacteu amb l'administrador. <a href=\"//securedrop."
 "org/v2-onion-eol\" rel=\"noreferrer\">Més informació</a>"
 
 #: journalist_templates/base.html:30
@@ -554,7 +553,7 @@ msgid ""
 "setup before April 30. Please contact your administrator. <a href=\"//"
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
-"<strong>Actualització requerida</strong>&nbsp;&nbsp;completeu la "
+"<strong>Actualització requerida</strong>&nbsp;&nbsp;Completeu la "
 "configuració dels serveis Onion v3 abans del 30 d'abril. Contacteu amb "
 "l'administrador. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\""
 ">Més informació</a>"
@@ -708,7 +707,7 @@ msgstr "Configuració de la instància"
 
 #: journalist_templates/config.html:10
 msgid "Organization Name"
-msgstr "Nom de l'organtizació"
+msgstr "Nom de l'organització"
 
 #: journalist_templates/config.html:15
 msgid "Set the organization name used on the SecureDrop web interfaces:"
@@ -1104,7 +1103,7 @@ msgstr "Protegeix els periodistes i les fonts"
 
 #: source_templates/base.html:24
 msgid "SecureDrop Home"
-msgstr "Inici de SecureDrop"
+msgstr "Inici del SecureDrop"
 
 #: source_templates/base.html:32
 msgid "LOG OUT"
