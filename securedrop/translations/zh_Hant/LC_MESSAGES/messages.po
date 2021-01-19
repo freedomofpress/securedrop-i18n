@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-01-13 23:37+0000\n"
+"PO-Revision-Date: 2021-01-19 23:15+0000\n"
 "Last-Translator: mengpangwang <mengpangwang@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.securedrop.org/"
 "projects/securedrop/securedrop/zh_Hant/>\n"
@@ -247,11 +247,11 @@ msgstr "取消"
 #: journalist_templates/_source_row.html:8
 #: journalist_templates/_source_row.html:17
 msgid "starred icon"
-msgstr ""
+msgstr "已加星號"
 
 #: journalist_templates/_source_row.html:16
 msgid "unstarred icon"
-msgstr ""
+msgstr "未加星號"
 
 #: journalist_templates/_source_row.html:28
 msgid "1 doc"
@@ -265,7 +265,7 @@ msgstr[0] "{num} 訊息"
 
 #: journalist_templates/_source_row.html:37
 msgid "download icon"
-msgstr ""
+msgstr "下載圖示"
 
 #: journalist_templates/_source_row.html:38
 msgid "1 unread"
@@ -401,11 +401,11 @@ msgstr "编辑用户{username}"
 
 #: journalist_templates/admin.html:31
 msgid "edit user icon"
-msgstr ""
+msgstr "編輯使用者圖示"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
-msgstr ""
+msgstr "已停用垃圾桶圖示"
 
 #: journalist_templates/admin.html:42
 msgid "Delete user {username}"
@@ -413,7 +413,7 @@ msgstr "删除用户 {username}"
 
 #: journalist_templates/admin.html:43 journalist_templates/admin.html:44
 msgid "trash icon"
-msgstr ""
+msgstr "垃圾桶圖示"
 
 #: journalist_templates/admin.html:53
 msgid "never"
@@ -518,6 +518,8 @@ msgid ""
 "setup before April 30. Please contact your administrator. <a href=\"//"
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>需要更新</strong>&nbsp;&nbsp;請在四月三十日前設定完成第三代 Onion 服務。請聯繫您的系統管理員。<a href="
+"\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">了解更多</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"
@@ -560,7 +562,7 @@ msgstr "回覆"
 
 #: journalist_templates/col.html:35 journalist_templates/col.html:65
 msgid "reply icon"
-msgstr ""
+msgstr "回覆圖示"
 
 #: journalist_templates/col.html:39 journalist_templates/col.html:50
 msgid "Read"
@@ -568,7 +570,7 @@ msgstr "讀取"
 
 #: journalist_templates/col.html:40
 msgid "check icon"
-msgstr ""
+msgstr "打勾圖示"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
@@ -576,11 +578,11 @@ msgstr "未讀"
 
 #: journalist_templates/col.html:46
 msgid "closed envelope icon"
-msgstr ""
+msgstr "密封信件圖示"
 
 #: journalist_templates/col.html:51
 msgid "open envelope icon"
-msgstr ""
+msgstr "開封信件圖示"
 
 #: journalist_templates/col.html:60
 msgid "Uploaded Document"
@@ -588,7 +590,7 @@ msgstr "已上傳的文件"
 
 #: journalist_templates/col.html:61
 msgid "files icon"
-msgstr ""
+msgstr "檔案圖示"
 
 #: journalist_templates/col.html:68
 msgid "Message"
@@ -596,7 +598,7 @@ msgstr "訊息"
 
 #: journalist_templates/col.html:69
 msgid "messages icon"
-msgstr ""
+msgstr "訊息圖示"
 
 #: journalist_templates/col.html:80 journalist_templates/col.html:144
 #: journalist_templates/index.html:62
@@ -836,7 +838,7 @@ msgstr "重置安全密鑰憑證"
 
 #: journalist_templates/flag.html:4
 msgid "info icon"
-msgstr ""
+msgstr "資訊圖示"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
