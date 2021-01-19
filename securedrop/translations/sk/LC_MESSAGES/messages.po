@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-10-15 08:01+0000\n"
-"Last-Translator: 1000101 <b1000101@pm.me>\n"
+"PO-Revision-Date: 2021-01-19 15:16+0000\n"
+"Last-Translator: Katarina Kasalova <katka.kasalova@gmail.com>\n"
 "Language-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sk/>\n"
 "Language: sk\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.1.1\n"
+"X-Generator: Weblate 4.3.2\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:19
@@ -33,8 +33,9 @@ msgstr "Boli ste odhlásený/á z dôvodu zmeny hesla"
 
 #: journalist_app/__init__.py:164 source_app/__init__.py:172
 #: source_templates/base.html:9 source_templates/index.html:7
+#, fuzzy
 msgid "SecureDrop"
-msgstr ""
+msgstr "SecureDrop"
 
 #: journalist_app/account.py:39
 msgid "Incorrect password or two-factor code."
@@ -60,11 +61,11 @@ msgstr "Preferencie uložené."
 
 #: journalist_app/admin.py:81
 msgid "Preferences not updated."
-msgstr ""
+msgstr "Preferencie neboli aktualizované."
 
 #: journalist_app/admin.py:95
 msgid "Failed to update organization name."
-msgstr ""
+msgstr "Aktualizácia názvu organizácie sa nepodarila."
 
 #: journalist_app/admin.py:128
 msgid ""
@@ -116,6 +117,8 @@ msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
 msgstr ""
+"Vaše sťahovanie sa nepodarilo, pretože sa súbor nenašiel. Admin vie zistiť "
+"viac informácií v logoch systému a monitoringu."
 
 #: journalist_app/decorators.py:18
 msgid "Only admins can access this page."
@@ -280,11 +283,11 @@ msgstr "Zrušiť"
 #: journalist_templates/_source_row.html:8
 #: journalist_templates/_source_row.html:17
 msgid "starred icon"
-msgstr ""
+msgstr "ikona hviezdičky"
 
 #: journalist_templates/_source_row.html:16
 msgid "unstarred icon"
-msgstr ""
+msgstr "ikona bez hviezdičky"
 
 #: journalist_templates/_source_row.html:28
 msgid "1 doc"
@@ -302,7 +305,7 @@ msgstr[2] "{num} správ"
 
 #: journalist_templates/_source_row.html:37
 msgid "download icon"
-msgstr ""
+msgstr "ikona sťahovania"
 
 #: journalist_templates/_source_row.html:38
 msgid "1 unread"
@@ -448,11 +451,11 @@ msgstr "Upraviť používateľa {username}"
 
 #: journalist_templates/admin.html:31
 msgid "edit user icon"
-msgstr ""
+msgstr "ikona úprav používateľa"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
-msgstr ""
+msgstr "ikona koša deaktivovaná"
 
 #: journalist_templates/admin.html:42
 msgid "Delete user {username}"
@@ -460,7 +463,7 @@ msgstr "Zmazať používateľa {username}"
 
 #: journalist_templates/admin.html:43 journalist_templates/admin.html:44
 msgid "trash icon"
-msgstr ""
+msgstr "ikona koša"
 
 #: journalist_templates/admin.html:53
 msgid "never"
@@ -544,13 +547,6 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Akonáhle nastavíte svoj YubiKey, zadajte šesťmiestny kód nižšie:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 onion services, which are being phased out for security "
-#| "reasons. In February 2021, v2 onion services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before "
 "April 30 to keep your SecureDrop servers online. Please contact your "
@@ -558,9 +554,9 @@ msgid ""
 "\">Learn More</a>"
 msgstr ""
 "<strong>Vyžaduje sa aktualizácia:</strong>Vaše SecureDrop servery stále "
-"používajú v2 onion services, ktoré sa z bezpečnostných dôvodov vyraďujú. Vo "
-"Februári 2021 bude v2 onion services deaktivovaný a vaše SecureDrop servery "
-"sa môžu stať nedostupnými. <a href=\"//securedrop.org/v2-onion-eol\" rel="
+"používajú služby v2 onion, ktoré sa z bezpečnostných dôvodov vyraďujú. Vo "
+"Februári 2021 bude služba v2 onion deaktivovaná a vaše SecureDrop servery sa "
+"môžu stať nedostupnými. <a href=\"//securedrop.org/v2-onion-eol\" rel="
 "\"noreferrer\">Learn More</a>"
 
 #: journalist_templates/base.html:30
@@ -569,6 +565,9 @@ msgid ""
 "setup before April 30. Please contact your administrator. <a href=\"//"
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Potrebná aktualizácia</strong>&nbsp;&nbsp;Dokončite nastavenie "
+"služieb v3 Onion pred 30. aprílom. Prosím kontaktujte vášho administrátora. "
+"<a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Zistiť viac</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"
@@ -613,7 +612,7 @@ msgstr "Odpoveď"
 
 #: journalist_templates/col.html:35 journalist_templates/col.html:65
 msgid "reply icon"
-msgstr ""
+msgstr "ikona odpovedať"
 
 #: journalist_templates/col.html:39 journalist_templates/col.html:50
 msgid "Read"
@@ -621,7 +620,7 @@ msgstr "Prečítané"
 
 #: journalist_templates/col.html:40
 msgid "check icon"
-msgstr ""
+msgstr "ikona rámčeka"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
@@ -629,11 +628,11 @@ msgstr "Neprečítané"
 
 #: journalist_templates/col.html:46
 msgid "closed envelope icon"
-msgstr ""
+msgstr "ikona zatvorenej obláky"
 
 #: journalist_templates/col.html:51
 msgid "open envelope icon"
-msgstr ""
+msgstr "ikona otvorenej obálky"
 
 #: journalist_templates/col.html:60
 msgid "Uploaded Document"
@@ -641,7 +640,7 @@ msgstr "Nahratý dokument"
 
 #: journalist_templates/col.html:61
 msgid "files icon"
-msgstr ""
+msgstr "ikona súborov"
 
 #: journalist_templates/col.html:68
 msgid "Message"
@@ -649,7 +648,7 @@ msgstr "Správa"
 
 #: journalist_templates/col.html:69
 msgid "messages icon"
-msgstr ""
+msgstr "ikona správ"
 
 #: journalist_templates/col.html:80 journalist_templates/col.html:144
 #: journalist_templates/index.html:62
@@ -717,15 +716,16 @@ msgstr "Nastavenie inštancie"
 
 #: journalist_templates/config.html:10
 msgid "Organization Name"
-msgstr ""
+msgstr "Názov organizácie"
 
 #: journalist_templates/config.html:15
 msgid "Set the organization name used on the SecureDrop web interfaces:"
 msgstr ""
+"Nastavte názov organizácie používaný vo webových rozhraniach SecureDrop:"
 
 #: journalist_templates/config.html:20
 msgid "SET ORGANIZATION NAME"
-msgstr ""
+msgstr "NASTAVIŤ NÁZOV ORGANIZÁCIE"
 
 #: journalist_templates/config.html:28 source_templates/index.html:33
 msgid "Logo Image"
@@ -914,7 +914,7 @@ msgstr "RESETOVAŤ PRIHLASOVACIE ÚDAJE BEZPEČNOSTNÉHO KĽÚČA"
 
 #: journalist_templates/flag.html:4
 msgid "info icon"
-msgstr ""
+msgstr "ikona info"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -1110,7 +1110,7 @@ msgstr "Chránime novinárov a zdroje"
 
 #: source_templates/base.html:24
 msgid "SecureDrop Home"
-msgstr ""
+msgstr "SecureDrop Domov"
 
 #: source_templates/base.html:32
 msgid "LOG OUT"
@@ -1291,19 +1291,14 @@ msgid "One more thing..."
 msgstr "Ešte posledná vec..."
 
 #: source_templates/logout.html:7
-#, fuzzy
-#| msgid ""
-#| "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
-#| "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor browser's "
-#| "toolbar. This will clear your Tor browser activity data on this device."
 msgid ""
 "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height="
 "\"16\">&nbsp;<strong>New Identity</strong> button in your Tor Browser's "
 "toolbar. This will clear your Tor Browser activity data on this device."
 msgstr ""
 "Kliknite na ikonu <img src={icon} alt=\"ikona metly\" width=\"16\" height="
-"\"16\">&nbsp;<strong>Nová identita</strong> na lište prehliadača Tor. Toto "
-"zmaže dáta o aktivite Tor prehlidača na tomto zariadení."
+"\"16\">&nbsp;<strong>Nová identita</strong> na lište prehliadača Tor. Tak sa "
+"vymažú dáta o aktivite Tor prehliadača na tomto zariadení."
 
 #: source_templates/lookup.html:7
 msgid "Remember, your codename is:"
@@ -1432,12 +1427,6 @@ msgid "Important"
 msgstr "Dôležité"
 
 #: source_templates/session_timeout.html:5
-#, fuzzy
-#| msgid ""
-#| "You were logged out due to inactivity. Click the <img src={icon} alt="
-#| "\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</"
-#| "strong> button in your Tor browser's toolbar before moving on. This will "
-#| "clear your Tor browser activity data on this device."
 msgid ""
 "You were logged out due to inactivity. Click the <img src={icon} alt=\"broom "
 "icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong> button "
@@ -1446,8 +1435,8 @@ msgid ""
 msgstr ""
 "Boli ste odhlásený/á z dôvodu nečinnosti. Skôr než budete pokračovať, "
 "kliknite na ikonu <img src={icon} alt=\"ikona metly\" width=\"16\" height="
-"\"16\">&nbsp;<strong>Nová identita</strong> na lište prehliadača Tor. Toto "
-"zmaže dáta o aktivite Tor prehlidača na tomto zariadení."
+"\"16\">&nbsp;<strong>Nová identita</strong> na lište prehliadača Tor. To "
+"vymaže dáta o aktivite Tor prehliadača na tomto zariadení."
 
 #: source_templates/tor2web-warning.html:3
 msgid "Why is there a warning about Tor2Web?"
@@ -1599,19 +1588,14 @@ msgstr ""
 "súbor, s príponou .gpg na konci (napr. <code>internal_memo.pdf.gpg</code>)"
 
 #: source_templates/why-public-key.html:21
-#, fuzzy
-#| msgid ""
-#| "<strong>Tip:</strong> If you wish to remain anonymous, <strong>do not</"
-#| "strong> use GPG to sign the encrypted file (with the <code>--sign</code> "
-#| "or <code>-s</code> flag) as this will reveal your GPG identity to us."
 msgid ""
 "<strong>Important:</strong> If you wish to remain anonymous, <strong>do not</"
 "strong> use GPG to sign the encrypted file (with the <code>--sign</code> or "
 "<code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr ""
 "<strong>Dôležité:</strong> Ak chcete zostať v anonymite, "
-"<strong>nepoužívajte</strong> GPG na podpisovanie šifrovaného súboru "
-"(príkazom <code>--sign</code> alebo <code>-s</code>), prezradili by ste nám "
+"<strong>nepoužívajte</strong> GPG na podpisovanie šifrovaného súboru ("
+"príkazom <code>--sign</code> alebo <code>-s</code>), lebo nám tak prezradíte "
 "svoju GPG identitu."
 
 #: source_templates/why-public-key.html:25
