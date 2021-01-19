@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-09-29 22:01+0000\n"
+"PO-Revision-Date: 2021-01-19 21:26+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/de/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.1.1\n"
+"X-Generator: Weblate 4.3.2\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:19
@@ -56,11 +56,11 @@ msgstr "Einstellungen gespeichert."
 
 #: journalist_app/admin.py:81
 msgid "Preferences not updated."
-msgstr ""
+msgstr "Einstellungen nicht aktualisiert."
 
 #: journalist_app/admin.py:95
 msgid "Failed to update organization name."
-msgstr ""
+msgstr "Organisationsname konnte nicht aktualisiert werden."
 
 #: journalist_app/admin.py:128
 msgid ""
@@ -112,6 +112,9 @@ msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
 msgstr ""
+"Ihr Download ist fehlgeschlagen, weil eine Datei nicht gefunden werden "
+"konnte. Ein Administrator kann weitere Informationen in den System- und "
+"Überwachungsprotokollen finden."
 
 #: journalist_app/decorators.py:18
 msgid "Only admins can access this page."
@@ -274,7 +277,7 @@ msgstr "Abbrechen"
 #: journalist_templates/_source_row.html:8
 #: journalist_templates/_source_row.html:17
 msgid "starred icon"
-msgstr ""
+msgstr "Sternchen-Symbol"
 
 #: journalist_templates/_source_row.html:16
 msgid "unstarred icon"
@@ -445,7 +448,7 @@ msgstr ""
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
-msgstr ""
+msgstr "Papierkorb-Symbol deaktiviert"
 
 #: journalist_templates/admin.html:42
 msgid "Delete user {username}"
@@ -453,7 +456,7 @@ msgstr "Benutzer {username} löschen"
 
 #: journalist_templates/admin.html:43 journalist_templates/admin.html:44
 msgid "trash icon"
-msgstr ""
+msgstr "Papierkorb-Symbol"
 
 #: journalist_templates/admin.html:53
 msgid "never"
@@ -539,24 +542,16 @@ msgstr ""
 "konfiguriert haben:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 onion services, which are being phased out for security "
-#| "reasons. In February 2021, v2 onion services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before "
 "April 30 to keep your SecureDrop servers online. Please contact your "
 "administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
 "\">Learn More</a>"
 msgstr ""
-"<strong>Aktualisierung Erforderlich:</strong> Ihre SecureDrop-Server "
-"verwenden noch v2-Onion-Dienste, die aus Sicherheitsgründen auslaufen. Im "
-"Februar 2021 werden die v2-Onion-Dienste abgeschaltet und Ihre SecureDrop-"
-"Server könnten unerreichbar werden.<a href=\"//securedrop.org/v2-onion-eol\" "
-"rel=\"noreferrer\">Mehr Erfahren</a>"
+"<strong>Aktualisierung erforderlich</strong>&nbsp;&nbsp;Richten Sie v3-Onion-"
+"Dienste vor dem 30. April ein, um Ihre SecureDrop-Server online zu halten. "
+"Bitte kontaktieren Sie Ihren Administrator. <a href=\"//securedrop.org/v2"
+"-onion-eol\" rel=\"noreferrer\">Mehr erfahren</a>"
 
 #: journalist_templates/base.html:30
 msgid ""
@@ -564,6 +559,10 @@ msgid ""
 "setup before April 30. Please contact your administrator. <a href=\"//"
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Aktualisierung erforderlich</strong>&nbsp;&nbsp;Schließen Sie die "
+"Einrichtung der v3-Onion-Dienste vor dem 30. April ab. Bitte kontaktieren "
+"Sie Ihren Administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel="
+"\"noreferrer\">Mehr erfahren</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"
@@ -644,7 +643,7 @@ msgstr "Nachricht"
 
 #: journalist_templates/col.html:69
 msgid "messages icon"
-msgstr ""
+msgstr "Nachrichten-Symbol"
 
 #: journalist_templates/col.html:80 journalist_templates/col.html:144
 #: journalist_templates/index.html:62
@@ -715,15 +714,17 @@ msgstr "Instanzkonfiguration"
 
 #: journalist_templates/config.html:10
 msgid "Organization Name"
-msgstr ""
+msgstr "Organisationsname"
 
 #: journalist_templates/config.html:15
 msgid "Set the organization name used on the SecureDrop web interfaces:"
 msgstr ""
+"Legen Sie den Organisationsnamen fest, der in den SecureDrop-Web-Oberflächen "
+"verwendet wird:"
 
 #: journalist_templates/config.html:20
 msgid "SET ORGANIZATION NAME"
-msgstr ""
+msgstr "ORGANISATIONSNAME FESTLEGEN"
 
 #: journalist_templates/config.html:28 source_templates/index.html:33
 msgid "Logo Image"
@@ -911,7 +912,7 @@ msgstr "SICHERHEITSSCHLÜSSEL ZUGANGSDATEN ZURÜCKSETZEN"
 
 #: journalist_templates/flag.html:4
 msgid "info icon"
-msgstr ""
+msgstr "Info-Symbol"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -973,8 +974,6 @@ msgid "No documents have been submitted!"
 msgstr "Es wurden keine Dokumente eingereicht!"
 
 #: journalist_templates/js-strings.html:3
-#, fuzzy
-#| msgid "filter by codename"
 msgid "Filter by codename"
 msgstr "Nach Deckname filtern"
 
