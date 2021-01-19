@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-01-14 22:19+0000\n"
+"PO-Revision-Date: 2021-01-19 19:02+0000\n"
 "Last-Translator: AO Localization Lab <ao@localizationlab.org>\n"
 "Language-Team: French <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/fr/>\n"
@@ -369,7 +369,7 @@ msgid ""
 "the barcode below:"
 msgstr ""
 "Votre téléphone sera alors en mode de lecture. Une fois dans ce mode, "
-"balayez le code-barres ci-dessous :"
+"balayez le code à barres ci-dessous :"
 
 #: journalist_templates/account_new_two_factor.html:14
 msgid ""
@@ -455,7 +455,7 @@ msgstr "icône Modifier l’utilisateur"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
-msgstr "l’icône de la corbeille est désactivée"
+msgstr "icône Corbeille désactivée"
 
 #: journalist_templates/admin.html:42
 msgid "Delete user {username}"
@@ -634,7 +634,7 @@ msgstr "icône Enveloppe fermée"
 
 #: journalist_templates/col.html:51
 msgid "open envelope icon"
-msgstr "Icône Enveloppe ouverte"
+msgstr "icône Enveloppe ouverte"
 
 #: journalist_templates/col.html:60
 msgid "Uploaded Document"
@@ -642,7 +642,7 @@ msgstr "Le document a été téléversé"
 
 #: journalist_templates/col.html:61
 msgid "files icon"
-msgstr "Icône Fichiers"
+msgstr "icône Fichiers"
 
 #: journalist_templates/col.html:68
 msgid "Message"
@@ -650,7 +650,7 @@ msgstr "Message"
 
 #: journalist_templates/col.html:69
 msgid "messages icon"
-msgstr "Icône Messages"
+msgstr "icône Messages"
 
 #: journalist_templates/col.html:80 journalist_templates/col.html:144
 #: journalist_templates/index.html:62
@@ -718,7 +718,7 @@ msgstr "Voulez-vous vraiment supprimer cette collection ?"
 
 #: journalist_templates/config.html:8
 msgid "Instance Configuration"
-msgstr "Configuration de l’Instance"
+msgstr "Configuration de l’instance"
 
 #: journalist_templates/config.html:10
 msgid "Organization Name"
@@ -922,7 +922,7 @@ msgstr "RÉINITIALISER LES AUTHENTIFIANTS DE LA CLÉ DE SÉCURITÉ"
 
 #: journalist_templates/flag.html:4
 msgid "info icon"
-msgstr "Icône Renseignements"
+msgstr "icône Renseignements"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
