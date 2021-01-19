@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-01-19 19:02+0000\n"
+"PO-Revision-Date: 2021-01-19 21:26+0000\n"
 "Last-Translator: AO Localization Lab <ao@localizationlab.org>\n"
 "Language-Team: French <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/fr/>\n"
@@ -1305,7 +1305,7 @@ msgstr "ANNULER"
 
 #: source_templates/logout.html:6
 msgid "One more thing..."
-msgstr "Encore une chose…"
+msgstr "Une dernière chose…"
 
 #: source_templates/logout.html:7
 msgid ""
@@ -1523,8 +1523,8 @@ msgid ""
 msgstr ""
 "S’il est possible que le téléchargement du Navigateur Tor suscite des "
 "soupçons et si votre fournisseur de services de courriel est moins "
-"susceptible d’être surveillé, vous pouvez envoyer un courriel à <pre> "
-"gettor@torproject.org</pre>, et un robot vous enverra des instructions."
+"susceptible d’être surveillé, vous pouvez envoyer un courriel à "
+"<pre>gettor@torproject.org</pre>. Un robot vous enverra des instructions."
 
 #: source_templates/why-public-key.html:3
 msgid "Why download the team's public key?"
