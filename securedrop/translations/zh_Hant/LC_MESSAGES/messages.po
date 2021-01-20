@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-01-20 00:07+0000\n"
-"Last-Translator: mengpangwang <mengpangwang@gmail.com>\n"
+"PO-Revision-Date: 2021-01-20 01:05+0000\n"
+"Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.securedrop.org/"
 "projects/securedrop/securedrop/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -494,23 +494,15 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "設定 Yubikey 後，請在下面輸入 6 位數字代碼："
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 onion services, which are being phased out for security "
-#| "reasons. In February 2021, v2 onion services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before "
 "April 30 to keep your SecureDrop servers online. Please contact your "
 "administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
 "\">Learn More</a>"
 msgstr ""
-"<strong>更新需求：</strong> SecureDrop 伺服器若使用 v2 Onion 服務須注意因安全"
-"考量將逐步淡出，自 2021 年2月起 v2 Onion 將被取消。仍使用它的 SecureDrop 伺服"
-"器可能無法訪問。 <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
-"\">詳情請參考</a>"
+"<strong>更新需求：</strong> 請及早在 4月30日前昇級為  v3 Onion 以確保您的 SecureDrop 伺服器平穩運作。"
+"詳情請聯繫管理員 <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\""
+">取得進一步資訊</a>。"
 
 #: journalist_templates/base.html:30
 msgid ""
@@ -895,8 +887,6 @@ msgid "No documents have been submitted!"
 msgstr "未有文件被提交！"
 
 #: journalist_templates/js-strings.html:3
-#, fuzzy
-#| msgid "filter by codename"
 msgid "Filter by codename"
 msgstr "按代號篩選"
 
