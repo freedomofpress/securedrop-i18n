@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 1.3.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-09-30 10:01+0000\n"
+"PO-Revision-Date: 2021-01-20 10:50+0000\n"
 "Last-Translator: Igor K. <igorkrainovic@gmail.com>\n"
 "Language-Team: Croatian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/hr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.1.1\n"
+"X-Generator: Weblate 4.3.2\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:19
@@ -35,7 +35,7 @@ msgstr "Odjavljeni ste zbog promjene lozinke"
 #: journalist_app/__init__.py:164 source_app/__init__.py:172
 #: source_templates/base.html:9 source_templates/index.html:7
 msgid "SecureDrop"
-msgstr ""
+msgstr "SecureDrop"
 
 #: journalist_app/account.py:39
 msgid "Incorrect password or two-factor code."
@@ -61,11 +61,11 @@ msgstr "Postavke spremljene."
 
 #: journalist_app/admin.py:81
 msgid "Preferences not updated."
-msgstr ""
+msgstr "Postavke nisu promjenjene."
 
 #: journalist_app/admin.py:95
 msgid "Failed to update organization name."
-msgstr ""
+msgstr "Nije uspjelo ažuriranje imena organizacije."
 
 #: journalist_app/admin.py:128
 msgid ""
@@ -116,14 +116,14 @@ msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
 msgstr ""
+"Vaše preuzimanje nije uspjelo jer datoteka nije pronađena. Administrator "
+"može pronaći više informacija u zapisima sustava i nadzora."
 
 #: journalist_app/decorators.py:18
 msgid "Only admins can access this page."
 msgstr "Samo administratori mogu pristupiti ovoj stranici."
 
 #: journalist_app/forms.py:19
-#, fuzzy
-#| msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgid "HOTP secrets are 40 characters long - you have entered {num}."
 msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
 msgstr[0] "HOTP tajne su 40 znakova duge - Vi ste unijeli {num}."
@@ -131,8 +131,6 @@ msgstr[1] "HOTP tajne su 40 znakova duge - Vi ste unijeli {num}."
 msgstr[2] "HOTP tajne su 40 znakova duge - Vi ste unijeli {num}."
 
 #: journalist_app/forms.py:30
-#, fuzzy
-#| msgid "Must be at least {min_chars} characters long."
 msgid "Must be at least {num} characters long."
 msgid_plural "Must be at least {num} characters long."
 msgstr[0] "Mora biti najmanje {num} znakova dugo."
@@ -140,12 +138,10 @@ msgstr[1] "Mora biti najmanje {num} znakova dugo."
 msgstr[2] "Mora biti najmanje {num} znakova dugo."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-#, fuzzy
-#| msgid "Cannot be longer than {max_chars} characters."
 msgid "Cannot be longer than {num} characters."
 msgid_plural "Cannot be longer than {num} characters."
-msgstr[0] "Ne može biti dulje od {num} znakova."
-msgstr[1] "Ne može biti dulje od {num} znakova."
+msgstr[0] "Ne može biti dulje od {num} znaka."
+msgstr[1] "Ne može biti dulje od {num} znaka."
 msgstr[2] "Ne može biti dulje od {num} znakova."
 
 #: journalist_app/forms.py:62
@@ -203,10 +199,6 @@ msgid "Login failed."
 msgstr "Prijava neuspjela."
 
 #: journalist_app/utils.py:110
-#, fuzzy
-#| msgid "Please wait at least {seconds} second before logging in again."
-#| msgid_plural ""
-#| "Please wait at least {seconds} seconds before logging in again."
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
 msgstr[0] "Molimo pričekjate barem {num} sekundu prije ponovne prijave."
@@ -288,11 +280,11 @@ msgstr "Otkaži"
 #: journalist_templates/_source_row.html:8
 #: journalist_templates/_source_row.html:17
 msgid "starred icon"
-msgstr ""
+msgstr "ikona zvijezdice"
 
 #: journalist_templates/_source_row.html:16
 msgid "unstarred icon"
-msgstr ""
+msgstr "ikona prazne zijezdice"
 
 #: journalist_templates/_source_row.html:28
 #, fuzzy
@@ -316,7 +308,7 @@ msgstr[2] "{num} poruka"
 
 #: journalist_templates/_source_row.html:37
 msgid "download icon"
-msgstr ""
+msgstr "ikona preuzimanja"
 
 #: journalist_templates/_source_row.html:38
 #, fuzzy
@@ -464,11 +456,11 @@ msgstr "Uredi korisnika {username}"
 
 #: journalist_templates/admin.html:31
 msgid "edit user icon"
-msgstr ""
+msgstr "ikona uređivanja korisnika"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
-msgstr ""
+msgstr "ikona smeća onemogućena"
 
 #: journalist_templates/admin.html:42
 msgid "Delete user {username}"
@@ -476,7 +468,7 @@ msgstr "Obriši korisnika {username}"
 
 #: journalist_templates/admin.html:43 journalist_templates/admin.html:44
 msgid "trash icon"
-msgstr ""
+msgstr "ikona smeća"
 
 #: journalist_templates/admin.html:53
 msgid "never"
@@ -559,24 +551,16 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Nakon što konfigurirate YubiKey, unesite 6-znamenkasti kod ispod:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 onion services, which are being phased out for security "
-#| "reasons. In February 2021, v2 onion services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before "
 "April 30 to keep your SecureDrop servers online. Please contact your "
 "administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
 "\">Learn More</a>"
 msgstr ""
-"<strong>Potrebno je ažuriranje:</strong> Vaši SecureDrop poslužitelji još "
-"uvijek koriste v2 onion usluge, koje se izbacuju iz upotrebe zbog "
-"sigurnosnih razloga. U veljači 2021., v2 onion usluge će biti onemogućene, a "
-"Vaši SecureDrop poslužitelji možda postanu nedostupni. <a href=\"//"
-"securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Saznajte više</a>"
+"<strong>Potrebno ažuriranje</strong>&nbsp;&nbsp;Postavite v3 Onion usluge "
+"prije 30. travnja kako bi Vaš SecureDrop poslužitelj ostao online. Obratite "
+"se svom administratoru.<a href=\"//securedrop.org/v2-onion-eol\" rel="
+"\"noreferrer\">Saznaj više</a>"
 
 #: journalist_templates/base.html:30
 msgid ""
@@ -584,6 +568,9 @@ msgid ""
 "setup before April 30. Please contact your administrator. <a href=\"//"
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Potrebno ažuriranje</strong>&nbsp;&nbsp;Dovršite postavljanje v3 "
+"Onion usluga prije 30. travnja. Obratite se svom administratoru.<a href=\""
+"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Saznajte više</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"
@@ -628,7 +615,7 @@ msgstr "Odgovori"
 
 #: journalist_templates/col.html:35 journalist_templates/col.html:65
 msgid "reply icon"
-msgstr ""
+msgstr "ikona odgovora"
 
 #: journalist_templates/col.html:39 journalist_templates/col.html:50
 msgid "Read"
@@ -636,7 +623,7 @@ msgstr "Pročitano"
 
 #: journalist_templates/col.html:40
 msgid "check icon"
-msgstr ""
+msgstr "ikona kvačice"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
@@ -644,11 +631,11 @@ msgstr "Nepročitano"
 
 #: journalist_templates/col.html:46
 msgid "closed envelope icon"
-msgstr ""
+msgstr "ikona zatvorene koverte"
 
 #: journalist_templates/col.html:51
 msgid "open envelope icon"
-msgstr ""
+msgstr "ikona otvorene koverte"
 
 #: journalist_templates/col.html:60
 msgid "Uploaded Document"
@@ -656,7 +643,7 @@ msgstr "Postavljeni dokument"
 
 #: journalist_templates/col.html:61
 msgid "files icon"
-msgstr ""
+msgstr "ikona datoteka"
 
 #: journalist_templates/col.html:68
 msgid "Message"
@@ -664,7 +651,7 @@ msgstr "Poruka"
 
 #: journalist_templates/col.html:69
 msgid "messages icon"
-msgstr ""
+msgstr "ikona poruka"
 
 #: journalist_templates/col.html:80 journalist_templates/col.html:144
 #: journalist_templates/index.html:62
@@ -732,15 +719,16 @@ msgstr "Konfiguracija instance"
 
 #: journalist_templates/config.html:10
 msgid "Organization Name"
-msgstr ""
+msgstr "Ime organizacije"
 
 #: journalist_templates/config.html:15
 msgid "Set the organization name used on the SecureDrop web interfaces:"
 msgstr ""
+"Postavite ime organizacije koje će se koristiti na SecureDrop web sučeljima:"
 
 #: journalist_templates/config.html:20
 msgid "SET ORGANIZATION NAME"
-msgstr ""
+msgstr "POSTAVITE IME ORGANIZACIJE"
 
 #: journalist_templates/config.html:28 source_templates/index.html:33
 msgid "Logo Image"
@@ -807,7 +795,7 @@ msgstr[0] "Sljedeća datoteka je odabrana za <strong>trajno brisanje</strong>:"
 msgstr[1] ""
 "Sljedeće {num} datoteke su odabrane za <strong>trajno brisanje</strong>:"
 msgstr[2] ""
-"Sljedećih {num} datoteka je odabrano za <strong>trajno brisanje</strong>:"
+"Sljedećij {num} datoteka je odabrano za <strong>trajno brisanje</strong>:"
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
@@ -934,7 +922,7 @@ msgstr "Ponovno postavi vjerodajnice sigurnosnog ključa"
 
 #: journalist_templates/flag.html:4
 msgid "info icon"
-msgstr ""
+msgstr "ikona informacija"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -994,10 +982,8 @@ msgid "No documents have been submitted!"
 msgstr "Dokumenti nisu predani!"
 
 #: journalist_templates/js-strings.html:3
-#, fuzzy
-#| msgid "filter by codename"
 msgid "Filter by codename"
-msgstr "filtriraj po kodnom imenu"
+msgstr "Filtriraj po kodnom imenu"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
@@ -1131,7 +1117,7 @@ msgstr "Zaštita novinara i izvora"
 
 #: source_templates/base.html:24
 msgid "SecureDrop Home"
-msgstr ""
+msgstr "SecureDrop Home"
 
 #: source_templates/base.html:32
 msgid "LOG OUT"
