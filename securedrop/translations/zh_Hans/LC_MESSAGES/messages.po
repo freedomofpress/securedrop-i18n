@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-10-02 15:19+0000\n"
-"Last-Translator: erinm <erinm@riseup.net>\n"
+"PO-Revision-Date: 2021-01-20 08:37+0000\n"
+"Last-Translator: ff98sha <ff98sha@163.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.1.1\n"
+"X-Generator: Weblate 4.3.2\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:19
@@ -34,7 +34,7 @@ msgstr "您因密码更改而被登出"
 #: journalist_app/__init__.py:164 source_app/__init__.py:172
 #: source_templates/base.html:9 source_templates/index.html:7
 msgid "SecureDrop"
-msgstr ""
+msgstr "SecureDrop"
 
 #: journalist_app/account.py:39
 msgid "Incorrect password or two-factor code."
@@ -58,11 +58,11 @@ msgstr "设置已保存。"
 
 #: journalist_app/admin.py:81
 msgid "Preferences not updated."
-msgstr ""
+msgstr "无法更新设置。"
 
 #: journalist_app/admin.py:95
 msgid "Failed to update organization name."
-msgstr ""
+msgstr "无法更新组织名称。"
 
 #: journalist_app/admin.py:128
 msgid ""
@@ -108,29 +108,23 @@ msgstr "未选择任何的集合。"
 msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
-msgstr ""
+msgstr "找不到文件，下载失败。管理员可以在系统日志中查看更多信息。"
 
 #: journalist_app/decorators.py:18
 msgid "Only admins can access this page."
 msgstr "此页面仅供管理员访问。"
 
 #: journalist_app/forms.py:19
-#, fuzzy
-#| msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgid "HOTP secrets are 40 characters long - you have entered {num}."
 msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
 msgstr[0] "HOTP 密码长度为40个字符 - 您已输入 {num} 个字符。"
 
 #: journalist_app/forms.py:30
-#, fuzzy
-#| msgid "Must be at least {min_chars} characters long."
 msgid "Must be at least {num} characters long."
 msgid_plural "Must be at least {num} characters long."
 msgstr[0] "该字段需要至少 {num} 个字符。"
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-#, fuzzy
-#| msgid "Cannot be longer than {max_chars} characters."
 msgid "Cannot be longer than {num} characters."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "字段长度需小于 {num} 个字符。"
@@ -187,10 +181,6 @@ msgid "Login failed."
 msgstr "登录失败。"
 
 #: journalist_app/utils.py:110
-#, fuzzy
-#| msgid "Please wait at least {seconds} second before logging in again."
-#| msgid_plural ""
-#| "Please wait at least {seconds} seconds before logging in again."
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
 msgstr[0] "请至少等待 {num} 秒后再登录。"
@@ -256,39 +246,30 @@ msgstr "取消"
 #: journalist_templates/_source_row.html:8
 #: journalist_templates/_source_row.html:17
 msgid "starred icon"
-msgstr ""
+msgstr "星标"
 
 #: journalist_templates/_source_row.html:16
 msgid "unstarred icon"
-msgstr ""
+msgstr "未星标"
 
 #: journalist_templates/_source_row.html:28
-#, fuzzy
-#| msgid "1 doc"
-#| msgid_plural "{doc_num} docs"
 msgid "1 doc"
 msgid_plural "{num} docs"
-msgstr[0] "{num} 文档"
+msgstr[0] "{num} 个文档"
 
 #: journalist_templates/_source_row.html:32
-#, fuzzy
-#| msgid "1 message"
-#| msgid_plural "{msg_num} messages"
 msgid "1 message"
 msgid_plural "{num} messages"
-msgstr[0] "{num} 消息"
+msgstr[0] "{num} 条消息"
 
 #: journalist_templates/_source_row.html:37
 msgid "download icon"
-msgstr ""
+msgstr "下载图标"
 
 #: journalist_templates/_source_row.html:38
-#, fuzzy
-#| msgid "1 unread"
-#| msgid_plural "{num_unread} unread"
 msgid "1 unread"
 msgid_plural "{num} unread"
-msgstr[0] "{num} 未读"
+msgstr[0] "{num} 个未读"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
@@ -419,11 +400,11 @@ msgstr "编辑用户 {username}"
 
 #: journalist_templates/admin.html:31
 msgid "edit user icon"
-msgstr ""
+msgstr "编辑用户图标"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
-msgstr ""
+msgstr "已禁用垃圾桶图标"
 
 #: journalist_templates/admin.html:42
 msgid "Delete user {username}"
@@ -431,7 +412,7 @@ msgstr "删除用户 {username}"
 
 #: journalist_templates/admin.html:43 journalist_templates/admin.html:44
 msgid "trash icon"
-msgstr ""
+msgstr "垃圾桶图标"
 
 #: journalist_templates/admin.html:53
 msgid "never"
@@ -511,23 +492,14 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "当你配置好 YubiKey 后，输入下面的 6 位口令："
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 onion services, which are being phased out for security "
-#| "reasons. In February 2021, v2 onion services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before "
 "April 30 to keep your SecureDrop servers online. Please contact your "
 "administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
 "\">Learn More</a>"
 msgstr ""
-"<strong>需要更新：</strong>你的 SecureDrop 服务器仍在使用v2版洋葱服务，其因为"
-"安全问题已过时。在2021年2月，v2版洋葱服务将被禁用，届时你的 SecureDrop 服务器"
-"会无法访问。<a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">了解"
-"更多</a>"
+"<strong>需要更新</strong>请在4月30日前为 SecureDrop 服务器升级到v3版洋葱服务，否则服务器会无法访问。请联系管理员。<a "
+"href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">了解更多</a>"
 
 #: journalist_templates/base.html:30
 msgid ""
@@ -535,6 +507,8 @@ msgid ""
 "setup before April 30. Please contact your administrator. <a href=\"//"
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>需要更新</strong>请在4月30日前完成 SecureDrop 服务器的v3版洋葱服务的升级，否则服务器会无法访问。请联系管理员。"
+"<a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">了解更多</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"
@@ -550,7 +524,7 @@ msgstr "登出"
 
 #: journalist_templates/base.html:62
 msgid "Powered by <em>SecureDrop {version}</em>."
-msgstr "由 <em>SecureDrop</em> 提供支持。"
+msgstr "由 <em>SecureDrop {version}</em> 提供支持。"
 
 #: journalist_templates/col.html:6
 msgid "All Sources"
@@ -577,7 +551,7 @@ msgstr "回复"
 
 #: journalist_templates/col.html:35 journalist_templates/col.html:65
 msgid "reply icon"
-msgstr ""
+msgstr "恢复图标"
 
 #: journalist_templates/col.html:39 journalist_templates/col.html:50
 msgid "Read"
@@ -585,7 +559,7 @@ msgstr "读取"
 
 #: journalist_templates/col.html:40
 msgid "check icon"
-msgstr ""
+msgstr "选中图标"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
@@ -593,11 +567,11 @@ msgstr "未读"
 
 #: journalist_templates/col.html:46
 msgid "closed envelope icon"
-msgstr ""
+msgstr "密封信件图标"
 
 #: journalist_templates/col.html:51
 msgid "open envelope icon"
-msgstr ""
+msgstr "开封信件图标"
 
 #: journalist_templates/col.html:60
 msgid "Uploaded Document"
@@ -605,7 +579,7 @@ msgstr "已上传的文件"
 
 #: journalist_templates/col.html:61
 msgid "files icon"
-msgstr ""
+msgstr "文件图标"
 
 #: journalist_templates/col.html:68
 msgid "Message"
@@ -613,7 +587,7 @@ msgstr "消息"
 
 #: journalist_templates/col.html:69
 msgid "messages icon"
-msgstr ""
+msgstr "消息图标"
 
 #: journalist_templates/col.html:80 journalist_templates/col.html:144
 #: journalist_templates/index.html:62
@@ -678,15 +652,15 @@ msgstr "实例设置"
 
 #: journalist_templates/config.html:10
 msgid "Organization Name"
-msgstr ""
+msgstr "组织名称"
 
 #: journalist_templates/config.html:15
 msgid "Set the organization name used on the SecureDrop web interfaces:"
-msgstr ""
+msgstr "设置您要用于 SecureDrop 界面的组织名称："
 
 #: journalist_templates/config.html:20
 msgid "SET ORGANIZATION NAME"
-msgstr ""
+msgstr "设置组织名称"
 
 #: journalist_templates/config.html:28 source_templates/index.html:33
 msgid "Logo Image"
@@ -732,19 +706,12 @@ msgid "SEND TEST OSSEC ALERT"
 msgstr "发送测试OSSEC警报"
 
 #: journalist_templates/delete.html:5
-#, fuzzy
-#| msgid ""
-#| "The following file has been selected for <strong>permanent deletion</"
-#| "strong>:"
-#| msgid_plural ""
-#| "The following {files} files have been selected for <strong>permanent "
-#| "deletion</strong>:"
 msgid ""
 "The following file has been selected for <strong>permanent deletion</strong>:"
 msgid_plural ""
 "The following {num} files have been selected for <strong>permanent deletion</"
 "strong>:"
-msgstr[0] "下列选中的 {num} 文件将被<strong>永久删除</strong>："
+msgstr[0] "下列选中的 {num} 个文件将被<strong>永久删除</strong>："
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
@@ -862,7 +829,7 @@ msgstr "重置安全密钥凭证"
 
 #: journalist_templates/flag.html:4
 msgid "info icon"
-msgstr ""
+msgstr "信息图标"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -920,8 +887,6 @@ msgid "No documents have been submitted!"
 msgstr "无已提交的文档！"
 
 #: journalist_templates/js-strings.html:3
-#, fuzzy
-#| msgid "filter by codename"
 msgid "Filter by codename"
 msgstr "按代号筛选"
 
@@ -1046,7 +1011,7 @@ msgstr "庇护记者及线人"
 
 #: source_templates/base.html:24
 msgid "SecureDrop Home"
-msgstr ""
+msgstr "SecureDrop 首页"
 
 #: source_templates/base.html:32
 msgid "LOG OUT"
