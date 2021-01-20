@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-01-20 10:50+0000\n"
+"PO-Revision-Date: 2021-01-20 11:00+0000\n"
 "Last-Translator: Ahmed Essam <ahmedessamdev@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -474,7 +474,7 @@ msgstr "أيقونة تحرير المستخدم"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
-msgstr ""
+msgstr "أيقونة سلة المهملات غير مفعلة"
 
 #: journalist_templates/admin.html:42
 msgid "Delete user {username}"
@@ -482,7 +482,7 @@ msgstr "احذف حساب {username}"
 
 #: journalist_templates/admin.html:43 journalist_templates/admin.html:44
 msgid "trash icon"
-msgstr ""
+msgstr "أيقونة سلة المهملات"
 
 #: journalist_templates/admin.html:53
 msgid "never"
@@ -592,6 +592,10 @@ msgid ""
 "setup before April 30. Please contact your administrator. <a href=\"//"
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>التحديث مطلوب</strong>&nbsp;&nbsp;قم بإكمال تنصيب الإصدار الثالث من "
+"خدمات البصلة \"Onion Services v3\" قبل 30 أبريل/نيسان. يرجي التواصل مع "
+"الإداري في هذا الشأن.<a href=\"//securedrop.org/v2-onion-eol\" rel="
+"\"noreferrer\">اعرف المزيد</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"
