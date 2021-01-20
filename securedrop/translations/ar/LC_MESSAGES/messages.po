@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-01-20 11:00+0000\n"
+"PO-Revision-Date: 2021-01-20 14:13+0000\n"
 "Last-Translator: Ahmed Essam <ahmedessamdev@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ar/>\n"
@@ -309,9 +309,9 @@ msgid_plural "{num} docs"
 msgstr[0] "لا مستندات"
 msgstr[1] "مستند واحد"
 msgstr[2] "مستندان"
-msgstr[3] "مستندات"
-msgstr[4] "{num} مستندات"
-msgstr[5] "{num} مستندات"
+msgstr[3] "{num} مستندات"
+msgstr[4] "{num} مستند"
+msgstr[5] "{num} مستند"
 
 #: journalist_templates/_source_row.html:32
 msgid "1 message"
@@ -566,25 +566,16 @@ msgstr ""
 "بعد إتمام ضبط مفتاح الاستيثاق \"YubiKey\" أدخل الرمز المكون من 6 أرقام:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 onion services, which are being phased out for security "
-#| "reasons. In February 2021, v2 onion services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before "
 "April 30 to keep your SecureDrop servers online. Please contact your "
 "administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
 "\">Learn More</a>"
 msgstr ""
-"<strong>التحديث مطلوب:</strong> خوادم SecureDrop الخاصة بك لا زالت تستخدم "
-"الإصدار الثاني من خدمات البصلة onion services و التى سوف يتم إنهاء العمل بها "
-"لأسباب أمنية. سوف يتم إلغاء تفعيل الإصدار الثاني من خدمات البصلة onion "
-"services في فبراير 2021، و ربما يتعذر الوصول إلي خوادم SecureDrop الخاصة بك. "
-"<a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">لمعرفة المزيد</"
-"a>"
+"<strong>التحديث مطلوب</strong>&nbsp;&nbsp;قم بتنصيب الإصدار الثالث من خدمات "
+"البصلة Onion Services v3 قبل 30 أبريل/نيسان للإبقاء علي خوادم SecureDrop "
+"متصلة عبر الإنترنت. يرجى التواصل مع الإداري في هذا الأمر.<a href=\""
+"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">معرفة المزيد</a>"
 
 #: journalist_templates/base.html:30
 msgid ""
@@ -593,9 +584,9 @@ msgid ""
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
 "<strong>التحديث مطلوب</strong>&nbsp;&nbsp;قم بإكمال تنصيب الإصدار الثالث من "
-"خدمات البصلة \"Onion Services v3\" قبل 30 أبريل/نيسان. يرجي التواصل مع "
-"الإداري في هذا الشأن.<a href=\"//securedrop.org/v2-onion-eol\" rel="
-"\"noreferrer\">اعرف المزيد</a>"
+"خدمات البصلة Onion Services v3 قبل 30 أبريل/نيسان. يرجي التواصل مع الإداري "
+"في هذا الأمر.<a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\""
+">معرفة المزيد</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"
@@ -640,7 +631,7 @@ msgstr "رُدّ"
 
 #: journalist_templates/col.html:35 journalist_templates/col.html:65
 msgid "reply icon"
-msgstr ""
+msgstr "أيقونة الرد"
 
 #: journalist_templates/col.html:39 journalist_templates/col.html:50
 msgid "Read"
@@ -648,7 +639,7 @@ msgstr "قراءة"
 
 #: journalist_templates/col.html:40
 msgid "check icon"
-msgstr ""
+msgstr "أيقونة التمام"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
@@ -656,11 +647,11 @@ msgstr "غير مقروءة"
 
 #: journalist_templates/col.html:46
 msgid "closed envelope icon"
-msgstr ""
+msgstr "أيقونة الظرف المغلق"
 
 #: journalist_templates/col.html:51
 msgid "open envelope icon"
-msgstr ""
+msgstr "أيقونة الظرف المفتوح"
 
 #: journalist_templates/col.html:60
 msgid "Uploaded Document"
@@ -668,7 +659,7 @@ msgstr "تم رفع المستند"
 
 #: journalist_templates/col.html:61
 msgid "files icon"
-msgstr ""
+msgstr "أيقونة الملفات"
 
 #: journalist_templates/col.html:68
 msgid "Message"
@@ -676,7 +667,7 @@ msgstr "رسالة"
 
 #: journalist_templates/col.html:69
 msgid "messages icon"
-msgstr ""
+msgstr "أيقونة الرسائل"
 
 #: journalist_templates/col.html:80 journalist_templates/col.html:144
 #: journalist_templates/index.html:62
@@ -744,15 +735,15 @@ msgstr "إعدادات النظام"
 
 #: journalist_templates/config.html:10
 msgid "Organization Name"
-msgstr ""
+msgstr "اسم المنظمة"
 
 #: journalist_templates/config.html:15
 msgid "Set the organization name used on the SecureDrop web interfaces:"
-msgstr ""
+msgstr "حدد اسم المنظمة المستخدم على واجهة SecureDrop:"
 
 #: journalist_templates/config.html:20
 msgid "SET ORGANIZATION NAME"
-msgstr ""
+msgstr "تحديد اسم المنظمة"
 
 #: journalist_templates/config.html:28 source_templates/index.html:33
 msgid "Logo Image"
@@ -930,7 +921,7 @@ msgstr "إعادة ضبط وتصفير بيانات اعتماد مفاتيح ا
 
 #: journalist_templates/flag.html:4
 msgid "info icon"
-msgstr ""
+msgstr "أيقونة المعلومة"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -989,8 +980,6 @@ msgid "No documents have been submitted!"
 msgstr "لا توجد مستندات مودعة!"
 
 #: journalist_templates/js-strings.html:3
-#, fuzzy
-#| msgid "filter by codename"
 msgid "Filter by codename"
 msgstr "الترشيح بالاسم الرمزي"
 
@@ -1122,7 +1111,7 @@ msgstr "لحماية الصحافيين و&nbsp;المصادر"
 
 #: source_templates/base.html:24
 msgid "SecureDrop Home"
-msgstr ""
+msgstr "SecureDrop الصفحة الرئيسية"
 
 #: source_templates/base.html:32
 msgid "LOG OUT"
