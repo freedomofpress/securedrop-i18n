@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-10-06 16:16+0000\n"
+"PO-Revision-Date: 2021-01-20 14:13+0000\n"
 "Last-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/"
 "securedrop/securedrop/nb_NO/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.1.1\n"
+"X-Generator: Weblate 4.3.2\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:19
@@ -35,7 +35,7 @@ msgstr "Du har blitt utlogget som følge av passordsendring"
 #: journalist_app/__init__.py:164 source_app/__init__.py:172
 #: source_templates/base.html:9 source_templates/index.html:7
 msgid "SecureDrop"
-msgstr ""
+msgstr "SecureDrop"
 
 #: journalist_app/account.py:39
 msgid "Incorrect password or two-factor code."
@@ -59,11 +59,11 @@ msgstr "Innstillinger lagret."
 
 #: journalist_app/admin.py:81
 msgid "Preferences not updated."
-msgstr ""
+msgstr "Innstillingene ikke oppdatert."
 
 #: journalist_app/admin.py:95
 msgid "Failed to update organization name."
-msgstr ""
+msgstr "Organisasjonsnavn kunne ikke oppdateres."
 
 #: journalist_app/admin.py:128
 msgid ""
@@ -112,6 +112,8 @@ msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
 msgstr ""
+"Nedlastingen mislyktes fordi en fil ikke ble funnet. En administrator kan "
+"finne detaljer om feilen i system- og driftsloggene."
 
 #: journalist_app/decorators.py:18
 msgid "Only admins can access this page."
@@ -263,11 +265,11 @@ msgstr "Avbryt"
 #: journalist_templates/_source_row.html:8
 #: journalist_templates/_source_row.html:17
 msgid "starred icon"
-msgstr ""
+msgstr "Stjernemerket ikon"
 
 #: journalist_templates/_source_row.html:16
 msgid "unstarred icon"
-msgstr ""
+msgstr "Ikke avkrysset stjernemerke-ikon"
 
 #: journalist_templates/_source_row.html:28
 msgid "1 doc"
@@ -283,7 +285,7 @@ msgstr[1] "{num} meldinger"
 
 #: journalist_templates/_source_row.html:37
 msgid "download icon"
-msgstr ""
+msgstr "nedlastingsikon"
 
 #: journalist_templates/_source_row.html:38
 msgid "1 unread"
@@ -428,11 +430,11 @@ msgstr "Rediger brukeren {username}"
 
 #: journalist_templates/admin.html:31
 msgid "edit user icon"
-msgstr ""
+msgstr "rediger bruker-ikon"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
-msgstr ""
+msgstr "deaktivert søppelbøtte-ikon"
 
 #: journalist_templates/admin.html:42
 msgid "Delete user {username}"
@@ -440,7 +442,7 @@ msgstr "Slett brukeren {username}"
 
 #: journalist_templates/admin.html:43 journalist_templates/admin.html:44
 msgid "trash icon"
-msgstr ""
+msgstr "søppelbøtte-ikon"
 
 #: journalist_templates/admin.html:53
 msgid "never"
@@ -524,24 +526,16 @@ msgstr ""
 "Når du har satt opp din YubiKey, skriv inn den 6 tegn lange koden nedenfor:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 onion services, which are being phased out for security "
-#| "reasons. In February 2021, v2 onion services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before "
 "April 30 to keep your SecureDrop servers online. Please contact your "
 "administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
 "\">Learn More</a>"
 msgstr ""
-"<strong>Oppdatering nødvendig:</strong> Dine SecureDrop-tjenere kjører "
-"fortsatt v2 Onion-tjenester, som fases ut av sikkerhetsgrunner. I februar "
-"2021 vil v2 Onion-tjenester bli deaktivert, og dine SecureDrop-tjenere vil "
-"kunne bli utilgjengelige. <a href=\"//securedrop.org/v2-onion-eol\" rel="
-"\"noreferrer\">Lær mer</a>"
+"<strong>Oppdatering nødvendig:</strong>&nbsp;&nbsp;Sett opp v3 Onion-"
+"tjenester før 30. april 2021 for å fortsatt holde SecureDrop-systemet "
+"oppsettet deres tilgjengelig. Kontakt din administrator. <a href=\""
+"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Lær mer</a>"
 
 #: journalist_templates/base.html:30
 msgid ""
@@ -549,6 +543,9 @@ msgid ""
 "setup before April 30. Please contact your administrator. <a href=\"//"
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Oppdatering nødvendig:</strong>&nbsp;&nbsp;Sett opp v3 Onion-"
+"tjenester før 30. april. Kontakt din administrator. <a href=\"//securedrop."
+"org/v2-onion-eol\" rel=\"noreferrer\">Lær mer</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"
@@ -593,7 +590,7 @@ msgstr "Svar"
 
 #: journalist_templates/col.html:35 journalist_templates/col.html:65
 msgid "reply icon"
-msgstr ""
+msgstr "svar-ikon"
 
 #: journalist_templates/col.html:39 journalist_templates/col.html:50
 msgid "Read"
@@ -601,7 +598,7 @@ msgstr "Lest"
 
 #: journalist_templates/col.html:40
 msgid "check icon"
-msgstr ""
+msgstr "avhukingsboks-ikon"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
@@ -609,11 +606,11 @@ msgstr "Ulest"
 
 #: journalist_templates/col.html:46
 msgid "closed envelope icon"
-msgstr ""
+msgstr "lukket konvolutt-ikon"
 
 #: journalist_templates/col.html:51
 msgid "open envelope icon"
-msgstr ""
+msgstr "åpen konvolutt-ikon"
 
 #: journalist_templates/col.html:60
 msgid "Uploaded Document"
@@ -621,7 +618,7 @@ msgstr "Opplastet dokument"
 
 #: journalist_templates/col.html:61
 msgid "files icon"
-msgstr ""
+msgstr "filer-ikon"
 
 #: journalist_templates/col.html:68
 msgid "Message"
@@ -629,7 +626,7 @@ msgstr "Melding"
 
 #: journalist_templates/col.html:69
 msgid "messages icon"
-msgstr ""
+msgstr "meldinger-ikon"
 
 #: journalist_templates/col.html:80 journalist_templates/col.html:144
 #: journalist_templates/index.html:62
@@ -701,15 +698,15 @@ msgstr "Instans-oppsett"
 
 #: journalist_templates/config.html:10
 msgid "Organization Name"
-msgstr ""
+msgstr "Organisasjonsnavn"
 
 #: journalist_templates/config.html:15
 msgid "Set the organization name used on the SecureDrop web interfaces:"
-msgstr ""
+msgstr "Lagre organisasjonsnavnet som vil bli brukt på SecureDrop-nettsidene:"
 
 #: journalist_templates/config.html:20
 msgid "SET ORGANIZATION NAME"
-msgstr ""
+msgstr "LAGRE ORGANISASJONSNAVN"
 
 #: journalist_templates/config.html:28 source_templates/index.html:33
 msgid "Logo Image"
@@ -889,7 +886,7 @@ msgstr "Tilbakestill identitetsdetaljer fra sikkerhetsnøkkel"
 
 #: journalist_templates/flag.html:4
 msgid "info icon"
-msgstr ""
+msgstr "info-ikon"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -950,10 +947,8 @@ msgid "No documents have been submitted!"
 msgstr "Ingen dokumenter har blitt sendt!"
 
 #: journalist_templates/js-strings.html:3
-#, fuzzy
-#| msgid "filter by codename"
 msgid "Filter by codename"
-msgstr "filtrer etter kodenavn"
+msgstr "Filtrer etter kodenavn"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
@@ -1084,7 +1079,7 @@ msgstr "Sikkerhet for journalister og kilder"
 
 #: source_templates/base.html:24
 msgid "SecureDrop Home"
-msgstr ""
+msgstr "SecureDrop hjem"
 
 #: source_templates/base.html:32
 msgid "LOG OUT"
