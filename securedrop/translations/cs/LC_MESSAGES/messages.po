@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-01-20 18:28+0000\n"
+"PO-Revision-Date: 2021-01-20 20:37+0000\n"
 "Last-Translator: michaela-bot <michaela.rybickova@gmail.com>\n"
 "Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/cs/>\n"
@@ -114,6 +114,8 @@ msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
 msgstr ""
+"Stahování selhalo protože soubor nebyl nalezen. Administrátor může najít "
+"více informací v systémovém a monitorovacím logu."
 
 #: journalist_app/decorators.py:18
 msgid "Only admins can access this page."
@@ -280,7 +282,7 @@ msgstr "Zrušit"
 #: journalist_templates/_source_row.html:8
 #: journalist_templates/_source_row.html:17
 msgid "starred icon"
-msgstr ""
+msgstr "ikonka hvězdy"
 
 #: journalist_templates/_source_row.html:16
 msgid "unstarred icon"
@@ -563,6 +565,9 @@ msgid ""
 "setup before April 30. Please contact your administrator. <a href=\"//"
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Nutná aktualizace</strong>&nbsp;&nbsp;Dokončete nastavení v3 Onion "
+"Services do 30. dubna. Kontaktujte prosím vašeho administrátora.<a href=\""
+"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Více informací</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"
@@ -607,7 +612,7 @@ msgstr "Odpověď"
 
 #: journalist_templates/col.html:35 journalist_templates/col.html:65
 msgid "reply icon"
-msgstr ""
+msgstr "ikona odpovědi"
 
 #: journalist_templates/col.html:39 journalist_templates/col.html:50
 msgid "Read"
@@ -623,11 +628,11 @@ msgstr "Nepřečteno"
 
 #: journalist_templates/col.html:46
 msgid "closed envelope icon"
-msgstr ""
+msgstr "ikona zavřené obálky"
 
 #: journalist_templates/col.html:51
 msgid "open envelope icon"
-msgstr ""
+msgstr "ikonka otevřené obálky"
 
 #: journalist_templates/col.html:60
 msgid "Uploaded Document"
@@ -635,7 +640,7 @@ msgstr "Nahraný dokument"
 
 #: journalist_templates/col.html:61
 msgid "files icon"
-msgstr ""
+msgstr "ikonka souborů"
 
 #: journalist_templates/col.html:68
 msgid "Message"
@@ -643,7 +648,7 @@ msgstr "Zpráva"
 
 #: journalist_templates/col.html:69
 msgid "messages icon"
-msgstr ""
+msgstr "ikonka zpráv"
 
 #: journalist_templates/col.html:80 journalist_templates/col.html:144
 #: journalist_templates/index.html:62
@@ -711,15 +716,15 @@ msgstr "Nastavení instance"
 
 #: journalist_templates/config.html:10
 msgid "Organization Name"
-msgstr ""
+msgstr "Jméno organizace"
 
 #: journalist_templates/config.html:15
 msgid "Set the organization name used on the SecureDrop web interfaces:"
-msgstr ""
+msgstr "Nastavte jméno organizace které bude použito v rozhraní SecureDrop:"
 
 #: journalist_templates/config.html:20
 msgid "SET ORGANIZATION NAME"
-msgstr ""
+msgstr "NASTAVIT JMÉNO ORGANIZACE"
 
 #: journalist_templates/config.html:28 source_templates/index.html:33
 msgid "Logo Image"
@@ -902,7 +907,7 @@ msgstr "RESETOVAT PŘIHLAŠOVACÍ ÚDAJE BEZPEČNOSTNÍHO KLÍČE"
 
 #: journalist_templates/flag.html:4
 msgid "info icon"
-msgstr ""
+msgstr "ikonka info"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
