@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-10-06 18:01+0000\n"
-"Last-Translator: erinm <erinm@riseup.net>\n"
+"PO-Revision-Date: 2021-01-20 10:50+0000\n"
+"Last-Translator: Ahmed Essam <ahmedessamdev@gmail.com>\n"
 "Language-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ar/>\n"
 "Language: ar\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 4.1.1\n"
+"X-Generator: Weblate 4.3.2\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:19
@@ -36,7 +36,7 @@ msgstr "تم الخروج من الحساب بسبب تغيير كلمة الس�
 #: journalist_app/__init__.py:164 source_app/__init__.py:172
 #: source_templates/base.html:9 source_templates/index.html:7
 msgid "SecureDrop"
-msgstr ""
+msgstr "SecureDrop"
 
 #: journalist_app/account.py:39
 msgid "Incorrect password or two-factor code."
@@ -60,11 +60,11 @@ msgstr "تم حفظ الاختيارات."
 
 #: journalist_app/admin.py:81
 msgid "Preferences not updated."
-msgstr ""
+msgstr "لم يتم تحديث الإختيارات."
 
 #: journalist_app/admin.py:95
 msgid "Failed to update organization name."
-msgstr ""
+msgstr "لم ينجح تحديث اسم المنظمة."
 
 #: journalist_app/admin.py:128
 msgid ""
@@ -112,52 +112,47 @@ msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
 msgstr ""
+"لم ينجح التحميل بسبب عدم امكانية العثور على ملف. الإداري يمكنه الحصول على "
+"المزيد من المعلومات عن هذا الأمر من خلال سجلات نظام التشغيل والمراقبة."
 
 #: journalist_app/decorators.py:18
 msgid "Only admins can access this page."
 msgstr "الإداريون وحدهم بوسعهم النّفاذ إلى هذه الصفحة."
 
 #: journalist_app/forms.py:19
-#, fuzzy
-#| msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgid "HOTP secrets are 40 characters long - you have entered {num}."
 msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
 msgstr[0] ""
-"تتألّف كلمة السرّ من نوع HOTP من 40 مَحرَفًا على الأقل، لكنّك أدخلت {num} محرفا."
+"تتألّف كلمة السرّ من نوع HOTP من 40 حرفًا على الأقل - أنت لم تدخل أي حرف."
 msgstr[1] ""
-"تتألّف كلمة السرّ من نوع HOTP من 40 مَحرَفًا على الأقل، لكنّك أدخلت {num} محرفا."
-msgstr[2] ""
-"تتألّف كلمة السرّ من نوع HOTP من 40 مَحرَفًا على الأقل، لكنّك أدخلت {num} محرفا."
+"تتألّف كلمة السرّ من نوع HOTP من 40 حرفًا على الأقل - أنت أدخلت حرفًا واحدًا."
+msgstr[2] "تتألّف كلمة السرّ من نوع HOTP من 40 حرفًا على الأقل - أنت أدخلت حرفين."
 msgstr[3] ""
-"تتألّف كلمة السرّ من نوع HOTP من 40 مَحرَفًا على الأقل، لكنّك أدخلت {num} محرفا."
+"تتألّف كلمة السرّ من نوع HOTP من 40 حرفًا على الأقل - أنت أدخلت {num} حروف."
 msgstr[4] ""
-"تتألّف كلمة السرّ من نوع HOTP من 40 مَحرَفًا على الأقل، لكنّك أدخلت {num} محرفا."
+"تتألّف كلمة السرّ من نوع HOTP من 40 حرفًا على الأقل - أنت أدخلت {num} حرفًا."
 msgstr[5] ""
-"تتألّف كلمة السرّ من نوع HOTP من 40 مَحرَفًا على الأقل، لكنّك أدخلت {num} محرفا."
+"تتألّف كلمة السرّ من نوع HOTP من 40 حرفًا على الأقل - أنت أدخلت {num} حرفًا."
 
 #: journalist_app/forms.py:30
-#, fuzzy
-#| msgid "Must be at least {min_chars} characters long."
 msgid "Must be at least {num} characters long."
 msgid_plural "Must be at least {num} characters long."
-msgstr[0] "يجب أن يحوي {num} حرفًا على الأقل."
-msgstr[1] "يجب أن يحوي {num} حرفًا على الأقل."
-msgstr[2] "يجب أن يحوي {num} حرفًا على الأقل."
-msgstr[3] "يجب أن يحوي {num} حرفًا على الأقل."
+msgstr[0] "يجب ألا يحوي أي حرف."
+msgstr[1] "يجب أن يحوي حرفًا واحدًا على الأقل."
+msgstr[2] "يجب أن يحوي حرفين على الأقل."
+msgstr[3] "يجب أن يحوي {num} حروف على الأقل."
 msgstr[4] "يجب أن يحوي {num} حرفًا على الأقل."
 msgstr[5] "يجب أن يحوي {num} حرفًا على الأقل."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-#, fuzzy
-#| msgid "Cannot be longer than {max_chars} characters."
 msgid "Cannot be longer than {num} characters."
 msgid_plural "Cannot be longer than {num} characters."
-msgstr[0] "هذا الحقل لا يقبل أكثر من {num} محرفًا."
-msgstr[1] "هذا الحقل لا يقبل أكثر من {num} محرفًا."
-msgstr[2] "هذا الحقل لا يقبل أكثر من {num} محرفًا."
-msgstr[3] "هذا الحقل لا يقبل أكثر من {num} محرفًا."
-msgstr[4] "هذا الحقل لا يقبل أكثر من {num} محرفًا."
-msgstr[5] "هذا الحقل لا يقبل أكثر من {num} محرفًا."
+msgstr[0] "هذا الحقل لا يقبل أي حرف."
+msgstr[1] "هذا الحقل لا يقبل أكثر من حرف واحد."
+msgstr[2] "هذا الحقل لا يقبل أكثر من حرفين."
+msgstr[3] "هذا الحقل لا يقبل أكثر من {num} حروف."
+msgstr[4] "هذا الحقل لا يقبل أكثر من {num} حرفًا."
+msgstr[5] "هذا الحقل لا يقبل أكثر من {num} حرفًا."
 
 #: journalist_app/forms.py:62
 msgid ""
@@ -302,11 +297,11 @@ msgstr "إلغاء"
 #: journalist_templates/_source_row.html:8
 #: journalist_templates/_source_row.html:17
 msgid "starred icon"
-msgstr ""
+msgstr "أيقونة النجمة"
 
 #: journalist_templates/_source_row.html:16
 msgid "unstarred icon"
-msgstr ""
+msgstr "لا توجد أيقونة النجمة"
 
 #: journalist_templates/_source_row.html:28
 msgid "1 doc"
@@ -330,7 +325,7 @@ msgstr[5] "{num} رسالة"
 
 #: journalist_templates/_source_row.html:37
 msgid "download icon"
-msgstr ""
+msgstr "أيقونة التحميل"
 
 #: journalist_templates/_source_row.html:38
 msgid "1 unread"
@@ -475,7 +470,7 @@ msgstr "حرَّر حساب {username}"
 
 #: journalist_templates/admin.html:31
 msgid "edit user icon"
-msgstr ""
+msgstr "أيقونة تحرير المستخدم"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
