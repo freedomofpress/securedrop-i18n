@@ -89,7 +89,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr "Dvoufaktorový kód pro uživatele \"{user}\" byl ověřen."
 
 #: journalist_app/admin.py:239 journalist_app/admin.py:247
-#: journalist_app/utils.py:364
+#: journalist_app/utils.py:368
 msgid "Name not updated: {}"
 msgstr "Jméno nebylo aktualizováno: {}"
 
@@ -109,7 +109,7 @@ msgstr "Sada {source_name} smazána."
 msgid "No collections selected."
 msgstr "Nevybral/a jste žádnou sadu."
 
-#: journalist_app/col.py:101 journalist_app/utils.py:205
+#: journalist_app/col.py:101 journalist_app/utils.py:208
 msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
@@ -133,7 +133,7 @@ msgstr[2] "HOTP hesla mají 40 znaků - zadal/a jste {num} znaků."
 #: journalist_app/forms.py:30
 #, fuzzy
 #| msgid "Must be at least {min_chars} characters long."
-msgid "Must be at least {num} characters long."
+msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
 msgstr[0] "Uživatelské jméno musí mít alespoň {num} znaků."
 msgstr[1] "Uživatelské jméno musí mít alespoň {num} znaků."
@@ -142,7 +142,7 @@ msgstr[2] "Uživatelské jméno musí mít alespoň {num} znaků."
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
 #, fuzzy
 #| msgid "Cannot be longer than {max_chars} characters."
-msgid "Cannot be longer than {num} characters."
+msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "Uživatelské jméno nemůže obsahovat více než {num} znaků."
 msgstr[1] "Uživatelské jméno nemůže obsahovat více než {num} znaků."
@@ -172,8 +172,8 @@ msgstr "Soubor je povinný."
 msgid "You can only upload PNG image files."
 msgstr "Nahrávat lze jen obrázky ve formátu PNG."
 
-#: journalist_app/main.py:130 journalist_app/utils.py:55
-#: journalist_app/utils.py:154
+#: journalist_app/main.py:130 journalist_app/utils.py:54
+#: journalist_app/utils.py:153
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Došlo k nečekané chybě. Informujte prosím administrátora."
 
@@ -185,23 +185,23 @@ msgstr "Děkujeme. Vaše odpověď byla uložena."
 msgid "No collections selected for download."
 msgstr "Nevybral/a jste žádnou sadu ke stažení."
 
-#: journalist_app/main.py:165 journalist_app/utils.py:310
+#: journalist_app/main.py:165 journalist_app/utils.py:314
 msgid "No collections selected for deletion."
 msgstr "Nevybral/a jste žádnou sadu k smazání."
 
-#: journalist_app/main.py:186
+#: journalist_app/main.py:188
 msgid "No unread submissions for this source."
 msgstr "Žádné nepřečtené příspěvky z tohoto zdroje."
 
-#: journalist_app/utils.py:62
+#: journalist_app/utils.py:61
 msgid "Account updated."
 msgstr "Uživatelský účet aktualizován."
 
-#: journalist_app/utils.py:103
+#: journalist_app/utils.py:102
 msgid "Login failed."
 msgstr "Přihlášení selhalo."
 
-#: journalist_app/utils.py:110
+#: journalist_app/utils.py:109
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
 msgstr[0] ""
@@ -211,7 +211,7 @@ msgstr[1] ""
 msgstr[2] ""
 "Před dalším pokusem o přihlášení prosím počkejte alespoň {num} vteřin."
 
-#: journalist_app/utils.py:121
+#: journalist_app/utils.py:120
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -219,37 +219,37 @@ msgstr ""
 "Dřív než budete pokračovat, počkejte prosím na nový dvoufaktorový kód z vaší "
 "mobilní aplikace nebo bezpečnostního klíče."
 
-#: journalist_app/utils.py:142
+#: journalist_app/utils.py:141
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr "Nesprávný formát hesla: prosím použijte pouze písmena A-F a čísla 0-9."
 
-#: journalist_app/utils.py:148
+#: journalist_app/utils.py:147
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "Nesprávná forma hesla: lichá délka hesla. Neudělal/a jste překlep?"
 
-#: journalist_app/utils.py:253
+#: journalist_app/utils.py:257
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Podání smazáno."
 msgstr[1] "{num} podání smazána."
 msgstr[2] "{num} podání smazáno."
 
-#: journalist_app/utils.py:318
+#: journalist_app/utils.py:322
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} sada smazaná"
 msgstr[1] "{num} sady smazány"
 msgstr[2] "{num} sad smazano"
 
-#: journalist_app/utils.py:362
+#: journalist_app/utils.py:366
 msgid "Name updated."
 msgstr "Jméno aktualizováno."
 
-#: journalist_app/utils.py:371
+#: journalist_app/utils.py:375
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "Vložené heslo je neplatné. Heslo nebylo změněno."
 
-#: journalist_app/utils.py:378
+#: journalist_app/utils.py:382
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -258,7 +258,7 @@ msgstr ""
 "Nastala chyba a nové heslo možná nebylo uloženo správně. Měl/a byste znovu "
 "zadat heslo, abyste zabránil/a ztrátě přístupu k Vašemu účtu."
 
-#: journalist_app/utils.py:387
+#: journalist_app/utils.py:391
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -266,7 +266,7 @@ msgstr ""
 "Heslo aktualizováno. Nezapomeňte si jej uložit do vaší KeePassX databáze. "
 "Nové heslo:"
 
-#: journalist_app/utils.py:411
+#: journalist_app/utils.py:415
 msgid "No unread submissions in selected collections."
 msgstr "Ve vybraných sadách nejsou žádná nepřečtená podání."
 
@@ -566,8 +566,8 @@ msgid ""
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
 "<strong>Nutná aktualizace</strong>&nbsp;&nbsp;Dokončete nastavení v3 Onion "
-"Services do 30. dubna. Kontaktujte prosím vašeho administrátora.<a href=\""
-"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Více informací</a>"
+"Services do 30. dubna. Kontaktujte prosím vašeho administrátora.<a href=\"//"
+"securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Více informací</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"

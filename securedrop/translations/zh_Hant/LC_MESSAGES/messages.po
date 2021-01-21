@@ -85,7 +85,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr "已成功驗證用户 \"{user}\" 的雙重驗證碼。"
 
 #: journalist_app/admin.py:239 journalist_app/admin.py:247
-#: journalist_app/utils.py:364
+#: journalist_app/utils.py:368
 msgid "Name not updated: {}"
 msgstr "名稱未更新: {}"
 
@@ -105,11 +105,12 @@ msgstr "{source_name} 集件已删除"
 msgid "No collections selected."
 msgstr "並未選擇任何的集件。"
 
-#: journalist_app/col.py:101 journalist_app/utils.py:205
+#: journalist_app/col.py:101 journalist_app/utils.py:208
 msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
-msgstr "您的下載失敗，因為找不到檔案。系統管理員能在系統及監控記錄中查詢更多資訊。"
+msgstr ""
+"您的下載失敗，因為找不到檔案。系統管理員能在系統及監控記錄中查詢更多資訊。"
 
 #: journalist_app/decorators.py:18
 msgid "Only admins can access this page."
@@ -121,12 +122,18 @@ msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
 msgstr[0] "HOTP secrets 需為 40 個字符長，已輸入 {num} 個字符。"
 
 #: journalist_app/forms.py:30
-msgid "Must be at least {num} characters long."
+#, fuzzy
+#| msgid "Must be at least {num} characters long."
+#| msgid_plural "Must be at least {num} characters long."
+msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
 msgstr[0] "须至少有 {num} 個字符長度。"
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-msgid "Cannot be longer than {num} characters."
+#, fuzzy
+#| msgid "Cannot be longer than {num} characters."
+#| msgid_plural "Cannot be longer than {num} characters."
+msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "不可多於 {num} 字元。"
 
@@ -152,8 +159,8 @@ msgstr "檔案欄為必要。"
 msgid "You can only upload PNG image files."
 msgstr "僅可上傳 PNG 格式的圖片檔。"
 
-#: journalist_app/main.py:130 journalist_app/utils.py:55
-#: journalist_app/utils.py:154
+#: journalist_app/main.py:130 journalist_app/utils.py:54
+#: journalist_app/utils.py:153
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "發生預期之外的錯誤！請通知系統管理員。"
 
@@ -165,73 +172,73 @@ msgstr "謝謝，我們已儲存您的回覆。"
 msgid "No collections selected for download."
 msgstr "未選擇要下載的集件。"
 
-#: journalist_app/main.py:165 journalist_app/utils.py:310
+#: journalist_app/main.py:165 journalist_app/utils.py:314
 msgid "No collections selected for deletion."
 msgstr "未選擇要刪除的集件。"
 
-#: journalist_app/main.py:186
+#: journalist_app/main.py:188
 msgid "No unread submissions for this source."
 msgstr "此位線人無未讀的提交。"
 
-#: journalist_app/utils.py:62
+#: journalist_app/utils.py:61
 msgid "Account updated."
 msgstr "帳戶已更新。"
 
-#: journalist_app/utils.py:103
+#: journalist_app/utils.py:102
 msgid "Login failed."
 msgstr "登錄失敗。"
 
-#: journalist_app/utils.py:110
+#: journalist_app/utils.py:109
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
 msgstr[0] "請等待至少 {num} 秒後再次登錄。"
 
-#: journalist_app/utils.py:121
+#: journalist_app/utils.py:120
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
 msgstr "請等待手機應用産生新的雙重認證碼或收到安全密鑰後再重試一遍。"
 
-#: journalist_app/utils.py:142
+#: journalist_app/utils.py:141
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr "無效的動態密碼格式：只可提交 A-F 之間的字母和 0-9 之間的數字。"
 
-#: journalist_app/utils.py:148
+#: journalist_app/utils.py:147
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "動態密碼格式不符：輸入長度為奇數。是否輸入錯誤？"
 
-#: journalist_app/utils.py:253
+#: journalist_app/utils.py:257
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "{num} 個提交已删除。"
 
-#: journalist_app/utils.py:318
+#: journalist_app/utils.py:322
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} 集件已删除"
 
-#: journalist_app/utils.py:362
+#: journalist_app/utils.py:366
 msgid "Name updated."
 msgstr "名稱已更新。"
 
-#: journalist_app/utils.py:371
+#: journalist_app/utils.py:375
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "提交的密碼不對！原密碼未更改。"
 
-#: journalist_app/utils.py:378
+#: journalist_app/utils.py:382
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
 "should reset your password again."
 msgstr "出錯了，新密碼可能未正確地保存。为了防止帳戶被鎖定，請再次重置密碼。"
 
-#: journalist_app/utils.py:387
+#: journalist_app/utils.py:391
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
 msgstr "密碼已更新。別忘了將它保存在你的 KeePassX 數據庫中。新的密碼是："
 
-#: journalist_app/utils.py:411
+#: journalist_app/utils.py:415
 msgid "No unread submissions in selected collections."
 msgstr "在所選擇的集件中，並無未讀的提交資訊。"
 
@@ -500,9 +507,9 @@ msgid ""
 "administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
 "\">Learn More</a>"
 msgstr ""
-"<strong>更新需求：</strong> 請及早在 4月30日前昇級為  v3 Onion 以確保您的 SecureDrop 伺服器平穩運作。"
-"詳情請聯繫管理員 <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\""
-">取得進一步資訊</a>。"
+"<strong>更新需求：</strong> 請及早在 4月30日前昇級為  v3 Onion 以確保您的 "
+"SecureDrop 伺服器平穩運作。詳情請聯繫管理員 <a href=\"//securedrop.org/v2-"
+"onion-eol\" rel=\"noreferrer\">取得進一步資訊</a>。"
 
 #: journalist_templates/base.html:30
 msgid ""
@@ -510,8 +517,9 @@ msgid ""
 "setup before April 30. Please contact your administrator. <a href=\"//"
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
-"<strong>需要更新</strong>&nbsp;&nbsp;請在四月三十日前設定完成第三代 Onion 服務。請聯繫您的系統管理員。<a href="
-"\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">了解更多</a>"
+"<strong>需要更新</strong>&nbsp;&nbsp;請在四月三十日前設定完成第三代 Onion 服"
+"務。請聯繫您的系統管理員。<a href=\"//securedrop.org/v2-onion-eol\" rel="
+"\"noreferrer\">了解更多</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"

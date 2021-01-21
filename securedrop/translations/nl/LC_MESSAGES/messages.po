@@ -91,7 +91,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr "De tweestapstoken voor gebruiker \"{user}\" is succesvol geverifieerd."
 
 #: journalist_app/admin.py:239 journalist_app/admin.py:247
-#: journalist_app/utils.py:364
+#: journalist_app/utils.py:368
 msgid "Name not updated: {}"
 msgstr "Naam niet bijgewerkt: {}"
 
@@ -111,7 +111,7 @@ msgstr "{source_name}-collectie verwijderd."
 msgid "No collections selected."
 msgstr "Geen collecties geselecteerd."
 
-#: journalist_app/col.py:101 journalist_app/utils.py:205
+#: journalist_app/col.py:101 journalist_app/utils.py:208
 msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
@@ -130,13 +130,19 @@ msgstr[0] "HOTP-geheim is 40 tekens lang - u heeft er {num} ingevoerd."
 msgstr[1] "HOTP-geheimen zijn 40 tekens lang - u heeft er {num} ingevoerd."
 
 #: journalist_app/forms.py:30
-msgid "Must be at least {num} characters long."
+#, fuzzy
+#| msgid "Must be at least {num} characters long."
+#| msgid_plural "Must be at least {num} characters long."
+msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
 msgstr[0] "Moet ten minste {num} teken lang zijn."
 msgstr[1] "Moet ten minste {num} tekens lang zijn."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-msgid "Cannot be longer than {num} characters."
+#, fuzzy
+#| msgid "Cannot be longer than {num} characters."
+#| msgid_plural "Cannot be longer than {num} characters."
+msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "Kan niet langer dan {num} teken zijn."
 msgstr[1] "Kan niet langer dan {num} tekens zijn."
@@ -165,8 +171,8 @@ msgstr "Bestand verplicht."
 msgid "You can only upload PNG image files."
 msgstr "U kunt alleen PNG-afbeeldingsbestanden uploaden."
 
-#: journalist_app/main.py:130 journalist_app/utils.py:55
-#: journalist_app/utils.py:154
+#: journalist_app/main.py:130 journalist_app/utils.py:54
+#: journalist_app/utils.py:153
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Er trad een onverwachte fout op! Neem contact op met uw beheerder."
 
@@ -178,23 +184,23 @@ msgstr "Bedankt. Uw reactie is opgeslagen."
 msgid "No collections selected for download."
 msgstr "Geen collecties geselecteerd om te downloaden."
 
-#: journalist_app/main.py:165 journalist_app/utils.py:310
+#: journalist_app/main.py:165 journalist_app/utils.py:314
 msgid "No collections selected for deletion."
 msgstr "Geen collecties geselecteerd om te verwijderen."
 
-#: journalist_app/main.py:186
+#: journalist_app/main.py:188
 msgid "No unread submissions for this source."
 msgstr "Geen ongelezen inzendingen van deze bron."
 
-#: journalist_app/utils.py:62
+#: journalist_app/utils.py:61
 msgid "Account updated."
 msgstr "Account bijgewerkt."
 
-#: journalist_app/utils.py:103
+#: journalist_app/utils.py:102
 msgid "Login failed."
 msgstr "Inloggen mislukt."
 
-#: journalist_app/utils.py:110
+#: journalist_app/utils.py:109
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
 msgstr[0] ""
@@ -202,7 +208,7 @@ msgstr[0] ""
 msgstr[1] ""
 "Wacht minstens {num} seconden voordat u nogmaals probeert in te loggen."
 
-#: journalist_app/utils.py:121
+#: journalist_app/utils.py:120
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -210,38 +216,38 @@ msgstr ""
 "Wacht op een nieuwe code van uw mobiele applicatie of tweestapstoken "
 "alvorens nogmaals te proberen."
 
-#: journalist_app/utils.py:142
+#: journalist_app/utils.py:141
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Ongeldige samenstelling voor geheim: gebruik uitsluitend letters A-F en "
 "cijfers 0-9."
 
-#: journalist_app/utils.py:148
+#: journalist_app/utils.py:147
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Ongeldig geheim: oneven lengte van geheim. Is het geheim correct gespeld?"
 
-#: journalist_app/utils.py:253
+#: journalist_app/utils.py:257
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Inzending verwijderd."
 msgstr[1] "{num} inzendingen verwijderd."
 
-#: journalist_app/utils.py:318
+#: journalist_app/utils.py:322
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} collectie verwijderd"
 msgstr[1] "{num} collecties verwijderd"
 
-#: journalist_app/utils.py:362
+#: journalist_app/utils.py:366
 msgid "Name updated."
 msgstr "Naam bijgewerkt."
 
-#: journalist_app/utils.py:371
+#: journalist_app/utils.py:375
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "U heeft een ongeldig wachtwoord ingevoerd. Wachtwoord niet gewijzigd."
 
-#: journalist_app/utils.py:378
+#: journalist_app/utils.py:382
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -251,7 +257,7 @@ msgstr ""
 "correct opgeslagen. Om te voorkomen dat u niet meer kunt inloggen adviseren "
 "wij om uw wachtwoord nogmaals te herstellen."
 
-#: journalist_app/utils.py:387
+#: journalist_app/utils.py:391
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -259,7 +265,7 @@ msgstr ""
 "Wachtwoord bijgewerkt. Vergeet het niet in uw KeePassX-database op te slaan. "
 "Nieuwe wachtwoord:"
 
-#: journalist_app/utils.py:411
+#: journalist_app/utils.py:415
 msgid "No unread submissions in selected collections."
 msgstr "Geen ongelezen inzendingen in de geselecteerde collecties."
 
@@ -547,8 +553,8 @@ msgid ""
 msgstr ""
 "<strong>Update vereist</strong>Stel v3 Onion services in voor 30 april om uw "
 "SecureDrop servers online te houden. Neem alstublieft contact op met uw "
-"administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\""
-">Lees meer</a>"
+"administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
+"\">Lees meer</a>"
 
 #: journalist_templates/base.html:30
 msgid ""

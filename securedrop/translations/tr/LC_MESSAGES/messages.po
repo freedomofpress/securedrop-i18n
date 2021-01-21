@@ -91,7 +91,7 @@ msgstr ""
 "\"{user}\" kullanıcısı için iki aşamalı kimlik doğrulama kodu doğrulandı."
 
 #: journalist_app/admin.py:239 journalist_app/admin.py:247
-#: journalist_app/utils.py:364
+#: journalist_app/utils.py:368
 msgid "Name not updated: {}"
 msgstr "Ad güncellenmedi: {}"
 
@@ -111,7 +111,7 @@ msgstr "{source_name} derlemeleri silindi."
 msgid "No collections selected."
 msgstr "Herhangi bir derleme seçilmemiş."
 
-#: journalist_app/col.py:101 journalist_app/utils.py:205
+#: journalist_app/col.py:101 journalist_app/utils.py:208
 msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
@@ -132,13 +132,19 @@ msgstr[1] ""
 "HOTP parolaları 40 karakter uzunluğundadır - sadece {num} karakter yazdınız."
 
 #: journalist_app/forms.py:30
-msgid "Must be at least {num} characters long."
+#, fuzzy
+#| msgid "Must be at least {num} characters long."
+#| msgid_plural "Must be at least {num} characters long."
+msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
 msgstr[0] "En az {num} karakter uzunluğunda olmalıdır."
 msgstr[1] "En az {num} karakter uzunluğunda olmalıdır."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-msgid "Cannot be longer than {num} characters."
+#, fuzzy
+#| msgid "Cannot be longer than {num} characters."
+#| msgid_plural "Cannot be longer than {num} characters."
+msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "En fazla {num} karakter yazılabilir."
 msgstr[1] "En fazla {num} karakter yazılabilir."
@@ -167,8 +173,8 @@ msgstr "Dosya gerekli."
 msgid "You can only upload PNG image files."
 msgstr "Yalnız PNG biçiminde görsel dosyaları yükleyebilirsiniz."
 
-#: journalist_app/main.py:130 journalist_app/utils.py:55
-#: journalist_app/utils.py:154
+#: journalist_app/main.py:130 journalist_app/utils.py:54
+#: journalist_app/utils.py:153
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Beklenmeyen bir sorun çıktı! Lütfen sistem yöneticinizi bilgilendirin."
 
@@ -180,29 +186,29 @@ msgstr "Teşekkürler. Yanıtınız kaydedildi."
 msgid "No collections selected for download."
 msgstr "İndirilecek bir derleme seçilmemiş."
 
-#: journalist_app/main.py:165 journalist_app/utils.py:310
+#: journalist_app/main.py:165 journalist_app/utils.py:314
 msgid "No collections selected for deletion."
 msgstr "Silinecek bir derleme seçilmemiş."
 
-#: journalist_app/main.py:186
+#: journalist_app/main.py:188
 msgid "No unread submissions for this source."
 msgstr "Bu kaynağın okunmamış gönderimi yok."
 
-#: journalist_app/utils.py:62
+#: journalist_app/utils.py:61
 msgid "Account updated."
 msgstr "Hesap güncellendi."
 
-#: journalist_app/utils.py:103
+#: journalist_app/utils.py:102
 msgid "Login failed."
 msgstr "Oturum açılamadı."
 
-#: journalist_app/utils.py:110
+#: journalist_app/utils.py:109
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
 msgstr[0] "Lütfen yeniden oturum açmayı denemeden önce {num} saniye bekleyin."
 msgstr[1] "Lütfen yeniden oturum açmayı denemeden önce {num} saniye bekleyin."
 
-#: journalist_app/utils.py:121
+#: journalist_app/utils.py:120
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -210,38 +216,38 @@ msgstr ""
 "Yeniden denemeden önce lütfen iki aşamalı kimlik doğrulama mobil "
 "uygulamanızdan yeni bir kod gelmesini bekleyin."
 
-#: journalist_app/utils.py:142
+#: journalist_app/utils.py:141
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Gizli biçim hatalı: lütfen A-F arasındaki harfleri ve 0-9 arasındaki "
 "rakamları kullanın."
 
-#: journalist_app/utils.py:148
+#: journalist_app/utils.py:147
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Gizli biçim hatalı: Gizli kod tek uzunlukta. Gizli kodu yanlış mı yazdınız?"
 
-#: journalist_app/utils.py:253
+#: journalist_app/utils.py:257
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Gönderi silindi."
 msgstr[1] "{num} gönderi silindi."
 
-#: journalist_app/utils.py:318
+#: journalist_app/utils.py:322
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} derleme silindi"
 msgstr[1] "{num} derleme silindi"
 
-#: journalist_app/utils.py:362
+#: journalist_app/utils.py:366
 msgid "Name updated."
 msgstr "Ad güncellendi."
 
-#: journalist_app/utils.py:371
+#: journalist_app/utils.py:375
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "Girdiğiniz parola geçerli değil. Parola değiştirilmedi."
 
-#: journalist_app/utils.py:378
+#: journalist_app/utils.py:382
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -250,7 +256,7 @@ msgstr ""
 "Bir sorun çıktı. Yeni parola doğru olarak kaydedilmemiş olabilir. Hesabınızı "
 "kullanmaya devam edebilmeniz için parolayı yeniden sıfırlamanız gerekli."
 
-#: journalist_app/utils.py:387
+#: journalist_app/utils.py:391
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -258,7 +264,7 @@ msgstr ""
 "Parola güncellendi. Parolanızı KeePassX veritabanınıza kaydetmeyi unutmayın. "
 "Yeni parola:"
 
-#: journalist_app/utils.py:411
+#: journalist_app/utils.py:415
 msgid "No unread submissions in selected collections."
 msgstr "Seçilmiş derlemelerde okunmamış bir gönderi yok."
 
@@ -546,8 +552,8 @@ msgid ""
 msgstr ""
 "<strong>Güncelleme Gerekiyor:</strong>&nbsp;&nbsp;SecureDrop sunucularınızı "
 "çevrimiçi tutmak istiyorsanız 30 Nisan'dan önce Onion Hizmetleri'nin 3. "
-"sürümünü kurun. Lütfen yöneticinizle bağlantıya geçin. <a href=\"//securedrop"
-".org/v2-onion-eol\" rel=\"noreferrer\">Daha Fazlasını Öğrenin</a>"
+"sürümünü kurun. Lütfen yöneticinizle bağlantıya geçin. <a href=\"//"
+"securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Daha Fazlasını Öğrenin</a>"
 
 #: journalist_templates/base.html:30
 msgid ""
@@ -711,7 +717,8 @@ msgstr "Kuruluş Adı"
 
 #: journalist_templates/config.html:15
 msgid "Set the organization name used on the SecureDrop web interfaces:"
-msgstr "SecureDrop web arayüzlerinde kullanılacak olan kuruluş adını ayarlayın:"
+msgstr ""
+"SecureDrop web arayüzlerinde kullanılacak olan kuruluş adını ayarlayın:"
 
 #: journalist_templates/config.html:20
 msgid "SET ORGANIZATION NAME"

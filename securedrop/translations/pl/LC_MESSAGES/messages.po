@@ -98,7 +98,7 @@ msgstr ""
 "Dwuskładnikowy kod użytkownika \"{user}\" został pomyślnie zweryfikowany."
 
 #: journalist_app/admin.py:239 journalist_app/admin.py:247
-#: journalist_app/utils.py:364
+#: journalist_app/utils.py:368
 msgid "Name not updated: {}"
 msgstr "Imię/nazwisko nieuaktualnione: {}"
 
@@ -122,7 +122,7 @@ msgstr "Zbiór {source_name} został usunięty"
 msgid "No collections selected."
 msgstr "Nie wybrano zbioru."
 
-#: journalist_app/col.py:101 journalist_app/utils.py:205
+#: journalist_app/col.py:101 journalist_app/utils.py:208
 msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
@@ -144,16 +144,18 @@ msgstr[1] "Pole musi mieć 40 znaków, a ma {num}."
 msgstr[2] "Pole musi mieć 40 znaków, a ma {num}."
 
 #: journalist_app/forms.py:30
-msgid "Must be at least {num} characters long."
+#, fuzzy
+#| msgid "Field can not be more than {max_chars} characters."
+msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Pole nie może być dłuższe niż {num} znaków."
+msgstr[1] "Pole nie może być dłuższe niż {num} znaków."
+msgstr[2] "Pole nie może być dłuższe niż {num} znaków."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
 #, fuzzy
 #| msgid "Field can not be more than {max_chars} characters."
-msgid "Cannot be longer than {num} characters."
+msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "Pole nie może być dłuższe niż {num} znaków."
 msgstr[1] "Pole nie może być dłuższe niż {num} znaków."
@@ -183,8 +185,8 @@ msgstr "To pole jest wymagane."
 msgid "You can only upload PNG image files."
 msgstr "Możesz przesłać jedynie pliki PNG."
 
-#: journalist_app/main.py:130 journalist_app/utils.py:55
-#: journalist_app/utils.py:154
+#: journalist_app/main.py:130 journalist_app/utils.py:54
+#: journalist_app/utils.py:153
 #, fuzzy
 #| msgid "An unexpected error occurred! Please inform your administrator."
 msgid "An unexpected error occurred! Please inform your admin."
@@ -199,23 +201,23 @@ msgstr "Dziękuję. Twoja odpowiedź została zapisana."
 msgid "No collections selected for download."
 msgstr "Nie wybrano zbioru do pobrania."
 
-#: journalist_app/main.py:165 journalist_app/utils.py:310
+#: journalist_app/main.py:165 journalist_app/utils.py:314
 msgid "No collections selected for deletion."
 msgstr "Nie wybrano zbioru do usunięcia."
 
-#: journalist_app/main.py:186
+#: journalist_app/main.py:188
 msgid "No unread submissions for this source."
 msgstr "Brak nieprzeczytanych zgłoszeń dla tego źródła."
 
-#: journalist_app/utils.py:62
+#: journalist_app/utils.py:61
 msgid "Account updated."
 msgstr "Konto zaktualizowane."
 
-#: journalist_app/utils.py:103
+#: journalist_app/utils.py:102
 msgid "Login failed."
 msgstr "Zalogowanie nieudane."
 
-#: journalist_app/utils.py:110
+#: journalist_app/utils.py:109
 #, fuzzy
 #| msgid "Please wait at least {seconds} second before logging in again."
 #| msgid_plural ""
@@ -225,10 +227,9 @@ msgid_plural "Please wait at least {num} seconds before logging in again."
 msgstr[0] ""
 "Proszę czekać co najmniej {num} sekundę przed ponownym zalogowaniem."
 msgstr[1] "Proszę czekać kilka sekund przed ponownym zalogowaniem."
-msgstr[2] ""
-"Proszę czekać co najmniej {num} sekund przed ponownym zalogowaniem."
+msgstr[2] "Proszę czekać co najmniej {num} sekund przed ponownym zalogowaniem."
 
-#: journalist_app/utils.py:121
+#: journalist_app/utils.py:120
 #, fuzzy
 #| msgid "Please wait for a new two-factor token before trying again."
 msgid ""
@@ -236,41 +237,41 @@ msgid ""
 "before trying again."
 msgstr "Poczekaj na nowy token dwuetapowy przed ponowną próbą."
 
-#: journalist_app/utils.py:142
+#: journalist_app/utils.py:141
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Nieprawidłowy format sekretu: należy podać tylko litery A-F i cyfry 0-9."
 
-#: journalist_app/utils.py:148
+#: journalist_app/utils.py:147
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Nieprawidłowy format sekretu: nieparzysta długość. Czy źle wpisałeś sekret?"
 
-#: journalist_app/utils.py:253
+#: journalist_app/utils.py:257
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Zgłoszenie usunięte."
 msgstr[1] "{num} zgłoszeń usuniętych."
 msgstr[2] "{num} zgłoszeń usuniętych."
 
-#: journalist_app/utils.py:318
+#: journalist_app/utils.py:322
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} zbiór usunięty"
 msgstr[1] "{num} zbiory usunięte"
 msgstr[2] "{num} zbiory usunięte"
 
-#: journalist_app/utils.py:362
+#: journalist_app/utils.py:366
 msgid "Name updated."
 msgstr "Imię/nazwisko uaktualnione."
 
-#: journalist_app/utils.py:371
+#: journalist_app/utils.py:375
 #, fuzzy
 #| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "Wpisano błędne hasło! Hasło nie zostało zmienione."
 
-#: journalist_app/utils.py:378
+#: journalist_app/utils.py:382
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -279,7 +280,7 @@ msgstr ""
 "Wystąpił błąd i nowe hasło mogło nie zostać zapisane poprawnie. Aby zapobiec "
 "zablokowaniu konta, zresetuj hasło ponownie."
 
-#: journalist_app/utils.py:387
+#: journalist_app/utils.py:391
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -287,7 +288,7 @@ msgstr ""
 "Hasło zaktualizowane. Nie zapomnij zapisać go w bazie danych KeePassX. Nowe "
 "hasło:"
 
-#: journalist_app/utils.py:411
+#: journalist_app/utils.py:415
 msgid "No unread submissions in selected collections."
 msgstr "Brak nowych zgłoszeń w wybranych zbiorach."
 

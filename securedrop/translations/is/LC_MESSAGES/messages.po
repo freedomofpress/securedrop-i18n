@@ -88,7 +88,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr "Það tókst að staðfesta tvíþátta-kóðann fyrir notandann \"{user}\"."
 
 #: journalist_app/admin.py:239 journalist_app/admin.py:247
-#: journalist_app/utils.py:364
+#: journalist_app/utils.py:368
 msgid "Name not updated: {}"
 msgstr "Nafn ekki uppfært: {}"
 
@@ -108,7 +108,7 @@ msgstr "Safninu {source_name} var eytt."
 msgid "No collections selected."
 msgstr "Engin söfn valin."
 
-#: journalist_app/col.py:101 journalist_app/utils.py:205
+#: journalist_app/col.py:101 journalist_app/utils.py:208
 msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
@@ -127,13 +127,19 @@ msgstr[0] "HOTP leynilyklar eru 40 stafa langir - þú hefur sett inn {num}."
 msgstr[1] "HOTP leynilyklar eru 40 stafa langir - þú hefur sett inn {num}."
 
 #: journalist_app/forms.py:30
-msgid "Must be at least {num} characters long."
+#, fuzzy
+#| msgid "Must be at least {num} characters long."
+#| msgid_plural "Must be at least {num} characters long."
+msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
 msgstr[0] "Verður að vera a.m.k. {num} stafa langt."
 msgstr[1] "Verður að vera a.m.k. {num} stafa langt."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-msgid "Cannot be longer than {num} characters."
+#, fuzzy
+#| msgid "Cannot be longer than {num} characters."
+#| msgid_plural "Cannot be longer than {num} characters."
+msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "Má ekki vera meira en {num} stafir."
 msgstr[1] "Má ekki vera meira en {num} stafir."
@@ -162,8 +168,8 @@ msgstr "Skrá er nauðsynleg."
 msgid "You can only upload PNG image files."
 msgstr "Þú getur einungis hlaðið upp PNG-myndskrár."
 
-#: journalist_app/main.py:130 journalist_app/utils.py:55
-#: journalist_app/utils.py:154
+#: journalist_app/main.py:130 journalist_app/utils.py:54
+#: journalist_app/utils.py:153
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Óvæn villa kom upp! Hafðu samband við kerfisstjórann þinn."
 
@@ -175,29 +181,29 @@ msgstr "Takk. Svarið þitt hefur verið vistað."
 msgid "No collections selected for download."
 msgstr "Engin söfn valin til niðurhals."
 
-#: journalist_app/main.py:165 journalist_app/utils.py:310
+#: journalist_app/main.py:165 journalist_app/utils.py:314
 msgid "No collections selected for deletion."
 msgstr "Engin söfn valin til eyðingar."
 
-#: journalist_app/main.py:186
+#: journalist_app/main.py:188
 msgid "No unread submissions for this source."
 msgstr "Engar ólesnar innsendingar hjá þessum heimildarmanni."
 
-#: journalist_app/utils.py:62
+#: journalist_app/utils.py:61
 msgid "Account updated."
 msgstr "Aðgangur uppfærður."
 
-#: journalist_app/utils.py:103
+#: journalist_app/utils.py:102
 msgid "Login failed."
 msgstr "Innskráning mistókst."
 
-#: journalist_app/utils.py:110
+#: journalist_app/utils.py:109
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
 msgstr[0] "Bíddu í a.m.k. {num} sekúndu áður en þú reynir innskráningu aftur."
 msgstr[1] "Bíddu í a.m.k. {num} sekúndur áður en þú reynir innskráningu aftur."
 
-#: journalist_app/utils.py:121
+#: journalist_app/utils.py:120
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -205,39 +211,39 @@ msgstr ""
 "Bíddu eftir nýjum kóða frá tvíþátta farsímaforriti eða settu inn "
 "dulritunarlykil áður en þú reynir aftur."
 
-#: journalist_app/utils.py:142
+#: journalist_app/utils.py:141
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Ógilt snið leynilykils: vinsamlegast notaðu einungis stafi frá A-F og tölur "
 "frá 0-9."
 
-#: journalist_app/utils.py:148
+#: journalist_app/utils.py:147
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Ógilt snið leynilykils: óvenjuleg lengd leynilykils. Slóstu leynilykilinn "
 "rétt inn?"
 
-#: journalist_app/utils.py:253
+#: journalist_app/utils.py:257
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Innsendingu eytt."
 msgstr[1] "{num} innsendingum eytt."
 
-#: journalist_app/utils.py:318
+#: journalist_app/utils.py:322
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} safni eytt"
 msgstr[1] "{num} söfnum eytt"
 
-#: journalist_app/utils.py:362
+#: journalist_app/utils.py:366
 msgid "Name updated."
 msgstr "Nafn uppfært."
 
-#: journalist_app/utils.py:371
+#: journalist_app/utils.py:375
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "Þú sendir inn ógilt lykilorð. Lykilorði ekki breytt."
 
-#: journalist_app/utils.py:378
+#: journalist_app/utils.py:382
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -247,7 +253,7 @@ msgstr ""
 "að koma í veg fyrir að þú læsist út úr aðgangnum þínum, ættirðu að "
 "endurstilla lykilorðið þitt aftur."
 
-#: journalist_app/utils.py:387
+#: journalist_app/utils.py:391
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -255,7 +261,7 @@ msgstr ""
 "Lykilorð uppfært. Ekki gleyma að vista það í KeePassX gagnagrunninum þínum. "
 "Nýja lykilorðið:"
 
-#: journalist_app/utils.py:411
+#: journalist_app/utils.py:415
 msgid "No unread submissions in selected collections."
 msgstr "Engar ólesnar innsendingar í völdum söfnum."
 

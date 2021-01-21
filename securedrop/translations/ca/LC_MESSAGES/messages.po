@@ -90,7 +90,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr "El codi de factor doble per a «{user}» s'ha verificat correctament."
 
 #: journalist_app/admin.py:239 journalist_app/admin.py:247
-#: journalist_app/utils.py:364
+#: journalist_app/utils.py:368
 msgid "Name not updated: {}"
 msgstr "El nom no s'ha actualitzat: {}"
 
@@ -110,7 +110,7 @@ msgstr "S’ha suprimit la col·lecció de {source_name}."
 msgid "No collections selected."
 msgstr "No s’ha seleccionat cap col·lecció."
 
-#: journalist_app/col.py:101 journalist_app/utils.py:205
+#: journalist_app/col.py:101 journalist_app/utils.py:208
 msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
@@ -131,13 +131,19 @@ msgstr[1] ""
 "Els secrets HOTP tenen una mida de 40 caràcters, però n’heu introduït {num}."
 
 #: journalist_app/forms.py:30
-msgid "Must be at least {num} characters long."
+#, fuzzy
+#| msgid "Must be at least {num} characters long."
+#| msgid_plural "Must be at least {num} characters long."
+msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
 msgstr[0] "Cal que tingui com a mínim {num} caràcter."
 msgstr[1] "Cal que tingui com a mínim {num} caràcters."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-msgid "Cannot be longer than {num} characters."
+#, fuzzy
+#| msgid "Cannot be longer than {num} characters."
+#| msgid_plural "Cannot be longer than {num} characters."
+msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "No pot tenir més d'{num} caràcter."
 msgstr[1] "No pot tenir més de {num} caràcters."
@@ -166,8 +172,8 @@ msgstr "El fitxer és obligatori."
 msgid "You can only upload PNG image files."
 msgstr "Només podeu pujar fitxers d’imatge PNG."
 
-#: journalist_app/main.py:130 journalist_app/utils.py:55
-#: journalist_app/utils.py:154
+#: journalist_app/main.py:130 journalist_app/utils.py:54
+#: journalist_app/utils.py:153
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "S’ha produït un error inesperat! Informeu-ne l’administrador."
 
@@ -179,29 +185,29 @@ msgstr "Gràcies. S'ha emmagatzemat la resposta."
 msgid "No collections selected for download."
 msgstr "No s’ha seleccionat cap col·lecció per baixar."
 
-#: journalist_app/main.py:165 journalist_app/utils.py:310
+#: journalist_app/main.py:165 journalist_app/utils.py:314
 msgid "No collections selected for deletion."
 msgstr "No s’ha seleccionat cap col·lecció per suprimir."
 
-#: journalist_app/main.py:186
+#: journalist_app/main.py:188
 msgid "No unread submissions for this source."
 msgstr "Aquesta font no té cap enviament sense llegir."
 
-#: journalist_app/utils.py:62
+#: journalist_app/utils.py:61
 msgid "Account updated."
 msgstr "S’ha actualitzat el compte."
 
-#: journalist_app/utils.py:103
+#: journalist_app/utils.py:102
 msgid "Login failed."
 msgstr "Ha fallat l’inici de la sessió."
 
-#: journalist_app/utils.py:110
+#: journalist_app/utils.py:109
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
 msgstr[0] "Espereu com a mínim {num} segon abans d’iniciar la sessió de nou."
 msgstr[1] "Espereu com a mínim {num} segons abans d’iniciar la sessió de nou."
 
-#: journalist_app/utils.py:121
+#: journalist_app/utils.py:120
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -209,39 +215,39 @@ msgstr ""
 "Espereu un codi nou de la vostra aplicació de factor doble o clau de "
 "seguretat abans de tornar-ho a provar."
 
-#: journalist_app/utils.py:142
+#: journalist_app/utils.py:141
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "El format del secret no és vàlid: introduïu només lletres A-F i números 0-9."
 
-#: journalist_app/utils.py:148
+#: journalist_app/utils.py:147
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "El format del secret no és vàlid: la mida no coincideix. L’heu inserit "
 "correctament?"
 
-#: journalist_app/utils.py:253
+#: journalist_app/utils.py:257
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "S’ha suprimit l’enviament."
 msgstr[1] "S’han suprimit {num} enviaments."
 
-#: journalist_app/utils.py:318
+#: journalist_app/utils.py:322
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "S’ha suprimit {num} col·lecció"
 msgstr[1] "S’han suprimit {num} col·leccions"
 
-#: journalist_app/utils.py:362
+#: journalist_app/utils.py:366
 msgid "Name updated."
 msgstr "S'ha actualitzat el nom."
 
-#: journalist_app/utils.py:371
+#: journalist_app/utils.py:375
 msgid "The password you submitted is invalid. Password not changed."
 msgstr ""
 "La contrasenya que heu enviat no és vàlida! No s’ha canviat la contrasenya."
 
-#: journalist_app/utils.py:378
+#: journalist_app/utils.py:382
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -250,7 +256,7 @@ msgstr ""
 "S'ha produït un error i potser la contrasenya nova no s'ha desat "
 "correctament. Per evitar blocar el compte, canvieu novament la contrasenya."
 
-#: journalist_app/utils.py:387
+#: journalist_app/utils.py:391
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -258,7 +264,7 @@ msgstr ""
 "S'ha actualitzat la contrasenya. No oblideu desar-la en la vostra base de "
 "dades del KeePassX. Contrasenya nova:"
 
-#: journalist_app/utils.py:411
+#: journalist_app/utils.py:415
 msgid "No unread submissions in selected collections."
 msgstr "No hi ha cap enviament sense llegir a les col·leccions seleccionades."
 
@@ -555,8 +561,8 @@ msgid ""
 msgstr ""
 "<strong>Actualització requerida</strong>&nbsp;&nbsp;Completeu la "
 "configuració dels serveis Onion v3 abans del 30 d'abril. Contacteu amb "
-"l'administrador. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\""
-">Més informació</a>"
+"l'administrador. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
+"\">Més informació</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"
@@ -775,8 +781,8 @@ msgid_plural ""
 "The following {num} files have been selected for <strong>permanent deletion</"
 "strong>:"
 msgstr[0] ""
-"S'ha seleccionat el fitxer següent per <strong>suprimir "
-"definitivament</strong>:"
+"S'ha seleccionat el fitxer següent per <strong>suprimir definitivament</"
+"strong>:"
 msgstr[1] ""
 "S'han seleccionat els {num} fitxers següents per <strong>suprimir "
 "definitivament</strong>:"

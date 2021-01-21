@@ -67,7 +67,6 @@ msgid "Preferences saved."
 msgstr ""
 
 #: journalist_app/admin.py:81
-#, fuzzy
 msgid "Preferences not updated."
 msgstr ""
 
@@ -102,7 +101,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr ""
 
 #: journalist_app/admin.py:239 journalist_app/admin.py:247
-#: journalist_app/utils.py:364
+#: journalist_app/utils.py:368
 msgid "Name not updated: {}"
 msgstr ""
 
@@ -127,7 +126,7 @@ msgstr "Šaltinio {source_name} medžiaga ištrinta"
 msgid "No collections selected."
 msgstr "Nepasirinkta jokios medžiagos."
 
-#: journalist_app/col.py:101 journalist_app/utils.py:205
+#: journalist_app/col.py:101 journalist_app/utils.py:208
 msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
@@ -150,14 +149,15 @@ msgstr[2] ""
 "HOTP paslapties ilgis - 40 simbolių. Jūs įvedėte {num} simbolius (-ių)."
 
 #: journalist_app/forms.py:30
-msgid "Must be at least {num} characters long."
+#, fuzzy
+msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Laukas turi būti nuo 1 iki {max_codename_len} simbolių ilgio."
+msgstr[1] "Laukas turi būti nuo 1 iki {max_codename_len} simbolių ilgio."
+msgstr[2] "Laukas turi būti nuo 1 iki {max_codename_len} simbolių ilgio."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-msgid "Cannot be longer than {num} characters."
+msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] ""
 msgstr[1] ""
@@ -189,8 +189,8 @@ msgstr "Byla (failas) privalomas."
 msgid "You can only upload PNG image files."
 msgstr "Prisegti galima tik PNG formato paveikslėlius."
 
-#: journalist_app/main.py:130 journalist_app/utils.py:55
-#: journalist_app/utils.py:154
+#: journalist_app/main.py:130 journalist_app/utils.py:54
+#: journalist_app/utils.py:153
 #, fuzzy
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Nenumatyta klaida! Prašome informuoti savo administratorių."
@@ -205,27 +205,27 @@ msgstr "Dėkojame. Jūsų atsakymas išsaugotas."
 msgid "No collections selected for download."
 msgstr "Nepasirinkta jokios medžiagos atsisiuntimui."
 
-#: journalist_app/main.py:165 journalist_app/utils.py:310
+#: journalist_app/main.py:165 journalist_app/utils.py:314
 #, fuzzy
 msgid "No collections selected for deletion."
 msgstr "Nepasirinkta jokios medžiagos ištrynimui."
 
-#: journalist_app/main.py:186
+#: journalist_app/main.py:188
 #, fuzzy
 msgid "No unread submissions for this source."
 msgstr "Šaltinis neturi neperskaitytų paraiškų."
 
-#: journalist_app/utils.py:62
+#: journalist_app/utils.py:61
 #, fuzzy
 msgid "Account updated."
 msgstr "Paskyra atnaujinta."
 
-#: journalist_app/utils.py:103
+#: journalist_app/utils.py:102
 #, fuzzy
 msgid "Login failed."
 msgstr "Prisijungimas nesėkmingas."
 
-#: journalist_app/utils.py:110
+#: journalist_app/utils.py:109
 #, fuzzy
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
@@ -236,7 +236,7 @@ msgstr[1] ""
 msgstr[2] ""
 "Prašome palaukti bent {num} sekundžių prieš vėl bandydami prisijungti."
 
-#: journalist_app/utils.py:121
+#: journalist_app/utils.py:120
 #, fuzzy
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
@@ -245,19 +245,19 @@ msgstr ""
 "Prašome palaukti naujo kodo iš jūsų dviejų dalių autentifikatoriaus prieš "
 "bandydami dar kartą."
 
-#: journalist_app/utils.py:142
+#: journalist_app/utils.py:141
 #, fuzzy
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Netinkamas slapto kodo formatas: prašome pateikti tik raides A-F ir skaičius "
 "0-9."
 
-#: journalist_app/utils.py:148
+#: journalist_app/utils.py:147
 #, fuzzy
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "Netinkamas slapto kodo ilgis - ar suklydote?"
 
-#: journalist_app/utils.py:253
+#: journalist_app/utils.py:257
 #, fuzzy
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
@@ -265,7 +265,7 @@ msgstr[0] "Paraiška ištrinta."
 msgstr[1] "Ištrintos {num} paraiškos."
 msgstr[2] "Ištrinta {num} paraiškų."
 
-#: journalist_app/utils.py:318
+#: journalist_app/utils.py:322
 #, fuzzy
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
@@ -273,16 +273,16 @@ msgstr[0] "Ištrintas {num} surinktos medžiagos vienetas"
 msgstr[1] "Ištrinti {num} surinktos medžiagos vienetai"
 msgstr[2] "Ištrinta {num} surinktos medžiagos vienetų"
 
-#: journalist_app/utils.py:362
+#: journalist_app/utils.py:366
 msgid "Name updated."
 msgstr ""
 
-#: journalist_app/utils.py:371
+#: journalist_app/utils.py:375
 #, fuzzy
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "Pateikėte neteisingą slaptažodį! Slaptažodis nepakeistas."
 
-#: journalist_app/utils.py:378
+#: journalist_app/utils.py:382
 #, fuzzy
 msgid ""
 "There was an error, and the new password might not have been saved "
@@ -292,7 +292,7 @@ msgstr ""
 "Įvyko klaida ir naujas slaptažodis galimai nebuvo išsaugotas. Atstatykite "
 "slaptažodį dar kartą, kad nebūtumėte užrakintas iš savo paskyros."
 
-#: journalist_app/utils.py:387
+#: journalist_app/utils.py:391
 #, fuzzy
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
@@ -301,7 +301,7 @@ msgstr ""
 "Slaptažodis atnaujintas. Nepamirškite jį išsaugoti savo KeePassX duomenų "
 "bazėje. Naujas slaptažodis:"
 
-#: journalist_app/utils.py:411
+#: journalist_app/utils.py:415
 #, fuzzy
 msgid "No unread submissions in selected collections."
 msgstr "Pasirinktoje medžiagoje nėra neperskaitytų paraiškų."
@@ -343,7 +343,6 @@ msgstr[1] "{num} žinutės"
 msgstr[2] "{num} žinučių"
 
 #: journalist_templates/_source_row.html:37
-#, fuzzy
 msgid "download icon"
 msgstr ""
 
@@ -509,7 +508,6 @@ msgid "Edit user {username}"
 msgstr "Redaguoti {username}"
 
 #: journalist_templates/admin.html:31
-#, fuzzy
 msgid "edit user icon"
 msgstr ""
 

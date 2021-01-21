@@ -89,7 +89,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr "Kode dua faktor untuk pengguna \"{user}\" telah berhasil diverifikasi."
 
 #: journalist_app/admin.py:239 journalist_app/admin.py:247
-#: journalist_app/utils.py:364
+#: journalist_app/utils.py:368
 msgid "Name not updated: {}"
 msgstr "Nama tidak diperbarui: {}"
 
@@ -113,7 +113,7 @@ msgstr "Koleksi {source_name} telah dihapus"
 msgid "No collections selected."
 msgstr "Anda tidak memilih koleksi."
 
-#: journalist_app/col.py:101 journalist_app/utils.py:205
+#: journalist_app/col.py:101 journalist_app/utils.py:208
 msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
@@ -128,22 +128,19 @@ msgstr "Hanya admin yang boleh mengakses halaman ini."
 #| msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgid "HOTP secrets are 40 characters long - you have entered {num}."
 msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
-msgstr[0] ""
-"Panjang kode HOTP seharusnya 40 karakter, tapi yang diinput {num}."
+msgstr[0] "Panjang kode HOTP seharusnya 40 karakter, tapi yang diinput {num}."
 
 #: journalist_app/forms.py:30
 #, fuzzy
-#| msgid ""
-#| "Field must be at least {min_chars} characters long but only got "
-#| "{num_chars}."
-msgid "Must be at least {num} characters long."
+#| msgid "Field can not be more than {max_chars} characters."
+msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
-msgstr[0] ""
+msgstr[0] "Kolom tidak bisa menampung lebih dari {num} karakter."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
 #, fuzzy
 #| msgid "Field can not be more than {max_chars} characters."
-msgid "Cannot be longer than {num} characters."
+msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "Kolom tidak bisa menampung lebih dari {num} karakter."
 
@@ -169,8 +166,8 @@ msgstr "Berkas diperlukan."
 msgid "You can only upload PNG image files."
 msgstr "Anda hanya dapat mengunggah file gambar PNG."
 
-#: journalist_app/main.py:130 journalist_app/utils.py:55
-#: journalist_app/utils.py:154
+#: journalist_app/main.py:130 journalist_app/utils.py:54
+#: journalist_app/utils.py:153
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Terjadi kesalahan yang tidak diperkirakan! Mohon beritahu admin Anda."
 
@@ -182,23 +179,23 @@ msgstr "Terima kasih. Jawaban anda telah disimpan."
 msgid "No collections selected for download."
 msgstr "Tidak ada koleksi yang dipilih untuk diunduh."
 
-#: journalist_app/main.py:165 journalist_app/utils.py:310
+#: journalist_app/main.py:165 journalist_app/utils.py:314
 msgid "No collections selected for deletion."
 msgstr "Tidak ada koleksi yang dipilih untuk dihapus."
 
-#: journalist_app/main.py:186
+#: journalist_app/main.py:188
 msgid "No unread submissions for this source."
 msgstr "Tidak ada kiriman yang belum dibaca dari sumber ini."
 
-#: journalist_app/utils.py:62
+#: journalist_app/utils.py:61
 msgid "Account updated."
 msgstr "Akun telah dimutakhirkan."
 
-#: journalist_app/utils.py:103
+#: journalist_app/utils.py:102
 msgid "Login failed."
 msgstr "Log masuk gagal."
 
-#: journalist_app/utils.py:110
+#: journalist_app/utils.py:109
 #, fuzzy
 #| msgid "Please wait at least {seconds} second before logging in again."
 #| msgid_plural ""
@@ -207,7 +204,7 @@ msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
 msgstr[0] "Mohon tunggu setidaknya {num} detik sebelum log masuk kembali."
 
-#: journalist_app/utils.py:121
+#: journalist_app/utils.py:120
 #, fuzzy
 #| msgid "Please wait for a new two-factor token before trying again."
 msgid ""
@@ -215,37 +212,37 @@ msgid ""
 "before trying again."
 msgstr "Mohon tunggu token dua faktor baru terbuat sebelum mencoba lagi."
 
-#: journalist_app/utils.py:142
+#: journalist_app/utils.py:141
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Format kata rahasia tidak sah: tolong hanya gunakan huruf A-F dan angka 0-9."
 
-#: journalist_app/utils.py:148
+#: journalist_app/utils.py:147
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Format kata rahasia tidak sah: jumlah huruf ganjil. Apakah ada salah ketik?"
 
-#: journalist_app/utils.py:253
+#: journalist_app/utils.py:257
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "{num} kiriman telah dihapus."
 
-#: journalist_app/utils.py:318
+#: journalist_app/utils.py:322
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} koleksi telah dihapus"
 
-#: journalist_app/utils.py:362
+#: journalist_app/utils.py:366
 msgid "Name updated."
 msgstr "Nama diperbarui."
 
-#: journalist_app/utils.py:371
+#: journalist_app/utils.py:375
 #, fuzzy
 #| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "Kata sandi baru tidak memenuhi syarat! Kata sandi tidak diperbarui."
 
-#: journalist_app/utils.py:378
+#: journalist_app/utils.py:382
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -254,7 +251,7 @@ msgstr ""
 "Terdapat kesalahan, dan sandi baru mungkin tidak tersimpan dengan baik. "
 "Untuk mencegah agar akun Anda tidak terkunci, Anda perlu mereset sandi lagi."
 
-#: journalist_app/utils.py:387
+#: journalist_app/utils.py:391
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -262,7 +259,7 @@ msgstr ""
 "Kata sandi telah dimutakhirkan. Jangan lupa menyimpannya di basis data "
 "KeePassX anda. Kata sandi baru:"
 
-#: journalist_app/utils.py:411
+#: journalist_app/utils.py:415
 msgid "No unread submissions in selected collections."
 msgstr "Tidak ada kiriman yang belum dibaca di koleksi-koleksi yang dipilih."
 
@@ -301,8 +298,6 @@ msgid_plural "{num} messages"
 msgstr[0] "{num} pesan"
 
 #: journalist_templates/_source_row.html:37
-#, fuzzy
-#| msgid "Download Selected"
 msgid "download icon"
 msgstr ""
 

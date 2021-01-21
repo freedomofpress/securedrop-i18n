@@ -94,7 +94,7 @@ msgstr ""
 "com sucesso."
 
 #: journalist_app/admin.py:239 journalist_app/admin.py:247
-#: journalist_app/utils.py:364
+#: journalist_app/utils.py:368
 msgid "Name not updated: {}"
 msgstr "O nome foi atualizado: {}"
 
@@ -118,7 +118,7 @@ msgstr "Coleção de {source_name} apagada"
 msgid "No collections selected."
 msgstr "Nenhuma coleção selecionada."
 
-#: journalist_app/col.py:101 journalist_app/utils.py:205
+#: journalist_app/col.py:101 journalist_app/utils.py:208
 msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
@@ -133,27 +133,23 @@ msgstr "Apenas administradores podem aceder a esta página."
 #| msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgid "HOTP secrets are 40 characters long - you have entered {num}."
 msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
-msgstr[0] ""
-"Segredos HOTP têm comprimento de 40 caracteres - inseriu {num}."
-msgstr[1] ""
-"Segredos HOTP têm comprimento de 40 caracteres - inseriu {num}."
+msgstr[0] "Segredos HOTP têm comprimento de 40 caracteres - inseriu {num}."
+msgstr[1] "Segredos HOTP têm comprimento de 40 caracteres - inseriu {num}."
 
 #: journalist_app/forms.py:30
 #, fuzzy
 #| msgid ""
 #| "Field must be at least {min_chars} characters long but only got "
 #| "{num_chars}."
-msgid "Must be at least {num} characters long."
+msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
-msgstr[0] ""
-"Tem que ter pelo menos {num} caracters."
-msgstr[1] ""
-"Tem que ter pelo menos {num} caracters."
+msgstr[0] "Tem que ter pelo menos {num} caracters."
+msgstr[1] "Tem que ter pelo menos {num} caracters."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
 #, fuzzy
 #| msgid "Field can not be more than {max_chars} characters."
-msgid "Cannot be longer than {num} characters."
+msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "Este campo não pode conter mais do que {num} caracteres."
 msgstr[1] "Este campo não pode conter mais do que {num} caracteres."
@@ -180,8 +176,8 @@ msgstr "É necessário o ficheiro."
 msgid "You can only upload PNG image files."
 msgstr "Apenas pode enviar imagens PNG."
 
-#: journalist_app/main.py:130 journalist_app/utils.py:55
-#: journalist_app/utils.py:154
+#: journalist_app/main.py:130 journalist_app/utils.py:54
+#: journalist_app/utils.py:153
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Um erro inesperado ocorreu! Por favor informe o seu administrador."
 
@@ -193,23 +189,23 @@ msgstr "Obrigado. A sua resposta for guardada."
 msgid "No collections selected for download."
 msgstr "Nenhuma coleção selecionada para transferir."
 
-#: journalist_app/main.py:165 journalist_app/utils.py:310
+#: journalist_app/main.py:165 journalist_app/utils.py:314
 msgid "No collections selected for deletion."
 msgstr "Nenhuma coleção foi selecionada para apagar."
 
-#: journalist_app/main.py:186
+#: journalist_app/main.py:188
 msgid "No unread submissions for this source."
 msgstr "Não tem submissões por ler desta fonte."
 
-#: journalist_app/utils.py:62
+#: journalist_app/utils.py:61
 msgid "Account updated."
 msgstr "Conta actualizada."
 
-#: journalist_app/utils.py:103
+#: journalist_app/utils.py:102
 msgid "Login failed."
 msgstr "Erro de início de sessão."
 
-#: journalist_app/utils.py:110
+#: journalist_app/utils.py:109
 #, fuzzy
 #| msgid "Please wait at least {seconds} second before logging in again."
 #| msgid_plural ""
@@ -219,10 +215,9 @@ msgid_plural "Please wait at least {num} seconds before logging in again."
 msgstr[0] ""
 "Por favor espere pelo menos {num} segundo antes de tentar entrar de novo."
 msgstr[1] ""
-"Por favor espere pelo menos {num} segundos antes de tentar entrar de "
-"novo."
+"Por favor espere pelo menos {num} segundos antes de tentar entrar de novo."
 
-#: journalist_app/utils.py:121
+#: journalist_app/utils.py:120
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -230,41 +225,41 @@ msgstr ""
 "Por favor espere por um novo código de autenticação de dois fatores ou chave "
 "de segurança antes tentar de novo."
 
-#: journalist_app/utils.py:142
+#: journalist_app/utils.py:141
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Formato do segredo inválido: por favor, utilize apenas letras de A a F e "
 "números de 0 a 9."
 
-#: journalist_app/utils.py:148
+#: journalist_app/utils.py:147
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Formato do segredo inválido: número ímpar de caracteres. O segredo foi "
 "digitado corretamente?"
 
-#: journalist_app/utils.py:253
+#: journalist_app/utils.py:257
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Submissão apagada."
 msgstr[1] "{num} submissões apagadas."
 
-#: journalist_app/utils.py:318
+#: journalist_app/utils.py:322
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} coleção apagada"
 msgstr[1] "{num} coleções apagadas"
 
-#: journalist_app/utils.py:362
+#: journalist_app/utils.py:366
 msgid "Name updated."
 msgstr "Nome atualizado."
 
-#: journalist_app/utils.py:371
+#: journalist_app/utils.py:375
 #, fuzzy
 #| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "Submeteu uma palavra-passe incorreta! Palavra-passe não atualizada."
 
-#: journalist_app/utils.py:378
+#: journalist_app/utils.py:382
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -274,7 +269,7 @@ msgstr ""
 "Para evitar perder o acesso à sua conta, deverá redefinir a sua palavra-"
 "passe."
 
-#: journalist_app/utils.py:387
+#: journalist_app/utils.py:391
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -282,7 +277,7 @@ msgstr ""
 "Palavra-passe actualizada. Não se esqueça de a gravar na sua base de dados "
 "KeePassX. Nova palavra-passe:"
 
-#: journalist_app/utils.py:411
+#: journalist_app/utils.py:415
 msgid "No unread submissions in selected collections."
 msgstr "Nenhuma submissão por ler das selecionadas."
 

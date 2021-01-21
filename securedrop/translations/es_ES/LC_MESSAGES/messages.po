@@ -93,7 +93,7 @@ msgstr ""
 "verificado exitosamente."
 
 #: journalist_app/admin.py:239 journalist_app/admin.py:247
-#: journalist_app/utils.py:364
+#: journalist_app/utils.py:368
 msgid "Name not updated: {}"
 msgstr "Nombre no actualizado: {}"
 
@@ -113,7 +113,7 @@ msgstr "Colección de {source_name} eliminada."
 msgid "No collections selected."
 msgstr "No hay colecciones seleccionadas."
 
-#: journalist_app/col.py:101 journalist_app/utils.py:205
+#: journalist_app/col.py:101 journalist_app/utils.py:208
 msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
@@ -136,13 +136,19 @@ msgstr[1] ""
 "{num}."
 
 #: journalist_app/forms.py:30
-msgid "Must be at least {num} characters long."
+#, fuzzy
+#| msgid "Must be at least {num} characters long."
+#| msgid_plural "Must be at least {num} characters long."
+msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
 msgstr[0] "Debe ser por lo menos {num} caracter de longitud."
 msgstr[1] "Debe ser por lo menos {num} caracteres de longitud."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-msgid "Cannot be longer than {num} characters."
+#, fuzzy
+#| msgid "Cannot be longer than {num} characters."
+#| msgid_plural "Cannot be longer than {num} characters."
+msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "No puede tener más que {num} caracter."
 msgstr[1] "No puede tener más que {num} caracteres."
@@ -171,8 +177,8 @@ msgstr "Archivo requerido."
 msgid "You can only upload PNG image files."
 msgstr "Solo puede subir archivos de imágenes PNG."
 
-#: journalist_app/main.py:130 journalist_app/utils.py:55
-#: journalist_app/utils.py:154
+#: journalist_app/main.py:130 journalist_app/utils.py:54
+#: journalist_app/utils.py:153
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "¡Ocurrió un error inesperado! Por favor informe a su administrador."
 
@@ -184,23 +190,23 @@ msgstr "Gracias. Su respuesta ha sido guardada."
 msgid "No collections selected for download."
 msgstr "No hay colecciones seleccionadas para descargar."
 
-#: journalist_app/main.py:165 journalist_app/utils.py:310
+#: journalist_app/main.py:165 journalist_app/utils.py:314
 msgid "No collections selected for deletion."
 msgstr "No hay colecciones seleccionadas para eliminar."
 
-#: journalist_app/main.py:186
+#: journalist_app/main.py:188
 msgid "No unread submissions for this source."
 msgstr "No hay envíos sin leer para esta fuente."
 
-#: journalist_app/utils.py:62
+#: journalist_app/utils.py:61
 msgid "Account updated."
 msgstr "Cuenta actualizada."
 
-#: journalist_app/utils.py:103
+#: journalist_app/utils.py:102
 msgid "Login failed."
 msgstr "El inicio de sesión falló."
 
-#: journalist_app/utils.py:110
+#: journalist_app/utils.py:109
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
 msgstr[0] ""
@@ -208,7 +214,7 @@ msgstr[0] ""
 msgstr[1] ""
 "Por favor espere al menos {num} segundos antes de iniciar sesión de nuevo."
 
-#: journalist_app/utils.py:121
+#: journalist_app/utils.py:120
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -216,39 +222,39 @@ msgstr ""
 "Por favor espere un nuevo código de dos factores de su aplicación móvil o "
 "clave de seguridad antes de volver a intentarlo."
 
-#: journalist_app/utils.py:142
+#: journalist_app/utils.py:141
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Formato del secreto inválido: por favor envíe solo las letras A-F y los "
 "números 0-9."
 
-#: journalist_app/utils.py:148
+#: journalist_app/utils.py:147
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "El formato del secreto es inválido: secreto de longitud impar. ¿Ha escrito "
 "mal el secreto?"
 
-#: journalist_app/utils.py:253
+#: journalist_app/utils.py:257
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Envío eliminado."
 msgstr[1] "{num} envíos eliminados."
 
-#: journalist_app/utils.py:318
+#: journalist_app/utils.py:322
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} colección eliminada"
 msgstr[1] "{num} colecciones eliminadas"
 
-#: journalist_app/utils.py:362
+#: journalist_app/utils.py:366
 msgid "Name updated."
 msgstr "Nombre actualizado."
 
-#: journalist_app/utils.py:371
+#: journalist_app/utils.py:375
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "Envió una contraseña incorrecta. La contraseña no fue cambiada."
 
-#: journalist_app/utils.py:378
+#: journalist_app/utils.py:382
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -258,7 +264,7 @@ msgstr ""
 "correctamente. Para evitar que se bloquee su cuenta, debe restablecer su "
 "contraseña nuevamente."
 
-#: journalist_app/utils.py:387
+#: journalist_app/utils.py:391
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -266,7 +272,7 @@ msgstr ""
 "Contraseña actualizada. No olvide guardarla en su base de datos KeePassX. "
 "Contraseña nueva:"
 
-#: journalist_app/utils.py:411
+#: journalist_app/utils.py:415
 msgid "No unread submissions in selected collections."
 msgstr "No hay envíos sin leer en las colecciones seleccionadas."
 
@@ -555,8 +561,8 @@ msgid ""
 msgstr ""
 "<strong>Actualización Requerida</strong>&nbsp;&nbsp;Configura Servicios "
 "Onion v3 antes del 30 de abril para mantener tus servidores SecureDrop en "
-"línea. Por favor contacta a tu administrador. <a href=\"//securedrop.org/v2"
-"-onion-eol\" rel=\"noreferrer\">Aprende Más</a>"
+"línea. Por favor contacta a tu administrador. <a href=\"//securedrop.org/v2-"
+"onion-eol\" rel=\"noreferrer\">Aprende Más</a>"
 
 #: journalist_templates/base.html:30
 msgid ""
@@ -566,8 +572,8 @@ msgid ""
 msgstr ""
 "<strong>Actualización Requerida</strong>&nbsp;&nbsp;Cmpleta la configuración "
 "de Servicios Onion v3 antes del 30 de abril. Por favor contacta a tu "
-"administrador. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\""
-">Aprende Más</a>"
+"administrador. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
+"\">Aprende Más</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"

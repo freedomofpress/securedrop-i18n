@@ -90,7 +90,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr "Tvåfaktorsautentisering för användaren \"{user}\" bekräftades."
 
 #: journalist_app/admin.py:239 journalist_app/admin.py:247
-#: journalist_app/utils.py:364
+#: journalist_app/utils.py:368
 msgid "Name not updated: {}"
 msgstr "Namn ej uppdaterat: {}"
 
@@ -110,7 +110,7 @@ msgstr "{source_name}s samling har raderats."
 msgid "No collections selected."
 msgstr "Inga samlingar är valda."
 
-#: journalist_app/col.py:101 journalist_app/utils.py:205
+#: journalist_app/col.py:101 journalist_app/utils.py:208
 msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
@@ -129,13 +129,19 @@ msgstr[0] "HOTP-hemligheter är 40 tecken långa - du har fyllt i {num}."
 msgstr[1] "HOTP-hemligheter är 40 tecken långa - du har fyllt i {num}."
 
 #: journalist_app/forms.py:30
-msgid "Must be at least {num} characters long."
+#, fuzzy
+#| msgid "Must be at least {num} characters long."
+#| msgid_plural "Must be at least {num} characters long."
+msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
 msgstr[0] "Måste vara minst {num} tecken långt."
 msgstr[1] "Måste vara minst {num} tecken långt."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-msgid "Cannot be longer than {num} characters."
+#, fuzzy
+#| msgid "Cannot be longer than {num} characters."
+#| msgid_plural "Cannot be longer than {num} characters."
+msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "Kan inte vara längre än {num} tecken."
 msgstr[1] "Kan inte vara längre än {num} tecken."
@@ -164,8 +170,8 @@ msgstr "Fil krävs."
 msgid "You can only upload PNG image files."
 msgstr "Du kan endast ladda upp PNG-bildfiler."
 
-#: journalist_app/main.py:130 journalist_app/utils.py:55
-#: journalist_app/utils.py:154
+#: journalist_app/main.py:130 journalist_app/utils.py:54
+#: journalist_app/utils.py:153
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Ett oväntat fel uppstod! Informera din administratör."
 
@@ -177,23 +183,23 @@ msgstr "Tack. Ditt svar har sparats."
 msgid "No collections selected for download."
 msgstr "Inga samlingar valda för nedladdning."
 
-#: journalist_app/main.py:165 journalist_app/utils.py:310
+#: journalist_app/main.py:165 journalist_app/utils.py:314
 msgid "No collections selected for deletion."
 msgstr "Inga samlingar har markerats för radering."
 
-#: journalist_app/main.py:186
+#: journalist_app/main.py:188
 msgid "No unread submissions for this source."
 msgstr "Det finns inga olästa inlämningar från denna källa."
 
-#: journalist_app/utils.py:62
+#: journalist_app/utils.py:61
 msgid "Account updated."
 msgstr "Kontot uppdaterat."
 
-#: journalist_app/utils.py:103
+#: journalist_app/utils.py:102
 msgid "Login failed."
 msgstr "Inloggningen misslyckades."
 
-#: journalist_app/utils.py:110
+#: journalist_app/utils.py:109
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
 msgstr[0] ""
@@ -201,7 +207,7 @@ msgstr[0] ""
 msgstr[1] ""
 "Var snäll och vänta åtminstone {num} sekunder innan du loggar in igen."
 
-#: journalist_app/utils.py:121
+#: journalist_app/utils.py:120
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -209,37 +215,37 @@ msgstr ""
 "Var snäll och vänta på en ny kod från din tvåfaktor-app eller "
 "säkerhetsnyckel innan du försöker på nytt."
 
-#: journalist_app/utils.py:142
+#: journalist_app/utils.py:141
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Ogiltigt format i hemlighet: vänligen använd endast bokstäverna A-F och "
 "siffrorna 0-9."
 
-#: journalist_app/utils.py:148
+#: journalist_app/utils.py:147
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "Ogiltigt format i hemlighet: ojämn längd. Skrev du fel?"
 
-#: journalist_app/utils.py:253
+#: journalist_app/utils.py:257
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Inlämningen har tagits bort."
 msgstr[1] "{num} inlämningar har tagits bort."
 
-#: journalist_app/utils.py:318
+#: journalist_app/utils.py:322
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} samling har tagits bort"
 msgstr[1] "{num} samlingar har tagits bort"
 
-#: journalist_app/utils.py:362
+#: journalist_app/utils.py:366
 msgid "Name updated."
 msgstr "Namn uppdaterat."
 
-#: journalist_app/utils.py:371
+#: journalist_app/utils.py:375
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "Lösenordet du angav är ogiltigt! Lösenordet har inte ändrats."
 
-#: journalist_app/utils.py:378
+#: journalist_app/utils.py:382
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -249,7 +255,7 @@ msgstr ""
 "korrekt. För att undvika att du blir utelåst från ditt konto, bör du "
 "återställa ditt lösenord en gång till."
 
-#: journalist_app/utils.py:387
+#: journalist_app/utils.py:391
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -257,7 +263,7 @@ msgstr ""
 "Lösenord uppdaterat. Glöm inte att spara det i din KeePassX databas. Det nya "
 "lösenordet är:"
 
-#: journalist_app/utils.py:411
+#: journalist_app/utils.py:415
 msgid "No unread submissions in selected collections."
 msgstr "Inga olästa inlämningar i valda samlingar."
 

@@ -87,7 +87,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr "لقد تم التحقق بنجاح من رمز الاستيثاق في خطوتين للمستخدم \"{user}\"."
 
 #: journalist_app/admin.py:239 journalist_app/admin.py:247
-#: journalist_app/utils.py:364
+#: journalist_app/utils.py:368
 msgid "Name not updated: {}"
 msgstr "الاسم لم يُحدَّث: {}"
 
@@ -107,7 +107,7 @@ msgstr "المجموعة {source_name} حُذفت."
 msgid "No collections selected."
 msgstr "لم يتم اختيار أي مجموعة."
 
-#: journalist_app/col.py:101 journalist_app/utils.py:205
+#: journalist_app/col.py:101 journalist_app/utils.py:208
 msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
@@ -135,7 +135,10 @@ msgstr[5] ""
 "تتألّف كلمة السرّ من نوع HOTP من 40 حرفًا على الأقل - أنت أدخلت {num} حرفًا."
 
 #: journalist_app/forms.py:30
-msgid "Must be at least {num} characters long."
+#, fuzzy
+#| msgid "Must be at least {num} characters long."
+#| msgid_plural "Must be at least {num} characters long."
+msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
 msgstr[0] "يجب ألا يحوي أي حرف."
 msgstr[1] "يجب أن يحوي حرفًا واحدًا على الأقل."
@@ -145,7 +148,10 @@ msgstr[4] "يجب أن يحوي {num} حرفًا على الأقل."
 msgstr[5] "يجب أن يحوي {num} حرفًا على الأقل."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-msgid "Cannot be longer than {num} characters."
+#, fuzzy
+#| msgid "Cannot be longer than {num} characters."
+#| msgid_plural "Cannot be longer than {num} characters."
+msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "هذا الحقل لا يقبل أي حرف."
 msgstr[1] "هذا الحقل لا يقبل أكثر من حرف واحد."
@@ -177,8 +183,8 @@ msgstr "يجب اختيار ملفّ."
 msgid "You can only upload PNG image files."
 msgstr "الصيغة المقبولة لملفّات الصور هي PNG حصرًا."
 
-#: journalist_app/main.py:130 journalist_app/utils.py:55
-#: journalist_app/utils.py:154
+#: journalist_app/main.py:130 journalist_app/utils.py:54
+#: journalist_app/utils.py:153
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "حدث عطل غير متوقع. الرجاء إبلاغ الإداري."
 
@@ -190,23 +196,23 @@ msgstr "شكرا. لقد حُفظ ردُّك."
 msgid "No collections selected for download."
 msgstr "لَمْ تُختَر أيّ مجموعة لتنزيلها."
 
-#: journalist_app/main.py:165 journalist_app/utils.py:310
+#: journalist_app/main.py:165 journalist_app/utils.py:314
 msgid "No collections selected for deletion."
 msgstr "لَمْ تُختَر أيّ مجموعة لحذفها."
 
-#: journalist_app/main.py:186
+#: journalist_app/main.py:188
 msgid "No unread submissions for this source."
 msgstr "لا توجد رسائل غير مقروءة من هذا المصدر."
 
-#: journalist_app/utils.py:62
+#: journalist_app/utils.py:61
 msgid "Account updated."
 msgstr "تم تحديث الحساب."
 
-#: journalist_app/utils.py:103
+#: journalist_app/utils.py:102
 msgid "Login failed."
 msgstr "فشل الولوج."
 
-#: journalist_app/utils.py:110
+#: journalist_app/utils.py:109
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
 msgstr[0] "ينبغي الانتظار {num} ثانية على الأقل قبل محاولة الولوج مجدّدا."
@@ -216,7 +222,7 @@ msgstr[3] "ينبغي الانتظار {num} ثوان على الأقل قبل �
 msgstr[4] "ينبغي الانتظار {num} ثانية على الأقل قبل محاولة الولوج مجدّدا."
 msgstr[5] "ينبغي الانتظار {num} ثانية على الأقل قبل محاولة الولوج مجدّدا."
 
-#: journalist_app/utils.py:121
+#: journalist_app/utils.py:120
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -224,19 +230,19 @@ msgstr ""
 "انتظر حتّى يظهر رمز الاستيثاق في خطوتين الجديد على التطبيق الهاتفي أو مفتاح "
 "المصادقة قبل إعادة المحاولة."
 
-#: journalist_app/utils.py:142
+#: journalist_app/utils.py:141
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "صيغة البيانات السرية غير صحيحة: المقبولة هي الأحرف من A-F و&nbsp;الأرقام من "
 "0-9 فقط."
 
-#: journalist_app/utils.py:148
+#: journalist_app/utils.py:147
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "صيغة البيانات السرية غير صحيحة: عدد كلمات العبارة السرية يجب أن يكون زوجيًّا "
 "لا فرديًّا. تلزم مراجعة الإدخال."
 
-#: journalist_app/utils.py:253
+#: journalist_app/utils.py:257
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "لَمْ تُحذف أي رسالة."
@@ -246,7 +252,7 @@ msgstr[3] "حُذِفَت بعض الرسائل."
 msgstr[4] "حُذِفَت العديد من الرسائل."
 msgstr[5] "حُذِفَت كلّ الرسائل."
 
-#: journalist_app/utils.py:318
+#: journalist_app/utils.py:322
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "لم تُحذَف أي مجموعة"
@@ -256,15 +262,15 @@ msgstr[3] "حُذِفَت {num} مجموعات"
 msgstr[4] "حُذِفَت {num} مجموعة"
 msgstr[5] "حُذِفَت {num} مجموعة"
 
-#: journalist_app/utils.py:362
+#: journalist_app/utils.py:366
 msgid "Name updated."
 msgstr "تم تحديث الاسم."
 
-#: journalist_app/utils.py:371
+#: journalist_app/utils.py:375
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "كلمة السر المُدخلة غير صحيحة! لم يتم تغييرها."
 
-#: journalist_app/utils.py:378
+#: journalist_app/utils.py:382
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -273,7 +279,7 @@ msgstr ""
 "حدث عطل و&nbsp;ربما لم تُحفَظ كلمة السر الجديدة كما ينبغي. لتلافي تعذّر ولوجك "
 "إلى الحساب لاحقا ينبغي عليك معاودة تعيين كلمة السر."
 
-#: journalist_app/utils.py:387
+#: journalist_app/utils.py:391
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -281,7 +287,7 @@ msgstr ""
 "تم تحديث كلمة السر. الرجاء حفظها في قاعدة بيانات KeePassX الخاصة بك . كلمة "
 "السر الجديدة:"
 
-#: journalist_app/utils.py:411
+#: journalist_app/utils.py:415
 msgid "No unread submissions in selected collections."
 msgstr "لا توجد رسائل غير مقروءة في المجموعات المختارة."
 
@@ -574,8 +580,8 @@ msgid ""
 msgstr ""
 "<strong>التحديث مطلوب</strong>&nbsp;&nbsp;قم بتنصيب الإصدار الثالث من خدمات "
 "البصلة Onion Services v3 قبل 30 أبريل/نيسان للإبقاء علي خوادم SecureDrop "
-"متصلة عبر الإنترنت. يرجى التواصل مع الإداري في هذا الأمر.<a href=\""
-"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">معرفة المزيد</a>"
+"متصلة عبر الإنترنت. يرجى التواصل مع الإداري في هذا الأمر.<a href=\"//"
+"securedrop.org/v2-onion-eol\" rel=\"noreferrer\">معرفة المزيد</a>"
 
 #: journalist_templates/base.html:30
 msgid ""
@@ -585,8 +591,8 @@ msgid ""
 msgstr ""
 "<strong>التحديث مطلوب</strong>&nbsp;&nbsp;قم بإكمال تنصيب الإصدار الثالث من "
 "خدمات البصلة Onion Services v3 قبل 30 أبريل/نيسان. يرجي التواصل مع الإداري "
-"في هذا الأمر.<a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\""
-">معرفة المزيد</a>"
+"في هذا الأمر.<a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
+"\">معرفة المزيد</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"

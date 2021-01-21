@@ -97,7 +97,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr ""
 
 #: journalist_app/admin.py:239 journalist_app/admin.py:247
-#: journalist_app/utils.py:364
+#: journalist_app/utils.py:368
 msgid "Name not updated: {}"
 msgstr "نام به روز نشد: {}"
 
@@ -121,7 +121,7 @@ msgstr "مجموعه‌ی {source_name} حذف شد"
 msgid "No collections selected."
 msgstr "هیچ مجموعه‌ای انتخاب نشد."
 
-#: journalist_app/col.py:101 journalist_app/utils.py:205
+#: journalist_app/col.py:101 journalist_app/utils.py:208
 msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
@@ -143,18 +143,16 @@ msgstr[1] ""
 
 #: journalist_app/forms.py:30
 #, fuzzy
-#| msgid ""
-#| "Field must be at least {min_chars} characters long but only got "
-#| "{num_chars}."
-msgid "Must be at least {num} characters long."
+#| msgid "Field can not be more than {max_chars} characters."
+msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "رشته نمی‌تواند بیش از {num} کاراکتر باشد."
+msgstr[1] "رشته نمی‌تواند بیش از {num} کاراکتر باشد."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
 #, fuzzy
 #| msgid "Field can not be more than {max_chars} characters."
-msgid "Cannot be longer than {num} characters."
+msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "رشته نمی‌تواند بیش از {num} کاراکتر باشد."
 msgstr[1] "رشته نمی‌تواند بیش از {num} کاراکتر باشد."
@@ -181,8 +179,8 @@ msgstr "پرونده مورد نیاز است."
 msgid "You can only upload PNG image files."
 msgstr "تنها می توانید تصاویر را با فرمت PNG بارگزاری کنید."
 
-#: journalist_app/main.py:130 journalist_app/utils.py:55
-#: journalist_app/utils.py:154
+#: journalist_app/main.py:130 journalist_app/utils.py:54
+#: journalist_app/utils.py:153
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "یک خطای غیر منتظره رخ داده است! لطفا به مدیر خود اطلاع دهید."
 
@@ -194,23 +192,23 @@ msgstr "با تشکر. پاسخ شما ذخیره شد."
 msgid "No collections selected for download."
 msgstr "هیچ مجموعه‌ای برای بارگیری انتخاب نشده است."
 
-#: journalist_app/main.py:165 journalist_app/utils.py:310
+#: journalist_app/main.py:165 journalist_app/utils.py:314
 msgid "No collections selected for deletion."
 msgstr "هیچ مجموعه‌ای برای حذف انتخاب نشده است."
 
-#: journalist_app/main.py:186
+#: journalist_app/main.py:188
 msgid "No unread submissions for this source."
 msgstr "هیچ محتوای ارسالی خوانده نشده‌‌ای از این منبع آگاه یافت نشد."
 
-#: journalist_app/utils.py:62
+#: journalist_app/utils.py:61
 msgid "Account updated."
 msgstr "حساب‌ به‌روزرسانی شد."
 
-#: journalist_app/utils.py:103
+#: journalist_app/utils.py:102
 msgid "Login failed."
 msgstr "ورود ناموفق بود."
 
-#: journalist_app/utils.py:110
+#: journalist_app/utils.py:109
 #, fuzzy
 #| msgid "Please wait at least {seconds} second before logging in again."
 #| msgid_plural ""
@@ -220,7 +218,7 @@ msgid_plural "Please wait at least {num} seconds before logging in again."
 msgstr[0] "لطفا قبل از ورود به سیستم حداقل یک ثانیه صبر کنید."
 msgstr[1] "لطفا قبل از ورود به سیستم حداقل {num} ثانیه صبر کنید."
 
-#: journalist_app/utils.py:121
+#: journalist_app/utils.py:120
 #, fuzzy
 #| msgid ""
 #| "Please wait for a new code from your two-factor token or application "
@@ -231,39 +229,39 @@ msgid ""
 msgstr ""
 "لطفا پیش از اقدام مجدد، برای دریافت شناسه‌ی دو مرحله ای یا سیستمی صبر کنید."
 
-#: journalist_app/utils.py:142
+#: journalist_app/utils.py:141
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr "قالب رمز نامعتبر: لطفا فقط حروف A-F و اعداد 0-9 را ارسال کنید."
 
-#: journalist_app/utils.py:148
+#: journalist_app/utils.py:147
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "قالب رمز نامعتبر است: تعداد کارکترها‌ی رمز باید زوج باشد. آیا رمز را اشتباه "
 "تایپ کردید؟"
 
-#: journalist_app/utils.py:253
+#: journalist_app/utils.py:257
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "محتوای ارسالی حذف شد."
 msgstr[1] "{num} محتوای ارسالی حذف شدند."
 
-#: journalist_app/utils.py:318
+#: journalist_app/utils.py:322
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} مجموعه حذف شد"
 msgstr[1] "{num} مجموعه حذف شدند"
 
-#: journalist_app/utils.py:362
+#: journalist_app/utils.py:366
 msgid "Name updated."
 msgstr "نام به روز شد."
 
-#: journalist_app/utils.py:371
+#: journalist_app/utils.py:375
 #, fuzzy
 #| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "گذرواژه‌ی وارد شده صحیح نمی‌باشد! گذر واژه تغییر نکرد."
 
-#: journalist_app/utils.py:378
+#: journalist_app/utils.py:382
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -272,7 +270,7 @@ msgstr ""
 "مشکلی بوجود آمد، و ممکن است گذرواژه‌ی جدید بدرستی ذخیره نشده باشد. برای "
 "جلوگیری از مسدود شدن حساب، می‌بایست گذر واژه‌ی خود را بازنشانی کنید."
 
-#: journalist_app/utils.py:387
+#: journalist_app/utils.py:391
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -280,7 +278,7 @@ msgstr ""
 "گذرواژه بروزرسانی شد. فراموش نکنید که آن را در پایگاه داده‌ی KeePassX ذخیره "
 "نمایید. گذرواژه‌ی جدید:"
 
-#: journalist_app/utils.py:411
+#: journalist_app/utils.py:415
 msgid "No unread submissions in selected collections."
 msgstr "هیج محتوای ارسالی خوانده نشده‌ای در مجموعه‌ی انتخاب شده وجود ندارد."
 

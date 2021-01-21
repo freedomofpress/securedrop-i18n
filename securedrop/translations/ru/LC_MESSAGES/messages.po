@@ -91,7 +91,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr "Двухфакторный код для пользователя \"{user}\" был успешно подтверждён."
 
 #: journalist_app/admin.py:239 journalist_app/admin.py:247
-#: journalist_app/utils.py:364
+#: journalist_app/utils.py:368
 msgid "Name not updated: {}"
 msgstr "Имя не обновлено: {}"
 
@@ -111,7 +111,7 @@ msgstr "Коллекция {source_name} удалена."
 msgid "No collections selected."
 msgstr "Коллекция не выбрана."
 
-#: journalist_app/col.py:101 journalist_app/utils.py:205
+#: journalist_app/col.py:101 journalist_app/utils.py:208
 msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
@@ -131,14 +131,20 @@ msgstr[1] "Секреты HOTP должны содержать 40 символо
 msgstr[2] "Секреты HOTP должны содержать 40 символов. Вы ввели {num}."
 
 #: journalist_app/forms.py:30
-msgid "Must be at least {num} characters long."
+#, fuzzy
+#| msgid "Must be at least {num} characters long."
+#| msgid_plural "Must be at least {num} characters long."
+msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
 msgstr[0] "Должно быть не менее {num} символов."
 msgstr[1] "Должно быть не менее {num} символов."
 msgstr[2] "Должно быть не менее {num} символов."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-msgid "Cannot be longer than {num} characters."
+#, fuzzy
+#| msgid "Cannot be longer than {num} characters."
+#| msgid_plural "Cannot be longer than {num} characters."
+msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "Длина не может превышать {num} символов."
 msgstr[1] "Длина не может превышать {num} символов."
@@ -168,8 +174,8 @@ msgstr "Файл обязателен."
 msgid "You can only upload PNG image files."
 msgstr "Вы можете загружать изображения только в формате PNG."
 
-#: journalist_app/main.py:130 journalist_app/utils.py:55
-#: journalist_app/utils.py:154
+#: journalist_app/main.py:130 journalist_app/utils.py:54
+#: journalist_app/utils.py:153
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Произошла непредвиденная ошибка! Сообщите об этом администратору."
 
@@ -181,23 +187,23 @@ msgstr "Спасибо. Ваш ответ сохранен."
 msgid "No collections selected for download."
 msgstr "Коллекции для скачивания не выбраны."
 
-#: journalist_app/main.py:165 journalist_app/utils.py:310
+#: journalist_app/main.py:165 journalist_app/utils.py:314
 msgid "No collections selected for deletion."
 msgstr "Не выбраны коллекции для удаления."
 
-#: journalist_app/main.py:186
+#: journalist_app/main.py:188
 msgid "No unread submissions for this source."
 msgstr "Нет непрочитанных материалов для этого источника."
 
-#: journalist_app/utils.py:62
+#: journalist_app/utils.py:61
 msgid "Account updated."
 msgstr "Аккаунт обновлен."
 
-#: journalist_app/utils.py:103
+#: journalist_app/utils.py:102
 msgid "Login failed."
 msgstr "Авторизация не удалась."
 
-#: journalist_app/utils.py:110
+#: journalist_app/utils.py:109
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
 msgstr[0] ""
@@ -210,7 +216,7 @@ msgstr[2] ""
 "Подождите минимум {num} секунд перед тем как попробовать снова войти в "
 "систему."
 
-#: journalist_app/utils.py:121
+#: journalist_app/utils.py:120
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -218,38 +224,38 @@ msgstr ""
 "Пожалуйста, дождитесь нового кода от вашего двухфакторного приложения или "
 "электронного ключа, прежде чем повторить попытку."
 
-#: journalist_app/utils.py:142
+#: journalist_app/utils.py:141
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Недопустимый формат: пожалуйста, используйте только буквы от A-F и цифры 0-9."
 
-#: journalist_app/utils.py:148
+#: journalist_app/utils.py:147
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "Неверный формат: количество символов нечетное. Вы ошиблись?"
 
-#: journalist_app/utils.py:253
+#: journalist_app/utils.py:257
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "Материал удален."
 msgstr[1] "{num} материала удалены."
 msgstr[2] "{num} материалов удалены."
 
-#: journalist_app/utils.py:318
+#: journalist_app/utils.py:322
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} коллекция удалена"
 msgstr[1] "{num} коллекции удалены"
 msgstr[2] "{num} коллекций удалено"
 
-#: journalist_app/utils.py:362
+#: journalist_app/utils.py:366
 msgid "Name updated."
 msgstr "Имя обновлено."
 
-#: journalist_app/utils.py:371
+#: journalist_app/utils.py:375
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "Введенный вами пароль неверен. Пароль не изменен."
 
-#: journalist_app/utils.py:378
+#: journalist_app/utils.py:382
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -258,7 +264,7 @@ msgstr ""
 "Произошла ошибка, новый пароль мог быть сохранен неправильно. Чтобы не "
 "потерять доступ к аккаунту вам нужно снова сбросить пароль.."
 
-#: journalist_app/utils.py:387
+#: journalist_app/utils.py:391
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -266,7 +272,7 @@ msgstr ""
 "Пароль обновлен. Не забудьте сохранить его в базе данных KeePassX. Новый "
 "пароль:"
 
-#: journalist_app/utils.py:411
+#: journalist_app/utils.py:415
 msgid "No unread submissions in selected collections."
 msgstr "Нет непрочитанных материалов в выбранных коллекциях."
 
@@ -559,8 +565,8 @@ msgid ""
 msgstr ""
 "<strong>Требуется обновление</strong>&nbsp;&nbsp;Настройте версию 3 служб "
 "Onion до 30 апреля, чтобы обеспечить работу ваших серверов SecureDrop. "
-"Пожалуйста, свяжитесь с вашим администратором. <a href=\"//securedrop.org/v2"
-"-onion-eol\" rel=\"noreferrer\">Подробнее</a>"
+"Пожалуйста, свяжитесь с вашим администратором. <a href=\"//securedrop.org/v2-"
+"onion-eol\" rel=\"noreferrer\">Подробнее</a>"
 
 #: journalist_templates/base.html:30
 msgid ""

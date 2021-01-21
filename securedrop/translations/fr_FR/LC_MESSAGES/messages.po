@@ -92,7 +92,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr "Le code A2F de l’utilisateur « {user} » a été vérifié avec succès."
 
 #: journalist_app/admin.py:239 journalist_app/admin.py:247
-#: journalist_app/utils.py:364
+#: journalist_app/utils.py:368
 msgid "Name not updated: {}"
 msgstr "Le nom n’a pas été mis à jour : {}"
 
@@ -112,7 +112,7 @@ msgstr "La collection de {source_name} a été supprimée."
 msgid "No collections selected."
 msgstr "Aucune collection n’a été sélectionnée."
 
-#: journalist_app/col.py:101 journalist_app/utils.py:205
+#: journalist_app/col.py:101 journalist_app/utils.py:208
 msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
@@ -134,13 +134,19 @@ msgstr[1] ""
 "Les secrets HOTP comportent 40 caractères. Vous en avez saisi {num}."
 
 #: journalist_app/forms.py:30
-msgid "Must be at least {num} characters long."
+#, fuzzy
+#| msgid "Must be at least {num} characters long."
+#| msgid_plural "Must be at least {num} characters long."
+msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
 msgstr[0] "Doit comporter au moins {num} caractère."
 msgstr[1] "Doit comporter au moins {num} caractères."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-msgid "Cannot be longer than {num} characters."
+#, fuzzy
+#| msgid "Cannot be longer than {num} characters."
+#| msgid_plural "Cannot be longer than {num} characters."
+msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "Ne peut pas dépasser {num} caractère."
 msgstr[1] "Ne peut pas dépasser {num} caractères."
@@ -169,8 +175,8 @@ msgstr "Un fichier est exigé."
 msgid "You can only upload PNG image files."
 msgstr "Vous ne pouvez téléverser que des fichiers images PNG."
 
-#: journalist_app/main.py:130 journalist_app/utils.py:55
-#: journalist_app/utils.py:154
+#: journalist_app/main.py:130 journalist_app/utils.py:54
+#: journalist_app/utils.py:153
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr ""
 "Une erreur inattendue est survenue ! Veuillez la signaler à votre "
@@ -184,23 +190,23 @@ msgstr "Merci. Votre réponse a été enregistrée."
 msgid "No collections selected for download."
 msgstr "Aucune collection n’a été sélectionnée pour être téléchargée."
 
-#: journalist_app/main.py:165 journalist_app/utils.py:310
+#: journalist_app/main.py:165 journalist_app/utils.py:314
 msgid "No collections selected for deletion."
 msgstr "Aucune collection n’a été sélectionnée pour être supprimée."
 
-#: journalist_app/main.py:186
+#: journalist_app/main.py:188
 msgid "No unread submissions for this source."
 msgstr "Aucun envoi non lu pour cette source."
 
-#: journalist_app/utils.py:62
+#: journalist_app/utils.py:61
 msgid "Account updated."
 msgstr "Le compte a été mis à jour."
 
-#: journalist_app/utils.py:103
+#: journalist_app/utils.py:102
 msgid "Login failed."
 msgstr "Échec de connexion."
 
-#: journalist_app/utils.py:110
+#: journalist_app/utils.py:109
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
 msgstr[0] ""
@@ -208,7 +214,7 @@ msgstr[0] ""
 msgstr[1] ""
 "Veuillez patienter au moins {num} secondes avant de vous reconnecter."
 
-#: journalist_app/utils.py:121
+#: journalist_app/utils.py:120
 msgid ""
 "Please wait for a new code from your two-factor mobile app or security key "
 "before trying again."
@@ -216,41 +222,41 @@ msgstr ""
 "Veuillez attendre un nouveau code de votre appli mobile ou de votre clé de "
 "sécurité d’A2F avant de réessayer."
 
-#: journalist_app/utils.py:142
+#: journalist_app/utils.py:141
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr ""
 "Le format du secret est invalide : veuillez n’utiliser que des lettres de A "
 "à F et des chiffres de 0 à 9."
 
-#: journalist_app/utils.py:148
+#: journalist_app/utils.py:147
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr ""
 "Le format du secret est invalide : le nombre de caractères est impair. Le "
 "secret serait-il mal orthographié ?"
 
-#: journalist_app/utils.py:253
+#: journalist_app/utils.py:257
 msgid "Submission deleted."
 msgid_plural "{num} submissions deleted."
 msgstr[0] "L’envoi a été supprimé."
 msgstr[1] "{num} envois ont été supprimés."
 
-#: journalist_app/utils.py:318
+#: journalist_app/utils.py:322
 msgid "{num} collection deleted"
 msgid_plural "{num} collections deleted"
 msgstr[0] "{num} collection a été supprimée"
 msgstr[1] "{num} collections ont été supprimées"
 
-#: journalist_app/utils.py:362
+#: journalist_app/utils.py:366
 msgid "Name updated."
 msgstr "Le nom a été mis à jour."
 
-#: journalist_app/utils.py:371
+#: journalist_app/utils.py:375
 msgid "The password you submitted is invalid. Password not changed."
 msgstr ""
 "Le mot de passe que vous avez proposé est invalide. Le mot de passe n’a pas "
 "été modifié."
 
-#: journalist_app/utils.py:378
+#: journalist_app/utils.py:382
 msgid ""
 "There was an error, and the new password might not have been saved "
 "correctly. To prevent you from getting locked out of your account, you "
@@ -260,7 +266,7 @@ msgstr ""
 "enregistré correctement. Pour éviter de perdre l’accès à votre compte, vous "
 "devriez réinitialiser votre mot de passe de nouveau."
 
-#: journalist_app/utils.py:387
+#: journalist_app/utils.py:391
 msgid ""
 "Password updated. Don't forget to save it in your KeePassX database. New "
 "password:"
@@ -268,7 +274,7 @@ msgstr ""
 "Le mot de passe a été mis à jour. N’oubliez pas de l’enregistrer dans votre "
 "base de données KeePassX. Le nouveau mot de passe est :"
 
-#: journalist_app/utils.py:411
+#: journalist_app/utils.py:415
 msgid "No unread submissions in selected collections."
 msgstr "Aucun envoi non lu dans les collections sélectionnées."
 
@@ -568,8 +574,8 @@ msgid ""
 msgstr ""
 "<strong>Mise à jour requise</strong>&nbsp;&nbsp;Terminez la mise en place "
 "des services Onion v3 avant le 30 avril. Veuillez contacter votre "
-"administrateur. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\""
-">En apprendre davantage</a>"
+"administrateur. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
+"\">En apprendre davantage</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"
@@ -1034,8 +1040,8 @@ msgid ""
 "\"{url}\">Why is this dangerous?</a>"
 msgstr ""
 "<strong>AVERTISSEMENT :&nbsp;</strong> il semble que vous utilisez Tor2Web. "
-"Cela <strong>ne garantit pas</strong> votre anonymat. <a href=\"{url}\""
-">Pourquoi est-ce dangereux ?</a>"
+"Cela <strong>ne garantit pas</strong> votre anonymat. <a href="
+"\"{url}\">Pourquoi est-ce dangereux ?</a>"
 
 #: source_app/forms.py:19
 msgid "Field must be between 1 and {max_codename_len} characters long."
