@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-01-21 21:07+0000\n"
-"Last-Translator: Anatoli <djanatoli@gmail.com>\n"
+"PO-Revision-Date: 2021-01-22 01:37+0000\n"
+"Last-Translator: Zuhualime Akoochimoya <zakooch@protonmail.ch>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
 "Language: es_ES\n"
@@ -114,7 +114,6 @@ msgid "No collections selected."
 msgstr "No hay colecciones seleccionadas."
 
 #: journalist_app/col.py:101 journalist_app/utils.py:208
-#, fuzzy
 msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
@@ -137,21 +136,15 @@ msgstr[1] ""
 "{num}."
 
 #: journalist_app/forms.py:30
-#, fuzzy
-#| msgid "Must be at least {num} characters long."
-#| msgid_plural "Must be at least {num} characters long."
 msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
-msgstr[0] "Debe ser por lo menos {num} caracter de longitud."
-msgstr[1] "Debe ser por lo menos {num} caracteres de longitud."
+msgstr[0] "Debe tener por lo menos {num} carácter de longitud."
+msgstr[1] "Debe tener por lo menos {num} caracteres de longitud."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-#, fuzzy
-#| msgid "Cannot be longer than {num} characters."
-#| msgid_plural "Cannot be longer than {num} characters."
 msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
-msgstr[0] "No puede tener más que {num} caracter."
+msgstr[0] "No puede tener más que {num} carácter."
 msgstr[1] "No puede tener más que {num} caracteres."
 
 #: journalist_app/forms.py:62
@@ -292,7 +285,6 @@ msgid "starred icon"
 msgstr "ícono de estrella"
 
 #: journalist_templates/_source_row.html:16
-#, fuzzy
 msgid "unstarred icon"
 msgstr "ícono de estrella vacío"
 
