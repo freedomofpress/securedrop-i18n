@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-01-21 22:39+0000\n"
+"PO-Revision-Date: 2021-01-22 01:37+0000\n"
 "Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
 "Language-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/nl/>\n"
@@ -905,7 +905,7 @@ msgstr "HERSTEL INSTELLINGEN VOOR BEVEILIGINGSSLEUTEL"
 
 #: journalist_templates/flag.html:4
 msgid "info icon"
-msgstr "infoo icoon"
+msgstr "info icoon"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -1241,7 +1241,7 @@ msgstr "BEGIN"
 
 #: source_templates/index.html:57
 msgid "Return visit"
-msgstr "Ik heb al eerder iets ingestuurd"
+msgstr "Vervolgbezoek"
 
 #: source_templates/index.html:59
 msgid "Already have a codename? Check for replies or submit something new."
