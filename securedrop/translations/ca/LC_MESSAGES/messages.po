@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-01-17 12:37+0000\n"
+"PO-Revision-Date: 2021-01-21 21:07+0000\n"
 "Last-Translator: John Smith <ecron_89@hotmail.com>\n"
 "Language-Team: Catalan <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ca/>\n"
@@ -131,18 +131,12 @@ msgstr[1] ""
 "Els secrets HOTP tenen una mida de 40 caràcters, però n’heu introduït {num}."
 
 #: journalist_app/forms.py:30
-#, fuzzy
-#| msgid "Must be at least {num} characters long."
-#| msgid_plural "Must be at least {num} characters long."
 msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
 msgstr[0] "Cal que tingui com a mínim {num} caràcter."
 msgstr[1] "Cal que tingui com a mínim {num} caràcters."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-#, fuzzy
-#| msgid "Cannot be longer than {num} characters."
-#| msgid_plural "Cannot be longer than {num} characters."
 msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "No pot tenir més d'{num} caràcter."
