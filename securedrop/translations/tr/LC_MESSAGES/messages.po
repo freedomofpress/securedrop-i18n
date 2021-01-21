@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-10-08 08:57+0000\n"
-"Last-Translator: Kaya Zeren <kayazeren@gmail.com>\n"
+"PO-Revision-Date: 2021-01-21 11:37+0000\n"
+"Last-Translator: tekrei <tekrei@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.1.1\n"
+"X-Generator: Weblate 4.3.2\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:19
@@ -34,7 +34,7 @@ msgstr "Parolanız değiştirildiği için oturumunuz kapatıldı"
 #: journalist_app/__init__.py:164 source_app/__init__.py:172
 #: source_templates/base.html:9 source_templates/index.html:7
 msgid "SecureDrop"
-msgstr ""
+msgstr "SecureDrop"
 
 #: journalist_app/account.py:39
 msgid "Incorrect password or two-factor code."
@@ -60,11 +60,11 @@ msgstr "Tercihler kaydedildi."
 
 #: journalist_app/admin.py:81
 msgid "Preferences not updated."
-msgstr ""
+msgstr "Tercihler güncellenmedi."
 
 #: journalist_app/admin.py:95
 msgid "Failed to update organization name."
-msgstr ""
+msgstr "Kuruluş ismi güncellemesi başarısız oldu."
 
 #: journalist_app/admin.py:128
 msgid ""
@@ -116,6 +116,8 @@ msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
 msgstr ""
+"İndirme işleminiz bir dosya bulunamadığı için başarısız oldu. Bir yönetici "
+"sistem ve izleme günlüklerinde sorunla ilgili daha fazla bilgiye ulaşabilir."
 
 #: journalist_app/decorators.py:18
 msgid "Only admins can access this page."
@@ -125,9 +127,9 @@ msgstr "Bu sayfaya yalnızca yöneticiler erişebilir."
 msgid "HOTP secrets are 40 characters long - you have entered {num}."
 msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
 msgstr[0] ""
-"HOTP parolaları 40 karakter uzunluğundadır - Henüz {num} karakter yazdınız."
+"HOTP parolaları 40 karakter uzunluğundadır - sadece {num} karakter yazdınız."
 msgstr[1] ""
-"HOTP parolaları 40 karakter uzunluğundadır - Henüz {num} karakter yazdınız."
+"HOTP parolaları 40 karakter uzunluğundadır - sadece {num} karakter yazdınız."
 
 #: journalist_app/forms.py:30
 msgid "Must be at least {num} characters long."
@@ -272,11 +274,11 @@ msgstr "İptal"
 #: journalist_templates/_source_row.html:8
 #: journalist_templates/_source_row.html:17
 msgid "starred icon"
-msgstr ""
+msgstr "yıldızlı simge"
 
 #: journalist_templates/_source_row.html:16
 msgid "unstarred icon"
-msgstr ""
+msgstr "yıldızsız simge"
 
 #: journalist_templates/_source_row.html:28
 msgid "1 doc"
@@ -292,7 +294,7 @@ msgstr[1] "{num} ileti"
 
 #: journalist_templates/_source_row.html:37
 msgid "download icon"
-msgstr ""
+msgstr "indirme simgesi"
 
 #: journalist_templates/_source_row.html:38
 msgid "1 unread"
@@ -439,11 +441,11 @@ msgstr "{username} kullanıcısını düzenle"
 
 #: journalist_templates/admin.html:31
 msgid "edit user icon"
-msgstr ""
+msgstr "kullanıcı düzenleme simgesi"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
-msgstr ""
+msgstr "devredışı çöp simgesi"
 
 #: journalist_templates/admin.html:42
 msgid "Delete user {username}"
@@ -451,7 +453,7 @@ msgstr "{username} kullanıcısını sil"
 
 #: journalist_templates/admin.html:43 journalist_templates/admin.html:44
 msgid "trash icon"
-msgstr ""
+msgstr "çöp simgesi"
 
 #: journalist_templates/admin.html:53
 msgid "never"
@@ -536,25 +538,16 @@ msgstr ""
 "YubiKey yapılandırmasını tamamladığınızda, aşağıdaki 6 haneli kodu yazın:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 onion services, which are being phased out for security "
-#| "reasons. In February 2021, v2 onion services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before "
 "April 30 to keep your SecureDrop servers online. Please contact your "
 "administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
 "\">Learn More</a>"
 msgstr ""
-"<strong>Güncelleme Gerekiyor:</strong> SecureDrop sunucularınız hala, "
-"güvenlik nedenleriyle aşamalı olarak kullanımdan kaldırılan onion "
-"hizmetlerinin 2. sürümünü kullanıyor. 2021 yılı Şubat ayında onion "
-"hizmetleri 2. sürümü devre dışı bırakılacaktır, bu durumda SecureDrop "
-"sunucularınız erişilemez hale gelebilir. <a href=\"//securedrop.org/v2-onion-"
-"eol\" rel=\"noreferrer\">Daha Fazlasını Öğren</a>"
+"<strong>Güncelleme Gerekiyor:</strong>&nbsp;&nbsp;SecureDrop sunucularınızı "
+"çevrimiçi tutmak istiyorsanız 30 Nisan'dan önce Onion Hizmetleri'nin 3. "
+"sürümünü kurun. Lütfen yöneticinizle bağlantıya geçin. <a href=\"//securedrop"
+".org/v2-onion-eol\" rel=\"noreferrer\">Daha Fazlasını Öğrenin</a>"
 
 #: journalist_templates/base.html:30
 msgid ""
@@ -562,6 +555,10 @@ msgid ""
 "setup before April 30. Please contact your administrator. <a href=\"//"
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Güncelleme Gerekiyor:</strong>&nbsp;&nbsp;Onion Hizmetleri 3. sürüm "
+"kurulumunu 30 Nisan'dan önce tamamlayın. Lütfen yöneticinizle bağlantıya "
+"geçin. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Daha "
+"Fazlasını Öğrenin</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"
@@ -606,7 +603,7 @@ msgstr "Yanıtla"
 
 #: journalist_templates/col.html:35 journalist_templates/col.html:65
 msgid "reply icon"
-msgstr ""
+msgstr "yanıtla simgesi"
 
 #: journalist_templates/col.html:39 journalist_templates/col.html:50
 msgid "Read"
@@ -614,7 +611,7 @@ msgstr "Okunmuş"
 
 #: journalist_templates/col.html:40
 msgid "check icon"
-msgstr ""
+msgstr "onay simgesi"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
@@ -622,11 +619,11 @@ msgstr "Okunmamış"
 
 #: journalist_templates/col.html:46
 msgid "closed envelope icon"
-msgstr ""
+msgstr "kapalı zarf simgesi"
 
 #: journalist_templates/col.html:51
 msgid "open envelope icon"
-msgstr ""
+msgstr "açık zarf simgesi"
 
 #: journalist_templates/col.html:60
 msgid "Uploaded Document"
@@ -634,7 +631,7 @@ msgstr "Yüklenen Belge"
 
 #: journalist_templates/col.html:61
 msgid "files icon"
-msgstr ""
+msgstr "dosyalar simgesi"
 
 #: journalist_templates/col.html:68
 msgid "Message"
@@ -642,7 +639,7 @@ msgstr "İleti"
 
 #: journalist_templates/col.html:69
 msgid "messages icon"
-msgstr ""
+msgstr "iletiler simgesi"
 
 #: journalist_templates/col.html:80 journalist_templates/col.html:144
 #: journalist_templates/index.html:62
@@ -710,15 +707,15 @@ msgstr "Örnek Yapılandırması"
 
 #: journalist_templates/config.html:10
 msgid "Organization Name"
-msgstr ""
+msgstr "Kuruluş Adı"
 
 #: journalist_templates/config.html:15
 msgid "Set the organization name used on the SecureDrop web interfaces:"
-msgstr ""
+msgstr "SecureDrop web arayüzlerinde kullanılacak olan kuruluş adını ayarlayın:"
 
 #: journalist_templates/config.html:20
 msgid "SET ORGANIZATION NAME"
-msgstr ""
+msgstr "KURULUŞ ADINI AYARLA"
 
 #: journalist_templates/config.html:28 source_templates/index.html:33
 msgid "Logo Image"
@@ -908,7 +905,7 @@ msgstr "FİZİKSEL GÜVENLİK ANAHTARI KİMLİK BİLGİLERİNİ SIFIRLA"
 
 #: journalist_templates/flag.html:4
 msgid "info icon"
-msgstr ""
+msgstr "bilgi simgesi"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -969,10 +966,8 @@ msgid "No documents have been submitted!"
 msgstr "Herhangi bir belge gönderilmedi!"
 
 #: journalist_templates/js-strings.html:3
-#, fuzzy
-#| msgid "filter by codename"
 msgid "Filter by codename"
-msgstr "kod adına göre süz"
+msgstr "Kod adına göre süz"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
@@ -1105,7 +1100,7 @@ msgstr "Gazetecileri ve Kaynakları Korumak"
 
 #: source_templates/base.html:24
 msgid "SecureDrop Home"
-msgstr ""
+msgstr "SecureDrop Anasayfa"
 
 #: source_templates/base.html:32
 msgid "LOG OUT"
