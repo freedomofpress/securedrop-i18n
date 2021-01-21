@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-01-20 20:37+0000\n"
+"PO-Revision-Date: 2021-01-21 14:39+0000\n"
 "Last-Translator: michaela-bot <michaela.rybickova@gmail.com>\n"
 "Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/cs/>\n"
@@ -304,7 +304,7 @@ msgstr[2] "{num} zpráv"
 
 #: journalist_templates/_source_row.html:37
 msgid "download icon"
-msgstr ""
+msgstr "ikonka stahování"
 
 #: journalist_templates/_source_row.html:38
 msgid "1 unread"
@@ -445,11 +445,11 @@ msgstr "Upravit uživatele „{username}“"
 
 #: journalist_templates/admin.html:31
 msgid "edit user icon"
-msgstr ""
+msgstr "ikonka editace uživatele"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
-msgstr ""
+msgstr "ikonka vypnutého odpadkového koše"
 
 #: journalist_templates/admin.html:42
 msgid "Delete user {username}"
@@ -457,7 +457,7 @@ msgstr "Smazat uživatele „{username}“"
 
 #: journalist_templates/admin.html:43 journalist_templates/admin.html:44
 msgid "trash icon"
-msgstr ""
+msgstr "ikonka odpadkového koše"
 
 #: journalist_templates/admin.html:53
 msgid "never"
@@ -620,7 +620,7 @@ msgstr "Přečteno"
 
 #: journalist_templates/col.html:40
 msgid "check icon"
-msgstr ""
+msgstr "ikonka fajfky"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
@@ -1102,7 +1102,7 @@ msgstr "Chráníme novináře a jejich zdroje"
 
 #: source_templates/base.html:24
 msgid "SecureDrop Home"
-msgstr ""
+msgstr "Domovská stránka SecureDrop"
 
 #: source_templates/base.html:32
 msgid "LOG OUT"
