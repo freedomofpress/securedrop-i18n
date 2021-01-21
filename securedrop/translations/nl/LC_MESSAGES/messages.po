@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-10-17 00:01+0000\n"
-"Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
+"PO-Revision-Date: 2021-01-21 11:37+0000\n"
+"Last-Translator: Nick Bouwhuis <github@nickbouwhuis.nl>\n"
 "Language-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/nl/>\n"
 "Language: nl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.1.1\n"
+"X-Generator: Weblate 4.3.2\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:19
@@ -35,7 +35,7 @@ msgstr "U bent uitgelogd omdat uw wachtwoord is gewijzigd"
 #: journalist_app/__init__.py:164 source_app/__init__.py:172
 #: source_templates/base.html:9 source_templates/index.html:7
 msgid "SecureDrop"
-msgstr ""
+msgstr "SecureDrop"
 
 #: journalist_app/account.py:39
 msgid "Incorrect password or two-factor code."
@@ -61,11 +61,11 @@ msgstr "Voorkeuren opgeslagen."
 
 #: journalist_app/admin.py:81
 msgid "Preferences not updated."
-msgstr ""
+msgstr "Voorkeuren niet geüpdatet."
 
 #: journalist_app/admin.py:95
 msgid "Failed to update organization name."
-msgstr ""
+msgstr "Het updaten van de organisatienaam is mislukt."
 
 #: journalist_app/admin.py:128
 msgid ""
@@ -116,6 +116,8 @@ msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
 msgstr ""
+"Uw download is mislukt omdat een bestand niet kon worden gevonden. Een "
+"administrator kan meer informatie vinden in de systeem en monitoring logs."
 
 #: journalist_app/decorators.py:18
 msgid "Only admins can access this page."
@@ -124,19 +126,19 @@ msgstr "Alleen beheerders hebben toegang tot deze pagina."
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num}."
 msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
-msgstr[0] "HOTP-geheimen zijn 40 tekens lang - u heeft er {num} ingevoerd."
+msgstr[0] "HOTP-geheim is 40 tekens lang - u heeft er {num} ingevoerd."
 msgstr[1] "HOTP-geheimen zijn 40 tekens lang - u heeft er {num} ingevoerd."
 
 #: journalist_app/forms.py:30
 msgid "Must be at least {num} characters long."
 msgid_plural "Must be at least {num} characters long."
-msgstr[0] "Moet minstens {num} tekens lang zijn."
-msgstr[1] "Moet minstens {num} tekens lang zijn."
+msgstr[0] "Moet ten minste {num} teken lang zijn."
+msgstr[1] "Moet ten minste {num} tekens lang zijn."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
 msgid "Cannot be longer than {num} characters."
 msgid_plural "Cannot be longer than {num} characters."
-msgstr[0] "Kan niet langer dan {num} tekens zijn."
+msgstr[0] "Kan niet langer dan {num} teken zijn."
 msgstr[1] "Kan niet langer dan {num} tekens zijn."
 
 #: journalist_app/forms.py:62
@@ -273,11 +275,11 @@ msgstr "Annuleren"
 #: journalist_templates/_source_row.html:8
 #: journalist_templates/_source_row.html:17
 msgid "starred icon"
-msgstr ""
+msgstr "favorieten icoon"
 
 #: journalist_templates/_source_row.html:16
 msgid "unstarred icon"
-msgstr ""
+msgstr "ster verwijderd icoon"
 
 #: journalist_templates/_source_row.html:28
 msgid "1 doc"
@@ -293,7 +295,7 @@ msgstr[1] "{num} berichten"
 
 #: journalist_templates/_source_row.html:37
 msgid "download icon"
-msgstr ""
+msgstr "download icoon"
 
 #: journalist_templates/_source_row.html:38
 msgid "1 unread"
@@ -439,11 +441,11 @@ msgstr "Gebruiker {username} bewerken"
 
 #: journalist_templates/admin.html:31
 msgid "edit user icon"
-msgstr ""
+msgstr "wijzig gebruiker knop"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
-msgstr ""
+msgstr "prullenbak icoon uitgeschakeld"
 
 #: journalist_templates/admin.html:42
 msgid "Delete user {username}"
@@ -451,7 +453,7 @@ msgstr "Gebruiker {username} verwijderen"
 
 #: journalist_templates/admin.html:43 journalist_templates/admin.html:44
 msgid "trash icon"
-msgstr ""
+msgstr "prullenbak icoon"
 
 #: journalist_templates/admin.html:53
 msgid "never"
@@ -537,24 +539,16 @@ msgstr ""
 "hieronder in:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 onion services, which are being phased out for security "
-#| "reasons. In February 2021, v2 onion services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before "
 "April 30 to keep your SecureDrop servers online. Please contact your "
 "administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
 "\">Learn More</a>"
 msgstr ""
-"<strong>Update vereist:</strong> Uw SecureDrop-servers gebruiken nog steeds "
-"v2 onion services, die vanwege veiligheidsredenen uitgefaseerd worden. In "
-"februari 2021 zullen v2 onion services worden uitgeschakeld, waardoor uw "
-"SecureDrop-servers mogelijk onbereikbaar worden. <a href=\"//securedrop.org/"
-"v2-onion-eol\" rel=\"noreferrer\">Meer weten</a>"
+"<strong>Update vereist</strong>Stel v3 Onion services in voor 30 april om uw "
+"SecureDrop servers online te houden. Neem alstublieft contact op met uw "
+"administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\""
+">Lees meer</a>"
 
 #: journalist_templates/base.html:30
 msgid ""
@@ -562,6 +556,9 @@ msgid ""
 "setup before April 30. Please contact your administrator. <a href=\"//"
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Update vereist</strong>&nbsp;&nbsp;Voltooi de v3 Onion Services "
+"installatie voor 30 april. Neem alstublieft contact op met uw administrator. "
+"<a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Lees meer</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"
@@ -606,7 +603,7 @@ msgstr "Reageren"
 
 #: journalist_templates/col.html:35 journalist_templates/col.html:65
 msgid "reply icon"
-msgstr ""
+msgstr "beantwoorden icoon"
 
 #: journalist_templates/col.html:39 journalist_templates/col.html:50
 msgid "Read"
@@ -614,7 +611,7 @@ msgstr "Gelezen"
 
 #: journalist_templates/col.html:40
 msgid "check icon"
-msgstr ""
+msgstr "vinkje icoon"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
@@ -622,11 +619,11 @@ msgstr "Ongelezen"
 
 #: journalist_templates/col.html:46
 msgid "closed envelope icon"
-msgstr ""
+msgstr "gesloten envelop icoon"
 
 #: journalist_templates/col.html:51
 msgid "open envelope icon"
-msgstr ""
+msgstr "open envelop icoon"
 
 #: journalist_templates/col.html:60
 msgid "Uploaded Document"
@@ -634,7 +631,7 @@ msgstr "Geüploade document"
 
 #: journalist_templates/col.html:61
 msgid "files icon"
-msgstr ""
+msgstr "bestanden icoon"
 
 #: journalist_templates/col.html:68
 msgid "Message"
@@ -642,7 +639,7 @@ msgstr "Bericht"
 
 #: journalist_templates/col.html:69
 msgid "messages icon"
-msgstr ""
+msgstr "berichten icoon"
 
 #: journalist_templates/col.html:80 journalist_templates/col.html:144
 #: journalist_templates/index.html:62
@@ -712,15 +709,16 @@ msgstr "Instantie configureren"
 
 #: journalist_templates/config.html:10
 msgid "Organization Name"
-msgstr ""
+msgstr "Organisatienaam"
 
 #: journalist_templates/config.html:15
 msgid "Set the organization name used on the SecureDrop web interfaces:"
 msgstr ""
+"Stel een organisatienaam in om te gebruiken in de SecureDrop webinterfaces:"
 
 #: journalist_templates/config.html:20
 msgid "SET ORGANIZATION NAME"
-msgstr ""
+msgstr "STEL ORGANISATIENAAM IN"
 
 #: journalist_templates/config.html:28 source_templates/index.html:33
 msgid "Logo Image"
@@ -907,7 +905,7 @@ msgstr "HERSTEL INSTELLINGEN VOOR BEVEILIGINGSSLEUTEL"
 
 #: journalist_templates/flag.html:4
 msgid "info icon"
-msgstr ""
+msgstr "infoo icoon"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -968,10 +966,8 @@ msgid "No documents have been submitted!"
 msgstr "Geen documenten ingezonden!"
 
 #: journalist_templates/js-strings.html:3
-#, fuzzy
-#| msgid "filter by codename"
 msgid "Filter by codename"
-msgstr "filter op codenaam"
+msgstr "Filter op codenaam"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
@@ -1104,7 +1100,7 @@ msgstr "Journalisten en bronnen beschermen"
 
 #: source_templates/base.html:24
 msgid "SecureDrop Home"
-msgstr ""
+msgstr "SecureDrop thuis"
 
 #: source_templates/base.html:32
 msgid "LOG OUT"
