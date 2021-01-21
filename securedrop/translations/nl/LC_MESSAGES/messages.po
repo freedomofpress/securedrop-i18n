@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-01-21 21:07+0000\n"
+"PO-Revision-Date: 2021-01-21 22:13+0000\n"
 "Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
 "Language-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/nl/>\n"
@@ -124,6 +124,7 @@ msgid "Only admins can access this page."
 msgstr "Alleen beheerders hebben toegang tot deze pagina."
 
 #: journalist_app/forms.py:19
+#, fuzzy
 msgid "HOTP secrets are 40 characters long - you have entered {num}."
 msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
 msgstr[0] "HOTP-geheim is 40 tekens lang - u heeft er {num} ingevoerd."
