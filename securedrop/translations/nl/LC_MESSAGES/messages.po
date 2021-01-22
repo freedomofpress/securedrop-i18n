@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-01-22 01:37+0000\n"
-"Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
+"PO-Revision-Date: 2021-01-22 09:37+0000\n"
+"Last-Translator: Nick Bouwhuis <github@nickbouwhuis.nl>\n"
 "Language-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/nl/>\n"
 "Language: nl\n"
@@ -1100,7 +1100,7 @@ msgstr "Journalisten en bronnen beschermen"
 
 #: source_templates/base.html:24
 msgid "SecureDrop Home"
-msgstr "SecureDrop thuis"
+msgstr "SecureDrop home"
 
 #: source_templates/base.html:32
 msgid "LOG OUT"
