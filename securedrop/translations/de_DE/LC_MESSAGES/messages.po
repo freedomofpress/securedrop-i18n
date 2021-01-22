@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-01-21 22:39+0000\n"
+"PO-Revision-Date: 2021-01-22 01:37+0000\n"
 "Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
 "Language-Team: German <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/de/>\n"
@@ -30,7 +30,7 @@ msgstr "Sie wurden wegen einer Passwortänderung abgemeldet"
 #: journalist_app/__init__.py:164 source_app/__init__.py:172
 #: source_templates/base.html:9 source_templates/index.html:7
 msgid "SecureDrop"
-msgstr ""
+msgstr "SecureDrop"
 
 #: journalist_app/account.py:39
 msgid "Incorrect password or two-factor code."
@@ -133,9 +133,6 @@ msgstr[0] "Muss mindestens {num} Zeichen lang sein."
 msgstr[1] "Muss mindestens {num} Zeichen lang sein."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-#, fuzzy
-#| msgid "Cannot be longer than {num} characters."
-#| msgid_plural "Cannot be longer than {num} characters."
 msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "Darf nicht länger als {num} Zeichen sein."
@@ -1115,7 +1112,7 @@ msgstr "Schützt Journalisten und Quellen"
 
 #: source_templates/base.html:24
 msgid "SecureDrop Home"
-msgstr ""
+msgstr "SecureDrop Startseite"
 
 #: source_templates/base.html:32
 msgid "LOG OUT"
