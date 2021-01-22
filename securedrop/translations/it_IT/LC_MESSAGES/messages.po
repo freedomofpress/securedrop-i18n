@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2020-10-02 11:00+0000\n"
+"PO-Revision-Date: 2021-01-22 16:37+0000\n"
 "Last-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\n"
 "Language-Team: Italian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/it/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.1.1\n"
+"X-Generator: Weblate 4.3.2\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: template_filters.py:19
@@ -38,7 +38,7 @@ msgstr "Sei stato disconnesso a seguito della modifica della password"
 #: journalist_app/__init__.py:164 source_app/__init__.py:172
 #: source_templates/base.html:9 source_templates/index.html:7
 msgid "SecureDrop"
-msgstr ""
+msgstr "SecureDrop"
 
 #: journalist_app/account.py:39
 msgid "Incorrect password or two-factor code."
@@ -64,11 +64,11 @@ msgstr "Preferenze salvate."
 
 #: journalist_app/admin.py:81
 msgid "Preferences not updated."
-msgstr ""
+msgstr "Preferenze non aggiornate."
 
 #: journalist_app/admin.py:95
 msgid "Failed to update organization name."
-msgstr ""
+msgstr "Aggiornamento del nome dell'organizzazione non riuscito."
 
 #: journalist_app/admin.py:128
 msgid ""
@@ -121,6 +121,9 @@ msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
 msgstr ""
+"Lo scaricamento non è riuscito perché un file non è stato trovato. Un "
+"amministratore può avere maggiori informazioni sul sistema e monitorare i "
+"log."
 
 #: journalist_app/decorators.py:18
 msgid "Only admins can access this page."
@@ -129,28 +132,20 @@ msgstr "Solo gli amministratori possono accedere a questa pagina."
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num}."
 msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
-msgstr[0] ""
-"Le password HOTP sono di 40 caratteri - ne sono stati inseriti {num}."
-msgstr[1] ""
-"Le password HOTP sono di 40 caratteri - ne sono stati inseriti {num}."
+msgstr[0] "Le password HOTP sono di 40 caratteri - ne è stato inserito {num}."
+msgstr[1] "Le password HOTP sono di 40 caratteri - ne sono stati inseriti {num}."
 
 #: journalist_app/forms.py:30
-#, fuzzy
-#| msgid "Must be at least {num} characters long."
-#| msgid_plural "Must be at least {num} characters long."
 msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
-msgstr[0] "Deve essere lungo almeno {num} caratteri."
+msgstr[0] "Deve essere lungo almeno {num} carattere."
 msgstr[1] "Deve essere lungo almeno {num} caratteri."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-#, fuzzy
-#| msgid "Cannot be longer than {num} characters."
-#| msgid_plural "Cannot be longer than {num} characters."
 msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
-msgstr[0] "No può contenere più di {num} caratteri."
-msgstr[1] "No può contenere più di {num} caratteri."
+msgstr[0] "Non può contenere più di {num} carattere."
+msgstr[1] "Non può contenere più di {num} caratteri."
 
 #: journalist_app/forms.py:62
 msgid ""
@@ -285,11 +280,11 @@ msgstr "Annulla"
 #: journalist_templates/_source_row.html:8
 #: journalist_templates/_source_row.html:17
 msgid "starred icon"
-msgstr ""
+msgstr "icone stella"
 
 #: journalist_templates/_source_row.html:16
 msgid "unstarred icon"
-msgstr ""
+msgstr "icona senza stella"
 
 #: journalist_templates/_source_row.html:28
 msgid "1 doc"
@@ -305,7 +300,7 @@ msgstr[1] "{num} messaggi"
 
 #: journalist_templates/_source_row.html:37
 msgid "download icon"
-msgstr ""
+msgstr "icona download"
 
 #: journalist_templates/_source_row.html:38
 msgid "1 unread"
@@ -452,11 +447,11 @@ msgstr "Modifica utente {username}"
 
 #: journalist_templates/admin.html:31
 msgid "edit user icon"
-msgstr ""
+msgstr "icona modifica utente"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
-msgstr ""
+msgstr "icona cestino disabilitato"
 
 #: journalist_templates/admin.html:42
 msgid "Delete user {username}"
@@ -464,7 +459,7 @@ msgstr "Elimina utente {username}"
 
 #: journalist_templates/admin.html:43 journalist_templates/admin.html:44
 msgid "trash icon"
-msgstr ""
+msgstr "icona cestino"
 
 #: journalist_templates/admin.html:53
 msgid "never"
@@ -551,13 +546,6 @@ msgstr ""
 "sotto:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 onion services, which are being phased out for security "
-#| "reasons. In February 2021, v2 onion services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before "
 "April 30 to keep your SecureDrop servers online. Please contact your "
@@ -568,8 +556,8 @@ msgstr ""
 "ancora eseguendo i servizi onion v2, che vengono gradualmente eliminati per "
 "motivi di sicurezza. Da febbraio 2021, i servizi onion v2 verranno "
 "disattivati, e i tuoi server SecureDrop potrebbero diventare "
-"irraggiungibili. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
-"\">Maggiori informazioni</a>"
+"irraggiungibili. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\""
+">Maggiori informazioni</a>"
 
 #: journalist_templates/base.html:30
 msgid ""
@@ -577,6 +565,10 @@ msgid ""
 "setup before April 30. Please contact your administrator. <a href=\"//"
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Aggiornamento richiesto</strong>&nbsp;&nbsp;Completare la "
+"configurazione dei servizi Onion v3 prima del 30 aprile. Contattare il "
+"proprio amministratore. <a href=\"//securedrop.org/v2-onion-eol\" rel="
+"\"noreferrer\">Ulteriori informazioni</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"
@@ -621,7 +613,7 @@ msgstr "Rispondi"
 
 #: journalist_templates/col.html:35 journalist_templates/col.html:65
 msgid "reply icon"
-msgstr ""
+msgstr "icona rispondi"
 
 #: journalist_templates/col.html:39 journalist_templates/col.html:50
 msgid "Read"
@@ -629,7 +621,7 @@ msgstr "Letto"
 
 #: journalist_templates/col.html:40
 msgid "check icon"
-msgstr ""
+msgstr "icona spunta"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
@@ -637,11 +629,11 @@ msgstr "Non letto"
 
 #: journalist_templates/col.html:46
 msgid "closed envelope icon"
-msgstr ""
+msgstr "icona busta chiusa"
 
 #: journalist_templates/col.html:51
 msgid "open envelope icon"
-msgstr ""
+msgstr "icona busta aperta"
 
 #: journalist_templates/col.html:60
 msgid "Uploaded Document"
@@ -649,7 +641,7 @@ msgstr "Documento caricato"
 
 #: journalist_templates/col.html:61
 msgid "files icon"
-msgstr ""
+msgstr "icona file"
 
 #: journalist_templates/col.html:68
 msgid "Message"
@@ -657,7 +649,7 @@ msgstr "Messaggio"
 
 #: journalist_templates/col.html:69
 msgid "messages icon"
-msgstr ""
+msgstr "icona messaggi"
 
 #: journalist_templates/col.html:80 journalist_templates/col.html:144
 #: journalist_templates/index.html:62
@@ -728,15 +720,17 @@ msgstr "Configurazione istanza"
 
 #: journalist_templates/config.html:10
 msgid "Organization Name"
-msgstr ""
+msgstr "Nome dell'organizzazione"
 
 #: journalist_templates/config.html:15
 msgid "Set the organization name used on the SecureDrop web interfaces:"
 msgstr ""
+"Imposta il nome dell'organizzazione da utilizzare sull'interfaccia web di "
+"SecureDrop:"
 
 #: journalist_templates/config.html:20
 msgid "SET ORGANIZATION NAME"
-msgstr ""
+msgstr "IMPOSTA NOME ORGANIZZAZIONE"
 
 #: journalist_templates/config.html:28 source_templates/index.html:33
 msgid "Logo Image"
@@ -794,10 +788,10 @@ msgid_plural ""
 "The following {num} files have been selected for <strong>permanent deletion</"
 "strong>:"
 msgstr[0] ""
-"Il seguente file è stato selezionato per la <strong>definitiva eliminazione</"
-"strong>:"
+"Il file seguente è stato selezionato per la <strong>definitiva "
+"eliminazione</strong>:"
 msgstr[1] ""
-"I seguenti {num} file sono stati selezionati per la <strong>definitiva "
+"I {num} file seguenti sono stati selezionati per la <strong>definitiva "
 "eliminazione</strong>:"
 
 #: journalist_templates/delete.html:20
@@ -924,7 +918,7 @@ msgstr "RIPRISTINA CREDENZIALI CHIAVI DI SICUREZZA"
 
 #: journalist_templates/flag.html:4
 msgid "info icon"
-msgstr ""
+msgstr "icona info"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -985,8 +979,6 @@ msgid "No documents have been submitted!"
 msgstr "Non è stato inviato alcun documento!"
 
 #: journalist_templates/js-strings.html:3
-#, fuzzy
-#| msgid "filter by codename"
 msgid "Filter by codename"
 msgstr "Filtra per nome in codice"
 
@@ -1123,7 +1115,7 @@ msgstr "Proteggi giornalisti e fonti"
 
 #: source_templates/base.html:24
 msgid "SecureDrop Home"
-msgstr ""
+msgstr "Home di SecureDrop"
 
 #: source_templates/base.html:32
 msgid "LOG OUT"
