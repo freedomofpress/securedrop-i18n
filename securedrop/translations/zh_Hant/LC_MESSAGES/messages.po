@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-01-20 01:05+0000\n"
+"PO-Revision-Date: 2021-01-22 01:37+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.securedrop.org/"
 "projects/securedrop/securedrop/zh_Hant/>\n"
@@ -109,8 +109,7 @@ msgstr "並未選擇任何的集件。"
 msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
-msgstr ""
-"您的下載失敗，因為找不到檔案。系統管理員能在系統及監控記錄中查詢更多資訊。"
+msgstr "因為找不到檔案，下載失敗。系統管理員能在系統及監控記錄中查詢更多資訊。"
 
 #: journalist_app/decorators.py:18
 msgid "Only admins can access this page."
@@ -122,17 +121,11 @@ msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
 msgstr[0] "HOTP secrets 需為 40 個字符長，已輸入 {num} 個字符。"
 
 #: journalist_app/forms.py:30
-#, fuzzy
-#| msgid "Must be at least {num} characters long."
-#| msgid_plural "Must be at least {num} characters long."
 msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
 msgstr[0] "须至少有 {num} 個字符長度。"
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-#, fuzzy
-#| msgid "Cannot be longer than {num} characters."
-#| msgid_plural "Cannot be longer than {num} characters."
 msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "不可多於 {num} 字元。"
@@ -191,7 +184,7 @@ msgstr "登錄失敗。"
 #: journalist_app/utils.py:109
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
-msgstr[0] "請等待至少 {num} 秒後再次登錄。"
+msgstr[0] "請等待 {num} 秒後再嚐試登錄。"
 
 #: journalist_app/utils.py:120
 msgid ""
@@ -272,7 +265,7 @@ msgstr[0] "{num} 訊息"
 
 #: journalist_templates/_source_row.html:37
 msgid "download icon"
-msgstr "下載圖示"
+msgstr "下載圖標"
 
 #: journalist_templates/_source_row.html:38
 msgid "1 unread"
@@ -408,11 +401,11 @@ msgstr "编辑用户{username}"
 
 #: journalist_templates/admin.html:31
 msgid "edit user icon"
-msgstr "編輯使用者圖示"
+msgstr "編輯使用者圖標"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
-msgstr "已停用垃圾桶圖示"
+msgstr "已停用垃圾桶圖標"
 
 #: journalist_templates/admin.html:42
 msgid "Delete user {username}"
@@ -517,9 +510,8 @@ msgid ""
 "setup before April 30. Please contact your administrator. <a href=\"//"
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
-"<strong>需要更新</strong>&nbsp;&nbsp;請在四月三十日前設定完成第三代 Onion 服"
-"務。請聯繫您的系統管理員。<a href=\"//securedrop.org/v2-onion-eol\" rel="
-"\"noreferrer\">了解更多</a>"
+"<strong>需要更新</strong>&nbsp;&nbsp;請在四月三十日前完成第三代 Onion 服務設置。聯繫您的系統管理員。<a href="
+"\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">了解更多</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"
@@ -582,7 +574,7 @@ msgstr "密封信件圖示"
 
 #: journalist_templates/col.html:51
 msgid "open envelope icon"
-msgstr "開封信件圖示"
+msgstr "開啟信件圖示"
 
 #: journalist_templates/col.html:60
 msgid "Uploaded Document"
@@ -667,7 +659,7 @@ msgstr "組織名稱"
 
 #: journalist_templates/config.html:15
 msgid "Set the organization name used on the SecureDrop web interfaces:"
-msgstr "設定您要在 SecureDrop 網頁介面上使用的組織名稱："
+msgstr "在 SecureDrop 網頁介面下設定使用的組織名稱："
 
 #: journalist_templates/config.html:20
 msgid "SET ORGANIZATION NAME"
@@ -722,7 +714,7 @@ msgid ""
 msgid_plural ""
 "The following {num} files have been selected for <strong>permanent deletion</"
 "strong>:"
-msgstr[0] "已挑選下方 {num} 文件，將被<strong>永久删除</strong>："
+msgstr[0] "下方被挑選的 {num} 文件，將被<strong>永久删除</strong>："
 
 #: journalist_templates/delete.html:20
 msgid "PERMANENTLY DELETE FILES"
