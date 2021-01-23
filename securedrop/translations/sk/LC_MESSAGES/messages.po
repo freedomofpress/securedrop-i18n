@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-01-19 15:16+0000\n"
+"PO-Revision-Date: 2021-01-23 12:37+0000\n"
 "Last-Translator: Katarina Kasalova <katka.kasalova@gmail.com>\n"
 "Language-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sk/>\n"
@@ -33,7 +33,6 @@ msgstr "Boli ste odhlásený/á z dôvodu zmeny hesla"
 
 #: journalist_app/__init__.py:164 source_app/__init__.py:172
 #: source_templates/base.html:9 source_templates/index.html:7
-#, fuzzy
 msgid "SecureDrop"
 msgstr "SecureDrop"
 
@@ -117,16 +116,14 @@ msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
 msgstr ""
-"Vaše sťahovanie sa nepodarilo, pretože sa súbor nenašiel. Admin vie zistiť "
-"viac informácií v logoch systému a monitoringu."
+"Vaše sťahovanie sa zlyhalo, pretože sa súbor nenašiel. Admin vie zistiť viac "
+"informácií v logoch systému a monitoringu."
 
 #: journalist_app/decorators.py:18
 msgid "Only admins can access this page."
 msgstr "Táto stránka je prístupná iba pre administrátorov."
 
 #: journalist_app/forms.py:19
-#, fuzzy
-#| msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgid "HOTP secrets are 40 characters long - you have entered {num}."
 msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
 msgstr[0] "HOTP heslá sú 40 znakov dlhé - zadali ste {num} znakov."
@@ -134,8 +131,6 @@ msgstr[1] "HOTP heslá sú 40 znakov dlhé - zadali ste {num} znakov."
 msgstr[2] "HOTP heslá sú 40 znakov dlhé - zadali ste {num} znakov."
 
 #: journalist_app/forms.py:30
-#, fuzzy
-#| msgid "Must be at least {min_chars} characters long."
 msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
 msgstr[0] "Musí byť aspoň {num} znakov dlhé."
@@ -143,8 +138,6 @@ msgstr[1] "Musí byť aspoň {num} znakov dlhé."
 msgstr[2] "Musí byť aspoň {num} znakov dlhé."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-#, fuzzy
-#| msgid "Cannot be longer than {max_chars} characters."
 msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "Nesmie byť dlhšie ako {num} znakov."
@@ -207,9 +200,9 @@ msgstr "Prihlásenie zlyhalo."
 #: journalist_app/utils.py:109
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
-msgstr[0] "Pred opakovaním prihlásenia prosím počkajte aspoň {num} sekundu."
-msgstr[1] "Pred opakovaním prihlásenia prosím počkajte aspoň {num} sekundy."
-msgstr[2] "Pred opakovaním prihlásenia prosím počkajte aspoň {num} sekúnd."
+msgstr[0] "Pred opakovaným prihlásením prosím počkajte aspoň {num} sekundu."
+msgstr[1] "Pred opakovaným prihlásením prosím počkajte aspoň {num} sekundy."
+msgstr[2] "Pred opakovaným prihlásením prosím počkajte aspoň {num} sekúnd."
 
 #: journalist_app/utils.py:120
 msgid ""
@@ -974,10 +967,8 @@ msgid "No documents have been submitted!"
 msgstr "Žiadne dokumenty neboli podané!"
 
 #: journalist_templates/js-strings.html:3
-#, fuzzy
-#| msgid "filter by codename"
 msgid "Filter by codename"
-msgstr "filtrovať podľa krycieho mena"
+msgstr "Filtrovať podľa krycieho mena"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
@@ -1456,10 +1447,6 @@ msgstr ""
 "pripojenia) vás môže identifikovať."
 
 #: source_templates/tor2web-warning.html:6
-#, fuzzy
-#| msgid ""
-#| "We <strong>strongly advise</strong> you to use the <a href=\"www."
-#| "torproject.org/projects/torbrowser.html\">Tor browser</a> instead."
 msgid ""
 "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject."
 "org/projects/torbrowser.html\">Tor Browser</a> instead."
@@ -1529,17 +1516,13 @@ msgstr ""
 "chcete, spravte nasledujúce:"
 
 #: source_templates/why-public-key.html:7
-#, fuzzy
-#| msgid ""
-#| "<a href=\"{url}\">Download</a> the public key. The public key is a text "
-#| "file with the extension <code>.asc</code>"
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. It will be saved to a file "
 "called:\n"
 "        <p><code>{submission_key_fpr_filename}</code></p>"
 msgstr ""
-"<a href=\"{url}\">Stiahnuť</a> verejný kľúč. Bude uložený do súboru s "
-"názvom:\n"
+"<a href=\"{url}\">Stiahnuť</a> verejný kľúč. Bude uložený do súboru s názvom:"
+"\n"
 "<p><code>{submission_key_fpr_filename}</code></p>"
 
 #: source_templates/why-public-key.html:9
