@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-01-21 11:37+0000\n"
-"Last-Translator: tekrei <tekrei@gmail.com>\n"
+"PO-Revision-Date: 2021-01-24 15:37+0000\n"
+"Last-Translator: Kaya Zeren <kayazeren@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/tr/>\n"
 "Language: tr\n"
@@ -132,22 +132,16 @@ msgstr[1] ""
 "HOTP parolaları 40 karakter uzunluğundadır - sadece {num} karakter yazdınız."
 
 #: journalist_app/forms.py:30
-#, fuzzy
-#| msgid "Must be at least {num} characters long."
-#| msgid_plural "Must be at least {num} characters long."
 msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
 msgstr[0] "En az {num} karakter uzunluğunda olmalıdır."
 msgstr[1] "En az {num} karakter uzunluğunda olmalıdır."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-#, fuzzy
-#| msgid "Cannot be longer than {num} characters."
-#| msgid_plural "Cannot be longer than {num} characters."
 msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
-msgstr[0] "En fazla {num} karakter yazılabilir."
-msgstr[1] "En fazla {num} karakter yazılabilir."
+msgstr[0] "En fazla {num} karakter uzunluğunda olabilir."
+msgstr[1] "En fazla {num} karakter uzunluğunda olabilir."
 
 #: journalist_app/forms.py:62
 msgid ""
