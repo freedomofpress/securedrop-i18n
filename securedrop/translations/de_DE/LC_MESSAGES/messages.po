@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-01-22 01:37+0000\n"
+"PO-Revision-Date: 2021-01-24 11:37+0000\n"
 "Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
 "Language-Team: German <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/de/>\n"
@@ -281,7 +281,7 @@ msgstr "Sternchen-Symbol"
 
 #: journalist_templates/_source_row.html:16
 msgid "unstarred icon"
-msgstr ""
+msgstr "Sternchen-Symbol entfernen"
 
 #: journalist_templates/_source_row.html:28
 msgid "1 doc"
@@ -297,7 +297,7 @@ msgstr[1] "{num} Nachrichten"
 
 #: journalist_templates/_source_row.html:37
 msgid "download icon"
-msgstr ""
+msgstr "Download-Symbol"
 
 #: journalist_templates/_source_row.html:38
 msgid "1 unread"
@@ -444,7 +444,7 @@ msgstr "Benutzer {username} bearbeiten"
 
 #: journalist_templates/admin.html:31
 msgid "edit user icon"
-msgstr ""
+msgstr "Benutzer-symbol bearbeiten"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
@@ -607,7 +607,7 @@ msgstr "Antworten"
 
 #: journalist_templates/col.html:35 journalist_templates/col.html:65
 msgid "reply icon"
-msgstr ""
+msgstr "Antwort-Symbol"
 
 #: journalist_templates/col.html:39 journalist_templates/col.html:50
 msgid "Read"
@@ -615,7 +615,7 @@ msgstr "Gelesen"
 
 #: journalist_templates/col.html:40
 msgid "check icon"
-msgstr ""
+msgstr "Häkchensymbol"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
@@ -623,11 +623,11 @@ msgstr "Ungelesen"
 
 #: journalist_templates/col.html:46
 msgid "closed envelope icon"
-msgstr ""
+msgstr "geschlossenes Umschlag-Symbol"
 
 #: journalist_templates/col.html:51
 msgid "open envelope icon"
-msgstr ""
+msgstr "geöffneter Umschlag-Symbol"
 
 #: journalist_templates/col.html:60
 msgid "Uploaded Document"
@@ -635,7 +635,7 @@ msgstr "Hochgeladenes Dokument"
 
 #: journalist_templates/col.html:61
 msgid "files icon"
-msgstr ""
+msgstr "Datei-Symbol"
 
 #: journalist_templates/col.html:68
 msgid "Message"
