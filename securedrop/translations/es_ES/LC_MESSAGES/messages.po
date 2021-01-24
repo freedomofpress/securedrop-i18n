@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-01-23 17:37+0000\n"
+"PO-Revision-Date: 2021-01-24 11:37+0000\n"
 "Last-Translator: Zuhualime Akoochimoya <zakooch@protonmail.ch>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/es/>\n"
@@ -453,7 +453,7 @@ msgstr "ícono de edición de usuario"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
-msgstr "ícono de papelera deshabilitado"
+msgstr "ícono de papelera deshabilitada"
 
 #: journalist_templates/admin.html:42
 msgid "Delete user {username}"
@@ -1275,7 +1275,7 @@ msgstr "Selecciona <strong>Configuración de seguridad avanzada</strong>"
 
 #: source_templates/index.html:79
 msgid "Select <strong>Safest</strong>"
-msgstr "Seleccione <strong>El más seguro de todos</strong>"
+msgstr "Selecciona <strong>El más seguro de todos</strong>"
 
 #: source_templates/index.html:81
 msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
@@ -1378,7 +1378,7 @@ msgstr ""
 
 #: source_templates/lookup.html:47
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
-msgstr "<a href=\"{url}\" class=\"text-link\">Aprender más</a>."
+msgstr "<a href=\"{url}\" class=\"text-link\">Aprende más</a>."
 
 #: source_templates/lookup.html:58
 msgid "Maximum upload size: 500 MB"
