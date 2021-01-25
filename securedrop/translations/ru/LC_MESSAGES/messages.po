@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-01-25 14:37+0000\n"
-"Last-Translator: erinm <erinm@riseup.net>\n"
+"PO-Revision-Date: 2021-01-25 22:11+0000\n"
+"Last-Translator: John Hensley <john@freedom.press>\n"
 "Language-Team: Russian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ru/>\n"
 "Language: ru\n"
@@ -133,15 +133,15 @@ msgstr[2] "Секреты HOTP должны содержать 40 символо
 #: journalist_app/forms.py:30
 msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
-msgstr[0] "Должно быть не менее {num} символов."
-msgstr[1] "Должно быть не менее {num} символов."
+msgstr[0] "Должно быть не менее {num} символ."
+msgstr[1] "Должно быть не менее {num} символа."
 msgstr[2] "Должно быть не менее {num} символов."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
 msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
-msgstr[0] "Длина не может превышать {num} символов."
-msgstr[1] "Длина не может превышать {num} символов."
+msgstr[0] "Длина не может превышать {num} символ."
+msgstr[1] "Длина не может превышать {num} символа."
 msgstr[2] "Длина не может превышать {num} символов."
 
 #: journalist_app/forms.py:62
@@ -289,7 +289,6 @@ msgid "unstarred icon"
 msgstr "значок без пометки"
 
 #: journalist_templates/_source_row.html:28
-#, fuzzy
 msgid "1 doc"
 msgid_plural "{num} docs"
 msgstr[0] "1 документ"
@@ -297,7 +296,6 @@ msgstr[1] "{num} документа"
 msgstr[2] "{num} документов"
 
 #: journalist_templates/_source_row.html:32
-#, fuzzy
 msgid "1 message"
 msgid_plural "{num} messages"
 msgstr[0] "1 сообщение"
@@ -309,7 +307,6 @@ msgid "download icon"
 msgstr "значок загрузки"
 
 #: journalist_templates/_source_row.html:38
-#, fuzzy
 msgid "1 unread"
 msgid_plural "{num} unread"
 msgstr[0] "1 непрочитанный"
