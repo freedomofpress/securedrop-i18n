@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 1.3.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-01-21 11:37+0000\n"
-"Last-Translator: Igor K. <igorkrainovic@gmail.com>\n"
+"PO-Revision-Date: 2021-01-25 14:37+0000\n"
+"Last-Translator: erinm <erinm@riseup.net>\n"
 "Language-Team: Croatian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/hr/>\n"
 "Language: hr\n"
@@ -141,9 +141,6 @@ msgstr[1] "Mora biti najmanje {num} znakova dugo."
 msgstr[2] "Mora biti najmanje {num} znakova dugo."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-#, fuzzy
-#| msgid "Cannot be longer than {num} characters."
-#| msgid_plural "Cannot be longer than {num} characters."
 msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "Ne može biti dulje od {num} znaka."
@@ -293,38 +290,29 @@ msgid "unstarred icon"
 msgstr "ikona prazne zijezdice"
 
 #: journalist_templates/_source_row.html:28
-#, fuzzy
-#| msgid "1 doc"
-#| msgid_plural "{doc_num} docs"
 msgid "1 doc"
 msgid_plural "{num} docs"
-msgstr[0] "1 dokument"
-msgstr[1] "{num} dokumenta"
-msgstr[2] "{num} dokumenata"
+msgstr[0] "1 dokument{num} dokumenta{num} dokumenata"
+msgstr[1] ""
+msgstr[2] ""
 
 #: journalist_templates/_source_row.html:32
-#, fuzzy
-#| msgid "1 message"
-#| msgid_plural "{msg_num} messages"
 msgid "1 message"
 msgid_plural "{num} messages"
-msgstr[0] "1 poruka"
-msgstr[1] "{num} poruke"
-msgstr[2] "{num} poruka"
+msgstr[0] "1 poruka{num} poruke{num} poruka"
+msgstr[1] ""
+msgstr[2] ""
 
 #: journalist_templates/_source_row.html:37
 msgid "download icon"
 msgstr "ikona preuzimanja"
 
 #: journalist_templates/_source_row.html:38
-#, fuzzy
-#| msgid "1 unread"
-#| msgid_plural "{num_unread} unread"
 msgid "1 unread"
 msgid_plural "{num} unread"
-msgstr[0] "1 nepročitana"
-msgstr[1] "{num} nepročitane"
-msgstr[2] "{num} nepročitanih"
+msgstr[0] "1 nepročitana{num} nepročitane{num} nepročitanih"
+msgstr[1] ""
+msgstr[2] ""
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
