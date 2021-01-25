@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2021-01-25 22:11+0000\n"
-"Last-Translator: John Hensley <john@freedom.press>\n"
+"Last-Translator: Andrey <andrey@mailbox.org>\n"
 "Language-Team: Russian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ru/>\n"
 "Language: ru\n"
@@ -1259,7 +1259,7 @@ msgstr "НАЧАТЬ"
 
 #: source_templates/index.html:57
 msgid "Return visit"
-msgstr "Повторый визит"
+msgstr "Повторный визит"
 
 #: source_templates/index.html:59
 msgid "Already have a codename? Check for replies or submit something new."
