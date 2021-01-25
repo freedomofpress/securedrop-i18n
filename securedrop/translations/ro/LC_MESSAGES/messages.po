@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-10-06 16:16+0000\n"
-"Last-Translator: Jobava <jobaval10n@gmail.com>\n"
+"PO-Revision-Date: 2021-01-26 01:37+0000\n"
+"Last-Translator: robbpa <robbpaun@gmail.com>\n"
 "Language-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ro/>\n"
 "Language: ro\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Weblate 4.1.1\n"
+"X-Generator: Weblate 4.3.2\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:19
@@ -35,7 +35,7 @@ msgstr "Ai fost deconectat(ă) în urma schimbării parolei"
 #: journalist_app/__init__.py:164 source_app/__init__.py:172
 #: source_templates/base.html:9 source_templates/index.html:7
 msgid "SecureDrop"
-msgstr ""
+msgstr "SecureDrop"
 
 #: journalist_app/account.py:39
 msgid "Incorrect password or two-factor code."
@@ -62,11 +62,11 @@ msgstr "Preferințele au fost salvate."
 
 #: journalist_app/admin.py:81
 msgid "Preferences not updated."
-msgstr ""
+msgstr "Preferințele nu au fost actualizate."
 
 #: journalist_app/admin.py:95
 msgid "Failed to update organization name."
-msgstr ""
+msgstr "Eșec la actualizarea denumirii organizației."
 
 #: journalist_app/admin.py:128
 msgid ""
@@ -119,14 +119,14 @@ msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
 msgstr ""
+"Descărcarea a eșuat deoarece nu a fost găsit un fișier. Un administrator "
+"poate găsi mai multe informații în sistem și în jurnalele de monitorizare."
 
 #: journalist_app/decorators.py:18
 msgid "Only admins can access this page."
 msgstr "Doar administratorii pot accesa această pagină."
 
 #: journalist_app/forms.py:19
-#, fuzzy
-#| msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgid "HOTP secrets are 40 characters long - you have entered {num}."
 msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
 msgstr[0] "Secretele HOTP au 40 de caractere lungime - ai introdus {num}."
@@ -134,22 +134,18 @@ msgstr[1] "Secretele HOTP au 40 de caractere lungime - ai introdus {num}."
 msgstr[2] "Secretele HOTP au 40 de caractere lungime - ai introdus {num}."
 
 #: journalist_app/forms.py:30
-#, fuzzy
-#| msgid "Must be at least {min_chars} characters long."
 msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
-msgstr[0] "Trebuie să aibă cel puțin {num} caractere."
+msgstr[0] "Trebuie să aibă cel puțin {num} caracter."
 msgstr[1] "Trebuie să aibă cel puțin {num} caractere."
-msgstr[2] "Trebuie să aibă cel puțin {num} caractere."
+msgstr[2] "Trebuie să aibă cel puțin {num} de caractere."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-#, fuzzy
-#| msgid "Cannot be longer than {max_chars} characters."
 msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
-msgstr[0] "Nu poate avea mai mult de {num} caractere."
+msgstr[0] "Nu poate avea mai mult de {num} caracter."
 msgstr[1] "Nu poate avea mai mult de {num} caractere."
-msgstr[2] "Nu poate avea mai mult de {num} caractere."
+msgstr[2] "Nu poate avea mai mult de {num} de caractere."
 
 #: journalist_app/forms.py:62
 msgid ""
@@ -293,11 +289,11 @@ msgstr "Renunță"
 #: journalist_templates/_source_row.html:8
 #: journalist_templates/_source_row.html:17
 msgid "starred icon"
-msgstr ""
+msgstr "pictogramă cu stea"
 
 #: journalist_templates/_source_row.html:16
 msgid "unstarred icon"
-msgstr ""
+msgstr "pictogramă fără stea"
 
 #: journalist_templates/_source_row.html:28
 msgid "1 doc"
@@ -315,7 +311,7 @@ msgstr[2] "{num} de mesaje"
 
 #: journalist_templates/_source_row.html:37
 msgid "download icon"
-msgstr ""
+msgstr "pictogramă de descărcare"
 
 #: journalist_templates/_source_row.html:38
 msgid "1 unread"
@@ -463,11 +459,11 @@ msgstr "Editează utilizatorul {username}"
 
 #: journalist_templates/admin.html:31
 msgid "edit user icon"
-msgstr ""
+msgstr "pictogramă de editare a utilizatorului"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
-msgstr ""
+msgstr "pictogramă de coș de gunoi dezactivată"
 
 #: journalist_templates/admin.html:42
 msgid "Delete user {username}"
@@ -475,7 +471,7 @@ msgstr "Șterge utilizatorul {username}"
 
 #: journalist_templates/admin.html:43 journalist_templates/admin.html:44
 msgid "trash icon"
-msgstr ""
+msgstr "pictogramă de coș de gunoi"
 
 #: journalist_templates/admin.html:53
 msgid "never"
@@ -562,24 +558,16 @@ msgstr ""
 "jos:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 onion services, which are being phased out for security "
-#| "reasons. In February 2021, v2 onion services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before "
 "April 30 to keep your SecureDrop servers online. Please contact your "
 "administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
 "\">Learn More</a>"
 msgstr ""
-"<strong>Actualizare necesară:</strong> Serverele dvs. SecureDrop încă "
-"rulează v2 onion services, care sunt înlocuite treptat din motive de "
-"securitate. În Februarie 2021, v2 onion services vor fi dezactivate, iar "
-"serverele dvs. SecureDrop vor deveni imposibil de accesat. <a href=\"//"
-"securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Află mai multe</a>"
+"<strong>Actualizare necesară</strong>&nbsp;&nbsp;Configurați v3 Onion "
+"Services până pe 30 aprilie pentru a vă menține serverele SecureDrop online. "
+"Contactați administratorul. <a href=\"//securedrop.org/v2-onion-eol\" rel="
+"\"noreferrer\">Mai multe</a>"
 
 #: journalist_templates/base.html:30
 msgid ""
@@ -587,6 +575,9 @@ msgid ""
 "setup before April 30. Please contact your administrator. <a href=\"//"
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>Actualizare necesară</strong>&nbsp;&nbsp;Finalizați configurarea v3 "
+"Onion Services înainte de 30 aprilie. Contactați administratorul. <a href=\""
+"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Mai multe</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"
@@ -631,7 +622,7 @@ msgstr "Răspunde"
 
 #: journalist_templates/col.html:35 journalist_templates/col.html:65
 msgid "reply icon"
-msgstr ""
+msgstr "pictogramă de răspuns"
 
 #: journalist_templates/col.html:39 journalist_templates/col.html:50
 msgid "Read"
@@ -639,7 +630,7 @@ msgstr "Citit"
 
 #: journalist_templates/col.html:40
 msgid "check icon"
-msgstr ""
+msgstr "pictogramă de verificare"
 
 #: journalist_templates/col.html:45
 msgid "Unread"
@@ -647,11 +638,11 @@ msgstr "Necitit"
 
 #: journalist_templates/col.html:46
 msgid "closed envelope icon"
-msgstr ""
+msgstr "pictogramă de plic închis"
 
 #: journalist_templates/col.html:51
 msgid "open envelope icon"
-msgstr ""
+msgstr "pictogramă de plic deschis"
 
 #: journalist_templates/col.html:60
 msgid "Uploaded Document"
@@ -659,7 +650,7 @@ msgstr "Documentul a fost încărcat"
 
 #: journalist_templates/col.html:61
 msgid "files icon"
-msgstr ""
+msgstr "pictogramă de fișiere"
 
 #: journalist_templates/col.html:68
 msgid "Message"
@@ -667,7 +658,7 @@ msgstr "Mesaj"
 
 #: journalist_templates/col.html:69
 msgid "messages icon"
-msgstr ""
+msgstr "pictogramă de mesaje"
 
 #: journalist_templates/col.html:80 journalist_templates/col.html:144
 #: journalist_templates/index.html:62
@@ -736,15 +727,15 @@ msgstr "Configurarea instanței"
 
 #: journalist_templates/config.html:10
 msgid "Organization Name"
-msgstr ""
+msgstr "Denumirea organizației"
 
 #: journalist_templates/config.html:15
 msgid "Set the organization name used on the SecureDrop web interfaces:"
-msgstr ""
+msgstr "Setați denumirea organizației folosită în interfețele web SecureDrop:"
 
 #: journalist_templates/config.html:20
 msgid "SET ORGANIZATION NAME"
-msgstr ""
+msgstr "SETEAZĂ DENUMIREA ORGANIZAȚIEI"
 
 #: journalist_templates/config.html:28 source_templates/index.html:33
 msgid "Logo Image"
@@ -937,7 +928,7 @@ msgstr "RESETEAZĂ DATELE DE AUTENTIFICARE PENTRU CHEIA DE SECURITATE"
 
 #: journalist_templates/flag.html:4
 msgid "info icon"
-msgstr ""
+msgstr "pictogramă de informații"
 
 #: journalist_templates/flag.html:5
 msgid "Thanks!"
@@ -998,10 +989,8 @@ msgid "No documents have been submitted!"
 msgstr "Nu a fost trimis niciun document!"
 
 #: journalist_templates/js-strings.html:3
-#, fuzzy
-#| msgid "filter by codename"
 msgid "Filter by codename"
-msgstr "filtrează după numele de cod"
+msgstr "Filtrează după numele de cod"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
@@ -1133,7 +1122,7 @@ msgstr "Pentru protecția jurnaliștilor și a surselor"
 
 #: source_templates/base.html:24
 msgid "SecureDrop Home"
-msgstr ""
+msgstr "Acasă SecureDrop"
 
 #: source_templates/base.html:32
 msgid "LOG OUT"
