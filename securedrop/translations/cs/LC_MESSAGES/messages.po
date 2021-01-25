@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2021-01-25 22:18+0000\n"
-"Last-Translator: michaela-bot <michaela.rybickova@gmail.com>\n"
+"Last-Translator: erinm <erinm@riseup.net>\n"
 "Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/cs/>\n"
 "Language: cs\n"
@@ -122,8 +122,6 @@ msgid "Only admins can access this page."
 msgstr "Na tuto stránku mají přístup pouze administrátoři."
 
 #: journalist_app/forms.py:19
-#, fuzzy
-#| msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgid "HOTP secrets are 40 characters long - you have entered {num}."
 msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
 msgstr[0] "HOTP hesla mají 40 znaků - zadal/a jste {num} znaků."
@@ -131,8 +129,6 @@ msgstr[1] "HOTP hesla mají 40 znaků - zadal/a jste {num} znaků."
 msgstr[2] "HOTP hesla mají 40 znaků - zadal/a jste {num} znaků."
 
 #: journalist_app/forms.py:30
-#, fuzzy
-#| msgid "Must be at least {min_chars} characters long."
 msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
 msgstr[0] "Uživatelské jméno musí mít alespoň {num} znaků."
@@ -140,8 +136,6 @@ msgstr[1] "Uživatelské jméno musí mít alespoň {num} znaků."
 msgstr[2] "Uživatelské jméno musí mít alespoň {num} znaků."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-#, fuzzy
-#| msgid "Cannot be longer than {max_chars} characters."
 msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "Uživatelské jméno nemůže obsahovat více než {num} znaků."
@@ -286,7 +280,7 @@ msgstr "ikonka hvězdy"
 
 #: journalist_templates/_source_row.html:16
 msgid "unstarred icon"
-msgstr ""
+msgstr "ikona bez hvězdičky"
 
 #: journalist_templates/_source_row.html:28
 msgid "1 doc"
@@ -959,10 +953,8 @@ msgid "No documents have been submitted!"
 msgstr "Žádné dokumenty nebyly podány!"
 
 #: journalist_templates/js-strings.html:3
-#, fuzzy
-#| msgid "filter by codename"
 msgid "Filter by codename"
-msgstr "filtrovat podle krycího jména"
+msgstr "Filtrovat podle krycího jména"
 
 #: journalist_templates/js-strings.html:4
 msgid "Select All"
