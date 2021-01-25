@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-01-21 21:07+0000\n"
+"PO-Revision-Date: 2021-01-26 01:37+0000\n"
 "Last-Translator: AO Localization Lab <ao@localizationlab.org>\n"
 "Language-Team: French <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/fr/>\n"
@@ -1119,7 +1119,7 @@ msgstr "Protège les journalistes et les sources"
 
 #: source_templates/base.html:24
 msgid "SecureDrop Home"
-msgstr "Accueil SecureDrop"
+msgstr "Page d’accueil de SecureDrop"
 
 #: source_templates/base.html:32
 msgid "LOG OUT"
