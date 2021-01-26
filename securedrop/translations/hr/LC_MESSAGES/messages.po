@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 1.3.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-01-25 14:37+0000\n"
+"PO-Revision-Date: 2021-01-26 15:01+0000\n"
 "Last-Translator: erinm <erinm@riseup.net>\n"
 "Language-Team: Croatian <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/hr/>\n"
@@ -310,9 +310,9 @@ msgstr "ikona preuzimanja"
 #: journalist_templates/_source_row.html:38
 msgid "1 unread"
 msgid_plural "{num} unread"
-msgstr[0] "1 nepročitana{num} nepročitane{num} nepročitanih"
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "1 nepročitana"
+msgstr[1] "{num} nepročitane"
+msgstr[2] "{num} nepročitanih"
 
 #: journalist_templates/account_edit_hotp_secret.html:6
 #: journalist_templates/admin_edit_hotp_secret.html:7
