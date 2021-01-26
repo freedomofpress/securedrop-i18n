@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 1.5.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-07-20 11:51+0000\n"
+"PO-Revision-Date: 2021-01-26 16:12+0000\n"
 "Last-Translator: Jinseo Kim <7020kjs@naver.com>\n"
 "Language-Team: Korean <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ko/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.1.1\n"
+"X-Generator: Weblate 4.3.2\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:19
@@ -24,10 +24,8 @@ msgid "{time} ago"
 msgstr "{time} 전"
 
 #: journalist_app/__init__.py:86 journalist_app/__init__.py:127
-#, fuzzy
-#| msgid "You have been logged out due to inactivity"
 msgid "You have been logged out due to inactivity."
-msgstr "활동이 없어 자동으로 로그아웃되었습니다"
+msgstr "활동이 없어 자동으로 로그아웃되었습니다."
 
 #: journalist_app/__init__.py:136
 msgid "You have been logged out due to password change"
@@ -36,7 +34,7 @@ msgstr "비밀번호를 변경하여 자동으로 로그아웃되었습니다"
 #: journalist_app/__init__.py:164 source_app/__init__.py:172
 #: source_templates/base.html:9 source_templates/index.html:7
 msgid "SecureDrop"
-msgstr ""
+msgstr "SecureDrop"
 
 #: journalist_app/account.py:39
 msgid "Incorrect password or two-factor code."
@@ -60,7 +58,7 @@ msgstr "설정이 저장되었습니다."
 
 #: journalist_app/admin.py:81
 msgid "Preferences not updated."
-msgstr ""
+msgstr "설정이 저장되지 않았습니다."
 
 #: journalist_app/admin.py:95
 msgid "Failed to update organization name."
@@ -131,13 +129,13 @@ msgstr[0] ""
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
 msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
-msgstr[0] ""
+msgstr[0] "{num}글자를 초과할 수 없습니다."
 
 #: journalist_app/forms.py:62
 msgid ""
 "This username is invalid because it is reserved for internal use by the "
 "software."
-msgstr "이 사용자명은 내부적으로 확보되어, 이용하실 수 없습니다."
+msgstr "이 사용자명은 내부적으로 예약되어 있으므로, 이용하실 수 없습니다."
 
 #: journalist_app/forms.py:68 journalist_app/forms.py:99 source_app/forms.py:15
 msgid "This field is required."
