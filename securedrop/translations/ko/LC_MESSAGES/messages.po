@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 1.5.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-01-26 16:12+0000\n"
+"PO-Revision-Date: 2021-01-26 16:13+0000\n"
 "Last-Translator: Jinseo Kim <7020kjs@naver.com>\n"
 "Language-Team: Korean <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/ko/>\n"
@@ -92,7 +92,7 @@ msgstr ""
 
 #: journalist_app/admin.py:273
 msgid "Deleted user '{user}'."
-msgstr ""
+msgstr "'{user}' 사용자를 삭제했습니다."
 
 #: journalist_app/admin.py:303
 msgid "Test alert sent. Please check your email."
@@ -124,12 +124,12 @@ msgstr[0] ""
 #: journalist_app/forms.py:30
 msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
-msgstr[0] ""
+msgstr[0] "{num}글자 이상이어야 합니다."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
 msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
-msgstr[0] "{num}글자를 초과할 수 없습니다."
+msgstr[0] "{num}글자 이하여야 합니다."
 
 #: journalist_app/forms.py:62
 msgid ""
