@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2020-10-01 03:52+0000\n"
-"Last-Translator: Drashti <drashtipandya37@gmail.com>\n"
+"PO-Revision-Date: 2021-01-26 01:37+0000\n"
+"Last-Translator: John Hensley <john@freedom.press>\n"
 "Language-Team: Hindi <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/hi/>\n"
 "Language: hi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.1.1\n"
+"X-Generator: Weblate 4.3.2\n"
 "Generated-By: Babel 2.5.1\n"
 
 #: template_filters.py:19
@@ -34,7 +34,7 @@ msgstr "पासवर्ड बदलने के कारण आप लॉ�
 #: journalist_app/__init__.py:164 source_app/__init__.py:172
 #: source_templates/base.html:9 source_templates/index.html:7
 msgid "SecureDrop"
-msgstr ""
+msgstr "SecureDrop"
 
 #: journalist_app/account.py:39
 msgid "Incorrect password or two-factor code."
@@ -58,11 +58,11 @@ msgstr "प्राथमिकताएं सेव हो गयी।"
 
 #: journalist_app/admin.py:81
 msgid "Preferences not updated."
-msgstr ""
+msgstr "प्राथमिकताएँ अपडेट नहीं की गईं।"
 
 #: journalist_app/admin.py:95
 msgid "Failed to update organization name."
-msgstr ""
+msgstr "संगठन का नाम अपडेट करने में विफल।"
 
 #: journalist_app/admin.py:128
 msgid ""
@@ -111,6 +111,8 @@ msgid ""
 "Your download failed because a file could not be found. An admin can find "
 "more information in the system and monitoring logs."
 msgstr ""
+"फ़ाइल डाउनलोड नहीं हो पाने के कारण आपका डाउनलोड विफल रहा। एक व्यवस्थापक सिस्"
+"टम और निगरानी लॉग में अधिक जानकारी पा सकता है।"
 
 #: journalist_app/decorators.py:18
 msgid "Only admins can access this page."
@@ -123,21 +125,15 @@ msgstr[0] "फ़ील्ड 40 वर्ण लंबा होनी चा�
 msgstr[1] "फ़ील्ड 40 वर्ण लंबा होनी चाहिए, लेकिन {num} मिले।"
 
 #: journalist_app/forms.py:30
-#, fuzzy
-#| msgid "Must be at least {num} characters long."
-#| msgid_plural "Must be at least {num} characters long."
 msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
-msgstr[0] "कम से कम {num} अक्षर लंबा होनी चाहिए।"
+msgstr[0] "कम से कम {num} वर्ण लंबा होना चाहिए।"
 msgstr[1] "कम से कम {num} अक्षर लंबा होनी चाहिए।"
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
-#, fuzzy
-#| msgid "Cannot be longer than {num} characters."
-#| msgid_plural "Cannot be longer than {num} characters."
 msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
-msgstr[0] "{num} अक्षर से लंबा नहीं होना चाहिए।"
+msgstr[0] "{num} वर्ण से अधिक लंबा नहीं होना चाहिए।"
 msgstr[1] "{num} अक्षर से लंबा नहीं होना चाहिए।"
 
 #: journalist_app/forms.py:62
@@ -523,23 +519,16 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "एक बार जब आप अपने YubiKey को कॉन्फ़िगर कर लेते हैं, तो नीचे 6 अंकों का कोड डालें:"
 
 #: journalist_templates/base.html:24
-#, fuzzy
-#| msgid ""
-#| "<strong>Update Required:</strong> Your SecureDrop servers are still "
-#| "running v2 onion services, which are being phased out for security "
-#| "reasons. In February 2021, v2 onion services will be disabled, and your "
-#| "SecureDrop servers may become unreachable. <a href=\"//securedrop.org/v2-"
-#| "onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid ""
 "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before "
 "April 30 to keep your SecureDrop servers online. Please contact your "
 "administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
 "\">Learn More</a>"
 msgstr ""
-"<strong>अपडेट की आवश्यकता:</strong> आपके SecureDrop सर्वर अभी भी v2 onion सेवाएँ "
-"चला रहे हैं, जिन्हें सुरक्षा कारणों से चरणबद्ध किया जा रहा है। फरवरी 2021 में, v2 onion "
-"सेवाएँ अक्षम हो जाएंगी, और आपके SecureDrop सर्वर अनुपलब्ध हो सकते हैं। <a href=\"//"
-"securedrop.org/v2-onion-eol\" rel=\"noreferrer\">और अधिक जानें</a>"
+"<strong>अपडेट आवश्यक है</strong>&nbsp;&nbsp;अपने सिक्योरड्रॉप सर्वर को ऑनला"
+"इन रखने के लिए 30 अप्रैल से पहले v3 प्याज सेवाएँ सेट करें। कृपया अपने "
+"व्यवस्थापक से संपर्क करें। <a href=\"//securedrop.org/v2-onion-eol\" rel="
+"\"noreferrer\">और जानें</a>"
 
 #: journalist_templates/base.html:30
 msgid ""
@@ -547,6 +536,9 @@ msgid ""
 "setup before April 30. Please contact your administrator. <a href=\"//"
 "securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
+"<strong>आवश्यक अपडेट करें</strong>&nbsp;&nbsp;30 अप्रैल से पहले v3 प्याज सेवा"
+" सेटअप पूरा करें। कृपया अपने व्यवस्थापक से संपर्क करें। <a href=\""
+"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">और जानें</a>"
 
 #: journalist_templates/base.html:35
 msgid "Logged on as"
@@ -695,15 +687,15 @@ msgstr "इंस्टेंस कॉन्फ़िगरेशन"
 
 #: journalist_templates/config.html:10
 msgid "Organization Name"
-msgstr ""
+msgstr "संस्था का नाम"
 
 #: journalist_templates/config.html:15
 msgid "Set the organization name used on the SecureDrop web interfaces:"
-msgstr ""
+msgstr "सिक्योरड्रॉप वेब इंटरफेस पर उपयोग किए जाने वाले संगठन का नाम सेट करें:"
 
 #: journalist_templates/config.html:20
 msgid "SET ORGANIZATION NAME"
-msgstr ""
+msgstr "संगठन का नाम सेट करें"
 
 #: journalist_templates/config.html:28 source_templates/index.html:33
 msgid "Logo Image"
@@ -939,8 +931,6 @@ msgid "No documents have been submitted!"
 msgstr "कोई दस्तावेज जमा नहीं किया गया है!"
 
 #: journalist_templates/js-strings.html:3
-#, fuzzy
-#| msgid "filter by codename"
 msgid "Filter by codename"
 msgstr "कोडनेम द्वारा फ़िल्टर करें"
 
@@ -1072,7 +1062,7 @@ msgstr "पत्रकारों और स्रोतों की रक�
 
 #: source_templates/base.html:24
 msgid "SecureDrop Home"
-msgstr ""
+msgstr "SecureDrop होम"
 
 #: source_templates/base.html:32
 msgid "LOG OUT"
