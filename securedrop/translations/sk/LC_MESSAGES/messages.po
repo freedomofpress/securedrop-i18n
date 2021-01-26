@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.14.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-01-23 12:37+0000\n"
-"Last-Translator: Katarina Kasalova <katka.kasalova@gmail.com>\n"
+"PO-Revision-Date: 2021-01-26 17:50+0000\n"
+"Last-Translator: John Hensley <john@freedom.press>\n"
 "Language-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/sk/>\n"
 "Language: sk\n"
@@ -126,22 +126,22 @@ msgstr "Táto stránka je prístupná iba pre administrátorov."
 #: journalist_app/forms.py:19
 msgid "HOTP secrets are 40 characters long - you have entered {num}."
 msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
-msgstr[0] "HOTP heslá sú 40 znakov dlhé - zadali ste {num} znakov."
-msgstr[1] "HOTP heslá sú 40 znakov dlhé - zadali ste {num} znakov."
+msgstr[0] "HOTP heslá sú 40 znakov dlhé - zadali ste {num} znak."
+msgstr[1] "HOTP heslá sú 40 znakov dlhé - zadali ste {num} znaky."
 msgstr[2] "HOTP heslá sú 40 znakov dlhé - zadali ste {num} znakov."
 
 #: journalist_app/forms.py:30
 msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
-msgstr[0] "Musí byť aspoň {num} znakov dlhé."
-msgstr[1] "Musí byť aspoň {num} znakov dlhé."
+msgstr[0] "Musí byť aspoň {num} znak dlhé."
+msgstr[1] "Musí byť aspoň {num} znaky dlhé."
 msgstr[2] "Musí byť aspoň {num} znakov dlhé."
 
 #: journalist_app/forms.py:41 journalist_app/forms.py:52
 msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
-msgstr[0] "Nesmie byť dlhšie ako {num} znakov."
-msgstr[1] "Nesmie byť dlhšie ako {num} znakov."
+msgstr[0] "Nesmie byť dlhšie ako {num} znak."
+msgstr[1] "Nesmie byť dlhšie ako {num} znaky."
 msgstr[2] "Nesmie byť dlhšie ako {num} znakov."
 
 #: journalist_app/forms.py:62
@@ -546,11 +546,10 @@ msgid ""
 "administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer"
 "\">Learn More</a>"
 msgstr ""
-"<strong>Vyžaduje sa aktualizácia:</strong>Vaše SecureDrop servery stále "
-"používajú služby v2 onion, ktoré sa z bezpečnostných dôvodov vyraďujú. Vo "
-"Februári 2021 bude služba v2 onion deaktivovaná a vaše SecureDrop servery sa "
-"môžu stať nedostupnými. <a href=\"//securedrop.org/v2-onion-eol\" rel="
-"\"noreferrer\">Learn More</a>"
+"<strong>Vyžaduje sa aktualizácia</strong>&nbsp;&nbsp;Do 30. apríla nastavte "
+"služby cibule v3, aby boli vaše servery SecureDrop online. Kontaktujte "
+"svojho správcu. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\""
+">Viac informácií</a>"
 
 #: journalist_templates/base.html:30
 msgid ""
@@ -621,7 +620,7 @@ msgstr "Neprečítané"
 
 #: journalist_templates/col.html:46
 msgid "closed envelope icon"
-msgstr "ikona zatvorenej obláky"
+msgstr "ikona zatvorenej obálky"
 
 #: journalist_templates/col.html:51
 msgid "open envelope icon"
