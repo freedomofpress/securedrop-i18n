@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-01-24 01:37+0000\n"
-"Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
+"PO-Revision-Date: 2021-01-28 11:37+0000\n"
+"Last-Translator: Thom <thom.pp9@gmail.com>\n"
 "Language-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/"
 "securedrop/nl/>\n"
 "Language: nl\n"
@@ -61,7 +61,7 @@ msgstr "Voorkeuren opgeslagen."
 
 #: journalist_app/admin.py:81
 msgid "Preferences not updated."
-msgstr "Voorkeuren niet geüpdatet."
+msgstr "Voorkeuren niet bijgewerkt."
 
 #: journalist_app/admin.py:95
 msgid "Failed to update organization name."
@@ -441,7 +441,7 @@ msgstr "Gebruiker {username} bewerken"
 
 #: journalist_templates/admin.html:31
 msgid "edit user icon"
-msgstr "wijzig gebruiker knop"
+msgstr "bewerk gebruiker icoon"
 
 #: journalist_templates/admin.html:37
 msgid "trash icon disabled"
