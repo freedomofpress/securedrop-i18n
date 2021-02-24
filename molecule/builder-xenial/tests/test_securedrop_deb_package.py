@@ -8,9 +8,9 @@ import yaml
 from testinfra.host import Host
 
 
-SECUREDROP_TARGET_PLATFORM = os.environ.get("SECUREDROP_TARGET_PLATFORM")
+SECUREDROP_TARGET_DISTRIBUTION = os.environ.get("SECUREDROP_TARGET_DISTRIBUTION")
 testinfra_hosts = [
-    "docker://{}-sd-dpkg-verification".format(SECUREDROP_TARGET_PLATFORM)
+    "docker://{}-sd-dpkg-verification".format(SECUREDROP_TARGET_DISTRIBUTION)
 ]
 
 
@@ -43,8 +43,8 @@ def load_securedrop_test_vars() -> Dict[str, Any]:
     test_vars = yaml.safe_load(open(filepath))
 
     # Tack on target OS for use in tests
-    test_vars["securedrop_target_platform"] = os.environ.get(
-        "SECUREDROP_TARGET_PLATFORM"
+    test_vars["securedrop_target_distribution"] = os.environ.get(
+        "SECUREDROP_TARGET_DISTRIBUTION"
     )
 
     return test_vars
@@ -61,9 +61,17 @@ def make_deb_paths() -> Dict[str, Path]:
     Jinja-based evaluation of the YAML files (so we can't trivially
     reuse vars in other var values, as is the case with Ansible).
     """
-    grsec_version = securedrop_test_vars["grsec_version"]
-    if SECUREDROP_TARGET_PLATFORM == "focal":
-        grsec_version = grsec_version+"+focal"
+
+    if SECUREDROP_TARGET_DISTRIBUTION == "xenial":
+        grsec_version = "{}+{}".format(
+            securedrop_test_vars["grsec_version_xenial"],
+            SECUREDROP_TARGET_DISTRIBUTION
+        )
+    else:
+        grsec_version = "{}+{}".format(
+            securedrop_test_vars["grsec_version_focal"],
+            SECUREDROP_TARGET_DISTRIBUTION
+        )
 
     substitutions = dict(
         securedrop_version=securedrop_test_vars["securedrop_version"],
@@ -71,7 +79,7 @@ def make_deb_paths() -> Dict[str, Path]:
         keyring_version=securedrop_test_vars["keyring_version"],
         config_version=securedrop_test_vars["config_version"],
         grsec_version=grsec_version,
-        securedrop_target_platform=securedrop_test_vars["securedrop_target_platform"],
+        securedrop_target_distribution=securedrop_test_vars["securedrop_target_distribution"],
     )
 
     return {
@@ -409,7 +417,7 @@ def test_grsec_metapackage(host: Host):
 
     c = host.run("dpkg-deb --contents {}".format(deb_paths["securedrop_grsec"]))
     contents = c.stdout
-    if SECUREDROP_TARGET_PLATFORM == "xenial":
+    if SECUREDROP_TARGET_DISTRIBUTION == "xenial":
         # Post-install kernel hook for managing PaX flags must exist.
         assert re.search(r"^.*\./etc/kernel/postinst.d/paxctl-grub$", contents, re.M)
         # Config file for paxctld should not be present
@@ -542,10 +550,18 @@ def test_config_package_contains_expected_files(host: Host) -> None:
     Inspect the package contents to ensure all config files are included in
     the package.
     """
-    wanted_files = [
-        "/etc/cron-apt/action.d/9-remove",
-        "/etc/profile.d/securedrop_additions.sh",
-    ]
+    if SECUREDROP_TARGET_DISTRIBUTION == "xenial":
+        wanted_files = [
+            "/etc/cron-apt/action.d/9-remove",
+            "/etc/profile.d/securedrop_additions.sh",
+        ]
+    else:
+        wanted_files = [
+            "/etc/profile.d/securedrop_additions.sh",
+            "/opt/securedrop/20auto-upgrades",
+            "/opt/securedrop/50unattended-upgrades",
+            "/opt/securedrop/reboot-flag",
+        ]
     c = host.run("dpkg-deb --contents {}".format(deb_paths["securedrop_config"]))
     for wanted_file in wanted_files:
         assert re.search(

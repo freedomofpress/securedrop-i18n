@@ -33,6 +33,9 @@ def test_sysctl_options(host, sysctl_opt):
     due to the heavy use of Tor.
     """
     with host.sudo():
+        # For Focal, we disable IPv6 entirely, so the IPv6 sysctl options won't exist
+        if sysctl_opt[0].startswith("net.ipv6") and host.system_info.codename == "focal":
+            return True
         assert host.sysctl(sysctl_opt[0]) == sysctl_opt[1]
 
 
@@ -110,6 +113,11 @@ def test_twofactor_disabled_on_tty(host):
   ('PasswordAuthentication', 'no'),
   ('PubkeyAuthentication', 'yes'),
   ('RSAAuthentication', 'yes'),
+  ('AllowGroups', 'ssh'),
+  ('AllowTcpForwarding', 'no'),
+  ('AllowAgentForwarding', 'no'),
+  ('PermitTunnel', 'no'),
+  ('X11Forwarding', 'no'),
 ])
 def test_sshd_config(host, sshd_opts):
     """
@@ -141,10 +149,33 @@ def test_no_ecrypt_messages_in_logs(host, logfile):
 
 
 @pytest.mark.parametrize('package', [
+    'aptitude',
+    'cloud-init',
     'libiw30',
-    'wpasupplicant',
+    'python-is-python2',
+    'snapd',
+    'torsocks',
     'wireless-tools',
+    'wpasupplicant',
 ])
 def test_unused_packages_are_removed(host, package):
     """ Check if unused package is present """
     assert host.package(package).is_installed is False
+
+
+def test_iptables_packages(host):
+    """
+    Focal hosts should use iptables-persistent for enforcing
+    firewall config across reboots.
+    """
+    if host.system_info.codename == "focal":
+        assert host.package("iptables-persistent").is_installed
+    else:
+        assert not host.package("iptables-persistent").is_installed
+
+
+def test_snapd_absent(host):
+    assert not host.file("/lib/systemd/system/snapd.service").exists
+    assert not host.file("/etc/apparmor.d/usr.lib.snapd.snap-confine.real").exists
+    assert not host.file("/usr/bin/snap").exists
+    assert not host.file("/var/lib/snapd/snaps").exists
