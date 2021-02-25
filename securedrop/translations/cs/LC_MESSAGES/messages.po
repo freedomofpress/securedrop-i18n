@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop 0.14.0~rc1\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-01-26 01:37+0000\n"
-"Last-Translator: John Hensley <john@freedom.press>\n"
-"Language-Team: Czech <https://weblate.securedrop.org/projects/securedrop/securedrop/cs/>\n"
-"Language: cs\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.3.2\n"
-"Generated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-02-25 16:40+0000\nLast-Translator: michaela-bot <michaela.rybickova@gmail.com>\nLanguage-Team: Czech <https://weblate.securedrop.org/projects/securedrop/securedrop/cs/>\nLanguage: cs\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "před {time}"
@@ -80,21 +68,17 @@ msgid "Success!"
 msgstr "Úspěch!"
 
 msgid "The account and data for the source {} has been deleted."
-msgstr ""
+msgstr "Účet a data pro zdroj {} byla smazána."
 
 #. Here, "Nothing Selected" appears before a message
 #. asking the user to select one or more items.
 #. asking the users to select one or more items
 #. asking the user to select one or more items
-#, fuzzy
-#| msgid "Download Selected"
 msgid "Nothing Selected"
-msgstr "Stáhnout vybrané"
+msgstr "Nic není vybráno"
 
-#, fuzzy
-#| msgid "You must enter a message."
 msgid "You must select one or more items."
-msgstr "Musíte vložit zprávu."
+msgstr "Musíte vybrat jednu nebo více položek."
 
 msgid "Your download failed because a file could not be found. An admin can find more information in the system and monitoring logs."
 msgstr "Stahování selhalo protože soubor nebyl nalezen. Administrátor může najít více informací v systémovém a monitorovacím logu."
@@ -138,20 +122,14 @@ msgstr "Nahrávat lze jen obrázky ve formátu PNG."
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Došlo k nečekané chybě. Informujte prosím administrátora."
 
-#, fuzzy
-#| msgid "Thanks. Your reply has been stored."
 msgid "Your reply has been stored."
-msgstr "Děkujeme. Vaše odpověď byla uložena."
+msgstr "Vaše odpověď byla uložena."
 
-#, fuzzy
-#| msgid "No collections selected for download."
 msgid "You must select one or more items for download"
-msgstr "Nevybral/a jste žádnou sadu ke stažení."
+msgstr "Musíte vybrat jednu či více položek ke stažení."
 
-#, fuzzy
-#| msgid "No collections selected for deletion."
 msgid "You must select one or more items for deletion"
-msgstr "Nevybral/a jste žádnou sadu k smazání."
+msgstr "Musíte vybrat jednu nebo více položek ke smazání"
 
 msgid "No unread submissions for this source."
 msgstr "Žádné nepřečtené příspěvky z tohoto zdroje."
@@ -159,10 +137,8 @@ msgstr "Žádné nepřečtené příspěvky z tohoto zdroje."
 msgid "Account updated."
 msgstr "Uživatelský účet aktualizován."
 
-#, fuzzy
-#| msgid "Login failed."
 msgid "<b>Login failed.</b>"
-msgstr "Přihlášení selhalo."
+msgstr "<b>Přihlášení selhalo.</b>"
 
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
@@ -179,32 +155,26 @@ msgstr "Nesprávný formát hesla: prosím použijte pouze písmena A-F a čísl
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "Nesprávná forma hesla: lichá délka hesla. Neudělal/a jste překlep?"
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The item has been deleted."
 msgid_plural "{num} items have been deleted."
-msgstr[0] "Všechny odpovědi byly smazány"
-msgstr[1] "Všechny odpovědi byly smazány"
-msgstr[2] "Všechny odpovědi byly smazány"
+msgstr[0] "Položka byla smazána."
+msgstr[1] "Položky byly smazány."
+msgstr[2] "Položek bylo smazáno."
 
 msgid "No collections selected for deletion."
 msgstr "Nevybral/a jste žádnou sadu k smazání."
 
 msgid "The account and all data for {n} source have been deleted."
 msgid_plural "The accounts and all data for {n} sources have been deleted."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Účet a všechna data pro {n} zdroj byla smazána."
+msgstr[1] "Účet a všechna data pro {n} zdroje byla smazána."
+msgstr[2] "Účet a všechna data pro {n} zdrojů byla smazána."
 
-#, fuzzy
-#| msgid "No collections selected for deletion."
 msgid "You must select one or more items for deletion."
-msgstr "Nevybral/a jste žádnou sadu k smazání."
+msgstr "Musíte vybrat jednu nebo více položek ke smazání."
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The files and messages have been deleted."
-msgstr "Všechny odpovědi byly smazány"
+msgstr "Soubory a zprávy byly smazány."
 
 msgid "Name updated."
 msgstr "Jméno aktualizováno."
@@ -255,35 +225,31 @@ msgstr[1] "{num} nepřečtené"
 msgstr[2] "{num} nepřečtených"
 
 msgid "When the account for a source is deleted:"
-msgstr ""
+msgstr "Pokud je účet zdroje smazán:"
 
 msgid "The source will not be able to log in with their codename again."
-msgstr ""
+msgstr "Zdroj se již nebude moci přihlásit pod svým krycím jménem."
 
 msgid "You will not be able to send them replies."
-msgstr ""
+msgstr "Nebudete moci zdroji odpovědět."
 
 msgid "All files and messages from that source will also be destroyed."
-msgstr ""
+msgstr "Všechny soubory a zprávy od tohoto zdroje budou zničeny."
 
 msgid "Are you sure this is what you want?"
-msgstr ""
+msgstr "Jste si jisti že to chcete udělat?"
 
 msgid "Yes, Delete Selected Source Accounts"
-msgstr ""
+msgstr "Ano, smazat účty vybraných zdrojů"
 
 msgid "What would you like to delete?"
-msgstr ""
+msgstr "Co chcete smazat?"
 
-#, fuzzy
-#| msgid "Submit Files or Messages"
 msgid "Files and Messages"
-msgstr "Nahrání souborů nebo zpráv"
+msgstr "Soubory a Zprávy"
 
-#, fuzzy
-#| msgid "Sources"
 msgid "Source Accounts"
-msgstr "Zdroje"
+msgstr "Účty zdrojů"
 
 msgid "Change Secret"
 msgstr "Změnit heslo"
@@ -411,15 +377,11 @@ msgstr "Nemůžete načíst čárový kód? Můžete manuálně spárovat FreeOT
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Jakmile nastavíte svůj YubiKey, zadejte šesticiferný kód níže:"
 
-#, fuzzy
-#| msgid "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before April 30 to keep your SecureDrop servers online. Please contact your administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Nutná aktualizace:</strong> Nastavte na svých SecureDrop serverech v3 Onion Services do 30. dubna, aby mohly dále běžet. Kontaktujte svého administrátora.<a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Dozvědět se více</a>"
+msgstr "<strong>Nezbytné zabezpečení:</strong> Operační systém vašich SecureDrop serverů dosáhl konce životnosti. Pro zprovoznění rozhraní pro zdroje a bezpečnou komunikaci je nutná manuální akutalizace. Kontaktujte svého administrátora.<a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Dozvědět se více</a>"
 
-#, fuzzy
-#| msgid "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before April 30 to keep your SecureDrop servers online. Please contact your administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual update is urgently required to remain safe. Please contact your adminstrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Nutná aktualizace:</strong> Nastavte na svých SecureDrop serverech v3 Onion Services do 30. dubna, aby mohly dále běžet. Kontaktujte svého administrátora.<a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Dozvědět se více</a>"
+msgstr "<strong>Nezbytné zabezpečení:</strong> Operačnímu systému vašich SecureDrop serverů končí životnost 30. dubna 2021. Pro bezpečnou komunikaci je urgentně vyžadována manuální aktualizace. Kontaktujte svého administrátora.<a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Dozvědět se více</a>"
 
 msgid "Logged on as"
 msgstr "Přihlášen/a jako"
@@ -436,10 +398,8 @@ msgstr "Používá systém <em>SecureDrop {version}</em>."
 msgid "All Sources"
 msgstr "Všechny zdroje"
 
-#, fuzzy
-#| msgid "The documents are stored encrypted for security. To read them, you will need to decrypt them using GPG."
 msgid "All messages, files, and replies from sources are stored as encrypted files for security. To read them, you will need to decrypt them on your Secure Viewing Station."
-msgstr "Tyto dokumenty jsou z bezpečnostních důvodů zašifrované. Musíte je dešifrovat pomocí GPG."
+msgstr "Všechny zprávy, soubory a odpovědi od zdrojů jsou kvůli zabezpečení ukládány jako šifrované soubory. Před přečtením je musíte dešifrovat na vašem bezpečném počítači."
 
 msgid "Download Selected"
 msgstr "Stáhnout vybrané"
@@ -483,23 +443,17 @@ msgstr "ikonka zpráv"
 msgid "Delete Confirmation"
 msgstr "Potvrdit smazání"
 
-#, fuzzy
-#| msgid "Are you sure you want to delete the selected documents?"
 msgid "Are you sure you want to delete the selected submissions?"
-msgstr "Opravdu chcete smazat vybrané dokumenty?"
+msgstr "Opravdu chcete smazat vybraná podání?"
 
 msgid "DELETE"
 msgstr "SMAZAT"
 
-#, fuzzy
-#| msgid "No documents to display."
 msgid "No submissions to display."
-msgstr "Žádné dokumenty k zobrazení."
+msgstr "Žádná podání k zobrazení."
 
-#, fuzzy
-#| msgid "You can write a secure reply to the person who submitted these documents:"
 msgid "You can write a secure reply to the person who submitted these messages and/or files:"
-msgstr "Můžete napsat bezpečnou odpověď člověku, který podal tyto dokumenty:"
+msgstr "Můžete napsat bezpečnou odpověď člověku, který poslal tyto zprávy a/nebo dokumenty:"
 
 msgid "You've flagged this source for reply."
 msgstr "Označili jste tento zdroj na odpověď."
@@ -513,16 +467,14 @@ msgstr "Pro odpověď tomuto zdroji klepněte níže."
 msgid "FLAG THIS SOURCE FOR REPLY"
 msgstr "OZNAČIT TENTO ZDROJ NA ODPOVĚĎ"
 
-#, fuzzy
-#| msgid "Edit your account"
 msgid "Delete Source Account"
-msgstr "Upravit svůj účet"
+msgstr "Smazat účet zdroje"
 
 msgid "Are you sure?"
-msgstr ""
+msgstr "Jste si jisti?"
 
 msgid "Yes, Delete Source Account"
-msgstr ""
+msgstr "Ano, smazat účet zdroje"
 
 msgid "Instance Configuration"
 msgstr "Nastavení instance"
@@ -686,10 +638,8 @@ msgstr "Opravdu chcete smazat uživatele „{username}“?"
 msgid "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr "Opravdu chcete obnovut dvoufaktorovu autentizaci pro uživatele „{username}“?"
 
-#, fuzzy
-#| msgid "No collections selected."
 msgid "Sources selected: "
-msgstr "Nevybral/a jste žádnou sadu."
+msgstr "Vybrané zdroje: "
 
 msgid "Login to access the journalist interface"
 msgstr "Přihlaste se do rozhraní pro novináře"
@@ -761,10 +711,10 @@ msgid "SecureDrop Home"
 msgstr "Domovská stránka SecureDrop"
 
 msgid "We're sorry, our SecureDrop is currently offline."
-msgstr ""
+msgstr "Omlouváme se, náš SecureDrop je aktuálně offline."
 
 msgid "Please try again later. Check our website for more information."
-msgstr ""
+msgstr "Zkuste to prosím později. Více informací najdete na naší stránce."
 
 msgid "LOG OUT"
 msgstr "ODHLÁSIT SE"
