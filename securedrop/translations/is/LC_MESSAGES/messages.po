@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop 0.12.0~rc1\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-01-21 16:41+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/securedrop/is/>\n"
-"Language: is\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
-"X-Generator: Weblate 4.3.2\n"
-"Generated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.12.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-02-25 10:44+0000\nLast-Translator: Sveinn í Felli <sv1@fellsnet.is>\nLanguage-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/securedrop/is/>\nLanguage: is\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "Fyrir {time} síðan"
@@ -80,21 +68,17 @@ msgid "Success!"
 msgstr "Tókst!"
 
 msgid "The account and data for the source {} has been deleted."
-msgstr ""
+msgstr "Notandaaðgangi og öllum gögnum heimildarmannsins {} hefur verið eytt."
 
 #. Here, "Nothing Selected" appears before a message
 #. asking the user to select one or more items.
 #. asking the users to select one or more items
 #. asking the user to select one or more items
-#, fuzzy
-#| msgid "Download Selected"
 msgid "Nothing Selected"
-msgstr "Sækja valið"
+msgstr "Ekkert valið"
 
-#, fuzzy
-#| msgid "You must enter a message."
 msgid "You must select one or more items."
-msgstr "Þú verður að setja inn skilaboð."
+msgstr "Þú verður að velja eitt eða fleiri atriði."
 
 msgid "Your download failed because a file could not be found. An admin can find more information in the system and monitoring logs."
 msgstr "Niðurhalið þitt mistókst vegna þess að skrá fannst ekki. Stjórnandi getur fundið ítarlegri upplýsingar í kerfinu og vöktunarskrám."
@@ -135,20 +119,14 @@ msgstr "Þú getur einungis hlaðið upp PNG-myndskrár."
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Óvæn villa kom upp! Hafðu samband við kerfisstjórann þinn."
 
-#, fuzzy
-#| msgid "Thanks. Your reply has been stored."
 msgid "Your reply has been stored."
-msgstr "Takk. Svarið þitt hefur verið vistað."
+msgstr "Svarið þitt hefur verið vistað."
 
-#, fuzzy
-#| msgid "No collections selected for download."
 msgid "You must select one or more items for download"
-msgstr "Engin söfn valin til niðurhals."
+msgstr "Þú verður að velja eitt eða fleiri atriði til niðurhals"
 
-#, fuzzy
-#| msgid "No collections selected for deletion."
 msgid "You must select one or more items for deletion"
-msgstr "Engin söfn valin til eyðingar."
+msgstr "Þú verður að velja eitt eða fleiri atriði til eyðingar"
 
 msgid "No unread submissions for this source."
 msgstr "Engar ólesnar innsendingar hjá þessum heimildarmanni."
@@ -156,10 +134,8 @@ msgstr "Engar ólesnar innsendingar hjá þessum heimildarmanni."
 msgid "Account updated."
 msgstr "Aðgangur uppfærður."
 
-#, fuzzy
-#| msgid "Login failed."
 msgid "<b>Login failed.</b>"
-msgstr "Innskráning mistókst."
+msgstr "<b>Innskráning mistókst.</b>"
 
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
@@ -175,30 +151,24 @@ msgstr "Ógilt snið leynilykils: vinsamlegast notaðu einungis stafi frá A-F o
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "Ógilt snið leynilykils: óvenjuleg lengd leynilykils. Slóstu leynilykilinn rétt inn?"
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The item has been deleted."
 msgid_plural "{num} items have been deleted."
-msgstr[0] "Öllum svörum hefur verið eytt"
-msgstr[1] "Öllum svörum hefur verið eytt"
+msgstr[0] "Atriðinu hefur verið eytt."
+msgstr[1] "{num} atriðum hefur verið eytt."
 
 msgid "No collections selected for deletion."
 msgstr "Engin söfn valin til eyðingar."
 
 msgid "The account and all data for {n} source have been deleted."
 msgid_plural "The accounts and all data for {n} sources have been deleted."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Notandaaðgangi og öllum gögnum {n} heimildarmanns hefur verið eytt."
+msgstr[1] "Notandaaðgangi og öllum gögnum {n} heimildarmanna hefur verið eytt."
 
-#, fuzzy
-#| msgid "No collections selected for deletion."
 msgid "You must select one or more items for deletion."
-msgstr "Engin söfn valin til eyðingar."
+msgstr "Þú verður að velja eitt eða fleiri atriði til eyðingar."
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The files and messages have been deleted."
-msgstr "Öllum svörum hefur verið eytt"
+msgstr "Öllum skrám og skilaboðum hefur verið eytt."
 
 msgid "Name updated."
 msgstr "Nafn uppfært."
@@ -246,35 +216,31 @@ msgstr[0] "1 ólesið"
 msgstr[1] "{num} ólesin"
 
 msgid "When the account for a source is deleted:"
-msgstr ""
+msgstr "Þegar notandaaðgangi heimildarmanns er eytt:"
 
 msgid "The source will not be able to log in with their codename again."
-msgstr ""
+msgstr "Heimildarmaðurinn mun ekki geta skráð sig inn aftur með kóðanafninu sínu."
 
 msgid "You will not be able to send them replies."
-msgstr ""
+msgstr "Þú munt ekki geta sent þeim svör."
 
 msgid "All files and messages from that source will also be destroyed."
-msgstr ""
+msgstr "Öllum skilaboðum og skrám frá þessum heimildarmanni verður einnig eytt."
 
 msgid "Are you sure this is what you want?"
-msgstr ""
+msgstr "Ertu viss um að þetta sé það sem þú viljir?"
 
 msgid "Yes, Delete Selected Source Accounts"
-msgstr ""
+msgstr "Já, eyða völdum aðgöngum heimildarmanna"
 
 msgid "What would you like to delete?"
-msgstr ""
+msgstr "Hverju viltu eyða?"
 
-#, fuzzy
-#| msgid "Submit Files or Messages"
 msgid "Files and Messages"
-msgstr "Senda inn skrár eða skilaboð"
+msgstr "Skrár og skilaboð"
 
-#, fuzzy
-#| msgid "Sources"
 msgid "Source Accounts"
-msgstr "Heimildarmenn"
+msgstr "Aðgangar heimildarmanna"
 
 msgid "Change Secret"
 msgstr "Skipta um leynilykil"
@@ -402,15 +368,11 @@ msgstr "Nærðu ekki að skanna strikamerkið? Þú getur parað FreeOTP handvir
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Þegar þú hefur sett upp YubiKey (dulritunarlykill), settu inn 6-stafa kóðann hér fyrir neðan:"
 
-#, fuzzy
-#| msgid "<strong>Critical Security:</strong> The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is urgently required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Áríðandi öryggismál:</strong> Stýrikerfið sem notað er á SecureDrop-þjónunum þínum er komið á enda líftíma síns. Til að gæta öryggis er nauðsynlegt að framkvæma handvirka uppfærslu sem fyrst - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Kanna nánar</a>"
+msgstr "<strong>Áríðandi öryggismál:</strong>&nbsp;&nbsp;Stýrikerfið sem notað er á SecureDrop-þjónunum þínum er komið á enda líftíma síns. Til að gæta öryggis er nauðsynlegt að framkvæma handvirka uppfærslu sem fyrst. Hafðu samband við kerfisstjórann þinn. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Kanna nánar</a>"
 
-#, fuzzy
-#| msgid "<strong>Critical Security:</strong> The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is urgently required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual update is urgently required to remain safe. Please contact your adminstrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Áríðandi öryggismál:</strong> Stýrikerfið sem notað er á SecureDrop-þjónunum þínum er komið á enda líftíma síns. Til að gæta öryggis er nauðsynlegt að framkvæma handvirka uppfærslu sem fyrst - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Kanna nánar</a>"
+msgstr "<strong>Áríðandi öryggismál:</strong>&nbsp;&nbsp;Stýrikerfið sem notað er á SecureDrop-þjónunum þínum mun enda líftíma sinn þann 30. aprím, 2021. Til að gæta öryggis er nauðsynlegt að framkvæma handvirka uppfærslu sem fyrst. Hafðu samband við kerfisstjórann þinn. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Kanna nánar</a>"
 
 msgid "Logged on as"
 msgstr "Innskráður sem"
@@ -427,10 +389,8 @@ msgstr "Keyrt með <em>SecureDrop {version}</em>."
 msgid "All Sources"
 msgstr "Allir heimildarmenn"
 
-#, fuzzy
-#| msgid "The documents are stored encrypted for security. To read them, you will need to decrypt them using GPG."
 msgid "All messages, files, and replies from sources are stored as encrypted files for security. To read them, you will need to decrypt them on your Secure Viewing Station."
-msgstr "Skjölin eru geymd dulrituð af öryggisástæðum. Til að lesa þau, þarftu að afkóða þau með GPG."
+msgstr "Öll skilaboð, skrár og svör frá heimildarmönnum eru geymd dulrituð af öryggisástæðum. Til að lesa þau, þarftu að afkóða þau í öruggu skoðunarstöðinni þinni (Secure Viewing Station)."
 
 msgid "Download Selected"
 msgstr "Sækja valið"
@@ -474,23 +434,17 @@ msgstr "tákn fyrir skilaboð"
 msgid "Delete Confirmation"
 msgstr "Staðfesting eyðingu"
 
-#, fuzzy
-#| msgid "Are you sure you want to delete the selected documents?"
 msgid "Are you sure you want to delete the selected submissions?"
-msgstr "Ertu viss um að þú viljir eyða völdu skjölunum?"
+msgstr "Ertu viss um að þú viljir eyða völdu gögnunum?"
 
 msgid "DELETE"
 msgstr "EYÐA"
 
-#, fuzzy
-#| msgid "No documents to display."
 msgid "No submissions to display."
-msgstr "Engin skjöl til að birta."
+msgstr "Engar innsendingar til að birta."
 
-#, fuzzy
-#| msgid "You can write a secure reply to the person who submitted these documents:"
 msgid "You can write a secure reply to the person who submitted these messages and/or files:"
-msgstr "Þú getur skrifað öruggt svar til aðilans sem sendi inn þessi skjöl:"
+msgstr "Þú getur skrifað öruggt svar til aðilans sem sendi inn þessi skilaboð og/eða skjöl:"
 
 msgid "You've flagged this source for reply."
 msgstr "Þú hefur merkt við að þú ætlir að svara þessum heimildarmanni."
@@ -504,16 +458,14 @@ msgstr "Smelltu hér fyrir neðan ef þú vilt skrifa svar til þessa heimildarm
 msgid "FLAG THIS SOURCE FOR REPLY"
 msgstr "MERKJA ÞENNAN HEIMILDARMANN TIL AÐ SVARA"
 
-#, fuzzy
-#| msgid "Edit your account"
 msgid "Delete Source Account"
-msgstr "Breyta aðganginum þínum"
+msgstr "Eyða notandaaðgangi heimildarmanns"
 
 msgid "Are you sure?"
-msgstr ""
+msgstr "Ertu viss?"
 
 msgid "Yes, Delete Source Account"
-msgstr ""
+msgstr "Já, eyða notandaaðgangi heimildarmanns"
 
 msgid "Instance Configuration"
 msgstr "Uppsetning á kerfiseintaki"
@@ -676,10 +628,8 @@ msgstr "Ertu viss um að þú viljir eyða notandanum {username}?"
 msgid "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr "Ertu viss um að þú viljir endurstilla tvíþátta auðkenninguna fyrir {username}?"
 
-#, fuzzy
-#| msgid "No collections selected."
 msgid "Sources selected: "
-msgstr "Engin söfn valin."
+msgstr "Valdir heimildarmenn: "
 
 msgid "Login to access the journalist interface"
 msgstr "Innskráning fyrir aðgang að fréttamannaviðmótinu"
@@ -751,10 +701,10 @@ msgid "SecureDrop Home"
 msgstr "Forsíða SecureDrop"
 
 msgid "We're sorry, our SecureDrop is currently offline."
-msgstr ""
+msgstr "Því miður, SecureDrop-þjónninn okkar er ótengdur þessa stundina."
 
 msgid "Please try again later. Check our website for more information."
-msgstr ""
+msgstr "Reyndu aftur síðar. Athugaðu vefsvæðið okkar til að sjá nánari upplýsingar."
 
 msgid "LOG OUT"
 msgstr "SKRÁ ÚT"
