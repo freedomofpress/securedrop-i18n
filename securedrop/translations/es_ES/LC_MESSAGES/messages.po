@@ -4,20 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop 0.3.12\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-01-24 11:37+0000\n"
-"Last-Translator: Zuhualime Akoochimoya <zakooch@protonmail.ch>\n"
-"Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\n"
-"Language: es_ES\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
-"Generated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-02-25 16:40+0000\nLast-Translator: erinm <erinm@riseup.net>\nLanguage-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "hace {time}"
@@ -136,10 +123,8 @@ msgstr "Solo puedes subir archivos de imágenes PNG."
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "¡Ocurrió un error inesperado! Por favor informa a tu administrador."
 
-#, fuzzy
-#| msgid "Thanks. Your reply has been stored."
 msgid "Your reply has been stored."
-msgstr "Gracias. Tu respuesta ha sido guardada."
+msgstr "Tu respuesta ha sido guardada."
 
 #, fuzzy
 #| msgid "No collections selected for download."
@@ -157,10 +142,8 @@ msgstr "No hay envíos sin leer para esta fuente."
 msgid "Account updated."
 msgstr "Cuenta actualizada."
 
-#, fuzzy
-#| msgid "Login failed."
 msgid "<b>Login failed.</b>"
-msgstr "El inicio de sesión falló."
+msgstr "<b>El inicio de sesión falló.</b>"
 
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
@@ -196,10 +179,8 @@ msgstr[1] ""
 msgid "You must select one or more items for deletion."
 msgstr "No hay colecciones seleccionadas para eliminar."
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The files and messages have been deleted."
-msgstr "Todas las repuestas han sido eliminadas"
+msgstr "Los archivos y mensajes han sido eliminados."
 
 msgid "Name updated."
 msgstr "Nombre actualizado."
@@ -267,10 +248,8 @@ msgstr ""
 msgid "What would you like to delete?"
 msgstr ""
 
-#, fuzzy
-#| msgid "Submit Files or Messages"
 msgid "Files and Messages"
-msgstr "Enviar Archivos o Mensajes"
+msgstr "Archivos y Mensajes"
 
 #, fuzzy
 #| msgid "Sources"
@@ -475,18 +454,14 @@ msgstr "ícono de mensajes"
 msgid "Delete Confirmation"
 msgstr "Confirmar la eliminación"
 
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected submissions?"
 msgid "Are you sure you want to delete the selected submissions?"
-msgstr "¿Está seguro de que desea eliminar las {size} sumisiones seleccionadas?"
+msgstr "¿Está seguro de que desea eliminar las sumisiones seleccionadas?"
 
 msgid "DELETE"
 msgstr "ELIMINAR"
 
-#, fuzzy
-#| msgid "No documents to display."
 msgid "No submissions to display."
-msgstr "No hay documentos que mostrar."
+msgstr "No hay sumisiones que mostrar."
 
 #, fuzzy
 #| msgid "You can write a secure reply to the person who submitted these documents:"
