@@ -7,20 +7,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014
 # gio <gdamiola@gmail.com>, 2014
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-01-23 00:37+0000\n"
-"Last-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\n"
-"Language-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\n"
-"Language: it_IT\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
-"Generated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-02-26 18:37+0000\nLast-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\nLanguage-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} fa"
@@ -84,21 +71,17 @@ msgid "Success!"
 msgstr "Completato!"
 
 msgid "The account and data for the source {} has been deleted."
-msgstr ""
+msgstr "L'account e i dati della fonte {} sono stati eliminati."
 
 #. Here, "Nothing Selected" appears before a message
 #. asking the user to select one or more items.
 #. asking the users to select one or more items
 #. asking the user to select one or more items
-#, fuzzy
-#| msgid "Download Selected"
 msgid "Nothing Selected"
-msgstr "Scarica selezionati"
+msgstr "Nessun oggetto selezionato"
 
-#, fuzzy
-#| msgid "You must enter a message."
 msgid "You must select one or more items."
-msgstr "È necessario inserire un messaggio."
+msgstr "È necessario selezionare uno o più oggetti."
 
 msgid "Your download failed because a file could not be found. An admin can find more information in the system and monitoring logs."
 msgstr "Lo scaricamento non è riuscito perché un file non è stato trovato. Un amministratore può avere maggiori informazioni sul sistema e monitorare i log."
@@ -139,20 +122,14 @@ msgstr "Possono essere caricate solo immagini PNG."
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Si è verificato un errore inatteso. Informare il proprio amministratore."
 
-#, fuzzy
-#| msgid "Thanks. Your reply has been stored."
 msgid "Your reply has been stored."
-msgstr "Grazie. La tua risposta è stata archiviata."
+msgstr "La tua risposta è stata archiviata."
 
-#, fuzzy
-#| msgid "No collections selected for download."
 msgid "You must select one or more items for download"
-msgstr "Nessun archivio è stato selezionato per essere scaricato."
+msgstr "È necessario selezionare uno o più oggetti da scaricare"
 
-#, fuzzy
-#| msgid "No collections selected for deletion."
 msgid "You must select one or more items for deletion"
-msgstr "Nessun archivio è stato selezionato per essere eliminato."
+msgstr "È necessario selezionare uno o più oggetti da eliminare"
 
 msgid "No unread submissions for this source."
 msgstr "Non ci sono invii non letti per questa fonte."
@@ -160,10 +137,8 @@ msgstr "Non ci sono invii non letti per questa fonte."
 msgid "Account updated."
 msgstr "Account aggiornato."
 
-#, fuzzy
-#| msgid "Login failed."
 msgid "<b>Login failed.</b>"
-msgstr "Accesso non riuscito."
+msgstr "<b>Accesso non riuscito.</b>"
 
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
@@ -179,30 +154,24 @@ msgstr "Formato del segreto non valido: utilizzare solo lettere A-F e numeri 0-9
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "Formato del segreto non valido: segreto di lunghezza dispari. Forse non è stato digitato correttamente?"
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The item has been deleted."
 msgid_plural "{num} items have been deleted."
-msgstr[0] "Tutte le risposte sono state eliminate"
-msgstr[1] "Tutte le risposte sono state eliminate"
+msgstr[0] "L'oggetto è stato eliminato."
+msgstr[1] "{num} oggetti sono stati eliminati."
 
 msgid "No collections selected for deletion."
 msgstr "Nessun archivio è stato selezionato per essere eliminato."
 
 msgid "The account and all data for {n} source have been deleted."
 msgid_plural "The accounts and all data for {n} sources have been deleted."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "L'account è tutti i dati della fonte {n} sono stati eliminati."
+msgstr[1] "Gli account è tutti i dati delle fonti {n} sono stati eliminati."
 
-#, fuzzy
-#| msgid "No collections selected for deletion."
 msgid "You must select one or more items for deletion."
-msgstr "Nessun archivio è stato selezionato per essere eliminato."
+msgstr "È necessario selezionare uno o più oggetti da eliminare."
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The files and messages have been deleted."
-msgstr "Tutte le risposte sono state eliminate"
+msgstr "I file e i messaggi sono stati eliminati."
 
 msgid "Name updated."
 msgstr "Nome aggiornato."
@@ -250,35 +219,31 @@ msgstr[0] "1 non letto"
 msgstr[1] "{num} non letti"
 
 msgid "When the account for a source is deleted:"
-msgstr ""
+msgstr "Quando l'account della fonte viene eliminato:"
 
 msgid "The source will not be able to log in with their codename again."
-msgstr ""
+msgstr "La fonte non potrà più accedere con il proprio nome in codice."
 
 msgid "You will not be able to send them replies."
-msgstr ""
+msgstr "Non sarà più possibile inviare risposte alle fonti."
 
 msgid "All files and messages from that source will also be destroyed."
-msgstr ""
+msgstr "Anche tutti i file e i messaggi inviati da quella fonte verranno distrutti."
 
 msgid "Are you sure this is what you want?"
-msgstr ""
+msgstr "Procedere veramente?"
 
 msgid "Yes, Delete Selected Source Accounts"
-msgstr ""
+msgstr "Sì, elimina gli account delle fonti selezionate"
 
 msgid "What would you like to delete?"
 msgstr ""
 
-#, fuzzy
-#| msgid "Submit Files or Messages"
 msgid "Files and Messages"
-msgstr "Invia file o messaggi"
+msgstr "File e messaggi"
 
-#, fuzzy
-#| msgid "Sources"
 msgid "Source Accounts"
-msgstr "Fonti"
+msgstr "Account delle fonti"
 
 msgid "Change Secret"
 msgstr "Cambia segreto"
@@ -478,10 +443,8 @@ msgstr "icona messaggi"
 msgid "Delete Confirmation"
 msgstr "Conferma eliminazione"
 
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected submissions?"
 msgid "Are you sure you want to delete the selected submissions?"
-msgstr "Invii selezionati {size}. Eliminarli veramente?"
+msgstr "Eliminare veramente gli invii selezionati?"
 
 msgid "DELETE"
 msgstr "ELIMINA"
@@ -680,10 +643,8 @@ msgstr "Eliminare veramente l'utente {username}?"
 msgid "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr "Reimpostare veramente l'autenticazione a due fattori per {username}?"
 
-#, fuzzy
-#| msgid "No collections selected."
 msgid "Sources selected: "
-msgstr "Non è stato selezionato alcun archivio."
+msgstr "Fonti selezionate: "
 
 msgid "Login to access the journalist interface"
 msgstr "Accedere per utilizzare l'interfaccia giornalista"
