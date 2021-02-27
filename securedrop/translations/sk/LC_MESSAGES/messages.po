@@ -72,20 +72,16 @@ msgstr "Používateľ '{user}' bol vymazaný."
 msgid "Test alert sent. Please check your email."
 msgstr "Testovacie upozornenie odoslané. Prosím, skontrolujte si svoj e-mail."
 
-#. Here, "Success!" appears before a message
-#. confirming the success of an operation.
-#. indicating a successful deletion
-#. Here, "Success" appears before a message
+#. Precedes a message confirming the success of an operation.
 msgid "Success!"
 msgstr "Úspech!"
 
-msgid "The account and data for the source {} has been deleted."
-msgstr ""
+#, fuzzy
+#| msgid "All replies have been deleted"
+msgid "The account and data for the source {} have been deleted."
+msgstr "Všetky odpovede boli zmazané"
 
-#. Here, "Nothing Selected" appears before a message
-#. asking the user to select one or more items.
-#. asking the users to select one or more items
-#. asking the user to select one or more items
+#. Error shown when a user has not selected items to act on.
 #, fuzzy
 #| msgid "Download Selected"
 msgid "Nothing Selected"
@@ -257,7 +253,7 @@ msgstr[2] "{num} neprečítaných"
 msgid "When the account for a source is deleted:"
 msgstr ""
 
-msgid "The source will not be able to log in with their codename again."
+msgid "The source will no longer be able to log in with their codename."
 msgstr ""
 
 msgid "You will not be able to send them replies."
@@ -413,12 +409,12 @@ msgstr "Akonáhle nastavíte svoj YubiKey, zadajte šesťmiestny kód nižšie:"
 
 #, fuzzy
 #| msgid "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before April 30 to keep your SecureDrop servers online. Please contact your administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
-msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
+msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr "<strong>Vyžaduje sa aktualizácia</strong>&nbsp;&nbsp;Do 30. apríla nastavte služby cibule v3, aby boli vaše servery SecureDrop online. Kontaktujte svojho správcu. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Viac informácií</a>"
 
 #, fuzzy
 #| msgid "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before April 30 to keep your SecureDrop servers online. Please contact your administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
-msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual update is urgently required to remain safe. Please contact your adminstrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
+msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr "<strong>Vyžaduje sa aktualizácia</strong>&nbsp;&nbsp;Do 30. apríla nastavte služby cibule v3, aby boli vaše servery SecureDrop online. Kontaktujte svojho správcu. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Viac informácií</a>"
 
 msgid "Logged on as"

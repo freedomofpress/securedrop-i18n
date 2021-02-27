@@ -7,7 +7,20 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014
 # gio <gdamiola@gmail.com>, 2014
 msgid ""
-msgstr "Project-Id-Version: SecureDrop\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-02-26 18:37+0000\nLast-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\nLanguage-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr ""
+"Project-Id-Version: SecureDrop\n"
+"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
+"POT-Creation-Date: 2017-09-02 07:28+0000\n"
+"PO-Revision-Date: 2021-02-26 18:37+0000\n"
+"Last-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\n"
+"Language-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
+"Generated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} fa"
@@ -63,20 +76,16 @@ msgstr "Utente \"{user}\" eliminato."
 msgid "Test alert sent. Please check your email."
 msgstr "Avviso di prova inviato. Controllare la propria casella email."
 
-#. Here, "Success!" appears before a message
-#. confirming the success of an operation.
-#. indicating a successful deletion
-#. Here, "Success" appears before a message
+#. Precedes a message confirming the success of an operation.
 msgid "Success!"
 msgstr "Completato!"
 
-msgid "The account and data for the source {} has been deleted."
+#, fuzzy
+#| msgid "The account and data for the source {} has been deleted."
+msgid "The account and data for the source {} have been deleted."
 msgstr "L'account e i dati della fonte {} sono stati eliminati."
 
-#. Here, "Nothing Selected" appears before a message
-#. asking the user to select one or more items.
-#. asking the users to select one or more items
-#. asking the user to select one or more items
+#. Error shown when a user has not selected items to act on.
 msgid "Nothing Selected"
 msgstr "Nessun oggetto selezionato"
 
@@ -221,7 +230,9 @@ msgstr[1] "{num} non letti"
 msgid "When the account for a source is deleted:"
 msgstr "Quando l'account della fonte viene eliminato:"
 
-msgid "The source will not be able to log in with their codename again."
+#, fuzzy
+#| msgid "The source will not be able to log in with their codename again."
+msgid "The source will no longer be able to log in with their codename."
 msgstr "La fonte non potrà più accedere con il proprio nome in codice."
 
 msgid "You will not be able to send them replies."
@@ -373,12 +384,12 @@ msgstr "Una volta configurata la tua Yubikey, inserisci il codice a 6 cifre qui 
 
 #, fuzzy
 #| msgid "<strong>Critical Security:</strong> The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is urgently required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Learn More</a>"
-msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
+msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr "<strong>Sicurezza critica:</strong> il sistema operativo usato dai propri server SecureDrop ha raggiunto la fine del suo ciclo di vita. È urgentemente richiesto un aggiornamento manuale per rimanere al sicuro - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Maggiorni informazioni</a>"
 
 #, fuzzy
 #| msgid "<strong>Critical Security:</strong> The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is urgently required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Learn More</a>"
-msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual update is urgently required to remain safe. Please contact your adminstrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
+msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr "<strong>Sicurezza critica:</strong> il sistema operativo usato dai propri server SecureDrop ha raggiunto la fine del suo ciclo di vita. È urgentemente richiesto un aggiornamento manuale per rimanere al sicuro - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Maggiorni informazioni</a>"
 
 msgid "Logged on as"

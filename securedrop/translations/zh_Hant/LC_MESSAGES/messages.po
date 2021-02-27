@@ -73,20 +73,16 @@ msgstr "删除了用户「{user}」"
 msgid "Test alert sent. Please check your email."
 msgstr "已送出測試警報，請檢查電郵信箱。"
 
-#. Here, "Success!" appears before a message
-#. confirming the success of an operation.
-#. indicating a successful deletion
-#. Here, "Success" appears before a message
+#. Precedes a message confirming the success of an operation.
 msgid "Success!"
 msgstr "成功！"
 
-msgid "The account and data for the source {} has been deleted."
-msgstr ""
+#, fuzzy
+#| msgid "All replies have been deleted"
+msgid "The account and data for the source {} have been deleted."
+msgstr "所有的回覆都已被删除"
 
-#. Here, "Nothing Selected" appears before a message
-#. asking the user to select one or more items.
-#. asking the users to select one or more items
-#. asking the user to select one or more items
+#. Error shown when a user has not selected items to act on.
 #, fuzzy
 #| msgid "Download Selected"
 msgid "Nothing Selected"
@@ -240,7 +236,7 @@ msgstr[0] "{num} 未讀"
 msgid "When the account for a source is deleted:"
 msgstr ""
 
-msgid "The source will not be able to log in with their codename again."
+msgid "The source will no longer be able to log in with their codename."
 msgstr ""
 
 msgid "You will not be able to send them replies."
@@ -396,12 +392,12 @@ msgstr "設定 Yubikey 後，請在下面輸入 6 位數字代碼："
 
 #, fuzzy
 #| msgid "<strong>Critical Security:</strong> The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is urgently required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Learn More</a>"
-msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
+msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr "<strong>重要安全課題:</strong> SecureDrop 伺服器作業系統已逾使用年限，亟需手動更新以維持安全。 - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">進一步了解</a>"
 
 #, fuzzy
 #| msgid "<strong>Critical Security:</strong> The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is urgently required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Learn More</a>"
-msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual update is urgently required to remain safe. Please contact your adminstrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
+msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr "<strong>重要安全課題:</strong> SecureDrop 伺服器作業系統已逾使用年限，亟需手動更新以維持安全。 - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">進一步了解</a>"
 
 msgid "Logged on as"

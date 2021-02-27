@@ -72,20 +72,16 @@ msgstr "Utilizatorul „{user}” a fost șters."
 msgid "Test alert sent. Please check your email."
 msgstr "A fost transmisă alerta de test. Te rugăm să îți verifici e-mailul."
 
-#. Here, "Success!" appears before a message
-#. confirming the success of an operation.
-#. indicating a successful deletion
-#. Here, "Success" appears before a message
+#. Precedes a message confirming the success of an operation.
 msgid "Success!"
 msgstr "Succes!"
 
-msgid "The account and data for the source {} has been deleted."
-msgstr ""
+#, fuzzy
+#| msgid "All replies have been deleted"
+msgid "The account and data for the source {} have been deleted."
+msgstr "Toate răspunsurile au fost șterse"
 
-#. Here, "Nothing Selected" appears before a message
-#. asking the user to select one or more items.
-#. asking the users to select one or more items
-#. asking the user to select one or more items
+#. Error shown when a user has not selected items to act on.
 #, fuzzy
 #| msgid "Download Selected"
 msgid "Nothing Selected"
@@ -257,7 +253,7 @@ msgstr[2] "{num} necitite"
 msgid "When the account for a source is deleted:"
 msgstr ""
 
-msgid "The source will not be able to log in with their codename again."
+msgid "The source will no longer be able to log in with their codename."
 msgstr ""
 
 msgid "You will not be able to send them replies."
@@ -413,12 +409,12 @@ msgstr "După ce ai configurat cheia fizică YubiKey, introdu codul de 6 cifre d
 
 #, fuzzy
 #| msgid "<strong>Critical Security:</strong> The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is urgently required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Learn More</a>"
-msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
+msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr "<strong>Alertă critică de securitate:</strong> Sistemul de operare folosit de serverele SecureDrop a ajuns la sfârșitul duratei de viață. Este necesară de urgență actualizarea manuală a sistemului pentru a rămâne în siguranță - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Află mai multe</a>"
 
 #, fuzzy
 #| msgid "<strong>Critical Security:</strong> The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is urgently required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Learn More</a>"
-msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual update is urgently required to remain safe. Please contact your adminstrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
+msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr "<strong>Alertă critică de securitate:</strong> Sistemul de operare folosit de serverele SecureDrop a ajuns la sfârșitul duratei de viață. Este necesară de urgență actualizarea manuală a sistemului pentru a rămâne în siguranță - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Află mai multe</a>"
 
 msgid "Logged on as"

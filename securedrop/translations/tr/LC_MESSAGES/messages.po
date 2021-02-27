@@ -72,20 +72,16 @@ msgstr "'{user}' kullanıcısı silindi."
 msgid "Test alert sent. Please check your email."
 msgstr "Deneme uyarısı gönderildi. Lütfen e-postanızı denetleyin."
 
-#. Here, "Success!" appears before a message
-#. confirming the success of an operation.
-#. indicating a successful deletion
-#. Here, "Success" appears before a message
+#. Precedes a message confirming the success of an operation.
 msgid "Success!"
 msgstr "Başarılı!"
 
-msgid "The account and data for the source {} has been deleted."
-msgstr ""
+#, fuzzy
+#| msgid "All replies have been deleted"
+msgid "The account and data for the source {} have been deleted."
+msgstr "Bütün yanıtlar silindi"
 
-#. Here, "Nothing Selected" appears before a message
-#. asking the user to select one or more items.
-#. asking the users to select one or more items
-#. asking the user to select one or more items
+#. Error shown when a user has not selected items to act on.
 #, fuzzy
 #| msgid "Download Selected"
 msgid "Nothing Selected"
@@ -248,7 +244,7 @@ msgstr[1] "{num} okunmamış"
 msgid "When the account for a source is deleted:"
 msgstr ""
 
-msgid "The source will not be able to log in with their codename again."
+msgid "The source will no longer be able to log in with their codename."
 msgstr ""
 
 msgid "You will not be able to send them replies."
@@ -404,12 +400,12 @@ msgstr "YubiKey yapılandırmasını tamamladığınızda, aşağıdaki 6 haneli
 
 #, fuzzy
 #| msgid "<strong>Critical Security:</strong> The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is urgently required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Learn More</a>"
-msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
+msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr "<strong>Hassas Güvenlik:</strong> SecureDrop sunucularınız tarafından kullanılan işletim sisteminizin ömrü bitmiştir. Güvende kalmak için elle bir güncelleme yapmanız gerekmektedir - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Daha Fazlasını Öğren</a>"
 
 #, fuzzy
 #| msgid "<strong>Critical Security:</strong> The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is urgently required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Learn More</a>"
-msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual update is urgently required to remain safe. Please contact your adminstrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
+msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr "<strong>Hassas Güvenlik:</strong> SecureDrop sunucularınız tarafından kullanılan işletim sisteminizin ömrü bitmiştir. Güvende kalmak için elle bir güncelleme yapmanız gerekmektedir - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Daha Fazlasını Öğren</a>"
 
 msgid "Logged on as"
