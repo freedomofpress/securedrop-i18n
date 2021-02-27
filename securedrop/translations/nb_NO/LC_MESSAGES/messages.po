@@ -4,20 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop 0.3.12\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-01-26 17:22+0000\n"
-"Last-Translator: John Hensley <john@freedom.press>\n"
-"Language-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/securedrop/securedrop/nb_NO/>\n"
-"Language: nb_NO\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
-"Generated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-02-27 17:37+0000\nLast-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\nLanguage-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/securedrop/securedrop/nb_NO/>\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} siden"
@@ -77,21 +64,15 @@ msgstr "Testvarsel sendt. Sjekk e-posten din."
 msgid "Success!"
 msgstr "Suksess!"
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The account and data for the source {} have been deleted."
-msgstr "Alle svar har blitt slettet"
+msgstr "Kontoen og dataene knyttet til kilden {} har blitt slettet."
 
 #. Error shown when a user has not selected items to act on.
-#, fuzzy
-#| msgid "Download Selected"
 msgid "Nothing Selected"
-msgstr "Last ned valgte"
+msgstr "Ingenting valgt"
 
-#, fuzzy
-#| msgid "You must enter a message."
 msgid "You must select one or more items."
-msgstr "Du må skrive inn en melding."
+msgstr "Du må velge ett eller flere elementer."
 
 msgid "Your download failed because a file could not be found. An admin can find more information in the system and monitoring logs."
 msgstr "Nedlastingen mislyktes fordi en fil ikke ble funnet. En administrator kan finne detaljer om feilen i system- og driftsloggene."
@@ -132,20 +113,14 @@ msgstr "Du kan kun laste opp PNG-bildefiler."
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "En uventet feil oppstod! Gi din administrator beskjed."
 
-#, fuzzy
-#| msgid "Thanks. Your reply has been stored."
 msgid "Your reply has been stored."
-msgstr "Takk. Svaret ditt har blitt lagret."
+msgstr "Svaret ditt har blitt lagret."
 
-#, fuzzy
-#| msgid "No collections selected for download."
 msgid "You must select one or more items for download"
-msgstr "Ingen kildeoppføringer valgt for nedlasting."
+msgstr "Du må velge ett eller flere elementer for nedlasting"
 
-#, fuzzy
-#| msgid "No collections selected for deletion."
 msgid "You must select one or more items for deletion"
-msgstr "Ingen kildeoppføringer valgt for sletting."
+msgstr "Du må velge ett eller flere elementer for sletting"
 
 msgid "No unread submissions for this source."
 msgstr "Ingen uleste innsendelser fra denne kilden."
@@ -153,10 +128,8 @@ msgstr "Ingen uleste innsendelser fra denne kilden."
 msgid "Account updated."
 msgstr "Konto oppdatert."
 
-#, fuzzy
-#| msgid "Login failed."
 msgid "<b>Login failed.</b>"
-msgstr "Innlogging mislyktes."
+msgstr "<b>Innlogging mislyktes.</b>"
 
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
@@ -172,30 +145,24 @@ msgstr "Ugyldig hemmelighetsformat: Kun bruk bokstavene A-F og tall fra 0-9."
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "Feil hemmelighet, du har lagt til eller glemt noe."
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The item has been deleted."
 msgid_plural "{num} items have been deleted."
-msgstr[0] "Alle svar har blitt slettet"
-msgstr[1] "Alle svar har blitt slettet"
+msgstr[0] "Elementet har blitt slettet."
+msgstr[1] "{num} elementer har blitt slettet."
 
 msgid "No collections selected for deletion."
 msgstr "Ingen kildeoppføringer valgt for sletting."
 
 msgid "The account and all data for {n} source have been deleted."
 msgid_plural "The accounts and all data for {n} sources have been deleted."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Kontoen og dataene knyttet til {n} kilde har blitt slettet."
+msgstr[1] "Kontoene og dataene knyttet til {n} kilder har blitt slettet."
 
-#, fuzzy
-#| msgid "No collections selected for deletion."
 msgid "You must select one or more items for deletion."
-msgstr "Ingen kildeoppføringer valgt for sletting."
+msgstr "Du må velge ett eller flere elementer for sletting."
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The files and messages have been deleted."
-msgstr "Alle svar har blitt slettet"
+msgstr "Filene og meldingene har blitt slettet."
 
 msgid "Name updated."
 msgstr "Navn oppdatert."
@@ -243,35 +210,31 @@ msgstr[0] "Én ulest"
 msgstr[1] "{num} uleste"
 
 msgid "When the account for a source is deleted:"
-msgstr ""
+msgstr "Når kontoen knyttet til en kilde slettes:"
 
 msgid "The source will no longer be able to log in with their codename."
-msgstr ""
+msgstr "Kilden vil ikke lenger kunne logge seg inn med sitt kodenavn."
 
 msgid "You will not be able to send them replies."
-msgstr ""
+msgstr "Du vil ikke lenger kunne sende svar til kilden."
 
 msgid "All files and messages from that source will also be destroyed."
-msgstr ""
+msgstr "Alle filer og meldinger fra den kilden vil også bli slettet."
 
 msgid "Are you sure this is what you want?"
-msgstr ""
+msgstr "Er du sikker på at du vil gjøre dette?"
 
 msgid "Yes, Delete Selected Source Accounts"
-msgstr ""
+msgstr "Ja, slett kontoene til de valgte kildene"
 
 msgid "What would you like to delete?"
-msgstr ""
+msgstr "Hva ønsker du å slette?"
 
-#, fuzzy
-#| msgid "Submit Files or Messages"
 msgid "Files and Messages"
-msgstr "Send inn filer eller meldinger"
+msgstr "Filer og meldinger"
 
-#, fuzzy
-#| msgid "Sources"
 msgid "Source Accounts"
-msgstr "Kilder"
+msgstr "Kildekontoer"
 
 msgid "Change Secret"
 msgstr "Endre hemmelighet"
@@ -399,15 +362,11 @@ msgstr "Kan du ikke skanne strekkoden? Du kan koble FreeOTP til denne kontoen ma
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Når du har satt opp din YubiKey, skriv inn den 6 tegn lange koden nedenfor:"
 
-#, fuzzy
-#| msgid "<strong>Critical Security:</strong> The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is urgently required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Sikkerhetskritisk:</strong> Operativsystemet på tjenerne som drifter denne installasjonen av SecureDrop har nådd slutten av sin levetid. En manuell oppgradering må gjøres innen kort tid for å opprettholde sikkerheten - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Les mer</a>"
+msgstr "<strong>Sikkerhetskritisk:</strong>&nbsp;&nbsp;Operativsystemet på tjenerne som drifter denne installasjonen av SecureDrop har nådd slutten av sin levetid. En manuell oppgradering kreves for å reaktivere kilde-nettsiden og opprettholde sikkerheten. Kontakt din administrator. <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Les mer</a>"
 
-#, fuzzy
-#| msgid "<strong>Critical Security:</strong> The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is urgently required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Sikkerhetskritisk:</strong> Operativsystemet på tjenerne som drifter denne installasjonen av SecureDrop har nådd slutten av sin levetid. En manuell oppgradering må gjøres innen kort tid for å opprettholde sikkerheten - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Les mer</a>"
+msgstr "<strong>Sikkerhetskritisk:</strong>&nbsp;&nbsp;Operativsystemet på tjenerne som drifter denne installasjonen av SecureDrop vil nå slutten av sin levetid den 30. april 2021. En manuell oppgradering må gjøres innen kort tid for å opprettholde sikkerheten. Kontakt din administrator. <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Les mer</a>"
 
 msgid "Logged on as"
 msgstr "Innlogget som"
