@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-02-26 23:04+0000\nLast-Translator: Zuhualime Akoochimoya <zakooch@protonmail.ch>\nLanguage-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-02-27 12:34+0000\nLast-Translator: Zuhualime Akoochimoya <zakooch@protonmail.ch>\nLanguage-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "hace {time}"
@@ -161,7 +161,7 @@ msgstr "No hay colecciones seleccionadas para eliminar."
 
 msgid "The account and all data for {n} source have been deleted."
 msgid_plural "The accounts and all data for {n} sources have been deleted."
-msgstr[0] "La cuenta y todos los datos de la fuente {n} han sido eliminados."
+msgstr[0] "La cuenta y todos los datos de {n} fuente han sido eliminados."
 msgstr[1] "Las cuentas y todos los datos de {n} fuentes han sido eliminados."
 
 msgid "You must select one or more items for deletion."
@@ -216,13 +216,13 @@ msgstr[0] "1 sin leer"
 msgstr[1] "{num} sin leer"
 
 msgid "When the account for a source is deleted:"
-msgstr "Cuando la cuenta para una fuente es borrada:"
+msgstr "Cuando la cuenta para una fuente es eliminada:"
 
 msgid "The source will not be able to log in with their codename again."
 msgstr "La fuente no podrá iniciar sesión de nuevo con su nombre clave."
 
 msgid "You will not be able to send them replies."
-msgstr "No podrás enviarles respuestas."
+msgstr "No podrás enviarle respuestas."
 
 msgid "All files and messages from that source will also be destroyed."
 msgstr "Todos los archivos y mensajes de esa fuente también serán destruídos."
@@ -234,7 +234,7 @@ msgid "Yes, Delete Selected Source Accounts"
 msgstr "Sí, eliminar cuentas de la fuente seleccionada"
 
 msgid "What would you like to delete?"
-msgstr "¿Qué te gustaría aliminar?"
+msgstr "¿Qué te gustaría eliminar?"
 
 msgid "Files and Messages"
 msgstr "Archivos y Mensajes"
@@ -369,7 +369,7 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Una vez que hayas configurado tu YubiKey, ingresa abajo el código de verificación de 6 dígitos:"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Situación crítica de Seguridad:</strong> El sistema operativo usado en tus servidores SecureDrop ha alcanzado el final de su ciclo de vida. Se necesita una actualización manual para rehabilitar la Interfaz de Fuente y permanecer seguro - <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Aprender Más</a>"
+msgstr "<strong>Situación crítica de Seguridad:</strong>&nbsp;&nbsp;El sistema operativo usado en tus servidores SecureDrop ha alcanzado el final de su ciclo de vida. Se necesita una actualización manual para rehabilitar la Interfaz de Fuente y permanecer seguro. Por favor contacta a tu administrador. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Aprender Más</a>"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual update is urgently required to remain safe. Please contact your adminstrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr "<strong>Situación crítica de Seguridad:</strong>&nbsp;&nbsp; El sistema operativo usado en tus servidores SecureDrop alcanzará el final de su ciclo de vida el 30 de abril de 2021. Se necesita urgentemente una actualización manual para permanecer seguro. Por favor contacta a tu administrador. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Aprender Más</a>"
@@ -701,7 +701,7 @@ msgid "SecureDrop Home"
 msgstr "Inicio de SecureDrop"
 
 msgid "We're sorry, our SecureDrop is currently offline."
-msgstr "Lo sentimos, nuestro SecureDrop no está en línea al momento."
+msgstr "Lo sentimos, nuestro SecureDrop no está en línea en este momento."
 
 msgid "Please try again later. Check our website for more information."
 msgstr "Por favor intenta de nuevo más tarde. Comprueba nuestro sitio web para más información."
