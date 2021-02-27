@@ -4,38 +4,28 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop 1.8.0~rc1\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: th\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 1.8.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-02-27 17:37+0000\nLast-Translator: Charlie Haviland <charliehaviland@gmail.com>\nLanguage-Team: Thai <https://weblate.securedrop.org/projects/securedrop/securedrop/th/>\nLanguage: th\nMIME-Version: 1.0\nContent-Type: text/plain; charset=utf-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
-msgstr ""
+msgstr "{time} ที่แล้ว"
 
 msgid "You have been logged out due to inactivity."
-msgstr ""
+msgstr "คุณได้ออกจากระบบเนื่องจากไม่มีการใช้งาน"
 
 msgid "You have been logged out due to password change"
-msgstr ""
+msgstr "คุณออกจากระบบเนื่องจากรหัสผ่านถูกเปลี่ยน"
 
 msgid "SecureDrop"
-msgstr ""
+msgstr "SecureDrop"
 
 msgid "Incorrect password or two-factor code."
-msgstr ""
+msgstr "รหัสผ่านหรือรหัสสองปัจจัยไม่ถูกต้อง"
 
 msgid "Your two-factor credentials have been reset successfully."
-msgstr ""
+msgstr "รีเซ็ตข้อมูลรับรองสองปัจจัยของคุณสำเร็จแล้ว"
 
 msgid "There was a problem verifying the two-factor code. Please try again."
-msgstr ""
+msgstr "เกิดปัญหาในการยืนยันรหัสสองปัจจัย กรุณาลองอีกครั้ง."
 
 msgid "Image updated."
 msgstr ""
