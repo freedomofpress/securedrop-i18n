@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop 0.5-rc4\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-01-26 01:37+0000\n"
-"Last-Translator: Volkan <volkangezer@gmail.com>\n"
-"Language-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/securedrop/tr/>\n"
-"Language: tr\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
-"Generated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-02 16:37+0000\nLast-Translator: Kaya Zeren <kayazeren@gmail.com>\nLanguage-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/securedrop/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} önce"
@@ -76,21 +64,15 @@ msgstr "Deneme uyarısı gönderildi. Lütfen e-postanızı denetleyin."
 msgid "Success!"
 msgstr "Başarılı!"
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The account and data for the source {} have been deleted."
-msgstr "Bütün yanıtlar silindi"
+msgstr "{} kaynağının hesap bilgileri ve verileri silindi."
 
 #. Error shown when a user has not selected items to act on.
-#, fuzzy
-#| msgid "Download Selected"
 msgid "Nothing Selected"
-msgstr "Seçilmişleri İndir"
+msgstr "Herhangi Bir Şey Seçilmemiş"
 
-#, fuzzy
-#| msgid "You must enter a message."
 msgid "You must select one or more items."
-msgstr "Bir ileti yazmalısınız."
+msgstr "Bir ya da bir kaç öge seçmelisiniz."
 
 msgid "Your download failed because a file could not be found. An admin can find more information in the system and monitoring logs."
 msgstr "İndirme işleminiz bir dosya bulunamadığı için başarısız oldu. Bir yönetici sistem ve izleme günlüklerinde sorunla ilgili daha fazla bilgiye ulaşabilir."
@@ -131,20 +113,14 @@ msgstr "Yalnız PNG biçiminde görsel dosyaları yükleyebilirsiniz."
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Beklenmeyen bir sorun çıktı! Lütfen sistem yöneticinizi bilgilendirin."
 
-#, fuzzy
-#| msgid "Thanks. Your reply has been stored."
 msgid "Your reply has been stored."
-msgstr "Teşekkürler. Yanıtınız kaydedildi."
+msgstr "Yanıtınız kaydedildi."
 
-#, fuzzy
-#| msgid "No collections selected for download."
 msgid "You must select one or more items for download"
-msgstr "İndirilecek bir derleme seçilmemiş."
+msgstr "İndirilecek bir ya da bir kaç öge seçmelisiniz"
 
-#, fuzzy
-#| msgid "No collections selected for deletion."
 msgid "You must select one or more items for deletion"
-msgstr "Silinecek bir derleme seçilmemiş."
+msgstr "Silinecek bir ya da birkaç öge seçmelisiniz"
 
 msgid "No unread submissions for this source."
 msgstr "Bu kaynağın okunmamış gönderimi yok."
@@ -152,10 +128,8 @@ msgstr "Bu kaynağın okunmamış gönderimi yok."
 msgid "Account updated."
 msgstr "Hesap güncellendi."
 
-#, fuzzy
-#| msgid "Login failed."
 msgid "<b>Login failed.</b>"
-msgstr "Oturum açılamadı."
+msgstr "<b>Oturum açılamadı.</b>"
 
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
@@ -171,30 +145,24 @@ msgstr "Gizli biçim hatalı: lütfen A-F arasındaki harfleri ve 0-9 arasındak
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "Gizli biçim hatalı: Gizli kod tek uzunlukta. Gizli kodu yanlış mı yazdınız?"
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The item has been deleted."
 msgid_plural "{num} items have been deleted."
-msgstr[0] "Bütün yanıtlar silindi"
-msgstr[1] "Bütün yanıtlar silindi"
+msgstr[0] "Öge silindi."
+msgstr[1] "{num} öge silindi."
 
 msgid "No collections selected for deletion."
 msgstr "Silinecek bir derleme seçilmemiş."
 
 msgid "The account and all data for {n} source have been deleted."
 msgid_plural "The accounts and all data for {n} sources have been deleted."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{n} kaynağın hesap bilgileri ve verileri silinecek."
+msgstr[1] "{n} kaynağın hesap bilgileri ve verileri silinecek."
 
-#, fuzzy
-#| msgid "No collections selected for deletion."
 msgid "You must select one or more items for deletion."
-msgstr "Silinecek bir derleme seçilmemiş."
+msgstr "Silinecek bir ya da birkaç öge seçmelisiniz."
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The files and messages have been deleted."
-msgstr "Bütün yanıtlar silindi"
+msgstr "Dosya ve iletiler silindi."
 
 msgid "Name updated."
 msgstr "Ad güncellendi."
@@ -242,35 +210,31 @@ msgstr[0] "1 okunmamış"
 msgstr[1] "{num} okunmamış"
 
 msgid "When the account for a source is deleted:"
-msgstr ""
+msgstr "Bir kaynağın hesabı silindiğinde:"
 
 msgid "The source will no longer be able to log in with their codename."
-msgstr ""
+msgstr "Kaynak kod adı ile oturum açamaz."
 
 msgid "You will not be able to send them replies."
-msgstr ""
+msgstr "Kaynağa yanıt gönderemezsiniz."
 
 msgid "All files and messages from that source will also be destroyed."
-msgstr ""
+msgstr "Bu kaynağın tüm dosya ve iletileri de silinir."
 
 msgid "Are you sure this is what you want?"
-msgstr ""
+msgstr "Bu işlemi yapmak istediğinize emin misiniz?"
 
 msgid "Yes, Delete Selected Source Accounts"
-msgstr ""
+msgstr "Evet, Seçilmiş Kaynak Hesaplarını Sil"
 
 msgid "What would you like to delete?"
-msgstr ""
+msgstr "Nelerin silinmesini istiyorsunuz?"
 
-#, fuzzy
-#| msgid "Submit Files or Messages"
 msgid "Files and Messages"
-msgstr "Dosya veya İleti Gönderin"
+msgstr "Dosyalar ve İletiler"
 
-#, fuzzy
-#| msgid "Sources"
 msgid "Source Accounts"
-msgstr "Kaynaklar"
+msgstr "Kaynak Hesapları"
 
 msgid "Change Secret"
 msgstr "Gizli Kodu Değiştir"
@@ -398,15 +362,11 @@ msgstr "Barkodu okutamıyor musunuz? Şu iki aşamalı kimlik doğrulama parolas
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "YubiKey yapılandırmasını tamamladığınızda, aşağıdaki 6 haneli kodu yazın:"
 
-#, fuzzy
-#| msgid "<strong>Critical Security:</strong> The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is urgently required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Hassas Güvenlik:</strong> SecureDrop sunucularınız tarafından kullanılan işletim sisteminizin ömrü bitmiştir. Güvende kalmak için elle bir güncelleme yapmanız gerekmektedir - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Daha Fazlasını Öğren</a>"
+msgstr "<strong>Kritik Güvenlik:</strong>&nbsp;&nbsp;SecureDrop sunucularınız tarafından kullanılan işletim sisteminizin ömrü bitmiştir. Kaynak arayüzünü yeniden etkinleştirmek ve güvende kalmak için elle bir güncelleme yapmanız gerekiyor. Lütfen BT yöneticiniz ile görüşün. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Ayrıntılı Bilgi Alın</a>"
 
-#, fuzzy
-#| msgid "<strong>Critical Security:</strong> The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is urgently required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Hassas Güvenlik:</strong> SecureDrop sunucularınız tarafından kullanılan işletim sisteminizin ömrü bitmiştir. Güvende kalmak için elle bir güncelleme yapmanız gerekmektedir - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Daha Fazlasını Öğren</a>"
+msgstr "<strong>Kritik Güvenlik:</strong>&nbsp;&nbsp;SecureDrop sunucularınızda kullanılan işletim sisteminin kullanım ömrü bitmiş. Güvende kalmak için el ile bir güncelleme yapmanız gerekiyor. Lütfen BT yöneticiniz ile görüşün. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Ayrıntılı Bilgi Alın</a>"
 
 msgid "Logged on as"
 msgstr "Oturum açan"
@@ -423,10 +383,8 @@ msgstr "<em>SecureDrop {version}</em> tarafından desteklenmektedir."
 msgid "All Sources"
 msgstr "Tüm Kaynaklar"
 
-#, fuzzy
-#| msgid "The documents are stored encrypted for security. To read them, you will need to decrypt them using GPG."
 msgid "All messages, files, and replies from sources are stored as encrypted files for security. To read them, you will need to decrypt them on your Secure Viewing Station."
-msgstr "Belgeler güvenlik amacıyla şifrelenmiş bir şekilde saklanmaktadır. Okuyabilmek için GPG kullanarak şifrelerini çözmeniz gerekmektedir."
+msgstr "Kaynakların tüm iletileri, dosyaları ve yanıtları güvenlik amacıyla şifrelenerek saklanır. Bunları okuyabilmek için Güvenli Görüntüleme İstasyonunuzdan şifrelerini çözmelisiniz."
 
 msgid "Download Selected"
 msgstr "Seçilmişleri İndir"
@@ -470,23 +428,17 @@ msgstr "iletiler simgesi"
 msgid "Delete Confirmation"
 msgstr "Silme Onayı"
 
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected submissions?"
 msgid "Are you sure you want to delete the selected submissions?"
-msgstr "Bu {size} seçili gönderiyi silmek istediğinize emin misiniz?"
+msgstr "Seçilmiş gönderileri silmek istediğinize emin misiniz?"
 
 msgid "DELETE"
 msgstr "SİL"
 
-#, fuzzy
-#| msgid "No documents to display."
 msgid "No submissions to display."
-msgstr "Görüntülenecek bir belge yok."
+msgstr "Görüntülenecek bir gönderi yok."
 
-#, fuzzy
-#| msgid "You can write a secure reply to the person who submitted these documents:"
 msgid "You can write a secure reply to the person who submitted these messages and/or files:"
-msgstr "Bu belgeleri gönderen kişiye güvenli bir yanıt yazabilirsiniz:"
+msgstr "Bu ileti ve/veya dosyaları gönderen kişiye güvenli bir yanıt yazabilirsiniz:"
 
 msgid "You've flagged this source for reply."
 msgstr "Bu kaynağı yanıtlamak amacıyla işaretlediniz."
@@ -500,16 +452,14 @@ msgstr "Bu kaynağa bir yanıt yazmak istiyorsanız aşağıya tıklayın."
 msgid "FLAG THIS SOURCE FOR REPLY"
 msgstr "BU KAYNAĞI YANITLAMAK İÇİN İŞARETLEYİN"
 
-#, fuzzy
-#| msgid "Edit your account"
 msgid "Delete Source Account"
-msgstr "Hesabınızı düzenleyin"
+msgstr "Kaynak Hesabını Sil"
 
 msgid "Are you sure?"
-msgstr ""
+msgstr "Emin misiniz?"
 
 msgid "Yes, Delete Source Account"
-msgstr ""
+msgstr "Evet, Kaynak Hesabını Sil"
 
 msgid "Instance Configuration"
 msgstr "Örnek Yapılandırması"
@@ -672,10 +622,8 @@ msgstr "{username} kullanıcısını silmek istediğinize emin misiniz?"
 msgid "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr "{username} kullanıcısının iki aşamalı kimlik doğrulamasını sıfırlamak istediğinize emin misiniz?"
 
-#, fuzzy
-#| msgid "No collections selected."
 msgid "Sources selected: "
-msgstr "Herhangi bir derleme seçilmemiş."
+msgstr "Seçilmiş kaynaklar: "
 
 msgid "Login to access the journalist interface"
 msgstr "Gazeteci arayüzüne erişmek için oturum açın"
@@ -747,10 +695,10 @@ msgid "SecureDrop Home"
 msgstr "SecureDrop Anasayfa"
 
 msgid "We're sorry, our SecureDrop is currently offline."
-msgstr ""
+msgstr "Maalesef, SecureDrop şu anda çevrimdışı."
 
 msgid "Please try again later. Check our website for more information."
-msgstr ""
+msgstr "Lütfen bir süre sonra yeniden deneyin. Ayrıntılı bilgi almak için web sitemize bakabilirsiniz."
 
 msgid "LOG OUT"
 msgstr "OTURUMU KAPAT"
