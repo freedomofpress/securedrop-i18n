@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-02 16:37+0000\nLast-Translator: michaela-bot <michaela.rybickova@gmail.com>\nLanguage-Team: Czech <https://weblate.securedrop.org/projects/securedrop/securedrop/cs/>\nLanguage: cs\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-02 19:59+0000\nLast-Translator: michaela-bot <michaela.rybickova@gmail.com>\nLanguage-Team: Czech <https://weblate.securedrop.org/projects/securedrop/securedrop/cs/>\nLanguage: cs\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "před {time}"
@@ -221,8 +221,6 @@ msgstr[2] "{num} nepřečtených"
 msgid "When the account for a source is deleted:"
 msgstr "Pokud je účet zdroje smazán:"
 
-#, fuzzy
-#| msgid "The source will not be able to log in with their codename again."
 msgid "The source will no longer be able to log in with their codename."
 msgstr "Zdroj se již nebude moci přihlásit pod svým krycím jménem."
 
@@ -373,10 +371,8 @@ msgstr "Nemůžete načíst čárový kód? Můžete manuálně spárovat FreeOT
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Jakmile nastavíte svůj YubiKey, zadejte šesticiferný kód níže:"
 
-#, fuzzy
-#| msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Nezbytné zabezpečení:</strong> Operační systém vašich SecureDrop serverů dosáhl konce životnosti. Pro zprovoznění rozhraní pro zdroje a bezpečnou komunikaci je nutná manuální akutalizace. Kontaktujte svého administrátora.<a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Dozvědět se více</a>"
+msgstr "<strong>Nezbytné zabezpečení:</strong> Operační systém vašich SecureDrop serverů dosáhl konce životnosti. Pro bezpečné zprovoznění rozhraní pro zdroje je nutná manuální akutalizace. Kontaktujte svého administrátora.<a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Dozvědět se více</a>"
 
 #, fuzzy
 #| msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual update is urgently required to remain safe. Please contact your adminstrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
