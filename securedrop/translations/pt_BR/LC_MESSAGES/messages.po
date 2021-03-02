@@ -185,7 +185,7 @@ msgid "The files and messages have been deleted."
 msgstr "Todas as respostas foram apagadas"
 
 msgid "Name updated."
-msgstr "O seu nome foi atualizado."
+msgstr "Nome atualizado."
 
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "A senha enviada é inválida. Sua senha não foi alterada."
