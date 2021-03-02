@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop 0.4.3\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-01-24 19:37+0000\n"
-"Last-Translator: communiaa <ameaneantie@riseup.net>\n"
-"Language-Team: Portuguese (Brazil) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_BR/>\n"
-"Language: pt_BR\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.3.2\n"
-"Generated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.4.3\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-02 17:09+0000\nLast-Translator: Rodolfo Viana <rodolfoviana@protonmail.com>\nLanguage-Team: Portuguese (Brazil) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_BR/>\nLanguage: pt_BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "há {time}"
@@ -64,7 +52,7 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr "O código 2FA da.o usuária.o \"{user}\" foi verificado com sucesso."
 
 msgid "Name not updated: {}"
-msgstr "O seu nome não foi atualizado: {}"
+msgstr "Nome não atualizado: {}"
 
 msgid "Deleted user '{user}'."
 msgstr "Usuário/a '{user}' apagado/a."
