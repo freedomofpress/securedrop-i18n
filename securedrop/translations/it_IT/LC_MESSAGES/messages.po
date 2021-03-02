@@ -7,20 +7,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014
 # gio <gdamiola@gmail.com>, 2014
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-02-26 18:37+0000\n"
-"Last-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\n"
-"Language-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\n"
-"Language: it_IT\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
-"Generated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-02 10:45+0000\nLast-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\nLanguage-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} fa"
@@ -80,8 +67,6 @@ msgstr "Avviso di prova inviato. Controllare la propria casella email."
 msgid "Success!"
 msgstr "Completato!"
 
-#, fuzzy
-#| msgid "The account and data for the source {} has been deleted."
 msgid "The account and data for the source {} have been deleted."
 msgstr "L'account e i dati della fonte {} sono stati eliminati."
 
@@ -230,8 +215,6 @@ msgstr[1] "{num} non letti"
 msgid "When the account for a source is deleted:"
 msgstr "Quando l'account della fonte viene eliminato:"
 
-#, fuzzy
-#| msgid "The source will not be able to log in with their codename again."
 msgid "The source will no longer be able to log in with their codename."
 msgstr "La fonte non potrà più accedere con il proprio nome in codice."
 
@@ -248,7 +231,7 @@ msgid "Yes, Delete Selected Source Accounts"
 msgstr "Sì, elimina gli account delle fonti selezionate"
 
 msgid "What would you like to delete?"
-msgstr ""
+msgstr "Cosa si vuole eliminare?"
 
 msgid "Files and Messages"
 msgstr "File e messaggi"
@@ -382,15 +365,11 @@ msgstr "Impossibile eseguire la scansione del codice a barre? È possibile accop
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Una volta configurata la tua Yubikey, inserisci il codice a 6 cifre qui sotto:"
 
-#, fuzzy
-#| msgid "<strong>Critical Security:</strong> The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is urgently required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Sicurezza critica:</strong> il sistema operativo usato dai propri server SecureDrop ha raggiunto la fine del suo ciclo di vita. È urgentemente richiesto un aggiornamento manuale per rimanere al sicuro - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Maggiorni informazioni</a>"
+msgstr "<strong>Sicurezza critica:</strong> il sistema operativo usato dai propri server SecureDrop ha raggiunto la fine del suo ciclo di vita. È richiesto un aggiornamento manuale per abilitare nuovamente l'interfaccia per le fonti e rimanere al sicuro. Contattare il proprio amministartore. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Maggiorni informazioni</a>"
 
-#, fuzzy
-#| msgid "<strong>Critical Security:</strong> The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is urgently required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Sicurezza critica:</strong> il sistema operativo usato dai propri server SecureDrop ha raggiunto la fine del suo ciclo di vita. È urgentemente richiesto un aggiornamento manuale per rimanere al sicuro - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Maggiorni informazioni</a>"
+msgstr "<strong>Sicurezza critica:</strong> il sistema operativo usato dai propri server SecureDrop raggiungerà la fine del suo ciclo di vita il 30 aprile 2021. È urgentemente richiesto un aggiornamento manuale per rimanere al sicuro. Contattare il proprio amministartore. <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Maggiorni informazioni</a>"
 
 msgid "Logged on as"
 msgstr "Accesso eseguito come"
@@ -407,10 +386,8 @@ msgstr "Offerto da <em>SecureDrop {version}</em>."
 msgid "All Sources"
 msgstr "Tutte le fonti"
 
-#, fuzzy
-#| msgid "The documents are stored encrypted for security. To read them, you will need to decrypt them using GPG."
 msgid "All messages, files, and replies from sources are stored as encrypted files for security. To read them, you will need to decrypt them on your Secure Viewing Station."
-msgstr "I documenti sono archiviati in forma cifrata per ragioni di sicurezza. Per poterli leggere, è necessario decifrarli utilizzando GPG."
+msgstr "Tutti i messaggi, i file e le risposte della fonte sono archiviati in forma cifrata per ragioni di sicurezza. Per poterli leggere, è necessario decifrarli sulla propria Secure Viewing Station."
 
 msgid "Download Selected"
 msgstr "Scarica selezionati"
@@ -460,15 +437,11 @@ msgstr "Eliminare veramente gli invii selezionati?"
 msgid "DELETE"
 msgstr "ELIMINA"
 
-#, fuzzy
-#| msgid "No documents to display."
 msgid "No submissions to display."
-msgstr "Non ci sono documenti da visualizzare."
+msgstr "Non ci sono invii da visualizzare."
 
-#, fuzzy
-#| msgid "You can write a secure reply to the person who submitted these documents:"
 msgid "You can write a secure reply to the person who submitted these messages and/or files:"
-msgstr "Puoi scrivere una risposta sicura alla persona che ha inviato questi documenti:"
+msgstr "Puoi scrivere una risposta sicura alla persona che ha inviato questi messaggi e/o file:"
 
 msgid "You've flagged this source for reply."
 msgstr "Hai contrassegnato questa fonte per fornire una risposta."
@@ -482,16 +455,14 @@ msgstr "Fare clic qui sotto per scrivere una risposta a questa fonte."
 msgid "FLAG THIS SOURCE FOR REPLY"
 msgstr "CONTRASSEGNA QUESTA FONTE PER UNA RISPOSTA"
 
-#, fuzzy
-#| msgid "Edit your account"
 msgid "Delete Source Account"
-msgstr "Modifica il tuo account"
+msgstr "Eliminare l'account della fonte"
 
 msgid "Are you sure?"
-msgstr ""
+msgstr "Procedere veramente?"
 
 msgid "Yes, Delete Source Account"
-msgstr ""
+msgstr "Sì, eliminare l'account della fonte"
 
 msgid "Instance Configuration"
 msgstr "Configurazione istanza"
@@ -727,10 +698,10 @@ msgid "SecureDrop Home"
 msgstr "Home di SecureDrop"
 
 msgid "We're sorry, our SecureDrop is currently offline."
-msgstr ""
+msgstr "Spiacenti, SecureDrop è attualmente offline."
 
 msgid "Please try again later. Check our website for more information."
-msgstr ""
+msgstr "Riprovare più tardi. Consulate il nostro sito web per ulteriori informazioni."
 
 msgid "LOG OUT"
 msgstr "ESCI"
