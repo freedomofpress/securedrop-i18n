@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop 0.5-rc4\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-01-25 11:09+0000\n"
-"Last-Translator: John Hensley <john@freedom.press>\n"
-"Language-Team: Catalan <https://weblate.securedrop.org/projects/securedrop/securedrop/ca/>\n"
-"Language: ca\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
-"Generated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-02 19:59+0000\nLast-Translator: Joan Montané <joan@montane.cat>\nLanguage-Team: Catalan <https://weblate.securedrop.org/projects/securedrop/securedrop/ca/>\nLanguage: ca\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "fa {time}"
@@ -76,21 +64,15 @@ msgstr "S’ha enviat una alerta de prova. Reviseu la vostra safata de correu."
 msgid "Success!"
 msgstr "Finalitzat!"
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The account and data for the source {} have been deleted."
-msgstr "S'han suprimit totes les respostes"
+msgstr "S'han suprimit el compte i les dades de la font {}."
 
 #. Error shown when a user has not selected items to act on.
-#, fuzzy
-#| msgid "Download Selected"
 msgid "Nothing Selected"
-msgstr "Baixa la selecció"
+msgstr "No hi ha res seleccionat"
 
-#, fuzzy
-#| msgid "You must enter a message."
 msgid "You must select one or more items."
-msgstr "Cal que introduïu un missatge."
+msgstr "Cal que seleccioneu un o més elements."
 
 msgid "Your download failed because a file could not be found. An admin can find more information in the system and monitoring logs."
 msgstr "La baixada ha fallat perquè no s'ha pogut trobar un fitxer. Un administrador pot obtenir més informació en els registres de sistema i seguiment."
@@ -131,20 +113,14 @@ msgstr "Només podeu pujar fitxers d’imatge PNG."
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "S’ha produït un error inesperat! Informeu-ne l’administrador."
 
-#, fuzzy
-#| msgid "Thanks. Your reply has been stored."
 msgid "Your reply has been stored."
-msgstr "Gràcies. S'ha emmagatzemat la resposta."
+msgstr "S'ha emmagatzemat la resposta."
 
-#, fuzzy
-#| msgid "No collections selected for download."
 msgid "You must select one or more items for download"
-msgstr "No s’ha seleccionat cap col·lecció per baixar."
+msgstr "Cal que seleccioneu un o més elements per baixar."
 
-#, fuzzy
-#| msgid "No collections selected for deletion."
 msgid "You must select one or more items for deletion"
-msgstr "No s’ha seleccionat cap col·lecció per suprimir."
+msgstr "Cal que seleccioneu un o més elements per suprimir."
 
 msgid "No unread submissions for this source."
 msgstr "Aquesta font no té cap enviament sense llegir."
@@ -152,10 +128,8 @@ msgstr "Aquesta font no té cap enviament sense llegir."
 msgid "Account updated."
 msgstr "S’ha actualitzat el compte."
 
-#, fuzzy
-#| msgid "Login failed."
 msgid "<b>Login failed.</b>"
-msgstr "Ha fallat l’inici de la sessió."
+msgstr "<b>Ha fallat l’inici de la sessió.</b>"
 
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
@@ -171,30 +145,24 @@ msgstr "El format del secret no és vàlid: introduïu només lletres A-F i núm
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "El format del secret no és vàlid: la mida no coincideix. L’heu inserit correctament?"
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The item has been deleted."
 msgid_plural "{num} items have been deleted."
-msgstr[0] "S'han suprimit totes les respostes"
-msgstr[1] "S'han suprimit totes les respostes"
+msgstr[0] "S'ha suprimit l'element."
+msgstr[1] "S'han suprimit {num} elements."
 
 msgid "No collections selected for deletion."
 msgstr "No s’ha seleccionat cap col·lecció per suprimir."
 
 msgid "The account and all data for {n} source have been deleted."
 msgid_plural "The accounts and all data for {n} sources have been deleted."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "S'ha suprimit el compte i totes les dades d'{n} font."
+msgstr[1] "S'ha suprimit el compte i totes les dades de {n} fonts."
 
-#, fuzzy
-#| msgid "No collections selected for deletion."
 msgid "You must select one or more items for deletion."
-msgstr "No s’ha seleccionat cap col·lecció per suprimir."
+msgstr "Cal que seleccioneu un o més elements per suprimir."
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The files and messages have been deleted."
-msgstr "S'han suprimit totes les respostes"
+msgstr "S'han suprimit els fitxers i missatges."
 
 msgid "Name updated."
 msgstr "S'ha actualitzat el nom."
@@ -242,35 +210,31 @@ msgstr[0] "1 per llegir"
 msgstr[1] "{num} per llegir"
 
 msgid "When the account for a source is deleted:"
-msgstr ""
+msgstr "Quan se suprimeix el compte d'una font:"
 
 msgid "The source will no longer be able to log in with their codename."
-msgstr ""
+msgstr "La font ja no podrà iniciar sessió amb el seu nom en clau."
 
 msgid "You will not be able to send them replies."
-msgstr ""
+msgstr "Ja no podreu enviar-li respostes."
 
 msgid "All files and messages from that source will also be destroyed."
-msgstr ""
+msgstr "També es destruiran tots els missatges de la font."
 
 msgid "Are you sure this is what you want?"
-msgstr ""
+msgstr "Esteu segur que això és el que voleu?"
 
 msgid "Yes, Delete Selected Source Accounts"
-msgstr ""
+msgstr "Sí, suprimeix els comptes font seleccionats"
 
 msgid "What would you like to delete?"
-msgstr ""
+msgstr "Què us agradaria suprimir?"
 
-#, fuzzy
-#| msgid "Submit Files or Messages"
 msgid "Files and Messages"
-msgstr "Envia fitxers o missatges"
+msgstr "Fitxers i missatges"
 
-#, fuzzy
-#| msgid "Sources"
 msgid "Source Accounts"
-msgstr "Fonts"
+msgstr "Comptes de font"
 
 msgid "Change Secret"
 msgstr "Canvia el secret"
@@ -398,15 +362,11 @@ msgstr "No podeu escanejar el codi de barres? Podeu vincular manualment el FreeO
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Quan hàgiu configurat la YubiKey, introduïu aquest codi de sis dígits:"
 
-#, fuzzy
-#| msgid "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before April 30 to keep your SecureDrop servers online. Please contact your administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Actualització necessària</strong>&nbsp;&nbsp;Configureu la versió 3 dels serveis Onion abans del 30 d'abril per a mantenir els servidors de SecureDrop en línia. Contacteu amb l'administrador. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Més informació</a>"
+msgstr "<strong>Seguretat crítica</strong>&nbsp;&nbsp;El sistema operatiu usat pels vostres servidors SecureDrop han arribat al fina de la vida. Cal una actualització manual per a restablir la interfície de fonts i mantenir-se segur. Contacteu amb l'administrador. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Més informació</a>"
 
-#, fuzzy
-#| msgid "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before April 30 to keep your SecureDrop servers online. Please contact your administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Actualització necessària</strong>&nbsp;&nbsp;Configureu la versió 3 dels serveis Onion abans del 30 d'abril per a mantenir els servidors de SecureDrop en línia. Contacteu amb l'administrador. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Més informació</a>"
+msgstr "<strong>Seguretat crítica</strong>&nbsp;&nbsp;El sistema operatiu usat pels vostres servidors SecureDrop arribaran al final de la seva vida el 30 d'abril de 2021. Cal una actualització manual de forma urgent per a mantenir-se segur. Contacteu amb l'administrador. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Més informació</a>"
 
 msgid "Logged on as"
 msgstr "Sessió iniciada com a"
@@ -423,10 +383,8 @@ msgstr "Funciona amb <em>SecureDrop {version}</em>."
 msgid "All Sources"
 msgstr "Totes les fonts"
 
-#, fuzzy
-#| msgid "The documents are stored encrypted for security. To read them, you will need to decrypt them using GPG."
 msgid "All messages, files, and replies from sources are stored as encrypted files for security. To read them, you will need to decrypt them on your Secure Viewing Station."
-msgstr "Els documents s'emmagatzemen xifrats per seguretat. Per llegir-los, els haureu de desxifrar fent servir el GPG."
+msgstr "Tots els missatges, fitxers i respostes de les fonts s'emmagatzemen com a fitxers xifrats per seguretat. Per llegir-los, els haureu de desxifrar en la vostra estació de visualització segura."
 
 msgid "Download Selected"
 msgstr "Baixa la selecció"
@@ -470,23 +428,17 @@ msgstr "icona de missatge"
 msgid "Delete Confirmation"
 msgstr "Confirmació de supressió"
 
-#, fuzzy
-#| msgid "Are you sure you want to delete the selected documents?"
 msgid "Are you sure you want to delete the selected submissions?"
-msgstr "Segur que voleu suprimir els documents seleccionats?"
+msgstr "Segur que voleu suprimir els enviaments seleccionats?"
 
 msgid "DELETE"
 msgstr "SUPRIMEIX"
 
-#, fuzzy
-#| msgid "No documents to display."
 msgid "No submissions to display."
-msgstr "No hi ha cap document a mostrar."
+msgstr "No hi ha cap enviament a mostrar."
 
-#, fuzzy
-#| msgid "You can write a secure reply to the person who submitted these documents:"
 msgid "You can write a secure reply to the person who submitted these messages and/or files:"
-msgstr "Podeu escriure una resposta segura a la persona que ha enviat aquests documents:"
+msgstr "Podeu escriure una resposta segura a la persona que ha enviat aquests missatges o fitxers:"
 
 msgid "You've flagged this source for reply."
 msgstr "Heu marcat aquesta font per a respondre-li."
@@ -500,16 +452,14 @@ msgstr "Feu clic a sota si voleu escriure una resposta a aquesta font."
 msgid "FLAG THIS SOURCE FOR REPLY"
 msgstr "MARCA AQUESTA FONT PER A RESPONDRE-LI"
 
-#, fuzzy
-#| msgid "Edit your account"
 msgid "Delete Source Account"
-msgstr "Modifica el compte"
+msgstr "Suprimeix el compte font"
 
 msgid "Are you sure?"
-msgstr ""
+msgstr "N'esteu segur?"
 
 msgid "Yes, Delete Source Account"
-msgstr ""
+msgstr "Sí, suprimeix el compte font"
 
 msgid "Instance Configuration"
 msgstr "Configuració de la instància"
@@ -672,10 +622,8 @@ msgstr "Segur que voleu suprimir l'usuari {username}?"
 msgid "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr "Segur que voleu restablir l'autenticació de factor doble per a {username}?"
 
-#, fuzzy
-#| msgid "No collections selected."
 msgid "Sources selected: "
-msgstr "No s’ha seleccionat cap col·lecció."
+msgstr "Fonts seleccionades: "
 
 msgid "Login to access the journalist interface"
 msgstr "Inicieu la sessió per accedir a la interfície de periodista"
@@ -747,10 +695,10 @@ msgid "SecureDrop Home"
 msgstr "Inici del SecureDrop"
 
 msgid "We're sorry, our SecureDrop is currently offline."
-msgstr ""
+msgstr "Vaja, el nostre SecureDrop és fora de línia."
 
 msgid "Please try again later. Check our website for more information."
-msgstr ""
+msgstr "Torneu-ho a intentar més tard. Comproveu el nostre lloc web per a més informació."
 
 msgid "LOG OUT"
 msgstr "TANCA LA SESSIÓ"
