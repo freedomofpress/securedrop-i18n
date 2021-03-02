@@ -7,7 +7,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014
 # gio <gdamiola@gmail.com>, 2014
 msgid ""
-msgstr "Project-Id-Version: SecureDrop\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-02 10:45+0000\nLast-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\nLanguage-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-02 13:37+0000\nLast-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\nLanguage-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} fa"
@@ -158,8 +158,8 @@ msgstr "Nessun archivio è stato selezionato per essere eliminato."
 
 msgid "The account and all data for {n} source have been deleted."
 msgid_plural "The accounts and all data for {n} sources have been deleted."
-msgstr[0] "L'account è tutti i dati della fonte {n} sono stati eliminati."
-msgstr[1] "Gli account è tutti i dati delle fonti {n} sono stati eliminati."
+msgstr[0] "L'account è tutti i dati di {n} fonte sono stati eliminati."
+msgstr[1] "Gli account è tutti i dati di {n} fonti sono stati eliminati."
 
 msgid "You must select one or more items for deletion."
 msgstr "È necessario selezionare uno o più oggetti da eliminare."
@@ -462,7 +462,7 @@ msgid "Are you sure?"
 msgstr "Procedere veramente?"
 
 msgid "Yes, Delete Source Account"
-msgstr "Sì, eliminare l'account della fonte"
+msgstr "Sì, elimina l'account della fonte"
 
 msgid "Instance Configuration"
 msgstr "Configurazione istanza"
