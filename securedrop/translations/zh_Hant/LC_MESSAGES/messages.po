@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-03 00:44+0000\nLast-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\nLanguage-Team: Chinese (Traditional) <https://weblate.securedrop.org/projects/securedrop/securedrop/zh_Hant/>\nLanguage: zh_Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-03 02:37+0000\nLast-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\nLanguage-Team: Chinese (Traditional) <https://weblate.securedrop.org/projects/securedrop/securedrop/zh_Hant/>\nLanguage: zh_Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} 之前"
@@ -150,17 +150,13 @@ msgstr "未選擇要刪除的集件。"
 
 msgid "The account and all data for {n} source have been deleted."
 msgid_plural "The accounts and all data for {n} sources have been deleted."
-msgstr[0] ""
+msgstr[0] "這些帳號與{n}位線人的資料皆已刪除。"
 
-#, fuzzy
-#| msgid "No collections selected for deletion."
 msgid "You must select one or more items for deletion."
-msgstr "未選擇要刪除的集件。"
+msgstr "須至少選取一項要刪除的集件。"
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The files and messages have been deleted."
-msgstr "所有的回覆都已被删除"
+msgstr "所有的檔案與訊息都已删除。"
 
 msgid "Name updated."
 msgstr "名稱已更新。"
@@ -205,35 +201,31 @@ msgid_plural "{num} unread"
 msgstr[0] "{num} 未讀"
 
 msgid "When the account for a source is deleted:"
-msgstr ""
+msgstr "若某位線人的帳號被刪除："
 
 msgid "The source will no longer be able to log in with their codename."
-msgstr ""
+msgstr "這名線人將無法再利用其代碼名登入。"
 
 msgid "You will not be able to send them replies."
-msgstr ""
+msgstr "您將無法向其傳送回覆。"
 
 msgid "All files and messages from that source will also be destroyed."
-msgstr ""
+msgstr "此位線人的檔案與訊息已被銷毀。"
 
 msgid "Are you sure this is what you want?"
-msgstr ""
+msgstr "確定要這麼做？"
 
 msgid "Yes, Delete Selected Source Accounts"
-msgstr ""
+msgstr "是的，刪除選取的安全帳號"
 
 msgid "What would you like to delete?"
-msgstr ""
+msgstr "您要刪除什麼？"
 
-#, fuzzy
-#| msgid "Submit Files or Messages"
 msgid "Files and Messages"
-msgstr "提交檔案和訊息"
+msgstr "檔案和訊息"
 
-#, fuzzy
-#| msgid "Sources"
 msgid "Source Accounts"
-msgstr "線人消息源"
+msgstr "線人帳號"
 
 msgid "Change Secret"
 msgstr "更改動能態密碼"
@@ -361,15 +353,11 @@ msgstr "無法掃描條碼？您可以輸入以下雙重驗證密鑰以便手動
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "設定 Yubikey 後，請在下面輸入 6 位數字代碼："
 
-#, fuzzy
-#| msgid "<strong>Critical Security:</strong> The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is urgently required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>重要安全課題:</strong> SecureDrop 伺服器作業系統已逾使用年限，亟需手動更新以維持安全。 - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">進一步了解</a>"
+msgstr "<strong>重要安全課題：</strong> &nbsp;&nbsp;SecureDrop 伺服器作業系統已逾使用年限，亟需手動更新才能啟用線人界面與維持安全。請聯絡網管人員 - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">了解進一步資訊</a>"
 
-#, fuzzy
-#| msgid "<strong>Critical Security:</strong> The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is urgently required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>重要安全課題:</strong> SecureDrop 伺服器作業系統已逾使用年限，亟需手動更新以維持安全。 - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">進一步了解</a>"
+msgstr "<strong>重要安全課題:</strong> &nbsp;&nbsp;SecureDrop 伺服器作業系統將在月30日超過使用年限，亟需手動更新以維持安全。 請聯絡網管人員 <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">了解詳情</a>"
 
 msgid "Logged on as"
 msgstr "登入為"
@@ -386,10 +374,8 @@ msgstr "由 <em> SecureDrop {version}</em> 搭建。"
 msgid "All Sources"
 msgstr "所有線人消息來源"
 
-#, fuzzy
-#| msgid "The documents are stored encrypted for security. To read them, you will need to decrypt them using GPG."
 msgid "All messages, files, and replies from sources are stored as encrypted files for security. To read them, you will need to decrypt them on your Secure Viewing Station."
-msgstr "為安全起見，所有文件都經加密儲存。須以 GPG 解密方可查閱文件。"
+msgstr "為安全起見，所有來自線人的訊息、檔案與回覆都經加密儲存。須透過檢視安全平台解密方可查閱。"
 
 msgid "Download Selected"
 msgstr "下載所選的部份"
@@ -433,23 +419,17 @@ msgstr "訊息圖示"
 msgid "Delete Confirmation"
 msgstr "刪除確認動作"
 
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected submissions?"
 msgid "Are you sure you want to delete the selected submissions?"
-msgstr "確認要删除所選的 {size} 大小的提交？"
+msgstr "確認要删除選取的提交資料？"
 
 msgid "DELETE"
 msgstr "删除"
 
-#, fuzzy
-#| msgid "No documents to display."
 msgid "No submissions to display."
-msgstr "無文件可顯示。"
+msgstr "無提收文件顯示。"
 
-#, fuzzy
-#| msgid "You can write a secure reply to the person who submitted these documents:"
 msgid "You can write a secure reply to the person who submitted these messages and/or files:"
-msgstr "您可以撰寫安全的回覆訊息給文件提交者："
+msgstr "您可以撰寫安全的回覆訊息給提交者："
 
 msgid "You've flagged this source for reply."
 msgstr "您已把這名線人標記為待回覆。"
@@ -463,16 +443,14 @@ msgstr "如要回覆此名線人，請點擊下方。"
 msgid "FLAG THIS SOURCE FOR REPLY"
 msgstr "請對此位線人加註旗誌，以進行回覆"
 
-#, fuzzy
-#| msgid "Edit your account"
 msgid "Delete Source Account"
-msgstr "編輯你的帳戶"
+msgstr "刪除線人帳號"
 
 msgid "Are you sure?"
-msgstr ""
+msgstr "確定嗎？"
 
 msgid "Yes, Delete Source Account"
-msgstr ""
+msgstr "是的，請刪除線人帳號"
 
 msgid "Instance Configuration"
 msgstr "架設主機設定"
@@ -634,10 +612,8 @@ msgstr "確認要刪除這名 {username} 用戶？"
 msgid "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr "確認要重置 {username} 的雙因素驗證？"
 
-#, fuzzy
-#| msgid "No collections selected."
 msgid "Sources selected: "
-msgstr "並未選擇任何的集件。"
+msgstr "選取的線人： "
 
 msgid "Login to access the journalist interface"
 msgstr "登入記者使用介面"
@@ -709,10 +685,10 @@ msgid "SecureDrop Home"
 msgstr "SecureDrop 首頁"
 
 msgid "We're sorry, our SecureDrop is currently offline."
-msgstr ""
+msgstr "抱歉，目前  SecureDrop  關機維修。"
 
 msgid "Please try again later. Check our website for more information."
-msgstr ""
+msgstr "請稍後再試或查看官網取得更多資訊。"
 
 msgid "LOG OUT"
 msgstr "登出"
