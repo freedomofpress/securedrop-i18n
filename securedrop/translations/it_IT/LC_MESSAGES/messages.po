@@ -7,7 +7,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014
 # gio <gdamiola@gmail.com>, 2014
 msgid ""
-msgstr "Project-Id-Version: SecureDrop\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-02 19:59+0000\nLast-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\nLanguage-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-03 12:37+0000\nLast-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\nLanguage-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} fa"
@@ -213,13 +213,13 @@ msgstr[0] "1 non letto"
 msgstr[1] "{num} non letti"
 
 msgid "When the account for a source is deleted:"
-msgstr "Quando l'account della fonte viene eliminato:"
+msgstr "Quando l'account di una fonte viene eliminato:"
 
 msgid "The source will no longer be able to log in with their codename."
 msgstr "La fonte non potrà più accedere con il proprio nome in codice."
 
 msgid "You will not be able to send them replies."
-msgstr "Non sarà più possibile inviare risposte alle fonti."
+msgstr "Non sarà più possibile inviare risposte alla fonte."
 
 msgid "All files and messages from that source will also be destroyed."
 msgstr "Anche tutti i file e i messaggi inviati da quella fonte verranno distrutti."
@@ -276,7 +276,7 @@ msgid "Enable YubiKey (OATH-HOTP)"
 msgstr "Abilita Yubikey (OATH-HOTP)"
 
 msgid "Once you have configured your YubiKey, enter the 6-digit verification code below:"
-msgstr "Una volta configurata la propria Yubikey, inserisci il codice di verifica a 6 cifre qui sotto:"
+msgstr "Una volta configurata la tua Yubikey, inserisci il codice di verifica a 6 cifre qui sotto:"
 
 msgid "Verification code"
 msgstr "Codice di verifica"
