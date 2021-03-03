@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-03 14:16+0000\nLast-Translator: michaela-bot <michaela.rybickova@gmail.com>\nLanguage-Team: Czech <https://weblate.securedrop.org/projects/securedrop/securedrop/cs/>\nLanguage: cs\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-03 17:37+0000\nLast-Translator: Honza Cibulka <honza@datastory.cz>\nLanguage-Team: Czech <https://weblate.securedrop.org/projects/securedrop/securedrop/cs/>\nLanguage: cs\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "před {time}"
@@ -231,7 +231,7 @@ msgid "All files and messages from that source will also be destroyed."
 msgstr "Všechny soubory a zprávy od tohoto zdroje budou zničeny."
 
 msgid "Are you sure this is what you want?"
-msgstr "Jste si jisti že to chcete udělat?"
+msgstr "Jste si jistí, že to chcete udělat?"
 
 msgid "Yes, Delete Selected Source Accounts"
 msgstr "Ano, smazat účty vybraných zdrojů"
@@ -393,7 +393,7 @@ msgid "All Sources"
 msgstr "Všechny zdroje"
 
 msgid "All messages, files, and replies from sources are stored as encrypted files for security. To read them, you will need to decrypt them on your Secure Viewing Station."
-msgstr "Všechny zprávy, soubory a odpovědi od zdrojů jsou kvůli zabezpečení ukládány jako šifrované soubory. Před přečtením je musíte dešifrovat na vašem bezpečném počítači (Secure Viewing Station)."
+msgstr "Všechny zprávy, soubory a odpovědi od zdrojů jsou kvůli zabezpečení ukládány jako šifrované soubory. Pro přečtení je musíte dešifrovat na vašem bezpečném počítači (Secure Viewing Station)."
 
 msgid "Download Selected"
 msgstr "Stáhnout vybrané"
@@ -708,7 +708,7 @@ msgid "We're sorry, our SecureDrop is currently offline."
 msgstr "Omlouváme se, náš SecureDrop je aktuálně offline."
 
 msgid "Please try again later. Check our website for more information."
-msgstr "Zkuste to prosím později. Více informací najdete na naší stránce."
+msgstr "Zkuste to prosím později. Více informací najdete na naší webové stránce."
 
 msgid "LOG OUT"
 msgstr "ODHLÁSIT SE"
