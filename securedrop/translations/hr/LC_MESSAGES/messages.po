@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop 1.3.0~rc1\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-01-26 15:53+0000\n"
-"Last-Translator: John Hensley <john@freedom.press>\n"
-"Language-Team: Croatian <https://weblate.securedrop.org/projects/securedrop/securedrop/hr/>\n"
-"Language: hr\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.3.2\n"
-"Generated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 1.3.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-03 12:37+0000\nLast-Translator: Igor K. <igorkrainovic@gmail.com>\nLanguage-Team: Croatian <https://weblate.securedrop.org/projects/securedrop/securedrop/hr/>\nLanguage: hr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "prije {time}"
@@ -76,21 +64,15 @@ msgstr "Testni alarm poslan. Molimo provjerite svoj email."
 msgid "Success!"
 msgstr "Uspjeh!"
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The account and data for the source {} have been deleted."
-msgstr "Svi odgovori obrisani"
+msgstr "Račun i podaci za izvor {} su obrisani."
 
 #. Error shown when a user has not selected items to act on.
-#, fuzzy
-#| msgid "Download Selected"
 msgid "Nothing Selected"
-msgstr "Preuzmi odabrano"
+msgstr "Ništa nije odabrano"
 
-#, fuzzy
-#| msgid "You must enter a message."
 msgid "You must select one or more items."
-msgstr "Morate unijeti poruku."
+msgstr "Morate odabrati jednu ili više stavki."
 
 msgid "Your download failed because a file could not be found. An admin can find more information in the system and monitoring logs."
 msgstr "Vaše preuzimanje nije uspjelo jer datoteka nije pronađena. Administrator može pronaći više informacija u zapisima sustava i nadzora."
@@ -134,20 +116,14 @@ msgstr "Možete postaviti samo slike PNG formata."
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Došlo je do neočekivane greške! Molimo obavijestite svog administratora."
 
-#, fuzzy
-#| msgid "Thanks. Your reply has been stored."
 msgid "Your reply has been stored."
-msgstr "Hvala. Vaš odgovor je pohranjen."
+msgstr "Vaš odgovor je pohranjen."
 
-#, fuzzy
-#| msgid "No collections selected for download."
 msgid "You must select one or more items for download"
-msgstr "Nisu odabrane kolekcije za preuzimanje."
+msgstr "Morate odabrati jednu ili više stavki za preuzimanje"
 
-#, fuzzy
-#| msgid "No collections selected for deletion."
 msgid "You must select one or more items for deletion"
-msgstr "Nisu odabrane kolekcije za brisanje."
+msgstr "Morate odabrati jednu ili više stavki za brisanje"
 
 msgid "No unread submissions for this source."
 msgstr "Nema nepročitanih predaja za ovaj izvor."
@@ -155,10 +131,8 @@ msgstr "Nema nepročitanih predaja za ovaj izvor."
 msgid "Account updated."
 msgstr "Račun ažuriran."
 
-#, fuzzy
-#| msgid "Login failed."
 msgid "<b>Login failed.</b>"
-msgstr "Prijava neuspjela."
+msgstr "<b>Prijava neuspjela.</b>"
 
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
@@ -175,32 +149,26 @@ msgstr "Neispravan format tajne: molimo unesite samo slova od A do F i brojeve o
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "Neispravan format tajne: neparna duljina tajne. Jeste li krivo natipkali tajnu?"
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The item has been deleted."
 msgid_plural "{num} items have been deleted."
-msgstr[0] "Svi odgovori obrisani"
-msgstr[1] "Svi odgovori obrisani"
-msgstr[2] "Svi odgovori obrisani"
+msgstr[0] "Stavka obrisana."
+msgstr[1] "{num} stavke obrisane"
+msgstr[2] "{num} stavki obrisano"
 
 msgid "No collections selected for deletion."
 msgstr "Nisu odabrane kolekcije za brisanje."
 
 msgid "The account and all data for {n} source have been deleted."
 msgid_plural "The accounts and all data for {n} sources have been deleted."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Račun i svi podaci za {n} izvor su obrisani."
+msgstr[1] "Račun i svi podaci za {n} izvora su obrisani."
+msgstr[2] "Račun i podaci za {n} izvora su obrisani."
 
-#, fuzzy
-#| msgid "No collections selected for deletion."
 msgid "You must select one or more items for deletion."
-msgstr "Nisu odabrane kolekcije za brisanje."
+msgstr "Morate odabrati jednu ili više stavki za brisanje."
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The files and messages have been deleted."
-msgstr "Svi odgovori obrisani"
+msgstr "Datoteke i poruke su obrisani."
 
 msgid "Name updated."
 msgstr "Ime ažurirano."
@@ -251,35 +219,31 @@ msgstr[1] "{num} nepročitane"
 msgstr[2] "{num} nepročitanih"
 
 msgid "When the account for a source is deleted:"
-msgstr ""
+msgstr "Kad je račun izvora obrisan:"
 
 msgid "The source will no longer be able to log in with their codename."
-msgstr ""
+msgstr "Izvor se više neće moći prijaviti svojim kodnim imenom."
 
 msgid "You will not be able to send them replies."
-msgstr ""
+msgstr "Nećete mu/joj moći slati odgovore."
 
 msgid "All files and messages from that source will also be destroyed."
-msgstr ""
+msgstr "Sve datoteke i poruke tog izvora će također biti uništene."
 
 msgid "Are you sure this is what you want?"
-msgstr ""
+msgstr "Jeste li sigurni da to želite?"
 
 msgid "Yes, Delete Selected Source Accounts"
-msgstr ""
+msgstr "Da, obriši odabrane račune izvora"
 
 msgid "What would you like to delete?"
-msgstr ""
+msgstr "Što bi htjeli obrisati?"
 
-#, fuzzy
-#| msgid "Submit Files or Messages"
 msgid "Files and Messages"
-msgstr "Predaj datoteke ili poruke"
+msgstr "Datoteke i poruke"
 
-#, fuzzy
-#| msgid "Sources"
 msgid "Source Accounts"
-msgstr "Izvori"
+msgstr "Računi izvora"
 
 msgid "Change Secret"
 msgstr "Promjeni tajnu"
@@ -407,15 +371,11 @@ msgstr "Ne možete skenirati barkod? Možete ručno upariti FreeOTP s ovim raču
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Nakon što konfigurirate YubiKey, unesite 6-znamenkasti kod ispod:"
 
-#, fuzzy
-#| msgid "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before April 30 to keep your SecureDrop servers online. Please contact your administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Potrebno ažuriranje</strong>&nbsp;&nbsp;Postavite v3 Onion usluge prije 30. travnja kako bi Vaš SecureDrop poslužitelj ostao online. Obratite se svom administratoru.<a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Saznaj više</a>"
+msgstr "<strong>Sigurnost kritična</strong>&nbsp;&nbsp;Operativni sustav kojeg koristi Vaš SecureDrop server je dosegnuo kraj podrške. Potrebna je ručna nadogradnja kako bi se omogućilo Sučelje izvora i kako bi ostali sigurni. Obratite se svom administratoru.<a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Saznaj više</a>"
 
-#, fuzzy
-#| msgid "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before April 30 to keep your SecureDrop servers online. Please contact your administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Potrebno ažuriranje</strong>&nbsp;&nbsp;Postavite v3 Onion usluge prije 30. travnja kako bi Vaš SecureDrop poslužitelj ostao online. Obratite se svom administratoru.<a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Saznaj više</a>"
+msgstr "<strong>Potrebno ažuriranje</strong>&nbsp;&nbsp;Operativni sustav kojeg koristi Vaš SecureDrop server je dosegnuo kraj podrške 30. travnja 2021. Potrebna je hitna ručna nadogradnja kako bi ostali sigurni. Obratite se svom administratoru.<a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Saznaj više</a>"
 
 msgid "Logged on as"
 msgstr "Prijavljen kao"
@@ -432,10 +392,8 @@ msgstr "Powered by <em>SecureDrop {version}</em>."
 msgid "All Sources"
 msgstr "Svi izvori"
 
-#, fuzzy
-#| msgid "The documents are stored encrypted for security. To read them, you will need to decrypt them using GPG."
 msgid "All messages, files, and replies from sources are stored as encrypted files for security. To read them, you will need to decrypt them on your Secure Viewing Station."
-msgstr "Dokumenti se spremaju enkriptirani zbog sigurnosti. Kako bi ih čitali, morate ih dekriptirati GPG-om."
+msgstr "Svi dokumenti, datoteke i odgovori izvora se spremaju kao enkriptirane datoteke zbog sigurnosti. Kako bi ih čitali, morate ih dekriptirati na svojoj Stanici za sigurno pregledavanje."
 
 msgid "Download Selected"
 msgstr "Preuzmi odabrano"
@@ -479,23 +437,17 @@ msgstr "ikona poruka"
 msgid "Delete Confirmation"
 msgstr "Potvrda brisanja"
 
-#, fuzzy
-#| msgid "Are you sure you want to delete the selected documents?"
 msgid "Are you sure you want to delete the selected submissions?"
-msgstr "Jeste li sigurni da želite obrisati odabrane dokumente?"
+msgstr "Jeste li sigurni da želite obrisati odabrane predaje?"
 
 msgid "DELETE"
 msgstr "Obriši"
 
-#, fuzzy
-#| msgid "No documents to display."
 msgid "No submissions to display."
-msgstr "Nema dokumenata za prikaz."
+msgstr "Nema predaja za prikaz."
 
-#, fuzzy
-#| msgid "You can write a secure reply to the person who submitted these documents:"
 msgid "You can write a secure reply to the person who submitted these messages and/or files:"
-msgstr "Možete napisati siguran odgovor osobi koja je predala ove dokumente:"
+msgstr "Možete napisati siguran odgovor osobi koja je predala ove poruke i/ili datoteke:"
 
 msgid "You've flagged this source for reply."
 msgstr "Označili ste ovaj izvor za odgovaranje."
@@ -509,16 +461,14 @@ msgstr "Kliknite ispod ako želite napisati odgovor na ovaj izvor."
 msgid "FLAG THIS SOURCE FOR REPLY"
 msgstr "Označi ovaj izvor za odgovaranje"
 
-#, fuzzy
-#| msgid "Edit your account"
 msgid "Delete Source Account"
-msgstr "Uredite svoj račun"
+msgstr "Obriši račun izvora"
 
 msgid "Are you sure?"
-msgstr ""
+msgstr "Jeste li sigurni?"
 
 msgid "Yes, Delete Source Account"
-msgstr ""
+msgstr "Da, obriši račun izvora"
 
 msgid "Instance Configuration"
 msgstr "Konfiguracija instance"
@@ -682,10 +632,8 @@ msgstr "Jeste li sigurni da želite obrisati korisnika {username}?"
 msgid "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr "Jeste li sigurni da želite ponovno postaviti dvofaktorsku autentikaciju za korisnika {username}?"
 
-#, fuzzy
-#| msgid "No collections selected."
 msgid "Sources selected: "
-msgstr "Nisu odabrane kolekcije."
+msgstr "Odabrani izvori: "
 
 msgid "Login to access the journalist interface"
 msgstr "Prijavite se za pristup na novinarsko sučelje"
@@ -757,10 +705,10 @@ msgid "SecureDrop Home"
 msgstr "SecureDrop Home"
 
 msgid "We're sorry, our SecureDrop is currently offline."
-msgstr ""
+msgstr "Žao nam je, naš SecureDrop je trenutno nedostupan."
 
 msgid "Please try again later. Check our website for more information."
-msgstr ""
+msgstr "Molimo pokušajte ponovno. Provjerite našu web stranicu za više informacija."
 
 msgid "LOG OUT"
 msgstr "Odjava"
