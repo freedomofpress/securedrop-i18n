@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 1.3.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-03 12:37+0000\nLast-Translator: Igor K. <igorkrainovic@gmail.com>\nLanguage-Team: Croatian <https://weblate.securedrop.org/projects/securedrop/securedrop/hr/>\nLanguage: hr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 1.3.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-03 17:37+0000\nLast-Translator: Igor K. <igorkrainovic@gmail.com>\nLanguage-Team: Croatian <https://weblate.securedrop.org/projects/securedrop/securedrop/hr/>\nLanguage: hr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "prije {time}"
@@ -152,8 +152,8 @@ msgstr "Neispravan format tajne: neparna duljina tajne. Jeste li krivo natipkali
 msgid "The item has been deleted."
 msgid_plural "{num} items have been deleted."
 msgstr[0] "Stavka obrisana."
-msgstr[1] "{num} stavke obrisane"
-msgstr[2] "{num} stavki obrisano"
+msgstr[1] "{num} stavke obrisane."
+msgstr[2] "{num} stavki obrisano."
 
 msgid "No collections selected for deletion."
 msgstr "Nisu odabrane kolekcije za brisanje."
@@ -199,15 +199,15 @@ msgstr "ikona prazne zijezdice"
 
 msgid "1 doc"
 msgid_plural "{num} docs"
-msgstr[0] "1 dokument{num} dokumenta{num} dokumenata"
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "1 dokument"
+msgstr[1] "{num} dokumenta"
+msgstr[2] "{num} dokumenata"
 
 msgid "1 message"
 msgid_plural "{num} messages"
-msgstr[0] "1 poruka{num} poruke{num} poruka"
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "1 poruka"
+msgstr[1] "{num} poruke"
+msgstr[2] "{num} poruka"
 
 msgid "download icon"
 msgstr "ikona preuzimanja"
@@ -375,7 +375,7 @@ msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used 
 msgstr "<strong>Sigurnost kritična</strong>&nbsp;&nbsp;Operativni sustav kojeg koristi Vaš SecureDrop server je dosegnuo kraj podrške. Potrebna je ručna nadogradnja kako bi se omogućilo Sučelje izvora i kako bi ostali sigurni. Obratite se svom administratoru.<a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Saznaj više</a>"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Potrebno ažuriranje</strong>&nbsp;&nbsp;Operativni sustav kojeg koristi Vaš SecureDrop server je dosegnuo kraj podrške 30. travnja 2021. Potrebna je hitna ručna nadogradnja kako bi ostali sigurni. Obratite se svom administratoru.<a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Saznaj više</a>"
+msgstr "<strong>Sigurnost kritična</strong>&nbsp;&nbsp;Operativni sustav kojeg koristi Vaš SecureDrop server će dosegnuti kraj podrške 30. travnja 2021. Potrebna je hitna ručna nadogradnja kako bi ostali sigurni. Obratite se svom administratoru.<a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Saznaj više</a>"
 
 msgid "Logged on as"
 msgstr "Prijavljen kao"
