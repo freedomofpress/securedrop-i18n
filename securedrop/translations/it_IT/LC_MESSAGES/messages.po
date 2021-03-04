@@ -7,7 +7,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014
 # gio <gdamiola@gmail.com>, 2014
 msgid ""
-msgstr "Project-Id-Version: SecureDrop\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-03 12:37+0000\nLast-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\nLanguage-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-04 07:54+0000\nLast-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\nLanguage-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} fa"
@@ -336,7 +336,7 @@ msgid "Username can contain spaces"
 msgstr "Il nome utente può contenere spazi"
 
 msgid "Username is case-sensitive"
-msgstr "Il nome utente è sensibile alle maiuscole"
+msgstr "Il nome utente differenzia le maiuscole dalle minuscole"
 
 msgid "First name"
 msgstr "Nome"
@@ -363,7 +363,7 @@ msgid "Can't scan the barcode? You can manually pair FreeOTP with this account b
 msgstr "Impossibile eseguire la scansione del codice a barre? È possibile accoppiare manualmente FreeOTP con questo account inserendo il seguente codice a due fattori nell'applicazione:"
 
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
-msgstr "Una volta configurata la tua Yubikey, inserisci il codice a 6 cifre qui sotto:"
+msgstr "Una volta configurata la tua Yubikey, inserisci il codice di 6 cifre qui sotto:"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr "<strong>Sicurezza critica:</strong> il sistema operativo usato dai propri server SecureDrop ha raggiunto la fine del suo ciclo di vita. È richiesto un aggiornamento manuale per abilitare nuovamente l'interfaccia per le fonti e rimanere al sicuro. Contattare il proprio amministartore. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Maggiorni informazioni</a>"
