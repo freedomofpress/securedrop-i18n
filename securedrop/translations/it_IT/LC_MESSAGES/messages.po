@@ -7,7 +7,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014
 # gio <gdamiola@gmail.com>, 2014
 msgid ""
-msgstr "Project-Id-Version: SecureDrop\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-04 07:54+0000\nLast-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\nLanguage-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-04 17:37+0000\nLast-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\nLanguage-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} fa"
@@ -366,10 +366,10 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Una volta configurata la tua Yubikey, inserisci il codice di 6 cifre qui sotto:"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Sicurezza critica:</strong> il sistema operativo usato dai propri server SecureDrop ha raggiunto la fine del suo ciclo di vita. È richiesto un aggiornamento manuale per abilitare nuovamente l'interfaccia per le fonti e rimanere al sicuro. Contattare il proprio amministartore. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Maggiorni informazioni</a>"
+msgstr "<strong>Sicurezza critica:</strong>&nbsp;&nbsp;il sistema operativo usato dai propri server SecureDrop ha raggiunto la fine del suo ciclo di vita. È richiesto un aggiornamento manuale per abilitare nuovamente l'interfaccia per le fonti e rimanere al sicuro. Contattare il proprio amministartore. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Maggiorni informazioni</a>"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Sicurezza critica:</strong> il sistema operativo usato dai propri server SecureDrop raggiungerà la fine del suo ciclo di vita il 30 aprile 2021. È urgentemente richiesto un aggiornamento manuale per rimanere al sicuro. Contattare il proprio amministartore. <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Maggiorni informazioni</a>"
+msgstr "<strong>Sicurezza critica:</strong>&nbsp;&nbsp;il sistema operativo usato dai propri server SecureDrop raggiungerà la fine del suo ciclo di vita il 30 aprile 2021. È urgentemente richiesto un aggiornamento manuale per rimanere al sicuro. Contattare il proprio amministartore. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Maggiorni informazioni</a>"
 
 msgid "Logged on as"
 msgstr "Accesso eseguito come"
@@ -387,7 +387,7 @@ msgid "All Sources"
 msgstr "Tutte le fonti"
 
 msgid "All messages, files, and replies from sources are stored as encrypted files for security. To read them, you will need to decrypt them on your Secure Viewing Station."
-msgstr "Tutti i messaggi, i file e le risposte della fonte sono archiviati in forma cifrata per ragioni di sicurezza. Per poterli leggere, è necessario decifrarli sulla propria Secure Viewing Station."
+msgstr "Tutti i messaggi, i file e le risposte delle fonti sono archiviati in forma cifrata per ragioni di sicurezza. Per poterli leggere, è necessario decifrarli sulla propria Secure Viewing Station."
 
 msgid "Download Selected"
 msgstr "Scarica selezionati"
