@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-02 19:59+0000\nLast-Translator: Joan Montané <joan@montane.cat>\nLanguage-Team: Catalan <https://weblate.securedrop.org/projects/securedrop/securedrop/ca/>\nLanguage: ca\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-04 17:37+0000\nLast-Translator: Benet (BennyBeat) R. i Camps <bennybeat@gmail.com>\nLanguage-Team: Catalan <https://weblate.securedrop.org/projects/securedrop/securedrop/ca/>\nLanguage: ca\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "fa {time}"
@@ -222,7 +222,7 @@ msgid "All files and messages from that source will also be destroyed."
 msgstr "També es destruiran tots els missatges de la font."
 
 msgid "Are you sure this is what you want?"
-msgstr "Esteu segur que això és el que voleu?"
+msgstr "Segur que això és el que voleu?"
 
 msgid "Yes, Delete Selected Source Accounts"
 msgstr "Sí, suprimeix els comptes font seleccionats"
@@ -363,10 +363,10 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Quan hàgiu configurat la YubiKey, introduïu aquest codi de sis dígits:"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Seguretat crítica</strong>&nbsp;&nbsp;El sistema operatiu usat pels vostres servidors SecureDrop han arribat al fina de la vida. Cal una actualització manual per a restablir la interfície de fonts i mantenir-se segur. Contacteu amb l'administrador. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Més informació</a>"
+msgstr "<strong>Seguretat crítica</strong>&nbsp;&nbsp;El sistema operatiu usat pels servidors del vostre SecureDrop ha assolit el final de cicle. Cal una actualització manual per restablir la interfície de fonts i mantenir-se segur. Contacteu amb l'administrador. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Més informació</a>"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Seguretat crítica</strong>&nbsp;&nbsp;El sistema operatiu usat pels vostres servidors SecureDrop arribaran al final de la seva vida el 30 d'abril de 2021. Cal una actualització manual de forma urgent per a mantenir-se segur. Contacteu amb l'administrador. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Més informació</a>"
+msgstr "<strong>Seguretat crítica</strong>&nbsp;&nbsp;El sistema operatiu usat pels servidors del vostre SecureDrop assolirà el final de cicle el 30 d'abril de 2021. Cal una actualització manual de forma urgent per a mantenir-se segur. Contacteu amb l'administrador. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Més informació</a>"
 
 msgid "Logged on as"
 msgstr "Sessió iniciada com a"
@@ -384,7 +384,7 @@ msgid "All Sources"
 msgstr "Totes les fonts"
 
 msgid "All messages, files, and replies from sources are stored as encrypted files for security. To read them, you will need to decrypt them on your Secure Viewing Station."
-msgstr "Tots els missatges, fitxers i respostes de les fonts s'emmagatzemen com a fitxers xifrats per seguretat. Per llegir-los, els haureu de desxifrar en la vostra estació de visualització segura."
+msgstr "Per motius de seguretat, tots els missatges, fitxers i respostes de les fonts s'emmagatzemen com a fitxers xifrats. Per llegir-los, desxifreu-los únicament en un dispositiu de visualització segura."
 
 msgid "Download Selected"
 msgstr "Baixa la selecció"
@@ -435,7 +435,7 @@ msgid "DELETE"
 msgstr "SUPRIMEIX"
 
 msgid "No submissions to display."
-msgstr "No hi ha cap enviament a mostrar."
+msgstr "No hi ha cap enviament per mostrar."
 
 msgid "You can write a secure reply to the person who submitted these messages and/or files:"
 msgstr "Podeu escriure una resposta segura a la persona que ha enviat aquests missatges o fitxers:"
@@ -698,7 +698,7 @@ msgid "We're sorry, our SecureDrop is currently offline."
 msgstr "Vaja, el nostre SecureDrop és fora de línia."
 
 msgid "Please try again later. Check our website for more information."
-msgstr "Torneu-ho a intentar més tard. Comproveu el nostre lloc web per a més informació."
+msgstr "Torneu a provar més tard. Per a més informació, comproveu el nostre lloc web."
 
 msgid "LOG OUT"
 msgstr "TANCA LA SESSIÓ"
