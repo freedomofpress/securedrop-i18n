@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.8.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-01 12:37+0000\nLast-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\nLanguage-Team: Greek <https://weblate.securedrop.org/projects/securedrop/securedrop/el/>\nLanguage: el\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.8.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-04 17:37+0000\nLast-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\nLanguage-Team: Greek <https://weblate.securedrop.org/projects/securedrop/securedrop/el/>\nLanguage: el\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "πριν από {time}"
@@ -64,10 +64,8 @@ msgstr "Η δοκιμαστική ειδοποίηση στάλθηκε. Παρ�
 msgid "Success!"
 msgstr "Επιτυχία!"
 
-#, fuzzy
-#| msgid "The account and data for the source {} has been deleted."
 msgid "The account and data for the source {} have been deleted."
-msgstr "Ο λογαριασμός και τα δεδομένα της πηγής {} έχουν διαγραφτεί."
+msgstr "Ο λογαριασμός και τα δεδομένα της πηγής {} έχουν διαγραφεί."
 
 #. Error shown when a user has not selected items to act on.
 msgid "Nothing Selected"
@@ -214,10 +212,8 @@ msgstr[1] "{num} μη αναγνωσμένα"
 msgid "When the account for a source is deleted:"
 msgstr "Όταν διαγράφεται ο λογαριασμός μίας πηγής:"
 
-#, fuzzy
-#| msgid "The source will not be able to log in with their codename again."
 msgid "The source will no longer be able to log in with their codename."
-msgstr "Η πηγή δεν θα μπορεί να ξανασυνδεθεί με το κωδικό όνομά του/της."
+msgstr "Η πηγή δεν θα μπορεί να συνδεθεί πια με το κωδικό όνομά του/της."
 
 msgid "You will not be able to send them replies."
 msgstr "Δεν θα μπορείτε να του/της στείλετε απαντήσεις."
@@ -366,15 +362,11 @@ msgstr "Δεν μπορείτε να σαρώσετε το barcode; Μπορεί
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Όταν ολοκληρώσετε την παραμετροποίηση του YubiKey σας, πληκτρολογήστε τον εξαψήφιο κωδικό παρακάτω:"
 
-#, fuzzy
-#| msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Κρίσιμο ζήτημα ασφάλειας:</strong>&nbsp;&nbsp;Το λειτουργικό σύστημα που χρησιμοποιούν οι σέρβερ του SecureDrop σου έχει φτάσει στο τέλος του κύκλου ζωής του. Χρειάζεται χειροκίνητη αναβάθμιση για να επανενεργοποιήσετε τη Διεπαφή πηγών και να παραμείνετε ασφαλείς. Παρακαλώ επικοινωνήστε με τη διαχείριση. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Μάθετε περισσότερα</a>"
+msgstr "<strong>Κρίσιμο ζήτημα ασφάλειας:</strong>&nbsp;&nbsp;Το λειτουργικό σύστημα που χρησιμοποιούν οι διακομιστές του SecureDrop σας έχει φτάσει στο τέλος του κύκλου ζωής του. Χρειάζεται χειροκίνητη αναβάθμιση για να επανενεργοποιήσετε τη Διεπαφή πηγών και να παραμείνετε ασφαλείς. Παρακαλώ επικοινωνήστε με τη διαχείριση. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Μάθετε περισσότερα</a>"
 
-#, fuzzy
-#| msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual update is urgently required to remain safe. Please contact your adminstrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Κρίσιμο ζήτημα ασφάλειας:</strong>&nbsp;&nbsp;Το λειτουργικό σύστημα που χρησιμοποιούν οι σέρβερ του SecureDrop σου θα φτάσει στο τέλος του κύκλου ζωής του στις 30 Απριλίου 2021. Χρειάζεται επειγόντως μια χειροκίνητη αναβάθμιση για να παραμείνετε ασφαλείς. Παρακαλούμε επικοινωνήστε με τη διαχείριση. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Μάθετε περισσότερα</a>"
+msgstr "<strong>Κρίσιμο ζήτημα ασφάλειας:</strong>&nbsp;&nbsp;Το λειτουργικό σύστημα που χρησιμοποιούν οι διακομιστές του SecureDrop σας θα φτάσει στο τέλος του κύκλου ζωής του στις 30 Απριλίου 2021. Χρειάζεται επειγόντως μια χειροκίνητη αναβάθμιση για να παραμείνετε ασφαλείς. Παρακαλούμε επικοινωνήστε με τη διαχείριση. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Μάθετε περισσότερα</a>"
 
 msgid "Logged on as"
 msgstr "Συνδεδεμένος/η ως"
