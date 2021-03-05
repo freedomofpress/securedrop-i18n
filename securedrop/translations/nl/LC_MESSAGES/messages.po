@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-05 23:11+0000\nLast-Translator: kwadronaut <kwadronaut@autistici.org>\nLanguage-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/securedrop/nl/>\nLanguage: nl\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-05 23:11+0000\nLast-Translator: KwadroNaut920b3d69f4d94ef5 <kwadronaut@chocovax.net>\nLanguage-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/securedrop/nl/>\nLanguage: nl\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} geleden"
@@ -64,21 +64,15 @@ msgstr "Testwaarschuwing verstuurd. Controleer uw e-mail."
 msgid "Success!"
 msgstr "Gelukt!"
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The account and data for the source {} have been deleted."
-msgstr "Alle reacties zijn verwijderd"
+msgstr "Het account en de data van de bron {} zijn verwijderd."
 
 #. Error shown when a user has not selected items to act on.
-#, fuzzy
-#| msgid "Download Selected"
 msgid "Nothing Selected"
-msgstr "Geselecteerde downloaden"
+msgstr "Niets geselecteerd"
 
-#, fuzzy
-#| msgid "You must enter a message."
 msgid "You must select one or more items."
-msgstr "U moet een bericht invoeren ."
+msgstr "U moet één of meerdere elementen selecteren."
 
 msgid "Your download failed because a file could not be found. An admin can find more information in the system and monitoring logs."
 msgstr "Uw download is mislukt omdat een bestand niet kon worden gevonden. Een administrator kan meer informatie vinden in de systeem en monitoring logs."
@@ -119,15 +113,11 @@ msgstr "U kunt alleen PNG-afbeeldingsbestanden uploaden."
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Er trad een onverwachte fout op! Neem contact op met uw beheerder."
 
-#, fuzzy
-#| msgid "Thanks. Your reply has been stored."
 msgid "Your reply has been stored."
-msgstr "Bedankt. Uw reactie is opgeslagen."
+msgstr "Uw reactie is opgeslagen."
 
-#, fuzzy
-#| msgid "No collections selected for download."
 msgid "You must select one or more items for download"
-msgstr "Geen collecties geselecteerd om te downloaden."
+msgstr "U moet één of meerdere items selecteren om te downloaden"
 
 msgid "You must select one or more items for deletion"
 msgstr "U moet één of meer items selecteren om te verwijderen"
@@ -165,8 +155,8 @@ msgstr "Geen collecties geselecteerd om te verwijderen."
 
 msgid "The account and all data for {n} source have been deleted."
 msgid_plural "The accounts and all data for {n} sources have been deleted."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Het account en alle data  van {n} bron zijn verwijderd."
+msgstr[1] "Het accounts en alle data van de {n} bronnen zijn verwijderd."
 
 msgid "You must select one or more items for deletion."
 msgstr "U moet één of meer items selecteren om te verwijderen."
