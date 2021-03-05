@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop 0.4.3\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-01-25 22:11+0000\n"
-"Last-Translator: Andrey <andrey@mailbox.org>\n"
-"Language-Team: Russian <https://weblate.securedrop.org/projects/securedrop/securedrop/ru/>\n"
-"Language: ru\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.3.2\n"
-"Generated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.4.3\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-05 15:47+0000\nLast-Translator: Adham Kurbanov <uz@zu.uz>\nLanguage-Team: Russian <https://weblate.securedrop.org/projects/securedrop/securedrop/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} назад"
@@ -76,21 +64,15 @@ msgstr "Отправлено тестовое предупреждение. Пр
 msgid "Success!"
 msgstr "Успех!"
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The account and data for the source {} have been deleted."
-msgstr "Все ответы были удалены"
+msgstr "Учетная запись и данные для source {} удалены."
 
 #. Error shown when a user has not selected items to act on.
-#, fuzzy
-#| msgid "Download Selected"
 msgid "Nothing Selected"
-msgstr "Загрузить выбранное"
+msgstr "Ничего не выбрано"
 
-#, fuzzy
-#| msgid "You must enter a message."
 msgid "You must select one or more items."
-msgstr "Вы должны ввести сообщение."
+msgstr "Нужно выбрать минимум один элемент."
 
 msgid "Your download failed because a file could not be found. An admin can find more information in the system and monitoring logs."
 msgstr "Загрузка не удалась, поскольку файл не был найден. Администратор может получить более подробную информацию в журналах системы и мониторинга."
@@ -134,20 +116,14 @@ msgstr "Вы можете загружать изображения только
 msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Произошла непредвиденная ошибка! Сообщите об этом администратору."
 
-#, fuzzy
-#| msgid "Thanks. Your reply has been stored."
 msgid "Your reply has been stored."
-msgstr "Спасибо. Ваш ответ сохранен."
+msgstr "Ваш ответ сохранен."
 
-#, fuzzy
-#| msgid "No collections selected for download."
 msgid "You must select one or more items for download"
-msgstr "Коллекции для скачивания не выбраны."
+msgstr "Необходимо выбрать минимум один элемент для скачивания"
 
-#, fuzzy
-#| msgid "No collections selected for deletion."
 msgid "You must select one or more items for deletion"
-msgstr "Не выбраны коллекции для удаления."
+msgstr "Вы должны выбрать минимум элемент для удаления"
 
 msgid "No unread submissions for this source."
 msgstr "Нет непрочитанных материалов для этого источника."
@@ -155,10 +131,8 @@ msgstr "Нет непрочитанных материалов для этого
 msgid "Account updated."
 msgstr "Аккаунт обновлен."
 
-#, fuzzy
-#| msgid "Login failed."
 msgid "<b>Login failed.</b>"
-msgstr "Авторизация не удалась."
+msgstr "<b>Авторизация не удалась.</b>"
 
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
@@ -175,32 +149,26 @@ msgstr "Недопустимый формат: пожалуйста, испол�
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "Неверный формат: количество символов нечетное. Вы ошиблись?"
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The item has been deleted."
 msgid_plural "{num} items have been deleted."
-msgstr[0] "Все ответы были удалены"
-msgstr[1] "Все ответы были удалены"
-msgstr[2] "Все ответы были удалены"
+msgstr[0] "{num} элемент был удален."
+msgstr[1] "{num} элементов были удалены."
+msgstr[2] "{num} элементов были удалены."
 
 msgid "No collections selected for deletion."
 msgstr "Не выбраны коллекции для удаления."
 
 msgid "The account and all data for {n} source have been deleted."
 msgid_plural "The accounts and all data for {n} sources have been deleted."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Учетная запись и данные для {n} источника были удалены."
+msgstr[1] "Учетные записи и данные для {n} источников были удалены."
+msgstr[2] "Учетные записи и данные для {n} источников были удалены."
 
-#, fuzzy
-#| msgid "No collections selected for deletion."
 msgid "You must select one or more items for deletion."
-msgstr "Не выбраны коллекции для удаления."
+msgstr "Необходимо выбрать минимум один элемент для удаления."
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The files and messages have been deleted."
-msgstr "Все ответы были удалены"
+msgstr "Файлы и сообщения были удалены."
 
 msgid "Name updated."
 msgstr "Имя обновлено."
@@ -231,8 +199,8 @@ msgstr "значок без пометки"
 
 msgid "1 doc"
 msgid_plural "{num} docs"
-msgstr[0] "1 документ"
-msgstr[1] "{num} документа"
+msgstr[0] "{num} документ"
+msgstr[1] "{num} документов"
 msgstr[2] "{num} документов"
 
 msgid "1 message"
@@ -246,40 +214,36 @@ msgstr "значок загрузки"
 
 msgid "1 unread"
 msgid_plural "{num} unread"
-msgstr[0] "1 непрочитанный"
+msgstr[0] "{num} непрочитанный"
 msgstr[1] "{num} непрочитанных"
 msgstr[2] "{num} непрочитанных"
 
 msgid "When the account for a source is deleted:"
-msgstr ""
+msgstr "Когда учетная запись для источника будет удалено:"
 
 msgid "The source will no longer be able to log in with their codename."
-msgstr ""
+msgstr "Источник не смог авторизоваться через свой псевдоним."
 
 msgid "You will not be able to send them replies."
-msgstr ""
+msgstr "Вы не сможете отправить им ответы."
 
 msgid "All files and messages from that source will also be destroyed."
-msgstr ""
+msgstr "Все файлы и сообщения источника будут очищены."
 
 msgid "Are you sure this is what you want?"
-msgstr ""
+msgstr "Вы уверены в этом?"
 
 msgid "Yes, Delete Selected Source Accounts"
-msgstr ""
+msgstr "Да, удалить выбранные учетные записи источника"
 
 msgid "What would you like to delete?"
-msgstr ""
+msgstr "Что вы хотите удалить?"
 
-#, fuzzy
-#| msgid "Submit Files or Messages"
 msgid "Files and Messages"
-msgstr "Отправить файлы или сообщения"
+msgstr "Файлы и сообщения"
 
-#, fuzzy
-#| msgid "Sources"
 msgid "Source Accounts"
-msgstr "Источники"
+msgstr "Учетные записи источника"
 
 msgid "Change Secret"
 msgstr "Изменить секрет"
@@ -407,15 +371,11 @@ msgstr "Не получается считать штрихкод? Вы може
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "После того, как вы настроили ваш YubiKey, введите 6-значный код ниже:"
 
-#, fuzzy
-#| msgid "<strong>Critical Security:</strong> The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is urgently required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Критическое предупреждение:</strong> Операционная система которая использовалась серверами SecureDrop отслужила своё. Для безопасного сохранения данных требуется срочное ручное обновление - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Подробнее</a>"
+msgstr "<strong>Критическое предупреждение:</strong>&nbsp;&nbsp; Операционная система которая использовалась серверами SecureDrop отслужила своё. Для безопасного сохранения данных требуется срочное ручное обновление - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Подробнее</a>"
 
-#, fuzzy
-#| msgid "<strong>Critical Security:</strong> The operating system used by your SecureDrop servers has reached its end-of-life. A manual update is urgently required to remain safe - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Критическое предупреждение:</strong> Операционная система которая использовалась серверами SecureDrop отслужила своё. Для безопасного сохранения данных требуется срочное ручное обновление - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Подробнее</a>"
+msgstr "<strong>Критическое предупреждение:</strong> &nbsp;&nbsp;Операционная система которая использовалась серверами SecureDrop отслужила своё и её срок истекает 30го апреля, 2021. Для безопасного сохранения данных требуется срочное ручное обновление, пожалуйста свяжитесь с администратором.- <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Подробнее</a>"
 
 msgid "Logged on as"
 msgstr "Вы вошли как"
@@ -432,10 +392,8 @@ msgstr "Основано на <em>SecureDrop {version}</em>."
 msgid "All Sources"
 msgstr "Все источники"
 
-#, fuzzy
-#| msgid "The documents are stored encrypted for security. To read them, you will need to decrypt them using GPG."
 msgid "All messages, files, and replies from sources are stored as encrypted files for security. To read them, you will need to decrypt them on your Secure Viewing Station."
-msgstr "Документы хранятся в зашифрованном виде для обеспечения безопасности. Чтобы прочитать их, вам потребуется расшифровка при помощи GPG."
+msgstr "Все сообщения, файлы и ответы источника хранятся в зашифрованном виде для обеспечения безопасности. Чтобы прочитать их, вам потребуется расшифровка при помощи SVS."
 
 msgid "Download Selected"
 msgstr "Загрузить выбранное"
@@ -479,22 +437,17 @@ msgstr "значок сообщения"
 msgid "Delete Confirmation"
 msgstr "Удалить подтверждение"
 
-#, fuzzy
 msgid "Are you sure you want to delete the selected submissions?"
-msgstr "Вы действительно хотите удалить {size} выбранные отправления?"
+msgstr "Вы действительно хотите удалить выбранные отправления?"
 
 msgid "DELETE"
 msgstr "УДАЛИТЬ"
 
-#, fuzzy
-#| msgid "No documents to display."
 msgid "No submissions to display."
-msgstr "Нет документов для отображения."
+msgstr "Нет отправлений для отображения."
 
-#, fuzzy
-#| msgid "You can write a secure reply to the person who submitted these documents:"
 msgid "You can write a secure reply to the person who submitted these messages and/or files:"
-msgstr "Вы можете написать безопасный ответ пользователю, предоставившему эти документы:"
+msgstr "Вы можете написать безопасный ответ пользователю, предоставившему эти сообщения/файлы:"
 
 msgid "You've flagged this source for reply."
 msgstr "Вы отметили этот источник для ответа."
@@ -508,16 +461,14 @@ msgstr "Нажмите ниже, если вы хотите написать о�
 msgid "FLAG THIS SOURCE FOR REPLY"
 msgstr "ОТМЕТИТЬ ЭТОТ ИСТОЧНИК ДЛЯ ОТВЕТА"
 
-#, fuzzy
-#| msgid "Edit your account"
 msgid "Delete Source Account"
-msgstr "Изменить свою учетную запись"
+msgstr "Удалить учетную запись источника"
 
 msgid "Are you sure?"
-msgstr ""
+msgstr "Вы уверены?"
 
 msgid "Yes, Delete Source Account"
-msgstr ""
+msgstr "Да, удалить учетную запись источника"
 
 msgid "Instance Configuration"
 msgstr "Пример конфигурации"
@@ -681,10 +632,8 @@ msgstr "Вы действительно хотите удалить пользо
 msgid "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr "Вы действительно хотите сбросить двухэтапную аутентификацию для пользователя {username}?"
 
-#, fuzzy
-#| msgid "No collections selected."
 msgid "Sources selected: "
-msgstr "Коллекция не выбрана."
+msgstr "Выбранные ичточники: "
 
 msgid "Login to access the journalist interface"
 msgstr "Войдите, чтобы получить доступ к панели журналиста"
@@ -756,10 +705,10 @@ msgid "SecureDrop Home"
 msgstr "Главная SecureDrop"
 
 msgid "We're sorry, our SecureDrop is currently offline."
-msgstr ""
+msgstr "Упс, наш SecureDrop сейчас без интернета."
 
 msgid "Please try again later. Check our website for more information."
-msgstr ""
+msgstr "Позже попробуйте заново. Подробную информацию можете получить на нашем сайте."
 
 msgid "LOG OUT"
 msgstr "ВЫЙТИ"
