@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: SecureDrop \\'0.3.5\\'\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-05 15:47+0000\nLast-Translator: Ettore Atalan <atalanttore@googlemail.com>\nLanguage-Team: German <https://weblate.securedrop.org/projects/securedrop/securedrop/de/>\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop \\'0.3.5\\'\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-05 23:11+0000\nLast-Translator: Ettore Atalan <atalanttore@googlemail.com>\nLanguage-Team: German <https://weblate.securedrop.org/projects/securedrop/securedrop/de/>\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "vor {time}"
@@ -60,7 +60,7 @@ msgid "Success!"
 msgstr "Erfolg!"
 
 msgid "The account and data for the source {} have been deleted."
-msgstr "Das Konto und alle Daten der Quelle wurden gelöscht."
+msgstr "Das Konto und die Daten für die Quelle {} wurden gelöscht."
 
 #. Error shown when a user has not selected items to act on.
 msgid "Nothing Selected"
@@ -112,7 +112,7 @@ msgid "Your reply has been stored."
 msgstr "Ihre Antwort wurde gespeichert."
 
 msgid "You must select one or more items for download"
-msgstr "Sie müssen einen oder mehrere Einträge zum Herunterladen auswählen."
+msgstr "Sie müssen einen oder mehrere Einträge zum Herunterladen auswählen"
 
 msgid "You must select one or more items for deletion"
 msgstr "Sie müssen einen oder mehrere Einträge zum Löschen auswählen"
@@ -208,16 +208,16 @@ msgid "When the account for a source is deleted:"
 msgstr "Wenn das Konto einer Quelle gelöscht wird:"
 
 msgid "The source will no longer be able to log in with their codename."
-msgstr "Kann die Quelle sich nicht länger mit ihrem Decknamen anmelden."
+msgstr "Die Quelle wird sich nicht mehr mit ihrem Decknamen anmelden können."
 
 msgid "You will not be able to send them replies."
-msgstr "Können Sie ihr keine weiteren Antworten senden."
+msgstr "Sie können ihnen dann keine Antworten senden."
 
 msgid "All files and messages from that source will also be destroyed."
-msgstr "Werden auch alle Dateien und Nachrichten der Quelle vernichtet."
+msgstr "Alle Dateien und Nachrichten von dieser Quelle werden ebenfalls zerstört."
 
 msgid "Are you sure this is what you want?"
-msgstr "Sind Sie sicher das sie das tun wollen?"
+msgstr "Sind Sie sicher, dass Sie das möchten?"
 
 msgid "Yes, Delete Selected Source Accounts"
 msgstr "Ja, ausgewählte Quellkonten löschen"
