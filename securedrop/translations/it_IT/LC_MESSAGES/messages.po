@@ -7,7 +7,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014
 # gio <gdamiola@gmail.com>, 2014
 msgid ""
-msgstr "Project-Id-Version: SecureDrop\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-04 17:37+0000\nLast-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\nLanguage-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-05 09:31+0000\nLast-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\nLanguage-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} fa"
@@ -387,7 +387,7 @@ msgid "All Sources"
 msgstr "Tutte le fonti"
 
 msgid "All messages, files, and replies from sources are stored as encrypted files for security. To read them, you will need to decrypt them on your Secure Viewing Station."
-msgstr "Tutti i messaggi, i file e le risposte delle fonti sono archiviati in forma cifrata per ragioni di sicurezza. Per poterli leggere, è necessario decifrarli sulla propria Secure Viewing Station."
+msgstr "Tutti i messaggi, i file e le risposte delle fonti sono archiviati in forma cifrata per ragioni di sicurezza. Per poterli leggere, è necessario decifrarli sulla propria postazione di visualizzazione sicura."
 
 msgid "Download Selected"
 msgstr "Scarica selezionati"
@@ -456,7 +456,7 @@ msgid "FLAG THIS SOURCE FOR REPLY"
 msgstr "CONTRASSEGNA QUESTA FONTE PER UNA RISPOSTA"
 
 msgid "Delete Source Account"
-msgstr "Eliminare l'account della fonte"
+msgstr "Elimina l'account della fonte"
 
 msgid "Are you sure?"
 msgstr "Procedere veramente?"
@@ -701,7 +701,7 @@ msgid "We're sorry, our SecureDrop is currently offline."
 msgstr "Spiacenti, SecureDrop è attualmente offline."
 
 msgid "Please try again later. Check our website for more information."
-msgstr "Riprovare più tardi. Consulate il nostro sito web per ulteriori informazioni."
+msgstr "Riprova più tardi. Consulta il nostro sito web per ulteriori informazioni."
 
 msgid "LOG OUT"
 msgstr "ESCI"
@@ -722,7 +722,7 @@ msgid "Forgot your codename?"
 msgstr "Nome in codice dimenticato?"
 
 msgid "Powered by"
-msgstr "Offerto da"
+msgstr "Implementato da"
 
 msgid "Please note: Sharing sensitive documents may put you at risk, even when using Tor and SecureDrop."
 msgstr "Nota: la condivisione di documenti riservati può comportare un rischio, anche quando si utilizzano Tor e SecureDrop."
@@ -752,7 +752,7 @@ msgid "SUBMIT DOCUMENTS"
 msgstr "INVIA DOCUMENTI"
 
 msgid "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security Level</strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> &nbsp;button in your browser’s toolbar to change it."
-msgstr "L'<a id=\"disable-js\" href=\"\"><strong>livello di sicurezza</strong></a> del proprio browser Tor è troppo bassa. Utilizzare il pulsante <img src=\"{icon}\" alt=\"icona di uno scudo\"> &nbsp;nella barra degli strumenti del browser per modificarla."
+msgstr "Il<a id=\"disable-js\" href=\"\"><strong>livello di sicurezza</strong></a> del proprio browser Tor è troppo basso. Utilizzare il pulsante <img src=\"{icon}\" alt=\"icona scudo\"> &nbsp;nella barra degli strumenti del browser per modificarlo."
 
 msgid "<strong>It is recommended to use Tor Browser to access SecureDrop:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to continue."
 msgstr "<strong>Si consiglia di usare il browser Tor per accedere a SecureDrop: </strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">Scopri come installarlo</a>, o ignora questo avviso per continuare."
