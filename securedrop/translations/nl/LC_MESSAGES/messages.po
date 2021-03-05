@@ -4,20 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop 0.3.12\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-01-24 01:37+0000\n"
-"Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
-"Language-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/securedrop/nl/>\n"
-"Language: nl\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
-"Generated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-05 23:11+0000\nLast-Translator: kwadronaut <kwadronaut@autistici.org>\nLanguage-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/securedrop/nl/>\nLanguage: nl\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} geleden"
@@ -142,10 +129,8 @@ msgstr "Bedankt. Uw reactie is opgeslagen."
 msgid "You must select one or more items for download"
 msgstr "Geen collecties geselecteerd om te downloaden."
 
-#, fuzzy
-#| msgid "No collections selected for deletion."
 msgid "You must select one or more items for deletion"
-msgstr "Geen collecties geselecteerd om te verwijderen."
+msgstr "U moet één of meer items selecteren om te verwijderen"
 
 msgid "No unread submissions for this source."
 msgstr "Geen ongelezen inzendingen van deze bron."
@@ -153,10 +138,8 @@ msgstr "Geen ongelezen inzendingen van deze bron."
 msgid "Account updated."
 msgstr "Account bijgewerkt."
 
-#, fuzzy
-#| msgid "Login failed."
 msgid "<b>Login failed.</b>"
-msgstr "Inloggen mislukt."
+msgstr "<b>Inloggen mislukt.</b>"
 
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
@@ -172,12 +155,10 @@ msgstr "Ongeldige samenstelling voor geheim: gebruik uitsluitend letters A-F en 
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
 msgstr "Ongeldig geheim: oneven lengte van geheim. Is het geheim correct gespeld?"
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The item has been deleted."
 msgid_plural "{num} items have been deleted."
-msgstr[0] "Alle reacties zijn verwijderd"
-msgstr[1] "Alle reacties zijn verwijderd"
+msgstr[0] "Het item is verwijderd."
+msgstr[1] "Alle {num} items zijn verwijderd."
 
 msgid "No collections selected for deletion."
 msgstr "Geen collecties geselecteerd om te verwijderen."
@@ -187,15 +168,11 @@ msgid_plural "The accounts and all data for {n} sources have been deleted."
 msgstr[0] ""
 msgstr[1] ""
 
-#, fuzzy
-#| msgid "No collections selected for deletion."
 msgid "You must select one or more items for deletion."
-msgstr "Geen collecties geselecteerd om te verwijderen."
+msgstr "U moet één of meer items selecteren om te verwijderen."
 
-#, fuzzy
-#| msgid "All replies have been deleted"
 msgid "The files and messages have been deleted."
-msgstr "Alle reacties zijn verwijderd"
+msgstr "De files en berichten zijn verwijderd."
 
 msgid "Name updated."
 msgstr "Naam bijgewerkt."
@@ -243,7 +220,7 @@ msgstr[0] "1 ongelezen"
 msgstr[1] "{num} ongelezen"
 
 msgid "When the account for a source is deleted:"
-msgstr ""
+msgstr "Als het account van een bron verwijderd wordt:"
 
 msgid "The source will no longer be able to log in with their codename."
 msgstr ""
