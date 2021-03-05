@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: SecureDrop \\'0.3.5\\'\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-05 23:11+0000\nLast-Translator: Ettore Atalan <atalanttore@googlemail.com>\nLanguage-Team: German <https://weblate.securedrop.org/projects/securedrop/securedrop/de/>\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop \\'0.3.5\\'\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-06 02:37+0000\nLast-Translator: Ettore Atalan <atalanttore@googlemail.com>\nLanguage-Team: German <https://weblate.securedrop.org/projects/securedrop/securedrop/de/>\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "vor {time}"
@@ -693,7 +693,7 @@ msgid "We're sorry, our SecureDrop is currently offline."
 msgstr "Es tut uns leid, unser SecureDrop ist derzeit offline."
 
 msgid "Please try again later. Check our website for more information."
-msgstr "Bitte versuchen Sie es später noch ein mal. Besuchen Sie unsere Webseite um weitere Informationen zu finden."
+msgstr "Bitte versuchen Sie es später noch einmal. Besuchen Sie unsere Webseite für weitere Informationen."
 
 msgid "LOG OUT"
 msgstr "ABMELDEN"
