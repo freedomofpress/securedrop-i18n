@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-02-27 17:37+0000\nLast-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\nLanguage-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/securedrop/securedrop/nb_NO/>\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-06 02:37+0000\nLast-Translator: kwadronaut <kwadronaut@autistici.org>\nLanguage-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/securedrop/securedrop/nb_NO/>\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} siden"
@@ -430,18 +430,14 @@ msgstr "meldinger-ikon"
 msgid "Delete Confirmation"
 msgstr "Bekreftelse av sletting"
 
-#, fuzzy
-#| msgid "Are you sure you want to delete the {size} selected submissions?"
 msgid "Are you sure you want to delete the selected submissions?"
-msgstr "Er du sikker på at du vil slette de {size} markerte bidragene?"
+msgstr "Er du sikker på at du vil slette de markerte bidragene?"
 
 msgid "DELETE"
 msgstr "SLETT"
 
-#, fuzzy
-#| msgid "No documents to display."
 msgid "No submissions to display."
-msgstr "Ingen dokumenter å vise."
+msgstr "Ingen bidragene å vise."
 
 #, fuzzy
 #| msgid "You can write a secure reply to the person who submitted these documents:"
