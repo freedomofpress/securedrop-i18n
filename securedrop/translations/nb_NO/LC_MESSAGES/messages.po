@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-06 02:37+0000\nLast-Translator: kwadronaut <kwadronaut@autistici.org>\nLanguage-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/securedrop/securedrop/nb_NO/>\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-06 16:37+0000\nLast-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\nLanguage-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/securedrop/securedrop/nb_NO/>\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} siden"
@@ -383,10 +383,8 @@ msgstr "Drevet av: <em>SecureDrop {version}</em>."
 msgid "All Sources"
 msgstr "Alle kilder"
 
-#, fuzzy
-#| msgid "The documents are stored encrypted for security. To read them, you will need to decrypt them using GPG."
 msgid "All messages, files, and replies from sources are stored as encrypted files for security. To read them, you will need to decrypt them on your Secure Viewing Station."
-msgstr "Dokumentene er lagret kryptert av hensyn til sikkerhet. For å lese dem, må du dekryptere dem med GPG."
+msgstr "Alle meldinger, filer og svar fra kilder er lagret som krypterte filer av hensyn til sikkerhet. For å lese dem, må du dekryptere dem på Secure Viewing Station."
 
 msgid "Download Selected"
 msgstr "Last ned valgte"
@@ -439,10 +437,8 @@ msgstr "SLETT"
 msgid "No submissions to display."
 msgstr "Ingen bidragene å vise."
 
-#, fuzzy
-#| msgid "You can write a secure reply to the person who submitted these documents:"
 msgid "You can write a secure reply to the person who submitted these messages and/or files:"
-msgstr "Du kan skrive et sikkert svar til personen som sendte inn dette bidraget:"
+msgstr "Du kan skrive et sikkert svar til personen som sendte inn disse meldingene og/eller filene:"
 
 msgid "You've flagged this source for reply."
 msgstr "Du har markert denne kilden for å kunne sende et svar til personen."
@@ -456,16 +452,14 @@ msgstr "Klikk her, om du ønsker skrive et svar til kilden."
 msgid "FLAG THIS SOURCE FOR REPLY"
 msgstr "MARKER DENNE KILDEN FOR Å SVARE"
 
-#, fuzzy
-#| msgid "Edit your account"
 msgid "Delete Source Account"
-msgstr "Rediger kontoen din"
+msgstr "Slett kilde-konto"
 
 msgid "Are you sure?"
-msgstr ""
+msgstr "Er du sikker?"
 
 msgid "Yes, Delete Source Account"
-msgstr ""
+msgstr "Ja, slett kildens konto"
 
 msgid "Instance Configuration"
 msgstr "Instans-oppsett"
@@ -628,10 +622,8 @@ msgstr "Er du sikker på at du vil slette brukeren {username}?"
 msgid "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr "Er du sikker på at du vil tilbakestille tofaktor-autentisering for {username}?"
 
-#, fuzzy
-#| msgid "No collections selected."
 msgid "Sources selected: "
-msgstr "Ingen kildeoppføringer valgt."
+msgstr "Kildeoppføringer valgt: "
 
 msgid "Login to access the journalist interface"
 msgstr "Logg inn for å få tilgang til journalist-portalen"
@@ -703,10 +695,10 @@ msgid "SecureDrop Home"
 msgstr "SecureDrop hjem"
 
 msgid "We're sorry, our SecureDrop is currently offline."
-msgstr ""
+msgstr "Vi beklager, vår SecureDrop er for tiden ute av drift."
 
 msgid "Please try again later. Check our website for more information."
-msgstr ""
+msgstr "Vennligst prøv igjen senere. Se vår nettside for mer informasjon."
 
 msgid "LOG OUT"
 msgstr "LOGG UT"
