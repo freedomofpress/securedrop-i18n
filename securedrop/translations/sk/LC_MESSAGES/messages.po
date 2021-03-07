@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 17:46+0000\nLast-Translator: 1000101 <b1000101@pm.me>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 17:46+0000\nLast-Translator: ViktoriaAndr <viktoria.andrascikova@gmail.com>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "pred {time}"
@@ -470,7 +470,7 @@ msgid "Are you sure?"
 msgstr "Ste si tým istí?"
 
 msgid "Yes, Delete Source Account"
-msgstr ""
+msgstr "Áno, chcem vymazať účet zdroja"
 
 msgid "Instance Configuration"
 msgstr "Nastavenie inštancie"
@@ -634,10 +634,8 @@ msgstr "Naozaj chcete zmazať používateľa {username}?"
 msgid "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr "Naozaj chcete resetovať dvojfaktorovú autentifikáciu pre používateľa {username}?"
 
-#, fuzzy
-#| msgid "No collections selected."
 msgid "Sources selected: "
-msgstr "Nevybrali ste žiadnu sadu."
+msgstr "Vybrané zdroje: "
 
 msgid "Login to access the journalist interface"
 msgstr "Prihláste sa do novinárskeho rozhrania"
@@ -709,7 +707,7 @@ msgid "SecureDrop Home"
 msgstr "SecureDrop Domov"
 
 msgid "We're sorry, our SecureDrop is currently offline."
-msgstr ""
+msgstr "Prepáčte, náš SecureDrop je v súčasnosti offline."
 
 msgid "Please try again later. Check our website for more information."
 msgstr ""
