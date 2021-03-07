@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 17:36+0000\nLast-Translator: ViktoriaAndr <viktoria.andrascikova@gmail.com>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 17:36+0000\nLast-Translator: 1000101 <b1000101@pm.me>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "pred {time}"
@@ -374,7 +374,7 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Akonáhle nastavíte svoj YubiKey, zadajte šesťmiestny kód nižšie:"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Kritické bezpečnostné riziko:</strong>&nbsp;&nbsp;Operačný systém vašich SecureDrop serverov dosiahol koniec životnosti (EoL). Pre opätovné spustenie rozhrania pre zdroje je vyžadovaný manuálny upgrade. Kontaktujte prosím svojho administrátora. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Viac informácií</a>"
+msgstr "<strong>Kritické bezpečnostné riziko:</strong>&nbsp;&nbsp;Operačný systém vašich SecureDrop serverov dosiahol koniec životnosti (EoL). Pre opätovné spustenie rozhrania pre zdroje je vyžadovaná manuálna aktualizácia. Kontaktujte prosím svojho administrátora. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Viac informácií</a>"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr "<strong>Kritické bezpečnostné riziko:</strong>&nbsp;&nbsp; 30. apríla končí operačnému systému vašich SecureDrop serverov životnosť (EoL). Kontaktujte prosím svojho administrátora. Pre ďalšie zabezpečenie je vyžadovaná aktualizácia.<a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Viac informácií</a>"
