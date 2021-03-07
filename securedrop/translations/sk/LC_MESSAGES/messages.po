@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 17:50+0000\nLast-Translator: ViktoriaAndr <viktoria.andrascikova@gmail.com>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 19:37+0000\nLast-Translator: 1000101 <b1000101@pm.me>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "pred {time}"
 
 msgid "You have been logged out due to inactivity."
-msgstr "Boli ste odhlásený/á z dôvodu nečinnosti."
+msgstr "Boli ste odhlásení z dôvodu nečinnosti."
 
 msgid "You have been logged out due to password change"
-msgstr "Boli ste odhlásený/á z dôvodu zmeny hesla"
+msgstr "Kvôli zmene hesla ste boli odhlásení"
 
 msgid "SecureDrop"
 msgstr "SecureDrop"
@@ -171,7 +171,7 @@ msgid "The files and messages have been deleted."
 msgstr "Súbory a odpovede boli zmazané."
 
 msgid "Name updated."
-msgstr "Meno aktualizované."
+msgstr "Meno bolo aktualizované."
 
 msgid "The password you submitted is invalid. Password not changed."
 msgstr "Zadané heslo je neplatné. Heslo nebolo zmenené."
@@ -270,10 +270,10 @@ msgid "Tap the QR code symbol at the top"
 msgstr "Klepnite na QR kód v hornej časti"
 
 msgid "Your phone will now be in \"scanning\" mode. When you are in this mode, scan the barcode below:"
-msgstr "Váš telefón bude teraz v skenovacom móde. Vrámci tohto módu prosím naskenujte QR kód nižšie:"
+msgstr "Váš telefón bude teraz v skenovacom móde. V rámci tohto módu prosím naskenujte QR kód nižšie:"
 
 msgid "Can't scan the barcode? You can manually pair FreeOTP with your SecureDrop account by entering the following two-factor secret into the app:"
-msgstr "Nemôžete nasnímať čiarový kód? Môžete manuálne spárovať FreeOTP s vašim SecureDrop účtom zadaním nasledujúceho dvojfaktorového tajomstva do aplikácie:"
+msgstr "Nemôžete nasnímať čiarový kód? Môžete manuálne spárovať FreeOTP s vaším SecureDrop účtom zadaním nasledujúceho dvojfaktorového tajomstva do aplikácie:"
 
 msgid "Once you have paired FreeOTP with this account, enter the 6-digit verification code below:"
 msgstr "Po spárovaní FreeOTP s týmto účtom, zadajte šesťmiestny overovací kód nižšie:"
@@ -318,7 +318,7 @@ msgid "edit user icon"
 msgstr "ikona úprav používateľa"
 
 msgid "trash icon disabled"
-msgstr "ikona koša deaktivovaná"
+msgstr "deaktivovaná ikona koša"
 
 msgid "Delete user {username}"
 msgstr "Zmazať používateľa {username}"
@@ -357,13 +357,13 @@ msgid "The user's password will be:"
 msgstr "Heslo používateľa bude:"
 
 msgid "Is Admin"
-msgstr "Je Administrátor"
+msgstr "Je administrátor"
 
 msgid "Is using a YubiKey [HOTP]"
 msgstr "Používa YubiKey [HOTP]"
 
 msgid "You're almost done! To finish adding this new user, have them follow the instructions below to set up two-factor authentication with FreeOTP. Once they've added an entry for this account in the app, have them enter one of the 6-digit codes from the app to confirm that two-factor authentication is set up correctly."
-msgstr "Máte takmer hotovo! Pre dokončenie pridávania tohto používateľa, požiadajte danú osobu o nasledovanie nižšie uvedených pokynov na nastavenie dvojfaktorovej autentifikácie pomocou FreeOTP. Akonáhle si používateľ pridá záznam pre tento účet do aplikácie, požiadajte ich, aby zadali jeden zo šesťmiestnych kódov. Týmto kódom sa potvrdí správnosť fungovania dvojfaktorovej autentifikácie."
+msgstr "Už to skoro máte! Pre dokončenie pridávania tohto používateľa, požiadajte danú osobu o nasledovanie nižšie uvedených pokynov na nastavenie dvojfaktorovej autentifikácie pomocou FreeOTP. Akonáhle si používateľ pridá záznam pre tento účet do aplikácie, požiadajte ich, aby zadali jeden zo šesťmiestnych kódov. Týmto kódom sa potvrdí správnosť fungovania dvojfaktorovej autentifikácie."
 
 msgid "Can't scan the barcode? You can manually pair FreeOTP with this account by entering the following two-factor secret into the app:"
 msgstr "Nemôžete nasnímať čiarový kód? Môžete manuálne spárovať FreeOTP s týmto účtom zadaním nasledujúceho dvojfaktorového tajomstva do aplikácie:"
@@ -378,7 +378,7 @@ msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used 
 msgstr "<strong>Kritické bezpečnostné riziko:</strong>&nbsp;&nbsp; 30. apríla končí operačnému systému vašich SecureDrop serverov životnosť (EoL). Kontaktujte prosím svojho administrátora. Pre ďalšie zabezpečenie je vyžadovaná aktualizácia.<a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Viac informácií</a>"
 
 msgid "Logged on as"
-msgstr "Prihlásený/á ako"
+msgstr "Ste prihlásení ako"
 
 msgid "Admin"
 msgstr "Administrátor"
@@ -498,7 +498,7 @@ msgid "Submission Preferences"
 msgstr "Preferencie podania"
 
 msgid "Prevent sources from uploading documents. Sources will still be able to send messages."
-msgstr "Zabráňte zdrojom v nahrávaní dokumentov. Zdroje budú stále môcť posielať správy."
+msgstr "Zabráňte zdrojom v nahrávaní dokumentov. Zdroje budú môcť naďalej posielať správy."
 
 msgid "UPDATE SUBMISSION PREFERENCES"
 msgstr "AKTUALIZOVAŤ PREFERENCIE PODANIA"
@@ -528,7 +528,7 @@ msgid "Edit user \"{user}\""
 msgstr "Upraviť používateľa „{user}“"
 
 msgid "Change Name and Admin Status"
-msgstr "Zmeniť meno and administračný stav"
+msgstr "Zmeniť meno a status administrátora"
 
 msgid "UPDATE"
 msgstr "AKTUALIZOVAŤ"
@@ -567,7 +567,7 @@ msgid "Reset Two-Factor Authentication"
 msgstr "Resetovať dvojfaktorovú autentifikáciu"
 
 msgid "If a user's two-factor authentication credentials have been lost or compromised, you can reset them here. <em>If you do this, make sure the user is present and ready to set up their device with the new two-factor credentials. Otherwise, they will be locked out of their account.</em>"
-msgstr "Ak boli používateľove údaje k dvojfaktorovému overovaniu stratené alebo kompromitované, môžete ich resetovať tu. <em>Najskôr sa však uistite, že daný používateľ je prítomný a pripravený nastaviť na zariadenie nové údaje k dvojfaktorovému overovaniu. V opačnom prípade prístup k účtu stratí.</em>"
+msgstr "Ak boli používateľove údaje k dvojfaktorovému overovaniu stratené alebo kompromitované, môžete ich resetovať tu. <em>Najskôr sa však uistite, že daný používateľ je prítomný a pripravený nastaviť na svoje zariadenie nové údaje k dvojfaktorovému overovaniu. V opačnom prípade prístup k účtu stratí.</em>"
 
 msgid "If your two-factor authentication credentials have been lost or compromised, or you got a new device, you can reset your credentials here. <em>If you do this, make sure you are ready to set up your new device, otherwise you will be locked out of your account.</em>"
 msgstr "Ak boli vaše údaje k dvojfaktorovému overovaniu stratené alebo kompromitované, alebo ak máte nové zariadenie, môžete si vaše údaje resetovať tu. <em>Najskôr sa však uistite, že ste pripravení nastaviť si vaše nové zariadenie, inak stratíte prístup k vašemu účtu.</em>"
@@ -666,10 +666,10 @@ msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
 msgstr "Veľké bloky textu musia byť nahraté ako súbor, nie skopírované a vložené."
 
 msgid "You were redirected because you are already logged in. If you want to create a new account, you should log out first."
-msgstr "Boli ste presmerovaný/á, pretože už ste prihlásený/á. Ak chcete vytvoriť nový účet, musíte sa najprv odhlásiť."
+msgstr "Boli ste presmerovaní, pretože už ste prihlásení. Ak chcete vytvoriť nový účet, musíte sa najprv odhlásiť."
 
 msgid "You are already logged in. Please verify your codename above as it may differ from the one displayed on the previous page."
-msgstr "Už ste prihlásený/á. Hore si overte správnosť svojho krycieho mena, keďže sa môže líšiť od toho zobrazeného na predošlej stránke."
+msgstr "Už ste prihlásení. Hore si overte správnosť svojho krycieho mena, keďže sa môže líšiť od toho zobrazeného na predošlej stránke."
 
 msgid "There was a temporary problem creating your account. Please try again."
 msgstr "Pri vytváraní vášho účtu sa vyskytol dočasný problém. Prosím, skúste to znova."
@@ -702,7 +702,7 @@ msgid "Protecting Journalists and Sources"
 msgstr "Chránime novinárov a zdroje"
 
 msgid "SecureDrop Home"
-msgstr "SecureDrop Domov"
+msgstr "Domovská stránka SecureDrop"
 
 msgid "We're sorry, our SecureDrop is currently offline."
 msgstr "Prepáčte, náš SecureDrop je v súčasnosti offline."
@@ -717,7 +717,7 @@ msgid "Server error"
 msgstr "Serverová chyba"
 
 msgid "Sorry, the website encountered an error and was unable to complete your request."
-msgstr "Prepáčte, na webovej stránke sa vyskytla chyba a stránka nebola schopná dokončiť vašu požiadavku."
+msgstr "Prepáčte, na webovej stránke sa vyskytla chyba."
 
 msgid "Look up a codename..."
 msgstr "Vyhľadať krycie meno..."
