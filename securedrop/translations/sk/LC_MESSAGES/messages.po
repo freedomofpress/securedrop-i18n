@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 16:35+0000\nLast-Translator: ViktoriaAndr <viktoria.andrascikova@gmail.com>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 16:41+0000\nLast-Translator: ViktoriaAndr <viktoria.andrascikova@gmail.com>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "pred {time}"
@@ -221,10 +221,10 @@ msgstr[1] "{num} neprečítané"
 msgstr[2] "{num} neprečítaných"
 
 msgid "When the account for a source is deleted:"
-msgstr ""
+msgstr "Ak je účet zdroja vymazaný:"
 
 msgid "The source will no longer be able to log in with their codename."
-msgstr ""
+msgstr "Zdroj sa už nebude môcť prihlásiť pod svojim krycím menom."
 
 msgid "You will not be able to send them replies."
 msgstr ""
