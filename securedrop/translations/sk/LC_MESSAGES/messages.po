@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 17:11+0000\nLast-Translator: 1000101 <b1000101@pm.me>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 17:11+0000\nLast-Translator: ViktoriaAndr <viktoria.andrascikova@gmail.com>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "pred {time}"
@@ -373,10 +373,8 @@ msgstr "Nemôžete nasnímať čiarový kód? Môžete manuálne spárovať Free
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Akonáhle nastavíte svoj YubiKey, zadajte šesťmiestny kód nižšie:"
 
-#, fuzzy
-#| msgid "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before April 30 to keep your SecureDrop servers online. Please contact your administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Vyžaduje sa aktualizácia</strong>&nbsp;&nbsp;Do 30. apríla nastavte služby cibule v3, aby boli vaše servery SecureDrop online. Kontaktujte svojho správcu. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Viac informácií</a>"
+msgstr "<strong>Nevyhnutné zabezpečenie:</strong>&nbsp;&nbsp;Operačný systém vašich SecureDrop serverov dosiahol konca životnosti. Pre opätovné spustenie rozhrania pre zdroje je vyžadovaný manuálny upgrade. Kontaktujte svojho administrátora, prosím. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Viac informácií</a>"
 
 #, fuzzy
 #| msgid "<strong>Update Required</strong>&nbsp;&nbsp;Set up v3 Onion Services before April 30 to keep your SecureDrop servers online. Please contact your administrator. <a href=\"//securedrop.org/v2-onion-eol\" rel=\"noreferrer\">Learn More</a>"
