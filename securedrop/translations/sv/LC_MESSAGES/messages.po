@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-03 10:28+0000\nLast-Translator: Jonas Waga <jonas.waga@schibsted.com>\nLanguage-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/securedrop/sv/>\nLanguage: sv\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 08:37+0000\nLast-Translator: Jonas Waga <jonas.waga@schibsted.com>\nLanguage-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/securedrop/sv/>\nLanguage: sv\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} sedan"
@@ -65,7 +65,7 @@ msgid "Success!"
 msgstr "Det lyckades!"
 
 msgid "The account and data for the source {} have been deleted."
-msgstr "Kontot och informationen för källan {} har raderats"
+msgstr "Kontot och informationen för källan {} har raderats."
 
 #. Error shown when a user has not selected items to act on.
 msgid "Nothing Selected"
@@ -233,8 +233,6 @@ msgstr "Vad vill du radera?"
 msgid "Files and Messages"
 msgstr "Filer och meddelanden"
 
-#, fuzzy
-#| msgid "Sources"
 msgid "Source Accounts"
 msgstr "Källor"
 
