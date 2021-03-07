@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 17:36+0000\nLast-Translator: 1000101 <b1000101@pm.me>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 17:41+0000\nLast-Translator: ViktoriaAndr <viktoria.andrascikova@gmail.com>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "pred {time}"
@@ -439,23 +439,17 @@ msgstr "ikona správ"
 msgid "Delete Confirmation"
 msgstr "Potvrdiť zmazanie"
 
-#, fuzzy
-#| msgid "Are you sure you want to delete the selected documents?"
 msgid "Are you sure you want to delete the selected submissions?"
-msgstr "Naozaj chcete zmazať vybraté dokumenty?"
+msgstr "Naozaj chcete zmazať zvolené podania?"
 
 msgid "DELETE"
 msgstr "ZMAZAŤ"
 
-#, fuzzy
-#| msgid "No documents to display."
 msgid "No submissions to display."
-msgstr "Žiadne dokumenty na zobrazenie."
+msgstr "Žiadne podania na zobrazenie."
 
-#, fuzzy
-#| msgid "You can write a secure reply to the person who submitted these documents:"
 msgid "You can write a secure reply to the person who submitted these messages and/or files:"
-msgstr "Môžete napísať bezpečnú odpoveď osobe, ktorá podala tieto dokumenty:"
+msgstr "Môžete napísať bezpečnú odpoveď osobe, ktorá poslala dané správy a/alebo dokumenty:"
 
 msgid "You've flagged this source for reply."
 msgstr "Označili ste tento zdroj na odpoveď."
@@ -469,13 +463,11 @@ msgstr "Pre odpoveď tomuto zdroju kliknite nižšie."
 msgid "FLAG THIS SOURCE FOR REPLY"
 msgstr "OZNAČIŤ TENTO ZDROJ NA ODPOVEĎ"
 
-#, fuzzy
-#| msgid "Edit your account"
 msgid "Delete Source Account"
-msgstr "Upraviť svoj účet"
+msgstr "Vymazať účet zdroja"
 
 msgid "Are you sure?"
-msgstr ""
+msgstr "Ste si tým istí?"
 
 msgid "Yes, Delete Source Account"
 msgstr ""
