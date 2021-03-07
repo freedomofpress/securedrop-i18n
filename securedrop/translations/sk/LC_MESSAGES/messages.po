@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 17:28+0000\nLast-Translator: 1000101 <b1000101@pm.me>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 17:36+0000\nLast-Translator: ViktoriaAndr <viktoria.andrascikova@gmail.com>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "pred {time}"
@@ -394,10 +394,8 @@ msgstr "Používá systém <em>SecureDrop {version}</em>."
 msgid "All Sources"
 msgstr "Všetky zdroje"
 
-#, fuzzy
-#| msgid "The documents are stored encrypted for security. To read them, you will need to decrypt them using GPG."
 msgid "All messages, files, and replies from sources are stored as encrypted files for security. To read them, you will need to decrypt them on your Secure Viewing Station."
-msgstr "Dokumenty sú z bezpečnostných dôvodov uložené šifrovane. Ak si ich chcete prečítať, musíte ich dešifrovať pomocou GPG."
+msgstr "Všetky správy, súbory a odpovede od zdrojov sú kvôli zabezpečeniu ukladané ako šifrované súbory. Aby ste si ich mohli prečítať, musíte ich najprv dešifrovať na bezpečnom počítači (Secure Viewing Station)."
 
 msgid "Download Selected"
 msgstr "Stiahnuť vybrané"
