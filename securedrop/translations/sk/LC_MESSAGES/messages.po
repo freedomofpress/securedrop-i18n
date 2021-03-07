@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 19:37+0000\nLast-Translator: 1000101 <b1000101@pm.me>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 21:37+0000\nLast-Translator: 1000101 <b1000101@pm.me>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "pred {time}"
@@ -882,7 +882,7 @@ msgid "Important"
 msgstr "Dôležité"
 
 msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
-msgstr "Boli ste odhlásený/á z dôvodu nečinnosti. Skôr než budete pokračovať, kliknite na ikonu <img src={icon} alt=\"ikona metly\" width=\"16\" height=\"16\">&nbsp;<strong>Nová identita</strong> na lište prehliadača Tor. To vymaže dáta o aktivite Tor prehliadača na tomto zariadení."
+msgstr "Boli ste odhlásení z dôvodu nečinnosti. Skôr než budete pokračovať, kliknite na ikonu <img src={icon} alt=\"ikona metly\" width=\"16\" height=\"16\">&nbsp;<strong>Nová identita</strong> na lište prehliadača Tor. To vymaže dáta o aktivite Tor prehliadača na tomto zariadení."
 
 msgid "Why is there a warning about Tor2Web?"
 msgstr "Prečo je tu upozornenie o Tor2Web?"
@@ -891,7 +891,7 @@ msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
 msgstr "Používanie Tor2Web na pripojenie k SecureDrop neochráni vašu anonymitu."
 
 msgid "It could be possible for anyone monitoring your Internet traffic (your government, your Internet provider), to identify you."
-msgstr "Ktokoľvek moniturujúci vašu Internetovú komunikáciu (vláda, poskytovateľ pripojenia) vás môže identifikovať."
+msgstr "Ktokoľvek moniturujúci vašu internetovú komunikáciu (vláda, poskytovateľ pripojenia) vás môže identifikovať."
 
 msgid "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject.org/projects/torbrowser.html\">Tor Browser</a> instead."
 msgstr "<strong>Odporúčame</strong>použiť <a href=\"www.torproject.org/projects/torbrowser.html\">prehliadač Tor</a>."
@@ -915,7 +915,7 @@ msgid "Why download the team's public key?"
 msgstr "Prečo si stiahnuť verejný kľúč tímu?"
 
 msgid "SecureDrop encrypts files and messages after they are submitted. Encrypting messages and files before submission can provide an extra layer of security before your data reaches the SecureDrop server."
-msgstr "SecureDrop šifruje súbory a správy až po ich podaní. Šifrovanie správ a súborov pred podaním môže pridať dodatočnú vrstvu bezpečnosti predtým, než sa vaše dáta dostanú na server SecureDrop-u."
+msgstr "SecureDrop šifruje súbory a správy až po ich podaní. Šifrovanie správ a súborov pred podaním môže pridať dodatočnú vrstvu bezpečnosti predtým, než sa vaše dáta dostanú na server SecureDrop."
 
 msgid "If you are already familiar with the GPG encryption software, you may wish to encrypt your submissions yourself. To do so:"
 msgstr "Ak ovládate prácu s GPG, môžete si zašifrovať svoje podanie sami. Ak to chcete, spravte nasledujúce:"
