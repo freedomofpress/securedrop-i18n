@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 16:54+0000\nLast-Translator: ViktoriaAndr <viktoria.andrascikova@gmail.com>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 17:11+0000\nLast-Translator: 1000101 <b1000101@pm.me>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "pred {time}"
@@ -170,7 +170,7 @@ msgid "You must select one or more items for deletion."
 msgstr "Žiadne sady neboli vybrané na zmazanie."
 
 msgid "The files and messages have been deleted."
-msgstr "Všetky odpovede boli zmazané."
+msgstr "Súbory a odpovede boli zmazané."
 
 msgid "Name updated."
 msgstr "Meno aktualizované."
@@ -224,7 +224,7 @@ msgid "When the account for a source is deleted:"
 msgstr "Ak je účet zdroja vymazaný:"
 
 msgid "The source will no longer be able to log in with their codename."
-msgstr "Zdroj sa už nebude môcť prihlásiť pod svojim krycím menom."
+msgstr "Zdroj sa už nebude môcť prihlásiť pod svojím krycím menom."
 
 msgid "You will not be able to send them replies."
 msgstr "Nebudete môcť zdroju zasielať odpovede."
@@ -236,10 +236,10 @@ msgid "Are you sure this is what you want?"
 msgstr "Ste si istí, že to chcete spraviť?"
 
 msgid "Yes, Delete Selected Source Accounts"
-msgstr "Áno, chcem vymazať účty vybraných zdrojov"
+msgstr "Áno, chcem zmazať účty vybraných zdrojov"
 
 msgid "What would you like to delete?"
-msgstr "Čo chcete vymazať?"
+msgstr "Čo chcete zmazať?"
 
 msgid "Files and Messages"
 msgstr "Súbory a správy"
