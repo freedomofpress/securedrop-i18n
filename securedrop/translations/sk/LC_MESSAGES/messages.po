@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 16:41+0000\nLast-Translator: ViktoriaAndr <viktoria.andrascikova@gmail.com>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 16:54+0000\nLast-Translator: 1000101 <b1000101@pm.me>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "pred {time}"
@@ -75,7 +75,7 @@ msgid "You must select one or more items."
 msgstr "Musíte vybrať jednu či viac položiek."
 
 msgid "Your download failed because a file could not be found. An admin can find more information in the system and monitoring logs."
-msgstr "Vaše sťahovanie sa zlyhalo, pretože sa súbor nenašiel. Admin vie zistiť viac informácií v logoch systému a monitoringu."
+msgstr "Sťahovanie zlyhalo, pretože súbor sa nenašiel. Administrátor môže nájsť viac informácií v logoch."
 
 msgid "Only admins can access this page."
 msgstr "Táto stránka je prístupná iba pre administrátorov."
@@ -129,19 +129,19 @@ msgid "No unread submissions for this source."
 msgstr "Žiadne neprečítané podania od tohto zdroja."
 
 msgid "Account updated."
-msgstr "Účet upravený."
+msgstr "Účet bol aktualizovaný."
 
 msgid "<b>Login failed.</b>"
 msgstr "<b>Prihlásenie zlyhalo.</b>"
 
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
-msgstr[0] "Pred opakovaným prihlásením prosím počkajte aspoň {num} sekundu."
-msgstr[1] "Pred opakovaným prihlásením prosím počkajte aspoň {num} sekundy."
-msgstr[2] "Pred opakovaným prihlásením prosím počkajte aspoň {num} sekúnd."
+msgstr[0] "Pred opakovaním prihlásenia prosím počkajte aspoň {num} sekundu."
+msgstr[1] "Pred opakovaním prihlásenia prosím počkajte aspoň {num} sekundy."
+msgstr[2] "Pred opakovaním prihlásenia prosím počkajte aspoň {num} sekúnd."
 
 msgid "Please wait for a new code from your two-factor mobile app or security key before trying again."
-msgstr "Pred pokračovaním prosím počkajte na nový kód z mobilnej aplikácie alebo bezpečnostného kľúča pre dvojfaktorovú autentifikáciu."
+msgstr "Pred pokračovaním prosím počkajte na nový kód z mobilnej aplikácie, alebo bezpečnostného kľúča pre dvojfaktorovú autentifikáciu."
 
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr "Nesprávny formát hesla: prosím zadávajte iba písmená A až F a čísla 0 až 9."
