@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 16:54+0000\nLast-Translator: 1000101 <b1000101@pm.me>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 16:54+0000\nLast-Translator: ViktoriaAndr <viktoria.andrascikova@gmail.com>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "pred {time}"
@@ -227,29 +227,25 @@ msgid "The source will no longer be able to log in with their codename."
 msgstr "Zdroj sa už nebude môcť prihlásiť pod svojim krycím menom."
 
 msgid "You will not be able to send them replies."
-msgstr ""
+msgstr "Nebudete môcť zdroju zasielať odpovede."
 
 msgid "All files and messages from that source will also be destroyed."
-msgstr ""
+msgstr "Všetky súbory a správy od daného zdroja budú zničené."
 
 msgid "Are you sure this is what you want?"
-msgstr ""
+msgstr "Ste si istí, že to chcete spraviť?"
 
 msgid "Yes, Delete Selected Source Accounts"
-msgstr ""
+msgstr "Áno, chcem vymazať účty vybraných zdrojov"
 
 msgid "What would you like to delete?"
-msgstr ""
+msgstr "Čo chcete vymazať?"
 
-#, fuzzy
-#| msgid "Submit Files or Messages"
 msgid "Files and Messages"
-msgstr "Odovzdať súbory alebo správy"
+msgstr "Súbory a správy"
 
-#, fuzzy
-#| msgid "Sources"
 msgid "Source Accounts"
-msgstr "Zdroje"
+msgstr "Účty zdrojov"
 
 msgid "Change Secret"
 msgstr "Zmeniť heslo"
