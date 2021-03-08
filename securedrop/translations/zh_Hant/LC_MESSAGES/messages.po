@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-08 13:37+0000\nLast-Translator: erinm <erinm@riseup.net>\nLanguage-Team: Chinese (Traditional) <https://weblate.securedrop.org/projects/securedrop/securedrop/zh_Hant/>\nLanguage: zh_Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-08 22:37+0000\nLast-Translator: John Hensley <john@freedom.press>\nLanguage-Team: Chinese (Traditional) <https://weblate.securedrop.org/projects/securedrop/securedrop/zh_Hant/>\nLanguage: zh_Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} 之前"
@@ -354,10 +354,10 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "設定 Yubikey 後，請在下面輸入 6 位數字代碼："
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>重要安全課題：</strong> &nbsp;&nbsp;SecureDrop 伺服器作業系統已逾使用年限，亟需手動更新才能啟用線人界面與維持安全。請聯絡網管人員 - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">了解進一步資訊</a>"
+msgstr "<strong>重要安全課題：</strong> &nbsp;&nbsp;SecureDrop 伺服器作業系統已逾使用年限，亟需手動更新才能啟用線人界面與維持安全。請聯絡網管人員 - <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">了解進一步資訊</a>"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>重要安全課題:</strong> &nbsp;&nbsp;SecureDrop 伺服器作業系統將在月30日超過使用年限，亟需手動更新以維持安全。 請聯絡網管人員 <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">了解詳情</a>"
+msgstr "<strong>重要安全課題:</strong> &nbsp;&nbsp;SecureDrop 伺服器作業系統將在月30日超過使用年限，亟需手動更新以維持安全。 請聯絡網管人員 <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">了解詳情</a>"
 
 msgid "Logged on as"
 msgstr "登入為"
