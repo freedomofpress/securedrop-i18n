@@ -4,13 +4,13 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-08 02:37+0000\nLast-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\nLanguage-Team: Chinese (Traditional) <https://weblate.securedrop.org/projects/securedrop/securedrop/zh_Hant/>\nLanguage: zh_Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-08 02:37+0000\nLast-Translator: mengpangwang <mengpangwang@gmail.com>\nLanguage-Team: Chinese (Traditional) <https://weblate.securedrop.org/projects/securedrop/securedrop/zh_Hant/>\nLanguage: zh_Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} 之前"
 
 msgid "You have been logged out due to inactivity."
-msgstr "您因閒置太久已被登出"
+msgstr "因為閒置太久，已將您登出。"
 
 msgid "You have been logged out due to password change"
 msgstr "因密碼變更已被登出"
@@ -55,7 +55,7 @@ msgid "Name not updated: {}"
 msgstr "名稱未更新: {}"
 
 msgid "Deleted user '{user}'."
-msgstr "删除了用户「{user}」"
+msgstr "已刪除使用者「{user}」"
 
 msgid "Test alert sent. Please check your email."
 msgstr "已送出測試警報，請檢查電郵信箱。"
