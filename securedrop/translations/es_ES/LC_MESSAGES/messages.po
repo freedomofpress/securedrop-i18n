@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-08 12:20+0000\nLast-Translator: Gonzalo Bulnes Guilpain <gon.bulnes@fastmail.com>\nLanguage-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-08 12:20+0000\nLast-Translator: erinm <erinm@riseup.net>\nLanguage-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "hace {time}"
@@ -638,7 +638,7 @@ msgid "LOG IN"
 msgstr "INICIAR SESIÓN"
 
 msgid "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This <strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href=\"{url}\">Why is this dangerous?</a>"
-msgstr "<strong>ADVERTENCIA:&nbsp;</strong> Usted parece estar usando Tor2Web. Esto <strong>&nbsp; no &nbsp;</strong> proporciona anonimato. <a href=\"{url}\"> ¿Por qué es peligroso? </a>"
+msgstr "<strong>ADVERTENCIA:&nbsp;</strong> Pareces estar usando Tor2Web. Esto <strong>&nbsp; no &nbsp;</strong> proporciona anonimato. <a href=\"{url}\"> ¿Por qué es peligroso? </a>"
 
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "Este campo debe tener de 1 a {max_codename_len} caracteres de longitud."
@@ -656,7 +656,7 @@ msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
 msgstr "Bloques de texto grandes deben ser cargados como archivo, no copiados y pegados."
 
 msgid "You were redirected because you are already logged in. If you want to create a new account, you should log out first."
-msgstr "Usted fue redirigido porque ya tenía una sesión iniciada. Si desea crear una cuenta nueva, debe cerrar la sesión primero."
+msgstr "Fuiste redirigido porque ya tenías una sesión iniciada. Si deseas crear una cuenta nueva, debes cerrar la sesión primero."
 
 msgid "You are already logged in. Please verify your codename above as it may differ from the one displayed on the previous page."
 msgstr "Ya tienes una sesión iniciada. Por favor verifica arriba tu nombre clave, ya que pudiera diferir del mostrado en la página previa."
@@ -755,7 +755,7 @@ msgid "<strong>It is recommended to use Tor Browser to access SecureDrop:</stron
 msgstr "<strong>Se recomienda que uses el Navegador Tor para acceder a SecureDrop:</strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\">Aprende cómo instalarlo</a>, o ignora esta advertencia para continuar."
 
 msgid "<strong>It is recommended you use the desktop version of Tor Browser to access SecureDrop, as Orfox does not provide the same level of security and anonymity as the desktop version.</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to continue."
-msgstr "<strong>Se recomienda que use la versión de escritorio del Navegador Tor para acceder a SecureDrop, ya que Orfox no proporciona el mismo nivel de seguridad y anonimato.</strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\"> Aprenda cómo instalarlo</a>, o ignore esta advertencia para continuar."
+msgstr "<strong>Se recomienda que uses la versión de escritorio del Navegador Tor para acceder a SecureDrop, ya que Orfox no proporciona el mismo nivel de seguridad y anonimato.</strong><a id=\"recommend-tor\" href=\"{tor_browser_url}\"> Aprende cómo instalarlo</a>, o ignora esta advertencia para continuar."
 
 msgid "First submission"
 msgstr "Primer envío"
@@ -782,7 +782,7 @@ msgid "Select <strong>Safest</strong>"
 msgstr "Selecciona <strong>El más seguro de todos</strong>"
 
 msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
-msgstr "¡<a href=\"/\">Refresque esta página</a>, y está listo!"
+msgstr "¡<a href=\"/\">Refresca esta página</a>, y está listo!"
 
 msgid "Enter Codename"
 msgstr "Introduce Nombre Clave"
@@ -797,7 +797,7 @@ msgid "One more thing..."
 msgstr "Una cosa más..."
 
 msgid "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong> button in your Tor Browser's toolbar. This will clear your Tor Browser activity data on this device."
-msgstr "Haga clic en el botón <img src={icon} alt=\"ícono de escoba\" width=\"16\" height=\"16\">&nbsp;<strong>Nueva identidad</strong> en la barra de herramientas del Navegador Tor. Esto borrará los datos de actividad de su Navegador Tor en este dispositivo."
+msgstr "Haz clic en el botón <img src={icon} alt=\"ícono de escoba\" width=\"16\" height=\"16\">&nbsp;<strong>Nueva identidad</strong> en la barra de herramientas del Navegador Tor. Esto borrará los datos de actividad de tu Navegador Tor en este dispositivo."
 
 msgid "Remember, your codename is:"
 msgstr "Recuerda que tu nombre clave es:"
