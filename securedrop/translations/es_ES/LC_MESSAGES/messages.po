@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-08 12:16+0000\nLast-Translator: Gonzalo Bulnes Guilpain <gon.bulnes@fastmail.com>\nLanguage-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-08 12:16+0000\nLast-Translator: erinm <erinm@riseup.net>\nLanguage-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "hace {time}"
@@ -429,7 +429,7 @@ msgid "Delete Confirmation"
 msgstr "Confirmar la eliminación"
 
 msgid "Are you sure you want to delete the selected submissions?"
-msgstr "¿Está seguro de que desea eliminar los envíos seleccionados?"
+msgstr "¿Estás seguro de que deseas eliminar los envíos seleccionados?"
 
 msgid "DELETE"
 msgstr "ELIMINAR"
@@ -770,7 +770,7 @@ msgid "Return visit"
 msgstr "Visitar de vuelta"
 
 msgid "Already have a codename? Check for replies or submit something new."
-msgstr "¿Ya tiene un nombre clave? Revise si hay respuestas o envíe algo nuevo."
+msgstr "¿Ya tienes un nombre clave? Revisa si hay respuestas o envía algo nuevo."
 
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
 msgstr "Haz clic en el <img src=\"{icon}\" alt=\"ícon de escudo\">, arriba en la barra de herramientas"
@@ -812,7 +812,7 @@ msgid "Sorry we haven't responded yet!"
 msgstr "¡Sentimos no haber respondido todavía!"
 
 msgid "Our SecureDrop recently experienced a surge of activity. For security reasons, the creation of a two-way communication channel was delayed until you checked in again."
-msgstr "Nuestro SecureDrop experimentó recientemente un pico de actividad. Por razones de seguridad, la creación de un canal de comunicación de doble vía fue demorada hasta que hayas iniciado sesión nuevamente."
+msgstr "Nuestro SecureDrop experimentó recientemente un pico de actividad. Por razones de seguridad, la creación de un canal de comunicación de doble vía fue demorada hasta que haya iniciado sesión nuevamente."
 
 msgid "Please rest assured that we were able to download your submission, and check back again later for a reply."
 msgstr "Por favor quédate tranquilo que hemos podido descargar tu envío, y vuelve a comprobar más tarde por una respuesta."
