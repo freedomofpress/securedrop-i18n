@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-08 11:51+0000\nLast-Translator: Gonzalo Bulnes Guilpain <gon.bulnes@fastmail.com>\nLanguage-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-08 12:16+0000\nLast-Translator: Gonzalo Bulnes Guilpain <gon.bulnes@fastmail.com>\nLanguage-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "hace {time}"
@@ -773,7 +773,7 @@ msgid "Already have a codename? Check for replies or submit something new."
 msgstr "¿Ya tiene un nombre clave? Revise si hay respuestas o envíe algo nuevo."
 
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
-msgstr "Haga clic en el <img src=\"{icon}\" alt=\"ícon de escudo\">, arriba en la barra de herramientas"
+msgstr "Haz clic en el <img src=\"{icon}\" alt=\"ícon de escudo\">, arriba en la barra de herramientas"
 
 msgid "Select <strong>Advanced Security Settings</strong>"
 msgstr "Selecciona <strong>Configuración de seguridad avanzada</strong>"
