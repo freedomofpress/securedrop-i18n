@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.4.3\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-05 15:47+0000\nLast-Translator: Adham Kurbanov <uz@zu.uz>\nLanguage-Team: Russian <https://weblate.securedrop.org/projects/securedrop/securedrop/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.4.3\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-08 22:37+0000\nLast-Translator: John Hensley <john@freedom.press>\nLanguage-Team: Russian <https://weblate.securedrop.org/projects/securedrop/securedrop/ru/>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} назад"
@@ -372,7 +372,7 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "После того, как вы настроили ваш YubiKey, введите 6-значный код ниже:"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Критическое предупреждение:</strong>&nbsp;&nbsp; Операционная система которая использовалась серверами SecureDrop отслужила своё. Для безопасного сохранения данных требуется срочное ручное обновление - <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Подробнее</a>"
+msgstr "<strong>Критическое предупреждение:</strong>&nbsp;&nbsp; Операционная система которая использовалась серверами SecureDrop отслужила своё. Для безопасного сохранения данных требуется срочное ручное обновление - <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Подробнее</a>"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr "<strong>Критическое предупреждение:</strong> &nbsp;&nbsp;Операционная система которая использовалась серверами SecureDrop отслужила своё и её срок истекает 30го апреля, 2021. Для безопасного сохранения данных требуется срочное ручное обновление, пожалуйста свяжитесь с администратором.- <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Подробнее</a>"
