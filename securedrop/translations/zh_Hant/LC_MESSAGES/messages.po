@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-03 02:37+0000\nLast-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\nLanguage-Team: Chinese (Traditional) <https://weblate.securedrop.org/projects/securedrop/securedrop/zh_Hant/>\nLanguage: zh_Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-08 02:37+0000\nLast-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\nLanguage-Team: Chinese (Traditional) <https://weblate.securedrop.org/projects/securedrop/securedrop/zh_Hant/>\nLanguage: zh_Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} 之前"
@@ -65,7 +65,7 @@ msgid "Success!"
 msgstr "成功！"
 
 msgid "The account and data for the source {} have been deleted."
-msgstr "基於安全考量該帳戶資料已全删除"
+msgstr "線人{} 的帳戶與資料皆已全數删除。"
 
 #. Error shown when a user has not selected items to act on.
 msgid "Nothing Selected"
@@ -685,7 +685,7 @@ msgid "SecureDrop Home"
 msgstr "SecureDrop 首頁"
 
 msgid "We're sorry, our SecureDrop is currently offline."
-msgstr "抱歉，目前  SecureDrop  關機維修。"
+msgstr "抱歉，目前  SecureDrop 關機維修。"
 
 msgid "Please try again later. Check our website for more information."
 msgstr "請稍後再試或查看官網取得更多資訊。"
@@ -903,7 +903,7 @@ msgstr "如果您熟悉 GPG 加密軟體，您可以在上傳文件前先自行�
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. It will be saved to a file called:\n"
 "        <p><code>{submission_key_fpr_filename}</code></p>"
-msgstr "<a href=\"{url}\">下載</a>公鑰。它會自動儲存為 <p><code>{submission_key_fpr_filename}</code></p>"
+msgstr "<a href=\"{url}\">下載</a>公鑰。它會自動儲存為:\n        <p><code>{submission_key_fpr_filename}</code></p>"
 
 msgid "Import it into your GPG keyring."
 msgstr "匯入至您的 GPG 鑰匙圈。"
@@ -912,7 +912,7 @@ msgid "If you are using <a href=\"{url}\">Tails</a>, you can double-click the <c
 msgstr "如果您正使用 <a href=\"{url}\">Tails</a>，可以雙擊剛才下載的 <code>.asc</code>文件，它會自動地加入到您的鑰匙圈中。"
 
 msgid "If you are using macOS or Linux, open the terminal. You can import the key with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
-msgstr "如果您使用 MacOS/Linux 系統，請打開終端機，用以下指令匯入金鑰：<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>。"
+msgstr "如果您使用 MacOS 或 Linux 系統，請打開終端機，用以下指令匯入金鑰：<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>。"
 
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
 msgstr "加密提交的文件，請在文字指令程式下輸入以下 gpg 指令："
