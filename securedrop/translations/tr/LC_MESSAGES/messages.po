@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-02 16:37+0000\nLast-Translator: Kaya Zeren <kayazeren@gmail.com>\nLanguage-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/securedrop/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-08 10:37+0000\nLast-Translator: Volkan <volkangezer@gmail.com>\nLanguage-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/securedrop/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} önce"
@@ -72,7 +72,7 @@ msgid "Nothing Selected"
 msgstr "Herhangi Bir Şey Seçilmemiş"
 
 msgid "You must select one or more items."
-msgstr "Bir ya da bir kaç öge seçmelisiniz."
+msgstr "Bir ya da daha fazla öge seçmelisiniz."
 
 msgid "Your download failed because a file could not be found. An admin can find more information in the system and monitoring logs."
 msgstr "İndirme işleminiz bir dosya bulunamadığı için başarısız oldu. Bir yönetici sistem ve izleme günlüklerinde sorunla ilgili daha fazla bilgiye ulaşabilir."
@@ -117,10 +117,10 @@ msgid "Your reply has been stored."
 msgstr "Yanıtınız kaydedildi."
 
 msgid "You must select one or more items for download"
-msgstr "İndirilecek bir ya da bir kaç öge seçmelisiniz"
+msgstr "İndirilecek bir ya da daha fazla öge seçmelisiniz"
 
 msgid "You must select one or more items for deletion"
-msgstr "Silinecek bir ya da birkaç öge seçmelisiniz"
+msgstr "Silinecek bir ya da daha fazla öge seçmelisiniz"
 
 msgid "No unread submissions for this source."
 msgstr "Bu kaynağın okunmamış gönderimi yok."
@@ -129,7 +129,7 @@ msgid "Account updated."
 msgstr "Hesap güncellendi."
 
 msgid "<b>Login failed.</b>"
-msgstr "<b>Oturum açılamadı.</b>"
+msgstr "<b>Oturum açma başarısız.</b>"
 
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
@@ -159,7 +159,7 @@ msgstr[0] "{n} kaynağın hesap bilgileri ve verileri silinecek."
 msgstr[1] "{n} kaynağın hesap bilgileri ve verileri silinecek."
 
 msgid "You must select one or more items for deletion."
-msgstr "Silinecek bir ya da birkaç öge seçmelisiniz."
+msgstr "Silinecek bir ya da daha fazla öge seçmelisiniz."
 
 msgid "The files and messages have been deleted."
 msgstr "Dosya ve iletiler silindi."
@@ -213,7 +213,7 @@ msgid "When the account for a source is deleted:"
 msgstr "Bir kaynağın hesabı silindiğinde:"
 
 msgid "The source will no longer be able to log in with their codename."
-msgstr "Kaynak kod adı ile oturum açamaz."
+msgstr "Kaynak, kod adı ile oturum açamaz."
 
 msgid "You will not be able to send them replies."
 msgstr "Kaynağa yanıt gönderemezsiniz."
@@ -363,10 +363,10 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "YubiKey yapılandırmasını tamamladığınızda, aşağıdaki 6 haneli kodu yazın:"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Kritik Güvenlik:</strong>&nbsp;&nbsp;SecureDrop sunucularınız tarafından kullanılan işletim sisteminizin ömrü bitmiştir. Kaynak arayüzünü yeniden etkinleştirmek ve güvende kalmak için elle bir güncelleme yapmanız gerekiyor. Lütfen BT yöneticiniz ile görüşün. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Ayrıntılı Bilgi Alın</a>"
+msgstr "<strong>Kritik Güvenlik:</strong>&nbsp;&nbsp;SecureDrop sunucularınız tarafından kullanılan işletim sisteminizin ömrü sona erdi. Kaynak arayüzünü yeniden etkinleştirmek ve güvende kalmak için elle bir güncelleme yapmanız gerekiyor. Lütfen BT yöneticiniz ile görüşün. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Ayrıntılı Bilgi Alın</a>"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Kritik Güvenlik:</strong>&nbsp;&nbsp;SecureDrop sunucularınızda kullanılan işletim sisteminin kullanım ömrü bitmiş. Güvende kalmak için el ile bir güncelleme yapmanız gerekiyor. Lütfen BT yöneticiniz ile görüşün. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Ayrıntılı Bilgi Alın</a>"
+msgstr "<strong>Kritik Güvenlik:</strong>&nbsp;&nbsp;SecureDrop sunucularınızda kullanılan işletim sisteminin kullanım ömrü 30 Nisan 2021'de sona eriyor. Güvende kalmak için el ile bir güncelleme yapmanız gerekiyor. Lütfen BT yöneticiniz ile görüşün. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Ayrıntılı Bilgi Alın</a>"
 
 msgid "Logged on as"
 msgstr "Oturum açan"
@@ -384,7 +384,7 @@ msgid "All Sources"
 msgstr "Tüm Kaynaklar"
 
 msgid "All messages, files, and replies from sources are stored as encrypted files for security. To read them, you will need to decrypt them on your Secure Viewing Station."
-msgstr "Kaynakların tüm iletileri, dosyaları ve yanıtları güvenlik amacıyla şifrelenerek saklanır. Bunları okuyabilmek için Güvenli Görüntüleme İstasyonunuzdan şifrelerini çözmelisiniz."
+msgstr "Kaynakların tüm iletileri, dosyaları ve yanıtları güvenlik amacıyla şifrelenerek saklanır. Bunları okuyabilmek için Güvenli Görüntüleme İstasyonunuz'dan şifrelerini çözmelisiniz."
 
 msgid "Download Selected"
 msgstr "Seçilmişleri İndir"
