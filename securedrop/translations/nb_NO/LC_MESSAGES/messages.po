@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-06 16:37+0000\nLast-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\nLanguage-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/securedrop/securedrop/nb_NO/>\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-08 22:37+0000\nLast-Translator: John Hensley <john@freedom.press>\nLanguage-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/securedrop/securedrop/nb_NO/>\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} siden"
@@ -363,10 +363,10 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Når du har satt opp din YubiKey, skriv inn den 6 tegn lange koden nedenfor:"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Sikkerhetskritisk:</strong>&nbsp;&nbsp;Operativsystemet på tjenerne som drifter denne installasjonen av SecureDrop har nådd slutten av sin levetid. En manuell oppgradering kreves for å reaktivere kilde-nettsiden og opprettholde sikkerheten. Kontakt din administrator. <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Les mer</a>"
+msgstr "<strong>Sikkerhetskritisk:</strong>&nbsp;&nbsp;Operativsystemet på tjenerne som drifter denne installasjonen av SecureDrop har nådd slutten av sin levetid. En manuell oppgradering kreves for å reaktivere kilde-nettsiden og opprettholde sikkerheten. Kontakt din administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Les mer</a>"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Sikkerhetskritisk:</strong>&nbsp;&nbsp;Operativsystemet på tjenerne som drifter denne installasjonen av SecureDrop vil nå slutten av sin levetid den 30. april 2021. En manuell oppgradering må gjøres innen kort tid for å opprettholde sikkerheten. Kontakt din administrator. <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Les mer</a>"
+msgstr "<strong>Sikkerhetskritisk:</strong>&nbsp;&nbsp;Operativsystemet på tjenerne som drifter denne installasjonen av SecureDrop vil nå slutten av sin levetid den 30. april 2021. En manuell oppgradering må gjøres innen kort tid for å opprettholde sikkerheten. Kontakt din administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Les mer</a>"
 
 msgid "Logged on as"
 msgstr "Innlogget som"
