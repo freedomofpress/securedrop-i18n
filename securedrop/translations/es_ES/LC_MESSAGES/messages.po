@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-08 12:20+0000\nLast-Translator: erinm <erinm@riseup.net>\nLanguage-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-08 12:21+0000\nLast-Translator: Gonzalo Bulnes Guilpain <gon.bulnes@fastmail.com>\nLanguage-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "hace {time}"
@@ -842,7 +842,7 @@ msgid "Read Replies"
 msgstr "Leer Respuestas"
 
 msgid "You have received a reply. To protect your identity in the unlikely event someone learns your codename, please delete all replies when you're done with them. This also lets us know that you are aware of our reply. You can respond by submitting new files and messages above."
-msgstr "Has recibido una respuesta. Para proteger tu identidad en el improbable caso de que alguien descubra tu nombre clave, por favor, borra todas las respuestas cuando hayas terminado con ellas. Esto también nos permite saber que has recibido nuestra respuesta. Puedes responder enviando nuevos archivos y mensajes arriba."
+msgstr "Has recibido una respuesta. Para proteger tu identidad en el caso improbable de que alguien descubra tu nombre clave, por favor, borra todas las respuestas cuando hayas terminado con ellas. Esto también nos permite saber que has recibido nuestra respuesta. Puedes responder enviando nuevos archivos y mensajes arriba."
 
 msgid "Delete this reply?"
 msgstr "¿Deseas eliminar esta respuesta?"
