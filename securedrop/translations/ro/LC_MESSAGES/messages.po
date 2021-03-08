@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.6~rc2\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-08 19:37+0000\nLast-Translator: John Hensley <john@freedom.press>\nLanguage-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/securedrop/ro/>\nLanguage: ro\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.6~rc2\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-08 22:37+0000\nLast-Translator: John Hensley <john@freedom.press>\nLanguage-Team: Romanian <https://weblate.securedrop.org/projects/securedrop/securedrop/ro/>\nLanguage: ro\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "acum {time}"
@@ -372,7 +372,7 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "După ce ai configurat cheia fizică YubiKey, introdu codul de 6 cifre de mai jos:"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Alertă critică de securitate:</strong>&nbsp;&nbsp;Sistemul de operare folosit de serverele SecureDrop a ajuns la sfârșitul duratei de viață. Este necesară trecerea manuală la o versiune superioară pentru reactivarea interfeței pentru surse și pentru a rămâne în siguranță. Contactează administratorul. <a href=\"//securedrop.org/xenial-upgradeeol\" rel=\"noreferrer\">Află mai multe</a>"
+msgstr "<strong>Alertă critică de securitate:</strong>&nbsp;&nbsp;Sistemul de operare folosit de serverele SecureDrop a ajuns la sfârșitul duratei de viață. Este necesară trecerea manuală la o versiune superioară pentru reactivarea interfeței pentru surse și pentru a rămâne în siguranță. Contactează administratorul. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Află mai multe</a>"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr "<strong>Alertă critică de securitate:</strong> Sistemul de operare folosit de serverele SecureDrop va ajunge la sfârșitul duratei de viață la data de 30 aprilie 2021. Este necesară de urgență trecerea manuală la o versiune superioară pentru a rămâne în siguranță. Contactează administratorul. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Află mai multe</a>"
