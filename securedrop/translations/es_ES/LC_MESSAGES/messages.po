@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-07 03:20+0000\nLast-Translator: Gonzalo Bulnes Guilpain <gon.bulnes@fastmail.com>\nLanguage-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-08 11:51+0000\nLast-Translator: Gonzalo Bulnes Guilpain <gon.bulnes@fastmail.com>\nLanguage-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "hace {time}"
@@ -96,7 +96,7 @@ msgstr[0] "No puede tener más que {num} carácter."
 msgstr[1] "No puede tener más que {num} caracteres."
 
 msgid "This username is invalid because it is reserved for internal use by the software."
-msgstr "Este nombre de usuario es inválido porque está reservado para su uso interno por el software."
+msgstr "Este nombre de usuario es inválido porque está reservado para uso interno por el software."
 
 msgid "This field is required."
 msgstr "Este campo es obligatorio."
@@ -228,7 +228,7 @@ msgid "Yes, Delete Selected Source Accounts"
 msgstr "Sí, eliminar cuentas de la fuente seleccionada"
 
 msgid "What would you like to delete?"
-msgstr "¿Qué te gustaría eliminar?"
+msgstr "¿Qué deseas eliminar?"
 
 msgid "Files and Messages"
 msgstr "Archivos y Mensajes"
@@ -267,7 +267,7 @@ msgid "Can't scan the barcode? You can manually pair FreeOTP with your SecureDro
 msgstr "¿No puedes escanear el código de barras? Puedes emparejar manualmente FreeOTP con tu cuenta SecureDrop ingresando el siguiente secreto de dos factores en la aplicación:"
 
 msgid "Once you have paired FreeOTP with this account, enter the 6-digit verification code below:"
-msgstr "Una vez que conectes FreeOTP con esta cuenta, ingresa abajo el código de verificación de 6 dígitos:"
+msgstr "Una vez que conectes FreeOTP con esta cuenta, ingresa el código de verificación de 6 dígitos a continuación:"
 
 msgid "Enable YubiKey (OATH-HOTP)"
 msgstr "Habilitar el dispositivo YubiKey (OATH-HOTP)"
@@ -354,7 +354,7 @@ msgid "Is using a YubiKey [HOTP]"
 msgstr "Está utilizando un dispositivo YubiKey [HOTP]"
 
 msgid "You're almost done! To finish adding this new user, have them follow the instructions below to set up two-factor authentication with FreeOTP. Once they've added an entry for this account in the app, have them enter one of the 6-digit codes from the app to confirm that two-factor authentication is set up correctly."
-msgstr "¡Casi listo! Para terminar de agregar este nuevo usuario, haz que siga las instrucciones de abajo para configurar la autenticación de dos factores con FreeOTP. Una vez que haya agregado una entrada para esta cuenta en la aplicación, haz que ingrese uno de los códigos de 6 dígitos generados por la misma para confirmar que la autenticación de dos factores esté configurada correctamente."
+msgstr "¡Casi listo! Para terminar de agregar este nuevo usuario, haz que configure la autenticación de dos factores con FreeOTP siguiendo las instrucciones abajo. Una vez que haya agregado una entrada para esta cuenta en la aplicación, haz que ingrese uno de los códigos de 6 dígitos de la aplicación para confirmar que la autenticación de dos factores esté configurada correctamente."
 
 msgid "Can't scan the barcode? You can manually pair FreeOTP with this account by entering the following two-factor secret into the app:"
 msgstr "¿No puedes escanear el código de barras? Puedes emparejar manualmente esta cuenta ingresando el siguiente secreto de dos factores en la aplicación:"
@@ -429,16 +429,16 @@ msgid "Delete Confirmation"
 msgstr "Confirmar la eliminación"
 
 msgid "Are you sure you want to delete the selected submissions?"
-msgstr "¿Está seguro de que desea eliminar las sumisiones seleccionadas?"
+msgstr "¿Está seguro de que desea eliminar los envíos seleccionados?"
 
 msgid "DELETE"
 msgstr "ELIMINAR"
 
 msgid "No submissions to display."
-msgstr "No hay sumisiones que mostrar."
+msgstr "No hay envíos que mostrar."
 
 msgid "You can write a secure reply to the person who submitted these messages and/or files:"
-msgstr "Puedes escribir una respuesta segura a la persona que presentó estos mensajes y/o archivos:"
+msgstr "Puedes escribir una respuesta segura a la persona que envió estos mensajes y/o archivos:"
 
 msgid "You've flagged this source for reply."
 msgstr "Has marcado esta fuente para responder."
@@ -557,7 +557,7 @@ msgid "Reset Two-Factor Authentication"
 msgstr "Restablecer la Autenticación de Dos Factores"
 
 msgid "If a user's two-factor authentication credentials have been lost or compromised, you can reset them here. <em>If you do this, make sure the user is present and ready to set up their device with the new two-factor credentials. Otherwise, they will be locked out of their account.</em>"
-msgstr "Si un usuario ha perdido o comprometido las credenciales de autenticación de dos factores, puedes restablecerlas aquí. <em>Si haces esto, asegúrate que el usuario esté presente y listo para configurar su dispositivo con las nuevas credenciales de dos factores. De lo contrario, será bloqueado de su cuenta.</em>"
+msgstr "Si un usuario ha perdido sus credenciales de autenticación de dos factores o sospecha que han sido comprometidas, puedes restablecerlas aquí. <em>Si haces esto, asegúrate que el usuario esté presente y listo para configurar su dispositivo con las nuevas credenciales de dos factores. De lo contrario, será bloqueado de su cuenta.</em>"
 
 msgid "If your two-factor authentication credentials have been lost or compromised, or you got a new device, you can reset your credentials here. <em>If you do this, make sure you are ready to set up your new device, otherwise you will be locked out of your account.</em>"
 msgstr "Si tus credenciales de autenticación de dos factores se han perdido o han sido comprometidas, o si tienes un dispositivo nuevo, puedes restablecer tus credenciales aquí. <em>Si haces esto, asegúrate de estar listo para configurar tu nuevo dispositivo, de lo contrario el acceso a tu cuenta será bloqueado.</em>"
@@ -770,10 +770,10 @@ msgid "Return visit"
 msgstr "Visitar de vuelta"
 
 msgid "Already have a codename? Check for replies or submit something new."
-msgstr "¿Ya tienes un nombre clave? Revisa si hay respuestas o envía algo nuevo."
+msgstr "¿Ya tiene un nombre clave? Revise si hay respuestas o envíe algo nuevo."
 
 msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
-msgstr "Haz clic en <img src=\"{icon}\" alt=\"shield icon\">, arriba en la barra de herramientas"
+msgstr "Haga clic en el <img src=\"{icon}\" alt=\"ícon de escudo\">, arriba en la barra de herramientas"
 
 msgid "Select <strong>Advanced Security Settings</strong>"
 msgstr "Selecciona <strong>Configuración de seguridad avanzada</strong>"
@@ -782,7 +782,7 @@ msgid "Select <strong>Safest</strong>"
 msgstr "Selecciona <strong>El más seguro de todos</strong>"
 
 msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
-msgstr "¡<a href=\"/\">Refresca esta página</a>, y estás listo!"
+msgstr "¡<a href=\"/\">Refresque esta página</a>, y está listo!"
 
 msgid "Enter Codename"
 msgstr "Introduce Nombre Clave"
@@ -797,7 +797,7 @@ msgid "One more thing..."
 msgstr "Una cosa más..."
 
 msgid "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong> button in your Tor Browser's toolbar. This will clear your Tor Browser activity data on this device."
-msgstr "Haz clic en el botón <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Nueva identidad</strong> en la barra de herramientas del Navegador Tor. Esto borrará los datos de actividad de tu Navegador Tor en este dispositivo."
+msgstr "Haga clic en el botón <img src={icon} alt=\"ícono de escoba\" width=\"16\" height=\"16\">&nbsp;<strong>Nueva identidad</strong> en la barra de herramientas del Navegador Tor. Esto borrará los datos de actividad de su Navegador Tor en este dispositivo."
 
 msgid "Remember, your codename is:"
 msgstr "Recuerda que tu nombre clave es:"
@@ -812,7 +812,7 @@ msgid "Sorry we haven't responded yet!"
 msgstr "¡Sentimos no haber respondido todavía!"
 
 msgid "Our SecureDrop recently experienced a surge of activity. For security reasons, the creation of a two-way communication channel was delayed until you checked in again."
-msgstr "Nuestro SecureDrop experimentó recientemente un pico de actividad. Por razones de seguridad, la creación de un canal de comunicación de doble vía fue demorada hasta que inicies sesión nuevamente."
+msgstr "Nuestro SecureDrop experimentó recientemente un pico de actividad. Por razones de seguridad, la creación de un canal de comunicación de doble vía fue demorada hasta que hayas iniciado sesión nuevamente."
 
 msgid "Please rest assured that we were able to download your submission, and check back again later for a reply."
 msgstr "Por favor quédate tranquilo que hemos podido descargar tu envío, y vuelve a comprobar más tarde por una respuesta."
