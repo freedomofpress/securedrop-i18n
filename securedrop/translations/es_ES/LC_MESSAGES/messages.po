@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-08 12:21+0000\nLast-Translator: Gonzalo Bulnes Guilpain <gon.bulnes@fastmail.com>\nLanguage-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-08 12:22+0000\nLast-Translator: Gonzalo Bulnes Guilpain <gon.bulnes@fastmail.com>\nLanguage-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "hace {time}"
@@ -872,7 +872,7 @@ msgid "Important"
 msgstr "Importante"
 
 msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
-msgstr "Tu sesión fue cerrada debido a inactividad. Haz clic en el botón <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Nueva identidad</strong> en la barra de herramientas del Navegador Tor antes de proseguir. Esto borrará los datos de actividad de tu Navegador Tor en este dispositivo."
+msgstr "Tu sesión ha terminado debido a inactividad. Haz clic en el botón <img src={icon} alt=\"icon de escoba\" width=\"16\" height=\"16\">&nbsp;<strong>Nueva identidad</strong> en la barra de herramientas del Navegador Tor antes de proseguir. Esto borrará los datos de actividad de tu Navegador Tor en este dispositivo."
 
 msgid "Why is there a warning about Tor2Web?"
 msgstr "¿Por qué hay una advertencia acerca de Tor2Web?"
