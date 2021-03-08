@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 08:37+0000\nLast-Translator: Jonas Waga <jonas.waga@schibsted.com>\nLanguage-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/securedrop/sv/>\nLanguage: sv\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-08 10:37+0000\nLast-Translator: Jonas Waga <jonas.waga@schibsted.com>\nLanguage-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/securedrop/sv/>\nLanguage: sv\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} sedan"
@@ -155,14 +155,14 @@ msgstr "Inga samlingar har markerats för radering."
 
 msgid "The account and all data for {n} source have been deleted."
 msgid_plural "The accounts and all data for {n} sources have been deleted."
-msgstr[0] "Kontot och all data för {n} källan har raderats."
-msgstr[1] "Kontona och all data för {n} källorna har raderats."
+msgstr[0] "Kontot och all data för {n} källa har raderats."
+msgstr[1] "Konton och data för {n} källor har raderats."
 
 msgid "You must select one or more items for deletion."
 msgstr "Du måste välja ett eller flera meddelanden för radering."
 
 msgid "The files and messages have been deleted."
-msgstr "Filerna och meddelandena har raderats."
+msgstr "Filer och meddelanden har raderats."
 
 msgid "Name updated."
 msgstr "Namn uppdaterat."
@@ -623,7 +623,7 @@ msgid "Are you sure you want to reset two-factor authentication for {username}?"
 msgstr "Är du säker att du vill återställa tvåfaktorsautentiseringen för {username}?"
 
 msgid "Sources selected: "
-msgstr "Samlingar valda: "
+msgstr "Källor valda: "
 
 msgid "Login to access the journalist interface"
 msgstr "Logga in för att få tillgång till journalistgränssnittet"
