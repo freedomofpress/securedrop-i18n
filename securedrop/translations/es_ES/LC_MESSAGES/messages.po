@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-08 12:24+0000\nLast-Translator: Gonzalo Bulnes Guilpain <gon.bulnes@fastmail.com>\nLanguage-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-09 00:37+0000\nLast-Translator: Gonzalo Bulnes Guilpain <gon.bulnes@fastmail.com>\nLanguage-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "hace {time}"
@@ -120,7 +120,7 @@ msgid "You must select one or more items for download"
 msgstr "Debes seleccionar uno o más ítems para descargar"
 
 msgid "You must select one or more items for deletion"
-msgstr "Debes seleccionar uno o más ítems. para eliminar"
+msgstr "Debes seleccionar uno o más ítems para eliminar"
 
 msgid "No unread submissions for this source."
 msgstr "No hay envíos sin leer para esta fuente."
@@ -812,7 +812,7 @@ msgid "Sorry we haven't responded yet!"
 msgstr "¡Sentimos no haber respondido todavía!"
 
 msgid "Our SecureDrop recently experienced a surge of activity. For security reasons, the creation of a two-way communication channel was delayed until you checked in again."
-msgstr "Nuestro SecureDrop experimentó recientemente un pico de actividad. Por razones de seguridad, la creación de un canal de comunicación de doble vía fue demorada hasta que haya iniciado sesión nuevamente."
+msgstr "Nuestro SecureDrop experimentó recientemente un pico de actividad. Por razones de seguridad, la creación de un canal de comunicación de doble vía fue demorada hasta que hayas iniciado sesión nuevamente."
 
 msgid "Please rest assured that we were able to download your submission, and check back again later for a reply."
 msgstr "Por favor quédate tranquilo que hemos podido descargar tu envío, y vuelve a comprobar más tarde por una respuesta."
@@ -924,7 +924,7 @@ msgid "If you are using <a href=\"{url}\">Tails</a>, you can double-click the <c
 msgstr "Si estás usando <a href=\"{url}\">Tails</a>, puedes hacer doble click en el archivo <code>.asc</code> que acabas de descargar, y automáticamente será importado a tu llavero."
 
 msgid "If you are using macOS or Linux, open the terminal. You can import the key with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
-msgstr "Si estás usando macOS o Linux, abre la terminal. Puedes importar la llave con:<p><code> gpg --import /ruta/hacia/{submission_key_fpr_filename}</code></p>"
+msgstr "Si estás usando macOS o Linux, abre la terminal. Puedes importar la llave con:<p><code>gpg --import /ruta/hacia/{submission_key_fpr_filename}</code></p>"
 
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
 msgstr "Cifra tu envío. Abre la terminal e ingresa este comando gpg:"
