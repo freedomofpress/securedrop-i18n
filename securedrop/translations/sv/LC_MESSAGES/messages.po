@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-08 10:37+0000\nLast-Translator: Jonas Waga <jonas.waga@schibsted.com>\nLanguage-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/securedrop/sv/>\nLanguage: sv\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-08 22:37+0000\nLast-Translator: John Hensley <john@freedom.press>\nLanguage-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/securedrop/sv/>\nLanguage: sv\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} sedan"
@@ -366,7 +366,7 @@ msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used 
 msgstr "<strong>Kritisk sårbarhet:</strong>&nbsp;&nbsp;Operativsystemet som används av dina SecureDrop-servrar har passerat sin livslängd. En manuell uppdatering krävs snarast för att återaktivera källgränssnittet och för att fortsätta vara säker. Vänligen kontakta din administratör. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Läs mer</a>"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>Kritisk sårbarhet:</strong> Operativsystemet som används av dina SecureDrop-servrar kommer passera sin livslängd 30 April 2021. En manuell uppdatering krävs snarast för att skydda systemet. Vänligen kontakta din administratör. <a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">Läs mer</a>"
+msgstr "<strong>Kritisk sårbarhet:</strong> Operativsystemet som används av dina SecureDrop-servrar kommer passera sin livslängd 30 April 2021. En manuell uppdatering krävs snarast för att skydda systemet. Vänligen kontakta din administratör. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Läs mer</a>"
 
 msgid "Logged on as"
 msgstr "Inloggad som"
