@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.6~rc2\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-07 08:37+0000\nLast-Translator: ff98sha <ff98sha@163.com>\nLanguage-Team: Chinese (Simplified) <https://weblate.securedrop.org/projects/securedrop/securedrop/zh_Hans/>\nLanguage: zh_Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.6~rc2\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-03-08 22:37+0000\nLast-Translator: John Hensley <john@freedom.press>\nLanguage-Team: Chinese (Simplified) <https://weblate.securedrop.org/projects/securedrop/securedrop/zh_Hans/>\nLanguage: zh_Hans\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "{time} 之前"
@@ -354,10 +354,10 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "当你配置好 YubiKey 后，输入下面的 6 位口令："
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>安全隐患：</strong>您使用的操作系统已经达到了使用年限，请您手动更新来重新启用线人界面。请联系你的管理员。<a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">进一步了解</a>"
+msgstr "<strong>安全隐患：</strong>您使用的操作系统已经达到了使用年限，请您手动更新来重新启用线人界面。请联系你的管理员。<a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">进一步了解</a>"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "<strong>安全隐患：</strong>您使用的操作系统将在2021年4月30日达到使用年限。请您手动更新来保证安全。请联系你的管理员。<a href=\"//securedrop.org/xenial-upgrade\" rel=\"noreferrer\">进一步了解</a>"
+msgstr "<strong>安全隐患：</strong>您使用的操作系统将在2021年4月30日达到使用年限。请您手动更新来保证安全。请联系你的管理员。<a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">进一步了解</a>"
 
 msgid "Logged on as"
 msgstr "以身份登录"
