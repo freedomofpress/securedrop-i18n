@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-07 00:37+0000\nLast-Translator: kwadronaut <kwadronaut@autistici.org>\nLanguage-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/securedrop/nl/>\nLanguage: nl\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-09 23:37+0000\nLast-Translator: kwadronaut <kwadronaut@autistici.org>\nLanguage-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/securedrop/nl/>\nLanguage: nl\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} geleden"
@@ -162,7 +162,7 @@ msgid "You must select one or more items for deletion."
 msgstr "U moet één of meer items selecteren om te verwijderen."
 
 msgid "The files and messages have been deleted."
-msgstr "De files en berichten zijn verwijderd."
+msgstr "De bestanden en berichten zijn verwijderd."
 
 msgid "Name updated."
 msgstr "Naam bijgewerkt."
@@ -219,7 +219,7 @@ msgid "You will not be able to send them replies."
 msgstr "U zal de bron geen berichten meer kunnen sturen."
 
 msgid "All files and messages from that source will also be destroyed."
-msgstr "Alle files en berichten van die bron zullen ook worden vernietigd."
+msgstr "Alle bestanden en berichten van die bron zullen ook worden vernietigd."
 
 msgid "Are you sure this is what you want?"
 msgstr "Bent u zeker dat dit is wat u wilt?"
