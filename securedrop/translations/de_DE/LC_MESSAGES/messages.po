@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: SecureDrop \\'0.3.5\\'\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-08 13:37+0000\nLast-Translator: erinm <erinm@riseup.net>\nLanguage-Team: German <https://weblate.securedrop.org/projects/securedrop/securedrop/de/>\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop \\'0.3.5\\'\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-03-10 22:37+0000\nLast-Translator: kwadronaut <kwadronaut@autistici.org>\nLanguage-Team: German <https://weblate.securedrop.org/projects/securedrop/securedrop/de/>\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "vor {time}"
@@ -358,7 +358,7 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Geben sie den folgenden 6-stelligen Code unten ein, sobald Sie Ihren YubiKey konfiguriert haben:"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
-msgstr "e<strong>Kritische Sicherheitswarnung:</strong>&nbsp;&nbsp;Das von Ihren SecureDrop Servern benutzte Betriebssystem hat sein Lebensende erreicht. Ein manuelles Upgrade ist nötig um die Eingabemaske für Quellen wieder zu aktivieren und um Sicherheit weiterhin zu gewährleisten. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Mehr Erfahren</a>"
+msgstr "<strong>Kritische Sicherheitswarnung:</strong>&nbsp;&nbsp;Das von Ihren SecureDrop Servern benutzte Betriebssystem hat sein Lebensende erreicht. Ein manuelles Upgrade ist nötig um die Eingabemaske für Quellen wieder zu aktivieren und um Sicherheit weiterhin zu gewährleisten. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Mehr Erfahren</a>"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers will reach its end-of-life on April 30, 2021. A manual upgrade is urgently required to remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr "<strong>Kritische Sicherheitswarnung:</strong>&nbsp;&nbsp; Das von Ihren SecureDrop Servern benutzte Betriebssystem wird am 30. April 2021 sein Lebensende erreichen. Ein manuelles Upgrade wird dringend benötigt um Sicherheit weiterhin zu gewährleisten. Bitte kontaktieren Sie Ihren Administrator - <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Mehr Erfahren</a>"
