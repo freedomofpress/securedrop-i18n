@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.4.3\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-04-16 19:38+0000\nLast-Translator: deeplow <deeplower@protonmail.com>\nLanguage-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\nLanguage: pt_PT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.4.3\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-04-17 20:38+0000\nLast-Translator: deeplow <deeplower@protonmail.com>\nLanguage-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\nLanguage: pt_PT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "há {time}"
@@ -186,10 +186,10 @@ msgid "Cancel"
 msgstr "Cancelar"
 
 msgid "starred icon"
-msgstr "icone de \"com estrela\""
+msgstr "ícone de \"com estrela\""
 
 msgid "unstarred icon"
-msgstr "icone de \"sem estrela\""
+msgstr "ícone de \"sem estrela\""
 
 msgid "1 doc"
 msgid_plural "{num} docs"
@@ -202,7 +202,7 @@ msgstr[0] "1 mensagem"
 msgstr[1] "{num} mensagens"
 
 msgid "download icon"
-msgstr "icone de transferência"
+msgstr "ícone de transferência"
 
 msgid "1 unread"
 msgid_plural "{num} unread"
@@ -210,7 +210,7 @@ msgstr[0] "1 por ler"
 msgstr[1] "{num} por ler"
 
 msgid "When the account for a source is deleted:"
-msgstr "Quando a conta da a fonte é apagada:"
+msgstr "Quando a conta da fonte é apagada:"
 
 msgid "The source will no longer be able to log in with their codename."
 msgstr "A fonte não poderá mais iniciar sessão com o seu nome-código."
@@ -219,7 +219,7 @@ msgid "You will not be able to send them replies."
 msgstr "Não poderá mais responder."
 
 msgid "All files and messages from that source will also be destroyed."
-msgstr "Todos os ficheiros e mensagens da fonte serão destruídos."
+msgstr "Todos os ficheiros e mensagens dessa fonte serão destruídos."
 
 msgid "Are you sure this is what you want?"
 msgstr "Tem a certeza que é isto que pretende?"
@@ -228,7 +228,7 @@ msgid "Yes, Delete Selected Source Accounts"
 msgstr "Sim, Apagar Contas de Fontes Selecionadas"
 
 msgid "What would you like to delete?"
-msgstr "O que gostaria de apagar?"
+msgstr "O que deseja apagar?"
 
 msgid "Files and Messages"
 msgstr "Ficheiros e Mensagens"
@@ -249,31 +249,31 @@ msgid "Enable FreeOTP"
 msgstr "Ativar FreeOTP"
 
 msgid "You're almost done! To finish resetting your two-factor authentication, follow the instructions below to set up FreeOTP. Once you've added the entry for your account in the app, enter one of the 6-digit codes from the app to confirm that two-factor authentication is set up correctly."
-msgstr "Está quase terminado! Para completar a redefinição da autenticação de dois fatores, siga as instruções abaixo para configurar o FreeOTP. Depois de registrar a conta na aplicação, insira um dos códigos de seis dígitos da aplicação para verificar se a autenticação de dois fatores foi configurada corretamente."
+msgstr "Está quase terminado! Para completar a redefinição da autenticação de dois fatores (2FA), siga as instruções abaixo para configurar a app FreeOTP. Depois de registar a conta na aplicação, insira um dos códigos de seis dígitos da aplicação para verificar se a autenticação de dois fatores foi configurada corretamente."
 
 msgid "Install FreeOTP on your phone"
-msgstr "Instale FreeOTP no seu telemóvel"
+msgstr "Instale FreeOTP no seu smartphone"
 
 msgid "Open the FreeOTP app"
 msgstr "Abra a app FreeOTP"
 
 msgid "Tap the QR code symbol at the top"
-msgstr "Carregue no símbolo do código QR no topo"
+msgstr "Carregue no símbolo de código QR no topo"
 
 msgid "Your phone will now be in \"scanning\" mode. When you are in this mode, scan the barcode below:"
-msgstr "Agora seu telefone deve estar em modo \"scan\". Leia com o dispositivo o código de barras abaixo:"
+msgstr "O seu smartphone deve estar em modo de \"leitura\". Leia com o dispositivo o código de barras abaixo:"
 
 msgid "Can't scan the barcode? You can manually pair FreeOTP with your SecureDrop account by entering the following two-factor secret into the app:"
-msgstr "Não consegue digitalizar o código QR? Pode adicionar a sua conta SecureDrop manualmente na app FreeOTP inserindo o código secreto de dois fatores:"
+msgstr "Não consegue ler o código QR? Pode adicionar a sua conta SecureDrop manualmente na app FreeOTP inserindo o código secreto de dois fatores:"
 
 msgid "Once you have paired FreeOTP with this account, enter the 6-digit verification code below:"
-msgstr "Depois de adicionar a conta na app FreeOTP, insira o código de verificação com seis dígitos abaixo:"
+msgstr "Depois de adicionar a conta na app FreeOTP, insira abaixo o código de verificação de seis dígitos:"
 
 msgid "Enable YubiKey (OATH-HOTP)"
 msgstr "Ativar YubiKey (OATH-HOTP)"
 
 msgid "Once you have configured your YubiKey, enter the 6-digit verification code below:"
-msgstr "Após configurar a sua YubiKey, insira o código de verificação com seis dígitos abaixo:"
+msgstr "Após configurar a sua YubiKey, insira o código de verificação de seis dígitos abaixo:"
 
 msgid "Verification code"
 msgstr "Código de verificação"
@@ -282,7 +282,7 @@ msgid "SUBMIT"
 msgstr "SUBMETER"
 
 msgid "Admin Interface"
-msgstr "Interface de Administração"
+msgstr "Interface de Administrador"
 
 msgid "ADD USER"
 msgstr "ADICIONAR UTILIZADOR"
@@ -300,13 +300,13 @@ msgid "Created"
 msgstr "Criado"
 
 msgid "Last login"
-msgstr "Ultimo início de sessão"
+msgstr "Último início de sessão"
 
 msgid "Edit user {username}"
 msgstr "Editar utilizador {username}"
 
 msgid "edit user icon"
-msgstr "editar icone de usuário"
+msgstr "editar ícone de utilizador"
 
 msgid "trash icon disabled"
 msgstr "ícone \"apagar\" desativado"
@@ -327,13 +327,13 @@ msgid "INSTANCE CONFIG"
 msgstr "CONFIGURAÇÃO DE INSTÂNCIA"
 
 msgid "Back to admin interface"
-msgstr "Regressar à interface de administração"
+msgstr "Regressar à interface de administrador"
 
 msgid "Username can contain spaces"
 msgstr "O nome de utilizador pode conter espaços"
 
 msgid "Username is case-sensitive"
-msgstr "O nome de utilizador diferencia maiúsculas e minúsculas"
+msgstr "O nome de utilizador diferencia maiúsculas de minúsculas"
 
 msgid "First name"
 msgstr "Nome"
@@ -345,7 +345,7 @@ msgid "First name and last name are optional"
 msgstr "Nome e apelido são opcionais"
 
 msgid "The user's password will be:"
-msgstr "A palavra-passe do usuário será:"
+msgstr "A palavra-passe do utilizador será:"
 
 msgid "Is Admin"
 msgstr "É Administrador(a)"
@@ -354,7 +354,7 @@ msgid "Is using a YubiKey [HOTP]"
 msgstr "Usa uma YubiKey [HOTP]"
 
 msgid "You're almost done! To finish adding this new user, have them follow the instructions below to set up two-factor authentication with FreeOTP. Once they've added an entry for this account in the app, have them enter one of the 6-digit codes from the app to confirm that two-factor authentication is set up correctly."
-msgstr "Está quase terminando! Para finalizar a criação deste novo utilizador, peça a essa pessoa que siga as instruções abaixo para configurar a autenticação de dois fatores com o FreeOTP. Ao registrar a nova conta na aplicação, peça-lhe que insira um código de seis dígitos gerado na aplicação para confirmar que a autenticação foi configurada com sucesso."
+msgstr "Está quase terminando! Para finalizar a criação deste novo utilizador, peça a essa pessoa que siga as instruções abaixo para configurar a autenticação de dois fatores (2FA) com a app FreeOTP. Ao registar a nova conta na aplicação, peça-lhe que insira um código de seis dígitos gerado na aplicação para confirmar que a autenticação foi configurada com sucesso."
 
 msgid "Can't scan the barcode? You can manually pair FreeOTP with this account by entering the following two-factor secret into the app:"
 msgstr "Não consegue digitalizar o código QR? Pode adicionar a sua conta SecureDrop manualmente na app FreeOTP inserindo o código secreto de dois fatores:"
@@ -554,13 +554,13 @@ msgid "Your password will be changed to:"
 msgstr "A sua palavra-passe passará a ser:"
 
 msgid "Reset Two-Factor Authentication"
-msgstr "Redefinir código de autenticação de dois fatores"
+msgstr "Redefinir código de autenticação de dois fatores (2FA)"
 
 msgid "If a user's two-factor authentication credentials have been lost or compromised, you can reset them here. <em>If you do this, make sure the user is present and ready to set up their device with the new two-factor credentials. Otherwise, they will be locked out of their account.</em>"
-msgstr "Se as credenciais de autenticação de dois fatores de um usuário forem perdidas ou comprometidas, poderá redefini-las aqui. <em>Ao fazê-lo, garanta a presença desse usuário e que esteja preparado para configurar no seu dispositivo as novas credenciais de autenticação de dois fatores. Caso contrário, o usuário não poderá mais aceder de novo à própria conta.</em>"
+msgstr "Se as credenciais de autenticação de dois fatores (2FA) de um utilizador forem perdidas ou comprometidas, poderá redefini-las aqui. <em>Ao fazê-lo, garanta a presença desse utilizador e que esteja preparado para configurar no seu dispositivo as novas credenciais de autenticação de dois fatores. Caso contrário, o utilizador não poderá voltar a aceder à sua conta</em>"
 
 msgid "If your two-factor authentication credentials have been lost or compromised, or you got a new device, you can reset your credentials here. <em>If you do this, make sure you are ready to set up your new device, otherwise you will be locked out of your account.</em>"
-msgstr "Se suas credenciais de autenticação de dois fatores tiverem sido perdidas ou comprometidas - ou se tiver mudado de dispositivo -, é possível redefini-las aqui. <em>Caso deseje fazê-lo, tenha seu dispositivo à mão para nele configurar as novas credenciais. Caso contrário, não será possível voltar a aceder à sua conta.</em>"
+msgstr "Se suas credenciais de autenticação de dois fatores (2FA) tiverem sido perdidas ou comprometidas - ou se tiver mudado de dispositivo -, é possível redefini-las aqui.<em>Caso deseje fazê-lo, tenha seu dispositivo à mão para nele configurar as novas credenciais. Caso contrário, não será possível voltar a aceder à sua conta.</em>"
 
 msgid "To reset two-factor authentication for mobile apps such as FreeOTP, choose the first option. For security keys like the YubiKey, choose the second one."
 msgstr "Para redefinir a autenticação de dois fatores para aplicações móveis como a FreeOTP, selecione a primeira opção. Para chaves de segurança como a Yubikey, selecione a segunda."
