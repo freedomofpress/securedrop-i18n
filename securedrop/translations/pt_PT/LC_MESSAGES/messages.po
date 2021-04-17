@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.4.3\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-04-17 20:38+0000\nLast-Translator: deeplow <deeplower@protonmail.com>\nLanguage-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\nLanguage: pt_PT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.4.3\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-04-17 20:57+0000\nLast-Translator: deeplow <deeplower@protonmail.com>\nLanguage-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\nLanguage: pt_PT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.3.2\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "há {time}"
@@ -563,16 +563,16 @@ msgid "If your two-factor authentication credentials have been lost or compromis
 msgstr "Se suas credenciais de autenticação de dois fatores (2FA) tiverem sido perdidas ou comprometidas - ou se tiver mudado de dispositivo -, é possível redefini-las aqui.<em>Caso deseje fazê-lo, tenha seu dispositivo à mão para nele configurar as novas credenciais. Caso contrário, não será possível voltar a aceder à sua conta.</em>"
 
 msgid "To reset two-factor authentication for mobile apps such as FreeOTP, choose the first option. For security keys like the YubiKey, choose the second one."
-msgstr "Para redefinir a autenticação de dois fatores para aplicações móveis como a FreeOTP, selecione a primeira opção. Para chaves de segurança como a Yubikey, selecione a segunda."
+msgstr "Para redefinir a autenticação de dois fatores (2FA) para aplicações móveis como FreeOTP, selecione a primeira opção. Para chaves de segurança como a Yubikey, selecione a segunda."
 
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
-msgstr "Redefinir código de autenticação de dois fatores para aplicações móveis como FreeOTP"
+msgstr "Redefinir código de autenticação de dois fatores (2FA) para aplicações móveis, como FreeOTP"
 
 msgid "RESET MOBILE APP CREDENTIALS"
 msgstr "REDEFINIR CREDENCIAIS DA APP MÓVEL"
 
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
-msgstr "Reinicializar autenticação de dois fatores para chave de segurança, como a YubiKey"
+msgstr "Reinicializar autenticação de dois fatores (2FA) para chaves de segurança, como a YubiKey"
 
 msgid "RESET SECURITY KEY CREDENTIALS"
 msgstr "REDEFINIR CREDENCIAIS DA CHAVE DE SEGURANÇA"
@@ -620,7 +620,7 @@ msgid "Are you sure you want to delete the user {username}?"
 msgstr "Tem a certeza que pretende apagar o utilizador {username}?"
 
 msgid "Are you sure you want to reset two-factor authentication for {username}?"
-msgstr "Tem certeza de que deseja redefinir a autenticação de dois fatores de {username}?"
+msgstr "Tem certeza de que deseja redefinir a autenticação de dois fatores (2FA) de {username}?"
 
 msgid "Sources selected: "
 msgstr "Fontes selecionadas: "
