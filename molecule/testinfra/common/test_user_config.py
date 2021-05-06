@@ -62,16 +62,17 @@ def test_sudoers_tmux_env(host):
             pid=$(pgrep --newest tmux)
             if test -n "$pid"
             then
-                /proc/$pid/exe attach
+                /proc/$pid/exe -u attach
             fi
             return 1
         }
 
         if test -z "$TMUX"
         then
-            (tmux attach || tmux_attach_via_proc || tmux new-session)
+            (tmux -u attach || tmux_attach_via_proc || tmux -u new-session)
         fi"""
     )
+
     assert host_file.content_string.strip() == expected_content
 
 

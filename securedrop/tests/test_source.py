@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# flake8: noqa: E741
 import gzip
 import re
 import subprocess
@@ -9,98 +10,32 @@ from datetime import date
 from io import BytesIO, StringIO
 from pathlib import Path
 
+from flaky import flaky
 from flask import session, escape, url_for, g, request
+from flask_babel import gettext
 from mock import patch, ANY
+import pytest
 
 import crypto_util
 import source
 from passphrases import PassphraseGenerator
 from . import utils
+import server_os
+import source_app as source_app_module
 import version
 
-import server_os
 from db import db
 from journalist_app.utils import delete_collection
 from models import InstanceConfig, Source, Reply
 from source_app import main as source_app_main
 from source_app import api as source_app_api
+from source_app import get_logo_url
 from .utils.db_helper import new_codename, submit
+from .utils.i18n import get_test_locales, language_tag, page_language, xfail_untranslated_messages
 from .utils.instrument import InstrumentedApp
 from sdconfig import config
 
 overly_long_codename = 'a' * (PassphraseGenerator.MAX_PASSPHRASE_LENGTH + 1)
-
-
-def test_source_interface_is_disabled_when_xenial_is_eol(config, source_app):
-    disabled_endpoints = [
-        "main.index",
-        "main.generate",
-        "main.login",
-        "info.download_public_key",
-        "info.tor2web_warning",
-        "info.recommend_tor_browser",
-        "info.why_download_public_key",
-    ]
-    static_assets = [
-        "css/source.css",
-        "i/custom_logo.png",
-        "i/font-awesome/fa-globe-black.png",
-        "i/favicon.png",
-    ]
-    with source_app.test_client() as app:
-        server_os.installed_version = "16.04"
-        server_os.XENIAL_EOL_DATE = date(2020, 1, 1)
-        for endpoint in disabled_endpoints:
-            resp = app.get(url_for(endpoint))
-            assert resp.status_code == 200
-            text = resp.data.decode("utf-8")
-            assert "We're sorry, our SecureDrop is currently offline." in text
-        # Ensure static assets are properly served
-        for asset in static_assets:
-            resp = app.get(url_for("static", filename=asset))
-            assert resp.status_code == 200
-            text = resp.data.decode("utf-8")
-            assert "We're sorry, our SecureDrop is currently offline." not in text
-
-
-def test_source_interface_is_not_disabled_before_xenial_eol(config, source_app):
-    disabled_endpoints = [
-        "main.index",
-        "main.generate",
-        "main.login",
-        "info.download_public_key",
-        "info.tor2web_warning",
-        "info.recommend_tor_browser",
-        "info.why_download_public_key",
-    ]
-    with source_app.test_client() as app:
-        server_os.installed_version = "16.04"
-        server_os.XENIAL_EOL_DATE = date(2200, 1, 1)
-        for endpoint in disabled_endpoints:
-            resp = app.get(url_for(endpoint), follow_redirects=True)
-            assert resp.status_code == 200
-            text = resp.data.decode("utf-8")
-            assert "We're sorry, our SecureDrop is currently offline." not in text
-
-
-def test_source_interface_is_not_disabled_for_focal(config, source_app):
-    disabled_endpoints = [
-        "main.index",
-        "main.generate",
-        "main.login",
-        "info.download_public_key",
-        "info.tor2web_warning",
-        "info.recommend_tor_browser",
-        "info.why_download_public_key",
-    ]
-    with source_app.test_client() as app:
-        server_os.installed_version = "20.04"
-        server_os.XENIAL_EOL_DATE = date(2020, 1, 1)
-        for endpoint in disabled_endpoints:
-            resp = app.get(url_for(endpoint))
-            assert resp.status_code == 200
-            text = resp.data.decode("utf-8")
-            assert "We're sorry, our SecureDrop is currently offline." not in text
 
 
 def test_logo_default_available(source_app):
@@ -110,12 +45,10 @@ def test_logo_default_available(source_app):
         os.remove(custom_image_location)
 
     with source_app.test_client() as app:
-        response = app.get(url_for('main.select_logo'), follow_redirects=False)
-
-        assert response.status_code == 302
-        observed_headers = response.headers
-        assert 'Location' in list(observed_headers.keys())
-        assert url_for('static', filename='i/logo.png') in observed_headers['Location']
+        logo_url = get_logo_url(source_app)
+        assert logo_url.endswith('i/logo.png')
+        response = app.get(logo_url, follow_redirects=False)
+        assert response.status_code == 200
 
 
 def test_logo_custom_available(source_app):
@@ -126,12 +59,10 @@ def test_logo_custom_available(source_app):
         shutil.copyfile(default_image, custom_image)
 
     with source_app.test_client() as app:
-        response = app.get(url_for('main.select_logo'), follow_redirects=False)
-
-        assert response.status_code == 302
-        observed_headers = response.headers
-        assert 'Location' in list(observed_headers.keys())
-        assert url_for('static', filename='i/custom_logo.png') in observed_headers['Location']
+        logo_url = get_logo_url(source_app)
+        assert logo_url.endswith('i/custom_logo.png')
+        response = app.get(logo_url, follow_redirects=False)
+        assert response.status_code == 200
 
 
 def test_page_not_found(source_app):
@@ -637,13 +568,30 @@ def test_submit_sanitizes_filename(source_app):
                                         mtime=0)
 
 
-def test_tor2web_warning_headers(source_app):
+@flaky(rerun_filter=utils.flaky_filter_xfail)
+@pytest.mark.parametrize("locale", get_test_locales())
+def test_tor2web_warning_headers(config, source_app, locale):
     with source_app.test_client() as app:
-        resp = app.get(url_for('main.index'),
-                       headers=[('X-tor2web', 'encrypted')])
-        assert resp.status_code == 200
-        text = resp.data.decode('utf-8')
-        assert "You appear to be using Tor2Web." in text
+        with InstrumentedApp(app) as ins:
+            resp = app.get(url_for('main.index', l=locale), headers=[('X-tor2web', 'encrypted')])
+            assert resp.status_code == 200
+
+            assert page_language(resp.data) == language_tag(locale)
+            msgids = [
+                "WARNING:",
+                "You appear to be using Tor2Web, which does not provide anonymity.",
+                "Why is this dangerous?",
+            ]
+            with xfail_untranslated_messages(config, locale, msgids):
+                ins.assert_message_flashed(
+                    '<strong>{}</strong>&nbsp;{}&nbsp;<a href="{}">{}</a>'.format(
+                        escape(gettext(msgids[0])),
+                        escape(gettext(msgids[1])),
+                        url_for('info.tor2web_warning'),
+                        escape(gettext(msgids[2])),
+                    ),
+                    'banner-warning'
+                )
 
 
 def test_tor2web_warning(source_app):
@@ -671,7 +619,7 @@ def test_why_journalist_key(source_app):
 
 
 def test_metadata_route(config, source_app):
-    with patch.object(source_app_api, "server_os", new="16.04"):
+    with patch("server_os.get_os_release", return_value="16.04"):
         with source_app.test_client() as app:
             resp = app.get(url_for('api.metadata'))
             assert resp.status_code == 200

@@ -22,8 +22,7 @@ def test_tor_packages(host, package):
 def test_tor_service_running(host):
     """
     Ensure Tor is running and enabled. Tor is required for SSH access,
-    so it must be enabled to start on boot. Checks systemd-style services,
-    used by Xenial.
+    so it must be enabled to start on boot.
     """
     s = host.service("tor")
     assert s.is_running
@@ -64,14 +63,11 @@ def test_tor_torrc_sandbox(host):
 
 
 @pytest.mark.skip_in_prod
-def test_tor_v2_onion_url_readable_by_app(host):
+def test_tor_v2_onion_url_file_absent(host):
     v2_url_filepath = "/var/lib/securedrop/source_v2_url"
     with host.sudo():
         f = host.file(v2_url_filepath)
-        assert f.is_file
-        assert f.user == "www-data"
-        assert f.mode == 0o644
-        assert re.search(r"^[a-z0-9]{16}\.onion$", f.content_string)
+        assert not f.exists
 
 
 @pytest.mark.skip_in_prod

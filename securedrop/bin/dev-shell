@@ -9,7 +9,7 @@ set -eu
 export PATH="/opt/venvs/securedrop-app-code/bin:$PATH"
 
 TOPLEVEL=$(git rev-parse --show-toplevel)
-BASE_OS="${BASE_OS:-xenial}"
+BASE_OS="${BASE_OS:-focal}"
 
 ## Get an integer offset for exposed ports, to support multiple containers
 get_port_offset() {
@@ -61,7 +61,13 @@ function docker_run() {
 
     # If this is a CI run, pass CodeCov settings into the container.
     if [ -n "${CIRCLE_BRANCH:-}" ] ; then
-        ci_env=$(bash <(curl -s https://codecov.io/env))
+        tmpdir=$(mktemp -d -t codecov-XXXX)
+        curl -s https://codecov.io/bash > "$tmpdir"/codecov;
+        curl -s https://codecov.io/env > "$tmpdir"/env;
+        VERSION="$(curl --silent "https://api.github.com/repos/codecov/codecov-bash/releases/latest" | grep '"tag_name":' |sed -E 's/.*"([^"]+)".*/\1/')"
+        curl -s https://raw.githubusercontent.com/codecov/codecov-bash/"${VERSION}"/SHA256SUM > "$tmpdir"/codecov-hashes
+        pushd "$tmpdir" && shasum -a 256 -c codecov-hashes && popd
+        ci_env=$(/bin/bash "$tmpdir"/env)
     else
         ci_env=""
     fi
@@ -79,7 +85,7 @@ function docker_run() {
            -e LOADDATA_ARGS \
            -e LC_ALL=C.UTF-8 \
            -e LANG=C.UTF-8 \
-           -e PAGE_LAYOUT_LOCALES \
+           -e TEST_LOCALES \
            -e PATH \
            -e BASE_OS=$BASE_OS \
            --user "${USER:-root}" \

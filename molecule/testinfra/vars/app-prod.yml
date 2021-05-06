@@ -2,15 +2,9 @@
 mon_ip: 10.0.1.5
 
 tor_services:
-  - ssh
-  - source
-  - journalist
-
-tor_stealth_services:
-  - service: "HiddenServicePort 22 127.0.0.1:22"
-    stealth: admin
-  - service: "HiddenServicePort 80 127.0.0.1:8080"
-    stealth: journalist
+  - sshv3
+  - sourcev3
+  - journalistv3
 
 app_directories:
   - /var/www/securedrop
@@ -24,17 +18,6 @@ apparmor_enforce:
     - "sbin/dhclient"
     - "/usr/lib/NetworkManager/nm-dhcp-client.action"
     - "/usr/lib/connman/scripts/dhclient-script"
-    - "/usr/sbin/tcpdump"
-    - "system_tor"
-    - "/usr/sbin/apache2"
-    - "/usr/sbin/apache2//DEFAULT_URI"
-    - "/usr/sbin/apache2//HANDLING_UNTRUSTED_INPUT"
-    - "/usr/sbin/tor"
-  xenial:
-    - "sbin/dhclient"
-    - "/usr/lib/NetworkManager/nm-dhcp-client.action"
-    - "/usr/lib/connman/scripts/dhclient-script"
-    - "/usr/sbin/ntpd"
     - "/usr/sbin/tcpdump"
     - "system_tor"
     - "/usr/sbin/apache2"

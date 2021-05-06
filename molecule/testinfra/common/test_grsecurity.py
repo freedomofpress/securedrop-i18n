@@ -1,5 +1,9 @@
 import pytest
-import re
+import warnings
+import io
+import difflib
+import os
+from jinja2 import Template
 
 import testutils
 
@@ -27,10 +31,7 @@ def test_grsecurity_apt_packages(host, package):
     Includes the FPF-maintained metapackage, as well as paxctl, for managing
     PaX flags on binaries.
     """
-    if host.system_info.codename == "xenial":
-        KERNEL_VERSION = sdvars.grsec_version_xenial
-    else:
-        KERNEL_VERSION = sdvars.grsec_version_focal
+    KERNEL_VERSION = sdvars.grsec_version_focal
     if package.startswith("linux-image"):
         package = package.format(KERNEL_VERSION)
     assert host.package(package).is_installed
@@ -76,10 +77,7 @@ def test_grsecurity_kernel_is_running(host):
     """
     Make sure the currently running kernel is specific grsec kernel.
     """
-    if host.system_info.codename == "xenial":
-        KERNEL_VERSION = sdvars.grsec_version_xenial
-    else:
-        KERNEL_VERSION = sdvars.grsec_version_focal
+    KERNEL_VERSION = sdvars.grsec_version_focal
     c = host.run('uname -r')
     assert c.stdout.strip().endswith('-grsec-securedrop')
     assert c.stdout.strip() == '{}-grsec-securedrop'.format(KERNEL_VERSION)
@@ -99,39 +97,47 @@ def test_grsecurity_sysctl_options(host, sysctl_opt):
         assert host.sysctl(sysctl_opt[0]) == sysctl_opt[1]
 
 
-@pytest.mark.skip_in_prod
-@pytest.mark.parametrize('paxtest_check', [
-  "Executable anonymous mapping",
-  "Executable bss",
-  "Executable data",
-  "Executable heap",
-  "Executable stack",
-  "Executable shared library bss",
-  "Executable shared library data",
-  "Executable anonymous mapping (mprotect)",
-  "Executable bss (mprotect)",
-  "Executable data (mprotect)",
-  "Executable heap (mprotect)",
-  "Executable stack (mprotect)",
-  "Executable shared library bss (mprotect)",
-  "Executable shared library data (mprotect)",
-  "Writable text segments",
-  "Return to function (memcpy)",
-  "Return to function (memcpy, PIE)",
-])
-def test_grsecurity_paxtest(host, paxtest_check):
+def test_grsecurity_paxtest(host):
     """
-    Check that paxtest does not report anything vulnerable
-    Requires the package paxtest to be installed.
-    The paxtest package is currently being installed in the app-test role.
+    Check that paxtest reports the expected mitigations. These are
+    "Killed" for most of the checks, with the notable exception of the
+    memcpy ones. Only newer versions of paxtest will fail the latter,
+    regardless of kernel.
     """
-    if host.exists("/usr/bin/paxtest"):
+    if not host.exists("/usr/bin/paxtest"):
+        warnings.warn("Installing paxtest to run kernel tests")
         with host.sudo():
-            c = host.run("paxtest blackhat")
-            assert c.rc == 0
-            assert "Vulnerable" not in c.stdout
-            regex = r"^{}\s*:\sKilled$".format(re.escape(paxtest_check))
-            assert re.search(regex, c.stdout)
+            host.run("apt-get update && apt-get install -y paxtest")
+    try:
+        with host.sudo():
+            # Log to /tmp to avoid cluttering up /root.
+            paxtest_cmd = "paxtest blackhat /tmp/paxtest.log"
+            # Select only predictably formatted lines; omit
+            # the guesses, since the number of bits can vary
+            paxtest_cmd += " | grep -P '^(Executable|Return)'"
+            paxtest_results = host.check_output(paxtest_cmd)
+
+        paxtest_template_path = "{}/paxtest_results.j2".format(
+            os.path.dirname(os.path.abspath(__file__)))
+
+        memcpy_result = "Killed"
+        # Versions of paxtest newer than 0.9.12 or so will report
+        # "Vulnerable" on memcpy tests, see details in
+        # https://github.com/freedomofpress/securedrop/issues/1039
+        if host.system_info.codename == "focal":
+            memcpy_result = "Vulnerable"
+        with io.open(paxtest_template_path, 'r') as f:
+            paxtest_template = Template(f.read().rstrip())
+            paxtest_expected = paxtest_template.render(memcpy_result=memcpy_result)
+
+        # The stdout prints here will only be displayed if the test fails
+        for paxtest_diff in difflib.context_diff(paxtest_expected.split('\n'),
+                                                 paxtest_results.split('\n')):
+            print(paxtest_diff)
+        assert paxtest_results == paxtest_expected
+    finally:
+        with host.sudo():
+            host.run("apt-get remove -y paxtest")
 
 
 @pytest.mark.skip_in_prod
@@ -159,33 +165,7 @@ def test_paxctl(host):
     As of Focal, paxctl is not used, and shouldn't be installed.
     """
     p = host.package("paxctl")
-    if host.system_info.codename == "xenial":
-        assert p.is_installed
-    else:
-        assert not p.is_installed
-
-
-def test_paxctld_xenial(host):
-    """
-    Xenial-specific paxctld config checks.
-    Ensures paxctld is running and enabled, and relevant
-    exemptions are present in the config file.
-    """
-    if host.system_info.codename != "xenial":
-        return True
-    hostname = host.ansible.get_variables()["inventory_hostname"]
-    # Under Xenial, apache2 pax flags managed by securedrop-app-code.
-    if "app" not in hostname:
-        return True
-
-    assert host.package("paxctld").is_installed
-    f = host.file("/etc/paxctld.conf")
-    assert f.is_file
-    assert f.contains("^/usr/sbin/apache2\tm")
-
-    s = host.service("paxctld")
-    assert s.is_enabled
-    assert s.is_running
+    assert not p.is_installed
 
 
 def test_paxctld_focal(host):
@@ -194,9 +174,6 @@ def test_paxctld_focal(host):
     Ensures paxctld is running and enabled, and relevant
     exemptions are present in the config file.
     """
-    if host.system_info.codename != "focal":
-        return True
-
     assert host.package("paxctld").is_installed
     f = host.file("/etc/paxctld.conf")
     assert f.is_file
@@ -209,7 +186,9 @@ def test_paxctld_focal(host):
     # out of /opt/ to ensure the file is always clobbered on changes.
     assert host.file("/opt/securedrop/paxctld.conf").is_file
 
-    hostname = host.ansible.get_variables()["inventory_hostname"]
+    hostname = host.check_output('hostname -s')
+    assert (("app" in hostname) or ("mon" in hostname))
+
     # Under Focal, apache2 pax flags managed by securedrop-grsec metapackage.
     # Both hosts, app & mon, should have the same exemptions. Check precedence
     # between install-local-packages & apt-test repo for securedrop-grsec.
@@ -232,10 +211,7 @@ def test_wireless_disabled_in_kernel_config(host, kernel_opts):
     remove wireless support from the kernel. Let's make sure wireless is
     disabled in the running kernel config!
     """
-    if host.system_info.codename == "xenial":
-        KERNEL_VERSION = sdvars.grsec_version_xenial
-    else:
-        KERNEL_VERSION = sdvars.grsec_version_focal
+    KERNEL_VERSION = sdvars.grsec_version_focal
     with host.sudo():
         kernel_config_path = "/boot/config-{}-grsec-securedrop".format(KERNEL_VERSION)
         kernel_config = host.file(kernel_config_path).content_string
@@ -254,10 +230,7 @@ def test_kernel_options_enabled_config(host, kernel_opts):
     Tests kernel config for options that should be enabled
     """
 
-    if host.system_info.codename == "xenial":
-        KERNEL_VERSION = sdvars.grsec_version_xenial
-    else:
-        KERNEL_VERSION = sdvars.grsec_version_focal
+    KERNEL_VERSION = sdvars.grsec_version_focal
     with host.sudo():
         kernel_config_path = "/boot/config-{}-grsec-securedrop".format(KERNEL_VERSION)
         kernel_config = host.file(kernel_config_path).content_string

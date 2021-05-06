@@ -2,6 +2,7 @@
   <img src="/securedrop/static/i/logo.png" width="350" height="314">
 </p>
 
+> [There are many ways to contribute to SecureDrop, and we welcome your help!](CONTRIBUTING.md) By contributing to this project, you agree to abide by our [Code of Conduct](https://github.com/freedomofpress/.github/blob/main/CODE_OF_CONDUCT.md).
 
 [![CircleCI branch](https://img.shields.io/circleci/project/github/freedomofpress/securedrop/develop.svg)](https://circleci.com/gh/freedomofpress/workflows/securedrop/tree/develop)
 [![codecov](https://codecov.io/gh/freedomofpress/securedrop/branch/develop/graph/badge.svg)](https://codecov.io/gh/freedomofpress/securedrop)
@@ -63,4 +64,4 @@ The wordlist we use to generate source passphrases come from various sources:
 
 A huge thank you to all SecureDrop contributors! You can see just
 code and documentation contributors in the ["Contributors"](https://github.com/freedomofpress/securedrop/graphs/contributors)
-tab on GitHub, and you can see code, documentation and translation contributors together [here](https://github.com/freedomofpress/securedrop-i18n/graphs/contributors).
+tab on GitHub, and you can see code, documentation and translation contributors together [here](https://github.com/freedomofpress/securedrop-i18n/graphs/contributors). Thanks to our friends at PyUp for sponsoring a subscription to their [Python security database](https://pyup.io).

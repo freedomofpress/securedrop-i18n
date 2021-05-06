@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from datetime import datetime, timedelta
+from pathlib import Path
+
 from flask import (Flask, session, redirect, url_for, flash, g, request,
                    render_template)
 from flask_assets import Environment
@@ -21,7 +23,6 @@ from journalist_app.utils import (get_source, logged_in,
                                   JournalistInterfaceSessionInterface,
                                   cleanup_expired_revoked_tokens)
 from models import InstanceConfig, Journalist
-from server_os import is_os_near_eol, is_os_past_eol
 from store import Storage
 
 import typing
@@ -36,7 +37,23 @@ if typing.TYPE_CHECKING:
     from werkzeug import Response  # noqa: F401
     from werkzeug.exceptions import HTTPException  # noqa: F401
 
-_insecure_views = ['main.login', 'main.select_logo', 'static']
+_insecure_views = ['main.login', 'static']
+
+
+def get_logo_url(app: Flask) -> str:
+    if not app.static_folder:
+        raise FileNotFoundError
+
+    custom_logo_filename = "i/custom_logo.png"
+    default_logo_filename = "i/logo.png"
+    custom_logo_path = Path(app.static_folder) / custom_logo_filename
+    default_logo_path = Path(app.static_folder) / default_logo_filename
+    if custom_logo_path.is_file():
+        return url_for("static", filename=custom_logo_filename)
+    elif default_logo_path.is_file():
+        return url_for("static", filename=default_logo_filename)
+
+    raise FileNotFoundError
 
 
 def create_app(config: 'SDConfig') -> Flask:
@@ -53,8 +70,6 @@ def create_app(config: 'SDConfig') -> Flask:
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['SQLALCHEMY_DATABASE_URI'] = config.DATABASE_URI
     db.init_app(app)
-
-    app.config.update(OS_PAST_EOL=is_os_past_eol(), OS_NEAR_EOL=is_os_near_eol())
 
     # TODO: Attaching a Storage dynamically like this disables all type checking (and
     # breaks code analysis tools) for code that uses current_app.storage; it should be refactored
@@ -76,9 +91,8 @@ def create_app(config: 'SDConfig') -> Flask:
 
     @app.errorhandler(CSRFError)
     def handle_csrf_error(e: CSRFError) -> 'Response':
-        # render the message first to ensure it's localized.
-        msg = gettext('You have been logged out due to inactivity.')
         session.clear()
+        msg = gettext('You have been logged out due to inactivity.')
         flash(msg, 'error')
         return redirect(url_for('main.login'))
 
@@ -157,10 +171,10 @@ def create_app(config: 'SDConfig') -> Flask:
         else:
             g.organization_name = gettext('SecureDrop')
 
-        if app.config["OS_PAST_EOL"]:
-            g.show_os_past_eol_warning = True
-        elif app.config["OS_NEAR_EOL"]:
-            g.show_os_near_eol_warning = True
+        try:
+            g.logo = get_logo_url(app)
+        except FileNotFoundError:
+            app.logger.error("Site logo not found.")
 
         if request.path.split('/')[1] == 'api':
             pass  # We use the @token_required decorator for the API endpoints

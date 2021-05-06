@@ -1,8 +1,9 @@
 from datetime import datetime, timedelta
+from pathlib import Path
 from typing import Optional
 
 import werkzeug
-from flask import (Flask, render_template, flash, Markup, request, g, session,
+from flask import (Flask, render_template, escape, flash, Markup, request, g, session,
                    url_for, redirect)
 from flask_babel import gettext
 from flask_assets import Environment
@@ -25,7 +26,22 @@ from source_app import main, info, api
 from source_app.decorators import ignore_static
 from source_app.utils import logged_in, was_in_generate_flow
 from store import Storage
-from server_os import is_os_past_eol
+
+
+def get_logo_url(app: Flask) -> str:
+    if not app.static_folder:
+        raise FileNotFoundError
+
+    custom_logo_filename = "i/custom_logo.png"
+    default_logo_filename = "i/logo.png"
+    custom_logo_path = Path(app.static_folder) / custom_logo_filename
+    default_logo_path = Path(app.static_folder) / default_logo_filename
+    if custom_logo_path.is_file():
+        return url_for("static", filename=custom_logo_filename)
+    elif default_logo_path.is_file():
+        return url_for("static", filename=default_logo_filename)
+
+    raise FileNotFoundError
 
 
 def create_app(config: SDConfig) -> Flask:
@@ -42,17 +58,6 @@ def create_app(config: SDConfig) -> Flask:
     def setup_i18n() -> None:
         """Store i18n-related values in Flask's special g object"""
         i18n.set_locale(config)
-
-    app.config.update(OS_PAST_EOL=is_os_past_eol())
-
-    @app.before_request
-    @ignore_static
-    def disable_ui() -> Optional[str]:
-        if app.config["OS_PAST_EOL"]:
-            session.clear()
-            g.show_offline_message = True
-            return render_template("base.html")
-        return None
 
     # The default CSRF token expiration is 1 hour. Since large uploads can
     # take longer than an hour over Tor, we increase the valid window to 24h.
@@ -110,14 +115,21 @@ def create_app(config: SDConfig) -> Flask:
         # ignore_static here so we only flash a single message warning
         # about Tor2Web, corresponding to the initial page load.
         if 'X-tor2web' in request.headers:
-            flash(Markup(gettext(
-                '<strong>WARNING:&nbsp;</strong> '
-                'You appear to be using Tor2Web. '
-                'This <strong>&nbsp;does not&nbsp;</strong> '
-                'provide anonymity. '
-                '<a href="{url}">Why is this dangerous?</a>')
-                .format(url=url_for('info.tor2web_warning'))),
-                "banner-warning")
+            flash(
+                Markup(
+                    '<strong>{}</strong>&nbsp;{}&nbsp;<a href="{}">{}</a>'.format(
+                        escape(gettext("WARNING:")),
+                        escape(
+                            gettext(
+                                'You appear to be using Tor2Web, which does not provide anonymity.'
+                            )
+                        ),
+                        url_for('info.tor2web_warning'),
+                        escape(gettext('Why is this dangerous?')),
+                    )
+                ),
+                "banner-warning"
+            )
 
     @app.before_request
     @ignore_static
@@ -182,6 +194,11 @@ def create_app(config: SDConfig) -> Flask:
             g.organization_name = app.instance_config.organization_name
         else:
             g.organization_name = gettext('SecureDrop')
+
+        try:
+            g.logo = get_logo_url(app)
+        except FileNotFoundError:
+            app.logger.error("Site logo not found.")
 
         return None
 

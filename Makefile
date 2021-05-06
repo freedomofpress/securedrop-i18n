@@ -46,6 +46,10 @@ update-python3-requirements:  ## Update Python 3 requirements with pip-compile.
 		--allow-unsafe \
 		--output-file requirements/python3/docker-requirements.txt \
 		requirements/python3/docker-requirements.in
+	@$(DEVSHELL) pip-compile --generate-hashes \
+		--allow-unsafe \
+		--output-file requirements/python3/translation-requirements.txt \
+		requirements/python3/translation-requirements.in
 
 .PHONY: update-pip-requirements
 update-pip-requirements: update-admin-pip-requirements update-python3-requirements ## Update all requirements with pip-compile.
@@ -128,7 +132,12 @@ safety:  ## Run `safety check` to check python dependencies for vulnerabilities.
 	@echo "███ Running safety..."
 	@for req_file in `find . -type f -name '*requirements.txt'`; do \
 		echo "Checking file $$req_file" \
-		&& safety check --ignore 39252 --full-report -r $$req_file \
+		&& safety check \
+		--ignore 39252 \
+		--ignore 39606 \
+		--ignore 39611 \
+		--ignore 39621 \
+		--full-report -r $$req_file \
 		&& echo -e '\n' \
 		|| exit 1; \
 	done
@@ -176,21 +185,9 @@ dev:  ## Run the development server in a Docker container.
 	@OFFSET_PORTS='false' DOCKER_BUILD_VERBOSE='true' $(DEVSHELL) $(SDBIN)/run
 	@echo
 
-.PHONY: dev-focal
-dev-focal:  ## Run the development server in a Docker container.
-	@echo "███ Starting development server..."
-	@OFFSET_PORTS='false' DOCKER_BUILD_VERBOSE='true' BASE_OS='focal' $(DEVSHELL) $(SDBIN)/run
-	@echo
-
 
 .PHONY: staging
-staging:  ## Create a local staging environment in virtual machines (Xenial)
-	@echo "███ Creating staging environment on Ubuntu Xenial..."
-	@$(SDROOT)/devops/scripts/create-staging-env xenial
-	@echo
-
-.PHONY: staging-focal
-staging-focal:  ## Create a local staging environment in virtual machines (Focal)
+staging:  ## Create a local staging environment in virtual machines (Focal)
 	@echo "███ Creating staging environment on Ubuntu Focal..."
 	@$(SDROOT)/devops/scripts/create-staging-env focal
 	@echo
@@ -226,10 +223,7 @@ test:  ## Run the test suite in a Docker container.
 	@echo
 
 .PHONY: test-focal
-test-focal:  ## Run the test suite in a Docker container.
-	@echo "███ Running SecureDrop application tests..."
-	@BASE_OS='focal' $(DEVSHELL) $(SDBIN)/run-test -v $${TESTFILES:-tests}
-	@echo
+test-focal:  test
 
 .PHONY: docker-vnc
 docker-vnc:  ## Open a VNC connection to a running Docker instance.
@@ -237,7 +231,6 @@ docker-vnc:  ## Open a VNC connection to a running Docker instance.
 	@$(SDROOT)/devops/scripts/vnc-docker-connect.sh
 	@echo
 
-# Xenial upgrade targets
 .PHONY: upgrade-start
 upgrade-start:  ## Boot an upgrade test environment using libvirt.
 	@echo "███ Starting upgrade test environment..."
@@ -315,27 +308,15 @@ endif
 ###########
 
 .PHONY: build-debs
-build-debs: ## Build and test SecureDrop Debian packages (for Xenial)
-	@echo "Building SecureDrop Debian packages for Xenial..."
+build-debs: ## Build and test SecureDrop Debian packages (for Focal)
+	@echo "Building SecureDrop Debian packages for Focal..."
 	@$(SDROOT)/devops/scripts/build-debs.sh
 	@echo
 
 .PHONY: build-debs-notest
-build-debs-notest: ## Build SecureDrop Debian packages (for Xenial) without running tests.
-	@echo "Building SecureDrop Debian packages for Xenial; skipping tests..."
-	@$(SDROOT)/devops/scripts/build-debs.sh notest
-	@echo
-
-.PHONY: build-debs-focal
-build-debs-focal: ## Build and test SecureDrop Debian packages (for Focal)
-	@echo "Building SecureDrop Debian packages for Focal..."
-	@$(SDROOT)/devops/scripts/build-debs.sh test focal
-	@echo
-
-.PHONY: build-debs-notest-focal
-build-debs-notest-focal: ## Build SecureDrop Debian packages (for Focal) without running tests.
+build-debs-notest: ## Build SecureDrop Debian packages (for Focal) without running tests.
 	@echo "Building SecureDrop Debian packages for Focal; skipping tests..."
-	@$(SDROOT)/devops/scripts/build-debs.sh notest focal
+	@$(SDROOT)/devops/scripts/build-debs.sh notest
 	@echo
 
 
@@ -363,14 +344,6 @@ ci-deb-tests:  ## Test SecureDrop Debian packages in CI environment.
 	@$(SDROOT)/devops/scripts/test-built-packages.sh
 	@echo
 
-.PHONY: ci-deb-tests-focal
-ci-deb-tests-focal:  ## Test SecureDrop Debian packages in CI environment.
-	@echo "███ Running Debian package tests in CI..."
-	@$(SDROOT)/devops/scripts/test-built-packages.sh focal
-	@echo
-
-
-
 .PHONY: build-gcloud-docker
 build-gcloud-docker:  ## Build Docker container for Google Cloud SDK.
 	@echo "Building Docker container for Google Cloud SDK..."
@@ -387,7 +360,7 @@ vagrant-package:  ## Package a Vagrant box of the last stable SecureDrop release
 	@echo
 
 .PHONY: fetch-tor-packages
-fetch-tor-packages:  ## Retrieves the most recent Tor packages for Xenial, for apt repo.
+fetch-tor-packages:  ## Retrieves the most recent Tor packages, for apt repo.
 	@echo "Fetching most recent Tor packages..."
 	@$(SDROOT)/devops/scripts/fetch-tor-packages.sh
 	@echo

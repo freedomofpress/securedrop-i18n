@@ -99,7 +99,7 @@ def validate_user(
             InvalidPasswordLength) as e:
         current_app.logger.error("Login for '{}' failed: {}".format(
             username, e))
-        login_flashed_msg = error_message if error_message else gettext('<b>Login failed.</b>')
+        login_flashed_msg = error_message if error_message else gettext('Login failed.')
 
         if isinstance(e, LoginThrottledException):
             login_flashed_msg += " "
@@ -123,7 +123,7 @@ def validate_user(
             except Exception:
                 pass
 
-        flash(Markup(login_flashed_msg), "error")
+        flash(login_flashed_msg, "error")
         return None
 
 
@@ -205,9 +205,12 @@ def download(
         zf = current_app.storage.get_bulk_archive(submissions, zip_directory=zip_basename)
     except FileNotFoundError:
         flash(
-            gettext(
+            ngettext(
+                "Your download failed because the file could not be found. An admin can find "
+                + "more information in the system and monitoring logs.",
                 "Your download failed because a file could not be found. An admin can find "
-                + "more information in the system and monitoring logs."
+                + "more information in the system and monitoring logs.",
+                len(submissions)
             ),
             "error"
         )
@@ -414,7 +417,7 @@ def set_name(user: Journalist, first_name: Optional[str], last_name: Optional[st
         db.session.commit()
         flash(gettext('Name updated.'), "success")
     except FirstOrLastNameError as e:
-        flash(gettext('Name not updated: {}'.format(e)), "error")
+        flash(gettext('Name not updated: {message}').format(message=e), "error")
 
 
 def set_diceware_password(user: Journalist, password: Optional[str]) -> bool:
@@ -437,11 +440,20 @@ def set_diceware_password(user: Journalist, password: Optional[str]) -> bool:
         return False
 
     # using Markup so the HTML isn't escaped
-    flash(Markup("<p>" + gettext(
-        "Password updated. Don't forget to "
-        "save it in your KeePassX database. New password:") +
-        ' <span><code>{}</code></span></p>'.format(password)),
-        'success')
+    flash(
+        Markup(
+            "<p>{message} <span><code>{password}</code></span></p>".format(
+                message=Markup.escape(
+                    gettext(
+                        "Password updated. Don't forget to save it in your KeePassX database. "
+                        "New password:"
+                    )
+                ),
+                password=Markup.escape("" if password is None else password)
+            )
+        ),
+        'success'
+    )
     return True
 
 
@@ -449,18 +461,17 @@ def col_download_unread(cols_selected: List[str]) -> werkzeug.Response:
     """
     Download all unseen submissions from all selected sources.
     """
-    unseen_submissions = []  # type: List[Union[Source, Submission]]
-
-    for filesystem_id in cols_selected:
-        source = (
-            Source.query.filter(Source.filesystem_id == filesystem_id)
-            .filter_by(deleted_at=None)
-            .one()
+    unseen_submissions = (
+        Submission.query.join(Source)
+        .filter(
+            Source.deleted_at.is_(None),
+            Source.filesystem_id.in_(cols_selected)
         )
-        submissions = Submission.query.filter_by(source_id=source.id).all()
-        unseen_submissions += [s for s in submissions if not s.seen]
+        .filter(~Submission.seen_files.any(), ~Submission.seen_messages.any())
+        .all()
+    )
 
-    if not unseen_submissions:
+    if len(unseen_submissions) == 0:
         flash(gettext("No unread submissions in selected collections."), "error")
         return redirect(url_for("main.index"))
 

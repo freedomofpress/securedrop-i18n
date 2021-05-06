@@ -44,17 +44,6 @@ apparmor_enforce:
     - "/usr/sbin/apache2//DEFAULT_URI"
     - "/usr/sbin/apache2//HANDLING_UNTRUSTED_INPUT"
     - "/usr/sbin/tor"
-  xenial:
-    - "sbin/dhclient"
-    - "/usr/lib/NetworkManager/nm-dhcp-client.action"
-    - "/usr/lib/connman/scripts/dhclient-script"
-    - "/usr/sbin/ntpd"
-    - "/usr/sbin/tcpdump"
-    - "system_tor"
-    - "/usr/sbin/apache2"
-    - "/usr/sbin/apache2//DEFAULT_URI"
-    - "/usr/sbin/apache2//HANDLING_UNTRUSTED_INPUT"
-    - "/usr/sbin/tor"
 
 app_directories:
   - /var/www/securedrop
@@ -64,20 +53,6 @@ app_directories:
   - /var/lib/securedrop/tmp
 
 tor_services:
-  - name: source
-    ports:
-      - "80"
-    authenticated: no
-    version: 2
-
-  - name: journalist
-    ports:
-      - "80"
-      - "8080"
-    authenticated: yes
-    client: journalist
-    version: 2
-
   - name: journalistv3
     ports:
       - "80"
@@ -133,6 +108,20 @@ log_events_without_ossec_alerts:
       jp&B1qSJM431TmEg,YJ][ge;6-dJI69?-TB?!BI4?Uza63V3vMY3ake6a
       hj-%A-m_5lgab!OVR,!pR+;L]eLgilU
 
+  # Override and suppress fwupd-specific errors under Ubuntu Focal
+  - name: test_ossec_fwupd_fuplugin_uefi_does_not_produce_alert
+    alert: >
+      Mar  1 13:22:53 app fwupd[133921]: 13:22:53:0883 FuPluginUefi
+      Error opening directory â€œ/sys/firmware/efi/esrt/entriesâ€�: No such file or directory
+    level: "0"
+    rule_id: "100111"
+
+  - name: test_ossec_fwupd_fuengine_does_not_produce_alert
+    alert: >
+      Mar  1 13:22:53 mon fwupd[133921]: 13:22:53:0576 FuEngine
+      Failed to load SMBIOS: invalid DMI data size, got 2527 bytes, expected 2745
+    level: "0"
+    rule_id: "100112"
 
 # Log events we expect an OSSEC alert to occur for
 log_events_with_ossec_alerts:
@@ -204,5 +193,4 @@ log_events_with_ossec_alerts:
     rule_id: "400700"
 
 fpf_apt_repo_url: "https://apt-test.freedom.press"
-grsec_version_xenial: "4.14.188"
 grsec_version_focal: "5.4.97"
