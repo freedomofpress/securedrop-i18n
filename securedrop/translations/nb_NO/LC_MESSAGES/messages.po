@@ -4,25 +4,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop 0.3.12\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-03-08 22:37+0000\n"
-"Last-Translator: John Hensley <john@freedom.press>\n"
-"Language-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/securedrop/securedrop/nb_NO/>\n"
-"Language: nb_NO\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
-"Generated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-05-08 20:43+0000\nLast-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\nLanguage-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/securedrop/securedrop/nb_NO/>\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
 
-#, fuzzy
-#| msgid "Message text too long."
 msgid "Name too long"
-msgstr "Meldingsteksten er for lang."
+msgstr "Navnet er for langt"
 
 msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
@@ -32,10 +17,8 @@ msgstr[1] "Må være minst {num} tegn langt."
 msgid "This username is invalid because it is reserved for internal use by the software."
 msgstr "Dette brukernavnet er ugyldig fordi programvaren har reservert det for intern bruk."
 
-#, fuzzy
-#| msgid "Change username"
 msgid "Invalid username"
-msgstr "Endre brukernavn"
+msgstr "Ugyldig brukernavn"
 
 msgid "{time} ago"
 msgstr "{time} siden"
@@ -63,7 +46,7 @@ msgstr "Bilde oppdatert."
 
 #. This error is shown when an uploaded image cannot be used.
 msgid "Unable to process the image file. Try another one."
-msgstr ""
+msgstr "Klarte ikke behandle bildefilen. Forsøk en annen fil."
 
 msgid "Preferences saved."
 msgstr "Innstillinger lagret."
@@ -79,12 +62,10 @@ msgstr "En feil oppstod knyttet til det automatisk opprettede passordet. Brukere
 
 #. Here, "{message}" explains the problem with the username.
 msgid "Invalid username: {message}"
-msgstr ""
+msgstr "Ugyldig brukernavn: {message}"
 
-#, fuzzy
-#| msgid "Username \"{user}\" already taken."
 msgid "Username \"{username}\" already taken."
-msgstr "Brukernavnet \"{user}\" er allerede i bruk."
+msgstr "Brukernavnet \"{username}\" er allerede i bruk."
 
 msgid "An error occurred saving this user to the database. Please inform your admin."
 msgstr "Kunne ikke lagre brukeren i databasen. Gi din administrator beskjed."
@@ -93,10 +74,8 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr "Tofaktorkoden for brukeren \"{user}\" stemmer."
 
 #. Here, "{message}" explains the problem with the name.
-#, fuzzy
-#| msgid "Name not updated: {}"
 msgid "Name not updated: {message}"
-msgstr "Navn ikke oppdatert: {}"
+msgstr "Navn ikke oppdatert: {message}"
 
 msgid "Deleted user '{user}'."
 msgstr "Slettet brukeren '{user}'."
@@ -164,10 +143,8 @@ msgstr "Ingen uleste innsendelser fra denne kilden."
 msgid "Account updated."
 msgstr "Konto oppdatert."
 
-#, fuzzy
-#| msgid "<b>Login failed.</b>"
 msgid "Login failed."
-msgstr "<b>Innlogging mislyktes.</b>"
+msgstr "Innlogging mislyktes."
 
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
@@ -670,13 +647,13 @@ msgid "LOG IN"
 msgstr "LOGG INN"
 
 msgid "WARNING:"
-msgstr ""
+msgstr "ADVARSEL:"
 
 msgid "You appear to be using Tor2Web, which does not provide anonymity."
-msgstr ""
+msgstr "Det virker som du bruker Tor2Web, som ikke gir anonymitet."
 
 msgid "Why is this dangerous?"
-msgstr ""
+msgstr "Hvorfor utgjør dette en fare?"
 
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "Feltet må være mellom ett og {max_codename_len} tegn langt."
