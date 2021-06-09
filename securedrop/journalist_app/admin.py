@@ -52,8 +52,11 @@ def make_blueprint(config: SDConfig) -> Blueprint:
                 f.save(custom_logo_filepath)
                 flash(gettext("Image updated."), "logo-success")
             except Exception:
-                # Translators: This error is shown when an uploaded image cannot be used.
-                flash(gettext("Unable to process the image file. Try another one."), "logo-error")
+                flash(
+                    # Translators: This error is shown when an uploaded image cannot be used.
+                    gettext("Unable to process the image file. Please try another one."),
+                    "logo-error"
+                )
             finally:
                 return redirect(url_for("admin.manage_config") + "#config-logoimage")
         else:
@@ -302,7 +305,7 @@ def make_blueprint(config: SDConfig) -> Blueprint:
             db.session.commit()
         return redirect(url_for('admin.edit_user', user_id=user_id))
 
-    @view.route('/ossec-test')
+    @view.route('/ossec-test', methods=('POST',))
     @admin_required
     def ossec_test() -> werkzeug.Response:
         current_app.logger.error('This is a test OSSEC alert')

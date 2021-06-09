@@ -16,7 +16,6 @@ RUN apt-get -y update && apt-get upgrade -y && apt-get install -y \
         gdb \
         git \
         gnupg2 \
-        haveged \
         inotify-tools \
         libffi-dev \
         libssl-dev \
@@ -41,6 +40,21 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu/ groovy universe" > /etc/apt/sour
 COPY aptpreferences.conf /etc/apt/preferences.d/ubuntu-groovy
 
 RUN apt-get update && apt-get install -y dh-virtualenv
+
+ENV RUST_VERSION 1.52.1
+
+# Install Rust for building cryptography
+RUN TMPDIR=`mktemp -d` && cd ${TMPDIR} \
+        && curl --proto '=https' --tlsv1.2 -OO -sSf https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init{,.sha256} \
+        && mkdir -p target/x86_64-unknown-linux-gnu/release/ \
+        && mv rustup-init target/x86_64-unknown-linux-gnu/release/ \
+        && sha256sum --check rustup-init.sha256 \
+        && cd target/x86_64-unknown-linux-gnu/release/ \
+        && chmod +x rustup-init \
+        && ./rustup-init --default-toolchain=${RUST_VERSION} -y \
+        && cd && rm -rf ${TMPDIR}
+
+RUN echo "source $HOME/.cargo/env" >> $HOME/.bashrc
 
 RUN paxctl -cm /usr/bin/python3.8 && mkdir -p /tmp/build
 RUN apt-get clean \

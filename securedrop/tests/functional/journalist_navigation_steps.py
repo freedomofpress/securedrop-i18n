@@ -169,7 +169,9 @@ class JournalistNavigationStepsMixin:
         def collection_deleted():
             if not self.accept_languages:
                 flash_msg = self.driver.find_element_by_css_selector(".flash")
-                assert "The account and all data for 1 source have been deleted." in flash_msg.text
+                assert (
+                    "The account and all data for the source have been deleted." in flash_msg.text
+                )
 
         self.wait_for(collection_deleted)
 
@@ -1064,9 +1066,6 @@ class JournalistNavigationStepsMixin:
         )
         el.location_once_scrolled_into_view
         ActionChains(self.driver).move_to_element(el).click().perform()
-
-    def _journalist_flags_source(self):
-        self.safe_click_by_id("flag-button")
 
     def _journalist_visits_admin(self):
         self.driver.get(self.journalist_location + "/admin")

@@ -53,6 +53,10 @@ LOGGER.setLevel(logging.WARNING)
 FIREFOX = "firefox"
 TORBROWSER = "torbrowser"
 
+# width & height of the browser window. If the top of screenshots is cropped,
+# increase the height of the window so the the whole page fits in the window.
+BROWSER_SIZE = (1024, 1400)
+
 
 class FunctionalTest(object):
     gpg = None
@@ -117,7 +121,7 @@ class FunctionalTest(object):
                 )
                 logging.info("Created Tor Browser web driver")
                 self.torbrowser_driver.set_window_position(0, 0)
-                self.torbrowser_driver.set_window_size(1024, 1200)
+                self.torbrowser_driver.set_window_size(*BROWSER_SIZE)
                 break
             except Exception as e:
                 logging.error("Error creating Tor Browser web driver: %s", e)
@@ -141,7 +145,7 @@ class FunctionalTest(object):
                     firefox_binary=FIREFOX_PATH, firefox_profile=profile
                 )
                 self.firefox_driver.set_window_position(0, 0)
-                self.firefox_driver.set_window_size(1024, 1200)
+                self.firefox_driver.set_window_size(*BROWSER_SIZE)
                 logging.info("Created Firefox web driver")
                 break
             except Exception as e:
@@ -203,87 +207,84 @@ class FunctionalTest(object):
         # Patch the two-factor verification to avoid intermittent errors
         logging.info("Mocking models.Journalist.verify_token")
         with mock.patch("models.Journalist.verify_token", return_value=True):
-            logging.info("Mocking source_app.main.get_entropy_estimate")
-            with mock.patch("source_app.main.get_entropy_estimate", return_value=8192):
+            try:
+                signal.signal(signal.SIGUSR1, lambda _, s: traceback.print_stack(s))
+
+                source_port = self._unused_port()
+                journalist_port = self._unused_port()
+
+                self.source_location = "http://127.0.0.1:%d" % source_port
+                self.journalist_location = "http://127.0.0.1:%d" % journalist_port
+
+                self.source_app = source_app.create_app(config)
+                self.journalist_app = journalist_app.create_app(config)
+                self.journalist_app.config["WTF_CSRF_ENABLED"] = True
+
+                self.__context = self.journalist_app.app_context()
+                self.__context.push()
+
+                env.create_directories()
+                db.create_all()
+                self.gpg = env.init_gpg()
+
+                # Add our test user
+                try:
+                    valid_password = "correct horse battery staple profanity oil chewy"
+                    user = Journalist(
+                        username="journalist", password=valid_password, is_admin=True
+                    )
+                    user.otp_secret = "JHCOGO7VCER3EJ4L"
+                    db.session.add(user)
+                    db.session.commit()
+                except IntegrityError:
+                    logging.error("Test user already added")
+                    db.session.rollback()
+
+                # This user is required for our tests cases to login
+                self.admin_user = {
+                    "name": "journalist",
+                    "password": ("correct horse battery staple" " profanity oil chewy"),
+                    "secret": "JHCOGO7VCER3EJ4L",
+                }
+
+                self.admin_user["totp"] = pyotp.TOTP(self.admin_user["secret"])
+
+                def start_journalist_server(app):
+                    app.run(port=journalist_port, debug=True, use_reloader=False, threaded=True)
+
+                self.source_process = Process(
+                    target=lambda: self.start_source_server(source_port)
+                )
+
+                self.journalist_process = Process(
+                    target=lambda: start_journalist_server(self.journalist_app)
+                )
+
+                self.source_process.start()
+                self.journalist_process.start()
+
+                for tick in range(30):
+                    try:
+                        requests.get(self.source_location, timeout=1)
+                        requests.get(self.journalist_location, timeout=1)
+                    except Exception:
+                        time.sleep(0.25)
+                    else:
+                        break
+                yield
+            finally:
+                try:
+                    self.source_process.terminate()
+                except Exception as e:
+                    logging.error("Error stopping source app: %s", e)
 
                 try:
-                    signal.signal(signal.SIGUSR1, lambda _, s: traceback.print_stack(s))
+                    self.journalist_process.terminate()
+                except Exception as e:
+                    logging.error("Error stopping source app: %s", e)
 
-                    source_port = self._unused_port()
-                    journalist_port = self._unused_port()
-
-                    self.source_location = "http://127.0.0.1:%d" % source_port
-                    self.journalist_location = "http://127.0.0.1:%d" % journalist_port
-
-                    self.source_app = source_app.create_app(config)
-                    self.journalist_app = journalist_app.create_app(config)
-                    self.journalist_app.config["WTF_CSRF_ENABLED"] = True
-
-                    self.__context = self.journalist_app.app_context()
-                    self.__context.push()
-
-                    env.create_directories()
-                    db.create_all()
-                    self.gpg = env.init_gpg()
-
-                    # Add our test user
-                    try:
-                        valid_password = "correct horse battery staple profanity oil chewy"
-                        user = Journalist(
-                            username="journalist", password=valid_password, is_admin=True
-                        )
-                        user.otp_secret = "JHCOGO7VCER3EJ4L"
-                        db.session.add(user)
-                        db.session.commit()
-                    except IntegrityError:
-                        logging.error("Test user already added")
-                        db.session.rollback()
-
-                    # This user is required for our tests cases to login
-                    self.admin_user = {
-                        "name": "journalist",
-                        "password": ("correct horse battery staple" " profanity oil chewy"),
-                        "secret": "JHCOGO7VCER3EJ4L",
-                    }
-
-                    self.admin_user["totp"] = pyotp.TOTP(self.admin_user["secret"])
-
-                    def start_journalist_server(app):
-                        app.run(port=journalist_port, debug=True, use_reloader=False, threaded=True)
-
-                    self.source_process = Process(
-                        target=lambda: self.start_source_server(source_port)
-                    )
-
-                    self.journalist_process = Process(
-                        target=lambda: start_journalist_server(self.journalist_app)
-                    )
-
-                    self.source_process.start()
-                    self.journalist_process.start()
-
-                    for tick in range(30):
-                        try:
-                            requests.get(self.source_location, timeout=1)
-                            requests.get(self.journalist_location, timeout=1)
-                        except Exception:
-                            time.sleep(0.25)
-                        else:
-                            break
-                    yield
-                finally:
-                    try:
-                        self.source_process.terminate()
-                    except Exception as e:
-                        logging.error("Error stopping source app: %s", e)
-
-                    try:
-                        self.journalist_process.terminate()
-                    except Exception as e:
-                        logging.error("Error stopping source app: %s", e)
-
-                    env.teardown()
-                    self.__context.pop()
+                env.teardown()
+                self.__context.pop()
 
     def wait_for_source_key(self, source_name):
         filesystem_id = self.source_app.crypto_util.hash_codename(source_name)

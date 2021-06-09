@@ -2025,7 +2025,7 @@ def test_logo_upload_save_fails(config, journalist_app, test_admin, locale):
                     )
 
                     assert page_language(resp.data) == language_tag(locale)
-                    msgids = ["Unable to process the image file. Try another one."]
+                    msgids = ["Unable to process the image file. Please try another one."]
                     with xfail_untranslated_messages(config, locale, msgids):
                         ins.assert_message_flashed(gettext(msgids[0]), "logo-error")
     finally:
@@ -2039,7 +2039,7 @@ def test_creation_of_ossec_test_log_event(journalist_app, test_admin, mocker):
     with journalist_app.test_client() as app:
         _login_user(app, test_admin['username'], test_admin['password'],
                     test_admin['otp_secret'])
-        app.get(url_for('admin.ossec_test'))
+        app.post(url_for('admin.ossec_test'))
 
     mocked_error_logger.assert_called_once_with(
         "This is a test OSSEC alert"

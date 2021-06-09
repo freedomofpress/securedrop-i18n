@@ -442,40 +442,6 @@ def test_submit_both(source_app):
         assert "Thanks! We received your message and document" in text
 
 
-def test_submit_message_with_low_entropy(source_app):
-    with patch.object(source_app_main, 'async_genkey') as async_genkey:
-        with patch.object(source_app_main, 'get_entropy_estimate') \
-                as get_entropy_estimate:
-            get_entropy_estimate.return_value = 300
-
-            with source_app.test_client() as app:
-                new_codename(app, session)
-                _dummy_submission(app)
-                resp = app.post(
-                    url_for('main.submit'),
-                    data=dict(msg="This is a test.", fh=(StringIO(''), '')),
-                    follow_redirects=True)
-                assert resp.status_code == 200
-                assert not async_genkey.called
-
-
-def test_submit_message_with_enough_entropy(source_app):
-    with patch.object(source_app_main, 'async_genkey') as async_genkey:
-        with patch.object(source_app_main, 'get_entropy_estimate') \
-                as get_entropy_estimate:
-            get_entropy_estimate.return_value = 2400
-
-            with source_app.test_client() as app:
-                new_codename(app, session)
-                _dummy_submission(app)
-                resp = app.post(
-                    url_for('main.submit'),
-                    data=dict(msg="This is a test.", fh=(StringIO(''), '')),
-                    follow_redirects=True)
-                assert resp.status_code == 200
-                assert async_genkey.called
-
-
 def test_delete_all_successfully_deletes_replies(source_app):
     with source_app.app_context():
         journalist, _ = utils.db_helper.init_journalist()
@@ -619,7 +585,7 @@ def test_why_journalist_key(source_app):
 
 
 def test_metadata_route(config, source_app):
-    with patch("server_os.get_os_release", return_value="16.04"):
+    with patch("server_os.get_os_release", return_value="20.04"):
         with source_app.test_client() as app:
             resp = app.get(url_for('api.metadata'))
             assert resp.status_code == 200
@@ -627,22 +593,9 @@ def test_metadata_route(config, source_app):
             assert resp.json.get('allow_document_uploads') ==\
                 InstanceConfig.get_current().allow_document_uploads
             assert resp.json.get('sd_version') == version.__version__
-            assert resp.json.get('server_os') == '16.04'
+            assert resp.json.get('server_os') == '20.04'
             assert resp.json.get('supported_languages') ==\
                 config.SUPPORTED_LOCALES
-            assert resp.json.get('v2_source_url') is None
-            assert resp.json.get('v3_source_url') is None
-
-
-def test_metadata_v2_url(config, source_app):
-    onion_test_url = "abcdabcdabcdabcd.onion"
-    with patch.object(source_app_api, "get_sourcev2_url") as mocked_v2_url:
-        mocked_v2_url.return_value = (onion_test_url)
-        with source_app.test_client() as app:
-            resp = app.get(url_for('api.metadata'))
-            assert resp.status_code == 200
-            assert resp.headers.get('Content-Type') == 'application/json'
-            assert resp.json.get('v2_source_url') == onion_test_url
             assert resp.json.get('v3_source_url') is None
 
 
@@ -654,7 +607,6 @@ def test_metadata_v3_url(config, source_app):
             resp = app.get(url_for('api.metadata'))
             assert resp.status_code == 200
             assert resp.headers.get('Content-Type') == 'application/json'
-            assert resp.json.get('v2_source_url') is None
             assert resp.json.get('v3_source_url') == onion_test_url
 
 
@@ -746,26 +698,25 @@ def test_failed_normalize_timestamps_logs_warning(source_app):
     still occur, but a warning should be logged (this will trigger an
     OSSEC alert)."""
 
-    with patch("source_app.main.get_entropy_estimate", return_value=8192):
-        with patch.object(source_app.logger, 'warning') as logger:
-            with patch.object(subprocess, 'call', return_value=1):
-                with source_app.test_client() as app:
-                    new_codename(app, session)
-                    _dummy_submission(app)
-                    resp = app.post(
-                        url_for('main.submit'),
-                        data=dict(
-                            msg="This is a test.",
-                            fh=(StringIO(''), '')),
-                        follow_redirects=True)
-                    assert resp.status_code == 200
-                    text = resp.data.decode('utf-8')
-                    assert "Thanks! We received your message" in text
+    with patch.object(source_app.logger, 'warning') as logger:
+        with patch.object(subprocess, 'call', return_value=1):
+            with source_app.test_client() as app:
+                new_codename(app, session)
+                _dummy_submission(app)
+                resp = app.post(
+                    url_for('main.submit'),
+                    data=dict(
+                        msg="This is a test.",
+                        fh=(StringIO(''), '')),
+                    follow_redirects=True)
+                assert resp.status_code == 200
+                text = resp.data.decode('utf-8')
+                assert "Thanks! We received your message" in text
 
-                    logger.assert_called_once_with(
-                        "Couldn't normalize submission "
-                        "timestamps (touch exited with 1)"
-                    )
+                logger.assert_called_once_with(
+                    "Couldn't normalize submission "
+                    "timestamps (touch exited with 1)"
+                )
 
 
 def test_source_is_deleted_while_logged_in(source_app):
