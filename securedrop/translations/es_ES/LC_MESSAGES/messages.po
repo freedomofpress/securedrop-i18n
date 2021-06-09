@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-06-01 13:44+0000\nLast-Translator: Zuhualime Akoochimoya <zakooch@protonmail.ch>\nLanguage-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-06-09 21:44+0000\nLast-Translator: Zuhualime Akoochimoya <zakooch@protonmail.ch>\nLanguage-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
 msgstr "Nombre demasiado largo"
@@ -45,10 +45,8 @@ msgid "Image updated."
 msgstr "Imagen actualizada."
 
 #. This error is shown when an uploaded image cannot be used.
-#, fuzzy
-#| msgid "Unable to process the image file. Try another one."
 msgid "Unable to process the image file. Please try another one."
-msgstr "Incapaz de procesar el archivo de imagen. Intenta con otro."
+msgstr "Incapaz de procesar el archivo de imagen. Por favor, intenta con otro."
 
 msgid "Preferences saved."
 msgstr "Preferencias guardadas."
@@ -99,11 +97,9 @@ msgstr "Nada Seleccionado"
 msgid "You must select one or more items."
 msgstr "Debes seleccionar uno o más ítems."
 
-#, fuzzy
-#| msgid "Your download failed because a file could not be found. An admin can find more information in the system and monitoring logs."
 msgid "Your download failed because the file could not be found. An admin can find more information in the system and monitoring logs."
 msgid_plural "Your download failed because a file could not be found. An admin can find more information in the system and monitoring logs."
-msgstr[0] "Tu descarga falló porque un archivo no pudo ser encontrado. Un administrador puede encontrar más información en los registros de sistema y monitoreo."
+msgstr[0] "Tu descarga falló porque el archivo no pudo ser encontrado. Un administrador puede encontrar más información en los registros de sistema y monitoreo."
 msgstr[1] "Tu descarga falló porque un archivo no pudo ser encontrado. Un administrador puede encontrar más información en los registros de sistema y monitoreo."
 
 msgid "Only admins can access this page."
@@ -174,12 +170,9 @@ msgstr[1] "{num} ítems han sido borrados."
 msgid "No collections selected for deletion."
 msgstr "No hay colecciones seleccionadas para eliminar."
 
-#, fuzzy
-#| msgid "The account and all data for {n} source have been deleted."
-#| msgid_plural "The accounts and all data for {n} sources have been deleted."
 msgid "The account and all data for the source have been deleted."
 msgid_plural "The accounts and all data for {n} sources have been deleted."
-msgstr[0] "La cuenta y todos los datos de {n} fuente han sido eliminados."
+msgstr[0] "La cuenta y todos los datos de la fuente han sido eliminados."
 msgstr[1] "Las cuentas y todos los datos de {n} fuentes han sido eliminados."
 
 msgid "You must select one or more items for deletion."
@@ -459,7 +452,7 @@ msgid "You can write a secure reply to the person who submitted these messages a
 msgstr "Puedes escribir una respuesta segura a la persona que envió estos mensajes y/o archivos:"
 
 msgid "This source has no encryption key."
-msgstr ""
+msgstr "Esta fuente no tiene clave de cifrado."
 
 msgid "An encryption key will be generated for the source the next time they log in, after which you will be able to reply to the source here."
 msgstr "Una llave de cifrado se generará para la fuente la próxima vez que ésta se conecte, después de lo cual podrás responderle desde aquí."
