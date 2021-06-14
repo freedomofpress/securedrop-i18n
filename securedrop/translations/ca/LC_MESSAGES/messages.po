@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-06-14 10:44+0000\nLast-Translator: Benet (BennyBeat) R. i Camps <bennybeat@gmail.com>\nLanguage-Team: Catalan <https://weblate.securedrop.org/projects/securedrop/securedrop/ca/>\nLanguage: ca\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-06-14 13:44+0000\nLast-Translator: Benet (BennyBeat) R. i Camps <bennybeat@gmail.com>\nLanguage-Team: Catalan <https://weblate.securedrop.org/projects/securedrop/securedrop/ca/>\nLanguage: ca\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
 msgstr "El nom és massa llarg"
@@ -107,7 +107,7 @@ msgstr "Només els administradors poden accedir a aquesta pàgina."
 
 msgid "HOTP secrets are 40 characters long - you have entered {num}."
 msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
-msgstr[0] "Els secrets HOTP tenen una mida de 40 caràcters, però n’heu introduït {num}."
+msgstr[0] "El secret HOTP té una mida de 40 caràcters, però n’heu introduït {num}."
 msgstr[1] "Els secrets HOTP tenen una mida de 40 caràcters, però n’heu introduït {num}."
 
 msgid "Cannot be longer than {num} character."
@@ -134,10 +134,10 @@ msgid "Your reply has been stored."
 msgstr "S'ha emmagatzemat la resposta."
 
 msgid "You must select one or more items for download"
-msgstr "Cal que seleccioneu un o més elements per baixar."
+msgstr "Cal que seleccioneu un o més elements per baixar"
 
 msgid "You must select one or more items for deletion"
-msgstr "Cal que seleccioneu un o més elements per suprimir."
+msgstr "Cal que seleccioneu un o més elements per suprimir"
 
 msgid "No unread submissions for this source."
 msgstr "Aquesta font no té cap enviament sense llegir."
@@ -347,7 +347,7 @@ msgid "Back to admin interface"
 msgstr "Torna a la interfície administrativa"
 
 msgid "Username can contain spaces"
-msgstr "El nom d’usuari no pot contenir espais"
+msgstr "El nom d’usuari pot contenir espais"
 
 msgid "Username is case-sensitive"
 msgstr "El nom d’usuari distingeix entre majúscules i minúscules"
@@ -568,7 +568,7 @@ msgid "If your two-factor authentication credentials have been lost or compromis
 msgstr "Si heu perdut les vostres credencials d'autenticació de factor doble, si s'han compromès o bé teniu un aparell nou, podeu restablir les vostres credencials aquí. <em>Si feu això, assegureu-vos que esteu preparat per configurar l'aparell nou, altrament si us blocarà el compte.</em>"
 
 msgid "To reset two-factor authentication for mobile apps such as FreeOTP, choose the first option. For security keys like the YubiKey, choose the second one."
-msgstr "Per restablir l'autenticació de factor doble per a aplicacions mòbils com ara el FreeOTP, trieu la primera opció. Per a claus de seguretat com ara el YubiKey, trieu la segona."
+msgstr "Per a restablir l'autenticació de factor doble per a aplicacions mòbils com ara el FreeOTP, trieu la primera opció. Per a claus de seguretat com ara el YubiKey, trieu la segona."
 
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
 msgstr "Restableix l'autenticació de factor doble per a aplicacions mòbils, com ara el FreeOTP"
@@ -847,7 +847,7 @@ msgid "YES, DELETE ALL REPLIES"
 msgstr "SÍ, SUPRIMEIX TOTES LES RESPOSTES"
 
 msgid "NO, NOT YET"
-msgstr "NO, NO ENCARA"
+msgstr "NO ENCARA"
 
 msgid "— No Messages —"
 msgstr "— No hi ha cap missatge —"
