@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop 0.9.0~rc1\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2018-10-16 02:32+0000\n"
-"Last-Translator: Pranciškus Jansas <pranciskusjansas@gmail.com>\n"
-"Language-Team: Lithuanian <https://weblate.securedrop.org/projects/securedrop/securedrop/lt/>\n"
-"Language: lt\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > 19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? 1 : 2);\n"
-"X-Generator: Weblate 2.20\n"
-"Generated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.9.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-06-14 08:14+0000\nLast-Translator: Tomas Darius Davainis <tomas@davainis.lt>\nLanguage-Team: Lithuanian <https://weblate.securedrop.org/projects/securedrop/securedrop/lt/>\nLanguage: lt\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > 19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? 1 : 2);\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
 
 #, fuzzy
 msgid "{time} ago"
@@ -396,61 +384,55 @@ msgstr "Paskutinis prisijungimas"
 msgid "Edit user {username}"
 msgstr "Redaguoti {username}"
 
+#, fuzzy
 msgid "edit user icon"
-msgstr ""
+msgstr "redaguoti vartotojo ženklelį"
 
 msgid "trash icon disabled"
-msgstr ""
+msgstr "šiukšliadėžės piktograma išjungta"
 
-#, fuzzy
 msgid "Delete user {username}"
-msgstr "Ištrinti vartotoją {username}"
+msgstr "Vartotoją {username} pašalinti"
 
 msgid "trash icon"
-msgstr ""
+msgstr "šiukšliadėžės piktograma"
 
-#, fuzzy
 msgid "never"
 msgstr "niekada"
 
-#, fuzzy
 msgid "No users to display"
-msgstr "Nėra vartotojų"
+msgstr "Nėra vartotojų, kuriuos būtų galima rodyti"
 
 #, fuzzy
 msgid "INSTANCE CONFIG"
-msgstr "INSTANCIJOS KONFIGŪRAVIMAS"
+msgstr "NUSTATYMO KONFIGŪRAVIMAS"
 
-#, fuzzy
 msgid "Back to admin interface"
-msgstr "Grįžti į administratoriaus aplinką"
+msgstr "Atgal į administratoriaus sąsają"
 
 msgid "Username can contain spaces"
-msgstr ""
+msgstr "Vartotojo vardas gali būti su tarpais"
 
 msgid "Username is case-sensitive"
-msgstr ""
+msgstr "Vartotojo vardas skiriamas didžiosiomis ir mažosiomis raidėmis"
 
 msgid "First name"
-msgstr ""
+msgstr "Vardas"
 
 msgid "Last name"
-msgstr ""
+msgstr "Pavardė"
 
 msgid "First name and last name are optional"
-msgstr ""
+msgstr "Vardas ir pavardė neprivalomi"
 
-#, fuzzy
 msgid "The user's password will be:"
-msgstr "Vartotojo slaptažodis bus:"
+msgstr "Vartotojo slaptažodis:"
 
-#, fuzzy
 msgid "Is Admin"
-msgstr "Administratorius"
+msgstr "Yra administratorius"
 
-#, fuzzy
 msgid "Is using a YubiKey [HOTP]"
-msgstr "Ar naudoja YubiKey [HOTP]"
+msgstr "Naudoja YubiKey [HOTP]"
 
 #, fuzzy
 msgid "You're almost done! To finish adding this new user, have them follow the instructions below to set up two-factor authentication with FreeOTP. Once they've added an entry for this account in the app, have them enter one of the 6-digit codes from the app to confirm that two-factor authentication is set up correctly."
