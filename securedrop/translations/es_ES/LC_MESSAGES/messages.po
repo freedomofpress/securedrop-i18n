@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-06-14 11:31+0000\nLast-Translator: Zuhualime Akoochimoya <zakooch@protonmail.ch>\nLanguage-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-06-14 11:34+0000\nLast-Translator: Gonzalo Bulnes Guilpain <gon.bulnes@fastmail.com>\nLanguage-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
 msgstr "Nombre demasiado largo"
@@ -880,7 +880,7 @@ msgid "You Should Use Tor Browser"
 msgstr "Deberías Usar el Navegador Tor"
 
 msgid "If you are not using Tor Browser, you <strong>may not be anonymous</strong>."
-msgstr "Si no estás usando el Navegador Tor, <strong>quizás no estés anónimo</strong>."
+msgstr "Si no estás usando el Navegador Tor, <strong>quizás no seas anónimo</strong>."
 
 msgid "If you want to submit information to SecureDrop, we <strong>strongly advise you</strong> to install Tor Browser and use it to access our site safely and anonymously."
 msgstr "Si quieres enviar información a SecureDrop, <strong>te recomendamos encarecidamente</strong> que instales el Navegador Tor y lo uses para entrar a nuestro sitio de forma segura y anónima."
