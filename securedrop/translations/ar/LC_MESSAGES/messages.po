@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 # Ahmad Gharbeia أحمد غربية <ahmad@gharbeia.org>, 2017.
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-06-17 20:44+0000\nLast-Translator: mohamad karkoura <mhkhkr@gmail.com>\nLanguage-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/securedrop/ar/>\nLanguage: ar\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-06-19 08:44+0000\nLast-Translator: erinm <erinm@riseup.net>\nLanguage-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/securedrop/ar/>\nLanguage: ar\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
 msgstr "إن الاسم طويلٌ جداً"
@@ -496,9 +496,8 @@ msgstr "لا يوجد ايداعات لعرضها."
 msgid "You can write a secure reply to the person who submitted these messages and/or files:"
 msgstr "يمكن كتابة رد آمن إلى الشخص الذي أودع هذه الرسائل و/أو الملفات:"
 
-#, fuzzy
 msgid "This source has no encryption key."
-msgstr "هذا المصدر لا يحتوي على مفتاح تشفير/تعمية."
+msgstr "هذا المصدر لا يحتوي على مفتاح تعمية."
 
 msgid "An encryption key will be generated for the source the next time they log in, after which you will be able to reply to the source here."
 msgstr "عند ولوج المصدر إلى النظام في المرّة التالية سيُولَّد له مفتاح تعمية، و&nbsp;سيمكنك بعد ذلك كتابة رسائل له هنا."
