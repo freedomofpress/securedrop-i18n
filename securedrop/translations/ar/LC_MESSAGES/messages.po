@@ -4,10 +4,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 # Ahmad Gharbeia أحمد غربية <ahmad@gharbeia.org>, 2017.
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-06-19 08:44+0000\nLast-Translator: erinm <erinm@riseup.net>\nLanguage-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/securedrop/ar/>\nLanguage: ar\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-06-19 16:02+0000\nLast-Translator: Ahmed Essam <ahmedessamdev@gmail.com>\nLanguage-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/securedrop/ar/>\nLanguage: ar\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
-msgstr "إن الاسم طويلٌ جداً"
+msgstr "الاسم طويل جدا"
 
 msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
@@ -101,16 +101,14 @@ msgstr "لم يتم اختيار شىء"
 msgid "You must select one or more items."
 msgstr "لا بد من اختيار عنصر أو أكثر."
 
-#, fuzzy
-#| msgid "Your download failed because a file could not be found. An admin can find more information in the system and monitoring logs."
 msgid "Your download failed because the file could not be found. An admin can find more information in the system and monitoring logs."
 msgid_plural "Your download failed because a file could not be found. An admin can find more information in the system and monitoring logs."
-msgstr[0] "لم ينجح التحميل بسبب عدم امكانية العثور على ملف. الإداري يمكنه الحصول على المزيد من المعلومات عن هذا الأمر من خلال سجلات نظام التشغيل والمراقبة."
-msgstr[1] "لم ينجح التحميل بسبب عدم امكانية العثور على ملف. الإداري يمكنه الحصول على المزيد من المعلومات عن هذا الأمر من خلال سجلات نظام التشغيل والمراقبة."
-msgstr[2] "لم ينجح التحميل بسبب عدم امكانية العثور على ملف. الإداري يمكنه الحصول على المزيد من المعلومات عن هذا الأمر من خلال سجلات نظام التشغيل والمراقبة."
-msgstr[3] "لم ينجح التحميل بسبب عدم امكانية العثور على ملف. الإداري يمكنه الحصول على المزيد من المعلومات عن هذا الأمر من خلال سجلات نظام التشغيل والمراقبة."
-msgstr[4] "لم ينجح التحميل بسبب عدم امكانية العثور على ملف. الإداري يمكنه الحصول على المزيد من المعلومات عن هذا الأمر من خلال سجلات نظام التشغيل والمراقبة."
-msgstr[5] "لم ينجح التحميل بسبب عدم امكانية العثور على ملف. الإداري يمكنه الحصول على المزيد من المعلومات عن هذا الأمر من خلال سجلات نظام التشغيل والمراقبة."
+msgstr[0] "لم ينجح التحميل بسبب عدم إمكانية العثور على أي ملف. الإداري يمكنه الحصول على المزيد من المعلومات عن هذا الأمر من خلال سجلات نظام التشغيل والمراقبة."
+msgstr[1] "لم ينجح التحميل بسبب عدم إمكانية العثور على الملف. الإداري يمكنه الحصول على المزيد من المعلومات عن هذا الأمر من خلال سجلات نظام التشغيل والمراقبة."
+msgstr[2] "لم ينجح التحميل بسبب عدم إمكانية العثور على ملف. الإداري يمكنه الحصول على المزيد من المعلومات عن هذا الأمر من خلال سجلات نظام التشغيل والمراقبة."
+msgstr[3] "لم ينجح التحميل بسبب عدم إمكانية العثور على ملف. الإداري يمكنه الحصول على المزيد من المعلومات عن هذا الأمر من خلال سجلات نظام التشغيل والمراقبة."
+msgstr[4] "لم ينجح التحميل بسبب عدم إمكانية العثور على ملف. الإداري يمكنه الحصول على المزيد من المعلومات عن هذا الأمر من خلال سجلات نظام التشغيل والمراقبة."
+msgstr[5] "لم ينجح التحميل بسبب عدم إمكانية العثور على ملف. الإداري يمكنه الحصول على المزيد من المعلومات عن هذا الأمر من خلال سجلات نظام التشغيل والمراقبة."
 
 msgid "Only admins can access this page."
 msgstr "الإداريون وحدهم بوسعهم النّفاذ إلى هذه الصفحة."
@@ -182,7 +180,7 @@ msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr "صيغة البيانات السرية غير صحيحة: المقبولة هي الأحرف من A-F و&nbsp;الأرقام من 0-9 فقط."
 
 msgid "Invalid secret format: odd-length secret. Did you mistype the secret?"
-msgstr "صيغة البيانات السرية غير صحيحة: عدد كلمات العبارة السرية يجب أن يكون زوجيًّا لا فرديًّا. تلزم مراجعة الإدخال."
+msgstr "صيغة البيانات السرية غير صحيحة: عدد كلمات العبارة السرية يجب أن يكون زوجيًّا لا فرديًّا. هل أخطأت في كتابة العبارة السرية؟"
 
 msgid "The item has been deleted."
 msgid_plural "{num} items have been deleted."
@@ -196,14 +194,11 @@ msgstr[5] "تم حذف {num} عنصر."
 msgid "No collections selected for deletion."
 msgstr "لَمْ تُختَر أيّ مجموعة لحذفها."
 
-#, fuzzy
-#| msgid "The account and all data for {n} source have been deleted."
-#| msgid_plural "The accounts and all data for {n} sources have been deleted."
 msgid "The account and all data for the source have been deleted."
 msgid_plural "The accounts and all data for {n} sources have been deleted."
 msgstr[0] "لم يتم حذف أي حساب أو أي بيانات."
 msgstr[1] "تم حذف حساب وكل بيانات المصدر."
-msgstr[2] "‪تم حذف حسابي وكل بيانات المصدرين."
+msgstr[2] "تم حذف حسابي وكل بيانات المصدرين."
 msgstr[3] "تم حذف حسابات و كل بيانات {n} مصادر."
 msgstr[4] "تم حذف حسابات وكل بيانات {n} مصدر."
 msgstr[5] "تم حذف حسابات وكل بيانات {n} مصدر."
@@ -419,7 +414,7 @@ msgid "You're almost done! To finish adding this new user, have them follow the 
 msgstr "قاربت على الانتهاء! لإتمام إضافة الحساب على المستخدم الجديد اتّباع التعليمات التالية لضبط الاستيثاق في خطوتين بواسطة FreeOTP. و&nbsp;بعد إضافة مدخلة لهذا الحساب في التطبيق يجب إدخال أحد الرموز المؤلّفة من 6 أرقام للتأكد من صحّة الإعداد."
 
 msgid "Can't scan the barcode? You can manually pair FreeOTP with this account by entering the following two-factor secret into the app:"
-msgstr "هل عجزت عن مسح وقراءة شريط الرموز أي البار كود؟ بامكانك مطابقة وربط بنفسك FreeOTP مع هذا الحساب وذلك عبر تسجيل رمز الاستيثاق في خطوتين التالي في التطبيق."
+msgstr "هل عجزت عن مسح وقراءة البار كود؟ بامكانك ربط FreeOTP مع هذا الحساب عن طريق إدخال رمزي الاستيثاق التاليين في التطبيق."
 
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "بعد إتمام ضبط مفتاح الاستيثاق \"YubiKey\" أدخل الرمز المكون من 6 أرقام:"
@@ -682,13 +677,11 @@ msgstr "لِج"
 msgid "WARNING:"
 msgstr "تحذير:"
 
-#, fuzzy
 msgid "You appear to be using Tor2Web, which does not provide anonymity."
-msgstr "يبدو أنك تستخدم  Tor2Webالذي لا يوفر خاصية إخفاء الهوية."
+msgstr "يبدو أنك تستخدم Tor2Web الذي لا يوفر خاصية إخفاء الهوية."
 
-#, fuzzy
 msgid "Why is this dangerous?"
-msgstr "لماذا يُعد هذا خطيرًأ؟"
+msgstr "لماذا يُعد هذا خطيرًا؟"
 
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "يجب أن يتراوح طول الحقل بين محرف واحد و&nbsp;{max_codename_len} محرفا."
@@ -965,7 +958,7 @@ msgid "If you are using <a href=\"{url}\">Tails</a>, you can double-click the <c
 msgstr "إذا كنت تستعمل نظام التشغيل <a href=\"{url}\">Tails</a> فيمكنك النقر المزدوج على ملف <code>asc</code> الذي نزّلته و&nbsp;سيُستورد تلقائيا إلى حلقة المفاتيح."
 
 msgid "If you are using macOS or Linux, open the terminal. You can import the key with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
-msgstr "إذا كنت تستخدم macOS أو لينُكس، فيمكنك استيراد المفتاح بواسطة <p><code> من خلال الطرفيّة بواسطة الأمر التالي :<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
+msgstr "إذا كنت تستخدم macOS أو لينُكس، فيمكنك استيراد المفتاح باستخدام الطرفيّة بواسطة الأمر التالي :<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
 
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
 msgstr "قم بتعمية ما أرسلته. افتح الطرفية وادخل أمر التعمية gpg:"
