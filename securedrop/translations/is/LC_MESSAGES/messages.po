@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr "Report-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-06-18 22:44+0000\nLast-Translator: Sveinn í Felli <sv1@fellsnet.is>\nLanguage-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/securedrop/is/>\nLanguage: is\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\nX-Generator: Weblate 4.6\nproject-Id-Version: SecureDrop 0.12.0~rc1\nGenerated-By: Babel 2.5.1\n"
+msgstr "Report-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-06-20 17:44+0000\nLast-Translator: Oktavia <oktaviahrund@gmail.com>\nLanguage-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/securedrop/is/>\nLanguage: is\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\nX-Generator: Weblate 4.6\nproject-Id-Version: SecureDrop 0.12.0~rc1\nGenerated-By: Babel 2.5.1\n"
 
 msgid "Name too long"
 msgstr "Nafnið er of langt"
@@ -65,7 +65,7 @@ msgid "Invalid username: {message}"
 msgstr "Ógilt notandanafn: {message}"
 
 msgid "Username \"{username}\" already taken."
-msgstr "Notandanafnið \"{user}\" er þegar í notkun."
+msgstr "Notandanafnið \"{user}\" er núþegar í notkun."
 
 msgid "An error occurred saving this user to the database. Please inform your admin."
 msgstr "Villa kom upp við vistun þessa notanda í gagnagrunninn. Hafðu samband við kerfisstjórann þinn."
@@ -99,8 +99,8 @@ msgstr "Þú verður að velja eitt eða fleiri atriði."
 
 msgid "Your download failed because the file could not be found. An admin can find more information in the system and monitoring logs."
 msgid_plural "Your download failed because a file could not be found. An admin can find more information in the system and monitoring logs."
-msgstr[0] "Niðurhalið þitt mistókst vegna þess að skrá fannst ekki. Stjórnandi getur fundið ítarlegri upplýsingar í kerfinu og vöktunarskrám."
-msgstr[1] "Niðurhalið þitt mistókst vegna þess að skrá fannst ekki. Stjórnandi getur fundið ítarlegri upplýsingar í kerfinu og vöktunarskrám."
+msgstr[0] "Niðurhalið þitt mistókst vegna þess að skráin fannst ekki. Stjórnandi getur fundið ítarlegri upplýsingar í kerfinu og vöktunarskrám."
+msgstr[1] "Niðurhalið þitt mistókst vegna þess að skráin fannst ekki. Stjórnandi getur fundið ítarlegri upplýsingar í kerfinu og vöktunarskrám."
 
 msgid "Only admins can access this page."
 msgstr "Einungis stjórnendur fá aðgang að þessari síðu."
