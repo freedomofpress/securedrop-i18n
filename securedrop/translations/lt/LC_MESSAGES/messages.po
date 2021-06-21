@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.9.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-06-21 00:25+0000\nLast-Translator: Tomas Darius Davainis <tomas@davainis.lt>\nLanguage-Team: Lithuanian <https://weblate.securedrop.org/projects/securedrop/securedrop/lt/>\nLanguage: lt\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > 19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? 1 : 2);\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.9.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-06-21 01:44+0000\nLast-Translator: Tomas Darius Davainis <tomas@davainis.lt>\nLanguage-Team: Lithuanian <https://weblate.securedrop.org/projects/securedrop/securedrop/lt/>\nLanguage: lt\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > 19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? 1 : 2);\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "Prieš {time}"
@@ -153,9 +153,9 @@ msgstr "Netinkamas slapto kodo ilgis - ar suklydote?"
 
 msgid "The item has been deleted."
 msgid_plural "{num} items have been deleted."
-msgstr[0] "Atsakymas ištrintas."
-msgstr[1] "{num} atsakymai ištrinti."
-msgstr[2] "{num} atsakymai ištrinti."
+msgstr[0] "{num} buvo ištrintas."
+msgstr[1] "{num} buvo ištrinti."
+msgstr[2] "{num} buvo ištrintų."
 
 msgid "No collections selected for deletion."
 msgstr "Nepasirinkta jokių kolekcijų ištrynimui."
@@ -201,7 +201,7 @@ msgstr "nepažymėta piktograma"
 
 msgid "1 doc"
 msgid_plural "{num} docs"
-msgstr[0] "1 dokumentas"
+msgstr[0] "{num} dokumentas"
 msgstr[1] "{num} dokumentai"
 msgstr[2] "{num} dokumentų"
 
@@ -216,9 +216,9 @@ msgstr "atsisiuntimo piktogramą"
 
 msgid "1 unread"
 msgid_plural "{num} unread"
-msgstr[0] "1 neperskaityta žinutė"
-msgstr[1] "{num} neperskaitytos žinutės"
-msgstr[2] "{num} neperskaitytų žinučių"
+msgstr[0] "{num} neperskaityta"
+msgstr[1] "{num} neperskaityti"
+msgstr[2] "{num} neperskaitytų"
 
 msgid "When the account for a source is deleted:"
 msgstr "Kai šaltinio paskyra ištrinama:"
@@ -519,7 +519,7 @@ msgstr "SIŲSTI PAVYZDINĮ \"OSSEC\" PRANEŠIMĄ"
 
 msgid "The following file has been selected for <strong>permanent deletion</strong>:"
 msgid_plural "The following {num} files have been selected for <strong>permanent deletion</strong>:"
-msgstr[0] "Šis failas pasirinktas <strong>negrįžtamai ištrinti</strong>:"
+msgstr[0] "{num} failas pasirinktas <strong>ištrinti negrįžtamai</strong>:"
 msgstr[1] "Šie {num} failai pasirinkti <strong>ištrinti visam laikui</strong>:"
 msgstr[2] "Šie {num} failų buvo pasirinkti <strong>ištrinti visam laikui</strong>:"
 
@@ -759,7 +759,7 @@ msgid ""
 "Because we do not track users of our <strong>SecureDrop</strong>\n"
 " service, in future visits, using this codename will be the only way we have to communicate with you should we have\n"
 " questions or are interested in additional information. Unlike passwords, there is no way to retrieve a lost codename."
-msgstr "Kadangi <strong>SecureDrop</strong> neseka vartotojų veiklos, ateityje šis slapyvardis bus vienintelis komunikacijos su jumis būdas, jeigu jums turėtume klausimų ar norėtume gauti papildomos informacijos. Kitaip nei slaptažodžių atveju, nėra būdo atkurti prarastą slapyvardį."
+msgstr "Kadangi <strong>SecureDrop</strong> neseka vartotojų veiklos,\nateityje šis slapyvardis bus vienintelis komunikacijos su jumis būdas, jeigu jums turėtume klausimų\nar norėtume gauti papildomos informacijos. Kitaip nei slaptažodžių atveju, nėra būdo atkurti prarastą slapyvardį."
 
 msgid "SUBMIT DOCUMENTS"
 msgstr "PATEIKTI DOKUMENTUS"
