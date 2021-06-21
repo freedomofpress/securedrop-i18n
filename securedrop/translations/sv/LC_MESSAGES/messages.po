@@ -4,10 +4,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-06-11 11:44+0000\nLast-Translator: Jonas Waga <jonas.waga@schibsted.com>\nLanguage-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/securedrop/sv/>\nLanguage: sv\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-06-21 10:44+0000\nLast-Translator: Jonas Waga <jonas.waga@schibsted.com>\nLanguage-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/securedrop/sv/>\nLanguage: sv\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
-msgstr "För långt namn"
+msgstr "Namnet är för långt"
 
 msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
@@ -46,7 +46,7 @@ msgstr "Bild uppdaterad."
 
 #. This error is shown when an uploaded image cannot be used.
 msgid "Unable to process the image file. Please try another one."
-msgstr "Kunde inte processa bild. Vänligen försök med en annan."
+msgstr "Kunde inte hantera bild. Vänligen försök med en annan."
 
 msgid "Preferences saved."
 msgstr "Inställningar sparade."
@@ -65,7 +65,7 @@ msgid "Invalid username: {message}"
 msgstr "Inkorrekt användarnamn: {message}"
 
 msgid "Username \"{username}\" already taken."
-msgstr "Användarnamnet \"{username}\" är redan använt."
+msgstr "Användarnamnet \"{username}\" är redan upptaget."
 
 msgid "An error occurred saving this user to the database. Please inform your admin."
 msgstr "Det uppstod ett fel när användaren skulle sparas till databasen. Vänligen kontakta din administratör."
@@ -634,7 +634,7 @@ msgid "WARNING:"
 msgstr "VARNING:"
 
 msgid "You appear to be using Tor2Web, which does not provide anonymity."
-msgstr "Det ser ut som att du använder Tor2Web, som inte ger någon anonymitet."
+msgstr "Det ser ut som att du använder Tor2Web, detta ger inte någon anonymitet."
 
 msgid "Why is this dangerous?"
 msgstr "Varför är detta osäkert?"
