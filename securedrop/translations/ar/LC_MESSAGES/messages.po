@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 # Ahmad Gharbeia أحمد غربية <ahmad@gharbeia.org>, 2017.
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-06-21 14:44+0000\nLast-Translator: erinm <erinm@riseup.net>\nLanguage-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/securedrop/ar/>\nLanguage: ar\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-06-21 19:44+0000\nLast-Translator: Layla Taha <layla@asl19.org>\nLanguage-Team: Arabic <https://weblate.securedrop.org/projects/securedrop/securedrop/ar/>\nLanguage: ar\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
 msgstr "الاسم طويلٌ جداً"
@@ -19,7 +19,7 @@ msgstr[4] "يجب أن يحوي {num} حرفًا على الأقل."
 msgstr[5] "يجب أن يحوي {num} حرفًا على الأقل."
 
 msgid "This username is invalid because it is reserved for internal use by the software."
-msgstr "اسم المستخدم غير صالح لأن هذا الاسم محجوز للاستخدام الداخلي في البرنامج."
+msgstr "اسم المستخدم غير صالح لأن هذا الاسم محجوز من قبل البرنامج للاستخدام الداخلي."
 
 msgid "Invalid username"
 msgstr "اسم المستخدم غير صالح"
@@ -82,17 +82,17 @@ msgid "Name not updated: {message}"
 msgstr "لم يتم تحديث الإسم: {message}"
 
 msgid "Deleted user '{user}'."
-msgstr "حُذِفَ المستخدم '{user}'."
+msgstr "تم حذف المستخدم '{user}'."
 
 msgid "Test alert sent. Please check your email."
-msgstr "تم إرسال تنبيه تجريبي. تفقّد بريدك الإلكتروني."
+msgstr "تم إرسال تنبيه تجريبي. يرجى فحص الإيميل."
 
 #. Precedes a message confirming the success of an operation.
 msgid "Success!"
 msgstr "تم بنجاح!"
 
 msgid "The account and data for the source {} have been deleted."
-msgstr "الحساب والبيانات الخاصة بالمصدر {} تم حذفها."
+msgstr "تم حذف الحساب والبيانات الخاصة بالمصدر {}."
 
 #. Error shown when a user has not selected items to act on.
 msgid "Nothing Selected"
@@ -111,7 +111,7 @@ msgstr[4] "لم ينجح التحميل بسبب عدم إمكانية العث�
 msgstr[5] "لم ينجح التحميل بسبب عدم إمكانية العثور على ملف. الإداري يمكنه الحصول على المزيد من المعلومات عن هذا الأمر من خلال سجلات نظام التشغيل والمراقبة."
 
 msgid "Only admins can access this page."
-msgstr "الإداريون وحدهم بوسعهم النّفاذ إلى هذه الصفحة."
+msgstr "الوصول إلى هذه الصفحة حكر على الإداريين."
 
 msgid "HOTP secrets are 40 characters long - you have entered {num}."
 msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
@@ -138,7 +138,7 @@ msgid "You cannot send an empty reply."
 msgstr "لا يمكن إرسال ردّ فارغ."
 
 msgid "File required."
-msgstr "يجب اختيار ملفّ."
+msgstr "يجب اختيار ملف."
 
 msgid "You can only upload PNG image files."
 msgstr "الصيغة المقبولة لملفّات الصور هي PNG حصرًا."
@@ -387,10 +387,10 @@ msgid "Back to admin interface"
 msgstr "الرجوع إلى واجهة الإدارة"
 
 msgid "Username can contain spaces"
-msgstr "يمكن أن يحوي اسم المستخدم مسافات"
+msgstr "يمكن أن يحتوي اسم المستخدم على المسافات"
 
 msgid "Username is case-sensitive"
-msgstr "حقل اسم المستخدم يمايز ما بين الأحرف اللاتينية الكبيرة و الصغيرة"
+msgstr "يميز حقل اسم المستخدم ما بين الأحرف اللاتينية الكبيرة و الصغيرة"
 
 msgid "First name"
 msgstr "الاسم"
@@ -429,7 +429,7 @@ msgid "Log Out"
 msgstr "اخرج من الحساب"
 
 msgid "Powered by <em>SecureDrop {version}</em>."
-msgstr "تشغّله <em>SecureDrop {version} </em>."
+msgstr "من <em>SecureDrop {version} </em>."
 
 msgid "All Sources"
 msgstr "كُلّ المصادر"
