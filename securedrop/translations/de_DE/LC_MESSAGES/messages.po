@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: SecureDrop \\'0.3.5\\'\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-06-13 16:44+0000\nLast-Translator: Ettore Atalan <atalanttore@googlemail.com>\nLanguage-Team: German <https://weblate.securedrop.org/projects/securedrop/securedrop/de/>\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop \\'0.3.5\\'\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-06-21 14:44+0000\nLast-Translator: erinm <erinm@riseup.net>\nLanguage-Team: German <https://weblate.securedrop.org/projects/securedrop/securedrop/de/>\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
 msgstr "Name zu lang"
@@ -264,7 +264,7 @@ msgid "You're almost done! To finish resetting your two-factor authentication, f
 msgstr "Sie sind fast fertig! Um das Zurücksetzen der Zwei-Faktor-Authentifizierung abzuschließen, folgen Sie den Anweisungen unten, um FreeOTP einzurichten. Nachdem Sie den Eintrag für Ihr Konto in der App hinzugefügt haben, geben Sie einen der 6-stelligen Codes aus der App ein, um zu bestätigen, dass die Zwei-Faktor-Authentifizierung korrekt eingerichtet ist."
 
 msgid "Install FreeOTP on your phone"
-msgstr "Installieren Sie FreeOTP auf Ihrem Mobiltelefon"
+msgstr "Installieren Sie FreeOTP auf Ihrem Smartphone"
 
 msgid "Open the FreeOTP app"
 msgstr "Öffnen Sie die FreeOTP-App"
@@ -273,7 +273,7 @@ msgid "Tap the QR code symbol at the top"
 msgstr "Tippen Sie oben auf das QR-Code-Symbol"
 
 msgid "Your phone will now be in \"scanning\" mode. When you are in this mode, scan the barcode below:"
-msgstr "Ihr Mobiltelefon befindet sich nun im \"Scan\"-Modus. Scannen Sie in diesem Modus den unten stehenden Barcode:"
+msgstr "Ihr Smartphone befindet sich nun im \"Scan\"-Modus. Scannen Sie in diesem Modus den unten stehenden Barcode:"
 
 msgid "Can't scan the barcode? You can manually pair FreeOTP with your SecureDrop account by entering the following two-factor secret into the app:"
 msgstr "Können Sie den Barcode nicht scannen? Um FreeOTP manuell mit Ihrem SecureDrop-Konto zu verbinden, geben Sie den folgenden Zwei-Faktor-Schlüssel in die App ein:"
