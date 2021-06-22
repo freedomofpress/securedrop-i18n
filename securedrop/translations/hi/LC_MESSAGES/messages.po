@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop 0.6~rc2\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-03-08 22:37+0000\n"
-"Last-Translator: John Hensley <john@freedom.press>\n"
-"Language-Team: Hindi <https://weblate.securedrop.org/projects/securedrop/securedrop/hi/>\n"
-"Language: hi\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
-"Generated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.6~rc2\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-06-22 09:25+0000\nLast-Translator: Chandan Kumar (raukadah) <raukadah@gmail.com>\nLanguage-Team: Hindi <https://weblate.securedrop.org/projects/securedrop/securedrop/hi/>\nLanguage: hi\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
 
 #, fuzzy
 #| msgid "Message text too long."
@@ -62,7 +50,7 @@ msgstr "छवि अपडेट की गई है।"
 
 #. This error is shown when an uploaded image cannot be used.
 msgid "Unable to process the image file. Please try another one."
-msgstr ""
+msgstr "छवि को संसाधित करने में असमर्थ। कृपया दूसरा प्रयास करें।"
 
 msgid "Preferences saved."
 msgstr "प्राथमिकताएं सेव हो गयी।"
@@ -78,7 +66,7 @@ msgstr "ऑटोग्रेनेरेटेड पासवर्ड के 
 
 #. Here, "{message}" explains the problem with the username.
 msgid "Invalid username: {message}"
-msgstr ""
+msgstr "अमान्य उपयोगकर्ता नाम: {message}"
 
 #, fuzzy
 #| msgid "Username \"{user}\" already taken."
@@ -230,7 +218,7 @@ msgid "Cancel"
 msgstr "रद्द करें"
 
 msgid "starred icon"
-msgstr ""
+msgstr "तारांकित आइकन"
 
 msgid "unstarred icon"
 msgstr ""
