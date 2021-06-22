@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.6~rc2\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-06-22 10:44+0000\nLast-Translator: Kushal Das <kushaldas@gmail.com>\nLanguage-Team: Hindi <https://weblate.securedrop.org/projects/securedrop/securedrop/hi/>\nLanguage: hi\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.6~rc2\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-06-22 13:44+0000\nLast-Translator: erinm <erinm@riseup.net>\nLanguage-Team: Hindi <https://weblate.securedrop.org/projects/securedrop/securedrop/hi/>\nLanguage: hi\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
 
 #, fuzzy
 #| msgid "Message text too long."
@@ -68,10 +68,8 @@ msgstr "ऑटोग्रेनेरेटेड पासवर्ड के 
 msgid "Invalid username: {message}"
 msgstr "अमान्य उपयोगकर्ता नाम: {message}"
 
-#, fuzzy
-#| msgid "Username \"{user}\" already taken."
 msgid "Username \"{username}\" already taken."
-msgstr "उपयोगकर्ता नाम \"{user}\" पहले से ही लिया जा चूका है।"
+msgstr "उपयोगकर्ता नाम \"{username}\" पहले से ही लिया जा चूका है।"
 
 msgid "An error occurred saving this user to the database. Please inform your admin."
 msgstr "इस उपयोगकर्ता को डेटाबेस में सहेजने समय त्रुटि हुई। कृपया अपने व्यवस्थापक को सूचित करें।"
@@ -80,10 +78,8 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr "उपयोगकर्ता \"{user}\" के लिए दो-कारक कोड सफलतापूर्वक सत्यापित किया गया था।"
 
 #. Here, "{message}" explains the problem with the name.
-#, fuzzy
-#| msgid "Name not updated: {}"
 msgid "Name not updated: {message}"
-msgstr "नाम अपडेट नही हुआ: {}"
+msgstr "नाम अपडेट नही हुआ: {message}"
 
 msgid "Deleted user '{user}'."
 msgstr "उपयोगकर्ता '{user}' हटा दिया गया है।"
@@ -155,10 +151,8 @@ msgstr "इस स्रोत के लिए कोई अपठित सब
 msgid "Account updated."
 msgstr "खाता अपडेट किया गया।"
 
-#, fuzzy
-#| msgid "<b>Login failed.</b>"
 msgid "Login failed."
-msgstr "<b>लॉगिन विफल।</b>"
+msgstr "लॉगिन विफल।"
 
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
