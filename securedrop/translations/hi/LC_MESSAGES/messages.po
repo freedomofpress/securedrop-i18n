@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.6~rc2\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-06-22 09:26+0000\nLast-Translator: Chandan Kumar (raukadah) <raukadah@gmail.com>\nLanguage-Team: Hindi <https://weblate.securedrop.org/projects/securedrop/securedrop/hi/>\nLanguage: hi\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.6~rc2\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-06-22 09:40+0000\nLast-Translator: Chandan Kumar (raukadah) <raukadah@gmail.com>\nLanguage-Team: Hindi <https://weblate.securedrop.org/projects/securedrop/securedrop/hi/>\nLanguage: hi\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
 
 #, fuzzy
 #| msgid "Message text too long."
@@ -234,7 +234,7 @@ msgstr[0] "1 मैसेज"
 msgstr[1] "{num} मैसेजस"
 
 msgid "download icon"
-msgstr ""
+msgstr "डाउनलोड आइकन"
 
 msgid "1 unread"
 msgid_plural "{num} unread"
@@ -338,16 +338,16 @@ msgid "Edit user {username}"
 msgstr "उपयोगकर्ता {username} संपादित करें"
 
 msgid "edit user icon"
-msgstr ""
+msgstr "उपयोगकर्ता आइकन को संपादित करें"
 
 msgid "trash icon disabled"
-msgstr ""
+msgstr "ट्रैश आइकन निष्क्रिय"
 
 msgid "Delete user {username}"
 msgstr "{username} उपयोगकर्ता हटाएं"
 
 msgid "trash icon"
-msgstr ""
+msgstr "ट्रैश आइकन"
 
 msgid "never"
 msgstr "कभी नहीँ"
@@ -422,34 +422,34 @@ msgid "Reply"
 msgstr "जवाब दें"
 
 msgid "reply icon"
-msgstr ""
+msgstr "जवाब दें आइकन"
 
 msgid "Read"
 msgstr "पठित"
 
 msgid "check icon"
-msgstr ""
+msgstr "सही करें आइकन"
 
 msgid "Unread"
 msgstr "अपठित"
 
 msgid "closed envelope icon"
-msgstr ""
+msgstr "बंद लिफाफा आइकन"
 
 msgid "open envelope icon"
-msgstr ""
+msgstr "खुला लिफाफा आइकन"
 
 msgid "Uploaded Document"
 msgstr "अपलोड किए गए दस्तावेज़"
 
 msgid "files icon"
-msgstr ""
+msgstr "फ़ाइलें आइकन"
 
 msgid "Message"
 msgstr "संदेश"
 
 msgid "messages icon"
-msgstr ""
+msgstr "संदेश आइकन"
 
 msgid "Delete Confirmation"
 msgstr "पुष्टिकरण हटाएं"
@@ -467,7 +467,7 @@ msgid "You can write a secure reply to the person who submitted these messages a
 msgstr "आप इन दस्तावेजों को सबमिट करने वाले व्यक्ति को एक सुरक्षित उत्तर लिख सकते हैं:"
 
 msgid "This source has no encryption key."
-msgstr ""
+msgstr "इस स्रोत में कोई एन्क्रिप्शन कुंजी नहीं है।"
 
 msgid "An encryption key will be generated for the source the next time they log in, after which you will be able to reply to the source here."
 msgstr "अगली बार जब वे लॉग इन करते हैं, तो स्रोत के लिए एक एन्क्रिप्शन कुंजी उत्पन्न होगी, जिसके बाद आप यहां स्रोत को जवाब दे पाएंगे।"
@@ -646,13 +646,13 @@ msgid "LOG IN"
 msgstr "लॉग इन"
 
 msgid "WARNING:"
-msgstr ""
+msgstr "चेतावनी:"
 
 msgid "You appear to be using Tor2Web, which does not provide anonymity."
-msgstr ""
+msgstr "आप Tor2Web का उपयोग कर रहे हैं, जो गुमनामी प्रदान नहीं करता है।"
 
 msgid "Why is this dangerous?"
-msgstr ""
+msgstr "यह असुरक्षित क्यों है?"
 
 msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr "फ़ील्ड 1 और {max_codename_len} वर्णों के बीच लंबा होना चाहिए।"
