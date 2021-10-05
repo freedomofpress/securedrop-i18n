@@ -7,7 +7,8 @@ import pwd
 import sys
 import subprocess
 
-from shutil import copyfile
+import tempfile
+from shutil import copyfile, copyfileobj
 
 
 # check for root
@@ -94,13 +95,6 @@ try:
 except subprocess.CalledProcessError:
     sys.exit('Error restarting Tor')
 
-# Turn off "automatic-decompression" in Nautilus to ensure the original
-# submission filename is restored (see
-# https://github.com/freedomofpress/securedrop/issues/1862#issuecomment-311519750).
-subprocess.call(['/usr/bin/dconf', 'write',
-                 '/org/gnome/nautilus/preferences/automatic-decompression',
-                 'false'])
-
 # Set journalist.desktop and source.desktop links as trusted with Nautilus (see
 # https://github.com/freedomofpress/securedrop/issues/2586)
 # set euid and env variables to amnesia user
@@ -155,3 +149,70 @@ flag_location = "/home/amnesia/Persistent/.securedrop/securedrop_update.flag"
 if b'Update needed' in output or os.path.exists(flag_location):
     # Start the SecureDrop updater GUI.
     subprocess.Popen(['python3', path_gui_updater], env=env)
+
+# Check for Tails < 4.19 and apply a fix to the auto-updater.
+# See https://tails.boum.org/news/version_4.18/
+# (Suggested removal: 2022/01)
+tails_4_min_version = 19
+needs_update = False
+tails_current_version = None
+
+with open('/etc/os-release') as file:
+    for line in file:
+        try:
+            k, v = line.strip().split("=")
+            if k == "TAILS_VERSION_ID":
+                tails_current_version = v.strip("\"").split(".")
+        except ValueError:
+            continue
+
+if tails_current_version:
+    try:
+        needs_update = (len(tails_current_version) >= 2 and
+                        int(tails_current_version[1]) < tails_4_min_version)
+
+    except (TypeError, ValueError):
+        sys.exit(0)  # Don't break tailsconfig trying to fix this
+
+    if needs_update:
+        cert_name = 'isrg-root-x1-cross-signed.pem'
+        pem_file = tempfile.NamedTemporaryFile(delete=True)
+
+        try:
+            subprocess.call(['torsocks', 'curl', '--silent',
+                             'https://tails.boum.org/' + cert_name],
+                            stdout=pem_file, env=env)
+
+            # Verify against /etc/ssl/certs/DST_Root_CA_X3.pem, which cross-signs
+            # the new LetsEncrypt cert but is expiring
+            verify_proc = subprocess.check_output(['openssl', 'verify',
+                                                   '-no_check_time', '-no-CApath',
+                                                   '-CAfile',
+                                                   '/etc/ssl/certs/DST_Root_CA_X3.pem',
+                                                   pem_file.name],
+                                                  universal_newlines=True, env=env)
+
+            if 'OK' in verify_proc:
+
+                # Updating the cert chain requires sudo privileges
+                os.setresgid(0, 0, -1)
+                os.setresuid(0, 0, -1)
+
+                with open('/usr/local/etc/ssl/certs/tails.boum.org-CA.pem', 'a') as chain:
+                    pem_file.seek(0)
+                    copyfileobj(pem_file, chain)
+
+                # As amnesia user, start updater GUI
+                os.setresgid(amnesia_gid, amnesia_gid, -1)
+                os.setresuid(amnesia_uid, amnesia_uid, -1)
+                restart_proc = subprocess.call(['systemctl', '--user', 'restart',
+                                                'tails-upgrade-frontend'], env=env)
+
+        except subprocess.CalledProcessError:
+            sys.exit(0)   # Don't break tailsconfig trying to fix this
+
+        except IOError:
+            sys.exit(0)
+
+        finally:
+            pem_file.close()

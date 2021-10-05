@@ -3,7 +3,6 @@ import binascii
 import datetime
 import base64
 import os
-import scrypt
 import pyotp
 import qrcode
 # Using svg because it doesn't require additional dependencies
@@ -11,6 +10,8 @@ import qrcode.image.svg
 import uuid
 from io import BytesIO
 
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives.kdf import scrypt
 from flask import current_app, url_for
 from flask_babel import gettext, ngettext
 from itsdangerous import TimedJSONWebSignatureSerializer, BadData
@@ -18,14 +19,15 @@ from jinja2 import Markup
 from passlib.hash import argon2
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import relationship, backref, Query, RelationshipProperty
-from sqlalchemy import Column, Integer, String, Boolean, DateTime, LargeBinary
+from sqlalchemy import Column, Index, Integer, String, Boolean, DateTime, LargeBinary
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm.exc import MultipleResultsFound, NoResultFound
 
 from db import db
 
 from typing import Callable, Optional, Union, Dict, List, Any
 from logging import Logger
-from pyotp import OTP
+from pyotp import TOTP, HOTP
 
 
 LOGIN_HARDENING = True
@@ -402,7 +404,7 @@ class Journalist(db.Model):
     is_admin = Column(Boolean)  # type: Column[Optional[bool]]
     session_nonce = Column(Integer, nullable=False, default=0)
 
-    otp_secret = Column(String(16), default=pyotp.random_base32)
+    otp_secret = Column(String(32), default=pyotp.random_base32)
     is_totp = Column(Boolean, default=True)  # type: Column[Optional[bool]]
     hotp_counter = Column(Integer, default=0)  # type: Column[Optional[int]]
     last_token = Column(String(6))
@@ -451,10 +453,17 @@ class Journalist(db.Model):
             self.username,
             " [admin]" if self.is_admin else "")
 
-    _LEGACY_SCRYPT_PARAMS = dict(N=2**14, r=8, p=1)
-
     def _scrypt_hash(self, password: str, salt: bytes) -> bytes:
-        return scrypt.hash(str(password), salt, **self._LEGACY_SCRYPT_PARAMS)
+        backend = default_backend()
+        scrypt_instance = scrypt.Scrypt(
+            length=64,
+            salt=salt,
+            n=2**14,
+            r=8,
+            p=1,
+            backend=backend,
+        )
+        return scrypt_instance.derive(password.encode("utf-8"))
 
     MAX_PASSWORD_LEN = 128
     MIN_PASSWORD_LEN = 14
@@ -547,6 +556,9 @@ class Journalist(db.Model):
                     "Should never happen: pw_salt is none for legacy Journalist {}".format(self.id)
                 )
 
+            # For type checking
+            assert isinstance(self.pw_hash, bytes)
+
             is_valid = pyotp.utils.compare_digest(
                 self._scrypt_hash(passphrase, self.pw_salt),
                 self.pw_hash)
@@ -575,14 +587,14 @@ class Journalist(db.Model):
         self.hotp_counter = 0
 
     @property
-    def totp(self) -> 'OTP':
+    def totp(self) -> 'TOTP':
         if self.is_totp:
             return pyotp.TOTP(self.otp_secret)
         else:
             raise ValueError('{} is not using TOTP'.format(self))
 
     @property
-    def hotp(self) -> 'OTP':
+    def hotp(self) -> 'HOTP':
         if not self.is_totp:
             return pyotp.HOTP(self.otp_secret)
         else:
@@ -689,6 +701,8 @@ class Journalist(db.Model):
 
             # Prevent TOTP token reuse
             if user.last_token is not None:
+                # For type checking
+                assert isinstance(token, str)
                 if pyotp.utils.compare_digest(token, user.last_token):
                     raise BadTokenException("previously used two-factor code "
                                             "{}".format(token))
@@ -832,7 +846,6 @@ class InstanceConfig(db.Model):
     __tablename__ = 'instance_config'
     version = Column(Integer, primary_key=True)
     valid_until = Column(DateTime, default=None, unique=True)
-
     allow_document_uploads = Column(Boolean, default=True)
     organization_name = Column(String(255), nullable=True, default="SecureDrop")
 
@@ -868,10 +881,13 @@ class InstanceConfig(db.Model):
         try:
             return cls.query.filter(cls.valid_until == None).one()  # lgtm [py/test-equals-none]  # noqa: E711, E501
         except NoResultFound:
-            current = cls()
-            db.session.add(current)
-            db.session.commit()
-            return current
+            try:
+                current = cls()
+                db.session.add(current)
+                db.session.commit()
+                return current
+            except IntegrityError:
+                return cls.query.filter(cls.valid_until == None).one()  # lgtm [py/test-equals-none]  # noqa: E711, E501
 
     @classmethod
     def check_name_acceptable(cls, name: str) -> None:
@@ -913,3 +929,11 @@ class InstanceConfig(db.Model):
         db.session.add(new)
 
         db.session.commit()
+
+
+one_active_instance_config_index = Index(
+    'ix_one_active_instance_config',
+    InstanceConfig.valid_until.is_(None),
+    unique=True,
+    sqlite_where=(InstanceConfig.valid_until.is_(None))
+)

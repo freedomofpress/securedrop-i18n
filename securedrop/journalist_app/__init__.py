@@ -79,9 +79,6 @@ def create_app(config: 'SDConfig') -> Flask:
     # TODO: Attaching a CryptoUtil dynamically like this disables all type checking (and
     # breaks code analysis tools) for code that uses current_app.storage; it should be refactored
     app.crypto_util = CryptoUtil(
-        scrypt_params=config.SCRYPT_PARAMS,
-        scrypt_id_pepper=config.SCRYPT_ID_PEPPER,
-        scrypt_gpg_pepper=config.SCRYPT_GPG_PEPPER,
         securedrop_root=config.SECUREDROP_ROOT,
         nouns_file=config.NOUNS,
         adjectives_file=config.ADJECTIVES,
@@ -118,6 +115,8 @@ def create_app(config: 'SDConfig') -> Flask:
     app.jinja_env.filters['rel_datetime_format'] = \
         template_filters.rel_datetime_format
     app.jinja_env.filters['filesizeformat'] = template_filters.filesizeformat
+    app.jinja_env.filters['html_datetime_format'] = \
+        template_filters.html_datetime_format
 
     @app.before_first_request
     def expire_blacklisted_tokens() -> None:

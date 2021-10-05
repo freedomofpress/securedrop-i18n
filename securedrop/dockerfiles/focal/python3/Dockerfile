@@ -1,5 +1,5 @@
-# ubuntu 20.04 image from 2021-04-03
-FROM ubuntu@sha256:3c9c713e0979e9bd6061ed52ac1e9e1f246c9495aa063619d9d695fb8039aa1f
+# ubuntu 20.04 image from 2021-09-21
+FROM ubuntu@sha256:3555f4996aea6be945ae1532fa377c88f4b3b9e6d93531f47af5d78a7d5e3761
 ARG USER_NAME
 ENV USER_NAME ${USER_NAME:-root}
 ARG USER_ID
@@ -13,6 +13,10 @@ RUN apt-get update && apt-get install -y paxctl && \
                        python3-pip python3-all python3-venv virtualenv libpython3.8-dev libssl-dev \
                        gnupg2 ruby redis-server git xvfb curl wget \
                        gettext paxctl x11vnc enchant libffi-dev sqlite3 gettext sudo \
+                       # For html5validator.  Used only in "app-page-layout-tests", but we can live
+                       # with its being installed along with everything else since it will be
+                       # cached along with everything else too.
+                       default-jdk \
                        libasound2 libdbus-glib-1-2 libgtk2.0-0 libfontconfig1 libxrender1 \
                        libcairo-gobject2 libgtk-3-0 libstartup-notification0 tor
 

@@ -1,13 +1,14 @@
 Jinja2>=2.11.3
 beautifulsoup4
 blinker
-coverage>=4.5.2
+coverage>=5.0  # #6091
 Flask-Testing
 flaky
+html5validator
 markupsafe>=1.1
 mock
 pathlib2
-pillow>=8.3.1
+pillow>=8.3.2
 pip-tools>=6.1.0
 py>=1.10.0
 pytest>=6.1.1
@@ -16,9 +17,9 @@ pluggy>=0.13.1
 pytest-cov
 pytest-mock
 hypothesis
-requests[socks]>2.21.0
+requests[socks]>=2.26.0
 setuptools>=56.0.0
 selenium>=3.141.0
 tbselenium>=0.5.2
 pyvirtualdisplay
-urllib3>=1.25.9
+urllib3>=1.26.5

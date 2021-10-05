@@ -5,15 +5,16 @@ from hypothesis.strategies import text
 import io
 import os
 import pytest
-import re
 
 from flask import url_for, session
 
 from passphrases import PassphraseGenerator
 
+from source_user import create_source_user
+
+
 os.environ['SECUREDROP_ENV'] = 'test'  # noqa
 import crypto_util
-import models
 
 from crypto_util import CryptoUtil, CryptoException
 from db import db
@@ -22,19 +23,6 @@ from db import db
 def test_word_list_does_not_contain_empty_strings(journalist_app):
     assert '' not in journalist_app.crypto_util.nouns
     assert '' not in journalist_app.crypto_util.adjectives
-
-
-def test_validate_name_for_diceware():
-    ok = (' !#%$&)(+*-1032547698;:=?@acbedgfihkjmlonqpsrutwvyxzABCDEFGHIJ'
-          'KLMNOPQRSTUVWXYZ')
-    invalids = ['foo bar`', 'bar baz~']
-
-    crypto_util._validate_name_for_diceware(ok)
-
-    for invalid in invalids:
-        with pytest.raises(CryptoException) as err:
-            crypto_util._validate_name_for_diceware(invalid)
-        assert 'invalid input: {}'.format(invalid) in str(err)
 
 
 def test_encrypt_success(source_app, config, test_source):
@@ -75,8 +63,9 @@ def test_encrypt_without_output(source_app, config, test_source):
             message,
             [source_app.crypto_util.get_fingerprint(test_source['filesystem_id']),
              config.JOURNALIST_KEY])
+        source_user = test_source["source_user"]
         plaintext = source_app.crypto_util.decrypt(
-            test_source['codename'],
+            source_user,
             ciphertext)
 
     assert plaintext == message
@@ -96,15 +85,15 @@ def test_encrypt_binary_stream(source_app, config, test_source):
     `gnupg._util._is_stream(plaintext)` returns `True`).
     """
     with source_app.app_context():
+        source_user = test_source["source_user"]
         with io.open(os.path.realpath(__file__)) as fh:
             ciphertext = source_app.crypto_util.encrypt(
                 fh,
-                [source_app.crypto_util.get_fingerprint(test_source['filesystem_id']),
+                [source_app.crypto_util.get_fingerprint(source_user.filesystem_id),
                  config.JOURNALIST_KEY],
-                source_app.storage.path(test_source['filesystem_id'],
-                                        'somefile.gpg'))
-        plaintext = source_app.crypto_util.decrypt(test_source['codename'],
-                                                   ciphertext)
+                source_app.storage.path(source_user.filesystem_id, 'somefile.gpg'))
+
+        plaintext = source_app.crypto_util.decrypt(source_user, ciphertext)
 
     with io.open(os.path.realpath(__file__)) as fh:
         assert fh.read() == plaintext
@@ -116,32 +105,23 @@ def test_basic_encrypt_then_decrypt_multiple_recipients(source_app,
     message = 'test'
 
     with source_app.app_context():
+        source_user = test_source["source_user"]
         ciphertext = source_app.crypto_util.encrypt(
             message,
-            [source_app.crypto_util.get_fingerprint(test_source['filesystem_id']),
+            [source_app.crypto_util.get_fingerprint(source_user.filesystem_id),
              config.JOURNALIST_KEY],
-            source_app.storage.path(test_source['filesystem_id'],
-                                    'somefile.gpg'))
-        plaintext = source_app.crypto_util.decrypt(test_source['codename'],
-                                                   ciphertext)
+            source_app.storage.path(source_user.filesystem_id, 'somefile.gpg'))
+        plaintext = source_app.crypto_util.decrypt(source_user, ciphertext)
 
         assert plaintext == message
 
         # Since there's no way to specify which key to use for
         # decryption to python-gnupg, we delete the `source`'s key and
         # ensure we can decrypt with the `config.JOURNALIST_KEY`.
-        source_app.crypto_util.delete_reply_keypair(
-            test_source['filesystem_id'])
+        source_app.crypto_util.delete_reply_keypair(source_user.filesystem_id)
         plaintext = source_app.crypto_util.gpg.decrypt(ciphertext).data.decode('utf-8')
 
         assert plaintext == message
-
-
-def test_hash_codename(source_app):
-    codename = PassphraseGenerator.get_default().generate_passphrase()
-    hashed_codename = source_app.crypto_util.hash_codename(codename)
-
-    assert re.compile('^[2-7A-Z]{103}=$').match(hashed_codename)
 
 
 def test_display_id(source_app):
@@ -169,15 +149,15 @@ def test_display_id_designation_collisions(source_app):
 
 def test_genkeypair(source_app):
     with source_app.app_context():
-        codename = PassphraseGenerator.get_default().generate_passphrase()
-        filesystem_id = source_app.crypto_util.hash_codename(codename)
-        journalist_filename = source_app.crypto_util.display_id()
-        source = models.Source(filesystem_id, journalist_filename)
-        db.session.add(source)
-        db.session.commit()
-        source_app.crypto_util.genkeypair(source.filesystem_id, codename)
+        source_user = create_source_user(
+            db_session=db.session,
+            source_passphrase=PassphraseGenerator.get_default().generate_passphrase(),
+            source_app_storage=source_app.storage,
+            source_app_crypto_util=source_app.crypto_util,
+        )
+        source_app.crypto_util.genkeypair(source_user)
 
-        assert source_app.crypto_util.get_fingerprint(filesystem_id) is not None
+        assert source_app.crypto_util.get_fingerprint(source_user.filesystem_id) is not None
 
 
 def parse_gpg_date_string(date_string):
@@ -202,13 +182,13 @@ def parse_gpg_date_string(date_string):
 
 def test_reply_keypair_creation_and_expiration_dates(source_app):
     with source_app.app_context():
-        codename = PassphraseGenerator.get_default().generate_passphrase()
-        filesystem_id = source_app.crypto_util.hash_codename(codename)
-        journalist_filename = source_app.crypto_util.display_id()
-        source = models.Source(filesystem_id, journalist_filename)
-        db.session.add(source)
-        db.session.commit()
-        source_app.crypto_util.genkeypair(source.filesystem_id, codename)
+        source_user = create_source_user(
+            db_session=db.session,
+            source_passphrase=PassphraseGenerator.get_default().generate_passphrase(),
+            source_app_storage=source_app.storage,
+            source_app_crypto_util=source_app.crypto_util,
+        )
+        source_app.crypto_util.genkeypair(source_user)
 
         # crypto_util.get_fingerprint only returns the fingerprint of the key. We need
         # the full output of gpg.list_keys() to check the creation and
@@ -218,7 +198,7 @@ def test_reply_keypair_creation_and_expiration_dates(source_app):
         # it always returns the entire key dictionary instead of just the
         # fingerprint (which is always easily extracted from the entire key
         # dictionary).
-        new_key_fingerprint = source_app.crypto_util.get_fingerprint(filesystem_id)
+        new_key_fingerprint = source_app.crypto_util.get_fingerprint(source_user.filesystem_id)
         new_key = [key for key in source_app.crypto_util.gpg.list_keys()
                    if new_key_fingerprint == key['fingerprint']][0]
 
@@ -313,12 +293,9 @@ def test_encrypt_then_decrypt_gives_same_result(
     https://hypothesis.readthedocs.io
     """
     crypto = source_app.crypto_util
-
-    key = crypto.genkeypair(
-        name,
-        secret
-    )
+    source_user = test_source["source_user"]
+    key = crypto.genkeypair(source_user)
     ciphertext = crypto.encrypt(message, [str(key)])
-    decrypted_text = crypto.decrypt(secret, ciphertext)
+    decrypted_text = crypto.decrypt(source_user, ciphertext)
 
     assert decrypted_text == message

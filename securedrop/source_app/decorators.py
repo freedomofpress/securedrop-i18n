@@ -1,19 +1,30 @@
 from typing import Any
 
-from flask import redirect, url_for, request
+from db import db
+
+from flask import redirect, url_for, request, session
 from functools import wraps
 
 from typing import Callable
 
-from source_app.utils import logged_in
+from source_app.utils import clear_session_and_redirect_to_logged_out_page
+from source_app.session_manager import SessionManager, UserNotLoggedIn, \
+    UserSessionExpired, UserHasBeenDeleted
 
 
 def login_required(f: Callable) -> Callable:
     @wraps(f)
     def decorated_function(*args: Any, **kwargs: Any) -> Any:
-        if not logged_in():
-            return redirect(url_for('main.login'))
-        return f(*args, **kwargs)
+        try:
+            logged_in_source = SessionManager.get_logged_in_user(db_session=db.session)
+
+        except (UserSessionExpired, UserHasBeenDeleted):
+            return clear_session_and_redirect_to_logged_out_page(flask_session=session)
+
+        except UserNotLoggedIn:
+            return redirect(url_for("main.login"))
+
+        return f(*args, **kwargs, logged_in_source=logged_in_source)
     return decorated_function
 
 

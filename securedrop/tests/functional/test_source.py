@@ -1,3 +1,6 @@
+import werkzeug
+
+from ..test_journalist import VALID_PASSWORD
 from . import source_navigation_steps, journalist_navigation_steps
 from . import functional_test
 from sdconfig import config
@@ -62,7 +65,7 @@ class TestDuplicateSourceInterface(
         return self.driver.find_element_by_css_selector("#codename").text
 
     def get_codename_lookup(self):
-        return self.driver.find_element_by_css_selector("#codename-hint-content p").text
+        return self.driver.find_element_by_css_selector("#codename-hint mark").text
 
     def test_duplicate_generate_pages(self):
         # Test generation of multiple codenames in different browser tabs, ref. issue 4458.
@@ -157,3 +160,15 @@ class TestDuplicateSourceInterface(
         codename_lookup_b = self.get_codename_lookup()
         assert codename_lookup_b == codename_a2
         self._source_submits_a_message()
+
+    def test_codenames_exceed_max_cookie_size(self):
+        # Test generation of enough codenames (from multiple tabs and/or serial
+        # refreshes) that the resulting cookie exceeds the recommended
+        # `werkzeug.Response.max_cookie_size` = 4093 bytes.  (#6043)
+
+        too_many = 2*(werkzeug.Response.max_cookie_size // len(VALID_PASSWORD))
+        for i in range(too_many):
+            self._source_visits_source_homepage()
+            self._source_chooses_to_submit_documents()
+
+        self._source_continues_to_submit_page()

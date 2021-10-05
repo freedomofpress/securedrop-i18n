@@ -72,14 +72,10 @@ jobs:
       - *installenchant
 
       - run:
-          name: Run all linters but shellcheck
+          name: Run all linters
           command: |
             fromtag=$(docker images |grep securedrop-test-focal-py3 |head -n1 |awk '{print $2}')
-            DOCKER_BUILD_ARGUMENTS="--cache-from securedrop-test-focal-py3:${fromtag:-latest}" securedrop/bin/dev-shell bash -c "/opt/venvs/securedrop-app-code/bin/pip3 install --require-hashes -r requirements/python3/develop-requirements.txt && make -C .. ansible-config-lint app-lint flake8 html-lint typelint yamllint"
-
-      - run:
-          name: Run shellcheck
-          command: make shellcheck
+            DOCKER_BUILD_ARGUMENTS="--cache-from securedrop-test-focal-py3:${fromtag:-latest}" securedrop/bin/dev-shell bash -c "sudo apt install shellcheck && /opt/venvs/securedrop-app-code/bin/pip3 install --require-hashes -r requirements/python3/develop-requirements.txt && make -C .. lint"
 
   app-tests:
     machine:
@@ -102,12 +98,59 @@ jobs:
       - run:
           name: Run tests
           command: |
-            BRANCH_MATCH=$(devops/scripts/match-ci-branch.sh "^(i18n|update-builder)")
-            if [[ $BRANCH_MATCH =~ ^found ]]; then echo "Skipping: ${BRANCH_MATCH}"; exit 0; fi
-            export TESTFILES=$(cd securedrop; circleci tests glob 'tests/test*py' 'tests/**/test*py' |circleci tests split --split-by=timings |xargs echo)
+            JOB_TESTFILES=$(cd securedrop; circleci tests glob 'tests/test*py' 'tests/{files,functional}/test*py')
+            echo "JOB_TESTFILES: ${JOB_TESTFILES}"
+            RUN_TESTFILES=$(echo "$JOB_TESTFILES" |circleci tests split --split-by=timings)
+            echo "RUN_TESTFILES: ${RUN_TESTFILES}"
+            export TESTFILES=$RUN_TESTFILES
             fromtag=$(docker images |grep securedrop-test-focal-py3 |head -n1 |awk '{print $2}')
             DOCKER_BUILD_ARGUMENTS="--cache-from securedrop-test-focal-py3:${fromtag:-latest}" make test
           no_output_timeout: 15m
+
+      - store_test_results:
+          path: ~/project/test-results
+
+      - store_artifacts:
+          path: ~/project/test-results
+
+  app-page-layout-tests:
+    machine:
+      image: ubuntu-2004:202010-01
+      enabled: true
+    environment:
+      DOCKER_API_VERSION: 1.23
+      BASE_OS: focal
+    parallelism: 5
+    steps:
+      - checkout
+      - *rebaseontarget
+      - *createcachedir
+      - *restorecache
+      - *loadimagelayers
+      - *dockerimagebuild
+      - *saveimagelayers
+      - *savecache
+
+      - run:
+          name: Run tests
+          command: |
+            JOB_TESTFILES=$(cd securedrop; circleci tests glob 'tests/pageslayout/test*py')
+            echo "JOB_TESTFILES: ${JOB_TESTFILES}"
+            RUN_TESTFILES=$(echo "$JOB_TESTFILES" |circleci tests split --split-by=timings)
+            echo "RUN_TESTFILES: ${RUN_TESTFILES}"
+            export TESTFILES=$RUN_TESTFILES
+            fromtag=$(docker images |grep securedrop-test-focal-py3 |head -n1 |awk '{print $2}')
+            DOCKER_BUILD_ARGUMENTS="--cache-from securedrop-test-focal-py3:${fromtag:-latest}" make test
+          no_output_timeout: 15m
+
+      # Once HTML can be expected to validate, remove "|| true" and
+      # "informational" status---in other words, fail if validation fails!
+      - run:
+          name: Validate HTML (informational)
+          command: |
+            fromtag=$(docker images |grep securedrop-test-focal-py3 |head -n1 |awk '{print $2}')
+            DOCKER_BUILD_ARGUMENTS="--cache-from securedrop-test-focal-py3:${fromtag:-latest}" \
+              make validate-test-html || true
 
       - store_test_results:
           path: ~/project/test-results
@@ -122,7 +165,7 @@ jobs:
     environment:
       DOCKER_API_VERSION: 1.23
       BASE_OS: focal
-    parallelism: 20
+    parallelism: 21
     steps:
       - checkout
       - *rebaseontarget
@@ -136,8 +179,6 @@ jobs:
       - run:
           name: Run tests
           command: |
-            BRANCH_MATCH=$(devops/scripts/match-ci-branch.sh "^i18n")
-            if ! [[ $BRANCH_MATCH =~ ^found ]]; then echo "Skipping: ${BRANCH_MATCH}"; exit 0; fi
             sudo apt update && sudo apt install python3-sh python3-babel
             export LOCALES="$(/usr/bin/python3 securedrop/i18n_tool.py list-locales --lines | circleci tests split | tr '\n' ' ')"
             fromtag=$(docker images | grep securedrop-test-focal-py3 | head -n1 | awk '{print $2}')
@@ -159,8 +200,6 @@ jobs:
       - run:
           name: Run tests
           command: |
-            BRANCH_MATCH=$(devops/scripts/match-ci-branch.sh "^(i18n|update-builder)")
-            if [[ $BRANCH_MATCH =~ ^found ]]; then echo "Skipping: ${BRANCH_MATCH}"; exit 0; fi
             cd admin; make test
 
   fetch-tor-debs:
@@ -173,20 +212,18 @@ jobs:
       - run:
           name: Fetch Tor packages
           command: |
-            BRANCH_MATCH=$(devops/scripts/match-ci-branch.sh "^(i18n|update-builder)")
-            if [[ $BRANCH_MATCH =~ ^found ]]; then echo "Skipping: ${BRANCH_MATCH}"; exit 0; fi
             export LC_ALL="C.UTF-8"
             make fetch-tor-packages
 
   updater-gui-tests:
     docker:
-      - image: circleci/python:3.5
+      - image: cimg/python:3.7
     steps:
       - checkout
 
       - run:
           name: Install libqt5designer5
-          command: sudo apt-get update && sudo apt-get install -y libqt5designer5
+          command: sudo apt-get update --allow-releaseinfo-change && sudo apt-get install -y libqt5designer5
 
       - run:
           name: Install requirements
@@ -197,8 +234,6 @@ jobs:
       - run:
           name: Run tests
           command: |
-            BRANCH_MATCH=$(devops/scripts/match-ci-branch.sh "^(i18n|update-builder)")
-            if [[ $BRANCH_MATCH =~ ^found ]]; then echo "Skipping: ${BRANCH_MATCH}"; exit 0; fi
             cd journalist_gui
             QT_QPA_PLATFORM=offscreen pipenv run python3 test_gui.py -v $2>/dev/null
 
@@ -246,8 +281,6 @@ jobs:
       - run:
           name: Run Staging tests on GCE
           command: |
-            BRANCH_MATCH=$(devops/scripts/match-ci-branch.sh "^(i18n)")
-            if [[ $BRANCH_MATCH =~ ^found ]]; then echo "Skipping: ${BRANCH_MATCH}"; exit 0; fi
             make ci-go
           no_output_timeout: 35m
 
@@ -277,8 +310,6 @@ jobs:
       - run:
           name: Test Debian package build
           command: |
-            BRANCH_MATCH=$(devops/scripts/match-ci-branch.sh "^update-builder")
-            if ! [[ $BRANCH_MATCH =~ ^found ]]; then echo "Skipping: ${BRANCH_MATCH}"; exit 0; fi
             make ci-deb-tests
 
 workflows:
@@ -287,6 +318,14 @@ workflows:
     jobs:
       - lint
       - app-tests:
+          filters:
+            branches:
+              ignore:
+                - /i18n-.*/
+                - /update-builder-.*/
+          requires:
+            - lint
+      - app-page-layout-tests:
           filters:
             branches:
               ignore:
@@ -316,13 +355,17 @@ workflows:
       - staging-test-with-rebase:
           filters:
             branches:
-              ignore:
-                - /i18n-.*/
+              # Ignore needs to be here explicitely as only clause introduced in PR #6086 might be removed afterwards.
+              ignore: /i18n-.*/
+              only: /(stg-|release\/).*/
           requires:
             - lint
       - translation-tests:
           requires:
             - lint
+          filters:
+            branches:
+              only: /i18n-.*/
       - deb-tests:
           filters:
             branches:
@@ -340,6 +383,7 @@ workflows:
               only:
                 - develop
     jobs:
+      - staging-test-with-rebase
       - static-analysis-and-no-known-cves
 
   weekly:

@@ -21,6 +21,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 
 # Number of times to try flaky clicks.
+from source_user import _SourceScryptManager
+
 CLICK_ATTEMPTS = 15
 
 
@@ -468,6 +470,10 @@ class JournalistNavigationStepsMixin:
         for i in range(CLICK_ATTEMPTS):
             try:
                 self.safe_click_by_css_selector(".delete-user")
+                self.wait_for(
+                    lambda: expected_conditions.element_to_be_clickable((By.ID, "delete-selected"))
+                )
+                self.safe_click_by_id("delete-selected")
                 self.alert_wait()
                 self.alert_accept()
                 break
@@ -851,7 +857,7 @@ class JournalistNavigationStepsMixin:
 
         def reply_stored():
             if not self.accept_languages:
-                assert "Your reply has been stored." in self.driver.page_source
+                assert "The source will receive your reply" in self.driver.page_source
 
         self.wait_for(reply_stored)
 
@@ -1040,7 +1046,9 @@ class JournalistNavigationStepsMixin:
         ActionChains(self.driver).move_to_element(confirm_btn).click().perform()
 
     def _source_delete_key(self):
-        filesystem_id = self.source_app.crypto_util.hash_codename(self.source_name)
+        filesystem_id = _SourceScryptManager.get_default().derive_source_filesystem_id(
+            self.source_name
+        )
         self.source_app.crypto_util.delete_reply_keypair(filesystem_id)
 
     def _journalist_continues_after_flagging(self):

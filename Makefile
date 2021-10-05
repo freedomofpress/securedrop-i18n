@@ -136,6 +136,7 @@ safety:  ## Run `safety check` to check python dependencies for vulnerabilities.
 		--ignore 39606 \
 		--ignore 39611 \
 		--ignore 39621 \
+		--ignore 41002 \
 		--full-report -r $$req_file \
 		&& echo -e '\n' \
 		|| exit 1; \
@@ -223,6 +224,12 @@ test:  ## Run the test suite in a Docker container.
 
 .PHONY: test-focal
 test-focal:  test
+
+.PHONY: validate-test-html
+validate-test-html:
+	@echo "███ Validating HTML source from $(shell find securedrop/tests/pageslayout/html -name "*.html" | wc -l | xargs echo -n) page-layout test(s)"
+	@$(DEVSHELL) html5validator tests/pageslayout/html
+	@echo
 
 .PHONY: docker-vnc
 docker-vnc:  ## Open a VNC connection to a running Docker instance.
