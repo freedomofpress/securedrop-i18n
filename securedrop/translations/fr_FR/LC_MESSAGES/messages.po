@@ -4,20 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop 0.3.12\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-06-10 18:44+0000\n"
-"Last-Translator: AO Localization Lab <ao@localizationlab.org>\n"
-"Language-Team: French <https://weblate.securedrop.org/projects/securedrop/securedrop/fr/>\n"
-"Language: fr_FR\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.6\n"
-"Generated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-10-07 16:42+0000\nLast-Translator: AO Localization Lab <ao@localizationlab.org>\nLanguage-Team: French <https://weblate.securedrop.org/projects/securedrop/securedrop/fr/>\nLanguage: fr_FR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
 msgstr "Le nom est trop long"
@@ -144,7 +131,7 @@ msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Une erreur inattendue est survenue ! Veuillez la signaler à votre administrateur."
 
 msgid "The source will receive your reply next time they log in."
-msgstr ""
+msgstr "La source recevra votre réponse lors de sa prochaine connexion."
 
 msgid "You must select one or more items for download"
 msgstr "Vous devez sélectionner un ou plusieurs éléments à télécharger"
@@ -216,16 +203,16 @@ msgid "Cancel"
 msgstr "Annuler"
 
 msgid "Un-star {designation}"
-msgstr ""
+msgstr "Ôter l’étoile pour {designation}"
 
 msgid "{designation} is starred"
-msgstr ""
+msgstr "{designation} a une étoile"
 
 msgid "Star {designation}"
-msgstr ""
+msgstr "Apposer une étoile sur {designation}"
 
 msgid "{designation} is not starred"
-msgstr ""
+msgstr "{designation} n’a pas d’étoile"
 
 msgid "1 doc"
 msgid_plural "{num} docs"
@@ -595,7 +582,7 @@ msgid "Success"
 msgstr "Réussi !"
 
 msgid "Error"
-msgstr ""
+msgstr "Erreur"
 
 msgid "Download Unread"
 msgstr "Télécharger les non lus"
@@ -658,7 +645,7 @@ msgid "Write a message."
 msgstr "Rédiger un message."
 
 msgid "Select a file to upload."
-msgstr ""
+msgstr "Sélectionnez un fichier à téléverser."
 
 msgid "Message text too long."
 msgstr "Le texte du message est trop long."
