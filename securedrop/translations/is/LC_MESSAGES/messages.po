@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.12.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-10-05 23:42+0000\nLast-Translator: Sveinn í Felli <sv1@fellsnet.is>\nLanguage-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/securedrop/is/>\nLanguage: is\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.12.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-10-07 16:42+0000\nLast-Translator: Oktavia <oktaviahrund@gmail.com>\nLanguage-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/securedrop/is/>\nLanguage: is\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
 
 msgid "Name too long"
 msgstr "Nafnið er of langt"
@@ -131,7 +131,7 @@ msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Óvæn villa kom upp! Hafðu samband við kerfisstjórann þinn."
 
 msgid "The source will receive your reply next time they log in."
-msgstr "Heimildarmenn munu fá svarið frá þér næst þegar þeir skrá sig inn."
+msgstr "Heimildarmaðurinn mun fá svarið frá þér við næstu innskráningu."
 
 msgid "You must select one or more items for download"
 msgstr "Þú verður að velja eitt eða fleiri atriði til niðurhals"
@@ -637,7 +637,7 @@ msgid "Write a message."
 msgstr "Skrifaðu skilaboð."
 
 msgid "Select a file to upload."
-msgstr "Veldu skrá til að senda inn."
+msgstr "Veldu skrá til að hlaða upp."
 
 msgid "Message text too long."
 msgstr "Texti skilaboðanna er of langur."
@@ -877,7 +877,7 @@ msgid "Important"
 msgstr "Mikilvægt"
 
 msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
-msgstr "Þú varst skráð/ur út vegna ónógrar virkni. Smelltu á hnappinn <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>Nýtt auðkenni</b> í verkfærastiku Tor-vafrans. Það mun hreinsa út allar fyrri aðgerðir Tor-vafrans á þessu tæki."
+msgstr "Þú varst skráð/ur út vegna ónógrar virkni. Smelltu á hnappinn <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>Nýtt auðkenni</b> í verkfærastiku Tor-vafrans áður en haldið er áfram. Það mun hreinsa út allar fyrri aðgerðir Tor-vafrans á þessu tæki."
 
 msgid "Why is there a warning about Tor2Web?"
 msgstr "Hversvegna er aðvörun vegna Tor2Web?"
@@ -904,7 +904,7 @@ msgid "Copy and paste the following address into your browser and follow the ins
 msgstr "Afritaðu og límdu eftirfarandi slóð inn í vafrann þinn og fylgdu svo leiðbeiningunum um hvernig eigi að sækja og setja upp Tor-vafrann:"
 
 msgid "If there is a chance that downloading Tor Browser raises suspicion and your mail provider is less likely to be monitored, you can send a mail to <kbd>gettor@torproject.org</kbd> and a bot will answer with instructions."
-msgstr "Ef líkur eru á að það að sækja sér Tor-vafrann valdi grunsemdum og ef minni líkur eru á að fylgst sé með tölvupóstþjónustu, þá geturðu sent tölvupóst á <kbd>gettor@torproject.org</kbd> og róbót síðan mun svara með viðeigandi leiðbeiningum."
+msgstr "Ef líkur eru á að það að sækja sér Tor-vafrann valdi grunsemdum og ef minni líkur eru á að fylgst sé með tölvupóstþjónustu þinni, þá geturðu sent tölvupóst á <kbd>gettor@torproject.org</kbd> og róbót síðan mun svara með viðeigandi leiðbeiningum."
 
 msgid "Why download the team's public key?"
 msgstr "Af hverju að ná í dreifilykil teymisins?"
