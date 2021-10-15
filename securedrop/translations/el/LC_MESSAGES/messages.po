@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.8.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-10-15 18:42+0000\nLast-Translator: Adrian <pappasadrian@gmail.com>\nLanguage-Team: Greek <https://weblate.securedrop.org/projects/securedrop/securedrop/el/>\nLanguage: el\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.8.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-10-15 20:42+0000\nLast-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\nLanguage-Team: Greek <https://weblate.securedrop.org/projects/securedrop/securedrop/el/>\nLanguage: el\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
 
 msgid "Name too long"
 msgstr "Το όνομα είναι πολύ μεγάλο"
@@ -131,7 +131,7 @@ msgid "An unexpected error occurred! Please inform your admin."
 msgstr "Παρουσιάστηκε απρόσμενο σφάλμα! Παρακαλώ ειδοποιήστε τον διαχειριστή."
 
 msgid "The source will receive your reply next time they log in."
-msgstr "Η πηγή θα λάβει την απάντησή σας την επόμενη φορά που συνδεθεί."
+msgstr "Η πηγή θα λάβει την απάντησή σας την επόμενη φορά που θα συνδεθεί."
 
 msgid "You must select one or more items for download"
 msgstr "Πρέπει να επιλέξετε ένα ή περισσότερα αντικείμενα για λήψη"
@@ -733,10 +733,10 @@ msgid ""
 "Because we do not track users of our <b>SecureDrop</b>\n"
 " service, in future visits, using this codename will be the only way we have to communicate with you should we have\n"
 " questions or are interested in additional information. Unlike passwords, there is no way to retrieve a lost codename."
-msgstr "Επειδή δεν παρακολουθούμε τους χρήστες της υπηρεσίας <b>SecureDrop</b> μας,\nσε μελλοντικές επισκέψεις σας, ο μοναδικός τρόπος για να επικοινωνήσουμε μαζί σας αν έχουμε απορίες ή ενδιαφερόμαστε\nγια περισσότερες πληροφορίες είναι χρησιμοποιώντας αυτό το κωδικό όνομα. Σε αντίθεση με τους κωδικούς, δεν υπάρχει\nτρόπος να ανακτήσετε το κωδικό όνομα αν το χάσετε ή το ξεχάσετε."
+msgstr "Επειδή δεν παρακολουθούμε τους χρήστες της υπηρεσίας <b>SecureDrop</b> μας,\nσε μελλοντικές επισκέψεις σας, η χρήση αυτού του κωδικού ονόματος ειναι ο μοναδικός τρόπος για να επικοινωνήσουμε μαζί σας αν έχουμε απορίες ή ενδιαφερόμαστε\nγια περισσότερες πληροφορίες. Σε αντίθεση με τους κωδικούς, δεν υπάρχει\nτρόπος να ανακτήσετε το κωδικό όνομα αν το χάσετε ή το ξεχάσετε."
 
 msgid "Submit Documents"
-msgstr "Υποβολη εγγράφων"
+msgstr "Υποβολή εγγράφων"
 
 msgid "SUBMIT DOCUMENTS"
 msgstr "ΥΠΟΒΟΛΗ ΕΓΓΡΑΦΩΝ"
@@ -748,7 +748,7 @@ msgid "How to change your security level"
 msgstr "Πως να αλλάξετε το επίπεδο ασφαλείας σας"
 
 msgid "Click the <img src=\"{icon}\" alt=\"&quot;Security Level&quot; button\"> in the toolbar above"
-msgstr "Πατήστε το <img src=\"{icon}\" alt=\"κουμπί &quot;Επίπεδο ασφαλείας&quot;\">στη γραμμή εργαλειών επάνω"
+msgstr "Πατήστε το <img src=\"{icon}\" alt=\"κουμπί &quot;Επίπεδο ασφαλείας&quot;\">στη γραμμή εργαλειών παραπάνω"
 
 msgid "Select <b>Advanced Security Settings</b>"
 msgstr "Επιλέξτε τις <b>Ρυθμίσεις ασφαλείας για προχωρημένους</b>"
@@ -787,7 +787,7 @@ msgid "Log In"
 msgstr "Σύνδεση"
 
 msgid "Selected language"
-msgstr "Επιλογή γλώσσας"
+msgstr "Επιλεγμένη γλώσσα"
 
 msgid "Choose language"
 msgstr "Επιλογή γλώσσας"
@@ -877,7 +877,7 @@ msgid "Important"
 msgstr "Σημαντικό"
 
 msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
-msgstr "Αποσυνδεθήκατε λόγω αδράνειας. Πατήστε το κουμπί <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>Νέα Ταυτότητα</b> στη γραμμή εργαλείων του Tor Browser σας πριν φύγετε. Αυτό θα διαγράψει τα δεδομένα δραστηριότητας του Tor Browser σε αυτή τη συσκευή."
+msgstr "Αποσυνδεθήκατε λόγω αδράνειας. Πατήστε το κουμπί <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>Νέα Ταυτότητα</b> στη γραμμή εργαλείων του Tor Browser σας πριν συνεχίσετε. Αυτό θα διαγράψει τα δεδομένα δραστηριότητας του Tor Browser σε αυτή τη συσκευή."
 
 msgid "Why is there a warning about Tor2Web?"
 msgstr "Γιατί υπάρχει προειδοποίηση για το Tor2Web;"
