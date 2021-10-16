@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-08-07 12:07+0000\nLast-Translator: Algustionesa Yoshi <yosh@algustionesa.com>\nLanguage-Team: Indonesian <https://weblate.securedrop.org/projects/securedrop/securedrop/id/>\nLanguage: id\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-10-16 20:42+0000\nLast-Translator: hadymaggot <saptohadi@outlook.com>\nLanguage-Team: Indonesian <https://weblate.securedrop.org/projects/securedrop/securedrop/id/>\nLanguage: id\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
 
 msgid "{time} ago"
 msgstr "{time} lalu"
@@ -16,7 +16,7 @@ msgid "You have been logged out due to password change"
 msgstr "Anda telah keluar karena perubahan kata sandi"
 
 msgid "SecureDrop"
-msgstr ""
+msgstr "SecureDrop"
 
 msgid "Incorrect password or two-factor code."
 msgstr "Kata sandi atau kode dua faktor salah."
@@ -54,13 +54,11 @@ msgstr "Kode dua faktor untuk pengguna \"{user}\" telah berhasil diverifikasi."
 msgid "Name not updated: {}"
 msgstr "Nama tidak diperbarui: {}"
 
-#, fuzzy
-#| msgid "Deleted user '{user}'"
 msgid "Deleted user '{user}'."
-msgstr "Pengguna '{user}' telah dihapus"
+msgstr "Pengguna '{user}' telah dihapus."
 
 msgid "Test alert sent. Please check your email."
-msgstr ""
+msgstr "Uji peringatan dikirim. Silakan periksa email Anda."
 
 #. Precedes a message confirming the success of an operation.
 msgid "Success!"
@@ -70,10 +68,8 @@ msgid "The account and data for the source {} have been deleted."
 msgstr "Akun dan data untuk sumber {} telah dihapus."
 
 #. Error shown when a user has not selected items to act on.
-#, fuzzy
-#| msgid "Download Selected"
 msgid "Nothing Selected"
-msgstr "Unduh pilihan"
+msgstr "Tidak ada yang dipilih"
 
 msgid "You must select one or more items."
 msgstr "Anda harus memilih satu item atau lebih."
@@ -84,20 +80,14 @@ msgstr ""
 msgid "Only admins can access this page."
 msgstr "Hanya admin yang boleh mengakses halaman ini."
 
-#, fuzzy
-#| msgid "HOTP secrets are 40 characters long - you have entered {num_chars}."
 msgid "HOTP secrets are 40 characters long - you have entered {num}."
 msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
 msgstr[0] "Panjang kode HOTP seharusnya 40 karakter, tapi yang diinput {num}."
 
-#, fuzzy
-#| msgid "Field can not be more than {max_chars} characters."
 msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
-msgstr[0] "Kolom tidak bisa menampung lebih dari {num} karakter."
+msgstr[0] "Isi minimal {num} karakter."
 
-#, fuzzy
-#| msgid "Field can not be more than {max_chars} characters."
 msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
 msgstr[0] "Kolom tidak bisa menampung lebih dari {num} karakter."
@@ -125,15 +115,11 @@ msgstr "Terjadi kesalahan yang tidak diperkirakan! Mohon beritahu admin Anda."
 msgid "Your reply has been stored."
 msgstr "Terima kasih. Jawaban anda telah disimpan."
 
-#, fuzzy
-#| msgid "No collections selected for download."
 msgid "You must select one or more items for download"
-msgstr "Tidak ada koleksi yang dipilih untuk diunduh."
+msgstr "Anda harus memilih satu atau lebih item untuk diunduh"
 
-#, fuzzy
-#| msgid "No collections selected for deletion."
 msgid "You must select one or more items for deletion"
-msgstr "Tidak ada koleksi yang dipilih untuk dihapus."
+msgstr "Anda harus memilih satu atau lebih item untuk dihapus"
 
 msgid "No unread submissions for this source."
 msgstr "Tidak ada kiriman yang belum dibaca dari sumber ini."
@@ -146,17 +132,12 @@ msgstr "Akun telah dimutakhirkan."
 msgid "<b>Login failed.</b>"
 msgstr "Log masuk gagal."
 
-#, fuzzy
-#| msgid "Please wait at least {seconds} second before logging in again."
-#| msgid_plural "Please wait at least {seconds} seconds before logging in again."
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
-msgstr[0] "Mohon tunggu setidaknya {num} detik sebelum log masuk kembali."
+msgstr[0] "Mohon tunggu setidaknya {num} detik sebelum masuk kembali."
 
-#, fuzzy
-#| msgid "Please wait for a new two-factor token before trying again."
 msgid "Please wait for a new code from your two-factor mobile app or security key before trying again."
-msgstr "Mohon tunggu token dua faktor baru terbuat sebelum mencoba lagi."
+msgstr "Harap tunggu kode baru dari aplikasi dua faktor di seluler atau kunci keamanan Anda sebelum mencoba lagi."
 
 msgid "Invalid secret format: please only submit letters A-F and numbers 0-9."
 msgstr "Format kata rahasia tidak sah: tolong hanya gunakan huruf A-F dan angka 0-9."
@@ -175,10 +156,8 @@ msgid "The account and all data for {n} source have been deleted."
 msgid_plural "The accounts and all data for {n} sources have been deleted."
 msgstr[0] ""
 
-#, fuzzy
-#| msgid "No collections selected for deletion."
 msgid "You must select one or more items for deletion."
-msgstr "Tidak ada koleksi yang dipilih untuk dihapus."
+msgstr "Anda harus memilih satu atau beberapa item untuk dihapus."
 
 msgid "The files and messages have been deleted."
 msgstr "Berkas dan pesan telah dihapus."
@@ -186,10 +165,8 @@ msgstr "Berkas dan pesan telah dihapus."
 msgid "Name updated."
 msgstr "Nama diperbarui."
 
-#, fuzzy
-#| msgid "You submitted a bad password! Password not changed."
 msgid "The password you submitted is invalid. Password not changed."
-msgstr "Kata sandi baru tidak memenuhi syarat! Kata sandi tidak diperbarui."
+msgstr "Kata sandi yang Anda kirimkan tidak valid. Kata sandi tidak berubah."
 
 msgid "There was an error, and the new password might not have been saved correctly. To prevent you from getting locked out of your account, you should reset your password again."
 msgstr "Terdapat kesalahan, dan sandi baru mungkin tidak tersimpan dengan baik. Untuk mencegah agar akun Anda tidak terkunci, Anda perlu mereset sandi lagi."
@@ -212,16 +189,10 @@ msgstr "ikon berbintang"
 msgid "unstarred icon"
 msgstr "ikon tak berbintang"
 
-#, fuzzy
-#| msgid "1 doc"
-#| msgid_plural "{doc_num} docs"
 msgid "1 doc"
 msgid_plural "{num} docs"
 msgstr[0] "{num} dokumen"
 
-#, fuzzy
-#| msgid "1 message"
-#| msgid_plural "{msg_num} messages"
 msgid "1 message"
 msgid_plural "{num} messages"
 msgstr[0] "{num} pesan"
@@ -229,9 +200,6 @@ msgstr[0] "{num} pesan"
 msgid "download icon"
 msgstr "ikon unduh"
 
-#, fuzzy
-#| msgid "1 unread"
-#| msgid_plural "{num_unread} unread"
 msgid "1 unread"
 msgid_plural "{num} unread"
 msgstr[0] "{num} belum dibaca"
@@ -240,30 +208,28 @@ msgid "When the account for a source is deleted:"
 msgstr "Ketika akun untuk sumber dihapus:"
 
 msgid "The source will no longer be able to log in with their codename."
-msgstr ""
+msgstr "Source sudah tidak dapat login dengan codename-nya."
 
 msgid "You will not be able to send them replies."
-msgstr ""
+msgstr "Anda tidak akan dapat mengirimi mereka balasan."
 
 msgid "All files and messages from that source will also be destroyed."
-msgstr ""
+msgstr "Semua berkas dan pesan dari sumber tersebut juga akan dimusnahkan."
 
 msgid "Are you sure this is what you want?"
-msgstr ""
+msgstr "Apakah Anda yakin ini yang Anda inginkan?"
 
 msgid "Yes, Delete Selected Source Accounts"
-msgstr ""
+msgstr "Ya, Hapus Akun Sumber yang Dipilih"
 
 msgid "What would you like to delete?"
-msgstr ""
+msgstr "Apa yang ingin Anda hapus?"
 
-#, fuzzy
-#| msgid "Message"
 msgid "Files and Messages"
-msgstr "Pesan"
+msgstr "Berkas dan Pesan"
 
 msgid "Source Accounts"
-msgstr ""
+msgstr "Akun Sumber"
 
 msgid "Change Secret"
 msgstr "Ubah kata rahasia"
@@ -277,10 +243,8 @@ msgstr "LANJUT"
 msgid "Enable FreeOTP"
 msgstr "Hidupkan FreeOTP"
 
-#, fuzzy
-#| msgid "You're almost done! To finish adding this new user, have them follow the instructions below to set up two-factor authentication with Google Authenticator. Once they've added an entry for this account in the app, have them enter one of the 6-digit codes from the app to confirm that two factor authentication is set up correctly."
 msgid "You're almost done! To finish resetting your two-factor authentication, follow the instructions below to set up FreeOTP. Once you've added the entry for your account in the app, enter one of the 6-digit codes from the app to confirm that two-factor authentication is set up correctly."
-msgstr "Anda hampir selesai menambah pengguna ini! Selanjutnya, minta dia mengikuti petunjuk di bawah ini untuk menata authentikasi dua faktor dengan Google Authenticator. Setelah dia menambah akun ini dalam aplikasi, minta dia memasukkan salah satu kode 6 angka dari aplikasi untuk konfirmasi bahwa authentikasi dua faktor telah ditata dengan benar."
+msgstr "Kamu hampir selesai! Untuk menyelesaikan pengaturan ulang autentikasi dua faktor Anda, ikuti petunjuk di bawah ini untuk menyiapkan FreeOTP. Setelah Anda menambahkan entri untuk akun Anda di aplikasi, masukkan salah satu dari 6 digit kode dari aplikasi untuk mengonfirmasi bahwa autentikasi dua faktor telah diatur dengan benar."
 
 msgid "Install FreeOTP on your phone"
 msgstr "Pasang FreeOTP di ponsel anda"
@@ -295,20 +259,16 @@ msgid "Your phone will now be in \"scanning\" mode. When you are in this mode, s
 msgstr "Ponsel anda akan berada pada modus \"pemindaian\". Pada saat berada pada modus ini, pindai barkode berikut:"
 
 msgid "Can't scan the barcode? You can manually pair FreeOTP with your SecureDrop account by entering the following two-factor secret into the app:"
-msgstr ""
+msgstr "Tidak dapat memindai barcode? Anda dapat memasangkan FreeOTP secara manual dengan akun SecureDrop Anda dengan memasukkan rahasia dua faktor berikut ke dalam aplikasi:"
 
-#, fuzzy
-#| msgid "Once you have scanned the barcode, enter the 6-digit code below:"
 msgid "Once you have paired FreeOTP with this account, enter the 6-digit verification code below:"
-msgstr "Setelah anda memindai kode batang, masukkan kode 6 angka di bawah:"
+msgstr "Setelah Anda memasangkan FreeOTP ke akun ini, masukkan 6 digit kode verifikasi di bawah ini:"
 
 msgid "Enable YubiKey (OATH-HOTP)"
 msgstr "Aktifkan YubiKey (OATH-HOTP)"
 
-#, fuzzy
-#| msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgid "Once you have configured your YubiKey, enter the 6-digit verification code below:"
-msgstr "Setelah anda mengatur konfigurasi YubiKey, masukkan kode 6 angka di bawah:"
+msgstr "Setelah Anda mengonfigurasi YubiKey Anda, masukkan 6 digit kode verifikasi di bawah ini:"
 
 msgid "Verification code"
 msgstr "Kode verifikasi"
@@ -359,47 +319,43 @@ msgid "No users to display"
 msgstr "Tidak ada pengguna untuk ditampilkan"
 
 msgid "INSTANCE CONFIG"
-msgstr ""
+msgstr "KONFIGURASI INSTAN"
 
 msgid "Back to admin interface"
 msgstr "Kembali ke antarmuka admin"
 
 msgid "Username can contain spaces"
-msgstr ""
+msgstr "Nama pengguna dapat berisi spasi"
 
 msgid "Username is case-sensitive"
-msgstr ""
+msgstr "Nama pengguna peka terhadap huruf besar-kecil"
 
 msgid "First name"
-msgstr ""
+msgstr "Nama depan"
 
 msgid "Last name"
-msgstr ""
+msgstr "Nama belakang"
 
 msgid "First name and last name are optional"
-msgstr ""
+msgstr "Nama depan dan nama belakang adalah opsional"
 
 msgid "The user's password will be:"
-msgstr "Kata sandi pengguna:"
+msgstr "Kata sandi pengguna akan menjadi:"
 
-#, fuzzy
-#| msgid "Admin"
 msgid "Is Admin"
-msgstr "Administrasi"
+msgstr "Administrator"
 
 msgid "Is using a YubiKey [HOTP]"
 msgstr "Pemakai YubiKey [HOTP]"
 
-#, fuzzy
-#| msgid "You're almost done! To finish adding this new user, have them follow the instructions below to set up two-factor authentication with Google Authenticator. Once they've added an entry for this account in the app, have them enter one of the 6-digit codes from the app to confirm that two factor authentication is set up correctly."
 msgid "You're almost done! To finish adding this new user, have them follow the instructions below to set up two-factor authentication with FreeOTP. Once they've added an entry for this account in the app, have them enter one of the 6-digit codes from the app to confirm that two-factor authentication is set up correctly."
-msgstr "Anda hampir selesai menambah pengguna ini! Selanjutnya, minta dia mengikuti petunjuk di bawah ini untuk menata authentikasi dua faktor dengan Google Authenticator. Setelah dia menambah akun ini dalam aplikasi, minta dia memasukkan salah satu kode 6 angka dari aplikasi untuk konfirmasi bahwa authentikasi dua faktor telah ditata dengan benar."
+msgstr "Kamu hampir selesai! Untuk menyelesaikan penambahan pengguna baru ini, minta mereka untuk mengikuti petunjuk di bawah ini guna menyiapkan autentikasi dua faktor menggunakan FreeOTP. Setelah mereka menambahkan entri untuk akun ini di aplikasi, minta mereka memasukkan salah satu dari kode 6 digit pada aplikasi untuk mengonfirmasi bahwa autentikasi dua faktor telah diatur dengan benar."
 
 msgid "Can't scan the barcode? You can manually pair FreeOTP with this account by entering the following two-factor secret into the app:"
-msgstr ""
+msgstr "Tidak dapat memindai barcode? Anda dapat memasangkan FreeOTP secara manual dengan akun ini dengan memasukkan rahasia dua faktor berikut ke dalam aplikasi:"
 
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
-msgstr "Setelah anda mengatur konfigurasi YubiKey, masukkan kode 6 angka di bawah:"
+msgstr "Setelah Anda mengonfigurasi YubiKey milik Anda, masukkan 6 digit kode di bawah ini:"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
@@ -417,36 +373,34 @@ msgid "Log Out"
 msgstr "Log keluar"
 
 msgid "Powered by <em>SecureDrop {version}</em>."
-msgstr ""
+msgstr "Didukung oleh <em>SecureDrop {version}</em>."
 
 msgid "All Sources"
 msgstr "Semua sumber"
 
-#, fuzzy
-#| msgid "The documents are stored encrypted for security. To read them, you will need to decrypt them using GPG."
 msgid "All messages, files, and replies from sources are stored as encrypted files for security. To read them, you will need to decrypt them on your Secure Viewing Station."
-msgstr "Dokumen-dokumen disimpan terenkripsi untuk keamanan. Untuk membacanya, anda perlu melakukan dekripsi dengan GPG."
+msgstr "Semua pesan, file, dan balasan dari sumber disimpan sebagai file terenkripsi untuk keamanan. Untuk membacanya, Anda perlu mendekripsinya di Secure Viewing Station Anda."
 
 msgid "Download Selected"
-msgstr "Unduh pilihan"
+msgstr "Unduh yang pilih"
 
 msgid "Delete Selected"
-msgstr "Hapus pilihan"
+msgstr "Hapus yang dipilih"
 
 msgid "Reply"
-msgstr "Jawab"
+msgstr "Balas"
 
 msgid "reply icon"
 msgstr ""
 
 msgid "Read"
-msgstr ""
+msgstr "Baca"
 
 msgid "check icon"
 msgstr ""
 
 msgid "Unread"
-msgstr ""
+msgstr "Belum Dibaca"
 
 msgid "closed envelope icon"
 msgstr ""
@@ -455,7 +409,7 @@ msgid "open envelope icon"
 msgstr ""
 
 msgid "Uploaded Document"
-msgstr "Dokumen terunggah"
+msgstr "Dokumen unggahan"
 
 msgid "files icon"
 msgstr ""
@@ -467,31 +421,25 @@ msgid "messages icon"
 msgstr ""
 
 msgid "Delete Confirmation"
-msgstr ""
+msgstr "Konfirmasi Hapus"
 
-#, fuzzy
-#| msgid "Are you sure you want to generate a new codename?"
 msgid "Are you sure you want to delete the selected submissions?"
-msgstr "Apakah anda yakin ingin menghasilkan nama sandi baru?"
+msgstr "Apakah Anda yakin ingin menghapus kiriman yang dipilih?"
 
 msgid "DELETE"
-msgstr ""
+msgstr "HAPUS"
 
-#, fuzzy
-#| msgid "No documents to display."
 msgid "No submissions to display."
-msgstr "Tidak ada dokumen untuk ditampilkan."
+msgstr "Tidak ada kiriman untuk ditampilkan."
 
-#, fuzzy
-#| msgid "You can write a secure reply to the person who submitted these documents:"
 msgid "You can write a secure reply to the person who submitted these messages and/or files:"
-msgstr "Anda bisa menjawab dengan aman ke orang yang mengirimkan dokumen-dokumen ini:"
+msgstr "Anda dapat menulis balasan dengan aman kepada orang yang mengirimkan pesan dan/atau file ini:"
 
 msgid "You've flagged this source for reply."
 msgstr "Anda telah menandai sumber ini untuk dijawab."
 
 msgid "An encryption key will be generated for the source the next time they log in, after which you will be able to reply to the source here."
-msgstr ""
+msgstr "Kunci enkripsi akan dibuat untuk sumber ketika mereka masuk kembali, setelah itu Anda dapat membalas sumber di sini."
 
 msgid "Click below if you would like to write a reply to this source."
 msgstr ""
@@ -499,136 +447,129 @@ msgstr ""
 msgid "FLAG THIS SOURCE FOR REPLY"
 msgstr ""
 
-#, fuzzy
-#| msgid "Delete Selected"
 msgid "Delete Source Account"
-msgstr "Hapus pilihan"
+msgstr "Hapus akun yang dipilih"
 
 msgid "Are you sure?"
-msgstr ""
+msgstr "Apakah Anda yakin?"
 
 msgid "Yes, Delete Source Account"
-msgstr ""
+msgstr "Ya, Hapus Akun Sumber"
 
 msgid "Instance Configuration"
-msgstr ""
+msgstr "Konfigurasi Instan"
 
 msgid "Organization Name"
-msgstr ""
+msgstr "Nama Organisasi"
 
 msgid "Set the organization name used on the SecureDrop web interfaces:"
-msgstr ""
+msgstr "Tetapkan nama organisasi yang akan digunakan pada web SecureDrop:"
 
 msgid "SET ORGANIZATION NAME"
-msgstr ""
+msgstr "SET NAMA ORGANISASI"
 
 msgid "Logo Image"
-msgstr ""
+msgstr "Gambar Logo"
 
 msgid "Here you can update the image displayed on the SecureDrop web interfaces:"
-msgstr ""
+msgstr "Di sini Anda dapat memperbarui gambar yang ditampilkan pada web SecureDrop:"
 
 msgid "Recommended size: 500px * 450px"
-msgstr ""
+msgstr "Rekomendasi ukuran : 500px * 450px"
 
 msgid "UPDATE LOGO"
-msgstr ""
+msgstr "PERBARUI LOGO"
 
-#, fuzzy
-#| msgid "Submission deleted."
-#| msgid_plural "Submissions deleted."
 msgid "Submission Preferences"
-msgstr "Kiriman telah dihapus."
+msgstr "Preferensi Pengiriman"
 
 msgid "Prevent sources from uploading documents. Sources will still be able to send messages."
-msgstr ""
+msgstr "Cegah sumber untuk mengunggah dokumen. Sumber masih dapat mengirim pesan."
 
 msgid "UPDATE SUBMISSION PREFERENCES"
-msgstr ""
+msgstr "PERBARUI PREFERENSI PENGIRIMAN"
 
 msgid "Alerts"
-msgstr ""
+msgstr "Peringatan"
 
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
-msgstr ""
+msgstr "Kirim email terenkripsi untuk memverifikasi apakah peringatan OSSEC berfungsi dengan benar:"
 
 msgid "SEND TEST OSSEC ALERT"
-msgstr ""
+msgstr "KIRIM UJI PERINGATAN OSSEC"
 
 msgid "The following file has been selected for <strong>permanent deletion</strong>:"
 msgid_plural "The following {num} files have been selected for <strong>permanent deletion</strong>:"
-msgstr[0] ""
+msgstr[0] "{num} file berikut telah dipilih untuk <strong>penghapusan permanen</strong>:"
 
 msgid "PERMANENTLY DELETE FILES"
-msgstr ""
+msgstr "HAPUS BERKAS SECARA PERMANEN"
 
 msgid "Return to the list of documents for {source_name}…"
-msgstr ""
+msgstr "Kembali ke daftar dokumen untuk {source_name}…"
 
 msgid "Edit user \"{user}\""
-msgstr ""
+msgstr "Edit pengguna \"{user}\""
 
 msgid "Change Name and Admin Status"
-msgstr ""
+msgstr "Ganti Nama dan Status Admin"
 
 msgid "UPDATE"
-msgstr ""
+msgstr "PERBARUI"
 
 msgid "Edit your account"
-msgstr ""
+msgstr "Ubah akun anda"
 
 msgid "Change Name"
-msgstr ""
+msgstr "Ubah Nama"
 
 msgid "Reset Password"
-msgstr ""
+msgstr "Setel Ulang Kata Sandi"
 
 msgid "SecureDrop uses automatically generated diceware passwords."
-msgstr ""
+msgstr "SecureDrop menggunakan kata sandi \"diceware\" yang dibuat secara otomatis."
 
 msgid "Your password will be changed immediately, so you will need to save it before pressing the \"Reset Password\" button."
-msgstr ""
+msgstr "Kata sandi Anda akan segera diubah, jadi Anda harus menyimpannya sebelum menekan tombol \"Setel Ulang Kata Sandi\"."
 
 msgid "Please enter your current password and two-factor code."
-msgstr ""
+msgstr "Silakan masukkan kata sandi Anda saat ini dan kode dua faktor."
 
 msgid "Current Password"
-msgstr ""
+msgstr "Kata Sandi saat ini"
 
 msgid "Two-factor Code"
-msgstr ""
+msgstr "Kode dua faktor"
 
 msgid "The user's password will be changed to:"
-msgstr ""
+msgstr "Kata sandi pengguna akan diubah menjadi:"
 
 msgid "Your password will be changed to:"
-msgstr ""
+msgstr "Kata sandi Anda akan diubah menjadi:"
 
 msgid "Reset Two-Factor Authentication"
-msgstr ""
+msgstr "Setel Ulang Otentikasi Dua Faktor"
 
 msgid "If a user's two-factor authentication credentials have been lost or compromised, you can reset them here. <em>If you do this, make sure the user is present and ready to set up their device with the new two-factor credentials. Otherwise, they will be locked out of their account.</em>"
-msgstr ""
+msgstr "Jika kredensial autentikasi dua faktor pengguna hilang atau dicuri, Anda dapat menyetel ulang di sini. <em>Jika Anda melakukan ini, pastikan pengguna ada dan siap untuk menyiapkan perangkat mereka dengan kredensial dua faktor yang baru. Jika tidak, akun mereka akan terkunci.</em>"
 
 msgid "If your two-factor authentication credentials have been lost or compromised, or you got a new device, you can reset your credentials here. <em>If you do this, make sure you are ready to set up your new device, otherwise you will be locked out of your account.</em>"
-msgstr ""
+msgstr "Jika kredensial otentikasi dua faktor Anda hilang atau dicuri, atau Anda mendapatkan perangkat baru, Anda dapat mengatur ulang kredensial Anda di sini. <em>Jika Anda melakukan ini, pastikan Anda siap untuk menyiapkan perangkat baru Anda, jika tidak, akun Anda akan terkunci.</em>"
 
 msgid "To reset two-factor authentication for mobile apps such as FreeOTP, choose the first option. For security keys like the YubiKey, choose the second one."
-msgstr ""
+msgstr "Untuk mengatur ulang otentikasi dua faktor pada aplikasi seluler seperti FreeOTP, pilih opsi pertama. Untuk kunci keamanan seperti YubiKey, pilih yang kedua."
 
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
-msgstr ""
+msgstr "Setel ulang autentikasi dua faktor untuk aplikasi seluler, seperti FreeOTP"
 
 msgid "RESET MOBILE APP CREDENTIALS"
-msgstr ""
+msgstr "RESET KREDENSIAL APLIKASI SELULER"
 
-#, fuzzy
-#| msgid "Token in two-factor authentication accepted for user {user}."
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
-msgstr "Token authentikasi dua faktor diterima untuk pengguna {user}."
+msgstr "Setel ulang autentikasi dua faktor untuk kunci keamanan, seperti YubiKey"
 
 msgid "RESET SECURITY KEY CREDENTIALS"
-msgstr ""
+msgstr "ATUR ULANG KREDENSIAL KUNCI KEAMANAN"
 
 msgid "info icon"
 msgstr ""
@@ -643,149 +584,145 @@ msgid "Continue to the list of documents for {codename}..."
 msgstr ""
 
 msgid "Download Unread"
-msgstr ""
+msgstr "Unduh Belum Terbaca"
 
 msgid "Download"
-msgstr ""
+msgstr "Unduh"
 
 msgid "Star"
-msgstr ""
+msgstr "Bintang"
 
 msgid "Un-star"
-msgstr ""
+msgstr "Hapus bintang"
 
 msgid "No documents have been submitted!"
-msgstr ""
+msgstr "Tidak ada dokumen yang dikirimkan!"
 
 msgid "Filter by codename"
-msgstr ""
+msgstr "Filter menurut nama kode"
 
 msgid "Select All"
-msgstr ""
+msgstr "Pilih Semua"
 
 msgid "Select Unread"
-msgstr ""
+msgstr "Pilih Belum Dibaca"
 
 msgid "Select None"
-msgstr ""
+msgstr "Pilih Tidak Ada"
 
 msgid "Are you sure you want to delete the user {username}?"
 msgstr ""
 
 msgid "Are you sure you want to reset two-factor authentication for {username}?"
-msgstr ""
+msgstr "Yakin ingin menyetel ulang autentikasi dua faktor untuk {username}?"
 
-#, fuzzy
-#| msgid "No collections selected."
 msgid "Sources selected: "
-msgstr "Anda tidak memilih koleksi."
+msgstr "Sumber yang dipilih: "
 
 msgid "Login to access the journalist interface"
-msgstr ""
+msgstr "Masuk untuk mengakses antarmuka jurnalis"
 
 msgid "Password"
-msgstr ""
+msgstr "Kata Sandi"
 
 msgid "Show password"
-msgstr ""
+msgstr "Tampilkan kata sandi"
 
 msgid "LOG IN"
-msgstr ""
+msgstr "MASUK"
 
 msgid "<strong>WARNING:&nbsp;</strong> You appear to be using Tor2Web. This <strong>&nbsp;does not&nbsp;</strong> provide anonymity. <a href=\"{url}\">Why is this dangerous?</a>"
 msgstr ""
 
 msgid "Field must be between 1 and {max_codename_len} characters long."
-msgstr ""
+msgstr "Masukkan antara 1 dan {max_codename_len} karakter."
 
 msgid "Invalid input."
-msgstr ""
+msgstr "Masukan tidak valid."
 
 msgid "Write a message."
-msgstr ""
+msgstr "Tulis pesan."
 
 msgid "Message text too long."
-msgstr ""
+msgstr "Teks pesan terlalu panjang."
 
 msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
-msgstr ""
+msgstr "Blok teks besar harus diunggah sebagai file, bukan disalin dan ditempel."
 
 msgid "You were redirected because you are already logged in. If you want to create a new account, you should log out first."
-msgstr ""
+msgstr "Anda dialihkan karena sudah login. Jika ingin membuat akun baru, Anda harus logout terlebih dahulu."
 
 msgid "You are already logged in. Please verify your codename above as it may differ from the one displayed on the previous page."
-msgstr ""
+msgstr "Anda sudah masuk. Harap verifikasi nama kode Anda di atas karena mungkin berbeda dari yang ditampilkan di halaman sebelumnya."
 
-#, fuzzy
-#| msgid "There was a problem verifying the two-factor code. Please try again."
 msgid "There was a temporary problem creating your account. Please try again."
-msgstr "Terjadi masalah dalam verifikasi kode dua-faktor. Mohon coba lagi."
+msgstr "Muncul masalah saat membuat akun Anda. Silakan coba lagi."
 
 msgid "You must enter a message or choose a file to submit."
-msgstr ""
+msgstr "Anda harus memasukkan pesan atau memilih file untuk dikirim."
 
 msgid "You must enter a message."
-msgstr ""
+msgstr "Anda harus memasukkan pesan."
 
 msgid "Thanks! We received your message."
-msgstr ""
+msgstr "Terima kasih! Kami menerima pesan Anda."
 
 msgid "Thanks! We received your document."
-msgstr ""
+msgstr "Terima kasih! Kami menerima dokumen Anda."
 
 msgid "Thanks! We received your message and document."
-msgstr ""
+msgstr "Terima kasih! Kami menerima pesan dan dokumen Anda."
 
 msgid "Reply deleted"
-msgstr ""
+msgstr "Balasan dihapus"
 
 msgid "All replies have been deleted"
-msgstr ""
+msgstr "Semua balasan telah dihapus"
 
 msgid "Sorry, that is not a recognized codename."
-msgstr ""
+msgstr "Maaf, itu bukan nama kode yang dikenali."
 
 msgid "Protecting Journalists and Sources"
-msgstr ""
+msgstr "Melindungi Jurnalis dan Sumber"
 
 msgid "SecureDrop Home"
 msgstr ""
 
 msgid "We're sorry, our SecureDrop is currently offline."
-msgstr ""
+msgstr "Maaf, SecureDrop kami sedang offline."
 
 msgid "Please try again later. Check our website for more information."
-msgstr ""
+msgstr "Silakan coba lagi nanti. Cek website kami untuk informasi lebih lanjut."
 
 msgid "LOG OUT"
-msgstr ""
+msgstr "KELUAR"
 
 msgid "Server error"
-msgstr ""
+msgstr "Server error"
 
 msgid "Sorry, the website encountered an error and was unable to complete your request."
-msgstr ""
+msgstr "Maaf, situs web mengalami error dan tidak dapat menyelesaikan permintaan Anda."
 
 msgid "Look up a codename..."
-msgstr ""
+msgstr "Cari nama kode..."
 
 msgid "Thank you for sending this information to us. Please check back later for replies."
-msgstr ""
+msgstr "Terima kasih telah mengirimkan informasi ini kepada kami. Silakan periksa kembali nanti untuk balasan."
 
 msgid "Forgot your codename?"
-msgstr ""
+msgstr "Lupa nama kode Anda?"
 
 msgid "Powered by"
-msgstr ""
+msgstr "Dipersembahkan oleh"
 
 msgid "Please note: Sharing sensitive documents may put you at risk, even when using Tor and SecureDrop."
-msgstr ""
+msgstr "Harap diperhatikan: Berbagi dokumen sensitif dapat membahayakan Anda, bahkan saat menggunakan Tor dan SecureDrop."
 
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
-msgstr ""
+msgstr "SecureDrop adalah proyek dari Freedom of the Press Foundation."
 
 msgid "Welcome"
-msgstr ""
+msgstr "Selamat Datang"
 
 msgid "Please either write this codename down and keep it in a safe place, or memorize it."
 msgstr ""
