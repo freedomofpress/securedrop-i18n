@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-10-07 09:42+0000\nLast-Translator: Jonas Waga <jonas.waga@schibsted.com>\nLanguage-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/securedrop/sv/>\nLanguage: sv\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-10-18 15:42+0000\nLast-Translator: Jonas Waga <jonas.waga@schibsted.com>\nLanguage-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/securedrop/sv/>\nLanguage: sv\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
 msgstr "Namnet är för långt"
@@ -88,7 +88,7 @@ msgid "Success!"
 msgstr "Det lyckades!"
 
 msgid "The account and data for the source {} have been deleted."
-msgstr "Kontot och informationen för källan  {} har raderats."
+msgstr "Kontot och informationen för källan {} har raderats."
 
 #. Error shown when a user has not selected items to act on.
 msgid "Nothing Selected"
@@ -341,7 +341,7 @@ msgid "Delete Confirmation"
 msgstr "Verifiera radering"
 
 msgid "Are you sure you want to delete this user?"
-msgstr "Är du säker på att du vill ta bort användaren?"
+msgstr "Är du säker på att du vill ta bort den här användaren?"
 
 msgid "DELETE"
 msgstr "TA BORT"
@@ -733,7 +733,7 @@ msgid ""
 "Because we do not track users of our <b>SecureDrop</b>\n"
 " service, in future visits, using this codename will be the only way we have to communicate with you should we have\n"
 " questions or are interested in additional information. Unlike passwords, there is no way to retrieve a lost codename."
-msgstr "Eftersom vi inte spårar användare av vår <b> SecureDrop</b>-tjänst,\nvid framtida besök, kommer användningen av detta kodnamnet att vara det enda sättet vi har att kommunicera med dig ifall vi har\nfrågor eller är intresserade av mer information. Till skillnad från lösenord, finns det inget sätt att återställa ett försvunnet kodnamn."
+msgstr "Eftersom vi inte spårar användare av vår <b> SecureDrop</b>-tjänst,\nvid framtida besök, kommer användningen av detta kodnamn att vara det enda sättet vi har att kommunicera med dig ifall vi har\nfrågor eller är intresserade av mer information. Till skillnad från lösenord, finns det inget sätt att återställa ett försvunnet kodnamn."
 
 msgid "Submit Documents"
 msgstr "Ladda upp dokument"
