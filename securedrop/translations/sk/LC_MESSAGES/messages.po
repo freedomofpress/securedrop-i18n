@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-10-18 13:23+0000\nLast-Translator: 1000101 <b1000101@pm.me>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-10-18 15:42+0000\nLast-Translator: Katarina Kasalova <katka.kasalova@gmail.com>\nLanguage-Team: Slovak <https://weblate.securedrop.org/projects/securedrop/securedrop/sk/>\nLanguage: sk\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
 
 msgid "Name too long"
 msgstr "Meno je príliš dlhé"
@@ -582,7 +582,7 @@ msgid "Notification"
 msgstr "Notifikácia"
 
 msgid "Success"
-msgstr "Úspech"
+msgstr "Podarilo sa"
 
 msgid "Error"
 msgstr "Chyba"
@@ -648,7 +648,7 @@ msgid "Write a message."
 msgstr "Napísať správu."
 
 msgid "Select a file to upload."
-msgstr "Vyberte súbor."
+msgstr "Vyberte súbor na nahratie."
 
 msgid "Message text too long."
 msgstr "Správa je príliš dlhá."
@@ -771,10 +771,10 @@ msgid "<a href=\"/\" aria-label=\"Follow these instructions, then refresh this p
 msgstr "<a href=\"/\" aria-label=\"Postupujte podľa inštrukcií a potom obnovte túto stránku\">Obnovte túto stránku</a> a to je všetko!"
 
 msgid "<strong>It is recommended to use Tor Browser to access SecureDrop:</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to continue."
-msgstr "<strong>Pre prístup k SecureDrop odporúčame použiť prehliadač Tor:</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Zistite ako ho nainštalovať</a>, alebo ignorujte toto varovanie a pokračujte ďalej."
+msgstr "<strong>Pre prístup k SecureDrop odporúčame použiť prehliadač Tor:</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Zistite ako ho nainštalovať</a>, alebo ignorujte toto upozornenie a pokračujte ďalej."
 
 msgid "<strong>It is recommended you use the desktop version of Tor Browser to access SecureDrop, as Orfox does not provide the same level of security and anonymity as the desktop version.</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to continue."
-msgstr "<strong>Pre prístup k SecureDrop odporúčame používať desktopovú verziu prehliadača Tor, pretože Orfox neposkytuje rovnakú úroveň zabezpečenia a súkromia ako desktopové verzia.</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Zistite ako ju nainštalovať</a>, alebo ignorujte toto varovanie a pokračujte ďalej."
+msgstr "<strong>Pre prístup k SecureDrop odporúčame používať desktopovú verziu prehliadača Tor, pretože Orfox neposkytuje rovnakú úroveň zabezpečenia a anonymitu ako desktopové verzia.</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Zistite ako ju nainštalovať</a>, alebo ignorujte toto upozornenie a pokračujte ďalej."
 
 msgid "First submission"
 msgstr "Prvé podanie"
@@ -819,7 +819,7 @@ msgid "One more thing..."
 msgstr "Ešte posledná vec..."
 
 msgid "Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar. This will clear your Tor Browser activity data on this device."
-msgstr "Kliknite na ikonu <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>Nová identita</b> na lište svojho prehliadača Tor. Zmažete tým dáta o aktivite prehliadača Tor na tomto zariadení."
+msgstr "Kliknite na ikonu <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>Nová identita</b> na lište vášho prehliadača Tor. Zmažete tým dáta o aktivite prehliadača Tor na tomto zariadení."
 
 msgid "Remember, your codename is:"
 msgstr "Pamätajte, vaše krycie meno je:"
@@ -888,7 +888,7 @@ msgid "Important"
 msgstr "Dôležité"
 
 msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
-msgstr "Boli ste odhlásení z dôvodu nečinnosti. Skôr než budete pokračovať, kliknite na ikonu <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>Nová identita</b> na lište prehliadača Tor. To vymaže dáta o aktivite Tor prehliadača na tomto zariadení."
+msgstr "Boli ste odhlásení z dôvodu nečinnosti. Skôr než budete pokračovať, kliknite na ikonu <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>Nová identita</b> na lište prehliadača Tor. Tým sa vymažú dáta o aktivite Tor prehliadača na tomto zariadení."
 
 msgid "Why is there a warning about Tor2Web?"
 msgstr "Prečo je tu upozornenie o Tor2Web?"
@@ -915,7 +915,7 @@ msgid "Copy and paste the following address into your browser and follow the ins
 msgstr "Skopírujte a vložte nasledujúcu adresu do svojho prehliadača a postupujte podľa inštrukcií na stiahnutie a nainštalovanie prehliadača Tor:"
 
 msgid "If there is a chance that downloading Tor Browser raises suspicion and your mail provider is less likely to be monitored, you can send a mail to <kbd>gettor@torproject.org</kbd> and a bot will answer with instructions."
-msgstr "Ak je tu šanca, že sťahovaním prehliadača Tor vzbudíte podozrenie, ale váš mailový poskytovateľ zrejme nie je monitorovaný, môžete poslať správu na adresu <kbd>gettor@torproject.org</kbd> a obdržíte automatickú odpoveď s inštrukciami."
+msgstr "Ak sa vyskytne možnosť, že sťahovaním prehliadača Tor vzbudíte podozrenie, a váš mailový poskytovateľ je možno menej monitorovaný, môžete poslať správu na adresu <kbd>gettor@torproject.org</kbd> a obdržíte automatickú odpoveď s inštrukciami."
 
 msgid "Why download the team's public key?"
 msgstr "Prečo si stiahnuť verejný kľúč tímu?"
