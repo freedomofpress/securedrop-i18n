@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-10-18 07:24+0000\nLast-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\nLanguage-Team: Chinese (Traditional) <https://weblate.securedrop.org/projects/securedrop/securedrop/zh_Hant/>\nLanguage: zh_Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-10-18 07:31+0000\nLast-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\nLanguage-Team: Chinese (Traditional) <https://weblate.securedrop.org/projects/securedrop/securedrop/zh_Hant/>\nLanguage: zh_Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
 msgstr "名稱過長"
@@ -70,7 +70,7 @@ msgid "An error occurred saving this user to the database. Please inform your ad
 msgstr "保存此用户到資料庫時出錯。請通知管理員。"
 
 msgid "The two-factor code for user \"{user}\" was verified successfully."
-msgstr "已成功驗證用户 \"{user}\" 的雙重驗證碼。"
+msgstr "已成功驗證用户 \"{user}\" 的雙因子驗證碼。"
 
 #. Here, "{message}" explains the problem with the name.
 msgid "Name not updated: {message}"
@@ -80,7 +80,7 @@ msgid "Deleted user '{user}'."
 msgstr "已刪除使用者 '{user}'"
 
 msgid "Test alert sent. Please check your email."
-msgstr "已送出測試警報，請檢查電郵信箱。"
+msgstr "已送出測試警報，請檢查電子郵件。"
 
 #. Precedes a message confirming the success of an operation.
 msgid "Success!"
@@ -101,7 +101,7 @@ msgid_plural "Your download failed because a file could not be found. An admin c
 msgstr[0] "因為找不到檔案，下載失敗。系統管理員能在系統及監控記錄中查詢更多資訊。"
 
 msgid "Only admins can access this page."
-msgstr "本頁面僅限管理員訪問。"
+msgstr "本頁面僅管理員能存取。"
 
 msgid "HOTP secrets are 40 characters long - you have entered {num}."
 msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
@@ -536,7 +536,7 @@ msgid "Reset Two-Factor Authentication"
 msgstr "重置雙因素驗證授權"
 
 msgid "If a user's two-factor authentication credentials have been lost or compromised, you can reset them here. <em>If you do this, make sure the user is present and ready to set up their device with the new two-factor credentials. Otherwise, they will be locked out of their account.</em>"
-msgstr "如果用户雙因素驗證的證明已丢失或遭破壞，可以在此重置它們。<em>如果這麼做，確認該用戶在場，而且在其設置上已設好新的雙因素驗證。否则，他們的帳戶將被鎖住。</em>"
+msgstr "如果用户雙因素驗證憑證已丢失或遭破壞，您可以在此重設。<em>如卻執行重設，請先確認該用戶在場，並且在其設置上設定好新的雙因素驗證憑證。不然該用戶將無法存取其帳戶。</em>"
 
 msgid "If your two-factor authentication credentials have been lost or compromised, or you got a new device, you can reset your credentials here. <em>If you do this, make sure you are ready to set up your new device, otherwise you will be locked out of your account.</em>"
 msgstr "如果你的雙因素驗證證明已丢失或遭到破壞，或是你有一件新設備，可以在此重置你的證明。<em> 如果要這麼做，請確認新設備已設置妥當，否则你的帳戶會被鎖住。</em>"
@@ -927,7 +927,7 @@ msgid "<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submissio
 msgstr "<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submission</code>"
 
 msgid "Upload your encrypted submission. It will have the same filename as the unencrypted file, with .gpg at the end (e.g. <code>internal_memo.pdf.gpg</code>)"
-msgstr "上傳已加密的提交文件。文件名稱應該和未加密前的文件一樣，但多添加了 .gpg 副檔名，（例如 <code>internal_memo.pdf.gpg</code>）"
+msgstr "上傳已加密的檔案，檔案名稱應該和未加密的檔案一致，但多添加了 .gpg 副檔名（例如 <code>internal_memo.pdf.gpg</code>）"
 
 msgid "<strong>Important:</strong> If you wish to remain anonymous, <strong>do not</strong> use GPG to sign the encrypted file (with the <code>--sign</code> or <code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr "<strong>重要：</strong>如果您希望保持匿名，<strong>請勿</strong>在 GPG 加密文件時進行數位簽署（使用 <code>--sign</code> 或 <code>-s</code> 指令參數），這樣做會向我們揭示您的 GPG 身份。"
