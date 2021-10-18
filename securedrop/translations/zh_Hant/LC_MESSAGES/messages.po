@@ -4,20 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop 0.3.12\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2021-06-10 02:44+0000\n"
-"Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
-"Language-Team: Chinese (Traditional) <https://weblate.securedrop.org/projects/securedrop/securedrop/zh_Hant/>\n"
-"Language: zh_Hant\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.6\n"
-"Generated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2021-10-18 07:24+0000\nLast-Translator: mengpangwang <mengpangwang@gmail.com>\nLanguage-Team: Chinese (Traditional) <https://weblate.securedrop.org/projects/securedrop/securedrop/zh_Hant/>\nLanguage: zh_Hant\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
 msgstr "名稱過長"
@@ -48,10 +35,10 @@ msgid "Incorrect password or two-factor code."
 msgstr "密碼或是雙因素驗證認證碼不正確。"
 
 msgid "Your two-factor credentials have been reset successfully."
-msgstr "已成功重設您的雙因子驗證。"
+msgstr "已成功重設您的雙因素驗證。"
 
 msgid "There was a problem verifying the two-factor code. Please try again."
-msgstr "確認雙重驗證碼時出現問題。請再次嘗試。"
+msgstr "確認雙因素驗證碼時出現問題。請再試一次。"
 
 msgid "Image updated."
 msgstr "圖片已更新。"
@@ -61,7 +48,7 @@ msgid "Unable to process the image file. Please try another one."
 msgstr "無法處理圖片。換一張試試。"
 
 msgid "Preferences saved."
-msgstr "偏好已儲存。"
+msgstr "偏好設定已儲存。"
 
 msgid "Preferences not updated."
 msgstr "無法更新偏好設定。"
