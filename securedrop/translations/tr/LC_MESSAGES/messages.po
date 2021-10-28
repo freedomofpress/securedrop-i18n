@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-10-15 22:42+0000\nLast-Translator: Kaya Zeren <kayazeren@gmail.com>\nLanguage-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/securedrop/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-10-28 06:56+0000\nLast-Translator: Kaya Zeren <kayazeren@gmail.com>\nLanguage-Team: Turkish <https://weblate.securedrop.org/projects/securedrop/securedrop/tr/>\nLanguage: tr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
 msgstr "İsim çok uzun"
@@ -112,8 +112,8 @@ msgstr[1] "HOTP parolaları 40 karakter uzunluğundadır - sadece {num} karakter
 
 msgid "Cannot be longer than {num} character."
 msgid_plural "Cannot be longer than {num} characters."
-msgstr[0] "{num} karakterden fazla olamaz."
-msgstr[1] "{num} karakterden fazla olamaz."
+msgstr[0] "{num} karakterden uzun olamaz."
+msgstr[1] "{num} karakterden uzun olamaz."
 
 msgid "This field is required."
 msgstr "Bu alanın doldurulması zorunludur."
@@ -888,20 +888,22 @@ msgstr "SecureDrop uygulamasına Tor2Web kullanarak bağlanmak anonim kalmanız�
 msgid "It could be possible for anyone monitoring your Internet traffic (your government, your Internet provider), to identify you."
 msgstr "İnternet kullanımını gözetleyen herhangi birinin (hükümetiniz, İnternet sağlayıcınız) sizin kim olduğunuzu belirleyebilir."
 
+#, fuzzy
 msgid "We <strong>strongly advise</strong> you to use the <a href=\"www.torproject.org/projects/torbrowser.html\">Tor Browser</a> instead."
-msgstr "Bunun yerine <a href=\"www.torproject.org/projects/torbrowser.html\">Tor Tarayıcı</a> kullanmanızı <strong>önemle öneririz</strong>."
+msgstr "Bunun yerine <a href=\"www.torproject.org/projects/torbrowser.html\">Tor Browser</a> kullanmanızı <strong>önemle öneririz</strong>."
 
 msgid "You Should Use Tor Browser"
-msgstr "Tor Tarayıcı Kullanmalısınız"
+msgstr "Tor Browser kullanmalısınız"
 
 msgid "If you are not using Tor Browser, you <strong>may not be anonymous</strong>."
-msgstr "Tor Tarayıcı kullanmıyorsanız, <strong>anonim kalamayabilirsiniz</strong>."
+msgstr "Tor Browser kullanmıyorsanız, <strong>anonim kalamayabilirsiniz</strong>."
 
+#, fuzzy
 msgid "If you want to submit information to SecureDrop, we <strong>strongly advise you</strong> to install Tor Browser and use it to access our site safely and anonymously."
-msgstr "Bilgi göndermek istiyorsanız, sitemize güvenli ve anonim bir şekilde erişmek için <a href=\"torproject.org/download.html.en\">Tor Tarayıcı</a> kurmanız ve kullanmanız <strong>önemle önerilir</strong>."
+msgstr "Bilgi göndermek istiyorsanız, sitemize güvenli ve anonim bir şekilde erişmek için <a href=\"torproject.org/download.html.en\">Tor Browser</a> kurmanız ve kullanmanız <strong>önemle önerilir</strong>."
 
 msgid "Copy and paste the following address into your browser and follow the instructions to download and install Tor Browser:"
-msgstr "Tor Tarayıcı uygulamasını indirmek ve kurmak için aşağıdaki adresi kopyalayıp tarayıcınızın adres çubuğuna yapıştırın ve açılacak sayfadaki adımları izleyin:"
+msgstr "Tor Browser uygulamasını indirmek ve kurmak için aşağıdaki adresi kopyalayıp tarayıcınızın adres çubuğuna yapıştırın ve açılacak sayfadaki adımları izleyin:"
 
 msgid "If there is a chance that downloading Tor Browser raises suspicion and your mail provider is less likely to be monitored, you can send a mail to <kbd>gettor@torproject.org</kbd> and a bot will answer with instructions."
 msgstr "Tor Browser uygulamasını indirmenizin şüphe uyandırma olasılığı varsa ve e-posta hizmeti sağlayıcınızın izlenme olasılığı daha düşük ise, <kbd>gettor@torproject.org</kbd> adresine bir e-posta atabilirsiniz. Bir bot yapmanız gerekenleri size yanıt olarak gönderir."
