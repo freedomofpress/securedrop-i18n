@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.8.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-10-28 10:07+0000\nLast-Translator: User <striae-chevy.0z@icloud.com>\nLanguage-Team: Japanese <https://weblate.securedrop.org/projects/securedrop/securedrop/ja/>\nLanguage: ja\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.8.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2021-10-28 10:46+0000\nLast-Translator: User <striae-chevy.0z@icloud.com>\nLanguage-Team: Japanese <https://weblate.securedrop.org/projects/securedrop/securedrop/ja/>\nLanguage: ja\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "{time} 前"
@@ -505,7 +505,7 @@ msgid_plural "The following {num} files have been selected for <strong>permanent
 msgstr[0] ""
 
 msgid "PERMANENTLY DELETE FILES"
-msgstr ""
+msgstr "永久的にファイルを削除"
 
 msgid "Return to the list of documents for {source_name}…"
 msgstr ""
@@ -514,7 +514,7 @@ msgid "Edit user \"{user}\""
 msgstr "ユーザー \"{user}\" を編集"
 
 msgid "Change Name and Admin Status"
-msgstr ""
+msgstr "名前と管理者ステータスを変更"
 
 msgid "UPDATE"
 msgstr "更新"
