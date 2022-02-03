@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from pathlib import Path
+
 import binascii
 import gzip
 import os
@@ -12,24 +14,26 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from werkzeug.utils import secure_filename
 
+from encryption import EncryptionManager
 from secure_tempfile import SecureTemporaryFile
 
 import rm
 from worker import create_queue
 
-
 import typing
+
 
 if typing.TYPE_CHECKING:
     # flake8 can not understand type annotation yet.
     # That is why all type annotation relative import
     # statements has to be marked as noqa.
     # http://flake8.pycqa.org/en/latest/user/error-codes.html?highlight=f401
-    from typing import List, Type, Union  # noqa: F401
+    from typing import List, Type, Union, Optional, IO  # noqa: F401
     from tempfile import _TemporaryFileWrapper  # type: ignore # noqa: F401
-    from io import BufferedIOBase  # noqa: F401
     from sqlalchemy.orm import Session  # noqa: F401
     from models import Reply, Submission  # noqa: F401
+
+_default_storage: typing.Optional["Storage"] = None
 
 
 VALIDATE_FILENAME = re.compile(
@@ -89,7 +93,7 @@ def safe_renames(old: str, new: str) -> None:
 
 class Storage:
 
-    def __init__(self, storage_path: str, temp_dir: str, gpg_key: str) -> None:
+    def __init__(self, storage_path: str, temp_dir: str) -> None:
         if not os.path.isabs(storage_path):
             raise PathException("storage_path {} is not absolute".format(
                 storage_path))
@@ -100,12 +104,28 @@ class Storage:
                 temp_dir))
         self.__temp_dir = temp_dir
 
-        self.__gpg_key = gpg_key
-
         # where files and directories are sent to be securely deleted
         self.__shredder_path = os.path.abspath(os.path.join(self.__storage_path, "../shredder"))
         if not os.path.exists(self.__shredder_path):
             os.makedirs(self.__shredder_path, mode=0o700)
+
+        # crash if we don't have a way to securely remove files
+        if not rm.check_secure_delete_capability():
+            raise AssertionError("Secure file deletion is not possible.")
+
+    @classmethod
+    def get_default(cls) -> "Storage":
+        from sdconfig import config
+
+        global _default_storage
+
+        if _default_storage is None:
+            _default_storage = cls(
+                config.STORE_DIR,
+                config.TEMP_DIR
+            )
+
+        return _default_storage
 
     @property
     def storage_path(self) -> str:
@@ -309,9 +329,13 @@ class Storage:
                              filesystem_id: str,
                              count: int,
                              journalist_filename: str,
-                             filename: str,
-                             stream: 'BufferedIOBase') -> str:
-        sanitized_filename = secure_filename(filename)
+                             filename: typing.Optional[str],
+                             stream: 'IO[bytes]') -> str:
+
+        if filename is not None:
+            sanitized_filename = secure_filename(filename)
+        else:
+            sanitized_filename = secure_filename("unknown.file")
 
         # We store file submissions in a .gz file for two reasons:
         #
@@ -341,8 +365,10 @@ class Storage:
                         break
                     gzf.write(buf)
 
-            current_app.crypto_util.encrypt(
-                stf, [self.__gpg_key], encrypted_file_path)
+            EncryptionManager.get_default().encrypt_source_file(
+                file_in=stf,
+                encrypted_file_path_out=Path(encrypted_file_path),
+            )
 
         return encrypted_file_name
 
@@ -370,16 +396,19 @@ class Storage:
                                 message: str) -> str:
         filename = "{0}-{1}-msg.gpg".format(count, journalist_filename)
         msg_loc = self.path(filesystem_id, filename)
-        current_app.crypto_util.encrypt(message, [self.__gpg_key], msg_loc)
+        EncryptionManager.get_default().encrypt_source_message(
+            message_in=message,
+            encrypted_message_path_out=Path(msg_loc),
+        )
         return filename
 
 
-def async_add_checksum_for_file(db_obj: 'Union[Submission, Reply]') -> str:
+def async_add_checksum_for_file(db_obj: 'Union[Submission, Reply]', storage: Storage) -> str:
     return create_queue().enqueue(
         queued_add_checksum_for_file,
         type(db_obj),
         db_obj.id,
-        current_app.storage.path(db_obj.source.filesystem_id, db_obj.filename),
+        storage.path(db_obj.source.filesystem_id, db_obj.filename),
         current_app.config['SQLALCHEMY_DATABASE_URI'],
     )
 

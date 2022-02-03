@@ -21,6 +21,7 @@ from flask_babel import gettext
 from sqlalchemy.orm.exc import NoResultFound
 
 from db import db
+from encryption import GpgKeyNotFoundError, EncryptionManager
 from models import Reply, Submission
 from journalist_app.forms import ReplyForm
 from journalist_app.utils import (make_star_true, make_star_false, get_source,
@@ -28,6 +29,7 @@ from journalist_app.utils import (make_star_true, make_star_false, get_source,
                                   col_download_all, col_star, col_un_star,
                                   col_delete, col_delete_data, mark_seen)
 from sdconfig import SDConfig
+from store import Storage
 
 
 def make_blueprint(config: SDConfig) -> Blueprint:
@@ -49,7 +51,12 @@ def make_blueprint(config: SDConfig) -> Blueprint:
     def col(filesystem_id: str) -> str:
         form = ReplyForm()
         source = get_source(filesystem_id)
-        source.has_key = current_app.crypto_util.get_fingerprint(filesystem_id)
+        try:
+            EncryptionManager.get_default().get_source_public_key(filesystem_id)
+            source.has_key = True
+        except GpgKeyNotFoundError:
+            source.has_key = False
+
         return render_template("col.html", filesystem_id=filesystem_id,
                                source=source, form=form)
 
@@ -59,7 +66,7 @@ def make_blueprint(config: SDConfig) -> Blueprint:
         source = get_source(filesystem_id)
         try:
             delete_collection(filesystem_id)
-        except ValueError as e:
+        except GpgKeyNotFoundError as e:
             current_app.logger.error("error deleting collection: %s", e)
             abort(500)
 
@@ -112,7 +119,7 @@ def make_blueprint(config: SDConfig) -> Blueprint:
         if '..' in fn or fn.startswith('/'):
             abort(404)
 
-        file = current_app.storage.path(filesystem_id, fn)
+        file = Storage.get_default().path(filesystem_id, fn)
         if not Path(file).is_file():
             flash(
                 gettext(
@@ -131,15 +138,15 @@ def make_blueprint(config: SDConfig) -> Blueprint:
                 reply = Reply.query.filter(Reply.filename == fn).one()
                 mark_seen([reply], journalist)
             elif fn.endswith("-doc.gz.gpg") or fn.endswith("doc.zip.gpg"):
-                file = Submission.query.filter(Submission.filename == fn).one()
-                mark_seen([file], journalist)
+                submitted_file = Submission.query.filter(Submission.filename == fn).one()
+                mark_seen([submitted_file], journalist)
             else:
                 message = Submission.query.filter(Submission.filename == fn).one()
                 mark_seen([message], journalist)
         except NoResultFound as e:
             current_app.logger.error("Could not mark {} as seen: {}".format(fn, e))
 
-        return send_file(current_app.storage.path(filesystem_id, fn),
+        return send_file(Storage.get_default().path(filesystem_id, fn),
                          mimetype="application/pgp-encrypted")
 
     return view

@@ -8,6 +8,8 @@ Loads test data into the SecureDrop database.
 import argparse
 import datetime
 import io
+from pathlib import Path
+
 import math
 import os
 import random
@@ -15,11 +17,11 @@ import string
 from itertools import cycle
 from typing import Optional, Tuple
 
-from flask import current_app
 from sqlalchemy.exc import IntegrityError
 
 import journalist_app
 from db import db
+from encryption import EncryptionManager
 from models import (
     Journalist,
     JournalistLoginAttempt,
@@ -35,6 +37,7 @@ from passphrases import PassphraseGenerator
 from sdconfig import config
 from source_user import create_source_user
 from specialstrings import strings
+from store import Storage
 
 messages = cycle(strings)
 replies = cycle(strings)
@@ -116,7 +119,7 @@ def set_source_count(s: str) -> int:
 
 
 def add_journalist(
-    username: str = "",
+    username: str,
     is_admin: bool = False,
     first_name: str = "",
     last_name: str = "",
@@ -127,9 +130,6 @@ def add_journalist(
     """
     test_password = "correct horse battery staple profanity oil chewy"
     test_otp_secret = "JHCOGO7VCER3EJ4L"
-
-    if not username:
-        username = current_app.crypto_util.display_id()
 
     journalist = Journalist(
         username=username,
@@ -180,20 +180,18 @@ def submit_message(source: Source, journalist_who_saw: Optional[Journalist]) -> 
     Adds a single message submitted by a source.
     """
     record_source_interaction(source)
-    fpath = current_app.storage.save_message_submission(
+    fpath = Storage.get_default().save_message_submission(
         source.filesystem_id,
         source.interaction_count,
         source.journalist_filename,
         next(messages),
     )
-    submission = Submission(source, fpath)
+    submission = Submission(source, fpath, Storage.get_default())
     db.session.add(submission)
-    db.session.flush()
 
     if journalist_who_saw:
-        seen_message = SeenMessage(message_id=submission.id, journalist_id=journalist_who_saw.id)
+        seen_message = SeenMessage(message=submission, journalist=journalist_who_saw)
         db.session.add(seen_message)
-        db.session.flush()
 
 
 def submit_file(source: Source, journalist_who_saw: Optional[Journalist]) -> None:
@@ -201,21 +199,19 @@ def submit_file(source: Source, journalist_who_saw: Optional[Journalist]) -> Non
     Adds a single file submitted by a source.
     """
     record_source_interaction(source)
-    fpath = current_app.storage.save_file_submission(
+    fpath = Storage.get_default().save_file_submission(
         source.filesystem_id,
         source.interaction_count,
         source.journalist_filename,
         "memo.txt",
         io.BytesIO(b"This is an example of a plain text file upload."),
     )
-    submission = Submission(source, fpath)
+    submission = Submission(source, fpath, Storage.get_default())
     db.session.add(submission)
-    db.session.flush()
 
     if journalist_who_saw:
-        seen_file = SeenFile(file_id=submission.id, journalist_id=journalist_who_saw.id)
+        seen_file = SeenFile(file=submission, journalist=journalist_who_saw)
         db.session.add(seen_file)
-        db.session.flush()
 
 
 def add_reply(
@@ -226,25 +222,20 @@ def add_reply(
     """
     record_source_interaction(source)
     fname = "{}-{}-reply.gpg".format(source.interaction_count, source.journalist_filename)
-    current_app.crypto_util.encrypt(
-        next(replies),
-        [
-            current_app.crypto_util.get_fingerprint(source.filesystem_id),
-            config.JOURNALIST_KEY,
-        ],
-        current_app.storage.path(source.filesystem_id, fname),
+    EncryptionManager.get_default().encrypt_journalist_reply(
+        for_source_with_filesystem_id=source.filesystem_id,
+        reply_in=next(replies),
+        encrypted_reply_path_out=Path(Storage.get_default().path(source.filesystem_id, fname)),
     )
-
-    reply = Reply(journalist, source, fname)
+    reply = Reply(journalist, source, fname, Storage.get_default())
     db.session.add(reply)
-    db.session.flush()
 
     # Journalist who replied has seen the reply
-    author_seen_reply = SeenReply(reply_id=reply.id, journalist_id=journalist.id)
+    author_seen_reply = SeenReply(reply=reply, journalist=journalist)
     db.session.add(author_seen_reply)
 
     if journalist_who_saw:
-        other_seen_reply = SeenReply(reply_id=reply.id, journalist_id=journalist_who_saw.id)
+        other_seen_reply = SeenReply(reply=reply, journalist=journalist_who_saw)
         db.session.add(other_seen_reply)
 
     db.session.commit()
@@ -258,15 +249,14 @@ def add_source() -> Tuple[Source, str]:
     source_user = create_source_user(
         db_session=db.session,
         source_passphrase=codename,
-        source_app_crypto_util=current_app.crypto_util,
-        source_app_storage=current_app.storage,
+        source_app_storage=Storage.get_default(),
     )
     source = source_user.get_db_record()
     source.pending = False
     db.session.commit()
 
     # Generate source key
-    current_app.crypto_util.genkeypair(source_user)
+    EncryptionManager.get_default().generate_source_key_pair(source_user)
 
     return source, codename
 
@@ -319,7 +309,7 @@ def create_default_journalists() -> Tuple[Journalist, ...]:
 def add_journalists(args: argparse.Namespace) -> None:
     total = args.journalist_count
     for i in range(1, total + 1):
-        add_journalist(progress=(i, total))
+        add_journalist(username=f"journalist{str(i)}", progress=(i, total))
 
 
 def add_sources(args: argparse.Namespace, journalists: Tuple[Journalist, ...]) -> None:
@@ -392,7 +382,7 @@ def load(args: argparse.Namespace) -> None:
 
         # delete one journalist
         _, _, journalist_to_be_deleted = journalists
-        db.session.delete(journalist_to_be_deleted)
+        journalist_to_be_deleted.delete()
         db.session.commit()
 
 

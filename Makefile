@@ -132,11 +132,9 @@ safety:  ## Run `safety check` to check python dependencies for vulnerabilities.
 	@for req_file in `find . -type f -name '*requirements.txt'`; do \
 		echo "Checking file $$req_file" \
 		&& safety check \
-		--ignore 39252 \
-		--ignore 39606 \
-		--ignore 39611 \
-		--ignore 39621 \
-		--ignore 41002 \
+		--ignore 42050 \
+		--ignore 42926 \
+		--ignore 42923 \
 		--full-report -r $$req_file \
 		&& echo -e '\n' \
 		|| exit 1; \
@@ -185,6 +183,11 @@ dev:  ## Run the development server in a Docker container.
 	@OFFSET_PORTS='false' DOCKER_BUILD_VERBOSE='true' $(DEVSHELL) $(SDBIN)/run
 	@echo
 
+.PHONY: dev-tor
+dev-tor:  ## Run the development server with onion services in a Docker container.
+	@echo "███ Starting development server..."
+	@OFFSET_PORTS='false' DOCKER_BUILD_VERBOSE='true' USE_TOR='true' $(DEVSHELL) $(SDBIN)/run
+	@echo
 
 .PHONY: staging
 staging:  ## Create a local staging environment in virtual machines (Focal)

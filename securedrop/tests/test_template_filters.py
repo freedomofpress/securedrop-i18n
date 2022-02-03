@@ -14,8 +14,6 @@ from flask import session
 from sh import pybabel
 from .utils.env import TESTS_DIR
 
-os.environ['SECUREDROP_ENV'] = 'test'  # noqa
-
 
 def verify_rel_datetime_format(app):
     with app.test_client() as c:
@@ -23,7 +21,7 @@ def verify_rel_datetime_format(app):
         assert session.get('locale') == "en_US"
         result = template_filters.rel_datetime_format(
             datetime(2016, 1, 1, 1, 1, 1))
-        assert "Jan 01, 2016 01:01 AM" == result
+        assert "January 1, 2016 at 1:01:01 AM UTC" == result
 
         result = template_filters.rel_datetime_format(
             datetime(2016, 1, 1, 1, 1, 1), fmt="yyyy")
@@ -38,7 +36,7 @@ def verify_rel_datetime_format(app):
         assert session.get('locale') == 'fr_FR'
         result = template_filters.rel_datetime_format(
             datetime(2016, 1, 1, 1, 1, 1))
-        assert "janv. 01, 2016 01:01 AM" == result
+        assert "1 janvier 2016 à 01:01:01 TU" == result
 
         result = template_filters.rel_datetime_format(
             datetime(2016, 1, 1, 1, 1, 1), fmt="yyyy")

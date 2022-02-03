@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-from datetime import datetime
+from datetime import datetime, timezone
+from pathlib import Path
 from typing import Union
 
 import werkzeug
@@ -12,11 +13,13 @@ from sqlalchemy.sql import func
 import store
 
 from db import db
+from encryption import EncryptionManager
 from models import SeenReply, Source, SourceStar, Submission, Reply
 from journalist_app.forms import ReplyForm
 from journalist_app.utils import (validate_user, bulk_delete, download,
                                   confirm_bulk_delete, get_source)
 from sdconfig import SDConfig
+from store import Storage
 
 
 def make_blueprint(config: SDConfig) -> Blueprint:
@@ -34,7 +37,7 @@ def make_blueprint(config: SDConfig) -> Blueprint:
                                                 request.form['token']))
 
                 # Update access metadata
-                user.last_access = datetime.utcnow()
+                user.last_access = datetime.now(timezone.utc)
                 db.session.add(user)
                 db.session.commit()
 
@@ -130,21 +133,19 @@ def make_blueprint(config: SDConfig) -> Blueprint:
         g.source.interaction_count += 1
         filename = "{0}-{1}-reply.gpg".format(g.source.interaction_count,
                                               g.source.journalist_filename)
-        current_app.crypto_util.encrypt(
-            form.message.data,
-            [current_app.crypto_util.get_fingerprint(g.filesystem_id),
-             config.JOURNALIST_KEY],
-            output=current_app.storage.path(g.filesystem_id, filename),
+        EncryptionManager.get_default().encrypt_journalist_reply(
+            for_source_with_filesystem_id=g.filesystem_id,
+            reply_in=form.message.data,
+            encrypted_reply_path_out=Path(Storage.get_default().path(g.filesystem_id, filename)),
         )
 
         try:
-            reply = Reply(g.user, g.source, filename)
+            reply = Reply(g.user, g.source, filename, Storage.get_default())
             db.session.add(reply)
-            db.session.flush()
-            seen_reply = SeenReply(reply_id=reply.id, journalist_id=g.user.id)
+            seen_reply = SeenReply(reply=reply, journalist=g.user)
             db.session.add(seen_reply)
             db.session.commit()
-            store.async_add_checksum_for_file(reply)
+            store.async_add_checksum_for_file(reply, Storage.get_default())
         except Exception as exc:
             flash(gettext(
                 "An unexpected error occurred! Please "

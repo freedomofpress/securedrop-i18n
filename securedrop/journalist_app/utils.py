@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import binascii
-import datetime
+from datetime import datetime, timezone
 import os
 from typing import Optional, List, Union, Any
 
@@ -12,10 +12,12 @@ from flask_babel import gettext, ngettext
 from sqlalchemy.exc import IntegrityError
 
 from db import db
+from encryption import EncryptionManager
 from models import (
     BadTokenException,
     FirstOrLastNameError,
     InvalidPasswordLength,
+    InvalidOTPSecretException,
     InvalidUsernameException,
     Journalist,
     LoginThrottledException,
@@ -30,8 +32,9 @@ from models import (
     Submission,
     WrongPasswordException,
     get_one_or_else,
+    HOTP_SECRET_LENGTH,
 )
-from store import add_checksum_for_file
+from store import Storage, add_checksum_for_file
 
 
 def logged_in() -> bool:
@@ -93,6 +96,7 @@ def validate_user(
     try:
         return Journalist.login(username, password, token)
     except (InvalidUsernameException,
+            InvalidOTPSecretException,
             BadTokenException,
             WrongPasswordException,
             LoginThrottledException,
@@ -111,6 +115,11 @@ def validate_user(
                 "Please wait at least {num} seconds before logging in again.",
                 period
             ).format(num=period)
+        elif isinstance(e, InvalidOTPSecretException):
+            login_flashed_msg += ' '
+            login_flashed_msg += gettext(
+                "Your 2FA details are invalid"
+                " - please contact an administrator to reset them.")
         else:
             try:
                 user = Journalist.query.filter_by(
@@ -134,19 +143,24 @@ def validate_hotp_secret(user: Journalist, otp_secret: str) -> bool:
     :param otp_secret: the new HOTP secret
     :return: True if it validates, False if it does not
     """
+    strip_whitespace = otp_secret.replace(' ', '')
+    secret_length = len(strip_whitespace)
+
+    if secret_length != HOTP_SECRET_LENGTH:
+        flash(ngettext(
+                'HOTP secrets are 40 characters long - you have entered {num}.',
+                'HOTP secrets are 40 characters long - you have entered {num}.',
+                secret_length
+            ).format(num=secret_length), "error")
+        return False
+
     try:
         user.set_hotp_secret(otp_secret)
     except (binascii.Error, TypeError) as e:
         if "Non-hexadecimal digit found" in str(e):
             flash(gettext(
-                "Invalid secret format: "
+                "Invalid HOTP secret format: "
                 "please only submit letters A-F and numbers 0-9."),
-                  "error")
-            return False
-        elif "Odd-length string" in str(e):
-            flash(gettext(
-                "Invalid secret format: "
-                "odd-length secret. Did you mistype the secret?"),
                   "error")
             return False
         else:
@@ -202,7 +216,7 @@ def download(
                              include in the ZIP-file.
     """
     try:
-        zf = current_app.storage.get_bulk_archive(submissions, zip_directory=zip_basename)
+        zf = Storage.get_default().get_bulk_archive(submissions, zip_directory=zip_basename)
     except FileNotFoundError:
         flash(
             ngettext(
@@ -219,7 +233,7 @@ def download(
         return redirect(on_error_redirect)
 
     attachment_filename = "{}--{}.zip".format(
-        zip_basename, datetime.datetime.utcnow().strftime("%Y-%m-%d--%H-%M-%S")
+        zip_basename, datetime.now(timezone.utc).strftime("%Y-%m-%d--%H-%M-%S")
     )
 
     mark_seen(submissions, g.user)
@@ -233,9 +247,9 @@ def download(
 
 
 def delete_file_object(file_object: Union[Submission, Reply]) -> None:
-    path = current_app.storage.path(file_object.source.filesystem_id, file_object.filename)
+    path = Storage.get_default().path(file_object.source.filesystem_id, file_object.filename)
     try:
-        current_app.storage.move_to_shredder(path)
+        Storage.get_default().move_to_shredder(path)
     except ValueError as e:
         current_app.logger.error("could not queue file for deletion: %s", e)
         raise
@@ -318,7 +332,7 @@ def col_delete(cols_selected: List[str]) -> werkzeug.Response:
     if len(cols_selected) < 1:
         flash(gettext("No collections selected for deletion."), "error")
     else:
-        now = datetime.datetime.utcnow()
+        now = datetime.now(timezone.utc)
         sources = Source.query.filter(Source.filesystem_id.in_(cols_selected))
         sources.update({Source.deleted_at: now}, synchronize_session="fetch")
         db.session.commit()
@@ -380,16 +394,12 @@ def col_delete_data(cols_selected: List[str]) -> werkzeug.Response:
 def delete_collection(filesystem_id: str) -> None:
     """deletes source account including files and reply key"""
     # Delete the source's collection of submissions
-    path = current_app.storage.path(filesystem_id)
+    path = Storage.get_default().path(filesystem_id)
     if os.path.exists(path):
-        current_app.storage.move_to_shredder(path)
+        Storage.get_default().move_to_shredder(path)
 
     # Delete the source's reply keypair
-    try:
-        current_app.crypto_util.delete_reply_keypair(filesystem_id)
-    except ValueError as e:
-        current_app.logger.error("could not delete reply keypair: %s", e)
-        raise
+    EncryptionManager.get_default().delete_source_key_pair(filesystem_id)
 
     # Delete their entry in the db
     source = get_source(filesystem_id, include_deleted=True)
@@ -490,7 +500,7 @@ def col_download_all(cols_selected: List[str]) -> werkzeug.Response:
 
 
 def serve_file_with_etag(db_obj: Union[Reply, Submission]) -> flask.Response:
-    file_path = current_app.storage.path(db_obj.source.filesystem_id, db_obj.filename)
+    file_path = Storage.get_default().path(db_obj.source.filesystem_id, db_obj.filename)
     response = send_file(file_path,
                          mimetype="application/pgp-encrypted",
                          as_attachment=True,
@@ -508,7 +518,7 @@ class JournalistInterfaceSessionInterface(
         sessions.SecureCookieSessionInterface):
     """A custom session interface that skips storing sessions for api requests but
     otherwise just uses the default behaviour."""
-    def save_session(self, app: flask.Flask, session: Any, response: werkzeug.Response) -> None:
+    def save_session(self, app: flask.Flask, session: Any, response: flask.Response) -> None:
         # If this is an api request do not save the session
         if request.path.split("/")[1] == "api":
             return

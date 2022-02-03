@@ -23,6 +23,7 @@ from sqlalchemy.sql.expression import func
 from html import escape as htmlescape
 
 import journalist_app as journalist_app_module
+from encryption import EncryptionManager, GpgKeyNotFoundError
 from journalist_app.utils import mark_seen
 import models
 from db import db
@@ -30,6 +31,7 @@ from models import (
     InvalidPasswordLength,
     InstanceConfig,
     Journalist,
+    JournalistLoginAttempt,
     Reply,
     SeenFile,
     SeenMessage,
@@ -38,6 +40,7 @@ from models import (
     InvalidUsernameException,
     Submission
 )
+from passphrases import PassphraseGenerator
 from sdconfig import config
 
 from .utils.instrument import InstrumentedApp
@@ -52,14 +55,31 @@ VALID_PASSWORD = 'correct horse battery staple generic passphrase hooray'
 VALID_PASSWORD_2 = 'another correct horse battery staple generic passphrase'
 
 
-def _login_user(app, username, password, otp_secret):
+def _login_user(app, username, password, otp_secret, success=True):
     resp = app.post(url_for('main.login'),
                     data={'username': username,
                           'password': password,
                           'token': TOTP(otp_secret).now()},
                     follow_redirects=True)
     assert resp.status_code == 200
-    assert hasattr(g, 'user')  # ensure logged in
+    assert (success == hasattr(g, 'user'))  # check logged-in vs expected
+
+
+@pytest.mark.parametrize("otp_secret", ['', 'GA','GARBAGE','JHCOGO7VCER3EJ4'])
+def test_user_with_invalid_otp_secret_cannot_login(journalist_app, otp_secret):
+    # Create a user with whitespace at the end of the username
+    with journalist_app.app_context():
+        new_username = 'badotp' + otp_secret
+        user, password = utils.db_helper.init_journalist(is_admin=False)
+        user.otp_secret = otp_secret
+        user.username = new_username
+        db.session.add(user)
+        db.session.commit()
+
+    # Verify that user is *not* able to login successfully
+    with journalist_app.test_client() as app:
+        _login_user(app, new_username, password,
+                    otp_secret, success=False)
 
 
 def test_user_with_whitespace_in_username_can_login(journalist_app):
@@ -629,6 +649,19 @@ def test_admin_deletes_invalid_user_404(journalist_app, test_admin):
         assert resp.status_code == 404
 
 
+def test_admin_deletes_deleted_user_403(journalist_app, test_admin):
+    with journalist_app.app_context():
+        deleted = Journalist.get_deleted()
+        db.session.commit()
+        deleted_id = deleted.id
+
+    with journalist_app.test_client() as app:
+        _login_user(app, test_admin['username'], test_admin['password'],
+                    test_admin['otp_secret'])
+        resp = app.post(url_for('admin.delete_user', user_id=deleted_id))
+        assert resp.status_code == 403
+
+
 @flaky(rerun_filter=utils.flaky_filter_xfail)
 @pytest.mark.parametrize("locale", get_test_locales())
 def test_admin_edits_user_password_error_response(
@@ -775,6 +808,7 @@ def test_admin_add_user_when_username_already_taken(config, journalist_app, test
                     first_name='',
                     last_name='',
                     password=VALID_PASSWORD,
+                    otp_secret='',
                     is_admin=None
                 ),
             )
@@ -890,6 +924,7 @@ def test_admin_add_user_password_too_long_warning(config, journalist_app, test_a
                     first_name='',
                     last_name='',
                     password=overly_long_password,
+                    otp_secret='',
                     is_admin=None
                 ),
             )
@@ -917,6 +952,7 @@ def test_admin_add_user_first_name_too_long_warning(config, journalist_app, test
                 first_name=overly_long_name,
                 last_name='',
                 password=VALID_PASSWORD,
+                otp_secret='',
                 is_admin=None
             ),
         )
@@ -947,6 +983,7 @@ def test_admin_add_user_last_name_too_long_warning(config, journalist_app, test_
                 first_name='',
                 last_name=overly_long_name,
                 password=VALID_PASSWORD,
+                otp_secret='',
                 is_admin=None
             ),
         )
@@ -1012,9 +1049,10 @@ def test_admin_resets_user_hotp_format_non_hexa(
 
         old_secret = journo.otp_secret
 
+        non_hexa_secret='0123456789ABCDZZ0123456789ABCDEF01234567'
         with InstrumentedApp(journalist_app) as ins:
             app.post(url_for('admin.reset_two_factor_hotp'),
-                     data=dict(uid=test_journo['id'], otp_secret='ZZ'))
+                     data=dict(uid=test_journo['id'], otp_secret=non_hexa_secret))
 
             # fetch altered DB object
             journo = Journalist.query.get(journo.id)
@@ -1026,8 +1064,40 @@ def test_admin_resets_user_hotp_format_non_hexa(
             assert journo.is_totp
 
             ins.assert_message_flashed(
-                "Invalid secret format: please only submit letters A-F and "
+                "Invalid HOTP secret format: please only submit letters A-F and "
                 "numbers 0-9.", "error")
+
+
+@pytest.mark.parametrize("the_secret", [' ', '    ', '0123456789ABCDEF0123456789ABCDE'])
+def test_admin_resets_user_hotp_format_too_short(
+        journalist_app, test_admin, test_journo, the_secret):
+
+    with journalist_app.test_client() as app:
+        _login_user(app, test_admin['username'], test_admin['password'],
+                    test_admin['otp_secret'])
+
+        journo = test_journo['journalist']
+        # guard to ensure check below tests the correct condition
+        assert journo.is_totp
+
+        old_secret = journo.otp_secret
+
+        with InstrumentedApp(journalist_app) as ins:
+            app.post(url_for('admin.reset_two_factor_hotp'),
+                     data=dict(uid=test_journo['id'], otp_secret=the_secret))
+
+            # fetch altered DB object
+            journo = Journalist.query.get(journo.id)
+
+            new_secret = journo.otp_secret
+            assert old_secret == new_secret
+
+            # ensure we didn't accidentally enable hotp
+            assert journo.is_totp
+
+            ins.assert_message_flashed(
+                "HOTP secrets are 40 characters long"
+                " - you have entered {num}.".format(num=len(the_secret.replace(' ', ''))), "error")
 
 
 def test_admin_resets_user_hotp(journalist_app, test_admin, test_journo):
@@ -1038,10 +1108,11 @@ def test_admin_resets_user_hotp(journalist_app, test_admin, test_journo):
         journo = test_journo['journalist']
         old_secret = journo.otp_secret
 
+        valid_secret="DEADBEEF01234567DEADBEEF01234567DEADBEEF"
         with InstrumentedApp(journalist_app) as ins:
             resp = app.post(url_for('admin.reset_two_factor_hotp'),
                             data=dict(uid=test_journo['id'],
-                                      otp_secret=123456))
+                                      otp_secret=valid_secret))
 
             # fetch altered DB object
             journo = Journalist.query.get(journo.id)
@@ -1055,36 +1126,12 @@ def test_admin_resets_user_hotp(journalist_app, test_admin, test_journo):
                                                uid=journo.id))
 
 
-def test_admin_resets_user_hotp_format_odd(journalist_app,
-                                           test_admin,
-                                           test_journo):
-    old_secret = test_journo['otp_secret']
-
-    with journalist_app.test_client() as app:
-        _login_user(app, test_admin['username'], test_admin['password'],
-                    test_admin['otp_secret'])
-
-        with InstrumentedApp(journalist_app) as ins:
-            app.post(url_for('admin.reset_two_factor_hotp'),
-                     data=dict(uid=test_journo['id'], otp_secret='Z'))
-
-            ins.assert_message_flashed(
-                "Invalid secret format: "
-                "odd-length secret. Did you mistype the secret?", "error")
-
-    # Re-fetch journalist to get fresh DB instance
-    user = Journalist.query.get(test_journo['id'])
-    new_secret = user.otp_secret
-
-    assert old_secret == new_secret
-
-
 def test_admin_resets_user_hotp_error(mocker,
                                       journalist_app,
                                       test_admin,
                                       test_journo):
 
-    bad_secret = '1234'
+    bad_secret = '0123456789ABCDZZ0123456789ABCDZZ01234567'
     error_message = 'SOMETHING WRONG!'
     mocked_error_logger = mocker.patch('journalist.app.logger.error')
     old_secret = test_journo['otp_secret']
@@ -1116,7 +1163,7 @@ def test_admin_resets_user_hotp_error(mocker,
 
 def test_user_resets_hotp(journalist_app, test_journo):
     old_secret = test_journo['otp_secret']
-    new_secret = 123456
+    new_secret = '0123456789ABCDEF0123456789ABCDEF01234567'
 
     # Precondition
     assert new_secret != old_secret
@@ -1138,39 +1185,19 @@ def test_user_resets_hotp(journalist_app, test_journo):
     assert old_secret != new_secret
 
 
-def test_user_resets_user_hotp_format_odd(journalist_app, test_journo):
-    old_secret = test_journo['otp_secret']
-
-    with journalist_app.test_client() as app:
-        _login_user(app, test_journo['username'], test_journo['password'],
-                    test_journo['otp_secret'])
-
-        with InstrumentedApp(journalist_app) as ins:
-            app.post(url_for('account.reset_two_factor_hotp'),
-                     data=dict(otp_secret='123'))
-            ins.assert_message_flashed(
-                "Invalid secret format: "
-                "odd-length secret. Did you mistype the secret?", "error")
-
-    # Re-fetch journalist to get fresh DB instance
-    user = Journalist.query.get(test_journo['id'])
-    new_secret = user.otp_secret
-
-    assert old_secret == new_secret
-
-
 def test_user_resets_user_hotp_format_non_hexa(journalist_app, test_journo):
     old_secret = test_journo['otp_secret']
 
+    non_hexa_secret='0123456789ABCDZZ0123456789ABCDEF01234567'
     with journalist_app.test_client() as app:
         _login_user(app, test_journo['username'], test_journo['password'],
                     test_journo['otp_secret'])
 
         with InstrumentedApp(journalist_app) as ins:
             app.post(url_for('account.reset_two_factor_hotp'),
-                     data=dict(otp_secret='ZZ'))
+                     data=dict(otp_secret=non_hexa_secret))
             ins.assert_message_flashed(
-                "Invalid secret format: "
+                "Invalid HOTP secret format: "
                 "please only submit letters A-F and numbers 0-9.", "error")
 
     # Re-fetch journalist to get fresh DB instance
@@ -1183,7 +1210,7 @@ def test_user_resets_user_hotp_format_non_hexa(journalist_app, test_journo):
 def test_user_resets_user_hotp_error(mocker,
                                      journalist_app,
                                      test_journo):
-    bad_secret = '1234'
+    bad_secret = '0123456789ABCDZZ0123456789ABCDZZ01234567'
     old_secret = test_journo['otp_secret']
     error_message = 'SOMETHING WRONG!'
     mocked_error_logger = mocker.patch('journalist.app.logger.error')
@@ -1264,7 +1291,7 @@ def test_admin_resets_hotp_with_missing_otp_secret_key(config, journalist_app, t
         )
 
         assert page_language(resp.data) == language_tag(locale)
-        msgids = ['Change Secret']
+        msgids = ['Change HOTP Secret']
         with xfail_untranslated_messages(config, locale, msgids):
             assert gettext(msgids[0]) in resp.data.decode('utf-8')
 
@@ -1327,6 +1354,7 @@ def test_admin_add_user(journalist_app, test_admin):
                                       first_name='',
                                       last_name='',
                                       password=VALID_PASSWORD,
+                                      otp_secret='',
                                       is_admin=None))
 
             new_user = Journalist.query.filter_by(username=username).one()
@@ -1349,6 +1377,7 @@ def test_admin_add_user_with_invalid_username(config, journalist_app, test_admin
                 first_name='',
                 last_name='',
                 password=VALID_PASSWORD,
+                otp_secret='',
                 is_admin=None
             ),
         )
@@ -1363,17 +1392,12 @@ def test_admin_add_user_with_invalid_username(config, journalist_app, test_admin
 @flaky(rerun_filter=utils.flaky_filter_xfail)
 @pytest.mark.parametrize("locale", get_test_locales())
 def test_deleted_user_cannot_login(config, journalist_app, locale):
-    username = 'deleted'
-    uuid = 'deleted'
-
-    # Create a user with username and uuid as deleted
     with journalist_app.app_context():
-        user, password = utils.db_helper.init_journalist(is_admin=False)
-        otp_secret = user.otp_secret
-        user.username = username
-        user.uuid = uuid
-        db.session.add(user)
+        user = Journalist.get_deleted()
+        password = PassphraseGenerator.get_default().generate_passphrase()
+        user.set_password(password)
         db.session.commit()
+        otp_secret = user.otp_secret
 
     with InstrumentedApp(journalist_app) as ins:
         # Verify that deleted user is not able to login
@@ -1381,9 +1405,9 @@ def test_deleted_user_cannot_login(config, journalist_app, locale):
             resp = app.post(
                 url_for('main.login', l=locale),
                 data=dict(
-                    username=username,
+                    username="deleted",
                     password=password,
-                    token=otp_secret
+                    token=TOTP(otp_secret).now()
                 ),
             )
             assert page_language(resp.data) == language_tag(locale)
@@ -1407,21 +1431,16 @@ def test_deleted_user_cannot_login(config, journalist_app, locale):
 @flaky(rerun_filter=utils.flaky_filter_xfail)
 @pytest.mark.parametrize("locale", get_test_locales())
 def test_deleted_user_cannot_login_exception(journalist_app, locale):
-    username = 'deleted'
-    uuid = 'deleted'
-
-    # Create a user with username and uuid as deleted
     with journalist_app.app_context():
-        user, password = utils.db_helper.init_journalist(is_admin=False)
-        otp_secret = user.otp_secret
-        user.username = username
-        user.uuid = uuid
-        db.session.add(user)
+        user = Journalist.get_deleted()
+        password = PassphraseGenerator.get_default().generate_passphrase()
+        user.set_password(password)
         db.session.commit()
+        otp_secret = user.otp_secret
 
     with journalist_app.test_request_context('/'):
         with pytest.raises(InvalidUsernameException):
-            Journalist.login(username, password, TOTP(otp_secret).now())
+            Journalist.login("deleted", password, TOTP(otp_secret).now())
 
 
 @flaky(rerun_filter=utils.flaky_filter_xfail)
@@ -1433,7 +1452,13 @@ def test_admin_add_user_without_username(config, journalist_app, test_admin, loc
 
         resp = app.post(
             url_for('admin.add_user', l=locale),
-            data=dict(username='', password=VALID_PASSWORD, is_admin=None),
+            data=dict(
+                username='',
+                first_name='',
+                last_name='',
+                password=VALID_PASSWORD,
+                otp_secret='',
+                is_admin=None),
         )
 
         assert page_language(resp.data) == language_tag(locale)
@@ -1455,8 +1480,11 @@ def test_admin_add_user_too_short_username(config, journalist_app, test_admin, l
             url_for('admin.add_user', l=locale),
             data=dict(
                 username=username,
+                first_name='',
+                last_name='',
                 password='pentagonpapers',
                 password_again='pentagonpapers',
+                otp_secret='',
                 is_admin=None
             ),
         )
@@ -1512,6 +1540,40 @@ def test_admin_add_user_yubikey_odd_length(journalist_app, test_admin, locale, s
                 ).format(num=len(secret))
                 in resp.data.decode("utf-8")
             )
+
+@flaky(rerun_filter=utils.flaky_filter_xfail)
+@pytest.mark.parametrize(
+    "locale, secret",
+    (
+        (locale, ' ' *i)
+        for locale in get_test_locales()
+        for i in range(3)
+    )
+)
+def test_admin_add_user_yubikey_blank_secret(journalist_app, test_admin, locale, secret):
+    with journalist_app.test_client() as app:
+        _login_user(app, test_admin['username'], test_admin['password'],
+                    test_admin['otp_secret'])
+
+        resp = app.post(
+            url_for('admin.add_user', l=locale),
+            data=dict(
+                username='dellsberg',
+                first_name='',
+                last_name='',
+                password=VALID_PASSWORD,
+                password_again=VALID_PASSWORD,
+                is_admin=None,
+                is_hotp=True,
+                otp_secret=secret
+            ),
+        )
+
+        assert page_language(resp.data) == language_tag(locale)
+        msgids = ['The "otp_secret" field is required when "is_hotp" is set.']
+        with xfail_untranslated_messages(config, locale, msgids):
+            # Should redirect to the token verification page
+            assert gettext(msgids[0]) in resp.data.decode('utf-8')
 
 
 @flaky(rerun_filter=utils.flaky_filter_xfail)
@@ -1584,6 +1646,7 @@ def test_admin_sets_user_to_admin(journalist_app, test_admin):
                         data=dict(username=new_user,
                                   first_name='',
                                   last_name='',
+                                  otp_secret='',
                                   password=VALID_PASSWORD,
                                   is_admin=None))
         assert resp.status_code in (200, 302)
@@ -1612,6 +1675,7 @@ def test_admin_renames_user(journalist_app, test_admin):
                                   first_name='',
                                   last_name='',
                                   password=VALID_PASSWORD,
+                                  otp_secret='',
                                   is_admin=None))
         assert resp.status_code in (200, 302)
         journo = Journalist.query.filter(Journalist.username == new_user).one()
@@ -1640,6 +1704,7 @@ def test_admin_adds_first_name_last_name_to_user(journalist_app, test_admin):
                                   first_name='',
                                   last_name='',
                                   password=VALID_PASSWORD,
+                                  otp_secret='',
                                   is_admin=None))
         assert resp.status_code in (200, 302)
         journo = Journalist.query.filter(Journalist.username == new_user).one()
@@ -1672,6 +1737,7 @@ def test_admin_adds_invalid_first_last_name_to_user(config, journalist_app, test
                 first_name='',
                 last_name='',
                 password=VALID_PASSWORD,
+                otp_secret='',
                 is_admin=None
             )
         )
@@ -1723,6 +1789,7 @@ def test_admin_add_user_integrity_error(config, journalist_app, test_admin, mock
                     first_name='',
                     last_name='',
                     password=VALID_PASSWORD,
+                    otp_secret='',
                     is_admin=None
                 ),
             )
@@ -2199,11 +2266,11 @@ def test_passphrase_migration_on_reset(journalist_app):
     assert journalist.valid_password(VALID_PASSWORD)
 
 
-def test_journalist_reply_view(journalist_app, test_source, test_journo):
-    source, _ = utils.db_helper.init_source()
+def test_journalist_reply_view(journalist_app, test_source, test_journo, app_storage):
+    source, _ = utils.db_helper.init_source(app_storage)
     journalist, _ = utils.db_helper.init_journalist()
-    submissions = utils.db_helper.submit(source, 1)
-    replies = utils.db_helper.reply(journalist, source, 1)
+    submissions = utils.db_helper.submit(app_storage, source, 1)
+    replies = utils.db_helper.reply(app_storage, journalist, source, 1)
 
     subm_url = url_for('col.download_single_file',
                        filesystem_id=submissions[0].source.filesystem_id,
@@ -2343,6 +2410,7 @@ def test_regenerate_totp(journalist_app, test_journo):
 
 def test_edit_hotp(journalist_app, test_journo):
     old_secret = test_journo['otp_secret']
+    valid_secret="DEADBEEF01234567DEADBEEF01234567DADEFEEB"
 
     with journalist_app.test_client() as app:
         _login_user(app, test_journo['username'], test_journo['password'],
@@ -2350,7 +2418,7 @@ def test_edit_hotp(journalist_app, test_journo):
 
         with InstrumentedApp(journalist_app) as ins:
             resp = app.post(url_for('account.reset_two_factor_hotp'),
-                            data=dict(otp_secret=123456))
+                            data=dict(otp_secret=valid_secret))
 
             new_secret = Journalist.query.get(test_journo['id']).otp_secret
 
@@ -2363,7 +2431,8 @@ def test_edit_hotp(journalist_app, test_journo):
 
 def test_delete_data_deletes_submissions_retaining_source(journalist_app,
                                                           test_journo,
-                                                          test_source):
+                                                          test_source,
+                                                          app_storage):
     """Verify that when only a source's data is deleted, the submissions
     are deleted but the source is not."""
 
@@ -2371,8 +2440,8 @@ def test_delete_data_deletes_submissions_retaining_source(journalist_app,
         source = Source.query.get(test_source['id'])
         journo = Journalist.query.get(test_journo['id'])
 
-        utils.db_helper.submit(source, 2)
-        utils.db_helper.reply(journo, source, 2)
+        utils.db_helper.submit(app_storage, source, 2)
+        utils.db_helper.reply(app_storage, journo, source, 2)
 
         assert len(source.collection) == 4
 
@@ -2387,7 +2456,8 @@ def test_delete_data_deletes_submissions_retaining_source(journalist_app,
 
 def test_delete_source_deletes_submissions(journalist_app,
                                            test_journo,
-                                           test_source):
+                                           test_source,
+                                           app_storage):
     """Verify that when a source is deleted, the submissions that
     correspond to them are also deleted."""
 
@@ -2395,8 +2465,8 @@ def test_delete_source_deletes_submissions(journalist_app,
         source = Source.query.get(test_source['id'])
         journo = Journalist.query.get(test_journo['id'])
 
-        utils.db_helper.submit(source, 2)
-        utils.db_helper.reply(journo, source, 2)
+        utils.db_helper.submit(app_storage, source, 2)
+        utils.db_helper.reply(app_storage, journo, source, 2)
 
         journalist_app_module.utils.delete_collection(
             test_source['filesystem_id'])
@@ -2405,7 +2475,7 @@ def test_delete_source_deletes_submissions(journalist_app,
         assert res is None
 
 
-def test_delete_collection_updates_db(journalist_app, test_journo, test_source):
+def test_delete_collection_updates_db(journalist_app, test_journo, test_source, app_storage):
     """
     Verify that when a source is deleted, the Source record is deleted and all records associated
     with the source are deleted.
@@ -2414,11 +2484,11 @@ def test_delete_collection_updates_db(journalist_app, test_journo, test_source):
     with journalist_app.app_context():
         source = Source.query.get(test_source["id"])
         journo = Journalist.query.get(test_journo["id"])
-        files = utils.db_helper.submit(source, 2)
+        files = utils.db_helper.submit(app_storage, source, 2)
         mark_seen(files, journo)
-        messages = utils.db_helper.submit(source, 2)
+        messages = utils.db_helper.submit(app_storage, source, 2)
         mark_seen(messages, journo)
-        replies = utils.db_helper.reply(journo, source, 2)
+        replies = utils.db_helper.reply(app_storage, journo, source, 2)
         mark_seen(replies, journo)
 
         journalist_app_module.utils.delete_collection(test_source["filesystem_id"])
@@ -2457,7 +2527,8 @@ def test_delete_collection_updates_db(journalist_app, test_journo, test_source):
 
 def test_delete_source_deletes_source_key(journalist_app,
                                           test_source,
-                                          test_journo):
+                                          test_journo,
+                                          app_storage):
     """Verify that when a source is deleted, the PGP key that corresponds
     to them is also deleted."""
 
@@ -2465,27 +2536,26 @@ def test_delete_source_deletes_source_key(journalist_app,
         source = Source.query.get(test_source['id'])
         journo = Journalist.query.get(test_journo['id'])
 
-        utils.db_helper.submit(source, 2)
-        utils.db_helper.reply(journo, source, 2)
+        utils.db_helper.submit(app_storage, source, 2)
+        utils.db_helper.reply(app_storage, journo, source, 2)
 
         # Source key exists
-        source_key = current_app.crypto_util.get_fingerprint(
-            test_source['filesystem_id'])
-        assert source_key is not None
+        encryption_mgr = EncryptionManager.get_default()
+        assert encryption_mgr.get_source_key_fingerprint(test_source['filesystem_id'])
 
         journalist_app_module.utils.delete_collection(
             test_source['filesystem_id'])
 
         # Source key no longer exists
-        source_key = current_app.crypto_util.get_fingerprint(
-            test_source['filesystem_id'])
-        assert source_key is None
+        with pytest.raises(GpgKeyNotFoundError):
+            encryption_mgr.get_source_key_fingerprint(test_source['filesystem_id'])
 
 
 def test_delete_source_deletes_docs_on_disk(journalist_app,
                                             test_source,
                                             test_journo,
-                                            config):
+                                            config,
+                                            app_storage):
     """Verify that when a source is deleted, the encrypted documents that
     exist on disk is also deleted."""
 
@@ -2493,8 +2563,8 @@ def test_delete_source_deletes_docs_on_disk(journalist_app,
         source = Source.query.get(test_source['id'])
         journo = Journalist.query.get(test_journo['id'])
 
-        utils.db_helper.submit(source, 2)
-        utils.db_helper.reply(journo, source, 2)
+        utils.db_helper.submit(app_storage, source, 2)
+        utils.db_helper.reply(app_storage, journo, source, 2)
 
         dir_source_docs = os.path.join(config.STORE_DIR, test_source['filesystem_id'])
         assert os.path.exists(dir_source_docs)
@@ -2510,7 +2580,8 @@ def test_delete_source_deletes_docs_on_disk(journalist_app,
 def test_bulk_delete_deletes_db_entries(journalist_app,
                                         test_source,
                                         test_journo,
-                                        config):
+                                        config,
+                                        app_storage):
     """
     Verify that when files are deleted, the corresponding db entries are
     also deleted.
@@ -2520,8 +2591,8 @@ def test_bulk_delete_deletes_db_entries(journalist_app,
         source = Source.query.get(test_source['id'])
         journo = Journalist.query.get(test_journo['id'])
 
-        utils.db_helper.submit(source, 2)
-        utils.db_helper.reply(journo, source, 2)
+        utils.db_helper.submit(app_storage, source, 2)
+        utils.db_helper.reply(app_storage, journo, source, 2)
 
         dir_source_docs = os.path.join(config.STORE_DIR, test_source['filesystem_id'])
         assert os.path.exists(dir_source_docs)
@@ -2553,18 +2624,19 @@ def test_bulk_delete_deletes_db_entries(journalist_app,
 def test_bulk_delete_works_when_files_absent(journalist_app,
                                              test_source,
                                              test_journo,
-                                             config):
+                                             config,
+                                             app_storage):
     """
     Verify that when files are deleted but are already missing,
-    the corresponding db entries are still
+    the corresponding db entries are still deleted
     """
 
     with journalist_app.app_context():
         source = Source.query.get(test_source['id'])
         journo = Journalist.query.get(test_journo['id'])
 
-        utils.db_helper.submit(source, 2)
-        utils.db_helper.reply(journo, source, 2)
+        utils.db_helper.submit(app_storage, source, 2)
+        utils.db_helper.reply(app_storage, journo, source, 2)
 
         dir_source_docs = os.path.join(config.STORE_DIR, test_source['filesystem_id'])
         assert os.path.exists(dir_source_docs)
@@ -2644,12 +2716,12 @@ def test_render_locales(config, journalist_app, test_journo, test_source):
 
 
 def test_download_selected_submissions_and_replies(
-    journalist_app, test_journo, test_source
+    journalist_app, test_journo, test_source, app_storage
 ):
     journo = Journalist.query.get(test_journo["id"])
     source = Source.query.get(test_source["id"])
-    submissions = utils.db_helper.submit(source, 4)
-    replies = utils.db_helper.reply(journo, source, 4)
+    submissions = utils.db_helper.submit(app_storage, source, 4)
+    replies = utils.db_helper.reply(app_storage, journo, source, 4)
     selected_submissions = random.sample(submissions, 2)
     selected_replies = random.sample(replies, 2)
     selected = [submission.filename for submission in selected_submissions + selected_replies]
@@ -2714,12 +2786,12 @@ def test_download_selected_submissions_and_replies(
 
 
 def test_download_selected_submissions_and_replies_previously_seen(
-    journalist_app, test_journo, test_source
+    journalist_app, test_journo, test_source, app_storage
 ):
     journo = Journalist.query.get(test_journo["id"])
     source = Source.query.get(test_source["id"])
-    submissions = utils.db_helper.submit(source, 4)
-    replies = utils.db_helper.reply(journo, source, 4)
+    submissions = utils.db_helper.submit(app_storage, source, 4)
+    replies = utils.db_helper.reply(app_storage, journo, source, 4)
     selected_submissions = random.sample(submissions, 2)
     selected_replies = random.sample(replies, 2)
     selected = [submission.filename for submission in selected_submissions + selected_replies]
@@ -2792,12 +2864,12 @@ def test_download_selected_submissions_and_replies_previously_seen(
 
 
 def test_download_selected_submissions_previously_downloaded(
-    journalist_app, test_journo, test_source
+    journalist_app, test_journo, test_source, app_storage
 ):
     journo = Journalist.query.get(test_journo["id"])
     source = Source.query.get(test_source["id"])
-    submissions = utils.db_helper.submit(source, 4)
-    replies = utils.db_helper.reply(journo, source, 4)
+    submissions = utils.db_helper.submit(app_storage, source, 4)
+    replies = utils.db_helper.reply(app_storage, journo, source, 4)
     selected_submissions = random.sample(submissions, 2)
     selected_replies = random.sample(replies, 2)
     selected = [submission.filename for submission in selected_submissions + selected_replies]
@@ -2854,13 +2926,13 @@ def test_download_selected_submissions_previously_downloaded(
 
 
 @pytest.fixture(scope="function")
-def selected_missing_files(journalist_app, test_source):
+def selected_missing_files(journalist_app, test_source, app_storage):
     """Fixture for the download tests with missing files in storage."""
     source = Source.query.get(test_source["id"])
-    submissions = utils.db_helper.submit(source, 2)
+    submissions = utils.db_helper.submit(app_storage, source, 2)
     selected = sorted([s.filename for s in submissions])
 
-    storage_path = Path(journalist_app.storage.storage_path)
+    storage_path = Path(app_storage.storage_path)
     msg_files = sorted([p for p in storage_path.rglob("*") if p.is_file()])
     assert len(msg_files) == 2
     for file in msg_files:
@@ -2870,7 +2942,7 @@ def selected_missing_files(journalist_app, test_source):
 
 
 def test_download_selected_submissions_missing_files(
-    journalist_app, test_journo, test_source, mocker, selected_missing_files
+    journalist_app, test_journo, test_source, mocker, selected_missing_files, app_storage
 ):
     """Tests download of selected submissions with missing files in storage."""
     mocked_error_logger = mocker.patch('journalist.app.logger.error')
@@ -2897,7 +2969,7 @@ def test_download_selected_submissions_missing_files(
     expected_calls = []
     for file in selected_missing_files:
         missing_file = (
-            Path(journalist_app.storage.storage_path)
+            Path(app_storage.storage_path)
             .joinpath(test_source["filesystem_id"])
             .joinpath(file)
             .as_posix()
@@ -2908,7 +2980,7 @@ def test_download_selected_submissions_missing_files(
 
 
 def test_download_single_submission_missing_file(
-    journalist_app, test_journo, test_source, mocker, selected_missing_files
+    journalist_app, test_journo, test_source, mocker, selected_missing_files, app_storage
 ):
     """Tests download of single submissions with missing files in storage."""
     mocked_error_logger = mocker.patch('journalist.app.logger.error')
@@ -2933,7 +3005,7 @@ def test_download_single_submission_missing_file(
     assert resp.status_code == 302
 
     missing_file = (
-        Path(journalist_app.storage.storage_path)
+        Path(app_storage.storage_path)
         .joinpath(test_source["filesystem_id"])
         .joinpath(missing_file)
         .as_posix()
@@ -2944,14 +3016,14 @@ def test_download_single_submission_missing_file(
     )
 
 
-def test_download_unread_all_sources(journalist_app, test_journo):
+def test_download_unread_all_sources(journalist_app, test_journo, app_storage):
     """
     Test that downloading all unread creates a zip that contains all unread submissions from the
     selected sources and marks these submissions as seen.
     """
     journo = Journalist.query.get(test_journo["id"])
 
-    bulk = utils.db_helper.bulk_setup_for_seen_only(journo)
+    bulk = utils.db_helper.bulk_setup_for_seen_only(journo, app_storage)
 
     with journalist_app.test_client() as app:
         _login_user(app, journo.username, test_journo["password"], test_journo["otp_secret"])
@@ -3020,14 +3092,14 @@ def test_download_unread_all_sources(journalist_app, test_journo):
                 assert zipinfo
 
 
-def test_download_all_selected_sources(journalist_app, test_journo):
+def test_download_all_selected_sources(journalist_app, test_journo, app_storage):
     """
     Test that downloading all selected sources creates zip that contains all submissions from the
     selected sources and marks these submissions as seen.
     """
     journo = Journalist.query.get(test_journo["id"])
 
-    bulk = utils.db_helper.bulk_setup_for_seen_only(journo)
+    bulk = utils.db_helper.bulk_setup_for_seen_only(journo, app_storage)
 
     with journalist_app.test_client() as app:
         _login_user(app, journo.username, test_journo["password"], test_journo["otp_secret"])
@@ -3202,14 +3274,14 @@ def test_col_process_aborts_with_bad_action(journalist_app, test_journo):
 
 
 def test_col_process_successfully_deletes_multiple_sources(journalist_app,
-                                                           test_journo):
+                                                           test_journo, app_storage):
     # Create two sources with one submission each
-    source_1, _ = utils.db_helper.init_source()
-    utils.db_helper.submit(source_1, 1)
-    source_2, _ = utils.db_helper.init_source()
-    utils.db_helper.submit(source_2, 1)
-    source_3, _ = utils.db_helper.init_source()
-    utils.db_helper.submit(source_3, 1)
+    source_1, _ = utils.db_helper.init_source(app_storage)
+    utils.db_helper.submit(app_storage, source_1, 1)
+    source_2, _ = utils.db_helper.init_source(app_storage)
+    utils.db_helper.submit(app_storage, source_2, 1)
+    source_3, _ = utils.db_helper.init_source(app_storage)
+    utils.db_helper.submit(app_storage, source_3, 1)
 
     with journalist_app.test_client() as app:
         _login_user(app, test_journo['username'], test_journo['password'],
@@ -3235,8 +3307,9 @@ def test_col_process_successfully_deletes_multiple_sources(journalist_app,
 
 def test_col_process_successfully_stars_sources(journalist_app,
                                                 test_journo,
-                                                test_source):
-    utils.db_helper.submit(test_source['source'], 1)
+                                                test_source,
+                                                app_storage):
+    utils.db_helper.submit(app_storage, test_source['source'], 1)
 
     with journalist_app.test_client() as app:
         _login_user(app, test_journo['username'], test_journo['password'],
@@ -3255,8 +3328,9 @@ def test_col_process_successfully_stars_sources(journalist_app,
 
 def test_col_process_successfully_unstars_sources(journalist_app,
                                                   test_journo,
-                                                  test_source):
-    utils.db_helper.submit(test_source['source'], 1)
+                                                  test_source,
+                                                  app_storage):
+    utils.db_helper.submit(app_storage, test_source['source'], 1)
 
     with journalist_app.test_client() as app:
         _login_user(app, test_journo['username'], test_journo['password'],
@@ -3310,3 +3384,46 @@ def test_app_error_handlers_defined(journalist_app):
     for status_code in [400, 401, 403, 404, 500]:
         # This will raise KeyError if an app-wide error handler is not defined
         assert journalist_app.error_handler_spec[None][status_code]
+
+
+def test_lazy_deleted_journalist_creation(journalist_app):
+    """test lazy creation of "deleted" jousrnalist works"""
+    not_found = Journalist.query.filter_by(username='deleted').one_or_none()
+    assert not_found is None, "deleted journalist doesn't exist yet"
+    deleted = Journalist.get_deleted()
+    db.session.commit()
+    # Can be found as a normal Journalist object
+    found = Journalist.query.filter_by(username='deleted').one()
+    assert deleted.uuid == found.uuid
+    assert found.is_deleted_user() is True
+    # And get_deleted() now returns the same instance
+    deleted2 = Journalist.get_deleted()
+    assert deleted.uuid == deleted2.uuid
+
+
+def test_journalist_deletion(journalist_app, app_storage):
+    """test deleting a journalist and see data reassociated to "deleted" journalist"""
+    # Create a journalist that's seen two replies and has a login attempt
+    source, _ = utils.db_helper.init_source(app_storage)
+    journalist, _ = utils.db_helper.init_journalist()
+    db.session.add(JournalistLoginAttempt(journalist))
+    replies = utils.db_helper.reply(app_storage, journalist, source, 2)
+    # Create a second journalist that's seen those replies
+    journalist2, _ = utils.db_helper.init_journalist()
+    for reply in replies:
+        db.session.add(SeenReply(reply=reply, journalist=journalist2))
+    db.session.commit()
+    # Only one login attempt in the table
+    assert len(JournalistLoginAttempt.query.all()) == 1
+    # And four SeenReplys
+    assert len(SeenReply.query.all()) == 4
+    # Delete the journalists
+    journalist.delete()
+    journalist2.delete()
+    db.session.commit()
+    # Verify the "deleted" journalist has 2 associated rows of both types
+    deleted = Journalist.get_deleted()
+    assert len(Reply.query.filter_by(journalist_id=deleted.id).all()) == 2
+    assert len(SeenReply.query.filter_by(journalist_id=deleted.id).all()) == 2
+    # And there are no login attempts
+    assert JournalistLoginAttempt.query.all() == []

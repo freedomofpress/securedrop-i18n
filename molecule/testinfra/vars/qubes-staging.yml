@@ -1,10 +1,11 @@
 ---
 # Testinfra vars file for app-staigng.
 wanted_apache_headers:
-  X-XSS-Protection: "1; mode=block"
   X-Content-Type-Options: nosniff
-  X-Download-Options: noopen
-  Content-Security-Policy: "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self';"
+  Content-Security-Policy: "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; frame-ancestors 'none';"
+  Cross-Origin-Opener-Policy: "same-origin"
+  Cross-Origin-Embedder-Policy: "same-origin"
+  Cross-Origin-Resource-Policy: "same-site"
 
 securedrop_venv: /opt/venvs/securedrop-app-code
 securedrop_venv_bin: "/opt/venvs/securedrop-app-code/bin"
@@ -29,7 +30,7 @@ app_ip: 10.137.0.50
 
 pip_deps:
   - name: 'Flask'
-    version: '1.0.2'
+    version: '2.0.2'
 
 apparmor_complain: []
 
@@ -185,6 +186,6 @@ log_events_with_ossec_alerts:
 
 fpf_apt_repo_url: "https://apt-test.freedom.press"
 
-grsec_version_focal: "5.4.136"
+grsec_version_focal: "5.15.18"
 
 daily_reboot_time: "4"

@@ -7,20 +7,21 @@ import re
 import zipfile
 from base64 import b32encode
 from binascii import unhexlify
-from distutils.version import StrictVersion
 from io import BytesIO
+import mock
 
 from bs4 import BeautifulSoup
-from flask import current_app, escape, g, session
+from flask import escape, g, session
 from pyotp import HOTP, TOTP
 
 import journalist_app as journalist_app_module
 from db import db
+from encryption import EncryptionManager
+from store import Storage
 from source_app.session_manager import SessionManager
 from . import utils
+from .test_encryption import import_journalist_private_key
 from .utils.instrument import InstrumentedApp
-
-os.environ['SECUREDROP_ENV'] = 'test'  # noqa
 
 
 # Seed the RNG for deterministic testing
@@ -37,7 +38,7 @@ def _login_user(app, user_dict):
     assert hasattr(g, 'user')  # ensure logged in
 
 
-def test_submit_message(journalist_app, source_app, test_journo):
+def test_submit_message(journalist_app, source_app, test_journo, app_storage):
     """When a source creates an account, test that a new entry appears
     in the journalist interface"""
     test_msg = "This is a test message."
@@ -68,25 +69,28 @@ def test_submit_message(journalist_app, source_app, test_journo):
 
         # The source should have a "download unread" link that
         # says "1 unread"
-        col = soup.select('ul#cols > li')[0]
-        unread_span = col.select('span.unread a')[0]
+        col = soup.select('table#collections tr.source')[0]
+        unread_span = col.select('td.unread a')[0]
         assert "1 unread" in unread_span.get_text()
 
-        col_url = soup.select('ul#cols > li a')[0]['href']
+        col_url = soup.select('table#collections th.designation a')[0]['href']
         resp = app.get(col_url)
         assert resp.status_code == 200
         text = resp.data.decode('utf-8')
         soup = BeautifulSoup(text, 'html.parser')
-        submission_url = soup.select('ul#submissions li a')[0]['href']
+        submission_url = soup.select('table#submissions th.filename a')[0]['href']
         assert "-msg" in submission_url
-        span = soup.select('ul#submissions li span.info span')[0]
-        assert re.compile(r'\d+ bytes').match(span['title'])
+        size = soup.select('table#submissions td.info')[0]
+        assert re.compile(r'\d+ bytes').match(size['title'])
 
         resp = app.get(submission_url)
         assert resp.status_code == 200
-        decrypted_data = journalist_app.crypto_util.gpg.decrypt(resp.data)
-        assert decrypted_data.ok
-        assert decrypted_data.data.decode('utf-8') == test_msg
+
+        encryption_mgr = EncryptionManager.get_default()
+        with import_journalist_private_key(encryption_mgr):
+            decryption_result = encryption_mgr._gpg.decrypt(resp.data)
+        assert decryption_result.ok
+        assert decryption_result.data.decode('utf-8') == test_msg
 
         # delete submission
         resp = app.get(col_url)
@@ -94,7 +98,8 @@ def test_submit_message(journalist_app, source_app, test_journo):
         text = resp.data.decode('utf-8')
         soup = BeautifulSoup(text, 'html.parser')
         doc_name = soup.select(
-            'ul > li > input[name="doc_names_selected"]')[0]['value']
+            'table#submissions > tr.submission > td.status input[name="doc_names_selected"]'
+            )[0]['value']
         resp = app.post('/bulk', data=dict(
             action='confirm_delete',
             filesystem_id=filesystem_id,
@@ -131,12 +136,12 @@ def test_submit_message(journalist_app, source_app, test_journo):
         # needs to wait for the worker to get the job and execute it
         def assertion():
             assert not (
-                os.path.exists(current_app.storage.path(filesystem_id,
-                                                        doc_name)))
+                os.path.exists(app_storage.path(filesystem_id,
+                                                doc_name)))
         utils.asynchronous.wait_for_assertion(assertion)
 
 
-def test_submit_file(journalist_app, source_app, test_journo):
+def test_submit_file(journalist_app, source_app, test_journo, app_storage):
     """When a source creates an account, test that a new entry appears
     in the journalist interface"""
     test_file_contents = b"This is a test file."
@@ -167,23 +172,26 @@ def test_submit_file(journalist_app, source_app, test_journo):
 
         # The source should have a "download unread" link that says
         # "1 unread"
-        col = soup.select('ul#cols > li')[0]
-        unread_span = col.select('span.unread a')[0]
+        col = soup.select('table#collections tr.source')[0]
+        unread_span = col.select('td.unread a')[0]
         assert "1 unread" in unread_span.get_text()
 
-        col_url = soup.select('ul#cols > li a')[0]['href']
+        col_url = soup.select('table#collections th.designation a')[0]['href']
         resp = app.get(col_url)
         assert resp.status_code == 200
         text = resp.data.decode('utf-8')
         soup = BeautifulSoup(text, 'html.parser')
-        submission_url = soup.select('ul#submissions li a')[0]['href']
+        submission_url = soup.select('table#submissions th.filename a')[0]['href']
         assert "-doc" in submission_url
-        span = soup.select('ul#submissions li span.info span')[0]
-        assert re.compile(r'\d+ bytes').match(span['title'])
+        size = soup.select('table#submissions td.info')[0]
+        assert re.compile(r'\d+ bytes').match(size['title'])
 
         resp = app.get(submission_url)
         assert resp.status_code == 200
-        decrypted_data = journalist_app.crypto_util.gpg.decrypt(resp.data)
+
+        encryption_mgr = EncryptionManager.get_default()
+        with import_journalist_private_key(encryption_mgr):
+            decrypted_data = encryption_mgr._gpg.decrypt(resp.data)
         assert decrypted_data.ok
 
         sio = BytesIO(decrypted_data.data)
@@ -200,7 +208,8 @@ def test_submit_file(journalist_app, source_app, test_journo):
         text = resp.data.decode('utf-8')
         soup = BeautifulSoup(text, 'html.parser')
         doc_name = soup.select(
-            'ul > li > input[name="doc_names_selected"]')[0]['value']
+            'table#submissions > tr.submission > td.status input[name="doc_names_selected"]'
+            )[0]['value']
         resp = app.post('/bulk', data=dict(
             action='confirm_delete',
             filesystem_id=filesystem_id,
@@ -237,8 +246,7 @@ def test_submit_file(journalist_app, source_app, test_journo):
         # needs to wait for the worker to get the job and execute it
         def assertion():
             assert not (
-                os.path.exists(current_app.storage.path(filesystem_id,
-                                                        doc_name)))
+                os.path.exists(app_storage.path(filesystem_id, doc_name)))
         utils.asynchronous.wait_for_assertion(assertion)
 
 
@@ -267,12 +275,12 @@ def _helper_test_reply(journalist_app, source_app, config, test_journo,
         text = resp.data.decode('utf-8')
         assert "Sources" in text
         soup = BeautifulSoup(resp.data, 'html.parser')
-        col_url = soup.select('ul#cols > li a')[0]['href']
+        col_url = soup.select('table#collections tr.source > th.designation a')[0]['href']
 
         resp = app.get(col_url)
         assert resp.status_code == 200
 
-    assert current_app.crypto_util.get_fingerprint(filesystem_id) is not None
+    assert EncryptionManager.get_default().get_source_key_fingerprint(filesystem_id)
 
     # Create 2 replies to test deleting on journalist and source interface
     with journalist_app.test_client() as app:
@@ -310,11 +318,8 @@ def _helper_test_reply(journalist_app, source_app, config, test_journo,
 
     zf = zipfile.ZipFile(BytesIO(resp.data), 'r')
     data = zf.read(zf.namelist()[0])
-    _can_decrypt_with_key(journalist_app, data)
-    _can_decrypt_with_key(
-        journalist_app,
-        data,
-        source_user.gpg_secret)
+    _can_decrypt_with_journalist_secret_key(data)
+    _can_decrypt_with_source_secret_key(data, source_user.gpg_secret)
 
     # Test deleting reply on the journalist interface
     last_reply_number = len(
@@ -377,33 +382,30 @@ def _helper_filenames_delete(journalist_app, soup, i):
 
     # Make sure the files were deleted from the filesystem
     def assertion():
-        assert not any([os.path.exists(current_app.storage.path(filesystem_id,
-                                                                doc_name))
+        assert not any([os.path.exists(Storage.get_default().path(filesystem_id,
+                                                                  doc_name))
                         for doc_name in checkbox_values])
     utils.asynchronous.wait_for_assertion(assertion)
 
 
-def _can_decrypt_with_key(journalist_app, msg, source_gpg_secret=None):
-    """
-    Test that the given GPG message can be decrypted.
-    """
+def _can_decrypt_with_journalist_secret_key(msg: bytes) -> None:
+    encryption_mgr = EncryptionManager.get_default()
+    with import_journalist_private_key(encryption_mgr):
+        # For GPG 2.1+, a non null passphrase _must_ be passed to decrypt()
+        decryption_result = encryption_mgr._gpg.decrypt(msg, passphrase="dummy passphrase")
 
-    # For GPG 2.1+, a non null passphrase _must_ be passed to decrypt()
-    using_gpg_2_1 = StrictVersion(
-        journalist_app.crypto_util.gpg.binary_version) >= StrictVersion('2.1')
-
-    if source_gpg_secret:
-        final_passphrase = source_gpg_secret
-    elif using_gpg_2_1:
-        final_passphrase = 'dummy passphrase'
-    else:
-        final_passphrase = None
-
-    decrypted_data = journalist_app.crypto_util.gpg.decrypt(
-        msg, passphrase=final_passphrase)
-    assert decrypted_data.ok, \
+    assert decryption_result.ok, \
         "Could not decrypt msg with key, gpg says: {}" \
-        .format(decrypted_data.stderr)
+        .format(decryption_result.stderr)
+
+
+def _can_decrypt_with_source_secret_key(msg: bytes, source_gpg_secret: str) -> None:
+    encryption_mgr = EncryptionManager.get_default()
+    decryption_result = encryption_mgr._gpg.decrypt(msg, passphrase=source_gpg_secret)
+
+    assert decryption_result.ok, \
+        "Could not decrypt msg with key, gpg says: {}" \
+        .format(decryption_result.stderr)
 
 
 def test_reply_normal(journalist_app,
@@ -413,10 +415,11 @@ def test_reply_normal(journalist_app,
     '''Test for regression on #1360 (failure to encode bytes before calling
        gpg functions).
     '''
-    journalist_app.crypto_util.gpg._encoding = "ansi_x3.4_1968"
-    source_app.crypto_util.gpg._encoding = "ansi_x3.4_1968"
-    _helper_test_reply(journalist_app, source_app, config, test_journo,
-                       "This is a test reply.", True)
+    encryption_mgr = EncryptionManager.get_default()
+    with mock.patch.object(encryption_mgr._gpg, "_encoding", "ansi_x3.4_1968"):
+        _helper_test_reply(
+            journalist_app, source_app, config, test_journo, "This is a test reply.", True
+        )
 
 
 def test_unicode_reply_with_ansi_env(journalist_app,
@@ -431,10 +434,11 @@ def test_unicode_reply_with_ansi_env(journalist_app,
     # _encoding attribute it would have had it been initialized in a "C"
     # environment. See
     # https://github.com/freedomofpress/securedrop/issues/1360 for context.
-    journalist_app.crypto_util.gpg._encoding = "ansi_x3.4_1968"
-    source_app.crypto_util.gpg._encoding = "ansi_x3.4_1968"
-    _helper_test_reply(journalist_app, source_app, config, test_journo,
-                       "ᚠᛇᚻ᛫ᛒᛦᚦ᛫ᚠᚱᚩᚠᚢᚱ᛫ᚠᛁᚱᚪ᛫ᚷᛖᚻᚹᛦᛚᚳᚢᛗ", True)
+    encryption_mgr = EncryptionManager.get_default()
+    with mock.patch.object(encryption_mgr._gpg, "_encoding", "ansi_x3.4_1968"):
+        _helper_test_reply(
+            journalist_app, source_app, config, test_journo, "ᚠᛇᚻ᛫ᛒᛦᚦ᛫ᚠᚱᚩᚠᚢᚱ᛫ᚠᛁᚱᚪ᛫ᚷᛖᚻᚹᛦᛚᚳᚢᛗ", True
+        )
 
 
 def test_delete_collection(mocker, source_app, journalist_app, test_journo):
@@ -456,7 +460,7 @@ def test_delete_collection(mocker, source_app, journalist_app, test_journo):
         resp = app.get('/')
         # navigate to the collection page
         soup = BeautifulSoup(resp.data.decode('utf-8'), 'html.parser')
-        first_col_url = soup.select('ul#cols > li a')[0]['href']
+        first_col_url = soup.select('table#collections tr.source > th.designation a')[0]['href']
         resp = app.get(first_col_url)
         assert resp.status_code == 200
 
@@ -479,7 +483,7 @@ def test_delete_collection(mocker, source_app, journalist_app, test_journo):
 
         # Make sure the collection is deleted from the filesystem
         def assertion():
-            assert not os.path.exists(current_app.storage.path(filesystem_id))
+            assert not os.path.exists(Storage.get_default().path(filesystem_id))
 
         utils.asynchronous.wait_for_assertion(assertion)
 
@@ -523,7 +527,7 @@ def test_delete_collections(mocker, journalist_app, source_app, test_journo):
         # Make sure the collections are deleted from the filesystem
         def assertion():
             assert not (
-                any([os.path.exists(current_app.storage.path(filesystem_id))
+                any([os.path.exists(Storage.get_default().path(filesystem_id))
                     for filesystem_id in checkbox_values]))
 
         utils.asynchronous.wait_for_assertion(assertion)
@@ -559,7 +563,7 @@ def test_filenames(source_app, journalist_app, test_journo):
         _login_user(app, test_journo)
         resp = app.get('/')
         soup = BeautifulSoup(resp.data.decode('utf-8'), 'html.parser')
-        first_col_url = soup.select('ul#cols > li a')[0]['href']
+        first_col_url = soup.select('table#collections tr.source > th.designation a')[0]['href']
         resp = app.get(first_col_url)
         assert resp.status_code == 200
 
@@ -567,7 +571,7 @@ def test_filenames(source_app, journalist_app, test_journo):
         soup = BeautifulSoup(resp.data.decode('utf-8'), 'html.parser')
         submission_filename_re = r'^{0}-[a-z0-9-_]+(-msg|-doc\.gz)\.gpg$'
         for i, submission_link in enumerate(
-                soup.select('ul#submissions li a .filename')):
+                soup.select('table#submissions tr.submission > th.filename a')):
             filename = str(submission_link.contents[0])
             assert re.match(submission_filename_re.format(i + 1), filename)
 
@@ -586,7 +590,7 @@ def test_filenames_delete(journalist_app, source_app, test_journo):
         _login_user(app, test_journo)
         resp = app.get('/')
         soup = BeautifulSoup(resp.data.decode('utf-8'), 'html.parser')
-        first_col_url = soup.select('ul#cols > li a')[0]['href']
+        first_col_url = soup.select('table#collections tr.source > th.designation a')[0]['href']
         resp = app.get(first_col_url)
         assert resp.status_code == 200
         soup = BeautifulSoup(resp.data.decode('utf-8'), 'html.parser')
@@ -599,13 +603,13 @@ def test_filenames_delete(journalist_app, source_app, test_journo):
         # test filenames and sort order
         submission_filename_re = r'^{0}-[a-z0-9-_]+(-msg|-doc\.gz)\.gpg$'
         filename = str(
-            soup.select('ul#submissions li a .filename')[0].contents[0])
+            soup.select('table#submissions tr.submission > th.filename a')[0].contents[0])
         assert re.match(submission_filename_re.format(1), filename)
         filename = str(
-            soup.select('ul#submissions li a .filename')[1].contents[0])
+            soup.select('table#submissions tr.submission > th.filename a')[1].contents[0])
         assert re.match(submission_filename_re.format(3), filename)
         filename = str(
-            soup.select('ul#submissions li a .filename')[2].contents[0])
+            soup.select('table#submissions tr.submission > th.filename a')[2].contents[0])
         assert re.match(submission_filename_re.format(4), filename)
 
 
@@ -639,7 +643,7 @@ def test_user_change_password(journalist_app, test_journo):
 def test_login_after_regenerate_hotp(journalist_app, test_journo):
     """Test that journalists can login after resetting their HOTP 2fa"""
 
-    otp_secret = 'aaaaaa'
+    otp_secret = '0123456789abcdef0123456789abcdef01234567'
     b32_otp_secret = b32encode(unhexlify(otp_secret))
 
     # edit hotp

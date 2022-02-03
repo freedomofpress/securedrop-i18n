@@ -37,11 +37,10 @@ import journalist_app
 import source_app
 import tests.utils.env as env
 from db import db
+from encryption import EncryptionManager
 from models import Journalist
-from sdconfig import config
 from source_user import _SourceScryptManager
 
-os.environ["SECUREDROP_ENV"] = "test"
 
 LOGFILE_PATH = abspath(join(dirname(realpath(__file__)), "../log/driver.log"))
 FIREFOX_PATH = "/usr/bin/firefox/firefox"
@@ -173,6 +172,7 @@ class FunctionalTest(object):
             disable_js(self.torbrowser_driver)
 
     def start_source_server(self, source_port):
+        from sdconfig import config
         config.SESSION_EXPIRATION_MINUTES = self.session_expiration / 60.0
 
         self.source_app.run(port=source_port, debug=True, use_reloader=False, threaded=True)
@@ -200,7 +200,7 @@ class FunctionalTest(object):
             logging.error("Error stopping Firefox driver: %s", e)
 
     @pytest.fixture(autouse=True)
-    def sd_servers(self):
+    def sd_servers(self, setup_journalist_key_and_gpg_folder):
         logging.info(
             "Starting SecureDrop servers (session expiration = %s)", self.session_expiration
         )
@@ -217,6 +217,7 @@ class FunctionalTest(object):
                 self.source_location = "http://127.0.0.1:%d" % source_port
                 self.journalist_location = "http://127.0.0.1:%d" % journalist_port
 
+                from sdconfig import config
                 self.source_app = source_app.create_app(config)
                 self.journalist_app = journalist_app.create_app(config)
                 self.journalist_app.config["WTF_CSRF_ENABLED"] = True
@@ -224,9 +225,8 @@ class FunctionalTest(object):
                 self.__context = self.journalist_app.app_context()
                 self.__context.push()
 
-                env.create_directories()
+                env.create_directories(config)
                 db.create_all()
-                self.gpg = env.init_gpg()
 
                 # Add our test user
                 try:
@@ -284,8 +284,12 @@ class FunctionalTest(object):
                 except Exception as e:
                     logging.error("Error stopping source app: %s", e)
 
-                env.teardown()
-                self.__context.pop()
+                env.teardown(config)
+                try:
+                    self.__context.pop()
+                except AttributeError:
+                    # Happens if the setup code failed before attaching __context to self
+                    pass
 
     def wait_for_source_key(self, source_name):
         filesystem_id = _SourceScryptManager.get_default().derive_source_filesystem_id(
@@ -293,7 +297,7 @@ class FunctionalTest(object):
         )
 
         def key_available(filesystem_id):
-            assert self.source_app.crypto_util.get_fingerprint(filesystem_id)
+            assert EncryptionManager.get_default().get_source_key_fingerprint(filesystem_id)
 
         self.wait_for(lambda: key_available(filesystem_id), timeout=60)
 

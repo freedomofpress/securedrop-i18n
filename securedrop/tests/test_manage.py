@@ -15,8 +15,6 @@ from passphrases import PassphraseGenerator
 from source_user import create_source_user
 
 
-os.environ['SECUREDROP_ENV'] = 'test'  # noqa
-
 YUBIKEY_HOTP = ['cb a0 5f ad 41 a2 ff 4e eb 53 56 3a 1b f7 23 2e ce fc dc',
                 'cb a0 5f ad 41 a2 ff 4e eb 53 56 3a 1b f7 23 2e ce fc dc d7']
 
@@ -102,7 +100,7 @@ def test_exception_handling_when_duplicate_username(journalist_app,
         assert 'successfully added' in out
 
         # Inserting the user for a second time should fail
-        return_value = manage._add_user()
+        return_value = manage._add_user(context=context)
         out, err = capsys.readouterr()
         assert return_value == 1
         assert 'ERROR: That username is already taken!' in out
@@ -122,7 +120,7 @@ def test_delete_user(journalist_app, config, mocker):
         return_value = manage._add_user(context=context)
         assert return_value == 0
 
-        return_value = manage.delete_user(args=None)
+        return_value = manage.delete_user(args=None, context=context)
         assert return_value == 0
 
 
@@ -217,7 +215,7 @@ def test_clean_tmp_removed(config, caplog):
     assert 'FILE removed' in caplog.text
 
 
-def test_were_there_submissions_today(source_app, config):
+def test_were_there_submissions_today(source_app, config, app_storage):
     with source_app.app_context() as context:
         # We need to override the config to point at the per-test DB
         data_root = config.SECUREDROP_DATA_ROOT
@@ -227,8 +225,7 @@ def test_were_there_submissions_today(source_app, config):
         source_user = create_source_user(
             db_session=db.session,
             source_passphrase=PassphraseGenerator.get_default().generate_passphrase(),
-            source_app_crypto_util=source_app.crypto_util,
-            source_app_storage=source_app.storage,
+            source_app_storage=app_storage,
         )
         source = source_user.get_db_record()
         source.last_updated = (datetime.datetime.utcnow() - datetime.timedelta(hours=24*2))

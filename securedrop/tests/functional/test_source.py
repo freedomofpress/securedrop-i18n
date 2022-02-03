@@ -1,5 +1,6 @@
 import werkzeug
 
+import source_user
 from ..test_journalist import VALID_PASSWORD
 from . import source_navigation_steps, journalist_navigation_steps
 from . import functional_test
@@ -11,14 +12,17 @@ class TestSourceInterfaceDesignationCollision(
         source_navigation_steps.SourceNavigationStepsMixin):
 
     def start_source_server(self, source_port):
-        self.source_app.crypto_util.adjectives = \
-            self.source_app.crypto_util.adjectives[:1]
-        self.source_app.crypto_util.nouns = self.source_app.crypto_util.nouns[:1]
+        # Generator that always returns the same journalist designation
+        source_user._default_designation_generator = source_user._DesignationGenerator(
+            nouns=["accent"],
+            adjectives=["tonic"],
+        )
+
         config.SESSION_EXPIRATION_MINUTES = self.session_expiration / 60.0
 
         self.source_app.run(port=source_port, debug=True, use_reloader=False, threaded=True)
 
-    def test_display_id_designation_collisions(self):
+    def test_journalist_designation_collisions(self):
         self._source_visits_source_homepage()
         self._source_chooses_to_submit_documents()
         self._source_continues_to_submit_page()
@@ -43,6 +47,33 @@ class TestSourceInterface(
         self._source_chooses_to_login()
         self._source_proceeds_to_login()
         self._source_sees_no_codename()
+
+    def test_lookup_submit_notification_first_login(self):
+        """Test that on a first login, the submission notification includes the 'Please check back
+        later' and 'Forgot your codename?' messages. Also verify that those messages are not
+        present on a subsequent submission."""
+        self._source_visits_source_homepage()
+        self._source_chooses_to_submit_documents()
+        self._source_continues_to_submit_page()
+        self._source_submits_a_message(
+            verify_notification=True, first_submission=True, first_login=True
+        )
+        self._source_submits_a_message(verify_notification=True)
+
+    def test_lookup_submit_notification_2nd_login(self):
+        """Test that on a second login, the first submission notification includes the 'Please
+        check back later' message but not the 'Forgot your codename?' message since the codename
+        hint section is not present on a second login (Ref. issue #5101). Also verify that none of
+        those messages are present on a subsequent submission."""
+        self._source_visits_source_homepage()
+        self._source_chooses_to_submit_documents()
+        self._source_continues_to_submit_page()
+        self._source_logs_out()
+        self._source_visits_source_homepage()
+        self._source_chooses_to_login()
+        self._source_proceeds_to_login()
+        self._source_submits_a_message(verify_notification=True, first_submission=True)
+        self._source_submits_a_message(verify_notification=True)
 
 
 class TestDownloadKey(
@@ -115,7 +146,7 @@ class TestDuplicateSourceInterface(
 
     def test_refreshed_duplicate_generate_pages(self):
         # Test generation of multiple codenames in different browser tabs, including behavior
-        # of refreshing the codemae in each tab. Ref. issue 4458.
+        # of refreshing the codename in each tab. Ref. issue 4458.
 
         # Generate a codename in Tab A
         assert len(self.driver.window_handles) == 1

@@ -1,12 +1,12 @@
 import collections.abc
 import json
 
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Tuple, Callable, Any, Set, Union
 
 import flask
 import werkzeug
-from flask import abort, Blueprint, current_app, jsonify, request
+from flask import abort, Blueprint, jsonify, request
 from functools import wraps
 
 from sqlalchemy import Column
@@ -19,9 +19,10 @@ from db import db
 from journalist_app import utils
 from models import (Journalist, Reply, SeenReply, Source, Submission,
                     LoginThrottledException, InvalidUsernameException,
-                    BadTokenException, WrongPasswordException)
+                    BadTokenException, InvalidOTPSecretException,
+                    WrongPasswordException)
 from sdconfig import SDConfig
-from store import NotEncrypted
+from store import NotEncrypted, Storage
 
 
 TOKEN_EXPIRATION_MINS = 60 * 8
@@ -115,7 +116,7 @@ def make_blueprint(config: SDConfig) -> Blueprint:
 
         try:
             journalist = Journalist.login(username, passphrase, one_time_code)
-            token_expiry = datetime.utcnow() + timedelta(
+            token_expiry = datetime.now(timezone.utc) + timedelta(
                 seconds=TOKEN_EXPIRATION_MINS * 60)
 
             response = jsonify({
@@ -127,13 +128,13 @@ def make_blueprint(config: SDConfig) -> Blueprint:
             })
 
             # Update access metadata
-            journalist.last_access = datetime.utcnow()
+            journalist.last_access = datetime.now(timezone.utc)
             db.session.add(journalist)
             db.session.commit()
 
             return response, 200
         except (LoginThrottledException, InvalidUsernameException,
-                BadTokenException, WrongPasswordException):
+                BadTokenException, InvalidOTPSecretException, WrongPasswordException):
             return abort(403, 'Token authentication failed.')
 
     @api.route('/sources', methods=['GET'])
@@ -252,7 +253,7 @@ def make_blueprint(config: SDConfig) -> Blueprint:
 
             source.interaction_count += 1
             try:
-                filename = current_app.storage.save_pre_encrypted_reply(
+                filename = Storage.get_default().save_pre_encrypted_reply(
                     source.filesystem_id,
                     source.interaction_count,
                     source.journalist_filename,
@@ -264,7 +265,7 @@ def make_blueprint(config: SDConfig) -> Blueprint:
             # issue #3918
             filename = path.basename(filename)
 
-            reply = Reply(user, source, filename)
+            reply = Reply(user, source, filename, Storage.get_default())
 
             reply_uuid = data.get('uuid', None)
             if reply_uuid is not None:
@@ -277,8 +278,7 @@ def make_blueprint(config: SDConfig) -> Blueprint:
 
             try:
                 db.session.add(reply)
-                db.session.flush()
-                seen_reply = SeenReply(reply_id=reply.id, journalist_id=user.id)
+                seen_reply = SeenReply(reply=reply, journalist=user)
                 db.session.add(seen_reply)
                 db.session.add(source)
                 db.session.commit()

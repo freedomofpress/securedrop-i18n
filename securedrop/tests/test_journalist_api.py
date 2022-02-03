@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import json
-import os
 import random
 
 from flask import url_for
@@ -9,6 +8,7 @@ from pyotp import TOTP
 from uuid import UUID, uuid4
 
 from db import db
+from encryption import EncryptionManager
 from models import (
     Journalist,
     Reply,
@@ -18,8 +18,6 @@ from models import (
     RevokedToken,
 )
 
-
-os.environ['SECUREDROP_ENV'] = 'test'  # noqa
 from .utils.api_helper import get_api_headers
 
 random.seed('◔ ⌣ ◔')
@@ -490,9 +488,9 @@ def test_authorized_user_can_get_single_reply(journalist_app, test_files,
         assert response.json['journalist_uuid'] == \
             reply.journalist.uuid
         assert response.json['journalist_first_name'] == \
-            reply.journalist.first_name
+            (reply.journalist.first_name or '')
         assert response.json['journalist_last_name'] == \
-            reply.journalist.last_name
+            (reply.journalist.last_name or '')
         assert response.json['is_deleted_by_source'] is False
         assert response.json['filename'] == \
             test_files['source'].replies[0].filename
@@ -510,12 +508,12 @@ def test_reply_of_deleted_journalist(journalist_app,
                                    source_uuid=uuid,
                                    reply_uuid=reply_uuid),
                            headers=get_api_headers(journalist_api_token))
-
+        deleted_uuid = Journalist.get_deleted().uuid
         assert response.status_code == 200
 
         assert response.json['uuid'] == reply_uuid
         assert response.json['journalist_username'] == "deleted"
-        assert response.json['journalist_uuid'] == "deleted"
+        assert response.json['journalist_uuid'] == deleted_uuid
         assert response.json['journalist_first_name'] == ""
         assert response.json['journalist_last_name'] == ""
         assert response.json['is_deleted_by_source'] is False
@@ -720,16 +718,18 @@ def test_unencrypted_replies_get_rejected(journalist_app, journalist_api_token,
 
 
 def test_authorized_user_can_add_reply(journalist_app, journalist_api_token,
-                                       test_source, test_journo):
+                                       test_source, test_journo, app_storage):
     with journalist_app.test_client() as app:
         source_id = test_source['source'].id
         uuid = test_source['source'].uuid
 
         # First we must encrypt the reply, or it will get rejected
         # by the server.
-        source_key = journalist_app.crypto_util.get_fingerprint(
-            test_source['source'].filesystem_id)
-        reply_content = journalist_app.crypto_util.gpg.encrypt(
+        encryption_mgr = EncryptionManager.get_default()
+        source_key = encryption_mgr.get_source_key_fingerprint(
+            test_source['source'].filesystem_id
+        )
+        reply_content = encryption_mgr._gpg.encrypt(
             'This is a plaintext reply', source_key).data
 
         response = app.post(url_for('api.all_source_replies',
@@ -760,8 +760,7 @@ def test_authorized_user_can_add_reply(journalist_app, journalist_api_token,
         expected_filename = '{}-{}-reply.gpg'.format(
             source.interaction_count, source.journalist_filename)
 
-        expected_filepath = journalist_app.storage.path(
-            source.filesystem_id, expected_filename)
+        expected_filepath = app_storage.path(source.filesystem_id, expected_filename)
 
         with open(expected_filepath, 'rb') as fh:
             saved_content = fh.read()

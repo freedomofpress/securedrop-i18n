@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y paxctl && \
                        # cached along with everything else too.
                        default-jdk \
                        libasound2 libdbus-glib-1-2 libgtk2.0-0 libfontconfig1 libxrender1 \
-                       libcairo-gobject2 libgtk-3-0 libstartup-notification0 tor
+                       libcairo-gobject2 libgtk-3-0 libstartup-notification0 tor basez
 
 RUN gem install sass -v 3.4.23
 
@@ -33,7 +33,7 @@ ENV TOR_RELEASE_KEY_FINGERPRINT "EF6E286DDA85EA2A4BA7DE684E2C6E8793298290"
 RUN curl -s https://openpgpkey.torproject.org/.well-known/openpgpkey/torproject.org/hu/kounek7zrdx745qydx6p59t9mqjpuhdf | gpg2 --import -
 
 # Fetch latest TBB version (obtained from https://github.com/micahflee/torbrowser-launcher/blob/develop/torbrowser_launcher/common.py#L198) and install Tor Browser
-RUN TBB_VERSION=$(curl -s https://aus1.torproject.org/torbrowser/update_3/release/Linux_x86_64-gcc3/x/en-US | grep -oP '\d+\.\d+\.\d+' | head -1) && \
+RUN TBB_VERSION=$(curl -s https://aus1.torproject.org/torbrowser/update_3/release/Linux_x86_64-gcc3/x/en-US | grep -oP 'appVersion="\K[^"]*' | head -1) && \
     wget https://www.torproject.org/dist/torbrowser/${TBB_VERSION}/tor-browser-linux64-${TBB_VERSION}_en-US.tar.xz && \
     wget https://www.torproject.org/dist/torbrowser/${TBB_VERSION}/tor-browser-linux64-${TBB_VERSION}_en-US.tar.xz.asc && \
     gpg2 --verify tor-browser-linux64-${TBB_VERSION}_en-US.tar.xz.asc 2>&1 | grep "Primary key fingerprint:" | sed -e 's/Primary key fingerprint: //' -e 's/ //g' | tail -1 | grep -qE "${TOR_RELEASE_KEY_FINGERPRINT}" && \
@@ -65,8 +65,8 @@ RUN wget https://github.com/mozilla/geckodriver/releases/download/${GECKODRIVER_
 COPY requirements requirements
 RUN python3 -m venv /opt/venvs/securedrop-app-code && \
     /opt/venvs/securedrop-app-code/bin/pip3 install --no-deps --require-hashes -r requirements/python3/docker-requirements.txt && \
-    /opt/venvs/securedrop-app-code/bin/pip3 install --no-deps --require-hashes -r requirements/python3/securedrop-app-code-requirements.txt && \
-    /opt/venvs/securedrop-app-code/bin/pip3 install --no-deps --require-hashes -r requirements/python3/test-requirements.txt
+    /opt/venvs/securedrop-app-code/bin/pip3 install --no-deps --require-hashes -r requirements/python3/test-requirements.txt && \
+    /opt/venvs/securedrop-app-code/bin/pip3 install --no-deps --require-hashes -r requirements/python3/securedrop-app-code-requirements.txt 
 
 RUN if test $USER_NAME != root ; then useradd --no-create-home --home-dir /tmp --uid $USER_ID $USER_NAME && echo "$USER_NAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers ; fi && \
     cp -r /root/.local /tmp/ && chmod +x /tmp/.local/tbb/tor-browser_en-US/Browser/firefox && chmod -R 777 /tmp/.local && \
