@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.8.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2022-02-09 16:36+0000\nLast-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\nLanguage-Team: Greek <https://weblate.securedrop.org/projects/securedrop/securedrop/el/>\nLanguage: el\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.8.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2022-02-09 21:04+0000\nLast-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\nLanguage-Team: Greek <https://weblate.securedrop.org/projects/securedrop/securedrop/el/>\nLanguage: el\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
 
 msgid "Name too long"
 msgstr "Το όνομα είναι πολύ μεγάλο"
@@ -115,7 +115,7 @@ msgid "Only admins can access this page."
 msgstr "Μόνο οι διαχειριστές έχουν πρόσβαση σε αυτήν την σελίδα."
 
 msgid "The \"{name}\" field is required when \"{other_name}\" is set."
-msgstr "Το πεδίο \"{name}\" απαιτείται όταν έχει επίσης οριστεί το πεδίο \"{other_name}\"."
+msgstr "Το πεδίο \"{name}\" απαιτείται όταν έχει οριστεί το πεδίο \"{other_name}\"."
 
 msgid "The \"{other_name}\" field was not found - it is required by \"{name}\"."
 msgstr "Το πεδίο \"{other_name}\" δεν βρέθηκε - απαιτείται από το πεδίο \"{name}\"."
@@ -166,7 +166,7 @@ msgstr[0] "Παρακαλώ περιμένετε τουλάχιστον {num} δ
 msgstr[1] "Παρακαλώ περιμένετε τουλάχιστον {num} δευτερόλεπτα πριν ξανασυνδεθείτε."
 
 msgid "Your 2FA details are invalid - please contact an administrator to reset them."
-msgstr "Οι λεπτομέρειες 2FA σας είναι μη έγκυρες - παρακαλώ επικοινωνήστε με τη διαχείριση για την επαναφορά τους."
+msgstr "Οι λεπτομέρειες 2FA σας είναι άκυρες - παρακαλώ επικοινωνήστε με τη διαχείριση για την επαναφορά τους."
 
 msgid "Please wait for a new code from your two-factor mobile app or security key before trying again."
 msgstr "Παρακαλώ περιμένετε για έναν νέο κωδικό από την εφαρμογή ή το κλειδί ασφαλείας πριν ξαναδοκιμάσετε."
@@ -359,7 +359,7 @@ msgid "No users to display"
 msgstr "Δεν υπάρχουν χρήστες για να προβληθούν"
 
 msgid "Update instance config"
-msgstr "Ανανέωση παραμετροποίησης εγκατάστασης"
+msgstr "Ενημέρωση παραμετροποίησης εγκατάστασης"
 
 msgid "INSTANCE CONFIG"
 msgstr "ΠΑΡΑΜΕΤΡΟΠΟΙΗΣΗ ΕΓΚΑΤΑΣΤΑΣΗΣ"
@@ -395,7 +395,7 @@ msgid "Change HOTP Secret"
 msgstr "Αλλαγή μυστικού HOTP"
 
 msgid "Enter a new HOTP secret formatted as a 40-digit hexadecimal string. Spaces will be ignored:"
-msgstr "Εισαγωγή ενός νέου μυστικού HOTP σε μορφή δεκαεξαδικού κλειδάριθμου (hex string) 40 ψηφίων. Τα κενά θα αγνοηθούν:"
+msgstr "Εισαγωγή ενός νέου μυστικού HOTP σε μορφή δεκαεξαδικής συμβολοσειράς (hex string) 40 ψηφίων. Τα κενά θα αγνοηθούν:"
 
 msgid "You're almost done! To finish adding this new user, have them follow the instructions below to set up two-factor authentication with FreeOTP. Once they've added an entry for this account in the app, have them enter one of the 6-digit codes from the app to confirm that two-factor authentication is set up correctly."
 msgstr "Έχετε σχεδόν τελειώσει. Για να ολοκληρώσετε την προσθήκη του νέου χρήστη, ζητήστε του να ακολουθήσει τις παρακάτω οδηγίες για να ρυθμίσει την πιστοποίηση δύο παραγόντων με το FreeOTP. Μόλις προσθέσουν μια εγγραφή για αυτό τον λογαριασμό στην εφαρμογή, ζητήστε τους να εισάγουν έναν από τους εξαψήφιους κωδικούς από την εφαρμογή για να επιβεβαιώσουν ότι η πιστοποίηση δύο παραγόντων έχει ρυθμιστεί σωστά."
@@ -533,7 +533,7 @@ msgid "Prevent sources from uploading documents. Sources will still be able to s
 msgstr "Να μην επιτρέπεται σε πηγές να ανεβάζουν έγγραφα. Οι πηγές θα μπορούν παρ' όλα αυτά να στέλνουν μηνύματα."
 
 msgid "Update Submission Preferences"
-msgstr "Ανανέωση ρυθμίσεων καταχωρήσεων"
+msgstr "Ενημέρωση ρυθμίσεων υποβολών"
 
 msgid "UPDATE SUBMISSION PREFERENCES"
 msgstr "ΑΝΑΝΕΩΣΗ ΡΥΘΜΙΣΕΩΝ ΚΑΤΑΧΩΡΗΣΕΩΝ"
@@ -571,7 +571,7 @@ msgid "Change Name and Admin Status"
 msgstr "Αλλαγή Ονόματος και Κατάστασης διαχειριστή"
 
 msgid "Update account"
-msgstr "Ανανέωση λογαριασμού"
+msgstr "Ενημέρωση λογαριασμού"
 
 msgid "UPDATE"
 msgstr "ΑΝΑΝΕΩΣΗ"
@@ -583,7 +583,7 @@ msgid "Change Name"
 msgstr "Αλλαγή ονόματος"
 
 msgid "Update your account"
-msgstr "Ανανέωση του λογαριασμού σας"
+msgstr "Ενημέρωση του λογαριασμού σας"
 
 msgid "Reset Password"
 msgstr "Επαναφορά κωδικού πρόσβασης"
