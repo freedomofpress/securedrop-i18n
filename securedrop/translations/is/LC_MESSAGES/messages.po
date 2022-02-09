@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.12.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2022-02-07 00:04+0000\nLast-Translator: Oktavia <oktaviahrund@gmail.com>\nLanguage-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/securedrop/is/>\nLanguage: is\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.12.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2022-02-09 19:20+0000\nLast-Translator: Sveinn í Felli <sv1@fellsnet.is>\nLanguage-Team: Icelandic <https://weblate.securedrop.org/projects/securedrop/securedrop/is/>\nLanguage: is\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
 
 msgid "Name too long"
 msgstr "Nafnið er of langt"
@@ -166,7 +166,7 @@ msgstr[0] "Bíddu í a.m.k. {num} sekúndu áður en þú reynir innskráningu a
 msgstr[1] "Bíddu í a.m.k. {num} sekúndur áður en þú reynir innskráningu aftur."
 
 msgid "Your 2FA details are invalid - please contact an administrator to reset them."
-msgstr "\"FA tveggja-þátta upplýsingarnar þínar eru ógildar - hafðu samband við kerfisstjóra til að endurstilla þær."
+msgstr "Tveggja-þátta innskráningarupplýsingarnar þínar eru ógildar - hafðu samband við kerfisstjóra til að endurstilla þær."
 
 msgid "Please wait for a new code from your two-factor mobile app or security key before trying again."
 msgstr "Bíddu eftir nýjum kóða frá tvíþátta farsímaforriti eða settu inn dulritunarlykil áður en þú reynir aftur."
