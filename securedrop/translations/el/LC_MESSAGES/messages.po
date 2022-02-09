@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.8.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2022-02-09 16:36+0000\nLast-Translator: Adrian <pappasadrian@gmail.com>\nLanguage-Team: Greek <https://weblate.securedrop.org/projects/securedrop/securedrop/el/>\nLanguage: el\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.8.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2022-02-09 16:36+0000\nLast-Translator: Dimitris Maroulidis <dmaroulidis@dimitrismaroulidis.com>\nLanguage-Team: Greek <https://weblate.securedrop.org/projects/securedrop/securedrop/el/>\nLanguage: el\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
 
 msgid "Name too long"
 msgstr "Το όνομα είναι πολύ μεγάλο"
@@ -817,11 +817,7 @@ msgid ""
 "Because we do not track users of our <b>SecureDrop</b>\n"
 " service, in future visits, using this codename will be the only way we have to communicate with you should we have\n"
 " questions or are interested in additional information. Unlike passwords, there is no way to retrieve a lost codename."
-msgstr ""
-"Επειδή δεν παρακολουθούμε τους χρήστες της υπηρεσίας <b>SecureDrop</b> μας,\n"
-"σε μελλοντικές επισκέψεις σας, η χρήση αυτού του κωδικού ονόματος ειναι ο μοναδικός τρόπος για να επικοινωνήσουμε μαζί σας αν έχουμε απορίες ή ενδιαφερόμαστε\n"
-"για περισσότερες πληροφορίες. Σε αντίθεση με τους κωδικούς, δεν υπάρχει\n"
-"τρόπος να ανακτήσετε το κωδικό όνομα αν το χάσετε ή το ξεχάσετε."
+msgstr "Επειδή δεν παρακολουθούμε τους χρήστες της υπηρεσίας <b>SecureDrop</b> μας,\nσε μελλοντικές επισκέψεις σας, η χρήση αυτού του κωδικού ονόματος είναι ο μοναδικός τρόπος για να επικοινωνήσουμε μαζί σας αν έχουμε απορίες ή ενδιαφερόμαστε για περισσότερες πληροφορίες. Σε αντίθεση με τους κωδικούς, δεν υπάρχει τρόπος να ανακτήσετε το κωδικό όνομα αν το χάσετε ή το ξεχάσετε."
 
 msgid "Submit Documents"
 msgstr "Υποβολή εγγράφων"
