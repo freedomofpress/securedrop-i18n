@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2022-02-09 21:04+0000\nLast-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\nLanguage-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/securedrop/securedrop/nb_NO/>\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.3.12\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPOT-Creation-Date: 2017-09-02 07:28+0000\nPO-Revision-Date: 2022-02-11 19:04+0000\nLast-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\nLanguage-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/securedrop/securedrop/nb_NO/>\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
 msgstr "Navnet er for langt"
@@ -443,10 +443,10 @@ msgid "Filename"
 msgstr "Filnavn"
 
 msgid "Size"
-msgstr ""
+msgstr "Størrelse"
 
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 msgid "Unread"
 msgstr "Ulest"
@@ -472,15 +472,11 @@ msgstr "Ingen bidragene å vise."
 msgid "You can write a secure reply to the person who submitted these messages and/or files:"
 msgstr "Du kan skrive et sikkert svar til personen som sendte inn disse meldingene og/eller filene:"
 
-#, fuzzy
-#| msgid "Write a message."
 msgid "Write a reply."
-msgstr "Skriv en melding."
+msgstr "Skriv et svar."
 
-#, fuzzy
-#| msgid "Submit"
 msgid "Submit reply"
-msgstr "Send inn"
+msgstr "Send svar"
 
 msgid "This source has no encryption key."
 msgstr "Denne kilden har ingen krypteringsnøkkel."
@@ -506,10 +502,8 @@ msgstr "Organisasjonsnavn"
 msgid "Set the organization name used on the SecureDrop web interfaces:"
 msgstr "Lagre organisasjonsnavnet som vil bli brukt på SecureDrop-nettsidene:"
 
-#, fuzzy
-#| msgid "Organization Name"
 msgid "Set Organization Name"
-msgstr "Organisasjonsnavn"
+msgstr "Lagre organisasjonsnavn"
 
 msgid "SET ORGANIZATION NAME"
 msgstr "LAGRE ORGANISASJONSNAVN"
@@ -520,16 +514,14 @@ msgstr "Logo-bilde"
 msgid "Here you can update the image displayed on the SecureDrop web interfaces:"
 msgstr "Her kan du oppdatere bildet vist på det nettbaserte SecureDrop-grensesnittet:"
 
-#, fuzzy
-#| msgid "Logo Image"
 msgid "Logo image:"
-msgstr "Logo-bilde"
+msgstr "Logo-bilde:"
 
 msgid "Recommended size: 500px * 450px"
 msgstr "Anbefalt størrelse: 500px * 450px"
 
 msgid "Update Logo"
-msgstr ""
+msgstr "Oppdater logo"
 
 msgid "UPDATE LOGO"
 msgstr "OPPDATER LOGO"
@@ -540,10 +532,8 @@ msgstr "Forsendelsesinnstillinger"
 msgid "Prevent sources from uploading documents. Sources will still be able to send messages."
 msgstr "Forhindre kilder i å laste opp filer. De vil fortsatt kunne sende inn meldinger."
 
-#, fuzzy
-#| msgid "Submission Preferences"
 msgid "Update Submission Preferences"
-msgstr "Forsendelsesinnstillinger"
+msgstr "Oppdater forsendelsesinnstillinger"
 
 msgid "UPDATE SUBMISSION PREFERENCES"
 msgstr "Oppdater innstillinger for forsendelser"
@@ -555,7 +545,7 @@ msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr "Send en kryptert e-post for å bekrefte at OSSEC-varsler fungerer:"
 
 msgid "Send Test OSSEC Alert"
-msgstr ""
+msgstr "Send test-alarm fra OSSEC"
 
 msgid "SEND TEST OSSEC ALERT"
 msgstr "SEND TEST OSSEC-VARSEL"
@@ -566,7 +556,7 @@ msgstr[0] "Følgende fil er markert for <strong>permanent sletting</strong>:"
 msgstr[1] "Følgende {num} filer er markert for <strong>permanent sletting</strong>:"
 
 msgid "Permanently Delete Files"
-msgstr ""
+msgstr "Permanent slett filer"
 
 msgid "PERMANENTLY DELETE FILES"
 msgstr "PERMANENT SLETTING AV FILER"
@@ -580,10 +570,8 @@ msgstr "Rediger brukeren \"{user}\""
 msgid "Change Name and Admin Status"
 msgstr "Endre navn og administratorstatus"
 
-#, fuzzy
-#| msgid "Edit your account"
 msgid "Update account"
-msgstr "Rediger kontoen din"
+msgstr "Oppdater konto"
 
 msgid "UPDATE"
 msgstr "OPPDATER"
@@ -594,10 +582,8 @@ msgstr "Rediger kontoen din"
 msgid "Change Name"
 msgstr "Endre navn"
 
-#, fuzzy
-#| msgid "Edit your account"
 msgid "Update your account"
-msgstr "Rediger kontoen din"
+msgstr "Oppdater kontoen din"
 
 msgid "Reset Password"
 msgstr "Tilbakestill passord"
@@ -642,7 +628,7 @@ msgid "RESET MOBILE APP CREDENTIALS"
 msgstr "Tilbakestill mobilprogramsoppsett"
 
 msgid "Reset Mobile App Credentials"
-msgstr ""
+msgstr "Tilbakestill innloggingsdetaljer for mobilapp"
 
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
 msgstr "Tilbakestill tofaktoroppsett for sikkerhetsnøkler, som YubiKey"
@@ -651,7 +637,7 @@ msgid "RESET SECURITY KEY CREDENTIALS"
 msgstr "Tilbakestill identitetsdetaljer fra sikkerhetsnøkkel"
 
 msgid "Reset Security Key Credentials"
-msgstr ""
+msgstr "Tilbakestill innloggingsdetaljer for sikkerhetsnøkkel"
 
 msgid "Download Unread"
 msgstr "Last ned uleste"
@@ -665,23 +651,17 @@ msgstr "Stjernemerk"
 msgid "Un-star"
 msgstr "Fjern stjernemerking"
 
-#, fuzzy
-#| msgid "Star {designation}"
 msgid "Designation"
-msgstr "Stjernemerk {designation}"
+msgstr "Merket"
 
-#, fuzzy
-#| msgid "Submit Documents"
 msgid "Documents"
-msgstr "Send inn dokumenter"
+msgstr "Dokumenter"
 
-#, fuzzy
-#| msgid "Message"
 msgid "Messages"
-msgstr "Melding"
+msgstr "Meldinger"
 
 msgid "Date"
-msgstr ""
+msgstr "Dato"
 
 msgid "No documents have been submitted!"
 msgstr "Ingen dokumenter har blitt sendt!"
@@ -864,7 +844,7 @@ msgid "Select <b>Safest</b>"
 msgstr "Velg <b>Tryggest</b>"
 
 msgid "<a href=\"/\" aria-label=\"Follow these instructions, then refresh this page\">Refresh this page</a>, and you're done!"
-msgstr "<a href=\"/\" aria-label=\"Følg disse instruksjonene, deretter oppdater siden\">Last inn siden igjen</a>, og så er du ferdig."
+msgstr "<a href=\"/\" aria-label=\"Følg disse instruksjonene, deretter oppdater siden\">Last inn siden igjen</a>, og så er du ferdig!"
 
 msgid "<strong>It is recommended to use Tor Browser to access SecureDrop:</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to continue."
 msgstr "<strong>Det anbefales å bruke Tor-nettleseren for å nå SecureDrop:</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Lær hvordan du installerer den</a>, eller se bort fra denne advarselen for å fortsette uten."
