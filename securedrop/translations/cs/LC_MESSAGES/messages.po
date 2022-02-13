@@ -4,10 +4,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2022-02-04 13:04+0000\nLast-Translator: michaela-bot <michaela.rybickova@gmail.com>\nLanguage-Team: Czech <https://weblate.securedrop.org/projects/securedrop/securedrop/cs/>\nLanguage: cs\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 0.14.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2022-02-13 13:04+0000\nLast-Translator: michaela-bot <michaela.rybickova@gmail.com>\nLanguage-Team: Czech <https://weblate.securedrop.org/projects/securedrop/securedrop/cs/>\nLanguage: cs\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
 
 msgid "Name too long"
-msgstr "Uživatelské jméno je příliš dlouhé."
+msgstr "Uživatelské jméno je příliš dlouhé"
 
 msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
@@ -19,7 +19,7 @@ msgid "This username is invalid because it is reserved for internal use by the s
 msgstr "Toto uživatelské jméno je neplatné, protože je rezervováno pro interní použití."
 
 msgid "Invalid username"
-msgstr "Neplatné uživatelské jméno."
+msgstr "Neplatné uživatelské jméno"
 
 msgid "Invalid OTP secret"
 msgstr "Neplatné OTP heslo"
@@ -75,7 +75,7 @@ msgid "Invalid username: {message}"
 msgstr "Neplatné uživatelské jméno: {message}"
 
 msgid "Username \"{username}\" already taken."
-msgstr "Uživatelské jméno \"{user}\" už používá někdo jiný."
+msgstr "Uživatelské jméno \"{username}\" už používá někdo jiný."
 
 msgid "An error occurred saving this user to the database. Please inform your admin."
 msgstr "Došlo k chybě při ukládání tohoto uživatele do databáze. Kontaktujte prosím administrátora."
@@ -171,7 +171,7 @@ msgstr[1] "Před dalším pokusem o přihlášení prosím počkejte alespoň {n
 msgstr[2] "Před dalším pokusem o přihlášení prosím počkejte alespoň {num} vteřin."
 
 msgid "Your 2FA details are invalid - please contact an administrator to reset them."
-msgstr ""
+msgstr "Vaše dvoufaktorové údaje jsou neplatné - kontaktujte prosím administrátora, aby je resetoval."
 
 msgid "Please wait for a new code from your two-factor mobile app or security key before trying again."
 msgstr "Dřív než budete pokračovat, počkejte prosím na nový dvoufaktorový kód z vaší mobilní aplikace nebo bezpečnostního klíče."
@@ -428,13 +428,11 @@ msgstr "Administrátor"
 msgid "Log Out"
 msgstr "Odhlásit se"
 
-#, fuzzy
-#| msgid "Powered by <em>SecureDrop {version}</em>."
 msgid "Powered by <b>SecureDrop {version}</b>."
-msgstr "Používá systém <em>SecureDrop {version}</em>."
+msgstr "Používá systém <b>SecureDrop {version}</b>."
 
 msgid "You are here:"
-msgstr ""
+msgstr "Jste zde:"
 
 msgid "All Sources"
 msgstr "Všechny zdroje"
@@ -449,18 +447,16 @@ msgid "Delete Selected"
 msgstr "Smazat vybrané"
 
 msgid "Status"
-msgstr ""
+msgstr "Stav"
 
-#, fuzzy
-#| msgid "First name"
 msgid "Filename"
-msgstr "Křestní jméno"
+msgstr "Jméno souboru"
 
 msgid "Size"
-msgstr ""
+msgstr "Velikost"
 
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 msgid "Unread"
 msgstr "Nepřečteno"
@@ -486,15 +482,11 @@ msgstr "Žádná podání k zobrazení."
 msgid "You can write a secure reply to the person who submitted these messages and/or files:"
 msgstr "Můžete napsat bezpečnou odpověď člověku, který poslal tyto zprávy a/nebo dokumenty:"
 
-#, fuzzy
-#| msgid "Write a message."
 msgid "Write a reply."
-msgstr "Napsat zprávu."
+msgstr "Napsat odpověď."
 
-#, fuzzy
-#| msgid "Submit"
 msgid "Submit reply"
-msgstr "Odeslat"
+msgstr "Odeslat odpověď"
 
 msgid "This source has no encryption key."
 msgstr "Tento zdroj nemá šifrovací klíč."
@@ -520,10 +512,8 @@ msgstr "Jméno organizace"
 msgid "Set the organization name used on the SecureDrop web interfaces:"
 msgstr "Nastavte jméno organizace které bude použito v rozhraní SecureDrop:"
 
-#, fuzzy
-#| msgid "Organization Name"
 msgid "Set Organization Name"
-msgstr "Jméno organizace"
+msgstr "Nastavit jméno organizace"
 
 msgid "SET ORGANIZATION NAME"
 msgstr "NASTAVIT JMÉNO ORGANIZACE"
@@ -534,16 +524,14 @@ msgstr "Obrázek loga"
 msgid "Here you can update the image displayed on the SecureDrop web interfaces:"
 msgstr "Zde můžete aktualizovat obrázek zobrazený ve webovém rozhraní SecureDrop:"
 
-#, fuzzy
-#| msgid "Logo Image"
 msgid "Logo image:"
-msgstr "Obrázek loga"
+msgstr "Obrázek loga:"
 
 msgid "Recommended size: 500px * 450px"
 msgstr "Doporučená velikost: 500px na 450px"
 
 msgid "Update Logo"
-msgstr ""
+msgstr "Aktualizovat logo"
 
 msgid "UPDATE LOGO"
 msgstr "AKTUALIZOVAT LOGO"
@@ -554,10 +542,8 @@ msgstr "Preference podání"
 msgid "Prevent sources from uploading documents. Sources will still be able to send messages."
 msgstr "Zabraňte zdrojům nahrávat dokumenty. Zdroje budou stále moci posílat zprávy."
 
-#, fuzzy
-#| msgid "Submission Preferences"
 msgid "Update Submission Preferences"
-msgstr "Preference podání"
+msgstr "Aktualizujte preference podání"
 
 msgid "UPDATE SUBMISSION PREFERENCES"
 msgstr "AKTUALIZOVAT PREFERENCE PODÁNÍ"
@@ -569,7 +555,7 @@ msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr "Pro ověření fungování OSECC upozornění prosím pošlete zašifrovaný e-mail:"
 
 msgid "Send Test OSSEC Alert"
-msgstr ""
+msgstr "Pošlete testovací OSSEC upozornění"
 
 msgid "SEND TEST OSSEC ALERT"
 msgstr "POSLAT TESTOVACÍ UPOZORNĚNÍ OSSEC"
@@ -581,7 +567,7 @@ msgstr[1] "Následující {num} soubory byly vybrány pro <strong>trvalé smazá
 msgstr[2] "Následujících {num} souborů bylo vybráno pro <strong>trvalé smazání</strong>:"
 
 msgid "Permanently Delete Files"
-msgstr ""
+msgstr "Trvale smazat soubory"
 
 msgid "PERMANENTLY DELETE FILES"
 msgstr "TRVALE SMAZAT SOUBORY"
@@ -595,10 +581,8 @@ msgstr "Upravit uživatele „{user}“"
 msgid "Change Name and Admin Status"
 msgstr "Změnit jméno a status administrátora"
 
-#, fuzzy
-#| msgid "Edit your account"
 msgid "Update account"
-msgstr "Upravit svůj účet"
+msgstr "Aktualizovat účet"
 
 msgid "UPDATE"
 msgstr "AKTUALIZOVAT"
@@ -609,10 +593,8 @@ msgstr "Upravit svůj účet"
 msgid "Change Name"
 msgstr "Změnit jméno"
 
-#, fuzzy
-#| msgid "Edit your account"
 msgid "Update your account"
-msgstr "Upravit svůj účet"
+msgstr "Aktualizovat váš účet"
 
 msgid "Reset Password"
 msgstr "Obnovit heslo"
@@ -657,7 +639,7 @@ msgid "RESET MOBILE APP CREDENTIALS"
 msgstr "RESETOVAT PŘIHLAŠOVACÍ ÚDAJE MOBILNÍ APLIKACE"
 
 msgid "Reset Mobile App Credentials"
-msgstr ""
+msgstr "Resetovat přihlašovací údaje mobilní aplikace"
 
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
 msgstr "Obnovit dvojfaktorovou autentizaci pro bezpečnostní klíče (např. YubiKey)"
@@ -666,7 +648,7 @@ msgid "RESET SECURITY KEY CREDENTIALS"
 msgstr "RESETOVAT PŘIHLAŠOVACÍ ÚDAJE BEZPEČNOSTNÍHO KLÍČE"
 
 msgid "Reset Security Key Credentials"
-msgstr ""
+msgstr "Resetovat přihlašovací údaje bezpečnostního klíče"
 
 msgid "Download Unread"
 msgstr "Stáhnout nepřečtené"
@@ -680,23 +662,17 @@ msgstr "Označit"
 msgid "Un-star"
 msgstr "Odznačit"
 
-#, fuzzy
-#| msgid "Star {designation}"
 msgid "Designation"
-msgstr "Označit {designation}"
+msgstr "Označení"
 
-#, fuzzy
-#| msgid "Submit Documents"
 msgid "Documents"
-msgstr "Odeslat dokumenty"
+msgstr "Dokumenty"
 
-#, fuzzy
-#| msgid "Message"
 msgid "Messages"
-msgstr "Zpráva"
+msgstr "Zprávy"
 
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 msgid "No documents have been submitted!"
 msgstr "Žádné dokumenty nebyly podány!"
