@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2022-02-07 15:04+0000\nLast-Translator: Jonas Waga <jonas.waga@schibsted.com>\nLanguage-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/securedrop/sv/>\nLanguage: sv\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.5-rc4\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2022-02-15 11:04+0000\nLast-Translator: Jonas Waga <jonas.waga@schibsted.com>\nLanguage-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/securedrop/sv/>\nLanguage: sv\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
 msgstr "Namnet är för långt"
@@ -115,7 +115,7 @@ msgid "Only admins can access this page."
 msgstr "Endast administratörer har tillgång till denna sida."
 
 msgid "The \"{name}\" field is required when \"{other_name}\" is set."
-msgstr "{name} krävs när {other_name} är satt."
+msgstr "\"{name}\" krävs när \"{other_name}\" är satt."
 
 msgid "The \"{other_name}\" field was not found - it is required by \"{name}\"."
 msgstr "\"{other_name}\" hittades inte - det behövs för \"{name}\"."
@@ -305,7 +305,7 @@ msgid "Verification code"
 msgstr "Verifikationskod"
 
 msgid "Submit verification code"
-msgstr "Skicka verifikationskod"
+msgstr "Skicka verifieringskod"
 
 msgid "SUBMIT"
 msgstr "SKICKA IN"
