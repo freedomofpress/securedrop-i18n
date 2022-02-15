@@ -4,19 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
 msgid ""
-msgstr ""
-"Project-Id-Version: SecureDrop 0.4.3\n"
-"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-10-19 01:42+0000\n"
-"Last-Translator: Cory Francis Myers <cory@freedom.press>\n"
-"Language-Team: Portuguese (Brazil) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_BR/>\n"
-"Language: pt_BR\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.6\n"
-"Generated-By: Babel 2.4.0\n"
+msgstr "Project-Id-Version: SecureDrop 0.4.3\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2022-02-15 22:04+0000\nLast-Translator: leilane <leilane.a@protonmail.com>\nLanguage-Team: Portuguese (Brazil) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_BR/>\nLanguage: pt_BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n > 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
 msgstr "Nome muito longo"
@@ -131,10 +119,10 @@ msgid "Only admins can access this page."
 msgstr "Apenas administradores podem acessar esta página."
 
 msgid "The \"{name}\" field is required when \"{other_name}\" is set."
-msgstr ""
+msgstr "O campo \"{name}\" é necessário quando \"{other_name}\" está definido."
 
 msgid "The \"{other_name}\" field was not found - it is required by \"{name}\"."
-msgstr ""
+msgstr "O campo \"{other_name}\"não foi encontrado - ele é requerido por \"{name}\"."
 
 msgid "HOTP secrets are 40 characters long - you have entered {num}."
 msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
@@ -159,7 +147,7 @@ msgid "You can only upload PNG image files."
 msgstr "Você pode carregar somente documentos de imagem PNG."
 
 msgid "The source will receive your reply next time they log in."
-msgstr ""
+msgstr "A fonte vai receber sua resposta na próxima vez em que você se conectar."
 
 msgid "You must select one or more items for download"
 msgstr "Você deve selecionar um ou mais itens para download"
@@ -182,7 +170,7 @@ msgstr[0] "Por favor, espere pelo menos {num} segundo antes de tentar acessar no
 msgstr[1] "Por favor, espere pelo menos {num} segundos antes de tentar acessar novamente."
 
 msgid "Your 2FA details are invalid - please contact an administrator to reset them."
-msgstr ""
+msgstr "As suas informações de ADF são inválidas - por favor contacte o administrador para redefiní-las."
 
 msgid "Please wait for a new code from your two-factor mobile app or security key before trying again."
 msgstr "Por favor, aguarde um novo código 2FA do seu aplicativo de celular ou chave de segurança antes de tentar novamente."
@@ -228,10 +216,10 @@ msgid "Cancel"
 msgstr "Cancelar"
 
 msgid "Un-star {designation}"
-msgstr ""
+msgstr "Remover dos favoritos {designation}"
 
 msgid "Star {designation}"
-msgstr ""
+msgstr "Marcar como favorito {designation}"
 
 msgid "1 doc"
 msgid_plural "{num} docs"
@@ -334,7 +322,7 @@ msgid "Admin Interface"
 msgstr "Interface de Administração"
 
 msgid "Add User"
-msgstr ""
+msgstr "Adicionar usuário"
 
 msgid "ADD USER"
 msgstr "ADICIONAR USUÁRIO"
@@ -383,7 +371,7 @@ msgid "No users to display"
 msgstr "Não há usuários para exibir"
 
 msgid "Update instance config"
-msgstr ""
+msgstr "Atualiza configuração da instância"
 
 msgid "INSTANCE CONFIG"
 msgstr "CONFIGURAÇÃO DE INSTÂNCIA"
@@ -421,7 +409,7 @@ msgid "Change HOTP Secret"
 msgstr "Alterar Segredo"
 
 msgid "Enter a new HOTP secret formatted as a 40-digit hexadecimal string. Spaces will be ignored:"
-msgstr ""
+msgstr "Insira um novo segredo HOTP formatado como uma cadeia de caracteres hexadecimais de 40 dígitos. Os espaços em branco serão ignorados:"
 
 msgid "You're almost done! To finish adding this new user, have them follow the instructions below to set up two-factor authentication with FreeOTP. Once they've added an entry for this account in the app, have them enter one of the 6-digit codes from the app to confirm that two-factor authentication is set up correctly."
 msgstr "Está quase terminando! Para finalizar a criação deste novo usuário, peça para essa pessoa seguir as instruções abaixo e configurar a autenticação de dois fatores (2FA) com o FreeOTP. Ao registrar a nova conta no aplicativo, um código de seis dígitos será gerado. Ele deve ser usado pela.o usuária.o para verificar a configuração do 2FA."
@@ -452,7 +440,7 @@ msgid "Powered by <b>SecureDrop {version}</b>."
 msgstr "Este site utiliza o <em>SecureDrop {version}</em>."
 
 msgid "You are here:"
-msgstr ""
+msgstr "Você está aqui:"
 
 msgid "All Sources"
 msgstr "Todas as Fontes"
@@ -467,7 +455,7 @@ msgid "Delete Selected"
 msgstr "Apagar Seleção"
 
 msgid "Status"
-msgstr ""
+msgstr "Estado"
 
 #, fuzzy
 #| msgid "First name"
@@ -475,10 +463,10 @@ msgid "Filename"
 msgstr "Nome"
 
 msgid "Size"
-msgstr ""
+msgstr "Tamanho"
 
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 msgid "Unread"
 msgstr "Não lida"
@@ -561,7 +549,7 @@ msgid "Recommended size: 500px * 450px"
 msgstr "Tamanho recomendado: 500px * 450px"
 
 msgid "Update Logo"
-msgstr ""
+msgstr "Atualizar Logotipo"
 
 msgid "UPDATE LOGO"
 msgstr "ATUALIZAR LOGO"
@@ -587,7 +575,7 @@ msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr "Envie um e-mail criptografado para verificar se os alertas OSSEC estão funcionando corretamente:"
 
 msgid "Send Test OSSEC Alert"
-msgstr ""
+msgstr "Envie um alerta OSSEC de teste"
 
 msgid "SEND TEST OSSEC ALERT"
 msgstr "ENVIAR ALERTA DE VERIFICAÇÃO DO OSSEC"
@@ -598,7 +586,7 @@ msgstr[0] "O seguinte arquivo será <strong>apagado definitivamente</strong>:"
 msgstr[1] "Os seguintes {num} arquivos serão <strong>apagados definitivamente</strong>:"
 
 msgid "Permanently Delete Files"
-msgstr ""
+msgstr "Apagar arquivos permanentemente"
 
 msgid "PERMANENTLY DELETE FILES"
 msgstr "APAGAR ARQUIVOS DEFINITIVAMENTE"
@@ -674,7 +662,7 @@ msgid "RESET MOBILE APP CREDENTIALS"
 msgstr "REDEFINIR CREDENCIAIS DO APLICATIVO PARA CELULAR"
 
 msgid "Reset Mobile App Credentials"
-msgstr ""
+msgstr "Redefinir as credenciais do app mobile"
 
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
 msgstr "Redefinir autenticação de dois fatores (2FA) para chaves de segurança, como YubiKey"
@@ -683,7 +671,7 @@ msgid "RESET SECURITY KEY CREDENTIALS"
 msgstr "REDEFINIR CREDENCIAIS DE CHAVE DE SEGURANÇA"
 
 msgid "Reset Security Key Credentials"
-msgstr ""
+msgstr "Redefinir credenciais da chave de segurança"
 
 msgid "Download Unread"
 msgstr "Baixar Não Lidas"
@@ -698,7 +686,7 @@ msgid "Un-star"
 msgstr "Desmarcar"
 
 msgid "Designation"
-msgstr ""
+msgstr "Designação"
 
 #, fuzzy
 #| msgid "Uploaded Document"
@@ -711,7 +699,7 @@ msgid "Messages"
 msgstr "Mensagem"
 
 msgid "Date"
-msgstr ""
+msgstr "Data"
 
 msgid "No documents have been submitted!"
 msgstr "Nenhum documento foi enviado!"
@@ -740,7 +728,7 @@ msgid "Selected language"
 msgstr "Não Selecionar Nada"
 
 msgid "Choose language"
-msgstr ""
+msgstr "Escolha a língua"
 
 msgid "Login to access the journalist interface"
 msgstr "Faça login para acessar a interface para jornalistas"
@@ -778,7 +766,7 @@ msgid "Write a message."
 msgstr "Escreva uma mensagem."
 
 msgid "Select a file to upload."
-msgstr ""
+msgstr "Selecione um arquivo para carregar."
 
 msgid "Message text too long."
 msgstr "Mensagem de texto muito longa."
@@ -879,7 +867,7 @@ msgstr ""
 "informações. Contrariamente a uma senha, não é possível recuperar um codinome perdido."
 
 msgid "Submit Documents"
-msgstr ""
+msgstr "Submeter Documentos"
 
 msgid "SUBMIT DOCUMENTS"
 msgstr "ENVIAR DOCUMENTOS"
@@ -888,7 +876,7 @@ msgid "Your Tor Browser's <a id=\"disable-js\" href=\"\"><b>Security Level</b></
 msgstr "O <a id=\"disable-js\" href=\"\"><b>nível de segurança</b></a> do seu navegador Tor está muito baixo. Use o botão <img src=\"{icon}\" alt=\"&quot;nível de segurança&quot;\"> &nbsp;no seu navegador para modificá-lo."
 
 msgid "How to change your security level"
-msgstr ""
+msgstr "Como mudar seu nível de segurança"
 
 msgid "Click the <img src=\"{icon}\" alt=\"&quot;Security Level&quot; button\"> in the toolbar above"
 msgstr "Clique no <img src=\"{icon}\" alt=\"&quot;nível de segurança&quot;\"> na barra de ferramentas, acima"
@@ -917,7 +905,7 @@ msgid "First time submitting to our SecureDrop? Start here."
 msgstr "Este é o seu primeiro envio pelo nosso SecureDrop? Comece por aqui."
 
 msgid "Get Started"
-msgstr ""
+msgstr "Iniciar"
 
 msgid "GET STARTED"
 msgstr "COMO COMEÇAR"
@@ -935,7 +923,7 @@ msgid "Enter your codename"
 msgstr "Digite o seu codinome"
 
 msgid "Continue"
-msgstr ""
+msgstr "Continuar"
 
 msgid "CANCEL"
 msgstr "CANCELAR"
@@ -971,7 +959,7 @@ msgid "Maximum upload size: 500 MB"
 msgstr "Tamanho máximo de envio: 500 MB"
 
 msgid "Submit"
-msgstr ""
+msgstr "Enviar"
 
 msgid "Read Replies"
 msgstr "Ler Respostas"
