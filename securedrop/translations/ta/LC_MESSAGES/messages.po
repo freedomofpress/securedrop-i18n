@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 1.0.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2022-02-23 19:04+0000\nLast-Translator: Stymy RAT <stymyrat@outlook.com>\nLanguage-Team: Tamil <https://weblate.securedrop.org/projects/securedrop/securedrop/ta/>\nLanguage: ta\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 1.0.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2022-02-25 07:04+0000\nLast-Translator: Stymy RAT <stymyrat@outlook.com>\nLanguage-Team: Tamil <https://weblate.securedrop.org/projects/securedrop/securedrop/ta/>\nLanguage: ta\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "{time} முன்பு"
@@ -16,7 +16,7 @@ msgid "You have been logged out due to password change"
 msgstr "கடவுச்சொல் மாற்றத்தால் நீங்கள் விடுபதிகை செய்யப்பட்டுள்ளீர்கள்"
 
 msgid "SecureDrop"
-msgstr ""
+msgstr "SecureDrop"
 
 msgid "Incorrect password or two-factor code."
 msgstr "சரியில்லாக் கடவுச்சொல் அல்லது இருகூற்றுக் குறி."
@@ -292,7 +292,7 @@ msgid "Your phone will now be in \"scanning\" mode. When you are in this mode, s
 msgstr "உங்கள் தொலைபேசி இப்பொழுது தேடி வருடும் முறைமையில் இருக்கும். இந்த நிலையில் இருக்கையில், கீழுள்ள பட்டைக்குறியைத் தேடி வருடுக:"
 
 msgid "Can't scan the barcode? You can manually pair FreeOTP with your SecureDrop account by entering the following two-factor secret into the app:"
-msgstr ""
+msgstr "வரிக்குறியை ஊடறிய முடியவில்லையா? பின்வரும் இருகூற்றுக் மறைசெய்தியைச் செயலியில் உள்ளிட்டு தஒபக FreeOTPயை உங்களுடைய SecureDrop கணக்குடன் நீங்களே இணைத்திட முடியும்:"
 
 #, fuzzy
 #| msgid "Once you have scanned the barcode, enter the 6-digit code below:"
@@ -391,7 +391,7 @@ msgid "You're almost done! To finish adding this new user, have them follow the 
 msgstr "நீங்கள் ஏறத்தாழ முடித்துவிட்டீர்கள்! புதுப்பயனர் சேர்க்கையை முடிக்க, கீழுள்ள தகவல்களைப் பின்பற்றி இருகூற்றுக் குறியடன் தளையற்ற ஒபகவை அமைக்கச் செய்க. செயலியில் இந்தக் கணக்கை அவர்கள் உள்ளிட்டு இணைத்தவுடன், இருகூற்றுக் குறி சரியாக அமைக்கப்பட்டதை உறுதிசெய்யும் பொருட்டு அவர்களைச் செயலியிலிருந்து பெற்ற 6-இலக்கக் குறிகளுள் ஒன்றை உள்ளிடச் செய்க."
 
 msgid "Can't scan the barcode? You can manually pair FreeOTP with this account by entering the following two-factor secret into the app:"
-msgstr ""
+msgstr "வரிக்குறியை ஊடறிய முடியவில்லையா? பின்வரும் இருகூற்றுக் மறைசெய்தியைச் செயலியில் உள்ளிட்டு தஒபக FreeOTPயை இந்தக் கணக்குடன் நீங்களே இணைத்திட முடியும்:"
 
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "YubiKey ஐ உருவமைவு செய்தபின், 6-இலக்கக் குறியை கீழே உள்ளிடுக:"
@@ -512,10 +512,10 @@ msgid "Organization Name"
 msgstr "நிறுவனத்தின் பெயர்"
 
 msgid "Set the organization name used on the SecureDrop web interfaces:"
-msgstr ""
+msgstr "SecureDrop வலைய இடைமுகத்தில் பயன்படுத்தப்படும் நிறுவனப் பெயரை உள்ளிடுக:"
 
 msgid "SET ORGANIZATION NAME"
-msgstr ""
+msgstr "நிறுவனப் பெயரை உள்ளிடுக"
 
 msgid "Logo Image"
 msgstr "குறியப்படிமம்"
