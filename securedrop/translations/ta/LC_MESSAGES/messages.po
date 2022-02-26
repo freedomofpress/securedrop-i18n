@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 1.0.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2022-02-25 07:04+0000\nLast-Translator: Stymy RAT <stymyrat@outlook.com>\nLanguage-Team: Tamil <https://weblate.securedrop.org/projects/securedrop/securedrop/ta/>\nLanguage: ta\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
+msgstr "Project-Id-Version: SecureDrop 1.0.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2022-02-26 16:04+0000\nLast-Translator: Stymy RAT <stymyrat@outlook.com>\nLanguage-Team: Tamil <https://weblate.securedrop.org/projects/securedrop/securedrop/ta/>\nLanguage: ta\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "{time} முன்பு"
@@ -22,7 +22,7 @@ msgid "Incorrect password or two-factor code."
 msgstr "சரியில்லாக் கடவுச்சொல் அல்லது இருகூற்றுக் குறி."
 
 msgid "Your two-factor credentials have been reset successfully."
-msgstr "உங்களுடைய இருகூற்றுச் சான்றாவணம் வெற்றிகரமாக மறுவமைப்பு செய்யப்பட்டுவிட்டது."
+msgstr "உங்களுடைய இருகூற்றுச் சான்றாவணங்கள் வெற்றிகரமாக மறுவமைப்பு செய்யப்பட்டுவிட்டன."
 
 msgid "There was a problem verifying the two-factor code. Please try again."
 msgstr "இருகூற்றுக் குறியைச் சரிபார்ப்பதில் குழப்பம் நேர்ந்துள்ளது. தயவு செய்து மீண்டும் முயல்க."
