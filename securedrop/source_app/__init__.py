@@ -1,9 +1,10 @@
 from pathlib import Path
 from typing import Optional
 
+import os
+import time
 import werkzeug
-from flask import (Flask, render_template, escape, flash, Markup, request, g, session,
-                   url_for)
+from flask import (Flask, render_template, request, g, session, redirect, url_for)
 from flask_babel import gettext
 from flask_assets import Environment
 from flask_wtf.csrf import CSRFProtect, CSRFError
@@ -84,32 +85,13 @@ def create_app(config: SDConfig) -> Flask:
     app.jinja_env.filters['filesizeformat'] = template_filters.filesizeformat
     app.jinja_env.filters['html_datetime_format'] = \
         template_filters.html_datetime_format
+    app.jinja_env.add_extension('jinja2.ext.do')
 
     for module in [main, info, api]:
         app.register_blueprint(module.make_blueprint(config))  # type: ignore
 
-    @app.before_request
-    @ignore_static
-    def check_tor2web() -> None:
-        # ignore_static here so we only flash a single message warning
-        # about Tor2Web, corresponding to the initial page load.
-        if 'X-tor2web' in request.headers:
-            flash(
-                Markup(
-                    '<strong>{}</strong>&nbsp;{}&nbsp;<a href="{}">{}</a>'.format(
-                        escape(gettext("WARNING:")),
-                        escape(
-                            gettext(
-                                'You appear to be using Tor2Web, which does not provide anonymity.'
-                            )
-                        ),
-                        url_for('info.tor2web_warning'),
-                        escape(gettext('Why is this dangerous?')),
-                    )
-                ),
-                "banner-warning"
-            )
-
+    # before_request hooks are executed in order of declaration, so set up g object
+    # before the potential tor2web 403 response.
     @app.before_request
     @ignore_static
     def setup_g() -> Optional[werkzeug.Response]:
@@ -126,6 +108,15 @@ def create_app(config: SDConfig) -> Flask:
 
         return None
 
+    @app.before_request
+    @ignore_static
+    def check_tor2web() -> Optional[werkzeug.Response]:
+        # TODO: expand header checking logic to catch modern tor2web proxies
+        if 'X-tor2web' in request.headers:
+            if request.path != url_for('info.tor2web_warning'):
+                return redirect(url_for('info.tor2web_warning'))
+        return None
+
     @app.errorhandler(404)
     def page_not_found(error: werkzeug.exceptions.HTTPException) -> Tuple[str, int]:
         return render_template('notfound.html'), 404
@@ -133,5 +124,16 @@ def create_app(config: SDConfig) -> Flask:
     @app.errorhandler(500)
     def internal_error(error: werkzeug.exceptions.HTTPException) -> Tuple[str, int]:
         return render_template('error.html'), 500
+
+    # Obscure the creation time of source private keys by touching them all
+    # on startup.
+    private_keys = Path(config.GPG_KEY_DIR) / 'private-keys-v1.d'
+    now = time.time()
+    for entry in os.scandir(private_keys):
+        if not entry.is_file() or not entry.name.endswith('.key'):
+            continue
+        os.utime(entry.path, times=(now, now))
+        # So the ctime is also updated
+        os.chmod(entry.path, entry.stat().st_mode)
 
     return app

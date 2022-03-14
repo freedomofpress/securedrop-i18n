@@ -31,6 +31,8 @@ from .utils.db_helper import new_codename, submit
 from .utils.i18n import get_test_locales, language_tag, page_language, xfail_untranslated_messages
 from .utils.instrument import InstrumentedApp
 
+GENERATE_DATA = {'tor2web_check': 'href="fake.onion"'}
+
 
 def test_logo_default_available(config, source_app):
     # if the custom image is available, this test will fail
@@ -108,10 +110,10 @@ def test_generate_already_logged_in(source_app):
     with source_app.test_client() as app:
         new_codename(app, session)
         # Make sure it redirects to /lookup when logged in
-        resp = app.get(url_for('main.generate'))
+        resp = app.post(url_for('main.generate'), data=GENERATE_DATA)
         assert resp.status_code == 302
         # Make sure it flashes the message on the lookup page
-        resp = app.get(url_for('main.generate'), follow_redirects=True)
+        resp = app.post(url_for('main.generate'), data=GENERATE_DATA, follow_redirects=True)
         # Should redirect to /lookup
         assert resp.status_code == 200
         text = resp.data.decode('utf-8')
@@ -120,7 +122,7 @@ def test_generate_already_logged_in(source_app):
 
 def test_create_new_source(source_app):
     with source_app.test_client() as app:
-        resp = app.get(url_for('main.generate'))
+        resp = app.post(url_for('main.generate'), data=GENERATE_DATA)
         assert resp.status_code == 200
         tab_id = next(iter(session['codenames'].keys()))
         resp = app.post(url_for('main.create'), data={'tab_id': tab_id}, follow_redirects=True)
@@ -133,12 +135,12 @@ def test_create_new_source(source_app):
 
 def test_generate(source_app):
     with source_app.test_client() as app:
-        resp = app.get(url_for('main.generate'))
+        resp = app.post(url_for('main.generate'), data=GENERATE_DATA)
         assert resp.status_code == 200
         session_codename = next(iter(session['codenames'].values()))
 
     text = resp.data.decode('utf-8')
-    assert "This codename is what you will use in future visits" in text
+    assert "functions as both your username and your password" in text
 
     codename = _find_codename(resp.data.decode('utf-8'))
     # codename is also stored in the session - make sure it matches the
@@ -149,7 +151,7 @@ def test_generate(source_app):
 def test_create_duplicate_codename_logged_in_not_in_session(source_app):
     with patch.object(source_app.logger, 'error') as logger:
         with source_app.test_client() as app:
-            resp = app.get(url_for('main.generate'))
+            resp = app.post(url_for('main.generate'), data=GENERATE_DATA)
             assert resp.status_code == 200
             tab_id, codename = next(iter(session['codenames'].items()))
 
@@ -172,12 +174,12 @@ def test_create_duplicate_codename_logged_in_not_in_session(source_app):
 def test_create_duplicate_codename_logged_in_in_session(source_app):
     with source_app.test_client() as app:
         # Given a user who generated a codename in a browser tab
-        resp = app.get(url_for('main.generate'))
+        resp = app.post(url_for('main.generate'), data=GENERATE_DATA)
         assert resp.status_code == 200
         first_tab_id, first_codename = list(session['codenames'].items())[0]
 
         # And then they opened a new browser tab to generate a second codename
-        resp = app.get(url_for('main.generate'))
+        resp = app.post(url_for('main.generate'), data=GENERATE_DATA)
         assert resp.status_code == 200
         second_tab_id, second_codename = list(session['codenames'].items())[1]
         assert first_codename != second_codename
@@ -417,6 +419,40 @@ def test_submit_big_message(source_app):
         assert "Message text too long." in text
 
 
+def test_submit_initial_short_message(source_app):
+    """
+    Test the message size limit.
+    """
+    with source_app.test_client() as app:
+        InstanceConfig.get_default().update_submission_prefs(
+            allow_uploads=True, min_length=10, reject_codenames=False)
+        new_codename(app, session)
+        resp = app.post(
+            url_for('main.submit'),
+            data=dict(msg="A" * 5, fh=(StringIO(''), '')),
+            follow_redirects=True)
+        assert resp.status_code == 200
+        text = resp.data.decode('utf-8')
+        assert "Your first message must be at least 10 characters long." in text
+        # Now retry with a longer message
+        resp = app.post(
+            url_for('main.submit'),
+            data=dict(msg="A" * 25, fh=(StringIO(''), '')),
+            follow_redirects=True)
+        assert resp.status_code == 200
+        text = resp.data.decode('utf-8')
+        assert "Thank you for sending this information to us." in text
+        # Now send another short message, that should still be accepted since
+        # it's no longer the initial one
+        resp = app.post(
+            url_for('main.submit'),
+            data=dict(msg="A", fh=(StringIO(''), '')),
+            follow_redirects=True)
+        assert resp.status_code == 200
+        text = resp.data.decode('utf-8')
+        assert "Thanks! We received your message." in text
+
+
 def test_submit_file(source_app):
     with source_app.test_client() as app:
         new_codename(app, session)
@@ -443,6 +479,47 @@ def test_submit_both(source_app):
         assert resp.status_code == 200
         text = resp.data.decode('utf-8')
         assert "Thanks! We received your message and document" in text
+
+
+def test_submit_antispam(source_app):
+    """
+    Test the antispam check.
+    """
+    with source_app.test_client() as app:
+        new_codename(app, session)
+        _dummy_submission(app)
+        resp = app.post(
+            url_for('main.submit'),
+            data=dict(msg="Test", fh=(StringIO(''), ''), text="blah"),
+            follow_redirects=True)
+        assert resp.status_code == 403
+
+
+def test_submit_codename(source_app):
+    """
+    Test preventions against people submitting their codename.
+    """
+    with source_app.test_client() as app:
+        InstanceConfig.get_default().update_submission_prefs(
+            allow_uploads=True, min_length=0, reject_codenames=True)
+        codename = new_codename(app, session)
+        resp = app.post(
+            url_for('main.submit'),
+            data=dict(msg=codename, fh=(StringIO(''), '')),
+            follow_redirects=True)
+        assert resp.status_code == 200
+        text = resp.data.decode('utf-8')
+        assert "Please do not submit your codename!" in text
+        # Do a dummy submission
+        _dummy_submission(app)
+        # Now resubmit the codename, should be accepted.
+        resp = app.post(
+            url_for('main.submit'),
+            data=dict(msg=codename, fh=(StringIO(''), '')),
+            follow_redirects=True)
+        assert resp.status_code == 200
+        text = resp.data.decode('utf-8')
+        assert "Thanks! We received your message" in text
 
 
 def test_delete_all_successfully_deletes_replies(source_app, app_storage):
@@ -537,38 +614,24 @@ def test_submit_sanitizes_filename(source_app):
                                         mtime=0)
 
 
-@flaky(rerun_filter=utils.flaky_filter_xfail)
-@pytest.mark.parametrize("locale", get_test_locales())
-def test_tor2web_warning_headers(config, source_app, locale):
+@pytest.mark.parametrize("test_url", ['main.index', 'main.create', 'main.submit'])
+def test_redirect_when_tor2web(config, source_app, test_url):
     with source_app.test_client() as app:
-        with InstrumentedApp(app) as ins:
-            resp = app.get(url_for('main.index', l=locale), headers=[('X-tor2web', 'encrypted')])
-            assert resp.status_code == 200
-
-            assert page_language(resp.data) == language_tag(locale)
-            msgids = [
-                "WARNING:",
-                "You appear to be using Tor2Web, which does not provide anonymity.",
-                "Why is this dangerous?",
-            ]
-            with xfail_untranslated_messages(config, locale, msgids):
-                ins.assert_message_flashed(
-                    '<strong>{}</strong>&nbsp;{}&nbsp;<a href="{}">{}</a>'.format(
-                        escape(gettext(msgids[0])),
-                        escape(gettext(msgids[1])),
-                        url_for('info.tor2web_warning'),
-                        escape(gettext(msgids[2])),
-                    ),
-                    'banner-warning'
-                )
-
+        resp = app.get(
+            url_for(test_url),
+            headers=[('X-tor2web', 'encrypted')],
+            follow_redirects=True)
+        text = resp.data.decode('utf-8')
+        assert resp.status_code == 403
+        assert "Proxy Service Detected" in text
 
 def test_tor2web_warning(source_app):
     with source_app.test_client() as app:
         resp = app.get(url_for('info.tor2web_warning'))
-        assert resp.status_code == 200
+        assert resp.status_code == 403
         text = resp.data.decode('utf-8')
-        assert "Why is there a warning about Tor2Web?" in text
+        assert "Proxy Service Detected" in text
+
 
 
 def test_why_use_tor_browser(source_app):
@@ -780,7 +843,7 @@ def test_source_session_expiration(source_app):
 def test_source_session_expiration_create(source_app):
     with source_app.test_client() as app:
         # Given a source user who is in the middle of the account creation flow
-        resp = app.get(url_for('main.generate'))
+        resp = app.post(url_for('main.generate'), data=GENERATE_DATA)
         assert resp.status_code == 200
 
         # But we're now 6 hours later hence they did not finish the account creation flow in time
@@ -869,3 +932,13 @@ def test_source_can_only_delete_own_replies(source_app, app_storage):
 
     reply = Reply.query.filter_by(filename=filename).one()
     assert reply.deleted_by_source
+
+
+def test_robots_txt(source_app):
+    """Test that robots.txt works"""
+    with source_app.test_client() as app:
+        # Not using url_for here because we care about the actual URL path
+        resp = app.get('/robots.txt')
+        assert resp.status_code == 200
+        text = resp.data.decode('utf-8')
+        assert 'Disallow: /' in text

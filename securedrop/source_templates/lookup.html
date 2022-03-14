@@ -1,9 +1,12 @@
 {% extends "base.html" %}
+{% import 'utils.html' as utils %}
 
 {% block body %}
 {% if new_user_codename %}
 <details class="code-reminder pull-left" id="codename-hint">
-  <summary>{{ gettext('Remember, your codename is:') }}</summary>
+  <summary data-show="{{ gettext('Show') }}" data-hide="{{ gettext('Hide') }}">
+   {{ gettext('Remember, your codename is:') }}
+  </summary>
   <mark class="codename">{{ new_user_codename }}</mark>
 </details>
 {% endif %}
@@ -41,6 +44,15 @@
       {% endif %}
       <div class="message grid-item{% if not allow_document_uploads %} wide{% endif %}">
         {{ form.msg(class="fill-parent") }}
+  {% if allow_document_uploads %}
+      {% if min_len > 0 %}
+         <p class="center" id="min-msg-length">{{ gettext('If you are only sending a message, it must be at least {} characters long.'.format(min_len)) }}</p>
+      {% endif %}
+  {% else %}
+      {% if min_len > 0 %}
+        <p class="center" id="min-msg-length">{{ gettext('Your first message must be at least {} characters long.'.format(min_len)) }}</p>
+      {% endif %}
+  {% endif %}
       </div>
     </div>
 
@@ -49,12 +61,14 @@
         {{ gettext('SUBMIT') }}
       </button>
 
-
-
       <a href="{{ url_for('main.lookup') }}" class="btn secondary" id="cancel" role="button"
         aria-label="{{ gettext('Cancel') }}">
         {{ gettext('CANCEL') }}
       </a>
+    </div>
+    <div id="text-field">
+      <label for="text">{{ gettext('Anti-spam check. Do not fill this in!') }}</label>
+      {{ form.antispam() }}
     </div>
   </form>
 </section>
@@ -68,9 +82,9 @@
       {{ gettext("You have received a reply. To protect your identity in the unlikely event someone learns your codename, please delete all replies when you're done with them. This also lets us know that you are aware of our reply. You can respond by submitting new files and messages above.") }}
     </p>
     {% for reply in replies %}
+    {%- set timestamp = utils.relative_time(reply.date) -%}
     <article class="reply">
-      <h3 class="date"><time title="{{ reply.date|rel_datetime_format }}"
-          datetime="{{ reply.date|html_datetime_format }}">{{ reply.date|rel_datetime_format(relative=True) }}</time></h3>
+      <h3 class="date">{{ timestamp }}</h3>
       <form id="delete" class="message" method="post" action="{{ url_for('main.delete') }}" autocomplete="off">
         <input name="csrf_token" type="hidden" value="{{ csrf_token() }}">
         <input type="hidden" name="reply_filename" value="{{ reply.filename }}" autocomplete="off">
@@ -80,8 +94,9 @@
         </a>
         <dialog open id="confirm-delete-{{ reply.filename }}" class="confirm-prompt"
           aria-labelledby="delete-heading-{{ reply.filename }}">
-          <h3 id="delete-heading-{{ reply.filename }}" hidden>Delete reply from
-            {{ reply.date|rel_datetime_format(relative=True) }}?</h3>
+          <h3 id="delete-heading-{{ reply.filename }}" hidden>
+            {{ gettext('Delete reply from {timestamp}?').format(timestamp=timestamp) }}
+          </h3>
           <p>{{ gettext('Delete this reply?') }}
             <a href="#delete" role="button">{{ gettext('Cancel') }}</a>
             <button type="submit" class="danger" id="confirm-delete-reply-button-{{ reply.filename }}" role="button"

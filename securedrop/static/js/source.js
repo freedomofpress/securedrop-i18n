@@ -1,5 +1,5 @@
-const TBB_UA_REGEX = /Mozilla\/5\.0 \((Windows NT 10\.0|X11; Linux x86_64|Macintosh; Intel Mac OS X 10\.[0-9]{2}|Windows NT 10\.0; Win64; x64|Android; Mobile); rv:[0-9]{2}\.0\) Gecko\/20100101 Firefox\/([0-9]{2})\.0/
-const ORFOX_UA_REGEX = /Mozilla\/5\.0 \(Android; Mobile; rv:[0-9]{2}\.0\) Gecko\/20100101 Firefox\/([0-9]{2})\.0/;
+const TBB_UA_REGEX = /Mozilla\/5\.0 \((Windows NT 10\.0|X11; Linux x86_64|Macintosh; Intel Mac OS X 10\.[0-9]{2}|Windows NT 10\.0; Win64; x64|Android; Mobile); rv:[0-9]{2,3}\.0\) Gecko\/20100101 Firefox\/([0-9]{2,3})\.0/
+const ORFOX_UA_REGEX = /Mozilla\/5\.0 \(Android; Mobile; rv:[0-9]{2,3}\.0\) Gecko\/20100101 Firefox\/([0-9]{2,3})\.0/;
 
 function fadeIn(el, duration = 200, displayStyle = "block") {
   const frameDuration = 16;
@@ -122,6 +122,15 @@ function suggestTor() {
   addFadingClose("use-tor-browser-close", useTorBrowser);
 }
 
+function checkClearnet() {
+  let url = new URL(location.href);
+  // Allow localhost for development
+  let localhost = ["127.0.0.1", "localhost"];
+  if (localhost.indexOf(url.hostname) === -1 && !url.host.endsWith(".onion")) {
+    location.href = "/tor2web-warning"
+  }
+}
+
 function ready(fn) {
   if (document.readyState != "loading"){
     fn();
@@ -140,4 +149,5 @@ ready(function() {
       suggestTor();
     }
   }
+  checkClearnet();
 });

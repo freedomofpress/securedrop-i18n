@@ -7,8 +7,8 @@ from datetime import datetime, timedelta, timezone
 from typing import Union
 
 import werkzeug
-from flask import (Blueprint, render_template, flash, redirect, url_for,
-                   session, current_app, request, Markup, abort, g)
+from flask import (Blueprint, render_template, flash, redirect, url_for, escape,
+                   session, current_app, request, Markup, abort, g, make_response)
 from flask_babel import gettext
 
 import store
@@ -24,7 +24,7 @@ from sdconfig import SDConfig
 from source_app.decorators import login_required
 from source_app.session_manager import SessionManager
 from source_app.utils import normalize_timestamps, fit_codenames_into_cookie, \
-    clear_session_and_redirect_to_logged_out_page
+    clear_session_and_redirect_to_logged_out_page, codename_detected
 from source_app.forms import LoginForm, SubmissionForm
 from source_user import InvalidPassphraseError, create_source_user, \
     SourcePassphraseCollisionError, SourceDesignationCollisionError, SourceUser
@@ -37,8 +37,15 @@ def make_blueprint(config: SDConfig) -> Blueprint:
     def index() -> str:
         return render_template('index.html')
 
-    @view.route('/generate', methods=('GET',))
+    @view.route('/generate', methods=('POST',))
     def generate() -> Union[str, werkzeug.Response]:
+        # Try to detect Tor2Web usage by looking to see if tor2web_check got mangled
+        tor2web_check = request.form.get('tor2web_check')
+        if tor2web_check is None:
+            # Missing form field
+            abort(403)
+        elif tor2web_check != 'href="fake.onion"':
+            return redirect(url_for('info.tor2web_warning'))
         if SessionManager.is_user_logged_in(db_session=db.session):
             flash(gettext(
                 "You were redirected because you are already logged in. "
@@ -46,7 +53,6 @@ def make_blueprint(config: SDConfig) -> Blueprint:
                 "first."),
                   "notification")
             return redirect(url_for('.lookup'))
-
         codename = PassphraseGenerator.get_default().generate_passphrase(
             preferred_language=g.localeinfo.language
         )
@@ -113,6 +119,13 @@ def make_blueprint(config: SDConfig) -> Blueprint:
             source_id=logged_in_source_in_db.id, deleted_by_source=False
         ).all()
 
+        first_submission = logged_in_source_in_db.interaction_count == 0
+
+        if first_submission:
+            min_message_length = InstanceConfig.get_default().initial_message_min_len
+        else:
+            min_message_length = 0
+
         for reply in source_inbox:
             reply_path = Storage.get_default().path(
                 logged_in_source.filesystem_id,
@@ -152,6 +165,7 @@ def make_blueprint(config: SDConfig) -> Blueprint:
             is_user_logged_in=True,
             allow_document_uploads=InstanceConfig.get_default().allow_document_uploads,
             replies=replies,
+            min_len=min_message_length,
             new_user_codename=session.get('new_user_codename', None),
             form=SubmissionForm(),
         )
@@ -165,7 +179,7 @@ def make_blueprint(config: SDConfig) -> Blueprint:
             for field, errors in form.errors.items():
                 for error in errors:
                     flash(error, "error")
-            return redirect(f"{url_for('main.lookup')}#flashed")
+            return redirect(url_for('main.lookup'))
 
         msg = request.form['msg']
         fh = None
@@ -180,11 +194,28 @@ def make_blueprint(config: SDConfig) -> Blueprint:
                       "error")
             else:
                 flash(gettext("You must enter a message."), "error")
-            return redirect(f"{url_for('main.lookup')}#flashed")
+            return redirect(url_for('main.lookup'))
 
         fnames = []
         logged_in_source_in_db = logged_in_source.get_db_record()
         first_submission = logged_in_source_in_db.interaction_count == 0
+
+        if first_submission:
+            min_len = InstanceConfig.get_default().initial_message_min_len
+            if (min_len > 0) and (msg and not fh) and (len(msg) < min_len):
+                flash(gettext(
+                    "Your first message must be at least {} characters long.".format(min_len)),
+                    "error")
+                return redirect(url_for('main.lookup'))
+
+            codenames_rejected = InstanceConfig.get_default().reject_message_with_codename
+            if codenames_rejected and codename_detected(msg, session['new_user_codename']):
+                flash(Markup('{}<br>{}'.format(
+                    escape(gettext("Please do not submit your codename!")),
+                    escape(gettext("Keep your codename secret, and use it to log in later"
+                                   " to check for replies."))
+                    )), "error")
+                return redirect(url_for('main.lookup'))
 
         if not os.path.exists(Storage.get_default().path(logged_in_source.filesystem_id)):
             current_app.logger.debug("Store directory not found for source '{}', creating one."
@@ -246,7 +277,7 @@ def make_blueprint(config: SDConfig) -> Blueprint:
 
         normalize_timestamps(logged_in_source)
 
-        return redirect(f"{url_for('main.lookup')}#flashed")
+        return redirect(url_for('main.lookup'))
 
     @view.route('/delete', methods=('POST',))
     @login_required
@@ -321,5 +352,12 @@ def make_blueprint(config: SDConfig) -> Blueprint:
             return render_template('logout.html')
         else:
             return redirect(url_for('.index'))
+
+    @view.route('/robots.txt')
+    def robots_txt() -> werkzeug.Response:
+        """Tell robots we don't want them"""
+        resp = make_response("User-agent: *\nDisallow: /")
+        resp.headers["content-type"] = "text/plain"
+        return resp
 
     return view

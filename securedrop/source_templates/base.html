@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
   {% if g.organization_name == "SecureDrop" %}
   <title>{{ g.organization_name }} | {{ gettext('Protecting Journalists and Sources') }}</title>
   {% else %}
@@ -16,11 +17,13 @@
 </head>
 
 <body>
-  {% include 'banner_warning_flashed.html' %}
-
   <div class="content">
     <div class="container">
       <header>
+        {% if get_flashed_messages() %}
+        <a href="#flashed" class="visually-hidden until-focus">{{ gettext('Skip to notification') }}</a>
+        {% endif %}
+        <a href="#main" class="visually-hidden until-focus">{{ gettext('Skip to main content') }}</a>
         {% block header %}
         <a href="{% if is_user_logged_in %}{{ url_for('main.lookup') }}{% else %}{{ url_for('main.index') }}{% endif %}"
           class="no-bottom-border">
@@ -30,7 +33,7 @@
         {% endblock %}
       </header>
 
-      <main>
+      <main id="main" tabindex="-1">
         {% if g.show_offline_message %}
         <section>
           <h1>{{ gettext("We're sorry, our SecureDrop is currently offline.") }}</h1>

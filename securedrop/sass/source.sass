@@ -40,7 +40,7 @@
       cursor: pointer
 
       &:after
-        content: "Show"
+        content: attr(data-show)
         display: block
         float: right
 
@@ -56,7 +56,7 @@
     &[open]
       summary
         &:after
-          content: "Hide"
+          content: attr(data-hide)
 
 @media only screen and (max-width: 880px)
   #codename-hint
@@ -143,6 +143,7 @@ p#codename
     margin-bottom: 1em
     border-radius: 5px
     position: relative
+    overflow-wrap: break-word
 
     &:dir(rtl)
       text-align: right
@@ -228,6 +229,10 @@ p#codename
     &:before, &:after
       content: " — "
 
+ul.explanation
+  margin-top: 26px
+  color: $color_grey_dark
+
 p.explanation
   text-align: left
   color: $color_grey_dark
@@ -253,6 +258,11 @@ p#max-file-size
   font-size: 10px
   font-style: italic
   margin-bottom: 0
+
+p#min-msg-length
+  font-size: 10px
+  font-style: italic
+  margin-bottom: 12px
 
 .bubble
   width: 415px
@@ -308,3 +318,7 @@ p#max-file-size
     background:
       image: url(/static/icons/chevron-left.png)
       size: contain
+
+/** This is the vaguely named antispam check */
+#text-field
+  display: none

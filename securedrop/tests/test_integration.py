@@ -26,6 +26,7 @@ from .utils.instrument import InstrumentedApp
 
 # Seed the RNG for deterministic testing
 random.seed('ಠ_ಠ')
+GENERATE_DATA = {'tor2web_check': 'href="fake.onion"'}
 
 
 def _login_user(app, user_dict):
@@ -44,7 +45,7 @@ def test_submit_message(journalist_app, source_app, test_journo, app_storage):
     test_msg = "This is a test message."
 
     with source_app.test_client() as app:
-        app.get('/generate')
+        app.post('/generate', data=GENERATE_DATA)
         tab_id = next(iter(session['codenames'].keys()))
         app.post('/create', data={'tab_id': tab_id}, follow_redirects=True)
         source_user = SessionManager.get_logged_in_user(db_session=db.session)
@@ -101,21 +102,6 @@ def test_submit_message(journalist_app, source_app, test_journo, app_storage):
             'table#submissions > tr.submission > td.status input[name="doc_names_selected"]'
             )[0]['value']
         resp = app.post('/bulk', data=dict(
-            action='confirm_delete',
-            filesystem_id=filesystem_id,
-            doc_names_selected=doc_name
-        ))
-
-        assert resp.status_code == 200
-        text = resp.data.decode('utf-8')
-        soup = BeautifulSoup(text, 'html.parser')
-        assert "The following file has been selected for" in text
-
-        # confirm delete submission
-        doc_name = soup.select
-        doc_name = soup.select(
-            'ul > li > input[name="doc_names_selected"]')[0]['value']
-        resp = app.post('/bulk', data=dict(
             action='delete',
             filesystem_id=filesystem_id,
             doc_names_selected=doc_name,
@@ -148,7 +134,7 @@ def test_submit_file(journalist_app, source_app, test_journo, app_storage):
     test_filename = "test.txt"
 
     with source_app.test_client() as app:
-        app.get('/generate')
+        app.post('/generate', data=GENERATE_DATA)
         tab_id = next(iter(session['codenames'].keys()))
         app.post('/create', data={'tab_id': tab_id}, follow_redirects=True)
         source_user = SessionManager.get_logged_in_user(db_session=db.session)
@@ -211,21 +197,6 @@ def test_submit_file(journalist_app, source_app, test_journo, app_storage):
             'table#submissions > tr.submission > td.status input[name="doc_names_selected"]'
             )[0]['value']
         resp = app.post('/bulk', data=dict(
-            action='confirm_delete',
-            filesystem_id=filesystem_id,
-            doc_names_selected=doc_name
-        ))
-
-        assert resp.status_code == 200
-        text = resp.data.decode('utf-8')
-        assert "The following file has been selected for" in text
-        soup = BeautifulSoup(resp.data, 'html.parser')
-
-        # confirm delete submission
-        doc_name = soup.select
-        doc_name = soup.select(
-            'ul > li > input[name="doc_names_selected"]')[0]['value']
-        resp = app.post('/bulk', data=dict(
             action='delete',
             filesystem_id=filesystem_id,
             doc_names_selected=doc_name,
@@ -255,7 +226,7 @@ def _helper_test_reply(journalist_app, source_app, config, test_journo,
     test_msg = "This is a test message."
 
     with source_app.test_client() as app:
-        app.get('/generate')
+        app.post('/generate', data=GENERATE_DATA)
         tab_id, codename = next(iter(session['codenames'].items()))
         app.post('/create', data={'tab_id': tab_id}, follow_redirects=True)
         # redirected to submission form
@@ -363,17 +334,6 @@ def _helper_filenames_delete(journalist_app, soup, i):
     # delete
     resp = journalist_app.post('/bulk', data=dict(
         filesystem_id=filesystem_id,
-        action='confirm_delete',
-        doc_names_selected=checkbox_values
-    ), follow_redirects=True)
-    assert resp.status_code == 200
-    text = resp.data.decode('utf-8')
-    assert (("The following file has been selected for"
-             " <strong>permanent deletion</strong>") in text)
-
-    # confirm delete
-    resp = journalist_app.post('/bulk', data=dict(
-        filesystem_id=filesystem_id,
         action='delete',
         doc_names_selected=checkbox_values
     ), follow_redirects=True)
@@ -446,7 +406,7 @@ def test_delete_collection(mocker, source_app, journalist_app, test_journo):
 
     # first, add a source
     with source_app.test_client() as app:
-        app.get('/generate')
+        app.post('/generate', data=GENERATE_DATA)
         tab_id = next(iter(session['codenames'].keys()))
         app.post('/create', data={'tab_id': tab_id})
         resp = app.post('/submit', data=dict(
@@ -496,7 +456,7 @@ def test_delete_collections(mocker, journalist_app, source_app, test_journo):
     with source_app.test_client() as app:
         num_sources = 2
         for i in range(num_sources):
-            app.get('/generate')
+            app.post('/generate', data=GENERATE_DATA)
             tab_id = next(iter(session['codenames'].keys()))
             app.post('/create', data={'tab_id': tab_id})
             app.post('/submit', data=dict(
@@ -553,7 +513,7 @@ def test_filenames(source_app, journalist_app, test_journo):
     and files"""
     # add a source and submit stuff
     with source_app.test_client() as app:
-        app.get('/generate')
+        app.post('/generate', data=GENERATE_DATA)
         tab_id = next(iter(session['codenames'].keys()))
         app.post('/create', data={'tab_id': tab_id})
         _helper_filenames_submit(app)
@@ -580,7 +540,7 @@ def test_filenames_delete(journalist_app, source_app, test_journo):
     """Test pretty, sequential filenames when journalist deletes files"""
     # add a source and submit stuff
     with source_app.test_client() as app:
-        app.get('/generate')
+        app.post('/generate', data=GENERATE_DATA)
         tab_id = next(iter(session['codenames'].keys()))
         app.post('/create', data={'tab_id': tab_id})
         _helper_filenames_submit(app)
@@ -684,7 +644,8 @@ def test_prevent_document_uploads(source_app, journalist_app, test_admin):
     with journalist_app.test_client() as app:
         _login_user(app, test_admin)
         form = journalist_app_module.forms.SubmissionPreferencesForm(
-            prevent_document_uploads=True)
+            prevent_document_uploads=True,
+            min_message_length=0)
         resp = app.post('/admin/update-submission-preferences',
                         data=form.data,
                         follow_redirects=True)
@@ -692,7 +653,7 @@ def test_prevent_document_uploads(source_app, journalist_app, test_admin):
 
     # Check that the source interface accepts only messages:
     with source_app.test_client() as app:
-        app.get('/generate')
+        app.post('/generate', data=GENERATE_DATA)
         tab_id = next(iter(session['codenames'].keys()))
         resp = app.post('/create', data={'tab_id': tab_id}, follow_redirects=True)
         assert resp.status_code == 200
@@ -712,13 +673,17 @@ def test_no_prevent_document_uploads(source_app, journalist_app, test_admin):
     # Set allow_document_uploads = True:
     with journalist_app.test_client() as app:
         _login_user(app, test_admin)
+        form = journalist_app_module.forms.SubmissionPreferencesForm(
+            prevent_document_uploads=False,
+            min_message_length=0)
         resp = app.post('/admin/update-submission-preferences',
+                        data=form.data,
                         follow_redirects=True)
         assert resp.status_code == 200
 
     # Check that the source interface accepts both files and messages:
     with source_app.test_client() as app:
-        app.get('/generate')
+        app.post('/generate', data=GENERATE_DATA)
         tab_id = next(iter(session['codenames'].keys()))
         resp = app.post('/create', data={'tab_id': tab_id}, follow_redirects=True)
         assert resp.status_code == 200
