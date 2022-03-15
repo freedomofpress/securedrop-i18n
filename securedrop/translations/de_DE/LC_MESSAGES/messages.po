@@ -3,16 +3,17 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2022-02-11 16:04+0000\n"
-"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
+"PO-Revision-Date: 2022-03-15 03:11+0000\n"
+"Last-Translator: Martin Trebuch <martin.trebuch@gmail.com>\n"
 "Language-Team: German <https://weblate.securedrop.org/projects/securedrop/securedrop/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.6\n"
+"X-Generator: Weblate 4.11.2\n"
 "Generated-By: Babel 2.4.0\n"
+
 msgid "Name too long"
 msgstr "Name zu lang"
 
@@ -735,7 +736,7 @@ msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
 msgstr "Längere Texte müssen als Datei hochgeladen, und nicht kopiert und eingefügt werden."
 
 msgid "Your connection is not anonymous right now!"
-msgstr ""
+msgstr "Ihre Verbindung ist gerade nicht anonym!"
 
 msgid "You were redirected because you are already logged in. If you want to create a new account, you should log out first."
 msgstr "Sie wurden umgeleitet, weil Sie bereits angemeldet sind. Wenn Sie ein neues Konto erstellen möchten, müssen Sie sich zuerst abmelden."
@@ -752,21 +753,14 @@ msgstr "Sie müssen eine Nachricht eingeben oder eine Datei zum Versenden auswä
 msgid "You must enter a message."
 msgstr "Sie müssen eine Nachricht eingeben."
 
-#, fuzzy
-#| msgid "Must be at least {num} character long."
-#| msgid_plural "Must be at least {num} characters long."
 msgid "Your first message must be at least {} characters long."
-msgstr "Muss mindestens {num} Zeichen lang sein."
+msgstr "Ihre erste Nachricht muss mindestens {} Zeichen lang sein."
 
-#, fuzzy
-#| msgid "Forgot your codename?"
 msgid "Please do not submit your codename!"
-msgstr "Decknamen vergessen?"
+msgstr "Bitte schicken Sie nicht Ihren Decknamen ab!"
 
-#, fuzzy
-#| msgid "If you have already submitted to journalists, log in here to check for responses."
 msgid "Keep your codename secret, and use it to log in later to check for replies."
-msgstr "Wenn Sie bereits an Journalisten versendet haben, melden Sie sich hier an, um nach Antworten zu schauen."
+msgstr "Halten Sie Ihren Decknamen geheim und verwenden Sie ihn später, um zu sehen, ob Sie Antworten erhalten haben."
 
 msgid "Thanks! We received your message."
 msgstr "Danke! Wir haben Ihre Nachricht erhalten."
