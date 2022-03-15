@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2022-03-15 18:11+0000\n"
-"Last-Translator: Martin Trebuch <martin.trebuch@gmail.com>\n"
+"PO-Revision-Date: 2022-03-15 20:11+0000\n"
+"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://weblate.securedrop.org/projects/securedrop/securedrop/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -834,10 +834,10 @@ msgid "You will need this codename to log into our SecureDrop later:"
 msgstr "Sie benötigen diesen Decknamen, um sich später bei unserem SecureDrop anzumelden:"
 
 msgid "<strong>Keep it secret.</strong> Do not share it with anyone."
-msgstr ""
+msgstr "<strong>Halten Sie es geheim.</strong> Teilen Sie es mit niemandem."
 
 msgid "<strong>Keep it safe.</strong> There is no account recovery option."
-msgstr ""
+msgstr "<strong>Bewahren Sie es sicher auf.</strong> Es gibt keine Option zur Wiederherstellung des Kontos."
 
 msgid "Continue"
 msgstr "Fortsetzen"
@@ -945,7 +945,7 @@ msgid "Delete this reply"
 msgstr "Diese Antwort löschen"
 
 msgid "Delete reply from {timestamp}?"
-msgstr ""
+msgstr "Antwort von {timestamp} löschen?"
 
 msgid "Delete this reply?"
 msgstr "Diese Antwort löschen?"
@@ -981,26 +981,22 @@ msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"\"
 msgstr "Sie wurden wegen Inaktivität abgemeldet. Klicken Sie auf die Schaltfläche <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>Neue Identität</b> in der Werkzeugleiste Ihres Tor-Browsers bevor Sie weitermachen. Dies löscht Ihre Tor-Browser-Aktivitätsdaten auf diesem Gerät."
 
 msgid "Proxy Service Detected"
-msgstr ""
+msgstr "Proxy-Dienst erkannt"
 
-#, fuzzy
-#| msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
 msgid "You appear to be using a Tor proxy service to access SecureDrop. Proxy services do not protect your anonymity."
-msgstr "Die Verwendung von Tor2Web, um sich mit SecureDrop zu verbinden, schützt Ihre Anonymität nicht."
+msgstr "Sie scheinen einen Tor-Proxy-Dienst zu benutzen, um auf SecureDrop zuzugreifen. Proxy-Dienste schützen Ihre Anonymität nicht."
 
-#, fuzzy
-#| msgid "It could be possible for anyone monitoring your Internet traffic (your government, your Internet provider), to identify you."
 msgid "Anyone monitoring your Internet traffic &mdash; including your government, your Internet provider, or the proxy operator &mdash; may be able to identify you."
-msgstr "Es könnte für jeden möglich sein, Ihren Internetverkehr zu überwachen (Ihre Regierung, Ihr Internetanbieter), um Sie zu identifizieren."
+msgstr "Jeder, der Ihren Internetverkehr überwacht, einschließlich Ihrer Regierung, Ihres Internetanbieters oder des Proxy-Betreibers, kann Sie möglicherweise identifizieren."
 
 msgid "Always use <a href=\"www.torproject.org/projects/torbrowser.html\">Tor Browser</a> to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
 msgstr ""
 
 msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
-msgstr ""
+msgstr "Wenn Sie bereits den Tor-Browser benutzen, kopieren Sie die obige Adresse und erstellen Sie eine neue Identität, bevor Sie auf SecureDrop zugreifen."
 
 msgid "If there is a reasonable risk of your Internet traffic being monitored, consider connecting from a different location or network."
-msgstr ""
+msgstr "Wenn die Gefahr besteht, dass Ihr Internetverkehr überwacht wird, sollten Sie sich von einem anderen Standort oder Netzwerk aus verbinden."
 
 msgid "You Should Use Tor Browser"
 msgstr "Sie sollten den Tor-Browser benutzen"
