@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2022-03-15 03:11+0000\n"
+"PO-Revision-Date: 2022-03-21 03:38+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.securedrop.org/projects/securedrop/securedrop/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -545,13 +545,13 @@ msgid "Prevent sources from uploading documents. Sources will still be able to s
 msgstr "防止消息來源上傳文件，但來源仍可以傳送訊息。"
 
 msgid "Prevent sources from sending initial messages shorter than the minimum required length:"
-msgstr "防止線人傳送不足最低字數要求的訊息:"
+msgstr "防止線人傳送不足字數長度的訊息:"
 
 msgid "Minimum number of characters."
-msgstr "最少的字符數目要求。"
+msgstr "最少的字符長度要求。"
 
 msgid "Prevent sources from submitting their codename as an initial message."
-msgstr "防上線人以自己的代碼名為初次訊息發送。"
+msgstr "防上線人發送以自己的代碼名為初次訊息。"
 
 msgid "Update Submission Preferences"
 msgstr "更新提交偏好"
@@ -821,10 +821,10 @@ msgid "Get Your Codename"
 msgstr "取得您的代號"
 
 msgid "A <em>codename</em> in SecureDrop functions as both your username and your password."
-msgstr ""
+msgstr "SecureDrop 底下的 <em>代碼名</em>，其作用相當於您的用戶名稱與密碼。"
 
 msgid "You will need this codename to log into our SecureDrop later:"
-msgstr ""
+msgstr "您稍後需透過此代碼名來登入 SecureDrop 系統："
 
 msgid "<strong>Keep it secret.</strong> Do not share it with anyone."
 msgstr "<strong>妥善地保管它</strong> 不要與別人共用。"
@@ -982,17 +982,14 @@ msgstr "您好像使用 Tor 代理服務來連線至 SecureDrop，但代理服�
 msgid "Anyone monitoring your Internet traffic &mdash; including your government, your Internet provider, or the proxy operator &mdash; may be able to identify you."
 msgstr "任何網路流量監控者（如政府、網路服務業者、代理服務商）都有可能認出您。"
 
-#, fuzzy
 msgid "Always use <a href=\"www.torproject.org/projects/torbrowser.html\">Tor Browser</a> to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
 msgstr "請使用 <a href=\"www.torproject.org/projects/torbrowser.html\">Tor 瀏覽器r</a> 來連線 SecureDrop，有效的 SecureDrop 網站其網址尾綴為 <code>.onion</code>，網站正確的網址為:"
 
-#, fuzzy
 msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
-msgstr "若已在使用 Tor 瀏覽器，請複製上方網址以自動產生新的身份以連線到 SecureDrop"
+msgstr "若已使用 Tor 瀏覽器，請複製上方網址以自動產生新的身份連線到 SecureDrop 。"
 
-#, fuzzy
 msgid "If there is a reasonable risk of your Internet traffic being monitored, consider connecting from a different location or network."
-msgstr "如合理懹疑自己受到網路監控，請考慮從別的地點或網路上網。"
+msgstr "如合理懷疑自己受到網路監控，請考慮從別的地點或其它網路上網。"
 
 msgid "You Should Use Tor Browser"
 msgstr "您應使用 Tor 瀏覽器"
