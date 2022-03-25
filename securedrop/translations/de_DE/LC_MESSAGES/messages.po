@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2022-03-25 13:45+0000\n"
-"Last-Translator: Martin Trebuch <martin.trebuch@gmail.com>\n"
+"PO-Revision-Date: 2022-03-25 16:02+0000\n"
+"Last-Translator: Stephen Brookman <stephen.brookman@outlook.com>\n"
 "Language-Team: German <https://weblate.securedrop.org/projects/securedrop/securedrop/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -148,7 +148,7 @@ msgid "You cannot send an empty reply."
 msgstr "Sie können keine leere Antwort senden."
 
 msgid "To configure a minimum message length, you must set the required number of characters."
-msgstr "Um eine minimale Nachrichtslänge zu konfigurieren müssen Sie die erforderliche Anzahl an Zeichen festlegen."
+msgstr "Um eine minimale Nachrichtenlänge zu konfigurieren müssen Sie die erforderliche Zeichenanzahl festlegen."
 
 msgid "File required."
 msgstr "Datei erforderlich."
@@ -550,13 +550,13 @@ msgid "Prevent sources from uploading documents. Sources will still be able to s
 msgstr "Quellen am Hochladen von Dokumenten hindern. Quellen werden weiterhin Nachrichten senden können."
 
 msgid "Prevent sources from sending initial messages shorter than the minimum required length:"
-msgstr "Quellen am Senden von Erstmeldungen hindern, wenn diese kürzer als die Mindestlänge sind."
+msgstr "Quellen am Senden von Erstmeldungen hindern, wenn diese kürzer als die Mindestlänge sind:"
 
 msgid "Minimum number of characters."
 msgstr "Mindestanzahl von Zeichen."
 
 msgid "Prevent sources from submitting their codename as an initial message."
-msgstr "Quellen am angeben von Decknamen in der Erstmitteilung hindern."
+msgstr "Quellen am Angeben von Decknamen in der Erstmitteilung hindern."
 
 msgid "Update Submission Preferences"
 msgstr "Einreichungseinstellungen aktualisieren"
