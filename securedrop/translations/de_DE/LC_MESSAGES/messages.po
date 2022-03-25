@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2022-03-25 16:02+0000\n"
-"Last-Translator: Stephen Brookman <stephen.brookman@outlook.com>\n"
+"Last-Translator: Martin Trebuch <martin.trebuch@gmail.com>\n"
 "Language-Team: German <https://weblate.securedrop.org/projects/securedrop/securedrop/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -553,7 +553,7 @@ msgid "Prevent sources from sending initial messages shorter than the minimum re
 msgstr "Quellen am Senden von Erstmeldungen hindern, wenn diese kürzer als die Mindestlänge sind:"
 
 msgid "Minimum number of characters."
-msgstr "Mindestanzahl von Zeichen."
+msgstr "Mindestzeichenanzahl."
 
 msgid "Prevent sources from submitting their codename as an initial message."
 msgstr "Quellen am Angeben von Decknamen in der Erstmitteilung hindern."
