@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2022-03-15 20:11+0000\n"
-"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
+"PO-Revision-Date: 2022-03-25 13:44+0000\n"
+"Last-Translator: Stephen Brookman <stephen.brookman@outlook.com>\n"
 "Language-Team: German <https://weblate.securedrop.org/projects/securedrop/securedrop/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -139,7 +139,7 @@ msgstr[0] "Darf nicht länger als {num} Zeichen sein."
 msgstr[1] "Darf nicht länger als {num} Zeichen sein."
 
 msgid "Please specify an integer value greater than 0."
-msgstr ""
+msgstr "Bitte geben Sie eine Ganzzahl an, welche größer als 0 ist."
 
 msgid "This field is required."
 msgstr "Dieses Feld ist erforderlich."
@@ -550,13 +550,13 @@ msgid "Prevent sources from uploading documents. Sources will still be able to s
 msgstr "Quellen am Hochladen von Dokumenten hindern. Quellen werden weiterhin Nachrichten senden können."
 
 msgid "Prevent sources from sending initial messages shorter than the minimum required length:"
-msgstr ""
+msgstr "Quellen am Senden von Erstmeldungen hindern, wenn diese kürzer als die Mindestlänge sind."
 
 msgid "Minimum number of characters."
 msgstr "Mindestanzahl von Zeichen."
 
 msgid "Prevent sources from submitting their codename as an initial message."
-msgstr ""
+msgstr "Quellen am angeben von Decknamen in der Erstmitteilung hindern."
 
 msgid "Update Submission Preferences"
 msgstr "Einreichungseinstellungen aktualisieren"
@@ -822,13 +822,11 @@ msgstr "Achtung: Das Teilen von vertraulichen Dokumenten kann Sie in Gefahr brin
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
 msgstr "SecureDrop ist ein Projekt der Freedom of the Press Foundation."
 
-#, fuzzy
-#| msgid "Enter your codename"
 msgid "Get Your Codename"
 msgstr "Geben Sie Ihren Decknamen ein"
 
 msgid "A <em>codename</em> in SecureDrop functions as both your username and your password."
-msgstr ""
+msgstr "Der <em>Deckname</em> wird in SecureDrop sowohl als Ihr Benutzername, als auch Passwort verwendet."
 
 msgid "You will need this codename to log into our SecureDrop later:"
 msgstr "Sie benötigen diesen Decknamen, um sich später bei unserem SecureDrop anzumelden:"
@@ -852,10 +850,10 @@ msgid "Click the <img src=\"{icon}\" alt=\"&quot;Security Level&quot; button\"> 
 msgstr "Klicken Sie auf <img src=\"{icon}\" alt=\"Schaltfläche &quot;Sicherheitsstufe&quot;\"> in der Werkzeugleiste oben"
 
 msgid "Click <b>Change</b> to open Security Level preferences"
-msgstr ""
+msgstr "Klicken Sie auf <b>Ändern</b> um die Einstellungen der Sicherheitsstufe anzuzeigen"
 
 msgid "Select <b>Safest</b> and close the preferences tab"
-msgstr ""
+msgstr "Wählen Sie <b>Am sichersten</b> und schließen Sie den Einstellungs-Tab"
 
 msgid "<a href=\"/\" aria-label=\"Follow these instructions, then refresh this page\">Refresh this page</a>, and you're done!"
 msgstr "<a href=\"/\" aria-label=\"Befolgen Sie diese Anweisungen und aktualisieren Sie dann diese Seite\">Aktualisieren Sie diese Seite</a>, und Sie sind fertig!"
@@ -933,7 +931,7 @@ msgid "Submit"
 msgstr "Absenden"
 
 msgid "Anti-spam check. Do not fill this in!"
-msgstr ""
+msgstr "Anti-Spam-Test. Bitte nichts eintragen!"
 
 msgid "Read Replies"
 msgstr "Antworten lesen"
@@ -990,7 +988,7 @@ msgid "Anyone monitoring your Internet traffic &mdash; including your government
 msgstr "Jeder, der Ihren Internetverkehr überwacht, einschließlich Ihrer Regierung, Ihres Internetanbieters oder des Proxy-Betreibers, kann Sie möglicherweise identifizieren."
 
 msgid "Always use <a href=\"www.torproject.org/projects/torbrowser.html\">Tor Browser</a> to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
-msgstr ""
+msgstr "Bitte nutzen Sie stets den <a href=\"www.torproject.org/projects/torbrowser.html\">Tor Browser</a> um SecureDrop aufzurufen. Eine gültige SecureDrop-Webadresse endet mit <code>.onion</code>. Die korrekte Adresse dieses Seite lautet:"
 
 msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
 msgstr "Wenn Sie bereits den Tor-Browser benutzen, kopieren Sie die obige Adresse und erstellen Sie eine neue Identität, bevor Sie auf SecureDrop zugreifen."
