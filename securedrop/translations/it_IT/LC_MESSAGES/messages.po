@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2022-03-15 18:11+0000\n"
+"PO-Revision-Date: 2022-03-29 19:32+0000\n"
 "Last-Translator: lsd-cat <giulio@gmx.com>\n"
 "Language-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\n"
 "Language: it_IT\n"
@@ -858,10 +858,10 @@ msgid "Click the <img src=\"{icon}\" alt=\"&quot;Security Level&quot; button\"> 
 msgstr "Fare clic su <img src=\"{icon}\" alt=\"Livello sicurezza\"> nella barra degli strumenti qui sopra"
 
 msgid "Click <b>Change</b> to open Security Level preferences"
-msgstr ""
+msgstr "Clicca <b>Cambia...</b> per aprire le impostazioni del Livello di Sicurezza"
 
 msgid "Select <b>Safest</b> and close the preferences tab"
-msgstr ""
+msgstr "Seleziona <b>Molto sicuro</b> e chiudi la scheda delle impostazioni"
 
 msgid "<a href=\"/\" aria-label=\"Follow these instructions, then refresh this page\">Refresh this page</a>, and you're done!"
 msgstr "<a href=\"/\" aria-label=\"Segui queste istruzioni, quindi aggiorna questa pagina\">Aggiorna questa pagina</a>, e il gioco è fatto!"
@@ -939,7 +939,7 @@ msgid "Submit"
 msgstr "Invia"
 
 msgid "Anti-spam check. Do not fill this in!"
-msgstr ""
+msgstr "Controllo anti-spam. Non inserire nulla in questo campo!"
 
 msgid "Read Replies"
 msgstr "Leggi risposte"
@@ -951,7 +951,7 @@ msgid "Delete this reply"
 msgstr "Elimina questa risposta"
 
 msgid "Delete reply from {timestamp}?"
-msgstr ""
+msgstr "Cancellare la risposta da {timestamp}?"
 
 msgid "Delete this reply?"
 msgstr "Eliminare questa risposta?"
@@ -987,26 +987,22 @@ msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"\"
 msgstr "Disconnesso per inattività. Fare clic sul pulsante <img src={icon} alt=\"\" width=\"16\" height=\"16\"> <b>Nuova identità</b> nella barra degli strumenti del Browser Tor prima di proseguire. Questo cancellerà i dati dell'attività del Browser Tor su questo dispositivo."
 
 msgid "Proxy Service Detected"
-msgstr ""
+msgstr "Rilevata connessione tramite proxy"
 
-#, fuzzy
-#| msgid "Using Tor2Web to connect to SecureDrop will not protect your anonymity."
 msgid "You appear to be using a Tor proxy service to access SecureDrop. Proxy services do not protect your anonymity."
-msgstr "Usare Tor2Web per connettersi a SecureDrop non proteggerà il proprio anonimato."
+msgstr "Sembra che tu stia usando un servizio proxy Tor per accedere a SecureDrop. Servizi proxy di questo tipo non proteggono il tuo anonimato."
 
-#, fuzzy
-#| msgid "It could be possible for anyone monitoring your Internet traffic (your government, your Internet provider), to identify you."
 msgid "Anyone monitoring your Internet traffic &mdash; including your government, your Internet provider, or the proxy operator &mdash; may be able to identify you."
-msgstr "Potrebbe essere possibile per chiunque stia monitorando il traffico Internet (il governo, il fornitore dei servizi Internet), identificarti."
+msgstr "Chiunque stia monitorando il traffico Internet come il tuo governo, il tuo provider internet, o il gestore del proxy potrebbe identificarti."
 
 msgid "Always use <a href=\"www.torproject.org/projects/torbrowser.html\">Tor Browser</a> to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
-msgstr ""
+msgstr "Usa sempre <a href=\"www.torproject.org/projects/torbrowser.html\">Tor Browser</a> per accedere a SecureDrop. Gli indirizzi validi per SecueDrop terminano sempre con <code>.onion</code>. L'indirizzo esatto di questo sito è:"
 
 msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
-msgstr ""
+msgstr "Se stai già usando Tor Browser, copia l'indirizzo mostrato sopra e genera una nuova identità prima di accedere a SecureDrop."
 
 msgid "If there is a reasonable risk of your Internet traffic being monitored, consider connecting from a different location or network."
-msgstr ""
+msgstr "Se esiste un ragionevole rischio che il tuo traffico Internet sia monitorato, considera la possibilità di connetterti da un posto o una rete diversi."
 
 msgid "You Should Use Tor Browser"
 msgstr "Dovresti usare il browser Tor"
