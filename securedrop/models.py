@@ -15,7 +15,7 @@ from cryptography.hazmat.primitives.kdf import scrypt
 from flask import current_app, url_for
 from flask_babel import gettext, ngettext
 from itsdangerous import TimedJSONWebSignatureSerializer, BadData
-from jinja2 import Markup
+from markupsafe import Markup
 from passlib.hash import argon2
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import relationship, backref, Query, RelationshipProperty
@@ -47,9 +47,6 @@ HOTP_SECRET_LENGTH = 40  # 160 bits == 40 hex digits (== 32 ascii-encoded chars 
 # Minimum length for ascii-encoded OTP secrets - by default, secrets are now 160-bit (32 chars)
 # but existing Journalist users may still have 80-bit (16-char) secrets
 OTP_SECRET_MIN_ASCII_LENGTH = 16  # 80 bits == 40 hex digits (== 16 ascii-encoded chars in db)
-
-# Timezone-naive datetime format expected by SecureDrop Client
-API_DATETIME_FORMAT = "%Y-%m-%dT%H:%M:%S.%fZ"
 
 
 def get_one_or_else(query: Query,
@@ -141,9 +138,9 @@ class Source(db.Model):
         docs_msg_count = self.documents_messages_count()
 
         if self.last_updated:
-            last_updated = self.last_updated.strftime(API_DATETIME_FORMAT)
+            last_updated = self.last_updated
         else:
-            last_updated = datetime.datetime.utcnow().strftime(API_DATETIME_FORMAT)
+            last_updated = datetime.datetime.now(tz=datetime.timezone.utc)
 
         if self.star and self.star.starred:
             starred = True
@@ -780,7 +777,7 @@ class Journalist(db.Model):
         if all_info is True:
             json_user['is_admin'] = self.is_admin
             if self.last_access:
-                json_user['last_login'] = self.last_access.strftime(API_DATETIME_FORMAT)
+                json_user['last_login'] = self.last_access
             else:
                 json_user['last_login'] = None
 
@@ -944,8 +941,9 @@ class InstanceConfig(db.Model):
                          nullable=False, unique=True)
     allow_document_uploads = Column(Boolean, default=True)
     organization_name = Column(String(255), nullable=True, default="SecureDrop")
-    initial_message_min_len = Column(Integer, default=0)
-    reject_message_with_codename = Column(Boolean, default=False)
+    initial_message_min_len = Column(Integer, nullable=False, default=0, server_default="0")
+    reject_message_with_codename = Column(Boolean, nullable=False,
+                                          default=False, server_default="0")
 
     # Columns not listed here will be included by InstanceConfig.copy() when
     # updating the configuration.

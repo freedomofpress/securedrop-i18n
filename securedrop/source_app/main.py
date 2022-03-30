@@ -37,15 +37,17 @@ def make_blueprint(config: SDConfig) -> Blueprint:
     def index() -> str:
         return render_template('index.html')
 
-    @view.route('/generate', methods=('POST',))
+    @view.route('/generate', methods=('POST', 'GET'))
     def generate() -> Union[str, werkzeug.Response]:
-        # Try to detect Tor2Web usage by looking to see if tor2web_check got mangled
-        tor2web_check = request.form.get('tor2web_check')
-        if tor2web_check is None:
-            # Missing form field
-            abort(403)
-        elif tor2web_check != 'href="fake.onion"':
-            return redirect(url_for('info.tor2web_warning'))
+        if request.method == 'POST':
+            # Try to detect Tor2Web usage by looking to see if tor2web_check got mangled
+            tor2web_check = request.form.get('tor2web_check')
+            if tor2web_check is None:
+                # Missing form field
+                abort(403)
+            elif tor2web_check != 'href="fake.onion"':
+                return redirect(url_for('info.tor2web_warning'))
+
         if SessionManager.is_user_logged_in(db_session=db.session):
             flash(gettext(
                 "You were redirected because you are already logged in. "
@@ -204,18 +206,23 @@ def make_blueprint(config: SDConfig) -> Blueprint:
             min_len = InstanceConfig.get_default().initial_message_min_len
             if (min_len > 0) and (msg and not fh) and (len(msg) < min_len):
                 flash(gettext(
-                    "Your first message must be at least {} characters long.".format(min_len)),
+                    "Your first message must be at least {} characters long.").format(min_len),
                     "error")
                 return redirect(url_for('main.lookup'))
 
+            # if the new_user_codename key is not present in the session, this is
+            # not a first session
+            new_codename = session.get('new_user_codename', None)
+
             codenames_rejected = InstanceConfig.get_default().reject_message_with_codename
-            if codenames_rejected and codename_detected(msg, session['new_user_codename']):
-                flash(Markup('{}<br>{}'.format(
-                    escape(gettext("Please do not submit your codename!")),
-                    escape(gettext("Keep your codename secret, and use it to log in later"
-                                   " to check for replies."))
-                    )), "error")
-                return redirect(url_for('main.lookup'))
+            if new_codename is not None:
+                if codenames_rejected and codename_detected(msg, new_codename):
+                    flash(Markup('{}<br>{}'.format(
+                        escape(gettext("Please do not submit your codename!")),
+                        escape(gettext("Keep your codename secret, and use it to log in later"
+                                       " to check for replies."))
+                        )), "error")
+                    return redirect(url_for('main.lookup'))
 
         if not os.path.exists(Storage.get_default().path(logged_in_source.filesystem_id)):
             current_app.logger.debug("Store directory not found for source '{}', creating one."

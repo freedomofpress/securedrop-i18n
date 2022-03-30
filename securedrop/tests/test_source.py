@@ -133,7 +133,7 @@ def test_create_new_source(source_app):
         assert 'codenames' not in session
 
 
-def test_generate(source_app):
+def test_generate_as_post(source_app):
     with source_app.test_client() as app:
         resp = app.post(url_for('main.generate'), data=GENERATE_DATA)
         assert resp.status_code == 200
@@ -146,6 +146,21 @@ def test_generate(source_app):
     # codename is also stored in the session - make sure it matches the
     # codename displayed to the source
     assert codename == escape(session_codename)
+
+def test_generate_as_get(source_app):
+    with source_app.test_client() as app:
+        resp = app.get(url_for('main.generate'))
+        assert resp.status_code == 200
+        session_codename = next(iter(session['codenames'].values()))
+
+    text = resp.data.decode('utf-8')
+    assert "functions as both your username and your password" in text
+
+    codename = _find_codename(resp.data.decode('utf-8'))
+    # codename is also stored in the session - make sure it matches the
+    # codename displayed to the source
+    assert codename == escape(session_codename)
+
 
 
 def test_create_duplicate_codename_logged_in_not_in_session(source_app):
@@ -493,6 +508,43 @@ def test_submit_antispam(source_app):
             data=dict(msg="Test", fh=(StringIO(''), ''), text="blah"),
             follow_redirects=True)
         assert resp.status_code == 403
+
+
+def test_submit_codename_second_login(source_app):
+    """
+    Test codename submissions *not* prevented on second session
+    """
+    with source_app.test_client() as app:
+        InstanceConfig.get_default().update_submission_prefs(
+            allow_uploads=True, min_length=0, reject_codenames=True)
+        codename = new_codename(app, session)
+        resp = app.post(
+            url_for('main.submit'),
+            data=dict(msg=codename, fh=(StringIO(''), '')),
+            follow_redirects=True)
+        assert resp.status_code == 200
+        text = resp.data.decode('utf-8')
+        assert "Please do not submit your codename!" in text
+
+        resp = app.get(url_for('main.logout'),
+                       follow_redirects=True)
+        assert not SessionManager.is_user_logged_in(db_session=db.session)
+        text = resp.data.decode('utf-8')
+        assert 'This will clear your Tor Browser activity data' in text
+
+        resp = app.post(url_for('main.login'),
+                        data=dict(codename=codename),
+                        follow_redirects=True)
+        assert resp.status_code == 200
+        assert SessionManager.is_user_logged_in(db_session=db.session)
+
+        resp = app.post(
+            url_for('main.submit'),
+            data=dict(msg=codename, fh=(StringIO(''), '')),
+            follow_redirects=True)
+        assert resp.status_code == 200
+        text = resp.data.decode('utf-8')
+        assert "Thank you for sending this information" in text
 
 
 def test_submit_codename(source_app):
