@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2022-03-25 16:02+0000\n"
+"PO-Revision-Date: 2022-04-02 10:38+0000\n"
 "Last-Translator: Øyvind Bye Skille <oyvind@byeskille.net>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.securedrop.org/projects/securedrop/securedrop/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -873,7 +873,7 @@ msgid "First submission"
 msgstr "Første innsendelse"
 
 msgid "First time submitting to our SecureDrop? Start here."
-msgstr "Førstegangsinnsendelse? Start her."
+msgstr "Hvis dette er første gang du sender informasjon til vår SecureDrop? Start her."
 
 msgid "Get Started"
 msgstr "Kom i gang"
@@ -1020,10 +1020,10 @@ msgid "Why download the team's public key?"
 msgstr "Hvorfor laste ned vår offentlige nøkkel?"
 
 msgid "SecureDrop encrypts files and messages after they are submitted. Encrypting messages and files before submission can provide an extra layer of security before your data reaches the SecureDrop server."
-msgstr "SecureDrop krypterer alle filer og meldinger når de kommer inn via systemet. Kryptering av filer eller meldinger de avhendes som innsendelse kan gi et ekstra lag beskyttelse for informasjonen før den når vår SecureDrop-tjener."
+msgstr "SecureDrop krypterer alle filer og meldinger når de kommer inn via systemet. Kryptering av filer eller meldinger før de sendes inn kan gi et ekstra lag beskyttelse for informasjonen før den når vår SecureDrop-tjener."
 
 msgid "If you are already familiar with the GPG encryption software, you may wish to encrypt your submissions yourself. To do so:"
-msgstr "Om du allerede er komfortabel med programvare for GPG-kryptering, kan du velge å kryptere din innsendelse selv. Gjør da følgende:"
+msgstr "Om du allerede er komfortabel med programvare for GPG-kryptering, kan du velge å kryptere filene du skal sende inn selv. Gjør da følgende:"
 
 msgid ""
 "<a href=\"{url}\">Download</a> the public key. It will be saved to a file called:\n"
@@ -1048,7 +1048,7 @@ msgid "<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submissio
 msgstr "<code>gpg --recipient '{submission_key_fpr}' --encrypt /plassering/på/disken/for/innsendelsen</code>"
 
 msgid "Upload your encrypted submission. It will have the same filename as the unencrypted file, with .gpg at the end (e.g. <code>internal_memo.pdf.gpg</code>)"
-msgstr "Last så opp din krypterte innsendelse. Det vil ha samme filnavnet som den ukrypterte filen, men med .gpg-filendelse (f.eks. <code>internt_notat.pdf.gpg</code>)"
+msgstr "Last så opp dine krypterte filer. Det vil ha samme filnavnet som den ukrypterte filen, men med .gpg-filendelse (f.eks. <code>internt_notat.pdf.gpg</code>)"
 
 msgid "<strong>Important:</strong> If you wish to remain anonymous, <strong>do not</strong> use GPG to sign the encrypted file (with the <code>--sign</code> or <code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr "<strong>Viktig:</strong> Om du ønsker å være helt anonym, <strong>ikke</strong> bruk GPG for å signere den krypterte filen (med <code>--sign</code> eller <code>-s</code> flagget på kommandolinjen) fordi dette vil avsløre din GPG-identitet."
