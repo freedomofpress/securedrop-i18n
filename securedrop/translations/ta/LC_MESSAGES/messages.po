@@ -4,7 +4,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
 msgid ""
-msgstr "Project-Id-Version: SecureDrop 1.0.0~rc1\nReport-Msgid-Bugs-To: securedrop@freedom.press\nPO-Revision-Date: 2022-02-28 12:04+0000\nLast-Translator: Stymy RAT <stymyrat@outlook.com>\nLanguage-Team: Tamil <https://weblate.securedrop.org/projects/securedrop/securedrop/ta/>\nLanguage: ta\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 4.6\nGenerated-By: Babel 2.5.1\n"
+msgstr ""
+"Project-Id-Version: SecureDrop 1.0.0~rc1\n"
+"Report-Msgid-Bugs-To: securedrop@freedom.press\n"
+"PO-Revision-Date: 2022-04-04 13:00+0000\n"
+"Last-Translator: Stymy RAT <stymyrat@outlook.com>\n"
+"Language-Team: Tamil <https://weblate.securedrop.org/projects/securedrop/securedrop/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.11.2\n"
+"Generated-By: Babel 2.5.1\n"
 
 msgid "{time} ago"
 msgstr "{time} முன்பு"
@@ -943,7 +955,7 @@ msgstr "உங்களுடைய மறைகுறியிடப்பட�
 #, fuzzy
 #| msgid "<strong>Tip:</strong> If you wish to remain anonymous, <strong>do not</strong> use GPG to sign the encrypted file (with the <code>--sign</code> or <code>-s</code> flag) as this will reveal your GPG identity to us."
 msgid "<strong>Important:</strong> If you wish to remain anonymous, <strong>do not</strong> use GPG to sign the encrypted file (with the <code>--sign</code> or <code>-s</code> flag) as this will reveal your GPG identity to us."
-msgstr "<strong>முக்கியம்:</strong> நீங்கள் பெயரிலாமலேயே இருக்க விரும்பினால், மறைகுறியிடப்பட்ட கோப்பை (<code>--sign</code> அல்லது <code>-s</code> கொடிக்குறியுடன்) கையெழுத்திட GPG-ஐப் பயன்படுத்த <strong>வேண்டாம்</strong> ஏனெனில் அது உங்களுடைய GPG அடையாளத்தை எங்களுக்குத் தெரியப்படுத்திவிடும்."
+msgstr "<strong>முக்கியம்:</strong> நீங்கள் பெயரிலாமலேயே இருக்க விரும்பினால், மறைகுறியிட்ட கோப்பை (<code>--sign</code> உடன் அல்லது <code>-s</code> கொடிக்குறியுடன்) கையெழுத்திட GPG-ஐப் பயன்படுத்த <strong>வேண்டாம்</strong> ஏனெனில் அது உங்களுடைய GPG அடையாளத்தை எங்களுக்குத் தெரியப்படுத்திவிடும்."
 
 msgid "Back to submission page"
 msgstr "அனுப்புகைப் பக்கத்திற்குத் திரும்புக"
