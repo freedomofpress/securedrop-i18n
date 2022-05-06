@@ -113,7 +113,7 @@ shellcheckclean:  ## Clean up temporary container associated with shellcheck tar
 .PHONY: typelint
 typelint:  ## Run mypy type linting.
 	@echo "███ Running mypy type checking..."
-	@mypy ./securedrop ./admin
+	@$(SDROOT)/securedrop/bin/run-mypy
 	@echo
 
 .PHONY: yamllint
@@ -188,6 +188,13 @@ dev-tor:  ## Run the development server with onion services in a Docker containe
 	@echo "███ Starting development server..."
 	@OFFSET_PORTS='false' DOCKER_BUILD_VERBOSE='true' USE_TOR='true' $(DEVSHELL) $(SDBIN)/run
 	@echo
+
+.PHONY: demo-landing-page
+demo-landing-page: ## Serve the landing page for the SecureDrop demo
+	@echo "███ Building Docker image..."
+	docker build -t sd-demo-landing-page -f devops/demo/landing-page/Dockerfile .
+	@echo "███ Running container and serving on port 8000..."
+	docker run -p 8000:8000 sd-demo-landing-page
 
 .PHONY: staging
 staging:  ## Create a local staging environment in virtual machines (Focal)

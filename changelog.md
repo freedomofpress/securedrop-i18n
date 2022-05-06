@@ -2,6 +2,17 @@
 
 ## 2.4.0~rc1
 
+
+## 2.3.2
+
+* Added Tails 5.0 compatibility updates (#6408, #6424)
+
+## 2.3.1
+
+* Bugfix: disabled GPG trustdb checks to prevent timeouts on operations with large keyrings (#6390)
+* Updated click test dependency from 7.1.2 to 8.1.2 (#6381)
+* Bugfix: fixed locale switcher on Source Interface codename page (#6377)
+
 ## 2.3.0
 
 ### Web Applications
