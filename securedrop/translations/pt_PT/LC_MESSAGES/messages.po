@@ -7,21 +7,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2021-04-17 20:57+0000\n"
-"Last-Translator: deeplow <deeplower@protonmail.com>\n"
+"PO-Revision-Date: 2022-05-13 21:11+0000\n"
+"Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.11.2\n"
 "Generated-By: Babel 2.4.0\n"
 
-#, fuzzy
-#| msgid "Message text too long."
 msgid "Name too long"
-msgstr "Mensagem de texto demasiado longa."
+msgstr "Nome demasiado longo."
 
 msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
@@ -31,10 +29,8 @@ msgstr[1] "Tem que ter no mínimo {num} caracteres."
 msgid "This username is invalid because it is reserved for internal use by the software."
 msgstr "Este nome de utilizador é inválido porque está reservado para uso interno pelo software."
 
-#, fuzzy
-#| msgid "Change username"
 msgid "Invalid username"
-msgstr "Alterar nome de utilizador"
+msgstr "Nome de utilizador inválido"
 
 #, fuzzy
 #| msgid "HOTP Secret"
@@ -67,7 +63,7 @@ msgstr "Imagem atualizada."
 
 #. This error is shown when an uploaded image cannot be used.
 msgid "Unable to process the image file. Please try another one."
-msgstr ""
+msgstr "Não foi possível utilizar a imagem. Por favor, tente outra."
 
 msgid "Preferences saved."
 msgstr "Preferências guardadas."
@@ -91,12 +87,10 @@ msgstr "Ocorreu um erro inesperado! Por favor informe o administrador."
 
 #. Here, "{message}" explains the problem with the username.
 msgid "Invalid username: {message}"
-msgstr ""
+msgstr "Nome de utilizador inválido: {message}"
 
-#, fuzzy
-#| msgid "Username \"{user}\" already taken."
 msgid "Username \"{username}\" already taken."
-msgstr "Nome de utilizador \"{user}\" já em uso."
+msgstr "Nome de utilizador \"{username}\" já está a ser utilizado."
 
 msgid "An error occurred saving this user to the database. Please inform your admin."
 msgstr "Ocorreu um erro ao gravar este utilizador na base de dados. Por favor, informe o administrador do sistema."
@@ -105,10 +99,8 @@ msgid "The two-factor code for user \"{user}\" was verified successfully."
 msgstr "O código de dois fatores para o/a utilizador(a) \"{user}\" foi verificado com sucesso."
 
 #. Here, "{message}" explains the problem with the name.
-#, fuzzy
-#| msgid "Name not updated: {}"
 msgid "Name not updated: {message}"
-msgstr "Nome não atualizado: {}"
+msgstr "Nome não atualizado: {message}"
 
 msgid "Deleted user '{user}'."
 msgstr "Utilizador '{user}' apagado."
