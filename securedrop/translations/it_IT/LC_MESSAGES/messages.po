@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2022-05-17 11:24+0000\n"
+"PO-Revision-Date: 2022-05-17 13:11+0000\n"
 "Last-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\n"
 "Language-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\n"
 "Language: it_IT\n"
@@ -188,7 +188,7 @@ msgstr[0] "Attendere almeno {num} secondo prima di accedere nuovamente."
 msgstr[1] "Attendere almeno {num} secondi prima di accedere nuovamente."
 
 msgid "Your 2FA details are invalid - please contact an administrator to reset them."
-msgstr "Le tue credenziali per la 2FA sono invalide - per favore contatta un amministratore per eseguire il ripristino."
+msgstr "I dettagli per l'accesso con 2FA non sono validi - contatta un amministratore per eseguire il ripristino."
 
 msgid "Please wait for a new code from your two-factor mobile app or security key before trying again."
 msgstr "Attendere un nuovo codice a due fattori dall'applicazione mobile o dalla chiave di sicurezza prima di tentare nuovamente."
@@ -752,10 +752,8 @@ msgstr "La connessione utilizzata in questo momento non è anonima!"
 msgid "You were redirected because you are already logged in. If you want to create a new account, you should log out first."
 msgstr "È stato eseguito il reindirizzamento perché era già stato eseguito l'accesso. Per creare un nuovo account bisogna prima terminare la sessione corrente."
 
-#, fuzzy
-#| msgid "You are already logged in. Please verify your codename above as it may differ from the one displayed on the previous page."
 msgid "You are already logged in. Please verify your codename as it may differ from the one displayed on the previous page."
-msgstr "È già stato eseguito l'accesso. Verificare il proprio nome in codice riportato sopra poiché potrebbe differire da quello visualizzato nella pagina precedente."
+msgstr "È già stato eseguito l'accesso. Verificare il proprio nome in codice in quanto potrebbe differire da quello visualizzato nella pagina precedente."
 
 msgid "There was a temporary problem creating your account. Please try again."
 msgstr "C'è stato un problema temporaneo nella creazione dell'account. Riprovare nuovamente."
@@ -878,7 +876,7 @@ msgid "<strong>It is recommended you use the desktop version of Tor Browser to a
 msgstr "<strong>Ti consigliamo di usare la versione desktop del Browser Tor per accedere a SecureDrop, in quanto Orfox non garantisce lo stesso livello di sicurezza e anonimato della versione desktop.</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Scopri come installarlo</a>, o ignora questo avviso per continuare."
 
 msgid "{} logo"
-msgstr ""
+msgstr "{} logo"
 
 msgid "First submission"
 msgstr "Primo invio"
@@ -934,10 +932,8 @@ msgstr "<a href=\"{url}\" class=\"text-link\">Scopri di più</a>."
 msgid "Maximum upload size: 500 MB"
 msgstr "Dimensione massima di caricamento: 500 MB"
 
-#, fuzzy
-#| msgid "Your first message must be at least {} characters long."
 msgid "If you are only sending a message, it must be at least {} characters long."
-msgstr "Il tuo primo messaggio deve essere lungo almeno {} carattere."
+msgstr "Se stai solo inviando un messaggio, deve essere lungo almeno {} caratteri."
 
 msgid "Anti-spam check. Do not fill this in!"
 msgstr "Controllo anti-spam. Non inserire nulla in questo campo!"
@@ -987,10 +983,8 @@ msgstr "Sembra che tu stia usando un servizio proxy Tor per accedere a SecureDro
 msgid "Anyone monitoring your Internet traffic &mdash; including your government, your Internet provider, or the proxy operator &mdash; may be able to identify you."
 msgstr "Chiunque stia monitorando il traffico Internet come il tuo governo, il tuo provider internet, o il gestore del proxy potrebbe identificarti."
 
-#, fuzzy
-#| msgid "Always use <a href=\"www.torproject.org/projects/torbrowser.html\">Tor Browser</a> to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
 msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
-msgstr "Usa sempre <a href=\"www.torproject.org/projects/torbrowser.html\">Tor Browser</a> per accedere a SecureDrop. Gli indirizzi validi per SecueDrop terminano sempre con <code>.onion</code>. L'indirizzo esatto di questo sito è:"
+msgstr "Usa sempre il browser Tor (<code>{}</code>) per accedere a SecureDrop. Gli indirizzi validi per SecueDrop terminano con <code>.onion</code>. L'indirizzo esatto di questo sito è:"
 
 msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
 msgstr "Se stai già usando Tor Browser, copia l'indirizzo mostrato sopra e genera una nuova identità prima di accedere a SecureDrop."
@@ -1019,10 +1013,8 @@ msgstr "Ricorda, il tuo nome in codice è:"
 msgid "Codename"
 msgstr "Nome in codice"
 
-#, fuzzy
-#| msgid "Codename"
 msgid "Show Codename"
-msgstr "Nome in codice"
+msgstr "Mostra il nome in codice"
 
 msgid "Why download the team's public key?"
 msgstr "Perché scaricare la chiave pubblica del gruppo?"
