@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop \\'0.3.5\\'\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2022-05-06 21:11+0000\n"
+"PO-Revision-Date: 2022-05-17 20:11+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://weblate.securedrop.org/projects/securedrop/securedrop/de/>\n"
 "Language: de_DE\n"
@@ -975,10 +975,8 @@ msgstr "Sie scheinen einen Tor-Proxy-Dienst zu benutzen, um auf SecureDrop zuzug
 msgid "Anyone monitoring your Internet traffic &mdash; including your government, your Internet provider, or the proxy operator &mdash; may be able to identify you."
 msgstr "Jeder, der Ihren Internetverkehr überwacht, einschließlich Ihrer Regierung, Ihres Internetanbieters oder des Proxy-Betreibers, kann Sie möglicherweise identifizieren."
 
-#, fuzzy
-#| msgid "Always use <a href=\"www.torproject.org/projects/torbrowser.html\">Tor Browser</a> to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
 msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
-msgstr "Bitte nutzen Sie stets den Tor Browser (<code>{}</code>) um SecureDrop aufzurufen. Eine gültige SecureDrop-Webadresse endet mit <code>.onion</code>. Die korrekte Adresse dieses Seite lautet:"
+msgstr "Nutzen Sie immer den Tor Browser (<code>{}</code>), um auf SecureDrop zuzugreifen. Gültige SecureDrop-Webadressen enden mit <code>.onion</code>. Die korrekte Adresse für diese Seite lautet:"
 
 msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
 msgstr "Wenn Sie bereits den Tor-Browser benutzen, kopieren Sie die obige Adresse und erstellen Sie eine neue Identität, bevor Sie auf SecureDrop zugreifen."
