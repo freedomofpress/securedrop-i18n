@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2022-05-17 11:23+0000\n"
+"PO-Revision-Date: 2022-05-17 11:24+0000\n"
 "Last-Translator: coronabond <coronabond@airmail.cc>\n"
 "Language-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\n"
 "Language: it_IT\n"
@@ -1011,7 +1011,7 @@ msgid "Copy and paste the following address into your browser and follow the ins
 msgstr "Copia e incolla il seguente indirizzo nel tuo browser e segui le istruzioni per scaricare e installare il Browser Tor:"
 
 msgid "If there is a chance that downloading Tor Browser raises suspicion and your mail provider is less likely to be monitored, you can send a mail to <kbd>gettor@torproject.org</kbd> and a bot will answer with instructions."
-msgstr "Se c'è la possibilità che scaricare Il Browser Tor possa destare sospetti e il fornitore di posta elettronica ha meno probabilità di essere monitorato, puoi inviare un messaggio all'indirizzo <kbd>gettor@torproject.org</kbd> e un bot ti risponderà con le istruzioni da seguire."
+msgstr "Se c'è la possibilità che scaricare il Browser Tor possa destare sospetti e il fornitore di posta elettronica ha meno probabilità di essere monitorato, puoi inviare un messaggio all'indirizzo <kbd>gettor@torproject.org</kbd> e un bot ti risponderà con le istruzioni da seguire."
 
 msgid "Remember, your codename is:"
 msgstr "Ricorda, il tuo nome in codice è:"
@@ -1047,7 +1047,7 @@ msgid "If you are using <a href=\"{url}\">Tails</a>, you can double-click the <c
 msgstr "Se stai usando <a href=\"{url}\">Tails</a>, puoi fare doppio-clic sul file <code>.asc</code> appena scaricato e verrà automaticamente importato nel tuo portachiavi."
 
 msgid "If you are using macOS or Linux, open the terminal. You can import the key with:<p><code>gpg --import /path/to/{submission_key_fpr_filename}</code></p>"
-msgstr "Se stai utilizzando Mac OS o Linux, apri il terminale. Puoi importare la chiave con: <p><code>gpg --import /percorso/file/{submission_key_fpr_filename}</code></p>"
+msgstr "Se stai utilizzando macOS o Linux, apri il terminale. Puoi importare la chiave con: <p><code>gpg --import /percorso/file/{submission_key_fpr_filename}</code></p>"
 
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
 msgstr "Esegui la cifratura dell'invio. Apri il terminale e digita questo comando gpg:"
