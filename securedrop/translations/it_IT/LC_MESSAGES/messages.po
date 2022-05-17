@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
 "PO-Revision-Date: 2022-05-17 11:23+0000\n"
-"Last-Translator: Claudio Arseni <claudio.arseni@ubuntu.com>\n"
+"Last-Translator: coronabond <coronabond@airmail.cc>\n"
 "Language-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
@@ -639,7 +639,7 @@ msgid "If a user's two-factor authentication credentials have been lost or compr
 msgstr "Se l'autenticazione a due fattori di un utente è stata persa o compromessa, è possibile reimpostarla qui. <em>Se lo fai, assicurati che l'utente sia presente e pronto a configurare il suo dispositivo con le nuove credenziali a due fattori, altrimenti, non potrà più accedere al suo account.</em>"
 
 msgid "If your two-factor authentication credentials have been lost or compromised, or you got a new device, you can reset your credentials here. <em>If you do this, make sure you are ready to set up your new device, otherwise you will be locked out of your account.</em>"
-msgstr "Se le tue credenziali per l'autenticazione a due fattori sono state perse o compromesse, o hai un nuovo dispositivo, puoi reimpostarle qui.<em>Se lo fai, assicurati di essere pronto a configurare il tuo nuovo dispositivo, altrimenti non potrai più accedere al tuo account.</em>"
+msgstr "Se le tue credenziali per l'autenticazione a due fattori sono state perse o compromesse, o hai un nuovo dispositivo, puoi reimpostarle qui. <em>Se lo fai, assicurati di essere pronto a configurare il tuo nuovo dispositivo, altrimenti non potrai più accedere al tuo account.</em>"
 
 msgid "To reset two-factor authentication for mobile apps such as FreeOTP, choose the first option. For security keys like the YubiKey, choose the second one."
 msgstr "Per ripristinare l'autenticazione a due fattori per le applicazioni mobili come FreeOTP, scegliere la prima opzione. Per le chiavi di sicurezza come YubiKey, scegliere la seconda."
@@ -875,7 +875,7 @@ msgid "<strong>It is recommended to use Tor Browser to access SecureDrop:</stron
 msgstr "<strong>Ti consigliamo di usare il Browser Tor per accedere a SecureDrop:</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Scopri come installarlo</a>, o ignora questo avviso per continuare."
 
 msgid "<strong>It is recommended you use the desktop version of Tor Browser to access SecureDrop, as Orfox does not provide the same level of security and anonymity as the desktop version.</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to continue."
-msgstr "<strong>Ti consigliamo di usare la versione desktop del Browser Tor per accedere a SecureDrop, in quanto Orfox non garantisce lo stesso livello di sicurezza e anonimato della versione desktop. </strong><a class=\"recommend-tor\" href=\"{tor_browser_url}\">Scopri come installarlo</a>, o ignora questo avviso per continuare."
+msgstr "<strong>Ti consigliamo di usare la versione desktop del Browser Tor per accedere a SecureDrop, in quanto Orfox non garantisce lo stesso livello di sicurezza e anonimato della versione desktop.</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Scopri come installarlo</a>, o ignora questo avviso per continuare."
 
 msgid "{} logo"
 msgstr ""
@@ -1008,7 +1008,7 @@ msgid "If you want to submit information to SecureDrop, we <strong>strongly advi
 msgstr "Se vuoi inviare informazioni a SecureDrop, ti <strong>raccomandiamo caldamente</strong> di installare il browser Tor e usarlo per accedere al nostro sito in maniera sicura e anonima."
 
 msgid "Copy and paste the following address into your browser and follow the instructions to download and install Tor Browser:"
-msgstr "Copia e incolla il seguente indirizzo nel tuo browser e segui le istruzioni per scaricare e installare Tor:"
+msgstr "Copia e incolla il seguente indirizzo nel tuo browser e segui le istruzioni per scaricare e installare il Browser Tor:"
 
 msgid "If there is a chance that downloading Tor Browser raises suspicion and your mail provider is less likely to be monitored, you can send a mail to <kbd>gettor@torproject.org</kbd> and a bot will answer with instructions."
 msgstr "Se c'è la possibilità che scaricare Il Browser Tor possa destare sospetti e il fornitore di posta elettronica ha meno probabilità di essere monitorato, puoi inviare un messaggio all'indirizzo <kbd>gettor@torproject.org</kbd> e un bot ti risponderà con le istruzioni da seguire."
