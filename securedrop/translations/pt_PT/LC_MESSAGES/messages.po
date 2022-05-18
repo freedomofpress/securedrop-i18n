@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2022-05-18 13:11+0000\n"
-"Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
+"PO-Revision-Date: 2022-05-18 21:11+0000\n"
+"Last-Translator: deeplow <deeplower@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Generated-By: Babel 2.4.0\n"
 
 msgid "Name too long"
-msgstr "Nome demasiado longo."
+msgstr "Nome demasiado longo"
 
 msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
@@ -27,7 +27,7 @@ msgstr[0] "Tem que ter no mínimo {num} caractere."
 msgstr[1] "Tem que ter no mínimo {num} caracteres."
 
 msgid "This username is invalid because it is reserved for internal use by the software."
-msgstr "Este nome de utilizador é inválido porque está reservado para uso interno pelo software."
+msgstr "Este nome de utilizador é inválido porque está reservado para uso interno do software."
 
 msgid "Invalid username"
 msgstr "Nome de utilizador inválido"
@@ -44,7 +44,7 @@ msgid "You have been logged out due to inactivity."
 msgstr "A sua sessão foi encerrada por inatividade."
 
 msgid "You have been logged out due to password change"
-msgstr "A sua sessão foi encerrada por ter sido alterada a sua palavra-passe"
+msgstr "A sua sessão foi encerrada devido à sua palavra-passe ter sido alterada"
 
 msgid "SecureDrop"
 msgstr "SecureDrop"
@@ -53,17 +53,17 @@ msgid "Incorrect password or two-factor code."
 msgstr "Palavra-passe ou código de dois fatores incorreto."
 
 msgid "Your two-factor credentials have been reset successfully."
-msgstr "O seu código de dois fatores foi reinicializado com sucesso."
+msgstr "O seu código de dois fatores foi alterado com sucesso."
 
 msgid "There was a problem verifying the two-factor code. Please try again."
-msgstr "Houve um problema com a verificação do código de dois fatores. Por favor, tente de novo."
+msgstr "Houve um problema ao verificar o código de dois fatores. Por favor, tente de novo."
 
 msgid "Image updated."
 msgstr "Imagem atualizada."
 
 #. This error is shown when an uploaded image cannot be used.
 msgid "Unable to process the image file. Please try another one."
-msgstr "Não foi possível utilizar a imagem. Por favor, tente outra."
+msgstr "Não foi possível utilizar a imagem. Por favor, tente com outra."
 
 msgid "Preferences saved."
 msgstr "Preferências guardadas."
@@ -81,14 +81,14 @@ msgid "Invalid HOTP secret format: please only submit letters A-F and numbers 0-
 msgstr "Formato do segredo HOTP inválido: por favor, utilize apenas letras de A a F e números de 0 a 9."
 
 msgid "An unexpected error occurred! Please inform your admin."
-msgstr "Ocorreu um erro inesperado! Por favor informe o administrador."
+msgstr "Ocorreu um erro inesperado! Por favor informe o administrador do sistema."
 
 #. Here, "{message}" explains the problem with the username.
 msgid "Invalid username: {message}"
 msgstr "Nome de utilizador inválido: {message}"
 
 msgid "Username \"{username}\" already taken."
-msgstr "Nome de utilizador \"{username}\" já está a ser utilizado."
+msgstr "Já existe um(a) utilizador(a) com o nome \"{username}\"."
 
 msgid "An error occurred saving this user to the database. Please inform your admin."
 msgstr "Ocorreu um erro ao gravar este utilizador na base de dados. Por favor, informe o administrador do sistema."
@@ -98,10 +98,10 @@ msgstr "O código de dois fatores para o/a utilizador(a) \"{user}\" foi verifica
 
 #. Here, "{message}" explains the problem with the name.
 msgid "Name not updated: {message}"
-msgstr "Nome não atualizado: {message}"
+msgstr "O nome não foi atualizado: {message}"
 
 msgid "Deleted user '{user}'."
-msgstr "Utilizador '{user}' apagado."
+msgstr "Utilizador(a) '{user}' apagado."
 
 msgid "Test alert sent. Please check your email."
 msgstr "Alerta-teste enviado. Por favor, verifique o seu email."
@@ -118,7 +118,7 @@ msgid "Nothing Selected"
 msgstr "Nada Selecionado"
 
 msgid "You must select one or more items."
-msgstr "Deve selecionar um ou mais itens."
+msgstr "Deve selecionar pelo menos um item."
 
 #, fuzzy
 #| msgid "Your download failed because a file could not be found. An admin can find more information in the system and monitoring logs."
@@ -159,10 +159,10 @@ msgid "To configure a minimum message length, you must set the required number o
 msgstr ""
 
 msgid "File required."
-msgstr "Ficheiro obrigatório."
+msgstr "É necessário escolher um ficheiro."
 
 msgid "You can only upload PNG image files."
-msgstr "Apenas pode submeter imagens PNG."
+msgstr "Apenas pode submeter imagens em formato PNG."
 
 msgid "The source will receive your reply next time they log in."
 msgstr ""
@@ -193,7 +193,7 @@ msgid "Your 2FA details are invalid - please contact an administrator to reset t
 msgstr ""
 
 msgid "Please wait for a new code from your two-factor mobile app or security key before trying again."
-msgstr "Por favor espere por um novo código de dois fatores da app ou chave de segurança antes tentar de novo."
+msgstr "Por favor, espere que a app de dois fatores ou chave de segurança gere um novo código antes tentar novamente."
 
 msgid "The item has been deleted."
 msgid_plural "{num} items have been deleted."
@@ -224,13 +224,13 @@ msgid "The password you submitted is invalid. Password not changed."
 msgstr "Submeteu uma palavra-passe inválida. A palavra-passe não foi alterada."
 
 msgid "There was an error, and the new password might not have been saved correctly. To prevent you from getting locked out of your account, you should reset your password again."
-msgstr "Ocorreu um erro e a palavra-passe poderá não ter sido gravada corretamente. Para evitar perder o acesso à sua conta, deverá redefinir a sua palavra-passe, novamente."
+msgstr "Ocorreu um erro e a palavra-passe poderá não ter sido gravada corretamente. Para evitar perder o acesso à sua conta, deverá novamente alterar a sua palavra-passe."
 
 msgid "Password updated. Don't forget to save it in your KeePassX database. New password:"
 msgstr "Palavra-passe atualizada. Não se esqueça de a gravar na sua base de dados KeePassX. Nova palavra-passe:"
 
 msgid "No unread submissions in selected collections."
-msgstr "Nenhuma submissão está por lêr nas coleções selecionadas."
+msgstr "Nenhuma submissão por ler nas coleções selecionadas."
 
 msgid "Close"
 msgstr "Fechar"
@@ -263,10 +263,10 @@ msgid "When the account for a source is deleted:"
 msgstr "Quando a conta da fonte é apagada:"
 
 msgid "The source will no longer be able to log in with their codename."
-msgstr "A fonte não poderá mais iniciar sessão com o seu nome-código."
+msgstr "A fonte deixará de poder iniciar sessão com o seu nome-código."
 
 msgid "You will not be able to send them replies."
-msgstr "Não poderá mais responder."
+msgstr "Não poderá mais enviar-lhe respostas."
 
 msgid "All files and messages from that source will also be destroyed."
 msgstr "Todos os ficheiros e mensagens dessa fonte serão destruídos."
@@ -275,7 +275,7 @@ msgid "Are you sure this is what you want?"
 msgstr "Tem a certeza que é isto que pretende?"
 
 msgid "Yes, Delete Selected Source Accounts"
-msgstr "Sim, Apagar Contas de Fontes Selecionadas"
+msgstr "Sim, Apagar Contas das Fontes Selecionadas"
 
 msgid "What would you like to delete?"
 msgstr "O que deseja apagar?"
@@ -304,10 +304,10 @@ msgid "Enable FreeOTP"
 msgstr "Ativar FreeOTP"
 
 msgid "You're almost done! To finish resetting your two-factor authentication, follow the instructions below to set up FreeOTP. Once you've added the entry for your account in the app, enter one of the 6-digit codes from the app to confirm that two-factor authentication is set up correctly."
-msgstr "Está quase terminado! Para completar a redefinição da autenticação de dois fatores (2FA), siga as instruções abaixo para configurar a app FreeOTP. Depois de registar a conta na aplicação, insira um dos códigos de seis dígitos da aplicação para verificar se a autenticação de dois fatores foi configurada corretamente."
+msgstr "Está quase terminado! Para completar a alteração da autenticação de dois fatores (2FA), siga as instruções abaixo para configurar a app FreeOTP. Depois de registar a conta na aplicação, insira um dos códigos de seis dígitos da aplicação para verificar se a autenticação de dois fatores foi configurada corretamente."
 
 msgid "Install FreeOTP on your phone"
-msgstr "Instale FreeOTP no seu smartphone"
+msgstr "Instale a app FreeOTP no seu smartphone"
 
 msgid "Open the FreeOTP app"
 msgstr "Abra a app FreeOTP"
@@ -316,7 +316,7 @@ msgid "Tap the QR code symbol at the top"
 msgstr "Carregue no símbolo de código QR no topo"
 
 msgid "Your phone will now be in \"scanning\" mode. When you are in this mode, scan the barcode below:"
-msgstr "O seu smartphone deve estar em modo de \"leitura\". Leia com o dispositivo o código de barras abaixo:"
+msgstr "O seu smartphone deve estar em modo de \"leitura\". Leia com o dispositivo o código QR abaixo:"
 
 msgid "Can't scan the barcode? You can manually pair FreeOTP with your SecureDrop account by entering the following two-factor secret into the app:"
 msgstr "Não consegue ler o código QR? Pode adicionar a sua conta SecureDrop manualmente na app FreeOTP inserindo o código secreto de dois fatores:"
@@ -435,10 +435,10 @@ msgid "Enter a new HOTP secret formatted as a 40-digit hexadecimal string. Space
 msgstr ""
 
 msgid "You're almost done! To finish adding this new user, have them follow the instructions below to set up two-factor authentication with FreeOTP. Once they've added an entry for this account in the app, have them enter one of the 6-digit codes from the app to confirm that two-factor authentication is set up correctly."
-msgstr "Está quase terminando! Para finalizar a criação deste novo utilizador, peça a essa pessoa que siga as instruções abaixo para configurar a autenticação de dois fatores (2FA) com a app FreeOTP. Ao registar a nova conta na aplicação, peça-lhe que insira um código de seis dígitos gerado na aplicação para confirmar que a autenticação foi configurada com sucesso."
+msgstr "Está quase terminando! Para finalizar a criação deste novo utilizador, peça ao utilizador que siga as instruções abaixo para configurar a autenticação de dois fatores (2FA) com a app FreeOTP. Ao registar a nova conta na aplicação, peça-lhe que insira um código de seis dígitos gerado na aplicação para confirmar que a autenticação de dois fatores foi configurada com sucesso."
 
 msgid "Can't scan the barcode? You can manually pair FreeOTP with this account by entering the following two-factor secret into the app:"
-msgstr "Não consegue digitalizar o código QR? Pode adicionar a sua conta SecureDrop manualmente na app FreeOTP inserindo o código secreto de dois fatores:"
+msgstr "Não consegue ler o código QR? Pode adicionar a sua conta SecureDrop manualmente na app FreeOTP inserindo o seguinte código secreto de dois fatores:"
 
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr "Após configurar a sua YubiKey, insira o código de seis dígitos abaixo:"
@@ -470,13 +470,13 @@ msgid "All Sources"
 msgstr "Todas as Fontes"
 
 msgid "All messages, files, and replies from sources are stored as encrypted files for security. To read them, you will need to decrypt them on your Secure Viewing Station."
-msgstr "Todas as mensagens, ficheiros e respostas são cifrados por motivos de segurança. Para a eles aceder, é necessário decifrá-los com na \"Secure Viewing Station\"."
+msgstr "Todas as mensagens, ficheiros e respostas de fontes são cifrados por motivos de segurança. Para os aceder, é necessário decifrá-los com na \"Secure Viewing Station\"."
 
 msgid "Download Selected"
-msgstr "Fazer Download da Seleção"
+msgstr "Transferir Selecionados"
 
 msgid "Delete Selected"
-msgstr "Apagar Selecionado(s)"
+msgstr "Apagar Selecionados"
 
 msgid "Status"
 msgstr ""
@@ -496,13 +496,13 @@ msgid "Unread"
 msgstr "Por Ler"
 
 msgid "Read"
-msgstr "Lido"
+msgstr "Lida"
 
 msgid "Uploaded Document"
 msgstr "Documento Enviado"
 
 msgid "Reply"
-msgstr "Resposta"
+msgstr "Responder"
 
 msgid "Message"
 msgstr "Mensagem"
@@ -514,7 +514,7 @@ msgid "No submissions to display."
 msgstr "Não há submissões a mostrar."
 
 msgid "You can write a secure reply to the person who submitted these messages and/or files:"
-msgstr "Pode enviar uma resposta protegida à pessoa que enviou estas mensagens e/ou ficheiros:"
+msgstr "Pode enviar uma resposta de forma segura à pessoa que lhe enviou estas mensagens e/ou ficheiros:"
 
 #, fuzzy
 #| msgid "Write a message."
@@ -528,7 +528,7 @@ msgid "This source has no encryption key."
 msgstr ""
 
 msgid "An encryption key will be generated for the source the next time they log in, after which you will be able to reply to the source here."
-msgstr "Uma chave criptográfica será gerada para esta fonte na próxima vez que ela iniciar sessão. Em seguida, poderá responder-lhe aqui."
+msgstr "Uma chave criptográfica será gerada para esta fonte na próxima vez que ela iniciar sessão. Apenas após isso poderá responder-lhe aqui."
 
 msgid "Delete Source Account"
 msgstr "Apagar Conta de Fonte"
@@ -580,7 +580,7 @@ msgid "Submission Preferences"
 msgstr "Definições de Submissão"
 
 msgid "Prevent sources from uploading documents. Sources will still be able to send messages."
-msgstr "Prevenir que fontes submetam documentos. As fontes continuarão a poder enviar mensagens."
+msgstr "Impedir que fontes submetam documentos. As fontes continuarão a poder enviar mensagens."
 
 msgid "Prevent sources from sending initial messages shorter than the minimum required length:"
 msgstr ""
@@ -637,58 +637,58 @@ msgid "Update your account"
 msgstr "Editar a sua conta"
 
 msgid "Reset Password"
-msgstr "Redefinir Palavra-passe"
+msgstr "Alterar Palavra-passe"
 
 msgid "SecureDrop uses automatically generated diceware passwords."
-msgstr "SecureDrop usa frases-chave Diceware, geradas automaticamente."
+msgstr "SecureDrop usa palavras-passe Diceware, geradas automaticamente."
 
 msgid "Your password will be changed immediately, so you will need to save it before pressing the \"Reset Password\" button."
-msgstr "Sua palavra-passe será alterada imediatamente. Salve-a antes de clicar em \"Redefinir Palavra-Passe\"."
+msgstr "A sua palavra-passe será alterada imediatamente. Guarde-a antes de clicar em \"Alterar Palavra-Passe\"."
 
 msgid "Please enter your current password and two-factor code."
-msgstr "Por favor, insira a sua palavra-passe atual e o código de dois fatores."
+msgstr "Por favor, insira a sua palavra-passe atual e o código de dois fatores (2FA)."
 
 msgid "Current Password"
 msgstr "Palavra-passe Atual"
 
 msgid "Two-factor Code"
-msgstr "Código de dois fatores"
+msgstr "Código de Dois Fatores (2FA)"
 
 msgid "The user's password will be changed to:"
-msgstr "A palavra-passe do utilizador passará a ser:"
+msgstr "A palavra-passe do utilizador passará a ser a seguinte:"
 
 msgid "Your password will be changed to:"
-msgstr "A sua palavra-passe passará a ser:"
+msgstr "A sua palavra-passe passará a ser a seguinte:"
 
 msgid "RESET PASSWORD"
-msgstr "REDEFINIR PALAVRA-PASSE"
+msgstr "ALTERAR PALAVRA-PASSE"
 
 msgid "Reset Two-Factor Authentication"
-msgstr "Redefinir código de autenticação de dois fatores (2FA)"
+msgstr "Alterar código de autenticação de dois fatores (2FA)"
 
 msgid "If a user's two-factor authentication credentials have been lost or compromised, you can reset them here. <em>If you do this, make sure the user is present and ready to set up their device with the new two-factor credentials. Otherwise, they will be locked out of their account.</em>"
-msgstr "Se as credenciais de autenticação de dois fatores (2FA) de um utilizador forem perdidas ou comprometidas, poderá redefini-las aqui. <em>Ao fazê-lo, garanta a presença desse utilizador e que esteja preparado para configurar no seu dispositivo as novas credenciais de autenticação de dois fatores. Caso contrário, o utilizador não poderá voltar a aceder à sua conta</em>"
+msgstr "Se as credenciais de autenticação de dois fatores (2FA) de um utilizador forem perdidas ou comprometidas, poderá alterá-las aqui. <em>Ao fazê-lo, garanta a presença desse utilizador e que está preparado para configurar no seu dispositivo as novas credenciais de autenticação de dois fatores. Caso contrário, o utilizador não poderá voltar a aceder à sua conta</em>"
 
 msgid "If your two-factor authentication credentials have been lost or compromised, or you got a new device, you can reset your credentials here. <em>If you do this, make sure you are ready to set up your new device, otherwise you will be locked out of your account.</em>"
-msgstr "Se suas credenciais de autenticação de dois fatores (2FA) tiverem sido perdidas ou comprometidas - ou se tiver mudado de dispositivo -, é possível redefini-las aqui.<em>Caso deseje fazê-lo, tenha seu dispositivo à mão para nele configurar as novas credenciais. Caso contrário, não será possível voltar a aceder à sua conta.</em>"
+msgstr "Se suas credenciais de autenticação de dois fatores (2FA) tiverem sido perdidas ou comprometidas, ou se tiver mudado de dispositivo, é possível redefini-las aqui.<em>Caso deseje fazê-lo, tenha seu dispositivo à mão para nele configurar as novas credenciais. Caso contrário, não será possível voltar a aceder à sua conta.</em>"
 
 msgid "To reset two-factor authentication for mobile apps such as FreeOTP, choose the first option. For security keys like the YubiKey, choose the second one."
-msgstr "Para redefinir a autenticação de dois fatores (2FA) para aplicações móveis como FreeOTP, selecione a primeira opção. Para chaves de segurança como a Yubikey, selecione a segunda."
+msgstr "Para alterar a autenticação de dois fatores (2FA) para aplicações móveis como FreeOTP, selecione a primeira opção. Para chaves de segurança como a Yubikey, selecione a segunda."
 
 msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
-msgstr "Redefinir código de autenticação de dois fatores (2FA) para aplicações móveis, como FreeOTP"
+msgstr "Alterar código de autenticação de dois fatores (2FA) para aplicações móveis, como FreeOTP"
 
 msgid "RESET MOBILE APP CREDENTIALS"
-msgstr "REDEFINIR CREDENCIAIS DA APP MÓVEL"
+msgstr "ALTERAR CREDENCIAIS DA APLICAÇÃO MOVEL"
 
 msgid "Reset Mobile App Credentials"
 msgstr ""
 
 msgid "Reset two-factor authentication for security keys, like a YubiKey"
-msgstr "Reinicializar autenticação de dois fatores (2FA) para chaves de segurança, como a YubiKey"
+msgstr "Alterar autenticação de dois fatores (2FA) para chaves de segurança (como a YubiKey)"
 
 msgid "RESET SECURITY KEY CREDENTIALS"
-msgstr "REDEFINIR CREDENCIAIS DA CHAVE DE SEGURANÇA"
+msgstr "ALTERAR CREDENCIAIS DA CHAVE DE SEGURANÇA"
 
 msgid "Reset Security Key Credentials"
 msgstr ""
@@ -700,10 +700,10 @@ msgid "Download"
 msgstr "Transferir"
 
 msgid "Star"
-msgstr "Marcar como Importante"
+msgstr "Marcar com Estrela"
 
 msgid "Un-star"
-msgstr "Desmarcar como Importante"
+msgstr "Remover Estrela"
 
 msgid "Designation"
 msgstr ""
@@ -722,7 +722,7 @@ msgid "Date"
 msgstr ""
 
 msgid "No documents have been submitted!"
-msgstr "Nenhum documento foi enviado!"
+msgstr "Nenhum documento foi submetido!"
 
 msgid "Filter by codename"
 msgstr "Filtrar por nome-código"
@@ -734,10 +734,10 @@ msgid "Select Unread"
 msgstr "Selecionar Não Lido"
 
 msgid "Select None"
-msgstr "Desseleccionar"
+msgstr "Desselecionar"
 
 msgid "Are you sure you want to reset two-factor authentication for {username}?"
-msgstr "Tem certeza de que deseja redefinir a autenticação de dois fatores (2FA) de {username}?"
+msgstr "Tem certeza de que deseja alterar a autenticação de dois fatores (2FA) de {username}?"
 
 msgid "Sources selected: "
 msgstr "Fontes selecionadas: "
@@ -774,7 +774,7 @@ msgid "Invalid input."
 msgstr "Entrada inválida."
 
 msgid "Write a message."
-msgstr "Escreva uma mensagem."
+msgstr "Escreva aqui a mensagem."
 
 msgid "Select a file to upload."
 msgstr ""
@@ -783,13 +783,13 @@ msgid "Message text too long."
 msgstr "Mensagem de texto demasiado longa."
 
 msgid "Large blocks of text must be uploaded as a file, not copied and pasted."
-msgstr "Longos textos devem ser carregados como arquivos, não simplesmente copiados e colados."
+msgstr "Textos longos não devem ser copiados e colados, mas sim enviados como ficheiros."
 
 msgid "Your connection is not anonymous right now!"
 msgstr ""
 
 msgid "You were redirected because you are already logged in. If you want to create a new account, you should log out first."
-msgstr "Sessão já iniciada. Para criar uma nova conta, é necessário terminar a sessão primeiro."
+msgstr "Veio parar a esta página pois já tem uma conta com a sessão iniciada. Para criar uma nova conta é necessário terminar sessão primeiro."
 
 #, fuzzy
 #| msgid "You are already logged in. Please verify your codename above as it may differ from the one displayed on the previous page."
@@ -797,7 +797,7 @@ msgid "You are already logged in. Please verify your codename as it may differ f
 msgstr "Já estava com sessão iniciada. Por favor, verifique o seu nome-código acima, porque pode ser diferente daquele exibido na página anterior."
 
 msgid "There was a temporary problem creating your account. Please try again."
-msgstr "Houve um problema temorário ao criar a sua conta. Por favor, tente de novo."
+msgstr "Houve um problema temporário ao criar a sua conta. Por favor, tente novamente."
 
 msgid "You must enter a message or choose a file to submit."
 msgstr "É preciso escrever uma mensagem ou escolher um ficheiro para enviar."
@@ -822,7 +822,7 @@ msgid "Keep your codename secret, and use it to log in later to check for replie
 msgstr "Se você já tiver feito algum envio, inicie sessão aqui para ler as respostas."
 
 msgid "Thank you for sending this information to us. Please check back later for replies."
-msgstr "Agradecemos a informação. Por favor, volte mais tarde para ler as respostas."
+msgstr "Obrigado por nos enviar esta informação. Por favor, volte mais tarde para ler as respostas."
 
 msgid "Thanks! We received your message."
 msgstr "Obrigado! Recebemos a sua mensagem."
@@ -840,7 +840,7 @@ msgid "All replies have been deleted"
 msgstr "Todas as respostas foram apagadas"
 
 msgid "Sorry, that is not a recognized codename."
-msgstr "Desculpe, mas este nome-código não foi reconhecido."
+msgstr "Desculpe, desconhecemos este nome-código."
 
 #, fuzzy
 msgid "Important"
@@ -861,7 +861,7 @@ msgid "We're sorry, our SecureDrop is currently offline."
 msgstr "Lamentamos informar que o nosso SecureDrop está atualmente indisponível."
 
 msgid "Please try again later. Check our website for more information."
-msgstr "Por favor, tente novamente mais tarde. Visite o nosso website para saber mais."
+msgstr "Por favor, tente mais tarde. Visite o nosso website para mais informações."
 
 msgid "LOG OUT"
 msgstr "TERMINAR SESSÃO"
@@ -879,7 +879,7 @@ msgid "Powered by"
 msgstr "Este site utiliza o"
 
 msgid "Please note: Sharing sensitive documents may put you at risk, even when using Tor and SecureDrop."
-msgstr "Atenção: Partilhar documentos sensíveis pode colocá-lo(a) em risco, mesmo usando Tor e Securedrop."
+msgstr "Atenção: Partilhar documentos sensíveis pode colocá-lo/a em risco, mesmo usando Tor e Securedrop."
 
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
 msgstr "SecureDrop é um projeto da Freedom of the Press Foundation."
@@ -945,7 +945,7 @@ msgid "First submission"
 msgstr "Primeira submissão"
 
 msgid "First time submitting to our SecureDrop? Start here."
-msgstr "Primera vez que submete no nosso SecureDrop? Começe aqui."
+msgstr "É a primera vez que submete no nosso SecureDrop? Começe aqui."
 
 msgid "Get Started"
 msgstr ""
@@ -954,7 +954,7 @@ msgid "GET STARTED"
 msgstr "COMEÇAR"
 
 msgid "Return visit"
-msgstr "Nova visita"
+msgstr "Já submeteu antes"
 
 msgid "Already have a codename? Check for replies or submit something new."
 msgstr "Já tem um nome-código? Veja se tem respostas ou envie novos documentos."
