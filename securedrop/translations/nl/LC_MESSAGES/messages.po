@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2022-03-31 23:38+0000\n"
+"PO-Revision-Date: 2022-05-19 13:11+0000\n"
 "Last-Translator: kwadronaut <kwadronaut@autistici.org>\n"
 "Language-Team: Dutch <https://weblate.securedrop.org/projects/securedrop/securedrop/nl/>\n"
 "Language: nl\n"
@@ -874,7 +874,7 @@ msgid "<strong>It is recommended you use the desktop version of Tor Browser to a
 msgstr "<strong>Het wordt aangeraden om de desktop-versie van de Tor Browser te gebruiken om SecureDrop te bezoeken, want Orfox biedt niet hetzelfde veiligheids- en anonimiteitsniveau als de desktop-versie.</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Leer hier hoe deze te installeren is</a> of negeer deze waarschuwing om door te gaan."
 
 msgid "{} logo"
-msgstr ""
+msgstr "Logo van {}"
 
 msgid "First submission"
 msgstr "Eerste inzending"
@@ -930,11 +930,8 @@ msgstr "<a href=\"{url}\" class=\"text-link\">Lees meer</a>."
 msgid "Maximum upload size: 500 MB"
 msgstr "Maximale bestandsgrootte: 500 MB"
 
-#, fuzzy
-#| msgid "Must be at least {num} character long."
-#| msgid_plural "Must be at least {num} characters long."
 msgid "If you are only sending a message, it must be at least {} characters long."
-msgstr "Moet ten minste {num} teken lang zijn."
+msgstr "Als u enkel een bericht stuurt, moet het ten minste {} tekens lang zijn."
 
 msgid "Anti-spam check. Do not fill this in!"
 msgstr "Anti-spam controle. Vul dit niet in!"
@@ -985,7 +982,7 @@ msgid "Anyone monitoring your Internet traffic &mdash; including your government
 msgstr "Iedereen die uw internetverkeer controleert, inclusief uw overheid, uw internetprovider of de proxy-operator, kan u mogelijk identificeren."
 
 msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
-msgstr ""
+msgstr "Gebruik altijd de Tor Browser (<code>{}</code>) om SecureDrop te bezoeken. Geldige SecureDrop website adressen eindigen op <code>.onion</code>. Het juiste adres voor deze site:"
 
 msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
 msgstr "Als u Tor Browser al gebruikt, kopieert u het bovenstaande adres en genereert u een nieuwe identiteit voordat u SecureDrop opent."
@@ -1014,10 +1011,8 @@ msgstr "Vergeet niet, uw codenaam is:"
 msgid "Codename"
 msgstr "Codenaam"
 
-#, fuzzy
-#| msgid "Codename"
 msgid "Show Codename"
-msgstr "Codenaam"
+msgstr "Toon codenaam"
 
 msgid "Why download the team's public key?"
 msgstr "Waarom moet ik de publieke sleutel van het team downloaden?"
