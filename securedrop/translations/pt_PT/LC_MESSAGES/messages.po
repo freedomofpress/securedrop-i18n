@@ -109,7 +109,7 @@ msgid "Success!"
 msgstr "Sucesso!"
 
 msgid "The account and data for the source {} have been deleted."
-msgstr "A conta e dados da fonte {} foram apagados."
+msgstr "A conta e os dados da fonte {} foram apagados."
 
 #. Error shown when a user has not selected items to act on.
 msgid "Nothing Selected"
