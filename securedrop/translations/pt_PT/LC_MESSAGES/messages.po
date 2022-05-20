@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2022-05-20 20:41+0000\n"
-"Last-Translator: deeplow <deeplower@protonmail.com>\n"
+"Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
@@ -92,7 +92,7 @@ msgid "An error occurred saving this user to the database. Please inform your ad
 msgstr "Ocorreu um erro ao gravar este utilizador na base de dados. Por favor, informe o administrador do sistema."
 
 msgid "The two-factor code for user \"{user}\" was verified successfully."
-msgstr "O código de dois fatores para o utilizador \"{user}\" foi verificado com sucesso."
+msgstr "O código de dois fatores (2FA) para o utilizador \"{user}\" foi verificado com sucesso."
 
 #. Here, "{message}" explains the problem with the name.
 msgid "Name not updated: {message}"
