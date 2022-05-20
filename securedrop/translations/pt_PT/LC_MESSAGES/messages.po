@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2022-05-20 20:05+0000\n"
-"Last-Translator: deeplow <deeplower@protonmail.com>\n"
+"Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
@@ -994,7 +994,7 @@ msgid "Anyone monitoring your Internet traffic &mdash; including your government
 msgstr "Qualquer entidade ou pessoa que possa inspecionar a sua atividade na Internet &mdash; incluindo governo do seu país, empresa de telecomunicações o está a servir, ou o administrador do serviço de proxy &mdash; poderá identificá-lo."
 
 msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
-msgstr ""
+msgstr "Use sempre o Navegador Tor (<code>{}</code>) para aceder ao SecureDrop. Os endereços válidos para o site SecureDrop terminam em <code>.onion</code>. O endereço correto para este site é:"
 
 msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
 msgstr ""
