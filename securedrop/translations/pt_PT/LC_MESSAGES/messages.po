@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2022-05-20 20:02+0000\n"
+"PO-Revision-Date: 2022-05-20 20:05+0000\n"
 "Last-Translator: deeplow <deeplower@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
@@ -991,7 +991,7 @@ msgid "You appear to be using a Tor proxy service to access SecureDrop. Proxy se
 msgstr "O uso de Tor2Web para conectar-se ao SecureDrop não protege o seu anonimato."
 
 msgid "Anyone monitoring your Internet traffic &mdash; including your government, your Internet provider, or the proxy operator &mdash; may be able to identify you."
-msgstr "Qualquer pessoa que inspecione a sua atividade na Internet &mdash; incluindo o seu governo, a sua empresa de telecomunicações, ou o administrador do serviço de proxy &mdash; poderá identificá-lo."
+msgstr "Qualquer entidade ou pessoa que possa inspecionar a sua atividade na Internet &mdash; incluindo governo do seu país, empresa de telecomunicações o está a servir, ou o administrador do serviço de proxy &mdash; poderá identificá-lo."
 
 msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
 msgstr ""
