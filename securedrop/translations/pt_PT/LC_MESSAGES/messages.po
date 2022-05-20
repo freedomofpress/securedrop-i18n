@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2022-05-20 11:11+0000\n"
+"PO-Revision-Date: 2022-05-20 19:41+0000\n"
 "Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
@@ -23,8 +23,8 @@ msgstr "Nome demasiado longo"
 
 msgid "Must be at least {num} character long."
 msgid_plural "Must be at least {num} characters long."
-msgstr[0] "Tem que ter no mínimo {num} caractere."
-msgstr[1] "Tem que ter no mínimo {num} caracteres."
+msgstr[0] "Deve ter no mínimo {num} caractere."
+msgstr[1] "Deve ter no mínimo {num} caracteres."
 
 msgid "This username is invalid because it is reserved for internal use by the software."
 msgstr "Este nome de utilizador é inválido porque está reservado para uso interno do software."
@@ -42,7 +42,7 @@ msgid "You have been logged out due to inactivity."
 msgstr "A sua sessão foi encerrada por inatividade."
 
 msgid "You have been logged out due to password change"
-msgstr "A sua sessão foi encerrada devido à sua palavra-passe ter sido alterada"
+msgstr "A sua sessão foi encerrada devido a alteração da sua palavra-passe"
 
 msgid "SecureDrop"
 msgstr "SecureDrop"
@@ -92,7 +92,7 @@ msgid "An error occurred saving this user to the database. Please inform your ad
 msgstr "Ocorreu um erro ao gravar este utilizador na base de dados. Por favor, informe o administrador do sistema."
 
 msgid "The two-factor code for user \"{user}\" was verified successfully."
-msgstr "O código de dois fatores para o/a utilizador(a) \"{user}\" foi verificado com sucesso."
+msgstr "O código de dois fatores para o utilizador \"{user}\" foi verificado com sucesso."
 
 #. Here, "{message}" explains the problem with the name.
 msgid "Name not updated: {message}"
@@ -102,7 +102,7 @@ msgid "Deleted user '{user}'."
 msgstr "Utilizador(a) '{user}' apagado."
 
 msgid "Test alert sent. Please check your email."
-msgstr "Alerta-teste enviado. Por favor, verifique o seu email."
+msgstr "Teste de alerta enviado. Por favor, verifique o seu email."
 
 #. Precedes a message confirming the success of an operation.
 msgid "Success!"
@@ -840,16 +840,16 @@ msgid "A <em>codename</em> in SecureDrop functions as both your username and you
 msgstr "Um <em>nome-código</em> no SecureDrop funciona tanto como nome de utilizador quanto como palavra-passe."
 
 msgid "You will need this codename to log into our SecureDrop later:"
-msgstr ""
+msgstr "Vai precisar deste nome-código para iniciar sessão neste SecureDrop mais tarde:"
 
 msgid "<strong>Keep it secret.</strong> Do not share it with anyone."
-msgstr ""
+msgstr "<strong>É secreto.</strong> Não partilhes com ninguém."
 
 msgid "<strong>Keep it safe.</strong> There is no account recovery option."
-msgstr ""
+msgstr "<strong>Não a pode perder.</strong> Não poderá recuperar a sua conta."
 
 msgid "Continue"
-msgstr ""
+msgstr "Continuar"
 
 #, fuzzy
 #| msgid "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security Level</strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> &nbsp;button in your browser’s toolbar to change it."
@@ -857,7 +857,7 @@ msgid "Your Tor Browser's <a id=\"disable-js\" href=\"\"><b>Security Level</b></
 msgstr "O <a id=\"disable-js\" href=\"\"><strong>Nível de Segurança</strong></a> do seu navegador Tor está demaisado fraco. Use o <img src=\"{icon}\" alt=\"ícone de escudo\"> &nbsp;no seu navegador para modificá-las."
 
 msgid "How to change your security level"
-msgstr ""
+msgstr "Como alterar o seu nível de segurança"
 
 #, fuzzy
 #| msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
@@ -868,25 +868,21 @@ msgid "Click <b>Change</b> to open Security Level preferences"
 msgstr ""
 
 msgid "Select <b>Safest</b> and close the preferences tab"
-msgstr ""
+msgstr "Selecione <b>O mais Seguro</b> e feche o separador das preferências."
 
 #, fuzzy
 #| msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
 msgid "<a href=\"/\" aria-label=\"Follow these instructions, then refresh this page\">Refresh this page</a>, and you're done!"
-msgstr "<a href=\"/\">Atualize esta página</a> e está feito!"
+msgstr "<a href=\"/\" arial-label=\"Atualize esta página\">Recarregue esta página</a> e está feito!"
 
-#, fuzzy
-#| msgid "<strong>It is recommended to use Tor Browser to access SecureDrop:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to continue."
 msgid "<strong>It is recommended to use Tor Browser to access SecureDrop:</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to continue."
-msgstr "<strong>Recomenda-se o uso do navegador Tor para aceder o SecureDrop:</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Veja como instalar o Tor</a>, ou ignore este aviso e continue."
+msgstr "<strong>Recomenda-se o uso do navegador Tor para aceder ao SecureDrop:</strong> <aclass=\"recommend-tor\" href=\"{tor_browser_url}\">Veja como instalar o Tor</a>, ou ignore este aviso e continue."
 
-#, fuzzy
-#| msgid "<strong>It is recommended you use the desktop version of Tor Browser to access SecureDrop, as Orfox does not provide the same level of security and anonymity as the desktop version.</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to continue."
 msgid "<strong>It is recommended you use the desktop version of Tor Browser to access SecureDrop, as Orfox does not provide the same level of security and anonymity as the desktop version.</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to continue."
-msgstr "<strong>Recomenda-se o uso da versão desktop do Navegador Tor para aceder ao SecureDrop, já que o Orfox não oferece o mesmo nível de segurança e anonimato que as versão de desktop.</strong> <a id=\"recommend-tor\" href=\"{tor_browser_url}\">Veja como instalar o Tor</a>, ou ignore este aviso e continue."
+msgstr "<strong>Recomenda-se o uso da versão para computador do Navegador Tor de modo a aceder ao SecureDrop, já que o Orfox não oferece o mesmo nível de segurança e anonimato que as versão para computador.</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Veja como instalar o Tor</a>, ou ignore este aviso e continue."
 
 msgid "{} logo"
-msgstr ""
+msgstr "{} logotipo"
 
 msgid "First submission"
 msgstr "Primeira submissão"
@@ -895,7 +891,7 @@ msgid "First time submitting to our SecureDrop? Start here."
 msgstr "É a primera vez que submete no nosso SecureDrop? Começe aqui."
 
 msgid "Get Started"
-msgstr ""
+msgstr "Começar"
 
 msgid "GET STARTED"
 msgstr "COMEÇAR"
