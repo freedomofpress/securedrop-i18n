@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2022-05-20 19:47+0000\n"
-"Last-Translator: deeplow <deeplower@protonmail.com>\n"
+"Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
@@ -947,7 +947,7 @@ msgid "If you are only sending a message, it must be at least {} characters long
 msgstr "Tem que ter no mínimo {num} caractere."
 
 msgid "Anti-spam check. Do not fill this in!"
-msgstr ""
+msgstr "Verificação anti-spam. Não preencha este campo!"
 
 msgid "Submit"
 msgstr ""
