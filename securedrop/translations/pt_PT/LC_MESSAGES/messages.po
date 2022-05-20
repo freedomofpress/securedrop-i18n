@@ -859,10 +859,8 @@ msgstr "O <a id=\"disable-js\" href=\"\"><strong>Nível de Segurança</strong></
 msgid "How to change your security level"
 msgstr "Como alterar o seu nível de segurança"
 
-#, fuzzy
-#| msgid "Click the <img src=\"{icon}\" alt=\"shield icon\"> in the toolbar above"
 msgid "Click the <img src=\"{icon}\" alt=\"&quot;Security Level&quot; button\"> in the toolbar above"
-msgstr "Clique no <img src=\"{icon}\" alt=\"ícone do escudo\"> na barra de ferramentas, acima"
+msgstr "Clique no <img src=\"{icon}\" alt=\"botão &quot;Ícone do Escudo&quot;\"> na barra de ferramentas, acima"
 
 msgid "Click <b>Change</b> to open Security Level preferences"
 msgstr "Clique em <b>Alterar</b> para abrir as preferências de Nível de Segurança"
