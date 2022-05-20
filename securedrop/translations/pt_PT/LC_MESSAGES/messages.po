@@ -989,7 +989,7 @@ msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid Secu
 msgstr "Use sempre o Navegador Tor (<code>{}</code>) para aceder ao SecureDrop. Os endereços válidos para o site SecureDrop terminam em <code>.onion</code>. O endereço correto para este site é:"
 
 msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
-msgstr ""
+msgstr "Caso esteja a utilizar o Navegador Tor, copie o endereço acima e gere uma nova identidade antes de aceder ao SecureDrop."
 
 msgid "If there is a reasonable risk of your Internet traffic being monitored, consider connecting from a different location or network."
 msgstr "Se houver um risco significativo da sua atividade na internet estar a ser vigiada, considere conectar-se de um local ou rede diferente."
