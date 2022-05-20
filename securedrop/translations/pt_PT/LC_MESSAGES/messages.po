@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2022-05-20 20:17+0000\n"
-"Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
+"Last-Translator: deeplow <deeplower@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
@@ -992,7 +992,7 @@ msgid "If you are already using Tor Browser, copy the address above and generate
 msgstr "Caso esteja a utilizar o Navegador Tor, copie o endereço acima e gere uma nova identidade antes de aceder ao SecureDrop."
 
 msgid "If there is a reasonable risk of your Internet traffic being monitored, consider connecting from a different location or network."
-msgstr "Se houver um risco significativo da sua atividade na internet estar a ser vigiada, considere conectar-se de um local ou rede diferente."
+msgstr "Se houver um risco significativo da sua atividade na Internet estar a ser vigiada, considere conectar-se de um local ou rede diferente."
 
 msgid "You Should Use Tor Browser"
 msgstr "Recomendamos o uso do navegador Tor"
