@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2022-05-20 20:37+0000\n"
+"PO-Revision-Date: 2022-05-20 20:40+0000\n"
 "Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
@@ -96,7 +96,7 @@ msgstr "O código de dois fatores para o utilizador \"{user}\" foi verificado co
 
 #. Here, "{message}" explains the problem with the name.
 msgid "Name not updated: {message}"
-msgstr "O nome não foi atualizado: {message}"
+msgstr "Nome não atualizado: {message}"
 
 msgid "Deleted user '{user}'."
 msgstr "Utilizador(a) '{user}' apagado."
