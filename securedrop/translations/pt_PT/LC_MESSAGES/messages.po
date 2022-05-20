@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2022-05-20 19:54+0000\n"
-"Last-Translator: deeplow <deeplower@protonmail.com>\n"
+"Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
@@ -865,7 +865,7 @@ msgid "Click the <img src=\"{icon}\" alt=\"&quot;Security Level&quot; button\"> 
 msgstr "Clique no <img src=\"{icon}\" alt=\"ícone do escudo\"> na barra de ferramentas, acima"
 
 msgid "Click <b>Change</b> to open Security Level preferences"
-msgstr ""
+msgstr "Clique em <b>Alterar</b> para abrir as preferências de Nível de Segurança"
 
 msgid "Select <b>Safest</b> and close the preferences tab"
 msgstr "Selecione <b>Mais Seguro (PT) / Safest (EN)</b> e feche o separador das preferências"
