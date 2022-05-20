@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2022-05-20 20:47+0000\n"
-"Last-Translator: deeplow <deeplower@protonmail.com>\n"
+"Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
@@ -106,7 +106,7 @@ msgstr "Teste de alerta enviado. Por favor, verifique o seu email."
 
 #. Precedes a message confirming the success of an operation.
 msgid "Success!"
-msgstr "Sucesso!"
+msgstr "Realizado com sucesso!"
 
 msgid "The account and data for the source {} have been deleted."
 msgstr "A conta e os dados da fonte {} foram apagados."
