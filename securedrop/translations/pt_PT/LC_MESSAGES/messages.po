@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2022-05-20 19:41+0000\n"
+"PO-Revision-Date: 2022-05-20 19:47+0000\n"
 "Last-Translator: deeplow <deeplower@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
@@ -873,16 +873,16 @@ msgstr "Selecione <b>O mais Seguro</b> e feche o separador das preferências."
 #, fuzzy
 #| msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
 msgid "<a href=\"/\" aria-label=\"Follow these instructions, then refresh this page\">Refresh this page</a>, and you're done!"
-msgstr "<a href=\"/\" arial-label=\"Atualize esta página\">Recarregue esta página</a> e está feito!"
+msgstr "<a href=\"/\" arial-label=\"Siga as instruções e em seguida recarregue esta página\">Recarregue esta página</a> e está feito!"
 
 msgid "<strong>It is recommended to use Tor Browser to access SecureDrop:</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to continue."
-msgstr "<strong>Recomenda-se o uso do navegador Tor para aceder ao SecureDrop:</strong> <aclass=\"recommend-tor\" href=\"{tor_browser_url}\">Veja como instalar o Tor</a>, ou ignore este aviso e continue."
+msgstr "<strong>Recomenda-se o uso do navegador Tor para aceder ao SecureDrop:</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Veja como o instalar</a>, ou ignore este aviso e continue."
 
 msgid "<strong>It is recommended you use the desktop version of Tor Browser to access SecureDrop, as Orfox does not provide the same level of security and anonymity as the desktop version.</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Learn how to install it</a>, or ignore this warning to continue."
 msgstr "<strong>Recomenda-se o uso da versão para computador do Navegador Tor de modo a aceder ao SecureDrop, já que o Orfox não oferece o mesmo nível de segurança e anonimato que as versão para computador.</strong> <a class=\"recommend-tor\" href=\"{tor_browser_url}\">Veja como instalar o Tor</a>, ou ignore este aviso e continue."
 
 msgid "{} logo"
-msgstr "{} logotipo"
+msgstr "logótipo de {}"
 
 msgid "First submission"
 msgstr "Primeira submissão"
