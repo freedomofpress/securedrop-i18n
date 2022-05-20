@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2022-05-20 21:06+0000\n"
-"Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
+"PO-Revision-Date: 2022-05-20 22:23+0000\n"
+"Last-Translator: deeplow <deeplower@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
@@ -39,10 +39,10 @@ msgid "{time} ago"
 msgstr "há {time}"
 
 msgid "You have been logged out due to inactivity."
-msgstr "A sua sessão foi encerrada por inatividade."
+msgstr "A sua sessão terminou por inatividade."
 
 msgid "You have been logged out due to password change"
-msgstr "A sua sessão foi encerrada devido a alteração da sua palavra-passe"
+msgstr "A sua sessão foi terminada devido à alteração da sua palavra-passe"
 
 msgid "SecureDrop"
 msgstr "SecureDrop"
@@ -64,10 +64,10 @@ msgid "Unable to process the image file. Please try another one."
 msgstr "Não foi possível utilizar esta imagem. Por favor, tente outra."
 
 msgid "Preferences saved."
-msgstr "Preferências guardadas."
+msgstr "Definições guardadas."
 
 msgid "Preferences not updated."
-msgstr "Preferências não atualizadas."
+msgstr "Definições não atualizadas."
 
 msgid "Failed to update organization name."
 msgstr "Falha ao atualizar o nome da organização."
@@ -129,9 +129,8 @@ msgstr "Esta página está reservada a administradores."
 msgid "The \"{name}\" field is required when \"{other_name}\" is set."
 msgstr "O campo \"{name}\" é obrigatório quando \"{other_name}\" está definido."
 
-#, fuzzy
 msgid "The \"{other_name}\" field was not found - it is required by \"{name}\"."
-msgstr "O campo \"{other_name}\" não foi encontrado - é obrigatório por \"{name}\"."
+msgstr "O campo \"{other_name}\" não está preenchido mas é exigido por \"{name}\"."
 
 msgid "HOTP secrets are 40 characters long - you have entered {num}."
 msgid_plural "HOTP secrets are 40 characters long - you have entered {num}."
@@ -144,7 +143,7 @@ msgstr[0] "Este campo pode conter no máximo {num} caractere."
 msgstr[1] "Este campo pode conter no máximo {num} caracteres."
 
 msgid "Please specify an integer value greater than 0."
-msgstr "Por favor especifique um valor inteiro maior que 0."
+msgstr "Por favor forneça um valor inteiro maior que 0."
 
 msgid "This field is required."
 msgstr "Este campo é obrigatório."
@@ -174,7 +173,7 @@ msgid "No unread submissions for this source."
 msgstr "Não tem nada por ler desta fonte."
 
 msgid "Account updated."
-msgstr "Conta atualizada."
+msgstr "Alterações à conta guardadas."
 
 msgid "Login failed."
 msgstr "Falha ao iniciar sessão."
@@ -185,7 +184,7 @@ msgstr[0] "Por favor espere pelo menos {num} segundo antes de tentar iniciar ses
 msgstr[1] "Por favor espere pelo menos {num} segundos antes de tentar iniciar sessão novamente."
 
 msgid "Your 2FA details are invalid - please contact an administrator to reset them."
-msgstr "Os seus dados de autenticação de 2 fatores (2FA) são inválidos - por favor, contacte o administrador para alterá-los."
+msgstr "Os seus dados de autenticação de dois fatores (2FA) são inválidos - por favor, contacte um administrador do sistema para os redefinir."
 
 msgid "Please wait for a new code from your two-factor mobile app or security key before trying again."
 msgstr "Por favor, espere que a app de dois fatores (2FA) ou chave de segurança gere um novo código antes tentar novamente."
@@ -859,10 +858,10 @@ msgid "Click the <img src=\"{icon}\" alt=\"&quot;Security Level&quot; button\"> 
 msgstr "Clique em <img src=\"{icon}\" alt=\"botão &quot;Ícone do Escudo&quot;\"> na barra de ferramentas, acima"
 
 msgid "Click <b>Change</b> to open Security Level preferences"
-msgstr "Clique em <b>Alterar (PT) / Change (EN)</b> para abrir as preferências de Nível de Segurança"
+msgstr "Clique em <b>Alterar (PT) / Change (EN)</b> para abrir as definições de Nível de Segurança"
 
 msgid "Select <b>Safest</b> and close the preferences tab"
-msgstr "Selecione <b>Mais Seguro (PT) / Safest (EN)</b> e feche o separador das preferências"
+msgstr "Selecione <b>Mais Seguro (PT) / Safest (EN)</b> e feche o separador das definições"
 
 #, fuzzy
 #| msgid "<a href=\"/\">Refresh this page</a>, and you're done!"
