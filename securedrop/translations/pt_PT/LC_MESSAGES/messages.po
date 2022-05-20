@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2022-05-20 20:24+0000\n"
+"PO-Revision-Date: 2022-05-20 20:25+0000\n"
 "Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
@@ -1012,10 +1012,8 @@ msgstr "Se houver probabilidade de levantar suspeitas por instalar o Navegador T
 msgid "Remember, your codename is:"
 msgstr "Lembre-se, o seu nome-código é:"
 
-#, fuzzy
-#| msgid "Enter Codename"
 msgid "Codename"
-msgstr "Inserir Nome-código"
+msgstr "Nome-código"
 
 msgid "Show Codename"
 msgstr "Mostrar Nome-código"
