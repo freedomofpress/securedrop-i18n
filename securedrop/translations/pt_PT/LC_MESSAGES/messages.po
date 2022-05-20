@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2022-05-20 19:56+0000\n"
-"Last-Translator: deeplow <deeplower@protonmail.com>\n"
+"Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
@@ -851,10 +851,8 @@ msgstr "<strong>Não a pode perder.</strong> Não poderá recuperar a sua conta.
 msgid "Continue"
 msgstr "Continuar"
 
-#, fuzzy
-#| msgid "Your Tor Browser's <a id=\"disable-js\" href=\"\"><strong>Security Level</strong></a> is too low. Use the <img src=\"{icon}\" alt=\"shield icon\"> &nbsp;button in your browser’s toolbar to change it."
 msgid "Your Tor Browser's <a id=\"disable-js\" href=\"\"><b>Security Level</b></a> is too low. Use the <img src=\"{icon}\" alt=\"&quot;Security Level&quot;\"> button in your browser’s toolbar to change it."
-msgstr "O <a id=\"disable-js\" href=\"\"><strong>Nível de Segurança</strong></a> do seu navegador Tor está demaisado fraco. Use o <img src=\"{icon}\" alt=\"ícone de escudo\"> &nbsp;no seu navegador para modificá-las."
+msgstr "O <a id=\"disable-js\" href=\"\"><b>Nível de Segurança</b></a> do seu navegador Tor está demaisado fraco. Use o <img src=\"{icon}\" alt=\"&quot;Security Level&quot;\"> botão na barra de ferramentas do seu navegador para modificá-las."
 
 msgid "How to change your security level"
 msgstr "Como alterar o seu nível de segurança"
