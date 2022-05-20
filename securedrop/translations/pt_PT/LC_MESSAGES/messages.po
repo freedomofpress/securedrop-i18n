@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2022-05-20 20:23+0000\n"
-"Last-Translator: deeplow <deeplower@protonmail.com>\n"
+"Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
@@ -1006,10 +1006,8 @@ msgstr "Para enviar informações para o SecureDrop, é <strong>altamente recome
 msgid "Copy and paste the following address into your browser and follow the instructions to download and install Tor Browser:"
 msgstr "Copie e cole o seguinte endereço no seu navegador e siga as instruções para baixar e instalar o Tor:"
 
-#, fuzzy
-#| msgid "If there is a chance that downloading Tor Browser raises suspicion and your mail provider is less likely to be monitored, you can send a mail to <pre>gettor@torproject.org</pre> and a bot will answer with instructions."
 msgid "If there is a chance that downloading Tor Browser raises suspicion and your mail provider is less likely to be monitored, you can send a mail to <kbd>gettor@torproject.org</kbd> and a bot will answer with instructions."
-msgstr "Caso você receie levantar suspeitas ao fazer download do Tor - e sua conta de e-mail for menos vulnerável ao controlo por terceiros -, envie um e-mail para <pre>gettor@torproject.org</pre>. Você receberá um mensagem automática com instruções."
+msgstr "Se houver a probabilidade de levantar suspeitas por instalar o Navegador Tor e se o seu serviço de email tiver menor probabilidade de ser vigiado, pode enviar um email para <kbd>gettor@torproject.org</kbd> e receberá uma mensagem automática com instruções."
 
 msgid "Remember, your codename is:"
 msgstr "Lembre-se, o seu nome-código é:"
