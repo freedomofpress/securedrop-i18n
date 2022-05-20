@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2022-05-20 20:11+0000\n"
-"Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
+"Last-Translator: deeplow <deeplower@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
@@ -989,7 +989,7 @@ msgid "You appear to be using a Tor proxy service to access SecureDrop. Proxy se
 msgstr "Parece estar a usar um serviço de proxy através da rede Tor para aceder ao SecureDrop. Serviços de proxy não protegem o seu anonimato."
 
 msgid "Anyone monitoring your Internet traffic &mdash; including your government, your Internet provider, or the proxy operator &mdash; may be able to identify you."
-msgstr "Qualquer entidade ou pessoa que possa inspecionar a sua atividade na Internet &mdash; incluindo governo do seu país, empresa de telecomunicações o está a servir, ou o administrador do serviço de proxy &mdash; poderá identificá-lo."
+msgstr "Qualquer entidade ou pessoa que possa inspecionar a sua atividade na Internet &mdash; incluindo governo do seu país, empresa de telecomunicações cujo serviço usa para aceder à Internet, ou o administrador do serviço de proxy &mdash; poderá identificá-lo."
 
 msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
 msgstr "Use sempre o Navegador Tor (<code>{}</code>) para aceder ao SecureDrop. Os endereços válidos para o site SecureDrop terminam em <code>.onion</code>. O endereço correto para este site é:"
