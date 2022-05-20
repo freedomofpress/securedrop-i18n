@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2022-05-20 20:58+0000\n"
-"Last-Translator: deeplow <deeplower@protonmail.com>\n"
+"Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
@@ -188,7 +188,7 @@ msgid "Your 2FA details are invalid - please contact an administrator to reset t
 msgstr "Os seus dados de autenticação de 2 fatores (2FA) são inválidos - por favor, contacte o administrador para alterá-los."
 
 msgid "Please wait for a new code from your two-factor mobile app or security key before trying again."
-msgstr "Por favor, espere que a app de dois fatores ou chave de segurança gere um novo código antes tentar novamente."
+msgstr "Por favor, espere que a app de dois fatores (2FA) ou chave de segurança gere um novo código antes tentar novamente."
 
 msgid "The item has been deleted."
 msgid_plural "{num} items have been deleted."
