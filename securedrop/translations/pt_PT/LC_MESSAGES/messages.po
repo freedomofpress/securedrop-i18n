@@ -296,7 +296,7 @@ msgid "You're almost done! To finish resetting your two-factor authentication, f
 msgstr "Está quase terminado! Para completar a alteração da autenticação de dois fatores (2FA), siga as instruções abaixo para configurar a app FreeOTP. Depois de registar a conta na aplicação, insira um dos códigos de seis dígitos da aplicação para verificar se a autenticação de dois fatores foi configurada corretamente."
 
 msgid "Install FreeOTP on your phone"
-msgstr "Instale a app FreeOTP no seu smartphone"
+msgstr "Instale a aplicação FreeOTP no seu smartphone"
 
 msgid "Open the FreeOTP app"
 msgstr "Abra a app FreeOTP"
