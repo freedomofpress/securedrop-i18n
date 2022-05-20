@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2022-05-19 23:11+0000\n"
-"Last-Translator: deeplow <deeplower@protonmail.com>\n"
+"PO-Revision-Date: 2022-05-20 11:11+0000\n"
+"Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
@@ -797,16 +797,14 @@ msgstr "Desculpe, desconhecemos este nome-código."
 msgid "Important"
 msgstr "Importante"
 
-#, fuzzy
-#| msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
 msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
-msgstr "A sua sessão terminada por inatividade. Clique no botão <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>Nova identidade</strong> na barra de ferramentas do Navegador Tor. Assim, os dados da sua atividade no Navegador Tor serão eliminados deste dispositivo."
+msgstr "A sua sessão terminou por inatividade. Clique no botão <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>Nova identidade</b> na barra de ferramentas do Navegador Tor antes de continuar. Assim, os dados da sua atividade no Navegador Tor serão eliminados deste dispositivo."
 
 msgid "Protecting Journalists and Sources"
 msgstr "A Proteger Jornalistas e Fontes"
 
 msgid "Skip to notification"
-msgstr ""
+msgstr "Avançar para as notificações"
 
 msgid "We're sorry, our SecureDrop is currently offline."
 msgstr "Lamentamos informar que o nosso SecureDrop está atualmente indisponível."
@@ -835,13 +833,11 @@ msgstr "Atenção: Partilhar documentos sensíveis pode colocá-lo/a em risco, m
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
 msgstr "SecureDrop é um projeto da Freedom of the Press Foundation."
 
-#, fuzzy
-#| msgid "Enter your codename"
 msgid "Get Your Codename"
-msgstr "Digite o seu nome-código"
+msgstr "Obtenha o Seu Nome-Código"
 
 msgid "A <em>codename</em> in SecureDrop functions as both your username and your password."
-msgstr ""
+msgstr "Um <em>nome-código</em> no SecureDrop funciona tanto como nome de utilizador quanto como palavra-passe."
 
 msgid "You will need this codename to log into our SecureDrop later:"
 msgstr ""
