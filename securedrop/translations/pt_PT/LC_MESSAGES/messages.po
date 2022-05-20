@@ -61,7 +61,7 @@ msgstr "Imagem atualizada."
 
 #. This error is shown when an uploaded image cannot be used.
 msgid "Unable to process the image file. Please try another one."
-msgstr "Não foi possível utilizar a imagem. Por favor, tente com outra."
+msgstr "Não foi possível utilizar esta imagem. Por favor, tente outra."
 
 msgid "Preferences saved."
 msgstr "Preferências guardadas."
