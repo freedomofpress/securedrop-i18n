@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2022-05-22 11:11+0000\n"
-"Last-Translator: deeplow <deeplower@protonmail.com>\n"
+"Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
@@ -635,7 +635,7 @@ msgid "If a user's two-factor authentication credentials have been lost or compr
 msgstr "Se as credenciais de autenticação de dois fatores (2FA) de um utilizador forem perdidas ou comprometidas, poderá alterá-las aqui. <em>Ao fazê-lo, garanta a presença desse utilizador e que está preparado para configurar no seu dispositivo as novas credenciais de autenticação de dois fatores. Caso contrário, o utilizador não poderá voltar a aceder à sua conta</em>"
 
 msgid "If your two-factor authentication credentials have been lost or compromised, or you got a new device, you can reset your credentials here. <em>If you do this, make sure you are ready to set up your new device, otherwise you will be locked out of your account.</em>"
-msgstr "Se suas credenciais de autenticação de dois fatores (2FA) tiverem sido perdidas ou comprometidas, ou se tiver mudado de dispositivo, é possível redefini-las aqui.<em>Caso deseje fazê-lo, tenha seu dispositivo à mão para nele configurar as novas credenciais. Caso contrário, não será possível voltar a aceder à sua conta.</em>"
+msgstr "Se as suas credenciais de autenticação de dois fatores (2FA) tiverem sido perdidas ou comprometidas, ou se mudou de dispositivo, é possível redefini-las aqui.<em>Caso deseje fazê-lo, certifique-se de que está pronto para configurar o novo dispositivo. Caso contrário, não será possível voltar a aceder à sua conta.</em>"
 
 msgid "To reset two-factor authentication for mobile apps such as FreeOTP, choose the first option. For security keys like the YubiKey, choose the second one."
 msgstr "Para alterar a autenticação de dois fatores (2FA) para aplicações móveis como FreeOTP, selecione a primeira opção. Para chaves de segurança como a Yubikey, selecione a segunda."
