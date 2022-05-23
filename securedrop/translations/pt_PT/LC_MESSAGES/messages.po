@@ -1001,7 +1001,7 @@ msgid "If you want to submit information to SecureDrop, we <strong>strongly advi
 msgstr "Para enviar informações para o SecureDrop, é <strong>altamente recomendado</strong> instalar o navegador Tor e usá-lo para aceder ao nosso site de forma segura e anónima."
 
 msgid "Copy and paste the following address into your browser and follow the instructions to download and install Tor Browser:"
-msgstr "Copie e cole o seguinte endereço no seu navegador e siga as instruções para baixar e instalar o Tor:"
+msgstr "Copie e cole o seguinte endereço no seu navegador e siga as instruções para transferir e instalar o Tor:"
 
 msgid "If there is a chance that downloading Tor Browser raises suspicion and your mail provider is less likely to be monitored, you can send a mail to <kbd>gettor@torproject.org</kbd> and a bot will answer with instructions."
 msgstr "Se houver probabilidade de levantar suspeitas por instalar o Navegador Tor e se o seu serviço de email tiver menor probabilidade de ser vigiado, pode enviar um email para <kbd>gettor@torproject.org</kbd> e receberá uma mensagem automática com instruções."
