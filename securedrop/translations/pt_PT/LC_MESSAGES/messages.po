@@ -644,7 +644,7 @@ msgid "Reset two-factor authentication for mobile apps, such as FreeOTP"
 msgstr "Alterar código de autenticação de dois fatores (2FA) para aplicações móveis, como FreeOTP"
 
 msgid "RESET MOBILE APP CREDENTIALS"
-msgstr "ALTERAR CREDENCIAIS DA APLICAÇÃO MOVEL"
+msgstr "ALTERAR CREDENCIAIS DA APLICAÇÃO MÓVEL"
 
 msgid "Reset Mobile App Credentials"
 msgstr "Alterar as Credenciais da Aplicação Móvel"
