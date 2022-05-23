@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2022-05-23 09:40+0000\n"
+"PO-Revision-Date: 2022-05-23 09:43+0000\n"
 "Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
@@ -1047,7 +1047,7 @@ msgid "<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submissio
 msgstr "<code>gpg --recipient '{submission_key_fpr}' --encrypt /caminho/para/a/submissão</code>"
 
 msgid "Upload your encrypted submission. It will have the same filename as the unencrypted file, with .gpg at the end (e.g. <code>internal_memo.pdf.gpg</code>)"
-msgstr "Envie o conteúdo cifrado. O nome do ficheiro será o mesmo da versão não cifrada, mas com \".gpg\" no final (por exemplo <code>docuemento.pdf.gpg</code>)"
+msgstr "Envie o conteúdo encriptado. O nome do ficheiro será o mesmo da versão não encriptada, mas com \".gpg\" no final (por exemplo: <code>docuemento.pdf.gpg</code>)"
 
 msgid "<strong>Important:</strong> If you wish to remain anonymous, <strong>do not</strong> use GPG to sign the encrypted file (with the <code>--sign</code> or <code>-s</code> flag) as this will reveal your GPG identity to us."
 msgstr "<strong>Importante:</strong> para manter o seu anonimato, <strong>não</strong> use o GPG para assinar o arquivo encriptado (com as opções <code>--sign</code> ou <code>-s</code>), pois isso revelar-nos-ia a sua identidade."
