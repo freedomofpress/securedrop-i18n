@@ -899,7 +899,7 @@ msgid "Enter Codename"
 msgstr "Inserir Nome-código"
 
 msgid "Enter your codename"
-msgstr "Digite o seu nome-código"
+msgstr "Insira o seu nome-código"
 
 msgid "CANCEL"
 msgstr "CANCELAR"
