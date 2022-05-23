@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2022-05-23 09:44+0000\n"
-"Last-Translator: deeplow <deeplower@protonmail.com>\n"
+"Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
@@ -1041,7 +1041,7 @@ msgid "If you are using macOS or Linux, open the terminal. You can import the ke
 msgstr "No Mac/Linux, abra o terminal. Pode importar a chave com o comando:<p><code>gpg --import /caminho/para/a/{submission_key_fpr_filename}</code></p>"
 
 msgid "Encrypt your submission. Open the terminal and enter this gpg command:"
-msgstr "Cifre a sua submissão. Abra um terminal e insira o seguinte comand gpg:"
+msgstr "Encripte a sua submissão. Abra um terminal e insira o seguinte comando gpg:"
 
 msgid "<code>gpg --recipient '{submission_key_fpr}' --encrypt /path/to/submission</code>"
 msgstr "<code>gpg --recipient '{submission_key_fpr}' --encrypt /caminho/para/a/submissão</code>"
