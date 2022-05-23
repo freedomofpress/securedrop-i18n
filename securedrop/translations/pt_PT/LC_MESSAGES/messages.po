@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2022-05-23 10:23+0000\n"
-"Last-Translator: deeplow <deeplower@protonmail.com>\n"
+"PO-Revision-Date: 2022-05-23 10:38+0000\n"
+"Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
@@ -455,7 +455,7 @@ msgid "Download Selected"
 msgstr "Transferir Selecionados"
 
 msgid "Delete Selected"
-msgstr "Apagar Selecionados"
+msgstr "Eliminar Selecionados"
 
 msgid "Status"
 msgstr "Estado"
@@ -485,7 +485,7 @@ msgid "Message"
 msgstr "Mensagem"
 
 msgid "Are you sure you want to delete the selected submissions?"
-msgstr "Tem a certeza que deseja apagar as submissões selecionadas?"
+msgstr "Tem a certeza que deseja eliminar as submissões selecionadas?"
 
 msgid "No submissions to display."
 msgstr "Não há submissões a mostrar."
@@ -503,16 +503,16 @@ msgid "This source has no encryption key."
 msgstr "Esta fonte não tem chave de encriptação."
 
 msgid "An encryption key will be generated for the source the next time they log in, after which you will be able to reply to the source here."
-msgstr "Uma chave criptográfica será gerada para esta fonte na próxima vez que ela iniciar sessão. Apenas após isso poderá responder-lhe aqui."
+msgstr "Uma chave de encriptação será gerada para esta fonte da próxima vez que ela iniciar sessão. Apenas depois disso poderá responder-lhe aqui."
 
 msgid "Delete Source Account"
-msgstr "Apagar Conta de Fonte"
+msgstr "Eliminar Conta da Fonte"
 
 msgid "Are you sure?"
 msgstr "Tem a certeza?"
 
 msgid "Yes, Delete Source Account"
-msgstr "Sim, Apagar Conta de Fonte"
+msgstr "Sim, Eliminar Conta da Fonte"
 
 msgid "Instance Configuration"
 msgstr "Configuração de Instância"
