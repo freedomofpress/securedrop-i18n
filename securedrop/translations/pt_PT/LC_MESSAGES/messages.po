@@ -554,7 +554,7 @@ msgid "Prevent sources from uploading documents. Sources will still be able to s
 msgstr "Impedir que fontes submetam documentos. As fontes continuarão a poder enviar mensagens."
 
 msgid "Prevent sources from sending initial messages shorter than the minimum required length:"
-msgstr "Previne que as fontes enviem mensagens iniciais mais curtas que o tamanho mínimo obrigatório:"
+msgstr "Impede que as fontes enviem mensagens iniciais mais curtas que o tamanho mínimo obrigatório:"
 
 msgid "Minimum number of characters."
 msgstr "Número mínimo de caracteres."
