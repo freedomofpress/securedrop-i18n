@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2022-05-22 11:11+0000\n"
+"PO-Revision-Date: 2022-05-23 09:36+0000\n"
 "Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
@@ -923,7 +923,7 @@ msgid "If you are already familiar with GPG, you can optionally encrypt your fil
 msgstr "Se está famizliarizado(a) com GPG, poderá optar por cifrar os seus próprios ficheiros e mensagens com nossa <a href=\"{url}\" class=\"text-link\">chave pública</a> antes de os enviar. Os ficheiros também cifrados após a sua receção no SecureDrop."
 
 msgid "If you are already familiar with GPG, you can optionally encrypt your messages with our <a href=\"{url}\" class=\"text-link\">public key</a> before submission."
-msgstr "Se está famizliarizado(a) com GPG, poderá optar por cifrar as suas mensagens com nossa <a href=\"{url}\" class=\"text-link\">chave pública</a> antes de os enviar."
+msgstr "Se está famizliarizado com GPG, poderá optar por encriptar as suas mensagens com a nossa <a href=\"{url}\" class=\"text-link\">chave pública</a> antes de os enviar."
 
 msgid "<a href=\"{url}\" class=\"text-link\">Learn more</a>."
 msgstr "<a href=\"{url}\" class=\"text-link\">Saiba mais</a>."
