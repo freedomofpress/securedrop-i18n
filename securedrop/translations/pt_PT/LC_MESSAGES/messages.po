@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2022-05-23 10:40+0000\n"
-"Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
+"Last-Translator: deeplow <deeplower@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
@@ -416,7 +416,7 @@ msgid "Enter a new HOTP secret formatted as a 40-digit hexadecimal string. Space
 msgstr "Insira um novo código secreto HOTP, composto por 40 caracteres exadecimais. Os espaços serão ignorados:"
 
 msgid "You're almost done! To finish adding this new user, have them follow the instructions below to set up two-factor authentication with FreeOTP. Once they've added an entry for this account in the app, have them enter one of the 6-digit codes from the app to confirm that two-factor authentication is set up correctly."
-msgstr "Está quase a terminar! Para finalizar a criação deste novo utilizador, peça-lhe que siga as instruções abaixo para configurar a autenticação de dois fatores (2FA) com a app FreeOTP. Ao registar a nova conta na aplicação, peça-lhe que insira um código de seis dígitos gerado na aplicação para confirmar que a autenticação de dois fatores foi configurada com sucesso."
+msgstr "Está quase a terminar! Para finalizar a criação deste novo utilizador, peça-lhe que siga as instruções abaixo para configurar a autenticação de dois fatores (2FA) com a aplicação móvel FreeOTP. Ao registar a nova conta na aplicação, peça-lhe que insira um código de 6 dígitos gerado na aplicação para confirmar que a autenticação de dois fatores foi configurada corretamente."
 
 msgid "Can't scan the barcode? You can manually pair FreeOTP with this account by entering the following two-factor secret into the app:"
 msgstr "Não consegue ler o código QR? Pode adicionar a sua conta SecureDrop manualmente na app FreeOTP inserindo o seguinte código secreto de dois fatores:"
