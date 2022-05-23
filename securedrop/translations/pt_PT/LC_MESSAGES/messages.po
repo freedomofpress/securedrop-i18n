@@ -344,7 +344,7 @@ msgid "Edit"
 msgstr "Editar"
 
 msgid "Delete"
-msgstr "Apagar"
+msgstr "Eliminar"
 
 msgid "Created"
 msgstr "Criado"
