@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2022-05-23 10:47+0000\n"
+"PO-Revision-Date: 2022-05-23 11:03+0000\n"
 "Last-Translator: deeplow <deeplower@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
@@ -120,8 +120,8 @@ msgstr "Deve selecionar pelo menos um item."
 
 msgid "Your download failed because the file could not be found. An admin can find more information in the system and monitoring logs."
 msgid_plural "Your download failed because a file could not be found. An admin can find more information in the system and monitoring logs."
-msgstr[0] "A sua transferência falhou porque o ficheiro não foi encontrado. Um administrador poderá encontrar mais informações no sistema e nos registos de monitorização."
-msgstr[1] "A sua transferência falhou porque um ficheiro não foi encontrado. Um administrador poderá encontrar mais informações no sistema e nos registos de monitorização."
+msgstr[0] "A sua transferência falhou porque o ficheiro não foi encontrado. O administrador do sistema poderá encontrar mais informações no sistema e nos registos de monitorização."
+msgstr[1] "A sua transferência falhou porque um ficheiro não foi encontrado. O administrador do sistema poderá encontrar mais informações no sistema e nos registos de monitorização."
 
 msgid "Only admins can access this page."
 msgstr "Esta página está reservada a administradores."
@@ -184,7 +184,7 @@ msgstr[0] "Por favor espere pelo menos {num} segundo antes de tentar iniciar ses
 msgstr[1] "Por favor espere pelo menos {num} segundos antes de tentar iniciar sessão novamente."
 
 msgid "Your 2FA details are invalid - please contact an administrator to reset them."
-msgstr "Os seus dados de autenticação de dois fatores (2FA) são inválidos - por favor, contacte um administrador do sistema para os redefinir."
+msgstr "Os seus dados de autenticação de dois fatores (2FA) são inválidos - por favor, contacte um administrador para os redefinir."
 
 msgid "Please wait for a new code from your two-factor mobile app or security key before trying again."
 msgstr "Por favor, espere que a app de dois fatores (2FA) ou chave de segurança gere um novo código antes tentar novamente."
@@ -195,7 +195,7 @@ msgstr[0] "O item foi apagado."
 msgstr[1] "{num} itens foram apagados."
 
 msgid "No collections selected for deletion."
-msgstr "Nenhuma coleção foi selecionada para apagar."
+msgstr "Nenhuma coleção foi selecionada para eliminação."
 
 msgid "The account and all data for the source have been deleted."
 msgid_plural "The accounts and all data for {n} sources have been deleted."
@@ -266,10 +266,10 @@ msgid "Are you sure this is what you want?"
 msgstr "Tem a certeza que é isto que pretende?"
 
 msgid "Yes, Delete Selected Source Accounts"
-msgstr "Sim, Apagar Contas das Fontes Selecionadas"
+msgstr "Sim, Eliminar Contas das Fontes Selecionadas"
 
 msgid "What would you like to delete?"
-msgstr "O que deseja apagar?"
+msgstr "O que deseja eliminar?"
 
 msgid "Files and Messages"
 msgstr "Ficheiros e Mensagens"
@@ -383,7 +383,7 @@ msgid "INSTANCE CONFIG"
 msgstr "CONFIGURAÇÃO DE INSTÂNCIA"
 
 msgid "Back to admin interface"
-msgstr "Regressar à interface de administrador do sistema"
+msgstr "Regressar à interface de administrador"
 
 msgid "Username can contain spaces"
 msgstr "O nome de utilizador pode conter espaços"
@@ -404,7 +404,7 @@ msgid "The user's password will be:"
 msgstr "A palavra-passe do utilizador será:"
 
 msgid "Is Admin"
-msgstr "É Administrador(a)"
+msgstr "É Administrador"
 
 msgid "Is using a YubiKey [HOTP]"
 msgstr "Usa uma YubiKey [HOTP]"
@@ -434,7 +434,7 @@ msgid "Logged on as"
 msgstr "Sessão iniciada como"
 
 msgid "Admin"
-msgstr "Administrador do Sistema"
+msgstr "Administrador"
 
 msgid "Log Out"
 msgstr "Terminar Sessão"
@@ -584,7 +584,7 @@ msgid "Edit user \"{user}\""
 msgstr "Editar utilizador \"{user}\""
 
 msgid "Change Name and Admin Status"
-msgstr "Alterar Nome e Status de Administrador do Sistema"
+msgstr "Alterar Nome e Status de Administrador"
 
 msgid "Update account"
 msgstr "Atualizar conta"
