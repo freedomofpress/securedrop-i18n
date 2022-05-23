@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2022-05-23 10:02+0000\n"
-"Last-Translator: deeplow <deeplower@protonmail.com>\n"
+"Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
@@ -749,7 +749,7 @@ msgid "You were redirected because you are already logged in. If you want to cre
 msgstr "Veio parar a esta página pois já tem uma conta com a sessão iniciada. Para criar uma nova conta é necessário terminar sessão primeiro."
 
 msgid "You are already logged in. Please verify your codename as it may differ from the one displayed on the previous page."
-msgstr "Já estava com sessão iniciada. Por favor, verifique o seu nome-código, pois pode ser diferente do exibido na página anterior."
+msgstr "Já tem sessão iniciada. Por favor, verifique o seu nome-código, pois pode ser diferente do exibido na página anterior."
 
 msgid "There was a temporary problem creating your account. Please try again."
 msgstr "Houve um problema temporário ao criar a sua conta. Por favor, tente novamente."
