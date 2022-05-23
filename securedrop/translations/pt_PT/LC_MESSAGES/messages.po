@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2022-05-23 10:47+0000\n"
-"Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
+"Last-Translator: deeplow <deeplower@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
@@ -308,7 +308,7 @@ msgid "Your phone will now be in \"scanning\" mode. When you are in this mode, s
 msgstr "O seu smartphone está em modo de \"leitura\". Leia com o dispositivo o código QR abaixo:"
 
 msgid "Can't scan the barcode? You can manually pair FreeOTP with your SecureDrop account by entering the following two-factor secret into the app:"
-msgstr "Não consegue ler o código QR? Pode adicionar a sua conta SecureDrop manualmente na app FreeOTP inserindo o código secreto de dois fatores (2FA):"
+msgstr "Não consegue ler o código QR? Pode adicionar a sua conta SecureDrop manualmente na aplicação móvel FreeOTP inserindo o seguinte código secreto de dois fatores (2FA):"
 
 msgid "Once you have paired FreeOTP with this account, enter the 6-digit verification code below:"
 msgstr "Depois de adicionar a conta na app FreeOTP, insira abaixo o código de verificação de seis dígitos:"
