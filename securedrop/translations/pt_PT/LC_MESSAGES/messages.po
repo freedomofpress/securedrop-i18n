@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "PO-Revision-Date: 2022-05-23 09:40+0000\n"
-"Last-Translator: deeplow <deeplower@protonmail.com>\n"
+"Last-Translator: notmuchtohide <notmuchtohide@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_PT/>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
@@ -1050,7 +1050,7 @@ msgid "Upload your encrypted submission. It will have the same filename as the u
 msgstr "Envie o conteúdo cifrado. O nome do ficheiro será o mesmo da versão não cifrada, mas com \".gpg\" no final (por exemplo <code>docuemento.pdf.gpg</code>)"
 
 msgid "<strong>Important:</strong> If you wish to remain anonymous, <strong>do not</strong> use GPG to sign the encrypted file (with the <code>--sign</code> or <code>-s</code> flag) as this will reveal your GPG identity to us."
-msgstr "<strong>Importante:</strong> para manter o seu anonimato, <strong>não</strong> use o GPG para assinar o arquivo cifrado (com as opções <code>--sign</code> ou <code>-s</code>), pois isso revelar-nos-ia a sua identidade."
+msgstr "<strong>Importante:</strong> para manter o seu anonimato, <strong>não</strong> use o GPG para assinar o arquivo encriptado (com as opções <code>--sign</code> ou <code>-s</code>), pois isso revelar-nos-ia a sua identidade."
 
 msgid "Back to submission page"
 msgstr "Voltar à página de envio"
