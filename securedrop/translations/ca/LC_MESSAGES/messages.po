@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2022-05-06 21:11+0000\n"
+"PO-Revision-Date: 2022-05-24 14:11+0000\n"
 "Last-Translator: Benet (BennyBeat) R. i Camps <bennybeat@gmail.com>\n"
 "Language-Team: Catalan <https://weblate.securedrop.org/projects/securedrop/securedrop/ca/>\n"
 "Language: ca\n"
@@ -872,7 +872,7 @@ msgid "<strong>It is recommended you use the desktop version of Tor Browser to a
 msgstr "<strong>És recomanable que useu la versió d'escriptori del navegador Tor per a accedir al SecureDrop, atès que l'Orfox no proporciona el mateix nivell de seguretat i anonimat que la versió d'escriptori.</strong><a class=\"recommend-tor\" href=\"{tor_browser_url}\">Apreneu com instal·lar-lo</a> o ignoreu aquest avís per a continuar."
 
 msgid "{} logo"
-msgstr "{} logo"
+msgstr "Logotip de {}"
 
 msgid "First submission"
 msgstr "Primer enviament"
