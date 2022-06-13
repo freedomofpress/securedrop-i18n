@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2022-05-09 16:11+0000\n"
+"PO-Revision-Date: 2022-06-13 14:02+0000\n"
 "Last-Translator: Jonas Waga <jonas.waga@schibsted.com>\n"
 "Language-Team: Swedish <https://weblate.securedrop.org/projects/securedrop/securedrop/sv/>\n"
 "Language: sv\n"
@@ -263,7 +263,7 @@ msgid "All files and messages from that source will also be destroyed."
 msgstr "Alla filer och meddelanden från den källan kommer också att raderas."
 
 msgid "Are you sure this is what you want?"
-msgstr "Är du säker på att detta är det du vill?"
+msgstr "Är du säker på att detta är vad du vill?"
 
 msgid "Yes, Delete Selected Source Accounts"
 msgstr "Ja, radera den markerade källan"
@@ -506,7 +506,7 @@ msgid "An encryption key will be generated for the source the next time they log
 msgstr "En krypteringsnyckel kommer att genereras till denna källa nästa gång den loggar in, därefter kommer du att kunna svara till källan här."
 
 msgid "Delete Source Account"
-msgstr "Radera en källa"
+msgstr "Radera käll-konto"
 
 msgid "Are you sure?"
 msgstr "Är du säker?"
