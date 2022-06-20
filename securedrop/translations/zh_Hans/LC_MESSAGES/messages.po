@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.6~rc2\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2022-05-06 21:11+0000\n"
+"PO-Revision-Date: 2022-06-20 17:02+0000\n"
 "Last-Translator: ff98sha <ff98sha@163.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.securedrop.org/projects/securedrop/securedrop/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -496,7 +496,7 @@ msgid "An encryption key will be generated for the source the next time they log
 msgstr "系统会在下次线人登陆时生成新的加密密钥，之后你可以在这里回复线人。"
 
 msgid "Delete Source Account"
-msgstr "删除线人账户"
+msgstr "删除线人账号"
 
 msgid "Are you sure?"
 msgstr "确定吗？"
