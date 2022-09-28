@@ -28,10 +28,10 @@ include source_app/*.py
 include source_templates/
 include source_templates/*.html
 include static/
-include static/.webassets-cache/
+include static/css/
+include static/css/*.css
 include static/fonts/
 include static/fonts/**
-include static/gen/
 include static/i/
 exclude static/i/custom_logo.png
 include static/i/**
@@ -88,6 +88,7 @@ include sass/global/**.sass
 include sass/modules/
 include sass/modules/**.sass
 include babel.cfg
+include i18n.json
 include translations/
 include translations/*.pot
 include translations/*/

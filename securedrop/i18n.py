@@ -16,8 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 import collections
-
-from typing import List, Set
+from typing import Dict, List, Set
 
 from babel.core import (
     Locale,
@@ -28,8 +27,7 @@ from babel.core import (
 )
 from flask import Flask, g, request, session
 from flask_babel import Babel
-
-from sdconfig import SDConfig, FALLBACK_LOCALE
+from sdconfig import FALLBACK_LOCALE, SDConfig
 
 
 class RequestLocaleInfo:
@@ -150,13 +148,13 @@ def validate_locale_configuration(config: SDConfig, babel: Babel) -> None:
     missing = configured - usable
     if missing:
         babel.app.logger.error(
-            f'Configured locales {missing} are not in the set of usable locales {usable}'
+            f"Configured locales {missing} are not in the set of usable locales {usable}"
         )
 
     defaults = parse_locale_set([config.DEFAULT_LOCALE, FALLBACK_LOCALE])
     if not defaults & usable:
         raise ValueError(
-            f'None of the default locales {defaults} are in the set of usable locales {usable}'
+            f"None of the default locales {defaults} are in the set of usable locales {usable}"
         )
 
     global USABLE_LOCALES
@@ -177,18 +175,21 @@ def map_locale_display_names(config: SDConfig) -> None:
     to distinguish them. For languages with more than one translation,
     like Chinese, we do need the additional detail.
     """
-    seen: Set[str] = set()
+
+    language_locale_counts = collections.defaultdict(int)  # type: Dict[str, int]
+    for l in sorted(config.SUPPORTED_LOCALES):
+        locale = RequestLocaleInfo(l)
+        language_locale_counts[locale.language] += 1
+
     locale_map = collections.OrderedDict()
     for l in sorted(config.SUPPORTED_LOCALES):
         if Locale.parse(l) not in USABLE_LOCALES:
             continue
 
         locale = RequestLocaleInfo(l)
-        if locale.language in seen:
+        if language_locale_counts[locale.language] > 1:
             # Disambiguate translations for this language.
             locale.use_display_name = True
-        else:
-            seen.add(locale.language)
 
         locale_map[str(locale)] = locale
 
@@ -213,7 +214,7 @@ def get_locale(config: SDConfig) -> str:
     - config.FALLBACK_LOCALE
     """
     preferences = []
-    if session.get("locale"):
+    if session and session.get("locale"):
         preferences.append(session.get("locale"))
     if request.args.get("l"):
         preferences.insert(0, request.args.get("l"))
@@ -250,9 +251,7 @@ def get_accepted_languages() -> List[str]:
             # at least be more legible at first contact than the
             # probable default locale of English.
             if parsed.language == "zh" and parsed.script:
-                accept_languages.append(
-                    str(Locale(language=parsed.language, script=parsed.script))
-                )
+                accept_languages.append(str(Locale(language=parsed.language, script=parsed.script)))
         except (ValueError, UnknownLocaleError):
             pass
     return accept_languages

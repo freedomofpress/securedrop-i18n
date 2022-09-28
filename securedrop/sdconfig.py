@@ -1,27 +1,33 @@
 from pathlib import Path
-from typing import Dict
-from typing import Optional
-
-from typing import Type
+from typing import Dict, Optional, Set, Type
 
 import config as _config
-from typing import Set
-
 
 FALLBACK_LOCALE = "en_US"
+
+
+# Adding a subclass here allows for adding attributes without modifying config.py
+class JournalistInterfaceConfig(_config.JournalistInterfaceFlaskConfig):
+    SESSION_COOKIE_NAME = "js"
+    SESSION_SIGNER_SALT = "js_session"
+    SESSION_KEY_PREFIX = "js_session:"
+    SESSION_LIFETIME = 2 * 60 * 60
+    SESSION_RENEW_COUNT = 5
+
+
+class SourceInterfaceConfig(_config.SourceInterfaceFlaskConfig):
+    SESSION_COOKIE_NAME = "ss"
 
 
 class SDConfig:
     def __init__(self) -> None:
         try:
-            self.JOURNALIST_APP_FLASK_CONFIG_CLS = (
-                _config.JournalistInterfaceFlaskConfig
-            )  # type: Type
+            self.JOURNALIST_APP_FLASK_CONFIG_CLS = JournalistInterfaceConfig  # type: Type
         except AttributeError:
             pass
 
         try:
-            self.SOURCE_APP_FLASK_CONFIG_CLS = _config.SourceInterfaceFlaskConfig  # type: Type
+            self.SOURCE_APP_FLASK_CONFIG_CLS = SourceInterfaceConfig  # type: Type
         except AttributeError:
             pass
 
@@ -90,9 +96,7 @@ class SDConfig:
         except AttributeError:
             pass
 
-        self.SESSION_EXPIRATION_MINUTES: int = getattr(
-            _config, "SESSION_EXPIRATION_MINUTES", 120
-        )
+        self.SESSION_EXPIRATION_MINUTES: int = getattr(_config, "SESSION_EXPIRATION_MINUTES", 120)
 
         try:
             self.SOURCE_TEMPLATES_DIR = _config.SOURCE_TEMPLATES_DIR  # type: str
@@ -114,20 +118,22 @@ class SDConfig:
         except AttributeError:
             pass
 
-        self.env = getattr(_config, 'env', 'prod')  # type: str
-        if self.env == 'test':
-            self.RQ_WORKER_NAME = 'test'  # type: str
+        self.env = getattr(_config, "env", "prod")  # type: str
+        if self.env == "test":
+            self.RQ_WORKER_NAME = "test"  # type: str
         else:
-            self.RQ_WORKER_NAME = 'default'
+            self.RQ_WORKER_NAME = "default"
 
         # Config entries used by i18n.py
         # Use en_US as the default locale if the key is not defined in _config
         self.DEFAULT_LOCALE = getattr(
-            _config, "DEFAULT_LOCALE", FALLBACK_LOCALE,
+            _config,
+            "DEFAULT_LOCALE",
+            FALLBACK_LOCALE,
         )  # type: str
-        supported_locales = set(getattr(
-            _config, "SUPPORTED_LOCALES", [self.DEFAULT_LOCALE]
-        ))  # type: Set[str]
+        supported_locales = set(
+            getattr(_config, "SUPPORTED_LOCALES", [self.DEFAULT_LOCALE])
+        )  # type: Set[str]
         supported_locales.add(self.DEFAULT_LOCALE)
         self.SUPPORTED_LOCALES = sorted(list(supported_locales))
 
@@ -143,8 +149,7 @@ class SDConfig:
     @property
     def DATABASE_URI(self) -> str:
         if self.DATABASE_ENGINE == "sqlite":
-            db_uri = (self.DATABASE_ENGINE + ":///" +
-                      self.DATABASE_FILE)
+            db_uri = self.DATABASE_ENGINE + ":///" + self.DATABASE_FILE
         else:
             if self.DATABASE_USERNAME is None:
                 raise RuntimeError("Missing DATABASE_USERNAME entry from config.py")
@@ -156,11 +161,15 @@ class SDConfig:
                 raise RuntimeError("Missing DATABASE_NAME entry from config.py")
 
             db_uri = (
-                self.DATABASE_ENGINE + '://' +
-                self.DATABASE_USERNAME + ':' +
-                self.DATABASE_PASSWORD + '@' +
-                self.DATABASE_HOST + '/' +
-                self.DATABASE_NAME
+                self.DATABASE_ENGINE
+                + "://"
+                + self.DATABASE_USERNAME
+                + ":"
+                + self.DATABASE_PASSWORD
+                + "@"
+                + self.DATABASE_HOST
+                + "/"
+                + self.DATABASE_NAME
             )
         return db_uri
 

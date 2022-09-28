@@ -3,6 +3,7 @@ ansible-lint>=4.2.0
 ansible>=2.9.23,<2.10.0
 argon2_cffi>=20.1.0
 bandit
+black
 # yes, we need both boto and boto3
 boto
 boto3
@@ -13,6 +14,7 @@ dnspython
 flake8
 html-linter
 importlib-resources
+isort
 markupsafe>=2.0
 molecule>=3.0.1
 molecule-vagrant>=0.3
@@ -34,6 +36,7 @@ pyyaml>=5.4.1
 requests>=2.26.0
 ruamel.yaml>=0.16.10
 safety>=1.9.0
+semgrep>=0.98.0
 setuptools>=56.0.0
 testinfra>=5.3.1
 urllib3>=1.26.5

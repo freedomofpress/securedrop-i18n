@@ -38,8 +38,6 @@
     rm -f /usr/share/python-wheels/setuptools-*.whl
     mv /tmp/securedrop-app-code-requirements-download/setuptools-*.whl /usr/share/python-wheels/
 
-- include: sass.yml
-
 - include: translations.yml
 
 - name: Create apparmor.d directory in prep directory
@@ -104,8 +102,6 @@
     state: directory
     dest: "{{ item }}"
   with_items:
-    - "{{ securedrop_app_code_deb_dir }}/var/www/securedrop/static/gen"
-    - "{{ securedrop_app_code_deb_dir }}/var/www/securedrop/static/.webassets-cache"
     - "{{ securedrop_app_code_deb_dir }}/var/www/securedrop/.well-known/pki-validation"
 
 - name: Build securedrop-app-code Debian package

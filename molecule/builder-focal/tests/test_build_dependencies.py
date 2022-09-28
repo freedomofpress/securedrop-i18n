@@ -1,27 +1,15 @@
-import pytest
 import os
 
+import pytest
 
 SECUREDROP_TARGET_DISTRIBUTION = os.environ.get("SECUREDROP_TARGET_DISTRIBUTION")
 SECUREDROP_PYTHON_VERSION = os.environ.get("SECUREDROP_PYTHON_VERSION", "3.5")
 DH_VIRTUALENV_VERSION = "1.2.2"
 
-testinfra_hosts = [
-        "docker://{}-sd-app".format(SECUREDROP_TARGET_DISTRIBUTION)
-]
+testinfra_hosts = ["docker://{}-sd-app".format(SECUREDROP_TARGET_DISTRIBUTION)]
 
 
-def test_sass_gem_installed(host):
-    """
-    Ensure the `sass` Ruby gem is installed, for compiling SASS to CSS.
-    """
-    c = host.run("gem list")
-    assert "sass (3.4.23)" in c.stdout
-    assert c.rc == 0
-
-
-@pytest.mark.xfail(reason="This check conflicts with the concept of pegging"
-                          "dependencies")
+@pytest.mark.xfail(reason="This check conflicts with the concept of pegging" "dependencies")
 def test_build_all_packages_updated(host):
     """
     Ensure a dist-upgrade has already been run, by checking that no
@@ -29,7 +17,7 @@ def test_build_all_packages_updated(host):
     all upgrades, security and otherwise, have been applied to the VM
     used to build packages.
     """
-    c = host.run('apt-get --simulate -y dist-upgrade')
+    c = host.run("apt-get --simulate -y dist-upgrade")
     assert c.rc == 0
     assert "No packages will be installed, upgraded, or removed." in c.stdout
 
