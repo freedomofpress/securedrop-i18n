@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2022-10-03 12:20+0000\n"
-"Last-Translator: David Figuera <dfb@mm.st>\n"
+"PO-Revision-Date: 2022-10-03 13:27+0000\n"
+"Last-Translator: cacu <carlosm2@riseup.net>\n"
 "Language-Team: Spanish <https://weblate.securedrop.org/projects/securedrop/securedrop/es/>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
@@ -950,7 +950,7 @@ msgid "Maximum upload size: 500 MB"
 msgstr "Tamaño máximo de carga: 500 MB"
 
 msgid "If you are only sending a message, it must be at least {} characters long."
-msgstr "Si solamente estás enviando un mensaje, debe tener al menos {} caracteres de longitud."
+msgstr "Si solo estás enviando un mensaje, este debe tener al menos {} caracteres de longitud."
 
 msgid "Anti-spam check. Do not fill this in!"
 msgstr "Comprobación de contenido no solicitado. ¡No completes esto!"
@@ -1001,7 +1001,7 @@ msgid "Anyone monitoring your Internet traffic &mdash; including your government
 msgstr "Cualquiera que esté monitoreando tu tráfico de Internet &mdash; incluyendo tu gobierno, tu proveedor de Internet o el operador del proxy &mdash; podría ser capaz de identificarte."
 
 msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
-msgstr "Usa siempre el Navegador Tor(<code>{}</code>) para acceder a SecureDrop. Las direcciones válidas de sitios SecureDrop terminan en <code>.onion</code>. La dirección correcta para este sitio es:"
+msgstr "Usa siempre el Navegador Tor (<code>{}</code>) para acceder a SecureDrop. Las direcciones válidas de sitios SecureDrop terminan en <code>.onion</code>. La dirección correcta para este sitio es:"
 
 msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
 msgstr "Si ya estás usando al Navegador Tor, copia la dirección de arriba y genera una nueva identidad antes de acceder a SecureDrop."
