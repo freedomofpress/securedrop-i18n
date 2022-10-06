@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2022-10-06 23:29+0000\n"
+"PO-Revision-Date: 2022-10-06 23:30+0000\n"
 "Last-Translator: Giandomenico Lombardi <GitHub@l1t.it>\n"
 "Language-Team: Italian <https://weblate.securedrop.org/projects/securedrop/securedrop/it/>\n"
 "Language: it_IT\n"
@@ -789,15 +789,11 @@ msgstr "Grazie per aver inviato questa informazione. Verifica più tardi per ved
 msgid "Thanks! We received your message."
 msgstr "Grazie! Abbiamo ricevuto il tuo messaggio."
 
-#, fuzzy
-#| msgid "Thanks! We received your message."
 msgid "Thanks! We received your file."
-msgstr "Grazie! Abbiamo ricevuto il tuo messaggio."
+msgstr "Grazie! Abbiamo ricevuto il tuo file."
 
-#, fuzzy
-#| msgid "Thanks! We received your message."
 msgid "Thanks! We received your file and message."
-msgstr "Grazie! Abbiamo ricevuto il tuo messaggio."
+msgstr "Grazie! Abbiamo ricevuto il tuo file e messaggio."
 
 msgid "Reply deleted"
 msgstr "Risposta eliminata"
