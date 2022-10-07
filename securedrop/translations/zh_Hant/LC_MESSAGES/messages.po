@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SecureDrop 0.3.12\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
 "POT-Creation-Date: 2017-09-02 07:28+0000\n"
-"PO-Revision-Date: 2022-10-03 01:27+0000\n"
+"PO-Revision-Date: 2022-10-07 01:27+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.securedrop.org/projects/securedrop/securedrop/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -760,7 +760,7 @@ msgid "You were redirected because you are already logged in. If you want to cre
 msgstr "你被重定向了， 因為已在登錄狀態。如果想創建一個新帳戶，請先登出。"
 
 msgid "You are already logged in. Please verify your codename as it may differ from the one displayed on the previous page."
-msgstr "您已登入。請驗證您的代號，它可能與上一頁所顯示的不同。"
+msgstr "您已登入。請驗證您的代號，它可能與上一頁所顯示的代號不同。"
 
 msgid "There was a temporary problem creating your account. Please try again."
 msgstr "創建新帳號發生問題。請再次嘗試。"
@@ -991,7 +991,7 @@ msgid "Anyone monitoring your Internet traffic &mdash; including your government
 msgstr "任何網路流量監控者（如政府、網路服務業者、代理服務商）都有可能認出您。"
 
 msgid "Always use Tor Browser (<code>{}</code>) to access SecureDrop. Valid SecureDrop site addresses end with <code>.onion</code>. The correct address for this site is:"
-msgstr "請永遠使用 Tor 瀏覽器 (<code>{}</code>) 來存取 SecureDrop。有效的 SecureDrop 網址都以 <code>.onion</code> 結尾。本網站正確的網址為："
+msgstr "請務必使用 Tor 瀏覽器 (<code>{}</code>) 來存取 SecureDrop。有效的 SecureDrop 網址都以 <code>.onion</code> 結尾。本網站正確的網址為："
 
 msgid "If you are already using Tor Browser, copy the address above and generate a new identity before you access SecureDrop."
 msgstr "若已使用 Tor 瀏覽器，請複製上方網址以自動產生新的身份連線到 SecureDrop 。"
