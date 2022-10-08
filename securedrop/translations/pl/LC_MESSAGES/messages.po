@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.5-rc4\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2022-10-06 19:27+0000\n"
+"PO-Revision-Date: 2022-10-08 11:27+0000\n"
 "Last-Translator: Adam Rak <kitynska@gmail.com>\n"
 "Language-Team: Polish <https://weblate.securedrop.org/projects/securedrop/securedrop/pl/>\n"
 "Language: pl\n"
@@ -140,7 +140,7 @@ msgid "You must select one or more items for deletion"
 msgstr "Musisz wybrać jeden lub więcej elementów do usunięcia"
 
 msgid "No unread submissions for this source."
-msgstr "Brak nieprzeczytanych zgłoszeń dla tego źródła."
+msgstr "Brak nieprzeczytanych zgłoszeń tego źródła."
 
 msgid "Account updated."
 msgstr "Konto zaktualizowane."
@@ -288,25 +288,25 @@ msgid "Tap the QR code symbol at the top"
 msgstr "Stuknij symbol kodu QR na górze"
 
 msgid "Your phone will now be in \"scanning\" mode. When you are in this mode, scan the barcode below:"
-msgstr "Twój telefon będzie teraz w trybie \"skanowania\". Będąc w tym trybie, zeskanuj poniższy kod kreskowy:"
+msgstr "Twój telefon będzie teraz w trybie \"skanowania\". W tym trybie zeskanuj poniższy kod kreskowy:"
 
 msgid "Can't scan the barcode? You can manually pair FreeOTP with your SecureDrop account by entering the following two-factor secret into the app:"
 msgstr "Problem z zeskanowaniem kodu? Możesz ręcznie sparować FreeOTP ze swoim kontem SecureDrop poprzez wprowadzenie poniższego, dwuskładnikowego sekretu do aplikacji:"
 
 msgid "Once you have paired FreeOTP with this account, enter the 6-digit verification code below:"
-msgstr "Po sparowaniu FreeOTP z tym kontem, wprowadź poniższy 6-cyfrowy kod weryfikacyjny:"
+msgstr "Po sparowaniu FreeOTP z tym kontem wprowadź poniżej 6-cyfrowy kod weryfikacyjny:"
 
 msgid "Enable YubiKey (OATH-HOTP)"
 msgstr "Włącz YubiKey (OATH-HOTP)"
 
 msgid "Once you have configured your YubiKey, enter the 6-digit verification code below:"
-msgstr "Po skonfigurowaniu YubiKey, wprowadź poniższy 6-cyfrowy kod weryfikacyjny:"
+msgstr "Po skonfigurowaniu YubiKey wprowadź poniżej 6-cyfrowy kod weryfikacyjny:"
 
 msgid "Verification code"
 msgstr "Kod weryfikacyjny"
 
 msgid "SUBMIT"
-msgstr "ZATWIERDŹ"
+msgstr "PRZEŚLIJ"
 
 msgid "Admin Interface"
 msgstr "Interfejs Administracyjny"
@@ -389,7 +389,7 @@ msgid "Can't scan the barcode? You can manually pair FreeOTP with this account b
 msgstr "Problem z zeskanowaniem kodu? Możesz ręcznie sparować FreeOTP z tym kontem poprzez wprowadzenie poniższego, dwuskładnikowego sekretu do aplikacji:"
 
 msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
-msgstr "Po skonfigurowaniu YubiKey, wprowadź poniższy 6-cyfrowy kod:"
+msgstr "Po skonfigurowaniu YubiKey wprowadź 6-cyfrowy kod poniżej:"
 
 msgid "<strong>Critical Security:</strong>&nbsp;&nbsp;The operating system used by your SecureDrop servers has reached its end-of-life. A manual upgrade is required to re-enable the Source Interface and remain safe. Please contact your administrator. <a href=\"//securedrop.org/xenial-eol\" rel=\"noreferrer\">Learn More</a>"
 msgstr ""
@@ -526,7 +526,7 @@ msgid "UPDATE SUBMISSION PREFERENCES"
 msgstr "ZAKTUALIZUJ USTAWIENIA DOT. ZGŁOSZEŃ"
 
 msgid "Alerts"
-msgstr "Ostrzeżenia"
+msgstr "Alerty"
 
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr "Wyślij zaszyfrowaną wiadomość e-mail, aby sprawdzić, czy alerty OSSEC działają poprawnie:"
@@ -661,7 +661,7 @@ msgid "Sources selected: "
 msgstr "Wybrane źródła: "
 
 msgid "Login to access the journalist interface"
-msgstr "Zaloguj się, aby uzyskać dostęp do interfejsu dziennikarskiego"
+msgstr "Zaloguj się, aby uzyskać dostęp do interfejsu dziennikarza"
 
 msgid "Password"
 msgstr "Hasło"
@@ -739,7 +739,7 @@ msgid "LOG OUT"
 msgstr "ZAKOŃCZ SESJĘ"
 
 msgid "Server error"
-msgstr "Błąd serwerowy"
+msgstr "Błąd serwera"
 
 msgid "Sorry, the website encountered an error and was unable to complete your request."
 msgstr "Niestety, witryna napotkała błąd i nie mogła spełnić Twojego żądania."
@@ -835,13 +835,13 @@ msgid "CANCEL"
 msgstr "ANULUJ"
 
 msgid "One more thing..."
-msgstr "Jeszcze jedna rzecz..."
+msgstr "Jeszcze jedna sprawa..."
 
 msgid "Click the <img src={icon} alt=\"broom icon\" width=\"16\" height=\"16\">&nbsp;<strong>New Identity</strong> button in your Tor Browser's toolbar. This will clear your Tor Browser activity data on this device."
 msgstr ""
 
 msgid "Remember, your codename is:"
-msgstr "Pamiętaj że Twój kryptonim to:"
+msgstr "Pamiętaj, Twój kryptonim to:"
 
 msgid "Show"
 msgstr "Pokaż"
