@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 2.5.0~rc1\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2022-12-30 20:45+0000\n"
+"PO-Revision-Date: 2022-12-30 22:04+0000\n"
 "Last-Translator: Mejans <farga@mejans.fr>\n"
 "Language-Team: Occitan <https://weblate.securedrop.org/projects/securedrop/securedrop/oc/>\n"
 "Language: oc\n"
@@ -30,19 +30,19 @@ msgid "This username is invalid because it is reserved for internal use by the s
 msgstr ""
 
 msgid "Invalid username"
-msgstr ""
+msgstr "Nom d'utilizaire invalid"
 
 msgid "Invalid OTP secret"
-msgstr ""
+msgstr "Secret OTP invalid"
 
 msgid "{time} ago"
-msgstr ""
+msgstr "fa {time}"
 
 msgid "You have been logged out due to inactivity."
 msgstr ""
 
 msgid "SecureDrop"
-msgstr ""
+msgstr "SecureDrop"
 
 msgid "Incorrect password or two-factor code."
 msgstr ""
@@ -54,17 +54,17 @@ msgid "There was a problem verifying the two-factor code. Please try again."
 msgstr ""
 
 msgid "Image updated."
-msgstr ""
+msgstr "Imatge actualizat"
 
 #. This error is shown when an uploaded image cannot be used.
 msgid "Unable to process the image file. Please try another one."
 msgstr ""
 
 msgid "Preferences saved."
-msgstr ""
+msgstr "Preferéncias salvadas."
 
 msgid "Preferences not updated."
-msgstr ""
+msgstr "Preferéncias pas actualizadas."
 
 msgid "Failed to update organization name."
 msgstr ""
@@ -110,7 +110,7 @@ msgstr ""
 
 #. Error shown when a user has not selected items to act on.
 msgid "Nothing Selected"
-msgstr ""
+msgstr "Res es pas seleccionat"
 
 msgid "You must select one or more items."
 msgstr ""
@@ -143,7 +143,7 @@ msgid "Please specify an integer value greater than 0."
 msgstr ""
 
 msgid "This field is required."
-msgstr ""
+msgstr "Aqueste camp es requesit."
 
 msgid "You cannot send an empty reply."
 msgstr ""
@@ -170,10 +170,10 @@ msgid "No unread submissions for this source."
 msgstr ""
 
 msgid "Account updated."
-msgstr ""
+msgstr "Compte actualizat."
 
 msgid "Login failed."
-msgstr ""
+msgstr "Fracàs de la connexion."
 
 msgid "Please wait at least {num} second before logging in again."
 msgid_plural "Please wait at least {num} seconds before logging in again."
@@ -206,7 +206,7 @@ msgid "The files and messages have been deleted."
 msgstr ""
 
 msgid "Name updated."
-msgstr ""
+msgstr "Nom actualizat."
 
 msgid "The password you submitted is invalid. Password not changed."
 msgstr ""
@@ -221,10 +221,10 @@ msgid "No unread submissions in selected collections."
 msgstr ""
 
 msgid "Close"
-msgstr ""
+msgstr "Tampar"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Anullar"
 
 msgid "Un-star {designation}"
 msgstr ""
@@ -234,13 +234,13 @@ msgstr ""
 
 msgid "1 doc"
 msgid_plural "{num} docs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 doc"
+msgstr[1] "{num} docs"
 
 msgid "1 message"
 msgid_plural "{num} messages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 messatge"
+msgstr[1] "{num} messatges"
 
 msgid "1 unread"
 msgid_plural "{num} unread"
@@ -269,7 +269,7 @@ msgid "What would you like to delete?"
 msgstr ""
 
 msgid "Files and Messages"
-msgstr ""
+msgstr "Fichièrs e messatges"
 
 msgid "Source Accounts"
 msgstr ""
@@ -284,10 +284,10 @@ msgid "Continue to change secret"
 msgstr ""
 
 msgid "CONTINUE"
-msgstr ""
+msgstr "CONTUNHAR"
 
 msgid "Enable FreeOTP"
-msgstr ""
+msgstr "Activar FreeOTP"
 
 msgid "You're almost done! To finish resetting your two-factor authentication, follow the instructions below to set up FreeOTP. Once you've added the entry for your account in the app, enter one of the 6-digit codes from the app to confirm that two-factor authentication is set up correctly."
 msgstr ""
@@ -323,31 +323,31 @@ msgid "Submit verification code"
 msgstr ""
 
 msgid "SUBMIT"
-msgstr ""
+msgstr "ENVIAR"
 
 msgid "Admin Interface"
-msgstr ""
+msgstr "Interfàcia d’administracion"
 
 msgid "Add User"
-msgstr ""
+msgstr "Apondre un utilizaire"
 
 msgid "ADD USER"
 msgstr ""
 
 msgid "Username"
-msgstr ""
+msgstr "Nom d'utilizaire"
 
 msgid "Edit"
-msgstr ""
+msgstr "Modificar"
 
 msgid "Delete"
-msgstr ""
+msgstr "Suprimir"
 
 msgid "Created"
-msgstr ""
+msgstr "Creat"
 
 msgid "Last login"
-msgstr ""
+msgstr "Darrièra connexion"
 
 msgid "Edit user {username}"
 msgstr ""
@@ -359,7 +359,7 @@ msgid "Delete user {username}"
 msgstr ""
 
 msgid "never"
-msgstr ""
+msgstr "pas jamai"
 
 msgid "Delete Confirmation"
 msgstr ""
@@ -368,7 +368,7 @@ msgid "Are you sure you want to delete this user?"
 msgstr ""
 
 msgid "DELETE"
-msgstr ""
+msgstr "SUPRIMIR"
 
 msgid "No users to display"
 msgstr ""
@@ -389,10 +389,10 @@ msgid "Username is case-sensitive"
 msgstr ""
 
 msgid "First name"
-msgstr ""
+msgstr "Prenom"
 
 msgid "Last name"
-msgstr ""
+msgstr "Nom d’ostal"
 
 msgid "First name and last name are optional"
 msgstr ""
@@ -422,7 +422,7 @@ msgid "Once you have configured your YubiKey, enter the 6-digit code below:"
 msgstr ""
 
 msgid "Navigation"
-msgstr ""
+msgstr "Navegacion"
 
 msgid "Skip to main content"
 msgstr ""
@@ -431,10 +431,10 @@ msgid "Logged on as"
 msgstr ""
 
 msgid "Admin"
-msgstr ""
+msgstr "Admin"
 
 msgid "Log Out"
-msgstr ""
+msgstr "Se desconnectar"
 
 msgid "Powered by <b>SecureDrop {version}</b>."
 msgstr ""
@@ -455,19 +455,19 @@ msgid "Delete Selected"
 msgstr ""
 
 msgid "Status"
-msgstr ""
+msgstr "Estatut"
 
 msgid "Filename"
-msgstr ""
+msgstr "Nom de fichièr"
 
 msgid "Size"
-msgstr ""
+msgstr "Talha"
 
 msgid "Type"
-msgstr ""
+msgstr "Tipe"
 
 msgid "Unread"
-msgstr ""
+msgstr "Pas legit"
 
 msgid "Read"
 msgstr ""
@@ -476,10 +476,10 @@ msgid "Uploaded File"
 msgstr ""
 
 msgid "Reply"
-msgstr ""
+msgstr "Respondre"
 
 msgid "Message"
-msgstr ""
+msgstr "Messatge"
 
 msgid "Are you sure you want to delete the selected submissions?"
 msgstr ""
@@ -506,7 +506,7 @@ msgid "Delete Source Account"
 msgstr ""
 
 msgid "Are you sure?"
-msgstr ""
+msgstr "O volètz vertadièrament ?"
 
 msgid ""
 "<p>\n"
@@ -525,10 +525,10 @@ msgid "Yes, Delete Source Account"
 msgstr ""
 
 msgid "Instance Configuration"
-msgstr ""
+msgstr "Configuracion de l’instància"
 
 msgid "Organization Name"
-msgstr ""
+msgstr "Nom de l'organizacion"
 
 msgid "Set the organization name used on the SecureDrop web interfaces:"
 msgstr ""
@@ -579,7 +579,7 @@ msgid "UPDATE SUBMISSION PREFERENCES"
 msgstr ""
 
 msgid "Alerts"
-msgstr ""
+msgstr "Alèrtas"
 
 msgid "Send an encrypted email to verify if OSSEC alerts work correctly:"
 msgstr ""
@@ -600,7 +600,7 @@ msgid "Update account"
 msgstr ""
 
 msgid "UPDATE"
-msgstr ""
+msgstr "ACTUALIZAR"
 
 msgid "Edit your account"
 msgstr ""
@@ -612,7 +612,7 @@ msgid "Update your account"
 msgstr ""
 
 msgid "Reset Password"
-msgstr ""
+msgstr "Reïnicializar senhal"
 
 msgid "SecureDrop uses automatically generated diceware passwords."
 msgstr ""
@@ -624,10 +624,10 @@ msgid "Please enter your current password and two-factor code."
 msgstr ""
 
 msgid "Current Password"
-msgstr ""
+msgstr "Senhal actual"
 
 msgid "Two-factor Code"
-msgstr ""
+msgstr "Còdi Two-factor"
 
 msgid "The user's password will be changed to:"
 msgstr ""
@@ -684,13 +684,13 @@ msgid "Designation"
 msgstr ""
 
 msgid "Files"
-msgstr ""
+msgstr "Fichièrs"
 
 msgid "Messages"
-msgstr ""
+msgstr "Messatges"
 
 msgid "Date"
-msgstr ""
+msgstr "Data"
 
 msgid "There are no submissions!"
 msgstr ""
@@ -714,19 +714,19 @@ msgid "Sources selected: "
 msgstr ""
 
 msgid "Selected language"
-msgstr ""
+msgstr "Lenga seleccionada"
 
 msgid "Choose language"
-msgstr ""
+msgstr "Causir una lenga"
 
 msgid "Login to access the journalist interface"
 msgstr ""
 
 msgid "Password"
-msgstr ""
+msgstr "Senhal"
 
 msgid "Show password"
-msgstr ""
+msgstr "Afichar lo senhal"
 
 msgid "Log In"
 msgstr ""
@@ -738,10 +738,10 @@ msgid "Field must be between 1 and {max_codename_len} characters long."
 msgstr ""
 
 msgid "Invalid input."
-msgstr ""
+msgstr "Entrada invalida."
 
 msgid "Write a message."
-msgstr ""
+msgstr "Escriure un messatge."
 
 msgid "Select a file to upload."
 msgstr ""
@@ -768,7 +768,7 @@ msgid "You must enter a message or choose a file to submit."
 msgstr ""
 
 msgid "You must enter a message."
-msgstr ""
+msgstr "Vos cal escriure un messatge."
 
 msgid "Your first message must be at least {} characters long."
 msgstr ""
@@ -792,7 +792,7 @@ msgid "Thanks! We received your file and message."
 msgstr ""
 
 msgid "Reply deleted"
-msgstr ""
+msgstr "Responsa suprimida"
 
 msgid "All replies have been deleted"
 msgstr ""
@@ -801,7 +801,7 @@ msgid "Sorry, that is not a recognized codename."
 msgstr ""
 
 msgid "Important"
-msgstr ""
+msgstr "Important"
 
 msgid "You were logged out due to inactivity. Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar before moving on. This will clear your Tor Browser activity data on this device."
 msgstr ""
@@ -822,7 +822,7 @@ msgid "LOG OUT"
 msgstr ""
 
 msgid "Server error"
-msgstr ""
+msgstr "Error del servidor"
 
 msgid "Sorry, the website encountered an error and was unable to complete your request."
 msgstr ""
@@ -831,7 +831,7 @@ msgid "Look up a codename..."
 msgstr ""
 
 msgid "Powered by"
-msgstr ""
+msgstr "Propulsat per"
 
 msgid "Please note: Sharing sensitive information may put you at risk, even when using Tor and SecureDrop."
 msgstr ""
@@ -855,7 +855,7 @@ msgid "<strong>Keep it safe.</strong> There is no account recovery option."
 msgstr ""
 
 msgid "Continue"
-msgstr ""
+msgstr "Contunhar"
 
 msgid "Your Tor Browser's <a id=\"disable-js\" href=\"\"><b>Security Level</b></a> is too low. Use the <img src=\"{icon}\" alt=\"&quot;Security Level&quot;\"> button in your browser’s toolbar to change it."
 msgstr ""
@@ -891,10 +891,10 @@ msgid "First time submitting to our SecureDrop? Start here."
 msgstr ""
 
 msgid "Get Started"
-msgstr ""
+msgstr "Ben començar"
 
 msgid "GET STARTED"
-msgstr ""
+msgstr "BEN COMENÇAR"
 
 msgid "Return visit"
 msgstr ""
@@ -909,10 +909,10 @@ msgid "Enter your codename"
 msgstr ""
 
 msgid "CANCEL"
-msgstr ""
+msgstr "ANULLAR"
 
 msgid "One more thing..."
-msgstr ""
+msgstr "Una darrièra causa..."
 
 msgid "Click the <img src={icon} alt=\"\" width=\"16\" height=\"16\">&nbsp;<b>New Identity</b> button in your Tor Browser's toolbar. This will clear your Tor Browser activity data on this device."
 msgstr ""
@@ -972,16 +972,16 @@ msgid "YES, DELETE ALL REPLIES"
 msgstr ""
 
 msgid "No Messages"
-msgstr ""
+msgstr "Cap de messatge"
 
 msgid "Page not found"
-msgstr ""
+msgstr "Pagina pas trobada"
 
 msgid "Sorry, we couldn't locate what you requested."
 msgstr ""
 
 msgid "Proxy Service Detected"
-msgstr ""
+msgstr "Servici de proxy detectat"
 
 msgid "You appear to be using a Tor proxy service to access SecureDrop. Proxy services do not protect your anonymity."
 msgstr ""
