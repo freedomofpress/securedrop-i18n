@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import binascii
 import os
 from datetime import datetime, timezone
@@ -12,10 +11,7 @@ from flask import Markup, abort, current_app, escape, flash, redirect, send_file
 from flask_babel import gettext, ngettext
 from journalist_app.sessions import session
 from models import (
-    HOTP_SECRET_LENGTH,
-    BadTokenException,
     FirstOrLastNameError,
-    InvalidOTPSecretException,
     InvalidPasswordLength,
     InvalidUsernameException,
     Journalist,
@@ -33,6 +29,7 @@ from models import (
 )
 from sqlalchemy.exc import IntegrityError
 from store import Storage, add_checksum_for_file
+from two_factor import HOTP, OtpSecretInvalid, OtpTokenInvalid
 
 
 def commit_account_changes(user: Journalist) -> None:
@@ -45,7 +42,7 @@ def commit_account_changes(user: Journalist) -> None:
                 gettext("An unexpected error occurred! Please " "inform your admin."),
                 "error",
             )
-            current_app.logger.error("Account changes for '{}' failed: {}".format(user, e))
+            current_app.logger.error(f"Account changes for '{user}' failed: {e}")
             db.session.rollback()
         else:
             flash(gettext("Account updated."), "success")
@@ -84,13 +81,13 @@ def validate_user(
         return Journalist.login(username, password, token)
     except (
         InvalidUsernameException,
-        InvalidOTPSecretException,
-        BadTokenException,
+        OtpSecretInvalid,
+        OtpTokenInvalid,
         WrongPasswordException,
         LoginThrottledException,
         InvalidPasswordLength,
     ) as e:
-        current_app.logger.error("Login for '{}' failed: {}".format(username, e))
+        current_app.logger.error(f"Login for '{username}' failed: {e}")
         login_flashed_msg = error_message if error_message else gettext("Login failed.")
 
         if isinstance(e, LoginThrottledException):
@@ -103,7 +100,7 @@ def validate_user(
                 "Please wait at least {num} seconds before logging in again.",
                 period,
             ).format(num=period)
-        elif isinstance(e, InvalidOTPSecretException):
+        elif isinstance(e, OtpSecretInvalid):
             login_flashed_msg += " "
             login_flashed_msg += gettext(
                 "Your 2FA details are invalid" " - please contact an administrator to reset them."
@@ -134,7 +131,7 @@ def validate_hotp_secret(user: Journalist, otp_secret: str) -> bool:
     strip_whitespace = otp_secret.replace(" ", "")
     secret_length = len(strip_whitespace)
 
-    if secret_length != HOTP_SECRET_LENGTH:
+    if secret_length != HOTP.SECRET_HEX_LENGTH:
         flash(
             ngettext(
                 "HOTP secrets are 40 characters long - you have entered {num}.",
@@ -161,9 +158,7 @@ def validate_hotp_secret(user: Journalist, otp_secret: str) -> bool:
                 gettext("An unexpected error occurred! " "Please inform your admin."),
                 "error",
             )
-            current_app.logger.error(
-                "set_hotp_secret '{}' (id {}) failed: {}".format(otp_secret, user.id, e)
-            )
+            current_app.logger.error(f"set_hotp_secret '{otp_secret}' (id {user.id}) failed: {e}")
             return False
     return True
 

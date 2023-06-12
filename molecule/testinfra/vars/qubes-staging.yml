@@ -5,7 +5,7 @@ wanted_apache_headers:
   Content-Security-Policy: "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; frame-ancestors 'none';"
   Cross-Origin-Opener-Policy: "same-origin"
   Cross-Origin-Embedder-Policy: "same-origin"
-  Cross-Origin-Resource-Policy: "same-site"
+  Cross-Origin-Resource-Policy: "same-origin"
 
 securedrop_venv: /opt/venvs/securedrop-app-code
 securedrop_venv_bin: "/opt/venvs/securedrop-app-code/bin"
@@ -13,6 +13,7 @@ securedrop_venv_site_packages: /opt/venvs/securedrop-app-code/lib/python{}/site-
 securedrop_code: /var/www/securedrop
 securedrop_data: /var/lib/securedrop
 securedrop_user: www-data
+securedrop_code_owner: root
 admin_user: sdadmin
 
 app_hostname: app-staging
@@ -30,7 +31,7 @@ app_ip: 10.137.0.50
 
 pip_deps:
   - name: 'Flask'
-    version: '2.0.2'
+    version: '2.0.3'
 
 apparmor_complain: []
 
@@ -45,13 +46,6 @@ apparmor_enforce:
     - "/usr/sbin/apache2//DEFAULT_URI"
     - "/usr/sbin/apache2//HANDLING_UNTRUSTED_INPUT"
     - "/usr/sbin/tor"
-
-app_directories:
-  - /var/www/securedrop
-  - /var/lib/securedrop
-  - /var/lib/securedrop/store
-  - /var/lib/securedrop/keys
-  - /var/lib/securedrop/tmp
 
 tor_services:
   - name: journalistv3
@@ -185,7 +179,5 @@ log_events_with_ossec_alerts:
     rule_id: "400700"
 
 fpf_apt_repo_url: "https://apt-test.freedom.press"
-
-grsec_version_focal: "5.15.57"
 
 daily_reboot_time: "4"

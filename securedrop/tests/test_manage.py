@@ -1,14 +1,11 @@
-# -*- coding: utf-8 -*-
-
 import argparse
 import datetime
-import io
 import logging
 import os
 import time
+from unittest import mock
 
 import manage
-import mock
 from management import submissions
 from models import Journalist, db
 from passphrases import PassphraseGenerator
@@ -140,26 +137,19 @@ def test_get_username_to_delete(mocker):
 
 
 def test_reset(journalist_app, test_journo, alembic_config, config):
-    original_config = manage.config
-    try:
-        # We need to override the config to point at the per-test DB
-        manage.config = config
-        with journalist_app.app_context() as context:
-            # Override the hardcoded alembic.ini value
-            manage.config.TEST_ALEMBIC_INI = alembic_config
+    with journalist_app.app_context() as context:
+        args = argparse.Namespace(store_dir=config.STORE_DIR)
+        # We have to override the hardcoded alembic .ini file because during testing
+        # the value in the .ini doesn't exist.
+        return_value = manage.reset(args=args, alembic_ini_path=alembic_config, context=context)
 
-            args = argparse.Namespace(store_dir=config.STORE_DIR)
-            return_value = manage.reset(args=args, context=context)
+        assert return_value == 0
+        assert config.DATABASE_FILE.exists()
+        assert config.STORE_DIR.exists()
 
-            assert return_value == 0
-            assert os.path.exists(config.DATABASE_FILE)
-            assert os.path.exists(config.STORE_DIR)
-
-            # Verify journalist user present in the database is gone
-            res = Journalist.query.filter_by(username=test_journo["username"]).one_or_none()
-            assert res is None
-    finally:
-        manage.config = original_config
+        # Verify journalist user present in the database is gone
+        res = Journalist.query.filter_by(username=test_journo["username"]).one_or_none()
+        assert res is None
 
 
 def test_get_username(mocker):
@@ -189,7 +179,7 @@ def test_clean_tmp_do_nothing(caplog):
 def test_clean_tmp_too_young(config, caplog):
     args = argparse.Namespace(days=24 * 60 * 60, directory=config.TEMP_DIR, verbose=logging.DEBUG)
     # create a file
-    io.open(os.path.join(config.TEMP_DIR, "FILE"), "a").close()
+    open(os.path.join(config.TEMP_DIR, "FILE"), "a").close()
 
     manage.setup_verbosity(args)
     manage.clean_tmp(args)
@@ -199,7 +189,7 @@ def test_clean_tmp_too_young(config, caplog):
 def test_clean_tmp_removed(config, caplog):
     args = argparse.Namespace(days=0, directory=config.TEMP_DIR, verbose=logging.DEBUG)
     fname = os.path.join(config.TEMP_DIR, "FILE")
-    with io.open(fname, "a"):
+    with open(fname, "a"):
         old = time.time() - 24 * 60 * 60
         os.utime(fname, (old, old))
     manage.setup_verbosity(args)
@@ -223,8 +213,8 @@ def test_were_there_submissions_today(source_app, config, app_storage):
         source.last_updated = datetime.datetime.utcnow() - datetime.timedelta(hours=24 * 2)
         db.session.commit()
         submissions.were_there_submissions_today(args, context)
-        assert io.open(count_file).read() == "0"
+        assert open(count_file).read() == "0"
         source.last_updated = datetime.datetime.utcnow()
         db.session.commit()
         submissions.were_there_submissions_today(args, context)
-        assert io.open(count_file).read() == "1"
+        assert open(count_file).read() == "1"

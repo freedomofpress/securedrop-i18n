@@ -3,7 +3,9 @@
 
 set -eu
 
-export REPOROOT="${REPOROOT:-$(git rev-parse --show-toplevel)}"
+cd ..
+export REPOROOT="${REPOROOT:-$PWD}"
+git config --global --add safe.directory "$REPOROOT"
 
 cd "${REPOROOT}/securedrop"
 
@@ -12,6 +14,7 @@ source "${BASH_SOURCE%/*}/dev-deps"
 
 run_redis &
 urandom
+build_redwood
 maybe_create_config_py
 reset_demo
 maybe_use_tor
@@ -19,7 +22,7 @@ maybe_use_tor
 # run the batch processing services normally managed by systemd
 /opt/venvs/securedrop-app-code/bin/rqworker &
 PYTHONPATH="${REPOROOT}/securedrop" /opt/venvs/securedrop-app-code/bin/python "${REPOROOT}/securedrop/scripts/rqrequeue" --interval 60 &
-/opt/venvs/securedrop-app-code/bin/python "${REPOROOT}/securedrop/scripts/shredder" --interval 60 &
-/opt/venvs/securedrop-app-code/bin/python "${REPOROOT}/securedrop/scripts/source_deleter" --interval 10 &
+PYTHONPATH="${REPOROOT}/securedrop" /opt/venvs/securedrop-app-code/bin/python "${REPOROOT}/securedrop/scripts/shredder" --interval 60 &
+PYTHONPATH="${REPOROOT}/securedrop" /opt/venvs/securedrop-app-code/bin/python "${REPOROOT}/securedrop/scripts/source_deleter" --interval 10 &
 
 ./manage.py run

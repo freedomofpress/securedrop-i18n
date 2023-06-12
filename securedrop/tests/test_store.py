@@ -1,9 +1,8 @@
-# -*- coding: utf-8 -*-
-import io
 import logging
 import os
 import re
 import stat
+import time
 import zipfile
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -15,10 +14,10 @@ from db import db
 from journalist_app import create_app
 from models import Reply, Submission
 from passphrases import PassphraseGenerator
+from rq.job import Job
 from source_user import create_source_user
 from store import Storage, async_add_checksum_for_file, queued_add_checksum_for_file
-
-from . import utils
+from tests import utils
 
 
 @pytest.fixture(scope="function")
@@ -42,7 +41,7 @@ def create_file_in_source_dir(base_dir, filesystem_id, filename):
     os.makedirs(source_directory)
 
     file_path = os.path.join(source_directory, filename)
-    with io.open(file_path, "a"):
+    with open(file_path, "a"):
         os.utime(file_path, None)
 
     return source_directory, file_path
@@ -119,7 +118,7 @@ def test_verify_in_store_dir(test_storage):
     with pytest.raises(store.PathException) as e:
         path = test_storage.storage_path + "_backup"
         test_storage.verify(path)
-        assert e.message == "Path not valid in store: {}".format(path)
+        assert e.message == f"Path not valid in store: {path}"
 
 
 def test_verify_store_path_not_absolute(test_storage):
@@ -137,7 +136,7 @@ def test_verify_rejects_symlinks(test_storage):
         os.symlink("/foo", link)
         with pytest.raises(store.PathException) as e:
             test_storage.verify(link)
-            assert e.message == "Path not valid in store: {}".format(link)
+            assert e.message == f"Path not valid in store: {link}"
     finally:
         os.unlink(link)
 
@@ -181,7 +180,7 @@ def test_verify_invalid_file_extension_in_sourcedir_raises_exception(test_storag
     with pytest.raises(store.PathException) as e:
         test_storage.verify(file_path)
 
-    assert "Path not valid in store: {}".format(file_path) in str(e)
+    assert f"Path not valid in store: {file_path}" in str(e)
 
 
 def test_verify_invalid_filename_in_sourcedir_raises_exception(test_storage):
@@ -192,7 +191,7 @@ def test_verify_invalid_filename_in_sourcedir_raises_exception(test_storage):
 
     with pytest.raises(store.PathException) as e:
         test_storage.verify(file_path)
-        assert e.message == "Path not valid in store: {}".format(file_path)
+        assert e.message == f"Path not valid in store: {file_path}"
 
 
 def test_get_zip(journalist_app, test_source, app_storage, config):
@@ -207,7 +206,7 @@ def test_get_zip(journalist_app, test_source, app_storage, config):
         archivefile_contents = archive.namelist()
 
     for archived_file, actual_file in zip(archivefile_contents, filenames):
-        with io.open(actual_file, "rb") as f:
+        with open(actual_file, "rb") as f:
             actual_file_content = f.read()
         zipped_file_content = archive.read(archived_file)
         assert zipped_file_content == actual_file_content
@@ -261,6 +260,29 @@ def test_add_checksum_for_file(config, app_storage, db_model):
         assert db_obj.checksum == "sha256:" + expected_hash
 
 
+def _wait_for_redis_worker(job: Job, timeout: int = 60) -> None:
+    """Raise an error if the Redis job doesn't complete successfully
+    before a timeout.
+
+    :param rq.job.Job job: A Redis job to wait for.
+
+    :param int timeout: Seconds to wait for the job to finish.
+
+    :raises: An :exc:`AssertionError`.
+    """
+    # This is an arbitrarily defined value in the SD codebase and not something from rqworker
+    redis_success_return_value = "success"
+
+    start_time = time.time()
+    while time.time() - start_time < timeout:
+        if job.result == redis_success_return_value:
+            return
+        elif job.result not in (None, redis_success_return_value):
+            assert False, "Redis worker failed!"
+        time.sleep(0.1)
+    assert False, "Redis worker timed out!"
+
+
 @pytest.mark.parametrize("db_model", [Submission, Reply])
 def test_async_add_checksum_for_file(config, app_storage, db_model):
     """
@@ -299,7 +321,7 @@ def test_async_add_checksum_for_file(config, app_storage, db_model):
 
         job = async_add_checksum_for_file(db_obj, app_storage)
 
-    utils.asynchronous.wait_for_redis_worker(job, timeout=5)
+    _wait_for_redis_worker(job, timeout=5)
 
     with app.app_context():
         # requery to get a new object
@@ -356,7 +378,7 @@ def test_shredder_deletes_symlinks(journalist_app, app_storage, caplog):
     link = os.path.abspath(os.path.join(app_storage.shredder_path, "foo"))
     os.symlink(link_target, link)
     app_storage.clear_shredder()
-    assert "Deleting link {} to {}".format(link, link_target) in caplog.text
+    assert f"Deleting link {link} to {link_target}" in caplog.text
     assert not os.path.exists(link)
 
 
@@ -373,6 +395,6 @@ def test_shredder_shreds(journalist_app, app_storage, caplog):
         f.write("testdata\n")
 
     app_storage.clear_shredder()
-    assert "Securely deleted file 1/1: {}".format(testfile) in caplog.text
+    assert f"Securely deleted file 1/1: {testfile}" in caplog.text
     assert not os.path.isfile(testfile)
     assert not os.path.isdir(testdir)

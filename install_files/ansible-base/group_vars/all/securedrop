@@ -2,7 +2,7 @@
 # Variables that apply to both the app and monitor server go in this file
 # If the monitor or app server need different values define the variable in
 # hosts_vars/app.yml or host_vars/mon.yml
-securedrop_version: "2.5.0~rc1"
+securedrop_version: "2.6.0~rc1"
 securedrop_app_code_sdist_name: "securedrop-app-code-{{ securedrop_version | replace('~', '-') }}.tar.gz"
 
 grsecurity: true
@@ -18,13 +18,6 @@ remote_host_ref: "{{ ansible_host|default(inventory_hostname) }}"
 # is used on the build VM to pull in required packages.
 development_dependencies: []
 
-# These profiles are referenced by multiple machines, such as Application Server
-# for direct copying at install time, and the build machine for including them
-# in the deb packages.
-apparmor_profiles:
-  - usr.sbin.tor
-  - usr.sbin.apache2
-
 # Installing the securedrop-app-code.deb package
 securedrop_target_distribution: focal
 securedrop_app_code_deb: "securedrop-app-code_{{ securedrop_version }}+{{ securedrop_target_distribution }}_amd64" # do not enter .deb extension
@@ -36,11 +29,3 @@ enable_ssh_over_tor: true
 # force a reboot. Needed because of the de-coupled nature of
 # the many roles of the current prod playbook
 securedrop_cond_reboot_file: /tmp/sd-reboot-now
-
-# If you bump this, also remember to bump in molecule/builder-focal/tests/vars.yml
-securedrop_pkg_grsec_focal:
-  ver: "5.15.57"
-  depends: "linux-image-5.15.57-grsec-securedrop,intel-microcode"
-
-# Mostly useful for local package installation
-grsec_version: "{{ securedrop_pkg_grsec_focal.ver }}"

@@ -1,18 +1,19 @@
-# -*- coding: utf-8 -*-
 import base64
 import binascii
 import datetime
 import os
 import uuid
+from hmac import compare_digest
 from io import BytesIO
 from logging import Logger
 from typing import Any, Callable, Dict, List, Optional, Union
 
-import pyotp
+import argon2
 import qrcode
 
 # Using svg because it doesn't require additional dependencies
 import qrcode.image.svg
+import two_factor
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.kdf import scrypt
 from db import db
@@ -20,9 +21,7 @@ from encryption import EncryptionManager, GpgKeyNotFoundError
 from flask import url_for
 from flask_babel import gettext, ngettext
 from markupsafe import Markup
-from passlib.hash import argon2
 from passphrases import PassphraseGenerator
-from pyotp import HOTP, TOTP
 from sqlalchemy import Boolean, Column, DateTime, ForeignKey, Integer, LargeBinary, String
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Query, backref, relationship
@@ -31,18 +30,7 @@ from store import Storage
 
 _default_instance_config: Optional["InstanceConfig"] = None
 
-LOGIN_HARDENING = True
-if os.environ.get("SECUREDROP_ENV") == "test":
-    LOGIN_HARDENING = False
-
-ARGON2_PARAMS = dict(memory_cost=2**16, rounds=4, parallelism=2)
-
-# Required length for hex-format HOTP secrets as input by users
-HOTP_SECRET_LENGTH = 40  # 160 bits == 40 hex digits (== 32 ascii-encoded chars in db)
-
-# Minimum length for ascii-encoded OTP secrets - by default, secrets are now 160-bit (32 chars)
-# but existing Journalist users may still have 80-bit (16-char) secrets
-OTP_SECRET_MIN_ASCII_LENGTH = 16  # 80 bits == 40 hex digits (== 16 ascii-encoded chars in db)
+ARGON2_PARAMS = {"memory_cost": 2**16, "time_cost": 4, "parallelism": 2, "type": argon2.Type.ID}
 
 
 def get_one_or_else(
@@ -60,7 +48,7 @@ def get_one_or_else(
         )
         failure_method(500)
     except NoResultFound as e:
-        logger.error("Found none when one was expected: %s" % (e,))
+        logger.error(f"Found none when one was expected: {e}")
         failure_method(404)
 
 
@@ -247,7 +235,7 @@ class Submission(db.Model):
     @property
     def seen(self) -> bool:
         """
-        If the submission has been downloaded or seen by any journalist, then the submssion is
+        If the submission has been downloaded or seen by any journalist, then the submission is
         considered seen.
         """
         if self.downloaded or self.seen_files.count() or self.seen_messages.count():
@@ -343,14 +331,14 @@ class FirstOrLastNameError(Exception):
     """Generic error for names that are invalid."""
 
     def __init__(self, msg: str) -> None:
-        super(FirstOrLastNameError, self).__init__(msg)
+        super().__init__(msg)
 
 
 class InvalidNameLength(FirstOrLastNameError):
     """Raised when attempting to create a Journalist with an invalid name length."""
 
     def __init__(self) -> None:
-        super(InvalidNameLength, self).__init__(gettext("Name too long"))
+        super().__init__(gettext("Name too long"))
 
 
 class LoginThrottledException(Exception):
@@ -362,16 +350,6 @@ class LoginThrottledException(Exception):
 class WrongPasswordException(Exception):
 
     """Raised when a user logs in with an incorrect password"""
-
-
-class BadTokenException(Exception):
-
-    """Raised when a user logins in with an incorrect TOTP token"""
-
-
-class InvalidOTPSecretException(Exception):
-
-    """Raised when a user's OTP secret is invalid - for example, too short"""
 
 
 class PasswordError(Exception):
@@ -411,7 +389,7 @@ class Journalist(db.Model):
     pw_hash = Column(LargeBinary(256), nullable=True)
     is_admin = Column(Boolean)
 
-    otp_secret = Column(String(32), default=pyotp.random_base32)
+    otp_secret = Column(String(32), default=two_factor.random_base32)
     is_totp = Column(Boolean, default=True)
     hotp_counter = Column(Integer, default=0)
     last_token = Column(String(6))
@@ -456,7 +434,7 @@ class Journalist(db.Model):
             self.set_hotp_secret(otp_secret)
 
     def __repr__(self) -> str:
-        return "<Journalist {0}{1}>".format(self.username, " [admin]" if self.is_admin else "")
+        return "<Journalist {}{}>".format(self.username, " [admin]" if self.is_admin else "")
 
     def _scrypt_hash(self, password: str, salt: bytes) -> bytes:
         backend = default_backend()
@@ -479,10 +457,11 @@ class Journalist(db.Model):
 
         self.check_password_acceptable(passphrase)
 
+        hasher = argon2.PasswordHasher(**ARGON2_PARAMS)
         # "migrate" from the legacy case
         if not self.passphrase_hash:
-            self.passphrase_hash = argon2.using(**ARGON2_PARAMS).hash(passphrase)
-            # passlib creates one merged field that embeds randomly generated
+            self.passphrase_hash = hasher.hash(passphrase)
+            # argon2 creates one merged field that embeds randomly generated
             # salt in the output like $alg$salt$hash
             self.pw_hash = None
             self.pw_salt = None
@@ -491,7 +470,7 @@ class Journalist(db.Model):
         if self.passphrase_hash and self.valid_password(passphrase):
             return
 
-        self.passphrase_hash = argon2.using(**ARGON2_PARAMS).hash(passphrase)
+        self.passphrase_hash = hasher.hash(passphrase)
 
     def set_name(self, first_name: Optional[str], last_name: Optional[str]) -> None:
         if first_name:
@@ -548,39 +527,56 @@ class Journalist(db.Model):
             raise InvalidPasswordLength(passphrase)
 
         # No check on minimum password length here because some passwords
-        # may have been set prior to setting the mininum password length.
+        # may have been set prior to setting the minimum password length.
 
+        hasher = argon2.PasswordHasher(**ARGON2_PARAMS)
         if self.passphrase_hash:
             # default case
-            is_valid = argon2.verify(passphrase, self.passphrase_hash)
+            try:
+                is_valid = hasher.verify(self.passphrase_hash, passphrase)
+            except argon2.exceptions.VerificationError:
+                is_valid = False
         else:
             # legacy support
             if self.pw_salt is None:
                 raise ValueError(
-                    "Should never happen: pw_salt is none for legacy Journalist {}".format(self.id)
+                    f"Should never happen: pw_salt is none for legacy Journalist {self.id}"
                 )
 
             # For type checking
             assert isinstance(self.pw_hash, bytes)
 
-            is_valid = pyotp.utils.compare_digest(
-                self._scrypt_hash(passphrase, self.pw_salt), self.pw_hash
-            )
+            is_valid = compare_digest(self._scrypt_hash(passphrase, self.pw_salt), self.pw_hash)
 
-        # migrate new passwords
-        if is_valid and not self.passphrase_hash:
-            self.passphrase_hash = argon2.using(**ARGON2_PARAMS).hash(passphrase)
-            # passlib creates one merged field that embeds randomly generated
-            # salt in the output like $alg$salt$hash
+        # If the passphrase isn't valid, bail out now
+        if not is_valid:
+            return False
+        # From here on we can assume the passphrase was valid
+
+        # Perform migration checks
+        needs_update = False
+        if self.passphrase_hash:
+            # Check if the hash needs an update
+            if hasher.check_needs_rehash(self.passphrase_hash):
+                self.passphrase_hash = hasher.hash(passphrase)
+                needs_update = True
+        else:
+            # Migrate to an argon2 hash, which creates one merged field
+            # that embeds randomly generated salt in the output like
+            # $alg$salt$hash
+            self.passphrase_hash = hasher.hash(passphrase)
             self.pw_salt = None
             self.pw_hash = None
+            needs_update = True
+
+        if needs_update:
             db.session.add(self)
             db.session.commit()
 
         return is_valid
 
     def regenerate_totp_shared_secret(self) -> None:
-        self.otp_secret = pyotp.random_base32()
+        self.otp_secret = two_factor.random_base32()
 
     def set_hotp_secret(self, otp_secret: str) -> None:
         self.otp_secret = base64.b32encode(binascii.unhexlify(otp_secret.replace(" ", ""))).decode(
@@ -590,22 +586,22 @@ class Journalist(db.Model):
         self.hotp_counter = 0
 
     @property
-    def totp(self) -> "TOTP":
+    def totp(self) -> two_factor.TOTP:
         if self.is_totp:
-            return pyotp.TOTP(self.otp_secret)
+            return two_factor.TOTP(self.otp_secret)
         else:
-            raise ValueError("{} is not using TOTP".format(self))
+            raise ValueError(f"{self} is not using TOTP")
 
     @property
-    def hotp(self) -> "HOTP":
+    def hotp(self) -> two_factor.HOTP:
         if not self.is_totp:
-            return pyotp.HOTP(self.otp_secret)
+            return two_factor.HOTP(self.otp_secret)
         else:
-            raise ValueError("{} is not using HOTP".format(self))
+            raise ValueError(f"{self} is not using HOTP")
 
     @property
     def shared_secret_qrcode(self) -> Markup:
-        uri = self.totp.provisioning_uri(self.username, issuer_name="SecureDrop")
+        uri = self.totp.get_provisioning_uri(self.username)
 
         qr = qrcode.QRCode(box_size=15, image_factory=qrcode.image.svg.SvgPathImage)
         qr.add_data(uri)
@@ -624,30 +620,27 @@ class Journalist(db.Model):
         chunks = [sec[i : i + 4] for i in range(0, len(sec), 4)]
         return " ".join(chunks).lower()
 
-    def _format_token(self, token: str) -> str:
-        """Strips from authentication tokens the whitespace
-        that many clients add for readability"""
-        return "".join(token.split())
-
-    def verify_token(self, token: "Optional[str]") -> bool:
+    def verify_2fa_token(self, token: Optional[str]) -> str:
         if not token:
-            return False
+            raise two_factor.OtpTokenInvalid()
+
+        # Strip from 2fa tokens the whitespace that many clients add for readability
+        sanitized_token = "".join(token.split())
+
+        # Reject OTP tokens that have already been used
+        if self.last_token is not None and self.last_token == sanitized_token:
+            raise two_factor.OtpTokenInvalid("Token already used")
 
         if self.is_totp:
-            # Also check the given token against the previous and next
-            # valid tokens, to compensate for potential time skew
-            # between the client and the server. The total valid
-            # window is 1:30s.
-            return self.totp.verify(token, valid_window=1)
+            # TOTP
+            self.totp.verify(sanitized_token, datetime.datetime.utcnow())
+        else:
+            # HOTP
+            successful_counter_value = self.hotp.verify(sanitized_token, self.hotp_counter)
+            self.hotp_counter = successful_counter_value + 1
+            db.session.commit()
 
-        if self.hotp_counter is not None:
-            for counter_val in range(self.hotp_counter, self.hotp_counter + 20):
-                if self.hotp.verify(token, counter_val):
-                    self.hotp_counter = counter_val + 1
-                    db.session.commit()
-                    return True
-
-        return False
+        return sanitized_token
 
     _LOGIN_ATTEMPT_PERIOD = 60  # seconds
     _MAX_LOGIN_ATTEMPTS_PER_PERIOD = 5
@@ -677,9 +670,11 @@ class Journalist(db.Model):
 
     @classmethod
     def login(
-        cls, username: str, password: "Optional[str]", token: "Optional[str]"
+        cls,
+        username: str,
+        password: Optional[str],
+        token: Optional[str],
     ) -> "Journalist":
-
         try:
             user = Journalist.query.filter_by(username=username).one()
         except NoResultFound:
@@ -688,26 +683,13 @@ class Journalist(db.Model):
         if user.username in Journalist.INVALID_USERNAMES:
             raise InvalidUsernameException(gettext("Invalid username"))
 
-        if len(user.otp_secret) < OTP_SECRET_MIN_ASCII_LENGTH:
-            raise InvalidOTPSecretException(gettext("Invalid OTP secret"))
+        # Login hardening measures
+        cls.throttle_login(user)
 
-        # From here to the return the order of statements is very important
-        token = user._format_token(token)
+        sanitized_token = user.verify_2fa_token(token)
 
-        if LOGIN_HARDENING:
-            cls.throttle_login(user)
-
-            # Prevent TOTP token reuse
-            if user.last_token is not None:
-                # For type checking
-                assert isinstance(token, str)
-                if pyotp.utils.compare_digest(token, user.last_token):
-                    raise BadTokenException("previously used two-factor code " "{}".format(token))
-        if not user.verify_token(token):
-            raise BadTokenException("invalid two-factor code")
-
-        # Store latest token to prevent OTP token reuse
-        user.last_token = token
+        # If it is valid, store the token that to prevent OTP token reuse
+        user.last_token = sanitized_token
         db.session.commit()
 
         if not user.valid_password(password):
@@ -852,7 +834,7 @@ class JournalistLoginAttempt(db.Model):
 
     __tablename__ = "journalist_login_attempt"
     id = Column(Integer, primary_key=True)
-    timestamp = Column(DateTime, default=datetime.datetime.utcnow)
+    timestamp = Column(DateTime, default=datetime.datetime.utcnow, nullable=True)
     journalist_id = Column(Integer, ForeignKey("journalists.id"), nullable=False)
 
     def __init__(self, journalist: Journalist) -> None:

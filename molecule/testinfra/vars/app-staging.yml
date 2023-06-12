@@ -5,7 +5,7 @@ wanted_apache_headers:
   Content-Security-Policy: "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; frame-ancestors 'none';"
   Cross-Origin-Opener-Policy: "same-origin"
   Cross-Origin-Embedder-Policy: "same-origin"
-  Cross-Origin-Resource-Policy: "same-site"
+  Cross-Origin-Resource-Policy: "same-origin"
 
 securedrop_venv: /opt/venvs/securedrop-app-code
 securedrop_venv_bin: /opt/venvs/securedrop-app-code/bin
@@ -29,7 +29,7 @@ app_ip: 10.0.1.2
 
 pip_deps:
   - name: 'Flask'
-    version: '2.0.2'
+    version: '2.0.3'
 
 apparmor_complain: []
 
@@ -44,13 +44,6 @@ apparmor_enforce:
     - "/usr/sbin/apache2//DEFAULT_URI"
     - "/usr/sbin/apache2//HANDLING_UNTRUSTED_INPUT"
     - "/usr/sbin/tor"
-
-app_directories:
-  - /var/www/securedrop
-  - /var/lib/securedrop
-  - /var/lib/securedrop/store
-  - /var/lib/securedrop/keys
-  - /var/lib/securedrop/tmp
 
 tor_services:
   - name: journalistv3

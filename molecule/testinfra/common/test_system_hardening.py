@@ -65,7 +65,7 @@ def test_blacklisted_kernel_modules(host, kernel_module):
         assert kernel_module not in c.stdout
 
     f = host.file("/etc/modprobe.d/blacklist.conf")
-    assert f.contains("^blacklist {}$".format(kernel_module))
+    assert f.contains(f"^blacklist {kernel_module}$")
 
 
 def test_swap_disabled(host):
@@ -124,7 +124,7 @@ def test_sshd_config(host, sshd_opts):
 
     sshd_config_file = host.file("/etc/ssh/sshd_config").content_string
 
-    line = "{} {}".format(sshd_opts[0], sshd_opts[1])
+    line = f"{sshd_opts[0]} {sshd_opts[1]}"
     assert line in sshd_config_file
 
 
@@ -180,3 +180,11 @@ def test_snapd_absent(host):
     assert not host.file("/etc/apparmor.d/usr.lib.snapd.snap-confine.real").exists
     assert not host.file("/usr/bin/snap").exists
     assert not host.file("/var/lib/snapd/snaps").exists
+
+
+def test_ubuntu_pro_disabled(host):
+    with host.sudo():
+        cmd = host.run("systemctl status esm-cache")
+        assert "Loaded: masked" in cmd.stdout
+        cmd = host.run("systemctl is-enabled ua-timer.timer")
+        assert cmd.stdout.strip() == "disabled"

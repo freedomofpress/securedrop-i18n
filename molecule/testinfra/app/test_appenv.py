@@ -21,9 +21,9 @@ def test_app_wsgi(host):
     f = host.file("/var/www/source.wsgi")
     with host.sudo():
         assert f.is_file
-        assert f.mode == 0o640
-        assert f.user == "www-data"
-        assert f.group == "www-data"
+        assert f.mode == 0o644
+        assert f.user == "root"
+        assert f.group == "root"
         assert f.contains("^import logging$")
         assert f.contains(r"^logging\.basicConfig(stream=sys\.stderr)$")
 
@@ -34,15 +34,35 @@ def test_pidfile(host):
     assert not host.file("/tmp/source.pid").exists
 
 
-@pytest.mark.parametrize("app_dir", sdvars.app_directories)
-def test_app_directories(host, app_dir):
+@pytest.mark.parametrize(
+    "app_dir,owner",
+    (
+        ("/var/www/securedrop", "root"),
+        ("/var/lib/securedrop", "www-data"),
+        ("/var/lib/securedrop/store", "www-data"),
+        ("/var/lib/securedrop/keys", "www-data"),
+        ("/var/lib/securedrop/tmp", "www-data"),
+    ),
+)
+def test_app_directories(host, app_dir, owner):
     """ensure securedrop app directories exist with correct permissions"""
     f = host.file(app_dir)
+    mode = 0o755 if owner == "root" else 0o700
     with host.sudo():
         assert f.is_directory
-        assert f.user == sdvars.securedrop_user
-        assert f.group == sdvars.securedrop_user
-        assert f.mode == 0o700
+        assert f.user == owner
+        assert f.group == owner
+        assert f.mode == mode
+
+
+def test_config_permissions(host):
+    """ensure config.py has correct permissions"""
+    f = host.file("/var/www/securedrop/config.py")
+    with host.sudo():
+        assert f.is_file
+        assert f.user == "root"
+        assert f.group == "www-data"
+        assert f.mode == 0o640
 
 
 def test_app_code_pkg(host):
@@ -78,16 +98,16 @@ def test_gpg_key_in_keyring(host):
 
 def test_ensure_logo(host):
     """ensure default logo header file exists"""
-    f = host.file("{}/static/i/logo.png".format(sdvars.securedrop_code))
+    f = host.file(f"{sdvars.securedrop_code}/static/i/logo.png")
     with host.sudo():
         assert f.mode == 0o644
-        assert f.user == sdvars.securedrop_user
-        assert f.group == sdvars.securedrop_user
+        assert f.user == "root"
+        assert f.group == "root"
 
 
-def test_securedrop_tmp_clean_cron(host):
-    """Ensure securedrop tmp clean cron job in place"""
+@pytest.mark.parametrize("user", ("root", "www-data"))
+def test_empty_crontabs(host, user):
+    """Ensure root + www-data crontabs are empty"""
     with host.sudo():
-        cronlist = host.run("crontab -l").stdout
-        cronjob = "@daily {}/manage.py clean-tmp".format(sdvars.securedrop_code)
-        assert cronjob in cronlist
+        # Returns exit code 1 when it's empty
+        host.run_expect([1], f"crontab -u {user} -l")

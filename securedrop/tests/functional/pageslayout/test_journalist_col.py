@@ -20,11 +20,11 @@ from typing import Generator, Tuple
 from uuid import uuid4
 
 import pytest
+from sdconfig import SecureDropConfig
+from tests.factories import SecureDropConfigFactory
 from tests.functional.app_navigators.journalist_app_nav import JournalistAppNavigator
 from tests.functional.conftest import SdServersFixtureResult, spawn_sd_servers
-from tests.functional.factories import SecureDropConfigFactory
-from tests.functional.pageslayout.utils import list_locales, save_screenshot_and_html
-from tests.functional.sd_config_v2 import SecureDropConfig
+from tests.functional.pageslayout.utils import list_locales, save_static_data
 
 
 def _create_source_and_submission_and_delete_source_key(config_in_use: SecureDropConfig) -> None:
@@ -39,20 +39,21 @@ def _create_source_and_submission_and_delete_source_key(config_in_use: SecureDro
 
 @pytest.fixture(scope="function")
 def _sd_servers_with_deleted_source_key(
-    setup_journalist_key_and_gpg_folder: Tuple[str, Path]
+    setup_journalist_key_and_gpg_folder: Tuple[str, Path],
+    setup_rqworker: Tuple[str, Path],
 ) -> Generator[SdServersFixtureResult, None, None]:
     """Same as sd_servers but spawns the apps with a source whose key was deleted.
 
     Slower than sd_servers as it is function-scoped.
     """
+    journalist_key_fingerprint, gpg_key_dir = setup_journalist_key_and_gpg_folder
+    worker_name, _ = setup_rqworker
     default_config = SecureDropConfigFactory.create(
         SECUREDROP_DATA_ROOT=Path(f"/tmp/sd-tests/functional-with-deleted-source-key-{uuid4()}"),
+        GPG_KEY_DIR=gpg_key_dir,
+        JOURNALIST_KEY=journalist_key_fingerprint,
+        RQ_WORKER_NAME=worker_name,
     )
-
-    # Ensure the GPG settings match the one in the config to use, to ensure consistency
-    journalist_key_fingerprint, gpg_dir = setup_journalist_key_and_gpg_folder
-    assert Path(default_config.GPG_KEY_DIR) == gpg_dir
-    assert default_config.JOURNALIST_KEY == journalist_key_fingerprint
 
     # Spawn the apps in separate processes with a callback to create a submission
     with spawn_sd_servers(
@@ -84,13 +85,13 @@ class TestJournalistLayoutCol:
 
         # Take a screenshot of the individual source's page when there is a document
         journ_app_nav.journalist_visits_col()
-        save_screenshot_and_html(journ_app_nav.driver, locale, "journalist-col")
+        save_static_data(journ_app_nav.driver, locale, "journalist-col")
         # The documentation uses an identical screenshot with a different name:
         # https://github.com/freedomofpress/securedrop-docs/blob/main/docs/images/manual
         # /screenshots/journalist-col_javascript.png
         # So we take the same screenshot again here
         # TODO(AD): Update the documentation to use a single screenshot
-        save_screenshot_and_html(journ_app_nav.driver, locale, "journalist-col_javascript")
+        save_static_data(journ_app_nav.driver, locale, "journalist-col_javascript")
 
         # Take a screenshot of the individual source's page when there are no documents
         journ_app_nav.journalist_clicks_delete_all_and_sees_confirmation()
@@ -102,7 +103,7 @@ class TestJournalistLayoutCol:
             assert submissions_after_confirming_count == 0
 
         journ_app_nav.nav_helper.wait_for(submission_deleted)
-        save_screenshot_and_html(journ_app_nav.driver, locale, "journalist-col_no_document")
+        save_static_data(journ_app_nav.driver, locale, "journalist-col_no_document")
 
     def test_col_has_no_key(self, locale, _sd_servers_with_deleted_source_key, firefox_web_driver):
         # Given an SD server with an already-submitted file, but the source's key was deleted
@@ -121,4 +122,4 @@ class TestJournalistLayoutCol:
 
         # Take a screenshot of the source's page after their key was deleted
         journ_app_nav.journalist_visits_col()
-        save_screenshot_and_html(journ_app_nav.driver, locale, "journalist-col_has_no_key")
+        save_static_data(journ_app_nav.driver, locale, "journalist-col_has_no_key")

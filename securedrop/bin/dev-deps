@@ -73,13 +73,38 @@ function maybe_use_tor() {
         # (restart a little flaky hence the kill)
         sudo kill "$(cat /run/tor/tor.pid)"; sudo service tor restart
         # print out the addresses and the JI client auth key
+
+        si_address="$(sudo -u debian-tor cat /var/lib/tor/services/source/hostname)"
+        ji_address="$(sudo -u debian-tor cat /var/lib/tor/services/journalist/hostname)"
+        ji_authkey="$(sudo -u debian-tor cat /tmp/k1.prv.key)"
+        sdkey_fpr="$(gpg --with-fingerprint --with-colons ./tests/files/test_journalist_key.pub | grep -e '^fpr' | tr -d 'fpr:')"
+
+        cat > /tmp/qubes-config.json <<EOF
+{
+  "submission_key_fpr": "${sdkey_fpr}",
+  "hidserv": {
+    "hostname": "${ji_address}",
+    "key": "${ji_authkey}"
+  },
+  "environment": "prod",
+  "vmsizes": {
+     "sd_app": 10,
+     "sd_log": 5
+  }
+}
+EOF
         echo
-        echo  ##############################################################################
         echo "Tor configuration complete! details as follows:"
-        echo "Source Interface:     http://$(sudo -u debian-tor cat /var/lib/tor/services/source/hostname)"
-        echo "Journalist Interface: http://$(sudo -u debian-tor cat /var/lib/tor/services/journalist/hostname)"
-        echo "Journalist Auth Key:  $(sudo -u debian-tor cat /tmp/k1.prv.key)"
-        echo  ##############################################################################
+        echo "--------"
+        echo "Source Interface:     http://${si_address}"
+        echo "Journalist Interface: http://${ji_address}"
+        echo "Journalist Auth Key:  ${ji_authkey}"
+        echo "--------"
+        echo
+        echo "SecureDrop Workstation config.json:"
+        echo "--------"
+        cat /tmp/qubes-config.json
+        echo "--------"
     fi
 }
 
@@ -130,4 +155,16 @@ function reset_demo() {
     else
         ./loaddata.py
     fi
+}
+
+function build_redwood() {
+    # Create a debug build of redwood and install it in the app-code virtualenv
+    # TODO: add live reload support
+    # We tell cargo to put its registry/crate cache and build cache in the target/ folder so
+    # it persists instead of being recreated from scratch each time the container starts.
+    # n.b. we can't re-use the host's caches because of permission differences
+    PATH="$PATH:/opt/cargo/bin/" \
+    CARGO_TARGET_DIR="${REPOROOT}/target/dev" CARGO_HOME="${REPOROOT}/target/cargo-dev" \
+        /opt/venvs/securedrop-build/bin/maturin build -m "${REPOROOT}/redwood/Cargo.toml"
+    /opt/venvs/securedrop-app-code/bin/pip install "${REPOROOT}"/target/dev/wheels/redwood-*.whl
 }

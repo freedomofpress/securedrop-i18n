@@ -16,7 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 import collections
-from typing import Dict, List, Set
+from typing import Dict, List, OrderedDict, Set
 
 from babel.core import (
     Locale,
@@ -25,9 +25,9 @@ from babel.core import (
     negotiate_locale,
     parse_locale,
 )
-from flask import Flask, g, request, session
+from flask import Flask, current_app, g, request, session
 from flask_babel import Babel
-from sdconfig import FALLBACK_LOCALE, SDConfig
+from sdconfig import FALLBACK_LOCALE, SecureDropConfig
 
 
 class RequestLocaleInfo:
@@ -99,7 +99,7 @@ class RequestLocaleInfo:
         return get_locale_identifier(parse_locale(str(self.locale)), sep="-")
 
 
-def configure_babel(config: SDConfig, app: Flask) -> Babel:
+def configure_babel(config: SecureDropConfig, app: Flask) -> Babel:
     """
     Set up Flask-Babel according to the SecureDrop configuration.
     """
@@ -128,7 +128,7 @@ def parse_locale_set(codes: List[str]) -> Set[Locale]:
     return {Locale.parse(code) for code in codes}
 
 
-def validate_locale_configuration(config: SDConfig, babel: Babel) -> None:
+def validate_locale_configuration(config: SecureDropConfig, babel: Babel) -> Set[Locale]:
     """
     Check that configured locales are available in the filesystem and therefore usable by
     Babel.  Warn about configured locales that are not usable, unless we're left with
@@ -157,16 +157,12 @@ def validate_locale_configuration(config: SDConfig, babel: Babel) -> None:
             f"None of the default locales {defaults} are in the set of usable locales {usable}"
         )
 
-    global USABLE_LOCALES
-    USABLE_LOCALES = usable
+    return usable
 
 
-# TODO(#6420): avoid relying on and manipulating on this global state
-LOCALES = collections.OrderedDict()  # type: collections.OrderedDict[str, RequestLocaleInfo]
-USABLE_LOCALES = set()  # type: Set[Locale]
-
-
-def map_locale_display_names(config: SDConfig) -> None:
+def map_locale_display_names(
+    config: SecureDropConfig, usable_locales: Set[Locale]
+) -> OrderedDict[str, RequestLocaleInfo]:
     """
     Create a map of locale identifiers to names for display.
 
@@ -183,7 +179,7 @@ def map_locale_display_names(config: SDConfig) -> None:
 
     locale_map = collections.OrderedDict()
     for l in sorted(config.SUPPORTED_LOCALES):
-        if Locale.parse(l) not in USABLE_LOCALES:
+        if Locale.parse(l) not in usable_locales:
             continue
 
         locale = RequestLocaleInfo(l)
@@ -193,17 +189,16 @@ def map_locale_display_names(config: SDConfig) -> None:
 
         locale_map[str(locale)] = locale
 
-    global LOCALES
-    LOCALES = locale_map
+    return locale_map
 
 
-def configure(config: SDConfig, app: Flask) -> None:
+def configure(config: SecureDropConfig, app: Flask) -> None:
     babel = configure_babel(config, app)
-    validate_locale_configuration(config, babel)
-    map_locale_display_names(config)
+    usable_locales = validate_locale_configuration(config, babel)
+    app.config["LOCALES"] = map_locale_display_names(config, usable_locales)
 
 
-def get_locale(config: SDConfig) -> str:
+def get_locale(config: SecureDropConfig) -> str:
     """
     Return the best supported locale for a request.
 
@@ -223,7 +218,8 @@ def get_locale(config: SDConfig) -> str:
     preferences.append(config.DEFAULT_LOCALE)
     preferences.append(FALLBACK_LOCALE)
 
-    negotiated = negotiate_locale(preferences, LOCALES.keys())
+    locales = current_app.config["LOCALES"]
+    negotiated = negotiate_locale(preferences, locales.keys())
 
     if not negotiated:
         raise ValueError("No usable locale")
@@ -257,11 +253,11 @@ def get_accepted_languages() -> List[str]:
     return accept_languages
 
 
-def set_locale(config: SDConfig) -> None:
+def set_locale(config: SecureDropConfig) -> None:
     """
     Update locale info in request and session.
     """
     locale = get_locale(config)
     g.localeinfo = RequestLocaleInfo(locale)  # pylint: disable=assigning-non-slot
     session["locale"] = locale
-    g.locales = LOCALES  # pylint: disable=assigning-non-slot
+    g.locales = current_app.config["LOCALES"]  # pylint: disable=assigning-non-slot

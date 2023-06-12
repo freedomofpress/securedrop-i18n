@@ -8,10 +8,10 @@ Create Date: 2022-01-12 19:31:06.186285
 import os
 import uuid
 
-import pyotp
+import argon2
 import sqlalchemy as sa
+import two_factor
 from alembic import op
-from passlib.hash import argon2
 
 # raise the errors if we're not in production
 raise_errors = os.environ.get("SECUREDROP_ENV", "prod") != "prod"
@@ -33,7 +33,7 @@ depends_on = None
 
 def generate_passphrase_hash() -> str:
     passphrase = PassphraseGenerator.get_default().generate_passphrase()
-    return argon2.using(**ARGON2_PARAMS).hash(passphrase)
+    return argon2.PasswordHasher(**ARGON2_PARAMS).hash(passphrase)
 
 
 def create_deleted() -> int:
@@ -53,7 +53,7 @@ def create_deleted() -> int:
         ).bindparams(
             uuid=str(uuid.uuid4()),
             passphrase_hash=generate_passphrase_hash(),
-            otp_secret=pyotp.random_base32(),
+            otp_secret=two_factor.random_base32(),
         )
     )
     # Get the autoincrement ID back
@@ -71,8 +71,8 @@ def migrate_nulls() -> None:
     needs_migration = []
     conn = op.get_bind()
     for table in tables:
-        result = conn.execute(  # nosec
-            f"SELECT 1 FROM {table} WHERE journalist_id IS NULL;"
+        result = conn.execute(
+            f"SELECT 1 FROM {table} WHERE journalist_id IS NULL;"  # nosec
         ).first()
         if result is not None:
             needs_migration.append(table)
@@ -82,14 +82,15 @@ def migrate_nulls() -> None:
 
     deleted_id = create_deleted()
     for table in needs_migration:
-        # The seen_ tables have UNIQUE(fk_id, journalist_id), so the deleted journalist can only have
-        # seen each item once. It is possible multiple NULL journalist have seen the same thing so we
-        # do this update in two passes.
+        # The seen_ tables have UNIQUE(fk_id, journalist_id), so the deleted journalist can only
+        # have seen each item once. It is possible multiple NULL journalist have seen the same thing
+        # so we do this update in two passes.
         # First we update as many rows to point to the deleted journalist as possible, ignoring any
         # unique key violations.
         op.execute(
             sa.text(
-                f"UPDATE OR IGNORE {table} SET journalist_id=:journalist_id WHERE journalist_id IS NULL;"
+                f"UPDATE OR IGNORE {table} SET journalist_id=:journalist_id "  # nosec
+                "WHERE journalist_id IS NULL;"
             ).bindparams(journalist_id=deleted_id)
         )
         # Then we delete any leftovers which had been ignored earlier.

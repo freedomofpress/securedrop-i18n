@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import binascii
 import os
 from typing import Optional, Union
@@ -31,12 +29,12 @@ from models import (
     Submission,
 )
 from passphrases import PassphraseGenerator
-from sdconfig import SDConfig
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm.exc import NoResultFound
+from two_factor import OtpTokenInvalid
 
 
-def make_blueprint(config: SDConfig) -> Blueprint:
+def make_blueprint() -> Blueprint:
     view = Blueprint("admin", __name__)
 
     @view.route("/", methods=("GET", "POST"))
@@ -226,7 +224,8 @@ def make_blueprint(config: SDConfig) -> Blueprint:
 
         if request.method == "POST":
             token = request.form["token"]
-            if user.verify_token(token):
+            try:
+                user.verify_2fa_token(token)
                 flash(
                     gettext(
                         'The two-factor code for user "{user}" was verified ' "successfully."
@@ -234,7 +233,8 @@ def make_blueprint(config: SDConfig) -> Blueprint:
                     "notification",
                 )
                 return redirect(url_for("admin.index"))
-            else:
+
+            except OtpTokenInvalid:
                 flash(
                     gettext("There was a problem verifying the two-factor code. Please try again."),
                     "error",
@@ -330,9 +330,7 @@ def make_blueprint(config: SDConfig) -> Blueprint:
         if user_id == session.get_uid():
             # Do not flash because the interface already has safe guards.
             # It can only happen by manually crafting a POST request
-            current_app.logger.error(
-                "Admin {} tried to delete itself".format(session.get_user().username)
-            )
+            current_app.logger.error(f"Admin {session.get_user().username} tried to delete itself")
             abort(403)
         elif not user:
             current_app.logger.error(
@@ -345,7 +343,7 @@ def make_blueprint(config: SDConfig) -> Blueprint:
             # Do not flash because the interface does not expose this.
             # It can only happen by manually crafting a POST request
             current_app.logger.error(
-                'Admin {} tried to delete "deleted" user'.format(session.get_user().username)
+                f'Admin {session.get_user().username} tried to delete "deleted" user'
             )
             abort(403)
         else:
@@ -366,6 +364,15 @@ def make_blueprint(config: SDConfig) -> Blueprint:
             user = Journalist.query.get(user_id)
         except NoResultFound:
             abort(404)
+
+        if user.id == session.get_uid():
+            current_app.logger.error(
+                "Admin {} tried to change their password without validation.".format(
+                    session.get_user().username
+                )
+            )
+            abort(403)
+
         password = request.form.get("password")
         if set_diceware_password(user, password, admin=True) is not False:
             current_app.session_interface.logout_user(user.id)  # type: ignore

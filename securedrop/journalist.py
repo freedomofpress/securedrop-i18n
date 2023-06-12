@@ -1,10 +1,11 @@
-# -*- coding: utf-8 -*-
 from encryption import EncryptionManager, GpgKeyNotFoundError
 from execution import asynchronous
 from journalist_app import create_app
 from models import Source
-from sdconfig import config
+from sdconfig import SecureDropConfig
 
+config = SecureDropConfig.get_current()
+# app is imported by journalist.wsgi
 app = create_app(config)
 
 

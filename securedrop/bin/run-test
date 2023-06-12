@@ -5,7 +5,9 @@ set -euo pipefail
 
 export PATH="/opt/venvs/securedrop-app-code/bin:$PATH"
 
-REPOROOT=$(git rev-parse --show-toplevel)
+cd ..
+export REPOROOT="${REPOROOT:-$PWD}"
+git config --global --add safe.directory "$REPOROOT"
 cd "${REPOROOT}/securedrop"
 
 PYTHONPATH=".:${PYTHONPATH:-}"
@@ -22,6 +24,7 @@ run_redis &
 setup_vncauth
 run_x11vnc &
 urandom
+build_redwood
 maybe_create_config_py
 
 if [ -n "${CIRCLE_BRANCH:-}" ] ; then
@@ -36,11 +39,11 @@ if [ -n "${CIRCLE_BRANCH:-}" ] ; then
 
         # download and validate codecov uploader
         echo "   Validating codecov uploader..."
-        curl https://keybase.io/codecovsecurity/pgp_keys.asc | gpg --no-default-keyring --keyring trustedkeys.gpg --import
+        gpg --no-default-keyring --keyring ./codecov.gpg --import tests/files/codecov.asc
         curl -Os https://uploader.codecov.io/latest/linux/codecov
         curl -Os https://uploader.codecov.io/latest/linux/codecov.SHA256SUM
         curl -Os https://uploader.codecov.io/latest/linux/codecov.SHA256SUM.sig
-        gpgv codecov.SHA256SUM.sig codecov.SHA256SUM
+        gpgv --keyring ./codecov.gpg codecov.SHA256SUM.sig codecov.SHA256SUM
         shasum -a 256 -c codecov.SHA256SUM
         chmod +x codecov
         echo "   Uploading coverage results to codecov..."

@@ -1,0 +1,274 @@
+<!--
+  Alert on cron-apt warnings and errors
+-->
+<group name="cron-apt">
+  <rule id="100002" level="0">
+    <decoded_as>cron-apt</decoded_as>
+    <description>Custom cron-apt alert</description>
+  </rule>
+
+  <rule id="100003" level="7">
+    <if_sid>100002</if_sid>
+    <status>W:</status>
+    <description>A cron-apt warning was detected</description>
+  </rule>
+
+  <rule id="100004" level="7">
+    <if_sid>100002</if_sid>
+    <status>E:</status>
+    <description>A cron-apt error was detected</description>
+  </rule>
+</group>
+
+<!--
+  The default iptables decoder just matches the string ^kernel
+  This will match all events in the kern.log. To get around this
+  use the rule option `<if_sid>100001</if_sid>` instead of
+  <decoded_as>kernel</decoded_as>
+-->
+<group name="kernel log">
+  <rule id="100001" level="0">
+    <decoded_as>iptables</decoded_as>
+  </rule>
+</group>
+<!--
+  Alert on apparmor denied events
+-->
+<group name="apparmor">
+  <rule id="100011" level="0">
+    <if_sid>100001</if_sid>
+    <status>STATUS</status>
+    <description>Apparmor status event</description>
+  </rule>
+
+  <rule id="100012" level="7">
+    <if_sid>100001</if_sid>
+    <status>DENIED</status>
+    <description>Apparmor denied event</description>
+  </rule>
+
+  <rule id="100013" level="0">
+    <if_sid>100001</if_sid>
+    <status>ALLOWED</status>
+    <description>Apparmor allowed event</description>
+  </rule>
+</group>
+
+<!--
+  Grsec related rules. Info and expected events should be whitelisted.
+  All other grsec events should be alerted on.
+-->
+<group name="grsec">
+  <rule id="100101" level="7">
+    <if_sid>100001</if_sid>
+    <match>grsec:</match>
+    <description>grsec error was detected</description>
+  </rule>
+
+  <rule id="100102" level="0">
+    <if_sid>100101</if_sid>
+    <match>time set by</match>
+    <description>time was set on the system</description>
+    <options>no_email_alert</options>
+  </rule>
+</group>
+
+<!--
+  fwupd auto-updates related rules.
+-->
+
+<group name="fwupd">
+  <rule id="100111" level="0">
+    <decoded_as>fwupd</decoded_as>
+    <match>Error opening directory</match>
+    <description>fwupd error</description>
+    <options>no_email_alert</options>
+  </rule>
+  <rule id="100112" level="0">
+    <decoded_as>fwupd</decoded_as>
+    <match>Failed to load SMBIOS</match>
+    <description>fwupd error for auto updates</description>
+    <options>no_email_alert</options>
+  </rule>
+  <rule id="100113" level="0">
+    <decoded_as>fwupd</decoded_as>
+    <match>The name org.freedesktop.UDisks2 was not provided by any .service files</match>
+    <description>fwupd error missing UDisks2</description>
+    <options>no_email_alert</options>
+  </rule>
+  <rule id="100114" level="0">
+    <decoded_as>fwupd</decoded_as>
+    <match>failed to get chassis type: no structure with type 03</match>
+    <description>fwupd error missing structure</description>
+    <options>no_email_alert</options>
+  </rule>
+</group>
+
+<!--
+  Do not alert on stagging VM dhcp client errors. These events should not occur
+  in production environments
+-->
+<group name="stagging vm errors">
+  <rule id="110030" level="0">
+    <decoded_as>dhclient</decoded_as>
+    <match>Failed to send 300 byte long packet over fallback interface.</match>
+    <description>dhcp error</description>
+    <options>no_email_alert</options>
+  </rule>
+</group>
+
+<!--
+  The python gnupg library that securedrop uses includes an obsolete option
+  WARNING:gnupg no-use-agent is an obsolete option - it has no effect
+  Do not send an alert for this event.
+-->
+<group name="do not alert">
+  <rule id="199997" level="0">
+    <decoded_as>gpg warning</decoded_as>
+    <match>--no-use-agent" is an obsolete option - it has no effect</match>
+    <description>no agent is an obsolete option</description>
+    <options>no_email_alert</options>
+  </rule>
+
+<!--
+  The rootcheck detects the hidden file blkid.tab as suspicious
+  do not send and alert for it.
+-->
+  <rule id="199998" level="0">
+    <if_sid>510</if_sid>
+    <match>/dev/.blkid.tab</match>
+    <options>no_email_alert</options>
+  </rule>
+
+  <rule id="199999" level="0">
+    <if_sid>510</if_sid>
+    <match>/dev/.blkid.tab.old</match>
+    <options>no_email_alert</options>
+  </rule>
+</group>
+
+<!--
+  Do not alert on attempted connections to the Tor HS on a port
+  the server is not listening on. Events are produced by
+  automated crawling/scanning.
+-->
+<group name="tor hs scans">
+  <rule id="200001" level="0">
+    <if_sid>1002</if_sid>
+    <match>connection_edge_process_relay_cell</match>
+    <options>no_email_alert</options>
+  </rule>
+</group>
+
+<!--
+  Do not send an email alert on overloaded Tor guard events.
+  These are purely informational notifications, but would be
+  a candidate for sending up to FPF for analysis in aggregate.
+-->
+<group name="tor guard overloaded">
+  <rule id="200002" level="0">
+    <if_sid>1002</if_sid>
+    <match>this means the Tor network is overloaded</match>
+    <options>no_email_alert</options>
+  </rule>
+</group>
+
+<!--
+  Do not alert on OSSEC keep alive messages sent to the OSSEC manager.
+  See https://github.com/freedomofpress/securedrop/issues/2138 for discussion
+  of this message, which may be removed in a future version of OSSEC.
+-->
+<group name="OSSEC keep alive">
+  <rule id="300001" level="0">
+    <if_sid>1002</if_sid>
+    <program_name>ossec-keepalive</program_name>
+    <regex>--\s*MARK\s*--</regex>
+    <options>no_email_alert</options>
+  </rule>
+</group>
+
+<!--
+  Alert on Ansible playbook runs on both servers. Note that administrators may
+  not realize what an "Ansible playbook" is, so we should be clear that this
+  means that securedrop-admin was executed with one of the options that involves
+  an Ansible playbook run.
+-->
+<group name="Ansible playbooks">
+  <rule id="400001" level="13">
+    <if_sid>1003</if_sid>
+    <program_name>ansible-apt_key</program_name>
+    <match>Invoked with file=None keyserver=None url=None</match>
+    <description>Ansible playbook run on server (securedrop-admin install, backup, or restore).</description>
+  </rule>
+</group>
+
+<!--
+  Do not send an email alert on OSSEC server/agent started message. These are
+  purely informational events.
+-->
+<group name="Ossec start notifications">
+  <rule id="400503" level="1">
+    <if_sid>503</if_sid>
+    <match>Agent started</match>
+    <description>This alert overrides 503 to suppress daily email alerts to admins.</description>
+    <options>no_email_alert</options>
+  </rule>
+
+  <rule id="400502" level="1">
+    <if_sid>502</if_sid>
+    <match>Ossec started</match>
+    <description>This alert overrides 502 to suppress daily email alerts to admins.</description>
+    <options>no_email_alert</options>
+  </rule>
+</group>
+
+<group name="Ossec daily notifications">
+  <rule id="400600" level="1" >
+    <if_sid>530</if_sid>
+    <options>alert_by_email</options> <!-- force email to be sent -->
+    <match>ossec: output: 'head -1 /var/lib/securedrop/submissions_today.txt</match>
+    <description>Boolean value indicating if there were submissions in the past 24h.</description>
+  </rule>
+</group>
+
+<group name="Apache logs">
+  <rule id="400700" level="7">
+    <if_sid>30301</if_sid>
+    <description>Apache application error.</description>
+  </rule>
+</group>
+
+<group name="sd_data_problems">
+  <rule id="400800" level="1" >
+    <if_sid>530</if_sid>
+    <options>alert_by_email</options> <!-- force email to be sent -->
+    <match>ossec: output: 'sudo -u www-data /opt/venvs/securedrop-app-code/bin/python3 /var/www/securedrop/manage.py check-disconnected-db-submissions'</match>
+    <regex>There are submissions in the database with no corresponding files\.</regex>
+    <description>Indicates that submissions in the database are missing their corresponding files.</description>
+  </rule>
+
+  <rule id="400801" level="1" >
+    <if_sid>530</if_sid>
+    <options>alert_by_email</options> <!-- force email to be sent -->
+    <match>ossec: output: 'sudo -u www-data /opt/venvs/securedrop-app-code/bin/python3 /var/www/securedrop/manage.py check-disconnected-fs-submissions'</match>
+    <regex>There are files in the submission area with no corresponding records in the database\.</regex>
+    <description>Indicates that there are files in the submission area without corresponding submissions in the database.</description>
+  </rule>
+</group>
+
+<group name="system_configuration">
+  <rule id="400900" level="12" >
+    <if_sid>530</if_sid>
+    <options>alert_by_email</options> <!-- force email to be sent -->
+    <match>ossec: output: '/var/ossec/checksdconfig.py'</match>
+    <regex>System configuration error:</regex>
+    <description>Indicates a problem with the configuration of the SecureDrop servers.</description>
+  </rule>
+  <rule id="400901" level="12" >
+    <if_sid>530</if_sid>
+    <options>alert_by_email</options> <!-- force email to be sent -->
+    <match>ossec: output: 'v2_service_check'</match>
+    <regex>HiddenServiceVersion 2</regex>
+    <description>v2 onion services are still enabled. Support for v2 onion services is deprecated and will be removed starting in March 2021. To preserve access to SecureDrop, you must migrate to v3 onion services: https://securedrop.org/v2-onion-eol</description>
+  </rule>
+</group>

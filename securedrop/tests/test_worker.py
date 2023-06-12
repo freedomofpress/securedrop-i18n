@@ -15,12 +15,10 @@ def layabout():
     time.sleep(3600)
 
 
-def start_rq_worker(config, queue_name=None):
+def start_rq_worker(config, queue_name):
     """
     Launches an rq worker process.
     """
-    if queue_name is None:
-        queue_name = config.RQ_WORKER_NAME
     return subprocess.Popen(
         [
             "/opt/venvs/securedrop-app-code/bin/rqworker",
@@ -32,16 +30,16 @@ def start_rq_worker(config, queue_name=None):
     )
 
 
-def test_no_interrupted_jobs(caplog):
+def test_no_interrupted_jobs(config, caplog):
     """
     Tests requeue_interrupted_jobs when there are no interrupted jobs.
     """
     caplog.set_level(logging.DEBUG)
 
-    q = worker.create_queue()
+    q = worker.create_queue(config.RQ_WORKER_NAME)
     try:
         assert len(q.get_job_ids()) == 0
-        worker.requeue_interrupted_jobs()
+        worker.requeue_interrupted_jobs(config.RQ_WORKER_NAME)
         assert "No interrupted jobs found in started job registry." in caplog.text
     finally:
         q.delete()
@@ -84,7 +82,7 @@ def test_job_interruption(config, caplog):
 
         # the running job should not be requeued
         worker.requeue_interrupted_jobs(queue_name)
-        skipped = "Skipping job {}, which is already being run by worker {}".format(job.id, w.key)
+        skipped = f"Skipping job {job.id}, which is already being run by worker {w.key}"
         assert skipped in caplog.text
 
         # kill the process group, to kill the worker and its workhorse
@@ -95,7 +93,7 @@ def test_job_interruption(config, caplog):
         # after killing the worker, the interrupted job should be requeued
         worker.requeue_interrupted_jobs(queue_name)
         print(caplog.text)
-        assert "Requeuing job {}".format(job) in caplog.text
+        assert f"Requeuing job {job}" in caplog.text
         assert len(q.get_job_ids()) == 1
     finally:
         q.delete()
@@ -134,7 +132,7 @@ def test_worker_for_job(config):
 
         logging.debug(
             [
-                "{}: state={}, job={}".format(w.pid, w.get_state(), w.get_current_job_id())
+                f"{w.pid}: state={w.get_state()}, job={w.get_current_job_id()}"
                 for w in worker.rq_workers(q)
             ]
         )

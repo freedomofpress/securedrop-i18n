@@ -1,5 +1,4 @@
 import difflib
-import io
 import os
 import warnings
 
@@ -21,23 +20,13 @@ def test_ssh_motd_disabled(host):
     assert not f.contains(r"pam\.motd")
 
 
-@pytest.mark.parametrize(
-    "package",
-    [
-        "linux-image-{}-grsec-securedrop",
-        "securedrop-grsec",
-    ],
-)
-def test_grsecurity_apt_packages(host, package):
+def test_grsecurity_apt_packages(host):
     """
     Ensure the grsecurity-related apt packages are present on the system.
     Includes the FPF-maintained metapackage, as well as paxctl, for managing
     PaX flags on binaries.
     """
-    KERNEL_VERSION = sdvars.grsec_version_focal
-    if package.startswith("linux-image"):
-        package = package.format(KERNEL_VERSION)
-    assert host.package(package).is_installed
+    assert host.package("securedrop-grsec").is_installed
 
 
 @pytest.mark.parametrize(
@@ -62,9 +51,9 @@ def test_generic_kernels_absent(host, package):
     # Can't use the TestInfra Package module to check state=absent,
     # so let's check by shelling out to `dpkg -l`. Dpkg will automatically
     # honor simple regex in package names.
-    c = host.run("dpkg -l {}".format(package))
+    c = host.run(f"dpkg -l {package}")
     assert c.rc == 1
-    error_text = "dpkg-query: no packages found matching {}".format(package)
+    error_text = f"dpkg-query: no packages found matching {package}"
     assert error_text in c.stderr.strip()
 
 
@@ -81,12 +70,10 @@ def test_grsecurity_lock_file(host):
 
 def test_grsecurity_kernel_is_running(host):
     """
-    Make sure the currently running kernel is specific grsec kernel.
+    Make sure the currently running kernel is our grsec kernel.
     """
-    KERNEL_VERSION = sdvars.grsec_version_focal
     c = host.run("uname -r")
     assert c.stdout.strip().endswith("-grsec-securedrop")
-    assert c.stdout.strip() == "{}-grsec-securedrop".format(KERNEL_VERSION)
 
 
 @pytest.mark.parametrize(
@@ -136,7 +123,7 @@ def test_grsecurity_paxtest(host):
         # https://github.com/freedomofpress/securedrop/issues/1039
         if host.system_info.codename == "focal":
             memcpy_result = "Vulnerable"
-        with io.open(paxtest_template_path, "r") as f:
+        with open(paxtest_template_path) as f:
             paxtest_template = Template(f.read().rstrip())
             paxtest_expected = paxtest_template.render(memcpy_result=memcpy_result)
 
@@ -214,12 +201,12 @@ def test_wireless_disabled_in_kernel_config(host, kernel_opts):
     remove wireless support from the kernel. Let's make sure wireless is
     disabled in the running kernel config!
     """
-    KERNEL_VERSION = sdvars.grsec_version_focal
+    kernel_version = host.run("uname -r").stdout.strip()
     with host.sudo():
-        kernel_config_path = "/boot/config-{}-grsec-securedrop".format(KERNEL_VERSION)
+        kernel_config_path = f"/boot/config-{kernel_version}"
         kernel_config = host.file(kernel_config_path).content_string
 
-        line = "# CONFIG_{} is not set".format(kernel_opts)
+        line = f"# CONFIG_{kernel_opts} is not set"
         assert line in kernel_config or kernel_opts not in kernel_config
 
 
@@ -236,12 +223,12 @@ def test_kernel_options_enabled_config(host, kernel_opts):
     Tests kernel config for options that should be enabled
     """
 
-    KERNEL_VERSION = sdvars.grsec_version_focal
+    kernel_version = host.run("uname -r").stdout.strip()
     with host.sudo():
-        kernel_config_path = "/boot/config-{}-grsec-securedrop".format(KERNEL_VERSION)
+        kernel_config_path = f"/boot/config-{kernel_version}"
         kernel_config = host.file(kernel_config_path).content_string
 
-        line = "{}=y".format(kernel_opts)
+        line = f"{kernel_opts}=y"
         assert line in kernel_config
 
 

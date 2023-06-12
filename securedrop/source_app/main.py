@@ -1,4 +1,3 @@
-import io
 import operator
 import os
 from base64 import urlsafe_b64encode
@@ -24,7 +23,7 @@ from flask import (
 from flask_babel import gettext
 from models import InstanceConfig, Reply, Submission, get_one_or_else
 from passphrases import DicewarePassphrase, PassphraseGenerator
-from sdconfig import SDConfig
+from sdconfig import SecureDropConfig
 from source_app.decorators import login_required
 from source_app.forms import LoginForm, SubmissionForm
 from source_app.session_manager import SessionManager
@@ -45,7 +44,7 @@ from source_user import (
 from store import Storage
 
 
-def make_blueprint(config: SDConfig) -> Blueprint:
+def make_blueprint(config: SecureDropConfig) -> Blueprint:
     view = Blueprint("main", __name__)
 
     @view.route("/")
@@ -118,7 +117,7 @@ def make_blueprint(config: SDConfig) -> Blueprint:
                     source_app_storage=Storage.get_default(),
                 )
             except (SourcePassphraseCollisionError, SourceDesignationCollisionError) as e:
-                current_app.logger.error("Could not create a source: {}".format(e))
+                current_app.logger.error(f"Could not create a source: {e}")
                 flash_msg(
                     "error",
                     None,
@@ -159,7 +158,7 @@ def make_blueprint(config: SDConfig) -> Blueprint:
                 reply.filename,
             )
             try:
-                with io.open(reply_path, "rb") as f:
+                with open(reply_path, "rb") as f:
                     contents = f.read()
                 decrypted_reply = EncryptionManager.get_default().decrypt_journalist_reply(
                     for_source_user=logged_in_source, ciphertext_in=contents

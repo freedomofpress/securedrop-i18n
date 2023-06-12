@@ -1,9 +1,7 @@
 #!/opt/venvs/securedrop-app-code/bin/python
-# -*- coding: utf-8 -*-
 
 import argparse
 import glob
-import io
 import json
 import logging
 import os
@@ -18,7 +16,6 @@ from pathlib import Path
 from typing import Dict, List, Optional, Set
 
 import version
-from sh import git, msgfmt, msgmerge, pybabel, sed, xgettext
 
 logging.basicConfig(format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger(__name__)
@@ -42,7 +39,7 @@ class I18NTool:
     #
     # name: English name of the language to the documentation, not for
     #       display in the interface.
-    # desktop: The language code used for dekstop icons.
+    # desktop: The language code used for desktop icons.
     #
     with open(I18N_CONF) as i18n_conf:
         conf = json.load(i18n_conf)
@@ -59,76 +56,156 @@ class I18NTool:
         Make sure we have a git remote for the i18n repo.
         """
 
-        k = {"_cwd": args.root}
-        if b"i18n" not in git.remote(**k).stdout:
-            git.remote.add("i18n", args.url, **k)
-        git.fetch("i18n", **k)
+        k = {"cwd": args.root}
+        if "i18n" not in subprocess.check_output(["git", "remote"], encoding="utf-8", **k):
+            subprocess.check_call(["git", "remote", "add", "i18n", args.url], **k)
+        subprocess.check_call(["git", "fetch", "i18n"], **k)
 
     def translate_messages(self, args: argparse.Namespace) -> None:
-        messages_file = os.path.join(args.translations_dir, "messages.pot")
+        messages_file = Path(args.translations_dir).absolute() / "messages.pot"
 
         if args.extract_update:
             if not os.path.exists(args.translations_dir):
                 os.makedirs(args.translations_dir)
             sources = args.sources.split(",")
-            pybabel.extract(
-                "--charset=utf-8",
-                "--mapping",
-                args.mapping,
-                "--output",
-                messages_file,
-                "--project=SecureDrop",
-                "--version",
-                args.version,
-                "--msgid-bugs-address=securedrop@freedom.press",
-                "--copyright-holder=Freedom of the Press Foundation",
-                "--add-comments=Translators:",
-                "--strip-comments",
-                "--add-location=never",
-                "--no-wrap",
-                *sources,
+            subprocess.check_call(
+                [
+                    "pybabel",
+                    "extract",
+                    "--charset=utf-8",
+                    "--mapping",
+                    args.mapping,
+                    "--output",
+                    messages_file,
+                    "--project=SecureDrop",
+                    "--version",
+                    args.version,
+                    "--msgid-bugs-address=securedrop@freedom.press",
+                    "--copyright-holder=Freedom of the Press Foundation",
+                    "--add-comments=Translators:",
+                    "--strip-comments",
+                    "--add-location=never",
+                    "--no-wrap",
+                    *sources,
+                ]
             )
 
-            sed("-i", "-e", '/^"POT-Creation-Date/d', messages_file)
+            msg_file_content = messages_file.read_text()
+            updated_content = _remove_from_content_line_with_text(
+                text='"POT-Creation-Date:', content=msg_file_content
+            )
+            messages_file.write_text(updated_content)
 
-            if self.file_is_modified(messages_file) and len(os.listdir(args.translations_dir)) > 1:
-                tglob = "{}/*/LC_MESSAGES/*.po".format(args.translations_dir)
+            if (
+                self.file_is_modified(str(messages_file))
+                and len(os.listdir(args.translations_dir)) > 1
+            ):
+                tglob = f"{args.translations_dir}/*/LC_MESSAGES/*.po"
                 for translation in glob.iglob(tglob):
-                    msgmerge("--previous", "--update", "--no-wrap", translation, messages_file)
-                log.warning("messages translations updated in {}".format(messages_file))
+                    subprocess.check_call(
+                        [
+                            "msgattrib",
+                            "--no-fuzzy",
+                            "--output-file",
+                            translation,
+                            translation,
+                        ]
+                    )
+                    subprocess.check_call(
+                        [
+                            "msgmerge",
+                            "--previous",
+                            "--update",
+                            "--no-fuzzy-matching",
+                            "--no-wrap",
+                            translation,
+                            messages_file,
+                        ]
+                    )
+                log.warning(f"messages translations updated in {messages_file}")
             else:
                 log.warning("messages translations are already up to date")
 
         if args.compile and len(os.listdir(args.translations_dir)) > 1:
-            pybabel.compile("--directory", args.translations_dir)
+            # Suppress all pybabel to hide warnings (e.g.
+            # https://github.com/python-babel/babel/issues/566) and verbose "compiling..." messages
+            subprocess.run(
+                ["pybabel", "compile", "--directory", args.translations_dir],
+                check=True,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+            )
 
     def translate_desktop(self, args: argparse.Namespace) -> None:
-        messages_file = os.path.join(args.translations_dir, "desktop.pot")
+        messages_file = Path(args.translations_dir).absolute() / "desktop.pot"
 
         if args.extract_update:
             sources = args.sources.split(",")
-            k = {"_cwd": args.translations_dir}
-            xgettext(
-                "--output=desktop.pot",
-                "--language=Desktop",
-                "--keyword",
-                "--keyword=Name",
-                "--package-version",
-                args.version,
-                "--msgid-bugs-address=securedrop@freedom.press",
-                "--copyright-holder=Freedom of the Press Foundation",
-                *sources,
-                **k,
-            )
-            sed("-i", "-e", '/^"POT-Creation-Date/d', messages_file, **k)
+            xgettext_flags = []
 
-            if self.file_is_modified(messages_file):
+            # First extract from JavaScript sources via Babel ("xgettext
+            # --language=JavaScript" can't parse gettext as exposed by GNOME
+            # JavaScript):
+            js_sources = [source for source in sources if ".js" in source]
+            if js_sources:
+                xgettext_flags.append("--join-existing")
+                subprocess.check_call(
+                    [
+                        "pybabel",
+                        "extract",
+                        "--charset=utf-8",
+                        "--mapping",
+                        args.mapping,
+                        "--output",
+                        "desktop.pot",
+                        "--project=SecureDrop",
+                        "--version",
+                        args.version,
+                        "--msgid-bugs-address=securedrop@freedom.press",
+                        "--copyright-holder=Freedom of the Press Foundation",
+                        "--add-comments=Translators:",
+                        "--strip-comments",
+                        "--add-location=never",
+                        "--no-wrap",
+                        *js_sources,
+                    ],
+                    cwd=args.translations_dir,
+                )
+
+            # Then extract from desktop templates via xgettext in appending
+            # "--join-existing" mode:
+            desktop_sources = [source for source in sources if ".js" not in source]
+            subprocess.check_call(
+                [
+                    "xgettext",
+                    *xgettext_flags,
+                    "--output=desktop.pot",
+                    "--language=Desktop",
+                    "--keyword",
+                    "--keyword=Name",
+                    "--package-version",
+                    args.version,
+                    "--msgid-bugs-address=securedrop@freedom.press",
+                    "--copyright-holder=Freedom of the Press Foundation",
+                    *desktop_sources,
+                ],
+                cwd=args.translations_dir,
+            )
+            msg_file_content = messages_file.read_text()
+            updated_content = _remove_from_content_line_with_text(
+                text='"POT-Creation-Date:', content=msg_file_content
+            )
+            messages_file.write_text(updated_content)
+
+            if self.file_is_modified(str(messages_file)):
                 for f in os.listdir(args.translations_dir):
                     if not f.endswith(".po"):
                         continue
                     po_file = os.path.join(args.translations_dir, f)
-                    msgmerge("--update", po_file, messages_file)
-                log.warning("messages translations updated in " + messages_file)
+                    subprocess.check_call(
+                        ["msgmerge", "--no-fuzzy-matching", "--update", po_file, messages_file]
+                    )
+                log.warning(f"messages translations updated in {messages_file}")
             else:
                 log.warning("desktop translations are already up to date")
 
@@ -140,17 +217,47 @@ class I18NTool:
             try:
                 open(linguas_file, "w").write(content)
 
-                for source in args.sources.split(","):
+                # First, compile each message catalog for normal gettext use.
+                # We have to iterate over them, rather than using "pybabel
+                # compile --directory", in order to replicate gettext's
+                # standard "{locale}/LC_MESSAGES/{domain}.mo" structure (like
+                # "securedrop/translations").
+                locale_dir = os.path.join(args.translations_dir, "locale")
+                for po in pos:
+                    locale = po.replace(".po", "")
+                    output_dir = os.path.join(locale_dir, locale, "LC_MESSAGES")
+                    subprocess.run(["mkdir", "--parents", output_dir], check=True)
+                    subprocess.run(
+                        [
+                            "msgfmt",
+                            "--output-file",
+                            os.path.join(output_dir, "messages.mo"),
+                            po,
+                        ],
+                        check=True,
+                        stdout=subprocess.DEVNULL,
+                        stderr=subprocess.DEVNULL,
+                        cwd=args.translations_dir,
+                    )
+
+                # Then use msgfmt to update the desktop files as usual.
+                desktop_sources = [
+                    source for source in args.sources.split(",") if ".js" not in source
+                ]
+                for source in desktop_sources:
                     target = source.rstrip(".in")
-                    msgfmt(
-                        "--desktop",
-                        "--template",
-                        source,
-                        "-o",
-                        target,
-                        "-d",
-                        ".",
-                        _cwd=args.translations_dir,
+                    subprocess.check_call(
+                        [
+                            "msgfmt",
+                            "--desktop",
+                            "--template",
+                            source,
+                            "-o",
+                            target,
+                            "-d",
+                            ".",
+                        ],
+                        cwd=args.translations_dir,
                     )
                     self.sort_desktop_template(join(args.translations_dir, target))
             finally:
@@ -182,7 +289,7 @@ class I18NTool:
         parser.add_argument(
             "--translations-dir",
             default=translations_dir,
-            help="Base directory for translation files (default {})".format(translations_dir),
+            help=f"Base directory for translation files (default {translations_dir})",
         )
         parser.add_argument(
             "--version",
@@ -195,7 +302,7 @@ class I18NTool:
         parser.add_argument(
             "--sources",
             default=sources,
-            help="Source files and directories to extract (default {})".format(sources),
+            help=f"Source files and directories to extract (default {sources})",
         )
 
     def set_translate_messages_parser(self, subps: _SubParsersAction) -> None:
@@ -209,7 +316,7 @@ class I18NTool:
         parser.add_argument(
             "--mapping",
             default=mapping,
-            help="Mapping of files to consider (default {})".format(mapping),
+            help=f"Mapping of files to consider (default {mapping})",
         )
         parser.set_defaults(func=self.translate_messages)
 
@@ -222,7 +329,19 @@ class I18NTool:
             "..",
             LOCALE_DIR["desktop"],
         )
-        sources = "desktop-journalist-icon.j2.in,desktop-source-icon.j2.in"
+        sources = ",".join(
+            [
+                "desktop-journalist-icon.j2.in",
+                "desktop-source-icon.j2.in",
+                "extension.js.in",
+            ]
+        )
+        mapping = join(dirname(realpath(__file__)), "babel.cfg")
+        parser.add_argument(
+            "--mapping",
+            default=mapping,
+            help=f"Mapping of files to consider (default {mapping})",
+        )
         self.set_translate_parser(parser, translations_dir, sources)
         parser.set_defaults(func=self.translate_desktop)
 
@@ -234,7 +353,7 @@ class I18NTool:
         )
         # nosemgrep: python.lang.security.audit.subprocess-shell-true.subprocess-shell-true
         if subprocess.call(cmd, shell=True):  # nosec
-            if "docker" in io.open("/proc/1/cgroup").read():
+            if "docker" in open("/proc/1/cgroup").read():
                 log.error(
                     "remember ~/.gitconfig does not exist "
                     "in the dev-shell Docker container, "
@@ -249,15 +368,14 @@ class I18NTool:
             l10n_content += "* " + info["name"] + " (``" + code + "``)\n"
         includes = abspath(join(args.docs_repo_dir, "docs/includes"))
         l10n_txt = join(includes, "l10n.txt")
-        io.open(l10n_txt, mode="w").write(l10n_content)
+        open(l10n_txt, mode="w").write(l10n_content)
         self.require_git_email_name(includes)
         if self.file_is_modified(l10n_txt):
-            k = {"_cwd": includes}
-            git.add("l10n.txt", **k)
+            subprocess.check_call(["git", "add", "l10n.txt"], cwd=includes)
             msg = "docs: update the list of supported languages"
-            git.commit("-m", msg, "l10n.txt", **k)
+            subprocess.check_call(["git", "commit", "-m", msg, "l10n.txt"], cwd=includes)
             log.warning(l10n_txt + " updated")
-            git_show_out = git.show(**k)
+            git_show_out = subprocess.check_output(["git", "show"], encoding="utf-8", cwd=includes)
             log.warning(git_show_out)
         else:
             log.warning(l10n_txt + " already up to date")
@@ -278,13 +396,15 @@ class I18NTool:
         self.ensure_i18n_remote(args)
 
         # Check out *all* remote changes to the LOCALE_DIRs.
-        git(
-            "-C",
-            args.root,
-            "checkout",
-            args.target,
-            "--",
-            *LOCALE_DIR.values(),
+        subprocess.check_call(
+            [
+                "git",
+                "checkout",
+                args.target,
+                "--",
+                *LOCALE_DIR.values(),
+            ],
+            cwd=args.root,
         )
 
         # Use the LOCALE_DIR corresponding to the "securedrop" component to
@@ -303,7 +423,7 @@ class I18NTool:
                 """
                 Add the file to the git index.
                 """
-                git("-C", args.root, "add", path)
+                subprocess.check_call(["git", "add", path], cwd=args.root)
                 paths.append(path)
 
             # Any translated locale may have changes that need to be staged from the
@@ -319,7 +439,7 @@ class I18NTool:
                 desktop_code = info["desktop"]
                 path = join(
                     LOCALE_DIR["desktop"],
-                    "{l}.po".format(l=desktop_code),  # noqa: E741
+                    f"{desktop_code}.po",  # noqa: E741
                 )
                 add(path)
             except KeyError:
@@ -353,7 +473,10 @@ class I18NTool:
 
         log_command.extend([args.target, "--", path])
 
-        log_lines = subprocess.check_output(log_command).decode("utf-8").strip().split("\n")
+        # NB. We use an explicit str.split("\n") here because str.splitlines() splits on a
+        # set of characters that includes the \x1e "record separator" we pass to "git log
+        # --format" in log_command.  See #6648.
+        log_lines = subprocess.check_output(log_command, encoding="utf-8").strip().split("\n")
         path_changes = [c.split("\x1e") for c in log_lines]
         path_changes = [
             c
@@ -361,7 +484,7 @@ class I18NTool:
             if len(c) > 1 and c[2] != since_commit and self.translated_commit_re.match(c[1])
         ]
         log.debug("Path changes for %s: %s", path, path_changes)
-        translators = set([c[0] for c in path_changes])
+        translators = {c[0] for c in path_changes}
         log.debug("Translators for %s: %s", path, translators)
         return translators
 
@@ -369,9 +492,8 @@ class I18NTool:
         """
         Returns the list of commit hashes involving the path, most recent first.
         """
-        return git(
-            "--no-pager", "-C", root, "log", "--format=%H", path, _encoding="utf-8"
-        ).splitlines()
+        cmd = ["git", "--no-pager", "log", "--format=%H", path]
+        return subprocess.check_output(cmd, encoding="utf-8", cwd=root).splitlines()
 
     def translated_locales(self, path: str) -> Dict[str, str]:
         """Return a dictionary of all locale directories present in `path`, where the keys
@@ -385,9 +507,8 @@ class I18NTool:
         """Check if any of the given paths have had changed staged.  If so, commit them."""
         self.require_git_email_name(args.root)
         authors = set()  # type: Set[str]
-        diffs = "{}".format(
-            git("--no-pager", "-C", args.root, "diff", "--name-only", "--cached", *paths)
-        )
+        cmd = ["git", "--no-pager", "diff", "--name-only", "--cached", *paths]
+        diffs = subprocess.check_output(cmd, cwd=args.root, encoding="utf-8")
 
         # If nothing was changed, "git commit" will return nonzero as a no-op.
         if len(diffs) == 0:
@@ -402,8 +523,10 @@ class I18NTool:
             path_commits = self.get_path_commits(args.root, path)
             since_commit = None
             for path_commit in path_commits:
-                commit_message = "{}".format(
-                    git("--no-pager", "-C", args.root, "show", path_commit, _encoding="utf-8")
+                commit_message = subprocess.check_output(
+                    ["git", "--no-pager", "show", path_commit],
+                    encoding="utf-8",
+                    cwd=args.root,
                 )
                 m = self.updated_commit_re.search(commit_message)
                 if m:
@@ -414,7 +537,9 @@ class I18NTool:
 
         authors_as_str = "\n  ".join(sorted(authors))
 
-        current = git("-C", args.root, "rev-parse", args.target)
+        current = subprocess.check_output(
+            ["git", "rev-parse", args.target], cwd=args.root, encoding="utf-8"
+        )
         message = textwrap.dedent(
             """
         l10n: updated {name} ({code})
@@ -427,7 +552,8 @@ class I18NTool:
           commit: {current}
         """
         ).format(remote=args.url, name=name, authors=authors_as_str, code=code, current=current)
-        git("-C", args.root, "commit", "-m", message, *paths)
+        subprocess.check_call(["git", "commit", "-m", message, *paths], cwd=args.root)
+        log.debug(f"Committing with this message: {message}")
 
     def set_update_from_weblate_parser(self, subps: _SubParsersAction) -> None:
         parser = subps.add_parser("update-from-weblate", help=("Import translations from weblate"))
@@ -544,9 +670,9 @@ class I18NTool:
             print("Listing all translators who have ever helped")
         else:
             since = args.since if args.since else self.get_last_release(args.root)
-            print("Listing translators who have helped since {}".format(since))
+            print(f"Listing translators who have helped since {since}")
         for code, info in sorted(self.supported_languages.items()):
-            translators = set([])
+            translators = set()
             paths = [
                 app_template.format(LOCALE_DIR["securedrop"], code),
                 desktop_template.format(info["desktop"]),
@@ -556,7 +682,7 @@ class I18NTool:
                     t = self.translators(args, path, since)
                     translators.update(t)
                 except Exception as e:
-                    print("Could not check git history of {}: {}".format(path, e), file=sys.stderr)
+                    print(f"Could not check git history of {path}: {e}", file=sys.stderr)
             print(
                 "{} ({}):{}".format(
                     code,
@@ -595,6 +721,18 @@ class I18NTool:
             return args.func(args)
         except KeyboardInterrupt:
             return signal.SIGINT
+
+
+def _remove_from_content_line_with_text(text: str, content: str) -> str:
+    # Split where the text is located; assume there is only one instance of the text
+    split_content = content.split(text)
+    assert len(split_content) == 2
+
+    # Remove the while line containing the text
+    content_before_line = split_content[0]
+    content_after_line = split_content[1].split("\n", maxsplit=1)[1]
+    updated_content = content_before_line + content_after_line
+    return updated_content
 
 
 if __name__ == "__main__":  # pragma: no cover

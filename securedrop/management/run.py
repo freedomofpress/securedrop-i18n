@@ -51,7 +51,7 @@ class DevServerProcess(subprocess.Popen):  # pragma: no cover
         self.cmd = cmd
         self.color = color
 
-        super(DevServerProcess, self).__init__(  # type: ignore
+        super().__init__(  # type: ignore
             self.cmd,
             stdin=subprocess.PIPE,
             stdout=subprocess.PIPE,
@@ -60,7 +60,7 @@ class DevServerProcess(subprocess.Popen):  # pragma: no cover
         )
 
     def print_label(self, to: TextIO) -> None:
-        label = "\n => {} <= \n\n".format(self.label)
+        label = f"\n => {self.label} <= \n\n"
         if to.isatty():
             label = colorize(label, self.color, True)
         to.write(label)
@@ -151,18 +151,18 @@ def run(args: Any) -> None:  # pragma: no cover
 
     """
     print(
-        """
- ____                                        ____
-/\\  _`\\                                     /\\  _`\\
-\\ \\,\\L\\_\\     __    ___   __  __  _ __    __\\ \\ \\/\\ \\  _ __   ___   _____
- \\/_\\__ \\   /'__`\\ /'___\\/\\ \\/\\ \\/\\`'__\\/'__`\\ \\ \\ \\ \\/\\`'__\\/ __`\\/\\ '__`\\
-   /\\ \\L\\ \\/\\  __//\\ \\__/\\ \\ \\_\\ \\ \\ \\//\\  __/\\ \\ \\_\\ \\ \\ \\//\\ \\L\\ \\ \\ \\L\\ \\  # noqa: E501
-   \\ `\\____\\ \\____\\ \\____\\\\ \\____/\\ \\_\\\\ \\____\\\\ \\____/\\ \\_\\\\ \\____/\\ \\ ,__/
-    \\/_____/\\/____/\\/____/ \\/___/  \\/_/ \\/____/ \\/___/  \\/_/ \\/___/  \\ \\ \\/
-                                                                      \\ \\_\\
-                                                                       \\/_/
+        r"""
+ ____                                       _____
+/\  _`\                                    /\  _ `\
+\ \,\L\_\    __    ___   __  __  _ __    __\ \ \/\ \  _ __   ___   _____
+ \/_\__ \  /'__`\ /'___\/\ \/\ \/\`'__\/'__`\ \ \ \ \/\`'__\/ __`\/\ '__`\
+  /\ \L\ \/\  __//\ \__/\ \ \_\ \ \ \//\  __/\ \ \_\ \ \ \//\ \L\ \ \ \L\ \
+  \ `\____\ \____\ \____\\ \____/\ \_\\ \____\\ \____/\ \_\\ \____/\ \ ,__/
+   \/_____/\/____/\/____/ \/___/  \/_/ \/____/ \/___/  \/_/ \/___/  \ \ \/
+                                                                     \ \_\
+                                                                      \/_/
 """
-    )  # noqa
+    )
 
     procs = [
         lambda: DevServerProcess("Source Interface", ["python", "source.py"], "blue"),

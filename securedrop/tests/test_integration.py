@@ -1,46 +1,27 @@
-# -*- coding: utf-8 -*-
-
 import gzip
 import os
 import random
 import re
 import zipfile
-from base64 import b32encode
-from binascii import unhexlify
 from io import BytesIO
+from unittest import mock
 
 import journalist_app as journalist_app_module
-import mock
 from bs4 import BeautifulSoup
 from db import db
 from encryption import EncryptionManager
 from flask import escape
 from journalist_app.sessions import session
-from pyotp import HOTP, TOTP
 from source_app.session_manager import SessionManager
 from store import Storage
-
-from . import utils
-from .test_encryption import import_journalist_private_key
-from .utils.instrument import InstrumentedApp
+from tests import utils
+from tests.test_encryption import import_journalist_private_key
+from tests.utils import login_journalist
+from two_factor import TOTP
 
 # Seed the RNG for deterministic testing
 random.seed("ಠ_ಠ")
 GENERATE_DATA = {"tor2web_check": 'href="fake.onion"'}
-
-
-def _login_user(app, user_dict):
-    resp = app.post(
-        "/login",
-        data={
-            "username": user_dict["username"],
-            "password": user_dict["password"],
-            "token": TOTP(user_dict["otp_secret"]).now(),
-        },
-        follow_redirects=True,
-    )
-    assert resp.status_code == 200
-    assert session.get_user() is not None
 
 
 def test_submit_message(journalist_app, source_app, test_journo, app_storage):
@@ -69,7 +50,9 @@ def test_submit_message(journalist_app, source_app, test_journo, app_storage):
 
     # Request the Journalist Interface index
     with journalist_app.test_client() as app:
-        _login_user(app, test_journo)
+        login_journalist(
+            app, test_journo["username"], test_journo["password"], test_journo["otp_secret"]
+        )
         resp = app.get("/")
         assert resp.status_code == 200
         text = resp.data.decode("utf-8")
@@ -164,7 +147,9 @@ def test_submit_file(journalist_app, source_app, test_journo, app_storage):
         app.get("/logout")
 
     with journalist_app.test_client() as app:
-        _login_user(app, test_journo)
+        login_journalist(
+            app, test_journo["username"], test_journo["password"], test_journo["otp_secret"]
+        )
         resp = app.get("/")
         assert resp.status_code == 200
         text = resp.data.decode("utf-8")
@@ -240,9 +225,7 @@ def test_submit_file(journalist_app, source_app, test_journo, app_storage):
         utils.asynchronous.wait_for_assertion(assertion)
 
 
-def _helper_test_reply(
-    journalist_app, source_app, config, test_journo, test_reply, expected_success=True
-):
+def _helper_test_reply(journalist_app, source_app, test_journo, test_reply, expected_success=True):
     test_msg = "This is a test message."
 
     with source_app.test_client() as app:
@@ -264,7 +247,9 @@ def _helper_test_reply(
         app.get("/logout")
 
     with journalist_app.test_client() as app:
-        _login_user(app, test_journo)
+        login_journalist(
+            app, test_journo["username"], test_journo["password"], test_journo["otp_secret"]
+        )
         resp = app.get("/")
         assert resp.status_code == 200
         text = resp.data.decode("utf-8")
@@ -279,7 +264,9 @@ def _helper_test_reply(
 
     # Create 2 replies to test deleting on journalist and source interface
     with journalist_app.test_client() as app:
-        _login_user(app, test_journo)
+        login_journalist(
+            app, test_journo["username"], test_journo["password"], test_journo["otp_secret"]
+        )
         for i in range(2):
             resp = app.post(
                 "/reply",
@@ -400,7 +387,7 @@ def _can_decrypt_with_source_secret_key(msg: bytes, source_gpg_secret: str) -> N
     )
 
 
-def test_reply_normal(journalist_app, source_app, test_journo, config):
+def test_reply_normal(journalist_app, source_app, test_journo):
     """Test for regression on #1360 (failure to encode bytes before calling
     gpg functions).
     """
@@ -409,14 +396,13 @@ def test_reply_normal(journalist_app, source_app, test_journo, config):
         _helper_test_reply(
             journalist_app,
             source_app,
-            config,
             test_journo,
             "This is a test reply.",
             True,
         )
 
 
-def test_unicode_reply_with_ansi_env(journalist_app, source_app, test_journo, config):
+def test_unicode_reply_with_ansi_env(journalist_app, source_app, test_journo):
     # This makes python-gnupg handle encoding equivalent to if we were
     # running SD in an environment where os.getenv("LANG") == "C".
     # Unfortunately, with the way our test suite is set up simply setting
@@ -430,7 +416,6 @@ def test_unicode_reply_with_ansi_env(journalist_app, source_app, test_journo, co
         _helper_test_reply(
             journalist_app,
             source_app,
-            config,
             test_journo,
             "ᚠᛇᚻ᛫ᛒᛦᚦ᛫ᚠᚱᚩᚠᚢᚱ᛫ᚠᛁᚱᚪ᛫ᚷᛖᚻᚹᛦᛚᚳᚢᛗ",
             True,
@@ -456,7 +441,9 @@ def test_delete_collection(mocker, source_app, journalist_app, test_journo):
         assert resp.status_code == 200
 
     with journalist_app.test_client() as app:
-        _login_user(app, test_journo)
+        login_journalist(
+            app, test_journo["username"], test_journo["password"], test_journo["otp_secret"]
+        )
         resp = app.get("/")
         # navigate to the collection page
         soup = BeautifulSoup(resp.data.decode("utf-8"), "html.parser")
@@ -474,10 +461,7 @@ def test_delete_collection(mocker, source_app, journalist_app, test_journo):
         assert resp.status_code == 200
 
         text = resp.data.decode("utf-8")
-        assert (
-            escape("The account and data for the source {} have been deleted.".format(col_name))
-            in text
-        )
+        assert escape(f"The account and data for the source {col_name} have been deleted.") in text
 
         assert "There are no submissions!" in text
 
@@ -510,7 +494,9 @@ def test_delete_collections(mocker, journalist_app, source_app, test_journo):
             app.get("/logout")
 
     with journalist_app.test_client() as app:
-        _login_user(app, test_journo)
+        login_journalist(
+            app, test_journo["username"], test_journo["password"], test_journo["otp_secret"]
+        )
         resp = app.get("/")
         # get all the checkbox values
         soup = BeautifulSoup(resp.data.decode("utf-8"), "html.parser")
@@ -525,7 +511,7 @@ def test_delete_collections(mocker, journalist_app, source_app, test_journo):
         )
         assert resp.status_code == 200
         text = resp.data.decode("utf-8")
-        assert "The accounts and all data for {} sources".format(num_sources) in text
+        assert f"The accounts and all data for {num_sources} sources" in text
 
         # simulate the source_deleter's work
         journalist_app_module.utils.purge_deleted_sources()
@@ -583,7 +569,9 @@ def test_filenames(source_app, journalist_app, test_journo):
 
     # navigate to the collection page
     with journalist_app.test_client() as app:
-        _login_user(app, test_journo)
+        login_journalist(
+            app, test_journo["username"], test_journo["password"], test_journo["otp_secret"]
+        )
         resp = app.get("/")
         soup = BeautifulSoup(resp.data.decode("utf-8"), "html.parser")
         first_col_url = soup.select("table#collections tr.source > th.designation a")[0]["href"]
@@ -611,7 +599,9 @@ def test_filenames_delete(journalist_app, source_app, test_journo):
 
     # navigate to the collection page
     with journalist_app.test_client() as app:
-        _login_user(app, test_journo)
+        login_journalist(
+            app, test_journo["username"], test_journo["password"], test_journo["otp_secret"]
+        )
         resp = app.get("/")
         soup = BeautifulSoup(resp.data.decode("utf-8"), "html.parser")
         first_col_url = soup.select("table#collections tr.source > th.designation a")[0]["href"]
@@ -645,7 +635,9 @@ def test_user_change_password(journalist_app, test_journo):
     their password"""
 
     with journalist_app.test_client() as app:
-        _login_user(app, test_journo)
+        login_journalist(
+            app, test_journo["username"], test_journo["password"], test_journo["otp_secret"]
+        )
         # change password
         new_pw = "another correct horse battery staply long password"
         assert new_pw != test_journo["password"]  # precondition
@@ -662,53 +654,8 @@ def test_user_change_password(journalist_app, test_journo):
 
     # start a new client/context to be sure we've cleared the session
     with journalist_app.test_client() as app:
-        # login with new credentials should redirect to index page
-        with InstrumentedApp(journalist_app) as ins:
-            resp = app.post(
-                "/login",
-                data=dict(
-                    username=test_journo["username"],
-                    password=new_pw,
-                    token=TOTP(test_journo["otp_secret"]).now(),
-                ),
-            )
-            ins.assert_redirects(resp, "/")
-
-
-def test_login_after_regenerate_hotp(journalist_app, test_journo):
-    """Test that journalists can login after resetting their HOTP 2fa"""
-
-    otp_secret = "0123456789abcdef0123456789abcdef01234567"
-    b32_otp_secret = b32encode(unhexlify(otp_secret))
-
-    # edit hotp
-    with journalist_app.test_client() as app:
-        _login_user(app, test_journo)
-        with InstrumentedApp(journalist_app) as ins:
-            resp = app.post("/account/reset-2fa-hotp", data=dict(otp_secret=otp_secret))
-            # valid otp secrets should redirect
-            ins.assert_redirects(resp, "/account/2fa")
-
-            resp = app.post("/account/2fa", data=dict(token=HOTP(b32_otp_secret).at(0)))
-            # successful verificaton should redirect to /account/account
-            ins.assert_redirects(resp, "/account/account")
-
-        # log out
-        app.get("/logout")
-
-    # start a new client/context to be sure we've cleared the session
-    with journalist_app.test_client() as app:
-        with InstrumentedApp(journalist_app) as ins:
-            # login with new 2fa secret should redirect to index page
-            resp = app.post(
-                "/login",
-                data=dict(
-                    username=test_journo["username"],
-                    password=test_journo["password"],
-                    token=HOTP(b32_otp_secret).at(1),
-                ),
-            )
-            ins.assert_redirects(resp, "/")
+        # login with new credentials
+        login_journalist(app, test_journo["username"], new_pw, test_journo["otp_secret"])
 
 
 def test_prevent_document_uploads(source_app, journalist_app, test_admin):
@@ -719,7 +666,9 @@ def test_prevent_document_uploads(source_app, journalist_app, test_admin):
 
     # Set allow_document_uploads = False:
     with journalist_app.test_client() as app:
-        _login_user(app, test_admin)
+        login_journalist(
+            app, test_admin["username"], test_admin["password"], test_admin["otp_secret"]
+        )
         form = journalist_app_module.forms.SubmissionPreferencesForm(
             prevent_document_uploads=True, min_message_length=0
         )
@@ -751,7 +700,9 @@ def test_no_prevent_document_uploads(source_app, journalist_app, test_admin):
 
     # Set allow_document_uploads = True:
     with journalist_app.test_client() as app:
-        _login_user(app, test_admin)
+        login_journalist(
+            app, test_admin["username"], test_admin["password"], test_admin["otp_secret"]
+        )
         form = journalist_app_module.forms.SubmissionPreferencesForm(
             prevent_document_uploads=False, min_message_length=0
         )

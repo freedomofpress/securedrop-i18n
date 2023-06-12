@@ -16,9 +16,10 @@ DEVSHELL := $(SDBIN)/dev-shell
 ######################################
 
 .PHONY: venv
-venv:  ## Provision a Python 3 virtualenv for development.
+venv: hooks  ## Provision a Python 3 virtualenv for development.
 	@echo "███ Preparing Python 3 virtual environment..."
 	@$(SDROOT)/devops/scripts/boot-strap-venv.sh
+	@echo "Make sure to run: source .venv/bin/activate"
 	@echo
 
 .PHONY: update-admin-pip-requirements
@@ -28,25 +29,29 @@ update-admin-pip-requirements:  ## Update admin requirements.
 .PHONY: update-python3-requirements
 update-python3-requirements:  ## Update Python 3 requirements with pip-compile.
 	@echo "███ Updating Python 3 requirements files..."
+	@SLIM_BUILD=1 $(DEVSHELL) pip-compile --generate-hashes \
+		--allow-unsafe \
+		--output-file requirements/python3/build-requirements.txt \
+		requirements/python3/build-requirements.in
 	@$(DEVSHELL) pip-compile --generate-hashes \
 		--allow-unsafe \
 		--output-file requirements/python3/develop-requirements.txt \
 		../admin/requirements-ansible.in \
 		../admin/requirements.in \
 		requirements/python3/develop-requirements.in
-	@$(DEVSHELL) pip-compile --generate-hashes \
+	@SLIM_BUILD=1 $(DEVSHELL) pip-compile --generate-hashes \
 		--allow-unsafe \
 		--output-file requirements/python3/test-requirements.txt \
 		requirements/python3/test-requirements.in
-	@$(DEVSHELL) pip-compile --generate-hashes \
+	@SLIM_BUILD=1 $(DEVSHELL) pip-compile --generate-hashes \
 				--allow-unsafe \
-		--output-file requirements/python3/securedrop-app-code-requirements.txt \
-		requirements/python3/securedrop-app-code-requirements.in
-	@$(DEVSHELL) pip-compile --generate-hashes \
+		--output-file requirements/python3/requirements.txt \
+		requirements/python3/requirements.in
+	@SLIM_BUILD=1 $(DEVSHELL) pip-compile --generate-hashes \
 		--allow-unsafe \
-		--output-file requirements/python3/docker-requirements.txt \
-		requirements/python3/docker-requirements.in
-	@$(DEVSHELL) pip-compile --generate-hashes \
+		--output-file requirements/python3/bootstrap-requirements.txt \
+		requirements/python3/bootstrap-requirements.in
+	@SLIM_BUILD=1 $(DEVSHELL) pip-compile --generate-hashes \
 		--allow-unsafe \
 		--output-file requirements/python3/translation-requirements.txt \
 		requirements/python3/translation-requirements.in
@@ -64,38 +69,22 @@ update-pip-requirements: update-admin-pip-requirements update-python3-requiremen
 .PHONY: check-black
 check-black: ## Check Python source code formatting with black
 	@echo "███ Running black check..."
-	@black --check --diff setup.py securedrop \
-                install_files \
-                journalist_gui \
-                molecule \
-                admin
+	@black --check --diff .
 	@echo
 
 .PHONY: black
 black: ## Update Python source code formatting with black
-	@black setup.py securedrop \
-                install_files \
-                journalist_gui \
-                molecule \
-                admin
+	@black securedrop .
 
 .PHONY: check-isort
 check-isort: ## Check Python import organization with isort
 	@echo "███ Running isort check..."
-	@isort --check-only --diff setup.py securedrop \
-                install_files \
-                journalist_gui \
-                molecule \
-                admin
+	@isort --check-only --diff .
 	@echo
 
 .PHONY: isort
 isort: ## Update Python import organization with isort
-	@isort setup.py securedrop \
-                install_files \
-                journalist_gui \
-                molecule \
-                admin
+	@isort .
 
 .PHONY: ansible-config-lint
 ansible-config-lint: ## Run custom Ansible linting tasks.
@@ -106,10 +95,8 @@ ansible-config-lint: ## Run custom Ansible linting tasks.
 .PHONY: app-lint
 app-lint:  ## Test pylint compliance.
 	@echo "███ Linting application code..."
-	@cd securedrop && find . -name '*.py' | xargs pylint --reports=no --errors-only \
+	@cd securedrop && find . -name '*.py' -or -path './scripts/*' | xargs pylint --reports=no --errors-only \
 	   --disable=no-name-in-module \
-	   --disable=unexpected-keyword-arg \
-	   --disable=too-many-function-args \
 	   --disable=import-error \
 	   --disable=no-member \
 	   --max-line-length=100
@@ -118,7 +105,7 @@ app-lint:  ## Test pylint compliance.
 .PHONY: app-lint-full
 app-lint-full: ## Test pylint compliance, with no checks disabled.
 	@echo "███ Linting application code with no checks disabled..."
-	@cd securedrop && find . -name '*.py' | xargs pylint
+	@cd securedrop && find . -name '*.py' -or -path './scripts/*' | xargs pylint
 	@echo
 
 .PHONY: flake8
@@ -136,15 +123,17 @@ html-lint:  ## Validate HTML in web application template files.
 		securedrop/source_templates/*.html securedrop/journalist_templates/*.html
 	@echo
 
+.PHONY: rust-lint
+rust-lint: ## Lint Rust code
+	@echo "███ Linting Rust code..."
+	cargo fmt --check
+	cargo clippy
+
 .PHONY: shellcheck
 shellcheck:  ## Lint shell scripts.
 	@echo "███ Linting shell scripts..."
 	@$(SDROOT)/devops/scripts/shellcheck.sh
 	@echo
-
-.PHONY: shellcheckclean
-shellcheckclean:  ## Clean up temporary container associated with shellcheck target.
-	@docker rm -f $(SDROOT)/shellcheck-targets
 
 .PHONY: typelint
 typelint:  ## Run mypy type linting.
@@ -155,7 +144,7 @@ typelint:  ## Run mypy type linting.
 .PHONY: yamllint
 yamllint:  ## Lint YAML files (does not validate syntax!).
 	@echo "███ Linting YAML files..."
-	@$(SDROOT)/devops/scripts/yaml-lint.sh
+	@yamllint --strict .
 	@echo
 
 .PHONY: lint
@@ -173,6 +162,19 @@ safety:  ## Run `safety check` to check python dependencies for vulnerabilities.
 		--ignore 42923 \
 		--ignore 45185 \
 		--ignore 49337 \
+		--ignore 51668 \
+		--ignore 52322 \
+                --ignore 52495 \
+                --ignore 52510 \
+                --ignore 52518 \
+                --ignore 54709 \
+                --ignore 54564 \
+                --ignore 54219 \
+                --ignore 54230 \
+                --ignore 54229 \
+                --ignore 54421 \
+                --ignore 55261 \
+                --ignore 58912 \
 		--full-report -r $$req_file \
 		&& echo -e '\n' \
 		|| exit 1; \
@@ -222,14 +224,11 @@ securedrop/config.py: ## Generate the test SecureDrop application config.
 	@echo "SUPPORTED_LOCALES = $$(if test -f /opt/venvs/securedrop-app-code/bin/python3; then ./securedrop/i18n_tool.py list-locales --python; else DOCKER_BUILD_VERBOSE=false $(DEVSHELL) ./i18n_tool.py list-locales --python; fi)" | sed 's/\r//' >> securedrop/config.py
 	@echo
 
-.PHONY: setup-dev-env
-setup-dev-env: venv add-hooks ## Set up tools and hooks for local development
+HOOKS_DIR=.githooks
 
-.PHONY: add-hooks
-add-hooks:  ## copy precommit hooks into place
-	@echo "███ copying git hooks..."
-	@mkdir -p .git/hooks
-	@cp .githooks/* .git/hooks
+.PHONY: hooks
+hooks:  ## Configure Git to use the hooks provided by this repository
+	git config core.hooksPath "$(HOOKS_DIR)"
 
 .PHONY: test-config
 test-config: securedrop/config.py
@@ -237,13 +236,13 @@ test-config: securedrop/config.py
 .PHONY: dev
 dev:  ## Run the development server in a Docker container.
 	@echo "███ Starting development server..."
-	@OFFSET_PORTS='false' DOCKER_BUILD_VERBOSE='true' $(DEVSHELL) $(SDBIN)/run
+	@OFFSET_PORTS='false' DOCKER_BUILD_VERBOSE='true' SLIM_BUILD=1 $(DEVSHELL) $(SDBIN)/run
 	@echo
 
 .PHONY: dev-tor
 dev-tor:  ## Run the development server with onion services in a Docker container.
-	@echo "███ Starting development server..."
-	@OFFSET_PORTS='false' DOCKER_BUILD_VERBOSE='true' USE_TOR='true' $(DEVSHELL) $(SDBIN)/run
+	@echo "███ Starting development server with onion services..."
+	@OFFSET_PORTS='false' DOCKER_BUILD_VERBOSE='true' USE_TOR='true' SLIM_BUILD=1 $(DEVSHELL) $(SDBIN)/run
 	@echo
 
 .PHONY: demo-landing-page
@@ -276,6 +275,9 @@ clean:  ## DANGER! Delete all uncommitted files, virtual machines, Onion address
 	@$(SDROOT)/devops/clean
 	@echo
 
+.PHONY: otp
+otp: ## Show (and opportunistically copy) the current development OTP (to the clipboard)
+	@$(SDROOT)/devops/scripts/otp-code.sh
 
 #########
 #
@@ -292,11 +294,22 @@ test:  ## Run the test suite in a Docker container.
 .PHONY: test-focal
 test-focal:  test
 
+.PHONY: rust-test
+rust-test:
+	@echo "███ Running Rust tests..."
+	cargo test
+
 .PHONY: validate-test-html
 validate-test-html:
 	@echo "███ Validating HTML source from $(shell find securedrop/tests/functional/pageslayout/html -name "*.html" | wc -l | xargs echo -n) page-layout test(s)"
 	@$(DEVSHELL) html5validator tests/functional/pageslayout/html
 	@echo
+
+.PHONY: accessibility-summary
+accessibility-summary:
+	@echo "███ Processing accessibility results..."
+	@$(DEVSHELL) $(SDBIN)/summarize-accessibility-info
+	cat securedrop/tests/functional/pageslayout/accessibility-info/summary.txt
 
 .PHONY: docker-vnc
 docker-vnc:  ## Open a VNC connection to a running Docker instance.
@@ -361,17 +374,57 @@ endif
 #
 ###########
 
+SCRIPT_MESSAGE="You can now examine or commit the log at:"
+SCRIPT_OUTPUT_PREFIX=$(SDROOT)/build/$(shell date +%Y%M%d)
+SCRIPT_OUTPUT_EXT=log
+
 .PHONY: build-debs
-build-debs: ## Build and test SecureDrop Debian packages (for Focal)
-	@echo "Building SecureDrop Debian packages for Focal..."
-	@$(SDROOT)/devops/scripts/build-debs.sh
+build-debs: OUT:=$(SCRIPT_OUTPUT_PREFIX)-securedrop.$(SCRIPT_OUTPUT_EXT)
+build-debs: ## Build and test SecureDrop Debian packages
+	@echo "Building SecureDrop Debian packages..."
+	@export TERM=dumb
+	@script \
+		--command $(SDROOT)/builder/build-debs.sh \
+		$(OUT)
 	@echo
+	@echo "$(SCRIPT_MESSAGE)"
+	@echo "$(OUT)"
 
 .PHONY: build-debs-notest
-build-debs-notest: ## Build SecureDrop Debian packages (for Focal) without running tests.
-	@echo "Building SecureDrop Debian packages for Focal; skipping tests..."
-	@$(SDROOT)/devops/scripts/build-debs.sh notest
+build-debs-notest: OUT:=$(SCRIPT_OUTPUT_PREFIX)-securedrop.$(SCRIPT_OUTPUT_EXT)
+build-debs-notest: ## Build SecureDrop Debian packages without running tests.
+	@echo "Building SecureDrop Debian packages, skipping tests..."
+	@export TERM=dumb
+	@NOTEST=1 script \
+		--command $(SDROOT)/builder/build-debs.sh \
+		$(OUT)
 	@echo
+	@echo "$(SCRIPT_MESSAGE)"
+	@echo "$(OUT)"
+
+.PHONY: build-debs-ossec
+build-debs-ossec: OUT:=$(SCRIPT_OUTPUT_PREFIX)-securedrop-ossec.$(SCRIPT_OUTPUT_EXT)
+build-debs-ossec: ## Build OSSEC Debian packages
+	@echo "Building OSSEC Debian packages"
+	@export TERM=dumb
+	@WHAT=ossec script \
+		--command $(SDROOT)/builder/build-debs.sh \
+		$(OUT)
+	@echo
+	@echo "$(SCRIPT_MESSAGE)"
+	@echo "$(OUT)"
+
+.PHONY: build-debs-ossec-notest
+build-debs-ossec-notest: OUT:=$(SCRIPT_OUTPUT_PREFIX)-securedrop-ossec.$(SCRIPT_OUTPUT_EXT)
+build-debs-ossec-notest: ## Build OSSEC Debian packages without running tests
+	@echo "Building OSSEC Debian packages, skipping tests..."
+	@export TERM=dumb
+	@NOTEST=1 WHAT=ossec script \
+	       --command $(SDROOT)/builder/build-debs.sh \
+	       $(OUT)
+	@echo
+	@echo "$(SCRIPT_MESSAGE)"
+	@echo "$(OUT)"
 
 
 ########################
@@ -416,7 +469,7 @@ vagrant-package:  ## Package a Vagrant box of the last stable SecureDrop release
 # Explanation of the below shell command should it ever break.
 # 1. Set the field separator to ":  ##" and any make targets that might appear between : and ##
 # 2. Use sed-like syntax to remove the make targets
-# 3. Format the split fields into $$1) the target name (in blue) and $$2) the target descrption
+# 3. Format the split fields into $$1) the target name (in blue) and $$2) the target description
 # 4. Pass this file as an arg to awk
 # 5. Sort it alphabetically
 # 6. Format columns with colon as delimiter.

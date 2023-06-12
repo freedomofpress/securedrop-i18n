@@ -12,8 +12,6 @@ from flask import Blueprint, abort, jsonify, request
 from journalist_app import utils
 from journalist_app.sessions import session
 from models import (
-    BadTokenException,
-    InvalidOTPSecretException,
     InvalidUsernameException,
     Journalist,
     LoginThrottledException,
@@ -23,10 +21,10 @@ from models import (
     Submission,
     WrongPasswordException,
 )
-from sdconfig import SDConfig
 from sqlalchemy import Column
 from sqlalchemy.exc import IntegrityError
 from store import NotEncrypted, Storage
+from two_factor import OtpSecretInvalid, OtpTokenInvalid
 from werkzeug.exceptions import default_exceptions
 
 
@@ -37,7 +35,7 @@ def get_or_404(model: db.Model, object_id: str, column: Column) -> db.Model:
     return result
 
 
-def make_blueprint(config: SDConfig) -> Blueprint:
+def make_blueprint() -> Blueprint:
     api = Blueprint("api", __name__)
 
     @api.route("/")
@@ -115,8 +113,8 @@ def make_blueprint(config: SDConfig) -> Blueprint:
         except (
             LoginThrottledException,
             InvalidUsernameException,
-            BadTokenException,
-            InvalidOTPSecretException,
+            OtpSecretInvalid,
+            OtpTokenInvalid,
             WrongPasswordException,
         ):
             return abort(403, "Token authentication failed.")
@@ -330,19 +328,19 @@ def make_blueprint(config: SDConfig) -> Blueprint:
             for file_uuid in request.json.get("files", []):
                 f = Submission.query.filter(Submission.uuid == file_uuid).one_or_none()
                 if f is None or not f.is_file:
-                    abort(404, "file not found: {}".format(file_uuid))
+                    abort(404, f"file not found: {file_uuid}")
                 targets.add(f)
 
             for message_uuid in request.json.get("messages", []):
                 m = Submission.query.filter(Submission.uuid == message_uuid).one_or_none()
                 if m is None or not m.is_message:
-                    abort(404, "message not found: {}".format(message_uuid))
+                    abort(404, f"message not found: {message_uuid}")
                 targets.add(m)
 
             for reply_uuid in request.json.get("replies", []):
                 r = Reply.query.filter(Reply.uuid == reply_uuid).one_or_none()
                 if r is None:
-                    abort(404, "reply not found: {}".format(reply_uuid))
+                    abort(404, f"reply not found: {reply_uuid}")
                 targets.add(r)
 
             # now mark everything seen.

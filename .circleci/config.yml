@@ -51,7 +51,23 @@ common-steps:
       paths:
         - /caches/layers.tar
 
-version: 2
+version: 2.1
+orbs:
+  slack: circleci/slack@4.4.4
+
+slack-fail-post-step: &slack-fail-post-step
+  post-steps:
+    - run:
+        name: Slack - Skip from Forks
+        command: |
+          if [ -z "$SLACK_ACCESS_TOKEN" ]; then
+            circleci-agent step halt
+          fi
+    - slack/notify:
+        channel: C01EY9C1X45
+        event: fail
+        template: basic_fail_1
+
 jobs:
   lint:
     machine:
@@ -75,7 +91,26 @@ jobs:
           name: Run all linters
           command: |
             fromtag=$(docker images |grep securedrop-test-focal-py3 |head -n1 |awk '{print $2}')
-            DOCKER_BUILD_ARGUMENTS="--cache-from securedrop-test-focal-py3:${fromtag:-latest}" securedrop/bin/dev-shell bash -c "sudo apt install shellcheck && /opt/venvs/securedrop-app-code/bin/pip3 install --require-hashes -r requirements/python3/develop-requirements.txt && make -C .. lint"
+            DOCKER_BUILD_ARGUMENTS="--cache-from securedrop-test-focal-py3:${fromtag:-latest}" securedrop/bin/dev-shell \
+                  bash -c "/opt/venvs/securedrop-app-code/bin/pip3 install --require-hashes -r requirements/python3/develop-requirements.txt && make -C .. lint"
+
+  rust:
+    # Keep version in sync with rust-toolchain.toml
+    docker:
+      - image: rust:1.69.0
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: |
+            apt-get update && apt-get install make --yes
+            rustup component add rustfmt
+            rustup component add clippy
+      - run:
+          name: Lint and test Rust code
+          command: |
+            make rust-lint
+            make rust-test
 
   app-tests:
     machine:
@@ -152,6 +187,13 @@ jobs:
             DOCKER_BUILD_ARGUMENTS="--cache-from securedrop-test-focal-py3:${fromtag:-latest}" \
               make validate-test-html || true
 
+      - run:
+          name: Validate accessibility (informational)
+          command: |
+            fromtag=$(docker images |grep securedrop-test-focal-py3 |head -n1 |awk '{print $2}')
+            DOCKER_BUILD_ARGUMENTS="--cache-from securedrop-test-focal-py3:${fromtag:-latest}" \
+              make accessibility-summary || true
+
       - store_test_results:
           path: ~/project/test-results
 
@@ -192,9 +234,9 @@ jobs:
 
   admin-tests:
     docker:
-      - image: cimg/python:3.7
+      - image: debian:bullseye
     steps:
-      - run: sudo apt update && sudo apt-get install -y make jq
+      - run: apt update && apt-get install -y make jq docker.io
       - checkout
       - setup_remote_docker
       - run:
@@ -204,27 +246,22 @@ jobs:
 
   updater-gui-tests:
     docker:
-      - image: cimg/python:3.8
+      - image: debian:bullseye
     steps:
       - checkout
-
       - run:
-          name: Install libqt5designer5
-          command: sudo apt-get update --allow-releaseinfo-change && sudo apt-get install -y libqt5designer5
-
-      - run:
-          name: Install requirements
+          name: Install dependencies
           command: |
+            apt update && apt-get install -y libqt5designer5 python3-venv
             cd journalist_gui
             python3 -m venv .venv/ && source .venv/bin/activate
             pip install --require-hashes -r dev-requirements.txt
-
       - run:
           name: Run tests
           command: |
             cd journalist_gui
-            python3 -m venv .venv/ && source .venv/bin/activate
-            QT_QPA_PLATFORM=offscreen python3 test_gui.py -v $2>/dev/null
+            source .venv/bin/activate
+            QT_QPA_PLATFORM=offscreen python3 test_gui.py -v
 
   static-analysis-and-no-known-cves:
     machine:
@@ -247,19 +284,22 @@ jobs:
           name: Check Python dependencies for CVEs
           command: |
             fromtag=$(docker images |grep securedrop-test-focal-py3 |head -n1 |awk '{print $2}')
-            DOCKER_BUILD_ARGUMENTS="--cache-from securedrop-test-focal-py3:${fromtag:-latest}" securedrop/bin/dev-shell bash -c "pip3 install -U -q --upgrade safety && make -C .. safety"
+            DOCKER_BUILD_ARGUMENTS="--cache-from securedrop-test-focal-py3:${fromtag:-latest}" securedrop/bin/dev-shell \
+                  bash -c "pip3 install -U -q --upgrade safety && make -C .. safety"
 
       - run:
           name: Run static security testing on source code with bandit
           command: |
             fromtag=$(docker images |grep securedrop-test-focal-py3 |head -n1 |awk '{print $2}')
-            DOCKER_BUILD_ARGUMENTS="--cache-from securedrop-test-focal-py3:${fromtag:-latest}" securedrop/bin/dev-shell bash -c "pip3 install -U -q --upgrade pip && pip3 install -U -q --upgrade bandit && make -C .. bandit"
+            DOCKER_BUILD_ARGUMENTS="--cache-from securedrop-test-focal-py3:${fromtag:-latest}" securedrop/bin/dev-shell \
+                  bash -c "pip3 install -U -q --upgrade pip && pip3 install -U -q --upgrade bandit && make -C .. bandit"
 
       - run:
           name: Run static security testing on source code with semgrep
           command: |
             fromtag=$(docker images |grep securedrop-test-focal-py3 |head -n1 |awk '{print $2}')
-            DOCKER_BUILD_ARGUMENTS="--cache-from securedrop-test-focal-py3:${fromtag:-latest}" securedrop/bin/dev-shell bash -c "pip3 install -U -q --upgrade pip && pip3 install -U -q --upgrade semgrep && make -C .. semgrep"
+            DOCKER_BUILD_ARGUMENTS="--cache-from securedrop-test-focal-py3:${fromtag:-latest}" securedrop/bin/dev-shell \
+                  bash -c "pip3 install -U -q --upgrade pip && pip3 install -U -q --upgrade semgrep && make -C .. semgrep"
 
   staging-test-with-rebase:
     machine:
@@ -292,25 +332,53 @@ jobs:
           path: ~/sd/junit
 
   deb-tests:
-    docker:
-      - image: cimg/python:3.8
+    machine:
+      image: ubuntu-2004:202010-01
+      enabled: true
     environment:
-      LC_ALL: C.UTF-8
-      LANG: C.UTF-8
+      DOCKER_API_VERSION: 1.23
+      BASE_OS: focal
     steps:
-      - run: sudo apt-get update && sudo apt-get install -y make virtualenv enchant jq python3-dev build-essential rsync
       - checkout
-      - setup_remote_docker
       - run:
-          name: Test Debian package build
+          name: Build debs
           command: |
-            make ci-deb-tests
+            make build-debs
+      - run:
+          name: Build OSSEC debs
+          command: |
+            make build-debs-ossec
+      - run:
+          name: Second round of builds
+          command: |
+            # TODO: use reprotest in the future
+            mv build/focal build/focal-first
+            make build-debs-notest
+            make build-debs-ossec-notest
+            mv build/focal build/focal-second
+      - run:
+          name: Run diffoscope
+          command: |
+            sha256sum build/focal-*/*.deb
+            # FIXME: securedrop-app-code isn't reproducible
+            for pkg in ossec-agent ossec-server securedrop-config securedrop-keyring securedrop-ossec-agent securedrop-ossec-server
+            do
+                echo "Checking ${pkg}..."
+                ./.venv/bin/diffoscope build/focal-first/${pkg}*.deb build/focal-second/${pkg}*.deb
+            done
 
 workflows:
   version: 2
   securedrop_ci:
     jobs:
-      - lint
+      - lint:
+          context:
+            - circleci-slack
+          <<: *slack-fail-post-step
+      - rust:
+          context:
+            - circleci-slack
+          <<: *slack-fail-post-step
       - app-tests:
           filters:
             branches:
@@ -319,6 +387,9 @@ workflows:
                 - /update-builder-.*/
           requires:
             - lint
+          context:
+            - circleci-slack
+          <<: *slack-fail-post-step
       - app-page-layout-tests:
           filters:
             branches:
@@ -327,46 +398,57 @@ workflows:
                 - /update-builder-.*/
           requires:
             - lint
+          context:
+            - circleci-slack
+          <<: *slack-fail-post-step
       - admin-tests:
           filters:
             branches:
               ignore:
                 - /i18n-.*/
                 - /update-builder-.*/
-          requires:
-            - lint
+          context:
+            - circleci-slack
+          <<: *slack-fail-post-step
       - updater-gui-tests:
           filters:
             branches:
               ignore:
                 - /i18n-.*/
                 - /update-builder-.*/
-          requires:
-            - lint
+          context:
+            - circleci-slack
+          <<: *slack-fail-post-step
       - static-analysis-and-no-known-cves:
           requires:
             - lint
+          context:
+            - circleci-slack
+          <<: *slack-fail-post-step
       - staging-test-with-rebase:
           filters:
             branches:
-              # Ignore needs to be here explicitely as only clause introduced in PR #6086 might be removed afterwards.
+              # Ignore needs to be here explicitly as only clause introduced in PR #6086 might be removed afterwards.
               ignore: /i18n-.*/
               only: /(stg-|release\/).*/
           requires:
             - lint
+          context:
+            - circleci-slack
+          <<: *slack-fail-post-step
       - translation-tests:
           requires:
             - lint
           filters:
             branches:
               only: /i18n-.*/
+          context:
+            - circleci-slack
+          <<: *slack-fail-post-step
       - deb-tests:
-          filters:
-            branches:
-              only:
-                - /update-builder-.*/
-          requires:
-            - lint
+          context:
+            - circleci-slack
+          <<: *slack-fail-post-step
 
   nightly:
     triggers:

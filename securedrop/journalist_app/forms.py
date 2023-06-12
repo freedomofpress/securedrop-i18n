@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import typing
 from typing import Any
 
@@ -7,7 +5,8 @@ from flask_babel import lazy_gettext as gettext
 from flask_babel import ngettext
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileAllowed, FileField, FileRequired
-from models import HOTP_SECRET_LENGTH, InstanceConfig, Journalist
+from models import InstanceConfig, Journalist
+from two_factor import HOTP
 from wtforms import (
     BooleanField,
     Field,
@@ -26,7 +25,7 @@ class RequiredIf(DataRequired):
         other_field_name: str,
         custom_message: typing.Optional[str] = None,
         *args: Any,
-        **kwargs: Any
+        **kwargs: Any,
     ) -> None:
 
         self.other_field_name = other_field_name
@@ -47,7 +46,7 @@ class RequiredIf(DataRequired):
                             other_name=self.other_field_name, name=field.name
                         )
                     )
-                super(RequiredIf, self).__call__(form, field)
+                super().__call__(form, field)
             else:
                 field.errors[:] = []
                 raise StopValidation()
@@ -64,7 +63,7 @@ class RequiredIf(DataRequired):
 def otp_secret_validation(form: FlaskForm, field: Field) -> None:
     strip_whitespace = field.data.replace(" ", "")
     input_length = len(strip_whitespace)
-    if input_length != HOTP_SECRET_LENGTH:
+    if input_length != HOTP.SECRET_HEX_LENGTH:
         raise ValidationError(
             ngettext(
                 "HOTP secrets are 40 characters long - you have entered {num}.",

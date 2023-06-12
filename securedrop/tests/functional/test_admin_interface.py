@@ -5,17 +5,17 @@ from uuid import uuid4
 
 import pytest
 from models import Journalist
+from sdconfig import SecureDropConfig
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.webdriver import WebDriver
 from selenium.webdriver.support import expected_conditions
+from tests.factories import SecureDropConfigFactory
 from tests.functional.app_navigators.journalist_app_nav import JournalistAppNavigator
 from tests.functional.app_navigators.source_app_nav import SourceAppNavigator
 from tests.functional.conftest import SdServersFixtureResult, spawn_sd_servers
 from tests.functional.db_session import get_database_session
-from tests.functional.factories import SecureDropConfigFactory
-from tests.functional.sd_config_v2 import SecureDropConfig
 
 
 class TestAdminInterfaceAddUser:
@@ -169,20 +169,21 @@ def _create_second_journalist(config_in_use: SecureDropConfig) -> None:
 
 @pytest.fixture(scope="function")
 def sd_servers_with_second_journalist(
-    setup_journalist_key_and_gpg_folder: Tuple[str, Path]
+    setup_journalist_key_and_gpg_folder: Tuple[str, Path],
+    setup_rqworker: Tuple[str, Path],
 ) -> Generator[SdServersFixtureResult, None, None]:
     """Sams as sd_servers but spawns the apps with an already-created second journalist.
 
     Slower than sd_servers as it is function-scoped.
     """
+    journalist_key_fingerprint, gpg_key_dir = setup_journalist_key_and_gpg_folder
+    worker_name, _ = setup_rqworker
     default_config = SecureDropConfigFactory.create(
-        SECUREDROP_DATA_ROOT=Path(f"/tmp/sd-tests/functional-with-second-journnalist-{uuid4()}"),
+        SECUREDROP_DATA_ROOT=Path(f"/tmp/sd-tests/functional-with-second-journalist-{uuid4()}"),
+        GPG_KEY_DIR=gpg_key_dir,
+        JOURNALIST_KEY=journalist_key_fingerprint,
+        RQ_WORKER_NAME=worker_name,
     )
-
-    # Ensure the GPG settings match the one in the config to use, to ensure consistency
-    journalist_key_fingerprint, gpg_dir = setup_journalist_key_and_gpg_folder
-    assert Path(default_config.GPG_KEY_DIR) == gpg_dir
-    assert default_config.JOURNALIST_KEY == journalist_key_fingerprint
 
     # Spawn the apps in separate processes with a callback to create a submission
     with spawn_sd_servers(
@@ -486,7 +487,7 @@ class TestAdminInterfaceEditConfig:
         journ_app_nav.admin_visits_system_config_page()
 
         # When they update the organization's name
-        assert "SecureDrop" == journ_app_nav.driver.title
+        assert "SecureDrop" in journ_app_nav.driver.title
         journ_app_nav.driver.find_element_by_id("organization_name").clear()
         new_org_name = "Walden Inquirer"
         journ_app_nav.nav_helper.safe_send_keys_by_id("organization_name", new_org_name)
@@ -494,7 +495,7 @@ class TestAdminInterfaceEditConfig:
         self._admin_submits_instance_settings_form(journ_app_nav)
 
         # Then it succeeds
-        assert new_org_name == journ_app_nav.driver.title
+        assert new_org_name in journ_app_nav.driver.title
 
         # And then, when a source user logs into the source app
         source_app_nav = SourceAppNavigator(

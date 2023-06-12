@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import json
 import random
 from datetime import datetime
@@ -8,7 +7,7 @@ from db import db
 from encryption import EncryptionManager
 from flask import url_for
 from models import Journalist, Reply, Source, SourceStar, Submission
-from pyotp import TOTP
+from two_factor import TOTP
 
 from .utils.api_helper import get_api_headers
 
@@ -89,7 +88,7 @@ def test_user_cannot_get_an_api_token_with_wrong_password(journalist_app, test_j
         assert response.json["error"] == "Forbidden"
 
 
-def test_user_cannot_get_an_api_token_with_wrong_2fa_token(journalist_app, test_journo, hardening):
+def test_user_cannot_get_an_api_token_with_wrong_2fa_token(journalist_app, test_journo):
     with journalist_app.test_client() as app:
         response = app.post(
             url_for("api.get_token"),
@@ -107,7 +106,7 @@ def test_user_cannot_get_an_api_token_with_wrong_2fa_token(journalist_app, test_
         assert response.json["error"] == "Forbidden"
 
 
-def test_user_cannot_get_an_api_token_with_no_passphase_field(journalist_app, test_journo):
+def test_user_cannot_get_an_api_token_with_no_passphrase_field(journalist_app, test_journo):
     with journalist_app.test_client() as app:
         valid_token = TOTP(test_journo["otp_secret"]).now()
         response = app.post(
@@ -1020,16 +1019,16 @@ def test_malformed_auth_token(journalist_app, journalist_api_token):
 
     with journalist_app.test_client() as app:
         # precondition to ensure token is even valid
-        resp = app.get(url, headers={"Authorization": "Token {}".format(journalist_api_token)})
+        resp = app.get(url, headers={"Authorization": f"Token {journalist_api_token}"})
         assert resp.status_code == 200
 
-        resp = app.get(url, headers={"Authorization": "not-token {}".format(journalist_api_token)})
+        resp = app.get(url, headers={"Authorization": f"not-token {journalist_api_token}"})
         assert resp.status_code == 403
 
         resp = app.get(url, headers={"Authorization": journalist_api_token})
         assert resp.status_code == 403
 
-        resp = app.get(url, headers={"Authorization": "too many {}".format(journalist_api_token)})
+        resp = app.get(url, headers={"Authorization": f"too many {journalist_api_token}"})
         assert resp.status_code == 403
 
 

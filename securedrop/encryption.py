@@ -9,6 +9,7 @@ from typing import Dict, List, Optional
 
 import pretty_bad_protocol as gnupg
 from redis import Redis
+from sdconfig import SecureDropConfig
 
 if typing.TYPE_CHECKING:
     from source_user import SourceUser
@@ -115,20 +116,18 @@ class EncryptionManager:
         try:
             self.get_journalist_public_key()
         except GpgKeyNotFoundError:
-            raise EnvironmentError(
+            raise OSError(
                 f"The journalist public key with fingerprint {journalist_key_fingerprint}"
                 f" has not been imported into GPG."
             )
 
     @classmethod
     def get_default(cls) -> "EncryptionManager":
-        # Late import so the module can be used without a config.py in the parent folder
-        from sdconfig import config
-
         global _default_encryption_mgr
         if _default_encryption_mgr is None:
+            config = SecureDropConfig.get_current()
             _default_encryption_mgr = cls(
-                gpg_key_dir=Path(config.GPG_KEY_DIR),
+                gpg_key_dir=config.GPG_KEY_DIR,
                 journalist_key_fingerprint=config.JOURNALIST_KEY,
             )
         return _default_encryption_mgr

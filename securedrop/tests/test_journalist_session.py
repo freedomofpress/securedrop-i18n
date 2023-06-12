@@ -1,16 +1,13 @@
-# -*- coding: utf-8 -*-
 import json
-import re
 from datetime import datetime, timedelta, timezone
-from urllib.parse import urlparse
 
 from flask import Response, url_for
 from flask.sessions import session_json_serializer
 from itsdangerous import URLSafeTimedSerializer
-from pyotp import TOTP
 from redis import Redis
-
-from .utils.api_helper import get_api_headers
+from tests.utils import login_journalist
+from tests.utils.api_helper import get_api_headers
+from two_factor import TOTP
 
 redis = Redis()
 
@@ -40,25 +37,6 @@ def _get_session(sid, journalist_app, api=False):
     return session_json_serializer.loads(redis.get(key))
 
 
-# Helper function to login and return the response
-# Returns the raw response object
-def _login_user(app, journo):
-    resp = app.post(
-        url_for("main.login"),
-        data={
-            "username": journo["username"],
-            "password": journo["password"],
-            "token": TOTP(journo["otp_secret"]).now(),
-        },
-        follow_redirects=False,
-    )
-
-    assert resp.status_code == 302
-    assert urlparse(resp.headers["Location"]).path == url_for("main.index")
-
-    return resp
-
-
 # Helper function to extract a the session cookie from the cookiejar when testing as client
 # Returns the session cookie value
 def _session_from_cookiejar(cookie_jar, journalist_app):
@@ -77,10 +55,9 @@ def test_session_login(journalist_app, test_journo):
     # Given a test client and a valid journalist user
     with journalist_app.test_client() as app:
         # When sending a correct login request
-        resp = _login_user(app, test_journo)
-        # Then a set-cookie header and a cookie: vary header are returned
-        assert "Set-Cookie" in list(resp.headers.keys())
-        assert "Cookie" in resp.headers["Vary"]
+        login_journalist(
+            app, test_journo["username"], test_journo["password"], test_journo["otp_secret"]
+        )
 
         # When checking the local session cookie jar
         session_cookie = _session_from_cookiejar(app.cookie_jar, journalist_app)
@@ -105,7 +82,7 @@ def test_session_login(journalist_app, test_journo):
 
         # Finally load the main page
         resp = app.get(url_for("main.index"))
-        # And expect a successfull status code
+        # And expect a successful status code
         assert resp.status_code == 200
 
 
@@ -114,8 +91,10 @@ def test_session_renew(journalist_app, test_journo):
     # Given a test client and a valid journalist user
     with journalist_app.test_client() as app:
         # When sending a correct login request
-        resp = _login_user(app, test_journo)
-        # Then check session existance, signature, and redis payload
+        login_journalist(
+            app, test_journo["username"], test_journo["password"], test_journo["otp_secret"]
+        )
+        # Then check session existence, signature, and redis payload
         session_cookie = _session_from_cookiejar(app.cookie_jar, journalist_app)
         assert session_cookie is not None
 
@@ -151,7 +130,9 @@ def test_session_logout(journalist_app, test_journo):
     # Given a test client and a valid journalist user
     with journalist_app.test_client() as app:
         # When sending a correct login request
-        resp = _login_user(app, test_journo)
+        login_journalist(
+            app, test_journo["username"], test_journo["password"], test_journo["otp_secret"]
+        )
         # Then check session as in the previous tests
         session_cookie = _session_from_cookiejar(app.cookie_jar, journalist_app)
         assert session_cookie is not None
@@ -176,11 +157,13 @@ def test_session_admin_change_password_logout(journalist_app, test_journo, test_
     # Given a test client and a valid journalist user
     with journalist_app.test_client() as app:
         # When sending a correct login request
-        resp = _login_user(app, test_journo)
+        login_journalist(
+            app, test_journo["username"], test_journo["password"], test_journo["otp_secret"]
+        )
         session_cookie = _session_from_cookiejar(app.cookie_jar, journalist_app)
         assert session_cookie is not None
         # Then save the cookie for later
-        cookie_val = re.search(r"js=(.*?);", resp.headers["set-cookie"]).group(1)
+        cookie_val = session_cookie.value
         # Then also save the session id for later
         sid = _check_sig(session_cookie.value, journalist_app)
         assert (redis.get(journalist_app.config["SESSION_KEY_PREFIX"] + sid)) is not None
@@ -188,7 +171,12 @@ def test_session_admin_change_password_logout(journalist_app, test_journo, test_
     # Given a another test client and a valid admin user
     with journalist_app.test_client() as admin_app:
         # When sending a valid login request as the admin user
-        _login_user(admin_app, test_admin)
+        login_journalist(
+            admin_app,
+            test_admin["username"],
+            test_admin["password"],
+            test_admin["otp_secret"],
+        )
         # When changing password of the journalist (non-admin) user
         resp = admin_app.post(
             url_for("admin.new_password", user_id=test_journo["id"]),
@@ -197,11 +185,11 @@ def test_session_admin_change_password_logout(journalist_app, test_journo, test_
         )
         # Then the password change has been successful
         assert resp.status_code == 302
-        # Then the journalis (non-admin) user session does no longer exist in redis
+        # Then the journalist (non-admin) user session does no longer exist in redis
         assert (redis.get(journalist_app.config["SESSION_KEY_PREFIX"] + sid)) is None
 
     with journalist_app.test_client() as app:
-        # Add our original cookie back in to the session, and try to re-use it
+        # Add our original cookie back into the session, and try to re-use it
         app.set_cookie(
             "localhost.localdomain",
             "js",
@@ -220,7 +208,9 @@ def test_session_change_password_logout(journalist_app, test_journo):
     # Given a test client and a valid journalist user
     with journalist_app.test_client() as app:
         # When sending a correct login request
-        resp = _login_user(app, test_journo)
+        login_journalist(
+            app, test_journo["username"], test_journo["password"], test_journo["otp_secret"]
+        )
         # Then check session as the previous tests
         session_cookie = _session_from_cookiejar(app.cookie_jar, journalist_app)
         assert session_cookie is not None
@@ -261,7 +251,9 @@ def test_session_login_regenerate_sid(journalist_app, test_journo):
         assert session_cookie_pre_login is not None
 
         # When sending a valid login request using the same client (same cookiejar)
-        resp = _login_user(app, test_journo)
+        login_journalist(
+            app, test_journo["username"], test_journo["password"], test_journo["otp_secret"]
+        )
         session_cookie_post_login = _session_from_cookiejar(app.cookie_jar, journalist_app)
         # Then the two session ids are different as the session id gets regenerated post login
         assert session_cookie_post_login != session_cookie_pre_login
@@ -316,7 +308,7 @@ def test_session_api_login(journalist_app, test_journo):
         response = app.get(
             url_for("api.get_current_user"), headers=get_api_headers(resp.json["token"])
         )
-        # Then the reuqest is successful and the correct journalist id is returned
+        # Then the request is successful and the correct journalist id is returned
         assert response.status_code == 200
         assert response.json["uuid"] == test_journo["uuid"]
 
@@ -413,7 +405,7 @@ def test_session_bad_signature(journalist_app, test_journo):
         signer = URLSafeTimedSerializer(
             journalist_app.secret_key, journalist_app.config["SESSION_SIGNER_SALT"]
         )
-        # Given a valid token signed with the corrects secret key and tje Journalist Interface salt
+        # Given a valid token signed with the corrects secret key and the Journalist Interface salt
         token_not_api_salt = signer.dumps(sid)
 
         # When requesting an authenticated endpoint with such token
@@ -445,7 +437,7 @@ def test_session_race_condition(mocker, journalist_app, test_journo):
         # When manually setting the journalist uid in session
         session["uid"] = test_journo["id"]
 
-        # When manually builfing a Flask repsonse object
+        # When manually building a Flask response object
         app.response = Response()
         # When manually calling save_session() to write the session in redis
         journalist_app.session_interface.save_session(journalist_app, session, app.response)

@@ -1,37 +1,18 @@
-# -*- coding: utf-8 -*-
-
-import io
 import os
 import shutil
 import signal
+import subprocess
 import time
 from os.path import abspath, dirname, exists, getmtime, join, realpath
+from pathlib import Path
+from unittest.mock import patch
 
 import i18n_tool
 import pytest
-from mock import patch
-from sh import git, msginit, pybabel, sed, touch
+from tests.test_i18n import set_msg_translation_in_po_file
 
 
-def dummy_translate(po):
-    buf = None
-    with io.open(po, "r") as in_file:
-        buf = in_file.readlines()
-
-    with io.open(po, "w") as out_file:
-        for line in buf:
-            if line.startswith("msgid "):
-                out_file.write(line)
-                idstr = line.split("msgid ", 1)
-                out_file.write("msgstr {}".format(idstr[1]))
-
-            elif line.startswith("msgstr "):
-                pass
-            else:
-                out_file.write(line)
-
-
-class TestI18NTool(object):
+class TestI18NTool:
     def setup(self):
         self.dir = abspath(dirname(realpath(__file__)))
 
@@ -64,7 +45,7 @@ class TestI18NTool(object):
         )
         messages_file = join(str(tmpdir), "desktop.pot")
         assert exists(messages_file)
-        with io.open(messages_file) as fobj:
+        with open(messages_file) as fobj:
             pot = fobj.read()
             assert "SecureDrop Source Interfaces" in pot
         # pretend this happened a few seconds ago
@@ -73,9 +54,7 @@ class TestI18NTool(object):
 
         i18n_file = join(str(tmpdir), "source.desktop")
 
-        #
         # Extract+update but do not compile
-        #
         old_messages_mtime = getmtime(messages_file)
         assert not exists(i18n_file)
         i18n_tool.I18NTool().main(
@@ -93,29 +72,31 @@ class TestI18NTool(object):
         current_messages_mtime = getmtime(messages_file)
         assert old_messages_mtime < current_messages_mtime
 
-        locale = "fr_FR"
-        po_file = join(str(tmpdir), locale + ".po")
-        msginit(
-            "--no-translator", "--locale", locale, "--output", po_file, "--input", messages_file
-        )
-        source = "SecureDrop Source Interfaces"
-        sed("-i", "-e", '/{}/,+1s/msgstr ""/msgstr "SOURCE FR"/'.format(source), po_file)
-        assert exists(po_file)
+        for locale, translation in [
+            ("fr_FR", "SOURCE FR"),
+            # Regression test for #4192; bug when adding Romanian as an accepted language
+            ("ro", "SOURCE RO"),
+        ]:
+            po_file = Path(tmpdir) / f"{locale}.po"
+            subprocess.check_call(
+                [
+                    "msginit",
+                    "--no-translator",
+                    "--locale",
+                    locale,
+                    "--output",
+                    po_file,
+                    "--input",
+                    messages_file,
+                ]
+            )
+            set_msg_translation_in_po_file(
+                po_file=po_file,
+                msgid_to_translate="SecureDrop Source Interfaces",
+                msgstr=translation,
+            )
 
-        # Regression test to trigger bug introduced when adding
-        # Romanian as an accepted language.
-        locale = "ro"
-        po_file = join(str(tmpdir), locale + ".po")
-        msginit(
-            "--no-translator", "--locale", locale, "--output", po_file, "--input", messages_file
-        )
-        source = "SecureDrop Source Interfaces"
-        sed("-i", "-e", '/{}/,+1s/msgstr ""/msgstr "SOURCE RO"/'.format(source), po_file)
-        assert exists(po_file)
-
-        #
         # Compile but do not extract+update
-        #
         old_messages_mtime = current_messages_mtime
         i18n_tool.I18NTool().main(
             [
@@ -129,11 +110,11 @@ class TestI18NTool(object):
             ]
         )
         assert old_messages_mtime == getmtime(messages_file)
-        with io.open(po_file) as fobj:
+        with open(po_file) as fobj:
             po = fobj.read()
             assert "SecureDrop Source Interfaces" in po
             assert "SecureDrop Journalist Interfaces" not in po
-        with io.open(i18n_file) as fobj:
+        with open(i18n_file) as fobj:
             i18n = fobj.read()
             assert "SOURCE FR" in i18n
 
@@ -157,23 +138,40 @@ class TestI18NTool(object):
         i18n_tool.I18NTool().main(args)
         messages_file = join(str(tmpdir), "messages.pot")
         assert exists(messages_file)
-        with io.open(messages_file, "rb") as fobj:
+        with open(messages_file, "rb") as fobj:
             pot = fobj.read()
             assert b"code hello i18n" in pot
             assert b"template hello i18n" in pot
 
         locale = "en_US"
         locale_dir = join(str(tmpdir), locale)
-        pybabel("init", "-i", messages_file, "-d", str(tmpdir), "-l", locale)
+        subprocess.check_call(
+            [
+                "pybabel",
+                "init",
+                "-i",
+                messages_file,
+                "-d",
+                str(tmpdir),
+                "-l",
+                locale,
+            ]
+        )
 
-        po_file = join(locale_dir, "LC_MESSAGES/messages.po")
-        dummy_translate(po_file)
+        # Add a dummy translation
+        po_file = Path(locale_dir) / "LC_MESSAGES/messages.po"
+        for msgid in ["code hello i18n", "template hello i18n"]:
+            set_msg_translation_in_po_file(
+                po_file=po_file,
+                msgid_to_translate=msgid,
+                msgstr=msgid,
+            )
 
         mo_file = join(locale_dir, "LC_MESSAGES/messages.mo")
         assert not exists(mo_file)
         i18n_tool.I18NTool().main(args)
         assert exists(mo_file)
-        with io.open(mo_file, mode="rb") as fobj:
+        with open(mo_file, mode="rb") as fobj:
             mo = fobj.read()
             assert b"code hello i18n" in mo
             assert b"template hello i18n" in mo
@@ -197,14 +195,16 @@ class TestI18NTool(object):
         )
         messages_file = join(str(tmpdir), "messages.pot")
         assert exists(messages_file)
-        with io.open(messages_file) as fobj:
+        with open(messages_file) as fobj:
             pot = fobj.read()
             assert "code hello i18n" in pot
 
         locale = "en_US"
         locale_dir = join(str(tmpdir), locale)
         po_file = join(locale_dir, "LC_MESSAGES/messages.po")
-        pybabel(["init", "-i", messages_file, "-d", str(tmpdir), "-l", locale])
+        subprocess.check_call(
+            ["pybabel", "init", "-i", messages_file, "-d", str(tmpdir), "-l", locale]
+        )
         assert exists(po_file)
         # pretend this happened a few seconds ago
         few_seconds_ago = time.time() - 60
@@ -231,7 +231,11 @@ class TestI18NTool(object):
 
         #
         # Translation would occur here - let's fake it
-        dummy_translate(po_file)
+        set_msg_translation_in_po_file(
+            po_file=Path(po_file),
+            msgid_to_translate="code hello i18n",
+            msgstr="code hello i18n",
+        )
 
         #
         # Compile but do not extract+update
@@ -250,31 +254,31 @@ class TestI18NTool(object):
             ]
         )
         assert current_po_mtime == getmtime(po_file)
-        with io.open(mo_file, mode="rb") as fobj:
+        with open(mo_file, mode="rb") as fobj:
             mo = fobj.read()
             assert b"code hello i18n" in mo
             assert b"template hello i18n" not in mo
 
     def test_require_git_email_name(self, tmpdir):
-        k = {"_cwd": str(tmpdir)}
-        git("init", **k)
+        k = {"cwd": str(tmpdir)}
+        subprocess.check_call(["git", "init"], **k)
         with pytest.raises(Exception) as excinfo:
             i18n_tool.I18NTool.require_git_email_name(str(tmpdir))
         assert "please set name" in str(excinfo.value)
 
-        git.config("user.email", "you@example.com", **k)
-        git.config("user.name", "Your Name", **k)
+        subprocess.check_call(["git", "config", "user.email", "you@example.com"], **k)
+        subprocess.check_call(["git", "config", "user.name", "Your Name"], **k)
         assert i18n_tool.I18NTool.require_git_email_name(str(tmpdir))
 
     def test_update_docs(self, tmpdir, caplog):
-        k = {"_cwd": str(tmpdir)}
-        git.init(**k)
-        git.config("user.email", "you@example.com", **k)
-        git.config("user.name", "Your Name", **k)
+        k = {"cwd": str(tmpdir)}
+        subprocess.check_call(["git", "init"], **k)
+        subprocess.check_call(["git", "config", "user.email", "you@example.com"], **k)
+        subprocess.check_call(["git", "config", "user.name", "Your Name"], **k)
         os.makedirs(join(str(tmpdir), "docs/includes"))
-        touch("docs/includes/l10n.txt", **k)
-        git.add("docs/includes/l10n.txt", **k)
-        git.commit("-m", "init", **k)
+        subprocess.check_call(["touch", "docs/includes/l10n.txt"], **k)
+        subprocess.check_call(["git", "add", "docs/includes/l10n.txt"], **k)
+        subprocess.check_call(["git", "commit", "-m", "init"], **k)
 
         i18n_tool.I18NTool().main(["--verbose", "update-docs", "--docs-repo-dir", str(tmpdir)])
         assert "l10n.txt updated" in caplog.text
@@ -286,23 +290,23 @@ class TestI18NTool(object):
         d = str(tmpdir)
         for repo in ("i18n", "securedrop"):
             os.mkdir(join(d, repo))
-            k = {"_cwd": join(d, repo)}
-            git.init(**k)
-            git.config("user.email", "you@example.com", **k)
-            git.config("user.name", "Loïc Nordhøy", **k)
-            touch("README.md", **k)
-            git.add("README.md", **k)
-            git.commit("-m", "README", "README.md", **k)
+            k = {"cwd": join(d, repo)}
+            subprocess.check_call(["git", "init"], **k)
+            subprocess.check_call(["git", "config", "user.email", "you@example.com"], **k)
+            subprocess.check_call(["git", "config", "user.name", "Loïc Nordhøy"], **k)
+            subprocess.check_call(["touch", "README.md"], **k)
+            subprocess.check_call(["git", "add", "README.md"], **k)
+            subprocess.check_call(["git", "commit", "-m", "README", "README.md"], **k)
         for o in os.listdir(join(self.dir, "i18n")):
             f = join(self.dir, "i18n", o)
             if os.path.isfile(f):
                 shutil.copyfile(f, join(d, "i18n", o))
             else:
                 shutil.copytree(f, join(d, "i18n", o))
-        k = {"_cwd": join(d, "i18n")}
-        git.add("securedrop", "install_files", **k)
-        git.commit("-m", "init", "-a", **k)
-        git.checkout("-b", "i18n", "master", **k)
+        k = {"cwd": join(d, "i18n")}
+        subprocess.check_call(["git", "add", "securedrop", "install_files"], **k)
+        subprocess.check_call(["git", "commit", "-m", "init", "-a"], **k)
+        subprocess.check_call(["git", "checkout", "-b", "i18n", "master"], **k)
 
         def r():
             return "".join([str(l) for l in caplog.records])
@@ -365,23 +369,33 @@ class TestI18NTool(object):
         )
         assert "l10n: updated Dutch (nl)" not in r()
         assert "l10n: updated German (de_DE)" not in r()
-        message = str(git("--no-pager", "-C", "securedrop", "show", _cwd=d, _encoding="utf-8"))
+        message = subprocess.check_output(
+            ["git", "--no-pager", "-C", "securedrop", "show"],
+            cwd=d,
+            encoding="utf-8",
+        )
         assert "Loïc" in message
 
-        #
         # an update is done to nl in weblate
-        #
-        k = {"_cwd": join(d, "i18n")}
-        f = "securedrop/translations/nl/LC_MESSAGES/messages.po"
-        sed("-i", "-e", "s/inactiviteit/INACTIVITEIT/", f, **k)
-        git.add(f, **k)
-        git.config("user.email", "somone@else.com", **k)
-        git.config("user.name", "Someone Else", **k)
-        git.commit("-m", "translation change", f, **k)
+        i18n_dir = Path(d) / "i18n"
+        po_file = i18n_dir / "securedrop/translations/nl/LC_MESSAGES/messages.po"
+        content = po_file.read_text()
+        text_to_update = "inactiviteit"
+        assert text_to_update in content
+        updated_content = content.replace(text_to_update, "INACTIVITEIT")
+        po_file.write_text(updated_content)
 
-        k = {"_cwd": join(d, "securedrop")}
-        git.config("user.email", "somone@else.com", **k)
-        git.config("user.name", "Someone Else", **k)
+        k = {"cwd": join(d, "i18n")}
+        subprocess.check_call(["git", "add", str(po_file)], **k)
+        subprocess.check_call(["git", "config", "user.email", "somone@else.com"], **k)
+        subprocess.check_call(["git", "config", "user.name", "Someone Else"], **k)
+        subprocess.check_call(
+            ["git", "commit", "-m", "Translated using Weblate", str(po_file)], **k
+        )
+
+        k = {"cwd": join(d, "securedrop")}
+        subprocess.check_call(["git", "config", "user.email", "somone@else.com"], **k)
+        subprocess.check_call(["git", "config", "user.name", "Someone Else"], **k)
 
         #
         # the nl translation update from weblate is copied
@@ -402,6 +416,27 @@ class TestI18NTool(object):
         )
         assert "l10n: updated Dutch (nl)" in r()
         assert "l10n: updated German (de_DE)" not in r()
-        message = str(git("--no-pager", "-C", "securedrop", "show", _cwd=d))
+
+        # The translator is credited in Git history.
+        message = subprocess.check_output(
+            ["git", "--no-pager", "-C", "securedrop", "show"],
+            cwd=d,
+            encoding="utf-8",
+        )
         assert "Someone Else" in message
         assert "Loïc" not in message
+
+        # The "list-translators" command correctly reads the translator from Git history.
+        caplog.clear()
+        i18n_tool.I18NTool().main(
+            [
+                "--verbose",
+                "list-translators",
+                "--all",
+                "--root",
+                join(str(tmpdir), "securedrop"),
+                "--url",
+                join(str(tmpdir), "i18n"),
+            ]
+        )
+        assert "Someone Else" in caplog.text
