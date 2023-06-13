@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SecureDrop 0.4.3\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2023-03-16 01:13+0000\n"
-"Last-Translator: Cory Francis Myers <cory@freedom.press>\n"
+"PO-Revision-Date: 2023-06-13 19:56+0000\n"
+"Last-Translator: Guilherme <gui.rugai.freire@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.securedrop.org/projects/securedrop/securedrop/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -472,8 +472,6 @@ msgstr "Não lida"
 msgid "Read"
 msgstr "Lida"
 
-#, fuzzy
-#| msgid "Uploaded Document"
 msgid "Uploaded File"
 msgstr "Documento Carregado"
 
@@ -522,6 +520,16 @@ msgid ""
 "All files, messages, and replies will also be deleted when their account is deleted.\n"
 "</p>"
 msgstr ""
+"<p> \n"
+"Apagar a conta de <b>{source}</b> irá: \n"
+"</p> \n"
+"<ul> \n"
+"<li>impedir de se logar com seu codinome novamente \n"
+"<li>impedir sua organização de enviar respostas \n"
+"</ul> \n"
+"<p> \n"
+"Todos os arquivos, mensagens e respostas também serão apagados quando a conta for apagada. \n"
+"</p>"
 
 msgid "Yes, Delete Source Account"
 msgstr "Sim, apagar a conta da fonte"
@@ -687,10 +695,8 @@ msgstr "Desmarcar"
 msgid "Designation"
 msgstr "Designação"
 
-#, fuzzy
-#| msgid "Filename"
 msgid "Files"
-msgstr "Nome do arquivo"
+msgstr "Arquivos"
 
 msgid "Messages"
 msgstr "Mensagens"
@@ -699,7 +705,7 @@ msgid "Date"
 msgstr "Data"
 
 msgid "There are no submissions!"
-msgstr ""
+msgstr "Não há submissões!"
 
 msgid "Filter by codename"
 msgstr "filtrar por codinome"
@@ -791,15 +797,11 @@ msgstr "Agradecemos pela informação. Por favor, retorne mais tarde para ler as
 msgid "Thanks! We received your message."
 msgstr "Agradecemos a contribuição. Recebemos a sua mensagem."
 
-#, fuzzy
-#| msgid "Thanks! We received your message."
 msgid "Thanks! We received your file."
-msgstr "Agradecemos a contribuição. Recebemos a sua mensagem."
+msgstr "Agradecemos a contribuição. Recebemos seu arquivo."
 
-#, fuzzy
-#| msgid "Thanks! We received your message."
 msgid "Thanks! We received your file and message."
-msgstr "Agradecemos a contribuição. Recebemos a sua mensagem."
+msgstr "Agradecemos a contribuição. Recebemos seu arquivo e mensagem."
 
 msgid "Reply deleted"
 msgstr "Resposta apagada"
@@ -843,10 +845,8 @@ msgstr "Procurar um codinome..."
 msgid "Powered by"
 msgstr "Este site utiliza o"
 
-#, fuzzy
-#| msgid "Please note: Sharing sensitive documents may put you at risk, even when using Tor and SecureDrop."
 msgid "Please note: Sharing sensitive information may put you at risk, even when using Tor and SecureDrop."
-msgstr "Por favor, preste atenção: Ao compartilhar documentos confidenciais, você se expõe a riscos, mesmo usando Tor e SecureDrop."
+msgstr "Por favor, preste atenção: Ao compartilhar informações confidenciais, você se expõe a riscos, mesmo usando Tor e SecureDrop."
 
 msgid "SecureDrop is a project of Freedom of the Press Foundation."
 msgstr "SecureDrop é um projeto da Freedom of the Press Foundation (Fundação pela Liberdade de Imprensa)."
