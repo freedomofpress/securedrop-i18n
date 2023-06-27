@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: securedrop@freedom.press\n"
-"PO-Revision-Date: 2023-06-15 01:56+0000\n"
+"PO-Revision-Date: 2023-06-27 09:09+0000\n"
 "Last-Translator: Chi-Hsun Tsai <chihsun.tsai@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.securedrop.org/"
 "projects/securedrop/desktop/zh_Hant/>\n"
@@ -37,7 +37,7 @@ msgid "Open KeePassXC Password Vault"
 msgstr "開啟 KeePassXC 密碼保存庫"
 
 msgid "Open File Browser"
-msgstr "開啟檔案總管"
+msgstr "開啟檔案瀏覽器"
 
 #: desktop-journalist-icon.j2.in:10
 msgid "SecureDrop Journalist Interface"
